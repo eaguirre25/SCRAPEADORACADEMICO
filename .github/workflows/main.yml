@@ -2,22 +2,21 @@ name: Daily Academic Scraper
 
 on:
   schedule:
-    # Ejecuta a las 13:00 UTC todos los días. Ajusta la hora según tu zona horaria.
     - cron: '0 13 * * *'
   workflow_dispatch:
-    # Permite ejecutar el flujo manualmente desde la interfaz de GitHub
-    inputs:
-      reason:
-        description: 'Motivo de la ejecución manual'
-        required: false
-        default: 'Ejecución manual'
+
+permissions:
+  contents: write
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,6 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Ensure data directory exists
+        run: |
+          mkdir -p data
+
       - name: Run scraper
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
@@ -36,3 +39,17 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: |
           python main.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/master_records.csv data/seen_ids.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update academic scraper database"
+            git push
+          fi
