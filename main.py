@@ -60,6 +60,10 @@ CSV_FIELDS = [
 ]
 
 
+def as_dict(value: Any) -> Dict[str, Any]:
+    return value if isinstance(value, dict) else {}
+
+
 def ensure_storage() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -190,16 +194,10 @@ def extract_authors(work: Dict[str, Any]) -> str:
         if not isinstance(authorship, dict):
             continue
 
-        author = authorship.get("author", {})
-        raw_name = ""
+        author = as_dict(authorship.get("author"))
+        raw_name = author.get("display_name", "") or authorship.get("raw_author_name", "") or ""
+        raw_name = str(raw_name).strip()
 
-        if isinstance(author, dict):
-            raw_name = author.get("display_name", "") or ""
-
-        if not raw_name:
-            raw_name = authorship.get("raw_author_name", "") or ""
-
-        raw_name = raw_name.strip()
         if raw_name:
             names.append(raw_name)
 
@@ -226,8 +224,8 @@ def extract_keywords(work: Dict[str, Any]) -> str:
                     if name:
                         values.append(str(name).strip())
 
-    cleaned = []
-    seen = set()
+    cleaned: List[str] = []
+    seen: Set[str] = set()
     for value in values:
         norm = normalize_text(value)
         if norm and norm not in seen:
@@ -270,7 +268,7 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
 
         works.extend(batch)
 
-        meta = data.get("meta", {})
+        meta = as_dict(data.get("meta"))
         next_cursor = meta.get("next_cursor")
 
         page_count += 1
@@ -287,22 +285,17 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
 
 
 def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any]:
-    ids = work.get("ids", {}) if isinstance(work.get("ids"), dict) else {}
+    ids = as_dict(work.get("ids"))
     openalex_id = str(work.get("id", "")).strip()
     doi = normalize_doi(ids.get("doi"))
 
-    primary_location = work.get("primary_location", {})
-    if not isinstance(primary_location, dict):
-        primary_location = {}
-
-    source = primary_location.get("source", {})
-    if not isinstance(source, dict):
-        source = {}
+    primary_location = as_dict(work.get("primary_location"))
+    source = as_dict(primary_location.get("source"))
+    host_venue = as_dict(work.get("host_venue"))
 
     origin = (
         source.get("display_name")
-        or work.get("primary_location", {}).get("source", {}).get("display_name")
-        or work.get("host_venue", {}).get("display_name", "")
+        or host_venue.get("display_name")
         or ""
     )
 
@@ -361,8 +354,11 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
         print(f"  Retrieved {len(works)} works for '{term}'")
 
         for work in works:
+            if not isinstance(work, dict):
+                continue
+
             record = extract_record_info(work, term)
-            record_id = record.get("record_id", "").strip()
+            record_id = str(record.get("record_id", "")).strip()
             signature = build_signature(
                 record.get("title", ""),
                 record.get("publication_year", ""),
