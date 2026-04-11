@@ -62,6 +62,7 @@ SEEN_IDS_JSON = DATA_DIR / "seen_ids.json"
 EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
 PDFS_DIR = DATA_DIR / "pdfs"
 
+# Campos del CSV — compatibles con registros viejos (is_oa y pdf_url pueden estar vacíos)
 CSV_FIELDS = [
     "record_id",
     "first_seen_date",
@@ -125,14 +126,14 @@ def load_existing_signatures() -> Set[str]:
     if not MASTER_CSV.exists():
         return signatures
     try:
-        with MASTER_CSV.open("r", encoding="utf-8", newline="") as f:
+        with MASTER_CSV.open("r", encoding="utf-8-sig", newline="") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 title = row.get("title", "")
                 year = row.get("publication_year", "")
                 signatures.add(build_signature(title, year))
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"Error leyendo signatures: {e}")
     return signatures
 
 
@@ -149,19 +150,26 @@ def count_master_records() -> int:
     if not MASTER_CSV.exists():
         return 0
     try:
-        with MASTER_CSV.open("r", encoding="utf-8", newline="") as f:
+        with MASTER_CSV.open("r", encoding="utf-8-sig", newline="") as f:
             return sum(1 for _ in csv.DictReader(f))
     except Exception:
         return 0
 
 
 def read_all_records() -> List[Dict[str, str]]:
+    """Lee todos los registros del CSV maestro.
+    Compatible con CSVs viejos que no tienen is_oa ni pdf_url."""
     if not MASTER_CSV.exists():
+        print("CSV maestro no encontrado.")
         return []
     try:
-        with MASTER_CSV.open("r", encoding="utf-8", newline="") as f:
-            return list(csv.DictReader(f))
-    except Exception:
+        with MASTER_CSV.open("r", encoding="utf-8-sig", newline="") as f:
+            reader = csv.DictReader(f)
+            rows = list(reader)
+            print(f"CSV leído: {len(rows)} registros, campos: {reader.fieldnames}")
+            return rows
+    except Exception as e:
+        print(f"Error leyendo CSV maestro: {e}")
         return []
 
 
@@ -307,6 +315,25 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
     return works
 
 
+def fetch_oa_info_by_doi(doi: str) -> Tuple[bool, str]:
+    """Consulta OpenAlex por DOI para obtener is_oa y pdf_url de un registro viejo."""
+    if not doi:
+        return False, ""
+    try:
+        url = f"https://api.openalex.org/works/https://doi.org/{doi}"
+        resp = requests.get(url, headers=build_headers(), timeout=15)
+        if resp.status_code != 200:
+            return False, ""
+        data = resp.json()
+        oa = as_dict(data.get("open_access"))
+        is_oa = bool(oa.get("is_oa", False))
+        primary = as_dict(data.get("primary_location"))
+        pdf_url = primary.get("pdf_url") or oa.get("oa_url") or ""
+        return is_oa, str(pdf_url)
+    except Exception:
+        return False, ""
+
+
 def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any]:
     ids = as_dict(work.get("ids"))
     openalex_id = str(work.get("id", "")).strip()
@@ -317,7 +344,6 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
     host_venue = as_dict(work.get("host_venue"))
 
     origin = source.get("display_name") or host_venue.get("display_name") or ""
-
     document_type = (
         primary_location.get("type")
         or work.get("type_crossref")
@@ -333,14 +359,9 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
     abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
     keywords = extract_keywords(work)
 
-    # Acceso abierto y URL al PDF
     oa_info = as_dict(work.get("open_access"))
     is_oa = bool(oa_info.get("is_oa", False))
-    pdf_url = (
-        primary_location.get("pdf_url")
-        or oa_info.get("oa_url")
-        or ""
-    )
+    pdf_url = primary_location.get("pdf_url") or oa_info.get("oa_url") or ""
 
     url = (
         primary_location.get("landing_page_url")
@@ -430,9 +451,14 @@ EXCEL_KEYS = [
 
 
 def update_excel(new_record_ids: Set[str]) -> None:
-    """Reconstruye el Excel completo desde el CSV maestro.
-    Las filas nuevas se resaltan en amarillo."""
+    """Reconstruye el Excel completo desde el CSV maestro."""
     all_records = read_all_records()
+
+    if not all_records:
+        print("ADVERTENCIA: No se encontraron registros para generar el Excel.")
+        return
+
+    print(f"Generando Excel con {len(all_records)} registros...")
 
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -455,11 +481,14 @@ def update_excel(new_record_ids: Set[str]) -> None:
     for row_idx, record in enumerate(all_records, 2):
         is_new = record.get("record_id", "") in new_record_ids
         for col_idx, key in enumerate(EXCEL_KEYS, 1):
-            val = record.get(key, "")
+            val = record.get(key, "") or ""
             if key == "is_oa":
                 val = "Sí" if str(val).lower() in ("true", "1", "yes", "sí") else "No"
             cell = ws.cell(row=row_idx, column=col_idx, value=val)
-            cell.alignment = Alignment(vertical="top", wrap_text=(key in ("title", "abstract", "keywords")))
+            cell.alignment = Alignment(
+                vertical="top",
+                wrap_text=(key in ("title", "abstract", "keywords")),
+            )
             if is_new:
                 cell.fill = new_fill
 
@@ -468,8 +497,11 @@ def update_excel(new_record_ids: Set[str]) -> None:
     for i, w in enumerate(col_widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
 
-    wb.save(EXCEL_FILE)
-    print(f"Excel actualizado: {EXCEL_FILE} ({len(all_records)} registros)")
+    try:
+        wb.save(EXCEL_FILE)
+        print(f"Excel guardado: {EXCEL_FILE} ({len(all_records)} registros)")
+    except Exception as e:
+        print(f"Error al guardar Excel: {e}")
 
 
 # ── Descarga de PDFs ──────────────────────────────────────────────────────────
@@ -504,6 +536,51 @@ def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
     except Exception as exc:
         print(f"  No se pudo descargar PDF ({pdf_url}): {exc}")
         return None
+
+
+def bulk_download_and_upload(uploader: Optional[Any]) -> None:
+    """
+    Procesa TODOS los registros del CSV:
+    - Si tienen pdf_url: descarga y sube.
+    - Si tienen DOI pero no pdf_url: consulta OpenAlex para obtenerlo.
+    Usa una pausa entre consultas para no saturar la API.
+    """
+    all_records = read_all_records()
+    print(f"\nDescarga masiva de PDFs: procesando {len(all_records)} registros...")
+
+    ok = 0
+    skipped = 0
+
+    for i, record in enumerate(all_records):
+        pdf_url = str(record.get("pdf_url", "")).strip()
+        is_oa_raw = str(record.get("is_oa", "")).lower()
+        is_oa = is_oa_raw in ("true", "1", "yes", "sí")
+
+        # Si el registro es viejo y no tiene pdf_url, intentamos obtenerlo por DOI
+        if not pdf_url and not is_oa:
+            doi = str(record.get("doi", "")).strip()
+            if doi:
+                is_oa, pdf_url = fetch_oa_info_by_doi(doi)
+                time.sleep(0.3)  # pausa cortesía con la API
+
+        if not pdf_url:
+            skipped += 1
+            continue
+
+        pdf_path = download_pdf({**record, "pdf_url": pdf_url})
+        if pdf_path:
+            ok += 1
+            if uploader:
+                try:
+                    uploader.upload(pdf_path)
+                except Exception as exc:
+                    print(f"  Error subiendo a Drive: {exc}")
+
+        # Progreso cada 100 registros
+        if (i + 1) % 100 == 0:
+            print(f"  Procesados {i + 1}/{len(all_records)} — PDFs descargados: {ok}")
+
+    print(f"Descarga masiva completada: {ok} PDFs descargados, {skipped} sin PDF disponible.")
 
 
 # ── Correo electrónico ────────────────────────────────────────────────────────
@@ -575,7 +652,6 @@ def send_email(
     msg["To"] = recipient
     msg.attach(MIMEText(body, _subtype="plain", _charset="utf-8"))
 
-    # Adjuntar Excel si existe
     if EXCEL_FILE.exists():
         with open(EXCEL_FILE, "rb") as f:
             part = MIMEBase("application", "octet-stream")
@@ -586,6 +662,9 @@ def send_email(
             f"attachment; filename={EXCEL_FILE.name}",
         )
         msg.attach(part)
+        print(f"Excel adjuntado ({EXCEL_FILE.stat().st_size / 1024:.1f} KB)")
+    else:
+        print("ADVERTENCIA: Excel no encontrado, se envía sin adjunto.")
 
     with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
         server.ehlo()
@@ -598,33 +677,29 @@ def send_email(
 # ── Flujo principal ───────────────────────────────────────────────────────────
 
 def main() -> None:
+    # 1. Buscar novedades en OpenAlex
     new_records, total_records = collect_new_records()
-
-    # IDs nuevos para resaltar en Excel
     new_record_ids = {str(r.get("record_id", "")) for r in new_records}
 
-    # Actualizar Excel acumulativo
+    # 2. Generar Excel con todos los registros
     update_excel(new_record_ids)
 
-    # Descargar PDFs en abierto y subir a Drive
+    # 3. Inicializar uploader de Drive (si está configurado)
     drive_folder_id = os.getenv("DRIVE_FOLDER_ID", "").strip()
     uploader = None
     if DRIVE_AVAILABLE and drive_folder_id:
         try:
             uploader = DriveUploader(drive_folder_id)
+            print("Google Drive conectado.")
         except Exception as exc:
             print(f"Drive no disponible: {exc}")
 
-    for record in new_records:
-        if record.get("is_oa") and record.get("pdf_url"):
-            pdf_path = download_pdf(record)
-            if pdf_path and uploader:
-                try:
-                    uploader.upload(pdf_path)
-                except Exception as exc:
-                    print(f"  Error subiendo a Drive: {exc}")
+    # 4. Descarga masiva: procesa TODOS los registros del CSV
+    #    (para registros viejos sin pdf_url, consulta OpenAlex por DOI)
+    #    En corridas siguientes solo descargará los que no existan todavía en data/pdfs/
+    bulk_download_and_upload(uploader)
 
-    # Enviar correo
+    # 5. Enviar correo con Excel adjunto
     gmail_user = os.getenv("GMAIL_USER", "").strip()
     gmail_password = (
         os.getenv("GMAIL_APP_PASSWORD", "").strip()
