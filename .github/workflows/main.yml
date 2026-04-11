@@ -26,7 +26,7 @@ jobs:
 
       - name: Ensure data directory exists
         run: |
-          mkdir -p data
+          mkdir -p data/pdfs
 
       - name: Crear credenciales de Google Drive
         run: |
