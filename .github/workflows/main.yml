@@ -1,17 +1,13 @@
 name: Daily Academic Scraper
-
 on:
   schedule:
     - cron: '0 13 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,11 +28,16 @@ jobs:
         run: |
           mkdir -p data
 
+      - name: Crear credenciales de Google Drive
+        run: |
+          echo '${{ secrets.GOOGLE_CREDENTIALS_JSON }}' > data/credentials.json
+
       - name: Run scraper
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
         run: |
           python main.py
 
@@ -44,9 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add data/master_records.csv data/seen_ids.json
-
+          git add data/master_records.csv data/seen_ids.json data/publicaciones.xlsx
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
