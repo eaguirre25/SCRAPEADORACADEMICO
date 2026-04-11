@@ -7,6 +7,9 @@ Qué hace
 - Recupera trabajos publicados desde 2020-01-01.
 - Mantiene una base maestra acumulativa en CSV.
 - Mantiene un índice de IDs ya vistos en JSON.
+- Genera y actualiza un Excel acumulativo (publicaciones.xlsx).
+- Adjunta el Excel al correo diario.
+- Descarga PDFs en acceso abierto y los sube a Google Drive (opcional).
 - Envía por mail solo las novedades de cada corrida.
 """
 
@@ -19,11 +22,26 @@ import re
 import smtplib
 import time
 from datetime import date
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 import requests
+import openpyxl
+from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.utils import get_column_letter
+
+# Drive uploader: se activa solo si existe drive_uploader.py y DRIVE_FOLDER_ID
+try:
+    from drive_uploader import DriveUploader
+    DRIVE_AVAILABLE = True
+except ImportError:
+    DRIVE_AVAILABLE = False
+
+# ── Configuración ─────────────────────────────────────────────────────────────
 
 SEARCH_TERMS: List[str] = [
     "gestión escolar",
@@ -41,6 +59,8 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 MASTER_CSV = DATA_DIR / "master_records.csv"
 SEEN_IDS_JSON = DATA_DIR / "seen_ids.json"
+EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
+PDFS_DIR = DATA_DIR / "pdfs"
 
 CSV_FIELDS = [
     "record_id",
@@ -57,8 +77,11 @@ CSV_FIELDS = [
     "doi",
     "url",
     "openalex_id",
+    "is_oa",
+    "pdf_url",
 ]
 
+# ── Helpers generales ─────────────────────────────────────────────────────────
 
 def as_dict(value: Any) -> Dict[str, Any]:
     return value if isinstance(value, dict) else {}
@@ -66,6 +89,7 @@ def as_dict(value: Any) -> Dict[str, Any]:
 
 def ensure_storage() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    PDFS_DIR.mkdir(parents=True, exist_ok=True)
 
     if not MASTER_CSV.exists():
         with MASTER_CSV.open("w", encoding="utf-8", newline="") as f:
@@ -75,6 +99,8 @@ def ensure_storage() -> None:
     if not SEEN_IDS_JSON.exists():
         SEEN_IDS_JSON.write_text("{}", encoding="utf-8")
 
+
+# ── Persistencia CSV / JSON ───────────────────────────────────────────────────
 
 def load_seen_ids() -> Set[str]:
     try:
@@ -96,10 +122,8 @@ def save_seen_ids(seen_ids: Set[str]) -> None:
 
 def load_existing_signatures() -> Set[str]:
     signatures: Set[str] = set()
-
     if not MASTER_CSV.exists():
         return signatures
-
     try:
         with MASTER_CSV.open("r", encoding="utf-8", newline="") as f:
             reader = csv.DictReader(f)
@@ -109,31 +133,39 @@ def load_existing_signatures() -> Set[str]:
                 signatures.add(build_signature(title, year))
     except Exception:
         pass
-
     return signatures
 
 
 def append_master_records(records: List[Dict[str, Any]]) -> None:
     if not records:
         return
-
     with MASTER_CSV.open("a", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
         for record in records:
-            writer.writerow(record)
+            writer.writerow({k: record.get(k, "") for k in CSV_FIELDS})
 
 
 def count_master_records() -> int:
     if not MASTER_CSV.exists():
         return 0
-
     try:
         with MASTER_CSV.open("r", encoding="utf-8", newline="") as f:
-            reader = csv.DictReader(f)
-            return sum(1 for _ in reader)
+            return sum(1 for _ in csv.DictReader(f))
     except Exception:
         return 0
 
+
+def read_all_records() -> List[Dict[str, str]]:
+    if not MASTER_CSV.exists():
+        return []
+    try:
+        with MASTER_CSV.open("r", encoding="utf-8", newline="") as f:
+            return list(csv.DictReader(f))
+    except Exception:
+        return []
+
+
+# ── Normalización ─────────────────────────────────────────────────────────────
 
 def build_headers() -> Dict[str, str]:
     gmail_user = os.getenv("GMAIL_USER", "").strip()
@@ -145,11 +177,9 @@ def build_headers() -> Dict[str, str]:
 def normalize_doi(doi_value: Optional[str]) -> str:
     if not doi_value:
         return ""
-
     doi_value = doi_value.strip()
     if "doi.org/" in doi_value:
         doi_value = doi_value.split("doi.org/")[-1]
-
     return doi_value.lower().strip()
 
 
@@ -168,7 +198,6 @@ def build_signature(title: Optional[str], year: Any) -> str:
 def reconstruct_abstract(abstract_inverted_index: Any) -> str:
     if not isinstance(abstract_inverted_index, dict):
         return ""
-
     tokens: List[Tuple[int, str]] = []
     for word, positions in abstract_inverted_index.items():
         if not isinstance(positions, list):
@@ -176,10 +205,8 @@ def reconstruct_abstract(abstract_inverted_index: Any) -> str:
         for pos in positions:
             if isinstance(pos, int):
                 tokens.append((pos, word))
-
     if not tokens:
         return ""
-
     tokens.sort(key=lambda x: x[0])
     return " ".join(word for _, word in tokens)
 
@@ -188,33 +215,31 @@ def extract_authors(work: Dict[str, Any]) -> str:
     authorships = work.get("authorships", [])
     if not isinstance(authorships, list):
         return ""
-
     names: List[str] = []
     for authorship in authorships:
         if not isinstance(authorship, dict):
             continue
-
         author = as_dict(authorship.get("author"))
-        raw_name = author.get("display_name", "") or authorship.get("raw_author_name", "") or ""
+        raw_name = (
+            author.get("display_name", "")
+            or authorship.get("raw_author_name", "")
+            or ""
+        )
         raw_name = str(raw_name).strip()
-
         if raw_name:
             names.append(raw_name)
-
     return "; ".join(names)
 
 
 def extract_keywords(work: Dict[str, Any]) -> str:
     keywords = work.get("keywords", [])
     values: List[str] = []
-
     if isinstance(keywords, list):
         for item in keywords:
             if isinstance(item, dict):
                 name = item.get("display_name", "")
                 if name:
                     values.append(str(name).strip())
-
     if not values:
         topics = work.get("topics", [])
         if isinstance(topics, list):
@@ -223,7 +248,6 @@ def extract_keywords(work: Dict[str, Any]) -> str:
                     name = item.get("display_name", "")
                     if name:
                         values.append(str(name).strip())
-
     cleaned: List[str] = []
     seen: Set[str] = set()
     for value in values:
@@ -231,9 +255,10 @@ def extract_keywords(work: Dict[str, Any]) -> str:
         if norm and norm not in seen:
             seen.add(norm)
             cleaned.append(value)
-
     return "; ".join(cleaned)
 
+
+# ── OpenAlex ──────────────────────────────────────────────────────────────────
 
 def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
     works: List[Dict[str, Any]] = []
@@ -243,12 +268,11 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
 
     while True:
         params = {
-            "search": f"\"{search_term}\"",
+            "search": f'"{search_term}"',
             "filter": f"from_publication_date:{from_date}",
             "per-page": 200,
             "cursor": cursor,
         }
-
         try:
             response = requests.get(
                 "https://api.openalex.org/works",
@@ -274,7 +298,6 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
         page_count += 1
         if not next_cursor:
             break
-
         if MAX_PAGES_PER_TERM is not None and page_count >= MAX_PAGES_PER_TERM:
             break
 
@@ -293,11 +316,7 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
     source = as_dict(primary_location.get("source"))
     host_venue = as_dict(work.get("host_venue"))
 
-    origin = (
-        source.get("display_name")
-        or host_venue.get("display_name")
-        or ""
-    )
+    origin = source.get("display_name") or host_venue.get("display_name") or ""
 
     document_type = (
         primary_location.get("type")
@@ -313,6 +332,15 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
     authors = extract_authors(work)
     abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
     keywords = extract_keywords(work)
+
+    # Acceso abierto y URL al PDF
+    oa_info = as_dict(work.get("open_access"))
+    is_oa = bool(oa_info.get("is_oa", False))
+    pdf_url = (
+        primary_location.get("pdf_url")
+        or oa_info.get("oa_url")
+        or ""
+    )
 
     url = (
         primary_location.get("landing_page_url")
@@ -338,8 +366,12 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
         "doi": doi,
         "url": url,
         "openalex_id": openalex_id,
+        "is_oa": is_oa,
+        "pdf_url": pdf_url,
     }
 
+
+# ── Recolección principal ─────────────────────────────────────────────────────
 
 def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     ensure_storage()
@@ -349,9 +381,9 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     new_records: List[Dict[str, Any]] = []
 
     for term in SEARCH_TERMS:
-        print(f"Searching for term: {term}")
+        print(f"Buscando: {term}")
         works = query_openalex(term, START_DATE)
-        print(f"  Retrieved {len(works)} works for '{term}'")
+        print(f"  {len(works)} resultados para '{term}'")
 
         for work in works:
             if not isinstance(work, dict):
@@ -366,10 +398,8 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
 
             if not record_id:
                 continue
-
             if record_id in seen_ids:
                 continue
-
             if signature in title_year_signatures:
                 seen_ids.add(record_id)
                 continue
@@ -385,6 +415,99 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     return new_records, total_records
 
 
+# ── Excel acumulativo ─────────────────────────────────────────────────────────
+
+EXCEL_HEADERS = [
+    "Título", "Año", "Fecha publicación", "Autores", "Revista/Fuente",
+    "Tipo", "Término búsqueda", "DOI", "URL", "Acceso abierto",
+    "PDF URL", "Abstract", "Palabras clave", "Fecha registro",
+]
+EXCEL_KEYS = [
+    "title", "publication_year", "publication_date", "authors", "origin",
+    "document_type", "search_term", "doi", "url", "is_oa",
+    "pdf_url", "abstract", "keywords", "first_seen_date",
+]
+
+
+def update_excel(new_record_ids: Set[str]) -> None:
+    """Reconstruye el Excel completo desde el CSV maestro.
+    Las filas nuevas se resaltan en amarillo."""
+    all_records = read_all_records()
+
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Publicaciones"
+
+    # Cabecera
+    header_fill = PatternFill("solid", fgColor="1F4E79")
+    header_font = Font(bold=True, color="FFFFFF", size=10)
+    for col, header in enumerate(EXCEL_HEADERS, 1):
+        cell = ws.cell(row=1, column=col, value=header)
+        cell.fill = header_fill
+        cell.font = header_font
+        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+
+    ws.row_dimensions[1].height = 28
+    ws.freeze_panes = "A2"
+
+    new_fill = PatternFill("solid", fgColor="FFF2CC")
+
+    for row_idx, record in enumerate(all_records, 2):
+        is_new = record.get("record_id", "") in new_record_ids
+        for col_idx, key in enumerate(EXCEL_KEYS, 1):
+            val = record.get(key, "")
+            if key == "is_oa":
+                val = "Sí" if str(val).lower() in ("true", "1", "yes", "sí") else "No"
+            cell = ws.cell(row=row_idx, column=col_idx, value=val)
+            cell.alignment = Alignment(vertical="top", wrap_text=(key in ("title", "abstract", "keywords")))
+            if is_new:
+                cell.fill = new_fill
+
+    # Anchos de columna
+    col_widths = [55, 6, 14, 40, 30, 12, 18, 38, 38, 12, 38, 60, 40, 14]
+    for i, w in enumerate(col_widths, 1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+
+    wb.save(EXCEL_FILE)
+    print(f"Excel actualizado: {EXCEL_FILE} ({len(all_records)} registros)")
+
+
+# ── Descarga de PDFs ──────────────────────────────────────────────────────────
+
+def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
+    pdf_url = str(record.get("pdf_url", "")).strip()
+    if not pdf_url:
+        return None
+
+    raw_name = (
+        str(record.get("doi") or record.get("record_id") or record.get("openalex_id") or "unknown")
+        .replace("/", "_")
+        .replace(":", "_")
+        .replace(" ", "_")
+    )
+    dest = PDFS_DIR / f"{raw_name}.pdf"
+
+    if dest.exists():
+        return dest
+
+    try:
+        resp = requests.get(pdf_url, timeout=30, stream=True)
+        resp.raise_for_status()
+        content_type = resp.headers.get("content-type", "")
+        if "pdf" not in content_type and not pdf_url.lower().endswith(".pdf"):
+            return None
+        with open(dest, "wb") as f:
+            for chunk in resp.iter_content(8192):
+                f.write(chunk)
+        print(f"  PDF descargado: {dest.name}")
+        return dest
+    except Exception as exc:
+        print(f"  No se pudo descargar PDF ({pdf_url}): {exc}")
+        return None
+
+
+# ── Correo electrónico ────────────────────────────────────────────────────────
+
 def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -> str:
     lines: List[str] = []
     lines.append(
@@ -397,6 +520,7 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
 
     if not new_records:
         lines.append("No se detectaron novedades respecto de la base acumulada.")
+        lines.append("Se adjunta el Excel actualizado con todos los registros.")
         return "\n".join(lines)
 
     sorted_records = sorted(
@@ -410,6 +534,7 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
     )
 
     lines.append(f"Se listan hasta {EMAIL_ITEM_LIMIT} novedades más recientes:")
+    lines.append("(Ver Excel adjunto para el listado completo.)")
     lines.append("")
 
     for i, rec in enumerate(sorted_records[:EMAIL_ITEM_LIMIT], start=1):
@@ -419,27 +544,48 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
         year = rec.get("publication_year") or "s/f"
         doi = rec.get("doi") or "Sin DOI"
         url = rec.get("url") or "Sin URL"
+        is_oa = "Sí" if rec.get("is_oa") else "No"
 
         lines.append(f"{i}. {title} ({year})")
         lines.append(f"   Autores: {authors}")
-        lines.append(f"   Origen: {origin}")
+        lines.append(f"   Fuente: {origin}")
         lines.append(f"   DOI: {doi}")
         lines.append(f"   URL: {url}")
+        lines.append(f"   Acceso abierto: {is_oa}")
         lines.append("")
 
     if len(sorted_records) > EMAIL_ITEM_LIMIT:
         lines.append(
-            f"Hay {len(sorted_records) - EMAIL_ITEM_LIMIT} novedades adicionales guardadas en la base maestra."
+            f"Hay {len(sorted_records) - EMAIL_ITEM_LIMIT} novedades adicionales en el Excel adjunto."
         )
 
     return "\n".join(lines)
 
 
-def send_email(subject: str, body: str, gmail_user: str, gmail_password: str, recipient: str) -> None:
-    msg = MIMEText(body, _subtype="plain", _charset="utf-8")
+def send_email(
+    subject: str,
+    body: str,
+    gmail_user: str,
+    gmail_password: str,
+    recipient: str,
+) -> None:
+    msg = MIMEMultipart()
     msg["Subject"] = subject
     msg["From"] = gmail_user
     msg["To"] = recipient
+    msg.attach(MIMEText(body, _subtype="plain", _charset="utf-8"))
+
+    # Adjuntar Excel si existe
+    if EXCEL_FILE.exists():
+        with open(EXCEL_FILE, "rb") as f:
+            part = MIMEBase("application", "octet-stream")
+            part.set_payload(f.read())
+        encoders.encode_base64(part)
+        part.add_header(
+            "Content-Disposition",
+            f"attachment; filename={EXCEL_FILE.name}",
+        )
+        msg.attach(part)
 
     with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
         server.ehlo()
@@ -449,9 +595,36 @@ def send_email(subject: str, body: str, gmail_user: str, gmail_password: str, re
         server.sendmail(gmail_user, [recipient], msg.as_string())
 
 
+# ── Flujo principal ───────────────────────────────────────────────────────────
+
 def main() -> None:
     new_records, total_records = collect_new_records()
 
+    # IDs nuevos para resaltar en Excel
+    new_record_ids = {str(r.get("record_id", "")) for r in new_records}
+
+    # Actualizar Excel acumulativo
+    update_excel(new_record_ids)
+
+    # Descargar PDFs en abierto y subir a Drive
+    drive_folder_id = os.getenv("DRIVE_FOLDER_ID", "").strip()
+    uploader = None
+    if DRIVE_AVAILABLE and drive_folder_id:
+        try:
+            uploader = DriveUploader(drive_folder_id)
+        except Exception as exc:
+            print(f"Drive no disponible: {exc}")
+
+    for record in new_records:
+        if record.get("is_oa") and record.get("pdf_url"):
+            pdf_path = download_pdf(record)
+            if pdf_path and uploader:
+                try:
+                    uploader.upload(pdf_path)
+                except Exception as exc:
+                    print(f"  Error subiendo a Drive: {exc}")
+
+    # Enviar correo
     gmail_user = os.getenv("GMAIL_USER", "").strip()
     gmail_password = (
         os.getenv("GMAIL_APP_PASSWORD", "").strip()
