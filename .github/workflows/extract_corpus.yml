@@ -1,0 +1,63 @@
+name: Extracción de corpus (PDFs → texto)
+
+on:
+  workflow_dispatch:  # solo manual — vos decidís cuándo corre
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300  # 5 horas máximo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3.3'
+
+      - name: Instalar dependencias del sistema (pdftools)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libpoppler-cpp-dev libcurl4-openssl-dev libssl-dev
+
+      - name: Instalar paquetes de R
+        run: |
+          Rscript -e "
+            install.packages(c(
+              'googledrive',
+              'httr',
+              'pdftools',
+              'readr',
+              'dplyr'
+            ), repos = 'https://cloud.r-project.org')
+          "
+
+      - name: Asegurar carpeta data
+        run: mkdir -p data
+
+      - name: Ejecutar extracción
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+        run: Rscript extract_corpus.R
+
+      - name: Guardar corpus en GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/corpus.csv data/extraction_log.csv
+          if git diff --cached --quiet; then
+            echo "Sin cambios en el corpus."
+          else
+            git commit -m "Actualiza corpus de texto extraído de PDFs"
+            git push
+          fi
