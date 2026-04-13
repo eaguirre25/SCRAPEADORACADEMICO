@@ -29,6 +29,7 @@ def read_csv(path):
     p = Path(path)
     if not p.exists():
         return []
+    csv.field_size_limit(10_000_000)
     with open(p, encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
