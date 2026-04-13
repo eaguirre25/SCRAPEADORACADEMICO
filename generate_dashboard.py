@@ -261,11 +261,15 @@ html = """<!DOCTYPE html>
   --text:#C9D1D9;--muted:#8B949E;--accent:#58A6FF;--dim:#484F58;--hover:#1F2937
 }
 body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-header{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-header h1{font-size:1.1em;color:#E6EDF3;font-weight:700}
-header h1 span{color:var(--accent)}
-.stamp{font-size:.72em;color:var(--dim)}
-.kpis{display:flex;background:var(--surface);border-bottom:1px solid var(--border)}
+header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+@keyframes neon-pulse{0%{text-shadow:0 0 5px #58a6ff,0 0 10px #58a6ff,0 0 20px #58a6ff,0 0 40px #1d6fd8}100%{text-shadow:0 0 8px #7bbfff,0 0 16px #7bbfff,0 0 32px #58a6ff,0 0 64px #1d6fd8,0 0 90px #1d6fd8}}
+.neon-title{font-size:1.25em;font-weight:900;letter-spacing:.05em;color:#fff;text-shadow:0 0 5px #58a6ff,0 0 10px #58a6ff,0 0 20px #58a6ff,0 0 40px #1d6fd8;animation:neon-pulse 2.5s ease-in-out infinite alternate;white-space:nowrap}
+.neon-title .nt-accent{color:#a8d4ff;text-shadow:0 0 5px #a8d4ff,0 0 12px #58a6ff,0 0 26px #58a6ff,0 0 50px #1d6fd8}
+.neon-sub{font-size:.68em;color:#8B949E;margin-top:2px;letter-spacing:.01em}
+.neon-sub a{color:#58A6FF;text-decoration:none}
+.neon-sub a:hover{text-decoration:underline}
+.header-left{display:flex;flex-direction:column}
+.stamp{font-size:.7em;color:var(--dim)}.kpis{display:flex;background:var(--surface);border-bottom:1px solid var(--border)}
 .kpi{flex:1;text-align:center;padding:10px 8px;border-right:1px solid var(--border)}
 .kpi:last-child{border-right:none}
 .kpi-n{font-size:1.5em;font-weight:700;color:var(--accent)}
@@ -332,7 +336,10 @@ tbody tr:hover td{background:var(--hover)}
 <body>
 
 <header>
-  <h1>Dashboard &middot; <span>Direccion y Gestion Escolar</span></h1>
+  <div class="header-left">
+    <div class="neon-title">Dashboard &middot; <span class="nt-accent">Direccion y Gestion Escolar</span></div>
+    <div class="neon-sub">version beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elias Aguirre</a> &middot; aguirre.elias.gonzalo@gmail.com</div>
+  </div>
   <span class="stamp">Actualizado: """ + date.today().strftime('%d/%m/%Y') + f""" &middot; {anio_min}&ndash;{anio_max}</span>
 </header>
 
