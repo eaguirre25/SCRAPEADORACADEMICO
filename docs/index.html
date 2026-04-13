@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard – Dirección Escolar</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0D1117;--surface:#161B22;--border:#21262D;
+    --text:#C9D1D9;--muted:#8B949E;--accent:#58A6FF;--dim:#484F58
+  }
+  body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+  header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  header h1{font-size:1.2em;color:#E6EDF3;font-weight:600}
+  header h1 span{color:var(--accent)}
+  .stamp{font-size:.75em;color:var(--dim)}
+  .kpis{display:flex;gap:12px;padding:16px 24px;background:var(--surface);border-bottom:1px solid var(--border)}
+  .kpi{text-align:center;flex:1}
+  .kpi-n{font-size:1.8em;font-weight:700;color:var(--accent)}
+  .kpi-l{font-size:.72em;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:12px;padding:16px 24px;max-width:1600px;margin:0 auto}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+  .card-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+  .card-header h2{font-size:.9em;font-weight:600;color:#E6EDF3;text-transform:uppercase;letter-spacing:.05em}
+  .badge{background:var(--accent);color:#0D1117;border-radius:20px;padding:2px 8px;font-size:.7em;font-weight:700}
+  .card-body{flex:1;padding:16px;overflow:auto}
+
+  /* Wordcloud */
+  #wc-svg{width:100%;height:320px}
+
+  /* Tópicos */
+  .topic-bar{margin-bottom:10px}
+  .topic-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+  .topic-name{font-size:.8em;font-weight:600}
+  .topic-pct{font-size:.75em;color:var(--muted)}
+  .bar-track{background:#1E2A38;border-radius:4px;height:8px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:4px;transition:width .4s}
+  .topic-words{font-size:.72em;color:var(--muted);margin-top:2px;line-height:1.4}
+
+  /* Mapa */
+  #map{height:340px;border-radius:6px}
+  .leaflet-container{background:#0D1117}
+
+  /* Artículos */
+  .art-item{border-bottom:1px solid var(--border);padding:10px 0;cursor:pointer;transition:background .15s}
+  .art-item:hover{background:#1a2030}
+  .art-item:last-child{border-bottom:none}
+  .art-title{font-size:.85em;font-weight:600;color:var(--accent);text-decoration:none;line-height:1.3}
+  .art-title:hover{text-decoration:underline}
+  .art-meta{font-size:.75em;color:var(--muted);margin-top:3px}
+  .art-kws{margin-top:5px;display:flex;flex-wrap:wrap;gap:4px}
+  .kw-tag{background:#1E2A38;color:var(--muted);border-radius:4px;padding:2px 7px;font-size:.7em}
+
+  footer{text-align:center;padding:20px;color:var(--dim);font-size:.75em;border-top:1px solid var(--border)}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dashboard · <span>Dirección y Gestión Escolar</span></h1>
+  <span class="stamp">Actualizado: 13/04/2026 · Literatura 2020–2026</span>
+</header>
+
+<div class="kpis">
+  <div class="kpi"><div class="kpi-n">2,381</div><div class="kpi-l">Publicaciones</div></div>
+  <div class="kpi"><div class="kpi-n">20</div><div class="kpi-l">Tópicos STM</div></div>
+  <div class="kpi"><div class="kpi-n">0</div><div class="kpi-l">Países</div></div>
+  <div class="kpi"><div class="kpi-n">2020–2026</div><div class="kpi-l">Período</div></div>
+</div>
+
+<div class="grid">
+
+  <!-- Cuadrante 1: Nube de palabras -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Nube de palabras</h2>
+      <span class="badge">Keywords del corpus</span>
+    </div>
+    <div class="card-body" style="padding:8px">
+      <svg id="wc-svg"></svg>
+    </div>
+  </div>
+
+  <!-- Cuadrante 2: Tópicos STM -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Tópicos emergentes</h2>
+      <span class="badge">STM inductivo</span>
+    </div>
+    <div class="card-body" id="topicos-container"></div>
+  </div>
+
+  <!-- Cuadrante 3: Mapa -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Distribución geográfica</h2>
+      <span class="badge">Por país de publicación</span>
+    </div>
+    <div class="card-body" style="padding:8px">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- Cuadrante 4: Últimos artículos -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Publicaciones recientes</h2>
+      <span class="badge">Últimas 15</span>
+    </div>
+    <div class="card-body" id="articulos-container"></div>
+  </div>
+
+</div>
+
+<footer>
+  Datos: OpenAlex API · Análisis: STM (R) · Actualización diaria automática via GitHub Actions
+</footer>
+
+<script>
+// ── Datos ─────────────────────────────────────────────────────────────────────
+const WC_DATA      = [{"text": "political science", "size": 1381}, {"text": "sociology", "size": 932}, {"text": "humanities", "size": 832}, {"text": "psychology", "size": 826}, {"text": "pedagogy", "size": 752}, {"text": "philosophy", "size": 587}, {"text": "educational leadership", "size": 408}, {"text": "public relations", "size": 405}, {"text": "computer science", "size": 400}, {"text": "medicine", "size": 351}, {"text": "medical education", "size": 276}, {"text": "mathematics education", "size": 273}, {"text": "context (archaeology)", "size": 260}, {"text": "geography", "size": 232}, {"text": "engineering", "size": 217}, {"text": "social science", "size": 199}, {"text": "social psychology", "size": 188}, {"text": "work (physics)", "size": 166}, {"text": "business", "size": 160}, {"text": "qualitative research", "size": 154}, {"text": "leadership style", "size": 133}, {"text": "knowledge management", "size": 127}, {"text": "quality (philosophy)", "size": 121}, {"text": "instructional leadership", "size": 96}, {"text": "engineering ethics", "size": 88}, {"text": "curriculum", "size": 87}, {"text": "mathematics", "size": 83}, {"text": "economics", "size": 76}, {"text": "politics", "size": 74}, {"text": "data collection", "size": 74}, {"text": "leadership studies", "size": 72}, {"text": "principal (computer security)", "size": 69}, {"text": "population", "size": 67}, {"text": "coronavirus disease 2019 (covid-19)", "size": 67}, {"text": "higher education", "size": 65}, {"text": "professional development", "size": 65}, {"text": "field (mathematics)", "size": 63}, {"text": "gender studies", "size": 63}, {"text": "epistemology", "size": 62}, {"text": "process (computing)", "size": 62}, {"text": "shared leadership", "size": 61}, {"text": "islam", "size": 57}, {"text": "government (linguistics)", "size": 54}, {"text": "perspective (graphical)", "size": 53}, {"text": "statistics", "size": 51}, {"text": "cartography", "size": 48}, {"text": "public administration", "size": 48}, {"text": "persona", "size": 46}, {"text": "transformational leadership", "size": 45}, {"text": "perception", "size": 44}, {"text": "physics", "size": 42}, {"text": "marketing", "size": 42}, {"text": "artificial intelligence", "size": 39}, {"text": "inclusion (mineral)", "size": 38}, {"text": "descriptive statistics", "size": 37}, {"text": "order (exchange)", "size": 36}, {"text": "pandemic", "size": 36}, {"text": "value (mathematics)", "size": 35}, {"text": "engineering management", "size": 35}, {"text": "focus group", "size": 34}, {"text": "transactional leadership", "size": 34}, {"text": "world wide web", "size": 33}, {"text": "servant leadership", "size": 32}, {"text": "process management", "size": 31}, {"text": "economic growth", "size": 31}, {"text": "documentation", "size": 31}, {"text": "applied psychology", "size": 31}, {"text": "accountability", "size": 30}, {"text": "sample (material)", "size": 28}, {"text": "test (biology)", "size": 28}, {"text": "equity (law)", "size": 28}, {"text": "structural equation modeling", "size": 28}, {"text": "identity (music)", "size": 27}, {"text": "ethnography", "size": 27}, {"text": "nonprobability sampling", "size": 27}, {"text": "neuroleadership", "size": 27}, {"text": "leadership development", "size": 27}, {"text": "subject (documents)", "size": 26}, {"text": "thematic analysis", "size": 26}, {"text": "competence (human resources)", "size": 26}];
+const TOPICOS_DATA = [{"id": "10", "prevalencia": 16.5, "frex": ["privatización", "ciudadana", "descentralización", "planeación", "freire", "filosofía", "ciudadanos"], "color": "#E63946"}, {"id": "9", "prevalencia": 10.1, "frex": ["igobernanza", "httpsdoiorgigobvoln", "minedu", "koinonia", "coro", "ugel", "depósito"], "color": "#F4A261"}, {"id": "16", "prevalencia": 8.81, "frex": ["latam", "arbitrado", "httpwwwindtecacomojsindexphprevistascientificoai", "indtec", "isni", "oai-pmh", "httpsdoiorgscientificissn-e-"], "color": "#2A9D8F"}, {"id": "11", "prevalencia": 6.73, "frex": ["smts", "learners", "ensuring", "smt", "initiatives", "fostering", "south"], "color": "#457B9D"}, {"id": "2", "prevalencia": 6.26, "frex": ["directoras", "indígena", "chileno", "chile", "mep", "discapacidad", "establecimiento"], "color": "#A8DADC"}, {"id": "6", "prevalencia": 6.11, "frex": ["boarding", "quran", "islamic", "gontor", "character", "factory", "religious"], "color": "#E9C46A"}, {"id": "4", "prevalencia": 5.35, "frex": ["cybersecurity", "technologies", "technology", "ict", "computer", "analytics", "english"], "color": "#264653"}, {"id": "7", "prevalencia": 4.68, "frex": ["auditoría", "interdisciplinarias", "rolando", "julia", "multidisciplinarios", "contabilidad", "scielo"], "color": "#F77F00"}, {"id": "8", "prevalencia": 4.67, "frex": ["multigrado", "rurales", "vergara", "hijos", "hogares", "inmigrantes", "niños"], "color": "#6A4C93"}, {"id": "20", "prevalencia": 4.51, "frex": ["abusive", "identity", "finnish", "collective", "pedagogies", "love", "dilemmas"], "color": "#1982C4"}, {"id": "15", "prevalencia": 4.16, "frex": ["ítems", "ítem", "creencias", "puntuaciones", "pruebas", "prueba", "httpsdoiorgeducatio"], "color": "#8AC926"}, {"id": "14", "prevalencia": 4.1, "frex": ["nursing", "transformational", "transactional", "styles", "cfa", "self-efficacy", "mediating"], "color": "#FF595E"}, {"id": "13", "prevalencia": 4.01, "frex": ["smc", "silence", "parent", "parental", "smcs", "disabled", "involvement"], "color": "#FFCA3A"}, {"id": "12", "prevalencia": 3.44, "frex": ["processo", "aos", "acesso", "anos", "esse", "além", "direitos"], "color": "#6A4C93"}, {"id": "5", "prevalencia": 3.28, "frex": ["women", "women’s", "cpd", "womens", "positions", "feminist", "presidents"], "color": "#1982C4"}, {"id": "17", "prevalencia": 2.17, "frex": ["flourishing", "coping", "depression", "racism", "stress", "plos", "anxiety"], "color": "#52B788"}, {"id": "1", "prevalencia": 1.66, "frex": ["atribución-compartirigual", "httpscreativecommonsorglicensesby-sadeedes", "httpswwwproduccioncientificaluzorgindexphprvg", "öğretmenlerin", "okul", "için", "rvgluz"], "color": "#D62828"}, {"id": "19", "prevalencia": 1.51, "frex": ["bibliometric", "disaster", "density", "water", "environmental", "sustainability", "tutoring"], "color": "#023E8A"}, {"id": "3", "prevalencia": 1.23, "frex": ["tua", "palopo", "bullying", "kolaborasi", "konseling", "orang", "didik"], "color": "#F3722C"}, {"id": "18", "prevalencia": 0.74, "frex": ["variabel", "uji", "sebesar", "gaya", "pengaruh", "organisasi", "disiplin"], "color": "#90BE6D"}];
+const MAPA_DATA    = [];
+const ARTS_DATA    = [{"titulo": "Gestión pedagógica en el desempeño docente en instituciones de educación superior", "autores": "Rayza Rosmery Paucar Ortiz; Nolberto Arnildo Leyva Aguilar", "revista": "Revista Simón Rodríguez", "anio": "2026", "url": "https://doi.org/10.62319/simonrodriguez.v.6i11.162", "keywords": ["Higher education", "Quality (philosophy)", "Work (physics)", "Access to information"]}, {"titulo": "Radiografía de la Gestión Educativa Privada: Situación actual en la UGEL 07 de Lima Metropolitana", "autores": "Katherine Maricielo Torres Guerrero", "revista": "IGOBERNANZA", "anio": "2026", "url": "https://doi.org/10.47865/igob.vol9.n33.2026.454", "keywords": ["Work (physics)", "Metropolitan area", "Context (archaeology)", "Local Development", "Population"]}, {"titulo": "Brechas de aprendizaje en Paraguay: un análisis aplicado de determinantes y desigualdades con datos del SNEPE 2018", "autores": "Diego Lovera; Gabriela Villalba", "revista": "Población y desarrollo", "anio": "2026", "url": "https://doi.org/10.18004/pdfce/2076-054x/2026.032.62.007", "keywords": ["Context (archaeology)", "Work (physics)", "Skin color"]}, {"titulo": "Influencia de las Habilidades Blandas en la Toma de Decisiones Participativa de los Gestores Educativos", "autores": "Meibol Tatiana Chernes Chiriguayo; Liliam Cathy Chiriguaya Placencio; Mirella Del Carmen Torres Gómez et al.", "revista": "Ciencia Latina Revista Científica Multidisciplinar", "anio": "2026", "url": "https://doi.org/10.37811/cl_rcm.v10i2.23219", "keywords": ["Elderly people", "Order (exchange)", "Exploratory analysis"]}, {"titulo": "El derecho de niños, niñas y adolescentes de pueblos indígenas a la educación en su propia cultura desde la regulación de la gestión escolar en Chile.", "autores": "DIEGO SEPULVEDA ZAPATA; Ricardo Alberto González Jara; Óscar Hernán Hidalgo Muñoz et al.", "revista": "Revista Chilena de Pedagogía", "anio": "2026", "url": "https://doi.org/10.5354/2452-5855.2025.74212", "keywords": ["Identity (music)", "Subject (documents)", "Derecho"]}, {"titulo": "Liderazgo pedagógico y gestión escolar rural: una revisión documental sistemática", "autores": "Jorge Mario Marenco Mercado; Jayson Bernate", "revista": "Pedagogical Constellation", "anio": "2026", "url": "https://doi.org/10.69821/constellations.v5i1.160", "keywords": ["Transformative learning", "Scholarship", "Equity (law)", "Quality (philosophy)", "Thematic analysis"]}, {"titulo": "Sentido de comunidad como eje de la gestión escolar: estudio de caso en una Escuela Cooperativa Nikkei en Lima", "autores": "Ena Ysabel Kitsutani-Barrenechea", "revista": "HOMERO", "anio": "2026", "url": "https://doi.org/10.64492/0pqcn185", "keywords": ["Context (archaeology)", "Field (mathematics)", "Socialization", "Identity (music)"]}, {"titulo": "Impacto de la Inteligencia Artificial en Procesos Educativos en Latinoamérica: Rendimiento Académico, Motivación y Autorregulación del Aprendizaje", "autores": "Juan Moises de la Serna", "revista": "Mendeley Data", "anio": "2026", "url": "https://doi.org/10.17632/vtc55dyc4n", "keywords": ["Latin Americans", "Secondary education", "Basic education", "Educational resources"]}, {"titulo": "Problemáticas Persistentes de la Gestión Escolar en Colombia: Ausencia de Liderazgo Pedagógico", "autores": "Nidia Jaqueline Varela Reyes; Ruth Milena Páez Martínez", "revista": "Ciencia Latina Revista Científica Multidisciplinar", "anio": "2026", "url": "https://doi.org/10.37811/cl_rcm.v10i2.23057", "keywords": ["Work (physics)", "School system", "Qualitative research", "Qualitative analysis", "Primary education"]}, {"titulo": "Gestión Educativa", "autores": "Laura Marcela Salazar Sicacha; Jhon Wilmar Toro Zapata; Natalia Ríos Orozco et al.", "revista": "", "anio": "2026", "url": "https://doi.org/10.31908/eucp.102.c799", "keywords": ["Work (physics)", "Qualitative research", "Context (archaeology)", "Ethnography", "Participant observation"]}, {"titulo": "Desafíos a los que se enfrentan los estudiantes inmigrantes en los procesos educativos y respuestas administrativas de la gestión escolar", "autores": "Yunus Emre Avci; Mehmet Faruk Süzgün", "revista": "Plumilla Educativa", "anio": "2026", "url": "https://doi.org/10.30554/p.e.35.1.5623.2026", "keywords": ["Domain (mathematical analysis)", "Immigration", "Social relationship"]}, {"titulo": "Gestión escolar en el logro de aprendizajes matemáticos: revisión sistemática", "autores": "Lizbeth Marisol Briones Dávila; Deisy Marisela Briones Dávila", "revista": "", "anio": "2026", "url": "https://doi.org/10.1590/scielopreprints.15420", "keywords": ["Work (physics)", "Context (archaeology)", "Initial training", "Social relationship"]}, {"titulo": "Gestión escolar e inclusión de estudiantes migrantes: tensiones y desafíos en la implementación de políticas educativas", "autores": "Rolando Poblete-Melis; Felipe Jiménez-Vargas; René Valdés", "revista": "Educación y Humanismo", "anio": "2026", "url": "https://doi.org/10.17081/eduhum.28.50.8331", "keywords": ["Field (mathematics)", "Context (archaeology)", "Participant observation", "Ethnography", "Work (physics)"]}, {"titulo": "La comunicación asertiva en la gestión educativa institucional", "autores": "Bolívar Ramón Chávez Guerrero; Sandro Atanacio Cornejo Cedeño; Ana Mayira Quiñones Ortiz et al.", "revista": "Arandu-UTIC.", "anio": "2026", "url": "https://doi.org/10.69639/arandu.v13i1.2015", "keywords": ["Research methodology", "Work (physics)", "Social change", "Social relationship", "Ethnography"]}, {"titulo": "Elogio al liderazgo escolar. Un revisión crítica", "autores": "Carolina Yelicich", "revista": "Revista Brasileira de Política e Administração da Educação - Periódico científico editado pela ANPAE", "anio": "2026", "url": "https://doi.org/10.21573/vol42n12026.139503", "keywords": ["Work (physics)", "Context (archaeology)", "Bad habit", "Face (sociological concept)"]}];
+
+// ── 1. Wordcloud con D3 ───────────────────────────────────────────────────────
+(function() {
+  const svg    = d3.select("#wc-svg");
+  const W      = document.getElementById("wc-svg").clientWidth || 600;
+  const H      = 320;
+  svg.attr("viewBox", `0 0 ${W} ${H}`);
+
+  const maxCount = d3.max(WC_DATA, d => d.size);
+  const scale    = d3.scaleLinear().domain([1, maxCount]).range([12, 48]);
+
+  const colors = ["#E63946","#F4A261","#2A9D8F","#457B9D","#E9C46A",
+                  "#8AC926","#F77F00","#6A4C93","#1982C4","#52B788",
+                  "#FF595E","#FFCA3A","#D62828","#F3722C","#90BE6D"];
+
+  const placed = [];
+  const words  = WC_DATA.slice(0, 60);
+
+  words.forEach((d, i) => {
+    const fs   = scale(d.size);
+    const color = colors[i % colors.length];
+    let x, y, tries = 0, ok = false;
+
+    while (tries < 200 && !ok) {
+      x = Math.random() * (W - 120) + 60;
+      y = Math.random() * (H - 40)  + 20;
+      const w = d.text.length * fs * 0.55;
+      const h = fs * 1.2;
+      ok = placed.every(p =>
+        Math.abs(x - p.x) > (w + p.w) / 2 + 4 ||
+        Math.abs(y - p.y) > (h + p.h) / 2 + 4
+      );
+      tries++;
+    }
+
+    if (ok) {
+      const w = d.text.length * fs * 0.55;
+      const h = fs * 1.2;
+      placed.push({ x, y, w, h });
+      svg.append("text")
+        .attr("x", x).attr("y", y)
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("fill", color)
+        .attr("font-size", fs)
+        .attr("font-family", "Segoe UI, sans-serif")
+        .attr("font-weight", d.size > maxCount * 0.5 ? "700" : "400")
+        .attr("opacity", 0.85)
+        .text(d.text)
+        .append("title").text(`${d.text} (${d.size})`);
+    }
+  });
+})();
+
+// ── 2. Tópicos STM ────────────────────────────────────────────────────────────
+(function() {
+  const container = document.getElementById("topicos-container");
+  const maxPrev   = Math.max(...TOPICOS_DATA.map(t => t.prevalencia));
+
+  TOPICOS_DATA.forEach(t => {
+    const div = document.createElement("div");
+    div.className = "topic-bar";
+    div.innerHTML = `
+      <div class="topic-label">
+        <span class="topic-name" style="color:${t.color}">T${t.id}</span>
+        <span class="topic-pct">${t.prevalencia.toFixed(1)}%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${(t.prevalencia/maxPrev*100).toFixed(1)}%;background:${t.color}"></div>
+      </div>
+      <div class="topic-words">${t.frex.join(" · ")}</div>
+    `;
+    container.appendChild(div);
+  });
+})();
+
+// ── 3. Mapa Leaflet ───────────────────────────────────────────────────────────
+(function() {
+  const map = L.map("map", {
+    center: [10, 10], zoom: 1.5,
+    zoomControl: true, scrollWheelZoom: false
+  });
+
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution: "© CartoDB",
+    subdomains: "abcd", maxZoom: 10
+  }).addTo(map);
+
+  const maxQ = Math.max(...MAPA_DATA.map(d => d.cantidad));
+
+  MAPA_DATA.forEach(d => {
+    const color = d3.interpolateViridis(d.cantidad / maxQ);
+    L.circleMarker([d.lat, d.lon], {
+      radius:      Math.max(5, Math.sqrt(d.cantidad) * 3),
+      fillColor:   color,
+      color:       "#fff",
+      weight:      0.5,
+      opacity:     0.9,
+      fillOpacity: 0.75
+    })
+    .addTo(map)
+    .bindPopup(`<strong>${d.pais}</strong><br>${d.cantidad} publicaciones`);
+  });
+})();
+
+// ── 4. Artículos recientes ────────────────────────────────────────────────────
+(function() {
+  const container = document.getElementById("articulos-container");
+
+  ARTS_DATA.forEach(a => {
+    const div  = document.createElement("div");
+    div.className = "art-item";
+    const kwHTML = a.keywords.map(k =>
+      `<span class="kw-tag">${k}</span>`
+    ).join("");
+    div.innerHTML = `
+      <a class="art-title" href="${a.url}" target="_blank" rel="noopener">${a.titulo}</a>
+      <div class="art-meta">${a.autores || "—"} · ${a.revista || "—"} · ${a.anio || "—"}</div>
+      ${kwHTML ? `<div class="art-kws">${kwHTML}</div>` : ""}
+    `;
+    container.appendChild(div);
+  });
+})();
+</script>
+</body>
+</html>
