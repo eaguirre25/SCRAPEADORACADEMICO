@@ -3,182 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STM – Dirección Escolar</title>
+<title>STM Inductivo – Dirección Escolar</title>
 <style>
-  body { font-family: Georgia, serif; max-width: 1100px; margin: 40px auto; padding: 0 20px; color: #222; background: #fafafa; }
-  h1 { color: #1a3a5c; border-bottom: 3px solid #1a3a5c; padding-bottom: 10px; }
-  h2 { color: #2c5f8a; margin-top: 40px; }
-  .meta { color: #666; font-size: 0.9em; margin-bottom: 30px; }
-  .kpi { display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
-  .kpi-box { background: #1a3a5c; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; min-width: 150px; }
-  .kpi-num { font-size: 2em; font-weight: bold; }
-  .kpi-label { font-size: 0.85em; opacity: 0.85; }
-  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em; }
-  th { background: #1a3a5c; color: white; padding: 10px 12px; text-align: left; }
-  td { padding: 9px 12px; border-bottom: 1px solid #ddd; vertical-align: top; }
-  tr:hover { background: #f0f5fa; }
-  .plot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-  .plot-box { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; }
-  .plot-box img { width: 100%; border-radius: 4px; }
-  .plot-box h3 { margin: 10px 0 5px; font-size: 1em; color: #1a3a5c; }
-  .note { background: #e8f0f8; border-left: 4px solid #2c5f8a; padding: 12px 16px; margin: 20px 0; border-radius: 0 6px 6px 0; font-size: 0.9em; }
-  footer { margin-top: 60px; color: #999; font-size: 0.8em; border-top: 1px solid #ddd; padding-top: 15px; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,sans-serif;background:#0D1117;color:#C9D1D9;max-width:1200px;margin:0 auto;padding:32px 24px}
+  h1{font-size:1.8em;color:#E6EDF3;border-bottom:2px solid #21262D;padding-bottom:12px;margin-bottom:8px}
+  h1 small{font-size:.55em;color:#8B949E;display:block;margin-top:4px}
+  h2{color:#58A6FF;margin:40px 0 16px;font-size:1.1em;text-transform:uppercase;letter-spacing:.05em}
+  .meta{color:#484F58;font-size:.85em;margin-bottom:28px}
+  .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+  .kpi-box{background:#161B22;border:1px solid #21262D;padding:16px 24px;border-radius:10px;text-align:center;min-width:140px;flex:1}
+  .kpi-num{font-size:2.2em;font-weight:700;color:#58A6FF}
+  .kpi-lbl{font-size:.78em;color:#8B949E;margin-top:4px}
+  .note{background:#161B22;border-left:3px solid #58A6FF;padding:14px 18px;margin:20px 0;border-radius:0 8px 8px 0;font-size:.88em;line-height:1.6;color:#8B949E}
+  .note strong{color:#C9D1D9}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.85em}
+  th{background:#161B22;color:#8B949E;padding:10px 14px;text-align:left;font-weight:500;text-transform:uppercase;font-size:.78em;letter-spacing:.05em;border-bottom:1px solid #21262D}
+  td{padding:10px 14px;border-bottom:1px solid #161B22;vertical-align:top}
+  td.prev{text-align:center;font-weight:700;color:#58A6FF;font-size:1.05em}
+  td.words{color:#8B949E;font-size:.82em;line-height:1.5}
+  tr:hover td{background:#161B22}
+  .tag{display:inline-block;padding:3px 10px;border-radius:20px;color:#fff;font-weight:700;font-size:.85em}
+  .plots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+  .plot-box{background:#161B22;border:1px solid #21262D;border-radius:10px;padding:16px;overflow:hidden}
+  .plot-box img{width:100%;border-radius:6px}
+  .plot-box h3{color:#C9D1D9;font-size:.9em;margin:10px 0 4px;font-weight:500}
+  .plot-box p{color:#484F58;font-size:.8em}
+  footer{margin-top:60px;color:#484F58;font-size:.78em;border-top:1px solid #21262D;padding-top:16px;text-align:center}
+  @media(max-width:700px){.plots{grid-template-columns:1fr}.kpi-box{min-width:100px}}
 </style>
 </head>
 <body>
-
-<h1>Análisis de Tópicos (STM)<br><small>Literatura sobre Dirección y Gestión Escolar</small></h1>
-<p class="meta">Generado automáticamente · %d/%m/%Y · Período: 2020–2026</p>
+<h1>Análisis de Tópicos (STM) Inductivo
+<small>Literatura sobre Dirección y Gestión Escolar · 2020–2026</small></h1>
+<p class="meta">Generado: %d/%m/%Y</p>
 
 <div class="kpi">
-  <div class="kpi-box"><div class="kpi-num">735</div><div class="kpi-label">Artículos analizados</div></div>
-  <div class="kpi-box"><div class="kpi-num">15</div><div class="kpi-label">Tópicos identificados</div></div>
-  <div class="kpi-box"><div class="kpi-num">24401</div><div class="kpi-label">Términos en vocabulario</div></div>
-  <div class="kpi-box"><div class="kpi-num">2020–2026</div><div class="kpi-label">Período cubierto</div></div>
+  <div class="kpi-box"><div class="kpi-num">735</div><div class="kpi-lbl">Artículos analizados</div></div>
+  <div class="kpi-box"><div class="kpi-num">20</div><div class="kpi-lbl">Tópicos emergentes</div></div>
+  <div class="kpi-box"><div class="kpi-num">32856</div><div class="kpi-lbl">Términos en vocabulario</div></div>
+  <div class="kpi-box"><div class="kpi-num">2020–2026</div><div class="kpi-lbl">Período</div></div>
 </div>
 
 <div class="note">
-  <strong>Metodología:</strong> Structural Topic Model (STM) con selección automática de K mediante búsqueda en grilla (K=15).
-  Covariable de prevalencia: año de publicación. Preprocesamiento: eliminación de stopwords en español e inglés,
-  términos con frecuencia &lt;5 documentos y &gt;90% de documentos. Palabras representativas calculadas por métrica FREX
-  (frecuencia ponderada por exclusividad).
+<strong>Diseño inductivo:</strong> Los tópicos emergen libremente del análisis del corpus.
+El preprocesamiento elimina únicamente palabras funcionales y términos del dominio omnipresentes
+que no discriminan entre documentos. Sin umbral superior de vocabulario.
+K=20 seleccionado automáticamente optimizando coherencia semántica y exclusividad (K ∈ {10,15,20,25,30}).
 </div>
 
-<h2>Tópicos identificados</h2>
+<h2>Tópicos emergentes del corpus</h2>
 <table>
-  <tr>
-    <th>Tópico</th>
-    <th>Prevalencia</th>
-    <th>Palabras FREX (frecuencia × exclusividad)</th>
-    <th>Palabras más frecuentes</th>
-  </tr>
+  <tr><th>Tópico</th><th>Prevalencia</th><th>FREX top 10</th><th>Más frecuentes</th></tr>
   
     <tr>
-      <td><strong>Tópico 14</strong></td>
-      <td>19.7%</td>
-      <td>pei, convivencia, directoras, persona, dirección, directora, quehacer</td>
-      <td>gestión, educación, educativa, escolar, liderazgo, educativo, escuela</td>
+      <td><span class='tag' style='background:#1982C4'>T10</span></td>
+      <td class='prev'>16.5%</td>
+      <td class='words'>privatización, ciudadana, descentralización, planeación, freire, filosofía, ciudadanos, pei, vinculación, humanista</td>
+      <td class='words'>desarrollo, calidad, proceso, formación, procesos, debe, social, evaluación, comunidad, sociales</td>
     </tr>
     <tr>
-      <td><strong>Tópico 10</strong></td>
-      <td>9.8%</td>
-      <td>universities, ict, technologies, sustainability, colleges, pedagogies, platforms</td>
-      <td>education, learning, leadership, students, development, digital, teaching</td>
+      <td><span class='tag' style='background:#6A4C93'>T9</span></td>
+      <td class='prev'>10.1%</td>
+      <td class='words'>igobernanza, httpsdoiorgigobvoln, minedu, koinonia, coro, ugel, depósito, venezuela, piedra, bilateral</td>
+      <td class='words'>calidad, desempeño, instituciones, nivel, relación, investigación, institución, organizacional, resultados, perú</td>
     </tr>
     <tr>
-      <td><strong>Tópico 13</strong></td>
-      <td>9.6%</td>
-      <td>nursing, transformational, hallinger, racism, stress, transactional, collective</td>
-      <td>leadership, school, leaders, learning, students, principals, education</td>
+      <td><span class='tag' style='background:#52B788'>T16</span></td>
+      <td class='prev'>8.8%</td>
+      <td class='words'>latam, arbitrado, httpwwwindtecacomojsindexphprevistascientificoai, indtec, isni, oai-pmh, httpsdoiorgscientificissn-e-, montúfar, asunción, metodologías</td>
+      <td class='words'>desarrollo, investigación, estrategias, resultados, mejora, innovación, institucional, formación, ecuador, calidad</td>
     </tr>
     <tr>
-      <td><strong>Tópico 3</strong></td>
-      <td>9.5%</td>
-      <td>inteligencia, latam, tic, paraguay, desafíos, asunción, innovación</td>
-      <td>aprendizaje, estudiantes, educación, gestión, educativa, desarrollo, innovación</td>
+      <td><span class='tag' style='background:#8AC926'>T11</span></td>
+      <td class='prev'>6.7%</td>
+      <td class='words'>smts, learners, ensuring, smt, initiatives, fostering, south, accounting, learner, overcrowded</td>
+      <td class='words'>development, practices, effective, leaders, challenges, performance, professional, role, strategies, support</td>
     </tr>
     <tr>
-      <td><strong>Tópico 12</strong></td>
-      <td>9.4%</td>
-      <td>igobernanza, correlación, httpsdoiorgigobvoln, coeficiente, hipótesis, bilateral, ugel</td>
-      <td>gestión, educativa, liderazgo, docentes, nivel, desempeño, calidad</td>
+      <td><span class='tag' style='background:#F4A261'>T2</span></td>
+      <td class='prev'>6.3%</td>
+      <td class='words'>directoras, indígena, chileno, chile, mep, discapacidad, establecimiento, organigrama, indígenas, riie</td>
+      <td class='words'>chile, prácticas, inclusión, investigación, centro, directivos, escolares, políticas, directivo, análisis</td>
     </tr>
     <tr>
-      <td><strong>Tópico 6</strong></td>
-      <td>8.3%</td>
-      <td>smts, smc, south, parent, parental, involvement, pupils</td>
-      <td>school, schools, teachers, education, teacher, learning, information</td>
+      <td><span class='tag' style='background:#E9C46A'>T6</span></td>
+      <td class='prev'>6.1%</td>
+      <td class='words'>boarding, quran, islamic, gontor, character, factory, religious, graduates, child-friendly, facilities</td>
+      <td class='words'>islamic, boarding, quality, implementation, process, activities, indonesia, development, jurnal, character</td>
     </tr>
     <tr>
-      <td><strong>Tópico 7</strong></td>
-      <td>6.7%</td>
-      <td>boarding, islamic, quran, character, namely, religious, muhammadiyah</td>
-      <td>school, education, islamic, boarding, learning, schools, students</td>
+      <td><span class='tag' style='background:#457B9D'>T4</span></td>
+      <td class='prev'>5.3%</td>
+      <td class='words'>cybersecurity, technologies, technology, ict, computer, analytics, english, computers, applications, platforms</td>
+      <td class='words'>digital, technology, information, system, development, process, systems, social, online, intelligence</td>
     </tr>
     <tr>
-      <td><strong>Tópico 15</strong></td>
-      <td>6.5%</td>
-      <td>koinonia, licencia, coro, arbitrado, depósito, venezuela, httpwwwindtecacomojsindexphprevistascientificoai</td>
-      <td>educativa, revista, docentes, investigación, gestión, docente, educación</td>
+      <td><span class='tag' style='background:#264653'>T7</span></td>
+      <td class='prev'>4.7%</td>
+      <td class='words'>auditoría, interdisciplinarias, rolando, julia, multidisciplinarios, contabilidad, scielo, abarca, inteligencia, fiscales</td>
+      <td class='words'>datos, desarrollo, artificial, inteligencia, salud, análisis, ciencias, desafíos, uso, información</td>
     </tr>
     <tr>
-      <td><strong>Tópico 9</strong></td>
-      <td>5.8%</td>
-      <td>privatización, alimentación, auditoría, argentina, aires, honduras, tributaria</td>
-      <td>educación, nacional, sistema, políticas, escuela, pública, trabajo</td>
+      <td><span class='tag' style='background:#F77F00'>T8</span></td>
+      <td class='prev'>4.7%</td>
+      <td class='words'>multigrado, rurales, vergara, hijos, hogares, inmigrantes, niños, cierre, amigó, padres</td>
+      <td class='words'>padres, familia, investigación, niños, pandemia, participación, nivel, social, años, rurales</td>
     </tr>
     <tr>
-      <td><strong>Tópico 11</strong></td>
-      <td>5.5%</td>
-      <td>rolando, interdisciplinarias, julia, scielo, rurales, abarca, migrantes</td>
-      <td>educación, gestión, estudiantes, educativa, estudios, revista, estudio</td>
+      <td><span class='tag' style='background:#90BE6D'>T20</span></td>
+      <td class='prev'>4.5%</td>
+      <td class='words'>abusive, identity, finnish, collective, pedagogies, love, dilemmas, signature, finland, risku</td>
+      <td class='words'>professional, leaders, social, development, process, work, knowledge, identity, collective, ethical</td>
     </tr>
     <tr>
-      <td><strong>Tópico 5</strong></td>
-      <td>3.5%</td>
-      <td>okul, women, bir, silence, eğitim, women’s, öğretmenlerin</td>
-      <td>school, women, teachers, education, gender, leadership, administrators</td>
+      <td><span class='tag' style='background:#1982C4'>T15</span></td>
+      <td class='prev'>4.2%</td>
+      <td class='words'>ítems, ítem, creencias, puntuaciones, pruebas, prueba, httpsdoiorgeducatio, tic, puntajes, psicométricas</td>
+      <td class='words'>resultados, tabla, nivel, análisis, tic, dimensiones, investigación, ítems, datos, prueba</td>
     </tr>
     <tr>
-      <td><strong>Tópico 8</strong></td>
-      <td>2.8%</td>
-      <td>diretores, araraquara, eleição, avaliações, freire, justiça, paulo</td>
-      <td>educação, gestão, dos, uma, escolar, das, escola</td>
+      <td><span class='tag' style='background:#6A4C93'>T14</span></td>
+      <td class='prev'>4.1%</td>
+      <td class='words'>nursing, transformational, transactional, styles, cfa, self-efficacy, mediating, cognitive, style, latent</td>
+      <td class='words'>transformational, performance, leaders, skills, motivation, styles, factor, relationship, social, style</td>
     </tr>
     <tr>
-      <td><strong>Tópico 4</strong></td>
-      <td>1.2%</td>
-      <td>tua, siswa, bullying, orang, sekolah, didik, peserta</td>
-      <td>dan, yang, sekolah, dalam, dengan, pendidikan, siswa</td>
+      <td><span class='tag' style='background:#FFCA3A'>T13</span></td>
+      <td class='prev'>4.0%</td>
+      <td class='words'>smc, silence, parent, parental, smcs, disabled, involvement, pupils, satisfaction, parents</td>
+      <td class='words'>quality, work, parents, organizational, participation, level, involvement, effectiveness, significant, variables</td>
     </tr>
     <tr>
-      <td><strong>Tópico 2</strong></td>
-      <td>0.8%</td>
-      <td>kinerja, organisasi, disiplin, pengaruh, kerja, gaya, motivasi</td>
-      <td>dan, yang, guru, kinerja, dengan, dalam, kerja</td>
+      <td><span class='tag' style='background:#FF595E'>T12</span></td>
+      <td class='prev'>3.4%</td>
+      <td class='words'>processo, aos, acesso, anos, esse, além, direitos, mesmo, assim, pois</td>
+      <td class='words'>escolas, trabalho, políticas, processo, brasil, social, educacional, pública, pesquisa, disponível</td>
     </tr>
     <tr>
-      <td><strong>Tópico 1</strong></td>
-      <td>0.8%</td>
-      <td>setor, terceiro, neoliberalismo, organizações, crise, serviços, valorização</td>
-      <td>educação, dos, uma, das, não, escolas, trabalho</td>
+      <td><span class='tag' style='background:#A8DADC'>T5</span></td>
+      <td class='prev'>3.3%</td>
+      <td class='words'>women, women’s, cpd, womens, positions, feminist, presidents, men, gender, african</td>
+      <td class='words'>women, gender, university, leaders, female, participation, positions, higher, african, social</td>
+    </tr>
+    <tr>
+      <td><span class='tag' style='background:#D62828'>T17</span></td>
+      <td class='prev'>2.2%</td>
+      <td class='words'>flourishing, coping, depression, racism, stress, plos, anxiety, wales, anger, medical</td>
+      <td class='words'>covid-, pandemic, health, stress, leaders, crisis, medical, work, strategies, online</td>
+    </tr>
+    <tr>
+      <td><span class='tag' style='background:#E63946'>T1</span></td>
+      <td class='prev'>1.7%</td>
+      <td class='words'>atribución-compartirigual, httpscreativecommonsorglicensesby-sadeedes, httpswwwproduccioncientificaluzorgindexphprvg, öğretmenlerin, okul, için, rvgluz, atribución, bir, obra</td>
+      <td class='words'>licencia, commons, creative, obra, internacional, está, okul, universidad, ética, atribución</td>
+    </tr>
+    <tr>
+      <td><span class='tag' style='background:#F3722C'>T19</span></td>
+      <td class='prev'>1.5%</td>
+      <td class='words'>bibliometric, disaster, density, water, environmental, sustainability, tutoring, forest, energy, spain</td>
+      <td class='words'>sustainability, environmental, articles, sustainable, authors, university, scientific, bibliometric, httpsdoiorg, energy</td>
+    </tr>
+    <tr>
+      <td><span class='tag' style='background:#2A9D8F'>T3</span></td>
+      <td class='prev'>1.2%</td>
+      <td class='words'>tua, palopo, bullying, kolaborasi, konseling, orang, didik, bimbingan, peserta, wawancara</td>
+      <td class='words'>orang, tua, bullying, manajemen, pembelajaran, baik, belajar, penelitian, adalah, lingkungan</td>
+    </tr>
+    <tr>
+      <td><span class='tag' style='background:#023E8A'>T18</span></td>
+      <td class='prev'>0.7%</td>
+      <td class='words'>variabel, uji, sebesar, gaya, pengaruh, organisasi, disiplin, integritas, pegawai, koefisien</td>
+      <td class='words'>kerja, terhadap, jurnal, manajemen, organisasi, kepemimpinan, disiplin, adalah, pengaruh, penelitian</td>
     </tr>
 </table>
 
 <h2>Visualizaciones</h2>
-<div class="plot-grid">
+<div class="plots">
   <div class="plot-box">
-    <img src="plots/01_seleccion_K.png" alt="Selección de K">
-    <h3>Diagnósticos para selección de K</h3>
+    <img src="plots/01_seleccion_K.png" alt="Selección K">
+    <h3>Selección de K</h3>
+    <p>Diagnósticos de coherencia, exclusividad y held-out likelihood</p>
   </div>
   <div class="plot-box">
-    <img src="plots/02_prevalencia_topicos.png" alt="Prevalencia de tópicos">
-    <h3>Prevalencia de tópicos en el corpus</h3>
+    <img src="plots/02_prevalencia_topicos.png" alt="Prevalencia">
+    <h3>Prevalencia de tópicos</h3>
+    <p>Proporción esperada de cada tópico en el corpus</p>
   </div>
   <div class="plot-box">
-    <img src="plots/03_palabras_frex.png" alt="Palabras FREX">
-    <h3>Palabras más representativas por tópico</h3>
+    <img src="plots/03_palabras_frex.png" alt="FREX">
+    <h3>Palabras representativas</h3>
+    <p>Términos con mayor frecuencia y exclusividad por tópico</p>
   </div>
   <div class="plot-box">
-    <img src="plots/04_evolucion_temporal.png" alt="Evolución temporal">
-    <h3>Evolución temporal de tópicos principales</h3>
+    <img src="plots/04_evolucion_temporal.png" alt="Evolución">
+    <h3>Evolución temporal</h3>
+    <p>Cómo varía la prevalencia de cada tópico entre 2020 y 2026</p>
   </div>
 </div>
 
-<h2>Notas metodológicas</h2>
-<p>El modelo STM permite identificar temas latentes en un corpus de textos y estimar cómo varía
-su prevalencia según covariables (en este caso, el año de publicación). A diferencia del LDA clásico,
-el STM incorpora información de metadatos directamente en el proceso de estimación.</p>
-<p>Las palabras <strong>FREX</strong> combinan frecuencia y exclusividad: privilegian términos que son
-frecuentes <em>en</em> el tópico pero poco frecuentes en los demás, lo que las hace más informativas
-para la interpretación sustantiva.</p>
-<p>La selección de K=<strong>15</strong> se realizó comparando coherencia semántica y exclusividad
-en una grilla de K ∈ {5, 10, 15, 20, 25}.</p>
-
 <footer>
-  Generado por GitHub Actions · extract_corpus.R + stm_analysis.R ·
-  Corpus: PDFs en acceso abierto indexados en OpenAlex (2020–2026)
+Generado por GitHub Actions · stm_analysis.R ·
+Corpus: 735 artículos en acceso abierto indexados en OpenAlex (2020–2026)
 </footer>
-
 </body>
 </html>
