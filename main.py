@@ -55,11 +55,6 @@ SEARCH_TERMS: List[str] = [
 
 OAI_SOURCES = [
     {
-        "name":     "CONICET Digital",
-        "url":      "https://ri.conicet.gov.ar/oai/request",
-        "max_pages": 60,
-    },
-    {
         "name":     "SEDICI-UNLP",
         "url":      "https://sedici.unlp.edu.ar/oai/request",
         "max_pages": 60,
@@ -69,6 +64,25 @@ OAI_SOURCES = [
         "url":      "https://repositorio.unsam.edu.ar/oai/request",
         "max_pages": 30,
     },
+]
+
+# Términos ampliados para OAI-PMH
+OAI_SEARCH_TERMS: List[str] = [
+    "gestión escolar", "dirección escolar", "gestión educativa",
+    "school management", "educational leadership",
+    "school principal", "principalship", "headteacher",
+    "conducción escolar", "administración escolar",
+    "director escolar", "liderazgo educativo",
+    "liderazgo escolar", "director de escuela",
+]
+
+# CONICET Digital: usa su API REST de DSpace en lugar de OAI-PMH
+CONICET_REST_URL = "https://ri.conicet.gov.ar/rest"
+CONICET_SEARCH_TERMS: List[str] = [
+    "gestion escolar", "direccion escolar", "gestion educativa",
+    "school management", "educational leadership",
+    "school principal", "director escolar", "liderazgo educativo",
+    "liderazgo escolar", "conduccion escolar",
 ]
 
 START_DATE         = "2020-01-01"
@@ -551,6 +565,126 @@ def query_oai_pmh(
     print(f"  {source_name}: {len(records)} registros con términos de búsqueda")
     return records
 
+
+
+
+def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
+    """
+    Consulta CONICET Digital via su API REST de DSpace.
+    Busca por cada término directamente en el motor de búsqueda.
+    Mucho más preciso que OAI-PMH con filtro local.
+    """
+    all_records: List[Dict[str, Any]] = []
+    seen_handles: Set[str] = set()
+
+    print("  Consultando CONICET Digital (REST API)...")
+
+    for term in CONICET_SEARCH_TERMS:
+        offset = 0
+        limit  = 100
+        term_count = 0
+
+        while True:
+            try:
+                resp = requests.get(
+                    f"{CONICET_REST_URL}/items",
+                    params={
+                        "query":  term,
+                        "limit":  limit,
+                        "offset": offset,
+                        "expand": "metadata",
+                    },
+                    headers={"Accept": "application/json",
+                             "User-Agent": "academic-scraper/3.0"},
+                    timeout=30,
+                )
+                resp.raise_for_status()
+                items = resp.json()
+            except Exception as e:
+                print(f"    Error CONICET REST para '{term}': {e}")
+                break
+
+            if not items:
+                break
+
+            for item in items:
+                handle = str(item.get("handle", "") or "").strip()
+                if not handle or handle in seen_handles:
+                    continue
+
+                # Extraer metadata DC
+                meta: Dict[str, List[str]] = {}
+                for m in item.get("metadata", []) or []:
+                    key = m.get("key", "")
+                    val = (m.get("value") or "").strip()
+                    if key and val:
+                        meta.setdefault(key, []).append(val)
+
+                title = (meta.get("dc.title", [""]) or [""])[0].strip()
+                if not title:
+                    continue
+
+                # Filtrar por año
+                dates_raw = meta.get("dc.date.issued", []) or meta.get("dc.date", []) or []
+                year = ""
+                for d in dates_raw:
+                    m_yr = re.search(r"(20\d{2})", str(d))
+                    if m_yr:
+                        year = m_yr.group(1)
+                        break
+                if year and int(year) < from_year:
+                    continue
+
+                # DOI y URL
+                doi = ""
+                identifiers = meta.get("dc.identifier.uri", []) + meta.get("dc.identifier", [])
+                url = f"https://ri.conicet.gov.ar/handle/{handle}"
+                for ident in identifiers:
+                    ident_lower = str(ident).lower()
+                    if "doi.org" in ident_lower or re.match(r"^10\.\d{{4,}}/", str(ident)):
+                        doi = normalize_doi(str(ident))
+                    elif str(ident).startswith("http") and "ri.conicet" in str(ident).lower():
+                        url = str(ident)
+
+                record_id = doi or f"conicet:{handle}"
+                seen_handles.add(handle)
+
+                authors_list = meta.get("dc.contributor.author", []) or meta.get("dc.creator", []) or []
+                subjects_list = (meta.get("dc.subject", []) or [])[:10]
+                abstract_list = meta.get("dc.description.abstract", []) or meta.get("dc.description", []) or []
+                types_list    = meta.get("dc.type", []) or []
+                source_list   = meta.get("dc.relation.journal", []) or meta.get("dc.publisher", []) or []
+
+                all_records.append({
+                    "record_id":        record_id,
+                    "first_seen_date":  date.today().isoformat(),
+                    "search_term":      term,
+                    "source":           "CONICET Digital",
+                    "origin":           source_list[0] if source_list else "CONICET Digital",
+                    "document_type":    types_list[0] if types_list else "",
+                    "authors":          "; ".join(str(a) for a in authors_list),
+                    "title":            title,
+                    "abstract":         abstract_list[0] if abstract_list else "",
+                    "keywords":         "; ".join(str(s) for s in subjects_list),
+                    "publication_year": year,
+                    "publication_date": dates_raw[0] if dates_raw else "",
+                    "doi":              doi,
+                    "url":              url,
+                    "openalex_id":      "",
+                    "is_oa":            True,
+                    "pdf_url":          "",
+                })
+                term_count += 1
+
+            if len(items) < limit:
+                break
+            offset += limit
+            time.sleep(1)
+
+        print(f"    CONICET '{term}': {term_count} registros")
+
+    print(f"  CONICET Digital total: {len(all_records)} registros")
+    return all_records
 
 def fetch_oa_info_by_doi(doi: str) -> Tuple[bool, str]:
     if not doi:
