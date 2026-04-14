@@ -624,6 +624,19 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                 if not title:
                     continue
 
+                # Filtrar por tipo de documento (incluir artículos, tesis y capítulos)
+                ACCEPTED_TYPES = {
+                    "article", "journal article", "artículo", "articulo",
+                    "thesis", "doctoral thesis", "tesis doctoral", "tesis",
+                    "book chapter", "capítulo de libro", "book section",
+                    "conference paper", "conference object", "ponencia",
+                }
+                types_list_check = meta.get("dc.type", []) or []
+                if types_list_check:
+                    type_lower = " ".join(str(t).lower() for t in types_list_check)
+                    if not any(t in type_lower for t in ACCEPTED_TYPES):
+                        continue
+
                 # Filtrar por año
                 dates_raw = meta.get("dc.date.issued", []) or meta.get("dc.date", []) or []
                 year = ""
