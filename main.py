@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 """
 Scraper acumulativo sobre dirección escolar / gestión escolar.
-
 Fuentes:
 - OpenAlex (API REST)
 - CONICET Digital (OAI-PMH)
 - SEDICI - UNLP (OAI-PMH)
 - RIAA - UNSAM (OAI-PMH)
-
 Deduplicación por capas:
 1. DOI exacto
 2. Similitud de título > 92% + mismo año
 3. Similitud de título > 80% + primer autor similar + mismo año
 """
-
 from __future__ import annotations
-
 import csv
 import json
 import os
@@ -31,20 +27,16 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
-
 import requests
 import openpyxl
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
-
 try:
     from drive_uploader import DriveUploader
     DRIVE_AVAILABLE = True
 except ImportError:
     DRIVE_AVAILABLE = False
-
 # ── Configuración ─────────────────────────────────────────────────────────────
-
 SEARCH_TERMS: List[str] = [
     "gestión escolar",
     "dirección escolar",
@@ -52,7 +44,6 @@ SEARCH_TERMS: List[str] = [
     "school management",
     "educational leadership",
 ]
-
 OAI_SOURCES = [
     {
         "name":     "SEDICI-UNLP",
@@ -65,7 +56,6 @@ OAI_SOURCES = [
         "max_pages": 30,
     },
 ]
-
 # Términos ampliados para OAI-PMH
 OAI_SEARCH_TERMS: List[str] = [
     "gestión escolar", "dirección escolar", "gestión educativa",
@@ -75,7 +65,6 @@ OAI_SEARCH_TERMS: List[str] = [
     "director escolar", "liderazgo educativo",
     "liderazgo escolar", "director de escuela",
 ]
-
 # CONICET Digital: usa su API REST de DSpace en lugar de OAI-PMH
 CONICET_REST_URL = "https://ri.conicet.gov.ar/rest"
 CONICET_SEARCH_TERMS: List[str] = [
@@ -84,44 +73,34 @@ CONICET_SEARCH_TERMS: List[str] = [
     "school principal", "director escolar", "liderazgo educativo",
     "liderazgo escolar", "conduccion escolar",
 ]
-
 START_DATE         = "2020-01-01"
 MAX_PAGES_PER_TERM: Optional[int] = 3
-
 # Umbrales de deduplicación fuzzy
 FUZZY_TITLE_HIGH   = 0.92   # título solo → duplicado
 FUZZY_TITLE_LOW    = 0.80   # título + autor → duplicado
 FUZZY_AUTHOR_MIN   = 0.85
-
 EMAIL_ITEM_LIMIT   = 50
-
 BASE_DIR   = Path(__file__).resolve().parent
 DATA_DIR   = BASE_DIR / "data"
 MASTER_CSV = DATA_DIR / "master_records.csv"
 SEEN_IDS_JSON = DATA_DIR / "seen_ids.json"
 EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
 PDFS_DIR   = DATA_DIR / "pdfs"
-
 CSV_FIELDS = [
     "record_id", "first_seen_date", "search_term", "source",
     "origin", "document_type", "authors", "title", "abstract",
     "keywords", "publication_year", "publication_date",
     "doi", "url", "openalex_id", "is_oa", "pdf_url",
 ]
-
 # Namespaces OAI-PMH
 OAI_NS = {
     "oai":    "http://www.openarchives.org/OAI/2.0/",
     "dc":     "http://purl.org/dc/elements/1.1/",
     "oai_dc": "http://www.openarchives.org/OAI/2.0/oai_dc/",
 }
-
 # ── Helpers ───────────────────────────────────────────────────────────────────
-
 def as_dict(value: Any) -> Dict[str, Any]:
     return value if isinstance(value, dict) else {}
-
-
 def normalize_text(text: Optional[str]) -> str:
     if not text:
         return ""
@@ -130,8 +109,6 @@ def normalize_text(text: Optional[str]) -> str:
     # quitar puntuación para comparación
     text = re.sub(r"[^\w\s]", "", text)
     return text
-
-
 def normalize_doi(doi_value: Optional[str]) -> str:
     if not doi_value:
         return ""
@@ -139,26 +116,82 @@ def normalize_doi(doi_value: Optional[str]) -> str:
     if "doi.org/" in doi_value:
         doi_value = doi_value.split("doi.org/")[-1]
     return doi_value.lower().strip()
-
-
 def build_signature(title: Optional[str], year: Any) -> str:
     return f"{normalize_text(title)}::{str(year or '').strip()}"
-
-
 def get_first_author(authors_str: str) -> str:
     if not authors_str:
         return ""
     return normalize_text(authors_str.split(";")[0].strip())
-
-
 def build_headers() -> Dict[str, str]:
     gmail_user = os.getenv("GMAIL_USER", "").strip()
     email = gmail_user or "academic-scraper@example.com"
     return {"User-Agent": f"academic-scraper/3.0 (mailto:{email})"}
-
-
+def infer_source(row: Dict[str, Any]) -> str:
+    source = str(row.get("source", "") or "").strip()
+    if source:
+        return source
+    url = str(row.get("url", "") or "").lower()
+    origin = str(row.get("origin", "") or "").lower()
+    openalex_id = str(row.get("openalex_id", "") or "").strip()
+    if "ri.conicet" in url or "conicet" in origin:
+        return "CONICET Digital"
+    if "repositorio.unsam" in url or "unsam" in origin:
+        return "RIAA-UNSAM"
+    if "sedici.unlp.edu.ar" in url or "sedici" in origin:
+        return "SEDICI-UNLP"
+    if openalex_id or "api.openalex.org" in url or "doi.org" in url or "dx.doi.org" in url:
+        return "OpenAlex"
+    return "Repositorio / Otro"
+def infer_origin(row: Dict[str, Any]) -> str:
+    origin = str(row.get("origin", "") or "").strip()
+    if origin:
+        return origin
+    return infer_source(row)
+def normalize_bool(value: Any) -> str:
+    if isinstance(value, bool):
+        return "True" if value else "False"
+    text = str(value or "").strip().lower()
+    return "True" if text in {"1", "true", "yes", "sí", "si"} else "False"
+def migrate_master_csv_schema() -> None:
+    if not MASTER_CSV.exists():
+        return
+    try:
+        with MASTER_CSV.open("r", encoding="utf-8-sig", newline="") as f:
+            reader = csv.DictReader(f)
+            old_fields = list(reader.fieldnames or [])
+            rows = list(reader)
+    except Exception as exc:
+        print(f"No se pudo leer CSV maestro para migración: {exc}")
+        return
+    if old_fields == CSV_FIELDS:
+        return
+    migrated_rows: List[Dict[str, Any]] = []
+    for row in rows:
+        migrated_rows.append({
+            "record_id":        str(row.get("record_id", "") or "").strip(),
+            "first_seen_date":  str(row.get("first_seen_date", "") or "").strip(),
+            "search_term":      str(row.get("search_term", "") or "").strip(),
+            "source":           infer_source(row),
+            "origin":           infer_origin(row),
+            "document_type":    str(row.get("document_type", "") or "").strip(),
+            "authors":          str(row.get("authors", "") or "").strip(),
+            "title":            str(row.get("title", "") or "").strip(),
+            "abstract":         str(row.get("abstract", "") or "").strip(),
+            "keywords":         str(row.get("keywords", "") or "").strip(),
+            "publication_year": str(row.get("publication_year", "") or "").strip(),
+            "publication_date": str(row.get("publication_date", "") or "").strip(),
+            "doi":              normalize_doi(row.get("doi", "")),
+            "url":              str(row.get("url", "") or "").strip(),
+            "openalex_id":      str(row.get("openalex_id", "") or "").strip(),
+            "is_oa":            normalize_bool(row.get("is_oa", "")),
+            "pdf_url":          str(row.get("pdf_url", "") or "").strip(),
+        })
+    with MASTER_CSV.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
+        writer.writeheader()
+        writer.writerows(migrated_rows)
+    print(f"CSV maestro migrado a esquema actual ({len(migrated_rows)} registros).")
 # ── Persistencia ──────────────────────────────────────────────────────────────
-
 def ensure_storage() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     PDFS_DIR.mkdir(parents=True, exist_ok=True)
@@ -167,8 +200,7 @@ def ensure_storage() -> None:
             csv.DictWriter(f, fieldnames=CSV_FIELDS).writeheader()
     if not SEEN_IDS_JSON.exists():
         SEEN_IDS_JSON.write_text("{}", encoding="utf-8")
-
-
+    migrate_master_csv_schema()
 def load_seen_ids() -> Set[str]:
     try:
         data = json.loads(SEEN_IDS_JSON.read_text(encoding="utf-8"))
@@ -177,15 +209,11 @@ def load_seen_ids() -> Set[str]:
     except Exception:
         pass
     return set()
-
-
 def save_seen_ids(seen_ids: Set[str]) -> None:
     SEEN_IDS_JSON.write_text(
         json.dumps({k: True for k in sorted(seen_ids)}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-
-
 def load_existing_signatures() -> Set[str]:
     sigs: Set[str] = set()
     if not MASTER_CSV.exists():
@@ -197,8 +225,6 @@ def load_existing_signatures() -> Set[str]:
     except Exception as e:
         print(f"Error leyendo signatures: {e}")
     return sigs
-
-
 def build_fuzzy_index() -> Dict[str, List[Tuple[str, str]]]:
     """Índice año → [(título_norm, primer_autor)] para dedup fuzzy."""
     index: Dict[str, List[Tuple[str, str]]] = {}
@@ -214,8 +240,6 @@ def build_fuzzy_index() -> Dict[str, List[Tuple[str, str]]]:
     except Exception as e:
         print(f"Error construyendo índice fuzzy: {e}")
     return index
-
-
 def is_fuzzy_duplicate(
     record: Dict[str, Any],
     fuzzy_index: Dict[str, List[Tuple[str, str]]],
@@ -229,10 +253,8 @@ def is_fuzzy_duplicate(
     year       = str(record.get("publication_year", "") or "").strip()
     title_norm = normalize_text(record.get("title", ""))
     first_auth = get_first_author(record.get("authors", ""))
-
     if not title_norm or not year:
         return False
-
     for (ex_title, ex_author) in fuzzy_index.get(year, []):
         if not ex_title:
             continue
@@ -243,27 +265,14 @@ def is_fuzzy_duplicate(
             if SequenceMatcher(None, first_auth, ex_author).ratio() >= FUZZY_AUTHOR_MIN:
                 return True
     return False
-
-
 def append_master_records(records: List[Dict[str, Any]]) -> None:
     if not records:
         return
-    # Detectar campos reales del CSV (compatibilidad con versiones anteriores)
-    existing_fields = CSV_FIELDS
-    if MASTER_CSV.exists():
-        try:
-            with MASTER_CSV.open("r", encoding="utf-8-sig", newline="") as f:
-                reader = csv.DictReader(f)
-                if reader.fieldnames:
-                    existing_fields = list(reader.fieldnames)
-        except Exception:
-            pass
+    migrate_master_csv_schema()
     with MASTER_CSV.open("a", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=existing_fields, extrasaction="ignore")
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS, extrasaction="ignore")
         for record in records:
-            writer.writerow({k: record.get(k, "") for k in existing_fields})
-
-
+            writer.writerow({k: record.get(k, "") for k in CSV_FIELDS})
 def count_master_records() -> int:
     if not MASTER_CSV.exists():
         return 0
@@ -272,8 +281,6 @@ def count_master_records() -> int:
             return sum(1 for _ in csv.DictReader(f))
     except Exception:
         return 0
-
-
 def read_all_records() -> List[Dict[str, str]]:
     if not MASTER_CSV.exists():
         print("CSV maestro no encontrado.")
@@ -288,10 +295,7 @@ def read_all_records() -> List[Dict[str, str]]:
     except Exception as e:
         print(f"Error leyendo CSV maestro: {e}")
         return []
-
-
 # ── OpenAlex ──────────────────────────────────────────────────────────────────
-
 def reconstruct_abstract(abstract_inverted_index: Any) -> str:
     if not isinstance(abstract_inverted_index, dict):
         return ""
@@ -306,8 +310,6 @@ def reconstruct_abstract(abstract_inverted_index: Any) -> str:
         return ""
     tokens.sort(key=lambda x: x[0])
     return " ".join(w for _, w in tokens)
-
-
 def extract_authors(work: Dict[str, Any]) -> str:
     authorships = work.get("authorships", [])
     if not isinstance(authorships, list):
@@ -321,8 +323,6 @@ def extract_authors(work: Dict[str, Any]) -> str:
         if raw_name:
             names.append(raw_name)
     return "; ".join(names)
-
-
 def extract_keywords(work: Dict[str, Any]) -> str:
     values: List[str] = []
     for item in work.get("keywords", []):
@@ -340,14 +340,11 @@ def extract_keywords(work: Dict[str, Any]) -> str:
             seen.add(n)
             cleaned.append(v)
     return "; ".join(cleaned)
-
-
 def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
     works: List[Dict[str, Any]] = []
     cursor    = "*"
     page_count = 0
     headers   = build_headers()
-
     while True:
         params = {
             "search": f'"{search_term}"',
@@ -361,13 +358,11 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
         except requests.RequestException as e:
             print(f"  Error OpenAlex '{search_term}': {e}")
             break
-
         data  = resp.json()
         batch = data.get("results", [])
         if not isinstance(batch, list):
             break
         works.extend(batch)
-
         meta       = as_dict(data.get("meta"))
         next_cursor = meta.get("next_cursor")
         page_count += 1
@@ -377,10 +372,7 @@ def query_openalex(search_term: str, from_date: str) -> List[Dict[str, Any]]:
             break
         cursor = next_cursor
         time.sleep(1)
-
     return works
-
-
 def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any]:
     ids         = as_dict(work.get("ids"))
     openalex_id = str(work.get("id", "")).strip()
@@ -397,7 +389,6 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
     url         = (primary.get("landing_page_url") or primary.get("pdf_url")
                    or (f"https://doi.org/{doi}" if doi else "") or openalex_id)
     record_id   = doi or openalex_id
-
     return {
         "record_id":        record_id,
         "first_seen_date":  date.today().isoformat(),
@@ -417,15 +408,10 @@ def extract_record_info(work: Dict[str, Any], search_term: str) -> Dict[str, Any
         "is_oa":            is_oa,
         "pdf_url":          pdf_url,
     }
-
-
 # ── OAI-PMH (CONICET / SEDICI / RIAA) ────────────────────────────────────────
-
 def _dc_texts(metadata: ET.Element, field: str) -> List[str]:
     els = metadata.findall(f"dc:{field}", OAI_NS)
     return [el.text.strip() for el in els if el.text and el.text.strip()]
-
-
 def query_oai_pmh(
     base_url:  str,
     from_date: str,
@@ -441,16 +427,13 @@ def query_oai_pmh(
     records: List[Dict[str, Any]] = []
     token: Optional[str] = None
     page = 0
-
     print(f"  Consultando {source_name}...")
-
     while True:
         params = (
             {"verb": "ListRecords", "resumptionToken": token}
             if token
             else {"verb": "ListRecords", "metadataPrefix": "oai_dc", "from": from_date}
         )
-
         try:
             resp = requests.get(base_url, params=params, timeout=60,
                                 headers={"User-Agent": "academic-scraper/3.0"})
@@ -458,33 +441,27 @@ def query_oai_pmh(
         except Exception as e:
             print(f"    Error en {source_name} (pág {page}): {e}")
             break
-
         try:
             root = ET.fromstring(resp.content)
         except ET.ParseError as e:
             print(f"    XML inválido en {source_name}: {e}")
             break
-
         # Verificar error OAI
         error_el = root.find(".//oai:error", OAI_NS)
         if error_el is not None:
             print(f"    OAI error {source_name}: {error_el.get('code')} – {error_el.text}")
             break
-
         for record_el in root.findall(".//oai:record", OAI_NS):
             header = record_el.find("oai:header", OAI_NS)
             if header is not None and header.get("status") == "deleted":
                 continue
-
             metadata = record_el.find(".//oai_dc:dc", OAI_NS)
             if metadata is None:
                 continue
-
             titles       = _dc_texts(metadata, "title")
             if not titles:
                 continue
             title = titles[0]
-
             subjects     = _dc_texts(metadata, "subject")
             descriptions = _dc_texts(metadata, "description")
             dates        = _dc_texts(metadata, "date")
@@ -492,14 +469,12 @@ def query_oai_pmh(
             creators     = _dc_texts(metadata, "creator")
             sources      = _dc_texts(metadata, "source")
             types        = _dc_texts(metadata, "type")
-
             # Filtro por términos de búsqueda
             searchable = normalize_text(
                 " ".join(titles + subjects + descriptions[:1])
             )
             if not any(term in searchable for term in terms_norm):
                 continue
-
             # Año
             year = ""
             for d in dates:
@@ -509,7 +484,6 @@ def query_oai_pmh(
                     break
             if year and int(year) < 2020:
                 continue
-
             # DOI y URL
             doi = ""
             url = ""
@@ -521,14 +495,12 @@ def query_oai_pmh(
                     url = ident
             if not url and doi:
                 url = f"https://doi.org/{doi}"
-
             # OAI identifier como fallback de record_id
             id_el     = record_el.find(".//oai:identifier", OAI_NS)
             oai_id    = (id_el.text or "").strip() if id_el is not None else ""
             record_id = doi or oai_id
             if not record_id:
                 continue
-
             records.append({
                 "record_id":        record_id,
                 "first_seen_date":  date.today().isoformat(),
@@ -548,7 +520,6 @@ def query_oai_pmh(
                 "is_oa":            True,
                 "pdf_url":          "",
             })
-
         # Paginación OAI
         token_el = root.find(".//oai:resumptionToken", OAI_NS)
         if token_el is not None and token_el.text and token_el.text.strip():
@@ -561,13 +532,8 @@ def query_oai_pmh(
                 break
         else:
             break
-
     print(f"  {source_name}: {len(records)} registros con términos de búsqueda")
     return records
-
-
-
-
 def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
     """
     Consulta CONICET Digital via su API REST de DSpace.
@@ -576,14 +542,11 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
     """
     all_records: List[Dict[str, Any]] = []
     seen_handles: Set[str] = set()
-
     print("  Consultando CONICET Digital (REST API)...")
-
     for term in CONICET_SEARCH_TERMS:
         offset = 0
         limit  = 100
         term_count = 0
-
         while True:
             try:
                 resp = requests.get(
@@ -603,15 +566,12 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
             except Exception as e:
                 print(f"    Error CONICET REST para '{term}': {e}")
                 break
-
             if not items:
                 break
-
             for item in items:
                 handle = str(item.get("handle", "") or "").strip()
                 if not handle or handle in seen_handles:
                     continue
-
                 # Extraer metadata DC
                 meta: Dict[str, List[str]] = {}
                 for m in item.get("metadata", []) or []:
@@ -619,11 +579,9 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                     val = (m.get("value") or "").strip()
                     if key and val:
                         meta.setdefault(key, []).append(val)
-
                 title = (meta.get("dc.title", [""]) or [""])[0].strip()
                 if not title:
                     continue
-
                 # Filtrar por tipo de documento (incluir artículos, tesis y capítulos)
                 ACCEPTED_TYPES = {
                     "article", "journal article", "artículo", "articulo",
@@ -636,38 +594,33 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                     type_lower = " ".join(str(t).lower() for t in types_list_check)
                     if not any(t in type_lower for t in ACCEPTED_TYPES):
                         continue
-
                 # Filtrar por año
                 dates_raw = meta.get("dc.date.issued", []) or meta.get("dc.date", []) or []
                 year = ""
                 for d in dates_raw:
-                    m_yr = re.search(r"(20\d{2})", str(d))
+                    m_yr = re.search(r"\b(20\d{2})\b", str(d))
                     if m_yr:
                         year = m_yr.group(1)
                         break
                 if year and int(year) < from_year:
                     continue
-
                 # DOI y URL
                 doi = ""
                 identifiers = meta.get("dc.identifier.uri", []) + meta.get("dc.identifier", [])
                 url = f"https://ri.conicet.gov.ar/handle/{handle}"
                 for ident in identifiers:
                     ident_lower = str(ident).lower()
-                    if "doi.org" in ident_lower or re.match(r"^10\.\d{{4,}}/", str(ident)):
+                    if "doi.org" in ident_lower or re.match(r"^10\.\d{4,}/", str(ident)):
                         doi = normalize_doi(str(ident))
                     elif str(ident).startswith("http") and "ri.conicet" in str(ident).lower():
                         url = str(ident)
-
                 record_id = doi or f"conicet:{handle}"
                 seen_handles.add(handle)
-
                 authors_list = meta.get("dc.contributor.author", []) or meta.get("dc.creator", []) or []
                 subjects_list = (meta.get("dc.subject", []) or [])[:10]
                 abstract_list = meta.get("dc.description.abstract", []) or meta.get("dc.description", []) or []
                 types_list    = meta.get("dc.type", []) or []
                 source_list   = meta.get("dc.relation.journal", []) or meta.get("dc.publisher", []) or []
-
                 all_records.append({
                     "record_id":        record_id,
                     "first_seen_date":  date.today().isoformat(),
@@ -688,17 +641,13 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                     "pdf_url":          "",
                 })
                 term_count += 1
-
             if len(items) < limit:
                 break
             offset += limit
             time.sleep(1)
-
         print(f"    CONICET '{term}': {term_count} registros")
-
     print(f"  CONICET Digital total: {len(all_records)} registros")
     return all_records
-
 def fetch_oa_info_by_doi(doi: str) -> Tuple[bool, str]:
     if not doi:
         return False, ""
@@ -716,20 +665,15 @@ def fetch_oa_info_by_doi(doi: str) -> Tuple[bool, str]:
         return bool(oa.get("is_oa", False)), str(pdf_url)
     except Exception:
         return False, ""
-
-
 # ── Recolección principal ─────────────────────────────────────────────────────
-
 def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     ensure_storage()
-
     seen_ids             = load_seen_ids()
     title_year_sigs      = load_existing_signatures()
     fuzzy_index          = build_fuzzy_index()
     new_records: List[Dict[str, Any]] = []
     # Índice en memoria de lo que ya agregamos en esta corrida (para dedup entre fuentes)
     session_index: Dict[str, List[Tuple[str, str]]] = {}
-
     def _is_new(record: Dict[str, Any]) -> bool:
         """Aplica las tres capas de dedup."""
         rid  = str(record.get("record_id", "")).strip()
@@ -737,7 +681,6 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
         year = str(record.get("publication_year", "") or "").strip()
         tnorm = normalize_text(record.get("title", ""))
         fauth = get_first_author(record.get("authors", ""))
-
         if not rid:
             return False
         # Capa 1: DOI/ID exacto
@@ -756,7 +699,6 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             seen_ids.add(rid)
             return False
         return True
-
     def _register(record: Dict[str, Any]) -> None:
         rid  = str(record.get("record_id", ""))
         sig  = build_signature(record.get("title", ""), record.get("publication_year", ""))
@@ -766,7 +708,6 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
         tnorm = normalize_text(record.get("title", ""))
         fauth = get_first_author(record.get("authors", ""))
         session_index.setdefault(year, []).append((tnorm, fauth))
-
     # ── 1. OpenAlex ──────────────────────────────────────────────────────────
     print("\n=== OpenAlex ===")
     for term in SEARCH_TERMS:
@@ -780,14 +721,20 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             if _is_new(rec):
                 new_records.append(rec)
                 _register(rec)
-
-    # ── 2. Repositorios OAI-PMH ───────────────────────────────────────────────
+    # ── 2. CONICET Digital (REST) ─────────────────────────────────────────────
+    print("\n=== CONICET Digital (REST) ===")
+    conicet_records = query_conicet_rest(from_year=int(START_DATE[:4]))
+    for rec in conicet_records:
+        if _is_new(rec):
+            new_records.append(rec)
+            _register(rec)
+    # ── 3. Repositorios OAI-PMH ───────────────────────────────────────────────
     print("\n=== Repositorios institucionales (OAI-PMH) ===")
     for src in OAI_SOURCES:
         oai_records = query_oai_pmh(
             base_url     = src["url"],
             from_date    = START_DATE,
-            search_terms = SEARCH_TERMS,
+            search_terms = OAI_SEARCH_TERMS,
             source_name  = src["name"],
             max_pages    = src["max_pages"],
         )
@@ -795,17 +742,12 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             if _is_new(rec):
                 new_records.append(rec)
                 _register(rec)
-
     append_master_records(new_records)
     save_seen_ids(seen_ids)
-
     total = count_master_records()
     print(f"\nNuevos registros: {len(new_records)} | Total acumulado: {total}")
     return new_records, total
-
-
 # ── Excel ─────────────────────────────────────────────────────────────────────
-
 EXCEL_HEADERS = [
     "Título", "Año", "Fecha publicación", "Autores", "Revista/Fuente",
     "Fuente", "Tipo", "Término búsqueda", "DOI", "URL", "Acceso abierto",
@@ -816,8 +758,6 @@ EXCEL_KEYS = [
     "source", "document_type", "search_term", "doi", "url", "is_oa",
     "pdf_url", "abstract", "keywords", "first_seen_date",
 ]
-
-
 def update_excel(new_record_ids: Set[str]) -> None:
     all_records = read_all_records()
     if not all_records:
@@ -855,10 +795,7 @@ def update_excel(new_record_ids: Set[str]) -> None:
         print(f"Excel guardado: {len(all_records)} registros")
     except Exception as e:
         print(f"Error al guardar Excel: {e}")
-
-
 # ── PDFs ──────────────────────────────────────────────────────────────────────
-
 def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
     pdf_url = str(record.get("pdf_url", "")).strip()
     if not pdf_url:
@@ -884,8 +821,6 @@ def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
     except Exception as exc:
         print(f"  No se pudo descargar ({pdf_url}): {exc}")
         return None
-
-
 def bulk_download_and_upload(uploader: Optional[Any]) -> None:
     all_records = read_all_records()
     print(f"\nDescarga masiva de PDFs: {len(all_records)} registros...")
@@ -912,10 +847,7 @@ def bulk_download_and_upload(uploader: Optional[Any]) -> None:
         if (i + 1) % 100 == 0:
             print(f"  {i+1}/{len(all_records)} — PDFs: {ok}")
     print(f"PDFs descargados: {ok} | Sin PDF: {skipped}")
-
-
 # ── Correo ────────────────────────────────────────────────────────────────────
-
 def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -> str:
     lines = [
         f"Informe diario – dirección/gestión escolar – {date.today().isoformat()}",
@@ -927,7 +859,6 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
     if not new_records:
         lines += ["Sin novedades. Excel adjunto actualizado."]
         return "\n".join(lines)
-
     # Agrupar por fuente
     from collections import Counter
     fuentes = Counter(r.get("source", "OpenAlex") for r in new_records)
@@ -935,7 +866,6 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
     for fuente, cnt in fuentes.most_common():
         lines.append(f"  {fuente}: {cnt} nuevos")
     lines.append("")
-
     sorted_records = sorted(
         new_records,
         key=lambda x: (str(x.get("publication_date") or ""), int(x.get("publication_year") or 0)),
@@ -955,8 +885,6 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
     if len(sorted_records) > EMAIL_ITEM_LIMIT:
         lines.append(f"... y {len(sorted_records) - EMAIL_ITEM_LIMIT} más en el Excel adjunto.")
     return "\n".join(lines)
-
-
 def send_email(subject: str, body: str, gmail_user: str, gmail_password: str, recipient: str) -> None:
     msg = MIMEMultipart()
     msg["Subject"] = subject
@@ -974,16 +902,11 @@ def send_email(subject: str, body: str, gmail_user: str, gmail_password: str, re
         server.ehlo(); server.starttls(); server.ehlo()
         server.login(gmail_user, gmail_password)
         server.sendmail(gmail_user, [recipient], msg.as_string())
-
-
 # ── Main ──────────────────────────────────────────────────────────────────────
-
 def main() -> None:
     new_records, total_records = collect_new_records()
     new_record_ids = {str(r.get("record_id", "")) for r in new_records}
-
     update_excel(new_record_ids)
-
     drive_folder_id = os.getenv("DRIVE_FOLDER_ID", "").strip()
     uploader = None
     if DRIVE_AVAILABLE and drive_folder_id:
@@ -992,22 +915,17 @@ def main() -> None:
             print("Google Drive conectado.")
         except Exception as exc:
             print(f"Drive no disponible: {exc}")
-
     bulk_download_and_upload(uploader)
-
     gmail_user     = os.getenv("GMAIL_USER", "").strip()
     gmail_password = (os.getenv("GMAIL_APP_PASSWORD", "") or os.getenv("GMAIL_PASSWORD", "")).strip()
     recipient      = os.getenv("RECIPIENT_EMAIL", "").strip()
     body           = generate_email_body(new_records, total_records)
     subject        = "Informe diario – dirección/gestión escolar"
-
     if gmail_user and gmail_password and recipient:
         send_email(subject, body, gmail_user, gmail_password, recipient)
         print("Correo enviado.")
     else:
         print("Faltan credenciales de correo. Informe en consola:")
         print(body)
-
-
 if __name__ == "__main__":
     main()
