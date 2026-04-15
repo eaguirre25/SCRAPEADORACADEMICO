@@ -42,6 +42,29 @@ def safe_int(v, default=0):
     except Exception:
         return default
 
+
+def infer_source(row):
+    source = s(row.get("source", ""))
+    if source:
+        return source
+    url = s(row.get("url", "")).lower()
+    origin = s(row.get("origin", "")).lower()
+    openalex_id = s(row.get("openalex_id", ""))
+    if "ri.conicet" in url or "conicet" in origin:
+        return "CONICET Digital"
+    if "repositorio.unsam" in url or "unsam" in origin:
+        return "RIAA-UNSAM"
+    if "sedici.unlp.edu.ar" in url or "sedici" in origin:
+        return "SEDICI-UNLP"
+    if openalex_id or "doi.org" in url or "dx.doi.org" in url:
+        return "OpenAlex"
+    return "Repositorio / Otro"
+
+
+def infer_origin(row):
+    origin = s(row.get("origin", ""))
+    return origin or infer_source(row)
+
 # ── Cargar datos ──────────────────────────────────────────────────────────────
 
 records    = read_csv("data/master_records.csv")
@@ -212,7 +235,8 @@ for r in records:
     all_articles.append({
         "titulo":  title,
         "autores": auth_short,
-        "revista": s(r.get("origin", "")),
+        "revista": infer_origin(r),
+        "fuente": infer_source(r),
         "anio":    s(r.get("publication_year", "")),
         "url":     url,
         "kws":     kws,
@@ -378,11 +402,12 @@ tbody tr:hover td{background:var(--hover)}
     <table>
       <thead>
         <tr>
-          <th style="width:42%">Titulo</th>
-          <th style="width:20%">Autores</th>
-          <th style="width:16%">Revista</th>
+          <th style="width:36%">Titulo</th>
+          <th style="width:18%">Autores</th>
+          <th style="width:16%">Revista / origen</th>
+          <th style="width:12%">Fuente</th>
           <th style="width:4%">Ano</th>
-          <th style="width:18%">Palabras clave</th>
+          <th style="width:14%">Palabras clave</th>
         </tr>
       </thead>
       <tbody id="arts-tbody"></tbody>
@@ -515,7 +540,7 @@ let curPage=0, filtered=ARTS;
 
 function onSearch(){
   const q=document.getElementById("search-input").value.toLowerCase().trim();
-  filtered = q ? ARTS.filter(a=>(a.titulo||"").toLowerCase().includes(q)||(a.autores||"").toLowerCase().includes(q)) : ARTS;
+  filtered = q ? ARTS.filter(a=>(a.titulo||"").toLowerCase().includes(q)||(a.autores||"").toLowerCase().includes(q)||(a.revista||"").toLowerCase().includes(q)||(a.fuente||"").toLowerCase().includes(q)) : ARTS;
   curPage=0;
   render();
 }
