@@ -3,7 +3,7 @@
 Scraper acumulativo sobre dirección escolar / gestión escolar.
 Fuentes:
 - OpenAlex (API REST)
-- CONICET Digital (OAI-PMH)
+- CONICET Digital (OpenSearch/Atom + fallback REST)
 - SEDICI - UNLP (OAI-PMH)
 - RIAA - UNSAM (OAI-PMH)
 Deduplicación por capas:
@@ -65,14 +65,23 @@ OAI_SEARCH_TERMS: List[str] = [
     "director escolar", "liderazgo educativo",
     "liderazgo escolar", "director de escuela",
 ]
-# CONICET Digital: usa su API REST de DSpace en lugar de OAI-PMH
+# CONICET Digital: conviene usar el buscador Discovery/OpenSearch del repositorio.
+# La API REST clásica de DSpace no replica fielmente el buscador web en muchas instalaciones.
 CONICET_REST_URL = "https://ri.conicet.gov.ar/rest"
+CONICET_OPENSEARCH_URL = "https://ri.conicet.gov.ar/open-search/discover"
 CONICET_SEARCH_TERMS: List[str] = [
-    "gestion escolar", "direccion escolar", "gestion educativa",
+    "gestión escolar", "gestion escolar",
+    "dirección escolar", "direccion escolar",
+    "gestión educativa", "gestion educativa",
     "school management", "educational leadership",
-    "school principal", "director escolar", "liderazgo educativo",
-    "liderazgo escolar", "conduccion escolar",
+    "school principal", "principalship", "headteacher",
+    "director escolar", "director de escuela",
+    "liderazgo educativo", "liderazgo escolar",
+    "conducción escolar", "conduccion escolar",
+    "administración escolar", "administracion escolar",
 ]
+# Para CONICET se usa sin recorte temporal por defecto, así coincide con el buscador del RI.
+CONICET_START_YEAR: Optional[int] = None
 START_DATE         = "2020-01-01"
 MAX_PAGES_PER_TERM: Optional[int] = 3
 # Umbrales de deduplicación fuzzy
@@ -152,6 +161,32 @@ def normalize_bool(value: Any) -> str:
         return "True" if value else "False"
     text = str(value or "").strip().lower()
     return "True" if text in {"1", "true", "yes", "sí", "si"} else "False"
+
+def split_merged_values(value: Any) -> List[str]:
+    text = str(value or "").strip()
+    if not text:
+        return []
+    parts = re.split(r"\s*\|\s*", text)
+    cleaned: List[str] = []
+    seen: Set[str] = set()
+    for part in parts:
+        part = part.strip()
+        key = normalize_text(part)
+        if part and key and key not in seen:
+            seen.add(key)
+            cleaned.append(part)
+    return cleaned
+
+def merge_pipe_values(left: Any, right: Any) -> str:
+    merged: List[str] = []
+    seen: Set[str] = set()
+    for raw in [left, right]:
+        for part in split_merged_values(raw):
+            key = normalize_text(part)
+            if key and key not in seen:
+                seen.add(key)
+                merged.append(part)
+    return " | ".join(merged)
 def migrate_master_csv_schema() -> None:
     if not MASTER_CSV.exists():
         return
@@ -273,6 +308,37 @@ def append_master_records(records: List[Dict[str, Any]]) -> None:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDS, extrasaction="ignore")
         for record in records:
             writer.writerow({k: record.get(k, "") for k in CSV_FIELDS})
+
+def write_all_records(rows: List[Dict[str, Any]]) -> None:
+    migrate_master_csv_schema()
+    with MASTER_CSV.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS, extrasaction="ignore")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({k: row.get(k, "") for k in CSV_FIELDS})
+
+def find_fuzzy_duplicate_target(
+    record: Dict[str, Any],
+    fuzzy_index: Dict[str, List[Dict[str, Any]]],
+) -> Optional[Dict[str, Any]]:
+    year       = str(record.get("publication_year", "") or "").strip()
+    title_norm = normalize_text(record.get("title", ""))
+    first_auth = get_first_author(record.get("authors", ""))
+    if not title_norm or not year:
+        return None
+    for candidate in fuzzy_index.get(year, []):
+        ex_title = normalize_text(candidate.get("title", ""))
+        ex_author = get_first_author(candidate.get("authors", ""))
+        if not ex_title:
+            continue
+        sim = SequenceMatcher(None, title_norm, ex_title).ratio()
+        if sim >= FUZZY_TITLE_HIGH:
+            return candidate
+        if sim >= FUZZY_TITLE_LOW and first_auth and ex_author:
+            if SequenceMatcher(None, first_auth, ex_author).ratio() >= FUZZY_AUTHOR_MIN:
+                return candidate
+    return None
+
 def count_master_records() -> int:
     if not MASTER_CSV.exists():
         return 0
@@ -534,11 +600,159 @@ def query_oai_pmh(
             break
     print(f"  {source_name}: {len(records)} registros con términos de búsqueda")
     return records
-def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
+def _xml_local_name(tag: str) -> str:
+    return tag.split("}")[-1].lower() if "}" in tag else tag.lower()
+
+def _collect_entry_texts(entry: ET.Element, local_names: Set[str]) -> List[str]:
+    wanted = {name.lower() for name in local_names}
+    values: List[str] = []
+    for el in entry.iter():
+        if _xml_local_name(el.tag) in wanted:
+            text = (el.text or "").strip()
+            if text:
+                values.append(text)
+    return values
+
+def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from_year: Optional[int]) -> Optional[Dict[str, Any]]:
+    title = ""
+    title_el = next((el for el in entry if _xml_local_name(el.tag) == "title" and (el.text or "").strip()), None)
+    if title_el is not None:
+        title = (title_el.text or "").strip()
+    if not title:
+        return None
+
+    authors_list = _collect_entry_texts(entry, {"creator", "name"})
+    subjects_list = _collect_entry_texts(entry, {"subject"})[:10]
+    abstract_list = _collect_entry_texts(entry, {"summary", "description", "abstract"})
+    types_list = _collect_entry_texts(entry, {"type"})
+    source_list = _collect_entry_texts(entry, {"source", "relation", "publisher", "bibliographiccitation"})
+    dates_raw = _collect_entry_texts(entry, {"issued", "date", "published", "updated"})
+
+    year = ""
+    for d in dates_raw:
+        m_yr = re.search(r"\b(19\d{2}|20\d{2})\b", str(d))
+        if m_yr:
+            year = m_yr.group(1)
+            break
+    if from_year is not None and year and int(year) < from_year:
+        return None
+
+    type_lower = " ".join(str(t).lower() for t in types_list)
+    if type_lower:
+        accepted_types = {
+            "article", "journal article", "artículo", "articulo",
+            "thesis", "doctoral thesis", "master thesis", "tesis doctoral", "tesis de maestría", "tesis",
+            "book chapter", "book section", "book part", "capítulo", "capitulo", "chapter",
+            "conference paper", "conference object", "ponencia", "paper",
+            "book", "libro", "review", "reseña", "report", "working paper",
+        }
+        if not any(t in type_lower for t in accepted_types):
+            return None
+
+    doi = ""
+    url = ""
+    pdf_url = ""
+    identifiers = _collect_entry_texts(entry, {"identifier", "id"})
+    for ident in identifiers:
+        ident_str = str(ident).strip()
+        ident_lower = ident_str.lower()
+        if not doi and ("doi.org" in ident_lower or re.match(r"^10\.\d{4,}/", ident_str)):
+            doi = normalize_doi(ident_str)
+        if not url and ident_str.startswith("http") and "ri.conicet" in ident_lower:
+            url = ident_str
+    for link in entry.findall("{http://www.w3.org/2005/Atom}link"):
+        href = (link.get("href") or "").strip()
+        ltype = (link.get("type") or "").lower()
+        if href and not url and "ri.conicet" in href.lower():
+            url = href
+        if href and "pdf" in ltype and not pdf_url:
+            pdf_url = href
+    if not url:
+        for ident in identifiers:
+            ident_str = str(ident).strip()
+            if ident_str.startswith("http"):
+                url = ident_str
+                break
+    if not url:
+        return None
+
+    handle_match = re.search(r"/handle/([^/?#]+/[^/?#]+)", url)
+    handle = handle_match.group(1) if handle_match else ""
+    record_id = doi or (f"conicet:{handle}" if handle else f"conicet:{normalize_text(title)}::{year}")
+    return {
+        "record_id":        record_id,
+        "first_seen_date":  date.today().isoformat(),
+        "search_term":      search_term,
+        "source":           "CONICET Digital",
+        "origin":           source_list[0] if source_list else "CONICET Digital",
+        "document_type":    types_list[0] if types_list else "",
+        "authors":          "; ".join(str(a) for a in authors_list),
+        "title":            title,
+        "abstract":         abstract_list[0] if abstract_list else "",
+        "keywords":         "; ".join(str(s) for s in subjects_list),
+        "publication_year": year,
+        "publication_date": dates_raw[0] if dates_raw else "",
+        "doi":              doi,
+        "url":              url,
+        "openalex_id":      "",
+        "is_oa":            True,
+        "pdf_url":          pdf_url,
+    }
+
+def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, Any]]:
+    all_records: List[Dict[str, Any]] = []
+    seen_urls: Set[str] = set()
+    headers = build_headers()
+    print("  Consultando CONICET Digital (OpenSearch/Atom)...")
+    for term in CONICET_SEARCH_TERMS:
+        start = 0
+        rpp = 100
+        term_count = 0
+        total_results: Optional[int] = None
+        while True:
+            try:
+                resp = requests.get(
+                    CONICET_OPENSEARCH_URL,
+                    params={"format": "atom", "query": term, "rpp": rpp, "start": start},
+                    headers=headers,
+                    timeout=30,
+                )
+                resp.raise_for_status()
+                root = ET.fromstring(resp.content)
+            except Exception as e:
+                print(f"    Error CONICET OpenSearch para '{term}': {e}")
+                break
+            entries = root.findall("{http://www.w3.org/2005/Atom}entry")
+            if total_results is None:
+                total_el = root.find("{http://a9.com/-/spec/opensearch/1.1/}totalResults")
+                if total_el is not None and (total_el.text or "").strip().isdigit():
+                    total_results = int((total_el.text or "0").strip())
+            if not entries:
+                break
+            for entry in entries:
+                rec = _extract_conicet_record_from_entry(entry, term, from_year)
+                if not rec:
+                    continue
+                key = rec.get("url", "") or rec.get("record_id", "")
+                if key in seen_urls:
+                    continue
+                seen_urls.add(key)
+                all_records.append(rec)
+                term_count += 1
+            if len(entries) < rpp:
+                break
+            start += rpp
+            if total_results is not None and start >= total_results:
+                break
+            time.sleep(1)
+        print(f"    CONICET OpenSearch '{term}': {term_count} registros")
+    print(f"  CONICET Digital OpenSearch total: {len(all_records)} registros")
+    return all_records
+
+def query_conicet_rest(from_year: Optional[int] = None) -> List[Dict[str, Any]]:
     """
-    Consulta CONICET Digital via su API REST de DSpace.
-    Busca por cada término directamente en el motor de búsqueda.
-    Mucho más preciso que OAI-PMH con filtro local.
+    Fallback sobre la API REST clásica de DSpace.
+    Se conserva por compatibilidad, pero el recolector principal prioriza OpenSearch.
     """
     all_records: List[Dict[str, Any]] = []
     seen_handles: Set[str] = set()
@@ -557,8 +771,7 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                         "offset": offset,
                         "expand": "metadata",
                     },
-                    headers={"Accept": "application/json",
-                             "User-Agent": "academic-scraper/3.0"},
+                    headers={"Accept": "application/json", **build_headers()},
                     timeout=30,
                 )
                 resp.raise_for_status()
@@ -572,7 +785,6 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                 handle = str(item.get("handle", "") or "").strip()
                 if not handle or handle in seen_handles:
                     continue
-                # Extraer metadata DC
                 meta: Dict[str, List[str]] = {}
                 for m in item.get("metadata", []) or []:
                     key = m.get("key", "")
@@ -582,29 +794,15 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                 title = (meta.get("dc.title", [""]) or [""])[0].strip()
                 if not title:
                     continue
-                # Filtrar por tipo de documento (incluir artículos, tesis y capítulos)
-                ACCEPTED_TYPES = {
-                    "article", "journal article", "artículo", "articulo",
-                    "thesis", "doctoral thesis", "tesis doctoral", "tesis",
-                    "book chapter", "capítulo de libro", "book section",
-                    "conference paper", "conference object", "ponencia",
-                }
-                types_list_check = meta.get("dc.type", []) or []
-                if types_list_check:
-                    type_lower = " ".join(str(t).lower() for t in types_list_check)
-                    if not any(t in type_lower for t in ACCEPTED_TYPES):
-                        continue
-                # Filtrar por año
                 dates_raw = meta.get("dc.date.issued", []) or meta.get("dc.date", []) or []
                 year = ""
                 for d in dates_raw:
-                    m_yr = re.search(r"\b(20\d{2})\b", str(d))
+                    m_yr = re.search(r"\b(19\d{2}|20\d{2})\b", str(d))
                     if m_yr:
                         year = m_yr.group(1)
                         break
-                if year and int(year) < from_year:
+                if from_year is not None and year and int(year) < from_year:
                     continue
-                # DOI y URL
                 doi = ""
                 identifiers = meta.get("dc.identifier.uri", []) + meta.get("dc.identifier", [])
                 url = f"https://ri.conicet.gov.ar/handle/{handle}"
@@ -645,9 +843,10 @@ def query_conicet_rest(from_year: int = 2020) -> List[Dict[str, Any]]:
                 break
             offset += limit
             time.sleep(1)
-        print(f"    CONICET '{term}': {term_count} registros")
-    print(f"  CONICET Digital total: {len(all_records)} registros")
+        print(f"    CONICET REST '{term}': {term_count} registros")
+    print(f"  CONICET Digital REST total: {len(all_records)} registros")
     return all_records
+
 def fetch_oa_info_by_doi(doi: str) -> Tuple[bool, str]:
     if not doi:
         return False, ""
@@ -668,47 +867,99 @@ def fetch_oa_info_by_doi(doi: str) -> Tuple[bool, str]:
 # ── Recolección principal ─────────────────────────────────────────────────────
 def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     ensure_storage()
-    seen_ids             = load_seen_ids()
-    title_year_sigs      = load_existing_signatures()
-    fuzzy_index          = build_fuzzy_index()
+    seen_ids = load_seen_ids()
+    existing_rows = read_all_records()
     new_records: List[Dict[str, Any]] = []
-    # Índice en memoria de lo que ya agregamos en esta corrida (para dedup entre fuentes)
-    session_index: Dict[str, List[Tuple[str, str]]] = {}
-    def _is_new(record: Dict[str, Any]) -> bool:
-        """Aplica las tres capas de dedup."""
-        rid  = str(record.get("record_id", "")).strip()
-        sig  = build_signature(record.get("title", ""), record.get("publication_year", ""))
+    dirty_existing = False
+
+    existing_by_id: Dict[str, Dict[str, Any]] = {}
+    existing_by_sig: Dict[str, Dict[str, Any]] = {}
+    existing_fuzzy: Dict[str, List[Dict[str, Any]]] = {}
+    for row in existing_rows:
+        rid = str(row.get("record_id", "") or "").strip()
+        sig = build_signature(row.get("title", ""), row.get("publication_year", ""))
+        year = str(row.get("publication_year", "") or "").strip()
+        if rid:
+            existing_by_id[rid] = row
+        if sig:
+            existing_by_sig[sig] = row
+        existing_fuzzy.setdefault(year, []).append(row)
+
+    session_by_id: Dict[str, Dict[str, Any]] = {}
+    session_by_sig: Dict[str, Dict[str, Any]] = {}
+    session_fuzzy: Dict[str, List[Dict[str, Any]]] = {}
+
+    def _merge_provenance(target: Dict[str, Any], incoming: Dict[str, Any]) -> None:
+        target["source"] = merge_pipe_values(target.get("source", ""), incoming.get("source", ""))
+        target["origin"] = merge_pipe_values(target.get("origin", ""), incoming.get("origin", ""))
+        target["search_term"] = merge_pipe_values(target.get("search_term", ""), incoming.get("search_term", ""))
+        if not str(target.get("url", "") or "").strip() and str(incoming.get("url", "") or "").strip():
+            target["url"] = incoming.get("url", "")
+        if not normalize_doi(target.get("doi", "")) and normalize_doi(incoming.get("doi", "")):
+            target["doi"] = normalize_doi(incoming.get("doi", ""))
+        if not str(target.get("pdf_url", "") or "").strip() and str(incoming.get("pdf_url", "") or "").strip():
+            target["pdf_url"] = incoming.get("pdf_url", "")
+        if not str(target.get("abstract", "") or "").strip() and str(incoming.get("abstract", "") or "").strip():
+            target["abstract"] = incoming.get("abstract", "")
+        if not str(target.get("keywords", "") or "").strip() and str(incoming.get("keywords", "") or "").strip():
+            target["keywords"] = incoming.get("keywords", "")
+        if not str(target.get("document_type", "") or "").strip() and str(incoming.get("document_type", "") or "").strip():
+            target["document_type"] = incoming.get("document_type", "")
+        if str(target.get("is_oa", "") or "").strip().lower() not in {"true", "1", "yes", "sí", "si"}:
+            target["is_oa"] = incoming.get("is_oa", target.get("is_oa", ""))
+
+    def _register_new(record: Dict[str, Any]) -> None:
+        rid = str(record.get("record_id", "") or "").strip()
+        sig = build_signature(record.get("title", ""), record.get("publication_year", ""))
         year = str(record.get("publication_year", "") or "").strip()
-        tnorm = normalize_text(record.get("title", ""))
-        fauth = get_first_author(record.get("authors", ""))
+        if rid:
+            seen_ids.add(rid)
+            session_by_id[rid] = record
+        if sig:
+            session_by_sig[sig] = record
+        session_fuzzy.setdefault(year, []).append(record)
+
+    def _find_duplicate_target(record: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        rid = str(record.get("record_id", "") or "").strip()
+        sig = build_signature(record.get("title", ""), record.get("publication_year", ""))
+        if rid and rid in session_by_id:
+            return session_by_id[rid]
+        if rid and rid in existing_by_id:
+            return existing_by_id[rid]
+        if sig and sig in session_by_sig:
+            return session_by_sig[sig]
+        if sig and sig in existing_by_sig:
+            return existing_by_sig[sig]
+        target = find_fuzzy_duplicate_target(record, session_fuzzy)
+        if target is not None:
+            return target
+        return find_fuzzy_duplicate_target(record, existing_fuzzy)
+
+    def _ingest(record: Dict[str, Any]) -> None:
+        nonlocal dirty_existing
+        rid = str(record.get("record_id", "") or "").strip()
         if not rid:
-            return False
-        # Capa 1: DOI/ID exacto
-        if rid in seen_ids:
-            return False
-        # Capa 2a: firma exacta (título normalizado + año)
-        if sig in title_year_sigs:
+            return
+        duplicate = _find_duplicate_target(record)
+        if duplicate is not None:
+            before = (
+                str(duplicate.get("source", "")),
+                str(duplicate.get("origin", "")),
+                str(duplicate.get("search_term", "")),
+            )
+            _merge_provenance(duplicate, record)
+            after = (
+                str(duplicate.get("source", "")),
+                str(duplicate.get("origin", "")),
+                str(duplicate.get("search_term", "")),
+            )
+            if duplicate in existing_rows and before != after:
+                dirty_existing = True
             seen_ids.add(rid)
-            return False
-        # Capa 2b: fuzzy contra base existente
-        if is_fuzzy_duplicate(record, fuzzy_index):
-            seen_ids.add(rid)
-            return False
-        # Capa 2c: fuzzy contra registros de esta misma corrida
-        if is_fuzzy_duplicate(record, session_index):
-            seen_ids.add(rid)
-            return False
-        return True
-    def _register(record: Dict[str, Any]) -> None:
-        rid  = str(record.get("record_id", ""))
-        sig  = build_signature(record.get("title", ""), record.get("publication_year", ""))
-        year = str(record.get("publication_year", "") or "").strip()
-        seen_ids.add(rid)
-        title_year_sigs.add(sig)
-        tnorm = normalize_text(record.get("title", ""))
-        fauth = get_first_author(record.get("authors", ""))
-        session_index.setdefault(year, []).append((tnorm, fauth))
-    # ── 1. OpenAlex ──────────────────────────────────────────────────────────
+            return
+        new_records.append(record)
+        _register_new(record)
+
     print("\n=== OpenAlex ===")
     for term in SEARCH_TERMS:
         print(f"Buscando: {term}")
@@ -717,18 +968,16 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
         for work in works:
             if not isinstance(work, dict):
                 continue
-            rec = extract_record_info(work, term)
-            if _is_new(rec):
-                new_records.append(rec)
-                _register(rec)
-    # ── 2. CONICET Digital (REST) ─────────────────────────────────────────────
-    print("\n=== CONICET Digital (REST) ===")
-    conicet_records = query_conicet_rest(from_year=int(START_DATE[:4]))
+            _ingest(extract_record_info(work, term))
+
+    print("\n=== CONICET Digital (OpenSearch) ===")
+    conicet_records = query_conicet_opensearch(from_year=CONICET_START_YEAR)
+    if not conicet_records:
+        print("  Sin resultados por OpenSearch. Intentando fallback REST...")
+        conicet_records = query_conicet_rest(from_year=CONICET_START_YEAR)
     for rec in conicet_records:
-        if _is_new(rec):
-            new_records.append(rec)
-            _register(rec)
-    # ── 3. Repositorios OAI-PMH ───────────────────────────────────────────────
+        _ingest(rec)
+
     print("\n=== Repositorios institucionales (OAI-PMH) ===")
     for src in OAI_SOURCES:
         oai_records = query_oai_pmh(
@@ -739,14 +988,16 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             max_pages    = src["max_pages"],
         )
         for rec in oai_records:
-            if _is_new(rec):
-                new_records.append(rec)
-                _register(rec)
+            _ingest(rec)
+
+    if dirty_existing:
+        write_all_records(existing_rows)
     append_master_records(new_records)
     save_seen_ids(seen_ids)
     total = count_master_records()
     print(f"\nNuevos registros: {len(new_records)} | Total acumulado: {total}")
     return new_records, total
+
 # ── Excel ─────────────────────────────────────────────────────────────────────
 EXCEL_HEADERS = [
     "Título", "Año", "Fecha publicación", "Autores", "Revista/Fuente",
