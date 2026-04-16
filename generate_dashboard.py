@@ -395,7 +395,7 @@ tbody tr:hover td{background:var(--hover)}
 <div class="arts-section">
   <div class="arts-head">
     <h2>Todos los articulos</h2>
-    <input type="text" class="search" id="search-input" placeholder="Buscar por titulo o autor..." oninput="onSearch()">
+    <input type="text" class="search" id="search-input" placeholder="Buscar por título, autor, revista o fuente..." oninput="onSearch()">
     <span class="badge" id="count-badge">{n_arts:,} articulos</span>
   </div>
   <div class="table-wrap">
@@ -568,6 +568,7 @@ function render(){
       <td><a class="alink" href="${a.url||"#"}" target="_blank" rel="noopener">${a.titulo}</a></td>
       <td><span class="ameta">${a.autores||"—"}</span></td>
       <td><span class="ameta">${a.revista||"—"}</span></td>
+      <td><span class="ameta">${a.fuente||"—"}</span></td>
       <td><span class="ameta">${a.anio||"—"}</span></td>
       <td><div class="kws">${kws}</div></td>`;
     tbody.appendChild(tr);
