@@ -24,32 +24,28 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Ensure data directory exists
+      - name: Ensure output directories exist
         run: |
-          mkdir -p data
+          mkdir -p data docs
 
       - name: Run scraper
-        env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
-          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
         run: |
           python main.py
 
-      - name: Commit updated data files
+      - name: Generate three-column dashboard
+        run: |
+          python generate_dashboard_three_columns.py
+
+      - name: Commit updated data and dashboard files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git reset --soft origin/main
-          git add data/master_records.csv data/seen_ids.json data/publicaciones.xlsx
+          git add data/master_records.csv data/seen_ids.json data/publicaciones.xlsx docs/index.html docs/.nojekyll generate_dashboard_three_columns.py .github/workflows/daily-scraper.yml
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update academic scraper database"
+            git commit -m "Update academic scraper database and dashboard"
             git push
           fi
