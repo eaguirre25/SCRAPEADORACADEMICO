@@ -1,7 +1,7 @@
-name: Daily Academic Scraper
+name: Academic Scraper
 on:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '0 13 */3 * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -26,15 +26,23 @@ jobs:
 
       - name: Ensure output directories exist
         run: |
-          mkdir -p data docs
+          mkdir -p data docs output
 
       - name: Run scraper
         run: |
           python main.py
 
+      - name: Filter by academic relevance
+        run: |
+          python relevance_filter.py
+
       - name: Generate three-column dashboard
         run: |
           python generate_dashboard_three_columns.py
+
+      - name: Check dashboard and STM files
+        run: |
+          python dashboard_healthcheck.py
 
       - name: Commit updated data and dashboard files
         run: |
@@ -42,7 +50,21 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git reset --soft origin/main
-          git add data/master_records.csv data/seen_ids.json data/publicaciones.xlsx docs/index.html docs/.nojekyll generate_dashboard_three_columns.py .github/workflows/daily-scraper.yml
+          git add \
+            data/master_records.csv \
+            data/review_records.csv \
+            data/rejected_records.csv \
+            data/latest_relevant_records.csv \
+            data/relevance_filter_report.json \
+            data/dashboard_healthcheck.json \
+            data/seen_ids.json \
+            data/publicaciones.xlsx \
+            docs/index.html \
+            docs/.nojekyll \
+            relevance_filter.py \
+            dashboard_healthcheck.py \
+            generate_dashboard_three_columns.py \
+            .github/workflows/daily-scraper.yml
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
