@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-05-04T16:42:15.587419+00:00",
+  "generated_at_utc": "2026-05-07T17:16:14.746727+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 4656975
+    "size_bytes": 4679439
   },
   "records": {
-    "master_high_relevance": 2847,
-    "review": 660,
-    "rejected": 852
+    "master_high_relevance": 2860,
+    "review": 610,
+    "rejected": 849
   },
   "stm_inputs_outputs": {
     "corpus": {

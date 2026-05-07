@@ -1,31 +1,31 @@
 {
-  "generated": "2026-05-04",
-  "input_total": 4359,
-  "kept_high_relevance": 2847,
-  "review_records": 660,
-  "rejected_records": 852,
-  "latest_high_relevance": 25,
+  "generated": "2026-05-07",
+  "input_total": 4319,
+  "kept_high_relevance": 2860,
+  "review_records": 610,
+  "rejected_records": 849,
+  "latest_high_relevance": 13,
   "by_source_input": {
-    "OpenAlex": 2652,
+    "OpenAlex": 2612,
     "CONICET Digital | OpenAlex": 1,
     "SEDICI-UNLP | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 2,
     "CONICET Digital": 1703
   },
   "by_source_kept": {
-    "OpenAlex": 1991,
+    "OpenAlex": 2003,
     "CONICET Digital | OpenAlex": 1,
     "SEDICI-UNLP | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 2,
-    "CONICET Digital": 852
+    "CONICET Digital": 853
   },
   "by_source_review": {
-    "OpenAlex": 649,
+    "OpenAlex": 599,
     "CONICET Digital": 11
   },
   "by_source_rejected": {
-    "OpenAlex": 12,
-    "CONICET Digital": 840
+    "OpenAlex": 10,
+    "CONICET Digital": 839
   },
   "policy": {
     "master_records_csv": "solo alta pertinencia",
