@@ -1,6 +1,9 @@
 name: Análisis STM – Dirección Escolar
 
 on:
+  workflow_run:
+    workflows: ["Extracción de corpus (PDFs → texto)"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -8,6 +11,7 @@ permissions:
 
 jobs:
   stm:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 360
 

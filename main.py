@@ -18,6 +18,7 @@ import os
 import re
 import smtplib
 import time
+import unicodedata
 import xml.etree.ElementTree as ET
 from datetime import date
 from difflib import SequenceMatcher
@@ -1047,15 +1048,79 @@ def update_excel(new_record_ids: Set[str]) -> None:
     except Exception as e:
         print(f"Error al guardar Excel: {e}")
 # ── PDFs ──────────────────────────────────────────────────────────────────────
+def env_flag(name: str) -> bool:
+    return os.getenv(name, "").strip().lower() in {"1", "true", "yes", "si", "sí"}
+
+
+def parse_iso_date(value: Any) -> Optional[date]:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    try:
+        return date.fromisoformat(text[:10])
+    except ValueError:
+        return None
+
+
+def strip_accents(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    return "".join(ch for ch in normalized if not unicodedata.combining(ch))
+
+
+def sanitize_filename_part(value: Any, max_len: int) -> str:
+    text = strip_accents(str(value or ""))
+    text = re.sub(r"[\\/:*?\"<>|]", " ", text)
+    text = re.sub(r"[\r\n\t]+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip(" .-_")
+    text = text[:max_len].strip(" .-_")
+    return text or "sin dato"
+
+
+def author_surname(author: str) -> str:
+    author = re.sub(r"\s+", " ", str(author or "")).strip()
+    if not author:
+        return ""
+    if "," in author:
+        return author.split(",", 1)[0].strip()
+    particles = {"da", "de", "del", "de la", "di", "dos", "do", "van", "von"}
+    parts = author.split()
+    if len(parts) >= 4 and parts[-2].casefold() in particles:
+        return " ".join(parts[-2:])
+    if len(parts) >= 3:
+        return " ".join(parts[-2:])
+    return parts[-1]
+
+
+def author_label(authors: Any) -> str:
+    author_list = [item.strip() for item in str(authors or "").split(";") if item.strip()]
+    surnames = [author_surname(author) for author in author_list]
+    surnames = [surname for surname in surnames if surname]
+    if not surnames:
+        return "Autor desconocido"
+    if len(surnames) > 2:
+        return f"{surnames[0]} et al"
+    return " ".join(surnames[:2])
+
+
+def build_pdf_filename(record: Dict[str, Any]) -> str:
+    authors = sanitize_filename_part(author_label(record.get("authors", "")), 60)
+    year = sanitize_filename_part(record.get("publication_year", "") or "s-f", 12)
+    title = sanitize_filename_part(record.get("title", "") or record.get("record_id", ""), 90)
+    return f"{authors} - {year} - {title}.pdf"
+
+
+def should_upload_record(record: Dict[str, Any], after_date: Optional[date]) -> bool:
+    if not after_date:
+        return True
+    first_seen = parse_iso_date(record.get("first_seen_date"))
+    return bool(first_seen and first_seen > after_date)
+
+
 def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
     pdf_url = str(record.get("pdf_url", "")).strip()
     if not pdf_url:
         return None
-    raw_name = (
-        str(record.get("doi") or record.get("record_id") or "unknown")
-        .replace("/", "_").replace(":", "_").replace(" ", "_")
-    )
-    dest = PDFS_DIR / f"{raw_name}.pdf"
+    dest = PDFS_DIR / build_pdf_filename(record)
     if dest.exists():
         return dest
     try:
@@ -1074,7 +1139,12 @@ def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
         return None
 def bulk_download_and_upload(uploader: Optional[Any]) -> None:
     all_records = read_all_records()
-    print(f"\nDescarga masiva de PDFs: {len(all_records)} registros...")
+    upload_after = parse_iso_date(os.getenv("PDF_UPLOAD_AFTER_DATE", ""))
+    if upload_after:
+        all_records = [record for record in all_records if should_upload_record(record, upload_after)]
+        print(f"\nDescarga masiva de PDFs validados posteriores a {upload_after.isoformat()}: {len(all_records)} registros...")
+    else:
+        print(f"\nDescarga masiva de PDFs validados: {len(all_records)} registros...")
     ok = skipped = 0
     for i, record in enumerate(all_records):
         pdf_url  = str(record.get("pdf_url", "")).strip()
@@ -1166,7 +1236,10 @@ def main() -> None:
             print("Google Drive conectado.")
         except Exception as exc:
             print(f"Drive no disponible: {exc}")
-    bulk_download_and_upload(uploader)
+    if env_flag("SKIP_PDF_UPLOAD"):
+        print("Subida de PDFs omitida en esta etapa (SKIP_PDF_UPLOAD=true).")
+    else:
+        bulk_download_and_upload(uploader)
     gmail_user     = os.getenv("GMAIL_USER", "").strip()
     gmail_password = (os.getenv("GMAIL_APP_PASSWORD", "") or os.getenv("GMAIL_PASSWORD", "")).strip()
     recipient      = os.getenv("RECIPIENT_EMAIL", "").strip()

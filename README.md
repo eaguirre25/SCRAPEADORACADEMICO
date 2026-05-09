@@ -1,100 +1,119 @@
-# Academic Scraper for School Management Research
+# SCRAPEADORACADEMICO
 
-Este repositorio contiene un script en Python que recolecta trabajos académicos
-relacionados con **dirección escolar** y **gestión escolar** a partir de repositorios
-públicos accesibles a través de la API de OpenAlex.  La finalidad es mantener
-actualizado un catálogo de publicaciones desde 2020 hasta la fecha y enviar un
-informe diario por correo electrónico con las nuevas incorporaciones.
+Repositorio para recolectar, filtrar, analizar y publicar un tablero de literatura academica sobre direccion, gestion y liderazgo escolar.
 
-## ¿Qué hace el script?
+El proyecto combina scraping desde fuentes abiertas, curado de relevancia, corpus para analisis STM y un dashboard HTML publicado desde `docs/index.html`.
 
-1. **Búsqueda en OpenAlex** – Utiliza la API pública de OpenAlex para
-   realizar búsquedas de texto sobre varios términos relacionados con
-   dirección/gestión escolar.  La consulta se filtra para recuperar obras
-   publicadas desde el 1 de enero de 2020.  Los resultados incluyen el título,
-   año de publicación, DOI y un enlace al recurso.
+## Que contiene
 
-2. **Base de datos local** – Guarda la lista de DOI ya registrados en
-   `data/scraped_records.json` para que en futuras ejecuciones sólo se
-   consideren artículos nuevos.  Este archivo se actualiza automáticamente
-   después de cada ejecución.
+- `main.py`: scraper principal y actualizacion de registros.
+- `relevance_filter.py`: clasificacion de registros relevantes, en revision y rechazados.
+- `generate_dashboard.py`: dashboard interactivo con red semantica, topicos STM y tabla paginada.
+- `generate_dashboard_three_columns.py`: dashboard liviano de tres columnas desde `data/master_records.csv`.
+- `dashboard_healthcheck.py`: chequeo rapido de archivos, cantidades y estado STM.
+- `data/`: registros, corpus, logs y reportes.
+- `output/`: resultados STM, tablas y graficos.
+- `docs/index.html`: tablero navegable para GitHub Pages o inspeccion local.
+- `.github/workflows/`: automatizaciones para scraping, dashboard, corpus y STM.
 
-3. **Informe diario por correo electrónico** – Si se encuentran nuevos
-   artículos, el script genera un resumen en formato de texto y envía un
-   correo electrónico al destinatario indicado con los detalles de las
-   publicaciones recientes.  El envío se realiza a través del servidor SMTP
-   de Gmail utilizando credenciales almacenadas como variables de entorno.
+## Inspeccion local rapida
 
-4. **Ejecución programada en GitHub Actions** – El flujo de trabajo
-   `/.github/workflows/daily-scraper.yml` ejecuta el script a diario a una
-   hora predefinida.  Se recomienda configurar los secretos del repositorio
-   para **GMAIL_USER**, **GMAIL_APP_PASSWORD** y **RECIPIENT_EMAIL**.
+Desde la raiz del repositorio:
 
-## Cómo empezar
+```powershell
+py -3 dashboard_healthcheck.py
+```
 
-1. **Clonar y preparar el entorno**
+Para abrir el dashboard localmente:
 
-   ```bash
-   git clone https://github.com/tu-usuario/academic-scraper.git
-   cd academic-scraper
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
+```powershell
+cd docs
+py -3 -m http.server 8082
+```
 
-2. **Configurar variables de entorno**
+Luego abrir:
 
-   El script utiliza tres variables de entorno para enviar el correo:
+```text
+http://localhost:8082/
+```
 
-   - `GMAIL_USER`: dirección de Gmail desde la cual se enviarán los correos.
-   - `GMAIL_APP_PASSWORD`: contraseña de aplicación generada en Gmail (no uses
-     tu contraseña de acceso directa; genera una contraseña de aplicación en
-     https://myaccount.google.com/apppasswords si tienes activada la verificación
-     en dos pasos).
-   - `RECIPIENT_EMAIL`: dirección de correo electrónico que recibirá los
-     informes diarios.
+## Estado actual del tablero
 
-   Puedes exportar estas variables en tu sesión o definirlas en los secretos
-   del repositorio cuando utilices GitHub Actions.
+El healthcheck valida:
 
-   ```bash
-   export GMAIL_USER="tu_usuario@gmail.com"
-   export GMAIL_APP_PASSWORD="contraseña_de_aplicación"
-   export RECIPIENT_EMAIL="destinatario@ejemplo.com"
-   ```
+- existencia de `docs/index.html`;
+- cantidad de registros en `data/master_records.csv`, `data/review_records.csv` y `data/rejected_records.csv`;
+- presencia de insumos y salidas STM en `data/corpus.csv` y `output/`;
+- generacion de `data/dashboard_healthcheck.json` para auditoria.
 
-3. **Ejecutar el scraper manualmente**
+## Regenerar dashboard
 
-   ```bash
-   python main.py
-   ```
+Dashboard completo con red, topicos STM y articulos:
 
-   La primera ejecución descargará todos los artículos desde 2020, guardará los
-   datos en `data/scraped_records.json` y enviará un correo con el informe.  Las
-   ejecuciones posteriores buscarán nuevos artículos y enviarán un informe
-   únicamente si se encuentran novedades.
+```powershell
+py -3 generate_dashboard.py
+```
 
-## Configuración de GitHub Actions
+Dashboard operativo liviano de tres columnas:
 
-Este repositorio incluye un flujo de trabajo ubicado en
-`.github/workflows/daily-scraper.yml` que programa la ejecución diaria del
-script.  Para activarlo es necesario:
+```powershell
+py -3 generate_dashboard_three_columns.py
+```
 
-1. **Crear un repositorio en GitHub** – Sube estos archivos a tu cuenta de
-   GitHub.
-2. **Definir los secretos** – En la configuración del repositorio en GitHub,
-   selecciona **Settings → Secrets and variables → Actions** y agrega los
-   siguientes secretos:
-   - `GMAIL_USER`
-   - `GMAIL_APP_PASSWORD`
-   - `RECIPIENT_EMAIL`
-3. **Activar las acciones** – Una vez que los secretos estén definidos, GitHub
-   Actions ejecutará el flujo de trabajo en el horario especificado en el
-   archivo YAML (puedes modificar la cron para adaptarla a tu zona horaria).
+Despues de regenerar, volver a ejecutar:
 
-## Créditos y licencias
+```powershell
+py -3 dashboard_healthcheck.py
+```
 
-Los datos recopilados provienen de la API de OpenAlex, que distribuye su
-contenido bajo licencia CC0 (dominio público)【280946531337324†L250-L346】.  Este proyecto está liberado bajo
-licencia MIT y puede adaptarse libremente para fines académicos o de
-investigación.
+## Subida de PDFs a Google Drive
+
+El workflow principal corre cada 3 dias. Primero recolecta registros, luego filtra la base con `relevance_filter.py` y recien despues sube a Google Drive los PDFs de registros validados en `data/master_records.csv`.
+
+Para recuperar pendientes desde la ultima subida historica, el workflow usa:
+
+```text
+PDF_UPLOAD_AFTER_DATE=2026-04-25
+```
+
+Los PDFs se nombran con este formato:
+
+```text
+ApellidoAutor1 ApellidoAutor2 - anio - recorte del titulo.pdf
+```
+
+Si hay mas de dos autores:
+
+```text
+ApellidoAutor1 et al - anio - recorte del titulo.pdf
+```
+
+La subida requiere estos secrets en GitHub Actions:
+
+```text
+DRIVE_FOLDER_ID
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+GOOGLE_REFRESH_TOKEN
+```
+
+## Dependencias Python
+
+```powershell
+py -3 -m pip install -r requirements.txt
+```
+
+## Automatizaciones
+
+Los workflows de GitHub Actions corren en cascada:
+
+1. `Academic Scraper`: cada 3 dias recolecta registros, actualiza la base, filtra relevancia y sube a Google Drive los PDFs validados.
+2. `Extracción de corpus (PDFs → texto)`: se dispara cuando termina bien el scraper; lee los PDFs de Drive y actualiza `data/corpus.csv`.
+3. `Análisis STM – Dirección Escolar`: se dispara cuando termina bien la extracción de corpus; recalcula tópicos, tablas, modelo e informe STM en `output/`.
+4. `Generar Dashboard`: se dispara cuando termina bien STM; regenera `docs/index.html` y corre `dashboard_healthcheck.py`.
+
+Cada workflow conserva `workflow_dispatch`, por lo que tambien puede ejecutarse manualmente desde GitHub Actions.
+
+## Fuentes y licencia
+
+Los datos provienen de fuentes academicas abiertas, incluyendo OpenAlex y repositorios institucionales. Revisar las condiciones de cada fuente antes de redistribuir datos enriquecidos o archivos derivados.

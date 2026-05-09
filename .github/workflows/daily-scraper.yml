@@ -29,6 +29,11 @@ jobs:
           mkdir -p data docs output
 
       - name: Run scraper
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          SKIP_PDF_UPLOAD: "true"
         run: |
           python main.py
 
@@ -36,15 +41,17 @@ jobs:
         run: |
           python relevance_filter.py
 
-      - name: Generate three-column dashboard
+      - name: Upload validated PDFs to Google Drive
+        env:
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          PDF_UPLOAD_AFTER_DATE: "2026-04-25"
         run: |
-          python generate_dashboard_three_columns.py
+          python upload_validated_pdfs.py
 
-      - name: Check dashboard and STM files
-        run: |
-          python dashboard_healthcheck.py
-
-      - name: Commit updated data and dashboard files
+      - name: Commit updated data files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -59,15 +66,13 @@ jobs:
             data/dashboard_healthcheck.json \
             data/seen_ids.json \
             data/publicaciones.xlsx \
-            docs/index.html \
-            docs/.nojekyll \
+            main.py \
             relevance_filter.py \
-            dashboard_healthcheck.py \
-            generate_dashboard_three_columns.py \
+            upload_validated_pdfs.py \
             .github/workflows/daily-scraper.yml
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update academic scraper database and dashboard"
+            git commit -m "Update academic scraper database"
             git push
           fi
