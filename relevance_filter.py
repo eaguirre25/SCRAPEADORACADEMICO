@@ -31,6 +31,8 @@ MASTER_CSV = DATA_DIR / "master_records.csv"
 REVIEW_CSV = DATA_DIR / "review_records.csv"
 REJECTED_CSV = DATA_DIR / "rejected_records.csv"
 LATEST_RELEVANT_CSV = DATA_DIR / "latest_relevant_records.csv"
+AUTO_REVIEW_PROMOTED_CSV = DATA_DIR / "auto_review_promoted.csv"
+AUTO_REVIEW_REJECTED_CSV = DATA_DIR / "auto_review_rejected.csv"
 REPORT_JSON = DATA_DIR / "relevance_filter_report.json"
 EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
 
@@ -91,6 +93,41 @@ EDUCATION_CONTEXT_TERMS = [
     "instituciones educativas",
     "docente", "docentes", "profesor", "profesores",
     "estudiante", "estudiantes", "alumno", "alumnos",
+]
+
+SCHOOL_SYSTEM_TERMS = [
+    "educacion basica", "educación básica", "basic education",
+    "educacion secundaria", "educación secundaria", "secondary education",
+    "educacion primaria", "educación primaria", "primary education",
+    "bachillerato", "k-12", "k12",
+    "colegio", "colegios", "liceo", "liceos",
+    "centro educativo", "centros educativos",
+    "institucion educativa", "institución educativa", "instituciones educativas",
+    "unidad educativa", "unidades educativas",
+    "comunidad educativa", "comunidades educativas",
+]
+
+SCHOOL_AUTHORITY_TERMS = [
+    "autoridad", "autoridades",
+    "administrador escolar", "administradores escolares",
+    "gestion institucional", "gestión institucional",
+    "gestion administrativa", "gestión administrativa",
+    "school administrator", "school administrators",
+    "school leader", "school leaders",
+    "management committee", "management committees",
+]
+
+HIGHER_ED_NOISE_TERMS = [
+    "universidad", "universitario", "universitaria", "universitarias",
+    "higher education", "educacion superior", "educación superior",
+    "postgrado", "postgrados", "posgrado", "posgrados",
+]
+
+SECTOR_NOISE_TERMS = [
+    "educacion fisica", "educación física", "physical education",
+    "salud", "health", "medicine", "medical",
+    "sexuality education", "educacion sexual", "educación sexual",
+    "covid", "pandemia", "pandemic",
 ]
 
 # Ruido frecuente: solo penaliza cuando no hay señales fuertes de dirección escolar.
@@ -229,24 +266,130 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     return "rechazada", score, "sin relación clara con dirección escolar", evidence
 
 
-def read_master() -> Tuple[List[str], List[Dict[str, str]]]:
-    if not MASTER_CSV.exists():
-        return CSV_FIELDS, []
+def second_review(row: Dict[str, Any]) -> Tuple[str, str, List[str]]:
+    """Resuelve casos en revisión con reglas conservadoras de segunda lectura."""
+    title, body, text = row_text(row)
+    search_term = norm(row.get("search_term"))
+    evidence: List[str] = []
+
+    strong_hits = phrase_hit(text, STRONG_PHRASES)
+    medium_hits = phrase_hit(text, MEDIUM_PHRASES)
+    role_hits = term_hit(text, ROLE_TERMS)
+    management_hits = term_hit(text, MANAGEMENT_TERMS)
+    core_school_hits = term_hit(text, CORE_SCHOOL_TERMS)
+    school_system_hits = term_hit(text, SCHOOL_SYSTEM_TERMS)
+    school_authority_hits = term_hit(text, SCHOOL_AUTHORITY_TERMS)
+    higher_ed_noise = term_hit(text, HIGHER_ED_NOISE_TERMS)
+    sector_noise = term_hit(text, SECTOR_NOISE_TERMS)
+    noise_hits = term_hit(text, NOISE_TERMS)
+
+    if strong_hits:
+        evidence.append("segunda revisión: frase directa: " + ", ".join(strong_hits[:3]))
+        return "promover", "segunda revisión confirma relación directa", evidence
+
+    if role_hits and (core_school_hits or school_system_hits):
+        evidence.append("segunda revisión: rol directivo + sistema escolar")
+        return "promover", "segunda revisión confirma rol directivo en contexto escolar", evidence
+
+    if school_authority_hits and (core_school_hits or school_system_hits) and management_hits:
+        evidence.append("segunda revisión: autoridad/gestión institucional + escuela")
+        return "promover", "segunda revisión confirma gestión institucional escolar", evidence
+
+    if management_hits and core_school_hits and not (higher_ed_noise or sector_noise):
+        evidence.append("segunda revisión: gestión/liderazgo + escuela sin ruido sectorial")
+        return "promover", "segunda revisión confirma gestión escolar", evidence
+
+    broad_only = bool(medium_hits) and not (role_hits or core_school_hits or school_system_hits or school_authority_hits)
+    if broad_only:
+        evidence.append("segunda revisión: coincidencia demasiado amplia: " + ", ".join(medium_hits[:3]))
+        return "descartar", "gestión/liderazgo educativo sin foco escolar/directivo", evidence
+
+    if higher_ed_noise and not (core_school_hits or school_system_hits):
+        evidence.append("segunda revisión: foco en educación superior/postgrado")
+        return "descartar", "fuera de dirección escolar: educación superior o postgrado", evidence
+
+    if sector_noise and not (role_hits or school_authority_hits or strong_hits):
+        evidence.append("segunda revisión: foco sectorial no directivo: " + ", ".join(sector_noise[:3]))
+        return "descartar", "fuera de dirección escolar: tema educativo sectorial", evidence
+
+    if noise_hits and not (role_hits or school_authority_hits or strong_hits):
+        evidence.append("segunda revisión: ruido temático: " + ", ".join(noise_hits[:3]))
+        return "descartar", "fuera de dirección escolar: ruido temático", evidence
+
+    if search_term in {norm(term) for term in MEDIUM_PHRASES} and not (core_school_hits or school_system_hits):
+        evidence.append("segunda revisión: término de búsqueda amplio sin anclaje escolar")
+        return "descartar", "coincidencia por término amplio, sin anclaje escolar suficiente", evidence
+
+    evidence.append("segunda revisión: requiere lectura humana")
+    return "duda", "caso ambiguo para revisión manual", evidence
+
+
+def read_csv_if_exists(path: Path) -> Tuple[List[str], List[Dict[str, str]]]:
+    if not path.exists():
+        return [], []
     csv.field_size_limit(20_000_000)
-    with MASTER_CSV.open("r", encoding="utf-8-sig", newline="") as fh:
+    with path.open("r", encoding="utf-8-sig", newline="") as fh:
         reader = csv.DictReader(fh)
-        fieldnames = list(reader.fieldnames or CSV_FIELDS)
-        rows = list(reader)
-    # Asegurar columnas esperadas, sin perder columnas extra si aparecieran.
+        return list(reader.fieldnames or []), list(reader)
+
+
+def read_master() -> Tuple[List[str], List[Dict[str, str]]]:
+    master_fields, master_rows = read_csv_if_exists(MASTER_CSV)
+    review_fields, review_rows = read_csv_if_exists(REVIEW_CSV)
+
+    fieldnames = list(master_fields or CSV_FIELDS)
+    for field in review_fields:
+        if field not in fieldnames:
+            fieldnames.append(field)
     for field in CSV_FIELDS:
         if field not in fieldnames:
             fieldnames.append(field)
+
+    rows: List[Dict[str, str]] = []
+    seen: set[str] = set()
+    for source_rows in [master_rows, review_rows]:
+        for row in source_rows:
+            rid = str(row.get("record_id") or "").strip()
+            fallback = "::".join([
+                norm(row.get("title")),
+                str(row.get("publication_year") or "").strip(),
+                norm(row.get("doi") or row.get("url")),
+            ])
+            key = rid or fallback
+            if key in seen:
+                continue
+            seen.add(key)
+            rows.append(row)
     return fieldnames, rows
+
+
+def record_key(row: Dict[str, Any]) -> str:
+    rid = str(row.get("record_id") or "").strip()
+    if rid:
+        return rid
+    return "::".join([
+        norm(row.get("title")),
+        str(row.get("publication_year") or "").strip(),
+        norm(row.get("doi") or row.get("url")),
+    ])
+
+
+def append_unique(target: List[Dict[str, Any]], rows: List[Dict[str, Any]]) -> None:
+    seen = {record_key(row) for row in target}
+    for row in rows:
+        key = record_key(row)
+        if key in seen:
+            continue
+        seen.add(key)
+        target.append(row)
 
 
 def write_csv(path: Path, fieldnames: List[str], rows: List[Dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    extra_fields = ["relevance_status", "relevance_score", "relevance_reason", "relevance_evidence"]
+    extra_fields = [
+        "relevance_status", "relevance_score", "relevance_reason", "relevance_evidence",
+        "second_review_status", "second_review_reason", "second_review_evidence",
+    ]
     final_fields = list(fieldnames)
     for field in extra_fields:
         if rows and field in rows[0] and field not in final_fields:
@@ -269,7 +412,10 @@ def write_excel(relevant: List[Dict[str, Any]], review: List[Dict[str, Any]], re
         ws = wb.active if idx == 0 else wb.create_sheet(title=name)
         ws.title = name
         sheet_fields = list(fieldnames)
-        for extra in ["relevance_status", "relevance_score", "relevance_reason", "relevance_evidence"]:
+        for extra in [
+            "relevance_status", "relevance_score", "relevance_reason", "relevance_evidence",
+            "second_review_status", "second_review_reason", "second_review_evidence",
+        ]:
             if rows and extra in rows[0] and extra not in sheet_fields:
                 sheet_fields.append(extra)
         ws.append(sheet_fields)
@@ -284,7 +430,7 @@ def write_excel(relevant: List[Dict[str, Any]], review: List[Dict[str, Any]], re
         ws.freeze_panes = "A2"
         for col_idx, field in enumerate(sheet_fields, start=1):
             width = 18
-            if field in {"title", "abstract", "keywords", "relevance_evidence"}:
+            if field in {"title", "abstract", "keywords", "relevance_evidence", "second_review_evidence"}:
                 width = 55
             elif field in {"url", "pdf_url", "doi"}:
                 width = 34
@@ -300,9 +446,16 @@ def write_excel(relevant: List[Dict[str, Any]], review: List[Dict[str, Any]], re
 
 def main() -> None:
     fieldnames, rows = read_master()
+    rejected_fields, previously_rejected = read_csv_if_exists(REJECTED_CSV)
+    for field in rejected_fields:
+        if field not in fieldnames:
+            fieldnames.append(field)
+
     relevant: List[Dict[str, Any]] = []
     review: List[Dict[str, Any]] = []
     rejected: List[Dict[str, Any]] = []
+    auto_promoted: List[Dict[str, Any]] = []
+    auto_rejected: List[Dict[str, Any]] = []
 
     today = date.today().isoformat()
 
@@ -316,9 +469,26 @@ def main() -> None:
         if status == "alta":
             relevant.append(row_out)
         elif status == "revisar":
-            review.append(row_out)
+            second_status, second_reason, second_evidence = second_review(row_out)
+            row_out["second_review_status"] = second_status
+            row_out["second_review_reason"] = second_reason
+            row_out["second_review_evidence"] = " | ".join(second_evidence)
+            if second_status == "promover":
+                row_out["relevance_status"] = "alta"
+                row_out["relevance_reason"] = f"{reason}; {second_reason}"
+                relevant.append(row_out)
+                auto_promoted.append(row_out)
+            elif second_status == "descartar":
+                row_out["relevance_status"] = "rechazada"
+                row_out["relevance_reason"] = f"{reason}; {second_reason}"
+                rejected.append(row_out)
+                auto_rejected.append(row_out)
+            else:
+                review.append(row_out)
         else:
             rejected.append(row_out)
+
+    append_unique(rejected, previously_rejected)
 
     latest_relevant = [r for r in relevant if str(r.get("first_seen_date") or "") == today]
 
@@ -327,6 +497,8 @@ def main() -> None:
     write_csv(REVIEW_CSV, fieldnames, review)
     write_csv(REJECTED_CSV, fieldnames, rejected)
     write_csv(LATEST_RELEVANT_CSV, fieldnames, latest_relevant)
+    write_csv(AUTO_REVIEW_PROMOTED_CSV, fieldnames, auto_promoted)
+    write_csv(AUTO_REVIEW_REJECTED_CSV, fieldnames, auto_rejected)
     write_excel(relevant, review, rejected, fieldnames)
 
     report = {
@@ -336,18 +508,31 @@ def main() -> None:
         "review_records": len(review),
         "rejected_records": len(rejected),
         "latest_high_relevance": len(latest_relevant),
+        "second_review": {
+            "input_review_candidates": len(review) + len(auto_promoted) + len(auto_rejected),
+            "auto_promoted_to_high_relevance": len(auto_promoted),
+            "auto_rejected": len(auto_rejected),
+            "remaining_manual_review": len(review),
+        },
         "by_source_input": Counter(source_name(r) for r in rows),
         "by_source_kept": Counter(source_name(r) for r in relevant),
         "by_source_review": Counter(source_name(r) for r in review),
         "by_source_rejected": Counter(source_name(r) for r in rejected),
+        "by_source_second_review_promoted": Counter(source_name(r) for r in auto_promoted),
+        "by_source_second_review_rejected": Counter(source_name(r) for r in auto_rejected),
         "policy": {
             "master_records_csv": "solo alta pertinencia",
-            "review_records_csv": "coincidencias amplias para revisión manual",
+            "review_records_csv": "dudas reales que sobrevivieron a la segunda revisión automática",
             "rejected_records_csv": "descartes automáticos auditables",
+            "auto_review_promoted_csv": "casos promovidos automáticamente desde revisión a alta pertinencia",
+            "auto_review_rejected_csv": "casos descartados automáticamente en segunda revisión",
         },
     }
     # Convertir Counter a dict normal para JSON.
-    for key in ["by_source_input", "by_source_kept", "by_source_review", "by_source_rejected"]:
+    for key in [
+        "by_source_input", "by_source_kept", "by_source_review", "by_source_rejected",
+        "by_source_second_review_promoted", "by_source_second_review_rejected",
+    ]:
         report[key] = dict(report[key])
 
     REPORT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -357,6 +542,9 @@ def main() -> None:
     print(f"Alta pertinencia: {len(relevant)}")
     print(f"Revisar: {len(review)}")
     print(f"Rechazados: {len(rejected)}")
+    print(f"Segunda revisión - promovidos: {len(auto_promoted)}")
+    print(f"Segunda revisión - descartados: {len(auto_rejected)}")
+    print(f"Segunda revisión - dudas reales: {len(review)}")
     print(f"Alta pertinencia de hoy: {len(latest_relevant)}")
     print(f"Reporte: {REPORT_JSON}")
 

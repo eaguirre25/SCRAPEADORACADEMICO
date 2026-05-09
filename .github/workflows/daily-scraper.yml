@@ -61,6 +61,8 @@ jobs:
             data/master_records.csv \
             data/review_records.csv \
             data/rejected_records.csv \
+            data/auto_review_promoted.csv \
+            data/auto_review_rejected.csv \
             data/latest_relevant_records.csv \
             data/relevance_filter_report.json \
             data/dashboard_healthcheck.json \
