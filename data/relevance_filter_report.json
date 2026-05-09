@@ -1,10 +1,16 @@
 {
   "generated": "2026-05-09",
   "input_total": 3473,
-  "kept_high_relevance": 2865,
-  "review_records": 598,
-  "rejected_records": 10,
-  "latest_high_relevance": 5,
+  "kept_high_relevance": 2880,
+  "review_records": 86,
+  "rejected_records": 507,
+  "latest_high_relevance": 20,
+  "second_review": {
+    "input_review_candidates": 598,
+    "auto_promoted_to_high_relevance": 15,
+    "auto_rejected": 497,
+    "remaining_manual_review": 86
+  },
   "by_source_input": {
     "OpenAlex": 2616,
     "CONICET Digital | OpenAlex": 1,
@@ -13,21 +19,29 @@
     "CONICET Digital": 853
   },
   "by_source_kept": {
-    "OpenAlex": 2008,
+    "OpenAlex": 2023,
     "CONICET Digital | OpenAlex": 1,
     "SEDICI-UNLP | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 2,
     "CONICET Digital": 853
   },
   "by_source_review": {
-    "OpenAlex": 598
+    "OpenAlex": 86
   },
   "by_source_rejected": {
-    "OpenAlex": 10
+    "OpenAlex": 507
+  },
+  "by_source_second_review_promoted": {
+    "OpenAlex": 15
+  },
+  "by_source_second_review_rejected": {
+    "OpenAlex": 497
   },
   "policy": {
     "master_records_csv": "solo alta pertinencia",
-    "review_records_csv": "coincidencias amplias para revisión manual",
-    "rejected_records_csv": "descartes automáticos auditables"
+    "review_records_csv": "dudas reales que sobrevivieron a la segunda revisión automática",
+    "rejected_records_csv": "descartes automáticos auditables",
+    "auto_review_promoted_csv": "casos promovidos automáticamente desde revisión a alta pertinencia",
+    "auto_review_rejected_csv": "casos descartados automáticamente en segunda revisión"
   }
 }
