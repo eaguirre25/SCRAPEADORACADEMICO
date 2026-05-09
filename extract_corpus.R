@@ -94,7 +94,8 @@ cat(sprintf("Metadatos cargados: %d registros\n\n", nrow(metadata)))
 # ── Cargar corpus previo ──────────────────────────────────────────────────────
 
 if (file.exists(CORPUS_CSV)) {
-  corpus_prev   <- read_csv(CORPUS_CSV, show_col_types = FALSE)
+  corpus_prev   <- read_csv(CORPUS_CSV, show_col_types = FALSE) %>%
+    mutate(across(everything(), as.character))
   ya_procesados <- corpus_prev$filename
   cat(sprintf("Corpus previo: %d archivos ya procesados.\n\n", length(ya_procesados)))
 } else {
@@ -169,14 +170,14 @@ for (i in seq_len(n)) {
     paginas          = resultado$paginas,
     status           = resultado$status,
     fecha_extraccion = Sys.Date()
-  )
+  ) %>% mutate(across(everything(), as.character))
 
   log_rows[[i]] <- tibble(
     filename = nombre,
     status   = resultado$status,
     paginas  = resultado$paginas,
     chars    = nchar(resultado$texto)
-  )
+  ) %>% mutate(across(everything(), as.character))
 
   if (i %% 50 == 0) {
     parcial <- bind_rows(resultados[1:i])
