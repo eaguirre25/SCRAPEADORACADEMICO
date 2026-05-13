@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-05-10T15:13:37.151587+00:00",
+  "generated_at_utc": "2026-05-13T17:05:31.317818+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 1533122
+    "size_bytes": 1532692
   },
   "records": {
-    "master_high_relevance": 2881,
+    "master_high_relevance": 2882,
     "review": 87,
-    "rejected": 1357
+    "rejected": 1358
   },
   "stm_inputs_outputs": {
     "corpus": {
@@ -19,22 +19,22 @@
     "tabla_topicos": {
       "path": "output/tabla_topicos.csv",
       "exists": true,
-      "size_bytes": 5622
+      "size_bytes": 4348
     },
     "document_topics": {
       "path": "output/document_topics.csv",
       "exists": true,
-      "size_bytes": 141561
+      "size_bytes": 141214
     },
     "stm_model": {
       "path": "output/stm_model.rds",
       "exists": true,
-      "size_bytes": 3998696
+      "size_bytes": 3074650
     },
     "informe_stm": {
       "path": "output/informe_stm.html",
       "exists": true,
-      "size_bytes": 11952
+      "size_bytes": 10119
     }
   },
   "stm_status": "ok",
