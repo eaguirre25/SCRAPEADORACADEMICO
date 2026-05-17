@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '0 13 */3 * *'
   workflow_dispatch:
+    inputs:
+      upload_after_date:
+        description: 'Subir PDFs de registros validados posteriores a esta fecha (YYYY-MM-DD).'
+        required: false
+        default: '2026-04-25'
 permissions:
   contents: write
 jobs:
@@ -34,6 +39,7 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
           SKIP_PDF_UPLOAD: "true"
+          SKIP_EMAIL: "true"
         run: |
           python main.py
 
@@ -41,13 +47,22 @@ jobs:
         run: |
           python relevance_filter.py
 
+      - name: Send curated email update
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: |
+          python notify_updates.py
+
       - name: Upload validated PDFs to Google Drive
         env:
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
-          PDF_UPLOAD_AFTER_DATE: "2026-04-25"
+          PDF_UPLOAD_AFTER_DATE: ${{ github.event.inputs.upload_after_date || '2026-04-25' }}
+          UPLOAD_LATEST_RELEVANT_ONLY: "true"
         run: |
           python upload_validated_pdfs.py
 
@@ -68,7 +83,9 @@ jobs:
             data/dashboard_healthcheck.json \
             data/seen_ids.json \
             data/publicaciones.xlsx \
+            drive_uploader.py \
             main.py \
+            notify_updates.py \
             relevance_filter.py \
             upload_validated_pdfs.py \
             .github/workflows/daily-scraper.yml

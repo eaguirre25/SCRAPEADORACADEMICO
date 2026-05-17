@@ -130,6 +130,14 @@ SECTOR_NOISE_TERMS = [
     "covid", "pandemia", "pandemic",
 ]
 
+OWNERSHIP_MANAGEMENT_NOISE_TERMS = [
+    "gestion privada", "gestión privada",
+    "gestion publica", "gestión pública",
+    "gestion estatal", "gestión estatal",
+    "gestion social", "gestión social",
+    "public management", "private management",
+]
+
 # Ruido frecuente: solo penaliza cuando no hay señales fuertes de dirección escolar.
 NOISE_TERMS = [
     "tourism", "turismo", "penguin", "penguins", "pinguino", "pingüino",
@@ -195,6 +203,11 @@ def source_name(row: Dict[str, Any]) -> str:
     return str(row.get("source") or "Repositorio / Otro").strip() or "Repositorio / Otro"
 
 
+def source_is_strict(source: str) -> bool:
+    parts = [part.strip() for part in source.split("|")]
+    return any(part in STRICT_SOURCES for part in parts)
+
+
 def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     """Devuelve categoría, puntaje, motivo y evidencias."""
     title, body, text = row_text(row)
@@ -209,6 +222,9 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     management_hits = term_hit(text, MANAGEMENT_TERMS)
     core_school_hits = term_hit(text, CORE_SCHOOL_TERMS)
     education_hits = term_hit(text, EDUCATION_CONTEXT_TERMS)
+    higher_ed_noise = term_hit(text, HIGHER_ED_NOISE_TERMS)
+    sector_noise = term_hit(text, SECTOR_NOISE_TERMS)
+    ownership_noise = term_hit(text, OWNERSHIP_MANAGEMENT_NOISE_TERMS)
     noise_hits = term_hit(text, NOISE_TERMS)
 
     evidence: List[str] = []
@@ -241,13 +257,24 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
         score -= 4
         evidence.append("ruido temático: " + ", ".join(noise_hits[:3]))
 
-    strict = source in STRICT_SOURCES
+    strict = source_is_strict(source)
+    direct_focus = bool(strong_title or strong_body or (role_hits and (core_school_hits or education_hits)))
+
+    if ownership_noise and not direct_focus:
+        score -= 3
+        evidence.append("gestión como dependencia/sector, no como objeto directivo: " + ", ".join(ownership_noise[:3]))
+
+    if (higher_ed_noise or sector_noise) and not direct_focus:
+        evidence.append("ruido de nivel/sector: " + ", ".join((higher_ed_noise + sector_noise)[:3]))
+        return "rechazada", score, "fuera de foco: nivel/sector sin dirección o gestión escolar como objeto", evidence
 
     # Alta pertinencia: lo que entra al master y al dashboard.
     if strong_title or strong_body:
         return "alta", score, "coincidencia directa con dirección/gestión/liderazgo escolar", evidence
     if role_hits and (core_school_hits or education_hits):
         return "alta", score, "menciona rol/equipo directivo en contexto educativo", evidence
+    if strict and management_hits and core_school_hits:
+        return "revisar", score, "fuente externa con gestión + escuela, requiere confirmar foco directivo", evidence
     if management_hits and core_school_hits and score >= 4:
         return "alta", score, "articula gestión/liderazgo/gobierno con escuela/escolaridad", evidence
 

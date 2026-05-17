@@ -96,6 +96,7 @@ MASTER_CSV = DATA_DIR / "master_records.csv"
 SEEN_IDS_JSON = DATA_DIR / "seen_ids.json"
 EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
 PDFS_DIR   = DATA_DIR / "pdfs"
+LATEST_RELEVANT_CSV = DATA_DIR / "latest_relevant_records.csv"
 CSV_FIELDS = [
     "record_id", "first_seen_date", "search_term", "source",
     "origin", "document_type", "authors", "title", "abstract",
@@ -1124,22 +1125,45 @@ def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
     if dest.exists():
         return dest
     try:
-        resp = requests.get(pdf_url, timeout=30, stream=True)
+        resp = requests.get(pdf_url, headers=build_headers(), timeout=30, stream=True)
         resp.raise_for_status()
-        content_type = resp.headers.get("content-type", "")
-        if "pdf" not in content_type and not pdf_url.lower().endswith(".pdf"):
-            return None
+        rejected_content = False
         with open(dest, "wb") as f:
+            first_chunk = True
             for chunk in resp.iter_content(8192):
+                if not chunk:
+                    continue
+                if first_chunk:
+                    content_type = resp.headers.get("content-type", "")
+                    looks_like_pdf = chunk.lstrip().startswith(b"%PDF")
+                    if "pdf" not in content_type.lower() and not pdf_url.lower().endswith(".pdf") and not looks_like_pdf:
+                        rejected_content = True
+                        break
+                    first_chunk = False
                 f.write(chunk)
+        if rejected_content:
+            try:
+                dest.unlink(missing_ok=True)
+            except OSError:
+                pass
+            return None
         print(f"  PDF descargado: {dest.name}")
         return dest
     except Exception as exc:
         print(f"  No se pudo descargar ({pdf_url}): {exc}")
         return None
 def bulk_download_and_upload(uploader: Optional[Any]) -> None:
-    all_records = read_all_records()
     upload_after = parse_iso_date(os.getenv("PDF_UPLOAD_AFTER_DATE", ""))
+    if not upload_after and env_flag("UPLOAD_LATEST_RELEVANT_ONLY") and LATEST_RELEVANT_CSV.exists():
+        try:
+            with LATEST_RELEVANT_CSV.open("r", encoding="utf-8-sig", newline="") as f:
+                all_records = list(csv.DictReader(f))
+            print(f"\nUsando solo novedades validadas: {LATEST_RELEVANT_CSV} ({len(all_records)} registros)")
+        except Exception as exc:
+            print(f"No se pudo leer {LATEST_RELEVANT_CSV}: {exc}. Usando master completo.")
+            all_records = read_all_records()
+    else:
+        all_records = read_all_records()
     if upload_after:
         all_records = [record for record in all_records if should_upload_record(record, upload_after)]
         print(f"\nDescarga masiva de PDFs validados posteriores a {upload_after.isoformat()}: {len(all_records)} registros...")
@@ -1149,7 +1173,7 @@ def bulk_download_and_upload(uploader: Optional[Any]) -> None:
     for i, record in enumerate(all_records):
         pdf_url  = str(record.get("pdf_url", "")).strip()
         is_oa    = str(record.get("is_oa", "")).lower() in ("true", "1", "yes", "sí")
-        if not pdf_url and not is_oa:
+        if not pdf_url:
             doi = str(record.get("doi", "")).strip()
             if doi:
                 is_oa, pdf_url = fetch_oa_info_by_doi(doi)
@@ -1245,7 +1269,9 @@ def main() -> None:
     recipient      = os.getenv("RECIPIENT_EMAIL", "").strip()
     body           = generate_email_body(new_records, total_records)
     subject        = "Informe diario – dirección/gestión escolar"
-    if gmail_user and gmail_password and recipient:
+    if env_flag("SKIP_EMAIL"):
+        print("Correo omitido en esta etapa (SKIP_EMAIL=true).")
+    elif gmail_user and gmail_password and recipient:
         send_email(subject, body, gmail_user, gmail_password, recipient)
         print("Correo enviado.")
     else:

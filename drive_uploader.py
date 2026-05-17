@@ -54,16 +54,20 @@ class DriveUploader:
 
     def _list_existing_files(self) -> set[str]:
         try:
-            result = (
-                self.service.files()
-                .list(
+            names: set[str] = set()
+            page_token = None
+            while True:
+                request = self.service.files().list(
                     q=f"'{self.folder_id}' in parents and trashed=false",
-                    fields="files(name)",
+                    fields="nextPageToken,files(name)",
                     pageSize=1000,
+                    pageToken=page_token,
                 )
-                .execute()
-            )
-            return {f["name"] for f in result.get("files", [])}
+                result = request.execute()
+                names.update(f["name"] for f in result.get("files", []) if f.get("name"))
+                page_token = result.get("nextPageToken")
+                if not page_token:
+                    return names
         except Exception as exc:
             log.warning("No se pudo listar archivos en Drive: %s", exc)
             return set()
