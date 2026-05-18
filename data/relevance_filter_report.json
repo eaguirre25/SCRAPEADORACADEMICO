@@ -3,7 +3,7 @@
   "input_total": 3393,
   "kept_high_relevance": 2727,
   "review_records": 77,
-  "rejected_records": 1535,
+  "rejected_records": 1536,
   "latest_high_relevance": 5,
   "second_review": {
     "input_review_candidates": 713,
@@ -30,7 +30,7 @@
     "CONICET Digital": 1
   },
   "by_source_rejected": {
-    "OpenAlex": 598,
+    "OpenAlex": 599,
     "CONICET Digital": 937
   },
   "by_source_second_review_promoted": {
