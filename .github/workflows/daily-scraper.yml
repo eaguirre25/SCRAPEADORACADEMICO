@@ -72,7 +72,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          git reset --soft origin/main
+          git reset --mixed origin/main
           git add \
             data/master_records.csv \
             data/review_records.csv \
@@ -83,13 +83,7 @@ jobs:
             data/relevance_filter_report.json \
             data/dashboard_healthcheck.json \
             data/seen_ids.json \
-            data/publicaciones.xlsx \
-            drive_uploader.py \
-            main.py \
-            notify_updates.py \
-            relevance_filter.py \
-            upload_validated_pdfs.py \
-            .github/workflows/daily-scraper.yml
+            data/publicaciones.xlsx
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
