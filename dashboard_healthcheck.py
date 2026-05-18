@@ -44,6 +44,7 @@ def main() -> None:
     review = DATA_DIR / "review_records.csv"
     rejected = DATA_DIR / "rejected_records.csv"
     dashboard = DOCS_DIR / "index.html"
+    article_table = DOCS_DIR / "articulos.html"
     stm_files = {
         "corpus": DATA_DIR / "corpus.csv",
         "tabla_topicos": OUTPUT_DIR / "tabla_topicos.csv",
@@ -55,6 +56,7 @@ def main() -> None:
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "dashboard": file_info(dashboard),
+        "article_table": file_info(article_table),
         "records": {
             "master_high_relevance": count_csv(master),
             "review": count_csv(review),

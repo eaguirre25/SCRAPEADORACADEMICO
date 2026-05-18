@@ -24,6 +24,7 @@ REPO_ROOT = Path(__file__).resolve().parent
 OWNER = "eaguirre25"
 REPO = "SCRAPEADORACADEMICO"
 DASHBOARD_FILE = REPO_ROOT / "docs" / "index.html"
+ARTICLE_TABLE_FILE = REPO_ROOT / "docs" / "articulos.html"
 WORKFLOWS = [
     ("Scraper", "daily-scraper.yml"),
     ("Corpus", "extract_corpus (6).yml"),
@@ -361,7 +362,7 @@ class Widget(tk.Tk):
             self.label(self.stm_frame, text, fg="#c9d1d9", wraplength=390).pack(fill="x", pady=1)
 
     def open_articles_table(self) -> None:
-        open_local_path(DASHBOARD_FILE, "#articulos")
+        open_local_path(ARTICLE_TABLE_FILE)
 
     def open_actions(self) -> None:
         webbrowser.open(f"https://github.com/{OWNER}/{REPO}/actions")

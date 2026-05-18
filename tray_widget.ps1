@@ -5,7 +5,7 @@ Add-Type -AssemblyName System.Drawing
 
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $widgetScript = Join-Path $repoRoot "desktop_widget.py"
-$articlesUrl = (New-Object System.Uri((Join-Path $repoRoot "docs\index.html"))).AbsoluteUri + "#articulos"
+$articlesUrl = (New-Object System.Uri((Join-Path $repoRoot "docs\articulos.html"))).AbsoluteUri
 $actionsUrl = "https://github.com/eaguirre25/SCRAPEADORACADEMICO/actions"
 
 function New-TechIcon {

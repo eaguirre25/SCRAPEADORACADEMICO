@@ -34,7 +34,9 @@ jobs:
         run: mkdir -p docs
 
       - name: Generar dashboard
-        run: python generate_dashboard.py
+        run: |
+          python generate_dashboard.py
+          python generate_article_table.py
 
       - name: Check dashboard and STM files
         run: python dashboard_healthcheck.py
@@ -43,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html data/dashboard_healthcheck.json
+          git add docs/index.html docs/articulos.html data/dashboard_healthcheck.json
           if git diff --cached --quiet; then
             echo "Sin cambios."
           else
