@@ -93,6 +93,38 @@ def read_csv_rows(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def is_core_school_management_article(row: dict[str, str]) -> bool:
+    # El resumen del widget debe ser conservador: si el titulo no contiene
+    # una senal directa del tema, queda para la tabla completa.
+    text = row.get("title", "").casefold()
+    core_terms = [
+        "gestion escolar",
+        "gestión escolar",
+        "direccion escolar",
+        "dirección escolar",
+        "gestion directiva",
+        "gestión directiva",
+        "gestion educativa",
+        "gestión educativa",
+        "liderazgo escolar",
+        "liderazgo educativo",
+        "liderazgo pedagogico",
+        "liderazgo pedagógico",
+        "directivo escolar",
+        "directivos escolares",
+        "director de escuela",
+        "directores de escuela",
+        "school management",
+        "school leadership",
+        "educational leadership",
+        "school principal",
+        "principal leadership",
+        "principalship",
+        "headteacher",
+    ]
+    return any(term in text for term in core_terms)
+
+
 def latest_articles() -> list[dict[str, str]]:
     rows = read_csv_rows(REPO_ROOT / "data" / "master_records.csv")
     rows.sort(
@@ -104,7 +136,8 @@ def latest_articles() -> list[dict[str, str]]:
         ),
         reverse=True,
     )
-    return rows[:10]
+    core_rows = [row for row in rows if is_core_school_management_article(row)]
+    return (core_rows or rows)[:10]
 
 
 def stm_topics() -> list[dict[str, str]]:
