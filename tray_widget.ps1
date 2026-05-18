@@ -5,8 +5,7 @@ Add-Type -AssemblyName System.Drawing
 
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $widgetScript = Join-Path $repoRoot "desktop_widget.py"
-$dashboard = Join-Path $repoRoot "docs\index.html"
-$excel = Join-Path $repoRoot "data\publicaciones.xlsx"
+$articlesUrl = (New-Object System.Uri((Join-Path $repoRoot "docs\index.html"))).AbsoluteUri + "#articulos"
 $actionsUrl = "https://github.com/eaguirre25/SCRAPEADORACADEMICO/actions"
 
 function New-TechIcon {
@@ -99,11 +98,8 @@ $menu = New-Object System.Windows.Forms.ContextMenuStrip
 $openItem = $menu.Items.Add("Abrir / ocultar widget")
 $openItem.Add_Click({ Toggle-Widget })
 
-$dashboardItem = $menu.Items.Add("Abrir tabla de artículos")
-$dashboardItem.Add_Click({ Start-Process $dashboard })
-
-$excelItem = $menu.Items.Add("Abrir Excel de publicaciones")
-$excelItem.Add_Click({ Start-Process $excel })
+$dashboardItem = $menu.Items.Add("Buscar artículos")
+$dashboardItem.Add_Click({ Start-Process $articlesUrl })
 
 $actionsItem = $menu.Items.Add("Ver GitHub Actions")
 $actionsItem.Add_Click({ Start-Process $actionsUrl })

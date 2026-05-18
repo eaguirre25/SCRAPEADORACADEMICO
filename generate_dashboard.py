@@ -232,14 +232,20 @@ for r in records:
     auth_short = "; ".join(auth_list[:3]) + (" et al." if len(auth_list) > 3 else "")
     kws_raw = s(r.get("keywords", ""))
     kws = [k.strip() for k in kws_raw.split(";") if k.strip()][:5]
+    resumen = s(r.get("abstract", ""))
+    fuente = infer_source(r)
+    revista = infer_origin(r)
+    search_text = " ".join([title, autores, revista, fuente, s(r.get("publication_year", "")), kws_raw, resumen])
     all_articles.append({
         "titulo":  title,
         "autores": auth_short,
-        "revista": infer_origin(r),
-        "fuente": infer_source(r),
+        "revista": revista,
+        "fuente": fuente,
         "anio":    s(r.get("publication_year", "")),
         "url":     url,
         "kws":     kws,
+        "resumen": resumen[:450],
+        "search":  search_text,
     })
 
 all_articles.sort(key=lambda x: safe_int(x["anio"], 0), reverse=True)
@@ -392,10 +398,10 @@ tbody tr:hover td{background:var(--hover)}
   </div>
 </div>
 
-<div class="arts-section">
+<div class="arts-section" id="articulos">
   <div class="arts-head">
     <h2>Todos los articulos</h2>
-    <input type="text" class="search" id="search-input" placeholder="Buscar por título, autor, revista o fuente..." oninput="onSearch()">
+    <input type="text" class="search" id="search-input" placeholder="Buscar por titulo, autor, resumen, palabras clave, revista, fuente o anio..." oninput="onSearch()">
     <span class="badge" id="count-badge">{n_arts:,} articulos</span>
   </div>
   <div class="table-wrap">
@@ -540,7 +546,7 @@ let curPage=0, filtered=ARTS;
 
 function onSearch(){
   const q=document.getElementById("search-input").value.toLowerCase().trim();
-  filtered = q ? ARTS.filter(a=>(a.titulo||"").toLowerCase().includes(q)||(a.autores||"").toLowerCase().includes(q)||(a.revista||"").toLowerCase().includes(q)||(a.fuente||"").toLowerCase().includes(q)) : ARTS;
+  filtered = q ? ARTS.filter(a=>(a.search||"").toLowerCase().includes(q)) : ARTS;
   curPage=0;
   render();
 }
@@ -564,8 +570,9 @@ function render(){
   page.forEach(a=>{
     const tr=document.createElement("tr");
     const kws=(a.kws||[]).map(k=>`<span class="kt">${k}</span>`).join("");
+    const resumen=a.resumen ? `<div class="ameta">${a.resumen}</div>` : "";
     tr.innerHTML=`
-      <td><a class="alink" href="${a.url||"#"}" target="_blank" rel="noopener">${a.titulo}</a></td>
+      <td><a class="alink" href="${a.url||"#"}" target="_blank" rel="noopener">${a.titulo}</a>${resumen}</td>
       <td><span class="ameta">${a.autores||"—"}</span></td>
       <td><span class="ameta">${a.revista||"—"}</span></td>
       <td><span class="ameta">${a.fuente||"—"}</span></td>
@@ -575,10 +582,19 @@ function render(){
   });
 }
 
+function focusArticleSearch(){
+  if(window.location.hash !== "#articulos") return;
+  const section = document.getElementById("articulos");
+  const input = document.getElementById("search-input");
+  if(section) section.scrollIntoView({block:"start"});
+  if(input) setTimeout(()=>input.focus(), 250);
+}
+
 function prevPage(){ if(curPage>0){ curPage--; render(); } }
 function nextPage(){ if(curPage<Math.ceil(filtered.length/PG)-1){ curPage++; render(); } }
 
 render();
+focusArticleSearch();
 </script>
 </body>
 </html>"""

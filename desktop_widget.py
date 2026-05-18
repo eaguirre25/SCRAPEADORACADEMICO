@@ -18,7 +18,6 @@ REPO_ROOT = Path(__file__).resolve().parent
 OWNER = "eaguirre25"
 REPO = "SCRAPEADORACADEMICO"
 DASHBOARD_FILE = REPO_ROOT / "docs" / "index.html"
-EXCEL_FILE = REPO_ROOT / "data" / "publicaciones.xlsx"
 WORKFLOWS = [
     ("Scraper", "daily-scraper.yml"),
     ("Corpus", "extract_corpus (6).yml"),
@@ -129,9 +128,12 @@ def local_counts() -> dict[str, int]:
     }
 
 
-def open_local_path(path: Path) -> None:
+def open_local_path(path: Path, fragment: str = "") -> None:
     if not path.exists():
         messagebox.showwarning("SCRAPEADORACADEMICO", f"No existe:\n{path}")
+        return
+    if fragment:
+        webbrowser.open(path.as_uri() + fragment)
         return
     if os.name == "nt":
         os.startfile(str(path))  # type: ignore[attr-defined]
@@ -229,8 +231,7 @@ class Widget(tk.Tk):
 
         footer = tk.Frame(self.body, bg="#0d1117")
         footer.pack(fill="x", pady=(12, 0))
-        tk.Button(footer, text="Tabla de articulos", command=self.open_articles_table, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="left")
-        tk.Button(footer, text="Excel", command=self.open_excel, bg="#238636", fg="#ffffff", relief="flat").pack(side="left", padx=6)
+        tk.Button(footer, text="Buscar articulos", command=self.open_articles_table, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="left")
         tk.Button(footer, text="Actions", command=self.open_actions, bg="#30363d", fg="#ffffff", relief="flat").pack(side="left")
         tk.Button(footer, text="Git pull", command=self.git_pull, bg="#30363d", fg="#ffffff", relief="flat").pack(side="right")
 
@@ -288,10 +289,7 @@ class Widget(tk.Tk):
             self.label(self.stm_frame, text, fg="#c9d1d9", wraplength=390).pack(fill="x", pady=1)
 
     def open_articles_table(self) -> None:
-        open_local_path(DASHBOARD_FILE)
-
-    def open_excel(self) -> None:
-        open_local_path(EXCEL_FILE)
+        open_local_path(DASHBOARD_FILE, "#articulos")
 
     def open_actions(self) -> None:
         webbrowser.open(f"https://github.com/{OWNER}/{REPO}/actions")
