@@ -209,6 +209,7 @@ class Widget(tk.Tk):
         head = tk.Frame(self.body, bg="#0d1117")
         head.pack(fill="x")
         self.label(head, "SCRAPEADORACADEMICO", fg="#ffffff", font=("Segoe UI Semibold", 15)).pack(side="left")
+        tk.Button(head, text="Buscar articulos", command=self.open_articles_table, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="right", padx=(6, 0))
         tk.Button(head, text="Actualizar", command=self.refresh, bg="#238636", fg="#ffffff", relief="flat").pack(side="right")
 
         self.status_var = tk.StringVar(value="Cargando...")
@@ -222,8 +223,18 @@ class Widget(tk.Tk):
         self.runs_frame.pack(fill="x")
 
         self.section("Ultimos 10 articulos")
-        self.articles_frame = tk.Frame(self.body, bg="#0d1117")
-        self.articles_frame.pack(fill="both", expand=True)
+        articles_shell = tk.Frame(self.body, bg="#0d1117")
+        articles_shell.pack(fill="both", expand=True)
+        self.articles_canvas = tk.Canvas(articles_shell, bg="#0d1117", highlightthickness=0)
+        self.articles_scroll = tk.Scrollbar(articles_shell, orient="vertical", command=self.articles_canvas.yview)
+        self.articles_canvas.configure(yscrollcommand=self.articles_scroll.set)
+        self.articles_canvas.pack(side="left", fill="both", expand=True)
+        self.articles_scroll.pack(side="right", fill="y")
+        self.articles_frame = tk.Frame(self.articles_canvas, bg="#0d1117")
+        self.articles_window = self.articles_canvas.create_window((0, 0), window=self.articles_frame, anchor="nw")
+        self.articles_frame.bind("<Configure>", self.update_article_scroll_region)
+        self.articles_canvas.bind("<Configure>", self.resize_article_frame)
+        self.articles_canvas.bind_all("<MouseWheel>", self.on_article_mousewheel)
 
         self.section("Resumen STM")
         self.stm_frame = tk.Frame(self.body, bg="#0d1117")
@@ -238,6 +249,15 @@ class Widget(tk.Tk):
     def clear(self, frame: tk.Frame) -> None:
         for child in frame.winfo_children():
             child.destroy()
+
+    def update_article_scroll_region(self, _event: tk.Event | None = None) -> None:
+        self.articles_canvas.configure(scrollregion=self.articles_canvas.bbox("all"))
+
+    def resize_article_frame(self, event: tk.Event) -> None:
+        self.articles_canvas.itemconfigure(self.articles_window, width=event.width)
+
+    def on_article_mousewheel(self, event: tk.Event) -> None:
+        self.articles_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
     def refresh(self) -> None:
         try:
@@ -277,6 +297,7 @@ class Widget(tk.Tk):
             self.label(block, title, bg="#161b22", fg="#ffffff", font=("Segoe UI Semibold", 8), wraplength=380).pack(fill="x")
             self.label(block, authors, bg="#161b22", fg="#8b949e", wraplength=380).pack(fill="x")
             self.label(block, meta, bg="#161b22", fg="#58a6ff").pack(fill="x")
+        self.update_article_scroll_region()
 
     def render_stm(self, topics: list[dict[str, str]]) -> None:
         self.clear(self.stm_frame)
