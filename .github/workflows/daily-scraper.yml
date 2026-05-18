@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       upload_after_date:
-        description: 'Subir PDFs de registros validados posteriores a esta fecha (YYYY-MM-DD).'
+        description: 'Opcional: recuperar PDFs de registros validados posteriores a esta fecha (YYYY-MM-DD). Si queda vacío, sube solo novedades validadas.'
         required: false
-        default: '2026-04-25'
+        default: ''
 permissions:
   contents: write
 jobs:
@@ -61,7 +61,7 @@ jobs:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
-          PDF_UPLOAD_AFTER_DATE: ${{ github.event.inputs.upload_after_date || '2026-04-25' }}
+          PDF_UPLOAD_AFTER_DATE: ${{ github.event.inputs.upload_after_date || '' }}
           UPLOAD_LATEST_RELEVANT_ONLY: "true"
           DRIVE_UPLOAD_STRICT: "false"
         run: |
