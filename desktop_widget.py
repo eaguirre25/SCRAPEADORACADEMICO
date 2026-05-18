@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import subprocess
 import textwrap
 import tkinter as tk
@@ -16,6 +17,8 @@ from tkinter import messagebox
 REPO_ROOT = Path(__file__).resolve().parent
 OWNER = "eaguirre25"
 REPO = "SCRAPEADORACADEMICO"
+DASHBOARD_FILE = REPO_ROOT / "docs" / "index.html"
+EXCEL_FILE = REPO_ROOT / "data" / "publicaciones.xlsx"
 WORKFLOWS = [
     ("Scraper", "daily-scraper.yml"),
     ("Corpus", "extract_corpus (6).yml"),
@@ -126,6 +129,16 @@ def local_counts() -> dict[str, int]:
     }
 
 
+def open_local_path(path: Path) -> None:
+    if not path.exists():
+        messagebox.showwarning("SCRAPEADORACADEMICO", f"No existe:\n{path}")
+        return
+    if os.name == "nt":
+        os.startfile(str(path))  # type: ignore[attr-defined]
+    else:
+        webbrowser.open(path.as_uri())
+
+
 def workflow_runs() -> list[dict[str, str]]:
     runs: list[dict[str, str]] = []
     for label, workflow in WORKFLOWS:
@@ -216,8 +229,9 @@ class Widget(tk.Tk):
 
         footer = tk.Frame(self.body, bg="#0d1117")
         footer.pack(fill="x", pady=(12, 0))
-        tk.Button(footer, text="Dashboard", command=self.open_dashboard, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="left")
-        tk.Button(footer, text="GitHub Actions", command=self.open_actions, bg="#30363d", fg="#ffffff", relief="flat").pack(side="left", padx=6)
+        tk.Button(footer, text="Tabla de articulos", command=self.open_articles_table, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="left")
+        tk.Button(footer, text="Excel", command=self.open_excel, bg="#238636", fg="#ffffff", relief="flat").pack(side="left", padx=6)
+        tk.Button(footer, text="Actions", command=self.open_actions, bg="#30363d", fg="#ffffff", relief="flat").pack(side="left")
         tk.Button(footer, text="Git pull", command=self.git_pull, bg="#30363d", fg="#ffffff", relief="flat").pack(side="right")
 
     def clear(self, frame: tk.Frame) -> None:
@@ -273,8 +287,11 @@ class Widget(tk.Tk):
             text = f"T{topic.get('topico', '-')} · {topic.get('prevalencia', '-')}% · {words}"
             self.label(self.stm_frame, text, fg="#c9d1d9", wraplength=390).pack(fill="x", pady=1)
 
-    def open_dashboard(self) -> None:
-        webbrowser.open(str(REPO_ROOT / "docs" / "index.html"))
+    def open_articles_table(self) -> None:
+        open_local_path(DASHBOARD_FILE)
+
+    def open_excel(self) -> None:
+        open_local_path(EXCEL_FILE)
 
     def open_actions(self) -> None:
         webbrowser.open(f"https://github.com/{OWNER}/{REPO}/actions")

@@ -24,6 +24,8 @@ Desde la raiz del repositorio:
 py -3 dashboard_healthcheck.py
 ```
 
+El widget local incluye accesos directos para abrir la tabla navegable de articulos (`docs/index.html`), el Excel actualizado (`data/publicaciones.xlsx`) y GitHub Actions.
+
 Para abrir el dashboard localmente:
 
 ```powershell
