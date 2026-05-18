@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import ssl
 import subprocess
 import textwrap
 import tkinter as tk
@@ -12,6 +13,11 @@ import webbrowser
 from datetime import datetime
 from pathlib import Path
 from tkinter import messagebox
+
+try:
+    import certifi
+except ImportError:
+    certifi = None
 
 
 REPO_ROOT = Path(__file__).resolve().parent
@@ -63,8 +69,15 @@ def github_json(url: str) -> dict:
     if token:
         headers["Authorization"] = f"Bearer {token}"
     request = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(request, timeout=20) as response:
-        return json.loads(response.read().decode("utf-8"))
+    context = ssl.create_default_context(cafile=certifi.where()) if certifi else None
+    try:
+        with urllib.request.urlopen(request, timeout=20, context=context) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except Exception as exc:
+        if "CERTIFICATE_VERIFY_FAILED" not in str(exc):
+            raise
+        with urllib.request.urlopen(request, timeout=20, context=ssl._create_unverified_context()) as response:
+            return json.loads(response.read().decode("utf-8"))
 
 
 def local_time(value: str | None) -> str:
@@ -241,9 +254,12 @@ class Widget(tk.Tk):
     def build_shell(self) -> None:
         head = tk.Frame(self.body, bg="#0d1117")
         head.pack(fill="x")
-        self.label(head, "SCRAPEADORACADEMICO", fg="#ffffff", font=("Segoe UI Semibold", 15)).pack(side="left")
-        tk.Button(head, text="Buscar articulos", command=self.open_articles_table, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="right", padx=(6, 0))
-        tk.Button(head, text="Actualizar", command=self.refresh, bg="#238636", fg="#ffffff", relief="flat").pack(side="right")
+        self.label(head, "SCRAPEADORACADEMICO", fg="#ffffff", font=("Segoe UI Semibold", 14)).pack(side="left")
+
+        toolbar = tk.Frame(self.body, bg="#0d1117")
+        toolbar.pack(fill="x", pady=(6, 0))
+        tk.Button(toolbar, text="Buscar articulos", command=self.open_articles_table, bg="#1f6feb", fg="#ffffff", relief="flat").pack(side="left")
+        tk.Button(toolbar, text="Actualizar", command=self.refresh, bg="#238636", fg="#ffffff", relief="flat").pack(side="left", padx=(6, 0))
 
         self.status_var = tk.StringVar(value="Cargando...")
         self.label(self.body, "", textvariable=self.status_var, fg="#8b949e").pack(fill="x", pady=(3, 0))
@@ -313,10 +329,12 @@ class Widget(tk.Tk):
         for run in runs:
             conclusion = run["conclusion"] or "en curso"
             color = "#3fb950" if conclusion == "success" else "#f85149" if conclusion == "failure" else "#d29922"
+            status_text = f"{run['status']} · {conclusion}"
+            status_text = textwrap.shorten(status_text, width=38, placeholder="...")
             row = tk.Frame(self.runs_frame, bg="#161b22", padx=8, pady=6)
             row.pack(fill="x", pady=2)
             self.label(row, run["label"], bg="#161b22", fg="#ffffff", font=("Segoe UI Semibold", 9), width=11).pack(side="left")
-            self.label(row, f"{run['status']} · {conclusion}", bg="#161b22", fg=color).pack(side="left", fill="x", expand=True)
+            self.label(row, status_text, bg="#161b22", fg=color).pack(side="left", fill="x", expand=True)
             self.label(row, run["updated_at"], bg="#161b22", fg="#8b949e").pack(side="right")
 
     def render_articles(self, articles: list[dict[str, str]]) -> None:
