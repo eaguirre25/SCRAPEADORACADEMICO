@@ -80,6 +80,7 @@ jobs:
             data/auto_review_promoted.csv \
             data/auto_review_rejected.csv \
             data/latest_relevant_records.csv \
+            data/pdf_upload_report.json \
             data/relevance_filter_report.json \
             data/dashboard_healthcheck.json \
             data/seen_ids.json \

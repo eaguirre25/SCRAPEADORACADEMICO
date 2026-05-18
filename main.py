@@ -20,7 +20,7 @@ import smtplib
 import time
 import unicodedata
 import xml.etree.ElementTree as ET
-from datetime import date
+from datetime import date, datetime
 from difflib import SequenceMatcher
 from email import encoders
 from email.mime.base import MIMEBase
@@ -97,6 +97,7 @@ SEEN_IDS_JSON = DATA_DIR / "seen_ids.json"
 EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
 PDFS_DIR   = DATA_DIR / "pdfs"
 LATEST_RELEVANT_CSV = DATA_DIR / "latest_relevant_records.csv"
+PDF_UPLOAD_REPORT = DATA_DIR / "pdf_upload_report.json"
 CSV_FIELDS = [
     "record_id", "first_seen_date", "search_term", "source",
     "origin", "document_type", "authors", "title", "abstract",
@@ -1169,29 +1170,76 @@ def bulk_download_and_upload(uploader: Optional[Any]) -> None:
         print(f"\nDescarga masiva de PDFs validados posteriores a {upload_after.isoformat()}: {len(all_records)} registros...")
     else:
         print(f"\nDescarga masiva de PDFs validados: {len(all_records)} registros...")
-    ok = skipped = 0
+    report = {
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "upload_after_date": upload_after.isoformat() if upload_after else "",
+        "records_considered": len(all_records),
+        "with_pdf_url": 0,
+        "without_pdf_url": 0,
+        "downloaded_now": 0,
+        "already_local": 0,
+        "download_failed": 0,
+        "uploaded_to_drive": 0,
+        "already_in_drive": 0,
+        "drive_upload_failed": 0,
+        "items": [],
+    }
     for i, record in enumerate(all_records):
         pdf_url  = str(record.get("pdf_url", "")).strip()
-        is_oa    = str(record.get("is_oa", "")).lower() in ("true", "1", "yes", "sí")
         if not pdf_url:
             doi = str(record.get("doi", "")).strip()
             if doi:
-                is_oa, pdf_url = fetch_oa_info_by_doi(doi)
+                _, pdf_url = fetch_oa_info_by_doi(doi)
                 time.sleep(0.3)
         if not pdf_url:
-            skipped += 1
+            report["without_pdf_url"] += 1
             continue
+        report["with_pdf_url"] += 1
+        expected_path = PDFS_DIR / build_pdf_filename({**record, "pdf_url": pdf_url})
+        already_local = expected_path.exists()
         pdf_path = download_pdf({**record, "pdf_url": pdf_url})
         if pdf_path:
-            ok += 1
+            if already_local:
+                report["already_local"] += 1
+            else:
+                report["downloaded_now"] += 1
+            item = {
+                "title": record.get("title", ""),
+                "year": record.get("publication_year", ""),
+                "pdf_file": pdf_path.name,
+                "pdf_url": pdf_url,
+                "drive_status": "not_configured",
+            }
             if uploader:
                 try:
-                    uploader.upload(pdf_path)
+                    already_in_drive = hasattr(uploader, "exists") and uploader.exists(pdf_path.name)
+                    file_id = uploader.upload(pdf_path)
+                    if file_id:
+                        report["uploaded_to_drive"] += 1
+                        item["drive_status"] = "uploaded"
+                    elif already_in_drive:
+                        report["already_in_drive"] += 1
+                        item["drive_status"] = "already_exists"
+                    else:
+                        report["drive_upload_failed"] += 1
+                        item["drive_status"] = "failed"
                 except Exception as exc:
                     print(f"  Error subiendo a Drive: {exc}")
+                    report["drive_upload_failed"] += 1
+                    item["drive_status"] = f"failed: {exc}"
+            report["items"].append(item)
+        else:
+            report["download_failed"] += 1
         if (i + 1) % 100 == 0:
-            print(f"  {i+1}/{len(all_records)} — PDFs: {ok}")
-    print(f"PDFs descargados: {ok} | Sin PDF: {skipped}")
+            print(f"  {i+1}/{len(all_records)} - PDFs nuevos: {report['downloaded_now']} - Drive nuevos: {report['uploaded_to_drive']}")
+    PDF_UPLOAD_REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(
+        "PDFs: "
+        f"nuevos locales={report['downloaded_now']} | ya locales={report['already_local']} | "
+        f"subidos a Drive={report['uploaded_to_drive']} | ya estaban en Drive={report['already_in_drive']} | "
+        f"sin URL={report['without_pdf_url']} | descarga fallida={report['download_failed']} | "
+        f"subida fallida={report['drive_upload_failed']}"
+    )
 # ── Correo ────────────────────────────────────────────────────────────────────
 def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -> str:
     lines = [

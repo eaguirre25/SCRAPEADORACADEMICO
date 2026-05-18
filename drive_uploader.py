@@ -72,10 +72,14 @@ class DriveUploader:
             log.warning("No se pudo listar archivos en Drive: %s", exc)
             return set()
 
+    def exists(self, file_name: str) -> bool:
+        """Indica si un archivo ya figura en la carpeta de Drive."""
+        return file_name in self._uploaded
+
     def upload(self, file_path: Path) -> Optional[str]:
         """Sube un archivo. Omite si ya existe con el mismo nombre."""
         if file_path.name in self._uploaded:
-            log.debug("Ya existe en Drive: %s", file_path.name)
+            print(f"  Ya existe en Drive: {file_path.name}")
             return None
 
         mime_type, _ = mimetypes.guess_type(str(file_path))
@@ -92,6 +96,7 @@ class DriveUploader:
             )
             file_id = result.get("id")
             self._uploaded.add(file_path.name)
+            print(f"  Subido a Drive: {file_path.name}")
             log.info("Subido a Drive: %s (id=%s)", file_path.name, file_id)
             return file_id
         except Exception as exc:
