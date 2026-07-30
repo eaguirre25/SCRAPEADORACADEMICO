@@ -1,4 +1,4 @@
-source("topic_modeling/stm_pipeline.R", encoding = "UTF-8")
+source(file.path("..", "..", "topic_modeling", "stm_pipeline.R"), encoding = "UTF-8")
 
 testthat::test_that("metric normalization is bounded and deterministic", {
   testthat::expect_equal(normalize_metric(c(1, 2, 3)), c(0, 0.5, 1))

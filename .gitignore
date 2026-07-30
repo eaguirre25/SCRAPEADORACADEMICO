@@ -2,6 +2,7 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 .venv/
+.r-library/
 cache/topic_models/
 output/topic_models/corpus/*.csv
 output/topic_models/bertopic/model/
