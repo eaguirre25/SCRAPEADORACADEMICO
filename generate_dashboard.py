@@ -7,7 +7,7 @@ Dashboard interactivo con:
 3. Lista completa paginada (50/página) con buscador por título/autor
 """
 
-import csv, json, re, itertools
+import csv, json, re, itertools, html as html_lib
 from pathlib import Path
 from datetime import date
 from collections import defaultdict
@@ -71,6 +71,9 @@ records    = read_csv("data/master_records.csv")
 corpus     = read_csv("data/corpus.csv")
 topicos    = read_csv("output/tabla_topicos.csv")
 doc_topics = read_csv("output/document_topics.csv")
+hybrid_stm_topics = read_csv("output/topic_models/stm/topics.csv")
+hybrid_bertopic_topics = read_csv("output/topic_models/bertopic/topics.csv")
+topic_alignment = read_csv("output/topic_models/comparison/topic_alignment.csv")
 
 print(f"Records: {len(records)} | Corpus: {len(corpus)} | Topicos: {len(topicos)} | Doc-topics: {len(doc_topics)}")
 
@@ -275,6 +278,38 @@ n_edges = len(edges)
 n_arts  = len(all_articles)
 n_tops  = len(topicos)
 
+def topic_cards(rows, model):
+    if not rows:
+        return '<p class="tm-empty">Todavia no hay resultados para este modelo.</p>'
+    cards = []
+    for row in rows:
+        label = s(row.get("human_label")) or s(row.get("automatic_label")) or f"Topico {s(row.get('topic_id'))}"
+        measure = "prevalencia STM" if model == "STM" else "proporcion del cluster"
+        cards.append(
+            '<article class="tm-card">'
+            f'<div class="tm-title">{html_lib.escape(label)}</div>'
+            f'<div class="tm-meta">T{s(row.get("topic_id"))} · {html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
+            f'{html_lib.escape(s(row.get("document_count")))} documentos · validacion: {html_lib.escape(s(row.get("label_status")) or "pending")}</div>'
+            f'<div class="tm-words">{html_lib.escape(s(row.get("top_words")))}</div>'
+            f'<div class="tm-reps">{html_lib.escape(s(row.get("representative_titles")))}</div></article>'
+        )
+    return "".join(cards)
+
+alignment_rows = sorted(topic_alignment, key=lambda row: float(row.get("combined_similarity") or 0), reverse=True)[:20]
+alignment_html = "".join(
+    f'<tr><td>STM {html_lib.escape(s(row.get("stm_topic")))}</td><td>BERTopic {html_lib.escape(s(row.get("bertopic_topic")))}</td>'
+    f'<td>{html_lib.escape(s(row.get("alignment_status")))}</td><td>{html_lib.escape(s(row.get("combined_similarity")))}</td></tr>'
+    for row in alignment_rows
+) or '<tr><td colspan="4">Ejecute ambos modelos y la comparacion para completar esta vista.</td></tr>'
+hybrid_section = f'''<section class="tm-section" id="modelado-tematico">
+  <div class="tm-head"><div><h2>Modelado tematico</h2><p>STM estadistica y BERTopic semantico no miden exactamente lo mismo.</p></div>
+  <select id="tm-select" onchange="showTopicModel(this.value)"><option value="stm">STM</option><option value="bertopic">BERTopic</option><option value="comparison">Comparacion</option></select></div>
+  <div class="tm-pane" id="tm-stm">{topic_cards(hybrid_stm_topics, "STM")}</div>
+  <div class="tm-pane" id="tm-bertopic" hidden>{topic_cards(hybrid_bertopic_topics, "BERTopic")}</div>
+  <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th>Topico STM</th><th>Topico BERTopic</th><th>Relacion</th><th>Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>
+  <div class="tm-method">Semilla configurable: 42 · periodo 2020–2026 · 2026 es un año incompleto. La prevalencia STM es una mezcla documental; el tamaño BERTopic es una asignacion de cluster. Las etiquetas automaticas requieren validacion humana.</div>
+</section>'''
+
 # ── HTML ──────────────────────────────────────────────────────────────────────
 
 html = """<!DOCTYPE html>
@@ -360,6 +395,7 @@ tbody tr:hover td{background:var(--hover)}
 .mpaper a:hover{text-decoration:underline}
 .mpmeta{font-size:.72em;color:var(--muted);margin-top:2px}
 .mcount{font-size:.72em;color:var(--dim);padding:7px 18px;border-top:1px solid var(--border);text-align:right}
+.tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:420px;overflow:auto}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.topics-panel{display:none}}
 </style>
 </head>
@@ -397,6 +433,8 @@ tbody tr:hover td{background:var(--hover)}
     <div class="topics-scroll" id="topics-container"></div>
   </div>
 </div>
+
+""" + hybrid_section + """
 
 <div class="arts-section" id="articulos">
   <div class="arts-head">
@@ -447,6 +485,9 @@ const EDGES   = """ + edges_json + """;
 const TOPICOS = """ + topicos_json + """;
 const ARTS    = """ + arts_json + """;
 const PG = 50;
+function showTopicModel(name){
+  ["stm","bertopic","comparison"].forEach(id => document.getElementById("tm-"+id).hidden = id !== name);
+}
 
 // ── Red D3 ────────────────────────────────────────────────────────────────────
 (function(){

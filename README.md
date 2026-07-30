@@ -1,5 +1,9 @@
 # SCRAPEADORACADEMICO
 
+## Modelado temático híbrido
+
+El repositorio conserva la STM y agrega BERTopic multilingüe, corpus auditables, comparación entre modelos y validación humana. Consulte la guía reproducible en [docs/TOPIC_MODELING.md](docs/TOPIC_MODELING.md).
+
 Repositorio para recolectar, filtrar, analizar y publicar un tablero de literatura academica sobre direccion, gestion y liderazgo escolar.
 
 El proyecto combina scraping desde fuentes abiertas, curado de relevancia, corpus para analisis STM y un dashboard HTML publicado desde `docs/index.html`.
