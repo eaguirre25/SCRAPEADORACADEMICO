@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import random
+import shutil
 import time
 from pathlib import Path
 from typing import Any
@@ -78,6 +79,13 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
         calculate_probabilities=bool(cfg.get("calculate_probabilities", True)), verbose=True,
     )
     topics, probabilities = model.fit_transform(texts, embeddings=np.asarray(embeddings))
+    reduced_topics = list(topics)
+    outlier_reduction_warning = ""
+    if bool(cfg.get("reduce_outliers", True)) and -1 in topics and probabilities is not None:
+        try:
+            reduced_topics = list(model.reduce_outliers(texts, topics, probabilities=probabilities, strategy="probabilities"))
+        except (TypeError, ValueError) as exc:
+            outlier_reduction_warning = f"Alternative outlier reduction was not available: {exc}"
     out = root / "bertopic"
     out.mkdir(parents=True, exist_ok=True)
     human = load_human_labels(config["paths"]["human_labels"])
@@ -110,6 +118,7 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
     margin_threshold = float(config["validation"]["ambiguous_probability_margin"])
     for index, (row, topic_id) in enumerate(zip(documents, topics, strict=True)):
         first, second_id, second, margin = _probability_fields(probabilities, valid_topic_ids, index, int(topic_id))
+        reduced_topic = int(reduced_topics[index])
         document_rows.append({
             "document_id": row["document_id"], "model": "bertopic", "topic_id": int(topic_id),
             "topic_probability": first, "second_topic_id": second_id, "second_topic_probability": second,
@@ -117,7 +126,8 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
             "is_ambiguous": margin != "" and float(margin) < margin_threshold,
             "year": row["year"], "language": row["language"], "title": row["title"], "doi": row["doi"],
             "source": row["source"], "corpus_unit": row["corpus_unit"],
-            "topic_original": int(topic_id), "topic_after_outlier_reduction": int(topic_id), "outlier_reassigned": False,
+            "topic_original": int(topic_id), "topic_after_outlier_reduction": reduced_topic,
+            "outlier_reassigned": int(topic_id) == -1 and reduced_topic != -1,
         })
     write_csv(out / "topics.csv", topic_rows)
     write_csv(out / "document_topics.csv", document_rows)
@@ -127,10 +137,42 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
     ])
     write_csv(out / "representative_documents.csv", representative_rows)
     write_csv(out / "outliers.csv", [row for row in document_rows if row["is_outlier"]])
-    model.save(str(out / "model"), serialization="safetensors", save_ctfidf=True)
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    similarity_rows: list[dict[str, Any]] = []
+    topic_order = sorted(int(topic) for topic in model.get_topics())
+    if getattr(model, "c_tf_idf_", None) is not None:
+        similarities = cosine_similarity(model.c_tf_idf_)
+        for left_index, left_topic in enumerate(topic_order):
+            for right_index in range(left_index + 1, len(topic_order)):
+                right_topic = topic_order[right_index]
+                score = float(similarities[left_index, right_index])
+                similarity_rows.append({
+                    "topic_a": left_topic, "topic_b": right_topic, "ctfidf_similarity": round(score, 6),
+                    "merge_candidate": score >= float(cfg.get("merge_candidate_similarity", 0.8)),
+                    "review_status": "pending_human_review",
+                })
+    write_csv(out / "topic_similarity.csv", similarity_rows)
+    write_csv(out / "merge_history.csv", [], ["timestamp", "topic_a", "topic_b", "decision", "reviewer", "notes"])
+    model_path = out / "model"
+    model_save_warning = ""
+    try:
+        model.save(str(model_path), serialization="safetensors", save_ctfidf=True)
+        model_save_mode = "safetensors_with_ctfidf"
+    except TypeError as exc:
+        # BERTopic 0.17.x can leave NumPy scalar values in the c-TF-IDF
+        # configuration. Preserve the fitted model and record the fallback.
+        if model_path.exists():
+            shutil.rmtree(model_path)
+        model.save(str(model_path), serialization="safetensors", save_ctfidf=False)
+        model_save_mode = "safetensors_without_ctfidf"
+        model_save_warning = f"c-TF-IDF state was not serialized: {exc}"
     metadata = base_metadata(config, model="bertopic", documents=len(documents), discarded=0, elapsed_seconds=time.perf_counter() - started)
     metadata["embedding_cache"] = {key: value for key, value in embedding_manifest.items() if key not in {"document_ids", "text_hashes"}}
     metadata["outlier_count"] = sum(int(topic) == -1 for topic in topics)
     metadata["outlier_percentage"] = round(100 * metadata["outlier_count"] / max(len(topics), 1), 4)
+    metadata["model_save_mode"] = model_save_mode
+    metadata["warnings"] = [warning for warning in (model_save_warning, outlier_reduction_warning) if warning]
+    metadata["outliers_reassigned_in_alternative"] = sum(row["outlier_reassigned"] for row in document_rows)
     write_metadata(out / "model_metadata.json", metadata)
     return metadata
