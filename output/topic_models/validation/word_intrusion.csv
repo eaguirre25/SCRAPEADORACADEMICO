@@ -1,0 +1,105 @@
+model,corpus,language,topic_id,candidate_terms_randomized,intruder_answer_key,human_selected_intruder,correct,reviewer,status
+stm,,,1,için | caos | mineral | atribución | okul | núm,mineral,,,,pending
+stm,,,2,finnish | bibliometric | hallinger | quality management | visionary | articles,quality management,,,,pending
+stm,,,3,indigenous | orang | kolaborasi | palopo | sustainable | tua,sustainable,,,,pending
+stm,,,4,tecnologías | sistema | tic | virtuales | artificial | formativa,sistema,,,,pending
+stm,,,5,opinions | distance | liderazgo transformacional | silence | ict | administrators,liderazgo transformacional,,,,pending
+stm,,,6,scientific | smts | instructional | transformational | flourishing | smt,scientific,,,,pending
+stm,,,7,disiplin | discursos | variabel | uji | kinerja | regresi,discursos,,,,pending
+stm,,,8,sustainable | ensuring | enhancing | initiatives | promoting | entrepreneurship,entrepreneurship,,,,pending
+stm,,,9,também | sua | acesso | direitos | anos | pública,pública,,,,pending
+stm,,,10,graduates | entrepreneurship | organizing | facilities | leadership style | vocational,leadership style,,,,pending
+stm,,,11,scielo | julia | estrategias | roxana | rolando | interdisciplinarias,estrategias,,,,pending
+stm,,,12,gontor | boarding | bengkulu | character | pesantren | quran,character,,,,pending
+stm,,,13,medical | disabled | emergency | wales | nursing | democratic,democratic,,,,pending
+stm,,,14,auditoría | koinonia | corrupción | depósito | heads | coro,heads,,,,pending
+stm,,,15,women | líder | liderazgo | transformacional | igobernanza | directivo,women,,,,pending
+stm,,,16,positions | racism | discapacidad | abusive | women | women’s,discapacidad,,,,pending
+stm,,,17,bullying | konseling | keputusan | mutu | partisipatif | infantil,infantil,,,,pending
+stm,,,18,coeficiente | spearman | technology | rho | bilateral | hipótesis,technology,,,,pending
+stm,,,19,smcs | smc | parent | gestin democrtica | financial | overcrowded,gestin democrtica,,,,pending
+stm,,,20,indígenas | indígena | igobernanza | privatización | aires | discursos,igobernanza,,,,pending
+stm,,,21,isni | latam | asunción | indtec | paraguay | south,south,,,,pending
+stm,,,22,rvgluz | atribución-compartirigual | rica | senior high schools | síndrome | mep,senior high schools,,,,pending
+STM-METADATA-EN,metadata,en,1,governance | democratic | participation | simon | transformation | participatory,simon,,,,pending
+STM-METADATA-EN,metadata,en,2,mineral | inclusive | argentina | disabilities | special | inclusion,argentina,,,,pending
+STM-METADATA-EN,metadata,en,3,women | black | equity | racism | justice | atribución,atribución,,,,pending
+STM-METADATA-EN,metadata,en,4,planning | services | vocational | entrepreneurship | process | buenas prcticas,buenas prcticas,,,,pending
+STM-METADATA-EN,metadata,en,5,styles | racial | style | principals | principal | instructional,racial,,,,pending
+STM-METADATA-EN,metadata,en,6,assurance | china | smcs | quality | directivo | smc,directivo,,,,pending
+STM-METADATA-EN,metadata,en,7,mental | bengkulu | stress | intervention | health | scale,bengkulu,,,,pending
+STM-METADATA-EN,metadata,en,8,coronavirus | crisis | instituciones educativas pblicas | pandemic | disease | covid,instituciones educativas pblicas,,,,pending
+STM-METADATA-EN,metadata,en,9,ict | discapacidad | information | digital | technology | artificial,discapacidad,,,,pending
+STM-METADATA-EN,metadata,en,10,collaborative | highlights | infantil | professional | fostering | emotional,infantil,,,,pending
+STM-METADATA-EN,metadata,en,11,south | africa | artificial | rural | smts | municipality,artificial,,,,pending
+STM-METADATA-EN,metadata,en,12,documentation | islam | uji | islamic | boarding | character,uji,,,,pending
+STM-METADATA-EN,metadata,en,13,parental | heads | statistics | secondary | hallinger | sampling,hallinger,,,,pending
+STM-METADATA-EN,metadata,en,14,climate | director | commitment | satisfaction | organizational | job,director,,,,pending
+STM-METADATA-EN,metadata,en,15,systematic | innovadoras | review | published | articles | scientific,innovadoras,,,,pending
+STM-METADATA-EN,metadata,en,16,programs | preparation | islamic | disaster | director | preparedness,islamic,,,,pending
+STM-METADATA-ES,metadata,es,1,participation | students | knowledge | organizational | scientific | gestão,scientific,,,,pending
+STM-METADATA-ES,metadata,es,2,lograr | entorno | latam | comunidad | permita | debe,latam,,,,pending
+STM-METADATA-ES,metadata,es,3,córdoba | discursos | leadership | mendoza | aires | policies,discursos,,,,pending
+STM-METADATA-ES,metadata,es,4,programs | ods | desempeño | experimental | sostenible | institución,programs,,,,pending
+STM-METADATA-ES,metadata,es,5,inclusión | discapacidad | inclusiva | gestin escolar calidad | inclusivas | diversidad,gestin escolar calidad,,,,pending
+STM-METADATA-ES,metadata,es,6,especiales | estándares | indicadores | pruebas | gerenciales | amp,especiales,,,,pending
+STM-METADATA-ES,metadata,es,7,infantil | director | investigacion | covid | gestion | burnout,director,,,,pending
+STM-METADATA-ES,metadata,es,8,innovadoras | transformación | innovación | okul | fortalecimiento | eje,okul,,,,pending
+STM-METADATA-ES,metadata,es,9,inteligencia | tic | artificial | digital | digitales | styles,styles,,,,pending
+STM-METADATA-ES,metadata,es,10,satisfacción | digital | clima | convivencia | padres | familia,digital,,,,pending
+STM-METADATA-ES,metadata,es,11,monitoreo | gontor | brechas | metodológicas | escasa | acompañamiento,gontor,,,,pending
+STM-METADATA-ES,metadata,es,12,hipótesis | confiabilidad | transformational | cronbach | ugel | lima,transformational,,,,pending
+STM-METADATA-ES,metadata,es,13,monitoreo | intercultural | adultos | jóvenes | ley | privatización,monitoreo,,,,pending
+STM-METADATA-ES,metadata,es,14,directores | inteligencia artificial | director | directivo | cargo | liderazgo,inteligencia artificial,,,,pending
+STM-METADATA-ES,metadata,es,15,pregunta | inteligencia | supervisión | filosofía | acción | paulo,inteligencia,,,,pending
+STM-METADATA-ES,metadata,es,16,estrategias gestin educativa | revisión | artículos | scopus | sistemática | scielo,estrategias gestin educativa,,,,pending
+STM-METADATA-PT,metadata,pt,1,aprendizagem | women | características | gestores | escolares | learning,women,,,,pending
+STM-METADATA-PT,metadata,pt,2,públicas | directivo gestin educativa | democratic | estado | brasil | democrática,directivo gestin educativa,,,,pending
+STM-METADATA-PT,metadata,pt,3,área | field | innovadoras | continuada | participación | municipal,innovadoras,,,,pending
+STM-METADATA-PT,metadata,pt,4,atribución-compartirigual | observação | grande | pedagógico | professores | processo,atribución-compartirigual,,,,pending
+STM-METADATA-PT,metadata,pt,5,rural | community | democratic | vida | práctica | campo,democratic,,,,pending
+STM-METADATA-PT,metadata,pt,6,políticas | argentina | sistema | secondary | educativas | ods,ods,,,,pending
+STM-METADATA-PT,metadata,pt,7,relação | desarrollo | últimos | democratization | vez | privatización,privatización,,,,pending
+STM-METADATA-PT,metadata,pt,8,pública | program | marco | indgena | public | programa,indgena,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,0,liderazgo transformacional | liderazgo | liderazgo transformacional gestin | innovacin | transformacional | transformacional gestin,innovacin,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,1,enhancing | padres | padres familia | familia | parents | parental,enhancing,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,2,filosofa | paulo | freire | paulo freire | direitos | complejidad,direitos,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,3,ai | educational | inteligencia | inteligencia artificial | artificial | ia,educational,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,4,boarding school | islamic boarding | boarding | school management committees | islamic | character,school management committees,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,5,motivation | pandemia | teachers | job satisfaction | satisfaction | job,pandemia,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,6,coronavirus | brasil | covid19 pandemic | disease | covid19 | pandemic,brasil,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,7,escuela rural | rurales | governance | indgena | escuelas rurales | rural,governance,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,8,artificial | buenos | crdoba | argentina | aires | buenos aires,artificial,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,9,buenas prcticas | educational leadership | educational | leadership theory | followers | leadership,buenas prcticas,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,10,sexual | gender | gnero | female | coronavirus | women,coronavirus,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,11,artificial | style | leadership | styles | leadership style | amp,artificial,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,12,technology | tic | information | ict | eje | integration,eje,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,13,digital transformation | digital era | transformation | instructional | era | digital,instructional,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,14,convivencia | violencia | integration | prevention | bullying | suicide,integration,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,15,quality | quality management | total quality | quality education | total quality management | planning,planning,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,16,gestin democrtica | satisfaction | democrtica | democratic | democracy | gesto,satisfaction,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,17,wa | ambiental | senior high schools | environmental | waste | democrtica,democrtica,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,18,black | antiracist | transformacional gestin | racial | racism | race,transformacional gestin,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,19,system | management information | school management system | management system | trujillo | information,trujillo,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,20,calidad educacin | calidad educativa | strategic | strategic planning | calidad | parental,parental,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,21,gestin escolar calidad | escolar calidad | calidad | privatización | calidad educativa | calidad servicio,privatización,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,22,educational leadership | orang | ethical | leadership | islamic | muslim,orang,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,23,callao | estrategias gestin | educativas pblicas | instituciones educativas pblicas | pblicas | responsabilidad social,estrategias gestin,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,24,tcnica | pandemia | mendoza | postpandemia | ncds | tiempos pandemia,tcnica,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,25,academic performance | síndrome | county | academic | grants | tanzania,síndrome,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,26,agentes educativos | educativos sobre | interdisciplinarias | mxico | x0d | nueva,interdisciplinarias,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,27,innovacin | innovadoras | estrategias | entrepreneurship education | innovacin gestin | trujillo,trujillo,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,28,multigrado | director | liderazgo directivo | buenas prcticas | director escolar | curriculum implementation,liderazgo directivo,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,29,prcticas inclusivas | inclusin | pedagógico | inclusivas | inclusiva | educacin inclusiva,pedagógico,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,30,directivo | ayacucho | liderazgo directivo | rs | directivo gestin educativa | bullying,bullying,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,31,ei | emocional | boarding | emotional | inteligencia emocional | emotional intelligence,boarding,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,32,gestin educativa eficiente | educativa eficiente | ecuador | estrategias gestin educativa | estrategias gestin | democracy,democracy,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,33,calidad educativa | figuras | narrativas | comprensin lectora | lectora | lenguaje,calidad educativa,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,34,educativa desempeo docente | compromisos gestin | compromisos | compromisos gestin escolar | inclusión | trujillo,inclusión,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,35,habilidades gerenciales | autoestima | desempeo | ambientes | clima institucional | desempeo docente,habilidades gerenciales,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,36,administrativa gestin | innovación | habilidades gerenciales | gestin administrativa | administrativa | gerenciales,innovación,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,37,per | corrupcin | impactos | transformational | desastres | neuqun,transformational,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,38,students disabilities | mild | compromisos gestin | disabilities | especiales | discapacidad,compromisos gestin,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,39,school management committee | smc | school management committees | smcs | management committee | direitos,direitos,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,40,tcnica | bogot | simon | interdisciplinarias | eficiencia | asistencia tcnica,interdisciplinarias,,,,pending
+BERTopic-METADATA-MULTILINGUAL,metadata,multilingual,41,desigualdades | sociedades democrticas | latinoamericana | job | amrica | amrica latina,job,,,,pending

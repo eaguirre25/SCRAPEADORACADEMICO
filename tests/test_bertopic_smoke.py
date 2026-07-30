@@ -1,4 +1,7 @@
 import json
+import sys
+import types
+from pathlib import Path
 
 import numpy as np
 
@@ -36,16 +39,65 @@ def test_bertopic_cpu_smoke_with_cached_embeddings(tmp_path, monkeypatch):
             "hdbscan": {"metric": "euclidean", "cluster_selection_method": "eom", "prediction_data": True},
         },
         "validation": {"ambiguous_probability_margin": 0.1},
+        "metadata_embeddings": {"combine_fields_as_embeddings": True},
+        "multilingual": {"language_topic_threshold": 0.8},
     }
+
+    class FakeInfo:
+        def __init__(self):
+            self.rows = [{"Topic": topic, "Count": 12} for topic in range(4)]
+        def __getitem__(self, key):
+            return types.SimpleNamespace(tolist=lambda: [row[key] for row in self.rows])
+        def iterrows(self):
+            return enumerate(self.rows)
+
+    class FakeUMAP:
+        def __init__(self, **_kwargs):
+            self.embedding_ = None
+
+    class FakeHDBSCAN:
+        def __init__(self, **_kwargs):
+            pass
+
+    class FakeCTFIDF:
+        def __init__(self, **_kwargs):
+            pass
+
+    class FakeBERTopic:
+        def __init__(self, *, umap_model, **_kwargs):
+            self.umap_model = umap_model
+            self.c_tf_idf_ = None
+        def fit_transform(self, texts, embeddings):
+            topics = np.repeat(np.arange(4), 12)
+            probabilities = np.full((len(texts), 4), 0.02)
+            probabilities[np.arange(len(texts)), topics] = 0.94
+            self.umap_model.embedding_ = np.asarray(embeddings)[:, :2]
+            return topics.tolist(), probabilities
+        def get_topic_info(self):
+            return FakeInfo()
+        def get_topic(self, topic_id):
+            return [(themes[topic_id][0].split()[0], 1.0), ("education", 0.8)]
+        def get_representative_docs(self, topic_id):
+            return [rows[topic_id * 12]["texto_modelado"]]
+        def get_topics(self):
+            return {topic: self.get_topic(topic) for topic in range(4)}
+        def save(self, path, **_kwargs):
+            Path(path).mkdir(parents=True, exist_ok=True)
+
+    monkeypatch.setitem(sys.modules, "bertopic", types.SimpleNamespace(BERTopic=FakeBERTopic))
+    monkeypatch.setitem(sys.modules, "bertopic.vectorizers", types.SimpleNamespace(ClassTfidfTransformer=FakeCTFIDF))
+    monkeypatch.setitem(sys.modules, "hdbscan", types.SimpleNamespace(HDBSCAN=FakeHDBSCAN))
+    monkeypatch.setitem(sys.modules, "umap", types.SimpleNamespace(UMAP=FakeUMAP))
     monkeypatch.setattr(
-        bertopic_model, "load_or_create_embeddings",
+        bertopic_model, "load_or_create_metadata_embeddings",
         lambda *_args, **_kwargs: (np.asarray(embeddings), {"fingerprint": "fixture", "dimension": 4}),
     )
     metadata = bertopic_model.run_bertopic(config)
-    docs = read_csv(output / "bertopic" / "document_topics.csv")
-    topics = read_csv(output / "bertopic" / "topics.csv")
+    model_output = output / "bertopic" / "metadata_multilingual"
+    docs = read_csv(model_output / "document_topics.csv")
+    topics = read_csv(model_output / "topics.csv")
     assert metadata["documents"] == 48
     assert len(docs) == 48
     assert len([row for row in topics if row["topic_id"] != "-1"]) >= 2
     assert {row["document_id"] for row in docs} == {row["document_id"] for row in rows}
-    assert json.loads((output / "bertopic" / "model_metadata.json").read_text(encoding="utf-8"))["seed"] == 42
+    assert json.loads((model_output / "model_metadata.json").read_text(encoding="utf-8"))["seed"] == 42

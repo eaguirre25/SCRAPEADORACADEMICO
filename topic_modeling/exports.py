@@ -1,70 +1,129 @@
 from __future__ import annotations
 
+import random
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from datetime import datetime, timezone
 
 from .corpus_builder import read_csv, write_csv
 
 
 VALIDATION_FIELDS = [
-    "model", "topic_id", "automatic_label", "human_label", "coherence_rating",
-    "internal_consistency_rating", "distinctiveness_rating", "relevance_to_school_leadership",
-    "merge_with", "split_required", "exclude_topic", "reviewer_notes", "validation_status",
+    "model", "corpus", "language", "topic_id", "automatic_descriptor", "proposed_label", "human_label",
+    "top_words", "top_ngrams", "representative_titles", "borderline_titles", "coherence_rating",
+    "semantic_purity_rating", "distinctiveness_rating", "relevance_rating", "language_dependence_rating",
+    "merge_required", "split_required", "exclude_required", "notes", "reviewer", "status", "validation_status",
 ]
 
 
+def _model_dirs(root: Path) -> list[Path]:
+    result = []
+    for family in ("stm", "bertopic"):
+        base = root / family
+        if not base.exists(): continue
+        if (base / "topics.csv").exists(): result.append(base)
+        result.extend(child for child in base.iterdir() if child.is_dir() and (child / "topics.csv").exists())
+    return result
+
+
 def export_validation_template(config: dict[str, Any]) -> int:
-    root = Path(config["paths"]["output_root"])
-    target = root / "validation" / "topic_validation_template.csv"
-    previous = {(row["model"], row["topic_id"]): row for row in read_csv(target)} if target.exists() else {}
+    root = Path(config["paths"]["output_root"]); validation = root / "validation"
+    target = validation / "topic_validation.csv"
+    compatibility_target = validation / "topic_validation_template.csv"
+    previous_rows = read_csv(target) if target.exists() else []
+    if compatibility_target.exists():
+        previous_rows.extend(read_csv(compatibility_target))
+    previous = {(row["model"], row.get("corpus", ""), row.get("language", ""), row["topic_id"]): row for row in previous_rows}
     rows: list[dict[str, Any]] = []
-    for model in ("stm", "bertopic"):
-        source = root / model / "topics.csv"
-        if not source.exists():
-            continue
-        for topic in read_csv(source):
-            key = (model, topic["topic_id"])
-            old = previous.get(key, {})
+    all_topics: list[dict[str, str]] = []
+    all_docs: list[dict[str, str]] = []
+    for model_dir in _model_dirs(root):
+        topics = read_csv(model_dir / "topics.csv"); docs = read_csv(model_dir / "document_topics.csv") if (model_dir / "document_topics.csv").exists() else []
+        all_topics.extend(topics); all_docs.extend(docs)
+        by_topic: dict[str, list[dict[str, str]]] = {}
+        for doc in docs: by_topic.setdefault(doc["topic_id"], []).append(doc)
+        for topic in topics:
+            model = topic.get("model", model_dir.name); corpus = topic.get("corpus", ""); language = topic.get("language", "")
+            key = (model, corpus, language, topic["topic_id"]); old = previous.get(key, {})
+            topic_docs = by_topic.get(topic["topic_id"], [])
+            validation_cfg = config.get("validation", {})
+            borderline = sorted(topic_docs, key=lambda row: float(row.get("probability_margin") or 0))[: int(validation_cfg.get("borderline_documents", 10))]
             rows.append({
-                "model": model, "topic_id": topic["topic_id"], "automatic_label": topic.get("automatic_label", ""),
-                "human_label": old.get("human_label", topic.get("human_label", "")),
-                **{name: old.get(name, "") for name in VALIDATION_FIELDS[4:-1]},
-                "validation_status": old.get("validation_status", "pending"),
+                "model": model, "corpus": corpus, "language": language, "topic_id": topic["topic_id"],
+                "automatic_descriptor": topic.get("automatic_label", topic.get("topic_label", "")),
+                "proposed_label": topic.get("topic_label", ""), "human_label": old.get("human_label", topic.get("human_label", "")),
+                "top_words": topic.get("top_words", ""), "top_ngrams": topic.get("top_ngrams", ""),
+                "representative_titles": topic.get("representative_titles", ""),
+                "borderline_titles": " | ".join(row.get("title", "") for row in borderline),
+                **{field: old.get(field, "") for field in VALIDATION_FIELDS[11:-1]},
+                "status": old.get("status", old.get("validation_status", "pending_human_review")),
+                "validation_status": old.get("validation_status", old.get("status", "pending_human_review")),
             })
     write_csv(target, rows, VALIDATION_FIELDS)
+    write_csv(compatibility_target, rows, VALIDATION_FIELDS)
+
+    rng = random.Random(int(config.get("project", {}).get("seed", 42)))
+    topic_terms = {
+        (row.get("model", ""), row.get("corpus", ""), row.get("language", ""), row["topic_id"]):
+        [part.strip() for part in row.get("top_words", "").split("|") if part.strip()]
+        for row in all_topics if row.get("topic_id") != "-1"
+    }
+    word_intrusion = []
+    for key, words in topic_terms.items():
+        alternatives = [word for other, terms in topic_terms.items() if other != key for word in terms[:5] if word not in words]
+        if len(words) < 5 or not alternatives: continue
+        intruder = rng.choice(alternatives); candidates = words[:5] + [intruder]; rng.shuffle(candidates)
+        word_intrusion.append({
+            "model": key[0], "corpus": key[1], "language": key[2], "topic_id": key[3],
+            "candidate_terms_randomized": " | ".join(candidates), "intruder_answer_key": intruder,
+            "human_selected_intruder": "", "correct": "", "reviewer": "", "status": "pending",
+        })
+    write_csv(validation / "word_intrusion.csv", word_intrusion)
+
+    topic_ids_by_model: dict[str, list[str]] = {}
+    for row in all_topics: topic_ids_by_model.setdefault(row.get("model", ""), []).append(row["topic_id"])
+    topic_intrusion = []
+    sample_docs = sorted(all_docs, key=lambda row: float(row.get("probability_margin") or 0))[: min(200, len(all_docs))]
+    for row in sample_docs:
+        options = [row.get("topic_id", ""), row.get("second_topic_id", "")]
+        alternatives = [value for value in topic_ids_by_model.get(row.get("model", ""), []) if value not in options and value != "-1"]
+        if not alternatives: continue
+        intruder = rng.choice(alternatives); options.append(intruder); rng.shuffle(options)
+        topic_intrusion.append({
+            "model": row.get("model", ""), "corpus": row.get("corpus", row.get("corpus_unit", "")),
+            "document_id": row["document_id"], "title": row.get("title", ""), "abstract": "",
+            "candidate_topics_randomized": " | ".join(options), "principal_topic_answer_key": row.get("topic_id", ""),
+            "intruder_answer_key": intruder, "human_selected_topic": "", "reviewer": "", "status": "pending",
+        })
+    write_csv(validation / "topic_intrusion.csv", topic_intrusion)
     return len(rows)
 
 
 def export_method_report(config: dict[str, Any]) -> Path:
     root = Path(config["paths"]["output_root"])
-    quality_path = root / "corpus" / "corpus_quality_report.csv"
-    metrics_path = root / "evaluation" / "model_metrics.csv"
-    alignment_path = root / "comparison" / "model_summary.csv"
-    quality = read_csv(quality_path) if quality_path.exists() else []
-    metrics = read_csv(metrics_path) if metrics_path.exists() else []
-    alignment = read_csv(alignment_path) if alignment_path.exists() else []
+    quality = read_csv(root / "corpus" / "corpus_quality_report.csv")
+    metrics = read_csv(root / "evaluation" / "model_metrics.csv")
+    alignment = read_csv(root / "comparison" / "model_summary.csv")
 
-    def table(rows: list[dict[str, Any]], first: str, second: str) -> str:
-        if not rows:
-            return "Datos todavía no generados."
-        lines = [f"| {first} | {second} |", "|---|---:|"]
-        lines.extend(f"| {row.get(first, '')} | {row.get(second, '')} |" for row in rows)
+    def table(rows: list[dict[str, Any]], columns: list[str]) -> str:
+        if not rows: return "Datos todavía no generados."
+        lines = ["| " + " | ".join(columns) + " |", "|" + "|".join("---" for _ in columns) + "|"]
+        lines.extend("| " + " | ".join(str(row.get(column, "")) for column in columns) + " |" for row in rows)
         return "\n".join(lines)
 
-    target = root / "reports" / "topic_modeling_report.md"
-    target.parent.mkdir(parents=True, exist_ok=True)
+    target = root / "reports" / "topic_modeling_report.md"; target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(
         "# Informe reproducible de modelado temático\n\n"
         f"Generado: {datetime.now(timezone.utc).isoformat()}\n\nSemilla: {config['project']['seed']}\n\n"
-        f"Período: {config['project']['start_year']}–{config['project']['end_year']} (último año incompleto)\n\n"
-        "## Calidad y cobertura del corpus\n\n" + table(quality, "metric", "value") + "\n\n"
-        "## Métricas de modelos\n\n" + table(metrics, "metric", "value") + "\n\n"
-        "## Comparación STM–BERTopic\n\n" + table(alignment, "metric", "value") + "\n\n"
+        f"Período: {config['project']['start_year']}–{config['project']['end_year']} (2026 incompleto)\n\n"
+        "**Estado general: exploratorio; falta validación humana y ninguna etiqueta automática debe interpretarse como categoría objetiva.**\n\n"
+        "## Calidad y cobertura del corpus\n\n" + table(quality, ["metric_group", "metric", "value"]) + "\n\n"
+        "## Métricas de modelos\n\n" + table(metrics, ["model", "corpus", "metric", "value", "applicability"]) + "\n\n"
+        "## Comparación STM–BERTopic\n\n" + table(alignment, ["metric", "value"]) + "\n\n"
         "## Interpretación y limitaciones\n\n"
-        "La prevalencia STM y el tamaño de cluster BERTopic no son equivalentes. Los outliers se conservan. "
-        "Las etiquetas son propuestas hasta su validación humana. Cambios por año pueden reflejar cobertura, idioma, fuente o disponibilidad de PDF. "
-        "La presencia de temas ajenos a dirección escolar indica contaminación potencial del corpus y debe revisarse sin eliminar registros silenciosamente.\n",
+        "STM estima masa temática promedio y mezclas por publicación; BERTopic produce agrupamientos documentales semánticos. "
+        "Los resultados no son equivalentes y sus medidas no son intercambiables. Los corpus metadata y full text son representaciones separadas de publicaciones relacionadas, no documentos sumables. "
+        "Los outliers se conservan, 2026 es parcial y las decisiones de relevancia, fusión, división y etiquetado esperan revisión humana.\n",
         encoding="utf-8",
     )
     return target

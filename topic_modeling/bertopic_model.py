@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .corpus_builder import read_csv, write_csv
-from .embeddings import load_or_create_embeddings
+from .embeddings import load_or_create_embeddings, load_or_create_metadata_embeddings
 from .metadata import base_metadata, write_metadata
 from .topic_labels import automatic_label, load_human_labels, resolve_label
 
@@ -36,7 +36,10 @@ def _probability_fields(probabilities: Any, topic_ids: list[int], index: int, as
     return first, second_topic, second, first - second
 
 
-def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force_embeddings: bool = False) -> dict[str, Any]:
+def run_bertopic(
+    config: dict[str, Any], *, corpus_unit: str = "metadata", force_embeddings: bool = False,
+    output_name: str | None = None, embedding_variant: str = "weighted_fields",
+) -> dict[str, Any]:
     import numpy as np
     from bertopic import BERTopic
     from bertopic.vectorizers import ClassTfidfTransformer
@@ -52,8 +55,13 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
     corpus_path = root / "corpus" / f"modeling_corpus_{corpus_unit}.csv"
     documents = read_csv(corpus_path)
     document_ids = [row["document_id"] for row in documents]
-    texts = [row["texto_modelado"] for row in documents]
-    embeddings, embedding_manifest = load_or_create_embeddings(document_ids, texts, config, force=force_embeddings)
+    texts = [row.get("text_for_modeling") or row["texto_modelado"] for row in documents]
+    if corpus_unit == "metadata" and config.get("metadata_embeddings", {}).get("combine_fields_as_embeddings", True):
+        embeddings, embedding_manifest = load_or_create_metadata_embeddings(
+            documents, config, force=force_embeddings, variant=embedding_variant
+        )
+    else:
+        embeddings, embedding_manifest = load_or_create_embeddings(document_ids, texts, config, force=force_embeddings)
     cfg = config["bertopic"]
     umap_cfg = cfg["umap"]
     hdb_cfg = cfg["hdbscan"]
@@ -86,7 +94,8 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
             reduced_topics = list(model.reduce_outliers(texts, topics, probabilities=probabilities, strategy="probabilities"))
         except (TypeError, ValueError) as exc:
             outlier_reduction_warning = f"Alternative outlier reduction was not available: {exc}"
-    out = root / "bertopic"
+    output_name = output_name or ("metadata_multilingual" if corpus_unit == "metadata" else "fulltext_multilingual")
+    out = root / "bertopic" / output_name
     out.mkdir(parents=True, exist_ok=True)
     human = load_human_labels(config["paths"]["human_labels"])
     info = model.get_topic_info()
@@ -94,6 +103,7 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
     topic_rows: list[dict[str, Any]] = []
     representative_rows: list[dict[str, Any]] = []
     total = len(documents)
+    model_label = f"BERTopic-{corpus_unit.upper()}-MULTILINGUAL"
     for _, item in info.iterrows():
         topic_id = int(item["Topic"])
         words = [word for word, _ in (model.get_topic(topic_id) or [])]
@@ -101,7 +111,7 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
         labels = resolve_label("bertopic", topic_id, proposal, human)
         reps = (model.get_representative_docs(topic_id) or []) if topic_id >= 0 else []
         topic_rows.append({
-            "model": "bertopic", "topic_id": topic_id, **labels,
+            "model": model_label, "corpus": corpus_unit, "language": "multilingual", "topic_id": topic_id, **labels,
             "prevalence": round(100 * int(item["Count"]) / max(total, 1), 4),
             "document_count": int(item["Count"]), "top_words": " | ".join(words[:15]),
             "top_ngrams": " | ".join(word for word in words if " " in word)[:2000],
@@ -111,7 +121,7 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
         for rank, text in enumerate(reps, 1):
             try:
                 idx = texts.index(text)
-                representative_rows.append({"model": "bertopic", "topic_id": topic_id, "rank": rank, "document_id": document_ids[idx], "title": documents[idx]["title"]})
+                representative_rows.append({"model": model_label, "corpus": corpus_unit, "topic_id": topic_id, "rank": rank, "document_id": document_ids[idx], "title": documents[idx]["title"]})
             except ValueError:
                 continue
     document_rows: list[dict[str, Any]] = []
@@ -120,7 +130,8 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
         first, second_id, second, margin = _probability_fields(probabilities, valid_topic_ids, index, int(topic_id))
         reduced_topic = int(reduced_topics[index])
         document_rows.append({
-            "document_id": row["document_id"], "model": "bertopic", "topic_id": int(topic_id),
+            "document_id": row["document_id"], "publication_document_id": row.get("publication_document_id", row["document_id"]),
+            "model": model_label, "corpus": corpus_unit, "topic_id": int(topic_id),
             "topic_probability": first, "second_topic_id": second_id, "second_topic_probability": second,
             "probability_margin": margin, "is_outlier": int(topic_id) == -1,
             "is_ambiguous": margin != "" and float(margin) < margin_threshold,
@@ -128,15 +139,53 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
             "source": row["source"], "corpus_unit": row["corpus_unit"],
             "topic_original": int(topic_id), "topic_after_outlier_reduction": reduced_topic,
             "outlier_reassigned": int(topic_id) == -1 and reduced_topic != -1,
+            "original_topic": int(topic_id), "outlier_probability": 1 - float(first or 0),
+            "suggested_topic": reduced_topic if int(topic_id) == -1 and reduced_topic != -1 else "",
+            "reassignment_method": "probability_alternative" if int(topic_id) == -1 and reduced_topic != -1 else "",
+            "reassignment_confidence": first if int(topic_id) == -1 and reduced_topic != -1 else "",
         })
+
+    # Document-level geometry is not equivalent to STM probabilities; retain it under explicit names.
+    from sklearn.metrics import silhouette_samples
+    from sklearn.neighbors import NearestNeighbors
+    reduced = np.asarray(model.umap_model.embedding_)
+    labels_array = np.asarray(topics)
+    valid_mask = labels_array >= 0
+    silhouette_values = np.full(len(documents), np.nan)
+    if valid_mask.sum() > len(set(labels_array[valid_mask])) > 1:
+        silhouette_values[valid_mask] = silhouette_samples(reduced[valid_mask], labels_array[valid_mask])
+    centroid_distances = np.full(len(documents), np.nan)
+    centroid_rows: list[dict[str, Any]] = []
+    for topic_id in sorted(set(labels_array[valid_mask])):
+        indexes = np.where(labels_array == topic_id)[0]
+        centroid = reduced[indexes].mean(axis=0)
+        centroid_distances[indexes] = np.linalg.norm(reduced[indexes] - centroid, axis=1)
+        for rank, doc_index in enumerate(indexes[np.argsort(centroid_distances[indexes])[:10]], 1):
+            centroid_rows.append({
+                "model": model_label, "corpus": corpus_unit, "topic_id": int(topic_id), "rank": rank,
+                "document_id": document_ids[int(doc_index)], "title": documents[int(doc_index)]["title"],
+                "distance_to_centroid": round(float(centroid_distances[int(doc_index)]), 6),
+            })
+    neighbors = NearestNeighbors(n_neighbors=min(11, len(documents))).fit(reduced)
+    neighbor_indexes = neighbors.kneighbors(return_distance=False)
+    for index, row in enumerate(document_rows):
+        local = neighbor_indexes[index][neighbor_indexes[index] != index][:10]
+        row["silhouette"] = "" if np.isnan(silhouette_values[index]) else round(float(silhouette_values[index]), 6)
+        row["distance_to_centroid"] = "" if np.isnan(centroid_distances[index]) else round(float(centroid_distances[index]), 6)
+        row["local_consistency"] = round(float(np.mean(labels_array[local] == labels_array[index])), 6) if len(local) else ""
     write_csv(out / "topics.csv", topic_rows)
     write_csv(out / "document_topics.csv", document_rows)
     write_csv(out / "topic_words.csv", [
-        {"model": "bertopic", "topic_id": topic_id, "rank": rank, "term": word, "weight": weight}
+        {"model": model_label, "corpus": corpus_unit, "topic_id": topic_id, "rank": rank, "term": word, "weight": weight}
         for topic_id in valid_topic_ids for rank, (word, weight) in enumerate(model.get_topic(topic_id) or [], 1)
     ])
     write_csv(out / "representative_documents.csv", representative_rows)
+    write_csv(out / "central_documents.csv", centroid_rows)
     write_csv(out / "outliers.csv", [row for row in document_rows if row["is_outlier"]])
+    low_confidence = sorted(document_rows, key=lambda row: float(row.get("topic_probability") or 0))
+    write_csv(out / "low_confidence_documents.csv", low_confidence[: 10 * max(len(valid_topic_ids), 1)])
+    borderline = sorted(document_rows, key=lambda row: float(row.get("probability_margin") or 0))
+    write_csv(out / "borderline_documents.csv", borderline[: 10 * max(len(valid_topic_ids), 1)])
     from sklearn.metrics.pairwise import cosine_similarity
 
     similarity_rows: list[dict[str, Any]] = []
@@ -154,6 +203,57 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
                 })
     write_csv(out / "topic_similarity.csv", similarity_rows)
     write_csv(out / "merge_history.csv", [], ["timestamp", "topic_a", "topic_b", "decision", "reviewer", "notes"])
+    hierarchy_warning = ""
+    if bool(cfg.get("hierarchy_enabled", True)) and len(valid_topic_ids) > 1:
+        try:
+            hierarchy = model.hierarchical_topics(texts)
+            hierarchy.to_csv(out / "topic_hierarchy.csv", index=False, encoding="utf-8-sig")
+        except (AttributeError, TypeError, ValueError) as exc:
+            hierarchy_warning = f"Topic hierarchy was not available: {exc}"
+            write_csv(out / "topic_hierarchy.csv", [], ["Parent_ID", "Parent_Name", "Topics", "Child_Left_ID", "Child_Right_ID", "Distance"])
+    # Language dependence is diagnostic, never an automatic topic interpretation.
+    language_rows: list[dict[str, Any]] = []
+    for topic_id in sorted(set(int(topic) for topic in topics if int(topic) >= 0)):
+        topic_docs = [row for row in document_rows if int(row["topic_id"]) == topic_id]
+        counts: dict[str, int] = {}
+        for row in topic_docs:
+            counts[row.get("language") or "und"] = counts.get(row.get("language") or "und", 0) + 1
+        shares = [count / len(topic_docs) for count in counts.values()]
+        entropy = -sum(share * np.log(share) for share in shares if share > 0)
+        dominant_language, dominant_count = max(counts.items(), key=lambda item: item[1])
+        dominant_share = dominant_count / len(topic_docs)
+        language_rows.append({
+            "model": model_label, "corpus": corpus_unit, "topic_id": topic_id,
+            "topic_language_distribution": json.dumps(counts, ensure_ascii=False),
+            "topic_language_entropy": round(float(entropy), 6), "dominant_language": dominant_language,
+            "dominant_language_share": round(dominant_share, 6),
+            "potentially_language_driven": dominant_share > float(config.get("multilingual", {}).get("language_topic_threshold", 0.8)),
+            "classification": "pending_human_review",
+        })
+    write_csv(out / "language_dependence.csv", language_rows)
+    heterogeneity_rows = []
+    for topic_id in valid_topic_ids:
+        topic_docs = [row for row in document_rows if int(row["topic_id"]) == topic_id]
+        sil = [float(row["silhouette"]) for row in topic_docs if row.get("silhouette") != ""]
+        mean_sil = sum(sil) / len(sil) if sil else 0.0
+        language = next((row for row in language_rows if row["topic_id"] == topic_id), {})
+        if len(topic_docs) < int(config["validation"].get("minimum_topic_documents", 5)):
+            status = "too_small"
+        elif language.get("potentially_language_driven") and mean_sil < 0.1:
+            status = "language_driven"
+        elif mean_sil < 0:
+            status = "heterogeneous"
+        elif mean_sil < 0.1:
+            status = "broad_but_interpretable"
+        else:
+            status = "coherent"
+        heterogeneity_rows.append({
+            "model": model_label, "corpus": corpus_unit, "topic_id": topic_id, "documents": len(topic_docs),
+            "mean_silhouette": round(mean_sil, 6),
+            "mean_distance_to_centroid": round(sum(float(row["distance_to_centroid"]) for row in topic_docs if row.get("distance_to_centroid") != "") / max(sum(row.get("distance_to_centroid") != "" for row in topic_docs), 1), 6),
+            "status": status, "review_status": "pending_human_review",
+        })
+    write_csv(out / "heterogeneity.csv", heterogeneity_rows)
     model_path = out / "model"
     model_save_warning = ""
     try:
@@ -167,12 +267,15 @@ def run_bertopic(config: dict[str, Any], *, corpus_unit: str = "metadata", force
         model.save(str(model_path), serialization="safetensors", save_ctfidf=False)
         model_save_mode = "safetensors_without_ctfidf"
         model_save_warning = f"c-TF-IDF state was not serialized: {exc}"
-    metadata = base_metadata(config, model="bertopic", documents=len(documents), discarded=0, elapsed_seconds=time.perf_counter() - started)
+    metadata = base_metadata(config, model=model_label, documents=len(documents), discarded=0, elapsed_seconds=time.perf_counter() - started)
+    metadata["corpus"] = corpus_unit
+    metadata["output_name"] = output_name
+    metadata["validation_status"] = "exploratory"
     metadata["embedding_cache"] = {key: value for key, value in embedding_manifest.items() if key not in {"document_ids", "text_hashes"}}
     metadata["outlier_count"] = sum(int(topic) == -1 for topic in topics)
     metadata["outlier_percentage"] = round(100 * metadata["outlier_count"] / max(len(topics), 1), 4)
     metadata["model_save_mode"] = model_save_mode
-    metadata["warnings"] = [warning for warning in (model_save_warning, outlier_reduction_warning) if warning]
+    metadata["warnings"] = [warning for warning in (model_save_warning, outlier_reduction_warning, hierarchy_warning) if warning]
     metadata["outliers_reassigned_in_alternative"] = sum(row["outlier_reassigned"] for row in document_rows)
     write_metadata(out / "model_metadata.json", metadata)
     return metadata

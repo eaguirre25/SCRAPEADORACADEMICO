@@ -21,6 +21,14 @@ on:
         description: Ejecutar réplicas STM costosas
         type: boolean
         default: false
+      preliminary:
+        description: STM preliminar con K fijo (sin afirmar selección óptima)
+        type: boolean
+        default: true
+      search_parameters:
+        description: Búsqueda escalonada de parámetros BERTopic
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -67,6 +75,8 @@ jobs:
           --corpus-unit ${{ inputs.corpus_unit }}
           ${{ inputs.force_embeddings && '--force-embeddings' || '' }}
           ${{ inputs.run_stability && '--run-stability' || '' }}
+          ${{ inputs.preliminary && '--preliminary' || '' }}
+          ${{ inputs.search_parameters && '--search-parameters' || '' }}
       - name: Run Python tests
         run: pytest -q
       - name: Upload tables, reports and dashboard

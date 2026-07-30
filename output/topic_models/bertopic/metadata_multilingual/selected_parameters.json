@@ -1,0 +1,45 @@
+{
+  "status": "provisional",
+  "selection_basis": "automatic preliminary screen; human review and stability pending",
+  "embedding_manifest": {
+    "fingerprint": "26e6ca83073397973994c044298b918f6b4698cc6417bb96ac89be489df7eeec",
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "dimension": 768,
+    "documents": 2182,
+    "created_at_utc": "2026-07-30T22:10:49.946518+00:00",
+    "combination": "weighted_field_average",
+    "variant": "weighted_fields",
+    "weights": {
+      "title_text": 0.35,
+      "abstract_text": 0.5,
+      "keywords_text": 0.15
+    },
+    "available_field_counts": {
+      "title_text": 2181,
+      "abstract_text": 2125,
+      "keywords_text": 2122
+    }
+  },
+  "selected": {
+    "phase": "hdbscan_screen",
+    "n_neighbors": 10,
+    "n_components": 10,
+    "min_dist": 0.0,
+    "min_cluster_size": 10,
+    "min_samples": 10,
+    "cluster_selection_method": "leaf",
+    "clusters": 42,
+    "outlier_share": 0.532997,
+    "minimum_cluster_size_observed": 10,
+    "median_cluster_size": 19,
+    "maximum_cluster_share": 0.05103,
+    "silhouette": 0.659707,
+    "language_cluster_nmi": 0.169574,
+    "preliminary_score": 0.479528,
+    "elapsed_seconds": 0.113,
+    "seed": 42,
+    "rank": 1,
+    "selection_status": "preliminary_candidate",
+    "human_review_status": "pending"
+  }
+}

@@ -71,9 +71,19 @@ records    = read_csv("data/master_records.csv")
 corpus     = read_csv("data/corpus.csv")
 topicos    = read_csv("output/tabla_topicos.csv")
 doc_topics = read_csv("output/document_topics.csv")
-hybrid_stm_topics = read_csv("output/topic_models/stm/topics.csv")
-hybrid_bertopic_topics = read_csv("output/topic_models/bertopic/topics.csv")
-topic_alignment = read_csv("output/topic_models/comparison/topic_alignment.csv")
+MODEL_VIEWS = [
+    ("stm-es", "STM · metadatos · español", "STM", "output/topic_models/stm/metadata_es/topics.csv"),
+    ("stm-en", "STM · metadatos · inglés", "STM", "output/topic_models/stm/metadata_en/topics.csv"),
+    ("stm-pt", "STM · metadatos · portugués", "STM", "output/topic_models/stm/metadata_pt/topics.csv"),
+    ("stm-harmonized", "STM · metadatos armonizados", "STM", "output/topic_models/stm/metadata_harmonized/topics.csv"),
+    ("bertopic-metadata", "BERTopic · metadatos · multilingüe", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/topics.csv"),
+    ("stm-fulltext", "STM · texto completo · secundario", "STM", "output/topic_models/stm/fulltext/topics.csv"),
+    ("bertopic-fulltext", "BERTopic · texto completo · secundario", "BERTopic", "output/topic_models/bertopic/fulltext_multilingual/topics.csv"),
+    ("legacy-stm", "STM anterior · texto completo · provisional", "STM", "output/topic_models/stm/topics.csv"),
+]
+topic_alignment = read_csv("output/topic_models/comparison/stm_bertopic_alignment.csv")
+if not topic_alignment:
+    topic_alignment = read_csv("output/topic_models/comparison/topic_alignment.csv")
 
 print(f"Records: {len(records)} | Corpus: {len(corpus)} | Topicos: {len(topicos)} | Doc-topics: {len(doc_topics)}")
 
@@ -282,6 +292,14 @@ n_nodes = len(nodes)
 n_edges = len(edges)
 n_arts  = len(all_articles)
 n_tops  = len(topicos)
+evaluation_topics = read_csv("output/topic_models/evaluation/topic_metrics.csv")
+language_diagnostics = read_csv("output/topic_models/evaluation/language_dependence.csv")
+heterogeneity_diagnostics = read_csv("output/topic_models/evaluation/heterogeneity.csv")
+evaluation_by_topic = {(s(row.get("model")), s(row.get("topic_id"))): row for row in evaluation_topics}
+language_by_topic = {(s(row.get("model")), s(row.get("topic_id"))): row for row in language_diagnostics}
+heterogeneity_by_topic = {(s(row.get("model")), s(row.get("topic_id"))): row for row in heterogeneity_diagnostics}
+annual_coverage = read_csv("output/topic_models/corpus/annual_coverage.csv")
+low_coverage_years = [s(row.get("year")) for row in annual_coverage if float(row.get("fulltext_coverage_in_year") or 0) < 0.5]
 
 def topic_cards(rows, model):
     if not rows:
@@ -289,30 +307,63 @@ def topic_cards(rows, model):
     cards = []
     for row in rows:
         label = s(row.get("human_label")) or s(row.get("automatic_label")) or f"Topico {s(row.get('topic_id'))}"
-        measure = "prevalencia STM" if model == "STM" else "proporcion del cluster"
+        measure = "prevalencia STM" if model == "STM" else "proporción del cluster"
+        label_status = s(row.get("label_status")) or "pending"
+        selection_status = s(row.get("selection_status") or row.get("model_status")) or "exploratory"
+        count = safe_int(row.get("document_count"), 0)
+        diagnostic_key = (s(row.get("model")), s(row.get("topic_id")))
+        evaluation = evaluation_by_topic.get(diagnostic_key, {})
+        language_diagnostic = language_by_topic.get(diagnostic_key, {})
+        heterogeneity = heterogeneity_by_topic.get(diagnostic_key, {})
+        alerts = []
+        if label_status.lower() not in {"validated", "human_validated", "approved"}:
+            alerts.append("etiqueta no validada por especialistas")
+        if count and count < 15:
+            alerts.append("tópico pequeño")
+        if selection_status.lower() not in {"validated", "metrics_complete"}:
+            alerts.append(f"modelo {selection_status}")
+        if s(row.get("stability")) == "":
+            alerts.append("estabilidad no calculada")
+        if s(language_diagnostic.get("potentially_language_driven")).lower() == "true":
+            alerts.append(f"posible dependencia del idioma {s(language_diagnostic.get('dominant_language'))}")
+        if s(evaluation.get("contamination_flag")).lower() == "true":
+            alerts.append(f"posible contaminación: {s(evaluation.get('contamination_terms'))}")
+        if s(heterogeneity.get("status")) in {"heterogeneous", "contaminated", "language_driven", "residual", "too_small"}:
+            alerts.append(f"heterogeneidad: {s(heterogeneity.get('status'))}")
+        alert_html = f'<div class="tm-alert">⚠ {html_lib.escape(" · ".join(alerts))}</div>' if alerts else ""
         cards.append(
             '<article class="tm-card">'
             f'<div class="tm-title">{html_lib.escape(label)}</div>'
             f'<div class="tm-meta">T{s(row.get("topic_id"))} · {html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
-            f'{html_lib.escape(s(row.get("document_count")))} documentos · validacion: {html_lib.escape(s(row.get("label_status")) or "pending")}</div>'
+            f'{html_lib.escape(s(row.get("document_count")))} documentos · validación: {html_lib.escape(label_status)}</div>'
+            f'{alert_html}'
             f'<div class="tm-words">{html_lib.escape(s(row.get("top_words")))}</div>'
             f'<div class="tm-reps">{html_lib.escape(s(row.get("representative_titles")))}</div></article>'
         )
     return "".join(cards)
 
-alignment_rows = sorted(topic_alignment, key=lambda row: float(row.get("combined_similarity") or 0), reverse=True)[:20]
+alignment_rows = sorted(topic_alignment, key=lambda row: float(row.get("combined_alignment") or row.get("combined_similarity") or 0), reverse=True)[:20]
 alignment_html = "".join(
     f'<tr><td>STM {html_lib.escape(s(row.get("stm_topic")))}</td><td>BERTopic {html_lib.escape(s(row.get("bertopic_topic")))}</td>'
-    f'<td>{html_lib.escape(s(row.get("alignment_status")))}</td><td>{html_lib.escape(s(row.get("combined_similarity")))}</td></tr>'
+    f'<td>{html_lib.escape(s(row.get("relationship") or row.get("alignment_status")))}</td><td>{html_lib.escape(s(row.get("combined_alignment") or row.get("combined_similarity")))}</td></tr>'
     for row in alignment_rows
 ) or '<tr><td colspan="4">Ejecute ambos modelos y la comparacion para completar esta vista.</td></tr>'
+available_models = [(key, label, kind, read_csv(path)) for key, label, kind, path in MODEL_VIEWS]
+first_model = next((key for key, _, _, rows in available_models if rows), available_models[0][0])
+model_options = "".join(
+    f'<option value="{key}"{" selected" if key == first_model else ""}>{html_lib.escape(label)}{" · sin ejecutar" if not rows else ""}</option>'
+    for key, label, _, rows in available_models
+) + '<option value="comparison">Comparación STM–BERTopic</option>'
+model_panes = "".join(
+    f'<div class="tm-pane" id="tm-{key}"{"" if key == first_model else " hidden"}>{topic_cards(rows, kind)}</div>'
+    for key, _, kind, rows in available_models
+)
 hybrid_section = f'''<section class="tm-section" id="modelado-tematico">
-  <div class="tm-head"><div><h2>Modelado tematico</h2><p>STM estadistica y BERTopic semantico no miden exactamente lo mismo.</p></div>
-  <select id="tm-select" onchange="showTopicModel(this.value)"><option value="stm">STM</option><option value="bertopic">BERTopic</option><option value="comparison">Comparacion</option></select></div>
-  <div class="tm-pane" id="tm-stm">{topic_cards(hybrid_stm_topics, "STM")}</div>
-  <div class="tm-pane" id="tm-bertopic" hidden>{topic_cards(hybrid_bertopic_topics, "BERTopic")}</div>
+  <div class="tm-head"><div><h2>Modelado temático</h2><p>El corpus primario usa metadatos; el texto completo queda como análisis secundario. STM y BERTopic no miden exactamente lo mismo.</p></div>
+  <select id="tm-select" onchange="showTopicModel(this.value)">{model_options}</select></div>
+  {model_panes}
   <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th>Topico STM</th><th>Topico BERTopic</th><th>Relacion</th><th>Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>
-  <div class="tm-method">Semilla configurable: 42 · periodo 2020–2026 · 2026 es un año incompleto. La prevalencia STM es una mezcla documental; el tamaño BERTopic es una asignacion de cluster. Las etiquetas automaticas requieren validacion humana.</div>
+  <div class="tm-method">Estado exploratorio: la selección computacional y las etiquetas son provisionales hasta completar estabilidad, intrusión y revisión humana. Semilla: 42 · período 2020–2026 · 2026 es incompleto. La prevalencia STM es una mezcla documental; el tamaño BERTopic es una asignación de cluster. Cobertura full text inferior al 50% en: {html_lib.escape(", ".join(low_coverage_years) or "ningún año")}.</div>
 </section>'''
 
 # ── HTML ──────────────────────────────────────────────────────────────────────
@@ -400,7 +451,7 @@ tbody tr:hover td{background:var(--hover)}
 .mpaper a:hover{text-decoration:underline}
 .mpmeta{font-size:.72em;color:var(--muted);margin-top:2px}
 .mcount{font-size:.72em;color:var(--dim);padding:7px 18px;border-top:1px solid var(--border);text-align:right}
-.tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:420px;overflow:auto}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
+.tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{max-width:420px;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:420px;overflow:auto}.tm-pane[hidden]{display:none}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps,.tm-alert{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-alert{color:#f6c177;background:#2b2214;border-left:2px solid #f6c177;padding:4px 6px}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.topics-panel{display:none}}
 </style>
 </head>
@@ -491,7 +542,7 @@ const TOPICOS = """ + topicos_json + """;
 const ARTS    = """ + arts_json + """;
 const PG = 50;
 function showTopicModel(name){
-  ["stm","bertopic","comparison"].forEach(id => document.getElementById("tm-"+id).hidden = id !== name);
+  document.querySelectorAll(".tm-pane").forEach(pane => pane.hidden = pane.id !== "tm-"+name);
 }
 
 // ── Red D3 ────────────────────────────────────────────────────────────────────

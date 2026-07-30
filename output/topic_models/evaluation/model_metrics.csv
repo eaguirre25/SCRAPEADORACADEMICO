@@ -1,0 +1,56 @@
+model,model_path,corpus,metric,value,applicability
+stm,stm_legacy,full_text,documents,863,all
+stm,stm_legacy,full_text,topics_excluding_outliers,22,all
+stm,stm_legacy,full_text,minimum_topic_size,2,dominant STM assignment or BERTopic cluster
+stm,stm_legacy,full_text,topic_word_diversity,1.0,lexical representation
+stm,stm_legacy,full_text,outlier_percentage,0.0,BERTopic only; STM returns 0
+stm,stm_legacy,full_text,ambiguous_documents,133,model-specific confidence
+stm,stm_legacy,full_text,coherence_computation_status,not_computed_empty_corpus,lexical representation
+stm,stm_legacy,full_text,mean_pairwise_topic_similarity,0.0,lexical overlap
+stm,stm_legacy,full_text,maximum_pairwise_topic_similarity,0.0,lexical overlap
+stm,stm_legacy,full_text,redundant_topic_pairs_0_5,0,lexical overlap
+stm,stm_legacy,full_text,temporal_accounting_issues,2020:dominant=0:documents=97 | 2020:mass=0.0:documents=97 | 2021:dominant=0:documents=110 | 2021:mass=0.0:documents=110 | 2022:dominant=0:documents=148 | 2022:mass=0.0:documents=148 | 2023:dominant=0:documents=174 | 2023:mass=0.0:documents=174 | 2024:dominant=0:documents=161 | 2024:mass=0.0:documents=161 | 2025:dominant=0:documents=144 | 2025:mass=0.0:documents=144 | 2026:dominant=0:documents=29 | 2026:mass=0.0:documents=29,empty means annual counts and topic mass reconcile
+STM-METADATA-EN,stm/metadata_en,metadata,documents,939,all
+STM-METADATA-EN,stm/metadata_en,metadata,topics_excluding_outliers,16,all
+STM-METADATA-EN,stm/metadata_en,metadata,minimum_topic_size,11,dominant STM assignment or BERTopic cluster
+STM-METADATA-EN,stm/metadata_en,metadata,topic_word_diversity,0.995833,lexical representation
+STM-METADATA-EN,stm/metadata_en,metadata,outlier_percentage,0.0,BERTopic only; STM returns 0
+STM-METADATA-EN,stm/metadata_en,metadata,ambiguous_documents,173,model-specific confidence
+STM-METADATA-EN,stm/metadata_en,metadata,coherence_computation_status,computed_gensim,lexical representation
+STM-METADATA-EN,stm/metadata_en,metadata,mean_pairwise_topic_similarity,0.000287,lexical overlap
+STM-METADATA-EN,stm/metadata_en,metadata,maximum_pairwise_topic_similarity,0.034483,lexical overlap
+STM-METADATA-EN,stm/metadata_en,metadata,redundant_topic_pairs_0_5,0,lexical overlap
+STM-METADATA-EN,stm/metadata_en,metadata,temporal_accounting_issues,,empty means annual counts and topic mass reconcile
+STM-METADATA-ES,stm/metadata_es,metadata,documents,1195,all
+STM-METADATA-ES,stm/metadata_es,metadata,topics_excluding_outliers,16,all
+STM-METADATA-ES,stm/metadata_es,metadata,minimum_topic_size,29,dominant STM assignment or BERTopic cluster
+STM-METADATA-ES,stm/metadata_es,metadata,topic_word_diversity,0.991667,lexical representation
+STM-METADATA-ES,stm/metadata_es,metadata,outlier_percentage,0.0,BERTopic only; STM returns 0
+STM-METADATA-ES,stm/metadata_es,metadata,ambiguous_documents,230,model-specific confidence
+STM-METADATA-ES,stm/metadata_es,metadata,coherence_computation_status,computed_gensim,lexical representation
+STM-METADATA-ES,stm/metadata_es,metadata,mean_pairwise_topic_similarity,0.000595,lexical overlap
+STM-METADATA-ES,stm/metadata_es,metadata,maximum_pairwise_topic_similarity,0.071429,lexical overlap
+STM-METADATA-ES,stm/metadata_es,metadata,redundant_topic_pairs_0_5,0,lexical overlap
+STM-METADATA-ES,stm/metadata_es,metadata,temporal_accounting_issues,,empty means annual counts and topic mass reconcile
+STM-METADATA-PT,stm/metadata_pt,metadata,documents,42,all
+STM-METADATA-PT,stm/metadata_pt,metadata,topics_excluding_outliers,8,all
+STM-METADATA-PT,stm/metadata_pt,metadata,minimum_topic_size,3,dominant STM assignment or BERTopic cluster
+STM-METADATA-PT,stm/metadata_pt,metadata,topic_word_diversity,0.866667,lexical representation
+STM-METADATA-PT,stm/metadata_pt,metadata,outlier_percentage,0.0,BERTopic only; STM returns 0
+STM-METADATA-PT,stm/metadata_pt,metadata,ambiguous_documents,5,model-specific confidence
+STM-METADATA-PT,stm/metadata_pt,metadata,coherence_computation_status,computed_gensim,lexical representation
+STM-METADATA-PT,stm/metadata_pt,metadata,mean_pairwise_topic_similarity,0.020908,lexical overlap
+STM-METADATA-PT,stm/metadata_pt,metadata,maximum_pairwise_topic_similarity,0.153846,lexical overlap
+STM-METADATA-PT,stm/metadata_pt,metadata,redundant_topic_pairs_0_5,0,lexical overlap
+STM-METADATA-PT,stm/metadata_pt,metadata,temporal_accounting_issues,,empty means annual counts and topic mass reconcile
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,documents,2182,all
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,topics_excluding_outliers,42,all
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,minimum_topic_size,10,dominant STM assignment or BERTopic cluster
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,topic_word_diversity,0.95,lexical representation
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,outlier_percentage,53.2997,BERTopic only; STM returns 0
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,ambiguous_documents,1200,model-specific confidence
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,coherence_computation_status,computed_gensim,lexical representation
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,mean_pairwise_topic_similarity,0.001483,lexical overlap
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,maximum_pairwise_topic_similarity,0.176471,lexical overlap
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,redundant_topic_pairs_0_5,0,lexical overlap
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual,metadata,temporal_accounting_issues,,empty means annual counts and topic mass reconcile
