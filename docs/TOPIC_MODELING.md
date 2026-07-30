@@ -32,7 +32,9 @@ La configuración admite variables TOPIC_MODELING__SECCION__CLAVE. Los scripts c
 
 ## Selección e interpretación
 
-La STM busca K=8,10,…,40 y combina coherencia, exclusividad, held-out likelihood, residuales y estabilidad con pesos configurables. Si no se ejecutan réplicas, la tabla lo advierte y usa un valor neutral para estabilidad. K_recomendado es una recomendación multicriterio, no un óptimo universal.
+La STM requiere los paquetes stm, tm y SnowballC. Busca K=8,10,…,40 y combina coherencia, exclusividad, held-out likelihood, residuales y estabilidad con pesos configurables. Si no se ejecutan réplicas, la tabla lo advierte y usa un valor neutral para estabilidad. K_recomendado es una recomendación multicriterio, no un óptimo universal.
+
+Una ejecución interrumpida después de guardar el modelo puede regenerar las exportaciones sin repetir la búsqueda de K con `Rscript topic_modeling/stm_pipeline.R --resume-model`. Los objetos RDS quedan locales porque superan el límite de tamaño de GitHub; las tablas CSV, el JSON de metadatos y el informe Markdown sí se versionan.
 
 BERTopic usa paraphrase-multilingual-mpnet-base-v2, embeddings normalizados y almacenados como NPY, UMAP reproducible y HDBSCAN. El manifiesto guarda hashes, IDs, modelo y dimensión. Se exportan probabilidades, segundo tópico, margen, ambigüedad y outliers.
 

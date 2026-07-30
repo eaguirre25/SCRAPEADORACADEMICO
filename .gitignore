@@ -6,6 +6,8 @@ __pycache__/
 cache/topic_models/
 output/topic_models/corpus/*.csv
 output/topic_models/bertopic/model/
+output/topic_models/stm/*.rds
+output/stm_model.rds
 output/topic_models/bertopic/embeddings*.npy
 output/topic_models/bertopic/embeddings*.parquet
 output/topic_models/**/*.joblib

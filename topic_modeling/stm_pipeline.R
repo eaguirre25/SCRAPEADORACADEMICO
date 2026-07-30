@@ -97,49 +97,62 @@ run_stm_pipeline <- function(args = character()) {
   candidates <- seq(as.integer(k_cfg$start), as.integer(k_cfg$end), by = as.integer(k_cfg$step))
   candidates <- candidates[candidates < length(prep$documents)]
   prevalence_formula <- ~ splines::ns(anio, df = 3)
-  set.seed(seed)
-  search <- searchK(prep$documents, prep$vocab, K = candidates, prevalence = prevalence_formula,
-    data = prep$meta, verbose = TRUE, cores = 1)
-  saveRDS(search, file.path(out, "k_search.rds"))
+  resume <- "--resume-model" %in% args
+  model_path <- file.path(out, "model.rds")
+  diagnostics_path <- file.path(out, "k_diagnostics.csv")
+  resumed <- resume && file.exists(model_path) && file.exists(diagnostics_path)
+  if (resumed) {
+    cat("Reanudando exportaciones desde el modelo STM guardado.\n")
+    diagnostics <- read_csv(diagnostics_path, show_col_types = FALSE)
+    K <- as.integer(diagnostics$K[1])
+    model <- readRDS(model_path)
+    if (nrow(model$theta) != length(prep$documents)) stop("El modelo guardado no corresponde al corpus procesado actual")
+    saveRDS(model, "output/stm_model.rds")
+  } else {
+    set.seed(seed)
+    search <- searchK(prep$documents, prep$vocab, K = candidates, prevalence = prevalence_formula,
+      data = prep$meta, verbose = TRUE, cores = 1)
+    saveRDS(search, file.path(out, "k_search.rds"))
 
-  n <- length(candidates)
-  diagnostics <- data.frame(
-    K = candidates, coherence = safe_result(search, "semcoh", n), exclusivity = safe_result(search, "exclus", n),
-    heldout = safe_result(search, "heldout", n), residual = safe_result(search, "residual", n),
-    bound = safe_result(search, "bound", n), stability = NA_real_, convergence_rate = NA_real_
-  )
-  run_stability <- tolower(Sys.getenv("RUN_STABILITY", "false")) == "true"
-  if (run_stability) {
-    runs <- as.integer(cfg$stm$number_of_runs)
-    for (i in seq_along(candidates)) {
-      models <- lapply(seq_len(runs), function(run) {
-        set.seed(seed + i * 100 + run)
-        stm(prep$documents, prep$vocab, K = candidates[i], prevalence = prevalence_formula, data = prep$meta,
-          max.em.its = as.integer(cfg$stm$max_em_iterations), init.type = cfg$stm$init_type, verbose = FALSE)
-      })
-      diagnostics$stability[i] <- topic_stability(models, prep$vocab)
-      diagnostics$convergence_rate[i] <- mean(vapply(models, function(m) !is.null(m$convergence$bound), logical(1)))
+    n <- length(candidates)
+    diagnostics <- data.frame(
+      K = candidates, coherence = safe_result(search, "semcoh", n), exclusivity = safe_result(search, "exclus", n),
+      heldout = safe_result(search, "heldout", n), residual = safe_result(search, "residual", n),
+      bound = safe_result(search, "bound", n), stability = NA_real_, convergence_rate = NA_real_
+    )
+    run_stability <- tolower(Sys.getenv("RUN_STABILITY", "false")) == "true"
+    if (run_stability) {
+      runs <- as.integer(cfg$stm$number_of_runs)
+      for (i in seq_along(candidates)) {
+        models <- lapply(seq_len(runs), function(run) {
+          set.seed(seed + i * 100 + run)
+          stm(prep$documents, prep$vocab, K = candidates[i], prevalence = prevalence_formula, data = prep$meta,
+            max.em.its = as.integer(cfg$stm$max_em_iterations), init.type = cfg$stm$init_type, verbose = FALSE)
+        })
+        diagnostics$stability[i] <- topic_stability(models, prep$vocab)
+        diagnostics$convergence_rate[i] <- mean(vapply(models, function(m) !is.null(m$convergence$bound), logical(1)))
+      }
     }
-  }
-  w <- cfg$stm$diagnostic_weights
-  stability_score <- ifelse(is.na(diagnostics$stability), 0.5, diagnostics$stability)
-  diagnostics$multicriteria_score <-
-    w$coherence * normalize_metric(diagnostics$coherence) +
-    w$exclusivity * normalize_metric(diagnostics$exclusivity) +
-    w$heldout * normalize_metric(diagnostics$heldout) +
-    w$residual * normalize_metric(diagnostics$residual, FALSE) +
-    w$stability * stability_score
-  diagnostics <- diagnostics %>% arrange(desc(multicriteria_score)) %>%
-    mutate(K_recomendado = row_number() == 1, K_alternativo = row_number() %in% 2:3,
-      justificacion = ifelse(K_recomendado, "Mayor puntaje multicriterio configurable", "Solución comparativa"),
-      advertencias = ifelse(run_stability, "", "Estabilidad no ejecutada; activar RUN_STABILITY=true"))
-  write_csv(diagnostics, file.path(out, "k_diagnostics.csv"))
-  K <- diagnostics$K[1]
+    w <- cfg$stm$diagnostic_weights
+    stability_score <- ifelse(is.na(diagnostics$stability), 0.5, diagnostics$stability)
+    diagnostics$multicriteria_score <-
+      w$coherence * normalize_metric(diagnostics$coherence) +
+      w$exclusivity * normalize_metric(diagnostics$exclusivity) +
+      w$heldout * normalize_metric(diagnostics$heldout) +
+      w$residual * normalize_metric(diagnostics$residual, FALSE) +
+      w$stability * stability_score
+    diagnostics <- diagnostics %>% arrange(desc(multicriteria_score)) %>%
+      mutate(K_recomendado = row_number() == 1, K_alternativo = row_number() %in% 2:3,
+        justificacion = ifelse(K_recomendado, "Mayor puntaje multicriterio configurable", "Solución comparativa"),
+        advertencias = ifelse(run_stability, "", "Estabilidad no ejecutada; activar RUN_STABILITY=true"))
+    write_csv(diagnostics, diagnostics_path)
+    K <- diagnostics$K[1]
 
-  set.seed(seed)
-  model <- stm(prep$documents, prep$vocab, K = K, prevalence = prevalence_formula, data = prep$meta,
-    max.em.its = as.integer(cfg$stm$max_em_iterations), init.type = cfg$stm$init_type, verbose = TRUE)
-  saveRDS(model, file.path(out, "model.rds")); saveRDS(model, "output/stm_model.rds")
+    set.seed(seed)
+    model <- stm(prep$documents, prep$vocab, K = K, prevalence = prevalence_formula, data = prep$meta,
+      max.em.its = as.integer(cfg$stm$max_em_iterations), init.type = cfg$stm$init_type, verbose = TRUE)
+    saveRDS(model, model_path); saveRDS(model, "output/stm_model.rds")
+  }
   labels <- labelTopics(model, n = 20)
   theta <- model$theta
   dominant <- max.col(theta, ties.method = "first")
@@ -178,10 +191,14 @@ run_stm_pipeline <- function(args = character()) {
       outlier_percentage = 0, year_complete = year != cfg$project$end_year)
   }))))
   write_csv(over_time, file.path(out, "topics_over_time.csv"))
-  effects <- estimateEffect(1:K ~ splines::ns(anio, df = 3), model, meta = prep$meta, uncertainty = "Global")
-  saveRDS(effects, file.path(out, "temporal_effects.rds"))
+  effect_formula <- as.formula(sprintf("1:%d ~ splines::ns(anio, df = 3)", K))
+  effects_path <- file.path(out, "temporal_effects.rds")
+  if (!(resumed && file.exists(effects_path))) {
+    effects <- estimateEffect(effect_formula, model, meta = prep$meta, uncertainty = "Global")
+    saveRDS(effects, effects_path)
+  }
 
-  legacy_topics <- topics %>% transmute(topico = topic_id, prevalencia, frex_top10 = str_replace_all(top_words, " \\| ", ", "),
+  legacy_topics <- topics %>% transmute(topico = topic_id, prevalencia = prevalence, frex_top10 = str_replace_all(top_words, " \\| ", ", "),
     prob_top10 = apply(labels$prob[, 1:10, drop = FALSE], 1, paste, collapse = ", "),
     lift_top5 = apply(labels$lift[, 1:5, drop = FALSE], 1, paste, collapse = ", "), color = "#457B9D")
   write_csv(legacy_topics, "output/tabla_topicos.csv")
@@ -192,7 +209,9 @@ run_stm_pipeline <- function(args = character()) {
     git_commit = tryCatch(system("git rev-parse HEAD", intern = TRUE), error = function(e) "unknown"),
     R_version = R.version.string, packages = list(stm = as.character(packageVersion("stm"))), configuration = cfg,
     documents = length(prep$documents), discarded_documents = nrow(corpus) - length(prep$documents), selected_K = K,
-    year_2026_incomplete = TRUE, elapsed_seconds = as.numeric(difftime(Sys.time(), started, units = "secs")))
+    year_2026_incomplete = TRUE, execution_mode = ifelse(resumed, "resume_exports", "full"),
+    model_completed_at = format(file.info(model_path)$mtime, tz = "UTC"),
+    elapsed_seconds = as.numeric(difftime(Sys.time(), started, units = "secs")))
   write_json(metadata, file.path(out, "model_metadata.json"), pretty = TRUE, auto_unbox = TRUE)
   cat(sprintf("STM completada: K=%d, documentos=%d, semilla=%d\n", K, length(prep$documents), seed))
   invisible(metadata)

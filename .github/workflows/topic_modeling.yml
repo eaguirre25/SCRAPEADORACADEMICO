@@ -58,7 +58,7 @@ jobs:
           r-version: "release"
       - name: Install R dependencies
         if: inputs.mode == 'stm' || inputs.mode == 'full'
-        run: Rscript -e "install.packages(c('stm','readr','dplyr','stringr','tidyr','ggplot2','yaml','jsonlite','digest','testthat'), repos='https://cloud.r-project.org')"
+        run: Rscript -e "install.packages(c('stm','tm','SnowballC','readr','dplyr','stringr','tidyr','ggplot2','yaml','jsonlite','digest','testthat'), repos='https://cloud.r-project.org')"
       - name: Run selected stage
         run: >-
           python scripts/run_topic_pipeline.py

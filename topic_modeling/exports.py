@@ -56,7 +56,7 @@ def export_method_report(config: dict[str, Any]) -> Path:
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(
         "# Informe reproducible de modelado temático\n\n"
-        f"Generado: {datetime.now(timezone.utc).isoformat()}  \nSemilla: {config['project']['seed']}  \n"
+        f"Generado: {datetime.now(timezone.utc).isoformat()}\n\nSemilla: {config['project']['seed']}\n\n"
         f"Período: {config['project']['start_year']}–{config['project']['end_year']} (último año incompleto)\n\n"
         "## Calidad y cobertura del corpus\n\n" + table(quality, "metric", "value") + "\n\n"
         "## Métricas de modelos\n\n" + table(metrics, "metric", "value") + "\n\n"
