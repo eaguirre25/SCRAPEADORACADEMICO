@@ -1,8 +1,8 @@
 {
   "model": "stm",
   "seed": 42,
-  "generated_at_utc": "2026-07-30 16:57:15",
-  "git_commit": "25555a680705f18cbc91f642622e57b656203534",
+  "generated_at_utc": "2026-07-30 20:33:35",
+  "git_commit": "10296bc8d757a3b3b96d3ceb91a58c3468dd8eb5",
   "R_version": "R version 4.6.1 (2026-06-24 ucrt)",
   "packages": {
     "stm": "1.3.8"
@@ -108,5 +108,5 @@
   "year_2026_incomplete": true,
   "execution_mode": "resume_exports",
   "model_completed_at": "2026-07-30 16:46:02",
-  "elapsed_seconds": 114.5821
+  "elapsed_seconds": 130.2281
 }

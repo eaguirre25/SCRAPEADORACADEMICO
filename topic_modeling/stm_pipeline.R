@@ -198,9 +198,15 @@ run_stm_pipeline <- function(args = character()) {
     saveRDS(effects, effects_path)
   }
 
+  topic_palette <- c(
+    "#E63946", "#F4A261", "#2A9D8F", "#457B9D", "#A8DADC", "#E9C46A", "#264653", "#F77F00",
+    "#6A4C93", "#1982C4", "#8AC926", "#FF595E", "#FFCA3A", "#7B2D8B", "#0077B6", "#52B788",
+    "#D62828", "#023E8A", "#F3722C", "#90BE6D", "#43AA8B", "#577590", "#F9C74F", "#F8961E"
+  )
   legacy_topics <- topics %>% transmute(topico = topic_id, prevalencia = prevalence, frex_top10 = str_replace_all(top_words, " \\| ", ", "),
     prob_top10 = apply(labels$prob[, 1:10, drop = FALSE], 1, paste, collapse = ", "),
-    lift_top5 = apply(labels$lift[, 1:5, drop = FALSE], 1, paste, collapse = ", "), color = "#457B9D")
+    lift_top5 = apply(labels$lift[, 1:5, drop = FALSE], 1, paste, collapse = ", "),
+    color = topic_palette[((topic_id - 1) %% length(topic_palette)) + 1])
   write_csv(legacy_topics, "output/tabla_topicos.csv")
   write_csv(data.frame(doc_index = seq_len(nrow(prep$meta)), filename = prep$meta$filename, doi = prep$meta$doi,
     titulo = prep$meta$titulo, topico_dominante = dominant), "output/document_topics.csv")

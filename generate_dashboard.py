@@ -80,9 +80,14 @@ print(f"Records: {len(records)} | Corpus: {len(corpus)} | Topicos: {len(topicos)
 # ── Colores por tópico ────────────────────────────────────────────────────────
 
 topic_colors = {}
-for i, t in enumerate(topicos):
+for i, t in enumerate(sorted(topicos, key=lambda row: safe_int(s(row.get("topico")), 10_000))):
     tid = s(t.get("topico", str(i + 1)))
-    topic_colors[tid] = s(t.get("color", PALETA[i % len(PALETA)]))
+    # Use a deterministic dashboard palette. The STM export may carry a
+    # placeholder color shared by every topic, which would make the network
+    # visually indistinguishable even when topic assignments are different.
+    color = PALETA[i % len(PALETA)]
+    topic_colors[tid] = color
+    t["color"] = color
 
 # ── DOI → tópico dominante ───────────────────────────────────────────────────
 
