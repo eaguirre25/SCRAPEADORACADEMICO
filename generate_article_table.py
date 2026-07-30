@@ -157,6 +157,11 @@ applyFilters();
 </script>
 </body>
 </html>"""
+    # The template keeps doubled braces so CSS and JavaScript can be edited
+    # safely alongside template-literal expressions. Convert them before
+    # injecting article JSON; otherwise the generated page contains invalid
+    # CSS and JavaScript (for example, `function render(){{ ... }}`).
+    html = html.replace("{{", "{").replace("}}", "}")
     html = html.replace("__TOTAL__", f"{total:,}").replace("__DATA__", data_json)
 
     (OUT_DIR / "articulos.html").write_text(html, encoding="utf-8")
