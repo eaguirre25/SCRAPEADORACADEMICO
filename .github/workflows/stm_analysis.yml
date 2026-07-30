@@ -44,7 +44,8 @@ jobs:
             install.packages(c(
               'stm', 'tm', 'SnowballC',
               'readr', 'dplyr', 'tidyr',
-              'ggplot2', 'scales', 'stringr'
+              'ggplot2', 'scales', 'stringr',
+              'yaml', 'jsonlite', 'digest', 'testthat'
             ))
             cat('Paquetes OK\n')
           "
@@ -53,7 +54,10 @@ jobs:
         run: mkdir -p output/plots
 
       - name: Ejecutar análisis STM
-        run: sudo Rscript stm_analysis.R
+        run: sudo Rscript stm_analysis.R --config config/topic_modeling.yml
+
+      - name: Pruebas R
+        run: sudo Rscript -e "testthat::test_file('tests/testthat/test-stm-helpers.R')"
 
       - name: Guardar resultados en GitHub
         run: |
