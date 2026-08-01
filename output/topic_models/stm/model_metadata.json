@@ -1,0 +1,112 @@
+{
+  "model": "stm",
+  "seed": 42,
+  "generated_at_utc": "2026-07-30 20:33:35",
+  "git_commit": "10296bc8d757a3b3b96d3ceb91a58c3468dd8eb5",
+  "R_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "packages": {
+    "stm": "1.3.8"
+  },
+  "configuration": {
+    "project": {
+      "seed": 42,
+      "start_year": 2020,
+      "end_year": 2026
+    },
+    "paths": {
+      "corpus_pdf": "data/corpus.csv",
+      "bibliographic_records": "data/master_records.csv",
+      "output_root": "output/topic_models",
+      "cache_root": "cache/topic_models",
+      "human_labels": "config/topic_labels.csv"
+    },
+    "corpus": {
+      "primary_unit": "metadata",
+      "fallback_unit": "full_text",
+      "minimum_characters": 200,
+      "deduplicate": true,
+      "remove_references_from_full_text": true,
+      "detect_language": true,
+      "supported_languages": ["es", "en", "pt", "id"],
+      "full_text_max_characters": 120000
+    },
+    "text_fields": {
+      "title": "title",
+      "abstract": "abstract",
+      "keywords": "keywords",
+      "full_text": "texto"
+    },
+    "metadata_corpus": {
+      "field_weights": {
+        "title": 3,
+        "keywords": 2,
+        "abstract": 1
+      }
+    },
+    "stm": {
+      "enabled": true,
+      "candidate_k": {
+        "start": 8,
+        "end": 40,
+        "step": 2
+      },
+      "max_em_iterations": 500,
+      "init_type": "Spectral",
+      "prevalence_formula": "~ s(anio)",
+      "number_of_runs": 5,
+      "remove_domain_stopwords": false,
+      "diagnostic_weights": {
+        "coherence": 0.3,
+        "exclusivity": 0.25,
+        "heldout": 0.2,
+        "residual": 0.1,
+        "stability": 0.15
+      }
+    },
+    "bertopic": {
+      "enabled": true,
+      "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "batch_size": 16,
+      "min_topic_size": 10,
+      "min_samples": 5,
+      "nr_topics": "auto",
+      "calculate_probabilities": true,
+      "low_memory": true,
+      "ngram_min": 1,
+      "ngram_max": 3,
+      "min_df": 2,
+      "max_df": 0.95,
+      "max_features": 50000,
+      "reduce_frequent_words": true,
+      "reduce_outliers": true,
+      "merge_candidate_similarity": 0.8,
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 5,
+        "min_dist": 0,
+        "metric": "cosine"
+      },
+      "hdbscan": {
+        "metric": "euclidean",
+        "cluster_selection_method": "eom",
+        "prediction_data": true
+      }
+    },
+    "validation": {
+      "stability_runs": 5,
+      "top_n_words": 15,
+      "representative_documents": 10,
+      "minimum_topic_documents": 5,
+      "ambiguous_probability_margin": 0.1,
+      "trend_minimum_documents": 20,
+      "bootstrap_samples": 500
+    }
+  },
+  "documents": 863,
+  "discarded_documents": 0,
+  "selected_K": 22,
+  "year_2026_incomplete": true,
+  "execution_mode": "resume_exports",
+  "model_completed_at": "2026-07-30 16:46:02",
+  "elapsed_seconds": 130.2281
+}

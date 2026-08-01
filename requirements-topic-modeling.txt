@@ -1,0 +1,17 @@
+bertopic>=0.17,<0.18
+sentence-transformers>=3.4,<6
+umap-learn>=0.5.7,<0.6
+hdbscan>=0.8.40,<0.9
+scikit-learn>=1.5,<1.8
+pandas>=2.2,<3
+numpy>=1.26,<3
+pyarrow>=17,<22
+PyYAML>=6.0,<7
+joblib>=1.4,<2
+gensim>=4.3,<5
+scipy>=1.12,<2
+plotly>=5.24,<7
+tqdm>=4.66,<5
+lingua-language-detector>=2.0,<3
+pytest>=8,<10
+truststore>=0.10,<1; sys_platform == "win32"

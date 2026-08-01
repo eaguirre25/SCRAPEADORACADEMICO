@@ -21,6 +21,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-topic-modeling.txt
+
+      - name: Instalar dependencias Python del corpus
+        run: pip install -r requirements-topic-modeling.txt
+
       - name: Instalar R y dependencias del sistema
         run: |
           sudo apt-get update -qq
@@ -44,7 +53,8 @@ jobs:
             install.packages(c(
               'stm', 'tm', 'SnowballC',
               'readr', 'dplyr', 'tidyr',
-              'ggplot2', 'scales', 'stringr'
+              'ggplot2', 'scales', 'stringr',
+              'yaml', 'jsonlite', 'digest', 'testthat'
             ))
             cat('Paquetes OK\n')
           "
@@ -52,8 +62,14 @@ jobs:
       - name: Crear directorio output
         run: mkdir -p output/plots
 
-      - name: Ejecutar análisis STM
-        run: sudo Rscript stm_analysis.R
+      - name: Construir corpus canónicos auditables
+        run: python scripts/build_modeling_corpus.py --config config/topic_modeling.yml
+
+      - name: Ejecutar STM corregida y estabilidad por idioma
+        run: python scripts/run_topic_pipeline.py --config config/topic_modeling.yml --mode stm --corpus-unit metadata --run-stability
+
+      - name: Pruebas R
+        run: sudo Rscript -e "testthat::test_file('tests/testthat/test-stm-helpers.R')"
 
       - name: Guardar resultados en GitHub
         run: |

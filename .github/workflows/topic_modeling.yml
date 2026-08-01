@@ -1,0 +1,93 @@
+name: Modelado temático híbrido
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Etapa a ejecutar
+        type: choice
+        options: [corpus, stm, bertopic, compare, dashboard, full]
+        default: corpus
+      corpus_unit:
+        description: Unidad para BERTopic
+        type: choice
+        options: [metadata, fulltext]
+        default: metadata
+      force_embeddings:
+        description: Ignorar caché de embeddings
+        type: boolean
+        default: false
+      run_stability:
+        description: Ejecutar réplicas STM costosas
+        type: boolean
+        default: true
+      preliminary:
+        description: STM preliminar con K fijo (sin afirmar selección óptima)
+        type: boolean
+        default: false
+      search_parameters:
+        description: Búsqueda escalonada de parámetros BERTopic
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  topic-modeling:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      HF_HOME: ${{ github.workspace }}/.cache/huggingface
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-topic-modeling.txt
+      - name: Cache Hugging Face and embeddings
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/huggingface
+            cache/topic_models
+          key: topic-models-${{ runner.os }}-${{ hashFiles('requirements-topic-modeling.txt', 'config/topic_modeling.yml', 'data/master_records.csv') }}
+          restore-keys: topic-models-${{ runner.os }}-
+      - name: Install Python dependencies
+        run: pip install -r requirements-topic-modeling.txt
+      - name: Install R
+        if: inputs.mode == 'stm' || inputs.mode == 'full'
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "release"
+      - name: Install R dependencies
+        if: inputs.mode == 'stm' || inputs.mode == 'full'
+        run: Rscript -e "install.packages(c('stm','tm','SnowballC','readr','dplyr','stringr','tidyr','ggplot2','yaml','jsonlite','digest','testthat'), repos='https://cloud.r-project.org')"
+      - name: Run selected stage
+        run: >-
+          python scripts/run_topic_pipeline.py
+          --config config/topic_modeling.yml
+          --mode ${{ inputs.mode }}
+          --corpus-unit ${{ inputs.corpus_unit }}
+          ${{ inputs.force_embeddings && '--force-embeddings' || '' }}
+          ${{ inputs.run_stability && '--run-stability' || '' }}
+          ${{ inputs.preliminary && '--preliminary' || '' }}
+          ${{ inputs.search_parameters && '--search-parameters' || '' }}
+      - name: Run Python tests
+        run: pytest -q
+      - name: Upload tables, reports and dashboard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topic-modeling-${{ github.run_id }}
+          path: |
+            output/topic_models/**
+            output/tabla_topicos.csv
+            output/document_topics.csv
+            docs/index.html
+          if-no-files-found: warn
+          retention-days: 30

@@ -1,0 +1,15 @@
+model,model_path,corpus,run_id,is_latest_for_model,is_preferred_model,status,metric,value,applicability
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,3f4de8ee8c0c96b1,True,True,preferred_provisional,documents,2182,all
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,3f4de8ee8c0c96b1,True,True,preferred_provisional,topics_excluding_outliers,14,all
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,3f4de8ee8c0c96b1,True,True,preferred_provisional,minimum_topic_size,38,dominant assignment or cluster
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,3f4de8ee8c0c96b1,True,True,preferred_provisional,model_topic_diversity_top10,0.914286,lexical representation
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,3f4de8ee8c0c96b1,True,True,preferred_provisional,outlier_percentage,38.5885,BERTopic
+STM-METADATA-EN,stm/metadata_en_corrected,metadata,5adc9f83bb44b510,True,False,stability_nonconverged,documents,939,all
+STM-METADATA-EN,stm/metadata_en_corrected,metadata,5adc9f83bb44b510,True,False,stability_nonconverged,topics_excluding_outliers,16,all
+STM-METADATA-EN,stm/metadata_en_corrected,metadata,5adc9f83bb44b510,True,False,stability_nonconverged,minimum_topic_size,29,dominant assignment or cluster
+STM-METADATA-ES,stm/metadata_es_corrected,metadata,22ecf8acc6e3bd31,True,False,stability_nonconverged,documents,1195,all
+STM-METADATA-ES,stm/metadata_es_corrected,metadata,22ecf8acc6e3bd31,True,False,stability_nonconverged,topics_excluding_outliers,16,all
+STM-METADATA-ES,stm/metadata_es_corrected,metadata,22ecf8acc6e3bd31,True,False,stability_nonconverged,minimum_topic_size,32,dominant assignment or cluster
+STM-METADATA-PT,stm/metadata_pt_corrected,metadata,98600702f07dbabe,True,False,exploratory_small_corpus_stability_nonconverged,documents,42,all
+STM-METADATA-PT,stm/metadata_pt_corrected,metadata,98600702f07dbabe,True,False,exploratory_small_corpus_stability_nonconverged,topics_excluding_outliers,5,all
+STM-METADATA-PT,stm/metadata_pt_corrected,metadata,98600702f07dbabe,True,False,exploratory_small_corpus_stability_nonconverged,minimum_topic_size,6,dominant assignment or cluster

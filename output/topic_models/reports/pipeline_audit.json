@@ -1,0 +1,157 @@
+{
+  "status": "needs_revision",
+  "configuration_effective_previous": {
+    "phase": "hdbscan_screen",
+    "n_neighbors": 10,
+    "n_components": 10,
+    "min_dist": 0.0,
+    "min_cluster_size": 10,
+    "min_samples": 10,
+    "cluster_selection_method": "leaf",
+    "clusters": 42,
+    "outlier_share": 0.532997,
+    "minimum_cluster_size_observed": 10,
+    "median_cluster_size": 19,
+    "maximum_cluster_share": 0.05103,
+    "silhouette": 0.659707,
+    "language_cluster_nmi": 0.169574,
+    "preliminary_score": 0.479528,
+    "elapsed_seconds": 0.113,
+    "seed": 42,
+    "rank": 1,
+    "selection_status": "preliminary_candidate",
+    "human_review_status": "pending"
+  },
+  "configuration_declared_previous": {
+    "enabled": true,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "embedding_model_alternatives": [
+      "sentence-transformers/distiluse-base-multilingual-cased-v2"
+    ],
+    "batch_size": 32,
+    "min_topic_size": 35,
+    "min_samples": 5,
+    "nr_topics": null,
+    "calculate_probabilities": true,
+    "low_memory": true,
+    "ngram_min": 1,
+    "ngram_max": 3,
+    "min_df": 2,
+    "max_df": 0.95,
+    "max_features": 50000,
+    "token_pattern": "(?u)\\b[^\\W\\d_](?:[\\wÀ-ÖØ-öø-ÿ-]*[^\\W_])?\\b",
+    "reduce_frequent_words": true,
+    "preserve_original_outliers": true,
+    "reduce_outliers": false,
+    "outlier_reduction_is_alternative": true,
+    "parameter_search_enabled": true,
+    "hierarchy_enabled": true,
+    "language_dependence_diagnostic": true,
+    "heterogeneous_topic_detection": true,
+    "merge_candidate_similarity": 0.8,
+    "umap": {
+      "n_neighbors": 15,
+      "n_components": 5,
+      "min_dist": 0.0,
+      "metric": "cosine"
+    },
+    "hdbscan": {
+      "metric": "euclidean",
+      "cluster_selection_method": "eom",
+      "prediction_data": true
+    },
+    "macro_search": {
+      "target_min_topics": 10,
+      "target_max_topics": 25,
+      "reject_outlier_share_above": 0.45,
+      "reject_topics_above": 35,
+      "reject_topics_below": 5,
+      "reject_median_cluster_below": 20,
+      "reject_minimum_size_share_above": 0.3,
+      "finalists": 4,
+      "stability_runs": 5,
+      "seeds": [
+        42,
+        117,
+        233,
+        401,
+        809
+      ],
+      "subcluster_minimum_documents": 60
+    },
+    "ambiguity": {
+      "margin_below": 0.08,
+      "membership_below": 0.35,
+      "centroid_similarity_below": 0.35,
+      "outlier_score_above": 0.8
+    },
+    "parameter_search": {
+      "umap_neighbors": [
+        10,
+        15,
+        30
+      ],
+      "umap_components": [
+        5,
+        10
+      ],
+      "umap_min_dist": [
+        0.0,
+        0.1
+      ],
+      "min_cluster_size": [
+        10,
+        20,
+        30,
+        50
+      ],
+      "min_samples": [
+        5,
+        10
+      ],
+      "cluster_selection_method": [
+        "eom",
+        "leaf"
+      ],
+      "staged_max_candidates": 12
+    }
+  },
+  "serialized_internal_defaults_not_effective": {
+    "calculate_probabilities": true,
+    "language": "english",
+    "low_memory": false,
+    "min_topic_size": 10,
+    "n_gram_range": [
+      1,
+      1
+    ],
+    "nr_topics": null,
+    "seed_topic_list": null,
+    "top_n_words": 10,
+    "verbose": true,
+    "zeroshot_min_similarity": 0.7,
+    "zeroshot_topic_list": null
+  },
+  "findings": {
+    "unicode_loss": "CountVectorizer(strip_accents='unicode') removed diacritics from c-TF-IDF terms; identifiers.normalize_text transliterated only matching keys; a small number of source abstracts were already damaged upstream.",
+    "probability_and_ambiguity": "topic_probability stored the maximum BERTopic distribution for every row and ambiguity used only a <0.10 top-two margin; HDBSCAN membership, outlier score and centroid similarity were not separated.",
+    "heterogeneity": "Mean UMAP silhouette plus one language condition produced coarse labels; no lexical, source, country, contamination or review-set evidence was combined.",
+    "contamination": "A fixed intersection between top words and a short contamination vocabulary; document-level relevance evidence was not aggregated.",
+    "language_dependence": "Dominant-language share >0.80 only; geography, source and cross-language semantic neighbors were absent.",
+    "stability": "The preliminary command explicitly omitted --run-stability; the selected BERTopic candidate was never replicated.",
+    "cluster_generation": "The preliminary score selected UMAP(10,10,0.0)+HDBSCAN(min_cluster_size=10,min_samples=10,leaf), a fragmenting configuration with no early rejection rules.",
+    "outlier_explanation": "Restrictive density settings, leaf selection and low-neighbor UMAP yielded many small islands; short/partial metadata, language separation and true low-density themes were not separately characterized."
+  },
+  "observed_previous": {
+    "documents": 2182,
+    "topics_excluding_outliers": 42,
+    "outliers": 1163,
+    "outlier_percentage": 53.2997,
+    "ambiguous_documents": 1200,
+    "heterogeneity_statuses": {
+      "coherent": 42
+    },
+    "language_flagged_topics": 28,
+    "stability_missing_rows": 0
+  }
+}

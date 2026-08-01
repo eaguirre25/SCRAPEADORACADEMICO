@@ -1,0 +1,13 @@
+phase,n_neighbors,n_components,min_dist,min_cluster_size,min_samples,cluster_selection_method,clusters,outlier_share,minimum_cluster_size_observed,median_cluster_size,maximum_cluster_share,silhouette,language_cluster_nmi,preliminary_score,elapsed_seconds,seed,rank,selection_status,human_review_status
+hdbscan_screen,10,10,0.0,10,10,leaf,42,0.532997,10,19,0.05103,0.659707,0.169574,0.479528,0.113,42,1,preliminary_candidate,pending
+hdbscan_screen,10,10,0.0,10,5,leaf,61,0.422548,10,17,0.039683,0.591273,0.159257,0.455683,0.126,42,2,preliminary_candidate,pending
+hdbscan_screen,10,10,0.0,20,5,leaf,33,0.433089,20,33,0.067098,0.589245,0.151523,0.445432,0.113,42,3,preliminary_candidate,pending
+umap_screen,10,10,0.0,10,5,eom,49,0.305225,10,20,0.116095,0.543358,0.133653,0.43741,12.939,42,4,screened,pending
+hdbscan_screen,10,10,0.0,10,5,eom,49,0.305225,10,20,0.116095,0.543358,0.133653,0.43741,0.132,42,5,screened,pending
+hdbscan_screen,10,10,0.0,20,5,eom,27,0.315765,20,42,0.117883,0.537801,0.137115,0.426678,0.137,42,6,screened,pending
+umap_screen,10,5,0.0,10,5,eom,45,0.28231,10,22,0.219668,0.520025,0.124818,0.398854,32.576,42,7,screened,pending
+hdbscan_screen,10,10,0.0,10,10,eom,30,0.345555,12,33,0.233894,0.54528,0.128631,0.397273,0.139,42,8,screened,pending
+umap_screen,10,10,0.1,10,5,eom,40,0.379468,10,22,0.121861,0.530837,0.143949,0.394373,13.018,42,9,screened,pending
+umap_screen,10,5,0.1,10,5,eom,37,0.340055,10,25,0.204861,0.489832,0.132886,0.349732,12.677,42,10,screened,pending
+umap_screen,15,5,0.0,10,5,eom,44,0.293767,10,19,0.249189,0.474263,0.126161,0.341299,13.685,42,11,screened,pending
+umap_screen,15,5,0.1,10,5,eom,37,0.347388,10,21,0.245787,0.444853,0.127904,0.29345,13.354,42,12,screened,pending

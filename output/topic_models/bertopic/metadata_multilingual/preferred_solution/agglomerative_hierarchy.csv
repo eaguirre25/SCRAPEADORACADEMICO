@@ -1,0 +1,14 @@
+﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
+26,leadership_gestión_educativa_escolar_educational leadership,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]",24,gestión_educativa_escolar_gestión escolar_gestión educativa,25,leadership_educational leadership_data_schools_digital,1.0715923660324764
+25,leadership_educational leadership_data_schools_digital,"[0, 1, 2, 5, 6, 8, 9, 11, 13]",23,leadership_educational leadership_data_liderazgo_digital,22,boarding_islamic_islamic boarding_boarding school_character,0.8553542120949019
+24,gestión_educativa_escolar_gestión escolar_gestión educativa,"[3, 4, 7, 10, 12]",21,educación_gestión_educativa_escolar_gestión educativa,19,nivel_padres_gestión escolar_gestión_desempeño,0.8452254740499793
+23,leadership_educational leadership_data_liderazgo_digital,"[0, 1, 2, 5, 6, 8, 9]",9,artificial_ia_inteligencia_inteligencia artificial_ai,20,leadership_educational leadership_data_liderazgo_digital,0.7825328802578667
+22,boarding_islamic_islamic boarding_boarding school_character,"[11, 13]",11,boarding_islamic_islamic boarding_boarding school_character,13,job_satisfaction_job satisfaction_motivation_performance,0.7681579277883582
+21,educación_gestión_educativa_escolar_gestión educativa,"[3, 7, 12]",12,buenos aires_aires_argentina_buenos_córdoba,16,gestión_educativa_educación_gestión educativa_escolar,0.7472529057884055
+20,leadership_educational leadership_data_liderazgo_digital,"[0, 1, 2, 5, 6, 8]",18,leadership_educational leadership_data_liderazgo_digital,8,women_gender_justice_racism_leadership,0.7345936861358758
+19,nivel_padres_gestión escolar_gestión_desempeño,"[4, 10]",4,desempeño_nivel_gestión escolar_gestión_relación,10,padres_familia_parents_padres familia_parental,0.6982868845250698
+18,leadership_educational leadership_data_liderazgo_digital,"[0, 1, 2, 5, 6]",17,leadership_educational leadership_liderazgo_data_digital,6,covid-19_pandemic_coronavirus_pandemia_disease,0.6654688975304753
+17,leadership_educational leadership_liderazgo_data_digital,"[0, 1, 2, 5]",5,inclusive_inclusiva_inclusión_inclusion_educación inclusiva,15,leadership_educational leadership_liderazgo_data_digital,0.6565335963271824
+16,gestión_educativa_educación_gestión educativa_escolar,"[3, 7]",3,rurales_rural_ecuador_educación_gestión,7,gestión educativa_educativa_planificación estratégica_gestión_planificación,0.6066898984919504
+15,leadership_educational leadership_liderazgo_data_digital,"[0, 1, 2]",14,leadership_educational leadership_liderazgo_calidad_principals,2,digital_information_technology_ict_data,0.5884584216990331
+14,leadership_educational leadership_liderazgo_calidad_principals,"[0, 1]",1,calidad_calidad educativa_gestión_educativa_quality management,0,leadership_educational leadership_liderazgo_style_leaders,0.5447677868478573

@@ -1,0 +1,15 @@
+topic_id,included_document_share,borderline_document_share,excluded_candidate_share,domain_similarity_mean,domain_similarity_min,contamination_terms,representative_contaminating_documents,status,review_status
+0,1.0,0.0,0.0,0.978949,0.660857,,,domain_relevant,pending_human_review
+1,1.0,0.0,0.0,0.957964,0.65344,,,domain_relevant,pending_human_review
+2,1.0,0.0,0.0,0.982251,0.654792,,,domain_relevant,pending_human_review
+3,1.0,0.0,0.0,0.958074,0.654332,,,domain_relevant,pending_human_review
+4,1.0,0.0,0.0,0.949385,0.655639,,,domain_relevant,pending_human_review
+5,1.0,0.0,0.0,0.967709,0.657656,,,domain_relevant,pending_human_review
+6,1.0,0.0,0.0,0.97624,0.65463,,,domain_relevant,pending_human_review
+7,1.0,0.0,0.0,0.935917,0.654658,,,domain_relevant,pending_human_review
+8,1.0,0.0,0.0,0.994456,0.673971,,,domain_relevant,pending_human_review
+9,1.0,0.0,0.0,0.939738,0.634399,,,domain_relevant,pending_human_review
+10,1.0,0.0,0.0,0.992303,0.657655,,,domain_relevant,pending_human_review
+11,1.0,0.0,0.0,0.999762,0.994202,,,domain_relevant,pending_human_review
+12,1.0,0.0,0.0,0.991099,0.661752,,,domain_relevant,pending_human_review
+13,1.0,0.0,0.0,0.963418,0.654321,,,domain_relevant,pending_human_review

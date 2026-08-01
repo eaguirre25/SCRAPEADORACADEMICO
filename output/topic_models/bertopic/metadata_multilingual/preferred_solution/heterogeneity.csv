@@ -1,0 +1,15 @@
+model,corpus,topic_id,documents,embedding_compactness,silhouette_mean,silhouette_min,title_semantic_dispersion,abstract_semantic_dispersion,ctfidf_coherence_cv,ctfidf_coherence_npmi,topic_diversity,language_entropy,dominant_language_share,source_entropy,country_entropy,contamination_share,borderline_document_share,low_confidence_share,status,review_status
+BERTopic-METADATA-MULTILINGUAL,metadata,0,316,0.8696,0.452617,-0.478326,0.158473,0.223176,,,0.071429,0.70119,0.572785,0.1063,-0.0,0.0,0.066456,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,1,158,0.853112,0.170432,-0.41301,0.190149,0.20456,,,0.071429,0.726607,0.512658,-0.0,-0.0,0.0,0.056962,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,2,141,0.808047,0.656517,0.279116,0.240681,0.264663,,,0.071429,0.71964,0.64539,0.129025,-0.0,0.0,0.297872,0.0,broad_but_interpretable,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,3,130,0.858437,0.223184,-0.286658,0.217159,0.170497,,,0.071429,0.391711,0.9,0.154709,-0.0,0.0,0.123077,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,4,100,0.910978,0.544806,0.224582,0.11495,0.112759,,,0.071429,0.167944,0.96,-0.0,-0.0,0.0,0.07,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,5,83,0.857444,0.69434,-0.097412,0.200975,0.196633,,,0.071429,0.780997,0.554217,-0.0,-0.0,0.0,0.26506,0.048193,broad_but_interpretable,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,6,75,0.819115,0.790944,0.317047,0.261423,0.247743,,,0.071429,0.736951,0.586667,0.310183,-0.0,0.0,0.106667,0.053333,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,7,64,0.862229,0.539036,0.221622,0.228769,0.195077,,,0.071429,0.447062,0.875,-0.0,-0.0,0.0,0.03125,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,8,62,0.815991,0.735651,0.330562,0.200816,0.286796,,,0.071429,0.467458,0.822581,0.142506,-0.0,0.0,0.0,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,9,46,0.843464,0.836575,0.227766,0.211803,0.196617,,,0.071429,0.646091,0.652174,-0.0,-0.0,0.0,0.043478,0.021739,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,10,46,0.888954,0.829795,0.720719,0.140585,0.159028,,,0.071429,0.753286,0.608696,-0.0,-0.0,0.0,0.173913,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,11,43,0.851508,0.864687,0.647805,0.17849,0.236295,,,0.071429,-0.0,1.0,-0.0,-0.0,0.0,0.023256,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,12,38,0.855399,0.609798,0.264494,0.16888,0.173914,,,0.071429,0.336496,0.894737,0.793395,-0.0,0.0,0.078947,0.0,coherent_candidate,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,13,38,0.824646,0.744714,0.56004,0.226778,0.239443,,,0.071429,0.336496,0.894737,-0.0,-0.0,0.0,0.0,0.0,coherent_candidate,pending_human_review
