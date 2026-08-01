@@ -3,6 +3,8 @@ from __future__ import annotations
 import math
 import random
 import re
+import hashlib
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -133,15 +135,52 @@ def _discover_models(root: Path) -> list[tuple[str, Path]]:
         family_root = root / family
         if not family_root.exists():
             continue
-        if (family_root / "topics.csv").exists():
-            models.append((f"{family}_legacy", family_root))
-        for child in family_root.iterdir():
-            if child.is_dir() and (child / "topics.csv").exists() and (child / "document_topics.csv").exists():
-                models.append((f"{family}/{child.name}", child))
+        for child in family_root.rglob("topics.csv"):
+            model_dir = child.parent
+            relative = model_dir.relative_to(root).as_posix()
+            if "archive" in model_dir.parts or not (model_dir / "document_topics.csv").exists():
+                continue
+            # A corrected STM run supersedes the same language/unit legacy run.
+            if family == "stm" and not model_dir.name.endswith("_corrected"):
+                corrected = model_dir.with_name(model_dir.name + "_corrected")
+                if (corrected / "topics.csv").exists() and (corrected / "document_topics.csv").exists():
+                    continue
+            # The selected BERTopic solution is the sole current metadata run.
+            if relative == "bertopic/metadata_multilingual" and (model_dir / "preferred_solution/topics.csv").exists():
+                continue
+            models.append((relative, model_dir))
     return models
 
 
-def evaluate_all(config: dict[str, Any]) -> list[dict[str, Any]]:
+def _run_info(model_key: str, path: Path) -> dict[str, Any]:
+    metadata_path = path / "model_metadata.json"
+    metadata: dict[str, Any] = {}
+    if metadata_path.exists():
+        try:
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            metadata = {}
+    generated_at = metadata.get("generated_at_utc", "")
+    run_id = hashlib.sha256(f"{model_key}|{generated_at}".encode("utf-8")).hexdigest()[:16]
+    return {
+        "run_id": run_id,
+        "model_path": model_key,
+        "is_current": True,
+        "generated_at": generated_at,
+        "commit": metadata.get("git_commit", ""),
+        "status": metadata.get("selection_status", metadata.get("model_status", "current_provisional")),
+    }
+
+
+def evaluate_all(config: dict[str, Any]) -> dict[str, Any]:
+    # Compatibility entrypoint.  Evaluation is now delegated to the frozen,
+    # evaluation-only layer so direct callers cannot regenerate the obsolete
+    # mixed-run tables below or fit a model accidentally.
+    from .evaluation_metrics import recompute_evaluation
+    return recompute_evaluation(config, recompute_model=False)
+
+    # Legacy implementation retained temporarily for historical diffability;
+    # unreachable by design.
     root = Path(config["paths"]["output_root"])
     model_metrics: list[dict[str, Any]] = []
     topic_metrics: list[dict[str, Any]] = []
@@ -149,7 +188,12 @@ def evaluate_all(config: dict[str, Any]) -> list[dict[str, Any]]:
     stability_rows: list[dict[str, Any]] = []
     language_rows: list[dict[str, Any]] = []
     heterogeneity_rows: list[dict[str, Any]] = []
+    run_rows: list[dict[str, Any]] = []
+    run_by_path: dict[str, dict[str, Any]] = {}
     for model_key, path in _discover_models(root):
+        run_info = _run_info(model_key, path)
+        run_rows.append(run_info)
+        run_by_path[model_key] = run_info
         topics, docs = read_csv(path / "topics.csv"), read_csv(path / "document_topics.csv")
         words = read_csv(path / "topic_words.csv") if (path / "topic_words.csv").exists() else []
         model_name = topics[0].get("model", model_key) if topics else model_key
@@ -213,7 +257,12 @@ def evaluate_all(config: dict[str, Any]) -> list[dict[str, Any]]:
             "model": model_name, "model_path": model_key, "corpus": corpus, "metric": "temporal_accounting_issues",
             "value": " | ".join(temporal_issues), "applicability": "empty means annual counts and topic mass reconcile",
         })
+    for collection in (model_metrics, topic_metrics, document_metrics, stability_rows):
+        for row in collection:
+            info = run_by_path.get(str(row.get("model_path", "")), {})
+            row.update({key: info.get(key, "") for key in ("run_id", "is_current", "generated_at", "commit", "status")})
     evaluation = root / "evaluation"
+    write_csv(evaluation / "model_runs.csv", run_rows)
     write_csv(evaluation / "model_metrics.csv", model_metrics)
     write_csv(evaluation / "topic_metrics.csv", topic_metrics)
     write_csv(evaluation / "document_metrics.csv", document_metrics)

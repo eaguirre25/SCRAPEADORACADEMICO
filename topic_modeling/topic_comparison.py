@@ -74,13 +74,15 @@ def align_topics(
 
 def compare_models(config: dict[str, Any]) -> dict[str, int]:
     root = Path(config["paths"]["output_root"])
-    bert_path = root / "bertopic" / "metadata_multilingual"
+    bert_base = root / "bertopic" / "metadata_multilingual"
+    bert_path = bert_base / "preferred_solution" if (bert_base / "preferred_solution" / "document_topics.csv").exists() else bert_base
     if not (bert_path / "document_topics.csv").exists():
         raise FileNotFoundError("BERTopic metadata multilingual output is required")
     bert_docs = read_csv(bert_path / "document_topics.csv"); bert_topics = read_csv(bert_path / "topics.csv")
     all_alignment: list[dict[str, Any]] = []; document_alignment: list[dict[str, Any]] = []
     for language in config.get("multilingual", {}).get("stm_languages", ["es", "en", "pt"]):
-        stm_path = root / "stm" / f"metadata_{language}"
+        corrected = root / "stm" / f"metadata_{language}_corrected"
+        stm_path = corrected if (corrected / "document_topics.csv").exists() else root / "stm" / f"metadata_{language}"
         if not (stm_path / "document_topics.csv").exists():
             continue
         stm_docs = read_csv(stm_path / "document_topics.csv"); stm_topics = read_csv(stm_path / "topics.csv")

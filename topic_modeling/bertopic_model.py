@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import hashlib
+import platform
 import random
 import shutil
 import time
@@ -11,14 +13,8 @@ from .corpus_builder import read_csv, write_csv
 from .embeddings import load_or_create_embeddings, load_or_create_metadata_embeddings
 from .metadata import base_metadata, write_metadata
 from .topic_labels import automatic_label, load_human_labels, resolve_label
-
-
-FUNCTIONAL_STOPWORDS = [
-    "de", "la", "el", "en", "y", "a", "los", "del", "las", "por", "para", "con", "una", "un",
-    "the", "and", "of", "in", "to", "for", "with", "on", "that", "this", "from",
-    "que", "da", "do", "dos", "das", "em", "não", "com", "para", "uma",
-    "dan", "yang", "untuk", "dengan", "dalam", "pada", "dari", "ini", "itu",
-]
+from .vectorization import build_vectorizer, effective_vectorizer_parameters
+from .embeddings import TEXT_CLEANING_VERSION
 
 
 def _probability_fields(probabilities: Any, topic_ids: list[int], index: int, assigned: int) -> tuple[float | str, int | str, float | str, float | str]:
@@ -44,7 +40,6 @@ def run_bertopic(
     from bertopic import BERTopic
     from bertopic.vectorizers import ClassTfidfTransformer
     from hdbscan import HDBSCAN
-    from sklearn.feature_extraction.text import CountVectorizer
     from umap import UMAP
 
     started = time.perf_counter()
@@ -55,7 +50,7 @@ def run_bertopic(
     corpus_path = root / "corpus" / f"modeling_corpus_{corpus_unit}.csv"
     documents = read_csv(corpus_path)
     document_ids = [row["document_id"] for row in documents]
-    texts = [row.get("text_for_modeling") or row["texto_modelado"] for row in documents]
+    texts = [row.get("text_for_vectorizer") or row.get("text_for_modeling") or row["texto_modelado"] for row in documents]
     if corpus_unit == "metadata" and config.get("metadata_embeddings", {}).get("combine_fields_as_embeddings", True):
         embeddings, embedding_manifest = load_or_create_metadata_embeddings(
             documents, config, force=force_embeddings, variant=embedding_variant
@@ -75,16 +70,21 @@ def run_bertopic(
         metric=hdb_cfg["metric"], cluster_selection_method=hdb_cfg["cluster_selection_method"],
         prediction_data=bool(hdb_cfg.get("prediction_data", True)),
     )
-    vectorizer = CountVectorizer(
-        ngram_range=(int(cfg["ngram_min"]), int(cfg["ngram_max"])), stop_words=FUNCTIONAL_STOPWORDS,
-        min_df=int(cfg.get("min_df", 2)), max_df=float(cfg.get("max_df", 0.95)),
-        max_features=int(cfg["max_features"]), strip_accents="unicode", token_pattern=r"(?u)\b[^\W\d_][\w-]+\b",
-    )
+    vectorizer = build_vectorizer(config)
     ctfidf = ClassTfidfTransformer(reduce_frequent_words=bool(cfg.get("reduce_frequent_words", True)))
+    representation_model = None
+    representation_components = {"MainRepresentation": "c-TF-IDF", "SecondaryRepresentation": "not_available", "NgramRepresentation": "CountVectorizer(1,3)", "RepresentativeDocuments": "BERTopic"}
+    try:
+        from bertopic.representation import KeyBERTInspired
+        representation_model = {"KeyBERT": KeyBERTInspired()}
+        representation_components["SecondaryRepresentation"] = "KeyBERTInspired"
+    except ImportError:
+        pass
     model = BERTopic(
-        embedding_model=None, umap_model=umap_model, hdbscan_model=hdbscan_model,
+        embedding_model=cfg["embedding_model"] if representation_model else None, umap_model=umap_model, hdbscan_model=hdbscan_model,
         vectorizer_model=vectorizer, ctfidf_model=ctfidf, nr_topics=cfg.get("nr_topics", "auto"),
         calculate_probabilities=bool(cfg.get("calculate_probabilities", True)), verbose=True,
+        representation_model=representation_model,
     )
     topics, probabilities = model.fit_transform(texts, embeddings=np.asarray(embeddings))
     reduced_topics = list(topics)
@@ -125,30 +125,37 @@ def run_bertopic(
             except ValueError:
                 continue
     document_rows: list[dict[str, Any]] = []
-    margin_threshold = float(config["validation"]["ambiguous_probability_margin"])
+    ambiguity_cfg = cfg.get("ambiguity", {})
+    fitted_hdbscan = getattr(model, "hdbscan_model", hdbscan_model)
+    membership_values = np.asarray(getattr(fitted_hdbscan, "probabilities_", np.ones(len(documents))))
+    outlier_scores = np.asarray(getattr(fitted_hdbscan, "outlier_scores_", np.zeros(len(documents))))
     for index, (row, topic_id) in enumerate(zip(documents, topics, strict=True)):
         first, second_id, second, margin = _probability_fields(probabilities, valid_topic_ids, index, int(topic_id))
         reduced_topic = int(reduced_topics[index])
+        membership = float(membership_values[index]) if int(topic_id) >= 0 else 0.0
+        outlier_score = float(outlier_scores[index]) if index < len(outlier_scores) else 0.0
         document_rows.append({
             "document_id": row["document_id"], "publication_document_id": row.get("publication_document_id", row["document_id"]),
             "model": model_label, "corpus": corpus_unit, "topic_id": int(topic_id),
-            "topic_probability": first, "second_topic_id": second_id, "second_topic_probability": second,
-            "probability_margin": margin, "is_outlier": int(topic_id) == -1,
-            "is_ambiguous": margin != "" and float(margin) < margin_threshold,
+            "topic_probability": membership, "hdbscan_membership_strength": round(membership, 6),
+            "bertopic_topic_distribution_max": first, "bertopic_second_topic_id": second_id,
+            "bertopic_second_distribution": second, "probability_margin": margin,
+            "outlier_score": round(outlier_score, 6), "is_outlier": int(topic_id) == -1,
+            "is_ambiguous": False,
             "year": row["year"], "language": row["language"], "title": row["title"], "doi": row["doi"],
             "source": row["source"], "corpus_unit": row["corpus_unit"],
             "topic_original": int(topic_id), "topic_after_outlier_reduction": reduced_topic,
-            "outlier_reassigned": int(topic_id) == -1 and reduced_topic != -1,
-            "original_topic": int(topic_id), "outlier_probability": 1 - float(first or 0),
-            "suggested_topic": reduced_topic if int(topic_id) == -1 and reduced_topic != -1 else "",
-            "reassignment_method": "probability_alternative" if int(topic_id) == -1 and reduced_topic != -1 else "",
-            "reassignment_confidence": first if int(topic_id) == -1 and reduced_topic != -1 else "",
+            "outlier_reassigned": False, "original_topic": int(topic_id),
+            "suggested_topic": "", "reassignment_method": "", "reassignment_confidence": "",
+            "accepted_reassignment": False,
+            "relevance_status": row.get("relevance_status", ""), "relevance_score": row.get("relevance_score", ""),
         })
 
     # Document-level geometry is not equivalent to STM probabilities; retain it under explicit names.
     from sklearn.metrics import silhouette_samples
     from sklearn.neighbors import NearestNeighbors
     reduced = np.asarray(model.umap_model.embedding_)
+    semantic_embeddings = np.asarray(embeddings)
     labels_array = np.asarray(topics)
     valid_mask = labels_array >= 0
     silhouette_values = np.full(len(documents), np.nan)
@@ -156,9 +163,13 @@ def run_bertopic(
         silhouette_values[valid_mask] = silhouette_samples(reduced[valid_mask], labels_array[valid_mask])
     centroid_distances = np.full(len(documents), np.nan)
     centroid_rows: list[dict[str, Any]] = []
+    semantic_centroids: dict[int, Any] = {}
     for topic_id in sorted(set(labels_array[valid_mask])):
         indexes = np.where(labels_array == topic_id)[0]
         centroid = reduced[indexes].mean(axis=0)
+        semantic_centroid = semantic_embeddings[indexes].mean(axis=0)
+        semantic_centroid /= max(float(np.linalg.norm(semantic_centroid)), 1e-12)
+        semantic_centroids[int(topic_id)] = semantic_centroid
         centroid_distances[indexes] = np.linalg.norm(reduced[indexes] - centroid, axis=1)
         for rank, doc_index in enumerate(indexes[np.argsort(centroid_distances[indexes])[:10]], 1):
             centroid_rows.append({
@@ -166,6 +177,9 @@ def run_bertopic(
                 "document_id": document_ids[int(doc_index)], "title": documents[int(doc_index)]["title"],
                 "distance_to_centroid": round(float(centroid_distances[int(doc_index)]), 6),
             })
+    centroid_ids = sorted(semantic_centroids)
+    centroid_matrix = np.vstack([semantic_centroids[topic] for topic in centroid_ids]) if centroid_ids else np.empty((0, semantic_embeddings.shape[1]))
+    semantic_similarity = semantic_embeddings @ centroid_matrix.T if len(centroid_matrix) else np.empty((len(documents), 0))
     neighbors = NearestNeighbors(n_neighbors=min(11, len(documents))).fit(reduced)
     neighbor_indexes = neighbors.kneighbors(return_distance=False)
     for index, row in enumerate(document_rows):
@@ -173,6 +187,21 @@ def run_bertopic(
         row["silhouette"] = "" if np.isnan(silhouette_values[index]) else round(float(silhouette_values[index]), 6)
         row["distance_to_centroid"] = "" if np.isnan(centroid_distances[index]) else round(float(centroid_distances[index]), 6)
         row["local_consistency"] = round(float(np.mean(labels_array[local] == labels_array[index])), 6) if len(local) else ""
+        if semantic_similarity.shape[1]:
+            order = np.argsort(semantic_similarity[index])[::-1]
+            nearest = centroid_ids[int(order[0])]; second_nearest = centroid_ids[int(order[1])] if len(order) > 1 else ""
+            nearest_similarity = float(semantic_similarity[index, order[0]])
+            second_similarity = float(semantic_similarity[index, order[1]]) if len(order) > 1 else 0.0
+            row["nearest_topic"] = nearest; row["nearest_centroid_similarity"] = round(nearest_similarity, 6)
+            row["second_nearest_topic"] = second_nearest; row["second_nearest_centroid_similarity"] = round(second_similarity, 6)
+            row["assignment_margin"] = round(nearest_similarity - second_similarity, 6)
+            assigned_centroid = semantic_centroids.get(int(row["topic_id"]))
+            row["semantic_distance_to_centroid"] = "" if assigned_centroid is None else round(1 - float(semantic_embeddings[index] @ assigned_centroid), 6)
+            if int(row["topic_id"]) == -1:
+                row["suggested_topic"] = nearest; row["reassignment_method"] = "nearest_semantic_centroid"
+                row["reassignment_confidence"] = round(nearest_similarity, 6)
+            from .bertopic_diagnostics import ambiguity_flag
+            row["is_ambiguous"] = ambiguity_flag(row, config)
     write_csv(out / "topics.csv", topic_rows)
     write_csv(out / "document_topics.csv", document_rows)
     write_csv(out / "topic_words.csv", [
@@ -182,9 +211,9 @@ def run_bertopic(
     write_csv(out / "representative_documents.csv", representative_rows)
     write_csv(out / "central_documents.csv", centroid_rows)
     write_csv(out / "outliers.csv", [row for row in document_rows if row["is_outlier"]])
-    low_confidence = sorted(document_rows, key=lambda row: float(row.get("topic_probability") or 0))
+    low_confidence = sorted(document_rows, key=lambda row: float(row.get("hdbscan_membership_strength") or 0))
     write_csv(out / "low_confidence_documents.csv", low_confidence[: 10 * max(len(valid_topic_ids), 1)])
-    borderline = sorted(document_rows, key=lambda row: float(row.get("probability_margin") or 0))
+    borderline = sorted(document_rows, key=lambda row: float(row.get("assignment_margin") or 0))
     write_csv(out / "borderline_documents.csv", borderline[: 10 * max(len(valid_topic_ids), 1)])
     from sklearn.metrics.pairwise import cosine_similarity
 
@@ -207,10 +236,10 @@ def run_bertopic(
     if bool(cfg.get("hierarchy_enabled", True)) and len(valid_topic_ids) > 1:
         try:
             hierarchy = model.hierarchical_topics(texts)
-            hierarchy.to_csv(out / "topic_hierarchy.csv", index=False, encoding="utf-8-sig")
+            hierarchy.to_csv(out / "agglomerative_hierarchy.csv", index=False, encoding="utf-8-sig")
         except (AttributeError, TypeError, ValueError) as exc:
             hierarchy_warning = f"Topic hierarchy was not available: {exc}"
-            write_csv(out / "topic_hierarchy.csv", [], ["Parent_ID", "Parent_Name", "Topics", "Child_Left_ID", "Child_Right_ID", "Distance"])
+            write_csv(out / "agglomerative_hierarchy.csv", [], ["Parent_ID", "Parent_Name", "Topics", "Child_Left_ID", "Child_Right_ID", "Distance"])
     # Language dependence is diagnostic, never an automatic topic interpretation.
     language_rows: list[dict[str, Any]] = []
     for topic_id in sorted(set(int(topic) for topic in topics if int(topic) >= 0)):
@@ -254,6 +283,45 @@ def run_bertopic(
             "status": status, "review_status": "pending_human_review",
         })
     write_csv(out / "heterogeneity.csv", heterogeneity_rows)
+    # Recompute diagnostics with distinct semantic, lexical, linguistic, source and relevance signals.
+    from .bertopic_diagnostics import (
+        build_document_hierarchy, export_outlier_analysis, export_review_sets, export_topic_diagnostics,
+    )
+    title_embeddings, _ = load_or_create_embeddings(document_ids, [row.get("title_text") or row.get("title", "") for row in documents], config, force=force_embeddings)
+    abstract_embeddings, _ = load_or_create_embeddings(document_ids, [row.get("abstract_text") or "" for row in documents], config, force=force_embeddings)
+    topic_terms = {topic_id: [word for word, _ in (model.get_topic(topic_id) or [])] for topic_id in valid_topic_ids}
+    export_topic_diagnostics(out, documents, document_rows, semantic_embeddings, title_embeddings, abstract_embeddings, topic_terms, config)
+    export_outlier_analysis(out, documents, document_rows)
+    build_document_hierarchy(out, documents, document_rows, semantic_embeddings, topic_rows, config)
+    export_review_sets(out, document_rows, int(config["validation"].get("representative_documents", 10)), seed)
+
+    vectorizer_parameters = effective_vectorizer_parameters(vectorizer)
+    stopword_input = vectorizer_parameters.pop("stop_words_sha256_input", "")
+    effective_configuration = {
+        "embedding_model_name": embedding_manifest.get("embedding_model"),
+        "embedding_model_revision": embedding_manifest.get("model_revision"),
+        "embedding_dimension": embedding_manifest.get("dimension"),
+        "embedding_batch_size": embedding_manifest.get("batch_size"),
+        "embedding_normalization": embedding_manifest.get("embedding_normalization"),
+        "field_weights": embedding_manifest.get("weights", {}),
+        "umap_class": f"{type(umap_model).__module__}.{type(umap_model).__name__}",
+        "umap_parameters": {"n_neighbors": umap_model.n_neighbors, "n_components": umap_model.n_components, "min_dist": umap_model.min_dist, "metric": umap_model.metric, "random_state": seed, "low_memory": umap_model.low_memory},
+        "hdbscan_class": f"{type(hdbscan_model).__module__}.{type(hdbscan_model).__name__}",
+        "hdbscan_parameters": {"min_cluster_size": hdbscan_model.min_cluster_size, "min_samples": hdbscan_model.min_samples, "metric": hdbscan_model.metric, "cluster_selection_method": hdbscan_model.cluster_selection_method, "prediction_data": hdbscan_model.prediction_data},
+        "vectorizer_class": f"{type(vectorizer).__module__}.{type(vectorizer).__name__}",
+        "vectorizer_parameters": vectorizer_parameters,
+        "stopwords_sha256": hashlib.sha256(stopword_input.encode("utf-8")).hexdigest(),
+        "ctfidf_parameters": ctfidf.get_params() if hasattr(ctfidf, "get_params") else {"reduce_frequent_words": bool(cfg.get("reduce_frequent_words", True))},
+        "representation_models": representation_components,
+        "bertopic_parameters": {"embedding_model": cfg["embedding_model"] if representation_model else None, "nr_topics": cfg.get("nr_topics"), "calculate_probabilities": bool(cfg.get("calculate_probabilities", True)), "language_parameter_used": False},
+        "multilingual_components": {"embeddings": True, "stopwords": True, "vectorization": True, "representation": True, "evaluation": True},
+        "seed": seed, "python_version": platform.python_version(),
+        "package_versions": base_metadata(config, model=model_label, documents=len(documents), discarded=0, elapsed_seconds=0).get("packages", {}),
+        "corpus_hash": hashlib.sha256(corpus_path.read_bytes()).hexdigest(),
+        "text_cleaning_version": TEXT_CLEANING_VERSION,
+        "embedding_cache_hash": embedding_manifest.get("fingerprint"),
+    }
+    (out / "effective_configuration.json").write_text(json.dumps(effective_configuration, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     model_path = out / "model"
     model_save_warning = ""
     try:
@@ -277,5 +345,9 @@ def run_bertopic(
     metadata["model_save_mode"] = model_save_mode
     metadata["warnings"] = [warning for warning in (model_save_warning, outlier_reduction_warning, hierarchy_warning) if warning]
     metadata["outliers_reassigned_in_alternative"] = sum(row["outlier_reassigned"] for row in document_rows)
+    metadata["effective_configuration_path"] = "effective_configuration.json"
+    metadata["macro_topics"] = len(valid_topic_ids)
+    metadata["subtopics"] = len(read_csv(out / "subtopics.csv"))
+    metadata["ambiguity_rule"] = "outlier OR low semantic margin OR low HDBSCAN membership OR low centroid similarity OR high outlier score"
     write_metadata(out / "model_metadata.json", metadata)
     return metadata

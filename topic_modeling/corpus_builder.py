@@ -20,6 +20,7 @@ from .text_cleaning import (
     clean_for_display,
     clean_for_embeddings,
     clean_for_stm,
+    clean_for_vectorizer,
     split_academic_sections,
 )
 
@@ -104,8 +105,8 @@ def _year_allowed(value: Any, start: int, end: int) -> bool:
 def _publication_from_record(row: dict[str, Any]) -> dict[str, Any]:
     publication_id = clean_value(row.get("publication_document_id")) or stable_document_id(row)
     title = clean_for_display(clean_value(row.get("title")))
-    abstract = clean_value(row.get("abstract"))
-    keywords = clean_value(row.get("keywords"))
+    abstract = clean_for_display(clean_value(row.get("abstract")))
+    keywords = clean_for_display(clean_value(row.get("keywords")))
     language, confidence, _ = detect_language(" ".join((title, abstract, keywords)))
     return {
         "document_id": publication_id, "doi_normalized": normalize_doi(row.get("doi")), "title": title,
@@ -265,11 +266,13 @@ def build_corpora(config: dict[str, Any]) -> BuildResult:
             })
             continue
         cleaned_stm, _ = clean_for_stm(text)
+        cleaned_vectorizer, _ = clean_for_vectorizer(text)
         metadata_rows.append({
             "publication_document_id": publication_id, "metadata_document_id": publication_id,
             "fulltext_document_id": "", "document_id": publication_id, "corpus_unit": "metadata",
             "unidad_modelado": "metadata", "text_for_modeling": text, "texto_modelado": text,
             "text_for_stm": cleaned_stm, "modeling_strategy": strategy, "title": publication["title"],
+            "text_for_vectorizer": cleaned_vectorizer,
             "abstract": publication["abstract"], "keywords": publication["keywords"], "year": publication["year"],
             "authors": publication["authors"], "doi": publication["doi_normalized"], "record_id": publication["record_id"],
             "source": publication["source_database"], "url": publication["url"], "pdf_url": publication["pdf_url"],
@@ -325,11 +328,13 @@ def build_corpora(config: dict[str, Any]) -> BuildResult:
                     selected = True
                     language, confidence, language_status = detect_language(selected_text)
                     cleaned_stm, _ = clean_for_stm(selected_text)
+                    cleaned_vectorizer, _ = clean_for_vectorizer(selected_text)
                     fulltext_rows.append({
                         "publication_document_id": publication_id, "metadata_document_id": publication_id if publication["source_database"] != "PDF corpus only" else "",
                         "fulltext_document_id": fulltext_id, "document_id": publication_id, "corpus_unit": "fulltext",
                         "unidad_modelado": "fulltext", "text_for_modeling": selected_text, "texto_modelado": selected_text,
                         "text_for_stm": cleaned_stm, "modeling_strategy": used_strategy, "title": publication["title"],
+                        "text_for_vectorizer": cleaned_vectorizer,
                         "abstract": publication["abstract"], "keywords": publication["keywords"], "year": model_year,
                         "authors": publication["authors"], "doi": publication["doi_normalized"], "record_id": publication["record_id"],
                         "source": publication["source_database"], "url": publication["url"], "pdf_url": publication["pdf_url"],
@@ -394,6 +399,43 @@ def _residual_artifact_candidates(rows: list[dict[str, Any]], limit: int = 500) 
     ]
 
 
+def _residual_tokens_after_cleaning(rows: list[dict[str, Any]], limit: int = 1000) -> list[dict[str, Any]]:
+    frequency: Counter[str] = Counter()
+    document_frequency: Counter[str] = Counter()
+    languages: dict[str, set[str]] = defaultdict(set)
+    sources: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        # A bounded prefix is sufficient for residue auditing and keeps full-text rebuilds predictable.
+        text = clean_value(row.get("text_for_vectorizer") or row.get("text_for_modeling"))[:50000]
+        tokens = re.findall(r"(?u)\b[^\W_]+\b", text.casefold())
+        frequency.update(tokens)
+        for token in set(tokens):
+            document_frequency[token] += 1
+            languages[token].add(clean_value(row.get("language")) or "und")
+            sources[token].add(clean_value(row.get("source")) or "unknown")
+    suspects = {"amp", "journal", "x0d", "http", "https", "www", "doi", "issn", "isbn", "nbsp", "xx", "cep", "ptsmc"}
+    rows_out = []
+    for token, count in frequency.most_common():
+        suspected_type = ""
+        if token in suspects:
+            suspected_type = "known_editorial_or_technical_residue"
+        elif len(token) >= 12 and any(char.isdigit() for char in token) and any(char.isalpha() for char in token):
+            suspected_type = "mixed_alphanumeric_identifier"
+        elif re.search(r"(.)\1{3,}", token):
+            suspected_type = "repeated_character_sequence"
+        elif len(token) >= 20:
+            suspected_type = "very_long_token"
+        if suspected_type:
+            rows_out.append({
+                "token": token, "frequency": count, "document_frequency": document_frequency[token],
+                "languages": " | ".join(sorted(languages[token])), "sources": " | ".join(sorted(sources[token])),
+                "suspected_type": suspected_type, "review_status": "pending_human_review",
+            })
+        if len(rows_out) >= limit:
+            break
+    return rows_out
+
+
 def export_corpora(config: dict[str, Any], result: BuildResult) -> None:
     root = Path(config["paths"]["output_root"]) / "corpus"
     write_csv(root / "publications_master.csv", result.publications, PUBLICATION_FIELDS)
@@ -419,6 +461,8 @@ def export_corpora(config: dict[str, Any], result: BuildResult) -> None:
     ])
     write_csv(root / "residual_artifact_candidates.csv", _residual_artifact_candidates(result.metadata + result.fulltext),
               ["token", "frequency", "reason", "review_status"])
+    write_csv(root / "residual_tokens_after_cleaning.csv", _residual_tokens_after_cleaning(result.metadata + result.fulltext),
+              ["token", "frequency", "document_frequency", "languages", "sources", "suspected_type", "review_status"])
 
     sample_size = int(config.get("relevance", {}).get("validation_sample_size", 200))
     validation_sample = _stratified_sample(result.publications, sample_size, int(config["project"]["seed"]))

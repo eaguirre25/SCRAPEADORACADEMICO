@@ -42,6 +42,12 @@ def safe_int(v, default=0):
     except Exception:
         return default
 
+def safe_float(v, default=0.0):
+    try:
+        return float(v)
+    except Exception:
+        return default
+
 
 def infer_source(row):
     source = s(row.get("source", ""))
@@ -72,14 +78,12 @@ corpus     = read_csv("data/corpus.csv")
 topicos    = read_csv("output/tabla_topicos.csv")
 doc_topics = read_csv("output/document_topics.csv")
 MODEL_VIEWS = [
-    ("stm-es", "STM · metadatos · español", "STM", "output/topic_models/stm/metadata_es/topics.csv"),
-    ("stm-en", "STM · metadatos · inglés", "STM", "output/topic_models/stm/metadata_en/topics.csv"),
-    ("stm-pt", "STM · metadatos · portugués", "STM", "output/topic_models/stm/metadata_pt/topics.csv"),
-    ("stm-harmonized", "STM · metadatos armonizados", "STM", "output/topic_models/stm/metadata_harmonized/topics.csv"),
-    ("bertopic-metadata", "BERTopic · metadatos · multilingüe", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/topics.csv"),
-    ("stm-fulltext", "STM · texto completo · secundario", "STM", "output/topic_models/stm/fulltext/topics.csv"),
-    ("bertopic-fulltext", "BERTopic · texto completo · secundario", "BERTopic", "output/topic_models/bertopic/fulltext_multilingual/topics.csv"),
-    ("legacy-stm", "STM anterior · texto completo · provisional", "STM", "output/topic_models/stm/topics.csv"),
+    ("principal", "bertopic-macros", "BERTopic multilingüe · 14 macrotemas", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/preferred_solution/topics.csv"),
+    ("principal", "bertopic-subtopics", "BERTopic multilingüe · subtópicos", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/preferred_solution/subtopics.csv"),
+    ("comparative", "stm-es", "STM metadatos · español", "STM", "output/topic_models/stm/metadata_es_corrected/topics.csv"),
+    ("comparative", "stm-en", "STM metadatos · inglés", "STM", "output/topic_models/stm/metadata_en_corrected/topics.csv"),
+    ("comparative", "stm-pt", "STM metadatos · portugués · exploratorio", "STM", "output/topic_models/stm/metadata_pt_corrected/topics.csv"),
+    ("historical", "legacy-stm", "STM anterior · texto completo · archivado", "STM", "output/topic_models/stm/topics.csv"),
 ]
 topic_alignment = read_csv("output/topic_models/comparison/stm_bertopic_alignment.csv")
 if not topic_alignment:
@@ -292,53 +296,127 @@ n_nodes = len(nodes)
 n_edges = len(edges)
 n_arts  = len(all_articles)
 n_tops  = len(topicos)
+n_macros_preferred = sum(row.get("topic_id") != "-1" for row in read_csv("output/topic_models/bertopic/metadata_multilingual/preferred_solution/topics.csv"))
 evaluation_topics = read_csv("output/topic_models/evaluation/topic_metrics.csv")
 language_diagnostics = read_csv("output/topic_models/evaluation/language_dependence.csv")
 heterogeneity_diagnostics = read_csv("output/topic_models/evaluation/heterogeneity.csv")
+model_runs = read_csv("output/topic_models/evaluation/model_runs.csv")
 evaluation_by_topic = {(s(row.get("model")), s(row.get("topic_id"))): row for row in evaluation_topics}
 language_by_topic = {(s(row.get("model")), s(row.get("topic_id"))): row for row in language_diagnostics}
 heterogeneity_by_topic = {(s(row.get("model")), s(row.get("topic_id"))): row for row in heterogeneity_diagnostics}
+preferred_run = next((row for row in model_runs if s(row.get("is_preferred_model")).lower() == "true"), {})
 annual_coverage = read_csv("output/topic_models/corpus/annual_coverage.csv")
 low_coverage_years = [s(row.get("year")) for row in annual_coverage if float(row.get("fulltext_coverage_in_year") or 0) < 0.5]
+preferred_root = Path("output/topic_models/bertopic/metadata_multilingual/preferred_solution")
+topic_label_proposals = read_csv("output/topic_models/validation/topic_label_proposals.csv")
+topic_label_proposal_by_id = {s(row.get("topic_id")): row for row in topic_label_proposals}
+outlier_rows = read_csv(preferred_root / "outlier_analysis.csv")
+outlier_causes = defaultdict(int)
+for row in outlier_rows:
+    outlier_causes[s(row.get("reason_category")) or "unknown"] += 1
+effective_config = {}
+effective_path = preferred_root / "effective_configuration.json"
+if effective_path.exists():
+    effective_config = json.loads(effective_path.read_text(encoding="utf-8"))
+outlier_summary = " · ".join(f"{key}: {value}" for key, value in sorted(outlier_causes.items(), key=lambda item: -item[1]))
+config_summary = (
+    f"Embeddings: {effective_config.get('embedding_model_name', 'pendiente')} · "
+    f"dimensión {effective_config.get('embedding_dimension', '—')} · "
+    f"n-gramas {effective_config.get('vectorizer_parameters', {}).get('ngram_range', '—')} · "
+    f"UMAP {effective_config.get('umap_parameters', {})} · "
+    f"HDBSCAN {effective_config.get('hdbscan_parameters', {})} · semilla {effective_config.get('seed', 42)}"
+)
 
 def topic_cards(rows, model):
     if not rows:
         return '<p class="tm-empty">Todavia no hay resultados para este modelo.</p>'
     cards = []
     for row in rows:
-        label = s(row.get("human_label")) or s(row.get("automatic_label")) or f"Topico {s(row.get('topic_id'))}"
+        topic_id = s(row.get("topic_id") or row.get("subtopic_id") or row.get("macro_topic_id"))
+        proposal = topic_label_proposal_by_id.get(topic_id, {}) if model == "BERTopic" else {}
+        algorithmic_label = s(row.get("automatic_label") or row.get("descriptor_automatic")) or f"Tópico {topic_id}"
+        proposed_label = s(proposal.get("proposed_human_label"))
+        validated_label = s(row.get("human_label")) if s(row.get("label_status")).lower() in {"validated", "human_validated", "approved"} else ""
+        label = validated_label or proposed_label or algorithmic_label
         measure = "prevalencia STM" if model == "STM" else "proporción del cluster"
         label_status = s(row.get("label_status")) or "pending"
         selection_status = s(row.get("selection_status") or row.get("model_status")) or "exploratory"
-        count = safe_int(row.get("document_count"), 0)
+        count = safe_int(row.get("document_count") or row.get("subtopic_size") or row.get("macro_topic_size"), 0)
         diagnostic_key = (s(row.get("model")), s(row.get("topic_id")))
         evaluation = evaluation_by_topic.get(diagnostic_key, {})
         language_diagnostic = language_by_topic.get(diagnostic_key, {})
         heterogeneity = heterogeneity_by_topic.get(diagnostic_key, {})
         alerts = []
         if label_status.lower() not in {"validated", "human_validated", "approved"}:
-            alerts.append("etiqueta no validada por especialistas")
+            alerts.append("Etiqueta humana provisional. Validación documental pendiente.")
         if count and count < 15:
             alerts.append("tópico pequeño")
         if selection_status.lower() not in {"validated", "metrics_complete"}:
             alerts.append(f"modelo {selection_status}")
-        if s(row.get("stability")) == "":
+        if s(row.get("stability")) == "" and model == "STM":
             alerts.append("estabilidad no calculada")
-        if s(language_diagnostic.get("potentially_language_driven")).lower() == "true":
+        if s(language_diagnostic.get("classification")) == "language_concentrated_candidate":
             alerts.append(f"posible dependencia del idioma {s(language_diagnostic.get('dominant_language'))}")
-        if s(evaluation.get("contamination_flag")).lower() == "true":
-            alerts.append(f"posible contaminación: {s(evaluation.get('contamination_terms'))}")
-        if s(heterogeneity.get("status")) in {"heterogeneous", "contaminated", "language_driven", "residual", "too_small"}:
+        if safe_float(heterogeneity.get("borderline_document_share"), 0) > 0.25:
+            alerts.append("alta proporción de documentos fronterizos")
+        if safe_int(heterogeneity.get("negative_silhouette_document_count"), 0) > 0:
+            alerts.append("contiene documentos con silueta negativa")
+        if heterogeneity and s(heterogeneity.get("coherence_status")) != "computed":
+            alerts.append("coherencia no calculada")
+        if heterogeneity and s(heterogeneity.get("country_status")) != "computed":
+            alerts.append("metadatos territoriales insuficientes")
+        if safe_float(heterogeneity.get("contamination_share"), 0) > 0:
+            alerts.append("posibles candidatos de contaminación")
+        if s(heterogeneity.get("status")) not in {"", "coherent_candidate"}:
             alerts.append(f"heterogeneidad: {s(heterogeneity.get('status'))}")
         alert_html = f'<div class="tm-alert">⚠ {html_lib.escape(" · ".join(alerts))}</div>' if alerts else ""
+        interpretation_html = ""
+        if proposal:
+            coherence_text = s(heterogeneity.get("coherence_cv")) or "No disponible por cobertura insuficiente"
+            country_text = (
+                f"{s(heterogeneity.get('dominant_country'))} ({100*safe_float(heterogeneity.get('dominant_country_share_known'),0):.1f}%)"
+                if s(heterogeneity.get("country_status")) == "computed" else
+                "Metadatos insuficientes para evaluar concentración territorial"
+            )
+            source_text = (
+                f"{s(heterogeneity.get('dominant_source'))} · entropía {s(heterogeneity.get('source_entropy'))}"
+                if s(heterogeneity.get("source_status")) == "computed" else
+                "Proveedor conocido, pero sin categorías suficientes para calcular entropía"
+            )
+            contamination_text = (
+                f"{100*safe_float(heterogeneity.get('contamination_share'),0):.1f}% · {s(heterogeneity.get('contamination_status'))}"
+                if s(heterogeneity.get("relevance_metadata_coverage")) else "Evidencia insuficiente"
+            )
+            interpretation_html = (
+                '<details class="tm-details"><summary>Ver interpretación y evidencia</summary>'
+                f'<div><strong>ID algorítmico:</strong> T{html_lib.escape(topic_id)}</div>'
+                f'<div><strong>Descriptor automático:</strong> {html_lib.escape(algorithmic_label)}</div>'
+                f'<div><strong>Etiqueta humana propuesta:</strong> {html_lib.escape(proposed_label)}</div>'
+                f'<div><strong>Definición:</strong> {html_lib.escape(s(proposal.get("short_definition")))}</div>'
+                f'<div><strong>Confianza:</strong> {html_lib.escape(s(proposal.get("interpretive_confidence")))} · '
+                f'<strong>acción:</strong> {html_lib.escape(s(proposal.get("proposed_action")))}</div>'
+                f'<div><strong>Justificación:</strong> {html_lib.escape(s(proposal.get("rationale")))}</div>'
+                f'<div><strong>Próximos tópicos:</strong> {html_lib.escape(s(proposal.get("related_topics")))}</div>'
+                f'<div><strong>Revisión:</strong> {html_lib.escape(s(proposal.get("reviewed_unique_documents")))} documentos únicos; '
+                f'{html_lib.escape(s(proposal.get("provisional_doubtful_reviews")))} casos priorizados como dudosos.</div>'
+                f'<div><strong>Heterogeneidad:</strong> silueta media {html_lib.escape(s(heterogeneity.get("silhouette_mean")) or "No disponible")} · '
+                f'negativas {100*safe_float(heterogeneity.get("silhouette_negative_share"),0):.1f}% · '
+                f'fronterizos {100*safe_float(heterogeneity.get("borderline_document_share"),0):.1f}% · '
+                f'baja confianza {100*safe_float(heterogeneity.get("low_confidence_document_share"),0):.1f}% · '
+                f'c_v {html_lib.escape(coherence_text)} · estado {html_lib.escape(s(heterogeneity.get("status")))}.</div>'
+                f'<div><strong>Territorio:</strong> {html_lib.escape(country_text)}.</div>'
+                f'<div><strong>Procedencia bibliográfica:</strong> {html_lib.escape(source_text)}.</div>'
+                f'<div><strong>Contaminación:</strong> {html_lib.escape(contamination_text)}. Pendiente de revisión humana.</div></details>'
+            )
         cards.append(
             '<article class="tm-card">'
             f'<div class="tm-title">{html_lib.escape(label)}</div>'
-            f'<div class="tm-meta">T{s(row.get("topic_id"))} · {html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
-            f'{html_lib.escape(s(row.get("document_count")))} documentos · validación: {html_lib.escape(label_status)}</div>'
+            f'<div class="tm-meta"><strong>ID:</strong> T{html_lib.escape(topic_id)} · <strong>descriptor automático:</strong> {html_lib.escape(algorithmic_label)}</div>'
+            f'<div class="tm-meta">{html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
+            f'{count} documentos · validación: {html_lib.escape(label_status)}</div>'
             f'{alert_html}'
             f'<div class="tm-words">{html_lib.escape(s(row.get("top_words")))}</div>'
-            f'<div class="tm-reps">{html_lib.escape(s(row.get("representative_titles")))}</div></article>'
+            f'<div class="tm-reps">{html_lib.escape(s(row.get("representative_titles")))}</div>{interpretation_html}</article>'
         )
     return "".join(cards)
 
@@ -348,19 +426,29 @@ alignment_html = "".join(
     f'<td>{html_lib.escape(s(row.get("relationship") or row.get("alignment_status")))}</td><td>{html_lib.escape(s(row.get("combined_alignment") or row.get("combined_similarity")))}</td></tr>'
     for row in alignment_rows
 ) or '<tr><td colspan="4">Ejecute ambos modelos y la comparacion para completar esta vista.</td></tr>'
-available_models = [(key, label, kind, read_csv(path)) for key, label, kind, path in MODEL_VIEWS]
-first_model = next((key for key, _, _, rows in available_models if rows), available_models[0][0])
+available_models = []
+for group, key, label, kind, path in MODEL_VIEWS:
+    model_rows = read_csv(path)
+    if key == "bertopic-macros":
+        model_rows = [row for row in model_rows if s(row.get("topic_id")) != "-1"]
+    available_models.append((group, key, label, kind, model_rows))
+first_model = "bertopic-macros"
+group_labels = {"principal": "Modelo principal", "comparative": "Modelos comparativos", "historical": "Históricos"}
 model_options = "".join(
-    f'<option value="{key}"{" selected" if key == first_model else ""}>{html_lib.escape(label)}{" · sin ejecutar" if not rows else ""}</option>'
-    for key, label, _, rows in available_models
-) + '<option value="comparison">Comparación STM–BERTopic</option>'
+    f'<optgroup label="{group_labels[group]}">' + "".join(
+        f'<option value="{key}"{" selected" if key == first_model else ""}>{html_lib.escape(label)}{" · sin ejecutar" if not rows else ""}</option>'
+        for item_group, key, label, _, rows in available_models if item_group == group and rows
+    ) + '</optgroup>' for group in ("principal", "comparative", "historical")
+) + '<optgroup label="Comparación"><option value="comparison">Comparación STM–BERTopic</option></optgroup>'
 model_panes = "".join(
     f'<div class="tm-pane" id="tm-{key}"{"" if key == first_model else " hidden"}>{topic_cards(rows, kind)}</div>'
-    for key, _, kind, rows in available_models
+    for _, key, _, kind, rows in available_models if rows
 )
 hybrid_section = f'''<section class="tm-section" id="modelado-tematico">
-  <div class="tm-head"><div><h2>Modelado temático</h2><p>El corpus primario usa metadatos; el texto completo queda como análisis secundario. STM y BERTopic no miden exactamente lo mismo.</p></div>
+  <div class="tm-head"><div><h2>Modelado temático</h2><p><strong>BERTopic multilingüe · solución preferida provisional · 14 macrotemas · validación humana pendiente.</strong> Las STM son comparativas y los históricos aparecen separados.</p></div>
   <select id="tm-select" onchange="showTopicModel(this.value)">{model_options}</select></div>
+  <div class="tm-method"><strong>Outliers conservados:</strong> {len(outlier_rows)} ({(100*len(outlier_rows)/2182 if outlier_rows else 0):.2f}%). Causas provisionales: {html_lib.escape(outlier_summary or "pendiente")}.</div>
+  <div class="tm-method"><strong>Configuración efectiva:</strong> {html_lib.escape(config_summary)}. Se muestran por separado el ID algorítmico, el descriptor automático y la etiqueta humana propuesta. Ninguna propuesta equivale a validación especializada.</div>
   {model_panes}
   <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th>Topico STM</th><th>Topico BERTopic</th><th>Relacion</th><th>Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>
   <div class="tm-method">Estado exploratorio: la selección computacional y las etiquetas son provisionales hasta completar estabilidad, intrusión y revisión humana. Semilla: 42 · período 2020–2026 · 2026 es incompleto. La prevalencia STM es una mezcla documental; el tamaño BERTopic es una asignación de cluster. Cobertura full text inferior al 50% en: {html_lib.escape(", ".join(low_coverage_years) or "ningún año")}.</div>
@@ -451,7 +539,7 @@ tbody tr:hover td{background:var(--hover)}
 .mpaper a:hover{text-decoration:underline}
 .mpmeta{font-size:.72em;color:var(--muted);margin-top:2px}
 .mcount{font-size:.72em;color:var(--dim);padding:7px 18px;border-top:1px solid var(--border);text-align:right}
-.tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{max-width:420px;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:420px;overflow:auto}.tm-pane[hidden]{display:none}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps,.tm-alert{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-alert{color:#f6c177;background:#2b2214;border-left:2px solid #f6c177;padding:4px 6px}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
+.tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{max-width:420px;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:520px;overflow:auto}.tm-pane[hidden]{display:none}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps,.tm-alert{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-alert{color:#f6c177;background:#2b2214;border-left:2px solid #f6c177;padding:4px 6px}.tm-details{font-size:.69em;color:var(--muted);line-height:1.5;margin-top:8px;border-top:1px solid var(--border);padding-top:7px}.tm-details summary{cursor:pointer;color:var(--accent);font-weight:700}.tm-details div{margin-top:4px}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.topics-panel{display:none}}
 </style>
 </head>
@@ -467,30 +555,30 @@ tbody tr:hover td{background:var(--hover)}
 
 <div class="kpis">
   <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Publicaciones</div></div>
-  <div class="kpi"><div class="kpi-n">{n_tops}</div><div class="kpi-l">Topicos STM</div></div>
+  <div class="kpi"><div class="kpi-n">{n_macros_preferred}</div><div class="kpi-l">Macrotemas BERTopic</div></div>
   <div class="kpi"><div class="kpi-n">{n_nodes}</div><div class="kpi-l">Nodos en red</div></div>
   <div class="kpi"><div class="kpi-n">{n_edges}</div><div class="kpi-l">Conexiones</div></div>
   <div class="kpi"><div class="kpi-n">{anio_min}&ndash;{anio_max}</div><div class="kpi-l">Periodo</div></div>
 </div>
 
+""" + hybrid_section + """
+
 <div class="main-grid">
   <div class="net-panel">
     <div class="panel-head">
-      <h2>Red de similitud semantica</h2>
-      <span class="badge">Keywords compartidas · color = topico STM</span>
+      <h2>Red documental comparativa · STM full text histórica</h2>
+      <span class="badge">Vista archivada · keywords compartidas · color = tópico STM</span>
     </div>
     <svg id="net-svg"></svg>
   </div>
   <div class="topics-panel">
     <div class="panel-head">
-      <h2>Topicos emergentes</h2>
+      <h2>Tópicos STM históricos</h2>
       <span class="badge">Clic para ver articulos</span>
     </div>
     <div class="topics-scroll" id="topics-container"></div>
   </div>
 </div>
-
-""" + hybrid_section + """
 
 <div class="arts-section" id="articulos">
   <div class="arts-head">

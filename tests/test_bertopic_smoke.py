@@ -22,6 +22,7 @@ def test_bertopic_cpu_smoke_with_cached_embeddings(tmp_path, monkeypatch):
         for index in range(12):
             rows.append({
                 "document_id": f"d-{topic}-{index}", "texto_modelado": f"{text} case {index}",
+                "text_for_vectorizer": f"{text} case {index}", "title_text": f"{text} {index}", "abstract_text": text,
                 "title": f"{text} {index}", "year": str(2020 + index % 6), "language": "en",
                 "doi": "", "source": "fixture", "corpus_unit": "metadata",
             })
@@ -35,6 +36,8 @@ def test_bertopic_cpu_smoke_with_cached_embeddings(tmp_path, monkeypatch):
             "nr_topics": None, "calculate_probabilities": True, "low_memory": True,
             "ngram_min": 1, "ngram_max": 2, "min_df": 1, "max_df": 1.0, "max_features": 1000,
             "reduce_frequent_words": True,
+            "ambiguity": {"margin_below": 0.08, "membership_below": 0.35, "centroid_similarity_below": 0.35, "outlier_score_above": 0.8},
+            "macro_search": {"subcluster_minimum_documents": 60},
             "umap": {"n_neighbors": 5, "n_components": 2, "min_dist": 0.0, "metric": "cosine"},
             "hdbscan": {"metric": "euclidean", "cluster_selection_method": "eom", "prediction_data": True},
         },
@@ -52,26 +55,30 @@ def test_bertopic_cpu_smoke_with_cached_embeddings(tmp_path, monkeypatch):
             return enumerate(self.rows)
 
     class FakeUMAP:
-        def __init__(self, **_kwargs):
+        def __init__(self, **kwargs):
             self.embedding_ = None
+            self.n_neighbors=kwargs["n_neighbors"]; self.n_components=kwargs["n_components"]; self.min_dist=kwargs["min_dist"]; self.metric=kwargs["metric"]; self.low_memory=kwargs["low_memory"]
 
     class FakeHDBSCAN:
-        def __init__(self, **_kwargs):
-            pass
+        def __init__(self, **kwargs):
+            for key,value in kwargs.items(): setattr(self,key,value)
 
     class FakeCTFIDF:
         def __init__(self, **_kwargs):
             pass
 
     class FakeBERTopic:
-        def __init__(self, *, umap_model, **_kwargs):
+        def __init__(self, *, umap_model, hdbscan_model, **_kwargs):
             self.umap_model = umap_model
+            self.hdbscan_model = hdbscan_model
             self.c_tf_idf_ = None
         def fit_transform(self, texts, embeddings):
             topics = np.repeat(np.arange(4), 12)
             probabilities = np.full((len(texts), 4), 0.02)
             probabilities[np.arange(len(texts)), topics] = 0.94
             self.umap_model.embedding_ = np.asarray(embeddings)[:, :2]
+            self.hdbscan_model.probabilities_ = np.full(len(texts), 0.94)
+            self.hdbscan_model.outlier_scores_ = np.full(len(texts), 0.05)
             return topics.tolist(), probabilities
         def get_topic_info(self):
             return FakeInfo()
@@ -92,6 +99,7 @@ def test_bertopic_cpu_smoke_with_cached_embeddings(tmp_path, monkeypatch):
         bertopic_model, "load_or_create_metadata_embeddings",
         lambda *_args, **_kwargs: (np.asarray(embeddings), {"fingerprint": "fixture", "dimension": 4}),
     )
+    monkeypatch.setattr(bertopic_model, "load_or_create_embeddings", lambda *_args, **_kwargs: (np.asarray(embeddings), {"fingerprint": "fixture", "dimension": 4}))
     metadata = bertopic_model.run_bertopic(config)
     model_output = output / "bertopic" / "metadata_multilingual"
     docs = read_csv(model_output / "document_topics.csv")

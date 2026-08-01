@@ -1,0 +1,15 @@
+topic_id,review_priority_score,borderline_share,low_confidence_share,negative_silhouette_share,coherence_cv,contamination_share,language_concentration,metadata_coverage,priority_reason,priority_rank
+1,21.674,0.056962,0.0,0.297468,0.331413,0.0,0.512658,0.5,siluetas negativas | país sin cobertura suficiente | heterogeneous_candidate,1
+2,20.757,0.297872,0.0,0.0,0.397541,0.028369,0.64539,0.5,alta proporción fronteriza | candidatos de contaminación | país sin cobertura suficiente | borderline_heavy_candidate,2
+5,20.456,0.26506,0.048193,0.012048,0.401316,0.0,0.554217,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,3
+10,19.034,0.173913,0.0,0.0,0.245564,0.0,0.608696,0.5,país sin cobertura suficiente | broad_but_interpretable,4
+0,15.413,0.066456,0.0,0.03481,0.336411,0.009494,0.572785,0.5,país sin cobertura suficiente,5
+3,13.755,0.123077,0.0,0.130769,0.724057,0.015385,0.9,0.5,siluetas negativas | país sin cobertura suficiente | language_concentrated_candidate,6
+12,12.436,0.078947,0.0,0.0,0.49547,0.0,0.894737,0.5,país sin cobertura suficiente | language_concentrated_candidate,7
+9,11.842,0.043478,0.021739,0.0,0.529372,0.065217,0.652174,0.5,candidatos de contaminación | país sin cobertura suficiente,8
+7,11.264,0.03125,0.0,0.0,0.478218,0.0,0.875,0.5,país sin cobertura suficiente | language_concentrated_candidate,9
+13,10.01,0.0,0.0,0.0,0.53444,0.052632,0.894737,0.5,candidatos de contaminación | país sin cobertura suficiente | language_concentrated_candidate,10
+4,9.169,0.07,0.0,0.0,0.695395,0.0,0.96,0.5,país sin cobertura suficiente | language_concentrated_candidate,11
+6,8.505,0.106667,0.053333,0.0,0.901877,0.053333,0.586667,0.5,candidatos de contaminación | país sin cobertura suficiente,12
+8,7.598,0.0,0.0,0.0,0.670875,0.016129,0.822581,0.5,país sin cobertura suficiente,13
+11,6.324,0.023256,0.0,0.0,0.807055,0.023256,1.0,0.5,candidatos de contaminación | país sin cobertura suficiente | language_concentrated_candidate,14

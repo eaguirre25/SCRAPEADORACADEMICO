@@ -1,0 +1,267 @@
+{
+  "model": "BERTopic-METADATA-MULTILINGUAL",
+  "seed": 42,
+  "generated_at_utc": "2026-07-30T22:16:01.981579+00:00",
+  "git_commit": "79e359763377dddae6478855817c6b649b0536da",
+  "python_version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "documents": 2182,
+  "discarded_documents": 0,
+  "elapsed_seconds": 40.173,
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "configuration": {
+    "project": {
+      "seed": 42,
+      "start_year": 2020,
+      "end_year": 2026
+    },
+    "paths": {
+      "corpus_pdf": "data/corpus.csv",
+      "bibliographic_records": "data/master_records.csv",
+      "output_root": "output/topic_models",
+      "cache_root": "cache/topic_models",
+      "human_labels": "config/topic_labels.csv"
+    },
+    "corpus": {
+      "canonical_unit": "publication",
+      "primary_modeling_unit": "metadata",
+      "fulltext_is_secondary": true,
+      "remove_references": true,
+      "detect_duplicates": true,
+      "relevance_filter_required": true,
+      "primary_unit": "metadata",
+      "fallback_unit": "full_text",
+      "minimum_characters": 200,
+      "metadata_minimum_characters": 80,
+      "deduplicate": true,
+      "remove_references_from_full_text": true,
+      "detect_language": true,
+      "supported_languages": [
+        "es",
+        "en",
+        "pt",
+        "id"
+      ],
+      "full_text_max_characters": 120000
+    },
+    "text_fields": {
+      "title": "title",
+      "abstract": "abstract",
+      "keywords": "keywords",
+      "full_text": "texto"
+    },
+    "metadata_corpus": {
+      "stm_strategy": "unweighted",
+      "alternatives": [
+        "unweighted",
+        "title_weighted",
+        "title_keywords_weighted"
+      ],
+      "field_weights": {
+        "title": 1,
+        "keywords": 1,
+        "abstract": 1
+      }
+    },
+    "metadata_embeddings": {
+      "combine_fields_as_embeddings": true,
+      "title_weight": 0.35,
+      "abstract_weight": 0.5,
+      "keywords_weight": 0.15,
+      "evaluate_title_abstract_only": true
+    },
+    "fulltext_strategy": {
+      "default": "abstract_introduction_conclusions",
+      "alternatives": [
+        "abstract_only",
+        "introduction_conclusions",
+        "fulltext_without_references"
+      ]
+    },
+    "relevance": {
+      "clear_include_threshold": 0.6,
+      "clear_exclude_threshold": -0.6,
+      "semantic_enabled": true,
+      "semantic_borderline_margin": 0.12,
+      "validation_sample_size": 200,
+      "manual_review_states": [
+        "borderline",
+        "manual_review"
+      ]
+    },
+    "multilingual": {
+      "stm_strategy": "separate_by_language",
+      "bertopic_strategy": "multilingual_embeddings",
+      "harmonized_stm_enabled": false,
+      "language_topic_diagnostic": true,
+      "language_topic_threshold": 0.8,
+      "stm_languages": [
+        "es",
+        "en",
+        "pt"
+      ],
+      "indonesian_policy": "bertopic_only"
+    },
+    "stm": {
+      "enabled": true,
+      "coarse_k": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ],
+      "fine_offsets": [
+        -4,
+        -2,
+        0,
+        2,
+        4
+      ],
+      "candidate_k": {
+        "start": 8,
+        "end": 32,
+        "step": 4
+      },
+      "max_em_iterations": 500,
+      "init_type": "Spectral",
+      "prevalence_formula": "~ s(anio)",
+      "number_of_runs": 5,
+      "stability_runs": 5,
+      "minimum_dominant_documents_warning": 10,
+      "selection_requires_stability": true,
+      "selection_requires_human_review": true,
+      "missing_metric_policy": "renormalize_and_warn",
+      "remove_domain_stopwords": false,
+      "diagnostic_weights": {
+        "coherence": 0.3,
+        "exclusivity": 0.25,
+        "heldout": 0.2,
+        "residual": 0.1,
+        "stability": 0.15
+      }
+    },
+    "bertopic": {
+      "enabled": true,
+      "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "embedding_model_alternatives": [
+        "sentence-transformers/distiluse-base-multilingual-cased-v2"
+      ],
+      "batch_size": 32,
+      "min_topic_size": 10,
+      "min_samples": 10,
+      "nr_topics": null,
+      "calculate_probabilities": true,
+      "low_memory": true,
+      "ngram_min": 1,
+      "ngram_max": 3,
+      "min_df": 2,
+      "max_df": 0.95,
+      "max_features": 50000,
+      "reduce_frequent_words": true,
+      "preserve_original_outliers": true,
+      "reduce_outliers": false,
+      "outlier_reduction_is_alternative": true,
+      "parameter_search_enabled": true,
+      "hierarchy_enabled": true,
+      "language_dependence_diagnostic": true,
+      "heterogeneous_topic_detection": true,
+      "merge_candidate_similarity": 0.8,
+      "umap": {
+        "n_neighbors": 10,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine"
+      },
+      "hdbscan": {
+        "metric": "euclidean",
+        "cluster_selection_method": "leaf",
+        "prediction_data": true
+      },
+      "parameter_search": {
+        "umap_neighbors": [
+          10,
+          15,
+          30
+        ],
+        "umap_components": [
+          5,
+          10
+        ],
+        "umap_min_dist": [
+          0.0,
+          0.1
+        ],
+        "min_cluster_size": [
+          10,
+          20,
+          30,
+          50
+        ],
+        "min_samples": [
+          5,
+          10
+        ],
+        "cluster_selection_method": [
+          "eom",
+          "leaf"
+        ],
+        "staged_max_candidates": 12
+      }
+    },
+    "validation": {
+      "human_validation_required": true,
+      "stability_runs": 5,
+      "top_n_words": 15,
+      "representative_documents": 10,
+      "borderline_documents": 10,
+      "low_confidence_documents": 10,
+      "topic_intrusion_enabled": true,
+      "word_intrusion_enabled": true,
+      "minimum_topic_documents": 5,
+      "ambiguous_probability_margin": 0.1,
+      "trend_minimum_documents": 20,
+      "bootstrap_samples": 500
+    }
+  },
+  "packages": {
+    "bertopic": "0.17.4",
+    "sentence-transformers": "5.6.1",
+    "umap-learn": "0.5.12",
+    "hdbscan": "0.8.44",
+    "scikit-learn": "1.7.2",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3"
+  },
+  "corpus": "metadata",
+  "output_name": "metadata_multilingual",
+  "validation_status": "exploratory",
+  "embedding_cache": {
+    "fingerprint": "26e6ca83073397973994c044298b918f6b4698cc6417bb96ac89be489df7eeec",
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "dimension": 768,
+    "documents": 2182,
+    "created_at_utc": "2026-07-30T22:10:49.946518+00:00",
+    "combination": "weighted_field_average",
+    "variant": "weighted_fields",
+    "weights": {
+      "title_text": 0.35,
+      "abstract_text": 0.5,
+      "keywords_text": 0.15
+    },
+    "available_field_counts": {
+      "title_text": 2181,
+      "abstract_text": 2125,
+      "keywords_text": 2122
+    }
+  },
+  "outlier_count": 1163,
+  "outlier_percentage": 53.2997,
+  "model_save_mode": "safetensors_without_ctfidf",
+  "warnings": [
+    "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"
+  ],
+  "outliers_reassigned_in_alternative": 0
+}

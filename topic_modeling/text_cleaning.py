@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from html import unescape
 from dataclasses import dataclass
 
 
@@ -35,6 +36,28 @@ def normalize_space(text: str) -> str:
     return re.sub(r"[ \t]+", " ", re.sub(r"\n{3,}", "\n\n", text)).strip()
 
 
+_TRANSLATION = str.maketrans({
+    "\u00a0": " ", "\u2007": " ", "\u202f": " ",
+    "\u2018": "'", "\u2019": "'", "\u201a": "'", "\u201b": "'",
+    "\u201c": '"', "\u201d": '"', "\u201e": '"', "\u201f": '"',
+    "\u2010": "-", "\u2011": "-", "\u2012": "-", "\u2013": "-", "\u2014": "-", "\u2212": "-",
+})
+
+
+def normalize_unicode_text(text: str) -> str:
+    """Normalize human text without transliterating or dropping diacritics."""
+    value = unescape(str(text or ""))
+    value = unicodedata.normalize("NFC", value).translate(_TRANSLATION)
+    value = "".join(
+        "\n" if char in "\r\n" else char
+        for char in value
+        if char in "\r\n\t" or unicodedata.category(char) not in {"Cc", "Cf", "Cs"}
+    )
+    value = re.sub(r"[ \t]+", " ", value)
+    value = re.sub(r"\s*\n\s*", "\n", value)
+    return re.sub(r"\n{3,}", "\n\n", value).strip()
+
+
 def remove_references(text: str, minimum_fraction: float = 0.35) -> ReferenceRemoval:
     matches = list(REFERENCE_HEADING_RE.finditer(text or ""))
     if not matches:
@@ -48,7 +71,7 @@ def remove_references(text: str, minimum_fraction: float = 0.35) -> ReferenceRem
 
 
 def _base_clean(text: str) -> str:
-    text = unicodedata.normalize("NFKC", text or "").replace("\x00", " ")
+    text = normalize_unicode_text(text)
     text = URL_RE.sub(" ", text)
     text = DOI_RE.sub(" ", text)
     text = ISSN_RE.sub(" ", text)
@@ -67,6 +90,14 @@ def clean_for_bertopic(text: str, *, strip_references: bool = False) -> tuple[st
     return normalize_space(removal.text), removal
 
 
+def clean_for_vectorizer(text: str, *, strip_references: bool = False) -> tuple[str, ReferenceRemoval]:
+    """Clean lexical input while preserving Unicode for c-TF-IDF n-grams."""
+    cleaned, removal = clean_for_bertopic(text, strip_references=strip_references)
+    cleaned = re.sub(r"(?i)\b(?:amp|x0d|nbsp)\b", " ", cleaned)
+    cleaned = re.sub(r"\b(?=\w*[a-záéíóúüñçãõàâêô])(?=\w*\d)\w{6,}\b", " ", cleaned, flags=re.I)
+    return normalize_space(cleaned.casefold()), removal
+
+
 def clean_for_embeddings(text: str, *, strip_references: bool = False) -> tuple[str, ReferenceRemoval]:
     """Conservative cleaning that preserves syntax for contextual embeddings."""
     return clean_for_bertopic(text, strip_references=strip_references)
@@ -80,7 +111,7 @@ def clean_for_stm(text: str, *, strip_references: bool = False) -> tuple[str, Re
 
 
 def clean_for_display(text: str) -> str:
-    return normalize_space(unicodedata.normalize("NFKC", text or "").replace("\x00", " "))
+    return normalize_space(normalize_unicode_text(text))
 
 
 SECTION_HEADINGS = {

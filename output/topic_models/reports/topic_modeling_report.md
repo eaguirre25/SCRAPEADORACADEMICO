@@ -1,12 +1,39 @@
 # Informe reproducible de modelado temático
 
-Generado: 2026-07-30T22:28:21.999610+00:00
+Generado: 2026-08-01T00:49:04.705877+00:00
 
 Semilla: 42
 
 Período: 2020–2026 (2026 incompleto)
 
-**Estado general: exploratorio; falta validación humana y ninguna etiqueta automática debe interpretarse como categoría objetiva.**
+## Resumen técnico
+
+**BERTopic metadata multilingüe es el único modelo principal vigente: 14 macrotemas, solución preferida provisional y validación humana pendiente.** Las STM corregidas se presentan sólo como modelos comparativos y los históricos quedan separados.
+
+## Modelo principal vigente
+
+| run_id | model_name | corpus_unit | language | status | validation_status |
+|---|---|---|---|---|---|
+| 3f4de8ee8c0c96b1 | BERTopic-METADATA-MULTILINGUAL | metadata | multilingual | preferred_provisional | pending_human_review |
+
+## Modelos comparativos
+
+| run_id | model_name | language | status | validation_status |
+|---|---|---|---|---|
+| 5adc9f83bb44b510 | STM-METADATA-EN | en | stability_nonconverged | stability_nonconverged |
+| 22ecf8acc6e3bd31 | STM-METADATA-ES | es | stability_nonconverged | stability_nonconverged |
+| 98600702f07dbabe | STM-METADATA-PT | pt | exploratory_small_corpus_stability_nonconverged | exploratory_small_corpus_stability_nonconverged |
+
+## Ejecuciones históricas
+
+| run_id | model_name | model_path | generated_at | status |
+|---|---|---|---|---|
+| a5b3020aebf80c00 | BERTopic-METADATA-MULTILINGUAL | bertopic/metadata_multilingual/archive/pre_unicode_fix | 2026-07-30T22:16:01.981579+00:00 | historical_provisional |
+| a6ee71770c19524a | BERTopic-METADATA-MULTILINGUAL | bertopic/metadata_multilingual/archive/pre_unicode_fix/root_duplicates | 2026-07-30T22:16:01.981579+00:00 | historical_provisional |
+| 47bbd742d47a7c4e | stm | stm | 2026-07-30 20:33:35 | historical_provisional |
+| b8d796a336cf0da4 | STM-METADATA-EN | stm/metadata_en | 2026-07-30 21:47:01 | provisional_fixed_k |
+| 4a698655b149236d | STM-METADATA-ES | stm/metadata_es | 2026-07-30 21:44:36 | provisional_fixed_k |
+| cfeff175c27b79a7 | STM-METADATA-PT | stm/metadata_pt | 2026-07-30 21:47:21 | provisional_fixed_k |
 
 ## Calidad y cobertura del corpus
 
@@ -27,65 +54,43 @@ Período: 2020–2026 (2026 incompleto)
 | distribution | language_distribution_metadata | {"en": 939, "es": 1195, "id": 4, "pt": 42, "und": 2} |
 | distribution | language_distribution_fulltext | {"en": 223, "es": 406, "id": 15, "pt": 24, "und": 4} |
 
-## Métricas de modelos
+## Métricas de modelos vigentes
 
-| model | corpus | metric | value | applicability |
-|---|---|---|---|---|
-| stm | full_text | documents | 863 | all |
-| stm | full_text | topics_excluding_outliers | 22 | all |
-| stm | full_text | minimum_topic_size | 2 | dominant STM assignment or BERTopic cluster |
-| stm | full_text | topic_word_diversity | 1.0 | lexical representation |
-| stm | full_text | outlier_percentage | 0.0 | BERTopic only; STM returns 0 |
-| stm | full_text | ambiguous_documents | 133 | model-specific confidence |
-| stm | full_text | coherence_computation_status | not_computed_empty_corpus | lexical representation |
-| stm | full_text | mean_pairwise_topic_similarity | 0.0 | lexical overlap |
-| stm | full_text | maximum_pairwise_topic_similarity | 0.0 | lexical overlap |
-| stm | full_text | redundant_topic_pairs_0_5 | 0 | lexical overlap |
-| stm | full_text | temporal_accounting_issues | 2020:dominant=0:documents=97 | 2020:mass=0.0:documents=97 | 2021:dominant=0:documents=110 | 2021:mass=0.0:documents=110 | 2022:dominant=0:documents=148 | 2022:mass=0.0:documents=148 | 2023:dominant=0:documents=174 | 2023:mass=0.0:documents=174 | 2024:dominant=0:documents=161 | 2024:mass=0.0:documents=161 | 2025:dominant=0:documents=144 | 2025:mass=0.0:documents=144 | 2026:dominant=0:documents=29 | 2026:mass=0.0:documents=29 | empty means annual counts and topic mass reconcile |
-| STM-METADATA-EN | metadata | documents | 939 | all |
-| STM-METADATA-EN | metadata | topics_excluding_outliers | 16 | all |
-| STM-METADATA-EN | metadata | minimum_topic_size | 11 | dominant STM assignment or BERTopic cluster |
-| STM-METADATA-EN | metadata | topic_word_diversity | 0.995833 | lexical representation |
-| STM-METADATA-EN | metadata | outlier_percentage | 0.0 | BERTopic only; STM returns 0 |
-| STM-METADATA-EN | metadata | ambiguous_documents | 173 | model-specific confidence |
-| STM-METADATA-EN | metadata | coherence_computation_status | computed_gensim | lexical representation |
-| STM-METADATA-EN | metadata | mean_pairwise_topic_similarity | 0.000287 | lexical overlap |
-| STM-METADATA-EN | metadata | maximum_pairwise_topic_similarity | 0.034483 | lexical overlap |
-| STM-METADATA-EN | metadata | redundant_topic_pairs_0_5 | 0 | lexical overlap |
-| STM-METADATA-EN | metadata | temporal_accounting_issues |  | empty means annual counts and topic mass reconcile |
-| STM-METADATA-ES | metadata | documents | 1195 | all |
-| STM-METADATA-ES | metadata | topics_excluding_outliers | 16 | all |
-| STM-METADATA-ES | metadata | minimum_topic_size | 29 | dominant STM assignment or BERTopic cluster |
-| STM-METADATA-ES | metadata | topic_word_diversity | 0.991667 | lexical representation |
-| STM-METADATA-ES | metadata | outlier_percentage | 0.0 | BERTopic only; STM returns 0 |
-| STM-METADATA-ES | metadata | ambiguous_documents | 230 | model-specific confidence |
-| STM-METADATA-ES | metadata | coherence_computation_status | computed_gensim | lexical representation |
-| STM-METADATA-ES | metadata | mean_pairwise_topic_similarity | 0.000595 | lexical overlap |
-| STM-METADATA-ES | metadata | maximum_pairwise_topic_similarity | 0.071429 | lexical overlap |
-| STM-METADATA-ES | metadata | redundant_topic_pairs_0_5 | 0 | lexical overlap |
-| STM-METADATA-ES | metadata | temporal_accounting_issues |  | empty means annual counts and topic mass reconcile |
-| STM-METADATA-PT | metadata | documents | 42 | all |
-| STM-METADATA-PT | metadata | topics_excluding_outliers | 8 | all |
-| STM-METADATA-PT | metadata | minimum_topic_size | 3 | dominant STM assignment or BERTopic cluster |
-| STM-METADATA-PT | metadata | topic_word_diversity | 0.866667 | lexical representation |
-| STM-METADATA-PT | metadata | outlier_percentage | 0.0 | BERTopic only; STM returns 0 |
-| STM-METADATA-PT | metadata | ambiguous_documents | 5 | model-specific confidence |
-| STM-METADATA-PT | metadata | coherence_computation_status | computed_gensim | lexical representation |
-| STM-METADATA-PT | metadata | mean_pairwise_topic_similarity | 0.020908 | lexical overlap |
-| STM-METADATA-PT | metadata | maximum_pairwise_topic_similarity | 0.153846 | lexical overlap |
-| STM-METADATA-PT | metadata | redundant_topic_pairs_0_5 | 0 | lexical overlap |
-| STM-METADATA-PT | metadata | temporal_accounting_issues |  | empty means annual counts and topic mass reconcile |
-| BERTopic-METADATA-MULTILINGUAL | metadata | documents | 2182 | all |
-| BERTopic-METADATA-MULTILINGUAL | metadata | topics_excluding_outliers | 42 | all |
-| BERTopic-METADATA-MULTILINGUAL | metadata | minimum_topic_size | 10 | dominant STM assignment or BERTopic cluster |
-| BERTopic-METADATA-MULTILINGUAL | metadata | topic_word_diversity | 0.95 | lexical representation |
-| BERTopic-METADATA-MULTILINGUAL | metadata | outlier_percentage | 53.2997 | BERTopic only; STM returns 0 |
-| BERTopic-METADATA-MULTILINGUAL | metadata | ambiguous_documents | 1200 | model-specific confidence |
-| BERTopic-METADATA-MULTILINGUAL | metadata | coherence_computation_status | computed_gensim | lexical representation |
-| BERTopic-METADATA-MULTILINGUAL | metadata | mean_pairwise_topic_similarity | 0.001483 | lexical overlap |
-| BERTopic-METADATA-MULTILINGUAL | metadata | maximum_pairwise_topic_similarity | 0.176471 | lexical overlap |
-| BERTopic-METADATA-MULTILINGUAL | metadata | redundant_topic_pairs_0_5 | 0 | lexical overlap |
-| BERTopic-METADATA-MULTILINGUAL | metadata | temporal_accounting_issues |  | empty means annual counts and topic mass reconcile |
+| run_id | model | corpus | metric | value | applicability |
+|---|---|---|---|---|---|
+| 3f4de8ee8c0c96b1 | BERTopic-METADATA-MULTILINGUAL | metadata | documents | 2182 | all |
+| 3f4de8ee8c0c96b1 | BERTopic-METADATA-MULTILINGUAL | metadata | topics_excluding_outliers | 14 | all |
+| 3f4de8ee8c0c96b1 | BERTopic-METADATA-MULTILINGUAL | metadata | minimum_topic_size | 38 | dominant assignment or cluster |
+| 3f4de8ee8c0c96b1 | BERTopic-METADATA-MULTILINGUAL | metadata | model_topic_diversity_top10 | 0.914286 | lexical representation |
+| 3f4de8ee8c0c96b1 | BERTopic-METADATA-MULTILINGUAL | metadata | outlier_percentage | 38.5885 | BERTopic |
+| 5adc9f83bb44b510 | STM-METADATA-EN | metadata | documents | 939 | all |
+| 5adc9f83bb44b510 | STM-METADATA-EN | metadata | topics_excluding_outliers | 16 | all |
+| 5adc9f83bb44b510 | STM-METADATA-EN | metadata | minimum_topic_size | 29 | dominant assignment or cluster |
+| 22ecf8acc6e3bd31 | STM-METADATA-ES | metadata | documents | 1195 | all |
+| 22ecf8acc6e3bd31 | STM-METADATA-ES | metadata | topics_excluding_outliers | 16 | all |
+| 22ecf8acc6e3bd31 | STM-METADATA-ES | metadata | minimum_topic_size | 32 | dominant assignment or cluster |
+| 98600702f07dbabe | STM-METADATA-PT | metadata | documents | 42 | all |
+| 98600702f07dbabe | STM-METADATA-PT | metadata | topics_excluding_outliers | 5 | all |
+| 98600702f07dbabe | STM-METADATA-PT | metadata | minimum_topic_size | 6 | dominant assignment or cluster |
+
+## Prioridad de revisión
+
+| priority_rank | topic_id | review_priority_score | priority_reason |
+|---|---|---|---|
+| 1 | 1 | 21.674 | siluetas negativas | país sin cobertura suficiente | heterogeneous_candidate |
+| 2 | 2 | 20.757 | alta proporción fronteriza | candidatos de contaminación | país sin cobertura suficiente | borderline_heavy_candidate |
+| 3 | 5 | 20.456 | alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate |
+| 4 | 10 | 19.034 | país sin cobertura suficiente | broad_but_interpretable |
+| 5 | 0 | 15.413 | país sin cobertura suficiente |
+| 6 | 3 | 13.755 | siluetas negativas | país sin cobertura suficiente | language_concentrated_candidate |
+| 7 | 12 | 12.436 | país sin cobertura suficiente | language_concentrated_candidate |
+| 8 | 9 | 11.842 | candidatos de contaminación | país sin cobertura suficiente |
+| 9 | 7 | 11.264 | país sin cobertura suficiente | language_concentrated_candidate |
+| 10 | 13 | 10.01 | candidatos de contaminación | país sin cobertura suficiente | language_concentrated_candidate |
+| 11 | 4 | 9.169 | país sin cobertura suficiente | language_concentrated_candidate |
+| 12 | 6 | 8.505 | candidatos de contaminación | país sin cobertura suficiente |
+| 13 | 8 | 7.598 | país sin cobertura suficiente |
+| 14 | 11 | 6.324 | candidatos de contaminación | país sin cobertura suficiente | language_concentrated_candidate |
 
 ## Comparación STM–BERTopic
 
@@ -94,10 +99,10 @@ Período: 2020–2026 (2026 incompleto)
 | shared_documents | 2176 |
 | stm_language_models_compared | 3 |
 | bertopic_documents | 2182 |
-| bertopic_outliers | 1163 |
+| bertopic_outliers | 842 |
 | one_to_one_alignments | 8 |
 | comparison_status | exploratory_pending_human_review |
 
-## Interpretación y limitaciones
+## Alcance, limitaciones y próximos pasos
 
-STM estima masa temática promedio y mezclas por publicación; BERTopic produce agrupamientos documentales semánticos. Los resultados no son equivalentes y sus medidas no son intercambiables. Los corpus metadata y full text son representaciones separadas de publicaciones relacionadas, no documentos sumables. Los outliers se conservan, 2026 es parcial y las decisiones de relevancia, fusión, división y etiquetado esperan revisión humana.
+STM estima masa temática promedio y mezclas por publicación; BERTopic produce agrupamientos documentales semánticos. Los resultados no son equivalentes y sus medidas no son intercambiables. Los corpus metadata y full text son representaciones separadas de publicaciones relacionadas, no documentos sumables. El país estructurado no está disponible; `source` significa proveedor/repositorio bibliográfico. Los outliers se conservan, 2026 es parcial y las decisiones de relevancia, fusión, división y etiquetado esperan revisión humana. Consulte `metric_definitions.md` y `evaluation_audit.json` para auditar fórmulas y cobertura.

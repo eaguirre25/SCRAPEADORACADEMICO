@@ -74,8 +74,14 @@ stm:
   coarse_k: [8, 12, 16, 20, 24, 28, 32]
   fine_offsets: [-4, -2, 0, 2, 4]
   candidate_k: {start: 8, end: 32, step: 4}
+  candidate_k_by_language:
+    es: [12, 14, 16, 18, 20]
+    en: [12, 14, 16, 18, 20]
+    pt: [3, 4, 5]
   max_em_iterations: 500
   init_type: Spectral
+  stability_init_type: LDA
+  stability_max_em_iterations: 150
   prevalence_formula: "~ s(anio)"
   number_of_runs: 5
   stability_runs: 5
@@ -95,8 +101,8 @@ bertopic:
   enabled: true
   embedding_model: sentence-transformers/paraphrase-multilingual-mpnet-base-v2
   embedding_model_alternatives: [sentence-transformers/distiluse-base-multilingual-cased-v2]
-  batch_size: 32
-  min_topic_size: 10
+  batch_size: 64
+  min_topic_size: 35
   min_samples: 5
   nr_topics: null
   calculate_probabilities: true
@@ -106,6 +112,7 @@ bertopic:
   min_df: 2
   max_df: 0.95
   max_features: 50000
+  token_pattern: '(?u)\b[^\W\d_](?:[\wÀ-ÖØ-öø-ÿ-]*[^\W_])?\b'
   reduce_frequent_words: true
   preserve_original_outliers: true
   reduce_outliers: false
@@ -124,6 +131,26 @@ bertopic:
     metric: euclidean
     cluster_selection_method: eom
     prediction_data: true
+  macro_search:
+    target_min_topics: 10
+    target_max_topics: 25
+    reject_outlier_share_above: 0.45
+    reject_topics_above: 35
+    reject_topics_below: 5
+    reject_median_cluster_below: 20
+    reject_minimum_size_share_above: 0.30
+    reject_maximum_cluster_share_above: 0.35
+    finalists: 4
+    stability_runs: 5
+    seeds: [42, 117, 233, 401, 809]
+    subcluster_minimum_documents: 60
+  ambiguity:
+    margin_below: 0.08
+    membership_below: 0.35
+    centroid_similarity_below: 0.35
+    outlier_score_above: 0.80
+    membership_context_below: 0.80
+    local_consistency_below: 0.60
   parameter_search:
     umap_neighbors: [10, 15, 30]
     umap_components: [5, 10]
@@ -146,3 +173,20 @@ validation:
   ambiguous_probability_margin: 0.10
   trend_minimum_documents: 20
   bootstrap_samples: 500
+
+evaluation:
+  mode: evaluation_only
+  recompute_model: false
+  metadata:
+    minimum_known_documents: 10
+    minimum_coverage: 0.30
+  heterogeneity:
+    negative_silhouette_high: 0.20
+    negative_silhouette_broad: 0.10
+    borderline_high: 0.30
+    borderline_candidate: 0.25
+    borderline_broad: 0.15
+    coherence_low: 0.30
+    contamination_high: 0.20
+    language_concentration: 0.85
+    source_concentration_excess: 0.15

@@ -23,7 +23,7 @@ def run(command: list[str], env: dict[str, str] | None = None) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Orchestrate the hybrid topic-modeling pipeline.")
     parser.add_argument("--config", default="config/topic_modeling.yml")
-    parser.add_argument("--mode", choices=["corpus", "stm", "bertopic", "compare", "dashboard", "full"], default="full")
+    parser.add_argument("--mode", choices=["corpus", "stm", "bertopic", "evaluation_only", "compare", "dashboard", "full"], default="full")
     parser.add_argument("--corpus-unit", choices=["metadata", "fulltext"], default="metadata")
     parser.add_argument("--force-embeddings", action="store_true")
     parser.add_argument("--run-stability", action="store_true")
@@ -40,26 +40,34 @@ def main() -> None:
         env["RUN_STABILITY"] = str(args.run_stability).lower()
         for language in args.stm_languages:
             command = ["Rscript", "stm_analysis.R", "--config", args.config, "--corpus-unit", args.corpus_unit,
-                       "--language", language, "--output-name", f"{args.corpus_unit}_{language}"]
+                       "--language", language, "--output-name", f"{args.corpus_unit}_{language}_corrected"]
             if args.preliminary:
                 command.append("--preliminary")
-            fixed_k = args.fixed_k or (8 if args.preliminary and language == "pt" else 16 if args.preliminary else None)
+            fixed_k = args.fixed_k or (4 if args.preliminary and language == "pt" else 16 if args.preliminary else None)
             if fixed_k:
                 command.extend(["--fixed-k", str(fixed_k)])
             run(command, env)
     if args.mode in {"bertopic", "full"}:
-        if args.search_parameters:
-            run([py, "scripts/search_bertopic_parameters.py", "--config", args.config, "--corpus-unit", args.corpus_unit])
+        if args.search_parameters and args.corpus_unit == "metadata":
+            run([py, "scripts/search_bertopic_macro_solutions.py", "--config", args.config])
+            run([py, "scripts/run_bertopic_stability.py", "--config", args.config, "--finalists-only"])
         command = [py, "scripts/run_bertopic.py", "--config", args.config, "--corpus-unit", args.corpus_unit]
         if args.search_parameters:
             command.append("--use-selected-parameters")
+            if args.corpus_unit == "metadata":
+                command.extend(["--output-name", "metadata_multilingual/preferred_solution"])
         if args.force_embeddings:
             command.append("--force-embeddings")
         run(command)
     if args.mode in {"compare", "full"}:
         for script in ("evaluate_topic_models.py", "compare_topic_models.py", "export_topic_dashboard.py"):
             run([py, f"scripts/{script}", "--config", args.config])
+    if args.mode == "evaluation_only":
+        run([py, "scripts/audit_topic_evaluation.py", "--config", args.config])
+        run([py, "scripts/recompute_topic_metrics.py", "--config", args.config, "--model", "preferred", "--recompute-model", "false"])
+        run([py, "scripts/rebuild_model_runs.py", "--config", args.config])
     if args.mode in {"dashboard", "full"}:
+        run([py, "scripts/generate_topic_validation_review.py"])
         run([py, "generate_dashboard.py"])
 
 

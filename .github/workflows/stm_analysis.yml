@@ -65,8 +65,8 @@ jobs:
       - name: Construir corpus canónicos auditables
         run: python scripts/build_modeling_corpus.py --config config/topic_modeling.yml
 
-      - name: Ejecutar STM preliminar por idioma
-        run: python scripts/run_topic_pipeline.py --config config/topic_modeling.yml --mode stm --corpus-unit metadata --preliminary
+      - name: Ejecutar STM corregida y estabilidad por idioma
+        run: python scripts/run_topic_pipeline.py --config config/topic_modeling.yml --mode stm --corpus-unit metadata --run-stability
 
       - name: Pruebas R
         run: sudo Rscript -e "testthat::test_file('tests/testthat/test-stm-helpers.R')"

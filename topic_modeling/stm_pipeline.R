@@ -89,13 +89,15 @@ run_stm_pipeline <- function(args = character()) {
   config_path <- arg_value(args, "--config", "config/topic_modeling.yml")
   cfg <- read_yaml(config_path)
   seed <- as.integer(Sys.getenv("TOPIC_MODELING_SEED", cfg$project$seed))
-  corpus_unit <- arg_value(args, "--corpus-unit", "metadata")
+  corpus_unit <- arg_value(args, "--corpus-unit", arg_value(args, "--corpus", "metadata"))
   language <- arg_value(args, "--language", "es")
   output_name <- arg_value(args, "--output-name", paste0(corpus_unit, "_", language))
   preliminary_only <- "--preliminary" %in% args
   fixed_k_value <- arg_value(args, "--fixed-k", NULL)
   fixed_k <- if (is.null(fixed_k_value)) NA_integer_ else as.integer(fixed_k_value)
   run_stability <- tolower(Sys.getenv("RUN_STABILITY", "false")) == "true" && !preliminary_only
+  small_language_corpus <- language == "pt"
+  completed_status <- ifelse(small_language_corpus, "exploratory_small_corpus", "metrics_complete")
   set.seed(seed)
   out <- file.path(cfg$paths$output_root, "stm", output_name)
   dir.create(out, recursive = TRUE, showWarnings = FALSE)
@@ -134,7 +136,8 @@ run_stm_pipeline <- function(args = character()) {
   )
   write_csv(prep_counts, file.path(out, "preprocessing_counts.csv"))
 
-  candidates <- as.integer(unlist(cfg$stm$coarse_k))
+  language_candidates <- cfg$stm$candidate_k_by_language[[language]]
+  candidates <- if (is.null(language_candidates)) as.integer(unlist(cfg$stm$coarse_k)) else as.integer(unlist(language_candidates))
   candidates <- candidates[candidates < length(prep$documents)]
   prevalence_formula <- ~ splines::ns(anio, df = 3)
   resume <- "--resume-model" %in% args
@@ -172,9 +175,9 @@ run_stm_pipeline <- function(args = character()) {
       bound = safe_result(search, "bound", n), stability = NA_real_, convergence_rate = NA_real_, search_phase = "coarse"
     )
     diagnostics <- score_diagnostics(diagnostics, cfg$stm$diagnostic_weights)
-    promising <- diagnostics %>% arrange(desc(multicriteria_score)) %>% slice_head(n = min(2, n())) %>% pull(K)
+    promising <- diagnostics %>% arrange(desc(multicriteria_score)) %>% slice_head(n = min(2, nrow(diagnostics))) %>% pull(K)
     offsets <- as.integer(unlist(cfg$stm$fine_offsets))
-    fine_candidates <- sort(unique(as.integer(outer(promising, offsets, "+"))))
+    fine_candidates <- if (is.null(language_candidates)) sort(unique(as.integer(outer(promising, offsets, "+")))) else integer()
     fine_candidates <- fine_candidates[fine_candidates >= 2 & fine_candidates < length(prep$documents) & !fine_candidates %in% candidates]
     fine_search <- NULL
     if (length(fine_candidates)) {
@@ -191,26 +194,35 @@ run_stm_pipeline <- function(args = character()) {
       diagnostics <- score_diagnostics(diagnostics, cfg$stm$diagnostic_weights)
     }
     saveRDS(list(coarse = search, fine = fine_search, coarse_K = candidates, fine_K = fine_candidates), file.path(out, "k_search.rds"))
-    finalists <- diagnostics %>% arrange(desc(multicriteria_score)) %>% slice_head(n = min(3, n())) %>% pull(K)
+    finalists <- diagnostics %>% arrange(desc(multicriteria_score)) %>% slice_head(n = min(3, nrow(diagnostics))) %>% pull(K)
     if (run_stability) {
       runs <- as.integer(cfg$stm$stability_runs)
       for (candidate in finalists) {
         models <- lapply(seq_len(runs), function(run) {
           set.seed(seed + candidate * 100 + run)
           stm(prep$documents, prep$vocab, K = candidate, prevalence = prevalence_formula, data = prep$meta,
-            max.em.its = as.integer(cfg$stm$max_em_iterations), init.type = cfg$stm$init_type, verbose = FALSE)
+            max.em.its = as.integer(ifelse(is.null(cfg$stm$stability_max_em_iterations), cfg$stm$max_em_iterations, cfg$stm$stability_max_em_iterations)),
+            init.type = ifelse(is.null(cfg$stm$stability_init_type), "Random", cfg$stm$stability_init_type),
+            verbose = FALSE)
         })
         diagnostics$stability[diagnostics$K == candidate] <- topic_stability(models, prep$vocab)
-        diagnostics$convergence_rate[diagnostics$K == candidate] <- mean(vapply(models, function(m) !is.null(m$convergence$bound), logical(1)))
+        diagnostics$convergence_rate[diagnostics$K == candidate] <- mean(vapply(models, function(m) isTRUE(m$convergence$converged), logical(1)))
       }
       diagnostics <- score_diagnostics(diagnostics, cfg$stm$diagnostic_weights)
     }
     diagnostics <- diagnostics %>% arrange(desc(multicriteria_score)) %>% mutate(
       K_preferred = row_number() == 1, K_competitive = row_number() %in% 2:3,
       K_rejected = !(K_preferred | K_competitive),
-      selection_status = ifelse(run_stability, "metrics_complete", "provisional"),
+      selection_status = ifelse(!run_stability, "provisional",
+        ifelse(is.na(stability), "not_stability_finalist",
+          ifelse(is.na(convergence_rate) | convergence_rate < 0.8,
+            ifelse(small_language_corpus, "exploratory_small_corpus_stability_nonconverged", "stability_nonconverged"),
+            completed_status))),
       human_review_status = "pending",
-      warning = ifelse(run_stability, "Human review is still required", "Stability not executed; missing weight removed and remaining weights renormalized")
+      warning = ifelse(!run_stability, "Stability not executed; missing weight removed and remaining weights renormalized",
+        ifelse(is.na(convergence_rate) | convergence_rate < 0.8,
+          "Stability replicas did not reach the required 0.8 convergence rate; result is exploratory",
+          "Human review is still required"))
     )
     write_csv(diagnostics, diagnostics_path)
     K <- diagnostics$K[1]
@@ -220,6 +232,7 @@ run_stm_pipeline <- function(args = character()) {
     saveRDS(model, model_path)
   }
 
+  model_selection_status <- ifelse(!is.na(fixed_k), "provisional_fixed_k", diagnostics$selection_status[1])
   labels <- labelTopics(model, n = 20); theta <- model$theta
   dominant <- max.col(theta, ties.method = "first")
   second <- apply(theta, 1, function(x) order(x, decreasing = TRUE)[2])
@@ -231,7 +244,7 @@ run_stm_pipeline <- function(args = character()) {
     topic_label = apply(labels$frex[, 1:4, drop = FALSE], 1, paste, collapse = " · "),
     automatic_label = apply(labels$frex[, 1:4, drop = FALSE], 1, paste, collapse = " · "), human_label = "",
     label_status = "pending", validation_status = "exploratory",
-    selection_status = ifelse(!is.na(fixed_k), "provisional_fixed_k", ifelse(run_stability, "metrics_complete", "provisional")),
+    selection_status = model_selection_status,
     prevalence = round(colMeans(theta) * 100, 4),
     document_count = tabulate(dominant, nbins = K),
     small_topic_warning = tabulate(dominant, nbins = K) < as.integer(cfg$stm$minimum_dominant_documents_warning),
@@ -288,11 +301,11 @@ run_stm_pipeline <- function(args = character()) {
     R_version = R.version.string, packages = list(stm = as.character(packageVersion("stm"))), configuration = cfg,
     documents = length(prep$documents), input_candidates = nrow(corpus), removed_by_textProcessor = nrow(removed_processor),
     removed_by_prepDocuments = nrow(removed_prep), selected_K = K,
-    selection_status = ifelse(!is.na(fixed_k), "provisional_fixed_k", ifelse(run_stability, "metrics_complete", "provisional")), human_review_status = "pending",
+    selection_status = model_selection_status, human_review_status = "pending",
     year_2026_incomplete = TRUE, execution_mode = ifelse(resumed, "resume_exports", "full"),
     elapsed_seconds = as.numeric(difftime(Sys.time(), started, units = "secs"))
   )
   write_json(metadata, file.path(out, "model_metadata.json"), pretty = TRUE, auto_unbox = TRUE)
-  cat(sprintf("STM preliminar completada: modelo=%s K=%d documentos=%d semilla=%d\n", model_label, K, length(prep$documents), seed))
+  cat(sprintf("STM completada: modelo=%s K=%d documentos=%d semilla=%d\n", model_label, K, length(prep$documents), seed))
   invisible(metadata)
 }

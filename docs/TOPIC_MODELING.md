@@ -46,9 +46,57 @@ La evaluación separa calidad léxica, diversidad, redundancia, asignación, est
 
 La comparación principal alinea STM-METADATA por idioma con BERTopic-METADATA multilingüe usando sólo publicaciones compartidas del mismo período y filtro. Informa solapamiento documental, mezcla ponderada, palabras, representantes y alineación combinada; `centroid_similarity` queda como no calculada hasta existir centroides comparables. Las relaciones (`one_to_one`, divisiones, combinaciones, solapamientos parciales o débiles) son propuestas matemáticas para revisión sustantiva.
 
+### Evaluación sin reestimación
+
+La modalidad predeterminada para corregir métricas es `evaluation_only`. Lee la solución `preferred_solution`, calcula sus métricas y compara hashes SHA-256 antes y después. No carga ni ajusta BERTopic, embeddings, UMAP o HDBSCAN. Tampoco modifica asignaciones, outliers, palabras, centroides o jerarquía.
+
+La coherencia usa `text_for_vectorizer` y el mismo `CountVectorizer` Unicode multilingüe. Unigramas, bigramas y trigramas se conservan como tokens literales: `gestión escolar` se compara con el mismo token generado por el analizador. Por tópico se exportan c_v, NPMI, UMass, términos usados/faltantes, documentos y estado. Un error o falta de cobertura produce NA más una causa; nunca cero artificial.
+
+`model_topic_diversity_top10` es global y sólo aparece en `model_metrics.csv`. A nivel tópico se distinguen `topic_unique_term_share`, `topic_shared_term_share`, similitud léxica media/máxima, tópico más similar y entropía de pesos c-TF-IDF.
+
+El corpus no contiene país estructurado. `country_entropy` queda NA con `country_status=missing_column`; no se convierte el vacío en una categoría. `source` significa proveedor/repositorio bibliográfico, no revista ni país. Entropías de metadata requieren al menos 10 valores conocidos, cobertura de 30% y dos categorías.
+
+La contaminación combina estados y puntajes de relevancia, candidatos previos, título, resumen y patrones de alta precisión. `relevance_score` es un puntaje de reglas, no una similitud coseno; por eso `domain_similarity_*` permanece NA hasta existir una medida válida. Contaminación cero no autoriza el estado “relevante para el dominio”: sigue pendiente de revisión.
+
+La heterogeneidad integra media, mediana, mínimo y proporción negativa de silueta; distancia al centroide; fronterizos; baja confianza; coherencia; exclusividad; idioma; metadata y contaminación. Las reglas configurables viven en `evaluation.heterogeneity`. Todos los resultados son candidatos provisionales.
+
+`model_runs.csv` separa `is_latest_for_model`, `is_preferred_model`, `is_dashboard_active` e `is_archived`. Sólo BERTopic metadata multilingüe de 14 macrotemas es preferido. Las STM corregidas son comparativas; la STM de texto completo y las corridas previas quedan históricas.
+
 La validación genera `topic_validation.csv`, word intrusion y topic intrusion. Requiere revisar documentos centrales y fronterizos, calificar pureza, distinción, relevancia y dependencia idiomática, y responder si el tópico ayuda a comprender la investigación sobre dirección, gestión o liderazgo escolar. Con dos revisores deben calcularse acuerdo porcentual y kappa o alpha según la escala.
 
+### Capa de interpretación sustantiva provisional
+
+La solución BERTopic seleccionada tiene 14 macrotópicos (T0–T13), 17 subtópicos y 842 outliers conservados sobre 2.182 publicaciones. `scripts/generate_topic_validation_review.py` cruza la asignación algorítmica con título, resumen, autores, año, fuente e idioma y crea una capa separada de interpretación. No reestima embeddings, UMAP o HDBSCAN; tampoco reasigna clusters u outliers.
+
+Cada tópico tiene tres niveles de identificación que nunca deben confundirse:
+
+1. `topic_id`: identificador algorítmico estable de la corrida.
+2. `automatic_label`: descriptor producido por c-TF-IDF/KeyBERT.
+3. `proposed_human_label`: interpretación sustantiva provisional, pendiente de revisión documental independiente.
+
+Los expedientes `output/topic_models/validation/topic_dossiers/T00.md` a `T13.md` documentan definición, evidencia léxica, estructura interna, documentos centrales y fronterizos, idiomas, fuentes y relaciones. `topic_document_review.csv` conserva muestras central, fronteriza, de baja confianza y aleatoria; para los tópicos con menos de 40 casos amplía la cobertura hasta incluir todos los documentos. Las columnas `human_*` permanecen vacías deliberadamente.
+
+`topic_merge_proposals.csv` y `topic_split_proposals.csv` son hipótesis de revisión, no operaciones ejecutadas. `word_intrusion.csv`, `topic_intrusion.csv` y `outlier_review_sample.csv` son plantillas reproducibles sin respuestas humanas precargadas. Sólo después de dos codificaciones independientes, cálculo de acuerdo y resolución de discrepancias corresponde cambiar una etiqueta a `validated` en `config/topic_labels.csv`.
+
+Las evaluaciones registran cada corrida en `output/topic_models/evaluation/model_runs.csv` mediante `run_id`, `is_current`, `generated_at`, `commit` y `status`. Si existe `metadata_<idioma>_corrected`, la evaluación excluye la carpeta STM anterior del informe operativo para evitar duplicados.
+
 ## Ejecución
+
+Auditoría y recomputación de métricas, sin reestimar el modelo:
+
+```powershell
+python scripts/audit_topic_evaluation.py --config config/topic_modeling.yml
+python scripts/recompute_topic_metrics.py --config config/topic_modeling.yml --model preferred --recompute-model false
+python scripts/rebuild_model_runs.py --config config/topic_modeling.yml
+python scripts/generate_topic_modeling_report.py --config config/topic_modeling.yml --latest-only
+python generate_dashboard.py
+```
+
+El atajo equivalente es:
+
+```powershell
+python scripts/run_topic_pipeline.py --mode evaluation_only --config config/topic_modeling.yml
+```
 
 Primera fase, deliberadamente preliminar:
 
@@ -58,6 +106,7 @@ python scripts/run_topic_pipeline.py --mode stm --corpus-unit metadata --prelimi
 python scripts/search_bertopic_parameters.py --corpus-unit metadata
 python scripts/run_bertopic.py --corpus-unit metadata
 python scripts/run_topic_pipeline.py --mode compare
+python scripts/generate_topic_validation_review.py
 python scripts/run_topic_pipeline.py --mode dashboard
 ```
 

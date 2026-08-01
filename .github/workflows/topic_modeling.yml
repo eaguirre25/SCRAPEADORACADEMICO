@@ -20,15 +20,15 @@ on:
       run_stability:
         description: Ejecutar réplicas STM costosas
         type: boolean
-        default: false
+        default: true
       preliminary:
         description: STM preliminar con K fijo (sin afirmar selección óptima)
         type: boolean
-        default: true
+        default: false
       search_parameters:
         description: Búsqueda escalonada de parámetros BERTopic
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: read

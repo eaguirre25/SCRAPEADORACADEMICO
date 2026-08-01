@@ -14,3 +14,4 @@ output/topic_models/bertopic/embeddings*.npy
 output/topic_models/bertopic/embeddings*.parquet
 output/topic_models/**/*.joblib
 output/topic_models/**/*.pkl
+output/topic_models/reports/edge-profile-*/
