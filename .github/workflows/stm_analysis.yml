@@ -44,7 +44,7 @@ jobs:
             libfreetype6-dev \
             libpng-dev \
             libtiff5-dev \
-            libjpeg-dev \\
+            libjpeg-dev \
             libuv1-dev
 
       - name: Instalar paquetes de R
