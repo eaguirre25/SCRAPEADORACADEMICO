@@ -3,9 +3,9 @@
   "corpus": "metadata",
   "language": "en",
   "seed": 42,
-  "generated_at_utc": "2026-07-31 05:15:21",
-  "git_commit": "645d2b9a2df77dcc2fea129f04f3c51cf344d2f4",
-  "R_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "generated_at_utc": "2026-08-06 23:32:01",
+  "git_commit": "4101c2d4cdec3d07201fa69d4222fd6ff0296de1",
+  "R_version": "R version 4.3.3 (2024-02-29)",
   "packages": {
     "stm": "1.3.8"
   },
@@ -36,12 +36,7 @@
       "deduplicate": true,
       "remove_references_from_full_text": true,
       "detect_language": true,
-      "supported_languages": [
-        "es",
-        "en",
-        "pt",
-        "id"
-      ],
+      "supported_languages": ["es", "en", "pt", "id"],
       "full_text_max_characters": 120000
     },
     "text_fields": {
@@ -52,11 +47,7 @@
     },
     "metadata_corpus": {
       "stm_strategy": "unweighted",
-      "alternatives": [
-        "unweighted",
-        "title_weighted",
-        "title_keywords_weighted"
-      ],
+      "alternatives": ["unweighted", "title_weighted", "title_keywords_weighted"],
       "field_weights": {
         "title": 1,
         "keywords": 1,
@@ -72,11 +63,7 @@
     },
     "fulltext_strategy": {
       "default": "abstract_introduction_conclusions",
-      "alternatives": [
-        "abstract_only",
-        "introduction_conclusions",
-        "fulltext_without_references"
-      ]
+      "alternatives": ["abstract_only", "introduction_conclusions", "fulltext_without_references"]
     },
     "relevance": {
       "clear_include_threshold": 0.6,
@@ -84,10 +71,7 @@
       "semantic_enabled": true,
       "semantic_borderline_margin": 0.12,
       "validation_sample_size": 200,
-      "manual_review_states": [
-        "borderline",
-        "manual_review"
-      ]
+      "manual_review_states": ["borderline", "manual_review"]
     },
     "multilingual": {
       "stm_strategy": "separate_by_language",
@@ -95,56 +79,22 @@
       "harmonized_stm_enabled": false,
       "language_topic_diagnostic": true,
       "language_topic_threshold": 0.8,
-      "stm_languages": [
-        "es",
-        "en",
-        "pt"
-      ],
+      "stm_languages": ["es", "en", "pt"],
       "indonesian_policy": "bertopic_only"
     },
     "stm": {
       "enabled": true,
-      "coarse_k": [
-        8,
-        12,
-        16,
-        20,
-        24,
-        28,
-        32
-      ],
-      "fine_offsets": [
-        -4,
-        -2,
-        0,
-        2,
-        4
-      ],
+      "coarse_k": [8, 12, 16, 20, 24, 28, 32],
+      "fine_offsets": [-4, -2, 0, 2, 4],
       "candidate_k": {
         "start": 8,
         "end": 32,
         "step": 4
       },
       "candidate_k_by_language": {
-        "es": [
-          12,
-          14,
-          16,
-          18,
-          20
-        ],
-        "en": [
-          12,
-          14,
-          16,
-          18,
-          20
-        ],
-        "pt": [
-          3,
-          4,
-          5
-        ]
+        "es": [12, 14, 16, 18, 20],
+        "en": [12, 14, 16, 18, 20],
+        "pt": [3, 4, 5]
       },
       "max_em_iterations": 500,
       "init_type": "Spectral",
@@ -213,13 +163,7 @@
         "reject_maximum_cluster_share_above": 0.35,
         "finalists": 4,
         "stability_runs": 5,
-        "seeds": [
-          42,
-          117,
-          233,
-          401,
-          809
-        ],
+        "seeds": [42, 117, 233, 401, 809],
         "subcluster_minimum_documents": 60
       },
       "ambiguity": {
@@ -231,33 +175,12 @@
         "local_consistency_below": 0.6
       },
       "parameter_search": {
-        "umap_neighbors": [
-          10,
-          15,
-          30
-        ],
-        "umap_components": [
-          5,
-          10
-        ],
-        "umap_min_dist": [
-          0,
-          0.1
-        ],
-        "min_cluster_size": [
-          10,
-          20,
-          30,
-          50
-        ],
-        "min_samples": [
-          5,
-          10
-        ],
-        "cluster_selection_method": [
-          "eom",
-          "leaf"
-        ],
+        "umap_neighbors": [10, 15, 30],
+        "umap_components": [5, 10],
+        "umap_min_dist": [0, 0.1],
+        "min_cluster_size": [10, 20, 30, 50],
+        "min_samples": [5, 10],
+        "cluster_selection_method": ["eom", "leaf"],
         "staged_max_candidates": 12
       }
     },
@@ -274,10 +197,29 @@
       "ambiguous_probability_margin": 0.1,
       "trend_minimum_documents": 20,
       "bootstrap_samples": 500
+    },
+    "evaluation": {
+      "mode": "evaluation_only",
+      "recompute_model": false,
+      "metadata": {
+        "minimum_known_documents": 10,
+        "minimum_coverage": 0.3
+      },
+      "heterogeneity": {
+        "negative_silhouette_high": 0.2,
+        "negative_silhouette_broad": 0.1,
+        "borderline_high": 0.3,
+        "borderline_candidate": 0.25,
+        "borderline_broad": 0.15,
+        "coherence_low": 0.3,
+        "contamination_high": 0.2,
+        "language_concentration": 0.85,
+        "source_concentration_excess": 0.15
+      }
     }
   },
-  "documents": 939,
-  "input_candidates": 939,
+  "documents": 946,
+  "input_candidates": 946,
   "removed_by_textProcessor": 0,
   "removed_by_prepDocuments": 0,
   "selected_K": 16,
@@ -285,5 +227,5 @@
   "human_review_status": "pending",
   "year_2026_incomplete": true,
   "execution_mode": "full",
-  "elapsed_seconds": 1956.9868
+  "elapsed_seconds": 852.711
 }
