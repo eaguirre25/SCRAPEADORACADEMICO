@@ -3,8 +3,8 @@
   "corpus": "metadata",
   "language": "pt",
   "seed": 42,
-  "generated_at_utc": "2026-08-06 23:32:29",
-  "git_commit": "4101c2d4cdec3d07201fa69d4222fd6ff0296de1",
+  "generated_at_utc": "2026-08-07 15:25:33",
+  "git_commit": "5011be0f9cdb9134ade2265dd7a169e287642f5a",
   "R_version": "R version 4.3.3 (2024-02-29)",
   "packages": {
     "stm": "1.3.8"
@@ -227,5 +227,5 @@
   "human_review_status": "pending",
   "year_2026_incomplete": true,
   "execution_mode": "full",
-  "elapsed_seconds": 25.8945
+  "elapsed_seconds": 24.6052
 }
