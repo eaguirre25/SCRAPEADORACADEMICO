@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-08-10T15:28:36.255085+00:00",
+  "generated_at_utc": "2026-08-15T13:17:24.292401+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 9417655
+    "size_bytes": 9430742
   },
   "article_table": {
     "path": "docs/articulos.html",
     "exists": true,
-    "size_bytes": 9813778
+    "size_bytes": 9826497
   },
   "records": {
-    "master_high_relevance": 3026,
+    "master_high_relevance": 3031,
     "review": 87,
-    "rejected": 1772
+    "rejected": 1776
   },
   "stm_inputs_outputs": {
     "corpus": {
