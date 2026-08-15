@@ -3,11 +3,14 @@
 .overlay{position:fixed;inset:0;background:var(--bg);z-index:100;display:none}.overlay.open{display:flex;flex-direction:column}.ovh{height:58px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--line);background:#0b1018}.ovbody{flex:1;overflow:auto;padding:20px;max-width:1200px;width:100%;margin:auto}.report-paper{padding:12px 0;border-bottom:1px solid var(--line)}
 .reader{position:fixed;inset:0;background:var(--bg);z-index:120;display:none;grid-template-columns:minmax(0,1.08fr) minmax(480px,.92fr)}.reader.open{display:grid}.reading{min-width:0;border-right:1px solid var(--line);display:flex;flex-direction:column}.rh{min-height:66px;padding:9px 12px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}.viewer{flex:1;min-height:0;background:#20242a}.viewer iframe{width:100%;height:100%;border:0;background:white}.fallback{height:100%;overflow:auto;padding:28px;line-height:1.7;background:#fff;color:#111}.sheet{min-width:0;overflow:auto;padding:14px 18px}.sheet h2{font-size:1.05rem;margin:18px 0 10px;border-bottom:1px solid var(--line);padding-bottom:7px}.sheet h2:first-child{margin-top:0}.form{margin-bottom:10px}.form label{display:block;color:var(--mut);font-size:.72rem;margin-bottom:4px}.form input,.form textarea,.form select{width:100%}.form textarea{min-height:82px;resize:vertical}.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.autosave{position:sticky;bottom:0;background:#122017;padding:9px;border:1px solid #238636;border-radius:8px;color:#7ee787;font-size:.78rem;margin-top:12px}.actions{display:flex;gap:6px;flex-wrap:wrap}.textcheck{padding:7px 9px;border-radius:7px;font-size:.76rem}.textcheck.ok{background:#122017;color:#7ee787;border:1px solid #238636}.textcheck.no{background:#2b2111;color:#e3b341;border:1px solid #9e6a03}.quote-entry{display:grid;grid-template-columns:145px 78px 1fr 42px;gap:7px;align-items:end;margin-bottom:8px}.quote-entry textarea{min-height:72px}.plus{font-weight:900;font-size:1.15rem;padding:10px 0}.quotes{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.quote-card{display:grid;grid-template-columns:120px 55px 1fr 34px;gap:8px;padding:9px;background:#111820;border:1px solid var(--line);border-radius:8px;align-items:start}.qtag{color:#79c0ff;font-weight:700}.qpage{color:#e3b341}.qtext{white-space:pre-wrap;line-height:1.5}.qdel{padding:2px 6px;border:0;background:transparent;color:#f85149}.taghint{font-size:.72rem;color:var(--mut);margin:-5px 0 8px}.tagchips{display:flex;gap:5px;flex-wrap:wrap;margin-top:-4px;margin-bottom:8px}.tagchip{font-size:.68rem;color:#79c0ff;border:1px solid #1f6feb;border-radius:999px;padding:2px 6px;background:#0d1b2a}@media(max-width:900px){.library{grid-template-columns:1fr;height:auto}.pane{height:60vh}.reader.open{grid-template-columns:1fr}.reading{height:52vh}.sheet{height:48vh}.quote-entry{grid-template-columns:100px 65px 1fr 38px}}
 @media print{body>*{display:none!important}.reader.open{display:block!important;position:static}.reading{display:none}.sheet{display:block!important;overflow:visible}.autosave,.actions,.rh,.plus,.qdel{display:none!important}}
-</style></head><body>
+</style>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@7/dist/tesseract.min.js"></script>
+</head><body>
 <header><div class="top"><div><div class="brand">Biblioteca de investigación</div><div class="sub">SCRAPEADORACADEMICO · buscar · revisar · leer · fichar</div></div><div class="actions"><a href="index.html">Dashboard</a><button onclick="exportAll()">Exportar archivo maestro</button></div></div><div class="tools"><input id="q" placeholder="Buscar título, autor, resumen, palabras clave o DOI..." autofocus><select id="year"><option value="">Todos los años</option></select><select id="state"><option value="">Todos los estados</option><option>Pendiente</option><option>Por leer</option><option>Leyendo</option><option>Leído</option><option>Fichado</option><option>Usado</option></select></div></header>
 <main class="library"><section class="pane"><div class="ph"><b>Artículos scrapeados</b><span class="meta" id="count"></span></div><div class="list" id="articles"></div></section><section class="pane"><div class="ph"><b>Revisiones e informes</b><span class="meta">clic para pantalla completa</span></div><div class="list" id="reports"></div></section></main>
 <div class="overlay" id="reportOverlay"><div class="ovh"><div><b id="rt"></b><div class="meta" id="rm"></div></div><button onclick="closeReport()">Cerrar</button></div><div class="ovbody" id="rb"></div></div>
-<div class="reader" id="reader"><section class="reading"><div class="rh"><div><b id="readTitle"></b><div class="meta" id="readMeta"></div><div id="textCheck"></div></div><div class="actions"><button onclick="externalOpen()">Abrir original</button><button onclick="closeReader()">Volver</button></div></div><div class="viewer" id="viewer"></div></section><section class="sheet" id="sheet"></section></div>
+<div class="reader" id="reader"><section class="reading"><div class="rh"><div><b id="readTitle"></b><div class="meta" id="readMeta"></div><div id="textCheck"></div></div><div class="actions"><button id="ocrBtn" onclick="reviewOCR()">Revisar / generar OCR</button><button onclick="externalOpen()">Abrir original</button><button onclick="closeReader()">Volver</button></div></div><div class="viewer" id="viewer"></div></section><section class="sheet" id="sheet"></section></div>
 <script>
 let A=[],R=[],F={},selected=null;const KEY='scrapeador_fichas_maestro_v3',$=x=>document.getElementById(x);function norm(v){return(v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}function esc(v){return(v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}function attr(v){return esc(v).replace(/"/g,'&quot;')}function id(a){return a.record_id||a.doi||norm(a.title)}
 async function loadMaster(){try{F=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){F={}};try{let root=await navigator.storage.getDirectory(),h=await root.getFileHandle('fichas_lectura.json');let file=await h.getFile(),txt=await file.text();if(txt.trim()){let disk=JSON.parse(txt);F={...disk,...F}}}catch(e){}localStorage.setItem(KEY,JSON.stringify(F))}
@@ -32,4 +35,152 @@ function refreshTags(){if(!selected||!$('inlineTags'))return;let tags=collectInl
 let timer;function autosave(){if(!selected)return;let f={...(F[id(selected)]||{})};$('sheet').querySelectorAll('[data-k]').forEach(e=>f[e.dataset.k]=e.value);f.inline_tags=collectInlineTags();f.updated_at=new Date().toISOString();F[id(selected)]=f;let x=$('autosave');if(x){x.textContent='Guardando…';clearTimeout(timer);timer=setTimeout(async()=>{await saveMaster();x.textContent='✓ Guardado automáticamente · fichas acumuladas: '+Object.keys(F).length},300)}filter()}
 function closeReader(){autosave();$('reader').classList.remove('open');selected=null}function externalOpen(){if(selected&&(selected.drive_file_id||selected.pdf_url||selected.url)){let u=selected.drive_file_id?`https://drive.google.com/file/d/${selected.drive_file_id}/view`:selected.pdf_url||selected.url;window.open(u,'_blank')}}
 function exportAll(){let blob=new Blob([JSON.stringify(F,null,2)],{type:'application/json'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='fichas_lectura.json';a.click();URL.revokeObjectURL(u)}$('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init();
-</script></body></html>
+</script>
+<script>
+(function(){
+  if (window.__libraryOCRInstalled) return;
+  window.__libraryOCRInstalled = true;
+  if (window.pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+  }
+
+  const OCR_LANGS = {
+    spa: {label:'Español', words:[' el ',' la ',' los ',' las ',' de ',' que ',' para ',' una ',' dirección ',' escuela ',' educación ',' escolar ',' desigualdad ',' docente ']},
+    eng: {label:'Inglés', words:[' the ',' of ',' and ',' to ',' in ',' school ',' education ',' leadership ',' teachers ',' students ',' policy ']},
+    por: {label:'Portugués', words:[' de ',' que ',' para ',' uma ',' escola ',' educação ',' gestão ',' professores ',' alunos ',' ensino ']}
+  };
+
+  function inferOCRLanguage(a){
+    const raw = (' ' + ((a&&a.title)||'') + ' ' + ((a&&a.abstract)||'') + ' ' + ((a&&a.keywords)||'') + ' ').toLowerCase();
+    const scores = {};
+    for (const [code,info] of Object.entries(OCR_LANGS)) {
+      scores[code] = info.words.reduce((n,w)=>n + (raw.split(w).length-1),0);
+    }
+    // Acentos distintivos como apoyo cuando hay pocos metadatos.
+    scores.spa += (raw.match(/[ñ¿¡]/g)||[]).length * 2;
+    scores.por += (raw.match(/[ãõç]/g)||[]).length * 2;
+    scores.eng += (raw.match(/\b(the|with|from|between|through)\b/g)||[]).length;
+    let code = Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0];
+    if (Math.max(...Object.values(scores)) === 0) code = 'spa';
+    return {code, label:OCR_LANGS[code].label, scores};
+  }
+
+  function setOCRStatus(msg, cls=''){
+    const box = document.getElementById('textCheck');
+    if (!box) return;
+    box.innerHTML = '<div class="textcheck '+cls+'">'+msg+'</div>';
+  }
+
+  function showOCRText(text, langLabel){
+    const viewer = document.getElementById('viewer');
+    if (!viewer) return;
+    viewer.innerHTML = '<div class="fallback" style="white-space:pre-wrap;font-family:Georgia,serif;line-height:1.55"><div style="position:sticky;top:0;background:white;padding:6px 0 10px;font-family:Segoe UI,Arial,sans-serif;font-size:12px;color:#555"><b>Texto OCR · '+langLabel+'</b> · seleccionable y copiable · los separadores indican la página</div>'+escapeOCR(text)+'</div>';
+  }
+
+  function escapeOCR(v){
+    return (v||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+  }
+
+  async function getPdfSource(a){
+    if (!a) throw new Error('No hay artículo seleccionado.');
+    const src = a.pdf_url || a.url;
+    if (!src) throw new Error('Este registro no tiene URL de PDF disponible.');
+    return src;
+  }
+
+  async function inspectNativeText(pdf, maxPages=3){
+    let chars=0, pages=0;
+    for (let n=1;n<=Math.min(pdf.numPages,maxPages);n++){
+      const page=await pdf.getPage(n);
+      const tc=await page.getTextContent();
+      const txt=(tc.items||[]).map(i=>i.str||'').join(' ').trim();
+      chars += txt.length; pages++;
+    }
+    return {chars,pages,avg:pages?chars/pages:0,hasText:pages ? chars/pages >= 120 : false};
+  }
+
+  async function extractNativeText(pdf){
+    const chunks=[];
+    for(let n=1;n<=pdf.numPages;n++){
+      setOCRStatus('Extrayendo texto existente · página '+n+' de '+pdf.numPages+'…','ok');
+      const page=await pdf.getPage(n);
+      const tc=await page.getTextContent();
+      const txt=(tc.items||[]).map(i=>i.str||'').join(' ').trim();
+      chunks.push('\\n\\n===== PÁGINA '+n+' =====\\n\\n'+txt);
+    }
+    return chunks.join('');
+  }
+
+  async function runOCR(pdf, lang){
+    const chunks=[];
+    const worker = await Tesseract.createWorker(lang, 1, {
+      logger: m => {
+        if (m && m.status === 'recognizing text' && typeof m.progress === 'number') {
+          const pct=Math.round(m.progress*100);
+          setOCRStatus('OCR '+OCR_LANGS[lang].label+' · '+pct+'% de la página actual…','');
+        }
+      }
+    });
+    try {
+      for(let n=1;n<=pdf.numPages;n++){
+        setOCRStatus('OCR '+OCR_LANGS[lang].label+' · página '+n+' de '+pdf.numPages+'…','');
+        const page=await pdf.getPage(n);
+        const viewport=page.getViewport({scale:1.65});
+        const canvas=document.createElement('canvas');
+        const ctx=canvas.getContext('2d',{willReadFrequently:true});
+        canvas.width=Math.ceil(viewport.width); canvas.height=Math.ceil(viewport.height);
+        await page.render({canvasContext:ctx,viewport}).promise;
+        const ret=await worker.recognize(canvas);
+        const txt=((ret&&ret.data&&ret.data.text)||'').trim();
+        chunks.push('\\n\\n===== PÁGINA '+n+' =====\\n\\n'+txt);
+        canvas.width=1; canvas.height=1;
+      }
+    } finally {
+      await worker.terminate();
+    }
+    return chunks.join('');
+  }
+
+  window.reviewOCR = async function(){
+    if (!window.selected) {
+      setOCRStatus('No hay artículo seleccionado.','no'); return;
+    }
+    const btn=document.getElementById('ocrBtn');
+    if(btn){btn.disabled=true;btn.textContent='Revisando OCR…';}
+    try{
+      if(!window.pdfjsLib || !window.Tesseract) throw new Error('No se pudieron cargar los componentes OCR. Recargá la página.');
+      const src=await getPdfSource(window.selected);
+      const inferred=inferOCRLanguage(window.selected);
+      setOCRStatus('Idioma probable: '+inferred.label+' · verificando capa de texto…','');
+      const pdf=await pdfjsLib.getDocument({url:src,withCredentials:false}).promise;
+      const native=await inspectNativeText(pdf);
+      let text, mode;
+      if(native.hasText){
+        text=await extractNativeText(pdf);
+        mode='texto nativo';
+        setOCRStatus('✓ Texto copiable detectado · OCR innecesario · idioma probable: '+inferred.label,'ok');
+      }else{
+        setOCRStatus('Sin texto suficiente · iniciando OCR en '+inferred.label+'…','no');
+        text=await runOCR(pdf,inferred.code);
+        mode='ocr';
+        setOCRStatus('✓ OCR generado · '+inferred.label+' · '+pdf.numPages+' páginas','ok');
+      }
+      const fid=(window.id && id(window.selected)) || window.selected.record_id || window.selected.doi || window.selected.title;
+      window.F = window.F || {};
+      const f={...(F[fid]||{})};
+      f.ocr_text=text; f.ocr_language=inferred.code; f.ocr_language_label=inferred.label; f.ocr_mode=mode; f.ocr_pages=pdf.numPages; f.ocr_updated_at=new Date().toISOString();
+      F[fid]=f;
+      if(typeof saveMaster==='function') await saveMaster();
+      showOCRText(text,inferred.label);
+    }catch(err){
+      console.error(err);
+      const msg=(err&&err.message)||String(err);
+      setOCRStatus('⚠ No se pudo revisar OCR dentro de la página: '+msg+' Puede deberse a restricciones de acceso/CORS del PDF.','no');
+    }finally{
+      if(btn){btn.disabled=false;btn.textContent='Revisar / generar OCR';}
+    }
+  };
+})();
+</script>
+
+</body></html>
