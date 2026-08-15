@@ -1,0 +1,593 @@
+IAES International Journal of Artificial Intelligence (IJ-AI)
+Vol. 13, No. 4, December 2024, pp. 3942~3950
+ISSN: 2252-8938, DOI: 10.11591/ijai.v13.i4.pp3942-3950                                                                         3942
+
+     Navigating the tech-savvy generation; key considerations in
+         developing of an artificial intelligence curriculum
+
+           Munasprianto Ramli1,2, Maifalinda Fatra1,2, Muhamad Murtadlo3, Hasan Albana3,
+                              Baiq Hana Susanti1,2, Saifullah Aldeia3
+                         1
+                           Artificial Intelligence Centre Indonesia, University of Indonesia, Depok, Indonesia
+       2
+        Faculty of Tarbiya and Teachers’ Sciences, Syarif Hidayatullah State Islamic University, Tangerang Selatan, Indonesia
+       3
+         Research Center for Education, Institute of Social Science and Humanities, National Research and Innovation Agency,
+                                                             Jakarta Indonesia
+
+
+
+
+ Article Info                                 ABSTRACT
+ Article history:                             The progress in artificial intelligence (AI) technology has greatly changed
+                                              various facets of society. This study aimed to explore aspects that need to be
+ Received Jan 8, 2024                         considered in developing AI curriculum for senior high schools in Indonesia.
+ Revised Apr 23 2024                          The qualitative approach employed in this study. The researchers utilized
+ Accepted Jun 1, 2024                         focus group discussions with schools’ management and students at seven
+                                              cities and group interviews with students at three cities. The results show that
+                                              some schools want AI as an extracurricular activity, while others want it as a
+ Keywords:                                    mandatory subject. School management and teachers aim for 2-3 competent
+                                              AI instructors in each school. If no teachers are available, training will be
+ Artificial intelligence                      provided to ICT, mathematics, or physics teachers for about a year to become
+ Applications                                 AI educators. All participants agree on the importance of teaching students
+ Competencies                                 about AI applications and discussing ethical issues related to AI.
+ Curriculum development
+ Ethics                                                            This is an open access article under the CC BY-SA license.
+
+
+
+
+ Corresponding Author:
+ Munasprianto Ramli
+ Artificial Intellligence Centre Indonesia, University of Indonesia
+ Multidisciplinary Research Lab Building FMIPA UI 4th Floor, Pondok Cina, Depok, Jawa Barat, Indonesia
+ Email: munasprianto.ramli@uinjkt.ac.id
+
+
+
+1.    INTRODUCTION
+          The advancement of artificial intelligence (AI) technology has significantly transformed numerous
+aspects of society. AI is now being utilized across various aspects of human life. AI's impact is evident in fields
+such as education, where it facilitates personalized learning experiences through adaptive learning platforms and
+virtual tutors. Gamification in education, powered by AI algorithms, not only enhances student engagement but
+also fosters critical thinking and problem-solving skills [1], [2]. In healthcare, AI-driven tools are revolutionizing
+patient care. The application and tools of AI is used to identify and prevent various diseases [3]‒[5]. AI is also
+at the forefront of environmental conservation efforts. AI enhances and broadens our existing knowledge of
+climate change, playing a significant role in addressing the climate crisis effectively [6]‒[8]. Moreover,
+AI-powered chatbots and virtual assistants have streamlined customer service in various industries, boosting
+productivity and enhancing customer engagement by improving communication between customers and customer
+service support, aligning with the core principles of digital transformation such as value creation, automation,
+interaction, transparency and control, improving efficiency, and enhancing user experiences [9]‒[11].
+          In this rapidly changing landscape, cultivating AI literacy among younger generations is essential. It
+equips them with the skills needed to harness AI's potential, ensuring a technologically adept workforce capable
+of addressing the complex challenges of our time while driving innovation and progress. For that, to assist
+
+
+
+Journal homepage: http://ijai.iaescore.com
+
+Int J Artif Intell                             ISSN: 2252-8938                                              3943
+
+learners in adapting to technological advancements, particularly in the development of AI, a curriculum for
+senior high schools is deemed necessary [12]‒[14].
+         The development of AI curriculum for senior high schools plays a crucial role in providing a
+foundation for education that is relevant to the rapidly evolving technological era [12]. AI learning will offer
+new opportunities for personalized and adaptive learning experiences. AI education that keeps pace with
+technological advancements can undoubtedly assist students in developing skills that are pertinent to an
+increasingly interconnected and complex world [1], [15], [16].
+         Moreover, the development of AI curriculum also addresses the changing demands of the workforce.
+The current job market increasingly requires high-tech skills, and understanding AI becomes a significant
+added value. Through a well-designed AI curriculum, senior high schools can prepare students to enter a
+workforce driven by innovation and technology, giving them a competitive edge in the global job market [17].
+         While paragraphs above delineate the pervasive influence of AI across various sectors such as
+education, healthcare, and environmental conservation, it highlights the imperative of cultivating AI literacy
+among younger generations. Despite acknowledging the necessity of AI education, there remains a noticeable
+gap in the existing literature regarding the development and implementation of AI curriculum in high schools,
+particularly in the Indonesian context. While previous studies have explored the impact of AI on education and
+workforce demands, there is a dearth of research focusing specifically on the formulation of tailored AI
+curricula for senior high schools. Therefore, the researcher is conducting a study on the development of an AI
+curriculum for senior high schools in Indonesia to address these gaps.
+         This article is divided into three sections excluding introduction. In the method section, the researchers
+provide an overview of the research methods employed, detailing the participants involved, data collection
+methods, and data analysis procedures. In the results and discussion section, the researcher presents findings
+obtained from interviews and focus group discussions, elaborating on them with reference to previous research.
+In the conclusion section, the researcher summarizes the results and discussions and discusses how this research
+contributes and provides recommendations for future research.
+
+
+2.    METHOD
+           This study employs qualitative research methods, utilizing focus group discussions with school
+management and teachers, as well as students, to gather data. The researchers decided to employ qualitative
+research to explore participants ideas, opinion and beliefs ascribe to a social human problem [18]. The focus
+group discussions involve school principals, vice principals, IT teachers, science teachers, and non-science
+teachers, lasting approximately three hours with 10 to 12 participants. These discussions take place in 12 high
+schools across seven cities: Palembang, Depok, Bogor, Denpasar, Jembrana, Samarinda, and Yogyakarta.
+Researchers chose schools in thses citoes because many of them are already digital-friendly and have
+implemented technology in their teaching methods. Additionally, focus group discussions with 10 students are
+conducted for one hour each, spanning across eight schools in Palembang, Depok, Bogor, and Samarinda.
+Furthermore, group interviews with four students are conducted for about an hour in four schools located in
+Denpasar, Jembrana, and Yogyakarta. The students involved in the focus group discussions and group
+interviews were purposively selected, with one consideration being their prior use of AI technologies such as
+ChatGPT in their daily lives. These discussions and interviews aim to provide in-depth insights regarding the
+development of the AI curriculum and its associated aspects. It's important to note that this research represents
+the first year of a planned three-year study.
+           To enhance the quality of qualitative research and mitigate potential biases, researchers must consider
+triangulation. In qualitative research, triangulation refers to an approach that utilizes multiple sources of data,
+methods, or theories to evaluate, validate, or refine research findings. Several types of triangulation can be
+applied, including data triangulation, method triangulation, theory triangulation, and researcher triangulation
+[19], [20]. In this study, the researcher implemented data triangulation and researcher triangulation. Data
+triangulation was ensured by collecting data using more than one data collection method, namely through focus
+group discussions and interviews. Source data triangulation was ensured through interviews and focus group
+discussions with three community groups: students, teachers, and school management. Meanwhile, researcher
+triangulation was conducted by having one transcript analyzed by more than one person, followed by a focus
+group discussion among different researchers for analysis. This activity served as a form of moderation to
+ensure the evaluation team was thorough in providing final assessments.
+           In qualitative data analysis, various methods such as discourse analysis, narrative analysis, and
+thematic analysis can be employed. This study specifically utilizes the thematic analysis approach, as defined
+by Boyatzis [21] which involves encoding qualitative information. He describes thematic analysis as a method
+that enables researchers to perceive, interpret, and systematically observe qualitative information, transforming
+it into qualitative data for analysis purpose research chronological, including research design and research
+procedure [21]. The researchers utilized Boyatzis' thematic analysis method in analysing data gathered by
+           Navigating the tech-savvy generation; key considerations in developing of … (Munasprianto Ramli)
+
+3944                                                                                            ISSN: 2252-8938
+
+implementing three distinct stages in the process: addressing sampling and design considerations, creating
+themes and a coding system, and validating and applying the generated code.
+
+
+3.   RESULTS AND DISCUSSION
+         In this section, the researchers is discussing the results of this study. This study explored stakeholders’
+perspectives on AI curriculum development for senior high schools in Indonesia. Five broad themes emerged
+from the thematic analysis that has been conducted. The five themes are the curriculum implementation models,
+teacghers competences, content of AI curriculum, teaching strategies and assessments, and ethical issues on AI.
+
+3.1. Curriculum implementation model
+          Based on the focus group discussions with teachers and school management we found that there are
+three possible models for implementing AI curriculum. The first model involves making AI a compulsory
+subject for high school students. According to teachers and school management supporting this model, the need
+for AI is unavoidable, and therefore, AI should be a mandatory subject in high schools. This is similar to the
+approach taken in the mid-2000s when the government made information and communication technology
+(ICT) a compulsory subject starting from junior high school. The following are quotess reflecting the
+viewpoints of teachers and school managements who support this model.
+
+         In my opinion AI education has become a necessity. Therefore, the subject of AI should rightfully exist
+         and become a mandatory part of the curriculum for all students. This way, our students will have a
+         good understanding of AI literacy, comprehend AI ethics, and be capable of producing AI products
+         rather than just being users. (Head Teacher: Depok)
+
+         AI should already be a compulsory subject for all students. In the past, when computer technology
+         was advancing rapidly, ICT was introduced as a subject. Now, it's time for AI to be designated as a
+         subject. (Teacher: Denpasar)
+
+          The second model chosen by teachers and school management is to make AI a compulsory subject
+for class X and offer it as an elective subject for classes XI and XII. The main AI materials can be included in
+the ICT curriculum for class X, and it is mandatory for all students. However, in classes XI and XII, AI lessons
+can be offered as an elective subject for interested students. This model is selected considering two factors.
+First, the knowledge related to AI is deemed essential for students, especially in the context of using AI in
+everyday life, AI literacy, and ethics related to AI. Besides being AI users, students are also expected to develop
+competencies to work on AI. However, given that AI development is not an easy and rather complex task, not
+all students may be capable of developing AI. Therefore, AI development is offered as an elective subject only
+for students in classes XI and XII. Second, the implemented Merdeka curriculum two years ago allows schools
+to offer elective subjects, making AI implementation as an elective subject feasible. Included the following are
+quotes from teachers and school administrators who are in favor of this approach.
+
+         In my ICT subject, there is indeed material on AI development in class XI, specifically covered in
+         Chapter V of the informatics section. It focuses on developing mobile applications with AI libraries.
+         However, this coverage is still quite limited. It is possible that there is no dedicated AI subject, so AI
+         content can be incorporated into the ICT subject in class X. However, for more advanced content, it
+         can be introduced as an elective subject in classes XI and XII. (Teacher: Denpasar)
+
+         In my opinion, AI can be designated as both a compulsory and an elective subject. For class X, AI
+         can be made a compulsory subject covering basic AI concepts. However, for those interested in
+         creating AI, it is a challenging task and, therefore, this is only for those with a specific interest.
+         (Head Teacher: Yogyakarta)
+
+         The third model involves making AI an extracurricular activity. Teachers and school management
+who agree with this model express that there are already numerous subjects in schools, and introducing AI as
+a new mandatory subject is not the right choice as it would add to the students' workload. According to them,
+the best option is to keep AI limited to extracurricular activities, catering to students who have an interest in
+AI. Knowledge related to AI that students must possess can be incorporated into one or two chapters of the
+ICT subject, minimizing the burden on students. Additionally, schools will not face the challenge of providing
+a permanent AI teacher; if AI is an extracurricular activity, schools can seek freelance or part-time AI teachers.
+Here is a quote from teachers and school management supporting the third model:
+
+Int J Artif Intell, Vol. 13, No. 4, December 2024: 3942-3950
+
+Int J Artif Intell                             ISSN: 2252-8938                                               3945
+
+          Currently, the curriculum is already very dense and can impose a heavy burden on students. Students
+          have the ability to learn independently, especially with the current technological advancements.
+          Children are accustomed to using technology, such as smartphones, and many of them spend time
+          playing online games. Some even participate in e-sports and achieve notable accomplishments.
+          Therefore, activities related to AI can be integrated as extracurricular activities for students who have
+          an interest and talent in that field. (Teacher: Samarinda)
+
+          If there is an AI curriculum to be introduced in a madrasah or school, we are very supportive.
+          However, communication with relevant parties regarding the curriculum development is necessary.
+          This is to ensure that the burden on students is not too heavy, allowing them to enhance specific skills
+          in certain subjects rather than having only superficial knowledge about many things, so it should be
+          considered as an extracurricular activity. (Head Teacher: Jembrana)
+
+          From the teacher's perspective, students already bear a considerable learning load in the classroom. If
+AI education is to be internalized into the curriculum, one option is to utilize extracurricular activities outside
+the classroom. Extracurricular activities in schools are learning activities conducted outside the regular
+classroom hours. The implementation of extracurricular learning activities aims to accommodate students'
+talents and interests that may not be fully addressed in the regular classroom learning process. It can be
+interpreted that these activities are optional for students based on their individual talents and interests.
+          Implementing AI education through extracurricular activities not only accommodates students' talents
+and interests but also enhances their engagement in the learning process. This results correlates with previous
+research findings indicating that students' involvement in extracurricular AI learning can improve understanding,
+ethical awareness, and the social implications of AI usage [22]. In addition, this results agree with the findings
+of other studies, in which placing AI education as an extracurricular activity also has implications for enhancing
+students' interpersonal skills, such as leadership and collaboration abilities [23], [24].
+
+3.2. Teachers’ competencies
+          AI learning in schools requires teachers who are competent in the field of AI. Teachers who
+understand AI, such as ICT teachers, are needed. Teachers with backgrounds in science, mathematics, or other
+subjects who have an understanding of AI can be considered as AI learning teachers. The main thing to note is
+the competence that these teachers must possess. Based on the focus group discussions conducted, it is evident
+that teachers who teach AI must have several key competencies. First, teachers who will teach AI must master
+basic AI knowledge, such as machine learning, internet of things, neural networks, and AI algorithms. Second,
+teachers must have the ability to teach gow to develop AI products. Third, teachers must understand the concept
+of ethics in AI and teach it to students. Finally, teachers must be willing to adapt to technology and continue
+learning about AI developments. This is evident from the following quotes:
+
+          At present, almost all schools do not have teachers with an informatics background because graduates
+          in informatics often choose not to become teachers due to their non-educational background and the
+          allure of higher salaries in IT companies. As a result, science and mathematics teachers with IT skills
+          are often designated as ICT teachers. Of course, they can become AI teachers if they possess
+          knowledge about AI and robotics. (Head Teacher: Samarinda)
+
+          In my opinion, younger teachers are closely acquainted with the internet and AI. They understand
+          ICT and AI even if they do not have an informatics background. Therefore, they can become AI
+          teachers if they have competencies in areas such as AI usage, AI development, AI ethics, and other
+          AI-related aspects. They certainly already have personal, social, and pedagogical competencies
+          because they are teachers (Teacher: Palembang)
+
+         Considering the absence of specific AI teachers in schools, if AI is to be incorporated into the
+curriculum, either as an intracurricular or extracurricular activity, it is essential to conduct training to prepare
+prospective AI teachers. Teachers need to be equipped with the competencies mentioned above as part of their
+professional skills while maintaining their personal, social, and professional competencies. Providing effective
+training will yield prospective AI teachers with comprehensive AI knowledge, the necessary skills, and a
+readiness to face the ongoing challenges of evolving technology. This is reflected in the following quotes:
+
+          Before teachers start teaching AI, they need to undergo sufficient training. They should be equipped
+          with knowledge related to AI, understanding IoT, machine learning, coding, and programming. So,
+          even if they don't have a background in informatics, with a strong willingness to learn AI and receiving
+          adequate training, teachers can teach AI. (Teacher: Bogor)
+
+           Navigating the tech-savvy generation; key considerations in developing of … (Munasprianto Ramli)
+
+3946                                                                                              ISSN: 2252-8938
+
+         The junior teachers appointed to teach AI must undergo sufficient training, similar to when the
+         government conducted training for prospective ICT teachers 10 or 15 years ago. Prospective AI
+         teachers should participate in structured training with content lasting approximately 6-12 months.
+         During the training, prospective AI teachers are relieved of their regular duties, allowing them to
+         focus on learning AI. (Teacher Yigyakarta)
+
+          As can be seen from the excerpts above, the improvement of teacher competence through training
+activities or workshops is one way to support the effective and efficient implementation of AI learning
+processes. This aligns with students' needs to master various 21st-century skills such as critical thinking,
+problem-solving, and collaboration. Professional development for teachers is necessary to assist them in
+learning and refining the pedagogy required to teach AI topics, simultaneously enhancing the aforementioned
+skills [15]. This is in accord with recent studies indicating that effective teacher competence development has
+several characteristics, including a focus on teachers' needs, alignment with technological advancements, clear
+training instructions, active teacher engagement, provision of adequate time and resources, ongoing support,
+collaboration, and addressing local needs [25], [26].
+
+3.3. Content of artificial intelligence curriculum
+          In the learning process, AI can be viewed both as content and as a supportive tool. In practice, AI-
+related materials have been taught in the 11th-grade ICT subject. However, it only constitutes one chapter,
+providing a general overview of AI. The ICT subject itself, within the independent curriculum, holds an elective
+status, making it optional for students who wish to delve into informatics. As mentioned in the first point, the
+ICT subject can be considered an option to be developed for AI learning. This means that the learning content
+in the ICT subject can be focused on topics related to AI. In addition to emphasizing AI knowledge and skills,
+the AI learning process should also consider the development of students' characters, including creativity,
+critical thinking, responsibility, interaction with peers, and independence. The internalization of these
+characters can be achieved through both within and outside AI learning activities. This can be seen in the
+following quote:
+
+         The materials needed to support AI lessons include mechanics, modern physics, data science, coding,
+         and programming. (Teacher-Samarinda)
+
+         There are many contents that must be used as materials in the teaching content, such as AI in daily
+         life, AI ethics, programming languages, and machine learning. The curriculum can also help students
+         design and create AI products, not just plug and play. (Teacher: Palembang)
+
+         Teachers should teach us about the use of AI in education and also explain the positive and negative
+         impacts of AI. (Student: Jembrana)
+
+         If there is an AI curriculum, in my opinion there should be the use of AI, its benefits, and impacts. We
+         should also be taught coding, programming, and creating simple AI products. (Student: Yogyakarta)
+
+          From the quotes above, it can be seen that teachers and students share a similar perspective on the
+content that needs to be included in the curriculum. This seems to be consistent with other research which
+found hat in AI learning projects, students are provided with knowledge about coding or robotics in high school
+[27], [28]. In accordance with this, previous study explains the AI learning framework, which is divided into
+several level. There are four levels of AI materials: social, ethical considerations (SE level). This level is related
+to understanding machine learning and AI; applications (A level). This level is related to understanding systems
+that include AI and the ability to create applications using machine learning systems models (M). This level is
+related to the ability to explore machine learning created by someone, understanding the process of selecting
+and removing data to train simple machine learning engines (E level). This level is related to the ability to
+explain how decision trees can be used to classify items [29].
+
+3.4. Teaching strategies and asssesments
+         The learning process that can be implemented for AI education involves providing basic concepts
+about AI followed by hands-on practice. Emphasis on AI materials is more focused on developing critical
+thinking and digital skills. Teachers can utilize several learning strategies such as problem-based learning
+(PBL), project-based learning (PjBL), and science, technology, engineering, and math (STEM)-based
+product-oriented learning approaches.
+
+
+Int J Artif Intell, Vol. 13, No. 4, December 2024: 3942-3950
+
+Int J Artif Intell                             ISSN: 2252-8938                                               3947
+
+          AI is similar to the ICT teaching I conduct; it should be approached using various methods such as
+          problem-solving and project-based learning. (Teacher: Denpasar)
+
+          In my opinion, it is more suitable for practice, the STEM approach, children constructing knowledge,
+          collaboratively engineering solutions, incorporating mathematics, logical reasoning, and utilizing the
+          latest technological advancements; STEM is more appropriate. (Teacher: Palembang)
+
+          AI learning should be taught more through practice and hands-on activities; there's no need for
+          extensive theory. Therefore, group work and product creation can be utilized as learning strategies.
+          (Student: Jembrana)
+
+          Maybe similar to ICT, in the beginning, the teacher explains the theory, but then there is more
+          practical application. So, AI lessons involve more practice and collaborative projects. (Student:
+          Depok)
+
+         As can be seen from quotes above, project-based learning should be considered as one option for
+delivering materials on AI. Several studies on the use of project-based learning in AI education have shown
+positive outcomes. A previous study indicated that project-based learning can enhance students' understanding
+of two of the most popular algorithms in AI [30]. Project-based learning, supported by the use of the Scratch
+programming language, was implemented in this research. In conformity tith this another research were also
+demonstrated that group-based project-based learning can provide in-depth understanding to learners regarding
+AI and its practical applications in daily life [31].
+         In the assessment aspect, teachers should implement authentic assessments according to students'
+needs and the goals of AI learning. Teachers can implement various assessment models, such as pre-post tests,
+paper-based exams, performance assessments, poster assessments, presentation assessments, and others. This
+assessment approach is designed to reflect students' deep understanding of AI material while simultaneously
+measuring practical abilities and skills required in the context of AI. In my opinion, learning.
+
+          AI is a new knowledge for students, so it is necessary to assess students' knowledge. Therefore, there
+          should be pre-tests and post-tests to measure learning progress (Teacher: Palembang)
+
+          AI learning is best approached through direct practice, allowing skill aspects to be assessed using a
+          scoring rubric. Meanwhile, observation instruments are employed to evaluate aspects of attitudes
+          developed during AI learning. (Teacher: Bogor)
+
+          Tecaher may used different type of assement. We may be assessed through exam if we learn theory.
+          However, if working on a project, the assessment might include performance, presentations, and the
+          results of the project undertaken. (Student: Yogyakarta)
+
+         From various opinions expressed by teachers and students, asessment models that can be used in AI
+learning include process evaluation and result evaluation. Process evaluation and result evaluation are used to
+measure students' abilities in cognitive, affective, and skill aspects. Through the displayed works, teachers can
+observe whether students have successfully completed group activities and their ability to solve problems [32].
+
+3.5. Ethical issues on artificial intellgence
+         The need for AI learning in high schools is inevitable. However, the integration of AI into daily life
+has raised concerns about the emergence of negative impacts. AI, as a tool and technology, is believed to have
+both positive and negative effects. Therefore, the AI curriculum must cover aspects related to AI ethics,
+addressing both the positive and potentially negative impacts of AI. Here are quotes from teachers and students
+regarding AI ethics in the learning.
+
+          The downside of AI is that children spend more time using technology, leading to a neglect of religious
+          practices and cultural traditions. Additionally, there is a risk of reduced job opportunities as many
+          jobs may be replaced by AI. If AI is to be taught in schools, it is essential to strengthen ethics and set
+          limits on the material provided to prevent students from going astray. (Head Teacher: Samarinda)
+
+          AI provides many conveniences in life. However, there are also drawbacks. What concerns us is the
+          negative impact of AI, such as its potential use for criminal activities, including cheating and
+          plagiarism when completing assignments. Therefore, AI ethics must be considered by teachers and
+          students and integrated into AI learning. (Teacher: Yogyakarta)
+
+
+           Navigating the tech-savvy generation; key considerations in developing of … (Munasprianto Ramli)
+
+3948                                                                                                                  ISSN: 2252-8938
+
+           The progress of AI has been widely utilized in education, such as using Chat GPT, creating
+           presentations with AI tools, and more. While this is beneficial in some aspects, it also has drawbacks.
+           The presence of AI can lead to a generation that becomes lazy, unwilling to think critically, and
+           resorting to plagiarism in their assignments, relying too much on AI. Therefore, there should be
+           education on the ethics of utilizing and developing AI to ensure responsible use. (Student: Yogyakarta)
+
+         The quotes above indicate a consensus among both teachers and students that AI, much like other
+technologies, possesses both advantageous and disadvantageous aspects. The disadvantage impacts of AI, such
+as creating a lazy generation, engaging in criminal activities, and developing irresponsible AI products, are
+concerns for both teachers and students. Therefore, the ethical aspect of AI must receive more attention and be
+incorporated into AI education and curriculum development. A curriculum developed with design principles
+encompassing active learning, integrated ethics, and easy access can assist students in becoming
+knowledgeable users and creators of AI [33], [34].
+
+
+4.    CONCLUSION
+          The research explored five key themes identified through thematic analysis, providing valuable
+perspectives on how to successfully incorporate AI into secondary education. Firstly, three proposed models
+for curriculum implementation are explored: making AI compulsory for all students, making it compulsory for
+class x and elective for classes XI and XII, and presenting AI as an extracurricular activity. Stakeholders
+advocating for each model express their views, emphasizing the necessity of AI education and the need to
+balance accessibility with the complexity of AI development. Secondly, the study underscores the importance
+of teacher competencies in AI education. Teachers, particularly those in ICT or with science and mathematics
+backgrounds, need to master basic AI knowledge, teach AI product development, understand AI ethics, and
+adapt to evolving technological landscapes. The study suggests comprehensive training programs to equip
+teachers with the required competencies. Thirdly, AI is positioned both as content and a supportive tool in the
+learning process. The current practice involves introducing AI-related materials in the 11th-grade ICT subject,
+with a call to consider ICT as a viable option for AI learning. The emphasis is not only on developing AI
+knowledge and skills but also on nurturing students' character traits, including creativity and critical thinking.
+Based on the results the researchers recommend further studies should be undertaken to investigate the
+long-term impacts of AI learning, exploring its effects on students' ethical awareness, critical thinking abilities,
+and practical skills. Investigating the societal implications of AI education is crucial, encompassing aspects
+such as its influence on students' career choices and their contributions to the ongoing development of AI
+technology. This comprehensive research agenda is essential for the continued advancement of AI education
+in high schools, fostering a deeper understanding of its multifaceted impacts and potential improvements.
+
+
+ACKNOWLEDGEMENTS
+        This research was funded by National Research and Innovation Agency, Indonesia (BRIN) according
+to BRIN Funding No 8/III.7/HK/2023 signed by Ahmad Najib Burhani, the head of Institute of Social Science
+and Humanities BRIN Indonesia. The researchers express their gratitude to BRIN for supporting this study.
+
+
+REFERENCES
+[1]    S. S. Babu and A. D. Moorthy, “Application of artificial intelligence in adaptation of gamification in education: a literature review,”
+       Computer Applications in Engineering Education, vol. 32, no. 1, Jan. 2024, doi: 10.1002/cae.22683.
+[2]    D. T. K. Ng, J. Su, and S. K. W. Chu, “Fostering secondary school students’ AI literacy through making AI-driven recycling bins,”
+       Education and Information Technologies, vol. 29, no. 8, pp. 9715–9746, Jun. 2024, doi: 10.1007/s10639-023-12183-9.
+[3]    M. Patel, M. Surti, and M. Adnan, “Artificial intelligence (AI) in Monkeypox infection prevention,” Journal of Biomolecular
+       Structure and Dynamics, vol. 41, no. 17, pp. 8629–8633, Nov. 2023, doi: 10.1080/07391102.2022.2134214.
+[4]    D. Newby et al., “Artificial intelligence for dementia prevention,” Alzheimer’s & Dementia, vol. 19, no. 12, pp. 5952–5969, Dec.
+       2023, doi: 10.1002/alz.13463.
+[5]    T. U. Zaman et al., “Artificial intelligence: the major role it played in the management of healthcare during COVID-19 pandemic,” IAES
+       International Journal of Artificial Intelligence (IJ-AI), vol. 12, no. 2, pp. 505–513, Jun. 2023, doi: 10.11591/ijai.v12.i2.pp505-513.
+[6]    E. K. Nti, S. J. Cobbina, E. E. Attafuah, E. Opoku, and M. A. Gyan, “Environmental sustainability technologies in biodiversity,
+       energy, transportation and water management using artificial intelligence: a systematic review,” Sustainable Futures, vol. 4, 2022,
+       doi: 10.1016/j.sftr.2022.100068.
+[7]    I. Nandutu, M. Atemkeng, and P. Okouma, “Integrating AI ethics in wildlife conservation AI systems in South Africa: a review,
+       challenges, and future research agenda,” AI & SOCIETY, vol. 38, no. 1, pp. 245–257, Feb. 2023, doi: 10.1007/s00146-021-01285-y.
+[8]    K. N. Shivaprakash et al., “Potential for artificial intelligence (AI) and machine learning (ML) applications in biodiversity
+       conservation, managing forests, and related services in India,” Sustainability, vol. 14, no. 12, Jun. 2022, doi: 10.3390/su14127154.
+[9]    Y. Xu, C. -H. Shieh, P. V. Esch, and I. -L. Ling, “AI customer service: task complexity, problem-solving ability, and usage
+       intention,” Australasian Marketing Journal, vol. 28, no. 4, pp. 189–199, Nov. 2020, doi: 10.1016/j.ausmj.2020.03.005.
+
+Int J Artif Intell, Vol. 13, No. 4, December 2024: 3942-3950
+
+Int J Artif Intell                                        ISSN: 2252-8938                                                             3949
+
+[10] M. Adam, M. Wessel, and A. Benlian, “AI-based chatbots in customer service and their effects on user compliance,” Electronic
+     Markets, vol. 31, no. 2, pp. 427–445, Jun. 2021, doi: 10.1007/s12525-020-00414-7.
+[11] L. Nicolescu and M. T. Tudorache, “Human-computer interaction in customer service: the experience with AI chatbots—a
+     systematic literature review,” Electronics, vol. 11, no. 10, May 2022, doi: 10.3390/electronics11101579.
+[12] F. Bellas, S. G. -Santalla, M. Naya, and R. J. Duro, “AI curriculum for European high schools: an embedded intelligence approach,”
+     International Journal of Artificial Intelligence in Education, vol. 33, no. 2, pp. 399–426, Jun. 2023, doi: 10.1007/s40593-022-00315-0.
+[13] T. K. F. Chiu and C. Chai, “Sustainable curriculum planning for artificial intelligence education: a self-determination theory
+     perspective,” Sustainability, vol. 12, no. 14, Jul. 2020, doi: 10.3390/su12145568.
+[14] B. Akram, S. Yoder, C. Tatar, S. Boorugu, I. Aderemi, and S. Jiang, “Towards an AI-infused interdisciplinary curriculum for
+     middle-grade classrooms,” Proceedings of the AAAI Conference on Artificial Intelligence, vol. 36, no. 11, pp. 12681–12688, Jun.
+     2022, doi: 10.1609/aaai.v36i11.21544.
+[15] R. Luckin, W. Holmes, M. Griffiths, and L. B. Forcier, Intelligence unleashed: an argument for AI in education, London: Pearson,
+     2016.
+[16] L. Chen, P. Chen, and Z. Lin, “Artificial intelligence in education: a review,” IEEE Access, vol. 8, pp. 75264–75278, 2020, doi:
+     10.1109/ACCESS.2020.2988510.
+[17] M. Rožman, P. Tominc, and I. Vrečko, “Building skills for the future of work: Students’ perspectives on emerging jobs in the data
+     and AI cluster through artificial intelligence in education,” Environment and Social Psychology, vol. 8, no. 2, Aug. 2023, doi:
+     10.54517/esp.v8i2.1670.
+[18] J. S. Creswell and J. D. Creswell, Research design. qualitative, quantitative and mixed methods approaches. Los Angeles: SAGE
+     Publications, 2022.
+[19] M. Q. Patton, “Enhancing the quality and credibility of qualitative analysis,” Health Services Research, vol. 34, no. 5, pp. 1189–
+     1208, 1999.
+[20] N. K. Denzin, The research act: a theoretical introduction to sociological methods, New York: Routledge, 2017, doi:
+     10.2307/2065439.
+[21] R. E. Boyatzis, Transforming qualitative information thematic analysis and code development. Los Angeles: SAGE publications,
+     1998.
+[22] I. T. Sanusi, S. S. Oyelere, H. Vartiainen, J. Suhonen, and M. Tukiainen, “Developing middle school students’ understanding of
+     machine learning in an African school,” Computers and Education: Artificial Intelligence, vol. 5, 2023, doi:
+     10.1016/j.caeai.2023.100155.
+[23] T. K. Ng, “New interpretation of extracurricular activities via social networking sites: a case study of artificial intelligence learning
+     at a secondary school in Hong Kong,” Journal of Education and Training Studies, vol. 9, no. 1, pp. 49–60, Dec. 2020, doi:
+     10.11114/jets.v9i1.5105.
+[24] M. Ahmad, M. F. Rahman, M. Ali, F. N. Rahman, and M. A. S. Al Azad, “Effect of extra curricular activity on student’s academic
+     performance,” Journal of Armed Forces Medical College, Bangladesh, vol. 11, no. 2, pp. 41–46, Jan. 2019, doi:
+     10.3329/jafmc.v11i2.39822.
+[25] L. D. -Hammond, M. Hyler, and M. Gardner, Effective teacher professional development, Palo Alto, California: Learning Policy
+     Institute, 2017, doi: 10.54300/122.311.
+[26] C. K. Lo, “Design principles for effective teacher professional development in integrated STEM education: a systematic review,”
+     Educational Technology and Society, vol. 24, no. 4, pp. 136–152, 2021.
+[27] T. K. F. Chiu, H. Meng, C.-S. Chai, I. King, S. Wong, and Y. Yam, “Creation and evaluation of a pretertiary artificial intelligence
+     (AI) curriculum,” IEEE Transactions on Education, vol. 65, no. 1, pp. 30–39, Feb. 2022, doi: 10.1109/TE.2021.3085878.
+[28] Y. Dai et al., “Collaborative construction of artificial intelligence curriculum in primary schools,” Journal of Engineering
+     Education, vol. 112, no. 1, pp. 23–42, Jan. 2023, doi: 10.1002/jee.20503.
+[29] S. Rizvi, J. Waite, and S. Sentance, “Artificial Intelligence teaching and learning in K-12 from 2019 to 2022: a systematic literature
+     review,” Computers and Education: Artificial Intelligence, vol. 4, 2023, doi: 10.1016/j.caeai.2023.100145.
+[30] J. Estevez, G. Garate, and M. Grana, “Gentle introduction to artificial intelligence for high-school students using scratch,” IEEE
+     Access, vol. 7, pp. 179027–179036, 2019, doi: 10.1109/ACCESS.2019.2956136.
+[31] N. Norouzi, S. Chaturvedi, and M. Rutledge, “lessons learned from teaching machine learning and natural language processing to
+     high school students,” Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 9, pp. 13397–13403, Apr. 2020,
+     doi: 10.1609/aaai.v34i09.7063.
+[32] W. Yang, “Artificial Intelligence education for young children: why, what, and how in curriculum design and implementation,”
+     Computers and Education: Artificial Intelligence, vol. 3, 2022, doi: 10.1016/j.caeai.2022.100061.
+[33] R. Williams et al., “AI + ethics curricula for middle school youth: lessons learned from three project-based curricula,” International
+     Journal of Artificial Intelligence in Education, vol. 33, no. 2, pp. 325–383, Jun. 2023, doi: 10.1007/s40593-022-00298-y.
+[34] S. Akgun and C. Greenhow, “Artificial intelligence in education: addressing ethical challenges in K-12 settings,” AI and Ethics,
+     vol. 2, no. 3, pp. 431–440, Aug. 2022, doi: 10.1007/s43681-021-00096-7.
+
+
+
+BIOGRAPHIES OF AUTHORS
+
+                                Munasprianto Ramli                   is a researcher at the Artificial Intelligence Centre Indonesia
+                                (AiCI) and also lecture at UIN Syarif Hidayatullah Jakarta. Holds Doctoral Degree in Science
+                                Education (Dr) from University of Mancehster. his research interest includes eduational
+                                technology, artificial intelligence for education, education media, science education, chemistry
+                                education, values in education, and education in non formal setting. He can be contacted at
+                                email: munasprianto.ramli@uinjkt.ac.id.
+
+
+
+
+            Navigating the tech-savvy generation; key considerations in developing of … (Munasprianto Ramli)
+
+3950                                                                                                ISSN: 2252-8938
+
+                        Maifalinda Fatra                received the Ph.D. degree in mathematics education from Sultan
+                        Idris Education University (UPSI) Malaysia. She has more than 25 years of experience as an
+                        Academic at Syarif Hidayatullah State Islamic University (UIN) Jakarta. Currently, she is an
+                        Associate Professor in the mathematics education study program at, the Faculty of Tarbiyah
+                        and Teacher Training. His current research interests include learning and developing the
+                        abilities of students at various levels and fields of education. His publication topics include
+                        school curricula, the development of learning tools, teacher competencies, educational
+                        institutions, students' HOT abilities, character education, learning models, and strategies. She
+                        can be contacted at email: maifalinda.fatra@uinjkt.ac.id.
+
+
+
+                        Muhamad Murtadlo                        is a Research Professor at the Center for Educational
+                        Research at the National Research and Innovation Agency (BRIN) in Indonesia. Previously he
+                        was a senior researcher at the Ministry of Religion of the Republic of Indonesia. He has taught
+                        at several universities such as Jakarta State University, Al Azhar University. The fields of study
+                        that are occupied are research methodology, educational research, character education research,
+                        religious moderation education, research for religion and religious traditions. He can be
+                        contacted at email: muha299@brin.go.id.
+
+
+
+
+                        Hasan Albana               is a researcher at the Research Center for Education of the Social
+                        Sciences and Humanities Research Organization of the National Research and Innovation
+                        Agency. He was appointed a researcher at BRIN in 2022, previously he taught as a lecturer at
+                        IAIN Syekh Nurjati Cirebon. Hasan's research interests are in religious education, character
+                        education, religious moderation, and religious tolerance. He can be contacted at email:
+                        hasan.albana@brin.go.id.
+
+
+
+
+                        Baiq Hana Susanti                 is a researcher at the Artificial Intelligence Centre Indonesia
+                        (AiCI) and also lecture at UIN Syarif Hidayatullah Jakarta. Holds bachelor in Aquaculture
+                        (S.Pi.) from Bogor Agricultural University, Master Degree in Aquaculture (M.Sc.) from Asian
+                        Institute of Technology (AIT) Bangkok Thailand and Doctoral Degree in Science Education
+                        (Dr.) from Universitas Pendidikan Indonesia (UPI) Bandung beside certificate from UBTech
+                        in China for AI learning. She’s research area of interests include educational technology,
+                        artificial intelligence for education, education media, and biology education. She can be
+                        contacted at email: baiq.hana@uinjkt.ac.id.
+
+
+
+
+                        Saifullah Aldeia             is a researcher at the Research Center for Education of the Social
+                        Sciences and Humanities Research Organization of the National Research and Innovation
+                        Agency. Holds bachelor of education (S.Pd.) in Islamic Education Management and Master of
+                        Education Management (M.Pd.) in Education Management. He was appointed a researcher at
+                        BRIN in 2022, previously he taught as a teacher at Ibnul Qoyyim Islamic Boarding School
+                        since 2012. His research interests are in modern management education, and educational
+                        technology. He can be contacted at email: amsa004@brin.go.id.
+
+
+
+
+Int J Artif Intell, Vol. 13, No. 4, December 2024: 3942-3950

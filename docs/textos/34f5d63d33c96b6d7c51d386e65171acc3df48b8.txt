@@ -1,0 +1,3517 @@
+Leadership for Learning as an Organization-Wide Practice: Evidence on Its Multilevel
+
+          Structure and Implications for Educational Leadership Practice and Research
+
+                                       Joonkil Ahn
+                    Department of Educational Policy Studies and Practice
+                                   College of Education
+                                   University of Arizona
+                          1430 E 2nd St, Tucson, AZ 85069-7100
+                                     (520) 621-9043
+                                    ahnj@arizona.edu
+
+                                       Alex J. Bowers
+                          Department of Organization and Leadership
+                           Teachers College, Columbia University
+                                 Box 67, 525 W 120th Street
+                             New York, New York 10027-6696
+                                       (212)-678-7466
+                                      Bowers@tc.edu
+
+                                     Anjalé D. Welton
+                 Department Chair and Rupple-Bascom Professor of Education
+                  Department of Educational Leadership and Policy Analysis
+                             University of Wisconsin, Madison
+                                    Adwelton@wisc.edu
+
+
+
+                 Published in International Journal of Leadership in Education
+
+SEE: Ahn, J., Bowers, A. J., & Welton, A. D. (2021). Leadership for learning as an organization-
+      wide practice: Evidence on its multilevel structure and implications for educational
+      leadership practice and research. International Journal of Leadership in Education. 1–53.
+      https://doi.org/10.1080/13603124.2021.1972162
+
+
+
+
+                                               1
+
+Leadership for Learning as an Organization-Wide Practice: Evidence on Its Multilevel Structure
+
+               and Implications for Educational Leadership Practice and Research
+
+                                             Abstract
+
+Leadership for learning has emerged as a framework that subsumes the core characteristics of
+
+instructional leadership, transformational leadership, and distributed leadership. It acknowledges
+
+that leadership responsibilities are shared across stakeholders, inviting wider sources of
+
+leadership. If leadership for learning conceptualizes leadership as an organization-wide practice
+
+beyond that of an individual (e.g., the school principal), its measurement must accordingly invite
+
+perceptions and experiences of diverse stakeholders at multiple levels. Focusing solely on
+
+principals’ or teachers’ leadership perceptions is problematic since it fails to capture the unique
+
+lived realities teachers or principals experience concerning leadership enactment. It also limits
+
+the capacity to examine whether and how these multiple perspectives exert same or divergent
+
+impacts on staff development, school culture, and student learning. Thus, this study employed
+
+leadership for learning as its theoretical framework and rigorous multilevel factor analysis
+
+techniques to examine the extent to which individual teachers, teachers collectively, and
+
+principals show distinct perceptions of leadership practices. Four-fold cross-validation multilevel
+
+factor analysis revealed conceptual distinctions in how the three entities experience leadership
+
+practices distributed across the school. We also present implications for educational leadership
+
+research, practices, and policy.
+
+Keywords: Leadership for learning, leadership perception gaps, multilevel factor analysis,
+
+Teaching and Learning International Survey
+
+
+
+
+                                                 2
+
+Introduction
+
+The purpose of this study is to provide empirical evidence on why it is crucial to include all three
+
+perspectives (i.e., individual teachers, teachers collectively, principals) in measuring a school’s
+
+leadership effectiveness. Leadership for learning has emerged as a framework that subsumes the
+
+core characteristics of instructional leadership, transformational leadership, and distributed
+
+leadership (Hallinger, 2011). Thus, leadership for learning acknowledges that leadership
+
+responsibilities are shared across stakeholders, inviting wider sources of leadership. If one
+
+conceptualizes leadership as an organization-wide practice beyond that of an individual (e.g., the
+
+school principal), its measurement must accordingly invite perceptions and experiences of
+
+diverse stakeholders at multiple levels. For example, qualitative researchers typically interview
+
+both teachers and principals to capture leadership practices among multiple individuals.
+
+However, quantitative research has primarily used only principals’ perspectives to describe an
+
+organization’s leadership practices (e.g., Bellibas & Liu, 2017; García-Carmona et al., 2016;
+
+Gumus, 2013; Liu, 2016). This is problematic since it fails to capture the unique lived
+
+experiences teachers have across classrooms and departments within the school (Kelley &
+
+Halverson, 2012). Focusing solely on the principal’s perceptions on leadership provides further
+
+issues since research increasingly evidences that principals and teachers often diverge in their
+
+perceptions about leadership and that these gaps are negatively associated with teacher
+
+collaboration, self-efficacy, and job satisfaction (Ham et al., 2015a; Park & Ham, 2016; Agasisti
+
+et al., 2019; Wang et al., 2019). Quantitative researchers also have commonly theorized that
+
+individual teachers and their collective body possess a shared understanding on leadership (Chen
+
+et al., 2005). This theorization is questionable because it implicitly assumes individual teachers
+
+within a school have a shared understanding and perception of leadership, which recent
+
+
+
+
+                                                  3
+
+scholarship suggest this assertion ignores teachers’ unique leadership practices and experiences
+
+(Boyce & Bowers, 2018a).
+
+       In addition, a problem exists, in that the degree to which these three leadership
+
+perceptions (i.e., individual teachers, collective teachers, principals) converge or diverge remains
+
+largely unaddressed. Within the leadership for learning framework, no prior measurement studies
+
+successfully have included all three perspectives simultaneously with adequate construct validity
+
+as well as reliability. Therefore, this study aims to provide empirical evidence on leadership for
+
+learning as practices existing at all three groups, via an exploration of its factor structure, through
+
+the 2018 Teaching and Learning International Survey (TALIS). We draw on a multilevel
+
+framework to more accurately decompose teacher-perceived leadership variance into the
+
+individual and their collective levels while also including principal’s perspectives. Providing
+
+evidence on leadership for learning as a multilevel construct is essential to achieve a more
+
+complex understanding of its enactment within and across school organizations. It is also critical
+
+for examining whether and how these multiple perspectives exert same or divergent impacts on
+
+staff development, school culture, and student learning (Boyce & Bowers, 2018a; Brezicha et al.,
+
+2019). A knowledge base of the divergent leadership perspectives multiple stakeholders hold
+
+toward leadership practices also prompts school leaders to explore practical ways in which they
+
+craft and communicate a shared goal and vision to achieve learning for all students. Therefore,
+
+this study employs leadership for learning as its theoretical framework and rigorous multilevel
+
+factor analysis techniques to address the following research question: What is the extent to which
+
+individual teachers, teachers collectively, and principals show distinct perceptions of leadership
+
+for learning?
+
+
+
+
+                                                  4
+
+Are Individual versus Collective Teacher Perspectives Isomorphic?
+
+Researchers in educational leadership have long questioned whether individuals and their
+
+collective (e.g., mean) perspectives indicate different factor structures and meanings at each level
+
+(Dyer et al., 2005). Thus, researchers often implicitly assumed individual teacher perceptions
+
+within school and the collective perceptions (i.e., mean) were equivalent.
+
+       However, due to the advance in multilevel factor analytics, recent studies began to
+
+provide evidence on the existence of valid collective-level leadership constructs (Dyer et al.,
+
+2005; Muthén, 1991). For instance, Dyer et al. (2005) suggested that collective-level (e.g.,
+
+between-school) leadership constructs can exist with different factor meanings and structures
+
+from their individual-level (e.g., within-school) counterparts. Dyer et al. illustrated a typology of
+
+three types of collective-level constructs. Compilation constructs represent the latent factors that
+
+exist only at the collective level. They do not possess a relevant conceptual meaning at the
+
+individual level (e.g., a school’s gender diversity, school SES). Composition constructs refer to
+
+the shared beliefs of individuals that are identified at the collective level. Thus, composition
+
+constructs operate isomorphically between the lower (e.g., within school) and the upper levels
+
+(e.g., between schools). In contrast, fuzzy composition constructs are isomorphic only partially at
+
+each level, and thus indicate a different factor structure at each level.
+
+       Subsequent studies further substantiate Dyer et al.’s (2005) collective-level leadership
+
+typology. For instance, using the 2008 TALIS, Urick and Bowers (2019) illustrated the
+
+isomorphic perspectives between individual and collective teachers using an instructional
+
+leadership framework. Further, employing the Schools and Staffing Survey (SASS), Boyce and
+
+Bowers (2018a) evidenced the extent to which individual teachers and their collective body
+
+diverge in how they perceive leadership for learning tasks. This body of literature on the
+
+
+
+
+                                                   5
+
+existence of valid collective-level (e.g., between school) leadership constructs provides
+
+meaningful insights on how individuals at the lower level and their collective body at the upper
+
+level perceive leadership tasks in the same or different ways ( Boyce & Bowers, 2018a; Dyer et
+
+al., 2005). However, research that further includes the principal’s perspectives in addition to
+
+individual and collective teacher perspectives is still rare.
+
+The Emergence of the Leadership for Learning Concept
+
+Multiple theories concerning school leadership to promote student learning have emerged from
+
+the literature over the past decades to respond to complex reform demands. The four most
+
+frequently researched leadership models are instructional leadership, transformational leadership,
+
+distributed leadership, and integrated leadership (Bowers, 2020; Hallinger & Heck, 1996;
+
+Hallinger, 2011; Hallinger & Murphy, 1985; Leithwood, 1994; Leithwood & Jantzi, 1999;
+
+Leithwood & Sun, 2012; Marks & Printy, 2003; Mitchell & Sackney, 2011; Porter et al., 2010).
+
+This section reviews how these leadership theories evolved and explores how the leadership for
+
+learning concept emerged.
+
+Instructional Leadership
+
+Instructional leadership within the educational literature emerged in the 1980s, based on the prior
+
+decade’s school effectiveness research (e.g., Edmonds, 1979). At the time, instructional
+
+leadership was seen as the most feasible response to turning around disadvantaged, urban schools
+
+in the 1970s and 1980s (Bossert et al., 1982). The instructional leadership literature highlighted
+
+principals as the center of the educational expertise, who created academic press within the
+
+school by monitoring teaching practices as well as student outcomes, and seeking violence-free
+
+school circumstances (Bossert et al., 1982; Hallinger, 2003; Hallinger & Murphy, 1985). The
+
+attention was focused on the principal ensuring effective instruction (Bossert et al., 1982).
+
+
+
+
+                                                   6
+
+Indeed, Robinson et al.'s (2008) meta-analysis of the effect sizes of leadership styles found that
+
+the level of impact the principal’s instructional leadership behaviors had on student outcomes
+
+was three to four times that of leaders’ transformational behaviors (i.e., charismatic influence,
+
+individual consideration, intellectual stimulation). Notably, the principal’s active promotion of
+
+and participation in teacher learning activities (e.g., professional development programs)
+
+evidenced the largest effect size (Robinson et al.), followed by goal setting and coordinating
+
+teaching and curriculum.
+
+       The major critiques for instructional leadership are threefold. First, researchers point to
+
+its excessive focus on the principal’s role as the single instructional leader and its failure to
+
+incorporate others’ contributions to teaching and learning practices within the school
+
+organization (Hallinger, 2003; Marks & Printy, 2003). Indeed, within much of the instructional
+
+leadership literature, teachers and assistant principals are not highlighted as important partners
+
+for principals to collaborate in instructional matters (Hallinger, 2005). Second, critics question
+
+the viability of reform strategies that foreground a principal as the sole lever for change
+
+(Hallinger, 2003). This heroic image of an instructional leader lacks feasibility in schools with a
+
+large student body or in secondary schools characterized by a highly compartmentalized
+
+structure (Hallinger, 2003). Third, research identifies the direct effect size of the principal’s
+
+instructional leadership on student outcomes as negligible. For example, Witziers et al.'s (2003)
+
+meta-analysis of 37 quantitative studies conclude that its averaged direct effect size on student
+
+outcomes is extremely small overall and near zero in secondary schools.
+
+Transformational Leadership
+
+With the advent of the school restructuring movement in the 1990s, questions arose concerning
+
+instructional leadership as a viable tool to address the restructuring requests aimed at higher-
+
+
+
+
+                                                   7
+
+order changes (i.e., changes in school’s normative structures beyond instruction; Leithwood,
+
+1994). School leaders increasingly shared responsibilities with teachers in curriculum and
+
+instruction as well as promoting coaching structures and professional learning communities
+
+within schools (Hallinger, 2003). This new trend promoted ‘collaborative, human resource-
+
+based, developmental, and transformational approaches’ to leadership (Blase & Blase, 1999, p.
+
+351). Accordingly, research on transformational leadership focused on identifying leadership
+
+practices that influenced teachers’ internal states (e.g., commitment) and the development of
+
+organizational conditions, crucial to teacher performance (Leithwood & Sun, 2012). Studies
+
+suggested that transformational leadership indirectly influenced student outcomes through school
+
+culture and staff capacity building (Leithwood & Sun, 2012). For instance, Thoonen et al.'s
+
+(2011) quantitative analysis of Dutch teachers found that principals’ transformational behaviors
+
+first influenced the school’s social and organizational conditions (e.g., mutual trust), increasing
+
+teacher motivational factors (e.g., internalizing school goals). Motivational factors, thus in turn,
+
+positively influenced professional learning activities to directly enhance teaching practices.
+
+       Transformational leadership responded to the changed reform agendas for achieving a
+
+higher-order school change (e.g., staff motivation), while also facing critiques. Much like how
+
+instructional leadership was questioned about its viability, critics similarly pointed out that
+
+training people-developing leaders through leadership preparation and in-service was
+
+challenging (Hallinger, 2003). Also, critics suggested transformational theory lacked empirical
+
+distinctiveness. Specifically, the dimensions in the Multifactor Leadership Questionnaire (MLQ),
+
+one of the most popular transformational leadership scales, faced critiques that its dimensions
+
+often ended up forming one overall scale, shown by its high inter-factor correlations (Berkovich,
+
+2016). Furthermore, its weak efficacy in affecting student learning outcomes is a common
+
+
+
+
+                                                  8
+
+critique (Robinson et al., 2008; Shatzer et al., 2013). In a meta-analytic review of 79 unpublished
+
+theses and dissertations, Leithwood and Sun (2012) found only two out of nine transformational
+
+leadership practices were directly associated with student learning, and their effect sizes were
+
+negligible (0.17, 0.15, respectively). As noted earlier in the literature review, Robinson et al.’s
+
+(2008) meta-analysis found that the instructional leadership effect on student outcomes was
+
+significantly larger than that of transformational practices, which was replicated by prior and
+
+subsequent research (Leithwood & Jantzi, 2006; Leithwood & Jantzi, 1999; Leithwood & Sun,
+
+2012; Shatzer et al., 2013). However, we argue that one must be cautious when concluding
+
+whether one leadership style is “superior” to another. This is because research increasingly
+
+suggests that school leaders realistically enact a set of leadership behaviors rather than a single
+
+style of leadership. That is, when transformational and instructional strategies are integrated into
+
+school leader’s daily practices, teaching effectiveness and student outcomes are maximized (Day
+
+et al., 2011; Day et al., 2016; Marks & Printy, 2003; Printy et al., 2009).
+
+Distributed Leadership
+
+Within a distributed perspective, leadership is framed as distributed across stakeholders and their
+
+situation (e.g., tools, artifacts, and organizational routines; Spillane et al., 2004; Tian et al.,
+
+2016). Within this lens, rather than being conceptualized as primarily residing as the actions of a
+
+sole formally appointed leader (e.g., school principal), leadership is constituted through
+
+interactions among leaders, followers, and their situations in particular contexts around specific
+
+leadership tasks (Spillane, 2006). With the interactions among individuals and their situations as
+
+the unit of analysis (Gronn, 2002), research has explored the range of variation in leadership
+
+distribution. For example, studies examined who, in what leadership functions (e.g.,
+
+administrative or instructional functions), and what subject area individuals led alone or co-led.
+
+
+
+
+                                                    9
+
+Research has also investigated how individuals without formal leadership designations engaged
+
+in leadership practices (Spillane et al., 2008).
+
+       Others explored how different sources of individual agency contribute to different forms
+
+of leadership distribution. For example, Gronn (2002) categorized leadership practice into
+
+spontaneous action, intuitive working relations, and institutional practices. A spontaneous action
+
+may occur when colleagues with different expertise spontaneously engage in collaborative tasks
+
+to solve a problem, after which these relationships may end. Intuitive working relations can
+
+emerge among individuals who share a role space or maintain close working relationships.
+
+Institutional practices refer to attempts to regularize formal structures to create distributed
+
+actions. External policy mandates and internal dissatisfaction with the existing organizational
+
+structure can stimulate the creation of a new organizational structure. Still others examined
+
+whether and how leadership could be distributed with a purpose. They were inclined to identify
+
+leadership distribution patterns that would positively influence school improvement (Tian et al.,
+
+2015). Thus, studies in this paradigm suggest that distributed leadership does not always lead to
+
+positive outcomes but depends on how it is distributed, and the purpose for which it is distributed
+
+(Harris et al., 2007). Despite these gaps between the different foci of each body of distributed
+
+leadership literature, one apparent commonality is that distributed leadership studies aim to
+
+capture the organization-wide processes that lead to school improvement, rather than focusing on
+
+the characteristics of an individual leader or their role as a solo manager.
+
+       The first critique around distributed leadership research is the elusiveness of the
+
+construct. Despite its prominence in recent leadership literature, there appears to exist little
+
+agreement on the meaning of distributed leadership (Hairon & Goh, 2015; Lumby, 2019). Thus,
+
+this construct may mean different things to different people (Harris et al., 2007). Hence, the
+
+
+
+
+                                                   10
+
+translation of a theoretical framework into an empirical measurement model is left as a
+
+challenging task. The second criticism of distributed leadership is its practicability. Fitzgerald
+
+and Gunter (2007) questioned the feasibility of leadership distribution when the school culture is
+
+hierarchical. For example, in an in-depth case account of a school in the United Kingdom, Storey
+
+(2004) illustrated how distributed leadership could lead to tensions between competing
+
+leadership styles of formal and informal leaders. Specifically, the principal and the science
+
+department chair were involved in tensions around priorities and targets of reform. The principal
+
+distributed his leadership but also wanted to exert his positional power, whereas the department
+
+chair assumed that he had more discretion than the principal intended. Thirdly, it is not clear how
+
+the distributed leadership framework articulates gender, race, and class inequities (Lumby,
+
+2019). Distributed leadership seems to remain silent on equity issues within leadership
+
+distribution contexts (Brooks et al., 2007). Although the emergence of leaders and involvement
+
+of the individuals without formal leadership designations are the common claims of the
+
+distributed leadership framework, less is known of its stance on the issue of power, and equity in
+
+gender, race and ethnicity (Lumby, 2013).
+
+Integrated Leadership Perspectives
+
+Although the past four decades witnessed the emergence of competing conceptualizations of
+
+leadership theories, research increasingly acknowledged that no single leadership style might
+
+adequately explain the complex mechanisms involved in leadership enactment (Blase & Blase,
+
+1999; Bossert et al., 1982; Bowers et al., 2017; Day et al., 2016; Leithwood & Sun, 2012; Pietsch
+
+et al., 2019; Silins & Mulford, 2004; Urick, 2016). As an earlier example of this line of research,
+
+Blase and Blase (1999) found that, although teachers had been asked to describe one of the most
+
+distinctive instructional leadership behaviors of their principals, they provided a set of leadership
+
+
+
+
+                                                 11
+
+strategies. Their responses implied that principals used a repertoire of strategies that covered not
+
+only instructional foci (e.g., supervision of teaching) but also the developmental and
+
+transformational aspects (e.g., teacher motivation) simultaneously. However, few early studies in
+
+educational leadership included this integrated view as their primary research focus.
+
+       One of the earliest attempts to illustrate an integrated perspective of leadership is Marks
+
+and Printy’s (2003) study. Analyzing data from 24 restructured schools in the U.S., Marks and
+
+Printy suggested that when principals integrated transformational and shared instructional
+
+leadership approaches, leadership effects on the quality of pedagogy and student achievement
+
+was higher than other schools where principals adopted either of the two. They also found that
+
+no schools were located in the low transformational–high shared instructional leadership
+
+quadrant where schools were plotted by their observed leadership practices. Based on this, they
+
+concluded that transformational leadership was necessary, but an insufficient condition to enact
+
+shared instructional leadership. Subsequent studies using larger sample sizes and conducted in
+
+diverse school settings also suggested that principals adjusted their leadership styles by
+
+responding to the school’s context, size, level, and developmental phase (Day et al., 2011;
+
+Mulford & Silins, 2011; Murphy et al., 2007; Pietsch et al., 2019; Sammons et al., 2014). For
+
+example, summarizing the findings from a longitudinal study, Day et al. (2011) found principals
+
+drew on a range of leadership styles for building organizational trust, promoting high
+
+expectations, and enhancing teaching quality. Aligned with Marks and Printy, although the effect
+
+sizes of leadership strategies on student outcomes were small when separately investigated, the
+
+combined effect was stronger.
+
+       In more recent years, research on principals’ layering multiple leadership styles expanded
+
+into attempts that employed recent advances in statistical techniques and larger samples in the
+
+
+
+
+                                                 12
+
+U.S. as well as international settings. For example, by analyzing the 1999–2000 SASS collected
+
+from 7,000 schools across the U.S., Urick and Bower 's (2014) latent class analysis identified
+
+that there exist three significantly different types of principals who simultaneously enact multiple
+
+leadership styles, based on personal backgrounds and school contexts. Evidence on different
+
+types of principals adopting multiple leadership styles was replicated in subsequent studies using
+
+the Comprehensive Assessment of Leadership for Learning (CALL) (Bowers et al., 2017), in a
+
+project conducted within an Italian context (Agasisti et al., 2019), and in a study that employed
+
+the most recent TALIS (Bowers, 2020). This accumulated evidence on school leaders’ adoption
+
+of multiple leadership styles to enhance student learning is conceptually aligned with leadership
+
+for learning, which serves as the theoretical framework of this study (Hallinger, 2011).
+
+Theoretical Framework
+
+This study applies leadership for learning as the theoretical framework. It emerged as an
+
+integrated framework that subsumes the core characteristics of instructional, transformational,
+
+and distributed leadership (Bowers, 2020; Hallinger, 2011; MacBeath & Townsend, 2011). As its
+
+label implies, while leadership for learning carries over the essential tenets of instructional
+
+leadership, such as an explicit focus on student learning, it is further characterized by broader
+
+sources of leadership, as well as its focus on ‘means or paths through which leadership achieves
+
+improvement in teaching and learning’ (Hallinger & Heck, 2010, p. 657, italics added). That is,
+
+beyond the principal’s initial leadership behaviors, the new framework encompasses the resulting
+
+school culture and the subsequent changes in teacher capacity and student outcomes, and adapted
+
+leadership practices, responding to the changes in school conditions over time.
+
+       Now we turn to the specific ways in which leadership for learning subsumes the key
+
+tenets of instructional, transformational, and distributed leadership. While sharing instructional
+
+
+
+
+                                                 13
+
+leadership’s school-wide focus on student learning, leadership for learning posits a more
+
+comprehensive connotation of learning (MacBeath & Townsend, 2011). That is, in addition to
+
+student learning, the new framework further underscores the importance of teacher, staff, and
+
+leader’s learning for enhancing the school’s instructional capacity. Thus, moving beyond
+
+previous decades’ competing foci either on accountability task (e.g., student outcomes) or people
+
+(e.g., staff development), leadership for learning bridges task achievement and people
+
+development by recognizing that ‘understanding who we are working with’ leads to richer
+
+learning outcomes of students and adults (MacBeath & Townsend, 2011, p. 1247). Accordingly,
+
+given how critical teachers are on student learning, school leaders must center teacher learning,
+
+coherently connecting supervision, professional development, and teacher evaluation (Zepeda,
+
+2011). This staff capacity-building domain of leadership for learning directly speaks to the tenets
+
+of transformational leadership (Hallinger & Heck, 2010). Transformational leadership aims to
+
+develop a school culture that promotes people’s capacity, commitment, and growth (Bass &
+
+Avolio, 2007; Bogler, 2001; Leithwood & Sun, 2012; Leithwood & Jantzi, 2005).
+
+       Additionally, leadership for learning posits that leadership tasks are shared by
+
+stakeholders across the school organization. Despite recent advances in the knowledge base on
+
+how leadership contributes to school improvement, one major limitation of recent scholarship in
+
+educational leadership has been its ‘almost exclusive focus on leadership by the principal’
+
+(Hallinger & Heck, 2011a, p. 480). Related to this limited focus, a leadership for learning
+
+framework helps facilitate a shift from focusing on individuals (i.e., principals) and their
+
+characteristics to multiple individuals (i.e., non-positional leaders) and organizational routines as
+
+key components of leadership enactment (Halverson & Kelley, 2017). Thus, leadership is framed
+
+as the function of an entire organization (Ogawa & Bossert, 1995) and as shaped through
+
+
+
+
+                                                 14
+
+interactions among leaders, followers, and their situations, such as tools, routines, and leadership
+
+tasks (Spillane, 2006).
+
+       Acknowledging broader sources of leadership also necessitates that leadership
+
+measurement can no longer focus solely on the actions of the principal. Moreover, if leadership
+
+for learning is conceptualized in such a way that highlights the means and paths through which
+
+leadership behaviors interact with school climate, staff development, and student outcomes, a
+
+static set of desired or evidenced principal behaviors may not adequately capture the type of
+
+leadership enactment that leadership for learning conceptualizes (Hallinger, 2011). Thus, we
+
+would argue that its measurement must also encompass leadership tasks carried out not only by
+
+the principal but also by non-positional leaders (Kelley & Halverson, 2012). In sum, the
+
+employment of an expanded connotation of learning, the invitation of wider sources of
+
+leadership, and the focus on paths through which school improvement is achieved, comprise the
+
+core dimensions of an integrated framework of leadership for learning (Bowers et al., 2017;
+
+Boyce & Bowers, 2018b; Hallinger, 2011; Kelley & Halverson, 2012; Minor et al., 2017).
+
+Comprehensive Assessment of Leadership for Learning (CALL)
+
+This study used CALL as a scaffold to build a leadership for learning measurement model
+
+(Kelley & Halverson, 2012). CALL is a leadership assessment scale developed as a formative
+
+feedback system to facilitate an organization’s leadership improvement. A critical point of
+
+distinction from most prior leadership assessments is that it focuses on organizational functions
+
+beyond individual leaders’ actions. Thus, it captures leadership practices shared by stakeholders
+
+across the school organization, beyond leadership practices of a principal (Kelley & Halverson,
+
+2012). Its conceptualization of leadership as an organization-wide practice is aligned with the
+
+core tenets of leadership for learning (Kelley & Halverson, 2012; MacBeath & Townsend, 2011).
+
+
+
+
+                                                 15
+
+It also values a collaborative school culture that emerges from reciprocal influences that formal,
+
+informal leaders shape in their interactions (Mitchell & Sackney, 2011). While acknowledging
+
+the principal’s critical leadership role, it appreciates that ‘the principal’s leadership works by
+
+engaging and building leadership capacity throughout the school’ (Halverson & Kelley, 2017, p.
+
+12). Accordingly, CALL measures collaborative school culture as well as leadership practices
+
+shared across the diverse staff. CALL adopts five domains related to broader leadership
+
+functions and 21 subdomains relevant to the specific leadership tasks.
+
+       Articulating domains and their subdomains of a leadership framework is important as
+
+they provide leaders with concrete measures to decide the extent to which their leadership
+
+practices are enacted (Halverson & Kelley, 2017). Defining these (sub)domains is also crucial as
+
+they enable leaders to coordinate specific actions to improve conditions and cultures for
+
+enhancing teaching and learning within their schools (Halverson & Kelley, 2017). In all, CALL’s
+
+usefulness to inform principal and teacher leadership comes from its ability to provide a tool to
+
+measure concrete practices, instead of describing leaders’ traits or leadership styles.
+
+       Tables 1 and 2 present CALL’s five domains and 21 subdomains. Each of the five
+
+domains present broader areas of leadership enactment and the 21 subdomains include specific
+
+practices. The first domain is ‘Focus on learning,’ including five subdomains. This domain
+
+reflects such leadership practices as leaders’ engaging with stakesholders in conversations to
+
+establish the school’s vision for learning (Subdomain 1. Maintaining a schoolwide focus on
+
+learning) and the importance of the principal to set an example of an instructional leader (e.g.,
+
+learning walks; Subdomain 2. Recognition of formal leaders as instructional leaders). This
+
+domain also measures the extent to which the school’s vision for learning is translated into
+
+collectively developed learning plan (Subdomain 3. Collaborative design of integrated learning
+
+
+
+
+                                                  16
+
+plan) and quality educational services are provided to all students via collaborations among staff
+
+members (Subdomain 4. Providing appropriate services for students who traditionally struggle).
+
+       The second CALL domain refers to leadership practices pertaining to ‘Monitoring
+
+teaching and learning.’ The first two subdomains describe the schoolwide information system
+
+where teachers’ formative and summative feedback on student learning is shared (Subdomain 1.
+
+Formative evaluation of student learning; Subdomain 2. Summative evaluation of student
+
+learning). The following two subdomains measure the extent to which monitoring student
+
+learning is complemented by teaching practices, such as walkthrough, classroom observations,
+
+and formal teacher evaluations (Suddomain 3. Formative evaluation of teaching; Subdomain 4.
+
+Summative evaluation of teaching).
+
+       The third CALL domain is ‘Building professional community,’ which denotes whether
+
+and how much a school sustains a professional community among its teachers. Leaders must
+
+establish a strong professional community where teachers collaborate to improve teaching and
+
+learning, sharing challenges as well as successes (Subdomain 1. Collaborative schoolwide focus
+
+on problems of teaching and learning). Leaders in a strong professional community also ensure
+
+that staff learning programs are aligned with the school’s shared learning goals (Subdomain 2.
+
+Professional learning). Teachers in a robust professional community further assume leadership
+
+roles regardless of whether they hold leadership designations or not (Subdomain 3. Socially
+
+distributed leadership) and create a strong mentor-mentee relationships with one another
+
+(Subdomain 4. Coaching and mentoring).
+
+       The fourth domain concerns ‘Acquiring and allocating resources’ and measures how
+
+effectively school resources (i.e., time, personnel, budget, expertise) are acquired and used to
+
+support the shared school goal. This domain reflects leadership practices such as hiring teachers
+
+
+
+
+                                                17
+
+with necessary skills and supporting them through peer networks (Subdomain 1. Personnel
+
+practices). It also measures how effectively leaders allocate time for teacher collaboration for
+
+instructional improvement (Subdomain 2. Structuring and maintaining time) and how much
+
+students benefit from instructional resources (Subdomain 3. School resources are focused on
+
+student learning). The fourth domain additionally assesses the extent to which schools use
+
+external expertise for staff development (Subdomain 4. Integrating external expertise into the
+
+school instructional program) and schools invite families into school community (Subdomain 5.
+
+Coordinating and supervising relations with families and external communities).
+
+       The fifth domain evaluates the extent to which school leaders ‘Establish(ing) a safe and
+
+effective learning environment.’ Leaders are assessed how effectively they communicate clear
+
+expectations for student behavior (Subdomain 1. Clear, consistent, and enforced expectations of
+
+student behavior; Subdomain 2. Clean and safe learning environment), identify and support
+
+students with special needs and behavior concerns (Subdomain 3. Support services for students
+
+who traditionally struggle), and assist teachers in addressing parent concerns and filter district
+
+resources to teachers (Subdomain 4. Buffering the teaching environment).
+
+       A detailed description of the procedure and the theoretical rationale by which we
+
+connected each of the CALL’s domains and subdomains to TALIS indicators is presented in the
+
+methods.
+
+                                       [Table 1 about here]
+
+                                       [Table 2 about here]
+
+
+
+
+                                                 18
+
+Methods
+
+Data
+
+Description of dataset
+
+This study is a secondary analysis of the 2018 TALIS administered by the Organization for
+
+Economic Co-operation and Development (OECD). TALIS is the first international education
+
+survey that focuses on the teaching and learning environments of schools (OECD, 2019). It
+
+consists of two types of questionnaire: one for teachers and the other for principals. Since the
+
+first data collection cycle in 2008, TALIS has collected the data every five years. Twenty-four
+
+countries and economies participated in the first cycle, while 34 countries did so in the 2013
+
+cycle, and 49 countries and economies participated in its 2018 data collection. Each participating
+
+country collected data from 200 schools, with 20 teachers and one principal responding to the
+
+survey. TALIS was administered in elementary schools (ISCED 1 level), lower secondary
+
+schools (ISCED 2 level), and upper secondary schools (ISCED 3), with ISCED level 2 schools
+
+as its primary interest. This study adopted ISCED level 2 data (i.e., grades 7-9) as the analytic
+
+dataset. The primary purpose of TALIS is to provide each participating country with teacher- and
+
+school-level data on the school conditions that are required for effective teaching and learning
+
+(OECD, 2019). Specifically, it collects teachers’ and principals’ perspectives of their school
+
+contexts as well as instructional and leadership practices, providing a useful dataset for
+
+researchers, especially in the fields of education policy and leadership as it contains variables
+
+related to the extent to which school context, leadership practices, organizational structures
+
+influence school culture and teaching practice.
+
+       This study used TALIS’s full analytic sample from across 47 countries from 153,682
+
+teachers and 9,247 principals collected between September 2017 and May 2018. Table 3 shows
+
+
+
+
+                                                  19
+
+the participating countries and the number of participating teachers and principals. Although not
+
+developed to specifically measure leadership for learning concepts, TALIS includes numerous
+
+sets of variables that mesh with leadership for learning task (sub)domains specified in CALL.
+
+Therefore, combining CALL’s validated leadership domains and TALIS’s teacher and principal
+
+survey items affords a useful tool to build a leadership for learning measurement model.
+
+                                       [Table 3 about here]
+
+Indicators used in analysis
+
+To create 21 teacher items (T1-T21) and 20 principal indicators (P1-P20) to be analyzed, We
+
+first mapped 39 teacher items and 40 principal items from TALIS to CALL’s subdomains.
+
+Tables 4 and 5 show how this conceptual mapping was conducted with relevant theoretical
+
+rationle behind selecting each of the TALIS indicators. After the mapping, each CALL
+
+subdomain includes one to three TALIS indicators that are conceptually aligned with it.
+
+                                       [Table 4 about here]
+
+                                       [Table 5 about here]
+
+We computed a subdomain mean score when items within a subdomain consisted of Likert scale
+
+items (e.g., 1=Strongly Disagree, 2=Disagree, 3=Agree, 4=Strongly Agree). In case items were
+
+binary (i.e., 0, 1), we calculated a sum of the items. We used SAS 9.4 for this calculation. The
+
+final dataset combining teacher and principal responses was then incorporated into Mplus 8.4
+
+(Muthén & Muthén, 1998–2017) for subsequent analyses.
+
+Research design
+
+To answer the research question and build a leadership for learning measurement model, we
+
+adopted four-fold cross-validation multilevel factor analysis. We first introduce the factor
+
+
+
+
+                                                20
+
+analysis concept and present the procedures for cross-validation, model estimation, and fit
+
+evaluation, as well as the five steps to conduct multilevel factor analyses.
+
+Factor analysis
+
+Factor analysis determines how unobservable constructs (i.e., latent factors) predict the
+
+covariation among multiple observed survey items. As the label, latent implies, since a latent
+
+factor is not directly observable and lacks a measurement, factor analysis uses survey responses
+
+and calculates a score for each item (i.e., factor loading) that indicates the degree to which each
+
+item is predicted by underlying latent factors (Sablan, 2019). In addition, due to the hierarchical
+
+structure of TALIS (i.e., teachers are nested within school), using a multilevel approach is
+
+required. Since multilevel factor analysis simultaneously considers within- and between-school
+
+level covariance matrices and decomposes dependent variables’ variance into each level, it is
+
+statistically more accurate than using only the total covariance matrix used in single-level
+
+approaches (Dyer et al., 2005).
+
+Cross-validation
+
+To avoid the risk of overfitting, we employed V-fold cross-validation (Arlot & Celisse, 2010;
+
+Curcuruto et al., 2018; Dunn et al., 2015). Overfitting refers to a statistical inference made by
+
+noises instead of a true pattern within the dataset. According to previous literature (Arlot &
+
+Celisse, 2010; Dunn et al., 2015; Hoyle, 2012) and considering our cluster-level sample size, we
+
+implemented a four-fold cross-validation. We first randomly split the full 2018 TALIS into four
+
+initial subsamples, so that each of the four samples represents all 47 countries, respectively.
+
+Consequently, each of the four initial subsamples included about 38,000 teachers and 9,000
+
+principals. As presented in Figure 1, we then created four exploratory subsamples by merging
+
+three of the four initial subsamples. Thus, each of the four exploratory subsamples represented
+
+
+
+
+                                                 21
+
+75% of the entire 2018 TALIS, representing all 47 countries, respectively. The four initial
+
+subsamples served as the four confirmatory subsamples, each representing 25% of the entire
+
+2018 TALIS, respectively. We fitted the multilevel exploratory factor analysis (MEFA) models
+
+to each of the four exploratory subsamples and then tested their performance by multilevel
+
+confirmatory factor analysis (MCFA) fitted to the four confirmatory subsample. Table 6 presents
+
+the descriptive statistics of the entire 2018 TALIS and Table 7 shows the descriptive statistics of
+
+MCFA subsample 3, which we reported as the final CFA solution in results.
+
+                                      [Figure 1 about here]
+
+                                       [Table 6 about here]
+
+                                       [Table 7 about here]
+
+Model fit evaluation
+
+We used model fit indices to evaluate the quality of factor solutions. A common tool to assess a
+
+model fit is the chi-square goodness-of-fit statistic (Marsh et al., 2004). However, with large
+
+samples, it often rejects models with adequate fit (Hox, 2010). Thus, we employed four
+
+additional indices to make a more informed decision about model fit adequacy: The root mean
+
+square error of approximation (RMSEA), the standardized root mean square residual (SRMR),
+
+the comparative fit index (CFI), and the Tucker-Lewis index (TLI), while adopting RMSEA
+
+< .06, CFI > .90, TLI > .90, and SRMR < .08 as an indication of an acceptable fit, respectively
+
+(Hu & Bentler, 1999).
+
+Missing data handling, sampling weights, estimation method
+
+We adopted the Full Information Maximum Likelihood (FIML) to manage missing data
+
+(Graham, 2003). Unlike multiple imputation, FIML does not recover missing cells with predicted
+
+values, but uses all available information that individual observations provide and uses case-wise
+
+
+
+
+                                                22
+
+log-likelihood to incorporate incomplete observations to refine parameter estimates. Simulation
+
+studies suggested that FIML outperforms multiple imputation or listwise deletion since it
+
+estimates standard errors more correctly (Larsen, 2011; Savalei & Rhemtulla, 2012). We used
+
+teacher- and school-level final weights (TCHWGT, SCHWGT, respectively) provided by TALIS
+
+throughout the analysis. The use of sampling weights is required for generalization of findings to
+
+the population. In addition, failing to consider weights may lead to biased parameter estimates
+
+due to disproportional sampling probabilities among schools and teachers (Asparouhov &
+
+Muthén, 2006; OECD, 2019). Concerning the model estimation method, we employed maximum
+
+likelihood estimation with robust standard errors (MLR).
+
+Five Steps for Multilevel Factor Analyses
+
+To build a measurement model with adequate item reliability, we conducted a series of
+
+multilevel factor analyses in five steps. Steps one through four used the four exploratory
+
+subsamples as these were conducted for exploratory purposes, whereas step five used the four
+
+confirmatory subsamples because this step aimed to confirm the factor structure identified by the
+
+previous steps. Step one tested the Intraclass Correlation Coefficient (ICC) as the indicator of the
+
+proportion of between-school variation out of total variance of each within-school indicator (i.e.,
+
+individual teacher responses) using the four exploratory subsamples. An ICC smaller than 0.05
+
+implies few benefits of employing a multilevel approach (Geldhof et al., 2014).
+
+       Step two performed a parallel analysis to make an informed decision concerning the ideal
+
+number of latent factors to be extracted by MEFA in steps three and four (Hayton et al., 2004). It
+
+creates multiple random samples from the original dataset to compute eigenvalues. Then the
+
+eigenvalues from the random samples and those from the original data are compared. The
+
+
+
+
+                                                23
+
+number of factors to be extracted is determined by the number of eigenvalues of the original data
+
+that are greater than those from the random sample (Hayton et al., 2004).
+
+       Step three separately estimated the number of leadership for learning latent factors at the
+
+within- and between-school levels (Dyer et al., 2005) at each of the four exploratory subsamples.
+
+We first created pooled-within and pooled-between correlation matrices in Mplus. The pooled-
+
+within matrix included the summary data from teacher responses, whereas the pooled-between
+
+matrix contained the summary data from principal responses as well as the mean teacher
+
+responses. Using these two separate matrices, we ran separate MEFA models for each level using
+
+each of the four exploratory subsamples. We applied a geomin oblique rotation, hypothesizing
+
+inter-factor correlations (Heck & Thomas, 2015; Hoyle, 2012). The primary goal of step three
+
+was to estimate the number of latent factors at each level before building a full MEFA.
+
+        Using each of the four exploratory subsamples, step four built a full MEFA model by
+
+simultaneously including individual teachers within school as well as teachers collectively and
+
+principals between schools. The goal of a full MEFA was to determine a multilevel factor
+
+structure at each level with an adequate model fit. An additional goal of MEFA was to determine
+
+a final set of indicators to be used in the subsequent MCFA. Based on the recommendations from
+
+previous literature (Arlot & Celisse, 2010; Boyce & Bowers, 2018b; Dunn et al., 2015), we
+
+pruned survey indicators using two criteria. The first criterion was to remove an indicator if it
+
+does not have a strong rotated (0.50) loading to any factor and does not have two or more
+
+significant (0.40) loadings. The second criterion was to remove an indicator if it does not
+
+indicate a consistent loading pattern across the four exploratory subsamples.
+
+       Following recommendations from cross-validation literature (Arlot & Celisse, 2010;
+
+Curcuruto et al., 2018; Dunn et al., 2015), step five used the four confirmatory subsamples and
+
+
+
+
+                                                 24
+
+tested MCFA models to confirm the factor structure identified in MEFA. According to the
+
+literature (Boyce & Bowers, 2018a; Dunn et al., 2015), we implemented MCFA in four different
+
+rounds to achieve an adequate model fit. In the first round, we only retained the items from
+
+MEFA with goemin-rotated factor loadings equal to or greater than 0.40 in all four exploratory
+
+subsamples (Ford et al., 2018). In the second round, we added the indicators that indicated
+
+significant (0.40) factor loadings in three exploratory subsamples. In the third round round, we
+
+added the indicators that indicated significant (0.40) factor loadings in two exploratory
+
+subsamples, while the fourth round of MCFA retained the indicators that possessed a significant
+
+loading in any of the exploratory subsamples.
+
+       Concerning item reliability, we used standardized factor loading 0.50 as the cutoff to
+
+consider an item as strong or reliable. We used 0.40 as a cutoff to consider an item as
+
+interpretable and used it as the criterion to use in the factor interpretation and define cross-
+
+loadings (Forer & Zumbo, 2011). Thus, an item loaded on two or more factors at 0.40 or higher
+
+was defined as cross-loaded. To assess the extent to which each latent factor represents distinct
+
+leadership task, we tested discriminant validity. According to the literature, we defined a latent
+
+construct possessed discriminant validity when its inter-factor correlation was lower than
+
+moderate level (0.60-0.80) (Voorhees et al., 2016).
+
+Results
+
+The purpose of this study is to suggest the importance of considering multiple perspectives (i.e.,
+
+individual teachers, teachers collectively, principals) in measuring an organization’s leadership.
+
+Four-fold cross-validation multilevel factor analysis revealed individual teachers and principals
+
+diverged in prioritizing specific leadership tasks in four out of five leadership for learning
+
+constructs. Individual teachers and their collective body also differed in perceiving leadership for
+
+
+
+
+                                                  25
+
+learning. These results provide strong empirical evidence regarding the need to consider all three
+
+perspectives in measuring an organization’s leadership practices. We first report MEFA and
+
+MCFA results, followed by the rationale behind labeling each leadership construct.
+
+Step one results: estimation of the systematic between-school level variance
+
+Step one calculated the ICC’s of the 21 individual teacher indicators using each of the four
+
+exploratory subsamples. All 21 items indicated ICC values greater than 0.05. For instance, the
+
+ICC’s in exploratory subsample 1 ranged from 0.121 to 0.313, with a mean of 0.186. This
+
+suggested that, on average, about 19% of item variance resided between schools, whereas 81%
+
+of variance existed within school. Since all 21 indicators’ ICC’s were above 0.05, we concluded
+
+that there was a statistically significant amount of between-school differences, warranting a
+
+multilevel approach. Additionally, the wide variation of ICC’s implied that some leadership for
+
+learning practices were more strongly influenced by contextual forces between schools than
+
+other practices with lower ICC’s (Hox, 2010). The observed variables at the within-school level
+
+are the function of both within- and between-school constructs (Dyer et al., 2005; Muthén, 1991;
+
+Muthén, 1994). Therefore, larger ICC values reflect larger school-level influence on the
+
+individual teacher perceptions of leadership. For instance, T7 (Formative feedback on teaching)
+
+and T8 (Summative feedback on teaching) indicated the highest ICC’s among tasks, suggesting
+
+that globally, leadership practice to share instructional feedback indicated the largest amount of
+
+variation between schools. Additionally, varied ICC’s suggested that indicator covariations at the
+
+within- and between-school levels might differ (Boyce & Bowers, 2018a). Thus, different factor
+
+structures were expected between individual teachers within school and teachers collectively
+
+between schools (Dunn et al., 2015).
+
+
+
+
+                                                26
+
+Step two results: preliminary factor retention estimation
+
+Step two ran a parallel analysis to estimate the number of factors to be retained in each level,
+
+using each of the four exploratory subsamples. At the within-school level, parallel analyses in all
+
+four exploratory subsamples suggested maximum six factors to be retained, whereas it implied
+
+maximum 10 factors at the between-school level.
+
+Step three results: separate within- and between-school MEFA
+
+Step three estimated the optimal number of factors at each level by running separate MEFA’s for
+
+the within- and between-school levels, using the four exploratory subsamples. Step three analysis
+
+provided the number of factors for teachers collectively and principals at the between-school
+
+level, whereas step two only provided an overall number of factors in this level.
+
+Within-school level MEFA results
+
+       Following the parallel analysis result, we examined one- up to six-factor MEFA solutions
+
+using the pooled-within correlation matrix. The model fit indices for one- through six-factor
+
+solutions of exploratory subsample 1 is presented in Table 8. We determined that the five-factor
+
+solution is the best model for the within-school analysis. That is, we first eliminated one- through
+
+four-factor models from consideration as none of the solutions reached adequate model fit in any
+
+of the four exploratory subsamples. We further removed the six-factor solution because it did not
+
+converge in three out of four exploratory subsamples.
+
+                                       [Table 8 about here]
+
+Between-school MEFA results
+
+According to the parallel analysis result at the between-school level, we built between one- and
+
+10-factor MEFA models using the pooled-between correlation matrix from each of the four
+
+exploratory subsamples. Table 9 presents the model fit indices of subsample 1. In choosing the
+
+
+
+
+                                                 27
+
+final factor solution among the 10 models, we considered model fit statistics and preferred the
+
+smaller number of cross-loaded items (i.e., items loaded on two or more factors at 0.40 or above)
+
+and the greater number of items that showed the goemin-rotated loadings | >. 40|. Based
+
+on these criteria, we selected the nine-factor solution as the best-fitting model. Although the 10-
+
+factor model indicated a slightly better fit over the nine-factor solution in all four exploratory
+
+subsamples, this solution did not improve interpretability. That is, the 10-factor solutions had a
+
+10th latent factor consisting solely of cross-loaded items in three out of four exploratory
+
+subsamples, whereas the 9-factor solution had this only-crossed loaded factor only in two
+
+subsamples. Additionally, the 10-factor solution had a factor consisting of only one item in three
+
+out of four exploratory subsamples, which cannot be modeled in CFA, as each factor must
+
+include at least two items. The 9-factor solution had this factor in only one out of four
+
+exploratory subsample. In the final nine-factor solution, teachers collectively perceived four
+
+latent factors, and principals accounted for five factors.
+
+                                        [Table 9 about here]
+
+Step four results: a full multilevel exploratory factor analysis (MEFA)
+
+The full MEFA in step four estimated the factor structure of leadership for learning by
+
+incorporating both within- and between-school data simultaneously. The separate MEFA’s in
+
+step three suggested five factors within schools and nine factors between schools. Thus, we
+
+tested whether this 5-within, 9-between solution fits the each of the four exploratory subsamples
+
+(Dunn et al., 2015). A close examination of MEFA results of the four exploratory subsamples
+
+revealed that five-within, nine-between solution fits well in all subsamples but subsample 2.
+
+Subsample 2 indicated unusually low CFI and TLI (CFI = 0.111, TLI = 0.048). CFI and TLI in
+
+subsamples 3 and 4 were also slightly lower than the desired cutoff.
+
+
+
+
+                                                 28
+
+       With this partially unsatisfactory model fit in each of the subsamples, we further
+
+reviewed the factor loadings to prune indicators to see if the pruning would improve the model
+
+fit. Based on the pruning criteria detailed in methods, we removed one teacher item (T19) and
+
+three principal indicators from the model. T19 did not possess any significant (0.40) loadings at
+
+either within- or between-school level and did not have any significant cross-loadings in any of
+
+the four exploratory subsamples. Similarly, we removed three principal indicators (P4, P13, P17)
+
+as they did not have any significant loadings in any of the four subsamples. We reran the MEFA
+
+models using each of the four exploratory subsamples. Results indicated that the pruning step
+
+remarkably improved model fit indices in all four exploratory subsamples. Table 10 shows the
+
+model fit changes resulting from the pruning process. Especially, the fit indices of subsample 2
+
+improved considerably, now reaching an adequate level. This provides strong evidence that the
+
+pruning step contributed to the enhanced fit and the parsimony of the model.
+
+       We further reviewed the factor loadings to determine whether additional indicators had to
+
+be pruned. In this second pruning, we used the criterion that an indicator should be removed if it
+
+did not have any consistent strong loading patterns across the four subsamples; and it had at least
+
+three distinct factors across the four different models (Boyce & Bowers, 2018b; Dunn et al.,
+
+2015). No teacher or principal indicators satisfied this second pruning criteria; therefore, we
+
+retained all indicators resulting from the first pruning step.
+
+                                       [Table 10 about here]
+
+       Table 11 presents factor loadings as well as inter-factor correlations of the final MEFA
+
+with five within-school and nine between-school factors. As the conclusion of step four, the full
+
+MEFA confirmed five individual teacher factors, four collective teacher factors, and five
+
+principal factors. The final MEFA implied that all 14 leadership for learning constructs
+
+
+
+
+                                                  29
+
+evidenced a satisfactory discriminant construct validity (Modeste & Kelley, 2020) as the inter-
+
+factor correlation coefficients reported in the lower half of Table 11 show that each factor is
+
+correlated at only weak to moderate levels (–0.006 < r < 0.396).
+
+                                       [Table 11 about here]
+
+Step five results: a full MCFA with four CFA subsamples
+
+Step five aimed to cross-validate the performance of the final MEFA models by fitting full
+
+MCFAs to the four CFA subsamples (Dunn et al., 2015). MCFA was implemented in four steps,
+
+followed by additional MCFA models, adding suggestions from model modification index (MI)
+
+(Tiffany, 2012). MI added all the paths that had initially been fixed at zero back to the model and
+
+evaluated the potential decrease in the overall chi-square goodness-of-fit statistic.
+
+       The initial round MCFA included only those indicators that showed significant factor
+
+loadings in all four exploratory subsamples, while fixing the loadings of other indicators at zero.
+
+Table 12 shows that none of the four MCFA subsamples in the initial round satisfied the desired
+
+model fit. In the second round, we added the indicators that showed significant loadings in three
+
+out of the four exploratory subsamples, with three individual teacher items (T6, T12, T17) being
+
+added at the between-school level. Model fit slightly improved, with averaged RMSEA = 0.011,
+
+CFI = 0.884, TLI = 0.869, and SRMRwithin = 0.055, SRMRbetween = 0.124.
+
+                                       [Table 12 about here]
+
+       The third round further included indicators that showed significant loadings in two
+
+exploratory subsamples, adding two additional teacher indicators (T5, T15) to the between-
+
+school level. Again, model fit slightly improved, with averaged RMSEA = 0.011, CFI = 0.889,
+
+TLI = 0.875, and SRMRwithin = 0.054, SRMRbetween = 0.119. The fourth round MCFA further
+
+incorporated the indicators that showed significant factor loadings in any of the four exploratory
+
+
+
+
+                                                 30
+
+subsamples, with seven teacher items (T4, T6, T9, T10, T14, T17, T20) being added to the
+
+between-school level. Again, model fit slightly improved, with averaged RMSEA = 0.010, CFI =
+
+0.887, TLI = 0.876, and SRMRwithin = 0.054, SRMRbetween = 0.105. As the final MCFA step, we
+
+reran the MCFA models four additional times at each of the four CFA subsamples, adding a
+
+residual covariance term at each time, based on the MI recommendations. Again, model fit
+
+improved, with averaged RMSEA = 0.009, CFI = 0.910, TLI = 0.896, and SRMRwithin = 0.053,
+
+SRMRbetween = 0.104.
+
+       Table 13 reports the standardized factor loadings for the final MCFA model after
+
+applying the MI’s, confirming five individual teacher factors within school as well as four
+
+collective teacher factors and five principal factors between schools. We reported the MCFA
+
+results from the subsample 3 as this model indicated the best model fit among the four CFA
+
+subsamples. Figures 2 presents the factor structures at each level as well as the inter-factor
+
+correlations in the final MCFA model. MCFA confirmed the factor structures as well as the
+
+construct discriminant validity and item reliability identified in MEFA.
+
+                                       [Table 13 about here]
+
+Factor naming
+
+Within school: individual teacher factors
+
+It is a crucial step to assign names to each latent factor that best represent the meanings of
+
+observed items within each leadership construct (Porter et al., 2010; Yong & Pearce, 2013).
+
+Working from WT1 to WT5 in Figure 2, we named the first factor as ‘Collaborative focus on
+
+learning.’ The covariance of the five items (T1–T4, T11; See Table 1 for item wordings) onto
+
+this factor represents the extent to which individual teachers perceive their school has a culture
+
+of shared responsibility for student learning. We labeled the second within-school factor (WT2)
+
+
+
+
+                                                 31
+
+as ‘Feedback on teaching and learning.’ The inspection of item wordings suggests that this factor
+
+represents the extent to which individual teachers prioritize different types of feedback
+
+information used to promote teaching and learning. We named the third factor (WT3) as
+
+‘Collaboration for learning.’ This factor refers to the extent to which individual teachers engage
+
+in collaborative staff learning as well as discussions about student learning and common
+
+standards. We further labeled the fourth factor (WT4) as ‘Time use for common data standards’
+
+to represent the degree to which teachers purposefully allocate time for addressing data standards
+
+with colleagues and parents. We named the fifth factor (WT5) as ‘Creating equitable learning
+
+space.’ This factor represents the degree to which individual teachers perceive their schools
+
+ensure equitable and safe learning environment concerning student behavior, community
+
+cooperation, and success of disadvantaged students.
+
+                                      [Figure 2 about here]
+
+Between school: collective teacher factors
+
+Working from BT1 to BT4 in Figure 2, the first collective teacher factor (BT1) shared identical
+
+items (T1-T4, T11) with the first within-school factor. Thus, we assigned the same label as WT1:
+
+‘Collaborative focus on learning.’ This factor represents the extent to which a school’s collective
+
+faculty perceive their school has a culture of shared responsibility for and collective focus on
+
+student learning. BT2 shared identical items (T5-T8) with WT2. Thus, we assigned the same
+
+label as its within-school counterpart: ‘Feedback on teaching and learning.’
+
+       BT3 was labeled as ‘Collective data analysis,’ as it subsumed two within-school factors,
+
+‘Feedback on teaching and learning’ and ‘Collaboration for learning,’ representing the degree to
+
+which teachers collectively value school-wide collective analysis of student data. BT4 subsumed
+
+two within-school factors, ‘Time use for common data standards’ and ‘Creating equitable
+
+
+
+
+                                                 32
+
+learning space,’ highlighting the indicators about inviting external expertise for staff
+
+development (T16, T13) and cooperating with parents (T17, T21). The strong convergence of
+
+these items suggests that BT4 represents the extent to which the collective teaching body of a
+
+school perceives their school culture of inviting insights and expertise from outside the school
+
+for staff and student development. Thus, we named BT4 as ‘Organizational listening culture.’
+
+Between school: principal factors
+
+Working from BP1 to BP5 in Figure 2, the first and second principal factors (BP1, BP2) shared
+
+the identical item wordings with WT1, BT1 and WT2, BT2, respectively. Thus, we assigned the
+
+same labels as its teacher factor counterparts: ‘Collaborative focus on learning’ and ‘Feedback
+
+on teaching and learning.’ These factors represent the degree to which principals perceive that
+
+their school has a culture of shared responsibility for and collective focus on student learning
+
+(BP1) and they prioritize different types of feedback information to promote teaching and
+
+learning (BP2).
+
+        We further labeled BP3 as ‘Coordination of learning communities.’ This corresponds to
+
+principal responses concerning their initiatives to proactively work with teachers for improving
+
+teaching and learning. The items associated with BP4 measured the extent to which principals
+
+shared leadership concerning budget allocation, personnel services, learning material selection,
+
+course offering, and establishing discipline policies. Thus, we labeled BP4 as ‘Resource
+
+management for learning.’ We named BP5 as ‘Establishment of learning environment.’ This
+
+factor represents the extent to which principals ensure adequate school physical infrastructure
+
+(e.g., instructional facilities) and staffing. In discussion, we interpret the leadership for learning
+
+measurement model and discuss implications for research and practice in educational leadership.
+
+
+
+
+                                                  33
+
+Discussion
+
+This study provides empirical evidence on educators’ divergent understandings of leadership
+
+enactments, requiring a more complex understanding of organization-wide leadership practice.
+
+Thus, discussion presents how individual and collective teachers as well as principals
+
+specifically differ in perceiving leadership for learning tasks and how these findings advance
+
+leadership theories, research methods, and educational leadership practices.
+
+How educators diverge in perceiving leadership for learning?
+
+Collective faculty vs. principals
+
+We examined the inter-factor correlations of principal and collective teacher factors to identify
+
+the degree to which principals and collective faculty agree in perceiving leadership for learning.
+
+Table 14 embedded in Figure 2 shows that 10 out of 20 correlation coefficients were non-
+
+significant, while the remaining 10 correlations were only small to medium (0.129-0.340). These
+
+results suggest that globally, leadership for learning perspectives of the collective faculty are not
+
+aligned with principals. This confirms past literature that the leadership perspectives of
+
+principals and collective faculty are only minimally correlated and thus refer to distinct
+
+constructs (Goff et al., 2014; Urick & Bowers, 2019). This incongruence between collective
+
+faculty and principals is concerning as a core tenet of leadership for learning is to ensure schools
+
+operate as a collective body to promote the success of students and teachers. We will further
+
+discuss this issue in the subsequent section, ‘Implications for Leadership Practice.’
+
+       This finding also resonates with recent conversations in the field regarding who to draw
+
+evidence from for assessing organizational leadership. Recent studies have increasingly
+
+addressed the predictive validity of leadership constructs. Predictive validity refers to a
+
+psychometric concept pertinent to whether a given measure ‘predict[s] meaningful change in
+
+
+
+
+                                                 34
+
+outcomes of relevance’ (Goff et al., 2015, p. 4). Studies report that collective teacher perceptions
+
+of leadership are more relevant to predicting educational outcomes such as stakeholder
+
+involvement in decision making and teacher job satisfaction (K. Wang et al., 2019) and their
+
+participation in professional collaboration (Park & Ham, 2016). Upon reflecting on this recent
+
+evidence that prioritizes collective teacher perspectives over those of principals, this study
+
+suggests that, in evaluating organization-wide leadership, researchers and policymakers may
+
+need to draw evidence from multiple data sources, such as collective teachers and other
+
+instructional staff (e.g., coaches) in addition to that of principals.
+
+        Critically, collective teacher leadership constructs afford insights on theorizing leadership
+
+as an organizational quality. Recall that leadership for learning conceptualizes leadership
+
+practices as inherently distributed across stakeholders and embedded in organizations’ structure
+
+(Goff et al., 2015; Halverson & Kelley, 2017; Mitchell & Sackney, 2011). One benefit of
+
+considering collective teacher leadership constructs as organization-wide leadership might be
+
+that principals and teacher leaders can frame the explanation for low survey ratings on these
+
+constructs as justification for organizational change rather than a deficit in their personal
+
+practice. Indeed, a CALL validation study found that, when the survey results were presented as
+
+feedback on the school organization’s performance, the participating principals regarded low
+
+ratings as ‘a cause for action,’ instead of as ‘an attack’ on themselves as individuals (Kelley &
+
+Dikkers, 2016, p. 407).
+
+        Although collective teacher perspectives are important, the critical roles principals play in
+
+guiding organizational changes should not be underestimated. Their formal authority empowers
+
+principals to play both substantive and symbolic roles in shaping policies and allocating human,
+
+material resources to create learning environments conducive to learning for all (Mohr &
+
+
+
+
+                                                   35
+
+Dichter, 2002). Indeed, Tan et al.'s (2020) second-order meta-analysis suggests that leadership
+
+impact of the principal is greater than those of other leaders even in the currently prevalent
+
+distributed leadership context. Therefore, the five principal task domains (BP1-BP5) identified in
+
+this study should also inform principals of actionable changes in their leadership practice. For
+
+instance, given the public nature of TALIS survey, district leaders may use the principal survey
+
+indicators to provide constructive feedback information on how each principal is performing
+
+across the district (i.e., compared to other principals within the district) or across time (i.e., by
+
+monitoring principals’ performance across multiple time points).
+
+Individual teachers vs. collective faculty
+
+The lower half of Figure 2 shows that individual and collective teachers diverge in the number of
+
+perceived leadership domains (four domains for collective faculty, five for individual teachers).
+
+With overall divergent factor structure between the two groups, Figure 2 also indicates partially
+
+isomorphic perceptions between the two. That is, working from left to right, the first two
+
+domains (Collaborative Focus on Learning, Feedback on Teaching and Learning) indicate
+
+exactly the same constituent items at both levels. According to Dyer et al.’s (2005) typology
+
+explained in the literature review, this result is aligned with composition factors as the two
+
+collective teacher factors (BT1, BT2) emerge from individual teacher factors (WT1, WT2),
+
+replicating the same property (i.e., constituent items). Therefore, in terms of the leadership tasks
+
+of a setting school-wide vision for learning (WT1, BT1) and sharing feedback on teaching and
+
+learning (WT2, BT2), one may use data from either individual teachers or their aggregated
+
+measure and either of them will possess the same predictive power in inferential analyses.
+
+        On the other hand, BT3 and BT4 indicate a different factor structure from their individual
+
+teacher counterparts, while BT3 subsumes WT2 and WT3, and BT4 includes WT4 and WT5. In
+
+
+
+
+                                                   36
+
+Dyer et al.'s (2005) typology, BT3 and BT4 illustrate fuzzy composition factors as leadership
+
+constructs are meaningful at both levels but possess distinct factor structures and meanings. This
+
+result suggests that collective faculty perceive two broader leadership tasks (i.e., Collective data
+
+analysis, Organizational listening culture) as relevant properties that separate their schools from
+
+elsewhere, whereas individual teachers perceived more specific three tasks (Collaboration for
+
+learning, Time use for common data standards, Creating equitable learning space) as the tasks
+
+that differentiate their performance from other colleagues.
+
+       These results that individual versus collective teachers do not agree in how they perceive
+
+leadership tasks afford strong counter evidence against the prevalent assumption in the field that
+
+leadership constructs have isomorphic structures and meanings at the individual (e.g., within
+
+school) and collective levels (e.g. between schools) (Dyer et al., 2005). This incongruent factor
+
+structure between the two groups suggests that organizational leadership behaviors must be
+
+measured separately at the individual and collective levels (Kozlowski & Klein, 2000).
+
+       In terms of construct meanings, collective faculty constructs capture teachers’ mean
+
+responses across schools, reflecting school-wide common beliefs of the collective faculty (Chen
+
+et al., 2005; Kozlowski & Klein, 2000). The essential characteristics of leadership for learning as
+
+an organization-wide quality is ‘to ensure that schools are collectively focused on what is
+
+necessary to ensure the success of their students’ (Boyce & Bowers, 2018a, p. 2). Thus, these
+
+collective faculty leadership domains should inform crafting organization-wide visions for
+
+school improvement, and thus guiding reflective conversations among collective faculty within
+
+professional learning communities or staff meetings. It is important to note that the four
+
+collective teacher leadership domains (BT1-BT4) measure actionable tasks (e.g., ‘Hours I spent
+
+on teamwork and dialogue with colleagues’) instead of generic traits of an individual (e.g., ‘How
+
+
+
+
+                                                 37
+
+much do you agree your principal is an effective leader?’). Therefore, the articulated four task
+
+domains should afford a common language among collective faculty and tangible paths for
+
+organizational change (Kelley & Dikkers, 2016). In contrast to collective teacher perspectives,
+
+individual-level constructs capture the variation in leadership enactment individual teachers
+
+experience across classrooms and departments. Thus, the five leadership domains (WT1-WT5)
+
+should act as ‘an outline of research-based effective practices’ (Kelley & Dikkers, 2016, p. 406),
+
+guiding the steps for individual teachers to improve their practices. Thus, principals could also
+
+use survey results from this measurement model to provide constructive feedback on individual
+
+teacher’s practice.
+
+Individual teachers vs. principals
+
+By definition, it is not allowed to examine factor correlations across within- and between-school
+
+levels. Therefore, we examined the order of factor loading strengths within each leadership
+
+domain to see the extent to which individual teachers and principals agree in perceiving
+
+leadership. Table 13 shows that factor loading patterns of individual teachers and principals do
+
+not agree in four out of five domains. The table illustrates that individual teachers and principals
+
+agreed only in the 1st domain (Focus on Learning), whereas they prioritize divergent leadership
+
+tasks in the remaining domains.
+
+       A close examination of Table 13 and the item wordings in Tables 1 and 2 signals that
+
+both individual teachers and principals perceive crafting and communicating a shared vision for
+
+learning (T1, P1) as the key leadership task among other tasks included in the 1st domain (WT1,
+
+BP1). In addition, individual teachers and principals share an identical order of prioritizing the
+
+three leadership tasks within this domain (i.e., T1, T3, T2 in order of loading strength for
+
+teachers; P1, P3, P2 for principals). However, they diverge in prioritizing leadership tasks within
+
+
+
+
+                                                 38
+
+the 2nd domain (Feedback on teaching and learning). For teachers, the highest loading is assigned
+
+to T7, which measures the collective use of information on formative teaching evaluation. The
+
+strongest loading for principals is assigned to P8, which assesses the summative evaluation of
+
+teaching. This suggests that individual teachers perceive the informal, formative aspect of
+
+feedback activities as the key leadership task in improving teaching and learning, whereas
+
+principals prioritize the formal, summative assessment of teaching over other tasks.
+
+       Table 13 further shows that principals and individual teachers prioritize leadership tasks
+
+in the completely opposite orders in the 3rd leadership domain (Learning Community). Although
+
+principals perceived professional development (P10) as the highest importance, followed by
+
+discussing learning (P9) and mentoring teachers (P12), teachers prioritized these tasks in the
+
+exact opposite order. In the 4th and 5th domains, constituent indicators loaded on to different
+
+factors in teacher’s and principals’ factors, meaning the two groups indicate even more
+
+substantial disagreement in leadership perceptions in the 4th and 5th domains.
+
+Contribution to theory and methods
+
+District and state leaders as well as policymakers consistently promote the assessment of
+
+leadership due to its research-evidenced effect on staff development and student learning (Goff
+
+et al., 2015). Relatedly, this study directly speaks to the current literature on what to measure:
+
+styles vs. practice for assessing leadership. After the evolution of multiple leadership models
+
+over the past decades, a comprehensive framework of leadership for learning emerged,
+
+subsuming instructional, transformational, and distributed of leadership (Hallinger, 2011).
+
+Indeed, the leadership domains of this study’s measurement model does represent a clear
+
+alignment with these leadership styles. For example, leadership domains, ‘Collaborative Focus
+
+on Learning’ (WT1, BT1, BP1) and ‘Feedback on Teaching and Learning’ (WT2, BT2, BP2) are
+
+
+
+
+                                                 39
+
+aligned with instructional leadership practices. Leadership tasks centering around ‘Collaboration
+
+for Learning’ (WT3) and ‘Coordination of Learning Communities’ (BP3) speak to
+
+transformational approach to leadership. Further, this study’s leadership measurement model
+
+reflects a distributed view of leadership as the survey items assess leadership tasks distributed
+
+throughout the school organization instead of focusing on the actions of the principal (Halverson
+
+& Kelley, 2017; Kelley & Dikkers, 2016).
+
+       However, it is important to note that this study’s measurement model assesses specific
+
+tasks, rather than styles of leadership. This study’s focus on tasks directly speaks to recent
+
+literature’s pivot toward practices (Day et al., 2016; Goff et al., 2015; Kelley & Dikkers, 2016;
+
+Tan et al., 2020). For instance, one critical issue around measuring styles of leadership is its
+
+limited actionability (Halverson & Kelley, 2017; Kelley & Dikkers, 2016). Actionability refers
+
+to the extent to which the feedback information on leadership enactment provided to school
+
+organizations can actually drive future organizational actions or change (Goff et al., 2015;
+
+Halverson & Kelley, 2017). Only when schools and districts have relevant information on
+
+measurable tasks and practice (not styles), organizational leaders can take concrete steps to
+
+improve leadership actions (Halverson & Kelley, 2017). In all, when viewed through CALL’s
+
+practice-focused lens, this study suggests that TALIS affords a strong opportunity to see
+
+leadership assessment survey as an indicator of practice instead of assessing style of leadership
+
+(Kelley & Dikkers, 2016; Tan et al., 2020). In addition, while using CALL as a scaffold to build
+
+the leadership for learning measurement model, this study also expands it. Although it is a multi-
+
+source survey, CALL provides feedback information on organization not on individuals. Thus, a
+
+principal may find the returned feedback incongruent with their practice (Goff et al., 2014). In
+
+contrast, by separately measuring perspectives of individual teachers and principals as well as
+
+
+
+
+                                                 40
+
+collective teachers, this study provides discrete feedback information for each of the three groups
+
+to improve actions.
+
+        In the field of educational leadership, there have been multiple efforts to illustrate the
+
+evolution of instructional leadership theory into a broader conceptualization of leadership for
+
+learning (Bowers, 2020; Boyce & Bowers, 2018a, 2018b; Hallinger, 2011; Hallinger & Heck,
+
+2010; MacBeath & Townsend, 2011; Pietsch et al., 2019). For instance, Hallinger's (2011)
+
+conceptual study proposed the conception of leadership for learning that subsumes previous
+
+theories of instructional, transformational, and distributed leadership. Additionally, using 109
+
+instructional leadership research studies, Boyce & Bowers 's (2018b) literature review illustrated
+
+how instructional leadership conceptually evolved into a more comprehensive framework of
+
+leadership for learning, encompassing staff development, school culture, and human resource
+
+management. Using the most recent TALIS, Bowers (2020) further suggested eight task domains
+
+of leadership for learning, although its factor structure was not empirically tested. In line with
+
+this body of research, this study adds to the literature by, for the first time, empirically testing the
+
+factor structure of the emergent leadership framework, using generalizable 2018 TALIS survey.
+
+        Relatedly, this study also contributes to a methodological advance in the field. Boyce and
+
+Bowers (2018a) suggested six individual- and three collective-teacher constructs of leadership
+
+for learning, but their model did not include principal factors. More recently, Modeste and
+
+Kelley (2020) included both teacher and principal data into their measurement model; however,
+
+their leadership constructs indicated high inter-factor correlations (i.e., > 0.90), resulting in a lack
+
+of discriminant construct validity. For the first time, this study successfully produces the separate
+
+factor structure of leadership for learning pertaining to individual and collective teachers as well
+
+as principals’ perspectives, also demonstrating sufficient construct discriminant validity.
+
+
+
+
+                                                  41
+
+Implications for leadership practice
+
+This study finds that globally, collective teachers’ and principals’ leadership perspectives are not
+
+correlated at all in 50% of tasks and the remaining half of the domains are also correlated in only
+
+small to medium range. This result is especially concerning as the essential goal of leadership for
+
+learning is to ensure that schools operate as a collective body to improve teaching and learning
+
+(Boyce & Bowers, 2018a; Mitchell & Sackney, 2011). The gap is also troublesome as research
+
+supports that school leaders in high-performing schools place an extensive effort to articulate a
+
+vision for learning that is shared and supported by teachers, students, and the community
+
+(Bellibas & Liu, 2017; Blase & Blase, 1999; Boyce & Bowers, 2018b; Hallinger, 2011;
+
+Hallinger & Murphy, 1985; Murphy et al., 2007). Related, Bowers et al. (2017) suggest that
+
+there exist three types of schools in the U.S., depending on the extent to which principals and
+
+teachers agree in evaluating the prevalence of leadership practice. Based on their finding that in
+
+one out of three school types, there is a strong alignment in the high leadership perceptions of
+
+both principals and teachers, they suggest schools may develop from low teacher-low principal
+
+leadership perception phase (i.e., both teachers and principals rate leadership prevalence as low),
+
+to the low teacher-high principals, and ultimately to high-teacher, high-principal phase (Bowers
+
+et al., 2017).
+
+        Thus, for the principal’s vision to be translated into measurable outcomes (Murphy et al.,
+
+2007), it is imperative to narrow these leadership perception gaps (Brezicha et al., 2019;
+
+Hallinger & Murphy, 1985; Ham & Kim, 2015; Mulford & Silins, 2011; Urick & Bowers, 2019).
+
+Leadership perception gaps between teachers and principals are negatively associated with
+
+teacher self-efficacy (Ham et al., 2015) and their participation in collaborative activities (Park &
+
+Ham, 2016). Others suggest teacher perceptions of leadership significantly predict different
+
+
+
+
+                                                 42
+
+outcomes (Park & Ham, 2016; K. Wang et al., 2019), whereas the principal’s perspectives do
+
+not. It is a reminder that the effect of principals’ leadership is indirect and mediated through what
+
+teachers do (Bosker et al., 2000; Day et al., 2016; Hallinger & Heck, 2011; Leithwood et al.,
+
+2010; Leithwood & Sun, 2012; Murphy et al., 2007; Pietsch et al., 2019; Robinson et al., 2008;
+
+Sammons et al., 2011; Silins & Mulford, 2011; Witziers et al., 2003). Therefore, we argue that
+
+the school organization’s vision for learning must be crafted and implemented by inviting
+
+teachers as equal partners.
+
+       It is worthwhile to note that there is a discrepancy between what principals believe to be a
+
+priority and what their position demands (Whitaker & Turner, 2000). In an analysis of 1,801 U.S.
+
+principal responses, principals’ perceived and actual priorities aligned in only three out of 31
+
+questions, with several items varying considerably between what they feel they should prioritize
+
+and what they actually prioritize (Whitaker & Turner, 2000). Principals put lower actual
+
+priorities than perceived importance in instructional leadership tasks, placing higher actual
+
+priorities than perceived importance in managerial tasks. This implies that, although principals
+
+perceive providing instructional leadership as a priority, this intent is often dominated by the
+
+managerial demands that are imposed by external authorities and regulations (Muse & Abrams,
+
+2011). However, it is a promising finding of this study that individual and collective teachers as
+
+well as principals agreed that sustaining a shared belief on student learning (WT1, BT1, BP1) is
+
+the key leadership tasks among others (In Table 13, T1 and P1 possess the highest factor
+
+loadings in WT1, BT1, BP1). This shared focus on the vision for learning will enable teachers
+
+and principals to determine whether they are being diverted away from the agreed-upon goal and
+
+to define actionable next steps to refocus on the shared vision (Robinson et al., 2008). Therefore,
+
+via multiple venues (e.g., whole staff meeting, professional learning communities, staff
+
+
+
+
+                                                 43
+
+professional development), principals must engage in continued discussions with teachers on
+
+how they can narrow the leadership perception gaps and maintain the shared goal for teaching
+
+and learning. These continued collective conversation is critical because leadership for learning
+
+is concerned more with ‘persistent focus on improving the conditions for learning’ and less with
+
+‘grand announcement of a new innovation’ (Hallinger, 2011, p. 137; italics added).
+
+Implications for research
+
+This study poses a fundamental question to researchers regarding the source of data for
+
+measuring leadership. 360-degree or multi-source leadership assessments have been touted as a
+
+sign of “robustness” of the evaluation (Goff et. al., 2015, p. 8). Yet research on whose data (e.g.,
+
+individual teacher, principal) and whose leadership task (e.g., principal, teacher) is sparse.
+
+Combining previous literature and this study’s results, Table 15 provides a typology of
+
+leadership perception congruence contingent on data source and unit of analysis (i.e., who’s
+
+practice to measure). Specifically, Urick and Bowers (2019) suggested that when measuring
+
+principals’ leadership practice, individual and collective teachers indicate an isomorphic factor
+
+structure. This means that one may use either data source for measuring leadership, and both will
+
+lead to equivalent results in subsequent inferential analysis (e.g., regression). Boyce and Bowers
+
+(2018b), on the other hand, proposed that when measuring teachers’ practice, individual and
+
+collective teachers indicated divergent perspectives, and thus different factor structures.
+
+Expanding this prior body of literature, this study adds more complex understanding to the
+
+congruence typology. It further suggests that when measuring school climate, all three
+
+perspectives from individual and collective teachers and principals produce equivalent factor
+
+structure, thus allowing the use of any one of them for further analysis. Additionally, this study
+
+
+
+
+                                                 44
+
+proposes that when measuring individual teachers’ tasks, none of the three groups agreed on
+
+how they perceived leadership for learning.
+
+       These findings require researchers to articulate their measurement intention. For example,
+
+if one aims to assess individual teachers’ leadership tasks, their survey indicators must refer to
+
+individual educators’ practices. And they should expect that individual teacher perspectives and
+
+those of collective faculty should be different, and the aggregation (e.g., mean) of individual
+
+perspectives will produce different outcomes than that of individuals, requiring a multilevel
+
+approach such as hierarchical linear modeling. However, if one aims to measure the school’s
+
+shared climate, their survey must refer to it (e.g., “School provides…) and they may expect
+
+equivalent factor structures across individual and collective teachers as well as principals, and
+
+thus equivalent inferential analysis results, regardless of data source.
+
+       In all, research aiming to measure leadership practices must consider including all three
+
+perspectives. Most prior studies used either the individual teacher’s or principal’s perspectives or
+
+teachers’ aggregated perceptions. More importantly, researchers should articulate whose practice
+
+they intend to measure (i.e., principal, teacher, school climate) and whose data they will use. In
+
+this decision making, we hope that Table 15 may play a role as a decision-making matrix for
+
+researchers aiming to measure organization-wide leadership practice.
+
+                                       [Table 15 about here]
+
+Significance
+
+Using generalizable 2018 TALIS and rigorous multilevel factor analysis, this study provides
+
+evidence that individual and collective teachers as well as principals distinctively perceive
+
+leadership tasks. This result necessitates that these distinct perceptions should be separately
+
+measured using multilevel framework wherever possible. Evaluating principals’ views in
+
+
+
+
+                                                 45
+
+addition to individual and collective teacher perceptions adds to the literature as few prior
+
+attempts successfully included all three groups in a single model with adequate discriminant
+
+validity. Incorporating the three perspectives within a single model provides novel opportunities
+
+to examine whether predicting powers of the three groups would diverge in effecting school
+
+improvement (Ham et al., 2015a; Park & Ham, 2016; Urick & Bowers, 2019; Wang et al., 2019).
+
+Limitations
+
+By employing the full 2018 TALIS from 47 countries, the major limitation of this study is
+
+measurement invariance (Kim et al., 2016; Masyn, 2017). Measurement invariance concerns
+
+whether measured constructs possess the same meanings in different populations (Kline, 2016).
+
+A test of measurement invariance includes four steps (Hoyle, 2012). The hypothesis of
+
+configural invariance tests the equality of factor structure in each demographic group. Metric (or
+
+weak) invariance examines whether factor loadings of each construct holds across groups. Scalar
+
+(or strong) invariance tests the equality of indicator intercepts. Strict invariance tests the equality
+
+of indicator residual variances. Related, further testing the dimensionality and distinctiveness of
+
+the latent leadership constructs using demographic information is warranted in future studies.
+
+Although this more comprehensive structural equation modeling analysis that incorporates
+
+demographic variables (e.g., country, school location, educator gender) is beyond the immediate
+
+scope of this study, we strongly recommend that future studies examine the factor structure this
+
+study suggested while incorporating these demographic variables. Additionally, a common
+
+question often posed regarding factor analysis results is common method bias (CMB) (Doty &
+
+Glick, 1998). CMB concerns the extent to which the variation in participants’ responses are
+
+affected by instrumental design (Reio Jr., 2010). To test the potential CMB effect, we adopted
+
+Harman’s single factor score approach, where we included all items into one common latent
+
+
+
+
+                                                  46
+
+factor at each level (Aguirre-Urreta & Hu, 2019). When the result indicates greater than 50% of
+
+variance is explained by a common latent factor, it is concluded that the factor analysis result has
+
+been affected by CMB. The CMB test result indicated that the common latent factors explained
+
+only 16.8% and 14.7% of variance at the within- and between-school level, respectively,
+
+suggesting that CMB does not significantly affect the results.
+
+Conclusion
+
+This study suggests there are conceptual distinctions in how individual teachers, their collective
+
+body, and principals experience leadership enactment. Related, it provides strong implications
+
+for research, practice, and policy. For research, it highlights the need to consider all three
+
+perspectives (individual teachers, the collective body, and principals) in measuring an
+
+organization’s leadership by employing a multilevel framework. Omitting any part of the three
+
+perspectives may be a missed opportunity to capture particular ways individuals or groups of
+
+individuals experience leadership realities. Qualitative and quantitative studies that examine
+
+whether and how these distinct leadership perspectives influence dynamics in school culture or
+
+educator capacity may provide an intriguing line of future inquiry. For example, quantitative
+
+studies that use this study’s measurement model and employ a structural equation modeling
+
+framework to examine the effects of each of the leadership for learning task domains are strongly
+
+recommended. For leadership practice, this study issues a call to school leaders that collective
+
+faculty do not necessarily agree with principals in perceiving leadership tasks. Therefore,
+
+principals must engage in discussions with teachers to narrow these perception gaps since it is a
+
+critical responsibility of formal school leaders to craft and communicate a shared vision to effect
+
+meaningful school changes (Hallinger, 2011). Given the publicly available TALIS survey, this
+
+study’s leadership for learning measurement model may also provide a useful measure for
+
+
+
+
+                                                  47
+
+schools and districts to evaluate the extent to which their leaders enact effective leadership tasks
+
+in daily practices. For education policy, the distinctive perspectives among educators reflect the
+
+complexity embedded in implementing school reform policies. Policymakers at all levels must
+
+reflect on the ways in which they can craft policy initiatives that best represent the divergent
+
+perceptions among school stakeholders. Future studies are warranted to examine whether district,
+
+state, and federal policymakers may expect improved implementation fidelity of policy
+
+initiatives once they invite diverse inputs from individual teachers, as well as principals.
+
+
+
+
+                                                 48
+
+                                          References
+
+Agasisti, T., Bowers, A. J., & Soncin, M. (2019). School principals’ leadership types and student
+        achievement in the Italian context: Empirical results from a three-step latent class
+        analysis. Educational Management Administration & Leadership, 47(6), 860–886.
+        https://doi.org/10. 1177/1741143218768577
+Bowers, A. J. (2020). Examining a congruency-typology model of leadership for learning using
+        two- level latent class analysis with TALIS2018. https://www.oecd-
+        ilibrary.org/content/paper/ c963073b-en
+Bowers, A. J., Blitz, M., Modeste, M. E., Salisbury, J., & Halverson, R. (2017). Is there a
+        typology of teacher and leader responders to CALL, and do they cluster in different types
+        of schools? A two- level latent class analysis of call survey data. Teachers College
+        Record, 119(4), 1–66.
+Boyce, J., & Bowers, A. J. (2018a). Different levels of leadership for learning: Investigating
+        differences between teachers individually and collectively using multilevel factor
+        analysis of the 2011-2012 schools and staffing survey. International Journal of
+        Leadership in Education, 21 (2), 197–225.
+        https://doi.org/10.1080/13603124.2016.1139187 Boyce, J., & Bowers, A. J. (2018b).
+        Toward an evolving conceptualization of instructional leadership as leadership for
+        learning: Meta-narrative review of 109 quantitative studies across 25 Years. Journal of
+        Educational Administration, 56(2), 161–182. https://doi.org/10.1108/JEA-06- 2016-0064
+Aguirre-Urreta, M. I., & Hu, J. (2019). Detecting common method bias: Performance of the
+        Harman’s single-factor test. Data Base for Advances in Information Systems, 50(2), 45–
+        70. https://doi.org/10.1145/3330472.3330477
+Arlot, S., & Celisse, A. (2010). A survey of cross-validation procedures for model selection.
+        Statistics Surveys, 4, 40–79. https://doi.org/10.1214/09-SS054
+Asparouhov, T., & Muthén, B. (2006). Multilevel modeling of complex survey data. 2718–2726.
+Bass, B. M., & Avolio, B. J. (2007). Transformational leadership and organizational culture.
+        International Journal of Public Administration, 17(3–4), 541–554.
+        https://doi.org/10.1080/01900699408524907
+Bellibas, M. S., & Liu, Y. (2017). Multilevel analysis of the relationship between principals’
+        perceived practices of instructional leadership and teachers’ Self-efficacy perceptions.
+        Journal of Educational Administration, 55(1), 49–69. https://doi.org/10.1108/JEA-12-
+        2015-0116
+Berkovich, I. (2016). School leaders and transformational leadership theory: Time to part ways?
+        Journal of Educational Administration, 54(5), 609–622. https://doi.org/10.1108/JEA-11-
+        2015-0100
+Blase, J., & Blase, J. (1999). Principals’ instructional leadership and teacher development:
+        Teachers’ perspectives. Educational Administration Quarterly, 35(3), 349–378.
+Bogler, R. (2001). The influence of leadership style on teacher job satisfaction. Educational
+        Administration Quarterly, 37(5), 662–683.
+Bosker, R., de Vos, H., & Witziers, B. (2000). Theories and models of educational effectiveness.
+        American Educational Research Association Annual Meeting, New Orleans.
+Bossert, S. T., Dwyer, D. C., Rowan, B., & Lee, G. V. (1982). The instructional management
+        role of the principal. Educational Administration Quarterly, 18(3), 34–64.
+        https://doi.org/10.1177/0013161X82018003004
+
+
+
+                                               49
+
+Brezicha, K. F., Ikoma, S., Park, H., & LeTendre, G. K. (2019). The ownership perception gap:
+       Exploring teacher job satisfaction and its relationship to teachers’ and principals’
+       perception of decision-making opportunities. International Journal of Leadership in
+       Education. https://doi.org/10.1080/13603124.2018.1562098
+Brooks, J. S., Jean-Marie, G., Normore, A. H., & Hodgins, D. W. (2007). Distributed leadership
+       for social justice: Exploring how influence and equity are stretched over an urban high
+       school. Journal of School Leadership, 17(4), 378–408.
+Buysse, V., Sparkman, K. L., & Wesley, P. W. (2003). Communities of practice: Connecting
+       what we know with what we do. Exceptional Children, 69(3), 263–277.
+       https://doi.org/10.1177/001440290306900301
+Cawelti, G., & Protheroe, N. (2001). High student acheivement: How six school districts
+       changed into high-performance systems. Educational Research Service.
+Chen, G., Bliese, P., & Mathieu, J. (2005). Conceptual framework and statistical procedures for
+       delineating and testing multilevel theories of homology. Organizational Research
+       Methods, 8(4), 375–409. https://doi.org/10.1177/1094428105280056
+Curcuruto, M., Kandola, R., Morgan, J. I., & Griffin, M. A. (2018). Multilevel safety climate in
+       the UK rail industry: A cross validation of the Zohar and Luria MSC scale. Safety
+       Science, 110, 183–194. https://doi.org/10.1016/j.ssci.2018.02.008
+Day, C., Gu, Q., & Sammons, P. (2016). The impact of leadership on student outcomes: How
+       successful school leaders use transformational and instructional strategies to make a
+       difference. Educational Administration Quarterly, 52(2), 221–258.
+       https://doi.org/10.1177/0013161X15616863
+Day, C., Sammons, P., Leithwood, K., Hopkins, D., Gu, Q., & Brown, E. (2011). Successful
+       school leadership: Linking with learning and achievement. McGraw Hill Open
+       University Press.
+Diamond, J. B., & Spillane, J. P. (2016). School leadership and management from a distributed
+       perspective: A 2016 retrospective and prospective. Management in Education, 30(4),
+       147–154. https://doi.org/10.1177/0892020616665938
+Doty, D. H., & Glick, W. H. (1998). Common methods bias: Does common methods variance
+       really bias results? Organizational Research Methods, 1(4), 374–406.
+       https://doi.org/10.1177/109442819814002
+Dunn, E. C., Masyn, K. E., Jones, S. M., Subramanian, S. V., & Koenen, K. C. (2015).
+       Measuring psychosocial environments using individual responses: An application of
+       multilevel factor analysis to examining students in schools. Prevention Science, 16(5),
+       718–733. https://doi.org/10.1007/s11121-014-0523-x
+Dyer, N. G., Hanges, P. J., & Hall, R. J. (2005). Applying multilevel confirmatory factor analysis
+       techniques to the study of leadership. Leadership Quarterly, 16(1), 149–167.
+       https://doi.org/10.1016/j.leaqua.2004.09.009
+Edmonds, R. (1979). Effective schools for the urban poor. Educational Leadership, 37(1), 15–
+       18.
+Fitzgerald, T., & Gunter, M. (2007, March). Teacher leadership: A new myth for our time? the
+       Annual Meeting of American Educational Research Association, Chicago, IL.
+Ford, T. G., Urick, A., & Wilson, A. S. P. (2018). Exploring the effect of supportive teacher
+       evaluation experiences on U.S. teachers’ job satisfaction. Education Policy Analysis
+       Archives, 26(59). https://doi.org/10.14507/epaa.26.3559
+
+
+
+
+                                               50
+
+Forer, B., & Zumbo, B. D. (2011). Validation of multilevel constructs: Validation methods and
+       empirical findings for the EDI. Social Indicators Research, 103(2), 231.
+       https://doi.org/10.1007/s11205-011-9844-3
+García-Carmona, M., Fernández-de-Álava, M., & Pallares, Q. C. (2016). Leadership in Brazilian,
+       Singaporean, and Spanish secondary schools: An in-depth analysis based on the 2013
+       TALIS. In P. Miller (Ed.), Cultures of leadership: Exploring educational leadership
+       practice across cultures. (pp. 121–148). Palgrave Macmillan.
+Geldhof, G. J., Preacher, K. J., & Zyphur, M. J. (2014). Reliability estimation in a multilevel
+       confirmatory factor analysis framework. Psychological Methods, 19(1), 72–91.
+       https://doi.org/10.1037/a0032138
+Goff, P., Salisbury, J., Blitz, M., & Wisconsin Center for Education Research. (2015).
+       Comparing CALL and VAL-ED: An illustrative application of a decision matrix for
+       selecting among leadership feedback instruments. WCER Working Paper No. 2015-5. In
+       Wisconsin Center for Education Research. Wisconsin Center for Education Research.
+       http://www.library.illinois.edu/proxy/go.php?url=http://search.ebscohost.com/login.aspx?
+       direct=true&db=eric&AN=ED577055&site=eds-live&scope=site
+Goff, P. T., Goldring, E., & Bickman, L. (2014). Predicting the Gap: Perceptual Congruence
+       between American Principals and Their Teachers’ Ratings of Leadership Effectiveness.
+       Educational Assessment, Evaluation and Accountability, 26(4), 333–359.
+Graham, J. W. (2003). Adding missing-data-relevant variables to FIML-based structural equation
+       models. Structural Equation Modeling: A Multidisciplinary Journal, 10(1), 80–100.
+       https://doi.org/10.1207/S15328007SEM1001_4
+Gronn, P. (2002). Distributed leadership as a unit of analysis. Leadership Quarterly, 13(4), 423.
+       https://doi.org/10.1016/S1048-9843(02)00120-0
+Gumus, S. (2013). The effects of teacher- and school-level factors on teachers’ participation in
+       professional development activities: The role of principal leadership. Journal of
+       International Education Research, 9(4), 371–380.
+Hairon, S., & Goh, J. W. P. (2015). Pursuing the elusive construct of distributed leadership: Is
+       the search over? Educational Management Administration & Leadership, 43(5), 693–
+       718. https://doi.org/10.1177/1741143214535745
+Hallinger, P. (2003). Leading educational change: Reflections on the practice of instructional and
+       transformational Leadership. Cambridge Journal of Education, 33(3), 329–351.
+Hallinger, P. (2005). Instructional leadership and the school principal: A passing fancy that
+       refuses to fade away. Leadership and Policy in Schools, 4(3), 221–239.
+       https://doi.org/10.1080/15700760500244793
+Hallinger, P. (2011). Leadership for learning: Lessons from 40 years of empirical research.
+       Journal of Educational Administration, 49(2), 125–142.
+       https://doi.org/10.1108/09578231111116699
+Hallinger, P., & Heck, R. H. (1996). Reassessing the principal’s role in school effectiveness: A
+       review of empirical research, 1980-1995. Educational Administration Quarterly, 32(1),
+       5–44. https://doi.org/10.1177/0013161X96032001002
+Hallinger, P., & Heck, R. H. (2010). Leadership for learning: Does collaborative leadership make
+       a difference in school improvement? Educational Management Administration &
+       Leadership, 38(6), 654–678. https://doi.org/10.1177/1741143210379060
+
+
+
+
+                                               51
+
+Hallinger, P., & Heck, R. H. (2011a). Collaborative leadership and school improvement:
+        Understanding the impact on school capacity and student learning (T. Townsend & R. H.
+        MacBeath, Eds.; pp. 469–485). Springer.
+Hallinger, P., & Heck, R. H. (2011b). Conceptual and methodological issues in studying school
+        leadership effects as a reciprocal process. School Effectiveness and School Improvement,
+        22(2), 149–173. https://doi.org/10.1080/09243453.2011.565777
+Hallinger, P., & Murphy, J. F. (1985). Assessing the instructional management behavior of
+        principals. Elementary School Journal, 86, 217–247.
+Halverson, R., & Dikkers, S. (2011). Comprehensive Assessment of Leadership for Learning
+        (CALL): Development and Design of an Online, Formative Assessment and Feedback
+        System for Middle and High School Leadership. Annual Meeting of the American
+        Educational Research Association, New Orleans, LA.
+Halverson, R., & Kelley, C. (2017). Mapping leadership: The tasks that matter for improving
+        teaching and learning in schools. Jossey-Bass.
+Ham, S.-H., Duyar, I., & Gumus, S. (2015a). Agreement of self-other perceptions matters:
+        Analyzing the effectiveness of principal leadership through multi-source assessment.
+        Australian Journal of Education, 59(3), 225–246.
+        https://doi.org/10.1177/0004944115603373
+Ham, S.-H., Duyar, I., & Gumus, S. (2015b). Agreement of self-other perceptions matters:
+        Analyzing the effectiveness of principal leadership through multi-source assessment.
+        Australian Journal of Education, 59(3), 225–246.
+        https://doi.org/10.1177/0004944115603373
+Ham, S.-H., & Kim, R. Y. (2015). The influence of principals’ instructional leadership on
+        teachers’ use of autonomy-supportive instruction: An analysis of three Asia-Pacific
+        countries. Asia-Pacific Education Researcher, 24(1), 57–65.
+        https://doi.org/10.1007/s40299-013-0158-x
+Harris, A., Leithwood, K., Day, C., Sammons, P., & Hopkins, D. (2007). Distributed leadership
+        and organizational change: Reviewing the evidence. Journal of Educational Change,
+        8(4), 337. https://doi.org/10.1007/s10833-007-9048-4
+Hayton, J. C., Allen, D. G., & Scarpello, V. (2004). Factor Retention Decisions in Exploratory
+        Factor Analysis: A Tutorial on Parallel Analysis. Organizational Research Methods,
+        7(2), 191–205.
+Heck, R. H., & Thomas, S. L. (2015). An introduction to multilevel modeling techniques (Third
+        Edition). Routledge.
+Hox, J. J. (2010). Multilevel analysis: Techniques and applications (Second Edition). Routledge.
+Hoyle, R. H. (2012). Handbook of structural equation modeling. Guilford Press.
+Hu, L., & Bentler, P. M. (1999). Cutoff criteria for fit indexes in covariance structure analysis:
+        Conventional criteria versus new alternatives. Structural Equation Modeling: A
+        Multidisciplinary Journal, 6(1), 1–55. https://doi.org/10.1080/10705519909540118
+Kelley, C., & Dikkers, S. (2016). Framing feedback for school improvement around distributed
+        leadership. Educational Administration Quarterly, 52(3), 392–422.
+        https://doi.org/10.1177/0013161X16638416
+Kelley, C., & Halverson, R. (2012). The Comprehensive Assessment of Leadership for Learning:
+        A next generation formative evaluation and feedback system. Journal of Applied
+        Research on Children, 3(2), 1–22.
+
+
+
+
+                                               52
+
+Kim, E. S., Joo, S., Lee, P., Wang, Y., & Stark, S. (2016). Measurement invariance testing across
+        between-level latent classes using multilevel factor mixture modeling. Structural
+        Equation Modeling, 23(6), 870–887. https://doi.org/10.1080/10705511.2016.1196108
+Kline, R. B. (2016). Principles and practice of structural equation modeling. The Guilford Press.
+Kozlowski, S. W., & Klein, K. J. (2000). A multilevel approach to theory and research in
+        organizations: Contextual, temporal, and emergent processes. In K. J. Klein & S. W. J.
+        Kozlowski (Eds.), Multilevel theory, research and methods in organizations:
+        Foundations, extensions, and new directions (pp. 3–39). Jossey-Bass.
+Larsen, R. (2011). Missing data imputation versus full information maximum likelihood with
+        second-level dependencies. Structural Equation Modeling: A Multidisciplinary Journal,
+        18(4), 649–662. https://doi.org/10.1080/10705511.2011.607721
+Leithwood, K. (1994). Leadership for school restructuring. Educational Administration
+        Quarterly, 30(4), 498–518. https://doi.org/10.1177/0013161X94030004006
+Leithwood, K., Anderson, S., Mascall, B., & Strauss, T. (2010). School leaders’ influences on
+        student learning: The four paths. In T. Bush, L. Bell, & D. Middlewood (Eds.), The
+        principles of educational leadership and management (pp. 13–30). SAGE.
+Leithwood, K., & Jantzi, D. (1999). (pp. 3–33). ERIC.
+        http://search.ebscohost.com/login.aspx?direct=true&db=eric&AN=ED432035
+Leithwood, K., & Jantzi, D. (2005). A Review of transformational school leadership research
+        1996–2005. Leadership & Policy in Schools, 4(3), 177.
+Leithwood, K., & Jantzi, D. (2006). Transformational school leadership for large-scale reform:
+        Effects on students, teachers, and their classroom practices. School Effectiveness and
+        School Improvement, 17(2), 201–227. https://doi.org/10.1080/09243450600565829
+Leithwood, K., & Sun, J. (2012). The nature and effects of transformational school leadership: A
+        meta-analytic review of unpublished research. Educational Administration Quarterly,
+        48(3), 387–423. https://doi.org/10.1177/0013161X11436268
+Liu, Y. (2016). How leadership is distributed and how it is associated with teaching quality? A
+        cross-country study with the talis 2013 [Ph.D., Michigan State University]. In ProQuest
+        Dissertations and Theses (1826827778).
+        https://search.proquest.com/docview/1826827778?accountid=14553
+Lumby, J. (2013). Distributed leadership: The uses and abuses of power. Educational
+        Management Administration and Leadership, 41(5), 581–597.
+        https://doi.org/10.1177/1741143213489288
+Lumby, J. (2019). Distributed leadership and bureaucracy. Educational Management
+        Administration & Leadership, 47(1), 5. https://doi.org/10.1177/1741143217711190
+MacBeath, J., & Townsend, T. (2011). Thinking and acting both locally and globally: What do
+        we know now and how do we continue to improve? In T. Townsend & J. MacBeath
+        (Eds.), International Handbook of Leadership for Learning: Part 1 (pp. 1237–1254).
+        Springer.
+Marks, H. M., & Printy, S. M. (2003). Principal leadership and school performance: An
+        integration of transformational and instructional leadership. Educational Administration
+        Quarterly, 39(3), 370–397. https://doi.org/10.1177/0013161X03253412
+Marsh, H. W., Hau, K.-T., & Wen, Z. (2004). In search of golden rules: Comment on hypothesis-
+        testing approaches to setting cutoff values for fit indexes and dangers in overgeneralizing
+        Hu and Bentler’s (1999) findings. Structural Equation Modeling, 11(3), 320–341.
+        https://doi.org/10.1207/s15328007sem1103_2
+
+
+
+                                                53
+
+Marzano, R. J., Waters, T., & MucNulty, B. A. (2005). School leadership that works: From
+        research to results. Association for Supervision and Curriculum Development (ASCD).
+Masyn, K. E. (2017). Measurement invariance and differential item functioning in latent class
+        analysis with sepwise multiple indicator multiple cause modeling. Structural Equation
+        Modeling, 24(2), 180–197. https://doi.org/10.1080/10705511.2016.1254049
+Mertens, S. B., & Flowers, N. (2003). Middle school practices improve student achivement in
+        high poverty schools. Middle School Journal, 35(1), 33–43.
+Minor, E. C., Porter, A. C., Murphy, J., Goldring, E., & Elliott, S. N. (2017). A test-retest
+        analysis of the Vanderbilt Assessment for Leadership in Education in the USA.
+        Educational Assessment, Evaluation and Accountability, 29(2), 211–224.
+        https://doi.org/10.1007/s11092-016-9254-9
+Mitchell, C., & Sackney, L. (2011). Building and leading within learning ecologies. In T.
+        Townsend & J. MacBeath (Eds.), International Handbook of Leadership for Learning:
+        Part 1 (pp. 975–990). Springer.
+Modeste, M. E., & Kelley, C. J. (2020). Examining distributed leadership practices by school
+        grade configuration. Leadership and Policy in Schools.
+        https://doi.org/10.1080/15700763.2018.1514057
+Mohr, N., & Dichter, A. (2002). Stages of Team Development Lessons from the Struggles of Site-
+        Based Management.
+Mulford, B., & Silins, H. (2011). Revised models and conceptualisation of successful school
+        principalship for improved student outcomes. International Journal of Educational
+        Management, 25(1), 61–82. https://doi.org/10.1108/09513541111100125
+Murphy, J., Elliott, S., Goldring, E., & Porter, A. (2007). Leadership for learning: A research-
+        based model and taxonomy of behaviors. School Leadership and Management, 27(2),
+        179–201.
+Muse, M. D., & Abrams, L. M. (2011). An investigation of school leadership priorities. The
+        Delta Kappa Gamma Bulletin: International Journal for Professional Educators, 77(4),
+        49–58.
+Muthén, B. O. (1991). Multilevel factor analysis of class and student achievement components.
+        Journal of Educational Measurement, 28(4), 338–354.
+Muthén, B. O. (1994). Multilevel covariance structure analysis. Sociological Methods &
+        Research, 22(3), 376–398.
+Muthén, L. K., & Muthén, B. O. (19982017). Mplus user’s guide: Statistical analysis with latent
+        variables. Eighth Edition. Muthén & Muthén.
+Neumerski, C. M. (2013). Rethinking instructional leadership, a review: What do we know about
+        principal, teacher, and coach instructional leadership, and where should we go from here?
+        Educational Administration Quarterly, 49(2), 310–347.
+        https://doi.org/10.1177/0013161X12456700
+OECD. (2019). TALIS 2018 technical report. OECD Publishing.
+Ogawa, R. T., & Bossert, S. T. (1995). Leadership as an organizational quality. Educational
+        Administration Quarterly, 31, 224–243. https://doi.org/10.1177/0013161X95031002004
+Park, J.-H., & Ham, S.-H. (2016). Whose perception of principal instructional leadership?
+        Principal-teacher perceptual (dis)agreement and its influence on teacher collaboration.
+        Asia Pacific Journal of Education, 36(3), 450–469.
+        https://doi.org/10.1080/02188791.2014.961895
+
+
+
+
+                                               54
+
+Pietsch, M., Tulowitzki, P., & Koch, T. (2019). On the differential and shared effects of
+        leadership for learning on teachers’ organizational commitment and job satisfaction: A
+        multilevel perspective. Educational Administration Quarterly, 55(5), 705–741.
+        https://doi.org/10.1177/0013161X18806346
+Porter, A. C., Polikoff, M. S., Goldring, E. B., Murphy, J., Elliott, S. N., & May, H. (2010).
+        Investigating the validity and reliability of the Vanderbilt Assessment of Leadership in
+        Education. Elementary School Journal, 111(2), 282–313.
+Reio Jr., T. G. (2010). The threat of common method variance bias to theory building. Human
+        Resource Development Review, 9(4), 405–411. Scopus®.
+        https://doi.org/10.1177/1534484310380331
+Robinson, V. M. J., Lloyd, C. A., & Rowe, K. J. (2008). The impact of leadership on student
+        outcomes: An analysis of the differential effects of leadership types. Educational
+        Administration Quarterly, 44(5), 635–674. https://doi.org/10.1177/0013161X08321509
+Sablan, J. R. (2019). Can you really measure that? Combining critical race theory and
+        quantitative methods. American Educational Research Journal, 56(1), 178–203.
+        https://doi.org/10.3102/0002831218798325
+Sammons, P., Davis, S., Day, C., & Gu, Q. (2014). Using mixed methods to investigate school
+        improvement and the role of leadership: An example of a longitudinal study in England.
+        Journal of Educational Administration, 52(5), 565–589. https://doi.org/10.1108/JEA-10-
+        2013-0121
+Sammons, P., Gu, Q., Day, C., & Ko, J. (2011). Exploring the impact of school leadership on
+        pupil outcomes: Results from a study of academically improved and effective schools in
+        England. International Journal of Educational Management, 25(1), 83–101.
+        https://doi.org/10.1108/09513541111100134
+Savalei, V., & Rhemtulla, M. (2012). On obtaining estimates of the fraction of missing
+        information from full information maximum likelihood. Structural Equation Modeling: A
+        Multidisciplinary Journal, 19(3), 477–494.
+        https://doi.org/10.1080/10705511.2012.687669
+Shatzer, R. H., Caldarella, P., Hallam, P. R., & Brown, B. L. (2013). Comparing the effects of
+        instructional and transformational leadership on student achievement: Implications for
+        practice. Educational Management Administration & Leadership, 42(4), 445–459.
+        https://doi.org/10.1177/1741143213502192
+Silins, H., & Mulford, B. (2004). Schools as learning organisations—Effects on teacher
+        leadership and student outcomes. School Effectiveness and School Improvement, 15(3–4),
+        43–466.
+Silins, H., & Mulford, B. (2011). Re-conceptualizing school principalship that improves student
+        outcomes. International Journal of Educational Management, 25(1), 61–82.
+        https://doi.org/10.1108/09513541111100125
+Spillane, J. P. (2006). Distributed leadership. Jossey-Bass.
+Spillane, J. P., Camburn, E. M., Pustejovsky, J., Pareja, A. S., & Lewis, G. (2008). Taking a
+        distributed perspective: Epistemological and methodological tradeoffs in operationalizing
+        the leader-plus aspect. Journal of Educational Administration, 46(2), 189–213.
+        https://doi.org/10.1108/09578230810863262
+Spillane, J. P., Halverson, R., & Diamond, J. B. (2004). Towards a theory of leadership practice:
+        A distributed perspective. Journal of Curriculum Studies, 36(1), 3–34.
+        https://doi.org/10.1080/0022027032000106726
+
+
+
+                                               55
+
+Storey, A. (2004). The problem of distributed leadership in schools. School Leadership &
+        Management, 24(3), 249. https://doi.org/10.1080/1363243042000266918
+Tan, C. Y., Gao, L., & Shi, M. (2020). Second-order meta-analysis synthesizing the evidence on
+        associations between school leadership and different school outcomes. Educational
+        Management Administration & Leadership, 1741143220935456.
+        https://doi.org/10.1177/1741143220935456
+Thoonen, E. E. J., Sleegers, P. J. C., Oort, F. J., Peetsma, T. T. D., & Geijsel, F. P. (2011). How
+        to improve teaching practices: The role of teacher motivation, organizational factors, and
+        leadership practices. Educational Administration Quarterly, 47(3), 496–536.
+Tian, M., Risku, M., & Collin, K. (2016). A meta-analysis of distributed leadership from 2002 to
+        2013: Theory development, empirical evidence and future research focus. Educational
+        Management Administration and Leadership, 44(1), 146–164.
+        https://doi.org/10.1177/1741143214558576
+Urick, A. (2016). Examining US principal perception of multiple leadership styles used to
+        practice shared instructional leadership. Journal of Educational Administration, 54(2),
+        152–172.
+Urick, A., & Bowers, A. J. (2014). What are the different types of principals across the United
+        States? A latent class analysis of principal perception of leadership. Educational
+        Administration Quarterly, 50(1), 96–134. https://doi.org/10.1177/0013161X13489019
+Urick, A., & Bowers, A. J. (2019). Assessing international teacher and principal perceptions of
+        instructional leadership: A multilevel factor analysis of TALIS 2008. Leadership and
+        Policy in Schools, 18(3), 249–269. https://doi.org/10.1080/15700763.2017.1384499
+Vanblaere, B., & Devos, G. (2018). The role of departmental leadership for professional learning
+        communities. Educational Administration Quarterly, 54(1), 85–114.
+        https://doi.org/10.1177/0013161X17718023
+VanDerHeyden, A. M. (2007). A multi-year evaluation of the effects of a Response to
+        Intervention (RTI) model on identification of children for special education. Journal of
+        School Psychology, 45(2), 225–256.
+Voorhees, C., Brady, M., Calantone, R., & Ramirez, E. (2016). Discriminant validity testing in
+        marketing: An analysis, causes for concern, and proposed remedies. Journal of the
+        Academy of Marketing Science, 44(1), 119–134. https://doi.org/10.1007/s11747-015-
+        0455-4
+Wang, K., Li, Y., Luo, W., & Zhang, S. (2019). Selected factors contributing to teacher job
+        satisfaction: A quantitative investigation using 2013 TALIS data. Leadership and Policy
+        in Schools. https://doi.org/10.1080/15700763.2019.1586963
+Wang, Y. (2018). The panorama of the last decade’s theoretical groundings of educational
+        leadership research: A concept co-occurrence network analysis. Educational
+        Administration Quarterly, 54(3), 327–365. https://doi.org/10.1177/0013161X18761342
+Whitaker, T., & Turner, E. (2000). What is your priority? NASSP Bulletin, 84(617), 29–36.
+        https://doi.org/10.1177/019263650008461704
+Whittaker Tiffany A. (2012). Using the modification index and standardized expected parameter
+        change for model modification. The Journal of Experimental Education, 80(1), 26.
+Witziers, B., Bosker, R. J., & Kruger, M. L. (2003). Educational leadership and student
+        achievement: The elusive search for an association. Educational Administration
+        Quarterly, 39(3), 398–425. https://doi.org/10.1177/0013161X03253411
+
+
+
+
+                                                56
+
+Yong, A. G., & Pearce, S. (2013). A Beginner’s guide to factor analysis: Focusing on
+      exploratory factor analysis. Tutorials in Quantitative Methods for Psychology, 9(2), 79–
+      94. https://doi.org/10.20982/tqmp.09.2.p079
+Zepeda, S. (2011). Instructional supervision, coherence, and job-embedded learning. In T.
+      Townsend & J. MacBeath (Eds.), International Handbook of Leadership for Learning
+      (pp. 741–756). Springer.
+
+
+
+
+                                              57
+
+Table 1. Mapping TALIS Teacher Items to CALL Subdomains
+   CALL                   CALL Subdomains                                                 2018 TALIS Teacher Survey Items                                             TALIS     Transformed
+  Domain                                                                                                                                                             Variable     Variable
+Focus on      1.1 Maintain a school-wide focus on learning   School has a culture of shared responsibility for school issues                                         TT3G48D        T1
+Learning                                                     Staff share a common set of beliefs about teaching and learning                                         TT3G48F
+              1.2 Formal leaders recognized as instructional School provides staff with opportunities to actively participate in school decisions                    TT3G48A        T2
+              leaders                                        School encourages staff to lead new initiatives                                                         TT3G48H
+              1.3 Collaborative design of an integrated      There is a collaborative school culture which is characterized my mutual support                        TT3G48E        T3
+              learning plan
+              1.4 Provide services for S who traditionally   Most teachers believe that students’ well-being is important                                            TT3G49B        T4
+              struggle                                       If a student needs extra assistance, school provides it                                                 TT3G49D
+Monitoring    2.1 Formative evaluation of student learning   Information on school-based and classroom-based results (e.g., project results, test score) is shared   TT3G29E        T5
+Teaching and 2.2 Summative evaluation of student learning Information on external results of students I teach (e.g., national test scores) is shared                 TT3G29D        T6
+Learning      2.3 Formative evaluation of teaching           Information on assessment of my content knowledge is shared                                             TT3G29C        T7
+                                                             Information on self-assessment of my work (e.g., analysis of my teaching video) is shared               TT3G29F
+              2.4 Summative evaluation of teaching           Information on observation of my classroom teaching is shared                                           TT3G29A        T8
+                                                             Information on student survey responses related to my teaching is shared                                TT3G29B
+Building      3.1 Collaborative school-wide focus on         I engage in discussions about the learning development of specific students                             TT3G33E        T9
+Nested        teaching and learning
+Learning      3.2 Professional learning                      I attended team conference                                                                              TT3G33G        T10
+Communities                                                  I took part in collaborative professional learning                                                      TT3G33H
+              3.3 Socially distributed leadership            Most teachers strive to develop new ideas for teaching and learning                                     TT3G32A        T11
+                                                             Most teachers search for new ways to solve problems                                                     TT3G32C
+                                                             Most teachers in this school provide practical support to each other to apply new ideas                 TT3G32D
+              3.4 Coaching and mentoring                     I work with other teachers to ensure common standards for assessing student progress                    TT3G33F        T12
+Acquiring and 4.1 Personnel practices                        Hours I spent on professional development activities                                                    TT3G18G        T13
+Allocating
+Resources     4.2 Structuring and maintaining time           Hours I spent on teamwork and dialogue with colleagues                                                  TT3G18B        T14
+              4.3 School resources are focused on student Hours I spent on participation in school management                                                        TT3G18E        T15
+              learning                                       Hours I spent on general administrative work (communication, paperwork)                                 TT3G18F
+              4.4 Integrating external expertise into school I participated in courses/seminars in person                                                            TT3G22A        T16
+              instructional program                          I participated in online courses/seminars                                                               TT3G22B
+                                                             I participated in education conference                                                                  TT3G22C
+              4.5 Coordinating relations with families and   Hours I spent on communication and cooperation with parents or guardians                                TT3G18H        T17
+              communities
+Maintaining 5.1 Clear, consistent, and enforced              Student behavior and classroom management were included in my professional development                  TT3G23F        T18
+safe and      expectation for student behavior               School management and administration were included in my professional development                       TT3G23G
+effective                                                    School staff enforces rules for student behavior consistently throughout the school                     TT3G48G
+learning      5.2 Clean and safe learning environment        Stress comes from maintaining classroom discipline*                                                     TT3G52G        T19
+environment                                                  Stress comes from being intimidated or verbally abused by students*                                     TT3G52H
+              5.3 Student support services provide a safe    Professional development includes approaches to individualized learning                                 TT3G23H        T20
+              haven for student who traditionally struggle   Teaching students with special needs was included in my professional development                        TT3G23I
+                                                             Teaching in multicultural or multilingual setting was included in my professional development           TT3G23J
+              5.4 Buffering the teaching environment         Teacher-parent/guardian cooperation was included in my professional development                         TT3G23M        T21
+                                                             Communicating with people from different cultures or countries was included in my professional          TT3G23N
+                                                             development                                                                                             TT3G52J
+                                                             Stress comes from addressing parent or guardian concerns*
+Note. Transformed variables were used in the analyses. Items with an asterisk (*) indicate they were reverse coded.
+
+
+
+
+                                                                                               58
+
+Table 2. Mapping TALIS Principal Items to CALL Subdomains
+   CALL                         CALL Subdomain                                                   2018 TALIS Principal Survey Items                                         TALIS Transformed
+  Domain                                                                                                                                                                  Variable Variable
+Focus on       1.1 Maintain a school-wide focus on learning              School has a culture of shared responsibility for school issues                                  TC3G26D    P1
+Learning                                                                 Staff share a common set of beliefs about teaching and learning                                  TC3G26G
+               1.2 Formal leaders recognized as instructional leaders    School provides staff with opportunities to actively participate in school decisions             TC3G26A    P2
+                                                                         School encourages staff to lead new initiatives                                                  TC3G26I
+               1.3 Collaborative design of an integrated learning plan   There is a collaborative school culture which is characterized by mutual support                 TC3G26F    P3
+               1.4 Provide services for students who traditionally       Policy is implemented to teach students to be inclusive of different Socioeconomic backgrounds   TC3G39A    P4
+               struggle                                                  Policy is implemented against socio-economic discrimination                                      TC3G39C
+                                                                         Policy is implemented to support students from disadvantaged backgrounds                         TC3G39D
+Monitoring   2.1 Formative evaluation of student learning                Information on school- and classroom-based results is shared                                     TC3G24E    P5
+Teaching and 2.2 Summative evaluation of student learning                Information on external results of students is shared (e.g., national test scores)               TC3G24D    P6
+Learning     2.3 Formative evaluation of teaching                        Information on teacher’s content knowledge is shared                                             TC3G24C    P7
+                                                                         Information on the self-assessment of teacher’s work is shared                                   TC3G24F
+               2.4 Summative evaluation of teaching                      Information on observation of classroom teaching is shared                                       TC3G24A    P8
+                                                                         Information on student survey responses related to teaching is shared                            TC3G24B
+Building    3.1 Collaborative school-wide focus on teaching and          I collaborated with teachers to solve classroom discipline problems                              TC3G22A    P9
+Nested      learning                                                     I took actions to ensure that teachers feel responsible for student learning outcomes            TC3G22F
+Learning
+Communities 3.2 Professional learning                                  I worked on a professional development plan for this school                                        TC3G22K    P10
+                                                                       I took actions to ensure that teachers take responsibility for improving teaching skills           TC3G22E
+              3.3 Socially distributed leadership                      I took actions to support cooperation among teachers to develop teaching practices                 TC3G22D    P11
+              3.4 Coaching and mentoring                               I observed instruction in the classroom                                                            TC3G22B    P12
+                                                                       I provided feedback to teachers based on my observations                                           TC3G22C
+                                                                       I value the importance of supporting less experienced teachers in their teaching                   TC3G36D
+Acquiring and 4.1 Personnel practices                                  Responsibility for appointing or hiring teachers is shared                                         TC3G20A    P13
+Allocating                                                             Responsibility for dismissing or suspending teachers from employment is shared                     TC3G20B
+Resources     4.2 Structuring and maintaining time                     Adequate time for instructional leadership*                                                        TC3G29N    P14
+                                                                       Responsibility for establishing student assessment policies is shared                              TC3G20G
+                                                                       Responsibility for choosing which learning materials are used is shared                            TC3G20I
+              4.3 School resources are focused on student learning     Responsibility for deciding budget allocations within school is shared                             TC3G20E    P15
+              4.4 Integrating external expertise into school           Responsibility for determining course content is shared                                            TC3G20J    P16
+              instructional program                                    Responsibility for deciding which courses are offered is shared                                    TC3G20K
+              4.5 Coordinating relations with families and communities Parents and guardians are involved in school activities                                            TC3G27E    P17
+                                                                       School cooperates with the local community                                                         TC3G27G
+Maintaining 5.1 Clear, consistent, and enforced expectation for        Staff enforces rules for student behavior consistently throughout the school                       TC3G26H    P18
+safe and      student behavior                                         Responsibility for establishing student disciplinary policies and procedures is shared             TC3G20F
+effective
+learning      5.2 Clean and safe learning environment                  Adequate instructional materials (e.g., textbooks)*                                                TC3G29D    P19
+environment                                                            Adequate instructional space (e.g., classrooms)*                                                   TC3G29I
+                                                                         Adequate physical infrastructure (e.g., classroom furniture, school buildings)*                  TC3G29J
+               5.3 Student support services provide a safe haven for     Enough teachers with competence in teaching students with special needs*                         TC3G29B    P20
+               students who traditionally struggle                       Enough teachers who can teach students in multicultural/multilingual setting*                    TC3G29K
+                                                                         Enough teachers who can teach students from low SES homes*                                       TC3G29L
+               5.4 Buffering the teaching environment                                        No survey items available from TALIS survey items
+Note. Transformed variables were used in the analysis. Items with an asterisk (*) indicate they were reverse coded.
+
+
+
+
+                                                                                                 59
+
+Table 3. Descriptive Statistics of TALIS 2018 Participating Countries
+                              Teachers                Principals (Schools)
+        Country            N              %            N               %
+ Australia               3,573           2.32         238             2.57
+ Austria                 4,255           2.77         277             3.00
+ Belgium                 5,257           3.42         308             3.33
+ Brazil                  2,447           1.59         186             2.01
+ Bulbaria                2,862           1.86         200             2.16
+ Chile                   1,963           1.28         179             1.94
+ Chinese Taipei          3,835           2.5          202             2.18
+ Colombia                2,398           1.56         157             1.70
+ Croatia                 3,358           2.19         195             2.11
+ Cyprus                  1,611           1.05         89              0.96
+ Czech Republic          3,447           2.24         219             2.37
+ Denmark                 2,001           1.3          148             1.60
+ Estonia                 3,004           1.95         195             2.11
+ Finland                 2,851           1.86         148             1.60
+ France                  3,006           1.96         196             2.12
+ Georgia                 3,101           2.02         192             2.08
+ Hungary                 3,245           2.11         189             2.04
+ Israel                  2,627           1.71         187             2.02
+ Italy                   3,612           2.35         192             2.08
+ Japan                   3,555           2.31         196             2.12
+ Kazakhstan              6,566           4.27         331             3.58
+ Korea                   2,931           1.91         165             1.78
+ Latvia                  2,315           1.51         137             1.48
+ Lithuania               3,759           2.45         195             2.11
+ Malta                   1,656           1.08         58              0.63
+ Mexico                  2,926           1.9          193             2.09
+ Netherlands             1,884           1.23         127             1.37
+ New Zealand             2,257           1.47         190             2.05
+ Norway                  4,154           2.7          193             2.09
+ Portugal                3,676           2.39         200             2.16
+ Russian Federation      4,011           2.61         230             2.49
+ Saudi Arabia            2,744           1.79         195             2.11
+ Singapore               3,280           2.13         169             1.83
+ Slovak Republic         3,015           1.96         180             1.95
+ Viet Nam                3,825           2.49         196             2.12
+ Slovenia                2,094           1.36         134             1.45
+ South Africa            2,046           1.33         177             1.91
+ Spain                   7,407           4.82         399             4.31
+ Sweden                  2,782           1.81         183             1.98
+ United Arab Emirates    8,648           5.63         521             5.63
+ Turkey                  3,952           2.57         198             2.14
+ United States           2,560           1.67         166             1.80
+ England (UK)            2,376           1.55         157             1.70
+ Alberta (Canada)        1,077           0.7          129             1.40
+ Romania                 3,658           2.38         199             2.15
+ Argentina               2,099           1.37         134             1.45
+ Shanghai (China)        3,976           2.57         198             2.14
+         Total          153,682          100         9,247            100
+
+
+
+
+                                                60
+
+Table 4. CALL-TALIS Conceptual Mapping: Teacher Items
+   CALL               CALL Subdomains                                TALIS Indicator                                                             Theoretical Rationale
+  Domain
+Focus on     1.1 Maintain a school-wide focus on TT3G48D (Shared responsibility to school issue)           Leaders in high-performing schools place an extensive effort to articulate a vision for learning
+Learning     learning                             TT3G48F (Common set of belief about learning)            shared by stakeholders (Blase & Blase, 1999; Hallinger, 2011b; Murphy et al., 2007)
+             1.2 Formal leaders recognized as     TT3G48A (Staff involvement in decision making)           Instructional decision making is a collaborative practice (Diamond & Spillane, 2016; Hallinger &
+             instructional leaders                TT3G48H (Encourage staff lead new initiatives)           Heck, 2011a)
+             1.3 Collaborative design of an       TT3G48E (Collaborative school culture)                   Collaborative instructional planning is a key characteristic of shared focus on learning (Halverson &
+             integrated learning plan                                                                      Dikkers, 2011)
+             1.4 Provide services for S who       TT3G49B (Teachers value student well-being)              Focus on learning requires providing appropriate assistance for students who struggle (Halverson
+             traditionally struggle               TT3G49D (School offer assistance to students)            & Dikkers, 2011)
+Monitoring   2.1 Formative evaluation of student TT3G29E (Feedback on student result, internal)            Effective instructional leaders use diverse data for monitoring and improving student learning
+Teaching and learning                                                                                      (Murphy et al., 2007)
+Learning     2.2 Summative evaluation of student TT3G29D (Student result, national test)                   Effective instructional leaders use diverse data for monitoring and improving student learning
+             learning                                                                                      (Murphy et al., 2007)
+             2.3 Formative evaluation of teaching TT3G29C (Assess content knowledge)                       Summative evaluation must be linked to formative supervision, embedded in teachers’ instructional
+                                                  TT3G29F (Self-assessment of teaching)                    routines (Zepeda, 2011)
+             2.4 Summative evaluation of          TT3G29A (Classroom observation)                          Summative evaluation aims to offer feedback on teaching and is defined by learning outcomes
+             teaching                             TT3G29B (Student survey about teaching)                  (Halverson & Dikkers, 2011)
+Building     3.1 Collaborative school-wide focus TT3G33E (Discuss with others about student learning       Knowledgebase to fulfill teacher responsibilities are best achieved through reflective dialogues and
+Nested       on teaching and learning             development)                                             shared experiences (Buysse et al., 2003)
+Learning     3.2 Professional learning            TT3G33G (Attend team conference)                         Effective communities engage teachers in professional growth in key instructional areas (Halverson
+Communities                                       TT3G33H (Collaborative professional learning)            & Dikkers, 2011)
+             3.3 Socially distributed leadership  TT3G32A (Teachers develop ideas for teaching)            Professional communities characterized by shared responsibilities enable staff to collaboratively
+                                                  TT3G32C (Search for ways to solve problems)              solve problems and transform cultures (Halverson & Dikkers, 2011)
+                                                  TT3G32D (Mutual support to apply new ideas)
+             3.4 Coaching and mentoring           TT3G33F (Work w/ others for student progress)            Reflective dialogues and coaching enhance collective responsibility for student learning (Vanblaere
+                                                                                                           & Devos, 2018)
+Acquiring and 4.1 Personnel practices              TT3G18G (Time for professional development)             The promotion of teacher professional development has the largest effect size on student learning
+Allocating                                                                                                 (Robinson et al., 2008)
+Resources     4.2 Structuring and maintaining time TT3G18B (Time for team work, diaglogues)                Structured time to discuss instructional issues is beneficial for improving teaching and learning
+                                                                                                           (Mertens & Flowers, 2003)
+            4.3 School resources are focused on TT3G18E (Time for school management)                       Managerial and administrative responsibilities are often distributed across staff (Diamond &
+            student learning                        TT3G18F (Time for administrative work)                 Spillane, 2016)
+            4.4 Integrating external expertise into TT3G22A (Attend courses/seminars)                      Effective leaders integrate external expertise into staff development (Cawelti & Protheroe, 2001)
+            school instructional program            TT3G22B (Attend online courses/seminars)
+                                                    TT3G22C (Attend educational conferences)
+            4.5 Coordinating relations with         TT3G18H (Communication with parents)                   Parental involvement with student learning is positively associated with learning outcomes
+            families and communities                                                                       (Halverson & Dikkers, 2011)
+Maintaining 5.1 Clear, consistent, and enforced TT3G23F (PD, classroom management)                         Maintaining order as it has central impact on student learning (Halverson & Dikkers, 2011)
+safe and    expectation for student behavior        TT3G23G (PD, management, administration)
+effective                                           TT3G48G (Consistent behavior enforcement)
+learning    5.2 Clean and safe learning             TT3G52G (Stress from classroom discipline)*            Few extreme discipline issues are observable in safe and orderly schools (Halverson & Dikkers,
+environment environment                             TT3G52H (Stress from being intimidated)*               2011)
+            5.3 Student support services provide TT3G23H (PD, Individualized learning)                     Effective leaders build systems and safety nets for disadvantaged students (VanDerHeyden, 2007)
+            a safe haven for student who            TT3G23I (PD, teaching students w/ spec. needs)
+            traditionally struggle                  TT3G23J (PD, teaching in multicultural setting)
+            5.4 Buffering the teaching              TT3G23M (PD, parent coordination)                      Positive parent-teacher relations are posively and teacher stress and burnout are negatively
+            environment                             TT3G23N (PD, communicating w/ people from              associated with student learning (Marzano et al., 2005)
+                                                    different cultures, countries)
+                                                    TT3G52J (Stress from parent concerns)*
+Note. Items with an asterisk (*) indicate they were reverse coded.
+
+
+
+
+                                                                                                      61
+
+Table 5. CALL-TALIS Conceptual Mapping: Principal Items
+   CALL                CALL Subdomain                                   TALIS Indicator                                                            Theoretical Rationale
+  Domain
+Focus on      1.1 Maintain a school-wide focus on TC3G26D (Shared responsibility to school issue)            Leaders in high-performing schools place an extensive effort to articulate a vision for learning
+Learning      learning                            TC3G26G (Common set of belief about learning)              shared by stakeholders (Blase & Blase, 1999; Hallinger, 2011b; Murphy et al., 2007)
+
+              1.2 Formal leaders recognized as      TC3G26A (Staff involvement in decision making)           Instructional decision making is a collaborative practice (Diamond & Spillane, 2016; Hallinger &
+              instructional leaders                 TC3G26I (Encourage staff lead new initiatives)           Heck, 2011a)
+              1.3 Collaborative design of an        TC3G26F (Collaborative school culture)                   Collaborative instructional planning is a key characteristic of shared focus on learning (Halverson
+              integrated learning plan                                                                       & Dikkers, 2011)
+              1.4 Provide services for students     TC3G39A (Support students w/ diverse SES)                Focus on learning requires providing appropriate assistance for students who struggle
+              who traditionally struggle            TC3G39C (Policy against SES discrimination)              (Halverson & Dikkers, 2011)
+                                                    TC3G39D (Support disadvantaged students)
+Monitoring   2.1 Formative evaluation of student    TC3G24E (Feedback on student result, internal)           Effective instructional leaders use diverse data for monitoring and improving student learning
+Teaching and learning                                                                                        (Murphy et al., 2007)
+Learning     2.2 Summative evaluation of student TC3G24D (Student result, national test)                     Effective instructional leaders use diverse data for monitoring and improving student learning
+             learning                                                                                        (Murphy et al., 2007)
+             2.3 Formative evaluation of teaching TC3G24C (Assess content knowledge)                         Summative evaluation must be linked to formative supervision, embedded in teachers’
+                                                  TC3G24F (Self-assessment of teaching)                      instructional routines (Zepeda, 2011)
+             2.4 Summative evaluation of          TC3G24A (Classroom observation)                            Summative evaluation aims to offer feedback on teaching and is defined by learning outcomes
+             teaching                             TC3G24B (Student survey about teaching)                    (Halverson & Dikkers, 2011)
+Building     3.1 Collaborative school-wide focus TC3G22A (Collaborate w/ teachers, discipline)               Knowledgebase to fulfill teacher responsibilities are best achieved through reflective dialogues
+Nested       on teaching and learning             TC3G22F (Collaborate w/ teachers, learning)                and shared experiences (Buysse et al., 2003)
+Learning
+Communities 3.2 Professional learning             TC3G22K (Work on PD plan for the school)                   Effective communities engage teachers in professional growth in key instructional areas
+                                                  TC3G22E (Collaborate w/ teachers, instruction)             (Halverson & Dikkers, 2011)
+             3.3 Socially distributed leadership  TC3G22D (Cooperation among teachers)                       Professional communities characterized by shared responsibilities enable staff to collaboratively
+                                                                                                             solve problems and transform cultures (Halverson & Dikkers, 2011)
+              3.4 Coaching and mentoring              TC3G22B (Classroom observation)                        Reflective dialogues and coaching enhance collective responsibility for student learning
+                                                      TC3G22C (Feedback after observations)                  (Vanblaere & Devos, 2018)
+                                                      TC3G36D (Support inexperienced teachers)
+Acquiring and 4.1 Personnel practices                 TC3G20A, B (responsibility for teacher hiring/dismissal Leadership tasks to strategically improve teaching & learning can be distributed across staff in
+Allocating                                            is shared)                                              the areas of personnel, budget, & curriculum content (Diamond & Spillane, 2016)
+Resources     4.2 Structuring and maintaining time TC3G29N (Time for instructional leadership)                Structured time to discuss instructional issues is beneficial for improving teaching and learning
+                                                      TC3G20G,I (Shared responsibility in student             (Mertens & Flowers, 2003)
+                                                      assessment, learning material selection)
+              4.3 School resources are focused on TC3G20E (Shared responsibility in budget allocation) Leadership tasks to strategically improve teaching & learning can be distributed across staff in
+              student learning                                                                                the areas of personnel, budget, & curriculum content (Diamond & Spillane, 2016)
+              4.4 Integrating external expertise into TC3G20J,K (Shared responsibility with external experts Effective leaders integrate external expertise into staff development (Cawelti & Protheroe, 2001)
+              school instructional program            in course content, course offering)
+              4.5 Coordinating relations with         TC3G27E (Parent invove in school activities)            Parental involvement with student learning is positively associated with learning outcomes
+              families and communities                TC3G27G (School cooperate w/ community)                 (Halverson & Dikkers, 2011)
+Maintaining 5.1 Clear, consistent, and enforced TC3G26H (Consistent behavior enforcement)                     Maintaining order has central impact on student learning (Halverson & Dikkers, 2011)
+safe and      expectation for student behavior        TC3G20F (Student discipline policy)
+effective     5.2 Clean and safe learning             TC3G29D,I,J (Shortage in instructional material,        Effective leaders build systems and safety nets for disadvantaged students (VanDerHeyden,
+learning      environment                             instructional space, physical infrastructure)           2007)
+environment 5.3 Student support services provide TC3G29B, K, L (Adequate number of teachers                   Leaders have a clear role to create an effective learning environment by hiring adequate number
+              a safe haven for students who           competent in teaching students w/ special needs, from of highly qualified teachers for all students (Halverson & Dikkers, 2011)
+              traditionally struggle                  multicultural setting, diverse SES)
+              5.4 Buffering the teaching              N/A                                                     N/A
+              environment
+Note. Items with an asterisk (*) indicate they were reverse coded
+
+
+
+
+                                                                                                       62
+
+Figure 1. EFA and CFA Subsample
+
+
+
+        Initial                Initial                 Initial               Initial
+     Subsample1             Subsample2              Subsample3            Subsample4
+
+
+
+
+                       EFA Subsample 1 (75%)                               N/A (25%)
+
+
+
+
+      N/A (25%)                              EFA Subsample 2 (75%)
+
+
+
+
+                             N/A (25%)                   EFA Subsample 3 (75%)
+
+
+
+
+           EFA Subsample 4 (75%)                     N/A (25%)
+
+
+
+
+        CFA
+                          CFA Subsample 2         CFA Subsample 3       CFA Subsample 4
+     Subsample
+                               (25%)                   (25%)                 (25%)
+      1 (25%)
+
+
+Note. N/A denotes the unused proportion (25%) in creating each of the four exploratory
+subsamples
+
+
+                                             63
+
+Table 6. Descriptive Statistics of Entire 2018 TALIS
+                   Teacher Survey                                     Principal Survey
+  Item      N      Min      Max     Mean      SD      Item      N      Min       Max     Mean     SD
+   T1    148,531     1        4      2.91    0.59     P1      8,807      1        4      3.09    0.50
+   T2    148,771     1        4      2.95    0.62     P2      8,808      1        4      3.35    0.44
+   T3    148,050     1        4      2.98    0.67     P3      8,785      1        4      3.26    0.57
+   T4    148,852     1        4      3.30    0.50     P4      8,766      0        3      2.52    0.74
+   T5    145,178     1        4      1.97    0.71     P5      8,280      0        5      2.20    1.20
+   T6    141,667     1        4      1.87    0.75     P6      8,141      0        5      2.23    1.31
+   T7    147,024     1        4      1.74    0.66     P7      8,304      0        5      1.49    1.06
+   T8    149,119     1        4      1.96    0.64     P8      8,326      0        5      1.96    1.05
+   T9    148,748     1        4      2.94    0.97     P9      8,847      1        4      2.85    0.61
+  T10    149,300     1        4      2.38    0.86     P10     8,846      1        4      2.79    0.64
+  T11    149,689     1        4      2.99    0.63     P11     8,836      1        4      2.78    0.74
+  T12    148,719     1        4      2.58    1.02     P12     8,862      1        4      2.88    0.67
+  T13    149,550     1        4      2.30    1.21     P13     8,851     0.5       5      1.42    0.64
+  T14    149,884     1        4      2.97    0.97     P14     8,889      1        5      2.30    0.74
+  T15    149,998     1        4      2.22    0.94     P15     8,786      0        5      1.67    0.91
+  T16    150,999     1        4      2.68    0.98     P16     8,815      0        5      1.96    1.02
+  T17    149,788     1        4      2.24    1.00     P17     8,807      1        4      2.79    0.62
+  T18    150,986     1        4      2.57    0.92     P18     8,889      1        5      2.63    0.66
+  T19    148,654     1        4      3.08    0.78     P19     8,796      1        4      3.11    0.79
+  T20    142,477     1        4      2.26    1.08     P20     8,799      1        4      3.06    0.73
+  T21    151,001     1        4      2.34    0.90
+Note: Abbreviations are used for the sake of space: Min = Minimum, Max = Maximum, SD = Standard deviation
+
+
+
+
+                                                     64
+
+Table 7. Descriptive Statistics of CFA Subsample 3
+                   Teacher Survey                                     Principal Survey
+  Item      N      Min      Max     Mean      SD      Item      N      Min       Max     Mean     SD
+   T1     37,052     1        4      2.91    0.59     P1      8,441      1        4      3.09    0.50
+   T2     37,113     1        4      2.95    0.62     P2      8,442      1        4      3.35    0.44
+   T3     36,922     1        4      2.99    0.67     P3      8,419      1        4      3.27    0.56
+   T4     37,159     1        4      3.30    0.50     P4      8,401      0        3      2.53    0.73
+   T5     36,210     1        4      1.98    0.71     P5      7,935      0        5      2.21    1.20
+   T6     35,372     1        4      1.86    0.75     P6      7,801      0        5      2.24    1.31
+   T7     36,710     1        4      1.74    0.66     P7      7,957      0        5      1.50    1.06
+   T8     37,242     1        4      1.97    0.63     P8      7,979      0        5      1.96    1.05
+   T9     37,132     1        4      2.95    0.97     P9      8,478      1        4      2.85    0.61
+  T10     37,276     1        4      2.38    0.85     P10     8,477      1        4      2.79    0.64
+  T11     37,344     1        4      2.99    0.63     P11     8,467      1        4      2.78    0.74
+  T12     37,128     1        4      2.59    1.02     P12     8,493      1        4      2.88    0.66
+  T13     37,338     1        4      2.30    1.21     P13     8,478     0.5       5      1.42    0.64
+  T14     37,417     1        4      2.96    0.97     P14     8,514      1        5      2.30    0.74
+  T15     37,447     1        4      2.22    0.94     P15     8,418      0        5      1.67    0.91
+  T16     37,708     1        4      2.68    0.98     P16     8,442      0        5      1.96    1.03
+  T17     37,391     1        4      2.24    1.00     P17     8,443      1        4      2.79    0.62
+  T18     37,711     1        4      2.56    0.92     P18     8,514      1        5      2.63    0.66
+  T19     37,107     1        4      3.07    0.79     P19     8,433      1        4      3.11    0.79
+  T20     35,575     1        4      2.27    1.08     P20     8,436      1        4      3.06    0.73
+  T21     37,721     1        4      2.34    0.90
+Note: Abbreviations are used for the sake of space: Min = Minimum, Max = Maximum, SD = Standard deviation
+
+
+
+
+                                                     65
+
+Table 8. Model Fit Indices of Pooled-Within MEFA: Subsample 1
+  Number            2              df            p       RMSEA         CFI       TLI      SRMRwithin
+ of Factors
+      1         280878.035         189          0.00    0.119          0.466     0.406       0.121
+      2         151263.422         169          0.00    0.092          0.712     0.643       0.081
+      3          90911.559         150          0.00    0.076          0.827     0.758       0.056
+      4          49999.108         132          0.00    0.060          0.905     0.849       0.042
+      5          14909.933         115          0.00    0.035          0.972     0.949       0.017
+      6                                          No Convergence
+Note. 2 = Chi-square goodness of fit statistic; df = degrees of freedom; p = significance level;
+RMSEA = The root mean square error of approximation; SRMR = the standardized root mean
+square residual; CFI = the comparative fit index; TLI = the Tucker-Lewis index. We followed a
+reporting format from Boyce and Bowers (2018a).
+
+
+
+
+                                                  66
+
+Table 9. Model Fit Indices of Pooled-Between MEFA: Subsample 1
+  Number           2              df           p       RMSEA        CFI        TLI    SRMRbetween
+    of
+  Factors
+     1             *****          779          0.00       0.161     0.257     0.218        0.146
+     2             *****          739          0.00       0.154     0.356     0.285        0.121
+     3             *****          700          0.00       0.137     0.518     0.435        0.099
+     4             *****          662          0.00       0.130     0.585     0.486        0.081
+     5             *****          625          0.00       0.124     0.646     0.535        0.069
+     6         859813.284         589          0.00       0.118     0.698     0.579        0.064
+     7         698590.263         554          0.00       0.110     0.754     0.636        0.051
+     8         596955.518         520          0.00       0.105     0.790     0.669        0.042
+     9         254567.166         487          0.00       0.101     0.816     0.690        0.035
+    10         433816.602         455          0.00       0.095     0.848     0.725        0.029
+Note. 2 = Chi-square goodness of fit statistic; df = degrees of freedom; p = significance level;
+RMSEA = The root mean square error of approximation; SRMR = the standardized root mean
+square residual; CFI = the comparative fit index; TLI = the Tucker-Lewis index. The multiple
+asterisks in the chi-square column between one and five factor solutions indicate that the software
+could not calculate the chi-square statistics because of the model misspecification. We followed a
+reporting format from Boyce & Bowers (2018a).
+
+
+
+
+                                                 67
+
+Table 10. Model Fit Improvement through Item Pruning
+         Subsample             RMSEA        CFI       TLI    SRMRwithin   SRMRbetween
+ Initial model
+     Subsample1                 0.009      0.917     0.858     0.017        0.040
+     Subsample2                 0.023      0.444     0.048     0.018        0.044
+     Subsample3                 0.010      0.889     0.810     0.018        0.053
+     Subsample4                 0.009      0.905     0.838     0.018        0.052
+ After Pruning
+     Subsample1                 0.009      0.925     0.863     0.015        0.041
+     Subsample2                 0.010      0.908     0.833     0.016        0.050
+     Subsample3                 0.009      0.932     0.876     0.015        0.051
+     Subsample4                 0.008      0.936     0.882     0.016        0.050
+Note. We followed a reporting format from Boyce & Bowers (2018a).
+
+
+
+
+                                            68
+
+Table 11. Geomin-Rotated Factor Loadings from Multilevel Exploratory Factor Analysis (5-Within, 9-Between Model): EFA Sub-
+sample 4
+                                      Within School                                                                                               Between Schools
+                                   Individual Teachers                                               Collective Teachers                                                                      Principals
+Indicator                                    W1       W2       W3        W4       W5               BT1        BT2      BT3      BT4                Indicator                   BP1       BP2        BP3       BP4        BP5
+T1: Shared belief about learning            0.872    0.006    -0.015    0.003    0.007         0.888      -0.058     0.030    0.254 P1: Shared belief about learning          0.853    -0.015     -0.005    -0.015      0.038
+T2: Staff engagement                        0.763    0.019    0.012    -0.001    0.017         0.876        0.034   -0.045    0.098 P2: Staff engagement                      0.584    -0.004      0.144     0.014     -0.123
+0.016T3: Collaborative school culture       0.819    -0.005   -0.015    0.014   -0.012         0.932        0.018    0.045   -0.008 P3: Collaborative school culture          0.620     0.014      0.018     0.043      0.016
+T4: Teachers care student wellbeing         0.485    0.001    0.088    -0.009   -0.011         0.658        0.070   -0.082   -0.342 P5: Classroom student assessment         -0.025     0.808      0.003     0.099     -0.009
+T5: Classroom student assessment            -0.005   0.765    0.012     0.003   -0.056         0.032        0.538    0.576    0.113 P6: External student assessment          -0.017     0.763     -0.014     0.029     -0.065
+T6: External student assessment             -0.018   0.666    0.032    -0.006   -0.030         -0.017       0.253    0.836    0.020 P7: Feedback on teaching                  0.056     0.665      0.059    -0.004      0.034
+T7: Feedback on teaching                    0.021    0.718    -0.008    0.013    0.066         0.032        0.690    0.081    0.365 P8: Feedback on teaching evaluation       0.006     0.751     -0.007    -0.019      0.032
+T8: Feedback on teaching evaluation         0.016    0.702    -0.022   -0.006    0.042         0.078        0.950   -0.019    0.020 P9: Collaborate with Ts on learning      -0.016    -0.051      0.688     0.029     -0.186
+T9: Collaborative discussion of learning    -0.012   0.011    0.672     0.018   -0.036         0.213      -0.275     0.025   -0.104 P10: Work on T professional growth        0.097     0.039      0.657    -0.006      0.071
+T10: Collaborative professional learning    0.021    0.018    0.551     0.050    0.102         0.300      -0.120     0.152   -0.196 P11: Support cooperation among Ts        -0.003     0.018      0.738    -0.001     -0.114
+T11: Collaborative teaching development     0.407    0.004    0.156    -0.028    0.012         0.709        0.062    0.061    0.026 P12: Provide feedback on teaching         0.035     0.021      0.558    -0.110      0.191
+T12: Collaboration on common standard       0.013    -0.011   0.773    -0.028    0.012         0.314      -0.067     0.472    0.023 P14: Shared R for instruction             0.009     0.028      0.008     0.781      0.219
+T13: Hours spent on PD                      -0.004   0.025    -0.019    0.492    0.082         -0.024       0.080    0.060    0.737 P15: Shared R for budget decision         0.034     0.061     -0.041     0.598     -0.002
+T14: Hours for teamwork                     0.019    0.011    0.091     0.539   -0.039         0.036        0.411    0.183   -0.173 P16: Shared R for course offering        -0.040    -0.010      0.007     0.753      0.101
+T15: Hours school management                0.008    -0.003   -0.043    0.636    0.028         -0.100       0.338    0.398   -0.166 P18: Consistent behavior enforcement      0.250     0.027     -0.026     0.714     -0.108
+T16: Attend external seminar/conference     -0.046   0.071    0.058     0.097    0.328         0.017      -0.134     0.097    0.524 P19: Adequate learning environment        0.004    -0.023     -0.032    -0.026      0.762
+T17: Hours cooperation with parents         -0.014 -0.020     0.024     0.621   -0.018         0.029        0.060    0.517    0.223 P20: Ts for disadvantaged Ss              0.085    -0.001     -0.119    -0.032      0.676
+T18: Consistent behavior enforcement        0.179    -0.021   -0.016    0.046    0.590         0.242        0.036   -0.039    0.756
+T20: Teaching disadvantaged students        -0.033   0.024    0.036    -0.017    0.681         0.061        0.173    0.000    0.413
+T21: Teacher-parent cooperation             0.017    -0.006   -0.007   -0.038    0.624         0.084        0.017    0.022    0.836
+                         Inter-Factor Correlation Coefficients: Individual Teachers                    Collective Teachers                                                                                          Principals
+                                            W1       W2       W3       W4       W5           BT1         BT2        BT3      BT4                                            BP1       BP2        BP3       BP4        BP5
+                                        W1 1.000                                         BT1 1.000                                                                      BP1 1.000
+                                        W2 0.168* 1.000                                  BT2 0.262*      1.000                                                          BP2 0.101*    1.000
+                                        W3 0.273* 0.265* 1.000                           BT3 0.225*      0.280      1.000                                               BP3 0.274*    0.078      1.000
+                                        W4 0.076* 0.155* 0.226*        1.000             BT4 0.299*      0.476*     0.319*   1.000                                      BP4 0.108*    0.396*     0.008     1.000
+                                        W5 0.236* 0.254* 0.232*        0.290*   1.000                                                                                   BP5 0.101     -0.006     -0.013    0.200*     1.000
+Note. All factor loadings were standardized. Significant (> .40) and strong ( > .50) factor loadings appear in bold. All significant and strong loadings were
+statistically significant at 0.05 level except two between-level items (i.e., T12, T17). 𝜒 2 =3766.960; df=602; p < 0.0001; RMSEA=0.008; CFI=0.936; TLI=0.882;
+SRMRwithin=0.016; SRMRbetween=0.050. Abbreviations are used for the sake of space: T(s) = teacher(s); S(s) = student(s); R = responsibility; PD = professional
+development. *p < 0.05 in interfactor correlations coefficients. We followed a reporting format from Boyce & Bowers (2018a).
+
+
+
+                                                                                                       69
+
+Table 12. Multilevel Confirmatory Factor Analysis Model Fit Indices
+         Subsample           RMSEA         CFI       TLI      SRMRwithin   SRMRbetween
+ Initial model
+     CFA Subsample1           0.011       0.877     0.864       0.057        0.152
+     CFA Subsample2           0.010       0.887     0.875       0.058        0.155
+     CFA Subsample3           0.011       0.889     0.877       0.058        0.148
+     CFA Subsample4           0.010       0.875     0.861       0.055        0.141
+ Second Round
+     CFA Subsample1           0.011       0.880     0.865       0.055        0.125
+     CFA Subsample2           0.010       0.890     0.876       0.055        0.123
+     CFA Subsample3           0.011       0.895     0.881       0.057        0.126
+     CFA Subsample4           0.010       0.872     0.855       0.053        0.123
+ Third Round
+     CFA Subsample1           0.011       0.883     0.868       0.053        0.120
+     CFA Subsample2           0.010       0.894     0.881       0.054        0.115
+     CFA Subsample3           0.011       0.896     0.882       0.057        0.124
+     CFA Subsample4           0.010       0.882     0.867       0.052        0.117
+ Fourth Round
+     CFA Subsample1           0.011       0.891     0.876       0.053        0.091
+     CFA Subsample2           0.010       0.894     0.881       0.054        0.115
+     CFA Subsample3           0.010       0.902     0.888       0.056        0.117
+     CFA Subsample4           0.010       0.877     0.860       0.052        0.098
+ Modification Indices
+ (Final MCFA Models)
+     CFA Subsample1           0.010       0.913     0.901       0.054        0.089
+     CFA Subsample2           0.009       0.908     0.896       0.053        0.113
+     CFA Subsample3           0.009       0.919     0.907       0.053        0.117
+     CFA Subsample4           0.009       0.896     0.881       0.051        0.097
+Note. We followed a reporting format from Boyce & Bowers (2018a).
+
+
+
+
+                                                   70
+
+Table 13. Results of Multilevel Confirmatory Factor Analysis (5-Within, 9-Between Model): CFA Sub-sample3
+                                 Within School                                                                                             Between Schools
+                               Individual Teachers                                      Collective Teachers                                                             Principals
+Indicator                                    W1       W2      W3      W4      W5     BT1 BT2     BT3     BT4                         Indicator                BP1     BP2      BP3    BP4     BP5
+T1: Shared belief about learning           0.880                                     0.985                            P1: Shared belief about learning       0.819
+T2: Staff engagement                       0.804                                     0.859                            P2: Staff engagement                   0.648
+T3: Collaborative school culture           0.814                                     0.884                            P3: Collaborative school culture       0.665
+T4: Teachers care student wellbeing        0.584                                     0.587                    -0.502 P4: Policy disadvantaged students
+T5: Classroom student assessment                     0.674                                   0.976   0.239            P5: Classroom student assessment               0.742
+T6: External student assessment                      0.568                                   0.832   0.426            P6: External student assessment                0.636
+T7: Feedback on teaching                             0.783                                   1.000                    P7: Feedback on teaching                       0.756
+T8: Feedback on teaching evaluation                  0.766                                   0.882                    P8: Feedback on teaching evaluation            0.835
+T9: Collaborative discussion of learning                     0.687                                   1.000            P9: Collaborate with Ts on learning                    0.659
+T10: Collaborative professional learning                     0.625                                   0.144            P10: Work on T professional growth                     0.758
+T11: Collaborative teaching development    0.489                                     0.572                            P11: Support cooperation among Ts                      0.740
+T12: Collaboration on common standard                        0.786                                   0.410            P12: Provide feedback on teaching                      0.554
+T13: Hours spent on PD                                               0.522                                    0.895 P13: Shared R for personnel service
+T14: Hours for teamwork                                              0.638                   0.301   0.230            P14: Shared R for instruction                                  0.861
+T15: Hours school management                                         0.610                   0.222                    P15: Shared R for budget decision                              0.621
+T16: Attend external seminar/conference                                                                       0.511 P16: Shared R for course offering                                0.753
+T17: Hours cooperation with parents                                  0.636                           -0.143   0.525 P17: Cooperation with parents
+T18: Consistent behavior enforcement                                         0.827                            0.837 P18: Consistent behavior enforcement                             0.700
+T19: Severity of disciplinary issues                                                                                  P19: Adequate learning environment                                     0.820
+T20: Teaching disadvantaged students                                         0.534                            0.364 P20: Ts for disadvantaged Ss                                             0.681
+T21: Teacher-parent cooperation                                              0.451                            0.944
+
+Note. All factor loadings were standardized. All significant ( > .40) and strong ( > .50) factor loadings were statistically significant at p < 0.05
+level. Significant and strong factor loadings appear in bold. 𝜒 2 = 3287.174; df=747; p < 0.0001; RMSEA=0.009; CFI=0.919; TLI=0.907;
+SRMRwithin=0.053; SRMRbetween=0.117; Abbreviations are used for the sake of space: T(s) = teacher(s); S(s) = student(s); R = responsibility;
+PD = professional development. We followed a reporting format from Boyce and Bowers (2018a).
+
+
+
+
+                                                                                                        71
+
+Figure 2. Final Factor Structure of Leadership for Learning from 2018 TALIS
+
+
+
+
+Note. The asterisk (*) attached to BP2 denotes that, although BP2 shares its constituent indicators
+with WT2 and BT2, each indicator’s order of loading strength differs from that of WT2 and BT2.
+Indicators within WT2 and BT2 share exactly the same order of factor loading strength.
+
+
+
+                                                 72
+
+Table 15. Comparison of Recent Leadership Measurement Studies
+                   Urick & Bowers      Goff et al. (2014)   Autho (2018b)         This Study
+                       (2019)
+  Analytic Data      2008 TALIS             VAL-ED               SASS             2018 TALIS
+
+
+
+   Leadership        Instructional       Instructional      Leadership for       Leadership for
+   Framework          Leadership          Leadership           learning             learning
+
+
+ Whose Practice        Principal           Principal           Teacher           School climate
+  to measure                                                                        Teacher
+                                                                                    Principal
+
+  Whose Data      Individual Teachers Individual Teachers Individual Teachers Individual Teachers
+                  Collective Teachers      Principals     Collective Teachers Collective Teachers
+                                                                                   Principals
+
+   Congruence            Yes                  No                  No          • When measuring
+                                                                                school climate: Y
+                                                                              • When measuring
+                                                                                teacher practice: N
+Note. VAL-ED: the Vanderbilt Assessment of Leadership in Education; SASS: Schools and Staffing
+Survey
+
+
+
+
+                                               73
+
+Appendix A. Mplus Code for Creating the Pooled-Within & Pooled-Between Correlation Matrices
+ TITLE: MEFA
+ DATA: FILE = EFA1.TXT;
+
+ VARIABLE: NAMES = TCHWGT T1-T21 ID
+                   SCHWGT P1-P20;
+
+            MISSING = ALL (999);
+            CLUSTER = ID;
+            WEIGHT = TCHWGT;
+            BWEIGHT = SCHWGT;
+
+ USEVARIABLES = T1-T21 P1-P20;
+ BETWEEN = P1-P20;
+
+ ANALYSIS: TYPE = TWOLEVEL EFA 5 5 UW 7 10 UB;
+ ESTIMATOR = MLR;
+ H1ITERATIONS = 80000;
+
+Appendix B. Mplus Code for Pooled-Within EFA
+ TITLE: POOLED WITHIN-ONLY EFA
+ DATA: FILE = WITHCOR.DAT;
+        TYPE = CORRELATION;
+        NOBSERVATIONS = 104820;
+        VARIABLE:
+        NAMES = T1-T21;
+
+ ANALYSIS: TYPE = EFA 1 8;
+           PARALLEL = 50;
+
+
+Appendix C. Mplus Code for Pooled-Between EFA
+ TITLE: POOLED BETWEEN-ONLY EFA
+ DATA: FILE = BETCOR1.DAT;
+        TYPE = CORRELATION;
+        NOBSERVATIONS = 104820;
+        VARIABLE:
+        NAMES = T1-T21 P1-P20;
+
+ ANALYSIS: TYPE = EFA 1 10;
+           PARALLEL = 50;
+           H1ITERATIONS = 200000;
+
+
+Appendix D. Mplus Codes for Full Multilevel Exploratory Factor Analysis
+ TITLE:   MEFA1 REMOVING P4, P13, P17, T19 (Next FIRST TRIM)
+ DATA:    FILE = EFA1.TXT;
+          VARIABLE: NAMES = TCHWGT T1-T21 ID SCHWGT P1-P20;
+          MISSING = ALL(999);
+          CLUSTER = ID;
+          WEIGHT = TCHWGT;
+          BWEIGHT = SCHWGT;
+          USEVARIABLES = T1-T18 T20 T21 P1-P3 P5-P12 P14-P16 P18-P20;
+          BETWEEN = P1-P3 P5-P12 P14-P16 P18-P20;
+
+ ANALYSIS: TYPE = TWOLEVEL EFA 5 5 UW 9 9 UB;
+           ESTIMATOR = MLR;
+           H1ITERATIONS = 80000;
+
+
+
+
+                                                 74
+
+Appendix E. Mplus Code for Final Multilevel Confirmatory Factor Analysis, CFA Subsample 3
+ TITLE: MODINDICES MCFA3 fixing Between T7 Residual Variance at zero within T6 WITH T5
+
+  DATA: FILE = CFA3.TXT;
+        VARIABLE: NAMES = TCHWGT T1-T21 ID SCHWGT P1-P20;
+        MISSING = ALL(999);
+        WEIGHT = TCHWGT;
+        BWEIGHT = SCHWGT;
+        CLUSTER = ID;
+        USEVARIABLES = T1-T18 T20 T21 P1-P3 P5-P12 P14-P16 P18-P20;
+        BETWEEN = P1-P3 P5-P12 P14-P16 P18-P20;
+
+  ANALYSIS: TYPE = TWOLEVEL;
+            H1ITERATIONS = 10000;
+            ALGO = EM;
+  MODEL:
+         %WITHIN%
+         W1 BY T1* T2 T3 T4 T11;
+         W2 BY T5* T6 T7 T8;
+         W3 BY T9* T10 T12;
+         W4 BY T13* T14 T15 T17;
+         W5 BY T18* T20 T21;
+         W1@1; W2@1; W3@1; W4@1; W5@1; T6 WITH T5;
+
+           %BETWEEN%
+           BT1 BY T1* T2 T3 T4 T11;
+           BT2 BY T5* T6 T7 T8 T14 T15;
+           BT3 BY T4* T13 T16 T17 T18 T20 T21;
+           BT4 BY T5* T6 T9 T10 T12 T14 T17;
+           T7@0;
+
+           BP1 BY P1* P2 P3;
+           BP2 BY P5* P6 P7 P8;
+           BP3 BY P9* P10 P11 P12;
+           BP4 BY P14* P15 P16 P18;
+           BP5 BY P19* P20;
+
+           BT1@1; BT2@1; BT3@1; BT4@1;
+           BP1@1; BP2@1; BP3@1; BP4@1; BP5@1;
+
+  OUTPUT: SAMPSTAT STAND MODINDICES;
+
+
+
+
+                                                75

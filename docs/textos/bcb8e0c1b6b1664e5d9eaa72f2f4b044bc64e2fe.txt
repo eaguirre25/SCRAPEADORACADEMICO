@@ -1,0 +1,443 @@
+Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                                 DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+
+Design and Implementation of a Multimodal Data Collection
+ and Distribution System Based on Python-Taking School
+           Management System as an Example
+                                    Yucheng Huang1, Junyu Yi2,a,*, Yuting Yin3
+     1
+         School of Robotics Engineering, College of Harbin Far East Institute of Technology, Harbin,
+                                                    China
+                                 2
+                                   Massey University, Auckland, Newzealand
+                              3
+                                University of Melbourne, Melbourne, Australia
+                                         a. 22009199@massey.ac.nz
+                                            *corresponding author
+
+            Abstract: The multimodal data collection and distribution system enables users to enter
+            multimodal information through the platform, including but not limited to paper and
+            electronic information. The backend administrator can then summarize these pieces of
+            information, facilitating efficient data collection for managers. This system is written on the
+            Windows platform using Python as the development language. It aims to develop a
+            multimodal data collection and distribution system. Through the research of the system, it
+            can not only enhance the comprehensive ability of community project analysis, design, and
+            development, but also provide an excellent management platform for multimodal data
+            collection and distribution, offering a convenient path to improve data collection efficiency.
+            This thesis follows software engineering design principles, employing methods such as
+            program structure diagrams, flowcharts, activity diagrams, and sequence diagrams in the
+            system design. It achieves automated processing and real-time distribution of multimodal
+            data. The system possesses flexible expandability and high security, capable of adapting to
+            data management needs of different scales and scenarios. Through continuous optimization
+            based on user feedback, the system constantly improves the accuracy of data analysis and
+            distribution, providing users with efficient and intelligent data information services.
+
+            Keywords: Multimodal data collection management, Python, Distribution system.
+
+
+
+
+1.        Introduction
+In today's rapidly evolving information technology landscape, the waves of big data and artificial
+intelligence are reshaping various sectors of the socio-economic domain at an unprecedented pace.
+Data, as the core driving force of this transformation, has become increasingly important. However,
+facing massive and diverse datasets, especially those containing multiple modalities such as text,
+images, audio, and video, how to efficiently collect, process, and push data has become an urgent
+issue to address.
+   Traditional data processing methods often confine themselves to a single modality, making it
+difficult to fully capture and analyze the multidimensional information within the data. This
+
+ © 2025 The Authors. This is an open access article distributed under the terms of the Creative Commons Attribution License 4.0
+ (https://creativecommons.org/licenses/by/4.0/).
+
+                                                                    1
+
+                   Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                            DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+significantly limits the full exploration and utilization of the data's value. Therefore, with the rise of
+multimodal data processing technologies, designing and implementing a system capable of
+integrating, analyzing, and pushing data across different modalities has become particularly urgent.
+   Against this backdrop, this research focuses on the design and implementation of a Python-based
+multimodal data collection and push system. The system aims to collect and integrate multimodal
+data from diversified sources through automated means, using algorithms and technologies for in-
+depth processing and analysis, ultimately achieving the tasks of collecting and pushing relevant
+information. This can significantly enhance the efficiency of data utilization. The system is committed
+to providing real-time performance, ensuring the completion of multimodal data collection,
+processing, and pushing tasks within a short timeframe. The paper will try to optimize algorithm and
+architecture designs to meet the needs of small-scale users simultaneously. Additionally, the system
+features strong scalability, easily accommodating future business growth challenges. By continuously
+collecting user feedback and performing data analysis, the recommendation algorithm will be
+continually optimized to improve accuracy and personalization, offering users more thoughtful and
+precise information services.
+2.    Related Works
+2.1. Domestic Research Status
+In China, with the rapid development of big data and artificial intelligence technologies, research on
+multimodal data collection and push systems has gradually become a hot topic. In recent years,
+domestic scholars have made significant progress in fields such as multimodal data fusion, sentiment
+analysis, and intelligent learning analytics, providing a solid theoretical foundation and technical
+support for the design and implementation of Python-based multimodal data collection and push
+systems.
+   Yu Wenjing and Zhou Jinzhi focused their research on sentiment analysis of online learning among
+college students, proposing a sentiment analysis model based on multimodal data fusion. This model
+integrates various types of data such as text, images, and videos, utilizing deep learning algorithms
+for sentiment recognition [1]. Additionally, Li Jiayao explored multimodal learning analytics based
+on intelligent technology, analyzing the connotations, models, and challenges faced by multimodal
+learning analytics [2]. She pointed out that multimodal learning analytics can comprehensively
+capture learners' behaviors, emotional states, and cognitive processes, providing strong support for
+personalized learning. Song Haomeng noted that China has made significant progress in the collection
+and processing of multimodal data [3]. He emphasized that with the development of deep learning
+technologies, models based on Convolutional Neural Networks (CNN) and Recurrent Neural
+Networks (RNN) have shown excellent performance in image and text processing [4]. Liu Bangjian
+focused his research on the application of multimodal data in intelligent recommendation systems [5].
+He believes that combining users' historical behavioral data and multimodal content features can
+significantly improve the accuracy and personalization of recommendations.
+2.2. International Research Status
+Yuan H focused on the application of multimodal data in social media analysis [5]. He argued that
+multimodal data on social media platforms (such as images, videos, texts, etc.) provide a rich source
+of information for user behavior analysis and content recommendations. Yuan H introduced a deep
+learning-based multimodal content recommendation system that can automatically analyze users'
+historical behaviors and interest preferences to push personalized multimedia content. He also pointed
+out that future research should pay more attention to privacy protection and algorithm interpretability.
+
+
+
+
+                                                               2
+
+                  Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                           DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+   Internationally, research on multimodal data collection and push systems has also received
+widespread attention. The work of Wiencrot et al. is particularly noteworthy; they successfully
+transformed a face-to-face survey targeting the elderly into a multimodal data collection approach [6].
+This transformation not only improved the efficiency and quality of data collection but also
+demonstrated the flexibility and adaptability of multimodal data collection in addressing different
+populations and scenarios. This study provides valuable practical experience for the application of
+Python-based multimodal data collection and push systems in various fields.
+   Meanwhile, Li, Z. T. achieved significant results in the organization of multimodal and
+longitudinal data for a lung cancer risk community cohort [7]. By collecting and organizing
+multimodal data from various time points and sources, they provided rich data support for the early
+diagnosis of lung cancer. This research not only highlights the immense value of multimodal data in
+the field of medical diagnosis but also offers insights for the application of Python-based multimodal
+data collection and push systems in healthcare.
+   In summary, domestic and international scholars have conducted extensive and in-depth research
+on multimodal data collection, processing, analysis, and application, laying a solid foundation for the
+design and implementation of Python-based multimodal data collection and push systems. In the
+future, with continuous technological advancements and expanding application scenarios, Python-
+based multimodal data collection and push systems are expected to play an important role in more
+fields [8-10].
+3.    Related Technologies Introduction
+3.1. Python Technology Introduction
+Python is a flexible and versatile computer programming language, known for its strong syntactical
+features and high readability. It is very user-friendly for beginner programmers due to its simple and
+easy-to-understand syntax, wide applicability, and practicality. Python is an object-oriented
+programming language that can be used on multiple platforms. Compared to other languages, it is
+easy to install; installing Anaconda Navigator can solve the configuration of environment variables
+and other additional installation issues, while also offering better compatibility. Pycharm, included in
+Python, is also an excellent Python library for generating charts. Additionally, Python is an interactive
+language that can directly execute code in the interactive interface, and most Linux systems use
+Python as their basic configuration. Python is an object-oriented language, meaning it supports object-
+oriented styles or code encapsulation within objects.
+   JavaScript is a high-level, object-oriented programming language primarily used for dynamic
+interaction effects on webpages. As a scripting language, JavaScript is designed to interact with web
+pages, executing in the user’s browser to change the content, structure, and style of web pages.
+JavaScript is widely used in front-end development.
+3.2. PostgreSQL
+PostgreSQL is an advanced open-source relational database that supports complex queries and large-
+scale data processing. Key features of PostgreSQL include:
+   Advanced Functionality: Supports complex queries, indexing, triggers, and stored procedures.
+   Extensibility: Allows users to define data types, functions, and operators.
+   Standard Compatibility: Highly compliant with SQL standards.
+   Data Integrity: Strong transaction handling capabilities supporting ACID properties.
+   PostgreSQL is suitable for complex applications and scenarios requiring high data integrity.
+   Advantage: It uses JSON storage internally, so there are no length restrictions on data types.
+
+
+
+
+                                                              3
+
+                  Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                           DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+4.   Multimodal Data Collection and Push System Analysis
+4.1. Performance Requirements Analysis
+(1) The system software can be used 24 hours a day, 365 days a year;
+(2) The system's software failure rate must be less than or equal to 10%.
+(3) When users input incorrect information, the system should prompt and not crash.
+4.2. Economic Feasibility
+Software resources: Downloading Python, PostgreSQL, and Pycharm from official websites is free
+and open-source.
+   Hardware resources: There is already a computer capable of handling development work.
+   Participants: The development of this system involves two other participants, each responsible for
+different functional modules of making the process more efficient and easier to debug.
+   Benefit Evaluation: Using this system will significantly reduce the number of manual record-
+keeping staff, reducing labor costs and increasing profits.
+4.3. Technical Feasibility
+The development software chosen for this system is Python, and the development platform is
+Pycharm. Considering the efficiency and open-source nature of the database, PostgreSQL is used.
+Since the project is somewhat similar to web front-end development, JavaScript (with Python as a
+mediator) was utilized.
+4.4. Operational Feasibility
+The system is relatively easy to operate, using common window login interfaces, with most input
+forms being dropdown boxes. In some pages, information can be automatically generated without the
+need for input. The operation is straightforward, requiring only proficient Windows operating skills
+from the operator.
+4.5. Functional Requirements Analysis
+4.5.1. User Login. User launches the application
+Enters username and password
+  System verifies user identity and permissions
+  User has the ability to add, delete, modify, and query personal data
+4.5.2. Data Collection
+Users choose data input methods (such as manual entry, file import, scanning paper documents, etc.)
+  For paper documents, the system uses OCR technology (detecting and recognizing text areas in
+images, converting them into editable text information) to identify content
+  Users enter multimodal information through the platform
+  The system performs preliminary verification and formatting of the input data
+4.5.3. Data Storage
+The collected data is stored in the local PostgreSQL database
+  At the same time, data is encrypted and synchronized to cloud servers
+
+
+
+                                                              4
+
+                  Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                           DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+4.5.4. Data Processing and Analysis
+Generate analysis reports and visualization charts
+4.5.5. Data Display
+Users can view personal or aggregated uploaded multimodal data
+  The system displays analysis results including health trends, emotional states, etc.
+  Provides various charts and reports for user browsing
+4.6. System Process Analysis
+Precondition: The administrator successfully logs into the system
+   Postcondition: Based on the user-set conditions, the system returns corresponding information on
+the page.
+   Primary Success Scenario:
+   The administrator inputs the username and password, successfully logs into the system.
+   The administrator clicks menu buttons to enter information function modules.
+4.7. System Login Process
+To ensure the security of the system, one must log in before using it. The administrator logs in via
+AJAX for validation by entering the login account and password, clicking login, and passing
+verification to achieve a page refresh-free administrator login. The flowchart for the login process is
+shown in Figure 1.
+
+
+
+
+                                           Figure 1: Log-in flow chart
+
+4.8. System Registration Process
+Users can register by entering information such as username, password, and name. The flowchart for
+the registration process is shown in Figure 2.
+
+
+
+                                                              5
+
+                 Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                          DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+
+                                       Figure 2: registration flow chart
+
+4.9. System Functional Module Design
+The system is primarily divided into system administrator and user management. The detailed overall
+functional module diagram of the system is shown in Figure 3, Figure 4.
+
+
+
+
+                 Figure 3: Overall Functional Module Diagram for Administrators
+
+
+
+
+                               Figure 4: User Functional Module Diagram
+
+
+
+
+                                                             6
+
+                     Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                              DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+4.10. Database Design
+Taking the student information function module as an example, see Table 1.
+
+                                         Table 1: Student Information Table
+ Serial   Column        Data          String      Decimal                   Primary     foreign     Allow        Default
+                                                              Identifier                                                   Description
+ Number   Name          Type          Length      Poimt                     key         key         Nulls        Value
+ 1        KidsName      couchDB       999999      No                                                Yes
+ 2        Age           couchDB       999999      No                                                No
+ 3        KidsName      couchDB       999999      No                                                Yes
+ 4        School        couchDB       999999      No                                                Yes
+ 5        Classroom     couchDB       999999      No                                                Yes
+                                                                                                                           Bound    to
+ 6        Birth         couchDB       999999      No                                                Yes
+                                                                                                                           age
+
+   All data types are CouchDB, which has no length restrictions, so the length values are infinite.
+Regarding the age field, it is determined based on the date of birth, and thus, the age will be
+automatically calculated using an addition or subtraction algorithm based on the current date and the
+date of birth.
+5.    Data Collection System Implementation
+5.1. System Login Interface
+When users enter the website to log in, the system checks whether the entered information is correct.
+If the information is correct, access is granted; if incorrect, a login error is displayed, and the user is
+returned to the login interface. The primary function of this interface is to verify the username,
+password, and user identity of those using the system, ensuring that only authorized users can access
+it. The system login interface is shown in Figure 5.
+
+
+
+
+                                          Figure 5: System Login Interface
+
+5.2. Data Collection Function
+This includes the collection of student attendance data and student information. Users can add, delete,
+modify, and query student information, as well as view student attendance records. Both users and
+administrators can use this function. As shown in Figures 6 and 7.
+
+
+
+
+                                                                 7
+
+                  Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                           DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+
+                                Figure 6: Student Attendance Data Interface
+
+
+
+
+                           Figure 7: Student Information Collection Interface
+
+5.3. Data Push Function
+The student event information management module includes a push function, specifically for the tasks
+and notes modules. Information from these two modules can be pushed to administrators. The notes
+module is used to record students' daily issues, while the tasks module records problems that students
+need to address. Both users and administrators have access to this function. As shown in Figures 8
+and 9.
+
+
+
+
+                                    Figure 8: Task Module Push Interface
+
+
+
+                                                              8
+
+                  Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                           DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+
+                                   Figure 9: Notes Module Push Interface
+
+5.4. User Management Interface
+The user management function is exclusive to administrators and not accessible to regular users.
+Administrators can view user information and contact details, and perform add, delete, modify, and
+query operations on user data. As shown in Figure 10.
+
+
+
+
+                                   Figure 10: User Management Interface
+
+5.5. System Management Interface
+This function is also exclusive to administrators and not accessible to regular users. Administrators
+can use this interface to export data to the database, connect to the database from the front-end
+webpage, and facilitate web page modifications. As shown in Figure 11.
+
+
+
+
+                                 Figure 11: System Management Interface
+
+
+
+
+                                                              9
+
+                     Proceedings of the 5th International Conference on Signal Processing and Machine Learning
+                                              DOI: 10.54254/2755-2721/120/2025.18759
+
+
+
+6.    Conclusion
+The main work of this paper is to design and implement a Python-based multimodal data collection
+and push system aimed at enhancing the efficiency of collecting, processing, and pushing multimodal
+data in campus management. Multimodal data fusion can integrate multiple data types such as text,
+images, audio, etc. to mine comprehensive information value, providing convenient input methods.
+Utilizing PostgreSQL for data storage and management, the system features real-time push
+capabilities to ensure timely data delivery to users. Through modular system design, it offers good
+scalability and flexibility to adapt to different scenarios and needs. The advantage of this system is
+it can integrate multiple modal data resources, providing comprehensive information services to users.
+Deep learning-based recommendation algorithms significantly improve recommendation accuracy
+and personalization. And the flexible system architecture is easy to extend and maintain. But
+multimodal data processing technology is relatively complex and requires a high technical threshold.
+Cross-modal data fusion and semantic alignment still face challenges. And system performance may
+be limited by hardware resources and network environment. The Python-based multimodal data
+collection and push system effectively improves data management efficiency and provides
+personalized data information services to users. Continuous optimization based on user feedback
+enhances the precision and intelligence of data analysis. Looking ahead, the system could further
+optimize cross-modal data fusion algorithms to improve data processing accuracy and be applied to
+broader fields, for example, in medical data storage, a hierarchical storage approach is used to classify
+and store patients' basic information, examination reports (multi-modal such as images and text), etc.
+for quick retrieval and accurate analysis, thereby providing better data support for medical decision-
+making.
+Authors Contribution
+All the authors contributed equally and their names were listed in alphabetical order.
+References
+[1] Yu, W, & Zhou, J. (2024). Emotional Analysis Model of College Students' Online Learning Based on Multi-modal
+     Data Fusion. Journal of Huainan Normal University, 26(01), 130 - 135.
+[2] Li, J. (2024). Multi-modal Learning Analysis Based on Intelligent Technology: Connotation, Model, Challenge.
+     China Educational Technology Equipment, 26(01), 26 - 30 + 37.
+[3] Song, H. (2024). Research on Convolutional Neural Network Model Quantification Method. Shijiazhuang Tiedao
+     University.
+[4] Liu, B. (2022). Research and Application of Intelligent Recommendation System Based on User Behavior
+     Characteristics. University of Electronic Science and Technology, DOI:10.27005/d.cnki.gdzku.2022.004265.
+[5] Yuan, H., Tang, Y., Xu, W., et al. (2021). Exploring the influence of multimodal social media data on stock
+     performance: an empirical perspective and analysis. Internet Research, 31(3), 871 - 891.
+[6] Wiencrot, A., O'Doherty, K., Lawrence, D., et al. (2024). Transitioning an In-Person Survey of Older Adults to
+     Multi-Mode Data Collection. The journals of Gerontology, Series B, Psychological sciences and social sciences.
+[7] Li, Z., Xu, K., Chada, C. N., et al. (2024). Curating retrospective multimodal and longitudinal data for community
+     cohorts at risk for lung cancer, Cancer biomarkers: section A of Disease markers.
+[8] Su, M., Cui, M., & Huang, X., et al. (2020). Multimodal Data Fusion in Learning Analytics: A Systematic Review.
+     Sensors, 6856.
+[9] Mangaroska, K., Martinez-Maldonado, R., Vesin, B., et al. (2021). Challenges and opportunities of multimodal data
+     in human learning: The computer science students' perspective. Journal of Computer Assisted Learning, jcal.1254.
+[10] Yu, H., Liang, Z., & Yan, Y. (2020). Multi-source Multi-modal Data Fusion and Integrated Research Progress.
+     Information Studies: Theory & Application, 43(11), 169.
+
+
+
+
+                                                                 10

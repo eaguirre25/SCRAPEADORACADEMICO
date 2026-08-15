@@ -1,0 +1,1013 @@
+Chang et al. BMC Public Health  (2023) 23:1852                                                                                                  BMC Public Health
+https://doi.org/10.1186/s12889-023-16748-8
+
+
+
+
+ RESEARCH                                                                                                                                               Open Access
+
+The impact of boarding schools
+on the development of cognitive
+and non‑cognitive abilities in adolescents
+Fang Chang1, Yanan Huo1, Songyan Zhang1, Hang Zeng1 and Bin Tang1*
+
+
+
+  Abstract
+  Background Since China adopted a policy to eliminate rural learning centers, boarding has become an important
+  feature of the current rural student community. However, there is a lack of consensus on the impact of boarding
+  schools on students’ cognitive and non-cognitive development. This study investigates the effect of boarding schools
+  on the development of cognitive and non-cognitive abilities of junior high school students in rural northwest China.
+  Methods Using a sample of 5,660 seventh-grade students from 160 rural junior high schools across 19 counties, we
+  identify a causal relationship between boarding and student abilities with the instrumental variables (IV) approach.
+  Results The results suggest that boarding positively influences memory and attention, while it has no significant
+  effect on other cognitive abilities such as reasoning, transcription speed, and accuracy. Furthermore, we find no sig-
+  nificant association between boarding and the development of non-cognitive skills.
+  Conclusions Given the widespread prevalence of boarding schools in rural regions, our study highlights the growing
+  importance of improving school management to promote the development of students’ cognitive abilities and inte-
+  grating the development of non-cognitive or social-emotional abilities into students’ daily routines.
+  Keywords Boarding, Cognitive ability, Non-cognitive ability
+
+
+Introduction                                                                               Cognitive and non-cognitive abilities are core compo-
+Human ability is composed of cognitive and non-cog-                                      nents of human capital [1, 2, 6]. Cognitive abilities are the
+nitive components, both of which are crucial to an                                       endowments for extracting, storing and utilizing infor-
+individual’s life [1, 2]. The influence of cognitive and non-                            mation from the objective world, This encompasses skills
+cognitive abilities has been observed in various aspects                                 such as logical reasoning, abstract thinking and memory
+of life, including academic performance, educational                                     [7], while non-cognitive abilities have emerged as a con-
+choices, wages, labor market outcomes, employment                                        cept distinct from cognitive abilities, aiming to distinguish
+decisions, health behaviors, and social integration [3–5].                               factors beyond cognitive itself. These encompass qualities
+                                                                                         such as motivation, authority, work norms, self-control,
+                                                                                         perseverance, and more [8]. Numerous researches have
+                                                                                         shown that cognitive and non-cognitive abilities play an
+*Correspondence:                                                                         important role in academic performance, educational
+Bin Tang                                                                                 decisions, wages, labor market performance, employ-
+tangbin198994@163.com
+1
+  Center of Experimental Economics in Education, Shaanxi Normal                          ment choices, health behaviors and social integration [1,
+University Shaanxi Province, No. 620 West Chang’an Street, Chang’an                      3–5, 8, 9]. Prior research has revealed a considerable dis-
+District, Xi’an 710119, China                                                            parity between the cognitive abilities of rural and urban
+
+
+                                        © The Author(s) 2023. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which
+                                        permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the
+                                        original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or
+                                        other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line
+                                        to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory
+                                        regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this
+                                        licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecom-
+                                        mons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.
+
+Chang et al. BMC Public Health   (2023) 23:1852                                                                Page 2 of 17
+
+
+
+
+students, with urban students scoring significantly higher    significant differences in social, emotional, and psycho-
+on word and mathematics tests by 0.75 and 0.54 standard       logical well-being between boarders and non-boarders in
+deviations, respectively [6, 10]. Rural students also tend    elementary schools [22]. However, boarders in second-
+to exhibit lower levels of non-cognitive skills, including    ary schools exhibited a higher incidence of emotional
+depression, self-esteem, and values, with left-behind chil-   difficulties, depression, anxiety, and stress compared to
+dren experiencing even greater disadvantages [11].            non-boarders. Given the mixed evidence, it is crucial to
+  Beginning in 2001, China adopted a policy to eliminate      carefully consider the potential positive and negative
+rural learning centers, leading to the consolidation of       impacts of boarding, especially for disadvantaged stu-
+educational resources and the growth of rural boarding        dents attending public boarding schools.
+schools. By the end of 2016, 26.08 million rural students        As boarding school enrollment continues to rise in
+were enrolled as compulsory boarders, comprising 27.5%        China, researchers have investigated the effects of board-
+of the total student population. Of these, 16.66 million      ing on students’ cognitive and non-cognitive abilities and
+were boarding students in rural junior high schools,          reported conflicting findings. Qiao and Di (2014) found
+amounting to a boarding rate of 58.6% [12]. Therefore, a      that boarding significantly improved rural students’ per-
+comprehensive evaluation of the cognitive and non-cog-        formance in mathematics [23], while Mo et al. (2012)
+nitive development of boarding students in rural areas        reported a significant negative effect of boarding on pri-
+has become essential.                                         mary school students’ math scores [24]. Similarly, Wang
+  Studies have shown that the communal learning envi-         et al. (2016), Li et al. (2018), and Zhu et al. (2019) found
+ronment in boarding schools can increase learning time,       that boarding had no significant impact on students’
+optimize teaching resources, and provide more oppor-          standardized math scores or even reduced their stand-
+tunities for boarders to communicate with their teach-        ardized language scores [25–27]. Most studies indicate
+ers and peers [13, 14]. However, boarding students may        that boarding has a negative impact on students’ non-
+also be exposed to at-risk peers, which can have negative     cognitive skills. Rural boarders are more likely to experi-
+effects on their development [15, 16]. Boarding can also      ence bullying, loneliness, and depression in schools and
+cause stress for students as they are separated from their    have lower self-esteem, resilience, and emotional intelli-
+familiar surroundings and parents, which can be particu-      gence than non-boarders [27–30]. Taken together, these
+larly significant during critical growth stages [17]. Con-    results suggest that the effects of boarding on students’
+sequently, there is a lack of consensus on the impact of      academic and non-academic outcomes are complex and
+boarding schools on students’ cognitive and non-cogni-        may vary depending on a range of factors, including the
+tive development.                                             type of boarding school, the students’ developmental
+  Extant research on boarding schools has primarily           stage, and their socio-economic background.
+focused on elite schools in developed countries, which           This paper aims to contribute to the existing literature
+have generally been associated with positive academic         on the impact of boarding on rural students’ cognitive
+performance [18]. However, public boarding schools have       and non-cognitive abilities in three ways. Firstly, the lit-
+been set up in many developed countries for marginalized      erature has primarily measured cognitive abilities using
+groups, such as the SEED public boarding schools in the       subject-specific scores, which may not fully capture the
+US and the Internet Excellence program in France. Quasi-      breadth of cognitive abilities. There are numerous studies
+experimental studies have shown that boarding has had a       on cognitive abilities in different disciplines. psycholo-
+significant positive impact on the academic performance       gists commonly differentiate between fluid intelligence,
+of disadvantaged students in reading and mathemat-            which emphasizes more general capacities such as logical
+ics [19]. Similarly, rural boarding schools in France have    reasoning and abstract thinking, and crystallized intelli-
+positively impacted academic performance, particularly        gence, which is related to the accumulation of concrete
+for outstanding boarders, with significant improvements       knowledge and experience [31, 32]. Academic perfor-
+in French and mathematics scores two years after enroll-      mance, such as math and reading tests is often used to
+ment [14]. Nonetheless, studies in Turkey have reported       measure crystallized intelligence [33]. Conversely, fluid
+a negative correlation between boarding and academic          intelligence is frequently assessed through quotient tests
+performance in Grades 5 to 9 [15]. Boarding also has a        (IQ tests), exemplified bu tools like the WISC-IV and
+significantly negative impact on students’ mental health,     Raven’s Standard Progressive Matrices [34]. To improve
+with boarders displaying more problem behaviors, such         accuracy and precision in measuring cognitive abilities,
+as anxiety, depression, hostility, substance abuse, alco-     this paper utilizes the Wechsler Intelligence Scale for
+hol dependency, and school bullying [20, 21]. Notably,        Children (WISC), Raven’s Standard Progressive Matri-
+the impact of boarding varies at different stages of devel-   ces, and standardized mathematics scores. Secondly, the
+opment. For instance, Mander et al. (2015) found no           literature has relied on self-administered questionnaires
+
+Chang et al. BMC Public Health    (2023) 23:1852                                                                       Page 3 of 17
+
+
+
+
+Table 1 Sample distribution
+                 Counties        Schools     Students   Boarding   Non-boarding   Students tested Students tested   Students
+                                                        students   students       by Raven        by Wechsler       tested by the
+                                                                                                                    Big five
+
+Total Sample     19              160         5660       2601       3059           2503            472               5166
+Province A       7               90          3413       841        2572           1530            208               3136
+Province B       12              70          2247       1760       487            973             264               2030
+
+
+
+to measure non-cognitive abilities, which may lack com-            Procedure
+prehensiveness and comparability. In contrast, this paper          The sample was collected in two phases. The first phase
+uses the Big Five Personality Inventory to measure non-            was carried out in 2015, which involved administering tests
+cognitive abilities accurately [35]. Finally, prior studies        to collect information on basic details of the sample stu-
+have examined the effects of boarding on cognitive or              dents, mathematics teachers, and schools using question-
+non-cognitive abilities separately, which prevents a com-          naires. Mathematics scores of students were also collected
+prehensive assessment of the impact of boarding on stu-            through tests (see Table 2). In the second phase, conducted
+dents’ human capital.                                              in 2016, additional tests were administered, which included
+  This study uses an instrumental variable approach to             more Raven’s tests, Wechsler tests, the Big Five Personality
+address endogeneity issues and analyzes data from 160              test, and the Perseverance Scale (see Table 2).
+junior high schools in rural northwest China to illustrate           The data collection involved three steps: (1) recruit-
+the effects of boarding on students’ cognitive and non-            ing and training researchers, (2) conducting question-
+cognitive abilities. The results indicate a significant posi-      naire tests in schools, and (3) administering cognitive
+tive effect of boarding on the cognitive abilities of rural        and non-cognitive ability tests. For (1), the project team
+junior high school students, particularly in memory and            recruited college students as researchers and provided
+attention, areas associated with fluid intelligence. How-          uniform training and simulation exercises to ensure
+ever, boarding has no significant impact on the non-cog-           recruited researchers mastered standardized opera-
+nitive abilities of rural students. Furthermore, we provide        tions of the study, thus reducing measurement errors
+evidence of heterogeneity in the impact of boarding on             caused by inconsistent implementation by researchers.
+cognitive and non-cognitive abilities by gender. We also           For (2), researchers organized students to take stand-
+find a significant positive effect on the cognitive abilities      ardized math tests and questionnaires, which were
+of left-behind children and students from families with            developed by the project team in collaboration with the
+better socioeconomic status.                                       best secondary school teachers and calibrated to match
+                                                                   the academic level appropriate for seventh-grade rural
+Method                                                             students. All sample schools used standardized math
+Participants                                                       tests with identical questions assigned by the project
+We conducted our study on first-year rural high school             team and proctored by researchers on-site. Researchers
+(seventh grade) students in three prefectures from two             also conducted one-on-one questionnaire interviews
+provinces in northwest China. These provinces were                 with principals and mathematics teachers. In (3), cog-
+below the national median in terms of GDP, according to            nitive ability tests included Raven’s test and Wechsler’s
+the National Bureau of Statistics of China (2015). Hence,          test. Raven’s test was administered in a group and took
+the sample of rural students in these provinces can be             approximately 45 min. The Wechsler test needed to
+considered representative of students in low-income                be conducted one-on-one and required highly trained
+areas in rural China.                                              personnel, participants therefore received training
+  We constructed our sample in two steps. First, we                in professional institutions. Additionally, the project
+selected 23 counties from three prefectures, two counties          team organized several practical exercises in non-
+with more developed economic status were excluded, and             sample schools to ensure the accuracy and consistency
+the remaining were included. Second, we obtained a list            of the Wechsler test. Given the significant testing and
+of all 496 junior high schools from the counties in Step           time costs of the Wechsler test, three students from
+1. After excluding non-rural schools and schools with              each sample class were randomly selected to take the
+less than 20 students in the seventh grade (to address             Wechsler test individually. Students are selected based
+potential sample attrition or school merger issues), we            on their mathematics scores in the first research sample
+obtained a final sample containing 5,660 seventh-grade             class, which were rank ordered into three groups: high,
+students from 160 schools (see Table 1).                           medium, and low; one student from each group was
+
+Chang et al. BMC Public Health      (2023) 23:1852                                                                                           Page 4 of 17
+
+
+
+
+Table 2 Descriptive statistics of the main variables
+                                     Definition                                                                   N     Mean Std. Dev Min         Max
+
+Panel A: Outcome variables
+  WISC-IV scores                     WISC-IV test scores                                                          472   88.258 10.948   59        124
+  Fluid Intelligence                  The average of working memory, perceptual reasoning, and process-           472   8.472   1.684   3.667     13.333
+                                      ing speed scores
+  Crystal intelligence                The verbal comprehension score                                              472   7.928   2.577   2         16
+  Similarities                        Scores of scale                                                             472   7.928   2.577   2         16
+  Digit span                          Scores of scale                                                             472   8.117   2.507   2         17
+  Coding                              Scores of scale                                                             472   9.71    2.481   2         19
+  Matrix Reasoning                    Scores of scale                                                             472   7.591   2.238   1         17
+  Raven’s IQ                          Raven’s test scores                                                         2503 93.641 17.511    5.35      133.3
+  Math scores of 2016                 Standardized math scores                                                    5188 .02      0.996   -2.071 2.517
+  Extraversion                        Scores of scale                                                             5166 3.349    0.562   1.125     5
+  Agreeableness                       Scores of scale                                                             5166 3.739    0.536   1.444     5
+  Conscientiousness                   Scores of scale                                                             5166 3.279    0.570   1.111     5
+  Neuroticism                         Scores of scale                                                             5166 2.913    0.625   1         5
+  Openness                            Scores of scale                                                             5166 3.411    0.569   1.3       4.9
+Panel B: Student Characteristics
+  Boarding                            1 = Student is boarding                                                     5660 0.460    0.498   0         1
+                                      at school
+  Student age                         A student’s age in years                                                    5660 12.917   0.964   10        17
+  Student gender                      1 = Male; 0 = Female                                                        5660 0.499    0.500   0         1
+  Left-behind child status            1 = Father or mother migrated to a city for work for more than six          5660 0.525    0.499   0         1
+                                      months in the past year
+  Father’s education level            1 = Junior high school and above                                            5660 0.359    0.480   0         1
+                                      0 = Junior high school below
+  Mather’s education level            1 = Junior high school and above                                            5660 0.213    0.410   0         1
+                                      0 = Junior high school below
+  Family asset value                  Indicators of wealth in the family                                          5660 -0.001   1.074   -1.496 3.019
+  Math scores of 2015                 Standardized math scores                                                    5660 -0.112   0.974   -3.167 2.551
+Panel C:School Characteristics
+  School size                         Number of students                                                          5660 217.91 96.641    46        447
+  Teacher-student ratio               Number of teachers per student                                              5660 0.137    0.065   0.039     .474
+   Time required for the school       hours                                                                       5660 1.22     0.777   0.05      4
+to be the furthest administrative
+village
+  The rate of school boarders         The number of boarders divided by the total number of students              5660 0.469    0.409   0         1
+                                      in the school
+Panel D:Teacher Characteristics
+  Teaching years                      years                                                                       5660 9.072    6.954   0         38
+  Teacher’s gender                    1 = Male; 0 = Female                                                        5660 0.636    0.481   0         1
+  Teacher’s education level           1 = junior college above                                                    5660 0.517    0.500   0         1
+                                      0 = junior college and below
+  Teacher’s age                       A teacher’s age in years                                                    5660 32.499   5.869   22.332 56
+  Teacher’s title                     0 = have no title;1 = third-grade title;2 = second-grade title;3 = first-   5660 1.093    1.005   0         4
+                                      grade tltle;4 = Senior professional title
+
+
+
+randomly selected for the Wechsler’s test. The rest of                             Cognitive ability
+the class took the Raven’s test. The non-cognitive skills                          The objective of this research is to investigate students’
+component primarily consisted of the Big Five person-                              cognitive abilities, measured using three tests: the
+ality test and the Perseverance Scale test, both of which                          Wechsler Intelligence Scale for Children-Fourth Edi-
+were included in the student questionnaire.                                        tion (WISC-IV), Raven’s Standard Progressive Matrices
+
+Chang et al. BMC Public Health        (2023) 23:1852                                                                                 Page 5 of 17
+
+
+
+
+(Raven’s IQ test), and a mathematics test. Cattell’s (1987)                        school mathematics teachers based on the standard high
+suggested that cognitive abilities are divisible into two                          school syllabus. The test captures crystallized intelligence
+categories: crystallized intelligence and fluid intelligence                       and was used for robustness testing in this study [33].
+[36]. The former pertains to skills attained through expe-                         Several pre-studies of the questions were carried out by
+rience and knowledge, such as vocabulary, calculation,                             the research team to assess their suitability.
+and verbal comprehension, whereas the latter refers to
+neural development, including perception, memory, and                              Non‑cognitive ability
+reasoning ability.                                                                 Non-cognitive abilities represent a fundamental compo-
+   The WISC-IV is a tool for assessing intelligence in                             nent of human capital and can be examined through vari-
+children aged 6 to 16 and comprises four indices: verbal                           ous skills and traits, including self-control, self-esteem,
+comprehension, perceptual reasoning, working memory,                               self-confidence, due diligence, perseverance, self-aware-
+and processing speed, along with the total IQ score [37].                          ness, and communication skills [45]. We employed the
+The Chinese version of the WISC-IV short-form scale                                Big Five personality traits and the Short Grit Scales as
+was employed in this research, which contains four sub-                            measures of non-cognitive abilities.
+tests representing the four indices [38].1 The four subtests                          DeYoung’s Big Five personality traits consist of neuroti-
+utilized for estimating the WISC IQ score were similari-                           cism, agreeableness, conscientiousness, extraversion, and
+ties, digit span, coding, and matrix reasoning. Similarities                       openness, which capture diverse aspects of personality.
+is designed to capture crystallized intelligence, while digit                      Neuroticism assesses emotional instability and sensitiv-
+span, coding, and matrix reasoning are intended to meas-                           ity, such as anxiety, hostility, depression, self-conscious-
+ure fluid intelligence [39]. The aggregated WISC IQ score                          ness, impulsivity, and vulnerability. Extraversion captures
+was used in the regression analysis.                                               interpersonal skills, positive affect, and energy levels.
+   The Raven’s IQ test is a nonverbal test of intelligence                         Openness refers to the imagination and intellectual curi-
+that consists of pictorial questions related to spatial                            osity as reflected in personal fantasy, aesthetics, feelings,
+reasoning and pattern matching, which are designed                                 actions, ideas, and values. Agreeableness evaluates how
+to assess observational and thinking ability [40]. The                             a person interacts with others through levels of trust,
+test is culture-, language-, and age-neutral and consists                          frankness, altruism, submissiveness, humility, and gen-
+of 60 questions that can be converted into IQ scores                               tleness. Finally, conscientiousness assesses competence,
+based on normative patterns. It is defined to capture                              order responsibility, effortful achievement, self-disci-
+fluid intelligence and was used for robustness testing in                          pline, and thoughtfulness [46]. The Big Five personality
+this study [31].2                                                                  traits have been widely studied and are recognized as
+   The mathematics test, administered to all students in                           being stable across different languages, disciplines, and
+the sample, was developed by experienced secondary                                 raters [47, 48].
+                                                                                      The Short Grit Scale, developed by Duckworth et al.
+1
+                                                                                   (2007), measures perseverance and passion for long-
+  WISC-IV is a clinical instrument created by David Wechsler in the United
+States. It is utilized to individually evaluate the intelligence of children       term goals [49]. This scale consists of eight questions that
+between the aged 6 and 16 years and is internationally recognized as one of        evaluate student attitudes and behaviors towards long-
+the most authoritative and valid personal intelligence tests. It was published     term goals, such as the tendency to prioritize new ideas
+in 1949 and updated to the fourth edition (WISC-IV) in 2003. In 2007, Prof.
+Houcan Zhang of the School of Psychology at Beijing Normal University,             over existing plans [50]. The Short Grit Scale has dem-
+introduced the fourth edition to China. Leveraging Chinese census data,            onstrated strong internal consistency, test–retest stabil-
+1100 people were proportionally sampled from 12 provinces in mainland              ity, and high predictive validity [51]. Grit is considered a
+China, with 100 people in each age group, to establish the Chinese version
+of the norm (with a mean of 100 and a standard deviation of 15). Resulting         facet of Big Five conscientiousness and has gained recent
+in a calculated mean of 88.258 and a standard deviation of 10.948 for the          attention in the literature on human achievement. In this
+students in our study’s samples. The average reliability coefficients of each      study, we utilized it for robustness testing.
+synthetic score of the scale ranged from 0.87 to 0.97, meeting the stand-
+ards set by the original American version. For this paper, the results of the
+Wechsler test were adjusted according to the Chinese norm [38].                    Model design
+2
+  Raven’s Standard Progressive Matrices is designed by the British psy-            Consider a statistical model that links a student’s cog-
+chologist Raven in 1938 designed for people over age of 5.5 with normal
+                                                                                   nitive and non-cognitive abilities, boarding status, and
+intellectual development. The norms used in this paper are from the 1989
+version (a sample of 5,108 students aged between 5 and 70 underwent test-          other determinants of ability as represented by:
+ing to determine China’s Raven’s norm for the Raven test, with a mean of
+100 and a standard deviation of 15) [41], as no updated norms have been                Yjis = α + β1 Boardingjis + β2 Wjis + µj + εjis       (1)
+established specifically for the Chinese population. Related studies in China
+have also used this test [42–44]. The split-half and retest reliabilities of the   where Yjis denotes the cognitive and non-cognitive abili-
+Raven test were 0.95 (p < 0.1) for the single-sample test and 0.82 (p < 0.1) for
+the retest. Concurrent validity was 0.71 (P < 0.1), and predictive validity was
+                                                                                   ties of student i in school s in county j; Boardingjis is an
+0.45 (P < 0.1).                                                                    indicator of the student’s boarding status (1 if boarding,
+
+Chang et al. BMC Public Health    (2023) 23:1852                                                                          Page 6 of 17
+
+
+
+
+0 otherwise), and Wjis is a set of exogenous covariates                  sample. Boarding students exhibit a less right-skewed
+that includes student (e.g., age and gender), family (e.g.,              distribution of WISC-IV scores compared to non-board-
+parental education), and school (e.g., teacher qualifica-                ing students, suggesting that boarding students have
+tions and school facilities) characteristics; µj is county               higher WISC-IV scores on average. Fig. 2 shows the den-
+fixed effect; and the error term εjis captures the influence             sity distribution of Raven’s IQ scores for the sample stu-
+of all unobserved factors.                                               dents. The estimated IQ scores on Raven’s test for both
+   Equation (1) may be subject to endogeneity issues                     boarding and non-boarding samples are not significantly
+for two main reasons. First, reverse causality may arise                 different from the norm. Moreover, there is no signifi-
+where students with lower cognitive abilities or academic                cant difference between the Raven’s IQ scores of board-
+performance could be more likely to choose boarding                      ing and non-boarding students. Finally, Fig. 3 illustrates
+[14]. This concern is particularly true in cases such as                 the density distribution of standardized math scores for
+the French excellent boarding school program, which is                   the sample students, suggesting that there is no signifi-
+designed to provide elite education for disadvantaged                    cant difference between the boarding and non-boarding
+groups. In contrast, boarding schools in rural China aim                 students.
+to integrate educational resources and are more likely to                   Table 3 presents the differences in cognitive and non-
+be chosen because of the distance between the student’s                  cognitive abilities between boarding and non-boarding
+home and school [26, 27, 52]. Therefore, reverse causal-                 students. The results indicate that boarders’ WISC-IV
+ity may not be a problem in this study. Second, omitted                  scores were 2.45 points higher than non-boarders, sig-
+variables may also pose a problem, given that factors that               nificant at the 5% level, and boarders’ fluid intelligence
+affect students’ cognitive and non-cognitive abilities may               scores were 0.363 points higher than non-boarder, simi-
+exist at multiple levels, and crucial indicators such as                 larly significant at the 5% level. Boarders also scored
+genetic factors and parental emotional involvement may                   higher on the matrix reasoning scale by 0.82 points at
+be difficult to measure [27, 53–55].                                     the 1% significance level. Additionally, boarders’ stand-
+   To address these problems, we use the standard instru-                ardized math scores were statistically significantly
+mental variables (IV) approach to identify an exogenous                  higher than non-boarders. In terms of non-cognitive
+source of variation in one’s boarding status. The propor-                skills, boarders scored higher in extraversion by 0.042,
+tion of boarders of all students in a particular school is               but lower in agreeableness by 0.042 compared to
+used as an instrumental variable for boarding. This strat-               non-boarders.
+egy is based on the assumption that the proportion of                       Table 4 verifies the representativeness of the WISC-
+boarders is a strong predictor of one’s boarding status,                 IV-tested students in the sample. We examine the differ-
+because a higher proportion of boarders within a school                  ences in student characteristics between those who took
+indicates a higher likelihood for students to become                     the test and those who did not. The results indicate no
+boarders in that school. We employ a two-stage least                     significant differences in individual characteristics, fam-
+squares (2SLS) framework to estimate Eq. (1) and the fol-                ily characteristics, and baseline math scores between the
+lowing first-stage equation.                                             two groups.
+   The first-stage equation:
+                                                                         Impact of boarding on cognitive abilities
+      Boardingjis = µ0 + µ1 schboardingjis + µ2 Wjis + µj + εjis   (2)
+                                                                         Table 5 presents an analysis of the impact of board-
+  The second stage equation:                                             ing on cognitive abilities among rural students, specifi-
+                                                                         cally focusing on WISC IQ scores, fluid intelligence, and
+     Yjis = α + β1 Boardingjis + β2 Wjis + µj + εjis               (1)   crystal intelligence. Using ordinary least squares (OLS)
+where Boardingjis is the proportion of boarders. The defi-               estimates in columns 1, 3, and 5, the results show that
+nitions of other variables are the same as in Eq. (1).                   boarding does not have a significant effect on students’
+                                                                         cognitive abilities. To further examine the causal relation-
+                                                                         ship between boarding and cognitive abilities, two-stage
+Result                                                                   least squares (2SLS) estimates are presented in columns
+Distribution of cognitive abilities and non‑cognitive
+                                                                         2, 4, and 6, and the findings indicate that boarding has no
+abilities
+                                                                         significant impact on WISC IQ scores, fluid intelligence,
+Figure 1 shows the distribution of WISC-IV scores in                     and crystal intelligence. The first stage regression has a
+our sample. The density distribution of WISC-IV scores                   high F-statistic of 41.284, indicating the exclusion of weak
+is right-skewed for both boarding and non-boarding                       instrumental variables. To better understand how board-
+students compared to the norm, indicating a relatively
+                                                                         ing affects students’ cognitive abilities, we also estimated
+high proportion of students with cognitive delays in our
+                                                                         the impacts of boarding on the four subdimensions of
+
+Chang et al. BMC Public Health    (2023) 23:1852                                                                                            Page 7 of 17
+
+
+
+
+ Fig. 1 Distribution of WISC IQ scores for sample students and a healthy population. The WISC IQ scores density distribution in the healthy
+ population is a normal distribution with a mean of 100 and a standard deviation of 15
+
+
+
+
+ Fig. 2 Distribution of Raven’s IQ scores for sample students and a healthy population. The Raven’s IQ scores density distribution in the healthy
+ population is a normal distribution with a mean of 100 and a standard deviation of 15
+
+
+
+
+WISC IQ scores, which are similarities, digit span, cod-                      positive impact of boarding on students’ performance in
+ing, and matrix reasoning. The results presented in                           this particular cognitive dimension.
+Table 6. The 2SLS estimates for boarding on students’
+scores in digit span has a parameter estimate of 2.024,                       Impact of boarding on students’ non‑cognitive abilities
+significant at the 5% level. Since scores in digit span is a                  Table 7 presents the effects of boarding on the person-
+test of attention and memory, the result highlights the                       ality traits of rural students, encompassing extraversion,
+
+Chang et al. BMC Public Health           (2023) 23:1852                                                                                 Page 8 of 17
+
+
+
+
+  Fig. 3 Distribution of standardized math scores for sample students. Math scores are standardized
+
+
+
+
+Table 3 Descriptive analysis of cognitive and non-cognitive abilities: comparisons between different types of students
+                                 Overall                    Nonboarders            Boarders            Nonboarders—Boarders
+                                 N           Mean           N             Mean     N          Mean     Difference in mean   P-value     Effect size
+                                                                                                                                        (Cohen’s
+                                                                                                                                        d)
+
+                                 (1)         (2)            (3)           (4)      (5)        (6)      (7)                  (8)         (9)
+Cognitive ability
+  WISC-IV scores                 472         88.258         243           87.070   229        89.520   -2.450**             0.015       -0.225
+  Fluid Intelligence             472         8.472          243           8.296    229        8.659    -0.363**             0.019       -0.217
+  Crystal intelligence           472         7.928          243           7.745    229        8.122    -0.377               0.112       -0.147
+  Similarities                   472         7.928          243           7.745    229        8.122    -0.377               0.112       -0.147
+  Digit span                     472         8.117          243           7.984    229        8.258    -0.274               0.236       -0.109
+  Coding                         472         9.71           243           9.712    229        9.707    0.005                0.984       0.002
+  Matrix Reasoning               472         7.591          243           7.193    229        8.013    -0.820***              < 0.001   -0.372
+   Raven’s IQ                    2503        93.641         1363          93.691   1140       93.582   0.109                0.877       0.006
+   Math scores of 2016           5188        .02            2816          -0.004   2372       0.049    -0.053*              0.055       -0.053
+Non-cognitive ability
+   Extraversion                  5166        3.349          2802          3.329    2364       3.372    -0.042***            0.007        -0.076
+   Agreeableness                 5166         3.739         2802          3.758    2364       3.716    0.042***             0.005        0.078
+   Conscientiousness             5166         3.279         2802          3.280    2364       3.277    0.003                0.861        0.005
+   Neuroticism                   5166         2.913         2802          2.904    2364       2.924    -0.020               0.261        -0.031
+   Openness                      5166         3.411         2802          3.409    2364       3.413    -0.004               0.815        -0.007
+   Grit scores                   5166         3.349         2809          3.385    2369       3.380    0.005                0.748        0.009
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+Chang et al. BMC Public Health               (2023) 23:1852                                                                                        Page 9 of 17
+
+
+
+
+Table 4 Descriptive analysis of students who took the WISC-IV test: comparisons between different Characteristics of students
+                                   Overall                          Students who          Students taking     Differences
+                                                                    did not take the      the Wechsler test
+                                                                    Wechsler test
+
+                                   N               Mean             N         Mean        N        Mean       Difference in mean   P-value           Effect size
+                                                                                                                                                     (Cohen’s
+                                                                                                                                                     d)
+                                   (1)             (2)              (3)       (4)         (5)      (6)        (7)                  (8)               (9)
+Student age                        5660            12.917           5188      12.914      472      12.948     -0.034               0.457             -0.036
+Student gender                     5660            .499             5188      0.499       472      0.504      -0.005               0.829             -0.010
+Left-behind child status           5660            .525             5188      0.526       472      0.508      0.018                0.465             0.035
+Father’s education level           5660            .359             5188      0.359       472      0.360      -0.001               0.965             -0.002
+Mather’s education level           5660            .213             5188      0.212       472      0.225      -0.013               0.510             -0.032
+Family asset value                 5660            -.001            5188      0.003       472      -0.044     0.047                0.366             0.043
+Math scores of 2015                5660            -.112            5188      -0.110      472      -0.139     0.029                0.529             0.030
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+Table 5 Impact of boarding on students’ cognitive abilities
+variables                              WISC IQ score WISC IQ score Fluid intelligence Fluid intelligence Crystal intelligence Crystal intelligence
+
+                                       OLS                  IV                OLS                IV                    OLS               IV
+                                       (1)                  (2)               (3)                (4)                   (5)               (6)
+Boarding                               0.103                4.781             -0.048             0.635                 0.181             0.934
+                                       (1.040)              (3.592)           (0.179)            (0.573)               (0.266)           (0.925)
+Student-level control variables YES                         YES               YES                YES                   YES               YES
+School-level control variables         YES                  YES               YES                YES                   YES               YES
+Teacher-level control variables YES                         YES               YES                YES                   YES               YES
+Constant                               139.817***           139.866***        16.501***          16.527***             15.396***         15.365***
+                                       (8.633)              (8.702)           (1.408)            (1.387)               (2.309)           (2.240)
+Observations                           472                  472               472                472                   472               472
+R-squared                              0.418                0.393             0.371              0.348                 0.286             0.286
+County fixed effects                   YES                  YES               YES                YES                   YES               YES
+Phase I F-statistic values                                  41.284                               41.284                                  41.284
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+agreeableness, dutifulness, neuroticism, and openness.                                    original instrumental variables method to re-estimate
+The OLS results in columns (1), (3), (5), (7), and (9) sug-                               the impact of boarding on students’ cognitive and
+gest that while there is a positive relationship between                                  non-cognitive abilities. The bootstrap method involves
+boarding and the extraversion of rural students, the IV                                   treating the observed sample as the entire population,
+results indicate that boarding does not have a statisti-                                  and repeatedly resampling with replacement from the
+cally significant effect on any of the five personality traits                            original sample to estimate the sampling distribution.
+examined. Therefore, we conclude that boarding does not                                   This approach can provide an estimate of the distri-
+have any significant effects on the non-cognitive abilities                               bution without introducing bias. In this paper, we
+of rural students.                                                                        conducted 1000 bootstrap samples and then used the
+                                                                                          instrumental variables method for estimation, which
+Robustness test                                                                           can provide more robust standard errors. Tables 8 and
+To enhance the robustness of the research find-                                           9 show the results, which indicate that boarding still
+ings, we conducted additional regression analy-                                           has a significant positive effect at the 10% level on stu-
+ses. First, we added the bootstrap method to the                                          dents’ scores in digit span and no significant effect on
+
+Chang et al. BMC Public Health           (2023) 23:1852                                                                                                               Page 10 of 17
+
+
+
+
+Table 6 Impact of boarding on subdimensions of cognitive abilities
+variables                                 Similarities                         Digit span                         Coding                                Matrix reasoning
+
+                                          OLS              IV                  OLS               IV               OLS               IV                  OLS              IV
+                                          (1)              (2)                 (3)               (4)              (5)               (6)                 (7)              (8)
+Boarding                                  0.181            0.934               0.278             2.024**          -0.685**          -0.472              0.263            0.352
+                                          (0.266)          (0.925)             (0.268)           (0.982)          (0.281)           (0.892)             (0.256)          (0.831)
+Student-level control variables           YES              YES                 YES               YES              YES               YES                 YES              YES
+School-level control variables           YES               YES                 YES               YES              YES               YES                 YES              YES
+Teacher-level control variables          YES               YES                 YES               YES              YES               YES                 YES              YES
+Constant                                 15.396***         15.365***           18.264***         18.195***        19.467***         19.517***           11.771***        11.869***
+                                         (2.309)           (2.240)             (2.216)           (2.380)          (2.098)           (2.162)             (1.976)          (2.013)
+Observations                             472               472                 472               472              472               472                 472              472
+R-squared                                0.286             0.274               0.201             0.134            0.272             0.271               0.223            0.223
+County fixed effects                     YES               YES                 YES               YES              YES               YES                 YES              YES
+Phase I F-statistic values                                 41.284                                41.284                             41.284                               41.284
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+Table 7 Impact of boarding on students’ non-cognitive abilities
+variables                              Extraversion                  Agreeableness                Conscientiousness           Neuroticism                     Openness
+
+                                       OLS           IV              OLS             IV           OLS        IV               OLS             IV              OLS          IV
+                                       (1)           (2)             (3)             (4)          (5)        (6)              (7)             (8)             (9)          (10)
+Boarding                               0.036*        -0.064          -0.034          0.023        0.009      0.109            -0.001          0.034           0.005        0.097
+                                       (0.020)       (0.082)         (0.022)         (0.077)      (0.025)    (0.083)          (0.023)         (0.090)         (0.023)      (0.083)
+Student-level control variables        YES           YES             YES             YES          YES        YES              YES             YES             YES          YES
+School-level control variables         YES           YES             YES             YES          YES        YES              YES             YES             YES          YES
+Teacher-level control variables        YES           YES             YES             YES          YES        YES              YES             YES             YES          YES
+Constant                               3.541***      3.555***        3.687***        3.707***     3.193***   3.190***         2.753***        2.747***        3.368***     3.367***
+                                       (0.153)       (0.158)         (0.169)         (0.149)      (0.178)    (0.161)          (0.206)         (0.175)         (0.171)      (0.160)
+Observations                           5,166         5,166           5,166           5,166        5,166      5,166            5,166           5,166           5,166        5,166
+R-squared                              0.020         0.015           0.039           0.037        0.016      0.012            0.028           0.028           0.021        0.018
+County fixed effects                   YES           YES             YES             YES          YES        YES              YES             YES             YES          YES
+Phase I F-statistic values                           342.982                         342.982                 342.982                          342.982         342.982      342.982
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+students’ non-cognitive abilities, which is consistent                                         diligence and perseverance [56]. It has also been shown
+with the results above.                                                                        that grit is a more refined measure of conscientiousness
+  Second, we performed robustness tests using Raven’s                                          [57, 58]. However, columns (5) and (6) of Table 10 show
+IQ, standardized math, and grit scores as additional                                           that boarding does not have a significant effect on stu-
+measures of cognitive and non-cognitive abilities.                                             dents’ grit scores, which are consistent with the previ-
+Raven’s IQ and standardized math scores are meas-                                              ous results.
+ures of fluid and crystal intelligence, respectively. The
+results in Table 10 suggest that boarding does not have                                        Heterogeneity analysis
+a significant effect on students’ Raven’s IQ and stand-                                        In addition to analyzing the effects of boarding, we
+ardized math scores, which are consistent with previ-                                          investigate the heterogeneity of these effects along
+ous findings. Grit is closely related to conscientiousness                                     three dimensions: gender, whether the student is a left-
+in the Big Five personality traits, and although the two                                       behind child, and family asset status. Family asset status
+are not identical, they share strong similarities such as                                      is defined by ranking students’ family asset indices from
+
+Chang et al. BMC Public Health           (2023) 23:1852                                                                                                    Page 11 of 17
+
+
+
+
+Table 8 Robustness test I: bootstrap sampling—cognitive abilities
+variables                             WISC IQ score Fluid intelligence Crystal intelligence Similarities Digit span Coding                           Matrix reasoning
+
+                                      (1)                  (2)                      (3)                     (4)         (5)               (6)        (7)
+Boarding                              4.781                0.635                    0.898                   0.934       2.024*            -0.472     0.352
+                                      (3.725)              (0.621)                  (0.877)                 (1.022)     (1.034)           (0 .990)   (0.890)
+Student-level control variables YES                        YES                      YES                     YES         YES               YES        YES
+School-level control variables        YES                  YES                      YES                     YES         YES               YES        YES
+Teacher-level control variables YES                        YES                      YES                     YES         YES               YES        YES
+Constant                              139.866***           16.527***                15.373***               15.365***   18.195***         19.517*** 11.869***
+                                      (9.140)              (1.550)                  (2.439)                 (2.520)     (2.340)           (2.289)    (2.113)
+Observations                          472                  472                      472                     472         472               472        472
+R-squared                             0.393                0.348                    0.274                   0.274       0.133             0.271      0.223
+County fixed effects                  YES                  YES                      YES                     YES         YES               YES        YES
+Phase I F-statistic values            41.732               41.732                   41.732                  41.732      41.732            41.732     41.732
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+Table 9 Robustness test I: bootstrap sampling-non-cognitive abilities
+variable                                        Extraversion              Agreeableness               Conscientiousness             Neuroticism                Openness
+
+                                                (1)                       (2)                         (3)                           (4)                        (5)
+Boarding                                        -0.064                    0.023                       0.109                         0.034                      0.097
+                                                (0.087)                   (0.076)                     (0.088)                       (0.092)                    (0.080)
+Student-level control variables                 YES                       YES                         YES                           YES                        YES
+School-level control variables                  YES                       YES                         YES                           YES                        YES
+Teacher-level control variables                 YES                       YES                         YES                           YES                        YES
+Constant                                        3.555***                  3.707***                    3.190***                      2.747***                   3.367***
+                                                (0.156)                   (0.148)                     (0.161)                       (0.176)                    (0.162)
+Observations                                    5,166                     5,166                       5,166                         5,166                      5,166
+R-squared                                       0.015                     0.037                       0.012                         0.028                      0.018
+County fixed effects                            YES                       YES                         YES                           YES                        YES
+Phase I F-statistic values                      342.982                   342.982                     342.982                       342.982                    342.982
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+smallest to largest, and students in the top 25% of the                                       points (p < 0.05). However, the coding score for non-left-
+sample are classified as having bad family conditions,                                        behind children is negatively affected, indicating that
+with a dummy variable indicating whether a student’s                                          boarding reduces their transcription speed, accuracy,
+family conditions are bad. Table 11 presents the results of                                   general learning ability, and anti-distraction ability. Pan-
+the heterogeneity analysis for cognitive abilities. The esti-                                 els E and F demonstrate that boarding has a significant
+mates in Panels A and B show that boarding has a signifi-                                     positive effect at the 5% level on the digit span scores
+cant positive effect on boys’ WISC IQ scores, particularly                                    (memory and attention) of students with good family
+in fluid intelligence, as evidenced by improvements in                                        conditions, while there is no significant effect on stu-
+digit span and matrix reasoning. These findings suggest                                       dents’ cognitive abilities from low-income families.
+that boarding enhances boys’ memory, attention, and                                             The heterogeneity analysis of non-cognitive abilities is
+reasoning abilities. Panels C and D indicate that board-                                      presented in Table 12. Panels A and B show gender differ-
+ing also has a significant positive impact on left-behind                                     ences in the effect of boarding on students’ non-cognitive
+children’s WISC IQ scores, again largely reflected in                                         abilities. Specifically, there is a significant positive effect
+fluid intelligence. Boarding increases the digit span score                                   of boarding on girls’ conscientiousness at the 10% statisti-
+(memory and attention) of left-behind children by 2.952                                       cal level, indicating that boarding enhances girls’ abilities
+
+Chang et al. BMC Public Health           (2023) 23:1852                                                                                   Page 12 of 17
+
+
+
+
+Table 10 Robustness test II: impact of boarding on students’ cognitive and non-cognitive abilities
+variables                                       Raven’s IQ scores                           Standardization                 Grit scores
+                                                                                            Math scores of 2016
+
+                                                (1)                       (2)               (3)             (4)             (5)                (6)
+Boarding                                        -0.548                    1.669             -0.052          0.086           0.003              -0.014
+                                                (0.855)                   (2.933)           (0.039)         (0.110)         (0.021)            (0.083)
+Student-level control variables                 YES                       YES               YES             YES             YES                YES
+School-level control variables                  YES                       YES               YES             YES             YES                YES
+Teacher-level control variables                 YES                       YES               YES             YES             YES                YES
+Constant                                        167.539***                170.819***        2.049***        2.226***        3.146***           3.209***
+                                                (7.639)                   (5.789)           (0.330)         (0.214)         (0.153)            (0.161)
+Observations                                    2,503                     2,503             5,188           5,188           5,188              5,188
+R-squared                                       0.337                     0.335             0.426           0.423           0.426              0.423
+County fixed effects                            YES                       YES               YES             YES             YES                YES
+Phase I F-statistic values                                                172.725                           348.218                            349.966
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+
+
+in areas such as responsibility, workability, and self-con-                            suggests that boarding can positively affect students’
+trol. However, no significant differences were found in                                memory and attention skills. One possible explanation
+the effect of boarding on non-cognitive abilities in other                             for this result is that intensive and continuous learning
+aspects. These findings suggest that boarding schools                                  or training can enhance an individual’s cognitive abilities
+have varying effects on different dimensions of students’                              [59–61]. Moreover, boarders have a more collaborative
+cognitive and non-cognitive abilities, highlighting the                                learning and living environment in comparison to com-
+importance of considering heterogeneity in understand-                                 muters, and they spend more time on general studies and
+ing the overall impact of boarding school education.                                   homework [29]. Thus, boarding can significantly improve
+                                                                                       students’ cognitive abilities. Furthermore, previous
+                                                                                       research has shown that the breadth of children’s working
+Conclusion and discussion                                                              memory increases linearly between the ages of 4 and 15
+This study examines the impact of boarding on the cog-                                 [62]. As boarders spend more time at school than com-
+nitive and non-cognitive abilities of 5,660 junior high                                muters, they may have more opportunities to exercise
+school students from 160 schools in rural northwest                                    their cognitive abilities, particularly in the area of atten-
+China using an instrumental variable (IV) approach. Our                                tion and memory. Therefore, the positive effect of board-
+findings suggest that boarding has a significant positive                              ing on their cognitive abilities is likely to be reflected in
+effect on the digit span scores of junior high school stu-                             their performance on digit span tasks. Most previous
+dents, which is a key component of the Working Memory                                  studies on the relationship between boarding and stu-
+Index in WISC, and suggests that boarding improves stu-                                dents’ cognitive ability have often used academic perfor-
+dents’ memory and attention. However, we did not find                                  mance (such as grades in math, language, and reading)
+any significant effects on other aspects of cognitive abil-                            as a proxy variable for cognitive ability. The conclusions
+ity, such as logical thinking, reasoning, and transcription                            drawn from these studies have been mixed. For instance,
+speed and accuracy. Additionally, we found no effects on                               some studies suggest a positive effect of boarding on stu-
+non-cognitive abilities. To ensure the robustness of our                               dents’ math performance in elementary school [19, 23],
+findings, we conducted bootstrap and alternative variable                              while others demonstrate a significant negative influence
+tests, which supported our main results.                                               on reading scores [26, 28]. On the other hand, boarding
+   We used comprehensive indicators of cognitive abili-                                has been linked to a positive effect on math and language
+ties, namely crystal and fluid intelligence, to investi-                               scores among junior high school students [29, 63]. None-
+gate the impact of boarding on rural students’ cognitive                               theless, academic performance merely measures a certain
+abilities. Our analysis shows that boarding has a signifi-                             dimension of students’ cognitive ability, often reflecting
+cant impact only on the ability of students to perform                                 crystallized intelligence and not offering a comprehen-
+digit-span tasks, which is an important component of                                   sive evaluation of cognitive ability. From this perspective,
+the Working Memory Index in the WISC. This finding                                     this study employs the Wechsler test to more precisely
+
+Table 11 Results of the heterogeneity analysis of the impact of boarding on students’ cognitive abilities
+variables                           WISC IQ score                Fluid intelligence   Crystal intelligence   Similarities             Digit span             Coding                Matrix
+                                                                                                                                                                                   reasoning
+
+                                    OLS           IV             OLS        IV        OLS         IV         OLS            IV        OLS          IV        OLS        IV         OLS         IV
+                                    (1)           (2)            (3)        (4)       (5)         (6)        (7)            (8)       (9)          (10)      (11)       (12)       (13)        (14)
+Panel A: Sample of male students
+                                                                                                                                                                                                         Chang et al. BMC Public Health
+
+
+
+
+  Boarding                          0.448         9.128**        0.132      1.494**   -0.205      0.998      -0.205         0.998     0.346        2.756**   -0.604     0.295      0.654*      1.432*
+                                    (1.418)       (3.991)        (0.250)    (0.609)   (0.362)     (1.046)    (0.362)        (1.046)   (0.422)      (1.110)   (0.399)    (0.918)    (0.378)     (0.867)
+  Observations                      238           238            238        238       238         238        238            238       238          238       238        238        238         238
+  Phase I F-statistic values                      36.872                    36.872                36.872                    36.872                 36.872               36.872                 36.872
+Panel B: Sample of female students
+                                                                                                                                                                                                         (2023) 23:1852
+
+
+
+
+  Boarding                          -0.584        -1.371         -0.336     -0.275    0.512       0.167      0.512          0.167     -0.102       1.284     -0.674     -0.456     -0.231      -1.652
+                                    (1.764)       (7.339)        (0.299)    (1.193)   (0.404)     (1.796)    (0.404)        (1.796)   (0.427)      (1.934)   (0.431)    (1.831)    (0.402)     (1.771)
+   Observations                     234           234            234        234       234          234       234            234       234          234       234        234        234         234
+   Phase I F-statistic values                     9.784                     9.784                  9.784                    9.784                  9.784                9.784                  9.784
+Panel C: Sample of left-behind children
+   Boarding                         -0.140        9.751*         0.116      1.652**   -0.458       1.006     -0.458         1.006     0.671        2.952**   -0.008     1.855      -0.315      0.147
+                                    (1.653)       (5.256)        (0.266)    (0.828)   (0.438)      (1.344)   (0.438)        (1.344)   (0.425)      (1.385)   (0.434)    (1.255)    (0.354)     (1.159)
+   Observations                     240           240            240        240       240          240       240            240       240          240       240        240        240         240
+   Phase I F-statistic values                     21.891                    21.891                 21.891                   21.891                 21.891               21.891                 21.891
+Panel D: Sample of non-left-behind children
+   Boarding                         1.909         -1.566         0.045      -0.770    0.925***     1.363     0.925***       1.363     0.079        1.470     -0.623     -3.446**   0.680*      -0.336
+                                    (1.305)       (5.544)        (0.243)    (0.913)   (0.338)      (1.436)   (0.338)        (1.436)   (0.389)      (1.535)   (0.383)    (1.551)    (0.353)     (1.311)
+   Observations                     232           232            232        232       232          232       232            232       232          232       232        232        232         232
+   Phase I F-statistic values                     15.299                    15.299                 15.299                   15.299                 15.299               15.299                 15.299
+Panel E: Sample with poor family conditions
+   Boarding                         -1.441        6.109          -0.280     0.809     -0.012       1.311     -0.012         1.311     -0.255       1.519     -1.246**   0.064      0.661       0.842
+                                    (1.942)       (5.490)        (0.311)    (0.863)   (0.465)      (1.329)   (0.465)        (1.329)   (0.527)      (1.543)   (0.587)    (1.327)    (0.596)     (1.288)
+   Observations                     144           144            144        144       144          144       144            144       144          144       144        144        144         144
+   Phase I F-statistic values                     15.818                    15.818                 15.818                   15.818                 15.818               15.818                 15.818
+Panel F: Sample with good family conditions
+   Boarding                         0.940         7.132          0.085      1.257     0.283        0.630     0.283          0.630     0.530        2.884**   -0.385     0.197      0.111       0.690
+                                    (1.365)       (5.126)        (0.233)    (0.831)   (0.324)      (1.304)   (0.324)        (1.304)   (0.366)      (1.402)   (0.346)    (1.282)    (0.318)     (1.174)
+   Observations                     328           328            328        328       328          328       328            328       328          328       328        328        328         328
+   Phase I F-statistic values                     19.995                    19.995                 19.995                   19.995                 19.995               19.995                 19.995
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+                                                                                                                                                                                                         Page 13 of 17
+
+Chang et al. BMC Public Health            (2023) 23:1852                                                                                  Page 14 of 17
+
+
+
+
+Table 12 Results of the heterogeneity analysis of the effect of boarding on students’ non-cognitive abilities
+Variables                           Extraversion                 Agreeableness        Conscientiousness       Neuroticism         Openness
+
+                                    OLS           IV             OLS       IV         OLS         IV          OLS       IV        OLS          IV
+                                    (1)           (2)            (3)       (4)        (5)         (6)         (7)       (8)       (9)          (10)
+Panel A: Sample of male students
+  Boarding                          0.002         -0.113         -0.060*   -0.099     0.025       0.006       0.023     0.053     0.031        0.101
+                                    (0.027)       (0.111)        (0.031)   (0.112)    (0.036)     (0.117)     (0.032)   (0.125)   (0.032)      (0.115)
+  Observations                      2,578         2,578          2,578     2,578      2,578       2,578       2,578     2,578     2,578        2,578
+  Phase I F-statistic values                      169.575                  169.575                169.575               169.575                169.575
+Panel B: Sample of female students
+  Boarding                          0.074**       0.006          -0.014    0.130      -0.016      0.222*      -0.027    0.002     -0.029       0.112
+                                    (0.033)       (0.119)        (0.028)   (0.106)    (0.031)     (0.118)     (0.033)   (0.130)   (0.030)      (0.118)
+  Observations                      2,588         2,588          2,588     2,588      2,588       2,588       2,588     2,588     2,588        2,588
+  Phase I F-statistic values                      176.668                  176.668                176.668               176.668                176.668
+Panel C: Sample of left-behind children
+  Boarding                          0.032         -0.099         -0.025    0.003      0.033       0.121       0.000     0.079     0.023        0.035
+                                    (0.025)       (0.126)        (0.027)   (0.115)    (0.033)     (0.126)     (0.035)   (0.136)   (0.030)      (0.123)
+  Observations                      2,715         2,715          2,715     2,715      2,715       2,715       2,715     2,715     2,715        2,715
+  Phase I F-statistic values                      142.219                  142.219                142.219               142.219                142.219
+Panel D: Sample of non-left-behind children
+  Boarding                          0.037         -0.084         -0.036    0.050      -0.022      0.052       -0.020    0.008     -0.009       0.179
+                                    (0.032)       (0.117)        (0.032)   (0.115)    (0.035)     (0.121)     (0.033)   (0.133)   (0.034)      (0.123)
+  Observations                      2,451         2,451          2,451     2,451      2,451       2,451       2,451     2,451     2,451        2,451
+  Phase I F-statistic values                      172.425                  172.425                172.425               172.425                172.425
+Panel E: Sample with poor family conditions
+  Boarding                          0.025         -0.157         -0.039    -0.056     0.019       0.173       0.006     0.129     -0.007       0.135
+                                    (0.034)       (0.155)        (0.041)   (0.146)    (0.042)    (0.159)      (0.038)   (0.176)   (0.038)      (0.164)
+  Observations                      1,399         1,399          1,399     1,399      1,399      1,399        1,399     1,399     1,399        1,399
+  Phase I F-statistic values                      84.057                   84.057                84.057                 84.057                 84.057
+Panel F: Sample with good family conditions
+  Boarding                          0.044*        -0.016         -0.030    0.065      0.003      0.081        -0.005    -0.002    0.005        0.063
+                                    (0.025)       (0.103)        (0.025)   (0.097)    (0.028)    (0.104)      (0.028)   (0.113)   (0.025)      (0.102)
+  Observations                      3,767         3,767          3,767     3,767      3,767      3,767        3,767     3,767     3,767        3,767
+  Phase I F-statistic values                      225.648                  225.648               225.648                225.648                225.648
+Source: Author’s survey
+Standard deviations in parentheses * p < 0.1. ** p < 0.05. *** p < 0.01
+
+
+gauge the impact of boarding on students’ cognitive abil-                            Five personality traits measurement is an internationally
+ity. In the existing literature, China Education Tracking                            recognized and widely employed tool for non-cognitive
+Survey (CEPS) data is the only source that gauged stu-                               abilities. Notably, there is a scarcity of literature investi-
+dents’ cognitive ability through a unified scale (but not                            gates the impact of boarding on students’ non-cognitive
+the Wechsler and Raven tests utilized in this study). Their                          skills within the framework of these five dimensions.
+findings indicated that boarding does not significantly                                We conducted further analysis on the heterogeneity
+impact students’ cognitive abilities [63], which broadly                             of the effects of boarding on the cognitive and non-
+aligns with the results of our study.                                                cognitive abilities of rural junior high school students
+   Moreover, regarding boarding and noncognitive abil-                               by gender, stay-at-home status, and family conditions.
+ity, the current literature has primarily focused on men-                            Our results indicate that the effect of boarding on the
+tal health indicators as measures of noncognitive ability                            cognitive abilities of boys is greater than that of girls,
+(e.g., depression, bullying, etc.). For instance, studies have                       particularly in fluid intelligence, as measured by digit
+pointed to potential psychological risks associated with                             span and matrix reasoning scales that show improved
+boarding for students [27, 28, 64–66]. However, the Big                              memory, attention, and reasoning abilities. This
+
+Chang et al. BMC Public Health   (2023) 23:1852                                                                             Page 15 of 17
+
+
+
+
+could be due to differences in time management skills         students from better-off families. The growing preva-
+between boys and girls, with boys benefitting from the        lence of boarding schools in rural areas underscores the
+external discipline and communal learning atmosphere          need to explore ways to further enhance students’ cogni-
+in boarding schools [67]. For left-behind students,           tive skills and foster the development of non-cognitive or
+boarding has a greater impact on their cognitive abili-       socio-emotional abilities in their daily boarding life. This
+ties, particularly in the areas of memory and attention,      issue deserves ongoing attention and efforts from educa-
+as they lack parental engagement and receive more             tors and policymakers.
+support from teachers [13]. Additionally, boarding               We do acknowledge one limitation of this study. While
+can have a positive impact on the cognitive abilities         our analysis and findings indicate that boarding has not
+of students from better-off families due to improved          significantly impacted the cognitive and non-cognitive
+nutritional intake in school, which is associated with        abilities of rural junior high school students, it remains
+better cognitive development [68]. Existing research          possible that potential adverse effects are still present.
+often uses academic performance as a proxy for cog-           It’s worth noting that the cognitive and non-cognitive
+nitive abilities, which may not accurately capture the        skills evaluated in this paper using measurement scales
+full range of cognitive skills. Furthermore, the positive     may not fully encompass the nuances of various students’
+effects of boarding on non-cognitive abilities were not       behaviors tied to boarding. For instance, aspects like the
+observed in our study, suggesting the need for further        dynamics between boarders and roommates, as well as
+investigation into the impact of boarding on non-cog-         the prolonged separation of boarders from parents, could
+nitive development.                                           potentially exert negative influences on their non-cogni-
+  Our analysis of the heterogeneous effects of board-         tive abilities, including interpersonal skills and emotional
+ing on students’ cognitive abilities also extends to          well-being [20, 21, 63, 72]. This points to both the limi-
+their non-cognitive abilities. We find that boarding          tation of our current study and the necessity for further
+has a more significant impact on girls’ conscientious-        research.
+ness of the Big Five personality traits, which is con-
+                                                              Acknowledgements
+sistent with previous research on gender differences          We thank the researchers from Center for Experimental Economics in Educa-
+in conscientiousness [69]. This may be attributed to          tion, Shaanxi Normal University for help on developing the study protocol
+female personality traits and the role of gender as a         and training the enumerators. We are also grateful to all respondents who
+                                                              participated in this study and the enumerators for data collection efforts.
+moderating variable affecting individual commitment
+[70]. Social role theory also suggests that individuals       Authors’ contributions
+of different genders develop different senses of group        FC and YNH contributed to the study design, data analysis and manuscript
+                                                              draft. BT gave critical feedback and conducted quality control. SYZ and HZ
+identity, causing them to behave differently in differ-       revised the manuscript. All authors have read and approved the manuscript.
+ent social situations [71]. Therefore, greater commit-
+ment by girls to group characteristics may explain why        Funding
+                                                              This work was supported by National Natural Science Foundation of China
+they are more likely to be influenced by the commu-           [Grant No.72103114], National Natural Science Foundation of China [Grant
+nal learning atmosphere and external discipline that          No.71933003; Grant No.72373085], and 111 Project [Grant No. B16031].
+boarding schools provide. Interestingly, we did not find
+                                                              Availability of data and materials
+a significant effect of boarding on non-cognitive abili-      The datasets used and analyzed during the current study are available from
+ties among left-behind children or those from different       the corresponding author on reasonable request.
+family backgrounds. This finding supports our main            Availability of methods
+                                                              All methods were carried out in accordance with relevant guidelines and
+estimation results and suggests that boarding may not         regulations.
+have a substantial impact on the non-cognitive abilities
+of rural middle school students. Furthermore, we ruled        Declarations
+out the possibility of positive and negative effects of
+boarding in different subsamples cancelling each other        Ethics approval and consent to participate
+                                                              The Stanford University Institutional Review Board (IRB Protocol ID #19748)
+out, which strengthens this conclusion.                       approved this study. Permission was received from local Boards of Education
+  In conclusion, our study provides evidence that board-      in each region and the principals of all schools. Written informed consent
+ing schools is not detrimental to the development of          was obtained from at least one parent and/or legal guardian for all child
+                                                              participants.
+new human capital, including cognitive and non-cogni-
+tive abilities, among rural junior high school students.      Consent for publication
+Moreover, boarding positively affects some dimensions         Not applicable.
+of students’ cognitive abilities, particularly in the areas   Competing interests
+of memory and attention, and has a greater effect on cer-     The authors declare no competing interests.
+tain subgroups such as boys, left-behind children, and
+
+Chang et al. BMC Public Health           (2023) 23:1852                                                                                                  Page 16 of 17
+
+
+
+
+Received: 18 May 2023 Accepted: 12 September 2023                                        24. Mo D, Yi H, Zhang L, Shi Y, Rozelle S, Medina A. Transfer paths and
+                                                                                             academic performance: the primary school merger program in China.
+                                                                                             Int J Educ Dev. 2012;32:423–31.
+                                                                                         25. Wang A, Medina A, Luo R, Shi Y, Yue A. To board or not to board: Evi-
+                                                                                             dence from nutrition, health and education outcomes of students in
+References                                                                                   rural China. Chin World Econ. 2016;24:52–66.
+1. Heckman JJ, Stixrud J, Urzua S. The effects of cognitive and non-cognitive            26. Li X, Zhu Z, Song Y, Wu Y. The impact of boarding on the reading
+    abilities on labor market outcomes and social behavior. J Law Econ.                      ability of rural children in poor areas in China: Evidence from 137
+    2006;24:411–82.                                                                          boarding schools in Hebei and Sichuan provinces. China Rural Surv.
+2. Hanushek EA. Developing a Skills-Based Agenda for “New Human Capital”                     2018;2:129–44.
+    Research. SSRN Electron J. 2010. https://​doi.​org/​10.​2139/​ssrn.​18892​00.        27. Zhu Z, Li Y, Song Y. Boarding education and children’s development:
+3. Farkas G. Cognitive skills and non-cognitive traits and behaviors in stratifi-            evidence from 137 rural boarding schools. Educ Res. 2019;8:79–91 (in
+    cation processes. Ann Rev Sociol. 2003;29:541–62.                                        Chinese).
+4. Cunha F, Heckman JJ, Lochner L, Masterov DV. Interpreting the evidence                28. Hou H, Wu Y, Song Y. Low-age boarding and rural pupils’ human capital
+    on life cycle skill formation. In Handbook of the Economics of Education,                accumulation: evidence from the “Primary School Merger Program.” Chin
+    eds. E. Hanushek and F. Welch (Elsevier), 2006. https://​doi.​org/​10.​1016/​            Rural Econ. 2018;7:113–29.
+    S1574-​0692(06)​01012-9.                                                             29. Yao S, Gao Y. Can large scale construction of boarding schools promote
+5. Durlak JA, Weissberg RP, Dymnicki AB, Taylor RD, Schellinger KB.                          the development of students in rural area better. Educ Econ. 2018;34:53–
+    The impact of enhancing students’ social and emotional learning:                         60 (in Chinese).
+    A meta-analysis of school-based universal interventions. Child Dev.                  30. Tang B, Wang Y, Gao Y, Wu S, Li H, Chen Y, et al. The effect of boarding on
+    2011;82:405–32.                                                                          the mental health of primary school students in Western Rural China. Int J
+6. Huang G, Xie Y, Xu H. Cognitive ability: Social correlates and conse-                     Environ Res Public Health. 2020;17:8200.
+    quences in contemporary China. Chinese Sociolog Rev. 2015;47:287–313.                31. Nisbett RE, Aronson J, Blair C, Dickens W, Flynn J, Halpern DF, et al.
+7. Autor DH. Skills, education, and the rise of earnings inequality among the                Intelligence: new findings and theoretical developments. Am Psychol.
+    “other 99 percent.” Scie. 2014;344:843–51.                                               2012;67:130.
+8. Bowles S, Gintis H. Schooling in Capitalist America Revisited. Sociol Educ.           32. Kautz T, Heckman JJ, Diris R, Weel B, Borghans L. December. Fostering
+    2002;75:1–18.                                                                            and Measuring Skills: Improving Cognitive and Non-Cognitive Skills to
+9. Lleras Borghans L, Duckworth AL, Heckman JJ, ter Weel B. The economics                    Promote Lifetime Success. National Bureau of Economic Research.2014.
+    and psychology of personality traits. J Human Res. 2008;43:972–1059.                     https://​doi.​org/​10.​3386/​w20749.
+10. Zhang D, Li X, Xue J. Education inequality between rural and urban areas             33. Roberts RD, Goff GN, Anjoul F, Kyllonen PC, Pallier G, Stankov L. The armed
+    of the People’s Republic of China, migrants’ children education, and some                services vocational aptitude battery (ASVAB): Little more than accultur-
+    implications. Asian Dev Rev. 2015;32:196–224.                                            ated learning (Gc)!? Learn Individ Differ. 2000;12:81–103.
+11. Xu H, Xie Y. The causal effects of rural-to-urban migration on children’s            34. Raven J, Raven JC, Court J. Manual for Raven’s Progressive Matrices and
+    well-being in China. Eur Sociol Rev. 2015;31:502–19.                                     Vocabulary Scales. San Antonio: Harcourt Assessment; 1988.
+12. Ministry of Education. The Ministry of Education’s Response to Recom-                35. Costa PT, McCrae RR. Four ways five factors are basic. Personality Individ
+    mendation 3638 of the Fifth Session of the 12th National People’s                        Differ. 1992;13:653–65.
+    Congress.2016. http://​www.​moe.​edu.​cn/​jyb_​xxgk/​xxgk_​jyta/​jyta_​jijia​osi/​   36. Cattell RB. Intelligence: Its structure, growth and action. Oxford, England:
+    201801/​t2018​0109_​324186.​html                                                         North-Holland; 1987.
+
+                                                                                             IV®). San Antonio, TX: The Psychological Corporation; 2003.
+13. Martin AJ, Papworth B, Ginns P. Liem GA Boarding school, academic                    37. Wechsler D. Wechsler intelligence scale for children—4th edition (WISC-
+    motivation and engagement, and psychological well-being: a large-scale
+    investigation. Am Educ Res J. 2014;51:1007–49.                                       38. Zhang H. The revision of WISC-IV Chinese version. Psychol Sci.
+14. Behaghel L, de Chaisemartin C, Gurgand M. Ready for boarding? The                        2009;32:1177–9 (in Chinese).
+    effects of a boarding school for disadvantaged students. Am Econ J Appl              39. Keith TZ, Fine JG, Taub GE, Reynolds MR, Kranzler JH. Higher order, mul-
+    Econ. 2017;9:140–64.                                                                     tisample, confirmatory factor analysis of the Wechsler Intelligence Scale
+15. Ak L, Sayil M. Three different types of elementary school students’ school               for Children—Fourth Edition: What does it measure. Sch Psychol Rev.
+    achievements, are perceived social support, school attitudes, and                        2006;35:108–27.
+    behavior-adjustment problems. Kuram ve Uygulamada Egitim Bilimleri.                  40. Borghans L, Golsteyn BH, Heckman JJ, Humphries JE. What grades and
+    2006;6:293.                                                                              achievement tests measure. Proc Natl Acad Sci. 2016;113:13354–9.
+16. Zhang X, Li Y, Zhang Q, Lu F, Wang Y. Smoking and its risk factors in Chi-           41. Zhang H, Wang X. Standardization research on Raven’s standard pro-
+    nese elementary and middle school students: A nationally representative                  gressive matrices in China. Acta Psychologica Sinica. 1989;2:113–21 (in
+    sample study. Addict Behav. 2014;39:837–41.                                              Chinese).
+17. Granot D, Mayseless O. Attachment security and adjustment to school in               42. Fan S, Liu H. Analysis of potential types of responses in raven advanced
+    middle childhood. Int J Behav Dev. 2001;25:530–41.                                       reasoning test. Psycholog Explor. 2016;36:257–63 (in Chinese).
+18. Steel A, Erhardt R, Phelps R, Upham P. Estimates of enhanced outcomes                43. Li C, Luo X, Wang T, Xu F. Gender differences in Raven’s reasoning test.
+    in employment, income, health, and volunteerism for the associa-                         Adv Psychol Sci. 2011;19:1076–82 (in Chinese).
+    tion of boarding schools member school graduates. J Adv Acad.                        44. Li H, Zheng Y. Analysis of combined raven testing and intervention effects
+    2015;26:227–45.                                                                          on children with learning difficulties. Western Med. 2009;21:2129–30 (in
+19. Curto VE, Fryer RG. The potential of urban boarding schools for the                      Chinese).
+    poor: evidence from SEED. J Law Econ. 2014;32:65–93.                                 45. Gutman LM, Schoon I. A Synthesis of causal evidence linking non-cogni-
+20. Evans-Campbell T, Walters KL, Pearson CR, Campbell CD. Indian board-                     tive skills to later outcomes for children and adolescents. Brill Available.
+    ing school experience, substance use, and mental health among urban                      2016. https://​doi.​org/​10.​1007/​978-​94-​6300-​591-3_9.
+    Two-Spirit American Indian/Alaska Natives. Am J Drug Alcohol Abuse.                  46. Patrick CL. Student evaluations of teaching: effects of the Big Five per-
+    2012;38:421–7.                                                                           sonality traits, grades and the validity hypothesis. Assess Eval High Educ.
+21. Pfeiffer JP, Pinquart M. Bullying in German boarding schools: a pilot                    2011;36:239–49.
+    study. Sch Psychol Int. 2014;35:580–91.                                              47. John OP, Naumann LP, Soto CJ. Paradigm shift to the integrative Big
+22. Mander DJ, Lester L, Cross D. The social and emotional well-being and                    Five trait taxonomy: history, measurement, and conceptual issues. The
+    mental health implications for adolescents transitioning to secondary                    Guilford Press; 2008.
+    boarding school. Int J Child Adolesc Health. 2015;8:131.                             48. Wang M, Dai X, Yao SQ. Development of Chinese Big Five Personality
+23. Qiao T, Di L. The causal inference of boarding’s effect in rural primary                 Inventory (CBF-PI)—Theoretical framework and relability analysis. Chin J
+    and secondary school education. J Soc Develop. 2014;1:138–52+245                         Clin Psychol. 2010;18:545–8.
+    (in Chinese).
+
+Chang et al. BMC Public Health         (2023) 23:1852                                                                                               Page 17 of 17
+
+
+
+
+49. Duckworth AL, Peterson C, Matthews MD, Kelly DR. Grit: Perseverance
+    and passion for long-term goals. J Pers Soc Psychol. 2007;92:1087–101.
+50. Harms PD. Grit: the power of passion and perseverance. Pers Psychol.
+    2016;69:1021–4.
+51. Duckworth AL, Quinn PD. Development and validation of the short grit
+    scale (Grit–S). J Pers Assess. 2009;91:166–74.
+52. Chen Q, Chen Y, Zhao Q. Impacts of boarding on primary school students’
+    mental health outcomes – Instrumental-Variable evidence from rural
+    northwestern China. Econ Hum Biol. 2020;39:100920.
+53. Jensen AR. Raising the IQ: the Ramey and Haskins study. Intelligence.
+    1981;5:29–40.
+54. Gronqvist E, Ockert B, Vlachos J. The Intergenerational Transmission of
+    Cognitive and Non-Cognitive Abilities. Working Paper. 2010. https://​doi.​
+    org/​10.​2139/​ssrn.​16276​57.
+55. Rimfeld K, Kovas Y, Dale PS, Plomin R. True grit and genetics: predict-
+    ing academic achievement from personality. J Pers Soc Psychol.
+    2016;2016(111):780.
+56. Eskreis-Winkler L, Duckworth A, Shulman E, Beal S. The grit effect: predict-
+    ing retention in the military, the workplace, school and marriage. Front
+    Psychol. 2014. https://​doi.​org/​10.​3389/​fpsyg.​2014.​00036.
+57. MacCann C, Duckworth AL, Roberts RD. Empirical identification of the
+    major facets of conscientiousness. Learn Individ Differ. 2009;19:451–8.
+58. Eisenberg N, Duckworth AL, Spinrad TL, Valiente C. Conscientiousness:
+    Origins in childhood? Dev Psychol. 2014;50:1331–49.
+59. Ceci SJ, Liker JK. A day at the races: A study of IQ, expertise, and cognitive
+    complexity. J Exp Psychol Gen. 1986;115:255–66.
+60. Jacobson MJ. Problem solving, cognition, and complex systems: differ-
+    ences between experts and novices. Complexity. 2001;6:41–9.
+61. Chang Y. Reorganization and plastic changes of the human brain associ-
+    ated with skill learning and expertise. Front Hum Neurosci. 2014. https://​
+    doi.​org/​10.​3389/​fnhum.​2014.​00035.
+62. Gathercole SE, Pickering SJ, Ambridge B, Wearing H. The structure of
+    working memory from 4 to 15 years of age. Dev Psychol. 2004;40:177–90.
+63. Zhou J, Xu N. The impact of boarding on student’s academic achieve-
+    ment, cognitive ability and non-cognitive ability in junior high school.
+    Educ Sci Res. 2021;5:53–9 (in Chinese).
+64. Liu W, Hou W. A study on the mental health of junior first-year high
+    school students and its influencing factors ——An analysis based
+    on China’s educational follow-up survey(CEPS). J Shanghai Educ Res.
+    2018;04:39–43+48 (in Chinese).
+65. Kleinfeld J, Bloom J. Boarding schools: effects on the mental health of
+    Eskimo adolescents. Am J Psychiatry. 1977;134:411–7.
+66. Shen Z, Chen L, Cui J, et al. Influencing factors of mental health of
+    boarding and non-boarding junior high school students. Educ Meas Eval.
+    2012;8:38–42 (in Chinese).
+67. Li B, Yang J. Relations of time management disposition self-efficiency
+    attribution of junior school student to academic achievement. Psychol
+    Expl. 2004;4:67–71 (in Chinese).
+68. Fang H, Ma G. Nutrition problems and countermeasures for students in
+    rural boarding schools in China. Chin J School Health. 2010;31:1039–40
+    (in Chinese).
+69. Kling KC, Noftle EE, Robins RW. Why do standardized tests underpredict
+    women’s academic performance? The role of conscientiousness. Soc
+    Psycholog Personal Scie. 2013;4:600–6.
+70. Vianello M, Robusto E, Anselmi P. Implicit conscientiousness predicts
+    academic performance. Personal Individ Differ. 2010;48:452–7.
+71. Eagly AH, Wood W. Explaining sex differences in social behavior: a meta-
+                                                                                     Ready to submit your research ? Choose BMC and benefit from:
+    analytic perspective. Pers Soc Psychol Bull. 1991;17:306–15.
+72. Wang S, Mao Y. The impact of boarding on social-emotional compe-
+                                                                                      • fast, convenient online submission
+    tence of left-behind children: an empirical study in 11 provinces and
+    autonomous region in western China. J Educ Studies. 2015;11:111–20 (in            • thorough peer review by experienced researchers in your field
+    Chinese).                                                                         • rapid publication on acceptance
+                                                                                      • support for research data, including large and complex data types
+Publisher’s Note                                                                      • gold Open Access which fosters wider collaboration and increased citations
+Springer Nature remains neutral with regard to jurisdictional claims in pub-          • maximum visibility for your research: over 100M website views per year
+lished maps and institutional affiliations.
+                                                                                     At BMC, research is always in progress.
+
+                                                                                     Learn more biomedcentral.com/submissions

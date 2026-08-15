@@ -1,0 +1,688 @@
+Advances in Social Science, Education and Humanities Research, volume 533
+               Proceedings of the 17th International Conference of the Asia Association of Computer-Assisted
+                                            Language Learning (AsiaCALL 2021)
+
+
+
+
+           CALL in Asia During Covid-19 and Models of
+                          E-Learning
+                                 Vu Phi Ho Pham1*, Thao Nguyen Da Vo2
+
+1
+  Faculty of Foreign Languages, Van Lang University
+2
+  VN-UK Institute for Research and Executive Education
+*
+  Corresponding author’s email: ho.pvp@vlu.edu.vn
+
+ABSTRACT
+Corona Virus’ pandemic (Covid-19) has affected all of the world's aspects, such as economics, lifestyles, culture,
+education, etc. Most schools and universities have been shut down for the safety of students. Then e-learning has been
+employed in many schools and universities to keep education going on. However, many lecturers/teachers and students
+in Vietnam have not been familiar with this teaching/learning mode yet. Training lecturers/teachers to use the e-
+learning system at a school or university is an important issue in terms of effective teaching/learning and school
+management. Few research studies have been investigated to study the useful model of e-learning classrooms during
+this critical time. This paper presents an overlook of e-learning issues around Asia during the Corona Virus pandemic.
+It then examined a case study on e-learning at a university in Vietnam during the lockdown situation. The study
+revealed that the implementation of e-learning in Vietnam still had many obstacles in terms of Internet connection,
+available devices, economic conditions, and the students' unwilling-perceptions. The study also provided a model of
+e-learning for the school/university management and the lecturers/teachers who wish to run their e-learning classes
+effectively.
+Keywords: Corona Virus’ pandemic, Covid-19, e-learning, online-meeting, LMS, pre-recording video,
+video clips.
+
+
+1. ISSUES OF E-LEARNING IN ASIA                                     learning at many universities in most countries,
+                                                                    especially East Asia and Southeast Asia (Jamal, 2020
+Since Corona Virus (Covid-19) has been outspread                    [2]; Rahman, 2020 [4]; Yarrow, 2020 [5]; Hayashi, et
+worldwide, all aspects of economics have been badly                 al., 2020 [6]). Dhawan (2020) asserted that the Corona
+affected, and education is not an exception. In Asia,               Virus epidemic is an opportunity to make the best out
+over 1.5 billion university students in 185 countries               of the present situation [2]. There are many options
+have been lockdown due to Coronavirus (COVID-19)                    available in this challenging situation, and teachers are
+pandemic (Pham & Ho, 2020 [1]; Jamal, 2020 [2];                     required to choose the right method and use it to
+Dharmaraj, 2020 [3]). When the students stay at home,               educate their students.
+schools, colleges, and universities need to keep on
+going with the training processes by applying distance              Online education is defined as learning experience
+studies from institutions to homes. Many higher                     using various devices including smartphones, iPads,
+education institutions in most countries, including East            desktops, laptops and internet access in synchronous or
+Asia and Southeast Asia, are transmitting to online                 asynchronous environments. The synchronous
+learning (Jamal, 2020 [2]; Rahman, 2020 [4]; Yarrow,                learning environment is structured in the sense that
+2020 [5]; Hayashi, et al., 2020 [6]). Besides, two-thirds           students take part in live lectures, that educators and
+of these universities' universities report that they need           learners are communicating in real-time and that
+to switch from classroom teaching and learn to e-                   immediate feedback is possible. Asynchronous
+learning. However, the COVID-19 pandemic would                      learning environments, by contrast, are not properly
+probably alter the direction of our thought on how the              organized [2]. In Dhawan, the online learning mode is
+sector can and should work [1]. The pandemic of the                 very easily available and reaches remote and rural
+coronavirus (COVID-19) is rapidly evolving                          areas as well. The way of education is considered
+innovation and looking for alternatives to Online                   comparatively cheaper in relation to lower costs of
+
+
+
+
+                                 Copyright © 2021 The Authors. Published by Atlantis Press SARL.
+    This is an open access article distributed under the CC BY-NC 4.0 license -http://creativecommons.org/licenses/by-nc/4.0/.   1
+
+                          Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+transport, housing and institutional learning.                   In Vietnam, the service providers of VNPT, FPT, and
+Flexibility is another interesting aspect of online              Viettel also run the online platforms for e-learning for
+learning; a student may plan or prepare online classes.          schools free of charge during the pandemic of COVID-
+Combining face-to-face lectures with technology                  19. Most schools let the teachers choose the adequate
+results in mixed learning and reversed lessons,                  type of online classes and platforms to offer online
+improving students' learning skills. All over the world,         courses and/or one-way classrooms (MEO, 2020 [10]).
+students will learn, thereby creating new skills that lead       According to Jamal (2020) [2], Southeast Asian
+to lifelong education. The Government recognizes the             countries have remarkable growth in internet access
+increasing importance of online learning in this                 and mobile phone use over the last few years as seen as
+competitive environment too [2].                                 the world's most devoted internet users. There are at
+                                                                 least 360 million internet users in Southeast Asia, and
+In Vietnam, before the Corona Virus pandemic
+                                                                 about 90 percent of them link to the Internet, primarily
+outbreak, e-learning was on the edge of higher
+                                                                 through their mobile devices. This is a tremendous
+education (Pham & Ho, 2020 [1]) and received fewer
+                                                                 accomplishment compared to many other nations, and
+respects from society. However, During the Covid-19,
+                                                                 the increase in the use of the Internet and mobile
+110 out of 240 Universities in Vietnam have employed
+                                                                 devices is already an advantage during the pandemic.
+e-learning, and 70% of them are of private universities
+(MOET, 2020 [9]). VNPT E-Learning experienced a
+                                                                 1.1 Problem statements
+four times rise to 5 million, with a high of 100,000
+hourly visitors. In the same way, Viettel Study got 41           Using technology is really a challenge for many Asian
+million visits per month. It has been implemented in             teachers (Ta, 2020) [11], and problems of teachers and
+nearly 26,000 schools globally, with a database of               students’ perceptions on e-learning (Yarrow, 2020) [5].
+29,000 lessons at all stages [3].                                Many teachers and lecturers are not friendly with
+In Malaysia, this equates to 4.9 million school students         technology or e-learning yet. Most of the teaching
+and 1.2 million students at higher education                     activities today are still in the mode of traditional
+institutions, which include some 130,000 international           methods. According to Dhawan (2020) [8], educational
+students, including public and private, polytechnic, and         institutions are currently focused only on conventional
+community universities [4]. In the Republic of Korea,            learning methods in India. They follow the traditional
+the Ministry of Education estimated that 3 million               set up in a classroom with face-to-face lectures. In
+users will concurrently access each of the two public            Malaysia, Rahman (2020) [4] reported that some
+online learning sites (i.e., KERIS e-Learning Site and           lecturers were not keen to even on enrolling in the
+EBS Online Class) (i.e., KERIS e-Learning Site and               learning management system. In China, many Chinese
+EBS Online Class). It extended the infrastructure                teachers have only begun to learn skills such as
+accordingly to provide reliable education service [5].           speaking spontaneously in front of a camera, using a
+                                                                 digital red pen during PowerPoint presentations, and
+Countries with existing good internet infrastructures,           engaging students through online written comments
+such as South Korea, Japan, Taiwan, and Singapore,               (Carey, 2020 [12]; Ta, 2020 [11]).
+have significant advantages when they implement
+online educational activities. In South Korea, the               Like other countries, in Sri Lanka, many faculty staff
+Education Ministry expected that during this era 3               were not used to online teaching in higher education
+million users will have access to two online public              institutions (Hayashi, et al., 2020 [6]). They always had
+learning platforms. Teachers use public and private              problems with technical issues when they started to
+online training resources to take real-time lessons and          implement e-learning. In Korea, both students and
+to provide students with teaching material and                   teachers lacked the technical skills to interact
+assignments (MOE, 2020 [10]). During the Corona                  effectively in online class environments. Both students
+Virus pandemic in Japan, some sites provide free                 and professors said that they were not trained to do it
+access to basic services. It was commonly used by                (Kalenzi, Back, & Yim, 2020 [13]).
+university students (MOE, 2020 [10]). During the                 In terms of students’ views, Indonesian students
+pandemic until 17 August 2020, all internet service              reported that they find it hard to stay focused. They
+providers in Sri Lanka have free access to university            believe that online lectures are less successful and
+web servers. More than 90% of universities and                   struggle to connect online with lecturers and peers
+colleges conduct e-learning (Hayashi et al., 2020 [6]).          (Yarrow, 2020 [5]). Yet, in China, many students were
+According to Yarrow (2020) [5], prepared programs,               dealing with a lack of resources at home, such as
+students, and teachers' adaption to online learning is a         computers and high-speed Internet, mostly from low-
+big issue. Getting the infrastructure in place makes it          income families (Ho-him, 2020 [14]). In Korea, the
+much easier to switch to online teaching and learning.           students rated low satisfaction regarding their online
+According to Hayashi, et al. (2020) [6], Higher                  learning and their dissatisfaction with tuition fees. 50%
+education institutions in Sri Lanka have used existing           of the students considered taking a leave of absence in
+web server Moodle-based learning management                      the subsequent semester (Kalenzi, Back, & Yim, 2020
+systems. Zoom can be periodically tracked by the                 [13]). Many students were against the e-learning
+network.
+
+
+
+
+                                                                                                                             2
+
+                          Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+activities in Vietnam and claimed that they paid tuition         the teachers an LMS platform, MS TEAM, a Zoom
+for face-to-face classrooms, not for e-learning.                 account, Google Meet, Cisco Webex, or
+                                                                 BigBlueButton to have a lesson on it. Second, the
+Regarding e-learning teaching activities, many
+                                                                 teachers need to know what to include in the lessons,
+teachers conducted their e-learning classes in such a
+                                                                 what to instruct the students, and how to cover all their
+way that they recorded a lecture and posted it online for
+                                                                 lessons' core content. Finally, How to help the teachers
+students to access and view (Carey, 2020 [12]).
+                                                                 shape their e-learning skills is an essential issue to be
+According to Hayashi et al. (2020) [6], in middle-
+                                                                 further explored.
+income countries, 54 percent of the e-learning classes
+were given video lectures, and 40 percent were                   2. METHODOLOGY
+evaluated online. In Sri Lanka, 40% of the teachers
+used PowerPoint presentations, online quizzes, and               This study employed a descriptive research design to
+online whiteboards for the online classes (Hayashi et            explore data from the students at a university in
+al., 2020 [6]). The review of the British Council for            Vietnam during the school lockdown because of
+China, Hongkong, Malaysia, and Vietnam indicated                 Corona Virus's pandemic (Covid-19). All the
+three gaps when applied e-learning (Ta, 2020 [11]): (1)          university lecturers were "forced" to use an e-learning
+Lack of comprehensive framework; (2) Lack of                     system during Corona Virus's pandemic. The second
+expertise and skills in teaching online; and (3)                 semester of the Academic year 2019-2020 took place
+Students’ lack of self-studies.                                  with face-to-face classrooms for two weeks before the
+                                                                 pandemic of Covid-19. As the universities and schools
+Due to the above-stated problems, the questions were             around the country were lockdowns, all the lecturers
+raised to educators and school leaders. What does the            worked to start-up e-learning though it was frustrating
+e-learning framework look like? Is it just a Powerpoint-         (for the lecturers).
+recorded presentation? Is it just an online meeting to
+learn the content of the lesson? How to cover the                2.1 E-learning/teaching framework
+content of the lesson on e-learning? And how does the
+                                                                 As the e-learning (online-teaching) was running to all
+university manage the teaching/learning activities?
+                                                                 teaching and learning activities via LMS Moodle and
+1.2 Rearch gaps                                                  MS-TEAM (Microsoft 365), the university leaders
+                                                                 needed to train the teachers and students to get used to
+The current study found some gaps in the                         the e-learning system. The lecturers were also
+implementation of e-learning around Asian                        introduced to use Loom (loom.com) and Zoom to
+institutions. First, E-learning is not just simply giving        record Video clips for the teaching lessons (See fig. 1).
+
+
+
+
+    Fig. 1 Teaching activities for e-learning
+    Each classroom lesson was included 1 to 2 pre-                 learning materials, and homework. This was done to
+    recorded videos relating to the lesson's core content,         ensure that the students could be accessed into the e-
+    then uploaded to the LMS system one or two days in             learning system and conduct their studies any time
+    advance (before the online meeting) for the students           before meeting with the lecturers virtually.
+    to learn online. Besides, the lecturers design some
+                                                                   In the virtual-meeting classrooms, the students and
+    activities for the students, such as discussions in the
+                                                                   lecturers used their professional emails to sign-in the
+    forum, exercises, problem-solving situations,
+                                                                   MS-TEAM of Office 365 to meet with the lecturers
+
+
+
+
+                                                                                                                             3
+
+                                Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+online. During this virtual meeting, the lecturers                                3. FINDINGS
+would deal with all the students' questions relating
+their what they had learned from the video clips,                                 The total samples who responded to the
+learning materials, problem-solving, exercises, and                               questionnaire survey were 1567 students. Among
+homework from the LSM system (Moodle). The                                        these respondents, 96% (n= 1482) had experienced
+lecturers instructed or gave the students some                                    E-learning during the Lockdown period of Corona
+guidelines to complete the strenuous activities or                                Virus (Covid-19), while 4% had no experience with
+solve them. Also, if the students failed to understand                            the e-learning system yet. Of 96% of the students (n
+all the lessons' points, the lecturers would provide                              = 1509), 318 students (21%) had the experience of
+them with explanations or examples to help them                                   learning e-learning from 1 to 2 courses, 410 students
+cope with it. During the virtual meeting, the lecturers                           (27%) had experience to learn from 3 to 4 classes
+recorded what occurred in the meeting and posted the                              with e-learning, and 781 students (52%) took five or
+LMS system's link to revisit the e-learning website to                            more than five courses with e-learning. The reasons
+review their lessons. This was also helpful for those                             for 4% of the students (n=53) not attending the
+students who missed the virtual classes. Fig. 2                                   university's e-learning system reported in the
+presents the teaching model for e-learning.                                       qualitative data were as follows. First, some students
+                                                                                  were not affordable for the e-learning system. they
+                                                                                  did not have enough conditions to study with the e-
+                               E-Learning                                         learning system for technical devices such as
+                                                                                  smartphones, laptops, iPad, or desktop computers.
+                                                           Learning               “Mỗi lần học online thì e phải ra quán net để có thể
+                 1 - 2 video clips                                                học nhưng từ lúc các quán net đã đóng hết và e không
+                                                           materials
+                                                                                  còn cách nào để có thể học tiếp được”. Second, they
+        Questions for
+                                                                                  were unwilling to study with e-learning for paying
+ discussion/problem- solving
+                               Tasks/Exercises/homework   Virtual-class meeting
+                                                                                  for traditional study mode, not e-learning mode. “Em
+                                                                                  đóng tiền vào là để học offline chứ không phải học
+Fig. 2 The teaching framework for e-learning                                      online”. Third, some of them were busy with their
+                                                                                  job/part-time jobs. “Em đi làm thêm không có thời
+At the end of the course of e-learning, the lecturers                             gian và laptop”. Finally, some felt uncomfortable to
+employed the feature of Quizzes in the LMS                                        have their studies with a small smartphone. “Học
+(Moodle) to create quizzes to help the students                                   không hiệu quả. Học trực tiếp trên trường còn chưa
+review the contents they had learned. Exercises and                               tiếp thu xong nói gì là học trc cái điện thoại”. Figure
+situations for problem-solving were also employed to                              3 presents the employment of digital devices that the
+review all the main content of the course. Some                                   students used for e-learning.
+online-meetings via MS TEAM were used to help
+students solve complicated learning issues.
+                                                                                                       Chart Title
+                                                                                    No device at all
+
+2.2 Survey questionnaire                                                           Internet services
+
+The survey questionnaire was sent to all students at a                                         Ipad
+University and received 1567 responses. The                                                Desktop
+questionnaire was set-up with the Form of Office
+                                                                                             Laptop
+365. Only the university's emails to the students
+could be accessed and complete the survey. The                                        Smartphones
+questionnaire survey was sent to the students to
+respond in one month, from 12 July to 12 August                                                        0      500      1000         1500
+2020.
+                                                                                  Fig. 3 Students’ uses of digital devices for e-
+They came from the faculty of Economics, Law,                                     learning
+Tourism, Foreign Languages, Computer Science,
+Mechanics, and Technology. Of which 35% of the                                    Fig. 3 presents the digital devices that the students
+students (n = 553) were Freshmen, 29% were                                        employed to do their e-learning in their own space.
+Sophomore (n= 452), 25% were Juniors (n=387), and                                 Smartphones were seen as the most favored device
+11% of them (n = 175) were Seniors.                                               used for their convenience (n = 1182; 75%). Many
+                                                                                  students today equipped themselves with
+                                                                                  smartphones, and they were easy to access the
+                                                                                  Internet. LMS (Moodle) and MS TEAM of Office
+                                                                                  365 also had Apps on the smartphone via Google
+                                                                                  Play. So the students were able to download them to
+
+
+
+
+                                                                                                                                            4
+
+                      Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+their mobile devices to do their studies.                      students reported possessing smartphones, only 55
+Laptops/Notebooks were the second most affordable              percent of state students and 66 percent of NGOs said
+devices that the students used to conduct their e-             they owned a portable computer. Just 7% of state
+learning (n = 678; 43%). The students did not                  students and 12% of non-state students announced
+popularly use desktops and Ipad because many of                that they had a laptop. For a number of students,
+them left far from their homes when they pursued               smartphones were not conducive to reading all
+their studies at universities. Of 1567 respondents,            materials and completing written assignments and
+180 students (11%) did not have any devices to do              quizzes using the learning management method. Fig.
+their e-learning, so they had to use the Internet              4 presents the frequency of times students visited the
+services nearby their locations. Hayashi et al. (2020)         LSM to do their self-studies, and Fig. 5 presents the
+study showed that students had smartphones, but                length of time when the students conducted their
+access to video camera laptops and desktops was                autonomous learning.
+inadequate. Whereas approximately 90 percent of
+
+                     Chart Title                                                    Chart Title
+    More than 6 times a
+                                                                       From 1.5h to 2h
+          week
+ Five to six times a week                                               From 1h - 1.5h
+    Three to four times a
+                                                                From 31 to 59 minutes
+            week
+   Once to twice a week                                           Less than 30 minutes
+
+                            0   200   400   600   800                                    0   200   400    600   800
+
+Fig. 4 Frequency of visiting the LMS to study                  Fig. 5. Times spending on the LMS for studies
+
+
+Figure 4 illustrates the frequencies of students who
+                                                                                   Chart Title
+visited the LMS (Moodle) to conduct their studies
+online. As can be seen, the most frequent was that                              Other
+most of the students visited the LMS once or twice                Online meeting (MS…
+a week to study online. Many other students visited
+the LMS three or four times a week to do their                      Learning materials
+studies. This indicates that many students conducted             Exercises/homework
+their autonomous learning during the Covid-19
+                                                                  Discussion/problem-…
+pandemic when they did not physically come to the
+classrooms. In Sri Lanka, more than 55% of students             Pre-recorded video of…
+who responded online joined daily, while
+approximately 10% said they engaged once a week                                          0   200   400   600    800
+in online learning (Hayashi et al., 2020 [6]).
+                                                               Fig. 6 Students’ preferences of activities and
+                                                               resources
+                                                               Fig. 6 illustrates the students’ preferences of
+As shown in Figure 5, most of the students spent               learning activities and resources when they
+from 31 to 59 minutes conducting their self-study              conducted their autonomous studies via the LSM
+online. Very few students spent from 1.5 to 2 hours            (Moodle). First, the most favorite recourses that the
+to stay online for listening to the video lectures or          students preferred to learn new knowledge via LMS
+doing exercises. This indicates that students could            was the lectures' pre-recorded video. The second
+not focus too long on learning the new knowledge.              favored resource that the students preferred to do
+This finding contributed to the suggested model for            their autonomous learning via the LMS system was
+e-learning of the current study. Fig. 6 presented the          the record of online-meeting via MS TEAM that the
+preferred activities when they conducted their                 lecturer implemented their teaching activities
+autonomous learning.                                           synchronously. In this online teaching activity, the
+                                                               lecturer met with their students as a normally
+                                                               scheduled calendar to meet with the students,
+                                                               respond to their questions, and solve problems if
+                                                               they did not understand or do them independently.
+
+
+
+
+                                                                                                                        5
+
+                        Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+The third most favored resource that the students                lessons (Em muốn giảng viên có thêm ví dụ minh
+wish to have for their autonomous learning via the               họa thực tiến nhiều để có thể tiếp thu kiến thức dễ
+LMS was the learning materials. In the current                   hiểu hơn). For some hands-on practice classes, the
+study, the learning materials refer to the book                  students suggested including videos for task-
+chapters relating to the content of the lesson, the out-         solving so that they could learn how to solve the
+of-the book sources that the lecturers provided to               problems of hands-on practices easily (Em cần
+their students for references, or sometimes the video            video giải các ví dụ). Significantly, many students
+clips relating to their content of the lesson that the           suggested that there be more interactions between
+lecturers made use from the Youtube and embed to                 teacher-students student-student (Giao tiếp và trao
+the LSM system for the students to learn. The less               đổi với sinh viên nhiều hơn, … Kết nối với sinh
+favored activities that the students did not prefer              viên).
+much were problem-solving, exercises, discussion,
+                                                                 In terms of each video clip's length, the students
+or homework. These activities were not a passive
+                                                                 suggested that Long video clips seemed not to be
+resource that the students received. They required
+                                                                 interesting to the students to watch and learn. It
+the students to involve in critical thinking, solving
+                                                                 should be shorter in length. (Giảng viên nên rút
+problems, or present their stances on some points
+                                                                 ngắn bài giảng thay vì kéo dài khiến sinh viên nhàm
+that they agreed or disagreed with. It requested the
+                                                                 chán không nhớ nổi bài hay không hiểu mình đang
+students to actively participate in the learning
+                                                                 học cái gì). Many lecturers wished to tell students
+process rather than become passive receivers of
+                                                                 everything relating to the lesson. This was the
+knowledge.
+                                                                 lecturers' good intention, but somehow it took the
+Regarding this issue, in the quantitative data, many             video clips too long to complete a section.
+students stated “no more e-learning” because it                  Normally it took one hour or more in the current
+caused them a lot of frustration. However, some                  situation. Therefore, the study suggested that the
+students suggested some more activities for the e-               pre-recorded video clips' length should be between
+learning to be more effective, such as Games,                    15 to 20 minutes and separated the lesson into 2 or
+Quizzes (Cuối mỗi buổi học cần có câu hỏi trắc                   3 video clips. Each clip should include a complete
+nghiệm để cũng cố kiến thức xem sinh viên tiếp thu               section of the lesson's main content. The students
+được bao nhiêu). Some students suggested more                    could then arrange their time to watch and learn at
+references and more examples to illustrate the                   a convenient time during the week.
+Table 1.
+Students’ evaluation of the activities & resources via E-learning
+
+
+                         Students' Evaluation                       Not effective enough            Effective enough
+ No.                                                                   n             %               n           %
+    1      Evaluation of the pre-recorded video lectures              371           25%             1098        75%
+           Assessment of the given exercises, homework, or
+                                                                      540           37%
+    2      problem-solving                                                                          917         63%
+    3      Assessment of the shared discussion forum                  612           42%             847         58%
+
+           Evaluation of all the activities on the LMS that           625           43%
+    4      cover the content of the course                                                          826         57%
+
+           Assessment of the quizzes that the teachers used to        482           34%
+    5      review the lessons                                                                       947         66%
+    6      Evaluation of the effectiveness of E-learning              420           29%             1035        71%
+
+
+Table 1 presents the students' evaluation of the                 the pre-recorded video clips, the students could
+activities and resources provided on the LSM for                 watch and pause to listen again and again to master
+the students to conduct their autonomous learning                new knowledge. To review what they had learned,
+via the LMS. 75% of the students (n=1098)                        quizzes were also highly valued by the students to
+confirmed that the pre-recorded video lectures were              consolidate the knowledge before taking the tests.
+effective for learning the new knowledge via LMS.                The students also favored problem-solving,
+When watching the video clips, the students could                exercises, or homework as activities to help them
+learn the new lesson's main content when they do                 cover the lessons' main content.
+their autonomous learning. Also, learning through
+
+
+
+
+                                                                                                                       6
+
+                       Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+Table 2.                                                        situations because of economic crisis (vì thời gian
+                                                                này nhà đang khó khăn về kinh tế phải đi làm hồ
+Students’ frequencies of online meetings via MS
+                                                                mưu sinh nên em không có thời gian để lướt web
+TEAM
+                                                                nhiều), (4) and some of them revealed that they did
+                                                                not have any devices to take these kinds of class
+ Frequencies                     n               %              meetings (Mỗi lần học online thì e phải ra quán net
+ Always                       206             13%               để có thể học nhưng từ lúc các quán net đã đóng hết
+                                                                và e không còn cách nào để có thể học tiếp được).
+ Usually                      926             60%
+                                                                Most of all, (5) they stated that they felt not practical
+ Sometimes                    341             22%               to take classes online in such a way compared to
+                                                                face-to-face learning (Bởi vì em thấy học rất khó tiếp
+ Never                          64              4%
+                                                                thu lắm ạ, em muốn học trực tiếp trên lớp để tiếp cận
+ Total                       1537            100%               hơn vối giảng viên và cũng dễ trao đổi hơn trong lúc
+                                                                học ạ).
+As illustrated in Table 2, among 1537 responses,
+73% of the students (n = 1132) regularly participated           The same problems about internet connection were
+in the Online-meeting via MS TEAM of Office 365.                found in Sri Lanka. Hayashi et al. (2020) [6]
+22% of them (n = 341) stated that they sometimes                reported that the top obstacle faced by faculty and
+took part in those classes, while 4% (n = 64)                   students during online learning was poor Internet
+confessed that they never do it. In the qualitative             access. During online teaching and learning, over 70
+data, these irregular online-meeting students                   percent of students, 68 percent of faculty in state
+claimed that they did not participate in the online-            institutions, and 76 percent of non-state institutions
+meeting due to the reasons of (1) poor Internet                 experienced connection problems. Carey (2020)
+connection (Mạng không tốt, thường xuyên bị văng                [12] also found that users can face several technical
+và không vào được), (2) the Internet App of TEAM                difficulties that impede and slow down the teaching-
+on a smartphone was not running well, (3) they had              learning process.
+to work part-time to overcome the demanding
+Table 3.
+Activities that the teachers conducted in the Online-class meeting
+
+
+
+ No.       Teachers’ activities in an online meeting                                     n          %
+
+       1   Review of the lesson presented in the pre-recorded video clips             843          23%
+
+           Responses to all students' questions that they had learned from
+       2   the LMS system                                                            1030          29%
+       3   Help students do their exercises and homework                              686          19%
+       4   Instructing students to do problem-solving or quizzes                      703          20%
+       5   Giving lectures on some related content of the lesson                      339          9%
+           Total                                                                     3601       100%
+
+
+Table 3 presents the teaching activities that the               requires assistance from the older students or the
+lecturers conducted in their online meeting classes.            lecturers. The second teaching activity that the
+As can be seen, the most common teaching activity               students favored when studying with the online-
+that the lecturers employed for their online-meeting            meetings was that they requested the lecturers to
+classes was for responses to the students' questions            review the lessons they broadcast via the pre-
+that they had learned from the LMS system                       recorded video clips (n=843; 23%). They needed the
+(n=1030; 29%). Since the students conducted their               lecturers to review the main points of the content to
+autonomous studies before the class-meetings, they              be sure of what they have already learned. The third
+could raise any questions to the lecturers to help              favored teaching activity via the online-meeting
+them due to difficult problems or knowledge that                classes was instructing students to do the problem-
+they could not obtain. This was correspondent to the            solving or quizzes (n=703; 20%). Solving-problem
+ZPD of Vygotsky’s study [15]. The students could                activities were to create students' critical thinking to
+learn some knowledge by themselves; some other                  solve problems relating to the lessons' content, and
+knowledge that they could not gain by themselves                doing quizzes at the end of the lessons/chapter was
+
+
+
+
+                                                                                                                            7
+
+                        Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+to help students consolidate or memorize what they               Interactions were limitted when study online, and
+had learned. Finally, helping students do the                    not easy to raise questions to the teachers (Tương tác
+exercises or homework was the fourth favored                     trên TEAM cực kỳ hạn chế, chỉ 1 người on mic 1
+activity for the students in the online-classes (n=686;          lúc, ngoài ra còn tạp âm nữa, chưa kể đang học rớt
+19%). Doing exercises or homework referred to the                mạng). Third, it was not easy for the students to
+activity that helped the students review the lesson's            submit assignments via smartphones.
+main content when they studied new knowledge. In
+                                                                        Tất cả đều khó hiểu khi giảng qua màn hình
+Sri Lanka, Hayashi et al. (2020) found that nearly
+                                                                        và chỉ nghe được giọng nói của thầy cô, thay
+90% of students were highly or moderately satisfied
+                                                                        vì trên lớp chỗ nào không hiểu thì thầy cô còn
+with online education.
+                                                                        giảng trực tiếp dễ hiểu hơn rất nhiều. Còn học
+In the qualitative data, the students revealed some                     online chỗ nào không hiểu thì cũng chỉ nghe
+difficulties of learning online-meeting. First, many                    được giọng nói chứ không hình dung ra được.
+students stated that it was so hard for the students to
+                                                                 Therefore, the current study suggested a model for
+watch the long video clips for an hour or longer,
+                                                                 e-learning (LMS), as illustrated in fig. 7, and a
+(Học trên elearning để ôn bài và nộp bài thì rất tiện.
+                                                                 model for the virtual meeting via MS TEAM in fig.
+Nhưng với bài mới em không thể coi clip giảng 1
+                                                                 8 as follows:
+tiếng mấy như coi phim được. Học offline không
+hiểu chỗ nào em hỏi liền được). Second, the
+   •15 – 20                                   •Discussion
+    minutes each                              •quizzes                                         Responses to all students'
+                                              •Games                                           questions
+
+                     2-3 pre-    Problem-
+
+
+
+                                                                             Virtual meeting
+                    recording     solving/                                                     Review of the lesson
+                      videos     discussion                                                    presented in the pre-
+                                                                                               recorded video clips
+
+                                                                                               Instruction of doing
+                      Virtual
+                                  Learning                                                     problem-solving or
+                     meetings                                                                  quizzes
+                                  materials
+                    (recorded)
+   •Half of usual                             •Task-solving                                    Instruction of doing
+    classroom                                 •More                                            exercises and homework
+    time                                       examples
+
+
+Fig. 7 Model for e-learning via LMS (Moodle).                    Fig. 8 Model for virtual meeting classes (Moodle).
+
+                                                                 to help students review the lessons' core content, and
+                                                                 games were used to help students learn with fun.
+4. CONCLUSION                                                    Third, learning materials such as book chapters,
+                                                                 books, or related video-clip sessions be provided for
+E-learning is not just recording a video and                     the students to broaden their knowledge and gain
+providing materials on an LMS. It needs more active              new experience better. Finally, recorded-video of
+activities to support students to cover all the                  the online meeting classes should be embedded in
+subjects' main areas. The lecturers should combine               the LMS to watch again and again to review the
+LMS (Moodle) and Online-meeting tools (MS                        lessons. In case some students were missing the
+TEAM) or other tools such as Zoom, Loom, Google                  online-meeting courses, they could come back to the
+Meet, etc., to conduct their e-learning effectively              LMS to learn the lesson no matter what constraint of
+(figs. 7 & 8). First, each teaching lesson should                time.
+contain from 2 to 3 pre-recorded video clips to
+                                                                 In terms of online-meeting classes, the four most
+present the lesson. The pre-recorded video clips
+were seen as the best learning resources as the                  common activities that the lecturers could employ
+students could learn any time and anywhere. They                 were (1) responses to all students' questions as they
+could review and pause at any section to master new              had learned the lessons via LMS before the online-
+knowledge or skills. However, each video clip                    meeting classes, (2) review of the lesson presented
+should not be longer than 20 minutes to pay attention            in the pre-recorded video clips, (3) instruction of
+to their studies. Longer video clips were seen as                doing problem-solving or quizzes, and (4)
+difficult for the students’ concentration. Second,
+                                                                 Instruction of doing exercises and homework.
+problem-solving should be used to help students
+create critical thinking. A discussion session should            The interactions between teachers and students are
+be employed to activate students' schemata to easily             still limited in e-learning. Teachers can make use of
+learn new knowledge. Quizzes should be employed                  other Apps such as Zalo (in Vietnam), Facebook
+
+
+
+
+                                                                                                                            8
+
+                      Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+Messenger, Kakao Talk (in Korea), Weibo (in
+China), Viber… to keep contact with their students.            [7] TheWorldBank, "Covid-19 Coronavirus
+                                                                   Response," 2020. [Online]. Available:
+E-learning is not as cheap as many people think. The               http://documents1.worldbank.org/curated/en/5
+time needed for online teaching was 14 percent                     06241590701178057/COVID-19-Impact-on-
+longer than traditional teaching. The ideal class size             Tertiary-Education-in-East-Asia-and-
+for online courses should be 12 – 17 students per                  Pacific.pdf. [Accessed 7 Jan 2021].
+class (Tomei, 2006) [16]. According to Cavenaugh
+(2005) [17], the effort needed to teach the online             [8] S. Dhawan, "Online Learning:A Panacea in the
+section for 15 students was equivalent to 40 students              Timeof COVID-19 Crisis," Journal of
+in the face-to-face area. It took six times as much                Educational Technology Systems, vol. 49, no.
+effort as a face-to-face course to conduct an online               1, pp. 5-22, 2020.
+course.
+                                                               [9] MOET, "The Information and
+REFERENCES                                                         Communications going along with Education
+                                                                   and Training in the preventing Covid-19," 2
+                                                                   April 2020. [Online]. Available:
+[1] H.-H. Pham and T.-T.-H. Ho, "Toward a ‘new                     https://en.moet.gov.vn/news/Pages/events.aspx
+    normal’ with e-learning in Vietnamese higher                   ?ItemID=3933. [Accessed Jan 2021].
+    education during the post COVID-19
+    pandemic," Higher Education Research &                     [10] MOE, "RESPONDINGTO COVID-19
+    Development, vol. 39, no. 7, pp. 1327-1331,                     :ONLINE CLASSESIN KOREA," Jun 2020.
+    2020.                                                           [Online]. Available: www.moe.go.kr.
+
+[2] U. Jamal, "What does the rise of online                    [11] L. Ta, "East Asia Watch: Online learning in
+    learning during COVID-19 mean for Southeast                     East Asia amid the coronavirus epidemic –
+    Asia?," 1 Jan 2020. [Online]. Available:                        common challenges," 21 April 2020. [Online].
+    https://www.aseantoday.com/2020/08/what-                        Available: https://education-
+    does-the-rise-of-online-learning-during-covid-                  services.britishcouncil.org/insights-blog/east-
+    19-mean-for-southeast-asia/. [Accessed 11 Jan                   asia-watch-online-learning-east-asia-amid-
+    2021].                                                          coronavirus-epidemic-%E2%80%93-common.
+                                                                    [Accessed 7 Jan 2021].
+[3] S. Dharmaraj, "E-learning platforms in
+    Vietnam grow amid COVID-19 breakout," 19                   [12] K. Carey, "Everybody Ready for the Big
+    March 2020. [Online]. Available:                                Migration to Online College? Actually, No,"
+    https://opengovasia.com/e-learning-platforms-                   13 March 2020. [Online]. Available:
+    in-vietnam-grow-amid-covid-19-breakout/.                        https://www.nytimes.com/2020/03/13/upshot/c
+    [Accessed 7 Jan 2021].                                          oronavirus-online-college-classes-
+                                                                    unprepared.html. [Accessed Jan 2021].
+[4] D. Rahman, "A reckoning for online learning
+    in times of crisis," 24 March 2020. [Online].              [13] C. Kalenzi, D. Back and M. Yim, "The future
+    Available:                                                      of online education: lessons from South
+    https://www.thestar.com.my/opinion/columnist                    Korea," 13 Nov. 2020. [Online]. Available:
+    s/whats-your-status/2020/03/24/a-reckoning-                     https://www.weforum.org/agenda/2020/11/less
+    for-online-learning-in-times-of-crisis.                         ons-from-south-korea-on-the-future-of-online-
+    [Accessed 7 Jan 2021].                                          education/. [Accessed 21 Jan 2021].
+
+[5] N. Yarrow, "COVID-19 in East Asia: How the                 [14] C. Ho-him, "Coronavirus: Hong Kong students
+    Region’s Higher Education Systems are                           adapt to online learning amid class suspension
+    Addressing the Crisis to Adapt to the Future,"                  over pandemic," 16 March 2020. [Online].
+    23 June 2020. [Online]. Available:                              Available: https://www.scmp.com/news/hong-
+    https://blogs.worldbank.org/education/covid-                    kong/education/article/3075280/coronavirus-
+    19-east-asia-how-regions-higher-education-                      hong-kong-students-adapt-online-learning-
+    systems-are-addressing-crisis-adapt. [Accessed                  amid. [Accessed 18 Jan 2021].
+    6 Jan 2020].
+                                                               [15] L. S. Vygotsky, Mind in society: The
+[6] R. Hayashi, M. Garcia, A. Maddawin and K. P.                    development of higher psychological
+    Hewagamage, "Online Learning in Sri Lanka’s                     processes, Boston: Harvard university press,
+    Higher Education Institutions during the                        1980.
+    coVId-19 Pandemic," ADB BRIEFS NO. 151,
+                                                               [16] L. Tomei, "The Impact of Online Teaching on
+    pp. 1-12, September 2020.
+                                                                    Faculty Load: Computing the Ideal Class Size
+
+
+
+
+                                                                                                                      9
+
+                   Advances in Social Science, Education and Humanities Research, volume 533
+
+
+
+
+    for Online Courses," Journal of Technology                    Learning Administration, vol. 8, no. 1, pp. 1-
+    and Teacher Education, vol. 14, no. 3, pp. 531-               11, April 2005.
+    541, 2006.
+
+[17] J. Cavanaugh, "Teaching online-A time
+     comparison," Online Journal of Distance
+
+
+
+
+                                                                                                                   10

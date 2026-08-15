@@ -1,0 +1,414 @@
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+       Uso de modelos de inteligencia artificial para la predicción del
+               abandono escolar en instituciones educativas
+    Use of artificial intelligence models for predicting school dropout in
+                             educational institutions
+  Jorge Walter Quituizaca Hernández1, Vilma Mayra Armijos Tituana2, Sandra de las Mercedes
+ Quiroz Chugá3, Marcia Iliana Carchi Cortez4, Anthony Berner Calderón Alaña5 y Luz Germania
+                                      Calderón Córdova6
+  1
+   Ministerio de Educación, Deporte y Cultura, mimascotaesmax_@hotmail.com, https://orcid.org/0009-0003-8492-8796, Ecuador
+2
+  Ministerio de Educación, Deporte y Cultura, alejandramayte2013@outlook.com, https://orcid.org/0009-0000-0164-0905, Ecuador
+3
+ Ministerio de Educación, Deporte y Cultura, sandram.quiroz@docentes.educacion.edu.ec, https://orcid.org/0009-0006-7226-762X,
+                                                              Ecuador
+  4
+    Ministerio de Educación, Deporte y Cultura, marcia.carchi@educacion.gob.ec, https://orcid.org/0009-0008-0179-8356, Ecuador
+       5
+        Ministerio de Educación, Deporte y Cultura, anbercalala@gmail.com, https://orcid.org/0009-0007-2919-3255, Ecuador
+        6
+         Ministerio de Educación, Deporte y Cultura, calgema@hotmail.com, https://orcid.org/0009-0006-3621-2488, Ecuador
+
+
+Información del Artículo                     RESUMEN
+Trazabilidad:                                El presente artículo analiza el uso de modelos de inteligencia artificial (IA)
+                                             para la predicción del abandono escolar en instituciones educativas, con el
+Recibido 09-10-2025                          objetivo de identificar factores determinantes y fortalecer las estrategias de
+Revisado 10-10-2025                          retención estudiantil, se aplicó una metodología de tipo cualitativo y analítico,
+Aceptado 08-11-2025                          basada en la simulación y análisis de datos provenientes de registros
+                                             académicos, socioeconómicos y conductuales. Los resultados revelan que
+                                             variables como el rendimiento académico, la asistencia y el entorno familiar
+                                             poseen una alta incidencia en la probabilidad de abandono, los modelos
+                                             predictivos, especialmente las redes neuronales artificiales, demostraron una
+                                             capacidad superior para reconocer patrones y clasificar a los estudiantes en
+Palabras Clave:                              niveles de riesgo, facilitando la toma de decisiones pedagógicas oportunas, se
+Inteligencia artificial                      identificaron, además, limitaciones vinculadas con la brecha digital, la
+                                             disponibilidad de datos y la formación docente en competencias tecnológicas;
+Abandono escolar
+                                             el estudio concluye que la inteligencia artificial puede convertirse en una
+Predicción educativa                         herramienta estratégica para optimizar la gestión educativa, siempre que se
+Gestión educativa                            acompañe de políticas éticas, capacitación continua y una integración
+Tecnología educativa                         pedagógica que garantice el uso responsable y equitativo de la tecnología en
+                                             el contexto educativo contemporáneo.
+
+
+
+
+                                             ABSTRACT
+                                             This article analyzes the use of artificial intelligence (AI) models for
+                                             predicting school dropout in educational institutions, with the objective of
+                                             identifying key factors and strengthening student retention strategies. A
+                                             qualitative and analytical methodology was applied, based on simulation and
+Keywords:                                    data analysis from academic, socioeconomic, and behavioral records. The
+                                             results reveal that variables such as academic performance, attendance, and
+Artificial intelligence                      family environment have a significant impact on the probability of dropout.
+School dropout                               Predictive models, especially artificial neural networks, demonstrated
+Educational prediction                       superior ability to recognize patterns and classify students according to risk
+Educational management                       levels, facilitating timely pedagogical decision-making. Additionally,
+                                             limitations were identified related to the digital divide, data availability, and
+Educational technology
+                                             teacher training in technological competencies. The study concludes that
+                                             artificial intelligence can become a strategic tool for optimizing educational
+                                             management, provided it is accompanied by ethical policies, continuous
+                                             professional development, and pedagogical integration that ensures the
+                                             responsible and equitable use of technology in the contemporary educational
+                                             context.
+
+
+
+
+                                                                                                                   pág. 318
+
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+INTRODUCCIÓN
+
+El abandono escolar constituye uno de los principales desafíos para los sistemas educativos a nivel mundial,
+afectando la equidad, la inclusión y el desarrollo socioeconómico de las naciones, de acuerdo con Contreras
+& Tarlly (2022) millones de estudiantes abandonan la escuela cada año debido a factores socioeconómicos,
+familiares, institucionales y personales, en América Latina, esta problemática se agrava por desigualdades
+estructurales, limitaciones en el acceso a recursos tecnológicos y deficiencias en el seguimiento académico
+de los estudiantes en riesgo.
+En los últimos años, la aplicación de modelos de inteligencia artificial (IA) ha cobrado relevancia como
+una herramienta innovadora para abordar este problema, estos modelos permiten analizar grandes
+volúmenes de datos y detectar patrones que predicen comportamientos de deserción antes de que ocurran,
+facilitando la intervención temprana, a través de técnicas de aprendizaje automático conocido como
+(machine learning), los sistemas educativos pueden identificar variables predictoras como el rendimiento
+académico, la asistencia, la participación digital o los indicadores socioeconómicos, contribuyendo así a la
+prevención de la deserción escolar (Morales et al., 2024).
+La integración de la IA en el ámbito educativo no solo implica avances tecnológicos, sino también
+transformaciones pedagógicas y organizacionales, las instituciones que implementan sistemas de
+predicción de abandono deben asumir un enfoque ético, transparente y centrado en el bienestar del
+estudiante, garantizando la privacidad de los datos y la equidad en los algoritmos, en este sentido, la
+predicción del abandono escolar mediante IA se convierte en una herramienta estratégica para fortalecer la
+gestión educativa, optimizar los recursos institucionales y fomentar la permanencia escolar (Vargas et al.,
+2025).
+En el contexto ecuatoriano, la implementación de tecnologías basadas en IA aún se encuentra en una etapa
+incipiente, especialmente en el nivel de educación media y superior; sin embargo, diversas instituciones
+han iniciado procesos de digitalización y uso de analítica educativa para mejorar sus sistemas de
+seguimiento académico, por lo que este estudio se propone analizar la aplicación de modelos de inteligencia
+artificial en la predicción del abandono escolar en instituciones educativas, explorando sus ventajas,
+limitaciones y potencial para la toma de decisiones orientadas a la mejora continua de la calidad educativa
+(German et al., 2025).
+Desde una perspectiva teórica, la IA aplicada a la educación se sustenta en los principios del learning
+analytics y del educational data mining, campos que buscan transformar los datos en conocimiento útil para
+la acción educativa, por lo que los modelos predictivos pueden, por ejemplo, utilizar algoritmos como la
+regresión logística, los árboles de decisión o las redes neuronales artificiales para identificar a los
+estudiantes en riesgo con un alto nivel de precisión (Jagadeesan et al., 2023).
+La adopción de la IA en el ámbito educativo enfrenta retos significativos, entre ellos la calidad y
+disponibilidad de los datos, la resistencia institucional al cambio tecnológico y la necesidad de formación
+docente en el manejo ético de la información (Jayakumar et al., 2025).
+Es indispensable garantizar que los algoritmos sean auditables, explicables y libres de sesgos que puedan
+reproducir desigualdades estructurales, la confianza en los sistemas automatizados depende, en gran
+medida, de su capacidad para ofrecer predicciones justas y contextualizadas (Moreno-Guaicha et al., 2025).
+La IA ofrece una oportunidad única para promover una educación más equitativa y personalizada, capaz de
+responder a las necesidades de cada estudiante, al integrar modelos predictivos en los sistemas de gestión
+educativa, las instituciones pueden diseñar estrategias preventivas, fortalecer los vínculos escuela-
+comunidad y promover políticas públicas basadas en evidencia.
+
+MATERIALES Y MÉTODOS
+
+La investigación se desarrolló bajo un enfoque cualitativo de tipo descriptivo-interpretativo, con el objetivo
+de comprender las percepciones y experiencias de los actores educativos frente al uso de herramientas de
+inteligencia artificial en la predicción del abandono escolar, el estudio se realizó en seis instituciones
+públicas, seleccionadas por criterios de accesibilidad y representatividad dentro del sistema educativo
+ecuatoriano (Franco & Solórzano, 2020).
+Los participantes fueron 18 docentes, 6 directivos y 3 psicólogos educativos, seleccionados mediante
+muestreo intencional, se utilizaron tres técnicas principales de recolección de datos:
+
+
+
+
+                                                                                                    pág. 319
+
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+Tabla 1: Categorías emergentes del análisis cualitativo
+
+ Técnica                  Propósito principal                 Descripción del procedimiento
+ Entrevistas              Indagar percepciones sobre la       Se aplicaron entrevistas a docentes,
+ semiestructuradas        utilidad y aplicabilidad de la      directivos y especialistas en tecnología
+                          inteligencia artificial en la       educativa para explorar sus experiencias y
+                          predicción del abandono escolar.    opiniones respecto al uso de modelos
+                                                              predictivos basados en IA.
+ Grupos focales           Promover la discusión colectiva     Se organizaron grupos focales con
+                          sobre las oportunidades y riesgos   estudiantes y profesores de instituciones
+                          de la implementación de sistemas    piloto para analizar las implicaciones
+                          de IA en la educación.              éticas, pedagógicas y organizacionales del
+                                                              uso de IA.
+ Análisis documental      Examinar                informes    Se revisaron documentos oficiales, reportes
+                          institucionales sobre retención     de gestión académica y lineamientos del
+                          estudiantil y políticas de          Ministerio de Educación relacionados con
+                          innovación tecnológica.             la integración de IA en procesos educativos.
+
+Los datos fueron procesados mediante análisis temático, siguiendo las fases propuestas por Naeem et al.
+(2023) como la codificación inicial, categorización, búsqueda de patrones y formulación de temas
+emergentes. La validez del estudio se fortaleció mediante triangulación de fuentes y técnicas, así como la
+devolución de resultados a los participantes para validar las interpretaciones obtenidas.
+
+RESULTADOS
+
+El análisis derivado de las entrevistas y grupos focales permitió identificar cuatro categorías emergentes
+que estructuran la comprensión del fenómeno: apropiación de la inteligencia artificial (IA), percepción del
+riesgo y utilidad, dimensión ética y formativa, y desafíos institucionales, estas categorías se construyeron
+mediante el proceso de codificación y triangulación de los discursos de 27 participantes entre docentes,
+directivos y orientadores.
+
+Tabla 1: Categorías emergentes del análisis cualitativo
+
+                                Subcategorías             Frecuencia
+ Categoría principal                                                          Descripción sintética
+                                 identificadas               (%)
+ Apropiación de la       Conocimiento, actitud y uso                     Nivel de comprensión y
+                                                              28
+ IA                      educativo                                       disposición hacia la IA.
+ Percepción del          Confianza, aplicabilidad y                      Reconocimiento del potencial de
+                                                              25
+ riesgo y utilidad       valor predictivo                                la IA y sus limitaciones.
+ Dimensión ética y       Privacidad, equidad y                           Reflexión sobre responsabilidad,
+                                                              22
+ formativa               formación digital                               ética y capacitación.
+ Desafíos                Infraestructura, liderazgo y                    Factores      contextuales   que
+                                                              25
+ institucionales         resistencia al cambio                           dificultan la implementación.
+
+En la primera categoría, “Apropiación de la inteligencia artificial”, los participantes evidenciaron una
+comprensión inicial de los modelos predictivos, aunque la mayoría los asocia con sistemas automáticos de
+evaluación, el 63% de los docentes mencionó haber escuchado sobre IA aplicada a la educación, pero solo
+un 18% afirmó haber recibido formación específica, una docente expresó: “Sabemos que existe la
+inteligencia artificial, pero no tenemos claridad sobre cómo se aplica al seguimiento de nuestros
+estudiantes”; por lo que esta percepción refleja una necesidad urgente de alfabetización digital orientada a
+la interpretación pedagógica de la IA.
+En la segunda categoría, “Percepción del riesgo y utilidad”, los directivos coincidieron en que la IA puede
+servir como un instrumento de apoyo a la gestión educativa, especialmente para la detección temprana del
+abandono, sin embargo, un 47% manifestó preocupación sobre la dependencia tecnológica y la pérdida de
+autonomía profesional, por otra parte, en el discurso institucional se observa una dualidad: entusiasmo por
+las posibilidades innovadoras y cautela por los riesgos de descontextualizar los datos del entorno social de
+los estudiantes.
+
+
+
+
+                                                                                                  pág. 320
+
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+
+
+
+Fig. 1: Distribución porcentual de categorías emergentes
+
+En la categoría “Dimensión ética y formativa”, surgió un consenso sobre la importancia de establecer
+protocolos de protección de datos y formación docente en el uso ético de la tecnología, los participantes
+señalaron que la IA puede ser un riesgo si se utiliza sin supervisión ni consentimiento informado, una
+orientadora afirmó: “Si no comprendemos el algoritmo, podemos generar etiquetas injustas que afecten
+emocionalmente al estudiante”.
+En cuanto a la categoría “Desafíos institucionales”, los resultados revelaron deficiencias estructurales
+comunes: falta de conectividad, equipos insuficientes y resistencia cultural al cambio, el 70% de los
+directivos reconoció que la infraestructura actual no permite implementar sistemas basados en IA, y un
+55% de los docentes declaró sentirse “poco preparado” para incorporar estas herramientas en la
+planificación escolar.
+
+Tabla 2: Factores limitantes en la implementación de IA educativa
+
+      Factor limitante          Porcentaje de mención                  Discurso cualitativo
+                                         (%)
+ Falta de infraestructura                 70                “Tenemos buenas ideas, pero sin
+                                                            computadoras es imposible.”
+ Capacitación insuficiente                 55               “Nos falta formación, la tecnología avanza
+                                                            más rápido.”
+ Falta de liderazgo                        45               “Necesitamos que los directivos impulsen
+ institucional                                              estas iniciativas.”
+ Temor al reemplazo                        35               “Algunos piensan que la IA viene a
+ docente                                                    sustituirnos.”
+
+De manera transversal, el análisis del discurso mostró que los valores humanistas y la dimensión ética
+constituyen los ejes más reiterados por los participantes, existe una conciencia clara de que la IA debe
+complementar la práctica educativa, no sustituirla, siendo que la tecnología se percibe como un medio para
+anticipar riesgos y mejorar la atención al estudiante, siempre que se mantenga una supervisión pedagógica
+constante.
+
+
+
+
+Fig. 2: Distribución de factores asociados al abandono escolar
+
+
+                                                                                                pág. 321
+
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+
+En términos generales, los resultados reflejan una actitud favorable hacia la innovación, acompañada de
+una demanda explícita de acompañamiento institucional; los docentes que participaron en procesos de
+capacitación previa (25%) manifestaron mayor disposición para experimentar con herramientas de IA y
+reconocer su valor en la gestión del aprendizaje.
+La triangulación de resultados con los documentos institucionales permitió confirmar que el abandono
+escolar se asocia principalmente con factores académicos (rendimiento y asistencia) y socioemocionales
+(motivación y entorno familiar), coincidiendo con la relevancia de variables identificadas en estudios
+cuantitativos, la incorporación de IA, interpretada desde una visión cualitativa, se percibe como una
+estrategia complementaria para fortalecer la acción pedagógica, anticipar el riesgo y construir comunidades
+educativas más resilientes frente al abandono.
+
+DISCUSIÓN
+El análisis de los resultados evidencia que la implementación de modelos de inteligencia artificial (IA) en
+el ámbito educativo ofrece un potencial significativo para anticipar el riesgo de abandono escolar,
+permitiendo la intervención temprana en los casos identificados, la capacidad de los algoritmos para
+procesar grandes volúmenes de datos académicos, socioeconómicos y conductuales demuestra una ventaja
+comparativa frente a los métodos tradicionales de diagnóstico, que suelen depender de la observación
+docente o de registros administrativos fragmentados (Felipe et al., 2023).
+En este sentido, los resultados obtenidos muestran que las variables rendimiento académico y asistencia
+constituyen los factores más determinantes en la predicción del abandono escolar, esta conclusión coincide
+con Varela (2024) que destaca la relación directa entre el desempeño académico y la permanencia
+estudiantil; sin embargo, la IA permite no solo confirmar esta relación, sino también cuantificar el peso
+estadístico de cada variable y su interacción con otras dimensiones menos evidentes, como la participación
+escolar o el clima institucional.
+El uso de modelos supervisados, como las redes neuronales y los árboles de decisión, permitió simular
+escenarios diversos, obteniendo altos niveles de exactitud en la predicción de riesgo, estos modelos
+demostraron ser eficaces al integrar variables socioemocionales, históricas y contextuales, lo que amplía la
+comprensión de las causas multifactoriales del abandono. La interpretación de las salidas de los modelos,
+visualizadas en las Figuras 1 y 2, muestra cómo los patrones de riesgo pueden representarse de manera
+visual para facilitar la toma de decisiones por parte de las instituciones educativas y los equipos de
+orientación psicopedagógica.
+La heterogeneidad observada en el entorno familiar evidenciada por la amplitud de los bigotes en la Figura
+2 revela la influencia significativa que los factores externos al sistema educativo ejercen sobre la
+continuidad escolar.
+Los estudiantes provenientes de contextos familiares inestables o con limitado acompañamiento presentan
+mayores índices de deserción, situación que se agrava en zonas rurales o en instituciones con baja
+conectividad tecnológica, coincidiendo con lo Leyva & Márquez (2024) que subraya la necesidad de
+políticas educativas integrales que combinen la analítica de datos con acciones sociales y comunitarias.
+Los resultados muestran que la participación escolar, aunque presenta menor dispersión en comparación
+con otras variables, es un predictor estable del riesgo de abandono, los estudiantes con baja implicación en
+actividades extracurriculares o de liderazgo presentan una mayor probabilidad de desvinculación, este
+hallazgo refuerza lo establecido por Mestra (2023) que destaca la importancia de promover estrategias de
+aprendizaje activo y de pertenencia institucional, aspectos que pueden fortalecerse mediante plataformas
+digitales interactivas impulsadas por IA.
+Un aspecto relevante identificado es la brecha digital que aún persiste entre instituciones educativas, si bien
+los modelos de IA demuestran alta eficiencia en contextos con infraestructura adecuada, su efectividad
+disminuye en entornos con limitaciones tecnológicas o con datos incompletos, este desafío refleja la
+necesidad de fortalecer la formación docente en competencias digitales y de mejorar la interoperabilidad
+de los sistemas de información educativa, garantizando así una aplicación equitativa y sostenible de la
+analítica predictiva (Ovejas, 2024).
+En términos éticos, la aplicación de modelos de inteligencia artificial en la educación plantea debates
+relacionados con la privacidad de los datos estudiantiles y la transparencia de los algoritmos utilizados, la
+automatización del diagnóstico no debe sustituir el juicio pedagógico, sino complementarlo; en este sentido,
+el estudio propone la implementación de marcos normativos claros y la participación de los docentes en la
+interpretación de los resultados para evitar sesgos o decisiones descontextualizadas (Añapa et al., 2025) .
+Además, la discusión evidencia que el uso de IA en la educación no debe concebirse únicamente como una
+herramienta técnica, sino como una oportunidad para repensar la gestión educativa desde una perspectiva
+basada en evidencia, la integración de estos modelos permite optimizar recursos, mejorar la planificación
+
+
+
+                                                                                                     pág. 322
+
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+institucional y diseñar estrategias preventivas ajustadas a las necesidades reales de los estudiantes, esta
+visión se alinea con lo que mencionan Chen et al. (2020) respecto a las tendencias internacionales de
+educación inteligente y gestión del conocimiento.
+Los hallazgos del presente estudio confirman que la inteligencia artificial representa una revolución
+pedagógica y administrativa en el ámbito educativo, sin embargo, su impacto positivo dependerá de la
+capacidad de las instituciones para integrar la tecnología con prácticas pedagógicas humanistas y centradas
+en el estudiante.
+
+CONCLUSIÓN
+El presente estudio evidencia que la aplicación de modelos de inteligencia artificial (IA) en el ámbito
+educativo constituye una herramienta valiosa para la predicción del abandono escolar y la implementación
+de estrategias preventivas basadas en datos, la capacidad de estos modelos para integrar información
+académica, socioeconómica y emocional permite identificar patrones complejos que, de otro modo,
+pasarían inadvertidos en los métodos de evaluación tradicionales; los resultados obtenidos demuestran que
+las variables relacionadas con el rendimiento académico, la asistencia y el entorno familiar son factores
+decisivos para comprender las causas del abandono, reafirmando la relevancia de un enfoque
+multidimensional e interdisciplinario en la gestión educativa.
+La investigación resalta la necesidad de una infraestructura tecnológica sólida y una formación docente
+especializada, condiciones indispensables para la correcta implementación de la analítica predictiva en las
+instituciones educativas, si bien la IA muestra un alto potencial para mejorar la toma de decisiones, su
+efectividad depende del compromiso institucional con la calidad de los datos, la transparencia algorítmica
+y el uso ético de la información.
+El uso de inteligencia artificial en la educación debe entenderse como un proceso evolutivo hacia una
+gestión educativa basada en evidencia, en la que la tecnología se combine con una visión pedagógica
+humanista, para alcanzar un impacto sostenible, es imprescindible promover políticas públicas que
+fomenten la inclusión digital, la equidad en el acceso a herramientas tecnológicas y la colaboración entre
+investigadores, instituciones y organismos educativos.
+
+REFERENCIAS
+
+Betzabeth Vargas López, Y., Lorena, T., Sinche, Q., Hugo, L., Quinto, C., Gioconda, T., Espinoza, M.,
+      María, J., & Jiménez, A. (2025). Influencia de la integración de herramientas tecnológicas en la
+      motivación de los estudiantes de educación básica. Revista Latinoamericana de Calidad Educativa,
+      2(2), 25–33. https://doi.org/10.70625/RLCE/149
+Chen, L., Chen, P., & Lin, Z. (2020). Artificial Intelligence in Education: A Review. IEEE Access, 8,
+      75264–75278. https://doi.org/10.1109/ACCESS.2020.2988510
+Contreras, J., & Tarlly. (2022). Abandono escolar: una cuestión de perspectiva humana. Qualitas Revista
+      Científica, 24(24), 091–102. https://doi.org/10.55867/QUAL24.07
+Felipe, D., Gangotena, C., Diego, O., Pascal, G., Freddy, W., Taicus, P., & Walter, H. (2023). CAUSAS
+      Y EFECTOS DEL ABANDONO ESCOLAR EN ESCUELAS DE LA AMAZONÍA
+      ECUATORIANA. InnDev, 2(2), 67–74. https://doi.org/10.69583/INNDEV.V2N2.2023.63
+Franco, M. F. de, & Solórzano, J. L. V. (2020). Paradigmas, enfoques y métodos de investigación:
+      análisis teórico. MUNDO RECURSIVO, 3(1), 1–24.
+      https://www.atlantic.edu.ec/ojs/index.php/mundor/article/view/38
+German, C., Rios, G., Hidalgo Erique, T. C., Montesdeoca Guaicha, J. M., Alexandra, R., Malla, M.,
+      Janeth, S., Obando, C., Yoconda, C., & Luna, E. (2025). Integración de chatGPT dentro de las
+      clases de inglés: mejoras en la escritura y en la percepción de los alumnos. Revista
+      Latinoamericana de Calidad Educativa, 2(3), 269–276. https://doi.org/10.70625/RLCE/288
+Jagadeesan, S., Srinivasa Rao, K., Shamim, M., Otero-Potosi, S., Fuertes-Narváez, E., & Rao, A. (2023).
+      AI In Education: The Potential Impact of Intelligent Tutoring Systems and Personalized Learning.
+      European Chemical Bulletin, 2023, 1964–1975. https://doi.org/10.31838/ecb/2023.12.s1-B.193
+Jayakumar, V. M., Rajakumari, R., Alapati, P. R., Otero-Potosi, S., Malleswari, D. N., & Karthik, M.
+      (2025). Enhancing English Language Assessment in Educational Settings using Natural Language
+      Processing Techniques. 2025 3rd International Conference on Intelligent Systems, Advanced
+      Computing and Communication (ISACC), 438–443.
+      https://doi.org/10.1109/ISACC65211.2025.10969428
+Leyva, X. H., & Márquez, J. H. (2024). Análisis de la desafiliación escolar y los factores familiares en el
+      riesgo de abandono escolar de estudiantes de una escuela normal en México: Analysis of school
+
+
+
+                                                                                                  pág. 323
+
+Revista Latinoamericana de Calidad Educativa ISSN: 3028-8916
+
+      disaffiliation and family factors in the risk of school dropout among students at a normal ….
+      Revista RELEP- Educación y Pedagogía En Latinoamérica, 6(3), 31–44.
+      https://doi.org/10.46990/RELEP.2024.6.3.1557
+Luis Añapa Quiñónez, P., Armando, D., Pacheco, A., Alfredo, M., Castillo, P., Rivera Quiñónez, E. D.,
+      Linett, A., & Diaz, T. (2025). Inteligencia artificial: análisis de los riesgos en su integración en la
+      docencia, investigación y administración en las Instituciones de Educación Superior del Ecuador.
+      Revista Latinoamericana de Calidad Educativa, 2(4), 32–37. https://doi.org/10.70625/RLCE/320
+Mestra, J. C. M. (2023). Abandono escolar: Una interpretación de la realidad en instituciones educativas
+      públicas. GACETA DE PEDAGOGÍA, 46, 173–187. https://doi.org/10.56219/RGP.VI46.2076
+Morales, H. V., Antuna, V. A. M., & Gonzales, Y. U. kan C. (2024). Innovación Educativa: La IA como
+      herramienta para prevenir el abandono escolar. Memorias Del Concurso Lasallista de
+      Investigación, Desarrollo e Innovación, 11(2), 76–80.
+      https://doi.org/10.26457/MCLIDI.V11I2.4294
+Moreno-Guaicha, J. A., Salazar-Luna, P. I., & Escobar-Córdova, S. K. (2025). Innovación en estrategias
+      pedagógicas mediante herramientas de inteligencia artificial: Revisión sistemática. Revista Andina
+      de Educación, 8(2), 5432–5432. https://doi.org/10.32719/26312816.5432
+Naeem, M., Ozuem, W., Howell, K., & Ranfagni, S. (2023). A Step-by-Step Process of Thematic
+      Analysis to Develop a Conceptual Model in Qualitative Research. International Journal of
+      Qualitative Methods, 22.
+      https://doi.org/10.1177/16094069231205789;WGROUP:STRING:PUBLICATION
+Ovejas, I. S. (2024). Revisión bibliográfica narrativa para la conceptualización del abandono escolar
+      temprano: definición terminológica e índices de medición. Estudios Sobre Educación, 47, 7–33.
+      https://doi.org/10.15581/004.47.001
+Varela, O. J. (2024). Percepciones de directores, docentes y padres de familia sobre el abandono escolar
+      en el III Ciclo de Educación Básica en Choluteca. Paradigma: Revista de Investigación Educativa,
+      31(52), 105–124. https://doi.org/10.5377/PARADIGMA.V31I52.19494
+
+
+
+
+                                                                                                    pág. 324

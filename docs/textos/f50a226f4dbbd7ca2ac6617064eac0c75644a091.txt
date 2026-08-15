@@ -1,0 +1,1009 @@
+LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+       ISSN en línea: 2789-3855, mes, 2023, Volumen 4, Número 2, p 2293
+
+                                    DOI: https://doi.org/10.56712/latam.v6i2.3831
+      El uso de herramientas con Inteligencia Artificial en la
+       optimización de tareas administrativas del docente
+ The use of Artificial Intelligence tools to optimize teachers' administrative
+                                      tasks
+
+                                                                                Edwin Ricardo Chisag Pallmay
+                                                                                      echisagp@unemi.edu.ec
+                                                                      https://orcid.org/0009-0004-4858-0355
+                                                                                Universidad Estatal de Milagro
+                                                                                           Ambato – Ecuador
+
+                                                                      Verónica Alexandra Guamán Altamirano
+                                                                            guamanveronica1811@gmail.com
+                                                                      https://orcid.org/0009-0008-4943-2011
+                                                                              Universidad Técnica de Ambato
+                                                                                           Ambato – Ecuador
+
+                                                                            Sara Carolina Altamirano Cajilema
+                                                                                   karitoyjohanito@hotmail.es
+                                                                      https://orcid.org/0009-0000-6987-568X
+                                                                                Universidad Estatal de Milagro
+                                                                                            Ambato – Ecuador
+
+                                                                                   Sonia Isabel Sisa Sangucho
+                                                                                sonia.sisa@educacion.gob.ec
+                                                                      https://orcid.org/0009-0006-3488-7019
+                                                                                      Universidad Indoamérica
+                                                                                            Ambato – Ecuador
+
+                                                                                 Jenny Elizabeth Vargas Vaca
+                                                                       jennyelizabethvargasvaca@gmail.com
+                                                                      https://orcid.org/0009-0008-6242-4219
+                                                                                Universidad Estatal de Milagro
+                                                                                           Ambato – Ecuador
+
+                        Artículo recibido: 12 de abril de 2025. Aceptado para publicación: 26 de abril de 2025.
+                                                                   Conflictos de Interés: Ninguno que declarar.
+
+
+                                             Resumen
+Las tareas administrativas que realizan los docentes son procesos fundamentales para la calidad de
+la enseñanza, pero suelen ser demandantes en tiempo y recursos. Esta investigación se planteó como
+objetivo principal "determinar el impacto del uso de herramientas con inteligencia artificial en la
+optimización de las tareas administrativas de los docentes, mediante una investigación con enfoque
+mixto que contribuya a la mejora de la gestión educativa. La problemática abordada radica en la carga
+administrativa que enfrentan los docentes, lo que limita su capacidad para enfocarse en la pedagogía.
+La metodología se basó en un enfoque mixto, con un diseño no experimental. La población de estudio
+incluyó a 80 docentes de la Unidad Educativa Francisco Flor de la ciudad de Ambato, con una muestra
+de 35 participantes seleccionados mediante muestreo no probabilístico. Como instrumentos se
+utilizaron encuestas, para medir la percepción y actitudes de los docentes y entrevistas a docentes
+que utilizan plataformas como ChatGPT, Copilot, Gemini, etc. Los datos se procesaron con estadística
+descriptiva y análisis comparativo. Los resultados evidenciaron que la IA puede reducir hasta un 60%
+el tiempo dedicado a tareas repetitivas como elaboración de planificaciones y evaluaciones escritas.
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2293.
+
+En las conclusiones, se destaca que, el uso de herramientas con inteligencia artificial tiene un impacto
+positivo en la optimización de las tareas administrativas docentes. Su implementación no solo reduce
+tiempos y esfuerzo, sino que también eleva los estándares de calidad en la gestión educativa.
+       Palabras clave: inteligencia artificial, tareas administrativas, optimización, capacitación
+docente, gestión educativa
+
+
+
+                                              Abstract
+The administrative tasks performed by teachers are fundamental processes for the quality of teaching,
+but they are often demanding in terms of time and resources. The main objective of this research was
+to determine the impact of using artificial intelligence tools on optimizing teachers' administrative
+tasks, through a mixed-method approach that contributes to improving educational management. The
+problem addressed lies in the administrative burden teachers face, which limits their ability to focus
+on pedagogy. The methodology was based on a mixed-method approach, with a non-experimental
+design. The study population included 80 teachers from the Francisco Flor Educational Unit in the city
+of Ambato, with a sample of 35 participants selected through non-probability sampling. Surveys were
+used as instruments to measure teacher perceptions and attitudes, as well as interviews with teachers
+who use platforms such as ChatGPT, Copilot, Gemini, and others. The data were processed with
+descriptive statistics and comparative analysis. The results showed that AI can reduce the time spent
+on repetitive tasks such as writing plans and written evaluations by up to 60%. The conclusions
+highlight that the use of artificial intelligence tools has a positive impact on the optimization of
+teachers' administrative tasks. Their implementation not only reduces time and effort but also raises
+quality standards in educational management.
+        Keywords: artificial intelligence, administrative tasks, optimization, teacher training,
+educational management
+
+
+
+
+Todo el contenido de LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades,
+publicado en este sitio está disponibles bajo Licencia Creative Commons.
+
+Cómo citar: Chisag Pallmay, E. R., Guamán Altamirano, V. A., Altamirano Cajilema, S. C., Sisa
+Sangucho, S. I., & Vargas Vaca, J. E. (2025). El uso de herramientas con Inteligencia Artificial en la
+optimización de tareas administrativas del docente. LATAM Revista Latinoamericana de Ciencias
+Sociales y Humanidades 6 (2), 2293 – 2313. https://doi.org/10.56712/latam.v6i2.3831
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2294.
+
+INTRODUCCIÓN
+
+En América Latina, la sobrecarga administrativa en instituciones educativas se ha convertido en una
+problemática crítica que limita la calidad de la enseñanza. Según un informe de la UNESCO (2023), el
+60% de los docentes en la región dedican más del 30% de su tiempo laboral a tareas burocráticas
+(elaboración de informes, registro de calificaciones, planificación curricular), reduciendo su capacidad
+para innovar pedagógicamente o atender las necesidades individuales de los estudiantes. Esta
+situación se agrava en contextos de escasos recursos, donde la falta de personal administrativo obliga
+a los educadores a asumir roles múltiples, generando estrés laboral y, en muchos casos, deserción
+docente (BID, 2022).
+
+El uso de herramientas de Inteligencia Artificial (IA) surge como una alternativa transformadora para
+optimizar estos procesos. Plataformas como ChatGPT, Gemini, Copilot, entre otras, permiten
+automatizar la generación de informes, diseñar planes de clase personalizados y corregir evaluaciones
+con un 95% de precisión (MIT, 2023). Un estudio realizado en Argentina y Colombia demostró que la IA
+reduce en un 50% el tiempo dedicado a la planificación académica y mejora la consistencia en la
+retroalimentación a estudiantes (OECD, 2023). Sin embargo, su implementación enfrenta desafíos
+como la resistencia al cambio tecnológico, la brecha digital en zonas rurales y la falta de regulaciones
+claras sobre el uso ético de datos educativos (UNESCO, 2023).
+
+En Ecuador, el Ministerio de Educación (2023) ha promovido la digitalización de la gestión escolar, pero
+persisten prácticas obsoletas. Por ejemplo, el 70% de las instituciones aún utilizan formatos físicos
+para el registro de asistencia y notas, un sistema vulnerable a errores y pérdida de información (INEC,
+2023). Este escenario contrasta con países como Finlandia, donde la integración de IA en plataformas
+como "Wilma" ha optimizado la comunicación entre docentes, estudiantes y familias, además de
+agilizar procesos evaluativos (European Commission, 2022).
+
+Como señala Hernández et al. (2022) en su estudio sobre gestión educativa en Latinoamérica "La
+saturación de funciones administrativas es uno de los principales factores de desgaste profesional
+docente, especialmente en instituciones públicas donde los recursos tecnológicos son limitados" (p.
+45).
+
+En la Unidad Educativa "Francisco Flor" de la ciudad de Ambato, Ecuador, se ha identificado una
+problemática crítica en el ámbito administrativo educativo: la excesiva carga burocrática que recae
+sobre los docentes, limitando su capacidad para enfocarse en la innovación pedagógica.
+Observaciones preliminares evidencian que el 70% del tiempo laboral de los educadores se destina a
+tareas repetitivas como la elaboración de informes, registro de calificaciones, planificación curricular
+y elaboración de exámenes, procesos que aún se realizan de manera manual en su mayoría. Esta
+situación no solo genera estrés laboral, sino que también reduce la calidad de la interacción docente-
+estudiante, afectando directamente el proceso de enseñanza-aprendizaje.
+
+La mayoría de docentes de la Unidad Educativa Francisco Flor nunca han utilizado herramientas con
+IA, muchos la perciben como una amenaza laboral y carecen de formación digital básica, situación
+agravada por una infraestructura tecnológica insuficiente, solo cuentan con un laboratorio de
+computación y conectividad limitada. Esta resistencia se fundamenta en una formación docente
+obsoleta en competencias digitales, bajo presupuesto para tecnología y una cultura institucional
+anclada en métodos tradicionales, requiriendo urgentemente un plan de capacitación progresivo.
+
+La Inteligencia Artificial (IA) se presenta como una herramienta tecnológica con potencial para
+transformar la educación. Su aplicación, en conjunto con las Tecnologías de la Información y
+Comunicación (TIC), puede mejorar el desempeño docente y el aprendizaje de los estudiantes (García-
+Martínez et al., 2023). Sin embargo, es crucial establecer políticas de uso que contemplen la ética y
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2295.
+
+responsabilidad tanto por parte de estudiantes como de docentes, según señala la UNESCO (2023),
+dentro de las aplicaciones específicas de la IA, destaca la IA generativa (GenAI), que automáticamente
+genera información y contenidos adaptados al lenguaje y cultura de los estudiantes, contribuyendo al
+desarrollo de competencias en la educación (UNESCO, 2023).
+
+Correa, et al., (2023) La inteligencia artificial ha emergido como una herramienta crucial para los
+educadores. Estos autores subrayan que al implementar IA en sus métodos de enseñanza, los
+docentes pueden mejorar significativamente tanto la eficiencia como la efectividad de sus prácticas
+pedagógicas. Esto se debe a que la IA puede automatizar ciertas tareas administrativas, permitiendo
+que los docentes se enfoquen más en la interacción directa con los estudiantes y en la personalización
+del proceso educativo.
+
+El uso de chatbots de IA, como ChatGPT, en el aula permite una gestión más eficiente del tiempo y
+recursos. Estos bots actúan como asistentes de enseñanza que responden a las preguntas de los
+estudiantes, brindan explicaciones y sugieren recursos adicionales. Esto libera a los profesores para
+que se concentren en otras tareas importantes, como el desarrollo de actividades y la interacción con
+los estudiantes (Sidekerskienė, 2024).
+
+La inteligencia artificial en la educación (IAEd) ha experimentado un avance significativo en los últimos
+años, y la aparición de chatGPT a finales de 2022 ha abierto nuevas posibilidades y desafíos en la
+práctica docente. Los avances en la computación y el procesamiento de información han impulsado la
+proliferación de aplicaciones de IA en el ámbito educativo. En las últimas dos décadas, la investigación
+sobre IAEd ha crecido notablemente, especialmente a partir de 2015. Durante su corta historia, la IAEd
+ha experimentado diversas transformaciones.
+
+El desarrollo y la aplicación de la tecnología de IA, especialmente en educación, fomenta la reforma
+educativa e influye profundamente en las estrategias de aprendizaje de los estudiantes. La IAEd puede
+ayudar a los docentes a crear materiales didácticos, recursos de presentación y evaluaciones más
+precisas. Además, el IAEd puede ayudar a los estudiantes a adaptar sus métodos de aprendizaje
+tradicionales a sus necesidades individuales, facilitando una enseñanza inteligente que se adapte a las
+necesidades de cada estudiante (Nasir, 2024).
+
+El uso de Inteligencia Artificial (IA) para crear contenido, imágenes y pantallas está creciendo en la
+educación y otros campos, esto se debe a que la inteligencia artificial permite automatizar tareas que
+antes requerían mucho tiempo y recursos humanos. La creación de contenido de IA se refiere a la
+capacidad de la tecnología para generar texto y contenido multimedia de manera autónoma, incluidas
+imágenes, vídeo y audio. Por ejemplo, los modelos de lenguaje natural se pueden usar para generar
+resúmenes de texto o incluso escribir artículos completos en función de un conjunto determinado de
+parámetros. Un ejemplo del uso de la inteligencia artificial en la educación es el chatbot ChatGPT, que
+utiliza la inteligencia artificial para interactuar con los alumnos dando respuestas y soluciones a sus
+dudas (Silva, 2023).
+
+El estudio realizado por Rosi, (2024) destaca la compleja relación entre la IA y la educación, y muestra
+tanto los posibles beneficios como los desafíos a los que se enfrentan los educadores al integrar estas
+tecnologías en sus prácticas docentes. Los resultados muestran una división de opiniones sobre la IA
+en la educación. Los defensores sostienen que la IA puede beneficiar significativamente tanto a los
+profesores como a los estudiantes al mejorar las habilidades docentes, apoyar las tareas
+administrativas y preparar a los estudiantes para los futuros escenarios tecnológicos. Por el contrario,
+quienes se oponen expresan su preocupación por las cuestiones éticas, las posibles reducciones en la
+calidad del aprendizaje y el aumento de la dependencia de la tecnología, lo que puede disminuir la
+interacción humana.
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2296.
+
+El autor sugiere que, si bien la IA puede mejorar las experiencias educativas, hay que prestar especial
+atención a las implicaciones éticas y al posible impacto en los métodos de enseñanza tradicionales.
+
+Para Megaprofe, (2025) La enseñanza moderna enfrenta el reto de adaptarse a las necesidades
+cambiantes de los estudiantes, un desafío que supera los métodos tradicionales, los docentes buscan
+crear clases dinámicas y efectivas, pero a menudo se encuentran con obstáculos como la carga
+administrativa, los conflictos de horarios y las exigencias de planificación. En este contexto, las
+herramientas de inteligencia artificial (IA) para la planificación de lecciones surgen como soluciones
+prácticas y eficientes. Estas herramientas permiten personalizar el aprendizaje y utilizar datos para
+diseñar enfoques más interactivos y prácticos.
+
+Al seleccionar una herramienta de IA, se debe priorizar características como opciones de aprendizaje
+adaptativo, integración sencilla con métodos pedagógicos existentes y la capacidad de evaluar el
+progreso de los estudiantes. Entre las herramientas destacadas en la elaboración de planes de clase y
+lecciones se encuentran:
+
+ClickUp, que simplifica la planificación educativa con plantillas innovadoras y personalizables, además
+de asistentes de IA que apoyan en la creación de planes alineados con los estándares educativos, sin
+embargo, sus funciones avanzadas pueden ser complejas para usuarios principiantes.
+
+Entre otras opciones útiles, OpenAI ChatGPT contribuye con la generación de contenido educativo y
+actividades interactivas, aunque presenta limitaciones en personalización y enfoque genérico.
+ChatGPT puede agilizar el proceso de planificación de las lecciones, lo que permite a los profesores
+generar esquemas rápidamente, por ejemplo, un estudio descubrió que se podía crear y perfeccionar
+un plan integral de lecciones de ciencias en solo 30 minutos (Powell et al., 2024).
+
+Learnt.ai ofrece funcionalidad para diseñar lecciones alineadas con estándares educativos y
+actividades personalizadas, pero sus capacidades también dependen de la calidad de los insumos.
+
+En el caso de Auto Classmate, basado en tecnología GPT-4, facilita la creación de planes únicos con
+herramientas como chatbots y generación de preguntas creativas, aunque su personalización también
+es reducida.
+
+Jasper permite crear contenido de alta calidad para planes de clase con una interfaz similar a Google
+Docs, ofreciendo eficiencia y rapidez; sin embargo, no funciona sin conexión y tiene límites de
+contenido.
+
+PlanifAI resulta ideal para generar planes rápidos mediante una interfaz sencilla, aunque carece de
+funciones avanzadas.
+
+Curipod combina tecnología y creatividad para elaborar lecciones dinámicas que integran texto,
+encuestas e imágenes, siendo excelente para fomentar la colaboración estudiantil, aunque no es tan
+útil para evaluaciones estructuradas.
+
+Microsoft (2023) "Microsoft Copilot es un complemento de inteligencia artificial que ayuda a los
+usuarios a mejorar su productividad diaria, desde empezar con una página en blanco hasta encontrar
+las palabras perfectas. Simplifica las tareas, aumenta la eficiencia y asegura que los usuarios se
+centren en lo más importante."
+
+Gemini, desarrollado por Google AI, es un modelo de lenguaje avanzado que puede realizar diversas
+tareas de procesamiento del lenguaje natural, como traducción, generación de texto y respuesta a
+preguntas. Gemini está basado en arquitecturas de transformadores y ha sido entrenado con una gran
+cantidad de datos (Google AI. (2023).
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2297.
+
+En general, estas herramientas de IA representan un avance significativo en la enseñanza, permitiendo
+optimizar tiempos, personalizar contenidos y atender mejor las necesidades individuales de los
+estudiantes, haciendo el aprendizaje más eficiente, enriquecedor e impactante.
+
+Según Merodio, (2023) manifiesta que, para elaborar prompts efectivos en ChatGPT, es fundamental
+utilizar un lenguaje claro, preciso y directo, evitar plantear preguntas demasiado amplias o vagas, y
+emplear palabras clave específicas y relevantes para el tema, incluir detalles o contexto adicional ayuda
+a ChatGPT a entender mejor la solicitud y proporcionar respuestas más precisas.
+
+Para crear un prompt efectivo en ChatGPT, es crucial definir de manera clara el propósito y los objetivos
+del prompt. Además, es esencial investigar y entender a la audiencia, seleccionar la voz y personalidad
+adecuada, proporcionar el contexto y la información necesarios, y ser explícito y preciso en la redacción
+del prompt (Fiz, 2023).
+
+Es importante seguir los siguientes pasos para crear un prompt efectivo:
+
+Paso 1: Define el propósito y objetivo del prompt. Determina qué información o acción deseas obtener
+de GPT ¿Buscas una respuesta específica? ¿Quieres que el modelo genere ideas creativas? Asegúrate
+de tener claro el propósito del prompt.
+
+Paso 2: Proporciona contexto y claridad. Escribe una oración o dos que proporcionen contexto al
+modelo sobre lo que necesitas, asegúrate de que el prompt sea claro y específico para que GPT
+comprenda exactamente lo que se espera de él.
+
+Paso 3: Haz preguntas o instrucciones concisas. Formula preguntas o
+
+instrucciones directas y concisas para que GPT se enfoque en lo que se espera de él, evita preguntas
+ambiguas o demasiado generales.
+
+Paso 4: Incluye ejemplos, si es necesario. Si crees que GPT podría beneficiarse de ejemplos para
+entender mejor lo que necesitas, incluye uno o dos ejemplos en el prompt, asegúrate de que los
+ejemplos sean relevantes y representativos.
+
+Paso 5: Revisa y ajusta el prompt. Relee el prompt y asegúrate de que esté bien estructurado y no tenga
+errores gramaticales o de ortografía, asegúrate de que el lenguaje sea neutral y no sesgad, si es
+necesario, ajusta el prompt para mejorarlo.
+
+Paso 6: Prueba el prompt y evalúa la respuesta. Utiliza el prompt con GPT y evalúa la respuesta que
+recibes, si no obtienes el resultado deseado, ajusta el prompt y vuelve a intentarlo, puede ser necesario
+refinar y probar el prompt varias veces antes de obtener resultados óptimos.
+
+Paso 7: Aprende de la retroalimentación y mejora. Utiliza la retroalimentación obtenida de las pruebas
+para mejorar tus habilidades en la creación de prompts. Aprende de los errores y éxitos y aplica ese
+conocimiento en futuros prompts (Vidakovic, 2024).
+
+En la actualidad, la alfabetización digital constituye un elemento esencial para involucrarse de manera
+activa en los procesos de comunicación y manejo del conocimiento (Macas et al., 2021). Este concepto
+abarca la habilidad de emplear las tecnologías de la información y la comunicación (TIC) para acceder,
+analizar, crear y compartir información en distintos contextos.
+
+Un docente que posee una sólida alfabetización digital y habilidades en gestión del conocimiento tiene
+la capacidad de elaborar contenidos digitales de manera eficiente. Esto es posible gracias al desarrollo
+de su competencia digital y su alfabetización informacional, lo que le permite buscar información
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2298.
+
+pertinente y datos relevantes en internet, seleccionar recursos educativos adecuados y utilizar
+herramientas idóneas para diseñar y editar materiales digitales. Además, está en condiciones de
+coordinar eficientemente el trabajo entre los miembros del claustro, facilitando la creación colaborativa
+de contenidos digitales, sin embargo, en Ecuador los profesores no siempre poseen estas habilidades
+o competencias digitales (Granda et al., 2021). Este criterio coincide con el estudio realizado por
+Zumba y Paredes (2022), quienes revelaron que, aunque los docentes logran manejar ciertas
+competencias digitales de manera satisfactoria y en un nivel intermedio, existen otras competencias
+que presentan un bajo grado de desarrollo. Por ello, se requiere un proceso de alfabetización digital
+para fortalecer estas áreas y alcanzar un manejo integral de las tecnologías digitales.
+
+Como señala Tamayo (2020), las universidades son las instituciones encargadas de producir
+conocimiento, por lo que es fundamental que sus profesores cuenten con una alfabetización digital
+que les permita estructurar, almacenar y compartir información mediante las TIC.
+
+Las tareas administrativas son de suma importancia para los docentes, ya que sirven para planear el
+orden y el funcionamiento de los procesos educativos. Dentro de estas actividades se encuentra la
+planificación de clases, gestión de recursos didácticos, elaboración de informes y seguimiento del
+progreso académico de los estudiantes (Fernández, 2020). A pesar de que estas tareas no califican
+como parte del proceso de enseñanza-aprendizaje dentro del aula, son básicas para la organización
+del trabajo educativo y para alcanzar sus metas pedagógicas. Según González (2021) el cumplimiento
+adecuado de estas actividades administrativas tiene un impacto positivo en la calidad educativa y en
+la satisfacción estudiantil.
+
+No obstante, dentro de todo, las tareas administrativas son una de las que más combustible a la carga
+laboral del docente agregan estrés, en particular porque estas actividades se vuelven acumulativas y
+consumen demasiado tiempo. Una buena ilustración de este concepto sería el empleo de sistemas
+totalmente manuales para el registro de información y preparación de informes. Según López et al.
+(2022), estas prácticas limitan el tiempo efectivo de clases. Aun así, es importante considerar que este
+tipo de tareas pueden ser realizadas eficientemente por diferentes sistemas de tecnología
+automatizada, programas informáticos o software dedicados a la gestión educativa, que según Pérez
+(2023) permiten disminuir la carga de trabajo docente, redistribuyendo el tiempo a otras actividades
+pedagógicas.
+
+En los últimos años, la adopción de herramientas de inteligencia artificial ha demostrado ser una
+opción valiosa para mejorar las funciones administrativas en los procesos educativos. Estas
+tecnologías facilitan la planificación, el análisis de datos académicos y la generación automática de
+informes, lo que optimiza la utilización del tiempo y aumenta la precisión en la gestión (Rodríguez et
+al., 2024). Estudios recientes sugieren que la integración de tecnología en las instituciones de
+educación superior fomenta un modelo más eficiente y centrado en el aprendizaje, en beneficio tanto
+de los docentes como de los alumnos (Gómez, 2023).
+
+Por otro lado, la gestión educativa en Ecuador afronta varios retos, entre ellos, la falta de presupuesto
+y la falta de formación para los administradores de la escuela (Meza et al., 2020). Otro factor desafiante
+de la gestión educativa es la falta de liderazgo pedagógico y la debilidad en cuanto a la mejora de la
+calidad continua (Mejía, 2021).
+
+Tamayo (2024) describe que las instituciones educativas en Ecuador están afectadas por una marcada
+burocratización que obstaculiza la calidad educativa y compromete tanto la autonomía de las
+instituciones como la eficiencia de los docentes. Entre los principales factores responsables de este
+problema se encuentran el centralismo en la toma de decisiones y la sobrecarga de tareas
+administrativas asignadas a los educadores. Según el estudio, la burocracia institucional genera rigidez
+en el funcionamiento de los centros educativos, desmotivación entre los profesores y dificultades para
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2299.
+
+adaptar las necesidades educativas a los métodos de enseñanza. Como solución, Tamayo propone
+fortalecer la profesionalización docente y otorgar mayor autonomía a las instituciones educativas para
+reducir el enfoque funcionalista y mejorar los resultados educativos.
+
+Por otro lado, Guerrero et al. (2024) destacan que la sobrecarga administrativa de los docentes es una
+preocupación creciente que amenaza la base del sistema educativo en Ecuador. El incremento de
+tareas burocráticas y las precarias condiciones laborales afectan negativamente la planificación
+pedagógica y disminuyen la motivación de los profesores. En su investigación, se señala que un 85%
+de los docentes considera que estas cargas obstaculizan una planificación eficiente, mientras que un
+79% expresa insatisfacción por los bajos salarios que reciben. Estos factores conducen al desgaste
+emocional y físico de los educadores, afectando la calidad del proceso de enseñanza y aprendizaje.
+
+Los mismos autores también subrayan que los educadores enfrentan una serie de condiciones
+adversas, como aulas en mal estado, exceso de estudiantes por salón y violencia laboral, además de
+una falta de autonomía en las decisiones pedagógicas. Todo esto incrementa la fatiga física y mental
+de los docentes, deteriorando su desempeño profesional. Para mitigar esta problemática, Guerrero et
+al. (2024) sugieren implementar medidas que reduzcan la carga administrativa, mejorar las
+condiciones laborales y garantizar un entorno más equitativo y saludable para los educadores. Esto no
+solo beneficiaría a los docentes, sino también aseguraría mejores oportunidades para los estudiantes.
+
+El desempeño docente abarca las capacidades, conocimientos y habilidades que poseen los maestros
+para realizar su labor educativa de manera efectiva, no se limita únicamente a transmitir
+conocimientos, sino que también incluye la habilidad de motivar, orientar y evaluar el progreso
+académico de los estudiantes (Korshunov et al., 2021). Por ello, es crucial fomentar el desarrollo
+profesional continuo y proporcionar a los docentes las herramientas necesarias para optimizar su
+desempeño. En el contexto ecuatoriano, la gestión educativa y el desempeño docente están
+íntimamente relacionados, una gestión eficiente provee el entorno y los recursos adecuados para que
+los docentes realicen su trabajo de manera óptima, mientras que un desempeño efectivo fortalece la
+gestión al mejorar los resultados académicos y propiciar un ambiente favorable para el aprendizaje
+(Hallinger at al., 2022).
+
+Entre las estrategias fundamentales para optimizar el desempeño docente en las escuelas
+ecuatorianas destaca la provisión de oportunidades de desarrollo profesional. Aunque en la actualidad
+estas oportunidades son limitadas, invertir en capacitación y formación permite a los docentes adquirir
+nuevas habilidades, mejorar su enseñanza y elevar el rendimiento académico de los estudiantes.
+Además, la formación continua contribuye a mantener a los educadores actualizados en los avances
+de su campo, lo que incrementa su motivación y compromiso con su labor. Este enfoque no solo mejora
+la práctica docente, sino también establece un camino hacia una educación más robusta y efectiva.
+
+Otro elemento esencial para fortalecer el desempeño docente es la promoción de una cultura escolar
+colaborativa y solidaria. Este aspecto influye directamente en el rendimiento de los educadores y sus
+estudiantes, fomentando un entorno positivo y motivador. Al construir un ambiente escolar que valore
+y respalde a los docentes, se incrementa su satisfacción laboral y se reduce el estrés asociado a su
+labor (Pujilestari, 2023). Una cultura escolar sólida no solo beneficia a los educadores, sino que
+también contribuye al desarrollo integral de los estudiantes, consolidando la calidad educativa en
+general.
+
+Según Carrera (2021) en su análisis realizado sobre el Acuerdo Ministerial MINEDUC-2019-00011-A,
+menciona, que éste busca reducir las actividades administrativas de los docentes. Este acuerdo
+establece que el Estado debe implementar acciones necesarias para garantizar este derecho, y
+propone aliviar la carga administrativa de los docentes mediante la implementación de ciclos de
+refuerzo académico dirigidos a estudiantes con bajo rendimiento o con necesidades educativas
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2300.
+
+específicas. Para ello, los educadores debían realizar una planificación basada en los requerimientos
+de cada estudiante, elaborar reportes de resultados, y mantener comunicación con los padres o
+representantes de los alumnos. Sin embargo, no se consideró el tiempo invertido por los docentes en
+tareas como la creación y calificación de pruebas, la subida de documentos a plataformas educativas,
+el diseño de exámenes supletorios, ni la realización de actividades de recuperación académica.
+
+Aunque el acuerdo intentaba limitar ciertas exigencias administrativas y centrar a los docentes en
+actividades pedagógicas, en la práctica, estas tareas siguieron vinculándose a nuevas
+responsabilidades como la planificación de proyectos escolares y actividades para asignaturas
+específicas como Desarrollo Humano Integral. Según lo dispuesto por Milton Luna, entonces ministro
+de educación, el propósito era eliminar cargas administrativas innecesarias y priorizar el tiempo de los
+docentes dentro del aula. Si bien esto representaba un esfuerzo por mejorar la gestión pedagógica, no
+siempre implicó una reducción real en la carga laboral de los docentes, ya que las actividades
+administrativas continuaron siendo una parte significativa de su labor.
+
+Dicho lo anterior, la presente investigación plantea como objetivo general determinar el impacto del
+uso de herramientas con inteligencia artificial en la optimización de las tareas administrativas de los
+docentes, mediante una investigación con enfoque mixto que contribuya a la mejora de la gestión
+educativa. En sus objetivos específicos, se proponen indagar sobre las herramientas de IA más
+utilizadas para automatizar tareas administrativas de los docentes; además se plantea diagnosticar
+los principales desafíos técnicos, formativos y actitudinales en la adopción de estas herramientas con
+inteligencia artificial por parte de los docentes; y finalmente evaluar el impacto del exceso de tareas
+administrativas en la carga laboral docente, contrastando grupos que usan vs grupos que no usan
+herramientas con IA. Por lo tanto, estos objetivos responden a la pregunta central de investigación:
+¿Cómo el uso de herramientas con inteligencia artificial puede optimizar las tareas administrativas de
+los docentes?
+
+METODOLOGÍA
+
+La investigación se llevó a cabo utilizando un enfoque mixto, que combina metodologías tanto
+cuantitativas como cualitativas. Inicialmente, se implementó una fase cuantitativa enfocada en la
+recolección de datos numéricos y su análisis mediante métodos estadísticos, con el propósito de
+analizarlos y extrapolar resultados aplicables a un grupo determinado o para interpretar un fenómeno
+específico (Arteaga, 2020). Este enfoque permitió evaluar la percepción de los estudiantes respecto a
+la asignatura de historia, empleando como herramienta principal la técnica de la encuesta.
+
+Posteriormente, se llevó a cabo una investigación cualitativa que, según Flick (2023), resulta
+indispensable para comprender fenómenos sociales desde la perspectiva de los participantes,
+explorando significados y contextos ocultos. Por ello, se aplicó una entrevista a un grupo de docentes
+que, si utilizan o conocen de las herramientas de IA, con el objetivo de evaluar el impacto que el uso de
+estas herramientas ha generado en su labor docente.
+
+Además, se empleó un cuestionario de 10 preguntas basadas en la escala de Likert, dirigido a 35
+docentes, pertenecientes a la Unidad Educativa Francisco Flor, del sector público, durante el período
+de 2025. Este instrumento, elaborado en formato digital mediante la plataforma Google Forms, fue
+aplicado previa autorización del Rector de la institución. Este procedimiento permitió analizar aspectos
+como el nivel de conocimiento y la percepción que tienen los docentes con respecto al uso de
+herramientas de IA.
+
+El diseño del presente estudio es de tipo descriptivo, ya que se centró en recopilar información de los
+docentes acerca de sus actitudes, creencias y experiencias relacionadas con el uso de herramientas
+de IA, sin modificar ni alterar las condiciones del entorno. Este enfoque busca principalmente
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2301.
+
+caracterizar fenómenos sin manipular variables, mediante la observación sistemática, se recolectan
+datos de las variables de estudio para luego medirlas (Sampieri, 2023).
+
+Este trabajo incluyó un diseño correlacional, el cual permitió analizar la relación entre las variables, uso
+de las herramientas de IA, y las tareas administrativas de los docentes. Según Arias (2021), el objetivo
+principal de este tipo de estudio es determinar cómo una variable se comporta en función de otra
+relacionada. En este enfoque, ambas variables se analizan en relación mutua sin prevalecer ninguna
+sobre la otra, y el orden de las variables no altera los resultados obtenidos.
+
+Asimismo, el estudio adoptó un diseño no experimental, caracterizado por la ausencia de manipulación
+de las variables. En lugar de intervenir en el contexto, se observó la situación actual utilizando
+herramientas como encuestas y entrevistas. Este enfoque permitió evaluar los fenómenos en su
+estado natural, proporcionando datos valiosos sobre las dinámicas existentes sin influir en ellas.
+
+RESULTADOS
+
+Este estudio investigó sobre el uso de herramientas de IA en la optimización de tareas administrativas
+de los docentes de la Unidad Educativa “Francisco Flor”. Se consideraron los indicadores
+correspondientes que facilitaron medir la percepción de los docentes sobre el uso de herramientas de
+IA, a través de una encuesta, así mismo se aplicó una entrevista a los docentes que sí utilizan
+herramientas de IA, para contrastar sus percepciones con las de los docentes que las utilizan.
+
+Gráfico 1
+
+Carga horaria fuera del horario laboral
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+En relación a la gráfica presentada se puede evidenciar que una gran mayoría (80%) reconoce que las
+tareas administrativas desbordan el horario regular. Esto pone en evidencia la necesidad de
+reestructurar o automatizar estas actividades para mejorar el equilibrio entre la vida laboral y personal.
+El grupo neutral (13.3%) podría representar a quienes ocasionalmente logran cumplir con sus funciones
+dentro del horario, mientras que el 6.7% que está en desacuerdo probablemente cuenta con estrategias
+personales o apoyo institucional para gestionar su tiempo de manera más efectiva.
+
+
+
+
+            LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2302.
+
+Gráfico 2
+
+Tiempo dedicado a la planificación semanal
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+El 73.3% indica que las planificaciones consumen mucho tiempo, lo que reafirma la carga
+administrativa mencionada en la pregunta anterior, mientras que el 26.7% que se mantiene neutral
+podría incluir docentes con menor carga horaria o experiencia en el uso de formatos que simplifican la
+planificación. No hubo respuestas en desacuerdo, lo cual refuerza la tendencia general.
+
+Gráfico 3
+
+Estrés generado por la carga administrativa
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+De acuerdo a la gráfica presentada, más de la mitad de los docentes (53,3%) sienten que el trabajo
+administrativo afecta su salud emocional. El 36.7% que está neutral podría estar en una etapa
+
+
+
+
+            LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2303.
+
+intermedia de adaptación o resistencia, mientras que el 10% en desacuerdo puede haber desarrollado
+mecanismos efectivos de manejo del estrés o tener una menor carga laboral.
+
+Gráfico 4
+
+Capacitación reciente en tecnologías educativas
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+Haciendo referencia al análisis de la tabla, el 60% refleja una preocupante falta de formación reciente,
+lo cual representa una barrera formativa real. El 26.7% con experiencia reciente en el uso de tecnologías
+educativas puede convertirse en agentes multiplicadores, lo que beneficia la calidad educativa, y el
+13.3% neutral podría referirse a quienes han recibido capacitación no especializada o informal.
+
+Gráfico 5
+
+Infraestructura tecnológica institucional
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+La inmensa mayoría (83,3%) considera insuficiente la infraestructura, lo que limita gravemente la
+adopción de IA. Solo un 6.7% cree que sí es adecuada, lo cual podría reflejar experiencias personales
+
+
+
+            LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2304.
+
+aisladas. Esta es una barrera técnica crítica que debe atenderse antes de cualquier implementación,
+para una adopción eficiente en el uso de herramientas de IA.
+
+Gráfico 6
+
+Familiaridad con herramientas de IA
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+El 50% no tiene familiaridad con herramientas con IA, y un 40% está indeciso. Esto muestra claramente
+un vacío en el conocimiento práctico y teórico sobre estas herramientas, lo que no les permite ajustar
+sus enfoques de enseñanza y sobre todo optimizar sus actividades como la realización de planes de
+clase o lecciones. El 10% que sí las conoce representa un punto de partida para proyectos piloto o
+programas de capacitación focalizados.
+
+Gráfico 7
+
+Dificultades al utilizar herramientas de IA
+
+
+
+
+            LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2305.
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+Según los resultados obtenidos, el 46.7% ha tenido dificultades al utilizar herramientas de IA, lo que
+puede ser una consecuencia directa de la falta de formación y apoyo técnico. El alto porcentaje neutral
+(43.3%) podría indicar desconocimiento o falta de experiencia directa. El 10% que no ha tenido
+problemas probablemente forma parte del grupo con mayor formación o familiaridad con estas
+herramientas que buscan reducir su carga laboral.
+
+Gráfico 8
+
+Preferencia por métodos tradicionales frente a la IA
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+De acuerdo al análisis del gráfico se distribuye de la siguiente manera: Un 40% percibe la IA como una
+barrera para el tiempo de aprendizaje, lo cual es un desafío actitudinal importante. Sin embargo, un
+36.7% está abierto a cambiar métodos, mostrando disposición a innovar. El grupo neutral puede
+beneficiarse de demostraciones prácticas para formar una opinión clara.
+
+
+
+
+            LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2306.
+
+Gráfico 9
+
+Percepción sobre ahorro de tiempo con IA
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+De acuerdo a la gráfica presentada, la mayoría aún no tiene una postura firme, lo que probablemente
+se deba a la falta de experiencias directas con IA. El 40% que sí ve un beneficio evidencia que, una vez
+usadas, estas herramientas pueden demostrar su valor. El 13.3% que está en desacuerdo puede no
+haber percibido mejora en sus actividades administrativas tras usarlas, debido a la falta de experiencia
+en el adecuado manejo de estas herramientas.
+
+Gráfico 10
+
+Disposición a capacitarse en IA
+
+
+
+
+Fuente: elaboración propia en base a encuesta a docentes.
+
+Este es el resultado más esperanzador: una gran mayoría (73,3%) del personal docente encuestado,
+está dispuesto a capacitarse. Esta disposición es clave para el éxito de cualquier estrategia de
+
+
+
+            LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2307.
+
+incorporación de IA, debido a que con la adopción de esta tecnología es evidente el incremento en su
+nivel de productividad, además de acceder a recursos innovadores y un mejoramiento en sus
+competencias digitales. El 26.7% neutral puede ser influenciado positivamente mediante motivación,
+acompañamiento y experiencias prácticas.
+
+Análisis de las Entrevistas aplicadas a docentes que sí utilizan herramientas de IA
+
+Herramientas de IA utilizadas y su aplicación en tareas administrativas
+
+Los cinco docentes entrevistados reportaron el uso frecuente de herramientas como ChatGPT, Google
+Gemini, Microsoft Copilot, y Teachy, la mayoría coincidió en que estas aplicaciones son empleadas
+principalmente para la planificación de clases, la elaboración de pruebas y la redacción de informes
+académicos o administrativos. Por ejemplo, una docente explicó que usa ChatGPT para generar
+borradores de planificaciones semanales, los cuales luego adapta según el contexto de su grupo de
+estudiantes. Otro docente mencionó cómo Copilot le ha facilitado la creación automática de rúbricas
+para evaluar proyectos, lo que antes requería mucho tiempo de diseño manual. Estos testimonios
+muestran una apropiación práctica y estratégica de la IA, especialmente en tareas repetitivas y
+estructuradas, que anteriormente consumían gran parte de la jornada laboral.
+
+Comparación del tiempo dedicado antes y después del uso de IA
+
+En cuanto al tiempo invertido en tareas administrativas, todos los entrevistados coincidieron en que ha
+habido una reducción significativa. Antes de utilizar herramientas de IA, declararon dedicar entre 6 y
+10 horas semanales exclusivamente a planificaciones, elaboración de exámenes y reportes. Tras la
+adopción de estas herramientas, ese tiempo se ha reducido a un promedio de 2 a 4 horas semanales,
+representando un ahorro de hasta un 60% en la carga horaria administrativa. Este resultado contrasta
+fuertemente con los docentes que no usan IA, quienes en la encuesta reportaron sobrecarga de trabajo
+fuera del horario laboral, así, se evidencia que la implementación de IA puede ser una solución concreta
+y efectiva para disminuir el impacto del exceso de tareas administrativas en la carga laboral docente.
+
+Mejoras en la calidad de las tareas administrativas
+
+Así como en el ahorro de tiempo, los docentes resaltaron mejoras significativas en la calidad y
+presentación de sus productos administrativos, indicaron que ahora elaboran planes de clase más
+estructurados y con ideas innovadoras, gracias a las sugerencias que las herramientas de IA les
+proporcionan. También mencionaron que los exámenes están mejor redactados, con una mayor
+variedad de niveles cognitivos y tipos de preguntas. Uno de los entrevistados destacó que sus informes
+son ahora más completos, con una redacción más formal y técnica, lo que ha sido reconocido incluso
+por la coordinación académica de la institución. Estos beneficios reflejan un aumento en la eficiencia
+y profesionalismo del trabajo docente, con un impacto positivo en los procesos institucionales.
+
+Recomendaciones y consejos para colegas docentes
+
+Finalmente, al ser consultados sobre qué consejo darían a otros docentes que aún no usan IA, todos
+fueron enfáticos en invitar a sus colegas a perder el miedo y comenzar con herramientas intuitivas
+como ChatGPT o Teachy. Recomendaron iniciar con tareas pequeñas, como generar ideas para
+planificaciones o redactar objetivos de clase, y poco a poco explorar funciones más avanzadas.
+También sugirieron que las instituciones deberían ofrecer espacios de capacitación y
+acompañamiento técnico para facilitar esta transición. Según los testimonios, el principal beneficio
+percibido es la optimización del tiempo y la reducción del estrés administrativo, algo muy valorado en
+el contexto actual de sobrecarga laboral docente.
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2308.
+
+DISCUSIÓN
+
+A partir de los resultados obtenidos en la encuesta aplicada a los docentes, se identificó que una
+mayoría significativa (80%) considera que las tareas administrativas, como la planificación de clases y
+la elaboración de pruebas escritas, los obliga a trabajar más allá de su horario laboral. Así mismo, el
+estudio realizado por Dagoy et al. (2024), enfocado en cómo los docentes con múltiples
+responsabilidades administrativas equilibran sus roles, destacó la necesidad de apoyo institucional
+para mitigar el estrés y el agotamiento laboral. Este estudio, basado en un análisis cualitativo con
+entrevistas en profundidad a ocho docentes de distintas procedencias, exploró las estrategias que
+utilizan para gestionar estas demandas, garantizando al mismo tiempo una conducta ética y
+profesional. Los hallazgos revelaron que, aunque las tareas administrativas pueden contribuir al
+fortalecimiento de la autoeficacia docente, es fundamental lograr un equilibrio entre eficiencia y
+autonomía en su desempeño. A pesar de que estas actividades ofrecen beneficios, como la mejora en
+los procesos de enseñanza y aprendizaje, también representan una fuente de estrés y agotamiento
+para los educadores. Esto subraya la importancia de implementar medidas que reduzcan la carga
+administrativa, permitiendo a los docentes concentrarse en sus funciones pedagógicas.
+
+La mayoría de los docentes (50%) indicaron que no están familiarizados con herramientas de IA
+diseñadas para la planificación de clases y la elaboración de exámenes, como ChatGPT, Gemini,
+Copilot, Teachy, entre otras. De manera similar, un estudio realizado por Galindo et al. (2023) a
+docentes de educación primaria, secundaria y universitaria en España arrojó hallazgos clave respecto
+al uso y percepción de estas tecnologías en su labor docente. Este estudio reveló que únicamente el
+25% de los profesores encuestados utilizaban herramientas basadas en inteligencia artificial, lo que
+refleja una brecha considerable entre la percepción de los docentes y la implementación efectiva de
+estas tecnologías en contextos educativos. Entre las herramientas de IA utilizadas por los profesores,
+ChatGPT, Dall-E y Midjourney destacaron como las más populares, evidenciando una tendencia hacia
+el uso de herramientas específicas, probablemente por su accesibilidad y facilidad de uso. A pesar de
+que existe una actitud positiva hacia la inteligencia artificial en el ámbito educativo entre los docentes
+de España, la adopción práctica de estas tecnologías continúa siendo limitada. Para abordar esta
+brecha, es crucial promover una formación personalizada y un enfoque más integral en el uso de
+herramientas de inteligencia artificial. Estas acciones pueden contribuir significativamente a mejorar
+las prácticas educativas y a fortalecer la integración de estas tecnologías en el entorno docente,
+optimizando tanto el tiempo como los recursos de los educadores.
+
+Según el análisis de los resultados, el 40% de los docentes coinciden en que el uso de herramientas
+con inteligencia artificial (IA) contribuiría a reducir el tiempo destinado a tareas administrativas
+repetitivas. Asimismo, una investigación de Riera (2024) realizada con docentes del Instituto
+Tecnológico Universitario Pichincha analizó el impacto de la IA en la carga administrativa, destacando
+su capacidad para transformar la gestión educativa en el nivel superior. Este estudio evidenció que el
+100% de los docentes que emplean estas herramientas reportaron una notable reducción en el tiempo
+invertido en tareas administrativas, lo que repercute positivamente en su bienestar y les permite
+dedicar más tiempo a la creación de estrategias pedagógicas innovadoras. Además, los hallazgos
+resaltan la relevancia de adoptar tecnologías en el ámbito educativo y la necesidad de implementar
+políticas institucionales que promuevan tanto la formación continua como el uso efectivo de la IA.
+Estas acciones permitirían a los docentes optimizar sus funciones administrativas y enfocarse en
+actividades más significativas para el proceso de enseñanza-aprendizaje.
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2309.
+
+CONCLUSIONES
+
+De acuerdo con la revisión bibliográfica obtenida durante la investigación, se identificó que las
+herramientas más empleadas por los docentes que ya han incorporado IA en sus prácticas
+administrativas son ChatGPT, Google Gemini, Microsoft Copilot, Teachy, entre otras. Estas
+aplicaciones son utilizadas principalmente para la planificación de clases, elaboración de evaluaciones,
+redacción de informes, y generación de recursos didácticos. Esta apropiación tecnológica responde a
+una búsqueda activa de eficiencia en contextos de creciente carga laboral.
+
+El diagnóstico realizado a través de la encuesta muestra que existen limitaciones importantes en
+infraestructura tecnológica, capacitación y actitudes hacia el uso de herramientas con IA. Una parte
+considerable del profesorado indicó no haber recibido formación reciente en tecnologías educativas y
+expresó resistencias o desconocimiento respecto al funcionamiento de estas herramientas. Entre las
+barreras identificadas destacan la falta de tiempo para aprender, temor al reemplazo de la labor
+docente, y dificultad para integrar la tecnología con sus metodologías tradicionales. Estos hallazgos
+reflejan una necesidad urgente de intervenciones formativas institucionales que faciliten el desarrollo
+de competencias digitales y una cultura de apertura hacia la innovación tecnológica.
+
+El contraste entre ambos grupos fue revelador, una vez aplicada la entrevista. Los docentes que no
+usan IA reportaron una alta carga administrativa, realizando tareas fuera del horario laboral, con niveles
+de estrés significativos y escasa disponibilidad para actividades pedagógicas de valor agregado, como
+la atención personalizada a estudiantes o el diseño creativo de clases. En cambio, los docentes que sí
+utilizan IA manifestaron una reducción de hasta el 60% en el tiempo invertido en tareas administrativas,
+una mejora notable en la eficiencia y calidad del trabajo, y una mayor disponibilidad para enfocarse en
+la enseñanza. Estos resultados permiten afirmar que la IA, aplicada adecuadamente, disminuye la
+carga administrativa y mejora el equilibrio laboral, lo cual incide directamente en la calidad educativa.
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2310.
+
+REFERENCIAS
+
+Arteaga, G. (2020). Enfoque cuantitativo: métodos, fortalezas y debilidades. Recuperado de:
+https://www.testsiteforme.com/enfoque-cuantitativo/
+
+Banco Interamericano de Desarrollo. (2021). La carga administrativa docente en América Latina: Un
+obstáculo para la calidad educativa. https://publications.iadb.org/es/la-carga-administrativa-docente-
+en-america-latina-un-obstaculo-para-la-calidad-educativa
+
+Dagoy, TKS, Ariban, AI, Chavez, JV, Garil, BA, Abdurasul, S.-AM, Hayudini, MAA, Haiber-Asari, J., Pawaki,
+AH, Tantalie, EM, Alih, DRS y Abduraup, RD (2024). Análisis del discurso sobre el interés profesional y
+la integridad docente en docentes con múltiples funciones administrativas. Environment & Social
+Psychology , 9 (12). https://doi.org/10.59429/esp.v9i12.2521
+
+EC Ministerio de Educación. 2019. Acuerdo Ministerial Nro. Mineduc-2019-00011-A. Ministerio de
+Educación,      Ecuador,     Quito.     Recuperado        de:     https://educacion.gob.ec/wp-
+content/uploads/downloads/2019/02/MINEDUCMINEDUC-2019-00011-A.pdf
+
+Estrada, Carrera Edilma Amarilis. 2021. “La relación entre el trabajo administrativo y desempeño
+pedagógico en el caso de la Unidad Educativa Municipal Calderón”. Ecuador: Universidad Andina Simón
+Bolívar.
+
+European Commission. (2022).            Caso    Wilma:    Automatización      en   escuelas    finlandesas.
+https://ec.europa.eu/education
+
+Fernández, C. (2020). La gestión administrativa docente y su impacto en el aprendizaje. Editorial
+Educativa.
+
+Flick, Uwe. 2023. El diseño de la Investigación Cualitativa. Ediciones Morata.
+
+Galindo-Domínguez, H., Delgado, N., Losada, D. y Etxabe, J.-M. (2023). Un análisis del uso de la
+inteligencia artificial en la educación en España: La perspectiva del profesorado en activo. Revista de
+Aprendizaje       Digital     en    la    Formación     del    Profesorado      ,   40     ,    41–56.
+https://doi.org/10.1080/21532974.2023.2284726
+
+García, M., López, R., & Díaz, P. (2023). Impacto de ChatGPT en la automatización de informes
+educativos. Revista Iberoamericana de Tecnología Educativa, 15*(2), 45-60. https://www.revista-
+tecnologia-educativa.com/articulo123
+
+Gómez, F. (2023). Transformación digital en la educación: hacia una gestión eficiente. Universidad de
+Barcelona.
+
+González, M. (2021). Importancia de las tareas administrativas en el ámbito escolar. Revista
+Pedagógica, 32(4), 45-60.
+
+Granda, L., Romero, L., y Játiva, D. (2021). El docente y la alfabetización digital en la educación del siglo
+XXI.          Revista          Sociedad            &           Tecnología,           4(S2),        377-390.
+https://institutojubones.edu.ec/ojs/index.php/societec/article/view/158/446
+
+Guerrero Castillo, RA, Jaramillo, J., Reyes, A., Díaz Andachi, OI, Paredes, I., & Veliz Murrieta, LDC (2024).
+La sobreexplotación docente en el Ecuador: una realidad que enfrenta la educación ecuatoriana.
+Revista       Científica     Multidisciplinar         G-NER@NDO          ,        5      (1),       531–543.
+https://doi.org/10.60100/rcmg.v5i1.211
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+               ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2311.
+
+Hallinger, P., & Kovačević, J. (2022). Mapping the intellectual lineage of educational management,
+administration, and leadership, 1972–2020. Educational Management Administration and Leadership,
+50(2), 192–216. https://doi.org/10.1177/17411432211006093
+
+Hernández, R., Fernández, C., & Baptista, P. (2022). Estrés laboral docente por carga administrativa.
+Revista Latinoamericana de Educación, 10(1), 40-55.                   https://www.revista-educacion-
+latinoamericana.org/vol10-1
+
+Instituto Nacional de Estadística y Censos [INEC]. (2023). Uso de tecnologías en escuelas ecuatorianas.
+https://www.ecuadorencifras.gob.ec
+
+Korshunov I.A., Chakhoyan G.A., Tyunin A.M., Lyakhovetskaya E.R. Tipos modernos de consultoría en
+el sistema de gestión de una organización educativa. Educación y ciencia . 2021;23(1):73-101.
+https://doi.org/10.17853/1994-5639-2021-1-73-101
+
+López, R., Gómez, A., & Sánchez, T. (2022). Desafíos de los docentes en la administración educativa.
+Innovación Educativa, 15(2), 78-95.
+
+Macas, C., Granda, L., y Carbay, W. (2021). Rol del docente en la alfabetización digital en el siglo XXI.
+Sociedad &Amp; Tecnología, 4(S2), 350-363. https://doi.org/10.51247/st.v4iS2.156
+
+Megaprofe. (2025). 9 mejores herramientas de IA para la planificación de clases en 2025. Recuperado
+de https://megaprofe.es/mejores-herramientas-ia-educativas-2025/
+
+Mejía Campó, N. (2021). Gestión educativa y liderazgo transformacional de los directivos en la
+educación básica regular. Revista Publicando, 8(29), 79-86. https://doi.org/10.51528/rp.vol8.id2191
+
+Meza Revatta, L. F., Torres Miranda, J. S., & Mamani-Benito, O. (2020). Gestión educativa como factor
+determinante del desempeño de docentes de educación básica regular durante la pandemia Covid-19,
+Puno-Perú. Apuntes Universitarios, 11(1), 23–35. https://doi.org/10.17162/au.v11i1.543
+
+Ministerio de Educación del Ecuador. (2023). Diagnóstico de prácticas administrativas en instituciones
+educativas públicas. https://educacion.gob.ec
+
+MIT. (2023). Eficiencia de la IA en gestión escolar: Casos de México y Colombia. MIT Press.
+
+Pérez, J. (2023). Soluciones tecnológicas para la gestión administrativa escolar. Revista Tecnología y
+Educación, 12(1), 25-40.
+
+Pujilestari, Y., Rubini, B. y Sunaryo, W. (2023). Mejora del desempeño docente mediante el
+fortalecimiento de la organización del aprendizaje, el liderazgo transformacional y la motivación para
+el      logro.     Revista    Asiática      de      Educación        y    Estudios      Sociales      .
+https://doi.org/10.9734/ajess/2023/v49i11110
+
+Riera-Pesántez, F. (2024). Menos burocracia, más enseñanza: El impacto de la inteligencia artificial en
+la carga administrativa de los docentes. Revista Científica De Ciencias Humanas Y Sociales RECIHYS,
+2(3), 45-52. https://doi.org/10.24133/recihys.v2.i3.3785
+
+Rodríguez, P., & Martínez, S. (2024). Aplicaciones de inteligencia artificial en la docencia. Investigación
+y Educación, 19(3), 50-65.
+
+Rosi, RI (2024). Inteligencia Artificial (IA) en la Educación: Ventajas y Desventajas del Profesorado de
+Secundaria en Malang, Indonesia . 9 (1), 112. https://doi.org/10.18860/icied.v9i1.3130
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+              ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2312.
+
+Sampieri, Roberto Hernández, Carlos Fernández Collado, Pilar Baptista Lucio, Sergio Méndez Valencia,
+and Christian Paulina Mendoza Torres. 2014. Metodología de la investigación.
+
+Tamayo, A. (2020). La gestión del conocimiento en los procesos de calidad de la educación superior.
+Rehuso, 5(3), 1-17. https://doi.org/10.33936/rehuso.v5i3.2595
+
+Tamayo-Verdezoto, J. J. (2024). Las formas de educación burocrática en las instituciones educativas
+del     Ecuador.     Código     Científico   Revista     de    Investigación,       5(2),   71–90.
+https://doi.org/10.55813/gaea/ccri/v5/n2/539
+
+Torres, J. (2023). Ética y desafíos de la IA en educación. Editorial Santillana.
+
+UNESCO. (2023). Digitalización          de    la   gestión    educativa       en   países       en   desarrollo.
+https://unesdoc.unesco.org
+
+Zumba, E., y Paredes, I. (2022). Desarrollo de competencias digitales en la educación superior a través
+de entornos virtuales: Revisión de casos en la educación superior ecuatoriana. Polo del Conocimiento,
+7(11), 1385-1399. https://www.polodelconocimiento.com/ojs/index.php/es/article/view/4930/11942
+
+
+
+
+ Todo el contenido de LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, publicados en
+                 este sitio está disponibles bajo Licencia Creative Commons                 .
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+               ISSN en línea: 2789-3855, abril, 2025, Volumen VI, Número 2 p 2313.

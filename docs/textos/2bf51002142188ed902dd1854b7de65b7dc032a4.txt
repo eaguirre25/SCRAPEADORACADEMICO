@@ -1,0 +1,834 @@
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                    479
+ISSN 2250-3153
+
+
+
+
+       A Proposed Evaluation Framework for School
+  Management Information Systems (SMIS) in secondary
+                       schools
+                              Bernard Okeyo Amollo *, Dr. Joshua Agola **, Prof. Antony Rodrigues ***
+
+                                          * Jaramogi Oginga Odinga University of Science and Technology-Kenya
+                                          ** Jaramogi Oginga Odinga University of Science and Technology-Kenya
+                                         *** Jaramogi Oginga Odinga University of Science and Technology-Kenya
+
+
+
+
+                                                           DOI: 10.29322/IJSRP.12.01.2022.p12164
+                                                     http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164
+
+Abstract- Many organizations decide to implement information systems in order to improve the effectiveness and efficiency of their
+organizations, however, lack of awareness of numerous and varied challenging issues surrounding the implementation process could be
+problematic for the whole process. In particular lack of key success issues seems to be a serious obstacle for the management information
+system implementation process.
+      The use and application of ICT is on the rise impacting positively on educational institutions and their programs, a number of
+secondary schools have also adopted information technology fully thus recording improved efficiency in their operations. However, the
+situation is not the same in all schools because others have been dissatisfied with their investments. For a school to optimally use and
+benefit from use of IT then it should subject its MIS to the evaluation framework proposed here, by first, addressing the following
+organization issues; Personnel issues, Technical system issues, Leadership issues, Organization environmental issues and Management
+Process issues. Furthermore, for successful MIS implementation; all the stakeholders should undergo some training on system use and
+that the top management should provide enough funding for infrastructure improvement and management of the system.
+
+Index Terms- ICT: Information Communication and Technology, IT: Information Technology, IS: Information System, MIS:
+Management Information System
+
+
+                                                                           I. INTRODUCTION
+
+F    1.1 Background Information
+     or prosperity and survival of most organization worldwide, top management in these organizations should at least possess some
+basic information technology (IT) skills. In order to reach more customers in different areas in the world, use of Information Systems
+(IS) can help companies to launch new products and in general change the way organizations conduct their business processes (Laudon
+& Laudon, 2006).
+       Competition rates have drastically increased globally in the use of IS, this has made it possible for most institutions to be more
+strategic and tactical to become more effective and efficient. An organization such as an educational institution can suffer a major risk
+if they decide to stay insensitive to this change.
+       According to Demir, 2003, there are some factors that may force educational institutions globally to develop new applications in
+order to survive. Such factors include; modern management perceptions and applications, increasing expectation of the society,
+information exchange and continuous developments in information technologies
+       Education has made IT to reach a state of high priority due to the priority of modern societies. According to Webber, 2003;
+Pelgrum, 2001; Yuen, Law & Wong, 2003, the most emphasized subject is the contributions of IT to education.
+       The popularity of information as a major resource in management had been realized as early as 1970’s. According to Oyier &
+Mwanda, (2011) towards the end of the twentieth century Information and Communication Technology (lCT) was used as a tool for
+management in the business organizations including educational institutions. Various approaches to information management developed
+due to the fact that ICT supported decision making processes. MIS provides relevant information which help in making relevant
+decisions in an organization (Breiter & Light, 2006).
+       In any organization where the school is part, the hierarchical organizational structure is normally adopted where manual
+information system is used. According to Tripathi (2011), there are three important levels of system structure namely; - operational,
+middle management and top management. In this kind of structure information is passed from operational level to the middle level and
+finally to the senior management level which is the topmost level. (Laudon & Laudon (2014) agrees with Tripathi (2011) as presented
+in figure 1.2
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                    www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                     480
+ISSN 2250-3153
+
+
+
+
+                                                                     Figure 1.1 :
+                                                 Organization Level (source: Laudon & Laudon, 2014)
+
+       The above figure can be related to a school setup where the main stakeholders are at the senior management where we have the
+school Board of Management (BOM), at the Middle management we have the; Head of Departments (HOD), Director of Studies (DOS),
+Senior masters/Mistresses, Class teachers and at operation Management we have; the Subject teachers, Librarians, Bursars, Workers,
+Students and Parents.
+       For secondary schools that have adopted the use of a computer based information system the hierarchical organizational structure
+can be modified for efficient and effective business processes. In this case the information system would conform to two levels; strategic
+level and operational level. The strategic level would include the principals and deputy principals while the operational level would
+include teachers, bursars, librarians and the students/parents/workers as the end user as shown in figure 1.3
+
+
+
+
+                                               Principal/Deputy principal                          Strategic Level
+
+
+
+
+                                     Bursar                                        Teachers
+
+
+
+
+                                                                                                   Operational Level
+                   Librarian
+                                                                        Students/Workers/Parents
+
+
+
+Figure 1.2: Major users/stakeholders of SMIS in secondary school set up (Source: Author 2021)
+
+      At the teachers category there exists; the Head of Departments, Head of Subjects, Director of Studies, Senior Masters/Mistresses,
+Class teachers and Subject teachers.
+      The levels are dependent on the functionality of the SMIS. Some of the packages included in the system includes; Academics
+Package, Accounting Package, Store records, Library Records, Accommodation records, Timetable processor, Biometric identification,
+Student records, Discipline records, Attendance register, Leaving certificates, Student IDs, Pocket money records, Bulk branded short
+message service, Fee records etc.
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                     www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                     481
+ISSN 2250-3153
+
+       When information system is used to improve the organization management by the managers it becomes a MIS (Ein-Dor and Segev
+1978). Management performance can be increased in this case by the system. When tools, manpower and software are collected together
+to perform various business processes in an organization it is referred to as MIS (Tripathi, 2011). For crucial decision-making purposes
+MIS plays a very major role such as providing information that directly affects the performance of such organizations (Murthy, 2006).
+This therefore makes IS to be an integral part of an organization. Notably in some organizations no business can be performed without
+an IS. The basic components of an organization include; - its people, structure, business process, politics and culture (Laudon & Laudon,
+2014). They stress that an information system is more than computers. Figure 1.4 justifies the above statement.
+
+
+
+
+                                                                          Organization
+
+
+
+
+                                                                         Information
+                                                                            System
+
+                                                      Management                                  Technology
+
+
+                                 Figure 1.3 : Aspects of Information system (Source: Laudon & Laudon, 2014)
+
+      From figure 1.4 IS also includes; - management, organization and technology. The number of successful implementations of
+information systems particularly considered in relation to plan execution is relatively low (Dyczkowski, 2007), therefore it is important
+to perform an evaluation process of information system implementation process. When good evaluation is carried on appropriately it
+guarantees achieving implementation goals and measurable benefits to the school. An evaluation approach is based initially on three
+concepts of structure, process and outcome (SPO) (Omwenga & Rodrigues, 2006). Structure of a system is defined as, the manner in
+which it is constructed or the whole of its essential parts, while Process performs a series of operations by which a task is accomplished
+and information transformed, and finally the Outcome of a system is the impact or visible effect or just the general result of the system
+operation.
+
+1.2 Background of evaluation frameworks and Theories
+      Omwenga & Rodrigues (2006) evaluation approach agrees with most theories used in evaluation such as the Values Engaged
+Theory (Green, 2011), Utilization Focused Theory (Patton, 2013), Empowerment Theory (Fetterman, 2012) and the Theory Driven
+Theory or the Program Theory (Chen, 2015), in that a lot of focus is on the user as an integral stakeholder.
+For proper implementation of the system in an organization, the system users should take into account that such systems cannot fully
+meet all the organization requirements since most researchers are in agreement that even the best designed and tested system cannot
+meet the actual requirements of an organization (Artit 2012; MacLeod & MacDonell 2011; Kumar & Malik 2011).
+Most of the common barriers according to Artit (2012) and Laudon & Laudon (2014) are Organization environment issues, the
+Leadership issues, Personnel issues, Management process issues and Technical issues. This research proposes a framework comprising
+the SPO (Rodrigues, 2004) and (Artit, 2012) model. The evaluation framework was guided by the program theory by (Chen, 2015).
+
+
+                                                                           II. METHODS
+2.1 Related Theories and Frameworks for Information Systems
+      From the early twentieth century there have been various developments of methodology to test the effectiveness of several
+educational programs in school. Evaluation process has evolved in this field and now has developed to a discipline of study, it has
+provided links with many research disciplines including; social science, public administration, education and public policy. Evaluation
+has played a major role in different organizations through service delivery process, policy formulation, identification of public need to
+ensure value and quality of the implemented solutions (Rogers, 2007).
+      It is worth noting that the processes involved in planning, executing, and evaluating MIS bear many similarities to that planning,
+implementing and evaluating projects and services in social organizations. Problem identification is key and the actions should be taken
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                     www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                   482
+ISSN 2250-3153
+
+in order to solve or rectify the already identified problem. The concept of evaluation has been extensively studied in social program
+setting, surprisingly, the concept of evaluation has been underdeveloped in the SMIS.
+       No major evaluation has been done in most MIS used in secondary schools in Kenya. Generally, there is no effort to systematically
+measure key facilities required for successful implementation of SMIS, challenges, outcomes or impacts in a comprehensive manner.
+Those in leadership positions should find it appropriate to bring together all the information received from various sources and be able
+to construct an evaluation of progress and results which can bring about new changes in the organization (Curry, 2004; Rauch, 2002).
+A new field that has emerged from the diverse array of applied social sciences is evaluation. Evaluation is practice oriented; it is of
+importance to note that there has been a rapid increase of research on evaluation theory to lay down rules underlying frameworks of
+evidence-based practice. The main role of evaluation theory is to specify convenient practices that evaluators can use to come up with
+knowledge about the value of social programs (Shadish, Cook, & Leviton 1991). The main five components which comes out clearly
+from the above explanation of evaluation theories are use, practice, valuing knowledge and social programming.
+       Methodology is mainly considered in evaluations. But a more considerate approach starts with theory before methodology. The
+purpose of evaluation should be considered first to determine its theoretical foundation is when evaluation questions are considered to
+inform the methodology. Most evaluations always focus on the technical details of the evaluation rather than the overall purpose. When
+focus is made on the theory at the beginning of the project, it ensures that the process, that is, stakeholder involvement, methodology,
+data collection, analysis and reporting is intentional, purposeful and more useful for the client.
+       The section below discusses some of the evaluation theories when put in practice can bridge the gap between evaluation theory
+and practice. Table 2.1 summarizes the theories and frameworks, with their merits and demerits.
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                   www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                                             483
+ISSN 2250-3153
+
+                                                      Table 2.1 : Related Theories and Frameworks
+
+        Evaluation Theory                           Brief description                             Merits                       Demerits
+        Values Engaged Theory.                      Provides         contextualized               It   encourages      the     Cannot address all the
+        (Greene, 2011).                             understandings     of    social               evaluators to include all    purposes and audiences
+                                                    programs that have particular                 relevant stakeholders.
+                                                    promise for underserved and
+                                                    underrepresented populations
+
+
+
+
+        Utilization Focused Theory                  It is on the premise that                     The evaluator involves       Its improvement is
+        (Patton, 2013).                             evaluations should be judged by               intended users at every      driven by a psychology
+                                                    their utility and actual use                  stage of the process.        of use. Which does not
+                                                                                                                               happen naturally
+
+
+
+
+        Empowerment Theory                          Was developed as an approach                  It seeks to increase the     It overburdens the
+        (Fetterman, 2012).                          to foster program improvement                 probability of program       evaluator i.e. evaluators’
+                                                    through empowerment and self-                 success by providing         role is to empower
+                                                    determination                                 stakeholders with the        stakeholders to take
+                                                                                                  tools and skills to self-    ownership       of     the
+                                                                                                  evaluate              and    evaluation process
+                                                                                                  mainstream evaluation
+                                                                                                  within an organization
+        Theory Driven              (Program         The focus is on the theory of                 1. Relies on change          1. It is resource and data
+        Theory)                                     change and causal mechanisms                  model       and     action   intensive
+        (Chen, 2015)                                underlying the program.                       model.                       2. It is notoriously
+                                                                                                  2. Provides a useful tool    difficult to construct and
+                                                                                                  to probe the validity of     the level of granularity
+                                                                                                  an evaluation and can        to which the evaluator
+                                                                                                  assist in identifying and    must go is often
+                                                                                                  controlling extraneous       uncertain;        multiple
+                                                                                                  sources of variance          theories are possible
+                                                                                                  3. Can be applied even
+                                                                                                  in most sophisticated
+                                                                                                  experimental
+                                                                                                  evaluations to explain
+                                                                                                  what factors were
+                                                                                                  responsible for the
+                                                                                                  program’s success – or
+                                                                                                  failure
+                                                                                                  4. Allows evaluators to
+                                                                                                  include all relevant
+                                                                                                  stakeholders at every
+                                                                                                  stage of the program
+        Technology                 Mediated         This framework was used to                    Allows the impact of an      Understanding of the
+        Learning:                 Evaluation        evaluate e-learning programs                  information system on        SPO model at times is
+        Framework                                                                                 e-learning       to     be   challenging to some
+        (Omwenga &                Rodrigues,                                                      evaluated at three           people.
+        2006)                                                                                     levels: the structure, the
+                                                                                                  process,      and      the
+                                                                                                  outcome.          It also
+                                                                                                  assesses from different
+                                                                                                  stakeholder viewpoint:
+                                                                                                  that     of     planners,
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                                           www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                                          484
+ISSN 2250-3153
+
+                                                                                                  providers           and
+                                                                                                  consumers. It includes
+                                                                                                  the system perspective
+                                                                                                  such as: technical
+                                                                                                  system’s functioning,
+                                                                                                  human perspective and
+                                                                                                  education impact
+                                                                                                  It provides a procedure
+                                                                                                  that    assesses     the
+                                                                                                  technical and the social
+                                                                                                  aspects of a system, as
+                                                                                                  well as the long-term
+                                                                                                  impact on improving
+                                                                                                  education provision.
+
+                                                                                                  It is a standardized
+                                                                                                  procedure for reporting
+                                                                                                  evaluation results that
+                                                                                                  may be widely applied.
+        The Artit framework                         It assesses the implementation                It Details key issues for   It was a frame work
+        (Artit, 2012)                               challenges, success Key issues,               MIS implementation          which heavily relied on
+                                                    effects and consequences                      success            which    military use, but can be
+                                                                                                  influence the MIS           adopted for educational
+                                                                                                  implementation              use.
+                                                                                                  process. It discusses
+                                                                                                  organizational impacts
+                                                                                                  focusing on effects and
+                                                                                                  consequences       which
+                                                                                                  are manipulated by
+                                                                                                  implementing        MIS
+                                                                                                  within the organization.
+        Source: Author 2021
+2.1.1 Values Engaged Evaluation Theory (VEE)
+        This theory was developed by Jennifer Greene, as a democratic approach that is highly responsive to context and emphasizes
+stakeholders’ values. The theory seeks to provide contextualized understandings of social programs that have particular promise for
+underserved and underrepresented populations (Greene, 2011). The reason why it is considered a democratic approach is because it
+encourages the evaluators to include all relevant stakeholders.
+        The main challenge of program evaluation is that, while all these purposes and audiences are legitimate, any one evaluation study
+cannot address all of them, so choice – sometimes difficult ones need to be made. Greene offers three points why it is important to
+include the stakeholder’s values. They are as follows; -
+a) It increases the chance of use, that is, it is pragmatic.
+b) It empowers the stakeholders
+c) It considers all interest
+        With this approach, evaluation design and methodology evolve as the evaluator understands the context needs; and values
+underlying the program.
+        VEE is mainly concerned with answering broad and in-depth questions, and is more suited for formative rather than summative
+evaluations. Values engagement has two main dimensions; first it signals purposeful attention to the values that are intrinsic in education
+programs including value differences that may be present among key program stakeholders and the second point is that it pays special
+attention to the values of diversity and equity (Greene, 2011). Greene’s work focuses on the practice of evaluation, not on the technical
+or methodological components of the evaluators work i.e. it assumes basic methodological proficiency.
+        The point here is for the evaluator to seek opportunities to surface understandings, values, assumptions and underlying rationales
+of the program design and implementation from multiple perspectives (Greene, 2011)
+
+2.1.2 Utilization – Focused Evaluation Theory (U-FE)
+       This theory was developed by Michael Quinn Patton, on the premise that evaluations should be judged by their utility and actual
+use (Patton, 2013). The application of this theory is done when there is need for discrete decision making.
+       U-FE focuses on intended users. Stakeholder identification is key when engaging the primary intended users, Patton, (2013)
+stresses on personnel factor. At every stage of the evaluation the intended users are involved. The ultimate purpose of U-FE is
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                                         www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                          485
+ISSN 2250-3153
+
+programmatic improvement driven by a psychology of use. Intended users are more likely to use the evaluation if they feel ownership
+of the process and its results. Use does not happen naturally; therefore, the evaluator must reinforce utility by engaging intended users
+at each stage of the evaluation.
+
+2.1.3 Empowerment Evaluation Theory
+       This theory was developed by David Fetterman, as an approach to foster program improvement through empowerment and self-
+determination (Fetterman, 2012). Self – determination theory describes an individual’s agency to chart his or her own course in life and
+the ability to identify and express needs. In this theory it is believed that the evaluators’ role is to empower stakeholders to take ownership
+of the evaluation process as a vehicle for self-determination. This theory also seeks to increase the probability of program success by
+providing stakeholders with the tools and skills to self-evaluate and mainstream evaluation within an organization. The steps for
+conducting empowerment evaluation includes (1) Develop and refine the mission, (2) take stock and prioritize the program’s activities,
+and (3) plan for the future.
+
+2.1.4 Theory – Driven Evaluation Theory (Program theory)
+      Huey Chen is one of the main contributors to this theory. He focuses on the theory of change and causal mechanisms underlying
+the program. Chen, (2015) recognizes that programs exist in an open system, consisting of inputs, outputs, outcomes, and impacts.
+According to Chen, evaluators should start by working with stakeholders to understand the assumptions and intended logic behind the
+program. To illustrate the causal relationships between activities and outcomes, a logic model can be used.
+
+
+
+
+                                        Figure 2.1: Program Theory Framework
+Source: Chen H-T. Practical Program Evaluation, Thousand Oaks, CA: Sage Publications, 2005.
+
+      Many suggestions have been offered for constructing program theory models, such as action model (i.e. systematic plan for
+arranging staff, resources, settings to deliver services) and change model (i.e. set of descriptive assumptions about causal processes
+underlying intervention and outcome) Chen, (2015).
+      Chen suggests that evaluators should consider this approach when working with program implementers to produce valuable
+information for formative program improvement.
+      A review by Lipsey Crosse, Dunkle, Pollard, and Stobart (1985) of 175 evaluation studies noted that “most of the programs…
+evaluated did not provide simple structured treatment that could be expected to work through readily apparent mechanisms”. In fact,
+one of the main reasons for the growing interest in theory-driven evaluation was “the usual inability of even the most sophisticated
+experimental evaluations to explain what factors were responsible for the program’s success – or failure” (Weiss, 1997a)
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                         www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                       486
+ISSN 2250-3153
+
+       Although some evaluators argued that the focus of any evaluation should be on the quality, value, and success of any implemented
+program (Scriven, 1994), theorists recognized that failing to identify the underlying causal mechanisms that led to program success
+would not allow deficiencies in either program implementation or program design to be suitably identified and addressed (Chen, 1994),
+thus program improvement was seen as a key goal in any program evaluation (Chen, 1994; Posavac & Carey, 2006; Rogers, 2000). The
+defining characteristics of theory-driven evaluation is that the assumptions and mechanisms behind a program can be expressed in a
+logical sequence of cause and effect statement – also known as program theory (Weiss, 1997a)
+       Donaldson (2007) noted that theory-driven evaluation provides a useful tool to probe the validity of an evaluation and can assist
+in identifying and controlling extraneous sources of variance. Chen (2005), Sullivan & Stewart (2006) further noted that program theory
+provides a strategy to incorporate stakeholder views in the program design and evaluation.
+       Theory-driven evaluation is not without its disadvantages and its critics. Weiss (1997a) – a leading proponent of the technique –
+described key challenges in theory-driven evaluation: program theory is notoriously difficult to construct and the level of granularity to
+which the evaluator must go is often uncertain; multiple theories are possible – often requiring multiple sets of measurement indicators
+– thus, the technique is resource and data intensive; and by focusing on the program theory, the evaluator may ignore many other
+important effects and causes (see also Shaw & Crompton, 2003). Others have noted that although program theory may provide focus to
+an evaluation, it provides a focal point of the evaluation (English & Kaleveld, 2003). Finally, it has been pointed out that in reality, few
+social science theories actually exist for the program areas that evaluators typically face, thus evaluator often begins with a grounded
+theory approach in developing program theory (Stufflebeam, 2001).
+
+2.1.5 Technology Mediated Learning: Evaluation Framework
+       Salomon (1991) describes the contrast between analytic and systemic approaches to research that transcends the “basic versus
+applied” or “quantitative versus qualitative” arguments that so often dominate debates about the relevancy of educational research.
+Salomon concludes that the analytic and systemic approaches are complementary, arguing that “the analytic approach capitalizes on
+precision while the systemic approach capitalizes on authenticity”.
+       According to Omwenga and Rodrigues (2006), any technology mediation for educational purposes has a structure, a process and
+a learning outcome (SPO) which can be viewed from three main systems perspectives: that of the technical system functioning, human
+perspectives of those involved, and the overall impact on the education system. A matrix diagonal resulting from the overlay are technical
+standards; organizational infrastructure and social interaction; and educational status and developmental potential of target population.
+By extending this framework more fully into a matrix we may explore and study broader and more comprehensive relationships
+(Omwenga and Rodrigues, 2006). For example, when the structure (or design) of a system is considered in terms of its overall impact
+on the educational system, one can appreciate the opportunities and challenges that arise in implementing interactive learning across
+emerging economies see figure 2.2 below.
+
+
+
+
+                             Fig 2.2: Technology Mediated Learning: Evaluation Framework (Source; Omwenga
+                                                           & Rodrigues, 2006)
+
+      According to Omwenga and Rodrigues (2006), the justification of the above approach provides a procedure that assesses the
+technical and the social aspects of a system, as well as the long-term impact on improving education provision, and it is also a
+standardized procedure for reporting evaluation results that may be widely applied. In summary, the technology mediated framework
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                       www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                   487
+ISSN 2250-3153
+
+permits a structured view of interactive learning projects which recognizes both the need to link the technology grounded applications
+with ones that involves a more fundamental understanding of the broader concept of the value of education.
+
+2.1.6 The Artit framework
+      Artit, (2012) came up with a framework to assess the implementation challenges, success Key issues, effects and consequences
+when he did a case study on a Fenix System (an MIS) used in the military. His framework is shown in figure 2.3 below;
+
+
+
+
+                                                                    Figure 2.3
+                                                  Artit MIS Framework (Source: Artit, (2012) pg. 28)
+
+      He argues that the implementation challenges can be broken down by issue type and they can be categorized into five issues
+including: leadership issues, organization environment issues, management process issues, personnel issues, and technical systems
+issues. Further, he introduces the key issues for MIS implementation success which influence the MIS implementation process. These
+success factors can be viewed as tools which increase degrees of implementation process improvement and support in each stages of the
+implementation process (Artit, 2012). In addition, a significant role of these success factors is the contribution to the success of MIS
+implementation. The last element in the model is organizational impacts focusing on effects and consequences which are manipulated
+by implementing MIS within the organization.
+      In conclusion the Chen’s framework (2015) can be fused with the Omwenga & Rodrigues (2006) framework to assist in the
+evaluation of MIS as was assessed by Artit, (2012). This integration will yield a new evaluation framework for SMIS
+The study was based on the integration of program theory, Technology Mediated Learning: Evaluation Framework and the Artit
+framework.
+
+The Program theory
+     The theory focuses on the stakeholders which is the key reference to the research work
+
+Technology Mediated Learning: Evaluation Framework
+       This approach was adopted because it details the structure, process and outcome of an evaluation of MIS which forms the basis
+of the research
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                   www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                    488
+ISSN 2250-3153
+
+The Artit Framework
+      This framework identifies the key issues affecting an organization, which was also important in the research during the evaluation
+process
+
+2.2 The Developed proposed evaluation framework for school management information systems for secondary schools
+      A multiple regression analysis was used to evaluate the proposed framework shown in figure 2.3 below and the results discussed
+below indicate that the model is useful as predictor of the status of school information management systems. The challenges facing the
+implementation process and the key success issues were considered under the SPO framework as shown in the figure 2.4
+
+
+
+
+       Figure 2.4 the proposed Evaluation framework of School Management Information System (Source: Author, 2021)
+
+       Multiple regression, an extension of simple linear regression is used to predict the value of a variable based on the value of two
+or more other variables. The variable to be predicted, called the dependent variable (the outcome, target or criterion variable) in this
+study is the status of school management information systems (STATUSSMIS). The variables used to predict the value of the dependent
+variable are called the independent variables (the predictor, explanatory or regressor variables) are System perspectives, SYSPERS and
+technical mediation, TECHMED, transformed from the survey questionnaire items that tested for each of the independent variables.
+Typically, mean scores are calculated after it has been established that these specific items load on one factor. The composite/mean
+score is simply a sum or mean where all items get the weight Olawale Fatoki (2018) in his study on “The impact of entrepreneurial
+resilience on the success of small and medium enterprises in South Africa”, Ofunoye (2017) in his work “Innovation and Resilience of
+Small-Medium Entrepreneurs in Port Harcourt” and Davidson in “Interpreting performance in small business research” all used the
+concept of finding the mean of items testing one variable. Before finding the mean scores, the correlations between the questionnaire
+items was tested and the few items that had extremely high correlations merged. All items on the system perspective component were
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                    www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                       489
+ISSN 2250-3153
+
+merged as SYSPERS, using the values of their sum and mean. Similarly, all items on technical mediation and status of SMIS were
+combined.
+      Multiple regression enabled the understanding of whether the status of the SMIS could be predicted based on system perspectives
+and technical mediation. It also helped to determine the overall fit (variance explained) of the model and the relative contribution of
+each of the predictors to the model. This was achieved by finding out how much of the variation in status of the SMIS could be explained
+by predictors together and the individual relative contribution. Before starting the regression analysis, all the variables were tested for
+assumptions required of them to give valid regression analysis output. These assumptions and their findings are discussed below.
+
+2.2.1 Assumptions
+       A regression analysis can only be undertaken if most of the assumptions that include the types of variables used, outliers,
+multicollinearity, homoscedasticity, independence of errors, normal distribution and linearity are met. These assumptions are explained
+in the discussion that follows.
+
+2.2.2 Variable types
+       For a multivariate logistical regression all independent variables must be quantitative or categorical with two categories. This
+study used the transformed variables of all the cases which are, therefore quantitative. The assumption of non-zero variance, implying
+that the predictors should have variations in value was also met given that all the values between and within the predictors differs for all
+cases.
+
+2.3.3 Outliers and influential cases
+
+                                                    Table 2.2 Test for outliers and influential cases.
+
+                     Residuals Statisticsa
+                                                 Minimum                   Maximum          Mean     Std. Deviation   N
+                     Predicted Value             1.4208                    4.3067           3.0000   1.04846          22
+                     Std. Predicted Value        -1.506                    1.246            .000     1.000            22
+                     Standard Error of Predicted .142                      .366             .213     .065             22
+                     Value
+                     Std. Residual               -1.310                    1.266            .000     .894             22
+                     Cook's Distance             .008                      1.110            .223     .323             22
+                     Centered Leverage Value     .020                      .652             .182     .179             22
+                     a. Dependent Variable: SMISSTATUS
+
+       As observed from the table 4.23 above, no case has a greater Cook’s distance than 1 (average Cook’s distance= 0.223). This
+indicates that none of the cases has an excessive or unjustified influence on the overall model. Furthermore, the table provides the
+centered leverage values. The average leverage value is 0.17 (k + 1/n = 4/23). Values which are twice (0.34) or three (0.51) times as
+large can indicate influential cases. In this case, the Centered Leverage Value is 0.182 and therefore, the cases presented do not unduly
+influence the data.
+
+2.2.4 Multicollinearity
+       The multicollinearity assumption requires that there should not be a perfect linear relationship between two or more of the
+predictors (Field, 2009). A problem with collinearity is present when the tolerance value is less than 0.1. For all independent variables
+the tolerance value is higher than 0.1. Furthermore, the variance inflation factors (VIF) should not have a ‘value greater than 10.
+Therefore, all values fall within the allowed range (VIF=2.093) and neither the tolerance nor the VIF values indicate a problem with
+collinearity.
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                        www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                         490
+ISSN 2250-3153
+
+                                                   Table 2.3 Collinearity tests for multicollinearity.
+
+
+
+
+      From table 2.3 above, the condition index values are less than 15. A condition index greater than 15 indicates a multicollinearity
+problem and greater than 30 is a serious problem that may rule out regression analysis. This result further indicates that assumption of
+multicollinearity is met.
+
+2.2.5 Homoscedasticity
+       The plot of the standardized residuals, the standardized difference between actual score and predicted criterion variable from the
+model versus standardized predicted values allow for evaluation of the normality and homoscedasticity assumptions made when testing
+the significance of the model and its parameters. An observation of the scatterplot by eye enables the determination of violation of these
+assumptions. Points in the scatterplot should be relatively random, evenly dispersed and linear. If the normality assumption has been
+met, then a vertical column of residuals at any point on the horizontal line at residual equal zero line will be normally distributed. The
+density of the plotted symbols will be greatest near that line and drop quickly away from the line and are symmetrically distributed on
+either sides of the line. If the homoscedasticity assumption has been met, then the spread of the dots, in the vertical dimension will be
+the same at any one point on that line as it is at any other point on that line. The residuals at each level of the predictors are expected to
+similar variances to meet the assumption of homoscedasticity (Field, 2009).
+
+
+
+
+                                Figure 2.5a. scatterplot to test for homoscedasticity for status of SMIS values.
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                        www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                        491
+ISSN 2250-3153
+
+
+
+
+                                Figure 2.5b. scatterplot to test for homoscedasticity for status of SMIS values.
+
+
+
+
+                               Figure 2.5(c). scatterplot to test for homoscedasticity for status of SMIS values.
+
+       From observation of figure 2.5a, the data seems not to violate the assumption of linearity. The points in the graph appear to be
+relatively random and evenly dispersed. The normality assumption appears to have been met as the density of the plotted symbols seem
+to be greatest near the line where residuals equal zero and drop quickly away from the line. They appear to be symmetrically distributed
+on both sides of the line as seen in figure 2.5b. The homoscedasticity assumption also seems to have been met as the spread of the dots
+in the vertical dimension look the same at all points on that line. Observation of the residuals plot patterns by the eye suggests a linear
+relationship between predictors and criterion variables in figure 2.5c. Therefore, both linearity and homoscedasticity assumptions are
+met. The residuals at each level of the predictors have similar variances in table 2.3 where it is apparent that none of the cases has a
+standardized residual less than -2 or greater than 2 and hence this assumption is met.
+
+2.2.6 Independence of errors
+       Another assumption concerns independent errors and the Durbin-Watson test is a frequently used method. In essence, for any two
+observations the residual terms should be uncorrelated. The test statistic ranges between 0 and 4 and a value of 2 implies that the residuals
+are uncorrelated (Field, 2009). In our model, the Durbin-Watson value is 1.913, nearly equal to 2 indicating that the residuals are likely
+to be uncorrelated. Hence, the assumption appears to have been met.
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                       www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                          492
+ISSN 2250-3153
+
+2.2.7 Normal distribution.
+       To determine normal distribution the distribution of residuals is used. According to Field (2009) it is assumed that the residuals
+in the model are random, normally distributed variables with a mean of 0 and a standard deviation of 1. The differences between the
+model and the observed data are expected to be zero or nearly zero and that difference much greater than zero should be very infrequent
+(Field, 2009). The table 2.3 indicates the minimum residual is -1.310 while maximum is 1.266 with mean of 0.000 and standard deviation
+of 0.894, almost equal to 1. Therefore, the data does not violate the assumption of normal distribution.
+       For further examination of the residuals the standardized residuals were entered into a scatter plot in figure 2.5c that shows the
+dependent variable in a normal P-P plot of the regression standardized residuals. The observed cumulative residuals are plotted against
+the expected cumulative residuals and it can be seen that the residuals are normally distributed as the points tend to lie on a straight line
+and the normal distribution assumption is not violated.
+
+2.2.8 Linearity
+       For the linearity assumption to be met the values of the outcome variable for each increment of the predictor(s) must lie along a
+straight line as seen in figure 2.5c. The scatter plot in figure 2.5a and 2.5b further lend support to this assumption as they display no
+clear pattern and the residuals appear to be dispersed around the reference line. Hence, the model appears to meet the criteria of linearity.
+
+2.2.9 Scale reliability
+      Cronbach’s Alpha will help determine the reliability. The overall, Cronbach’s Alpha for the Model is .817 (α = .817) which can
+be regarded as acceptable.
+
+2.2.10 Descriptive statistics of the survey data
+
+                                              Table 2.4 Means and standard deviations of test variable
+
+
+
+                       Descriptive Statistics
+
+
+                                                                 Mean                Std. Deviation      N
+                       SMISSTATUS                                3.0000              1.11524             21
+
+                       SYSPERSPECTIVE                            2.0649              .84119              21
+
+                       TECHMED                                   2.8701              1.26080             21
+
+
+       The table 2.4 above shows the mean and standard deviation for each variable included in the regression analysis. The means of
+the independent and dependent variable were found to be approximately 3, 2 and 3 respectively, implying that there could be some
+relationship between the independent and dependent variables worth investigating. This would be helpful to prove the developed
+evaluation model for SMIS.
+
+2.2.11 Correlations
+      The correlation coefficients for each path, that is, the links between each of the variables should be statistically significant (p≤0.05.
+The correlations between the independent variables should not be too high. (0.8 upwards usually create issues of multicollinearity).
+
+Table 2.5 Correlations
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                         www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                          493
+ISSN 2250-3153
+
+
+
+
+      The Table 2.5 above reveal a significant correlation between the dependent variable SMISSTATUS and the two independent
+variables; SYSPERSPECTIVE and TECHMMED; R = .752 and .933 respectively with p<0.05. There does not seem to exist a
+particularly strong association between SYSPERSPECTIVE and their TECHMED, (R=0.703) that may be sufficiently large to cause
+problems of multicollinearity in subsequent stages of the analysis. These results indicate that, at the bivariate level, each of the conditions
+necessary for the multiple regression analysis has been met.
+
+2.2.12 Multiple Regression Analysis
+
+                                                     Table 2.6 Summary of the model relationship
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                         www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                        494
+ISSN 2250-3153
+
+
+               The model summary in table 2.6 shows that 78% of all responses on SMISSTATUS can be explained by the
+               responses on SYSPERSPECTIVE and TECHMED at 95% confidence level (p < 0.05) indicating that
+               SYSPERSPECTIVE and TECHMED determined the SMISSTATUS indicating the significant relationship
+               between SYSPERSPECTIVE and TECHMED and SMISSTATUS.
+               Furthermore the R2 value = .78, which indicates that 78% of the changes in SMISSTATUS can be explained
+               by the independent variables. The adjusted R2 at .756 is inherently lower as it accounts for other possible
+               indicators. Overally, taking into account the adjusted R2, 88% of the variation in SMISSTATUS can be
+               explained with the use of the model.
+                                               Table 2.7 Regression values from ANOVA.
+
+
+
+
+                                   ANOVAb
+
+                                                              Sum             of
+                                   Model                      Squares              Df             Mean Square F       Sig.
+                                   1         Regression       10.993               2              5.496      30.432   .000a
+
+                                             Residual         3.432                19             .181
+                                             Total            14.425               21
+                                   a. Predictors: (Constant), TECHMED, SYSPERSPECTIVE
+
+                                   b. Dependent Variable: SMISSTATUS
+
+
+       The F-ratio in the ANOVA table 2.7 above tests whether the overall regression model is a good fit for the data. The table shows
+that the independent variables statistically significantly predict the dependent variable, F(2, 21) = 30.432, p < .0005 (i.e., the regression
+model is a good fit of the data).
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                           www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                                                     495
+ISSN 2250-3153
+
+                                                 Table 2.8 Model coefficients and collinearity statistics.
+
+
+
+
+      The Unstandardized coefficients indicate how much the dependent variable varies with an independent variable when all other
+independent variables are held constant. The table 2.8 above illustrates that b0 = 0.484, and hence the model predicts a SMISSTATUS
+score of .484 if the values of predictor variables is set to 0. Additionally, b1 SYSPERSPECTIVE is 0.215 with a significance of .038.
+b2, the coefficient for TECHMED is 0.722 with a significance of .002 seems to be a better predictor for SMISSTATUS. Therefore the
+two predictors are useful in predicting the status of SMIS and the model is usable in SMIS evaluation.
+The model equation becomes;
+
+SMISSTATUS= 0.484+0.215(SYSPERSPECTIVE) + 0.722(TECHMED) + error term
+       The statistical significance of each of the independent variables is found by testing whether the unstandardized (or standardized)
+coefficients are equal to 0 (zero) in the population. If p < .05, we can conclude that the coefficients are statistically significantly different
+to 0 (zero). The t-value and corresponding p-value are located in the "t" and "Sig." columns, respectively in the table 2.8 above confirm
+the statistical significance of independent variables ( Sig<0.05 in both cases). Although the intercept, b0, is tested for statistical
+significance, this is rarely an important or interesting finding.
+       We, therefore, conclude that a multiple regression was run to predict SMISSTATUS from SYSPERSPECTIVE and
+TECHMED. These variables statistically significantly predicted SMISSTATUS, F(2, 21) = 30.432, p < .0005, R2 = .884. The two
+independent variables added statistically significantly to the prediction, p < .05. The model is therefore; fit to be used to predict the
+status of schools’ management information systems (SMIS) given the system perspectives and technical mediation observations.
+
+
+                                                                             REFERENCES
+[1]  Artit K. (2012) Management Information System Implementation Challenges, Success Key Issues, Effects and Consequences: A Case Study of Fenix System,
+     Jönköping University
+[2] Breiter, A., & Light, D. (2006). Data for school improvement: Factors for designing effective information systems to support decision making in schools. Educational
+     Technology & Society. Retrieved July 26, 2010, from http://www.ifets.info/journals/9_3/18.pdf
+[3] Chen, H.T. (2015). Practical program evaluation: Theory-Driven Evaluation and the Integrated Evaluation Perspective. Thousand Oaks, CA: Sage.
+[4] Chen, H.-T. (2005). Practical program evaluation. Assessing and improving planning, implementation, and effectiveness. Thousand Oaks, CA: Sage.
+[5] Chen, H.-T. (1994). Theory-driven evaluations: Needs, difficulties, and options. Evaluation Practice, 15, 79-82.
+[6] Curry, H. (2004). The current battle damage assessment paradigm is obsolete. Air and Space Power Journal, 18, 13-17.
+[7] Demir, K. (2003). İl milli eğitim müdürlüğü yönetim bilgi sistemlerinin değerlendirilmesi. Eğitim Yönetimi, 9(36), 558-581.
+[8] Donaldson, S. I. (2007). Program theory-driven evaluation science: Strategies and applications. New York, NY: Taylor and Francis.
+[9] Dyczkowski, M. (2007). Skuteczność wdrażania gospodarczych systemów informacyjnychw świetle badań ankietowych. In Chmielarz W., Parys T. (Ed.),
+     Zastosowania systemów ebiznesuw gospodarce, Warsaw, Poland: Wydawnictwo Wyższej Szkoły Ekonomiczno-Informatycznej.
+[10] Ein-dor, P. & Segev, E. (1978) Organizational context and the success of management information systems. Management Science, 24 (10), 1064–1077.
+[11] English, B., & Kaleveld, L. (2003). The politics of program logic. Evaluation Journal of Australasia, 3, 35-42
+[12] Fetterman, D.M. (2012). Empowerment Evaluation: Learning to think like an evaluator. In M.C. Alkin (Ed.), Evaluation Roots (2nd edition) (pp. 304-322).
+[13] Greene, J.C., Boyce, A.S, & Ahn, J. (2011). Value-Engaged, Educative Evaluation Guidebook. University of Illinois, Urbana-Champaign.
+[14] Kumar, A. & Malik, P. (2011). Critical Success Factors in ERP Implementation in India. International Transactions in Applied Sciences, 4 (2), pp. 271-280.
+[15] Laudon, K. & Laudon, J. (2006) Management Information Systems: Managing the Digital Firm, 9th ed. Prentice Hall: New Jersey
+[16] Laudon, K. & Laudon, J. (2014) Management Information Systems: Managing the Digital Firm, 13th ed. Prentice Hall: New Jersey
+[17] Lipsey, M. W., Crosse, S., Dunkle, J., Pollard, J., & Stobart, G. (1985). Evaluation: The state of the art and the sorry state of the science. In Cordray. D. S (Ed.),
+     Utilizing prior research in evaluation planning (pp. 7-28). New Directions for Program Evaluation, Vol. 27. San Francisco: Jossey-Bass.
+[18] McLeod, L. & MacDonell, S. G. (2011). Factors that Affect Software Systems DevelopmentProject Outcomes: A Survey of Research. ACM Computing Surveys,
+     43(4), pp. 24.1-24.56.
+[19] Murthy, C. S. V. (2006) Management information systems. Mumbai, Himalaya Publishing House.
+[20] Ofunoye, C.M. Innovation and Resilience of Small-Medium Entrepreneurs in Port Harcourt. Sch. J. Sci. Res. Essay 2017, 6, 61–66.
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                                                  www.ijsrp.org
+
+International Journal of Scientific and Research Publications, Volume 12, Issue 1, January 2022                                                                      496
+ISSN 2250-3153
+
+[21] Olawale Fatoki ( 2018) in his study on The Impact of Entrepreneurial Resilience on the Success of Small and Medium Enterprises in South Africa," Sustainability,
+     MDPI, Open Access Journal, vol. 10(7), pages 1-12, July.
+[22] Omwenga E.I & Rodrigues A.J. (2006). Towards an Education Evaluation Framework: Synchronous and Asynchronous E-learning Cases. Journal of the Research
+     Centre for Educational Technology Spring 2006. http://www.rcet.org
+[23] Oyier, R. C., & Mwanda, S. O. (2011). Impact of information and communication technology in the management of private secondary schools in Nairobi Kenya.
+     Retrieved November 18, 2012, from University of Nairobi: www.uonbi.ac.ke/faculties/turntopdf.php?project_id=1344
+[24] Patton, M.Q. (2013). Utilization-Focused Evaluation (U-FE) Checklist. Western Michigan University Checklists.
+[25] Pelgrum, W.J. (2001). Obstacles to the integration of ICT in education: results from a worldwide educational assessment. Computers & Education 37, 163–178.
+[26] Posavac, E.J., & Carey, R. G. (2006). Program evaluation: Methods and case studies (7th ed.). Upper Saddle River, NJ: Pearson.
+[27] Rauch, J. T. (2002). Assessing airpower’s effects: Capabilities and limitations of real-time battle damage assessment. (Masters dissertation, School of Advanced
+     Airpower, Air University, 2002). Retrieved September 10, 2018, from http://handle.dtic.mil/100.2/ADA420587.
+[28] Rogers, P. J. (2007). Theory-based evaluation: Reflection ten years on. In Mathison, S. (Ed.), Enduring issues in evaluation: The 20th anniversary of the collaboration
+     between NDE and AEA. New Directions for Evaluation, Vol. 114. San Francisco: Jossey Bass.
+[29] Rogers, P. J. (2000). Programtheory: Not whether programs work but how they work. In
+[30] Stufflebeam. D. L,Madaus. G. F, & Kellaghan. T (Eds.), Evaluation models (pp. 209-232). Boston: Kluwer Academic.
+[31] Scriven, M. (1994). The fine line between evaluation and explanation. Evaluation Practice, 15, 75-77.
+[32] Shadish, W. R. Jr., Cook, T. D., & Leviton, L. C. (1991). Chapter 2: Good theory for social program evaluation. Foundations of Program Evaluation: Theories of
+     Practice (pp. 36-67). Newbury Park, CA: Sage.
+[33] Shaw, I., & Crompton, A. (2003). Theory, like mist on spectacles, obscures vision. Evaluation, 9, 192-204.
+[34] Stufflebeam, D. L. (Ed.). (2001). Evaluation models. New directions for evaluation, 89. San Francisco: Jossey-Bass.
+[35] Sullivan, H. & Stewart, M. (2006). Who owns the theory of change? Evaluation, 12, 179-199.
+[36] Tripathi, K. P. (2011) Role of management information system (MIS) in human resource. International Journal of Computer Science and Technology, 2 (1), 58–62.
+[37] Webber, C.F. (2003). New technologies and educative leadership. Journal of Educational Administration, 41(2), 119-123.
+[38] Weiss, C. H. (1997a). How can theory-based evaluations make greater headway? Evaluation Review, 21, 501-524.
+[39] Yuen, A.H.K.; Law, N; Wong, K.C. (2003). ICT implementation and school leadership: Case studies of ICT integration in teaching and learning. Journal of
+     Educational Administration, 41(2), 158-170.
+
+
+
+                                                                               AUTHORS
+First Author – Bernard Okeyo Amollo(amolohb@gmail.com, Jaramogi Oginga Odinga University of Science and Technology-Kenya
+Second Author – Dr. Joshua Agola(agolaus@gmail.com, Jaramogi Oginga Odinga University of Science and Technology-Kenya
+Third Author – Prof. Antony Rodrigues (tonyaniceto@gmail.com, Jaramogi Oginga Odinga University of Science and Technology-
+Kenya
+
+
+
+
+ This publication is licensed under Creative Commons Attribution CC BY.
+ http://dx.doi.org/10.29322/IJSRP.12.01.2022.p12164                                                                                                   www.ijsrp.org

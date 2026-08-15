@@ -1,0 +1,913 @@
+International Education Studies; Vol. 14, No. 1; 2021
+                                                                                  ISSN 1913-9020 E-ISSN 1913-9039
+                                                               Published by Canadian Center of Science and Education
+
+
+    The Association Between Parent Participation in School Management
+        and Student Achievement in Eight Countries and Economies
+                                                 Jutaro Sakamoto1
+1
+    College of Education, Michigan State University, East Lansing, United States
+Correspondence: Jutaro Sakamoto, College of Education, Michigan State University, 620 Farm Lane, East
+Lansing, MI 48824, United States. E-mail: sakamo12@msu.edu
+
+
+Received: July 7, 2020          Accepted: September 29, 2020         Online Published: December 26, 2020
+doi:10.5539/ies.v14n1p115                          URL: https://doi.org/10.5539/ies.v14n1p115
+
+
+Abstract
+Parent participation in school management has been promoted as a strategy for holding schools accountable for
+education quality and outcomes. However, the evidence has proven inconclusive and limited in explaining
+mechanisms to affect student achievement. By using public school student data derived from the Programme for
+International Student Assessment 2015, this study examines how 1) participation of a student’s own parents in
+school management, which would affect their learning support at home and 2) participation of a group of
+parents, which would influence school decisions and thus affect the learning environment at school, are
+associated with student achievement in Croatia, Georgia, Portugal, the Dominican Republic, Mexico, Korea,
+Hong Kong, and Macao. I found no evidence that parent participation in school management contributed to
+improving student achievement. Instead, depending on the country, a negative association is derived from either
+individual-level or school-level parent participation. The associations are not moderated by parents’
+socioeconomic status but by school’s openness to parental engagement in some of the countries, indicating that
+what matters might not be participation per se but the degree of engagement. The findings underscore the
+importance of understanding mechanisms and conditions in which parent participation affects student learning in
+context to design effective participatory school governance.
+Keywords: accountability, parent involvement, school governance, school-based management, student
+achievement
+1. Introduction
+Governments and development partners confront challenges to secure the rights to quality education. Although the
+global net enrollment rate in primary and secondary education reached 89% and 66% in 2015 respectively (United
+Nations Educational, Scientific and Cultural Organization [UNESCO] Institute for Statistics, 2018), many
+countries have failed to provide quality education for an increasing number of students (UNESCO, 2013).
+Approximately 200 million children and adolescents leave school without learning the basic skills and knowledge
+that they need to thrive in modern society (UNESCO, 2013).
+One of the policy responses to the learning crisis is the decentralization of education governance (Iftene, 2014;
+Shatkin & Gershberg, 2007; UNESCO, 2008). By giving decision-making authority to local stakeholders, who are
+assumed to know their children’s educational needs and their local education system better than the central
+government does, education decentralization is expected to improve the quality of education and hold schools
+accountable for educational outcomes (Barrera-Osorio, Fasih, & Patrinos, 2009; UNESCO, 2015b).
+In particular, engaging parents in school management is viewed as an important mechanism for improving student
+achievement because parents have direct incentives to improve their child’s education (Barrera-Osorio et al.,
+2009). For example, parent participation in school management is expected to improve education quality and
+outcomes by enhancing the transparency of school operations, strengthening accountability for learning outcomes,
+increasing school resources through local contributions, and achieving a better match between students’ learning
+needs and school offerings (Barrera-Osorio et al., 2009; Bruns, Filmer, & Patrinos, 2011; Edwards & DeMatthews,
+2014; Moradi, Beidokhti, & Fathi, 2016). Strengthening school–parent partnerships is recognized as a strategy for
+addressing the learning crisis and achieving the globally agreed education target in the Sustainable Development
+Goals: inclusive and equitable quality education for all (UNESCO, 2015a).
+
+
+                                                        115
+
+ies.ccsenet.org                            International Education Studies                      Vol. 14, No. 1; 2021
+
+
+Despite the theoretical underpinnings, the evidence on the association between parent participation in school
+management and student achievement is inconclusive. In addition, the available evidence does not adequately
+explain mechanisms by which parent participation influences student achievement. To address the issues, this
+study pays attention to two mechanisms through which parent participation in school management affects student
+achievement. First, by participating in school management, individual parents may obtain information about
+school and build networks with school personnel and other parents that enable them to provide optimal levels of
+learning support for their child at home. Second, participation provides a group of parents with opportunities to
+influence school decisions and thus affect the learning environment at school.
+Using public school student data derived from the Programme for International Student Assessment (PISA) in
+2015, I performed ordinary least squares (OLS) regression analysis to examine how individual-level and
+school-level parent participation in school management are associated with student achievement and how parents’
+socioeconomic status (SES) and other factors moderate these associations in eight countries and economies
+(Croatia, Georgia, Portugal, the Dominican Republic, Mexico, Korea, Hong Kong, and Macao). Understanding
+mechanisms and conditions in which parent participation affects student achievement in different country contexts
+provides insight into ways to leverage participatory school governance for improving students’ learning.
+2. Parent Participation in School Management and Student Achievement
+2.1 Empirical Evidence
+There is a fair number of studies that examine the association between parent participation in school management
+and student achievement. These studies use parent engagement in local school governing bodies, such as
+parent–teacher associations (PTAs), parent–teacher organizations (PTOs), and school management committees, as
+a measure of parent participation in school management.
+Many empirical studies in the United States exploited rich student-level data to estimate the association between
+participation of a student’s own parents in school management and student achievement. The evidence derived
+from these studies is mixed. A composite measure of parent involvement in school, which includes participation in
+a PTA/PTO, was found to be positively associated with student achievement in both cross-sectional and
+longitudinal studies (Dearing, Kreider, Simpkins, & Weiss, 2006; Desimone, 1999; Park & Holloway, 2017).
+However, other studies found no or negative associations. One longitudinal study found that parent participation in
+a PTA was not associated with mathematics and reading scores (Domina, 2005). A composite measure of parent
+participation, which includes PTA/PTO participation, was also identified to have no association or a negative
+association with student achievement (Fan, 2001; McNeal, 1999; Shumow & Miller, 2001).
+Research exploring the association between parent participation in school management and learning outcomes is
+also found for less developed countries where school-based management programs have been implemented. These
+programs transfer the responsibility for school management to local school governing bodies represented by
+parents. Comparing student achievement between treatment schools and control schools, researchers examined
+whether school-level parent participation was associated with student achievement. The evidence from these
+studies is inconclusive. For instance, a positive association was found in Argentina (Galiani, Gertler, &
+Schargrodsky, 2008), Ecuador (Ponce, 2006), and Mali (Muskin, 1999), while a lack of association was suggested
+in studies conducted in Mexico (Santibañez, Abreu-Lastra, & O’Donoghue, 2014), Nepal (Chaudhury & Parajuli,
+2010), and the Philippines (San Antonio, 2008).
+2.2 Possible Explanation for the Mixed Results
+The literature suggests several conceptual and methodological issues that may have contributed to the mixed
+evidence.
+2.2.1 Distinction of Parent Participation in School Management
+Parent participation in school management should be distinguished from other types of parent participation
+because mechanisms to influence student learning differ by type of participation (Epstein, 1995; McNeal, 1999).
+Although the importance of differentiating types of parent participation has been addressed (Hill & Taylor, 2004;
+Shumow & Miller, 2001), participation in school management is often combined with other types of participation,
+such as membership in PTAs/PTOs, school visits, volunteering, and fundraising (e.g., Fan, 2001; McNeal, 1999;
+Sui-Chu & Willms, 1996). This practice poses a challenge to understand how participation in school management
+is associated with student achievement.
+2.2.2 Isolation of Individual- and School-Level Parent Participation
+Parent participation in school management is unique in that it influences student learning through two channels.
+
+                                                        116
+
+ies.ccsenet.org                            International Education Studies                        Vol. 14, No. 1; 2021
+
+
+First, individual parents who participate in school management could obtain insider information about school, such
+as curriculum design and instructional/assessment policy, and build networks with school personnel and other
+parents. These parents may use these resources to provide optimal levels of learning support for their child at home
+(Hill & Taylor, 2004; McNeal, 1999), for example, by providing effective homework help and private tutoring.
+Second, a group of parents participating in school management could influence school decisions and change
+school policy and practice to improve the learning environment at school (Epstein, 1995). Due to its school-wide
+influence, this benefit accrues to even students whose parents do not participate in school management as spillover
+effects.
+To understand how parent participation in school management affects student achievement, the association derived
+from participation of a student’s own parents and that of a group of parents needs to be isolated from each other.
+Park and Holloway (2017) and Sui-Chu and Willms (1996) examined both individual- and school-level parent
+participation; however, these studies do not provide a clear picture because they used a composite measure of
+parent participation and/or did not isolate the two associations from each other.
+2.2.3 Heterogeneity in Parents’ Socioeconomic Status (SES)
+The literature suggests that parents’ SES may moderate the participation–achievement association derived from
+individual- and school-level parent participation differently. Thus, the role of SES needs to be examined for each
+of the two mechanisms. With regard to individual-level participation, socioeconomically advantaged parents may
+have a greater capacity to obtain information and develop networks from their participation and use these
+advantages in providing more effective learning support at home, although the evidence on the SES advantage is
+inconclusive (Dearing et al., 2006; Domina, 2005; McNeal, 1999; Park & Holloway, 2017).
+Concerning school-level participation, socioeconomically advantaged parents are reported to have more power to
+influence school decisions (Chikoko, 2008; Gershberg, Meade, & Andersson, 2009; Khan, 2003; Swift-Morgan,
+2006). However, school-level SES is identified to have zero or negative moderating effects on the
+participation–achievement association (Park & Holloway, 2017; Sui-Chu & Willms, 1996). The literature also
+suggests that what matters could be a variation in SES within school because, in a socioeconomically diverse
+school, parent participation creates conflicts within the parent group (Anderson, 1998), which may make it
+difficult for parents to form a collective power to influence school decisions. In this context, the role of SES as a
+moderating factor needs to be examined with respect to both the level of and variation in SES.
+2.2.4 Reverse Causality
+Another issue to be addressed is reverse causality, which could generate a downward bias in the
+participation–achievement association. While parent participation is expected to affect student achievement in
+theory, poor academic results may provide parents with incentives to increase their involvement in school
+(McNeal, 2012). Recent studies address this issue by using longitudinal data, which enable researchers to control
+for past achievement and examine causal directions (Dearing et al., 2006; Domina, 2005).
+Overall, the literature suggests the need to examine how individual- and school-level parent participation in school
+management, each of which would distinctly influence the learning environment, is associated with student
+achievement and how parents’ SES moderates these associations, while addressing reverse causality.
+3. Data
+3.1 Data and Sample
+This study used data on public school students derived from the PISA 2015 round surveys. The Organisation for
+Economic Co-operation and Development (OECD) has administered PISA, an international survey assessing the
+competencies of nationally representative 15-year-old students, every three years since 2000. In addition to tests in
+mathematics, science, and reading, a questionnaire survey was provided to students and their schools. Some
+countries and economies further administered an optional questionnaire survey to parents of the students. I used
+only a public school sample because public and private schools, which embody different social values and parental
+expectations, develop different accountability relationships with parents (Anderson, 1992).
+Out of 73 countries and economies that participated in the PISA 2015, 19 countries and economies administered a
+questionnaire survey to parents. Parents were asked to report whether they “participated in local school
+government, e.g., parent council or school management committee.” The parent-reported participation has missing
+values accounting for 38.27% of the sample. Because the test of differences suggested that the missing data are not
+completely at random, I used a multiple imputation technique to replace missing values with a set of plausible
+values predicted by other variables in the dataset. I first dropped 11 countries and economies with more than 10%
+missing data on parent-reported participation (Note 1) and then performed multiple imputation by chained
+
+                                                        117
+
+ies.ccsenet.org                               International Education Studies                         Vol. 14, No. 1; 2021
+
+
+equations to add 20 imputations to the dataset (StataCorp, 2017). The final sample is 31,569 public school students
+in Croatia, Georgia, Portugal, the Dominican Republic, Mexico, Korea, Hong Kong, and Macao.
+3.2 Student and School Characteristics
+Table 1 presents a descriptive summary of public school students. The detailed description of each variable is
+provided in Appendix A.
+
+
+Table 1. Descriptive summary of the public school student sample
+                                                                     Country/Economy
+Variable                                                             Dom.
+                                    Croatia   Georgia   Portugal                Mexico     Korea    Hong Kong    Macao
+                                                                   Republic
+Achievement
+Math score                          463.74    398.15     487.80     317.31      405.23     518.17    568.19      485.34
+Science score                       474.98    405.94     497.66     320.60      411.99     508.84    539.31      479.80
+Reading score                       486.29    396.08     495.37     344.05      418.76     509.13    537.98      462.77
+Parent participation
+Parent-reported participation        0.19      0.25       0.12       0.61        0.48       0.14      0.10        0.26
+School-reported participation (%)   32.93      27.23     20.29       66.75       43.46     31.14      24.61      17.70
+Parent characteristics
+Parents’ SES                         -0.24     -0.40     -0.44       -1.12       -1.37     -0.24      -0.53       -0.88
+Student characteristics
+Age                                 15.71      15.87     15.78       15.74       15.81     15.70      15.75      15.85
+Female                               0.51      0.47       0.50       0.51        0.49       0.46      0.51        0.46
+Native immigration status            0.89      0.98       0.92       0.98         0.99      1.00      0.59        0.36
+Home/test language match             0.97      0.95       0.97       0.97         0.96      1.00      0.98        0.90
+Relative school grade                0.20      -0.24     -0.51       -0.62       -0.50     -0.10      -0.41       -0.79
+School program
+General                              0.32      0.98       0.88       0.95        0.72       0.84      1.00        0.82
+Pre-vocational                       0.00      0.00       0.05       0.00         0.00      0.00      0.00        0.18
+Vocational                           0.68      0.02       0.07       0.05         0.28      0.16      0.00        0.00
+School characteristics
+Location (population)
+<3,000                               0.01      0.34       0.03       0.17        0.19       0.01      0.00        0.00
+3,000–15,000                         0.20      0.13       0.30       0.35        0.18       0.00      0.00        0.00
+15,000–100,000                       0.41      0.16       0.50       0.29        0.20       0.12      0.00        0.00
+100,000–1,000,000                    0.35      0.16       0.14       0.11        0.21       0.38      0.00        1.00
+>1,000,000                           0.03      0.21       0.03       0.07        0.21       0.48      1.00        0.00
+School size                         605.04    636.55    1,796.13    650.27      1,000.90   947.70    797.47      522.06
+School-mean SES                      -0.24     -0.40     -0.42       -1.12       -1.37     -0.24      -0.52       -0.88
+Variation in SES                     0.72      0.74       0.99       0.89        0.93       0.60      0.90        0.75
+Observations                        5,675      4,734     6,897       3,401       6,635     3,703       403        121
+Note. The table shows the mean values estimated based on non-imputed data using sampling and replicate
+weights. The variation in SES is the standard deviation of parents’ SES within school.
+
+
+The average student achievement was highest in Hong Kong and the lowest in the Dominican Republic.
+Parent-reported participation ranges from 0.10 in Hong Kong to 0.61 in the Dominican Republic. A
+school-reported proportion of parents who participated in school management was the lowest in Macao at 17.70%,
+and the highest in the Dominican Republic at 66.75%. The test scores and parent participation imply that, without
+controlling for other factors, the participation–achievement association could be a negative one.
+3.3 Differences Between Participating and Non-Participating Parents
+I also examined whether there are any significant differences between parents who did and did not participate in
+school management. The results of the test of differences are presented in Table 2.
+
+
+
+
+                                                           118
+
+ies.ccsenet.org                                    International Education Studies                                    Vol. 14, No. 1; 2021
+
+
+Table 2. Differences in student and parent characteristics according to parent participation in school management
+                                                   Test of differences (participating parents – non-participating parents)
+Variable                                                                    Dom.
+                                      Croatia    Georgia     Portugal                    Mexico         Korea      Hong Kong     Macao
+                                                                          Republic
+Student characteristics
+Age                                   -0.06***    0.00        -0.01          0.01          0.00        0.04***      -0.09***      0.04
+                                       (0.01)    (0.01)       (0.01)        (0.01)        (0.01)        (0.01)        (0.02)     (0.05)
+Female                                 -0.03*     -0.02       -0.02          0.00         -0.03*        -0.01         -0.03       0.05
+                                       (0.02)    (0.02)       (0.02)        (0.02)        (0.02)        (0.03)        (0.05)     (0.11)
+Native immigration status              -0.01      -0.01        0.02          0.00         -0.01         0.00*         -0.06      -0.07
+                                       (0.01)    (0.01)       (0.01)        (0.00)        (0.00)        (0.00)        (0.08)     (0.11)
+                                       -0.01      0.01        0.01*          0.00        -0.02**         0.00         -0.03       0.04
+Home/test language match
+                                       (0.01)    (0.01)       (0.01)        (0.01)        (0.01)        (0.00)        (0.03)     (0.06)
+Relative school grade                 -0.10***    0.02        -0.03          0.04       -0.12***         0.02       -0.25***     -0.04
+                                       (0.01)    (0.03)       (0.04)        (0.06)        (0.04)        (0.01)        (0.06)     (0.18)
+School program
+General                                -0.03      0.00      -0.05***         0.00        0.05***        -0.01                     0.01
+                                                                                                                        -
+                                       (0.02)    (0.00)       (0.02)        (0.01)        (0.02)        (0.02)                   (0.08)
+Pre-vocational                                                0.03**                                                             -0.01
+                                         -          -                          -             -            -             -
+                                                              (0.01)                                                             (0.08)
+Vocational                              0.03      0.00         0.01          0.00       -0.05***         0.01
+                                                                                                                        -          -
+                                       (0.02)    (0.00)       (0.01)        (0.01)        (0.02)        (0.02)
+Parent characteristics
+Parents’ SES                            0.04      -0.06        0.04         -0.01       -0.42***       0.12***         0.17      -0.22
+                                       (0.03)    (0.04)       (0.05)        (0.05)        (0.05)        (0.03)        (0.14)     (0.20)
+Reason for school choice: Good        0.08***    0.11***       0.01          0.01          0.03          0.03        0.15***      0.09
+reputation                             (0.03)    (0.03)       (0.03)        (0.02)        (0.02)        (0.03)        (0.04)     (0.18)
+Reason       for   school   choice:    0.05*      0.10*       0.06**        -0.02        0.06***       0.21***       0.34**      0.40**
+Courses offered                        (0.03)    (0.05)       (0.03)        (0.04)        (0.02)        (0.04)        (0.13)     (0.18)
+Reason for school choice: High        0.08**     0.10***      -0.02        0.06**          0.01        0.10**         -0.02      0.34**
+achievement                            (0.03)    (0.03)       (0.03)        (0.03)        (0.02)        (0.04)        (0.09)     (0.15)
+                                      0.15***    0.42***     0.16***       0.12**        0.20***       0.25***       0.59***      0.18
+Satisfaction with school quality
+                                       (0.04)    (0.04)       (0.04)        (0.05)        (0.03)        (0.05)        (0.07)     (0.25)
+Observations                           5,229      4,475       6,394         3,188         6,045         3,630          397        117
+Note. The table shows coefficients and standard errors in parentheses for the test of differences between parents
+who did and did not participate in school management based on non-imputed data. Sampling and replicate
+weights are used for estimation. Significance level: * p<0.10; ** p<0.05; *** p<0.01.
+
+
+With regard to student characteristics, parents of children enrolled in lower grades were more likely to participate
+in school management in Croatia, Mexico, and Hong Kong only. In terms of parent characteristics, parents who
+participated in school management had lower SES in Mexico but higher SES in Korea. More consistent differences
+are identified in parents’ academic orientation and their satisfaction with school. Parents were asked to rate the
+importance of school reputation, offering of particular courses, and school academic achievement in choosing their
+child’s school. These questions indicate the degree to which parents care about the quality of education and their
+child’s academic success. The results show that participating parents were more likely to value at least one of the
+academic orientation measures in all the countries and economies. In addition, they had a higher level of
+satisfaction with the quality of their child’s school than non-participating parents except Macao.
+4. Methods
+4.1 Basic Model
+I estimated OLS regression models to examine the relationship between parent participation in school management
+and student achievement for each of the countries and economies. All models were estimated by using sampling
+weights and balanced repeated replication weights to obtain estimates that account for the complex survey design
+of PISA (OECD, 2017a, 2017b). The basic model is specified below.
+      Scoreis = β0 + β1Participationis + β2%Participations + β3SESis + STUcharacterisβ4 + SCHcharactersβ5 +
+
+                                                                   119
+
+ies.ccsenet.org                            International Education Studies                        Vol. 14, No. 1; 2021
+
+
+             β6PTorientis + β7PTorients + β8PTdiscussis + β9%PTdiscusss + β10SCHsharedecisions + εis               (1)
+The outcome (Score) is a PISA test score in mathematics, science, or reading of student i in school s (Note 2). The
+student performance is scaled to have an OECD mean of 500 and standard deviation of 100. The outcome is
+estimated as a function of individual- and school-level parent participation in school management. Participation of
+a student’s own parents (Participation) is derived from parents’ self-reporting on whether they participated in local
+school government. School-level parent participation (%Participation) is measured by the school-reported
+proportion of parents who participated in local school government. This study used the school-reported measure,
+rather than aggregating parent-reported participation to school level, due to the relatively large proportion of
+missing data in the latter variable. The school-reported participation measure would also capture the participation
+of parents who were not sampled for the survey.
+The model controlled for parents’ SES (SES) and student characteristics that affect test scores (STUcharacter),
+including age, gender, native immigration status, home–school language match, school grade, and school program
+enrolled. School characteristics (SCHcharacter) include school location and size.
+The parameter estimates for parent participation are biased if the participation measures are endogenous to other
+unobserved factors that are correlated with both parent participation and student achievement. Although an
+instrumental variable approach would be an option to address the endogeneity in cross-sectional data, no valid
+instruments are found in the data. Thus, I decided to include several additional variables to control for potential
+sources of endogeneity.
+First, I controlled for parents’ academic orientation, which could result in an upward bias in the
+participation–achievement associations. Parents who participate in school management may have higher
+expectations for their child’s academic success, which may affect the child’s learning behavior and achievement.
+To address the issue, I used factor analysis to generate latent variables that measure the degree of the parents’
+academic orientation from a set of questions asking parents the importance of education quality for choosing their
+child’s school. The first factor, which accounts for 58% of the total variation, was used as a control for the
+academic orientation of an individual’s parents (PTorientis) (Note 3). I also aggregated this measure to the school
+level as a school-mean parents’ academic orientation (PTorients) that may affect both school-level parent
+participation and student achievement.
+Second, the model addressed the aforementioned reverse causality. The reverse causality happens when parents of
+poorly performing children decide to participate in school management to improve the school learning
+environment for their child. Similarly, school-level parent participation may be high in low-performing schools if
+parents in such schools try to participate in school management to improve their schools’ learning environment.
+These behavioral patterns would create a downward bias. I assume that such parents would talk to teachers of their
+child before thinking of participating in school management if they have concerns over their child’s performance.
+In the PISA survey, parents reported whether they took the initiative in discussing their child’s progress with a
+teacher (PTdiscuss). Schools also reported the proportion of parents who took the initiative to discuss their child’s
+progress with a teacher (%PTdiscuss). I used the two measures as a control for parents’ behavior to participate in
+school for the purpose of improving academic achievement of their low-performing child and school.
+Third, the model controlled for whether the school involved parents in school decision-making
+(SCHsharedecision). Schools involving parents in decision-making might not only facilitate parent participation
+but also offer academically oriented programs to satisfy parents’ expectations and/or attract high-achieving
+students. This could result in upward bias. To address this issue, I included schools’ self-reported information on
+whether they involved parents in decision-making in the models. The detailed description of each variable is
+provided in Appendix A.
+4.2 Interaction Models
+Next, this study examined whether parents’ SES moderates the participation–achievement association. First, I
+examined whether SES of an individual’s parents moderates the association between participation of the student’s
+parents and that student’s achievement. In model 2, individual-level parent participation is interacted with parents’
+SES. The parameter estimate (β11) indicates whether the association between participation of a student’s own
+parents and their child’s achievement differs according to the parent’s SES.
+     Scoreis = β0 + β1Participationis + β2%Participations + β3SESis + STUcharacterisβ4 + SCHcharactersβ5 +
+              β6PTorientis + β7PTorients + β8PTdiscussis + β9%PTdiscusss + β10SCHsharedecisions +
+                                          β11(Participationis × SESis) + εis                               (2)
+Second, I examined whether school-mean parents’ SES (SCHSES), as a source of bargaining power, moderates the
+
+                                                        120
+
+ies.ccsenet.org                                      International Education Studies                           Vol. 14, No. 1; 2021
+
+
+association between school-level parent participation and student achievement. In model 3, school-level parent
+participation is interacted with a school-average SES, which is included as both a main effect and an interaction
+effect.
+       Scoreis = β0 + β1Participationis + β2%Participations + β3SESis + STUcharacterisβ4 + SCHcharactersβ5 +
+                β6PTorientis + β7PTorients + β8PTdiscussis + β9%PTdiscusss + β10SCHsharedecisions +
+                                 β11SCHSESs + β12(%Participations × SCHSESs) + εis                           (3)
+Third, I examined whether a within-school variation in SES (SDSES), which is measured by the standard deviation
+in parents’ SES in school s, moderates the association between school-level parent participation and student
+achievement. In model 4, the within-school SES variation is included as a main effect and an interaction effect.
+       Scoreis = β0 + β1Participationis + β2%Participations + β3SESis + STUcharacterisβ4 + SCHcharactersβ5 +
+                β6PTorientis + β7PTorients + β8PTdiscussis + β9%PTdiscusss + β10SCHsharedecisions +
+                                   β11SDSESs + β12(%Participations × SDSESs)+ εis                            (4)
+5. Results
+5.1 Association Between Parent Participation and Student Achievement
+Table 3 presents the association between parent participation in school management and student achievement
+estimated by the basic regression model.
+
+
+Table 3. Association between parent participation in school management and student achievement
+                                                                                 Test score
+Parent participation                                                         Dom.
+                                 Croatia    Georgia        Portugal                      Mexico    Korea    Hong Kong    Macao
+                                                                            Republic
+Math
+                                -10.80***    -1.20          -1.80           -7.51**       -1.34    -6.18      9.30         5.99
+Parent-reported participation
+                                 (3.20)      (3.60)         (4.11)           (3.11)      (2.40)    (5.22)    (14.40)     (20.01)
+School-reported                   0.00      -0.26***        -0.08             0.06        0.04     0.10       0.14        -1.76
+participation (%)                (0.07)      (0.09)         (0.07)           (0.08)      (0.06)    (0.08)     (0.31)      (4.13)
+Science
+                                -10.35***    -5.70*         -4.52           -7.84***     -4.25**   -6.71      7.46         2.35
+Parent-reported participation
+                                 (2.79)      (3.06)         (3.83)           (2.82)      (2.03)    (4.80)    (14.38)     (18.80)
+School-reported                   0.00      -0.18**         -0.01             0.04        0.03     0.14       0.09        -0.52
+participation (%)                (0.06)      (0.08)         (0.05)           (0.07)      (0.05)    (0.08)     (0.26)      (3.16)
+Reading
+                                -11.11***    -5.12          -3.75           -7.94**      -4.61*    -9.21*     4.48        -9.08
+Parent-reported participation
+                                 (3.11)      (3.84)         (3.93)           (3.49)      (2.39)    (4.88)    (15.64)     (19.47)
+School-reported                   0.00      -0.21**         -0.01            -0.01        0.03     0.12       0.08        -2.09
+participation (%)                (0.08)      (0.10)         (0.07)           (0.08)      (0.06)    (0.08)     (0.24)      (3.45)
+Observations                      5,675      4,734          6,897            3,401        6,635    3,703       403         121
+Note. The table shows coefficients for individual- and school-level participation and their standard errors in
+parentheses. Significance level: * p<0.10; ** p<0.05; *** p<0.01.
+
+
+The results show that participation of a student’s own parents is not significantly associated with student
+achievement at the 5% significance level in the majority of countries and economies except for Croatia, the
+Dominican Republic, and Mexico. On average, participation of a student’s own parents is associated with a
+decrease in test scores in mathematics, science, and reading in Croatia (-11 points) and the Dominican Republic (-8
+points) and a reduction in science scores in Mexico (-4 points).
+Similarly, school-level parent participation is not statistically significantly associated with student achievement in
+most of the countries and economies. An exception is Georgia, where a 10-percentage-point increase in the
+proportion of parents who participate in school management is associated with a decrease in test scores in
+mathematics, science, and reading by about two points.
+Overall, I found no evidence that parent participation in school management contributed to improving student
+achievement. The participation–achievement association varies by country and economy, but any statistically
+significant associations lie in a negative direction. However, depending on the country and economy, the negative
+
+                                                                      121
+
+ies.ccsenet.org                              International Education Studies                         Vol. 14, No. 1; 2021
+
+
+association is derived from different mechanisms, that is, either participation of a student’s own parents or
+participation of a group of parents.
+5.2 Roles of Parents’ SES as a Moderating Factor
+Table 4 summarizes the results of interaction regression models that examined whether parents’ SES moderates the
+participation–achievement association.
+
+
+Table 4. Interaction effects between parent participation in school management and SES
+                                                                          Test score
+Interaction term                                                      Dom.
+                                   Croatia      Georgia   Portugal               Mexico    Korea    Hong Kong   Macao
+                                                                     Republic
+Individual-level participation ×
+parents’ SES
+                                    -0.92        3.60       3.32       -3.06      -1.36    -1.17      -6.43     -22.12
+Math
+                                   (3.33)       (3.93)     (2.96)     (3.09)      (2.18)   (6.24)    (12.11)    (18.30)
+                                    -0.18        2.68       3.11       -3.43      -1.95    -1.80      -11.30    -17.74
+Science
+                                   (3.25)       (3.55)     (3.01)     (2.75)      (1.83)   (6.29)     (9.37)    (18.06)
+                                    -0.44        4.00       4.79       -4.71      -2.80    -1.18      -13.38    -20.04
+Reading
+                                   (3.33)       (3.99)     (3.00)     (2.88)      (1.82)   (6.36)    (10.94)    (18.20)
+School-level participation (%) ×
+school-mean SES
+                                    0.05         -0.16      0.07       -0.08      -0.12    0.03       -0.22      3.46
+Math
+                                   (0.15)       (0.19)     (0.11)     (0.21)      (0.08)   (0.21)     (0.48)     (7.86)
+                                    0.08         -0.08      0.02       0.02       -0.05    -0.07      -0.07      3.46
+Science
+                                   (0.15)       (0.18)     (0.09)     (0.20)      (0.07)   (0.18)     (0.45)     (8.64)
+                                    0.12         0.02       0.07       -0.06      -0.03    -0.01      -0.05      0.71
+Reading
+                                   (0.17)       (0.18)     (0.11)     (0.22)      (0.08)   (0.20)     (0.46)     (9.66)
+School-level participation (%) ×
+within-school SES variation
+                                    -0.55        0.45       -0.13      0.29       -0.04    -0.44      0.02
+Math                                                                                                               -
+                                   (0.63)       (0.44)     (0.51)     (0.54)      (0.32)   (0.84)     (2.02)
+                                    -0.56        0.38       0.40       -0.05      -0.25    -0.09      -0.40
+Science                                                                                                            -
+                                   (0.61)       (0.40)     (0.38)     (0.47)      (0.30)   (0.75)     (1.72)
+                                    0.42         0.07       0.09       -0.08      0.06     -0.38      0.21
+Reading                                                                                                            -
+                                   (0.34)       (0.23)     (0.14)     (0.41)      (0.25)   (0.26)     (0.49)
+Note. The table shows a coefficient and standard errors in parentheses for the corresponding interaction term
+from a separate regression model. The interaction term between school-level participation and within-school
+SES variation in Macao is omitted due to a dependency among predictors. Significance level: * p<0.10; **
+p<0.05; *** p<0.01.
+
+
+I found no statistically significant interaction effects for any of the subjects and in any of the countries and
+economies. The results indicate that the association between participation of a student’s own parents and student
+achievement does not change according to the level of the parents’ SES. Similarly, the association between
+school-level participation and student achievement does not vary by either the level or the variation of parents’
+SES within the school (Note 4).
+5.3 School’s Openness to Parental Engagement as a Moderating Factor
+Given the lack of moderating effects of SES, I explored other factors that may have moderated the
+participation–achievement association. Parent participation might be effectively leveraged for improving student
+achievement when schools recognize the importance of parent engagement and promote it proactively. Such
+schools may provide a welcoming and supportive environment that enables parents who participate in school
+management to obtain information and networks useful to strengthen learning support at home and/or play an
+active role in school decision-making. Therefore, I examined whether school’s openness to parental engagement
+moderates the participation–achievement association. I used factor analysis to generate latent variables that
+measure school’s openness to parental engagement from a set of questions that asked parents to assess their
+
+                                                          122
+
+ies.ccsenet.org                                     International Education Studies                              Vol. 14, No. 1; 2021
+
+
+school’s parental engagement practices. The first factor, which accounts for 62% of the total variation (Note 5),
+was interacted with individual-level parent participation, and the school-mean parents’ perception was interacted
+with school-level parent participation, respectively, in separate models. The results are presented in Table 5.
+
+
+Table 5. Interaction effects between parent participation in school management and parents’ perception of school’s
+openness to parental engagement
+                                                                                 Test score
+Main effects and
+                                                                             Dom.
+Interaction term                   Croatia    Georgia       Portugal                     Mexico       Korea    Hong Kong    Macao
+                                                                            Republic
+1) Individual-level participation × parent’s perception of school’s openness to parental engagement
+Math
+Parent participation               -9.72***     -0.46        -1.29          -6.57**       -0.74       -5.41      6.34        12.37
+                                    (3.21)     (4.42)        (4.18)          (3.29)      (2.51)       (5.30)    (16.09)     (19.13)
+Parent participation × parent’s     -3.60       -0.05        -1.66           -1.94        -1.56       -2.12      6.02      -38.07**
+perception                          (2.85)     (3.95)        (3.65)          (2.19)      (1.99)       (6.17)    (20.51)     (16.30)
+Science
+Parent participation               -9.10***     -4.62        -3.69          -6.47**      -4.09*       -6.10      4.48        8.16
+                                    (2.76)     (3.81)        (4.64)          (3.23)      (2.13)       (4.89)    (15.80)     (17.72)
+Parent participation × parent’s     -4.43       0.43          0.31           -2.81        -0.74       -2.48      1.60      -47.81***
+perception                          (2.91)     (3.90)        (3.30)          (2.54)      (1.97)       (6.09)    (19.20)     (15.96)
+Reading
+Parent participation               -9.73***     -4.26        -3.39           -7.17*      -4.59*       -8.66*     0.86        -4.39
+                                    (3.02)     (4.75)        (4.01)          (3.92)      (2.45)       (4.97)    (16.85)     (18.93)
+Parent participation × parent’s     -4.87       1.30         -1.18           -1.48        -0.22       -4.91      5.04      -38.07**
+perception                          (3.05)     (4.05)        (3.64)          (2.81)      (2.17)       (5.32)    (20.00)     (15.52)
+2) School-level participation × school-mean parents’ perception of school’s openness to parental engagement
+Math
+School-level              parent     0.03     -0.27**        -0.08           -0.07        0.04         0.10      0.07        -1.76
+participation (%)                   (0.07)     (0.11)        (0.07)          (0.10)      (0.08)       (0.10)     (0.45)     (4.13)
+Participation       (%)       ×
+                                    -0.28       0.03          0.22           0.22*        0.05        -0.02      -0.07
+school-mean            parents’                                                                                                -
+                                    (0.29)     (0.18)        (0.25)          (0.13)      (0.18)       (0.34)     (0.59)
+perception
+Science
+School-level              parent     0.03       -0.15        -0.02           -0.08        0.01        0.19**     0.08        -0.52
+participation (%)                   (0.07)     (0.10)        (0.05)          (0.09)      (0.07)       (0.10)     (0.39)     (3.16)
+Participation       (%)       ×
+                                    -0.24       -0.11        0.36*            0.19        0.08         0.35      -0.11
+school-mean            parents’                                                                                                -
+                                    (0.29)     (0.16)        (0.21)          (0.13)      (0.16)       (0.30)     (0.52)
+perception
+Reading
+School-level              parent     0.05      -0.02*        -0.02           -0.22*       0.01         0.14      0.02        -2.09
+participation (%)                   (0.07)     (0.11)        (0.07)          (0.11)      (0.08)       (0.10)     (0.34)     (3.45)
+Participation       (%)       ×
+                                    -0.33       -0.02         0.32          0.36**        0.08         0.09      0.02
+school-mean            parents’                                                                                                -
+                                    (0.36)     (0.18)        (0.23)          (0.15)      (0.18)       (0.35)     (0.52)
+perception
+Note. The table shows a coefficient and standard errors in parentheses for parent participation (main effects) and
+a corresponding interaction term. The interaction term in specification 2 in Macao is omitted due to a
+dependency among predictors. All models include individual- and school-level parent participation measures,
+parents’ SES, student and school characteristics, and additional controls addressing potential sources of
+endogeneity. Significance level: * p<0.10; ** p<0.05; *** p<0.01
+
+
+In Macao, there are negative interaction effects for the association between individual-level parent participation
+and student achievement. This indicates that parents who felt more involved by their child’s school received fewer
+benefits from their own participation or paid a greater cost of participation in terms of student achievement. For
+instance, participation of a student’s own parents is associated with a 17.55-point increase in mathematics scores
+
+
+                                                                      123
+
+ies.ccsenet.org                             International Education Studies                        Vol. 14, No. 1; 2021
+
+
+for students whose parents have an average level of perception about the school’s openness (-0.14). However, for
+parents whose perception is one standard deviation higher than the average (0.77), their participation is associated
+with a decrease in mathematics scores by 17.08 points.
+In the Dominican Republic, the results show small but positive interaction effects for the association between
+school-level parent participation and students’ reading scores. In schools where parents’ perception about their
+school’s openness is at the country’s average (0.64), a 10-percentage-point increase in the proportion of parents
+who participate in school management is associated with an increase in reading achievement by 0.11 points.
+However, in schools where the parents’ perception is one standard deviation higher than the country average
+(1.05), a 10-percentage-point increase in the share of participating parents is associated with an increase in reading
+scores by 1.59 points.
+6. Limitations
+The findings of this study need to be interpreted with several limitations in mind. First, the analyses may still be
+subject to biases resulting from endogeneity. Even though the models controlled for potential sources of
+endogeneity, there might be other factors that explain both parent participation and student achievement.
+Therefore, no causal inference can be made from the findings of this study.
+Second, the school-level participation measure may be subject to measurement error. This study used a
+school-reported share of parents participating in school management as a measure of school-level parent
+participation. However, the information provided by schools might not necessarily be accurate if the data did not
+come from official school records.
+Third, the PISA survey did not provide the information on types of school governing bodies and decision-making
+tasks in which parents were actually engaged. Therefore, the results of this study might be influenced by the
+variation in types of school governing bodies and the degree of decision-making authority accorded to parents.
+7. Discussion and Conclusion
+This study examined how individual-level and school-level parent participation in school management, each of
+which would have a distinct mechanism for learning gain, is associated with student achievement in eight countries
+and economies. The analysis shows that the participation–achievement association varies by country and economy
+but any statistically significant associations lie in a negative direction. However, depending on the country or
+economy, the negative associations are identified in either participation of a student’s own parents that is more
+likely to affect home input or participation of a group of parents that is assumed to affect school input. This study
+also found that the participation–achievement associations are not moderated by parents’ SES but by the parents’
+perception of school’s openness to parental engagement in some countries and economies. I discuss these findings
+in specific country contexts and provide insights into participatory school governance.
+7.1 Participation of Student’s Own Parents
+The literature suggests that parents obtain information and networks that can be utilized to strengthen their
+learning support at home through their participation in school management (Hill & Taylor, 2004; McNeal, 1999).
+However, participation of a student’s own parents was found not to be associated with student achievement in most
+of the countries and economies. One potential explanation could be that the resources obtained at school did not
+contribute to increasing the quality of learning support at home. The descriptive analysis presented in Table 2
+indicated that parents who participated in school management cared about their child’s education and academic
+success more than non-participating parents. This implies that participating parents might have already provided
+an optimal level of learning support even before their participation in school management.
+However, this hypothesis does not explain the negative associations found in Croatia, the Dominican Republic,
+and Mexico. The negative associations suggest that parents who participated in school management might have
+ended up providing a lower level of home input. This could happen if, for example, parents who had provided
+relatively high-level learning support at home had to cut the amount of their support as a result of participating in
+school management and were unable to obtain useful resources to strengthen their learning support. In other
+words, the negative association could be explained by high opportunity cost and insufficient benefits of
+participation.
+In fact, the opportunity cost of participation is considered relatively high in these countries. According to the PISA
+data, parents of public school students in the Dominican Republic, Croatia, and Mexico rank 1st, 5th, and 6th out
+of 17 countries and economies in terms of the frequency of helping their child with homework. By devoting their
+time to school management, however, they may have given up some amount of learning support at home. In
+addition, the benefits of participating in school management for individual parents would be low, at least, in
+
+                                                         124
+
+ies.ccsenet.org                             International Education Studies                         Vol. 14, No. 1; 2021
+
+
+Croatia. According to Pahić et al. (2010), in Croatia, only parents who truly engaged in the work of school boards
+realized that their participation was useful for their own child (as cited in Ercegovac, Koludrović, & Bubić, 2016).
+These imply that, if a negative association is derived from individual-level participation, policy makers may need
+to develop more efficient participatory school governance from which parents can obtain useful information and
+networks with less time commitment into school management tasks.
+7.2 Participation of a Group of Parents
+The literature suggests that parents who have direct incentives to improve their child’s education would seek to
+influence school decisions to improve the learning environment at school through their participation in school
+management (e.g., Barrera-Osorio et al., 2009; Epstein, 1995). However, school-level parent participation was
+found not to be associated with student achievement in most of the countries and economies.
+One potential explanation would be a relatively weak sense of urgency to improve the quality of school education
+among parents who participated in school management. As presented in Table 2, participating parents had a greater
+level of satisfaction with the quality of their child’s school than non-participating parents. This implies that parents
+might not have exerted influence over school decision-making even if they participated in school management
+because they were already content with education provided at their child’s school.
+One unique case is Georgia, where the proportion of parents participating in school management is negatively
+associated with student achievement. The finding implies that allowing a large number of parents to influence
+school decision-making might have caused detrimental effects on school operation and students’ learning. In fact,
+the literature suggests that, although participatory school boards were introduced in the country during the 2000s,
+schools were not properly prepared to engage parents in school decision-making due to insufficient capacity as
+well as corruption and chaos in school governance resulting from frequent changes in the country’s
+decentralization policy (Dzotsenidze, 2018; Gorgodze, 2016; The World Bank, 2014). In such circumstances,
+engaging parents who are not education professionals in school decision-making might have reduced school
+effectiveness. This suggests that, if a negative association is derived from school-level participation, policy makers
+may need to provide parents with an enabling environment so that they can play an effective role in school
+decision-making.
+7.3 Factors Moderating the Participation-Achievement Association
+This study found that parents’ SES did not moderate the participation–achievement association for both
+individual-level and school-level participation. The results imply that parents’ SES did not affect either the parents’
+ability to capitalize upon their own participation to strengthen their learning support at home or the parents’ power
+to influence school decisions to improve learning environments at school through their participation in school
+management. However, the study found that the parents’ perception of school’s openness to parental engagement
+did moderate the participation–achievement association in Macao and the Dominican Republic.
+In Macao, the negative interaction effects for individual-level parent participation suggest that parents who felt
+strongly involved by the school might have paid the higher opportunity cost of participation, indicating that what
+matters may not be participation per se but a degree of involvement. In Macao, the roles of parents and school tend
+to be defined by a clear demarcation of tasks with parents as home-based supporters and teachers as school-based
+educators (Ho, 2009). Therefore, parents with trust in the school express a low level of desire to influence school
+decisions (Chou, 2012; Ho, 2009). Under this circumstance, it is likely that parents tend to volunteer a minimum
+level of commitment to school management even if they participate in a school governing body. In such cases, the
+opportunity cost of participation is assumed to increase only when participating parents are actively involved in
+school management with substantial time commitment. This speculative explanation can only be confirmed if
+there are data on not only the state of parent participation but also on the degree of their involvement.
+In the Dominican Republic, the positive interaction effects for school-level parent participation indicate that a
+group of parents who felt strongly welcomed and involved by the school could be more likely to influence school
+decisions in a way to improve reading achievement through their participation in school management.
+Unfortunately, a scarcity of literature on parent participation in the country poses a challenge in exploring the
+reason behind this finding.
+7.4 Conclusion
+Strengthening school–parent partnerships is recognized as a strategy for improving the quality of school education
+and holding schools accountable for learning outcomes. However, the results of this study indicate that parent
+participation in school management might not necessarily be a promising strategy for improving the quality of
+education and educational outcomes.
+
+                                                          125
+
+ies.ccsenet.org                           International Education Studies                     Vol. 14, No. 1; 2021
+
+
+The findings of this study call into question the recommendations to increase parental participation in school
+management without attending to various contextual factors. This study relays the importance of identifying
+mechanisms that account for participation–achievement associations in each country and key conditions under
+which parent participation can effectively increase home and school input. Establishing a better understanding of
+how parent participation works in a given context helps policy makers and school authorities to leverage the
+school–parent partnerships for improving students’ learning outcomes.
+Acknowledgements
+I thank Dr. Amita Chudgar, Dr. Lynn Paine, Dr. David Arsen, and Dr. Joshua Cowen at Michigan State University
+for their valuable comments and suggestions.
+References
+Anderson, D. (1992). The interaction of public and private school systems. Australian Journal of Education,
+    36(3), 213-236. https://doi.org/10.1177/000494419203600302
+Anderson, G. L. (1998). Toward authentic participation: Deconstructing the discourses of participatory reforms
+    in       education.     American      Educational       Research       Journal,      35(4),       571-603.
+    https://doi.org/10.3102/00028312035004571
+Barrera-Osorio, F., Fasih, T., Patrinos, H. A. (2009). Decentralized decision-making in schools: The theory and
+    evidence on school-based management. Washington, DC: The World Bank.
+Bruns, B., Filmer, D., & Patrinos, H. A. (2011). Making schools work: New evidence on accountability reforms.
+    Washington, DC: The World Bank. https://doi.org/10.1596/978-0-8213-8679-8
+Chaudhury, N., & Parajuli, D. (2010). Giving it back: Evaluating the impact of devolution of school management
+    to communities in Nepal. Unpublished manuscript, The World Bank, Washington, DC.
+Chikoko, V. (2008). The role of parent governors in school governance in Zimbabwe: Perceptions of school
+    heads, teachers, and parents. International Review of Education, 54(2), 243-263.
+    https://doi.org/10.1007/s11159-007-9080-x
+Chou, B. K. P. (2012). The paradox of educational quality and education policy in Hong Kong and Macau.
+    Chinese Education and Society, 45(2), 96-110. https://doi.org/10.2753/CED1061-1932450206
+Dearing, E., Kreider, H., Simpkins, S., & Weiss, H. B. (2006). Family involvement in school and low-income
+    children's literacy: Longitudinal associations between and within families. Journal of Educational
+    Psychology, 98(4), 653-664. https://doi.org/10.1037/0022-0663.98.4.653
+Desimone, L. (1999). Linking parent involvement with student achievement: Do race and income matter? The
+    Journal of Educational Research, 93(1), 11-30. https://doi.org/10.1080/00220679909597625
+Domina, T. (2005). Leveling the home advantage: Assessing the effectiveness of parental involvement in
+   elementary school. Sociology of Education, 78, 233-249. https://doi.org/10.1177/003804070507800303
+Dzotsenidze, N. (2018). The school decentralization process in Georgia and South Africa through the lens of
+    world culture theory: A comparative analysis. In A. W. Wiseman, & P. M. Davidson (Eds.), Cross-nationally
+    comparative, evidence-based educational policy making and reform (pp. 101-124). Bingley: Emerald
+    Publishing. https://doi.org/10.1108/S1479-367920180000035005
+Edwards, D. B., Jr., & DeMatthews, D. E. (2014). Historical trends in educational decentralization in the United
+   States and developing countries: A periodization and comparison in the post-WWII context. Education
+   Policy Analysis Archives, 22(40), 1-35. https://doi.org/10.14507/epaa.v22n40.2014
+Epstein, J. L. (1995). School/family/community partnerships: Caring for the children we share. Phi Delta
+    Kappan, 76(9), 701-712.
+Ercegovac, I. R., Koludrović, M., & Bubić, A. (2016). School governance models and school boards:
+    Educational and administrative aspects. In N. Alfirević, J. Burušić, J. Pavičić, & R. Relja (Eds.), School
+    effectiveness and educational management: Towards a south-eastern Europe research and public policy
+    agenda (pp. 107-124). Cham: Palgrave Macmillan. https://doi.org/10.1007/978-3-319-29880-1_7
+Fan, X. (2001). Parental involvement and students’ academic achievement: A growth modeling analysis. Journal
+     of Experimental Education, 70(1), 27-61. https://doi.org/10.1080/00220970109599497
+Galiani, S., Gertler, P., & Schargrodsky, E. (2008). School decentralization: Helping the good get better, but
+     leaving    the      poor   behind.    Journal    of    Public    Economics      92(10-11),   2106-2120.
+
+                                                       126
+
+ies.ccsenet.org                           International Education Studies                     Vol. 14, No. 1; 2021
+
+
+     https://doi.org/10.1016/j.jpubeco.2008.05.004
+Gershberg, A. I., Meade, B., & Andersson, S. (2009). Providing better education services to the poor:
+    Accountability and context in the case of Guatemalan decentralization. International Journal of
+    Educational Development, 29(3), 187-200. https://doi.org/10.1016/j.ijedudev.2008.08.002
+Gorgodze, S. (2016). Rise and fall of decentralized school governance - Decision-making practices in Georgia.
+    International Education Studies, 9(11), 25-39. https://doi.org/10.5539/ies.v9n11p25
+Hill, N. E. & Taylor, L. C. (2004). Parental school involvement and children’s academic achievement:
+     Pragmatics and issues. Current Directions in Psychological Science, 13(4), 161-164.
+     https://doi.org/10.1111/j.0963-7214.2004.00298.x
+Ho, E. S. C. (2009). Home-school collaboration in two Chinese societies: Hong Kong and Macao. In R.
+    Deslandes (Ed.), International perspectives on contexts, communities and evaluated innovative practices:
+    Family-school-community partnerships (pp. 37-49). New York: Routledge.
+Iftene, C. (2014). Educational systems’ autonomy: Facts and analysis. Procedia - Social and Behavioral Sciences,
+     142, 47-53. https://doi.org/10.1016/j.sbspro.2014.07.586
+Kaiser, H. F. (1960). The application of electronic computers to factor analysis. Educational and Psychological
+    Measurement. 20, 141-151. https://doi.org/10.1177/001316446002000116
+Khan, S. R. (2003). Participation via collective action in government and NGO schools in Pakistan. Development
+    in Practice, 13(4), 361-376. https://doi.org/10.1080/09614520320001122419
+Lee, J. H., & Huber, J., Jr. (2011). Multiple imputation with large proportions of missing data: How much is too
+     much? United Kingdom Stata Users’ Group Meetings 2011 23, Stata Users Group.
+McNeal, R. B., Jr. (1999). Parental involvement as social capital: Differential effectiveness on science
+   achievement, truancy, and dropping out. Social Forces 78(1), 117-144. https://doi.org/10.1093/sf/78.1.117
+McNeal, R. B., Jr. (2012). Checking in or checking out? Investigating the parent involvement reactive hypothesis.
+   The Journal of Educational Research, 105(2), 79-89. https://doi.org/10.1080/00220671.2010.519410
+Moradi, S., Beidokhti, A. A., & Fathi, K. (2016). Comparative comparison of implementing school-based
+    management in developed countries in the historical context: From theory to practice. International
+    Education Studies, 9(9), 191-198. https://doi.org/10.5539/ies.v9n9p191
+Muskin, J. A. (1999). Including local priorities to assess school quality: The case of Save the Children
+   Community Schools in Mali. Comparative Education Review, 43(1), 36-63. https://doi.org/10.1086/447544
+OECD. (2009). PISA data analysis manual: SPSS® (2nd ed.). Paris: OECD Publishing.
+OECD. (2017a). PISA-based test for schools: Technical report 2016. Paris: OECD Publishing.
+OECD. (2017b). PISA 2015 technical report. Paris: OECD Publishing.
+Park, S., & Holloway, S. D. (2017). The effects of school-based parental involvement on academic achievement
+     at the child and elementary school level: A longitudinal study. The Journal of Educational Research, 110(1),
+     1-16. https://doi.org/10.1080/00220671.2015.1016600
+Ponce, J. (2006). The impact of a school-based management program on students’ cognitive achievement: A case
+    study of Redes Amigas in rural Ecuador. FLASCO-Ecuador.
+San Antonio, D. M. (2008). Creating better schools through democratic school leadership. International Journal
+    of Leadership in Education, 11(1), 43-62. https://doi.org/10.1080/13603120601174311
+Santibañez, L., Abreu-Lastra, R., & O’Donoghue, J. (2014). School based management effects: Resources or
+     governance change? Evidence from Mexico. Economics of Education Review, 39, 97-109.
+     https://doi.org/10.1016/j.econedurev.2013.11.008
+Shatkin, G., & Gershberg, A. I. (2007). Empowering parents and building communities: The role of school-based
+    councils in educational governance and accountability. Urban Education, 42(6), 582-615.
+    https://doi.org/10.1177/0042085907305044
+Shumow, L., & Miller, J. D. (2001). Parents’ at-home and at-school academic involvement with young
+    adolescents. The Journal of Early Adolescence, 21, 68-91. https://doi.org/10.1177/0272431601021001004
+StataCorp. (2017). Stata multiple-imputation reference manual: Release 15. College Station, TX: A Stata Press
+     publication.
+
+                                                       127
+
+ies.ccsenet.org                                International Education Studies                                 Vol. 14, No. 1; 2021
+
+
+Sui-Chu, E. H., & Willms, J. D. (1996). Effects of parental involvement on eighth-grade achievement. Sociology
+    of Education, 69(2), 126-141. https://doi.org/10.2307/2112802
+Swift-Morgan, J. (2006). What community participation in schooling means: Insights from Southern Ethiopia.
+    Harvard Education Review, 76(3), 339-368. https://doi.org/10.17763/haer.76.3.e475j32j69q27x63
+The World Bank. (2014). Georgia: Technical assistance to support preparation of education sector strategy:
+    Education sector policy review: Strategic issues and reform agenda. Washington, DC: The World Bank.
+UNESCO. (2008). EFA Global Monitoring Report 2009. Overcoming inequality: Why governance matters.
+   Paris: UNESCO Publishing.
+UNESCO. (2013). The global learning crisis: Why every child deserves a quality education. Paris: UNESCO.
+UNESCO. (2015a). Education 2030: Incheon declaration and framework for action for the implementation of
+   Sustainable Development Goal 4. Paris: UNESCO.
+UNESCO. (2015b). EFA Global Monitoring Report 2015. Education for all 2000-2015: Achievements and
+   challenges. Paris: UNESCO Publishing.
+UNESCO Institute for Statistics. (2018). UIS.Stat. Montreal: UNESCO Institute for Statistics. Retrieved from
+   http://data.uis.unesco.org
+
+
+Notes
+Note 1. Multiple imputations generate bias that increases as the proportion of missing data increases if the
+probability of a particular value being missing depends on unobserved data (Lee & Huber, 2011). Because I
+could not eliminate a possibility that the missing mechanism is missing not at random (MNAR), I dropped
+countries with more than 10% missing data.
+Note 2. The PISA 2015 round provides 10 plausible values for test scores to improve the accuracy of estimation.
+The analysis using plausible values was performed in accordance with the PISA Analytical Manual (OECD, 2009).
+Note 3. Only the first factor was retained in accordance with the Kaiser criterion (Kaiser, 1960).
+Note 4. The results did not change even if I used the SES of parents who actually participated in school
+management instead of the SES of all parents in school.
+Note 5. Only the first factor was retained in accordance with the Kaiser criterion (Kaiser, 1960).
+
+
+Appendix A
+List of Variables
+ Variable                                        Definition
+ Outcomes
+ Student achievement                             Test scores in mathematics, science, and reading.
+ Parent participation
+ Participation of a student’s own parents in
+                                                 Parents’ report on whether they participated in local school government.
+ school management
+ A proportion of parents who participate in      School’s report on a proportion of parents who participated in local school
+ school management                               government.
+ Student characteristics
+                                                 PISA SES index derived from parents’ education, highest occupation, and home
+ Parents’ socioeconomic status
+                                                 possessions.
+ Age                                             Age in month.
+ Female                                          Whether the student is female.
+ Native immigration status                       Whether at least one parent was born in the country.
+ Home/test language match                        Whether the test language is the same as home language.
+                                                 A difference from the modal grade at which the majority of 15-year-old students
+ Relative school grade
+                                                 are enrolled.
+ School program                                  School program (general, pre-vocational, or vocational).
+ School characteristics
+ School location                                 The population in a community where school is located in five categories.
+
+
+                                                                128
+
+ies.ccsenet.org                                       International Education Studies                                     Vol. 14, No. 1; 2021
+
+
+ School size                                            School enrollment.
+ Controls for endogeneity
+                                                        The factor score derived from the three variables, which asked parents the
+ Parents’ academic orientation (individual-level)       importance of reasons for choosing a school for their child in a four-point scale (1.
+                                                        good reputation; 2. course/subjects; and 3. student achievement).
+                                                        School average of the above factor score, excluding the score of a student’s own
+ Parents’ academic orientation (school-level)
+                                                        parents from calculation.
+ Parents discussing progress with a teacher on          Parents’ report on whether they discussed progress with a teacher on their own
+ one’s own initiative (individual-level)                initiative.
+ Parents discussing progress with a teacher on          School report on a share of parents who discussed progress with a teacher on their
+ their own initiative (school-level)                    own initiative.
+ Whether       school   involves       parents   in
+                                                        School report on whether school involves parents in decision-making.
+ decision-making
+ Variables for interaction
+                                                        School-mean SES of parents, excluding SES of a student’s own parents from
+ School-level SES
+                                                        calculation.
+ Within-school variation in SES                         Within-school standard deviation in SES of parents.
+                                                        The factor score derived from the five variables, which asked parents their
+                                                        perception of schools’ parental engagement practices in a four-point scale (1.
+ Parents’ perception of school’s openness to            providing      an    inviting   atmosphere;   2.   providing   effective   school-home
+ parent engagement (individual-level)                   communication; 3. involving in decision-making; 4. providing regular information
+                                                        on child’s progress; and 5. informing about how to help child’s homework and
+                                                        school activities).
+ Parents’ perception of school’s openness to            School average of the above factor score on parent’s perception of schools’
+ parent engagement (school-level)                       parental engagement practices.
+ Parents’ characteristics
+ Reason for school choice:                              The importance of a good reputation as a reason for choosing a school for their
+ - Good reputation                                      child in a four-point scale.
+ Reason for school choice:                              The importance of offering of particular courses or subjects as a reason for
+ - Courses offered                                      choosing a school for their child in a four-point scale.
+ Reason for school choice:                              The importance of high academic achievement as a reason for choosing a school
+ - High achievement                                     for their child in a four-point scale.
+ Satisfaction with school quality                       The PISA index of parents’ perceptions of the quality of school learning
+
+
+Copyrights
+Copyright for this article is retained by the author(s), with first publication rights granted to the journal.
+This is an open-access article distributed under the terms and conditions of the Creative Commons Attribution
+license (http://creativecommons.org/licenses/by/4.0/).
+
+
+
+
+                                                                       129

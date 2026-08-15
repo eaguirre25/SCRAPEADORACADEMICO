@@ -1,0 +1,1490 @@
+No todo está dicho:
+claves detrás de
+las escuelas resilientes
+
+
+
+
+                                                                                                 magis
+                                                                                                    m
+      Not Everything Is Said: Key Insights Behind Resilient Schools
+
+
+
+
+                                                                                                  VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+                    Artículo de investigación | Research Article | Artigo de investigação
+
+                                               Fecha de recepción: 28 de mayo de 2024
+                                                Fecha de aceptación: 4 de abril de 2025
+                                   Fecha de disponibilidad en línea: septiembre de 2025
+
+                                                       doi: 10.11144/Javeriana.m18.cder
+
+                                                            María Marta Formichella
+                                                         mformichella@iiess-conicet.gob.ar
+                                    Instituto de Investigaciones Económicas y Sociales del Sur
+                                   (Universidad Nacional del Sur- CONICET) y Departamento
+                                       de Economía (Universidad Nacional del Sur), A rgentina
+                                               ORCID: https://orcid.org/0000-0002-2057-0938
+
+                                                                          Natalia K rüger 
+                                                                 natalia.kruger@uns.edu.ar
+                                    Instituto de Investigaciones Económicas y Sociales del Sur
+                                   (Universidad Nacional del Sur- CONICET) y Departamento
+                                       de Economía (Universidad Nacional del Sur), A rgentina
+                                               ORCID: https://orcid.org/0000-0001-8401-2639
+
+
+
+
+      Para citar este artículo | To cite this article | Para citar este artigo
+      Formichella, M. M. & Krüger, N. (2025). No todo está dicho: claves detrás de las
+      escuelas resilientes. magis, Revista Internacional de Investigación en Educación, 18,
+      1-27. https://doi.org/10.11144/Javeriana.m18.cder
+
+                                                                           Resumen
+                                                                           Pese a la continua expansión del acceso al sistema educativo formal
+                                                                           en Latinoamérica, persisten desigualdades estructurales que se
+                                                                           reflejan en los resultados escolares. Aunque existe evidencia de que
+                                                                           las escuelas con un perfil socioeconómico estudiantil más vulnerable
+                                                                           muestran resultados inferiores al promedio, algunas instituciones
+                                                                           superan las expectativas de logro, compensando las desventajas
+                                                                           iniciales de su alumnado.
+                                                                           Aquí se las denomina escuelas resilientes y se propone el objetivo de
+                                                                           identificar los factores que inciden en la probabilidad de resiliencia.
+magis
+
+
+
+
+                                                                           Para ello, se estiman modelos de regresión logística empleando las
+                                                                           pruebas de sexto grado de primaria en Lectura, Matemática y Ciencias
+                                                                           del Estudio Regional Comparativo y Explicativo (ERCE) 2019.
+                 2
+                                                                           Se hallan escuelas que pueden calificarse como resilientes, en las
+                                                                           cuales la articulación de factores familiares y escolares que denotan
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                           un compromiso con la educación permite desarrollar un clima de aula
+                                                                           y de escuela propicios. Entre los primeros, se destacan la residencia
+                                                                           en un vecindario sin violencia, las expectativas parentales positivas y
+                                                                           su involucramiento en las actividades escolares. Entre los últimos, son
+                                                                           clave la antigüedad de los docentes en el colegio, su compromiso y el
+                                                                           interés manifiesto por sus alumnos, así como el liderazgo directivo
+                                                                           y la ruralidad.
+
+                                                                           Palabras clave
+                                                                           Resiliencia, calidad de la educación, igualdad de oportunidades,
+                                                                           enseñanza primaria, América Latina
+
+
+                                                                           Abstract
+                                                                           Despite the continued expansion of access to formal education systems
+                                                                           in Latin America, structural inequalities persist and are reflected in
+                                                                           school outcomes. Although there is evidence that schools with a
+                                                                           more vulnerable student socioeconomic profile tend to show below-
+                                                                           average results, some institutions surpass achievement expectations,
+                                                                           compensating for the initial disadvantages of their student body.
+                                                                           These institutions are referred to here as resilient schools, and the
+                                                                           aim is to identify the factors influencing their probability of resilience.
+                                                                           To this end, logistic regression models are estimated using the 2019
+                                                                           Sixth Grade Reading, Mathematics, and Science assessments from the
+                                                                           Regional Comparative and Explanatory Study (ERCE).
+                                                                           Resilient schools are identified, in which the combination of family
+                                                                           and school-related factors —demonstrating a strong commitment
+                                                                           to education— helps foster a positive classroom and school
+                                                                           environment. Among the family-related factors, notable ones include
+                                                                           living in a non-violent neighborhood, positive parental expectations,
+                                                                           and parental involvement in school activities. Among the school-
+                                                                           related factors, key elements include teacher tenure at the school,
+                                                                           their commitment and clear interest in their students, as well as school
+                                                                           leadership and rural location.
+
+
+                                                                           Keywords
+                                                                           Resilience, educational quality, equal opportunity, primary education,
+                                                                           Latin America
+
+     Descripción del artículo | Article description | Descrição do artigo
+     Este artículo de investigación se enmarca en los proyectos de grupos de
+     investigación Equidad educativa: Segmentación escolar en la localidad
+     de Bahía Blanca y su extensión y La equidad educativa interna: factores
+     exógenos y endógenos detrás de las desigualdades en la educación básica
+     en Argentina y la localidad de Bahía Blanca, ambos financiados por la
+     Secretaría General de Ciencia y Tecnología de la Universidad Nacional del Sur,
+     Argentina, y dirigidos por las Dras. María Marta Formichella y Natalia Krüger,
+     como investigadoras principales.
+
+
+
+
+                                                                                      magis
+Introducción
+                                                                                                    3
+
+
+     Pese al continuo proceso de expansión del acceso al sistema educa-
+
+
+
+
+                                                                                       No todo está dicho: claves detrás de las escuelas resilientes
+tivo formal en América Latina, las desigualdades estructurales se visibilizan
+al considerar la inclusión desde una perspectiva más amplia. La pobreza de
+aprendizajes y la segregación escolar por nivel socioeconómico (NSE) son
+dos de los problemas que atentan contra una verdadera inclusión educativa
+en la región.
+     Murillo et al. (2023) muestran, utilizando datos del Estudio Regional
+Comparativo y Explicativo (ERCE) 2019, el alto grado de segregación socioe-
+conómica en las escuelas de nivel primario de la región. Explican que esto
+influye negativamente en la autoestima de los estudiantes, sus expectativas
+y su trayectoria educativa, al tiempo que dificulta la tarea de los profesores,
+que tienen que trabajar con un alumnado con condiciones de origen des-
+favorables, afecta a las familias y la comunidad, e influye negativamente en
+la implementación de políticas educativas y sociales que se vuelven por ello
+menos eficientes, impactando en el desarrollo de la sociedad.
+     Además, la literatura de economía de la educación ha documentado, a
+nivel internacional, la influencia del NSE individual y escolar sobre los resul-
+tados educativos (Erberber et al., 2015; Rodríguez de Luque, 2024). De este
+modo, la escuela puede devenir un espacio reproductor de las desigualda-
+des iniciales.
+     Así, la tendencia general es que las escuelas con un perfil socioeconó-
+mico estudiantil más vulnerable muestran resultados inferiores al promedio.
+Sin embargo, el determinismo no es absoluto y las propias escuelas tienen
+un potencial rol compensador, en el sentido de que la literatura ha hallado
+factores que logran disminuir la influencia del NSE de origen (Murillo, 2007;
+Valenti Nigrini, 2022).
+     Algunas instituciones que superan las expectativas pueden conside-
+rarse resilientes, ya que sus alumnos alcanzan en promedio niveles relativa-
+mente altos de rendimiento, pese a su entorno socioeconómico desafiante
+(Siebecke & Jarl, 2022). Valenti Nigrini (2022) explica que parte de la literatura
+
+                                                                           nombra a estas escuelas como eficaces, por su capacidad de compensar o
+                                                                           incluso revertir los efectos negativos vinculados a las condiciones de origen
+                                                                           desaventajadas de sus estudiantes.
+                                                                                Poner la atención en la resiliencia de la escuela o la comunidad esco-
+                                                                           lar en conjunto, más que en los alumnos en tanto individuos, es un enfoque
+                                                                           menos usual y puede contribuir a conocer las características y estrategias de
+                                                                           acción de las instituciones más exitosas. Ello ofrece indicios sobre qué po-
+                                                                           líticas implementar para mejorar los resultados académicos, en especial de
+magis
+
+
+
+
+                                                                           los estudiantes que provienen de entornos vulnerables (Milheiro da Silva &
+                                                                           Marques da Silva, 2022). Además, comprender este fenómeno puede pro-
+                 4                                                         mover una distribución de recursos más efectiva y equitativa (Siebecke &
+                                                                           Jarl, 2022).
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                                Entonces, los objetivos del presente trabajo son dos: por un lado, de-
+                                                                           terminar si hay escuelas resilientes en el nivel educativo primario en América
+                                                                           Latina y, de ser así, calcular qué proporción representan de las escuelas con
+                                                                           una composición social estudiantil desfavorable, realizando comparaciones
+                                                                           por área de aprendizaje y por países; por otra parte, se busca identificar po-
+                                                                           sibles factores asociados a la probabilidad de que una escuela sea resiliente.
+                                                                                Para ello, se propone una forma de operacionalizar el concepto de re-
+                                                                           siliencia escolar y se estiman modelos de regresión logística empleando los
+                                                                           resultados de las pruebas de Lectura, Matemática y Ciencias del ERCE 2019
+                                                                           para sexto grado.
+
+
+                                                                           Marco teórico-conceptual
+
+
+                                                                                Si bien los orígenes de la teoría de la resiliencia se remontan a estudios
+                                                                           psicológicos, luego el campo se ha ampliado a otras ciencias como la socio-
+                                                                           logía, la educación o la política (Sandoval-Hernández & Białowolski, 2016).
+                                                                           Aunque la resiliencia es una propiedad que suele atribuirse a los individuos,
+                                                                           es posible transferirla al nivel institucional (Pinskaya et al., 2018) y trabajar
+                                                                           con la noción de escuelas resilientes. Aquí, siguiendo a Romero et al. (2022)
+                                                                           y a Siebecke y Jarl (2022), se identifican como resilientes a aquellas que lo-
+                                                                           gran un desempeño superior al esperado, dadas las condiciones de origen
+                                                                           vulnerables de su alumnado.
+                                                                                Además, al igual que en Milheiro da Silva y Marques da Silva (2022), se
+                                                                           considera que la resiliencia de las instituciones refleja la resiliencia de sus ac-
+                                                                           tores, pero también la excede, dado que no se define por la suma de las resi-
+                                                                           liencias de los miembros de la comunidad educativa, sino por la forma como
+                                                                           estas se retroalimentan y se desarrollan como un sistema.
+                                                                                Asimismo, la resiliencia de las escuelas puede interpretarse como resul-
+                                                                           tado de una mayor eficacia —en relación con otras escuelas con una similar
+
+composición estudiantil— y en ese sentido resulta pertinente valerse del he-
+rramental teórico-conceptual de las investigaciones sobre eficacia escolar.
+     La literatura sobre eficacia escolar analiza cómo diferentes facto-
+res y procesos intraescolares influyen en los logros educativos de los es-
+tudiantes (Bolívar & Murillo, 2017; Valenti Nigrini, 2022). De este modo,
+aporta elementos relevantes para entender qué diferencia a las escuelas re-
+silientes, cuáles son sus características y sus estrategias de acción (Romero
+et al., 2022). Una extensa y variada producción académica se ha desarro-
+
+
+
+
+                                                                                     magis
+llado en torno a la identificación de los factores escolares más relevantes,
+la cual es revisada y sintetizada en Murillo (2007), Reynolds et al. (2011) y
+Valenti Nigrini (2022).                                                                            5
+
+     La Investigación Iberoamericana sobre Eficacia Escolar (Murillo, 2007)
+
+
+
+
+                                                                                      No todo está dicho: claves detrás de las escuelas resilientes
+realiza una gran contribución al proponer y validar empíricamente un modelo
+teórico adaptado a la región. En este intervienen factores correspondientes
+a cuatro niveles (alumno, aula, escuela y sistema), clasificados en cuatro fun-
+ciones (contexto, entrada, proceso y producto), los cuales se vinculan entre sí
+para explicar qué promueve la eficacia. Se propone que el sistema educativo
+proporciona el contexto en el que factores de entrada —como las característi-
+cas de la escuela, los docentes, las aulas y los alumnos— dan lugar a procesos
+—vinculados con la dirección y el clima escolar, el compromiso y las expecta-
+tivas docentes, las instalaciones y recursos, la implicación de las familias, las
+prácticas implementadas en el aula, los hábitos, valores y actitudes de alum-
+nos y familias— y determinan el producto final —el logro de los alumnos—.
+Esta representación teórica resulta de gran utilidad como guía para la revi-
+sión empírica y la selección de las variables relevantes en el presente estudio.
+
+
+Antecedentes empíricos destacados
+     Dada la profusión de investigaciones internacionales y regionales sobre
+los factores que afectan el desempeño escolar, la resiliencia educativa y la
+eficacia escolar, se presenta aquí un recorte de la literatura empírica que es-
+pecíficamente ha orientado el presente estudio: por un lado, los análisis de
+los determinantes de la eficacia escolar para el nivel primario en América La-
+tina y, por otro, los estudios sobre escuelas resilientes y los factores escolares
+que contribuyen a la resiliencia individual de los alumnos. No obstante, la in-
+vestigación se nutre directa o indirectamente de una literatura más amplia,
+que ha tenido un gran desarrollo en la región latinoamericana.
+     En general, en América Latina se ha constatado que la proporción de la
+varianza en los resultados escolares atribuible al nivel escuela es menor que
+la del nivel alumno (Murillo, 2007; UNESCO/OREALC, 2021). No obstante, se
+han identificado efectos escolares significativos y relevantes, que permiten a
+los centros incidir en los logros.
+
+                                                                           Factores de eficacia escolar en el nivel primario en América Latina
+                                                                               A partir de una extensa revisión bibliográfica y de su investigación em-
+                                                                           pírica para el nivel primario de gestión estatal en nueve países de Iberoamé-
+                                                                           rica, en Murillo (2007) se concluye que las escuelas pueden resultar eficaces
+                                                                           en relación con unos tipos de logros, pero no en relación con otros, y se re-
+                                                                           salta que una cultura de eficacia no se limita a la sumatoria de elementos
+                                                                           aislados, sino a un conjunto de condiciones escolares. Entre los factores aso-
+                                                                           ciados a la escuela, se cuentan:
+magis
+
+
+
+
+                                                                               • Una comunidad escolar organizada en pos del aprendizaje integral.
+                 6                                                             • Docentes con antigüedad en la escuela, comprometidos y traba-
+                                                                                   jando en equipo.
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                               • Clima escolar agradable, con buenas relaciones interpersonales.
+                                                                               • Dirección escolar capaz y comprometida.
+                                                                               • Alta implicación de las familias y la comunidad.
+                                                                               • Altas expectativas globales hacia los alumnos, docentes y directivos.
+                                                                               • Instalaciones y recursos materiales adecuados.
+
+
+                                                                               Por su parte, los factores de aula se identifican con:
+
+
+                                                                               • Clases bien preparadas y estructuradas que promuevan la partici-
+                                                                                   pación.
+                                                                               • Utilización de recursos didácticos vinculados a las tecnologías de la
+                                                                                   información y la comunicación (TIC).
+                                                                               • Buena gestión del tiempo, bajos registros de ausentismo e impun-
+                                                                                   tualidad docente y alta dedicación efectiva de tiempo al aprendizaje.
+                                                                               • Clima de aula positivo, ausencia de conflictos, afecto y motivación
+                                                                                   de los docentes.
+                                                                               • Formación permanente del docente.
+
+
+                                                                               El estudio destaca también el apoyo de las familias, a través de altas ex-
+                                                                           pectativas sobre el logro académico de sus hijos y la implicación en activida-
+                                                                           des extracurriculares y extraescolares.
+
+
+                                                                           Factores escolares asociados a la resiliencia educativa
+                                                                               Si bien son escasos los estudios enfocados en la resiliencia como ca-
+                                                                           racterística escolar, en conjunto aportan elementos orientadores para iden-
+                                                                           tificar factores relevantes. Así, Pinskaya et al. (2018) encuentran que los
+                                                                           directivos de las escuelas resilientes de Rusia buscan crear un ambiente que
+                                                                           intensifique los aprendizajes, y exhiben un comportamiento estratégico para
+                                                                           organizar efectivamente la distribución de su tiempo y el de su personal.
+
+    Para el caso de México, Valenti Nigrini (2022) sugiere que el involu-
+cramiento docente, tanto como el de las familias y la gestión institucional,
+propician significativamente la resiliencia escolar. Lo primero se refleja en
+las altas expectativas hacia el alumnado, la transmisión de confianza y mo-
+tivación, el compromiso en el cumplimiento del horario y la búsqueda de
+innovación pedagógica. La participación familiar es fomentada a través
+de actividades que refuerzan los vínculos familia-escuela y la corresponsa-
+bilidad entre ambas. Por último, la práctica directiva influye indirectamente,
+
+
+
+
+                                                                                 magis
+propiciando un buen clima escolar y la planificación en equipo del trabajo.
+    Por su parte, Romero et al. (2022) encuentran que las principales va-
+riables que explican la resiliencia escolar en la Ciudad Autónoma de Buenos                    7
+
+Aires, Argentina, son la disciplina escolar y la confianza de los estudiantes
+
+
+
+
+                                                                                  No todo está dicho: claves detrás de las escuelas resilientes
+en sí mismos. También destacan el clima en el aula, el sentido de comuni-
+dad, el compromiso y la capacidad técnica de los directivos, la calidad del
+currículo y la gestión del tiempo.
+    Para una ciudad más pequeña de Argentina, Krüger et al. (2022) con-
+cluyen que las escuelas resilientes tienen: mayor disponibilidad de recursos
+TIC; menos problemas de disciplina, ausentismo y puntualidad en sus do-
+centes y estudiantes; directivos más jóvenes, en mayor proporción mujeres,
+y que dedican más tiempo a la tarea; y menores problemas de coordina-
+ción y gestión.
+
+Factores escolares asociados a la resiliencia
+individual de los alumnos
+    Tal como señalan Barber et al. (2021), cada vez se reconoce más el ca-
+rácter contextualizado del proceso de aprendizaje y el hecho de que las in-
+teracciones sociales son un elemento clave para el desarrollo de diversas
+competencias. Según estos autores, el clima escolar o áulico comprende as-
+pectos como las relaciones interpersonales sólidas, un sentido de seguridad
+física y emocional, un sentimiento de conexión y sostenes adecuados para
+el aprendizaje. Otros constructos más específicos que incluye la literatura
+son el ethos escolar, el clima pedagógico, la calidad de los vínculos perso-
+nales, el reconocimiento de la voz de los estudiantes, la equidad y un sen-
+tido general de pertenencia. Es en ese sentido que uno de los factores que
+emerge de forma recurrente en las investigaciones sobre resiliencia educa-
+tiva es el clima escolar: que el proceso de enseñanza y aprendizaje se de-
+sarrolle en un entorno de disciplina, orden, bajo ausentismo, respeto entre
+los actores y hacia las normas de convivencia, promueve en general mejo-
+res resultados; por contraste, las malas relaciones interpersonales aparecen
+como obstáculo (Agasisti et al., 2018; Agasisti & Longobardi, 2017; Carrion,
+2023; Erberber et al., 2015; García Crespo, 2021; Rodríguez de Luque, 2024;
+Sandoval-Hernández & Białowolski, 2016; Waxman et al., 2003).
+
+                                                                               Asimismo, hay evidencia de que el clima escolar depende de otras va-
+                                                                           riables, como el tipo de gestión del director (Agasisti et al., 2018; Cuenca &
+                                                                           Cáceda, 2017; Milheiro da Silva & Marques da Silva, 2022; Misad et al., 2022)
+                                                                           o el grado de rotación de los docentes. Además, un liderazgo directivo po-
+                                                                           sitivo, centrado en el acompañamiento y la generación de condiciones favo-
+                                                                           rables al proceso educativo, puede propiciar actitudes de resiliencia (Cuenca
+                                                                           & Cáceda, 2017; Erberber et al., 2015; Misad et al., 2022; Olmo-Extremera
+                                                                           et al., 2021; Waxman et al., 2003).
+magis
+
+
+
+
+                                                                               A su vez, el liderazgo es una función compartida por distintos actores,
+                                                                           tanto directivos como docentes (Milheiro da Silva & Marques da Silva, 2022;
+                 8
+                                                                           Misad et al., 2022). Así, todas aquellas estrategias y actitudes que fomenten
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                           el uso eficiente de los recursos y el pensamiento innovador, que promuevan el
+                                                                           desarrollo profesional, los vínculos positivos, o que construyan una pers-
+                                                                           pectiva pedagógica común tenderán a desarrollar la resiliencia institucional.
+                                                                               Por otro lado, se ha subrayado el apoyo y la conexión emocional que los
+                                                                           docentes puedan brindar a sus alumnos, toda vez que, en la interacción coti-
+                                                                           diana, tienen un rol vital para acompañar a quienes vivencian situaciones ad-
+                                                                           versas en sus hogares (Milheiro da Silva & Marques da Silva, 2022). Distintos
+                                                                           estudios, como los de Agasisti y Longobardi (2017), Erberber et al. (2015),
+                                                                           García Crespo (2021), Sandoval-Hernández y Białowolski (2016) y Waxman
+                                                                           et al. (2003), sostienen que cuando los docentes transmiten confianza a sus
+                                                                           alumnos, mantienen altas expectativas y generan oportunidades para parti-
+                                                                           cipar, pueden propiciar su resiliencia. En este orden, Johnson (2008) resalta
+                                                                           que las acciones realizadas con empatía, motivación y escucha activa, pue-
+                                                                           den tener un gran impacto en los resultados académicos.
+                                                                               Respecto de las prácticas pedagógicas, García Crespo (2021) encuen-
+                                                                           tra que la formación docente complementaria y la implementación de estra-
+                                                                           tegias menos rutinarias aumentan la probabilidad de resiliencia estudiantil.
+                                                                               Finalmente, distintas variables de nivel escuela se han asociado en la
+                                                                           literatura a la resiliencia de los alumnos (Agasisti et al., 2018; Agasisti &
+                                                                           Longobardi, 2017; Carrion, 2023; García Crespo, 2021). El NSE promedio del
+                                                                           alumnado puede incidir en el rendimiento individual a través del conocido
+                                                                           efecto compañero. Luego, la oferta de actividades extracurriculares puede
+                                                                           mejorar los logros de estudiantes de origen desfavorecido, cuando va acom-
+                                                                           pañada de una mayor participación de docentes y padres. Lo mismo sucede
+                                                                           con la buena gestión del tiempo, que es más fructífero cuando prevalece un
+                                                                           clima tranquilo en el aula y cuando se respeta la puntualidad. Menos con-
+                                                                           senso existe en torno al efecto de la disponibilidad y calidad de recursos ma-
+                                                                           teriales, aunque el mismo podría ser mayor en países menos desarrollados y
+                                                                           según propicien mayores oportunidades de aprendizaje.
+
+     En suma, la resiliencia escolar es un fenómeno que responde a un con-
+junto amplio de elementos que se combinan entre sí y que se originan, tanto
+en características de las escuelas y sus docentes, como de los estudiantes
+y sus familias. Entre aquellos, la literatura destaca las condiciones socioe-
+conómicas del alumnado, su bienestar general, las expectativas y el acom-
+pañamiento por parte de las familias y los docentes, el clima escolar, el
+compromiso y las competencias pedagógicas docentes, las capacidades de
+gestión y liderazgo de los directivos, y algunos factores relativos a la organi-
+
+
+
+
+                                                                                   magis
+zación y los recursos materiales escolares.
+     A partir de los aportes teóricos y los antecedentes analizados, la hi-
+pótesis del trabajo es que existen escuelas latinoamericanas de nivel pri-                       9
+
+mario que pueden considerarse resilientes y que dicha resiliencia se asocia:
+
+
+
+
+                                                                                    No todo está dicho: claves detrás de las escuelas resilientes
+(i) de forma positiva, a factores como una composición social estudiantil
+más privilegiada, un mayor sentido de pertenencia institucional, el interés
+demostrado por los docentes, la antigüedad del personal, y la disponibili-
+dad de recursos escolares, entre otros; y (ii) de forma negativa, a factores
+como una mayor vulnerabilidad social y académica del alumnado, un bajo
+compromiso docente, un clima áulico o escolar negativo, y una baja impli-
+cación de las familias.
+
+
+Metodología
+
+
+Datos
+     Se emplea la base de datos de la cuarta versión del ERCE 2019 imple-
+mentado por el Laboratorio Latinoamericano de Evaluación de la Calidad
+Educativa (LLECE-UNESCO) para medir los logros de aprendizaje de estudian-
+tes de sistemas educativos de nivel primario de América Latina y el Caribe. Se
+aplicó en 16 países: Argentina, Brasil, Colombia, Costa Rica, Cuba, Ecuador,
+El Salvador, Guatemala, Honduras, México, Nicaragua, Panamá, Paraguay,
+Perú, República Dominicana y Uruguay, cubriendo más de 4000 escuelas y
+160 000 niños de tercer y sexto grado (UNESCO/OREALC, 2021).
+     Aquí, se toma a la escuela como unidad de análisis, ya que el interés
+es explorar la capacidad de resiliencia de la comunidad escolar en conjunto,
+más que indagar en los efectos de la escuela sobre el rendimiento individual.
+Se trabaja con la muestra de alumnos de sexto grado, más próximos a culmi-
+nar la escolaridad primaria, ya que es más factible en esta instancia identifi-
+car los efectos acumulativos del tránsito por la escuela durante varios años.
+A su vez, las respuestas del cuestionario de alumnos resultan más fidedignas
+que las de sus pares de menor edad.
+     Por otro lado, como se desarrolla en la sección de Variables, se em-
+plea una muestra reducida de escuelas, que solo incluye a aquellas cuya
+
+                                                                           población estudiantil tiene un NSE bajo, las que se denominan aquí poten-
+                                                                           cialmente resilientes.
+                                                                                La muestra final, entonces, se conforma por 1280 escuelas, cuyos alum-
+                                                                           nos de sexto grado participaron del operativo del ERCE.
+
+
+                                                                           Método
+                                                                                Como lo señalan Erberber et al. (2015) y Sandoval-Hernández y
+                                                                           Białowolski (2016), un abordaje usual y generalmente aceptado en los estu-
+magis
+
+
+
+
+                                                                           dios de resiliencia es estimar un modelo de regresión logística para identifi-
+                                                                           car los factores asociados a que un subgrupo de alumnos, en este caso de
+ 10
+                                                                           escuelas en desventaja socioeconómica, resulte resiliente —variable de res-
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                           puesta binaria—.
+                                                                                Un modelo de regresión logística (logit) supone que la probabilidad
+                                                                           de ocurrencia de un evento es función de un índice no observable al que se
+                                                                           denomina latente (Zi) y que está influenciado por un conjunto de variables
+                                                                           independientes (Xi), de manera tal que: Zi=α+βXi . En un logit también se
+                                                                           supone que Z es una variable aleatoria, cuya distribución es logística, lo cual
+                                                                           permite que la probabilidad anteriormente mencionada pueda calcularse a
+                                                                           partir de la función de distribución acumulada logística (Greene, 2003).
+                                                                                En estos modelos, la magnitud del efecto de las variables explicativas se
+                                                                           analiza a partir de las razones de probabilidad (denominadas odds-ratios), las
+                                                                           cuales cuantifican la probabilidad de que ocurra un evento (Y=1), en función
+                                                                           de que se verifique otro suceso X, en relación con la probabilidad de que no
+                                                                           ocurra el evento en cuestión (Y=0), condicionada a la ocurrencia del mismo
+                                                                           suceso X. Si las variables están acompañadas por coeficientes de signo po-
+                                                                           sitivo/negativo, los odds-ratios serán mayores/menores a uno. Finalmente, el
+                                                                           cambio en la probabilidad de ocurrencia del evento que se desea explicar en
+                                                                           relación con la probabilidad de no ocurrencia del mismo, en función de un
+                                                                           cambio en cualquiera de las variables explicativas (X), se estima como el va-
+                                                                           lor del odds-ratio menos la unidad (Wooldridge, 2009).
+                                                                                Se decidió estimar modelos separados para cada área evaluada por el
+                                                                           ERCE (Matemática, Lengua y Ciencias), ya que existe evidencia sobre la in-
+                                                                           consistencia de los efectos escolares en diferentes variables de producto
+                                                                           (Murillo, 2007). Asimismo, se cuenta con información específica del docente
+                                                                           de cada asignatura que vale la pena explorar y que se perdería al combinar
+                                                                           los resultados de las distintas pruebas.
+                                                                                Por otro lado, se trabaja con los resultados de todos los países en con-
+                                                                           junto, ya que ello permite contar con una muestra más amplia y con ma-
+                                                                           yor variabilidad en los valores de las variables escolares, que son el foco de
+                                                                           atención. De todas formas, se incluyen efectos fijos por país para controlar
+
+por las características socioeconómicas, culturales y de los sistemas educa-
+tivos, que pueden incidir en la probabilidad de que existan escuelas resilien-
+tes (García Crespo et al., 2019).
+
+
+Variables1
+     La variable dependiente (esto es, el producto) se estipula por la escuela
+resiliente, considerando que la condición de resiliencia escolar se define por
+separado para cada una de las asignaturas.
+
+
+
+
+                                                                                             magis
+     Operativamente, una escuela resiliente cumple dos condiciones: i) tiene
+una población estudiantil vulnerable, tal que el NSE promedio de su alum-
+nado es significativamente inferior a la media para todas las escuelas de su                  11
+
+país (escuela potencialmente resiliente); y ii) alcanza un resultado alto en
+
+
+
+
+                                                                                              No todo está dicho: claves detrás de las escuelas resilientes
+la prueba de aprendizaje, tal que el puntaje promedio de su alumnado su-
+pera significativamente a la media para todas las escuelas de su país. Así,
+se descarta a aquellas escuelas con un NSE tanto superior como cercano
+a la media. Por otra parte, las escuelas de bajo NSE cuyo rendimiento pro-
+medio es menor o no difiere significativamente de la media, se consideran
+no resilientes.
+     Como indicador del NSE del alumnado se toma al Índice de Nivel So-
+cioeconómico de la Familia, el cual es elaborado por el LLECE y sintetiza
+información sobre la escolaridad de madre y padre, su ocupación, las condi-
+ciones de la vivienda, y la posesión de distintos bienes, incluidos los vincula-
+dos con las TIC y el número de libros en el hogar.
+     Por su parte, con relación a las variables explicativas2, se seleccionaron
+factores explicativos potencialmente relevantes según la literatura, y se los
+organizó por nivel y función, siguiendo el modelo teórico de eficacia esco-
+lar validado por Murillo (2007). Se buscó estimar un modelo parsimonioso
+y, a la vez, evitar el problema de multicolinealidad entre las variables inde-
+pendientes, dado que muchos de los factores escolares de interés presentan
+
+
+1   Se hizo un esfuerzo por seleccionar y construir indicadores que reflejaran fiel-
+    mente los resultados y factores explicativos de interés. No obstante, todo pro-
+    ceso de operacionalización de variables implica un recorte y una aproximación a
+    los conceptos teóricos que se busca representar.
+        Para mayores detalles sobre la construcción de las variables, se sugiere dirigirse
+    a los libros de código y al Manual de uso de las bases de datos del ERCE 2019,
+    disponibles en https://www.unesco.org/es/articles/estudio-regional-comparativo-
+    y-explicativo-erce-2019
+2   Algunas variables incluidas no son estrictamente explicativas de la resiliencia,
+    pero es necesario añadirlas como control. Una variable de control es una variable
+    que el investigador mantiene constante y está relacionada con otras dos variables
+    del modelo (Gujarati, 1992). Se incorporan para asegurar que el efecto que se ha-
+    lla en los coeficientes que acompañan a cada variable explicativa sea atribuible a
+    la misma y no a terceros factores omitidos.
+
+                                                                           una alta correlación. Asimismo, se contemplaron algunas restricciones de
+                                                                           la fuente de información, procurando minimizar la cantidad de observacio-
+                                                                           nes perdidas, descartar variables con respuestas inconsistentes y garantizar
+                                                                           cierta variabilidad en los valores de las variables.
+                                                                                Todas las variables de nivel alumno fueron agregadas al nivel escuela, y
+                                                                           los indicadores sintéticos fueron provistos por el LLECE.
+
+                                                                           Características de los alumnos y sus hogares
+magis
+
+
+
+
+                                                                                La variable de contexto que se introduce viene dada por la violencia en
+                                                                           el barrio del hogar promedio, la cual refiere a la percepción familiar sobre
+ 12                                                                        distintas situaciones vivenciadas en su barrio, como robos, peleas y agresio-
+                                                                           nes, compraventa de drogas, vandalismo, etc.
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                                Por su parte, las variables de entrada comprenden:
+
+                                                                                • Proporción de estudiantes mujeres.
+                                                                                • Proporción de alumnos repitentes, tomado como el mejor indica-
+                                                                                   dor disponible del rendimiento previo del alumnado, para aproxi-
+                                                                                   marse a la concepción de eficacia como valor añadido por la escuela
+                                                                                   (Murillo, 2007).
+                                                                                • NSE promedio escolar, incluido para controlar por la variabilidad per-
+                                                                                   sistente luego de descartar a las escuelas de alto NSE.
+
+                                                                                Finalmente, las variables de proceso son:
+
+                                                                                • Sentido de pertenencia escolar promedio, el cual indica si los alum-
+                                                                                   nos se sienten orgullosos y parte de su escuela, si disfrutan de asistir
+                                                                                   y si los profesores los hacen sentir cómodos.
+                                                                                • Proporción de alumnos con expectativas académicas familiares altas,
+                                                                                   es decir, aquellos cuyos padres consideran que completarán el nivel
+                                                                                   superior o más.
+
+                                                                           Características del aula y los docentes
+                                                                                Aquí, la variable de entrada viene dada por las condiciones sociolabora-
+                                                                           les y experiencia del profesorado, esto es, la antigüedad del docente, referida
+                                                                           a la cantidad de años en que ha trabajado como tal en la escuela.
+                                                                                Entre tanto, las variables de proceso son:
+
+                                                                                • Inasistencia e impuntualidad de los docentes promedio, que indica
+                                                                                   la percepción de los alumnos sobre la frecuencia con que los profeso-
+                                                                                   res faltan, llegan tarde a clases o se van antes de que termine la hora.
+                                                                                • Interés por el bienestar de los estudiantes promedio, el cual indica si
+                                                                                   los alumnos consideran que los docentes se interesan por ellos, tie-
+                                                                                   nen empatía, los animan y motivan.
+
+     • Apoyo al aprendizaje en la asignatura promedio, el cual cuantifica,
+        según los alumnos, la frecuencia con la que en cada asignatura el
+        profesor les pregunta si entienden, los anima a concretar las tareas,
+        propone actividades entretenidas, promueve la autonomía y la me-
+        tacognición, fomenta el trabajo grupal, etc.
+     • Clima del aula, entendido a partir de la disrupción en el aula durante
+        cada asignatura promedio que indica, según los alumnos, la frecuen-
+        cia con la que ocurre que durante la clase haya desorden, interrup-
+
+
+
+
+                                                                                   magis
+        ciones o ruido excesivo que dificultan el aprendizaje.
+
+Características de la escuela                                                       13
+
+     La variable de contexto en este punto es la localización de la escuela,
+
+
+
+
+                                                                                    No todo está dicho: claves detrás de las escuelas resilientes
+ubicada en zona rural.
+     Por otra parte, las variables de entrada son dos:
+
+     • Condiciones sociolaborales del directivo, esto es, la antigüedad del
+        director indicada por la cantidad de años en que ha trabajado como
+        tal en la escuela.
+     • Recursos materiales e infraestructura, dimensión representada por la
+        disponibilidad de laboratorio móvil de computación y de biblioteca
+        para los alumnos de primaria.
+
+     Finalmente, las variables de proceso son:
+
+     • Liderazgo pedagógico del director, quien reporta que durante el último
+        año, muy a menudo generó instancias para que los docentes colabo-
+        rasen entre sí en el desarrollo de nuevas prácticas de aula o bien para
+        favorecer la mejora de las habilidades pedagógicas de los docentes.
+     • Baja implicación de las familias, toda vez que el docente del área indica
+        que, durante el último año, ninguno de los padres participó como vo-
+        luntario en actividades extracurriculares (como mantenimiento de la
+        infraestructura, obras de teatro, paseos, deporte).
+     • Clima escolar, dado por la violencia al interior de la escuela como in-
+        dicador de la percepción de los directivos acerca de la frecuencia con
+        la que se registran hechos como amenazas, daños o discriminación
+        entre estudiantes e insultos desde estudiantes hacia docentes.
+     • Tiempo destinado al aprendizaje, en tanto la jornada extendida se-
+        ñala si los estudiantes tienen más de cuatro horas al día de clases.
+
+Sistema educativo y contexto en el que se inscribe
+     En este caso, la variable de contexto la constituyen los efectos fijos por
+país. En la tabla 1 se sintetizan las variables explicativas escogidas para cada
+dimensión o nivel y sus principales estadísticas descriptivas.
+
+                                                                           Tabla 1
+                                                                           Estadísticas descriptivas de las variables explicativas para las escuelas de NSE bajo
+
+                                                                                                                                                   Media (DE) /
+                                                                           Dimensión              Variables
+                                                                                                                                                   porcentaje
+                                                                           Características        Proporción de estudiantes mujeres                  49,2(15,6)
+                                                                           de los alumnos         Proporción de alumnos repitentes                   24,7(16,6)
+                                                                           y sus hogares
+                                                                                                  NSE promedio escolar                             -0,748(0,659)
+                                                                                                  Violencia en el barrio del hogar                 -0,076(0,582)
+                                                                                                  Sentido de pertenencia escolar                   -0,003(0,521)
+magis
+
+
+
+
+                                                                                                  Proporción de alumnos con expectativas
+                                                                                                                                                    42,3(0,261)
+                                                                                                  académicas familiares altas
+ 14
+                                                                           Características del    Antigüedad del docente                              8,2(7,7)
+                                                                           aula y los docentes
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                                                  Inasistencia e impuntualidad de los docentes     0,080(0,637)
+                                                                                                  Interés por el bienestar de los estudiantes      -0,064(0,567)
+                                                                                                  Apoyo al aprendizaje en la asignatura
+                                                                                                     Matemática                                    -0,089(0,587)
+                                                                                                     Lengua                                        -0,076(0,569)
+                                                                                                     Ciencias                                      -0,065(0,562)
+                                                                                                  Disrupción en el aula durante cada asignatura
+                                                                                                     Matemática                                    -0,182(0,639)
+                                                                                                     Lengua                                        -0,119(0,578)
+                                                                                                     Ciencias                                      -0,138(0,606)
+                                                                           Características        Escuela rural                                         55,7
+                                                                           de la escuela          Antigüedad del director                             6,7(7,1)
+                                                                                                  Laboratorio móvil de computación                      19,6
+                                                                                                  Biblioteca                                            40,9
+                                                                                                  Liderazgo pedagógico del director                     32,8
+                                                                                                  Baja implicación de las familias                      30,3
+                                                                                                  Violencia al interior de la escuela               0,149(1,117)
+                                                                                                  Jornada extendida                                     58,4
+
+                                                                           Fuente: elaboración propia con base en datos del ERCE 2019.
+
+
+
+
+                                                                           Resultados y discusión3
+
+
+                                                                                Como primer resultado, se verifica la existencia de un conjunto de es-
+                                                                           cuelas que cumplen con la condición de resiliencia aquí establecida. La pro-
+                                                                           porción de escuelas resilientes, respecto de las que potencialmente pueden
+
+
+
+                                                                           3   Las correlaciones entre variables mencionadas en esta sección son estadística-
+                                                                               mente significativas al 5 %.
+
+                      serlo, se encuentra en un rango del 11 % al 52 % y varía según el área de
+                      aprendizaje considerada y el país. Esto puede observarse en la tabla 2, en la
+                      cual los países están ordenados según su porcentaje de escuelas resilientes
+                      (promedio de las tres asignaturas).
+
+
+Tabla 2
+Escuelas resilientes por área y país
+
+                                    Cantidad      Porcentaje     Porcentaje de escuelas
+
+
+
+
+                                                                                                         magis
+                        Cantidad
+                                   de escuelas    de escuelas      resilientes por área
+País                       de
+                                 potencialmente potencialmente
+                        escuelas
+                                   resilientes    resilientes  Matemática Lengua Ciencias
+                                                                                                          15
+Nicaragua                   272              90               33,1         52,2       38,8     48,9
+
+
+
+
+                                                                                                          No todo está dicho: claves detrás de las escuelas resilientes
+Honduras                    257              80               31,1         47,5       35,6     41,2
+Cuba                        244              55               22,5         47,3       33,2     43,6
+México                      195              65               33,3         38,5       31,7     36,9
+Paraguay                    254              78               30,7         32,0       30,0     34,6
+Ecuador                     245              83               33,8         34,9       29,9     31,3
+Perú                        281              78               27,7         29,5       32,8     32,0
+El Salvador                 289             121               41,9         29,7       33,6     26,4
+Colombia                    145              60               41,4         33,3       25,5     28,3
+Guatemala                   234              91               38,9         28,6       29,5     24,2
+República Dominicana        185              76               41,1         19,7       27,7     28,9
+Costa Rica                  211              79               37,4         17,7       30,2     25,3
+Argentina                   227              91               40,1         19,8       29,5     19,8
+Uruguay                     249              97               38,9         15,5       39,7     11,3
+Panamá                      267              71               26,6         16,9       17,3     18,3
+Brasil                      169              65               38,5         15,4       14,2     13,8
+Total                      3724            1280               34,4        29,6       28,0      28,7
+
+Fuente: elaboración propia con base en datos del ERCE 2019.
+
+
+
+
+                           A continuación, se sintetizan los resultados de los modelos estimados,
+                      en los cuales se incorporaron todas las variables (explicativas y de control) de
+                      modo simultáneo, para conocer el efecto esperado de cada variable de inte-
+                      rés sobre la probabilidad de que la escuela sea resiliente (tabla 3).
+                           Cabe señalar que las relaciones que se encontraron entre las variables
+                      explicativas y la variable dependiente no deben ser interpretadas como víncu-
+                      los de estricta causalidad, sino como relaciones estadísticamente significa-
+                      tivas entre factores.
+
+                                                                           Tabla 3
+                                                                           Resultados de los modelos: factores asociados a la resiliencia escolar por área
+
+                                                                           Dimensiones                       Matemática                     Lengua                    Ciencias
+                                                                           y variables                  Coef.     Odds-ratios      Coef.      Odds-ratios     Coef.      Odds-ratios
+                                                                           Características de los alumnos y sus hogares
+                                                                           Proporción de
+                                                                                                       -0,99**        0,37          0,46         1,58         -0,88*         0,42
+                                                                           estudiantes mujeres
+                                                                           Proporción de
+                                                                                                           0,09       1,09         -0,27         0,77         -0,84          0,43
+                                                                           alumnos repitentes
+magis
+
+
+
+
+                                                                           NSE promedio escolar        0,99***        2,70        2,45***        11,64       1,29***         3,62
+                                                                           Violencia en el barrio
+                                                                                                       -0,55***       0,58        -0,56***       0,57        -0,48***        0,62
+                                                                           del hogar
+ 16
+                                                                           Sentido de pertenencia
+                                                                                                           0,19       1,21          -0,15        0,86         0,24           1,27
+                                                                           escolar
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                           Proporción de alumnos
+                                                                           con expectativas
+                                                                                                       1,83***        6,26        1,48***        4,39        2,13***         8,45
+                                                                           académicas familiares
+                                                                           altas
+                                                                           Características del aula y los docentes
+                                                                           Antigüedad del docente       0,02**        1,02          0,01         1,01          0,01          1,01
+                                                                           Inasistencia e
+                                                                           impuntualidad de            -0,48***       0,62        -0,43**        0,65        -0,64***        0,53
+                                                                           los docentes
+                                                                           Interés por el bienestar
+                                                                                                        -0,07         0,93        0,94***        2,55        0,53**          1,71
+                                                                           de los estudiantes
+                                                                           Apoyo al aprendizaje
+                                                                                                       0,94***        2,56          0,08         1,08         0,30           1,35
+                                                                           en la asignatura
+                                                                           Disrupción en el aula
+                                                                                                        -0,26         0,77        -0,42**        0,66        -0,51***        0,59
+                                                                           durante cada asignatura
+                                                                           Características de la escuela
+                                                                           Escuela rural               0,65***        1,91         0,45**        1,58         0,04           1,04
+                                                                           Antigüedad del director         0,00       1,00          0,01         1,01         -0,00          0,99
+                                                                           Laboratorio móvil
+                                                                                                        0,59**        1,81          0,07         1,08         0,47*          1,59
+                                                                           de computación
+                                                                           Biblioteca                      0,26       1,30         -0,00         0,99          0,12          1,13
+                                                                           Liderazgo pedagógico
+                                                                                                           0,12        1,12        0,32*         1,37          0,13          1,14
+                                                                           del director
+                                                                           Baja implicación
+                                                                                                       -0,39**        0,68        -0,40**        0,67         -0,18          0,84
+                                                                           de las familias
+                                                                           Violencia al interior
+                                                                                                        -0,03         0,97          -0,12        0,89         -0,18*         0,84
+                                                                           de la escuela
+                                                                           Jornada extendida            -0,07         0,93         -0,04         0,96          0,01          1,01
+                                                                           Sistema educativo y contexto en el que se inscribe (base Argentina)
+                                                                           Brasil                       1,28**        3,59        1,69***        5,41        1,68***         5,38
+                                                                           Colombia                    1,84***        6,28        2,84***        17,06       2,05***         7,76
+                                                                           Costa Rica                    -0,16        0,85          0,74         2,09         0,09           1,09
+                                                                           Cuba                         -0,60         0,55         -0,07         0,93         -0,95*         0,38
+                                                                           República Dominicana            0,28       1,32          0,89         2,44         0,87           2,38
+                                                                                                                                                                                 Continúa
+
+ Dimensiones                        Matemática                       Lengua                            Ciencias
+ y variables                   Coef.      Odds-ratios      Coef.       Odds-ratios            Coef.       Odds-ratios
+ Ecuador                       1,18**          3,26       1,96***             7,10            1,19**          3,28
+ Guatemala                     2,11***         8,27       4,29***         73,29               2,62***        13,77
+ Honduras                     3,26***          25,99      4,75***         115,75              3,21***        24,67
+ México                       2,06***          7,88       2,66***         14,32               2,16***         8,64
+ Nicaragua                    3,20***          24,54      4,74***         114,73              3,69***        39,95
+ Panamá                         1,15*          3,14           1,30        3,67                 1,31*          3,72
+ Perú                         1,54***          4,66       3,67***         39,40               1,74***         5,68
+
+
+
+
+                                                                                                                        magis
+ Paraguay                      1,20**          3,32       1,85***         6,36                1,79***         5,99
+ El Salvador                   1,33**          3,78       3,05***         21,15               1,93***         6,90
+                                                                                                                         17
+ Uruguay                        0,25           1,28           0,73        2,08                 -0,11          0,89
+
+
+
+
+                                                                                                                         No todo está dicho: claves detrás de las escuelas resilientes
+ Constante                    -2,60***         0,07       -2,89***        0,05               -2,26***         0,10
+
+Fuente: elaboración propia con base en datos del ERCE 2019.
+
+Nota: códigos de significancia: *0,1 **0,05 ***0,01.
+
+
+
+                            Por último, en la tabla 4 se presentan algunas medidas que permiten
+                       evaluar la bondad de ajuste del modelo estimado. La capacidad predictiva
+                       en cada área es adecuada y el pseudo R2 de McFadden se ubica por encima
+                       de 0,2 en cada caso, valor que McFadden (1979) establece como umbral
+                       para un excelente ajuste.
+
+
+                       Tabla 4
+                       Estadísticos de bondad de ajuste
+
+                        Bondad de ajuste               Matemática                    Lengua                Ciencias
+                        Observaciones (N)                 1054                        1064                   1047
+                        pseudo-R2                         0,204                       0,218                  0,225
+                        Sensibilidad                      41,9 %                     43,1 %                 43,5 %
+                        Especificidad                     91,9 %                     91,3 %                 91,4 %
+                        Capacidad predictiva             76,8 %                      77,4 %                 77,3 %
+
+                       Fuente: elaboración propia con base en datos del ERCE 2019.
+
+
+
+
+                            Con respecto a los factores asociados a la resiliencia de las escuelas que
+                       se relacionan con las características individuales de los alumnos y de sus fa-
+                       milias u hogares, la proporción de mujeres y la composición socioeconó-
+                       mica presentan la relación esperada según los antecedentes (Agasisti et al.,
+                       2018; Ibáñez Martín & Formichella, 2017). Estas variables se han incluido a
+                       modo de control, por lo que no se consideran estrictamente explicativas de
+                       la resiliencia.
+
+                                                                                Vale la pena detenerse, en cambio, en el efecto de otras variables. En
+                                                                           principio, se analiza que el alumnado habite, en promedio, en un barrio
+                                                                           donde se registran situaciones de violencia. En las tres áreas, este factor
+                                                                           presenta efectos negativos y significativos sobre la probabilidad de resi-
+                                                                           liencia escolar (la reduce cerca del 40 %). Considerando a la escuela como
+                                                                           una comunidad, que los alumnos y sus familias convivan con situaciones de
+                                                                           violencia dificultará la posibilidad de que se desarrollen actitudes y com-
+                                                                           portamientos escolares propicios para la resiliencia, algo que se refleja, por
+magis
+
+
+
+
+                                                                           ejemplo, en una correlación positiva y estadísticamente significativa entre la
+                                                                           violencia promedio en el barrio del hogar y la violencia al interior de la es-
+ 18
+                                                                           cuela, la disrupción en el aula y el ausentismo estudiantil. Es decir que la po-
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                           sibilidad de que en la escuela se contrarresten las desventajas de NSE del
+                                                                           alumnado se ve afectada por otros componentes del contexto que se cuelan
+                                                                           en las aulas y la institución.
+                                                                                Poniendo el foco en uno de los actores principales de la comunidad
+                                                                           escolar, la familia, se observa que en las escuelas a las que asiste una ma-
+                                                                           yor proporción de estudiantes cuyos padres mantienen expectativas altas
+                                                                           acerca de su trayectoria educativa, tienen más probabilidad de ser resilien-
+                                                                           tes en cada una de las áreas de aprendizaje, en concordancia con lo expuesto
+                                                                           en la revisión de literatura internacional realizada por Murillo (2007). Asi-
+                                                                           mismo, Romero et al. (2022) destacan la confianza de los estudiantes en sí
+                                                                           mismos, la cual se relaciona estrechamente con las expectativas de sus fami-
+                                                                           lias. Aquí, se observa que quienes pertenecen a familias que tienen expecta-
+                                                                           tivas altas responden con mayor frecuencia que acuerdan con la afirmación
+                                                                           “Soy bueno en Matemáticas”, que aquellos que pertenecen a familias con
+                                                                           expectativas bajas (79,9 % vs 67,5 %). Lo mismo sucede con la afirmación
+                                                                           “Confío en que me irá bien en Matemáticas al final del año escolar” (90,6 %
+                                                                           vs 83,5 %), con diferencias estadísticamente significativas en ambos casos.
+                                                                                Se encuentra también un conjunto de variables vinculadas a las carac-
+                                                                           terísticas del aula y los docentes que resultaron ser estadísticamente signifi-
+                                                                           cativas como explicativas de la resiliencia de las escuelas. Entre las variables
+                                                                           de entrada, la cantidad de años del docente del área ejerciendo dentro de la
+                                                                           escuela —la cual ofrece una idea de su experiencia, pero también de su es-
+                                                                           tabilidad— arroja un resultado significativo y positivo en Matemáticas, pero
+                                                                           no así en Lengua y Ciencias. Lo hallado en Matemáticas coincide con lo ex-
+                                                                           puesto por Murillo (2007) al estudiar los factores de la eficacia escolar y se
+                                                                           vincula con la idea de que un docente con más años de participación en la
+                                                                           institución conoce mejor a la comunidad y puede acompañar más adecua-
+                                                                           damente los procesos de aprendizaje de los estudiantes, cuestión resaltada
+                                                                           por Milheiro da Silva y Marques da Silva (2022).
+
+     Por otra parte, entre las variables de proceso, la conducta de los docen-
+tes en relación con la puntualidad y la asistencia resulta ser significativa en
+las tres áreas de aprendizaje consideradas. Esto representa una aproxima-
+ción al compromiso que tienen con su trabajo, el cual se vincula a dos va-
+riables destacadas por la literatura como favorecedoras de la resiliencia: su
+rol como líderes (Milheiro da Silva & Marques da Silva, 2022) y el buen clima
+escolar (Agasisti et al., 2018; Agasisti & Longobardi, 2017; Carrion, 2023;
+Erberber et al. 2015; García Crespo, 2021; Sandoval-Hernández & Białowolski,
+
+
+
+
+                                                                                       magis
+2016; Waxman et al., 2003). La puntualidad también puede ser indicio de
+una buena gestión del tiempo, la cual maximiza el aprovechamiento del
+trabajo en el aula, factor explicativo de la eficacia escolar (Murillo, 2007) y         19
+
+de la resiliencia de las escuelas (Agasisti et al., 2018; Romero et al., 2022);
+
+
+
+
+                                                                                        No todo está dicho: claves detrás de las escuelas resilientes
+por su parte, una mayor asistencia implica una menor rotación de los docen-
+tes, propiciatoria del trabajo en comunidad y el sentido de pertenencia, am-
+bos elementos favorecedores de la eficacia y la resiliencia (Agasisti et al., 2018).
+     Otro factor que presenta efectos significativos en dos de las áreas es-
+tudiadas (Lengua y Ciencias) es el interés que muestran los docentes por el
+bienestar de los estudiantes, según la percepción de estos últimos. Se ob-
+serva que cuanto mayor es el índice que mide la calidad de la forma en que
+se vinculan, mayor es la probabilidad de que la escuela sea resiliente. En Ma-
+temática, resultó significativa una variable similar, un índice que cuantifica
+en qué medida los docentes apoyan a los estudiantes en la asignatura a tra-
+vés de diversas estrategias, también a partir de la mirada de los alumnos;
+nuevamente, la relación con la resiliencia escolar es positiva. Estos resulta-
+dos se asemejan a los hallados por García Crespo (2021), Johnson (2008),
+Murillo (2007) y Waxman et al. (2003), quienes destacan el acompañamiento
+que los profesores pueden ejercer, su grado de apoyo y conexión emocional
+con los estudiantes y la realización de actividades de forma ordenada, pero
+no rutinaria.
+     Asimismo, este índice de apoyo a los estudiantes incluye el tipo de ac-
+tividades y propuestas que los docentes realizan: si son más entretenidas y
+fomentan la autonomía, mayor será este índice y mayor la probabilidad de
+resiliencia de la escuela, ya que la misma se vincula con el tipo de prácticas
+pedagógicas (García Crespo, 2021).
+     Para finalizar con las variables de proceso, cabe mencionar la relevan-
+cia del clima en el aula, el cual ha sido señalado por la literatura en reitera-
+das oportunidades (Murillo, 2007; Rodríguez de Luque, 2024, entre otros).
+En este caso, el coeficiente que acompaña al índice de disrupción en la sala
+muestra un efecto significativo y negativo en Lengua y en Ciencias. Es de-
+cir que, cuando el trabajo se realiza de forma desordenada, con interrup-
+ciones o ruido excesivo, resulta menos probable que puedan desarrollarse
+
+                                                                           estrategias pedagógicas o ponerse en juego habilidades y emociones que
+                                                                           tiendan a superar las desventajas de origen del alumnado.
+                                                                                En relación con las características de la escuela, un primer factor que
+                                                                           emerge como significativo es la localización rural, incrementando la proba-
+                                                                           bilidad de que la escuela sea resiliente en un 91 % para Matemáticas y en
+                                                                           un 58 % para Lengua. Esto se da a pesar de que, como señalan Treviño et al.
+                                                                           (2016), las escuelas rurales de la región enfrentan mayores desafíos en tér-
+                                                                           minos del NSE de su población, la dotación de personal, o el acceso a recur-
+magis
+
+
+
+
+                                                                           sos tecnológicos, entre otros factores.
+                                                                                Si bien queda fuera del alcance del trabajo explorar en profundidad
+ 20                                                                        esta cuestión, algunos antecedentes pueden orientar una hipótesis interpre-
+                                                                           tativa. Por un lado, Weinstein (2016) advierte una mayor percepción positiva
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                           sobre el trabajo en el aula, el clima escolar y los vínculos entre los distintos
+                                                                           actores en las escuelas rurales latinoamericanas. También, los alumnos mani-
+                                                                           fiestan percibir un mejor trato e interés por parte de sus profesores. A modo
+                                                                           de ejemplo, aquí, índices como la calidad de las relaciones interpersonales y
+                                                                           la satisfacción con el lugar de trabajo por parte de los docentes, o la violen-
+                                                                           cia en la escuela, presentan un valor promedio más favorable en las escuelas
+                                                                           rurales respecto a las urbanas, y la discrepancia es estadísticamente signifi-
+                                                                           cativa. Por otro lado, Bustos Jiménez (2010) señala distintas ventajas de las
+                                                                           escuelas rurales, pese a su escasez de recursos y el contexto social desfavo-
+                                                                           recido. Destaca el esquema multigrado y el bajo ratio de alumnos por do-
+                                                                           cente, ya que favorecen una enseñanza más personalizada y centrada en
+                                                                           competencias, un aprendizaje contagiado, y mayor flexibilidad en el aula.
+                                                                                Por su parte, entre los indicadores de recursos escolares incluidos, la
+                                                                           disponibilidad de un laboratorio móvil de computación presenta un efecto
+                                                                           significativo y positivo en Matemáticas y Ciencias, favoreciendo la resiliencia
+                                                                           escolar. Este hallazgo acerca de la relevancia de los recursos, y en particu-
+                                                                           lar los vinculados a las TIC, coincide con diversos antecedentes para la re-
+                                                                           gión (Agasisti & Longobardi, 2017; García Crespo, 2021; Krüger et al., 2022;
+                                                                           Murillo, 2007). Según Borgonovi y Pal (2016), este factor forma parte de la
+                                                                           dimensión material del bienestar estudiantil, el cual a su vez se asocia a un
+                                                                           mejor rendimiento académico. Sin embargo, no se han hallado efectos im-
+                                                                           portantes para otros tipos de recursos materiales e infraestructura, lo cual se
+                                                                           encuentra en línea con el argumento de Agasisti et al. (2018) acerca de que
+                                                                           su efecto depende del tipo de uso que se les dé o de las oportunidades de
+                                                                           aprendizaje que propicien.
+                                                                                Respecto al liderazgo del director, si bien no se observa un efecto signi-
+                                                                           ficativo en todas las áreas, cuando el directivo reporta realizar muy a menudo
+                                                                           acciones para la colaboración entre los docentes o la mejora pedagógica, se
+                                                                           incrementa en un 37,4 % la probabilidad de que la escuela sea resiliente en
+
+Lengua. Esta variable se correlaciona con otros índices referidos al liderazgo di-
+rectivo según la percepción de los docentes, como la retroalimentación sobre
+las prácticas pedagógicas o el apoyo, el trato y las capacidades del director.
+     Así, en línea con Murillo (2007), Bolívar y Murillo (2017), Pinskaya et al.
+(2018), Valenti Nigrini (2022) y otros, la gestión directiva constituye un factor
+relevante para compensar las desventajas de origen en las escuelas vulnera-
+bles. De ello pueden depender cuestiones como la creación de un ambiente
+centrado en el aprendizaje, el involucramiento y la colaboración docentes, la
+
+
+
+
+                                                                                        magis
+búsqueda de innovación o la generación de un clima escolar agradable. De
+hecho, se observa que diversas variables como la colaboración entre docen-
+tes, la calidad de las relaciones interpersonales o la satisfacción con el lugar         21
+
+de trabajo, según las respuestas del profesorado, se correlacionan significa-
+
+
+
+
+                                                                                         No todo está dicho: claves detrás de las escuelas resilientes
+tiva y positivamente con el indicador de liderazgo incluido en los modelos.
+     La gestión directiva también favorece el involucramiento de las familias
+a través de diversas iniciativas y, de hecho, este factor muestra una correla-
+ción significativa y negativa con la baja implicación familiar. Una escasa im-
+plicación de los padres en actividades extracurriculares en la escuela, a su
+vez, reduce la probabilidad de resiliencia en Matemática y en Lengua en un
+30 %, aproximadamente. Así, se constata uno de los hallazgos que sobresa-
+len en la literatura acerca de la importancia de la participación de las familias
+(Agasisti et al., 2018; Murillo, 2007; Valenti Nigrini, 2022), la cual, además de
+indicar la actitud desde el hogar, promueve un buen clima escolar y un ma-
+yor bienestar de los alumnos. Tal es esto que, a modo de ejemplo, se verifica
+que en las escuelas en las que existe nula participación familiar, los directi-
+vos reportan solo en un 23 % que las relaciones entre docentes y padres son
+muy buenas, frente a un 77 % entre las escuelas en las que los padres par-
+ticipan. De igual modo, una baja participación familiar se correlaciona sig-
+nificativa y negativamente con el promedio escolar del índice de sentido de
+pertenencia de los alumnos, y significativa y positivamente con la proporción
+de alumnos que presenta un ausentismo alto.
+     Finalmente, los resultados sugieren que se obstaculiza la posibilidad de
+resiliencia en escuelas donde se evidencian situaciones de violencia. Al igual
+que la disrupción en las aulas (factor con el cual correlaciona positivamente),
+esta variable es representativa del clima escolar, uno de los factores recurren-
+tes en la revisión de la literatura sobre eficacia y resiliencia educativas (Agasisti
+et al., 2018; Agasisti & Longobardi, 2017; Carrion, 2023; Erberber et al. 2015;
+García Crespo, 2021; Murillo, 2007; Pinskaya et al., 2018; Sandoval-Hernández
+& Białowolski, 2016; Waxman et al., 2003) y uno de los componentes de la di-
+mensión social del bienestar estudiantil, según Borgonovi y Pal (2016).
+     Cuando la escuela es un espacio donde se propician daños y amena-
+zas entre alumnos o hacia los docentes, cabe esperar que se dificulte crear
+
+                                                                                                 un ambiente enfocado en el aprendizaje, donde todos los actores puedan
+                                                                                                 sentirse motivados y confiados para colaborar, innovar y desarrollarse inte-
+                                                                                                 gralmente. En este sentido, puede señalarse que entre las escuelas potencial-
+                                                                                                 mente resilientes, la violencia escolar presenta una correlación significativa
+                                                                                                 y negativa con indicadores como la satisfacción de los docentes con el lu-
+                                                                                                 gar de trabajo, el sentido de pertenencia manifestado en promedio por los
+                                                                                                 alumnos y la propuesta de acciones tendientes a una activación cognitiva.
+                                                                                                 Por el contrario, a mayor violencia, mayor es la percepción de dificultades
+magis
+
+
+
+
+                                                                                                 para la enseñanza por parte de los docentes, vinculadas con la disponibili-
+                                                                                                 dad de tiempo o las exigencias hacia su tarea.
+ 22                                                                                                       Secundariamente, si bien escapa al alcance del presente trabajo anali-
+                                                                                                 zar la influencia del contexto nacional sobre la probabilidad de resiliencia,
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                                                 cabe mencionar que se aprecian divergencias entre los países al incluir efec-
+                                                                                                 tos fijos en los modelos. Así, con respecto a la base que es Argentina, tie-
+                                                                                                 nen mayores probabilidades de ser resilientes las escuelas de la mayoría de
+                                                                                                 los países de la región, con la excepción de Costa Rica, Cuba, República Do-
+                                                                                                 minicana y Uruguay.
+                                                                                                          A modo de cierre del análisis y para ofrecer una clara visualización de
+                                                                                                 cómo los distintos factores se conjugan para conformar escenarios más o
+                                                                                                 menos propicios para la resiliencia, se presenta en la tabla 5 la probabilidad
+                                                                                                 estimada de que instituciones con distintos perfiles sean resilientes. Tanto
+                                                                                                 para una escuela rural como para una urbana, se construyen dichos per-
+                                                                                                 files tomando valores favorables y desfavorables de las distintas variables
+                                                                                                 explicativas con efecto significativo en alguna de las áreas. Así, en el per-
+                                                                                                 fil favorable, las variables dicotómicas con efecto positivo toman valor 1,
+                                                                                                 las cuantitativas con efecto positivo toman el valor del percentil 75 y las de
+                                                                                                 efecto negativo el valor del percentil 25; lo contrario se realiza para el per-
+                                                                                                 fil desfavorable.
+
+                                                                           Tabla 5
+                                                                           Probabilidad de resiliencia por área para diversos perfiles de escuelas
+
+                                                                                                                    Matematicas               Lengua              Ciencias
+                                                                                                                       Pr (Y=1)              Pr (Y=1)             Pr (Y=1)
+                                                                                                                         (IC)                  (IC)                 (IC)
+                                                                                                                       75,60 %                 65,7 %               72,1 %
+                                                                                       Perfil favorable
+                                                                                                                   (64,4 %;86,8 %)        (51,8 %;79,4 %)      (59,7 %;84,5 %)
+                                                                           Rural
+                                                                                                                        7,30 %                 5,5 %                4,6 %
+                                                                                       Perfil desfavorable
+                                                                                                                    (3,7 %;10,8 %)         (2,6 %;8,4 %)        (2,2 %;7,1 %)
+                                                                                                                        61,90 %               54,8 %                71,4 %
+                                                                                       Perfil favorable
+                                                                                                                    (47,2 %;76,6 %)       (39,1 %;70,5 %)      (58,4 %;84,4 %)
+                                                                            Urbana
+                                                                                                                        3,90 %                 3,6 %                4,5 %
+                                                                                       Perfil desfavorable
+                                                                                                                     (1,8 %;6,1 %)         (1,6 %;5,6 %)        (2,1 %;6,9 %)
+
+                                                                           Fuente: elaboración propia con base en datos del ERCE 2019.
+
+     Entonces, se observa cómo una escuela de NSE bajo localizada en un
+entorno rural con valores favorables en los distintos factores relevantes iden-
+tificados, tiene una probabilidad de resiliencia estimada en Matemática del
+75,6 %. Para una escuela urbana con las mismas condiciones, la probabili-
+dad se reduce al 61,9 %, y si además presenta valores desfavorables en las
+demás variables, las chances de resiliencia caen al 3,9 %. Algo similar ocurre
+para Lengua y Ciencias, con la excepción en este último caso de que la loca-
+lización no altera significativamente las probabilidades.
+
+
+
+
+                                                                                   magis
+Conclusión
+                                                                                    23
+
+     A lo largo de este trabajo se ha explorado la posibilidad de resiliencia de
+
+
+
+
+                                                                                    No todo está dicho: claves detrás de las escuelas resilientes
+las instituciones escolares de nivel primario de América Latina y se ha hecho
+un esfuerzo por identificar factores asociados a dicha condición. En este as-
+pecto se realiza una contribución a la literatura, ya que los trabajos académi-
+cos focalizados en la resiliencia de las escuelas son escasos en relación con
+los que se centran en la resiliencia de los estudiantes.
+     Como primer resultado, fue posible determinar la existencia de escue-
+las resilientes, aunque cabe reconocer que la forma de operacionalización
+del concepto escogida es poco ambiciosa, ya que se basa en valores prome-
+dio y es posible que no todos los estudiantes de las escuelas resilientes ten-
+gan buenos resultados. No obstante, es una condición más exigente que la
+aplicada en otros estudios que consideran resiliente a aquel alumno desfa-
+vorecido que se desempeña mejor que el promedio de los desfavorecidos.
+En segundo lugar, fue factible mostrar que la cantidad absoluta y relativa de
+escuelas resilientes varía por país y por área de aprendizaje.
+     Finalmente, se logró encontrar factores asociados a una mayor proba-
+bilidad de resiliencia escolar en concordancia con la literatura previa. Se des-
+taca que la escuela sea rural; el rol de los docentes y los directivos —junto
+a sus aptitudes y actitudes—; la disponibilidad de recursos —en especial
+vinculados a las TIC— y el clima del aula y de la escuela. También, en relación
+con los estudiantes y sus familias, se resalta que la resiliencia de la comuni-
+dad escolar como un todo se ve afectada por las expectativas y la participa-
+ción familiar y el contexto barrial en el que reside el alumnado.
+     En síntesis, se logra sumar evidencia, en línea con los antecedentes,
+sobre la existencia de escuelas que alcanzan resultados mejores a los espera-
+dos, y sobre ciertas dimensiones del contexto familiar y de la institución que
+favorecen esta posibilidad.
+     A futuro se espera seguir avanzando en la investigación sobre la resi-
+liencia, ya que conocer en profundidad por qué algunas escuelas son más
+exitosas a la hora de compensar las desventajas socioeconómicas de origen
+
+                                                                           puede brindar útiles herramientas de política educativa en pos de una mayor
+                                                                           equidad. Entre las posibles líneas a abordar se encuentra, por un lado, la ne-
+                                                                           cesidad de estudiar el fenómeno por medio de estrategias de índole cualita-
+                                                                           tiva, que permitan ahondar más en el tipo de acciones que se llevan a cabo
+                                                                           en cada escuela, según su idiosincrasia y su historia; asimismo, replicar el es-
+                                                                           tudio con otras fuentes de datos o indicadores de logros estudiantiles sería
+                                                                           una oportunidad para superar las limitaciones asociadas a la operacionali-
+                                                                           zación de los conceptos teóricos de interés; por otra parte, se prevé aplicar
+magis
+
+
+
+
+                                                                           modelos de ecuaciones estructurales para identificar constructos que com-
+                                                                           binen distintos factores y plantear relaciones de mediación.
+ 24
+
+                                                                           Aclaraciones y agradecimientos
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                                Las autoras agradecen el financiamiento aportado por la Secretaría Ge-
+                                                                           neral de Ciencia y Tecnología de la Universidad Nacional del Sur.
+
+                                                                           Sobre los autores
+
+                                                                           María Marta Formichella es investigadora del Consejo Nacional de Inves-
+                                                                           tigaciones Científicas y Técnicas (CONICET), Argentina, y profesora del Depar-
+                                                                           tamento de Economía de la Universidad Nacional del Sur (UNS), Bahía Blanca,
+                                                                           Argentina. Doctora en economía por la UNS con estudios postdoctorales en Es-
+                                                                           paña. Área de especialidad: economía de la educación.
+
+                                                                           Natalia Krüger es investigadora del Consejo Nacional de Investigaciones Cien-
+                                                                           tíficas y Técnicas (CONICET), Argentina, y profesora del Departamento de Econo-
+                                                                           mía de la Universidad Nacional del Sur (UNS), Bahía Blanca, Argentina. Doctora
+                                                                           en economía por la UNS con estudios doctorales y postdoctorales en España,
+                                                                           Brasil y Bélgica. Área de especialidad: economía de la educación.
+
+                                                                           Referencias
+
+                                                                           Agasisti, T., Avvisati, F., Borgonovi, F. & Longobardi, S. (2018). Academic re-
+                                                                               silience: What schools and countries do to help disadvantaged students
+                                                                               succeed in PISA. OECD Education Working Papers, (167). https://one.oecd.
+                                                                               org/document/EDU/WKP(2018)3/
+                                                                           Agasisti, T. & Longobardi, S. (2017). Equality of Educational Opportunities,
+                                                                               Schools’ Characteristics and Resilient Students: An Empirical Study of EU-15
+                                                                               Countries Using OECD-PISA 2009 Data. Social Indicators Research, 134,
+                                                                               917-953. http://doi.org/10.1007/s11205-016-1464-5
+                                                                           Barber, C., Clark, C. & Torney-Purta, J. (2021). Learning environments and school/
+                                                                               classroom climate as supports for civic reasoning, discourse and engagement.
+                                                                               En C. Lee, G. White & D. Dong (eds.), Educating for Civic Reasoning and Dis-
+                                                                               course (pp. 273-318). National Academy of Education. https://naeducation.
+                                                                               org/educating-for-civic-reasoning-and-discourse-report/
+
+Bolívar, A. & Murillo, F. J. (2017). El efecto escuela: Un reto de liderazgo para el
+     aprendizaje y la equidad. En J. Weinstein & G. Muñoz (eds.), Mejoramiento
+     y liderazgo en la escuela. Once miradas (pp. 71-112). Centro de Desarrollo
+     del Liderazgo Educativo.
+Borgonovi, F., & Pál, J. (2016). A framework for the analysis of student well-being
+    in the PISA 2015 study: Being 15 in 2015. OECD Education Working Papers,
+    (140). https://doi.org/10.1787/5jlpszwghvvb-en
+Bustos Jiménez, A. (2010). Aproximación a las aulas de escuela rural: heteroge-
+     neidad y aprendizaje en los grupos multigrado. Revista de Educación, 352,
+
+
+
+
+                                                                                       magis
+     353-378. https://hdl.handle.net/10481/96986
+Carrion, I. V. (2023). Socioeconomic inequalities in education: public policies
+     for resilience [Tesis de doctorado en Economía Industrial]. Universidad de         25
+
+     Valencia.
+
+
+
+
+                                                                                        No todo está dicho: claves detrás de las escuelas resilientes
+Cuenca, R., & Cáceda, J. (2017). Ideales normativos, normas y praxis: patologías
+    sociales sobre los directivos escolares en el Perú. REICE. Revista Iberoame-
+    ricana sobre Calidad, Eficacia y Cambio en Educación, 15(2), 5-29. https://
+    doi.org/10.15366/reice2017.15.2.001
+Erberber, E., Stephens, M., Mamedova, S., Ferguson, S., & Kroeger, T. (2015). So-
+     cioeconomically disadvantaged students who are academically successful:
+     Examining academic resilience cross-nationally. IEA’s Policy Brief Series, (5).
+     https://eric.ed.gov/?id=ED557616
+García Crespo, F. J. (2021). Resiliencia académica en las evaluaciones internacio-
+     nales PIRLS, TIMSS y PISA [Tesis de doctorado en Psicología y Educación].
+     Universidad de Oviedo, España. https://digibuo.uniovi.es/dspace/handle/
+     10651/64346
+García Crespo, F. J., Galián, B., Fernández Alonso, R. & Muñiz, J. (2019). Educa-
+     tional resilience in reading comprehension: Determinant factors in PIRLS-
+     Europe. Revista de Educación, 384, 65-89. https://dx.doi.org/10.4438/1988-
+     592X-RE-2019-384-413
+Greene, W. (2003). Econometric analysis. Prentice Hall.
+Gujarati, D. (1992). Econometría. McGraw-Hill.
+Ibáñez Martín M. M. & Formichella, M. M. (2017). Logros educativos: ¿es rele-
+     vante el género de los estudiantes? Archivos Analíticos de Políticas Educati-
+     vas, 25(3), 1-30. http://dx.doi.org/10.14507/epaa.25.2520
+Johnson, B. (2008). Teacher–student relationships which promote resilience at
+    school: a micro-level analysis of students’ views. British Journal of Guid-
+    ance & Counselling, 36(4), 385-398. https://dx.doi.org/10.1080/03069
+    880802364528
+Krüger, N., Formichella, M. M., & Hamodi-Galán, C. (2022). Oferta educativa
+    desigual y escuelas resilientes. magis, Revista Internacional de Investigación
+    en Educación, 15, 1-34. https://doi.org/10.11144/Javeriana.m15.oede
+McFadden, D. (1979). Quantitative methods for analyzing travel behaviour on
+    individuals: some recent developments. En D. Hensher & P. Stopher (eds.),
+    Behavioural Travel Modelling (pp. 279-318). Croom Helm. https://doi.
+    org/10.4324/9781003156055
+
+                                                                           Milheiro da Silva, A. & Marques da Silva, S. (2022). Resilient schools: indicators
+                                                                                from literature and border schools’ projects. Cadernos de Pesquisa, 52.
+                                                                                https://doi.org/10.1590/198053148438_en
+                                                                           Misad, K., Misad, R. & Dávila, O. (2022). El clima escolar desde la gestión directi-
+                                                                                va en Latinoamérica: una revisión de la producción académica. Gestionar:
+                                                                                Revista de Empresa y Gobierno, 2(2), 7-24. https://revistagestionar.com/
+                                                                                index.php/rg/article/view/31
+                                                                           Murillo, F. J. (Coord.) (2007). Investigación Iberoamericana sobre Eficacia Esco-
+                                                                                lar. Convenio Andrés Bello. https://repositorio.minedu.gob.pe/bitstream/
+                                                                                handle/20.500.12799/284/155.%20Investigaci%C3%B3n%20Iberoamerica
+magis
+
+
+
+
+                                                                                na%20sobre%20eficacia%20escolar.pdf
+                                                                           Murillo, F. J., Martínez-Garrido, C. & Graña, R. (2023). Segregación escolar por
+ 26
+                                                                                nivel socioeconómico en educación primaria en América Latina y el Caribe.
+                                                                                REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educa-
+ VOLUMEN 18 / AÑO 2025 / ISSN 2027-1182 / BOGOTÁ-COLOMBIA / Páginas 1-27
+
+
+
+
+                                                                                ción, 21(1), 87–117. https://doi.org/10.15366/reice2023.21.1.005
+                                                                           Olmo-Extremera, M., Sabino de Farias, I. M., & Domingo-Segovia, J. (2021).
+                                                                                Construir resiliencia en las escuelas desde la acción de liderazgo. DEDiCA
+                                                                                Revista De Educação E Humanidades (DREH), (18), 69-90. https://doi.org/
+                                                                                10.30827/dreh.vi18.17002
+                                                                           Pinskaya, M., Kosaretsky, S., Zvyagintsev, R., & Derbishire, N. (2018). Building
+                                                                                resilient schools in Russia: effective policy strategies. School Leadership &
+                                                                                Management, 39(2), 127–144. https://doi.org/10.1080/13632434.2018.14
+                                                                                70501
+                                                                           Reynolds, D., Chapman, C., Kelly, A., Muijs, D. & Sammons, P. (2011). Educational
+                                                                                Effectiveness: The Development of the Discipline, the Critiques, the Defence,
+                                                                                and the Present Debate. Effective Education, 3(2), 109-127. https://dx.doi.or
+                                                                                g/10.1080/19415532.2011.686168
+                                                                           Rodríguez de Luque, J. J. (2024). Asociaciones entre el alto desempeño académi-
+                                                                                co y el clima escolar en Bogotá: ¿hay diferencias debido al nivel socioeco-
+                                                                                nómico del estudiantado? magis, Revista Internacional de Investigación en
+                                                                                Educación, 17, 1-24. https://dx.doi.org/10.11144/Javeriana.m17.aada
+                                                                           Romero, C., Krichesky, G., Zacarias, N. & Figueira, A. (2022). Escuelas resilientes.
+                                                                                Estudio sobre factores asociados a logros en escuelas secundarias públicas
+                                                                                de gestión estatal de la ciudad de Buenos Aires. En T. Vinacur & L. Landeo
+                                                                                (eds.), Mejora escolar: enfoques, evidencias y experiencias. OEI. https://oei.
+                                                                                int/oficinas/argentina/publicaciones/mejora-escolar-enfoques-evidencias-
+                                                                                y-experiencias/
+                                                                           Sandoval-Hernández, A., & Białowolski, P. (2016). Factors and conditions promot-
+                                                                                ing academic resilience: A TIMSS-based analysis of five Asian education sys-
+                                                                                tems. Asia Pacific Education Review, 17(3), 511-520. https://doi.org/10.1007/
+                                                                                s12564-016-9447-4
+                                                                           Siebecke, D. E. & Jarl, M. (2022). Does the material well-being at schools suc-
+                                                                                cessfully compensate for socioeconomic disadvantages? Analysis of resilient
+                                                                                schools in Sweden. Large-scale Assessments in Education, 10(11). https://
+                                                                                doi.org/10.1186/s40536-022-00130-y
+                                                                           Treviño, E., Villalobos, C., & Baeza, A. (2016). Recomendaciones de Políticas
+                                                                                Educativas en América Latina en base al TERCE. UNESCO. https://unesdoc.
+                                                                                unesco.org/ark:/48223/pf0000244976
+
+UNESCO/OREALC. (2021). Los aprendizajes fundamentales en América Latina y
+     el Caribe. Estudio Regional Comparativo y Explicativo (ERCE 2019). Resumen
+     Ejecutivo. UNESCO. https://unesdoc.unesco.org/ark:/48223/pf0000380257
+Valenti Nigrini, G. (2022). Una aproximación a la equidad educativa en México
+     a través de las escuelas públicas eficaces de nivel primaria. Bonilla Artigas
+     Editores.
+Waxman, H. C, Gray, J. P. & Padron, Y. N. (2003). Review of Research on Educa-
+     tional Resilience. UC Berkeley: Center for Research on Education, Diversity
+     and Excellence. https://escholarship.org/uc/item/7x695885
+
+
+
+
+                                                                                     magis
+Weinstein, J. (2016). ¿Cómo vivencian los docentes latinoamericanos su trabajo y
+     su escuela? Nuevos antecedentes a partir del estudio TERCE. REICE. Revista
+     Iberoamericana sobre Calidad, Eficacia y Cambio en Educación, 14(4), 93-
+                                                                                      27
+     111. https://dx.doi.org/10.15366/reice2016.14.4.005
+Wooldridge, J. M. (2009). Introducción a la Econometría. Un enfoque moderno.
+
+
+
+
+                                                                                      No todo está dicho: claves detrás de las escuelas resilientes
+     CENGAGE Learning.

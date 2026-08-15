@@ -1,0 +1,640 @@
+British Journal of Education
+                                                               Vol.13, Issue 2,30-43, 2025
+                                                       Online ISSN: 2054-636X (Online)
+                                                             Print ISSN: 2054-6351(Print)
+                                                     Website: https://www.eajournals.org/
+          Publication of the European Centre for Research Training and Development-UK
+
+
+          A Bibliometric Review of Research Trends
+               in Educational Leadership
+                        Samuel Kwadwo Aboagye, PhD
+       Akenten Appiah-Menka University of Skills Training and Entrepreneurial
+                         Development, Kumasi, Ghana
+
+                         Mary Assumpta Ayikue, PhD
+       Akenten Appiah-Menka University of Skills Training and Entrepreneurial
+                         Development, Kumasi, Ghana
+
+doi: https://doi.org/10.37745/bje.2013/vol13n23043                Published January 18, 2025
+
+Citation: Aboagye S.K. and Ayikue M.A. (2025) A Bibliometric Review of Research Trends in
+Educational Leadership, British Journal of Education, Vol.13, Issue 2,30-43
+
+Abstract: Little attempt has been made to map global research trends in Educational
+Leadership. This paper presents a bibliometric review of the application of Leadership
+theories in OM to determine research trends and gaps in Educational Leadership. A
+total of 50 publications on Educational Leadership from 2015 to 2023 were reviewed.
+The analysis was done with the VOSviewer software (version 1.6.13). The analysis
+focused on the bibliographic coupling of countries, co-authorship of authors, citation
+of documents, and co-occurrence of keywords, Educational, Theories, Leadership,
+Organisation, and Culture which were presented as network visualization maps. The
+findings revealed that the Educational, Distributed, Social Justice Leadership,
+Theories, and Organisation Culture publication trends, although not completely
+gradient, have been upwards since 2015. United States, Finland, United Kingdom,
+Norway, Netherlands, Sweden, and Malaysia were the countries that have had a great
+impact in this research area. Both the keywords and document citation analysis
+revealed three distinct phases in the evolution of Educational Leadership research.
+Only one data source - Scopus - was used. Therefore, the representation of publications
+presented in this study are limited to only Scopus data source.
+Keywords: educational leadership, theories, distributed leadership, organisation
+culture, social justice leadership, network visualization maps
+
+
+INTRODUCTION
+
+The importance of Educational Leadership lies in the belief that good leadership in
+schools helps to foster both a positive and motivating culture for staff and high-quality
+experience for learners. Leaders at all levels in schools can contribute to this by
+developing the top skills needed by school leaders (Jossey Bass). Educational
+
+                                                                                         30
+
+                                                              British Journal of Education
+                                                               Vol.13, Issue 2,30-43, 2025
+                                                      Online ISSN: 2054-636X (Online)
+                                                            Print ISSN: 2054-6351(Print)
+                                                   Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+Leadership is a term that is used synonymously with school leadership in some
+countries especially the United States. It is important not only for teachers but also for
+students to experience leadership opportunities during their schooling to learn the art of
+building relationships within teams, defining identities, and achieving tasks effectively.
+This benefit avails itself only when there is good and effective educational leadership.
+Educational Leadership provides an opportunity to learn to identify and display
+effective communication and interpersonal skills. They are important skills to have
+because a good leader is able to bring out the best abilities in his or her team members
+and motivate them to work together in achieving a shared goal. A good leader is also
+organised and keeps the team on track and focused to avoid delays. The use of
+educational theories has gained popularity in all educational institutions. Although
+many educational institutions have been adopting educational theories and pedagogies
+for their operations over the years, the current system of education has added an extra
+impetus to the uptake of educational theories and pedagogies. It can be said in practical
+terms, that pedagogical authority is constructed in classrooms, in teacher-student
+interaction, and in the spirit of their physical presence, confidence, appreciation,
+responsibility, and respect, and in the way they both relate to the content and norms
+(https://www.tandfonline.com). On the question of how teachers view their pedagogical
+authority, Elina Harjunen (2011), in her “Students’ Consent to a Teacher’s Pedagogical
+Authority”, reasons along a similar line to Kirsi Tirri et al. (2010) that pedagogical
+authority is constructed in the classroom through the interaction between teachers and
+students. Journal of Education for Teaching. Gil-Madrona (2020) is of the view that the
+concept of pedagogical authority can be considered as a power that grants obedience
+and discipline in the classroom. Commenting on this, McDonald (2021) says that in
+essence, this means that assessment results for learners are not equal; the talents of all
+students are not the same. Educational Leadership offers several benefits and therefore
+underscores the need for more research on education, in all fields of study, including
+organizations, theories, culture, and leadership.
+
+Research on the importance of Educational Leadership in countries abounds. For
+example, a recent study by the Wallace Foundation reported that effective school
+leaders make both a stronger and broader positive impact on student learning, especially
+in high-needs schools.
+
+Yukl (2013) believes that leaders intentionally exert influence on organizational
+members in order to affect the organization. Yukl is of the view that leadership is the
+process of influencing others to understand what needs to be done and how to do it, and
+the process of facilitating individual and collective efforts to accomplish shared
+objectives. According to Lezotte and McKee (2006), effective leaders see to it that the
+organization internalizes the vision and the means used to achieve that vision, making
+apparent the critical difference between being an effective manager, and an effective
+leader. Edwards (2009) indicated that leadership is a practice that leads to positive
+influence, growth, and development of both individuals and groups for collective
+purposes.
+
+                                                                                       31
+
+                                                             British Journal of Education
+                                                              Vol.13, Issue 2,30-43, 2025
+                                                      Online ISSN: 2054-636X (Online)
+                                                            Print ISSN: 2054-6351(Print)
+                                                  Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+Although studies on Educational Leadership in general and the application of theories
+in Educational Leadership abound, there is no evidence of studies that identified the
+research trends and determined the evolution of theories applied in Educational
+Leadership. Evidence of a bibliometric review in this area of study is lacking. This
+paper presents a bibliometric review of Educational, Distributed, Social Justice
+Leadership studies, Theories, and Organisation culture. The output of publications, key
+authors, and the collaborations among authors and countries, as well as the network of
+keywords, were explored with the aid of network visualization maps to identify research
+trends and determine the evolution of theories applied in Leadership. This can help
+school leaders become familiar with the current and cutting-edge theories that could
+promote effective and efficient leadership.
+
+
+RESEARCH METHODOLOGY
+
+In this study, the authors used the Scopus database as the data source. Hosseini et al.
+(2018) believe that the Scopus database has a wide coverage of publications from
+diverse areas. Moreover, scientific research database such as Scopus provide
+researchers with information on the most important academic literature in any scientific
+domain (Chadegani et al., 2013). This makes Scopus a trustworthy database. This study
+focused specifically on Educational, Distributed, Social Justice Leadership studies,
+Theories, and Organisation culture as keywords for the study. The search was limited
+to documents published over the past nine years, i.e., 2015 to 2023. This helped to
+demonstrate how research on educational leadership has evolved. The first search
+resulted in a total of 176 documents. The search was further refined to include only
+Articles, Conference Papers, and Book Chapters published in the subject areas of
+Educational, Distributed, Social Justice Leadership Studies, Theories, and Organisation
+culture. This resulted in a reduction from 176 to 132 documents. The search was further
+limited to only documents published in English resulting in a reduction from 132 to 101
+documents.
+
+The second stage was the screening; the titles and abstract of the 101 documents were
+further screened to eliminate papers which do not align with the research title or theme.
+This was done by analysing the content of the titles and abstracts. After the screening,
+a total of 50 documents were deemed appropriate for the study. The search/filtering and
+screening of the titles and abstract was done on 30th December, 2023.
+
+A bibliometric review was then conducted at the third stage to analyse the 50 documents
+obtained at the second stage. The bibliometric review was done with the VOSviewer
+software (version 1.6.13). Bibliometric review is a quantitative technique involving the
+visual and logical analysis of articles by assessing, mapping, and identifying structural
+patterns in a research domain, using mathematical models, visualization clusters and
+algorithms (Olawumi & Chan, 2018). Van Eck and Waltman (2014) clarified that the
+VOSviewer software, a bibliometric analysis tool, can help to display large
+
+                                                                                      32
+
+                                                              British Journal of Education
+                                                               Vol.13, Issue 2,30-43, 2025
+                                                       Online ISSN: 2054-636X (Online)
+                                                             Print ISSN: 2054-6351(Print)
+                                                    Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+visualization networks such that it become easily interpretable. Therefore, for this
+study, data was imported from the Scopus database into the VOSviewer software to
+create network and overlay visualization maps. Four visualization maps are presented
+in this study. The visualization maps used for the study are bibliographic coupling of
+countries and sources, citation of documents and authors, and co-occurrence of
+keywords. The network visualization map represents items by their labels in a circle.
+Three factors – size, color, and link – influence the analysis of the network visualization
+map (Van Eck & Waltman, 2019). First, the size of the label and the size of the circle
+of an item have a relation to the weight of the item; thus, bigger labels/circles represent
+higher weight. Secondly, all related items in a cluster network are presented in the same
+color. Finally, items are linked with lines; thus, the distance between two items
+indicates their relatedness. For example, the closer two items are to each other, the
+stronger their relatedness (Van Eck & Waltman, 2019). F-igure 1 shows the steps/stages
+adopted in this study.
+
+
+
+
+                                                                                        33
+
+                                                                              British Journal of Education
+                                                                               Vol.13, Issue 2,30-43, 2025
+                                                                   Online ISSN: 2054-636X (Online)
+                                                                            Print ISSN: 2054-6351(Print)
+                                                               Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+
+                           Keywords: “Educational, Distributed, Social Justice
+                           Leadership, Theories and Organisation culture from
+                           2015 to 2023 = 176 documents
+
+
+                           Document types: Articles, Conference Papers, and Book
+   Search                                            AND
+   stage                   Subject Area: Educational, Distributed, Social Justice
+                           Leadership, Theories and Organisation culture = 132
+                           documents
+
+                           Language: English = 101 documents
+
+
+
+
+      Screening
+                                     Screening of title and abstract = 50 documents
+      Stage
+
+
+
+                                          Annual publication distribution
+
+            Bibliometric                  Bibliographic coupling of countries/sources
+            Stage
+                                          Citation of documents
+
+                                          Network of Keyword Clusters
+
+
+
+Figure 1: Steps followed in the methodology
+
+
+ANALYSIS AND DISCUSSION
+
+Annual Publication Distribution
+The number of publications from 2015 to 2023 is demonstrated in Figure 2. It is evident
+that there were only three publications recorded in 2015 and five recorded in 2016 and
+2021. The number of publications rose from three in 2015 to five publications in the
+year 2017. The highest increase was recorded in the years 2018 and 2019 with 9
+publications. Then it increased sharply to 13 in 2023. This is probably due to the
+conferences organised that had a specific focus on Educational, Distributed, Social
+Justice Leadership studies, Theories and Organisation culture. Although the trend has
+not been smooth, the general trend of publications has been upward.
+
+
+
+
+                                                                                                       34
+
+                                                                                 British Journal of Education
+                                                                                  Vol.13, Issue 2,30-43, 2025
+                                                                         Online ISSN: 2054-636X (Online)
+                                                                                Print ISSN: 2054-6351(Print)
+                                                                       Website: https://www.eajournals.org/
+                             Publication of the European Centre for Research Training and Development-UK
+
+                        14
+
+
+                        12
+
+
+                        10
+   No of publications
+
+
+
+
+                        8
+
+
+                        6                                                                       No of Publication
+
+                        4
+
+
+                        2
+
+
+                        0
+                         2014         2016       2018           2020     2022       2024
+                                                        Years
+
+Figure 2. Annual Publication Research Trend
+
+Bibliographic Coupling of Countries
+A bibliographic coupling analysis of countries was done to first determine the number
+of publications recorded by each country, and secondly to evaluate the level of
+collaboration between/among the countries. The minimum number of documents of a
+country was set at 2 whilst the minimum number of citations of a country was set at 2.
+Out of the 26 countries, only 9 met this threshold. United States had the highest number
+of documents, i.e., 11 with 98 citations whereas Finland recorded the second highest
+number of citations, i.e., 25, with only 2 documents. Similar to Finland, Sweden,
+Malaysia and Spain recorded 2 documents each. However, in terms of citations,
+whereas Finland had 25, Sweden had 35 citations, Malaysia had as low as 4 citations
+with Spain recording the lowest citation of 2 with 2 documents. The country with the
+second highest citation was United Kingdom followed by Norway, Netherlands,
+Sweden and Australia. Respectively, they recorded 95, 45, 44, 35, and 23 citations. It
+is worth noting that no country in Africa met the threshold of 2 documents and 2
+citations. This demonstrates that Africa lags in this area of research.
+
+
+
+
+                                                                                                            35
+
+                                                            British Journal of Education
+                                                             Vol.13, Issue 2,30-43, 2025
+                                                    Online ISSN: 2054-636X (Online)
+                                                          Print ISSN: 2054-6351(Print)
+                                                 Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+Table 1. Bibliographic Coupling of Countries
+  No. Author                   Documents     Citations          Total link
+                                                                strength
+  1       United States           11              98            593
+  2       Finland                 2               25            488
+  3       United Kingdom          8               95            162
+  4       Norway                  4               45            141
+  5       Netherlands             3               44            89
+  6       Sweden                  2               35            9
+  7       Malaysia                2               4             8
+  8       Australia               3               23            4
+  9       Spain                   2               2             0
+
+Regarding the link among the countries, United States had the strongest link whilst
+Australia had the weakest link. However, all countries had links with each other
+demonstrating a satisfactory level of research link among the countries, with exception
+of Spain which had no link at all with any country. The network visualization map also
+reveals 3 clusters: cluster 1 (United States and Finland); cluster 2 (United Kingdom,
+Norway and Netherlands); cluster 3 (Sweden, Malaysia, Australia, and Spain) (see
+Figure 3).
+
+
+
+
+Figure 3. Country Network Visualization Map
+
+
+                                                                                     36
+
+                                                                 British Journal of Education
+                                                                 Vol.13, Issue 2,30-43, 2025
+                                                         Online ISSN: 2054-636X (Online)
+                                                               Print ISSN: 2054-6351(Print)
+                                                       Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+Bibliographic Coupling of Sources
+According to the bibliographic records, a total of 47 sources had publications in this
+area of study. Using the VOSviewer software, a minimum number of documents was
+set at 10 and the minimum citations was set at 10. Out of the total of 47 sources, only
+16 met this threshold. These, without doubt, are the sources that have contributed in
+this area of research. It is quite revealing that all these 16 sources have either an element
+of Educational, Distributed, Social Justice Leadership, Theories and Organisational
+Culture in the title. Table 2 further reveals that Journal of Educational Administration,
+BMC medical Education, International Journal of Leadership in Education, BMC
+Health Services Research, and Medical Teacher had the highest number of 2 documents
+each followed by the remaining 10 of the top 15 selected sources with one document
+each. However, in terms of citations, Journal of Psychology: Interdisciplinary and
+Applied was the journal with the highest number of citations, i.e. 42 citations. The rest
+of the top 15 sources had a citation range from 37 to 10. Apart from Journal of
+Psychology: Interdisciplinary and Applied, BMJ Quality and Safety, and Advances in
+Developing Human Resource Journals, it appears all the other sources have a good link
+(see figure 4).
+
+Table 2. Top 15 sources
+ No. Sources                                       Documents Citations Total link
+                                                                       strength
+ 1     BMC medical Education                       2         35        5
+ 2     International Journal of Leadership in      2         19        5
+       Education
+ 3     Educational Governance Research             1               19           4
+ 4     Implementation Science                      1               34           4
+ 5     BMC Health Services Research                2               19           3
+ 6     Journal of Organizational Change            1               22           3
+       Management
+ 7     Medical Teacher                             2               16           3
+ 8     Frontiers in Marine Science                 1               10           2
+ 9     Nursing Ethics                              1               17           2
+ 10    Journal of Educational Administration       2               13           1
+ 11    Learning Organization                       1               13           1
+ 12    Research in Organizational Behavior         1               11           1
+ 13    Advances in Developing Human                1               33           0
+       Resource
+ 14    BMJ Quality and Safety                      1               37           0
+ 15    Journal of Psychology:                      1               43           0
+       Interdisciplinary and Applied
+
+
+
+
+                                                                                          37
+
+                                                              British Journal of Education
+                                                               Vol.13, Issue 2,30-43, 2025
+                                                      Online ISSN: 2054-636X (Online)
+                                                            Print ISSN: 2054-6351(Print)
+                                                   Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+
+
+
+
+Figure 4. Sources Network Visualization Map
+
+Citation of Documents
+
+A citation analysis of documents was done to determine the level of citations of the
+specific documents. The minimum number of citations of a document was set at one.
+Out of the 125 documents, 15 met the threshold. For each of the 15 authors, the total
+strength of the citation links with other authors was calculated, but it was realized that
+there were no linkages between them, an indication that there was not much team work
+or collaboration between these 15 top authors. This is illustrated in the figure 5 below.
+
+
+
+
+                                                                                       38
+
+                                                             British Journal of Education
+                                                              Vol.13, Issue 2,30-43, 2025
+                                                      Online ISSN: 2054-636X (Online)
+                                                            Print ISSN: 2054-6351(Print)
+                                                  Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+
+
+
+
+Figure 5. Documents Citation Network Visualization Map
+
+
+Network of Keyword Clusters
+
+A keyword co-occurrence analysis was conducted to determine the trends and evolution
+of Educational, Distributed, Social Justice Leadership, Theories and Organisational
+culture. Hu et al. (2019) revealed that clustering analysis helps to identify patterns by
+grouping sources that share similar words and attribute value. The scope of any research
+study is determined by the keywords. A network of keyword clusters was derived from
+a total of 460 keywords. A minimum number of 5 co-occurrence of keywords was set
+and 14 keywords co-occurred. To ensure that only relevant keywords were captured in
+the network, some words such as human, female, male, and adult were taken out. Four
+main words were identified to have strong linkages with other words. These were
+“leadership, Organisational Culture, Education, and Learning. Under the keyword,
+Leadership, words that had linkages with other educational leadership words were
+organization and management, organizational culture, education, learning, and
+motivation.
+
+Under the keyword, Organizational Culture, there were strong linkages between
+leadership, education, learning, organization and management, motivation and
+interview.
+
+                                                                                      39
+
+                                                              British Journal of Education
+                                                               Vol.13, Issue 2,30-43, 2025
+                                                      Online ISSN: 2054-636X (Online)
+                                                            Print ISSN: 2054-6351(Print)
+                                                   Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+Under the keyword, education, there were strong linkages between education and
+organization and management, organizational Culture, leadership, learning and
+motivation.
+Under the keyword, learning, there were linkages between organizational culture,
+education, leadership, organization and management and human development
+
+Two clusters emerged from the analysis. Cluster 1 had 8 keywords; some of the
+keywords related to Educational leadership in this cluster are education, leadership,
+organization and management, organizational culture, learning, human equipment,
+interview, and humans. Cluster 2 had 2 keywords which were article and motivation.
+
+To allow for an informed discussion, the clusters are presented in different colors to
+demonstrate the timeframe where such words dominated (see the visualization map in
+fig. 6). It can be inferred from Fig 6 that keywords in Cluster 1 are represented in blue,
+Purple, and green; these were the keywords which dominated between 2015 and early
+2019. The keywords in cluster 2 are represented in Yellow; these keywords dominated
+from late 2019 until 2023.
+
+
+
+
+Figure 6. Overlay visualization map of co-occurring keywords
+
+
+
+
+                                                                                       40
+
+                                                                 British Journal of Education
+                                                                 Vol.13, Issue 2,30-43, 2025
+                                                         Online ISSN: 2054-636X (Online)
+                                                               Print ISSN: 2054-6351(Print)
+                                                     Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+DISCUSSION
+
+Educational leadership, a critical component of effective educational systems, has
+witnessed evolving research trends that mirror the dynamic nature of educational
+environments. This discussion provides a concise overview of three prominent research
+trends: distributed leadership, technology integration, and social justice leadership.
+
+It is evident that the general trend in publications on Educational, Distributed, Social
+Justice Leadership, Theories and Organisation culture, although not completely
+gradient, has been upwards since 2015. Recent scholarship emphasizes the shift from
+traditional hierarchical leadership structures towards more collaborative and distributed
+models. Spillane et al. (2004) propose a distributed perspective, highlighting the shared
+nature of leadership responsibilities. Harris (2008) notes the importance of
+understanding and leveraging distributed leadership, challenging conventional notions
+to enhance organizational adaptability. The integration of technology in education
+prompts a re-evaluation of the role of educational leaders. Fullan (2021) discusses the
+significance of leaders in navigating digital transformations and the implications for
+teaching and learning. Davis et al. (2011) identify emerging trends and challenges in
+K-12 education, emphasizing the need for leaders to effectively utilize digital tools for
+organizational improvement.
+
+Addressing issues of equity and social justice, educational leadership research
+increasingly centres on leaders' roles in fostering inclusive environments. Theoharis
+(2009) introduces the concept of social justice leadership, focusing on leaders' ability
+to resist systemic inequalities. Darling-Hammond (2017) stresses the importance of
+leaders in creating educational systems that promote diversity and equal opportunities
+for all students.
+
+Moreover, several other studies on the application of educational theories in
+organisations, and culture, have been done recently (Schein, 2004). Research on the
+application of educational theories in organisations, like the other fields in leadership,
+also thrive. For example, Kouzes and Posner’s (2012) study pointed out that for
+conducive atmosphere to prevail at school, leadership practices and commitments are
+commendable. Mankoe (2007) was of the view that the burning desire in many
+developing countries to provide education for more children and to cater for the large
+numbers of illiterate adults is aimed at increasing the literacy rate, and it is believed that
+if this is effectively done, it will confer many advantages on developing nations.
+
+It also became evident from the country analysis that whereas countries like United
+States, Finland, United Kingdom, Norway, Netherlands, Sweden, Malaysia, Australia,
+Spain – all in the Americas, Asia, and Europe have had great impact in this research
+area, no country in Africa was found to have had a significant contribution in this
+research area.
+
+
+                                                                                           41
+
+                                                                 British Journal of Education
+                                                                 Vol.13, Issue 2,30-43, 2025
+                                                         Online ISSN: 2054-636X (Online)
+                                                               Print ISSN: 2054-6351(Print)
+                                                     Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+This creates an opportunity for researchers on the continent to focus more attention in
+this research domain to help address the gap in this research area. This also opens up
+an opportunity for research collaboration and partnership with other countries outside
+the continent. There is also the need for organisations and research institution to provide
+support to promote this research agenda.
+
+CONCLUSION
+
+This study presented a bibliometric review on Educational, Distributed, Social Justice
+Leadership, Theories and Organisational culture, using publications from the Scopus
+database. A total of 50 relevant publications were used for the analysis, focusing on the
+number of publications annually, the publication distribution across countries and
+continents, bibliographic coupling of sources, citation of documents, and co-occurrence
+of keywords. This trend provides a direction to guide future investigation in this area
+of research. The representation of publications presented in this study are somewhat
+limited since the data set used for the analysis was limited to Scopus database. Also,
+only documents published in English were considered, excluding other possibly
+relevant documents published in other languages. As educational leadership continues
+to adapt to the challenges of the 21st century, these research trends underscore the need
+for leaders who can navigate change, harness technology, and champion social justice.
+The interdisciplinary nature of these trends reflects the multifaceted responsibilities of
+educational leaders in fostering inclusive, innovative, and equitable learning
+environments.
+
+Therefore, the study recommends further studies be conducted using more than one
+database. Moreover, it is evident that Africa lags in this area of research. It is, therefore,
+highly recommended that researchers on the continent focus more attention in this
+research domain to help address the gap in this research area.
+
+
+References
+
+Chadegani, D. A. A. Salehi, H. Yunus, M. M. Farhadi, H. Fooladi, M. Farhadi, M.
+       and Ebrahim, N. A. (2013) A comparison between two main academic
+       literature collections: web of science and Scopus, Asian Social Science,
+       9(5)18-26.
+Darling-Hammond, L. (2017) Teacher education around the world: What can we learn
+       from international practice? European Journal of Teacher Education, 40(3),
+       291-309.
+Davis, N. Preston, C. and Sahin, I. (2011) Emerging trends and challenges in K-12
+       education: Examining the issues, Education Sciences, 1(2), 88-103.
+Edwards, A. K. (2009) Professional citizenship and otherness leadership
+       development: Examining the relationships among meaning, moral reasoning,
+
+
+                                                                                           42
+
+                                                            British Journal of Education
+                                                             Vol.13, Issue 2,30-43, 2025
+                                                     Online ISSN: 2054-636X (Online)
+                                                           Print ISSN: 2054-6351(Print)
+                                                  Website: https://www.eajournals.org/
+         Publication of the European Centre for Research Training and Development-UK
+        and diversity competencies of graduate students, United State: Bowling Green
+        State University.
+Elina, H. (2011) Students’ Consent to a Teacher’s Pedagogical Authority,
+        Scandinavian Journal of Educational Research, 55(4), 403-424.
+        https://doi:10.1080/00313831.2011.587325
+Fullan, M. (2021) The new meaning of educational change, New York: Teachers
+        College Press.
+Gil-Madrona, P. (2020) Scale of pedagogical authority meanings in the classroom
+        (ESAPA) for Ibero-America built on the opinions of teaching students,
+        Teaching and Teacher Education, 93, 16-23.
+        https://doi.org/10.1016/j.tate.2020.103079.
+Harris, A. (2008) Distributed leadership: Conceptual confusion and empirical
+        reticence, International Journal of Leadership in Education, 11(1), 7-19.
+Hu, Z. Z. Tian, P. Li, S. W. and Zhang, J. P. (2019) BIM-based integrated delivery
+        technologies for intelligent MEP management in the operation and
+        maintenance phase, Advances in Engineering Software, 115, 1-16.
+Kirsi, T. and Tapio, P. (2010) Teacher Authority in Schools: A case study from
+        Finland, Journal of Education for Teaching, 26(2), 157-165.
+        https://doi.org/10.1080/02607470050127072
+Kouzes J. and Posner B. (2012) The leadership challenges: How to make
+        extraordinary things happen in organizations, San Francisco: A Willy Brand.
+Lezotte, L. W. and McKee, K. M. (2006) Stepping up: Leading the charge to improve
+        our schools, Okemos, MI: Effective Schools Products, Ltd.
+Mankoe, J. (2007) Educational administration and management in Ghana (revised
+        edition), Kumasi: Payless Publication Ltd.
+McDonald, Z. (2021) Acquiring Pedagogic Authority While Learning to Teach,
+        Africa Development / Afrique et Développement, 46(1), 23–44.
+        https://www.jstor.org/stable/48618353
+Olawumi, O. T. and Chan, D. W. M. (2018) Identifying and prioritizing the benefits
+        of integrating BIM and sustainability practices in construction projects: A
+        Delphi survey of international experts, Sustainable Cities and Society, 40, 16-
+        27. https://doi.org/10.1016/j.scs.2018.03.033.
+Schein, E. (2004) Organizational culture and leadership (3rd ed.), San Francisco, CA:
+        Jossey-Bass.
+Spillane, J. P. Halverson, R. and Diamond, J. B. (2004) Towards a theory of
+        leadership practice: A distributed perspective, Journal of Curriculum Studies,
+        36(1), 3-34.
+Van Eck, N. J. and Waltman, L. (2014) Visualizing bibliometric networks. In Y.
+        Ding, R. Rousseau, & D. Wolfram (Eds.), Measuring scholarly impact:
+        Methods and practice, 285–320.
+Van Eck, N. J. and Waltman, L. (2019) Manual for VOSviewer version 1.6.13.
+Yukl, G. (2013) Leadership in organizations (Global Edition), Boston: Pearson.
+
+
+
+                                                                                     43

@@ -1,0 +1,1296 @@
+Research in Educational Administration & Leadership
+
+
+
+
+        School Management Activities in a Digital Age:
+       An International Comparison Based on ICILS 2018
+
+                                    Julia Gerick*
+                    Technical University of Braunschweig, Germany
+
+                            Pierre Tulowitzki
+      FHNW University of Applied Sciences and Arts Northwestern Switzerland
+
+                               Birgit Eickelmann
+                            Paderborn University, Germany
+
+                                Jeppe Bundsgaard
+                              Aarhus University, Denmark
+
+                              Christiane Annemann
+                    Technical University of Braunschweig, Germany
+
+                                 Claudia Menge
+                    Technical University of Braunschweig, Germany
+
+
+ Abstract                                                                     Article Info
+ Principals have an important role to play in the implementation of
+                                                                            Article History:
+ digitalization in schools. They can be seen as role models for teachers           Received:
+ with regard to information and communication technology (ICT)                 May 30, 2024
+ usage. Furthermore, there is nowadays a solid research linking                   Accepted:
+                                                                           November 18, 2024
+ educational leadership and management indirectly to student
+
+
+
+
+     *Corresponding author
+     E-mail: j.gerick@tu-braunschweig.de
+
+achievement. However, there is a lack of studies on the specific ICT
+usage of principals and the relationship with students' ICT skills.
+Against this background, our research aimed to find out whether
+different clusters of principals in Chile, Denmark, Germany, the
+Republic of Korea, and the United States can be identified on the basis
+of their leadership and management activities using ICT and whether             Keywords:
+there are differences in the distribution of the identified clusters           International
+                                                                              Computer and
+across the countries. A latent class analysis was conducted using the Information Literacy
+International Computer and Information Literacy Study (ICILS)                Study (ICILS),
+2018 school questionnaire data. Across the five countries, three                Latent Class
+                                                                         Analysis, secondary
+different clusters were identified based on principals’ activities using       school, school
+ICT. Proportions of principals’ distribution across the clusters varied        management,
+significantly between the countries. In addition, it was investigated digitalization, ICT.
+whether the clusters are related to students' computer and
+information literacy (CIL) using the means of student's scores in the
+computer based CIL test. No significant relation was found either
+when the five countries were considered together or individually.
+
+
+
+    Cite as:
+    Gerick, J., Tulowitzki, P., Eickelmann, B., Bundsgaard, J., Annemann,
+            C. & Menge, C. (2024). School management activities in a
+            digital age – An international comparison based on ICILS 2018.
+            Research in Educational Administration & Leadership, 9(4), 661-
+            697. https://doi.org/10.30828/real.1485901
+
+
+
+
+                                                                                    662
+
+                               Introduction
+
+Digitalization is permeating the entire world of work and life
+worldwide (Kupaysinovna & Abduvakhobovich, 2021; Rohatgi et al.,
+2020; Tiede et al., 2015). Digitalization processes are also being driven
+forward in education systems through educational reforms, the
+increasing usage of media and technologies in classrooms, and in the
+routine tasks of teachers and principals around the world (Nadrljanski
+et al., 2022; Tiede et al., 2015). Principals are often expected to lead the
+digital transformation in schools to promote students' learning of 21st
+century skills which will prepare them for life in the digital world
+(Håkansson Lindqvist & Pettersson, 2019; Rojas Briñez et al., 2023;
+Tiede et al., 2015). In order to fulfil these tasks, a good understanding
+of ICT usage in the school context and the corresponding digital skills
+are required (Dexter, 2018). As leaders, principals are expected to
+create conditions that promote ICT usage in schools (Dexter, 2018) and
+act as role models for teachers with regard to ICT usage in the
+digitalization of the school system (Nababan et al., 2021).
+
+There is strong evidence linking school leadership to the capacity of
+teachers and (indirectly) to student achievement (Leithwood et al.,
+2017; Mulford, 2003; Robinson et al., 2008). However, there is a lack of
+empirical research on the importance of principals for the deployment
+and (competent) usage of ICT in schools, especially research that uses
+large international data sets. An international understanding of how
+principals use ICT and how they might influence ICT integration in
+schools seems especially important as the pandemic has highlighted
+the potential of ICT in schooling but also – in many countries – that the
+current state of integration leaves room for improvement (Karakose et
+al., 2021; Pietsch et al., 2022; Ramos-Pla et al., 2021).
+
+
+
+
+663
+
+In this article, we describe the relevance of school leadership in the
+context of ICT (integration) in schools and introduce the framework of
+our study including information on national contexts for ICT-related
+education and students’ performance in our five comparison countries:
+Chile, Denmark, Germany, the Republic of Korea, and the United
+States. Then, we will present the sources of data and methods,
+followed by our findings and a discussion including a reflection on
+areas of future research.
+
+The relevance of school leadership in a digitalized world
+
+School leadership – an increasingly digital profession under pressure?
+
+The profession of a school leader is characterized as a position of high
+responsibility (Tan et al., 2022). School leaders are expected to manage
+– among other things – “enhanced administrative and managerial
+tasks, handle financial and human resources, manage public relations
+and build coalitions, engage in quality management and public
+reporting processes and provide leadership for learning” (Pont et al.,
+2008, pp. 28–29). Their position has sometimes been likened to that of
+a middle manager. They are expected to not only be administrators but
+also drivers of change. They act as points of contact for a variety of
+stakeholders, among them teachers, students, parents, and local
+authorities/school boards. As such, acts of communication and
+information management can be considered two key areas of their job.
+These domains have been heavily influenced by technological
+advances over the past two decades and have consequently also
+changed the day-to-day work of principals (see, e.g., Akhtar, 2022).
+Nevertheless, there are currently only a few studies on the use of ICT
+by principals (see, e.g., Tulowitzki et al., 2022). Moreover, existing
+research is not internationally comparative. An earlier study by Stuart
+et al. (2009) showed that 64 principals surveyed in New Zealand
+
+
+
+                                                                    664
+
+frequently use ICT in their work. A study in Canada (Pollock &
+Hauseman, 2018) based on interviews with 70 school principals
+revealed that the increasing usage of e-mails was seen as a double-
+edged sword, providing efficiency but also leading to an increased
+volume of communication and extension of the workday. Similarly,
+Akhtar (2022) concludes that while the use of ICT infrastructure
+improves the effectiveness of Pakistani school management and raises
+school standards, it can also create additional challenges for principals
+due to technology failures. Other studies have shown that school
+principals are considered role models for teachers and other
+stakeholders with regard to ICT usage (Apsorn et al., 2019; Baydar,
+2022). Further research into the usage of ICT by principals therefore
+appears valuable to identify starting points for the further
+development of digitalization processes in schools.
+
+We argue that better understanding the ICT usage of principals is
+relevant on two levels: First, because digital tools and technology are
+nowadays part of many working contexts including the working
+context of principals. Second, because the actions of principals,
+including their use of ICT, can influence the overall technology
+integration in a school.
+
+The ICT-related influence of principals
+
+Overall, there have been few studies on the leadership role in
+educational technology reforms, but the school leadership role is seen
+as a crucial aspect for successful ICT adoption (Arham et al., 2022;
+Dexter & Richardson, 2020; Rojas Briñez et al., 2023). Principals have
+long been identified as “change agents” (Fullan, 1993) that can act as
+gatekeepers or drivers of innovation in schools (Hall & Hord, 2019),
+depending on their open innovation mindset (Witthöft et al., 2024).
+These innovations include ICT usage in schools. Here, principals have
+
+
+665
+
+been found to influence teachers' knowledge and usage of ICT (Dexter,
+2018; Petersen, 2014; Petko & Prasse, 2018). Principals' engagement in
+ICT has also been shown to influence teachers' self-efficacy (Ismail et
+al., 2021), beliefs (Schmitz et al., 2023), and attitudes towards ICT
+(Petko & Prasse, 2018). The different (ICT-related) leadership
+approaches that principals can choose also have an impact on their
+staff (Navaridas-Nalda et al., 2020). In particular, there is an indication
+that a transformational leadership is linked to (comparatively faster)
+implementation of ICT by teachers (Ruloff & Petko, 2021; Vermeulen
+et al., 2015). The concept of transformational leadership originated
+with Burns (1978) and was further developed by Bass (1985). Next to
+functions   in   the   area   of   management       and    administration,
+transformational principals lay emphasis on inspiring and motivating
+teachers, being a role model, and developing a meaningful vision for
+the future of the school (also see, e.g., Daniëls et al., 2019; Leithwood &
+Sun, 2012). By using transformational leadership practices, such as
+setting a good example and thus acting as a role model, principals' own
+usage of ICT can influence how teachers engage with, perceive and use
+ICT (see, e.g., Schmitz et al., 2023; Tulowitzky et al., 2023). This is also
+emphasized in Hope and Stakenas (1999) approach about principals’
+three primary roles for being a technology leader for better integration
+of ICT in schools (also see, Mwambo, 2019).
+
+Principals need to interact with various stakeholders in their day-to-
+day work and build strong relationships in order to successfully lead
+technological innovation and change in schools (Dexter & Richardson,
+2020). The choice of communication methods can have an impact on
+the quality of these interactions. For example, Mazza (2015)
+highlighted the potential benefits of US American principals utilizing
+social media to enhance communication and relationships between
+
+
+
+
+                                                                        666
+
+schools and parents, complementing traditional forms of two-
+way/multi-way communication in the modern era.
+
+Furthermore, there is nowadays a wealth of evidence linking
+educational leadership indirectly to student outcomes (see, for
+example ten Bruggencate et al., 2012; Grissom et al., 2021). Principals
+can influence teacher capacity, motivation and working conditions
+which then in turn affect classroom instruction and student
+performance (Leithwood & Louis, 2012; Leithwood et al., 2017;
+Mulford, 2003). For example, a study in Texas with 1779 primary
+school teachers and data on student grades has shown that school
+leadership has a positive indirect impact on student performance by
+creating a rational climate in the school (Leithwood et al., 2020). The
+study by Tan (2018) also demonstrated an indirect influence of school
+leadership on the students‘ mathematic performance in various
+countries. With regard to a direct influence, however, the results are
+different: In various studies, there is little to no direct influence of
+individual practices of transformational leadership on student
+performance (Allen et al., 2015; Sun & Leithwood, 2012). In addition,
+there is currently a lack of studies that deal with the influence of school
+leadership practices in relation to digital media on student ICT skills.
+
+               Theoretical and empirical framework
+
+Theoretical framework model
+
+Our research uses secondary analyses to examine school leadership in
+the context of digitalization. To do this, we draw on data from the
+International Computer and Information Literacy Study (IEA-ICILS 2018).
+ICILS 2018 is the most recent comparative study providing data about
+ICT in schools with a representative database. For the second time
+since 2013, the Computer And Information Literacy (CIL) of Grade 8
+
+
+
+667
+
+students was examined in an international comparison using
+computer-based test environments. In addition, information on school
+improvement processes as well as teaching and learning with ICT was
+collected using questionnaires (Mikheeva & Meyer, 2020). ICILS 2018
+as an international comparative large-scale study is based on a
+theoretical framework model (Fraillon et al., 2020). In line with
+previous models, it takes into account the multilevel structure when it
+comes to student learning (e.g. Scheerens, 1990; Scheerens & Bosker,
+1997). The model differentiates between antecedents and processes,
+following the assumptions that antecedents influence processes and
+that processes are closely connected to the outcome, i.e. the level of CIL
+competence. School leadership is posited as one of the relevant process
+factors on the level of the school and the classroom (see Figure 1).
+
+
+
+
+                                                                       668
+
+Figure 1. Theoretical Framework of the International Computer and
+Information Literacy Study ( Eickelmann, 2019, shortened and
+translated by the authors; based on Fraillon et al., 2020)
+
+
+We therefore take a closer look at this topic in this paper. In order to be
+able to better interpret the following international comparative
+
+
+
+
+669
+
+analyses, information on the national context of the countries
+considered is summarized below.
+
+National contexts for CIL education
+
+Since, according to the framework, the (process) characteristics of the
+educational systems have an influence on the school and classroom
+level, some country-specific background information on the context for
+CIL education until the ICILS survey in 2018 is provided as follows.
+The following five countries are considered in this article: Chile,
+Denmark, Germany, the Republic of Korea, and the United States.
+These countries were chosen in order to provide a diverse
+representation of school management activities across four different
+continents, allowing for a comprehensive global perspective on the
+issue. In addition, Denmark was used as a comparison country because
+it is the ICILS winning country where students have the best computer
+and information skills (Fraillon et al., 2020). Furthermore, the inclusion
+of both Denmark and Germany allows for an intra-European
+comparison to further utilize the rich potential of the international data
+set. As shown in the following, the selected countries cover a wide
+range of ICT-related educational practices and policies and differ in
+terms of their level of digitalization and student achievement. This
+diverse selection of countries enhances the generalizability and
+applicability of the study findings to a broader context.
+
+First of all, it should be noted that, according to the findings of Fraillon
+et al. (2020) from the ICILS national contexts survey, the five countries
+differ in terms of the curricula for ICT usage in the classroom, the
+timing, and responsibilities for implementing these. While in Chile,
+Denmark and Korea, guidelines for ICT curricula were defined and
+implemented at state level, in the USA additional guidelines were
+
+
+
+
+                                                                        670
+
+implemented at federal level by 2018, and in Germany only at federal
+level (Fraillon et al., 2020).
+
+Furthermore,     there    are    differences in    the current   state   of
+implementation,       particularly    concerning    the   availability   of
+technology-related resources for teaching and learning: Results of
+ICILS 2018 show that while Danish schools are comparatively best
+equipped, the availability of resources in Chile and Korea varies
+greatly depending on the resource. In comparison with all ICILS
+countries, German schools lag behind in terms of technology resources
+(Fraillon et al., 2020). Denmark also leads in software-related
+resources, with Korea also performing well in ICILS country
+comparison. Germany faces shortages in various software resources,
+while Chile's schools lag overall in software provision. The availability
+of technology facilities for teaching and student learning is also
+comparatively good in Denmark, while it varies in Germany
+depending on the facility and is notably lacking in Chile and Korea in
+ICILS country comparison. Chile places a higher priority on facilitating
+ICT usage in education compared to other countries, while Denmark,
+Germany, and Korea prioritize it less. The United States does not meet
+the high ICLS sample participation requirements for a comparison
+across all aspects (Fraillon et al., 2020). It is also difficult to draw
+general conclusions about the US education system due to its highly
+decentralized nature, with the national Department of Education
+playing a minor role compared to the state and local school council
+level (Vachkova et al., 2021). However, according to ICILS 2018, the
+United States has a very good availability of technology-related and
+software-related resources and technology facilities for teaching and
+student learning. In addition, the United States places a high priority
+
+
+
+
+671
+
+on many ways of facilitating ICT use in teaching and learning (Fraillon
+et al., 2020).
+
+Students CIL in international comparison
+
+Within the ICILS framework, CIL is defined as the ability “to use
+computers to investigate, create, and communicate in order to
+participate effectively” in various areas of life (Fraillon et al., 2020,
+p. v). Two overarching strands of CIL are distinguished: Collecting and
+managing information which involves “a practical understanding of
+how to use a computer and the capability to find and critically evaluate
+online information” and producing and exchanging information which
+includes “communication, safe use of information, secure use of
+information and transforming and creating digital information”
+(Rohatgi et al., 2020, p. 145).
+
+Based on the individual test results of the students, five levels of CIL
+with increasing difficulty are distinguished. With scores between 518
+and 553 (see Table 1), students from Denmark, Germany, the Republic
+of Korea and the United States on average are on Level 2 and thus
+manage to “use computers, under direct instruction, to complete basic
+and explicit information gathering and management tasks” (Fraillon et
+al., 2020, p. 51) while students of Chile are on average in Level 1 and
+thus “demonstrate a functional working knowledge of computers as
+tools” (Fraillon et al., 2020, p. 51). The highest average scores can be
+found in Denmark. In the Republic of Korea, the highest proportion of
+students (9 %) reached the highest CIL level. These ICILS findings are
+also reflected in further comparative studies, with Denmark (see, e.g.,
+Rohatgi et al., 2020; Storte et al., 2019) and the Republic of Korea (see,
+e.g., Fiş Erümit & Keles, 2021) being in particular regarded as global
+role models in terms of digital integration and student performance.
+
+
+
+
+                                                                      672
+
+Table 1.
+Student performance in CIL in the five countries: results from ICILS
+2018
+                                            Average CIL scores
+Chile                                               476
+Denmark                                             553
+Germany                                             518
+Republic of Korea                                   542
+United Statesa                                      519
+ICLS Total                                          496
+a does not meet the high IEA sample participation requirements
+
+
+
+
+Research questions
+
+Due to the lack of international comparative studies on the use of ICT
+by principals, this topic was examined in more detail in the present
+study. Therefore, the following three research questions were
+addressed:
+
+      1. Is it possible to empirically identify distinct clusters of
+         principals across Chile, Denmark, Germany, the Republic of
+         Korea, and the United States based on their leadership and
+         management activities using ICT?
+
+      2. If so, are there any differences in the distribution of the
+         identified clusters across these five countries?
+
+      3. Are the identified clusters related to students' competence in
+         CIL?
+
+The next section explains how such distinct clusters are identified.
+
+
+
+
+673
+
+   Data sources, methods, statistical techniques
+
+   To answer the research questions, data from the second cycle of the
+   International Computer and Information Literacy Study (ICILS 2018) was
+   used. The main aim of the study was to investigate to which extent
+   students in grade 8 (or equivalent) have computer and information-
+   related skills. To this purpose, the students completed various
+   computer-based tests. In addition, the framework conditions for skills
+   acquisition were recorded using various additional questionnaires for
+   different stakeholders (Fraillon et al., 2020). This study is based on the
+   information from the school principal questionnaire and the students'
+   test results (see, e.g., Mikheeva & Meyer, 2020). Data from the
+   following countries is taken into account: Chile, Denmark, Germany,
+   the Republic of Korea and the USA. The respondents completed the
+   tests and questionnaires in their respective national languages. Table 2
+   shows the sample sizes of the principals who took part in the 2018
+   ICILS survey for the five countries.
+
+   Table 2.
+   Sample sizes in the five countries taken into account
+
+                                  Sample size in the analysis sample            Percentage
+Chile                                             174                               19.3
+Denmark                                           140                               15.5
+Germany                                           194                               21.5
+Republic of Korea                                 150                               16.6
+United States                                     245                               27.1
+Overall                                           903                              100.0
+
+
+
+   In order to answer the research question 1, a Latent Class Analysis
+   (LCA) was conducted (Geiser, 2013; Lazarsfeld & Henry, 1968;
+   McCutcheon, 1987) using Mplus 7.0 (Muthén & Muthén, 2012). Using
+
+
+
+
+                                                                         674
+
+methodological approaches to cluster data to identify different classes
+appears particularly fruitful and has been conducted recently in
+different contexts using large scale assessment data on the student (e.g.
+Bundsgaard & Gerick, 2017; Ü nlü & Schurig, 2016; Wendt & Kasper,
+2016), the teacher (e.g., Eickelmann & Vennemann, 2017), and the
+school level (Gerick, 2018). In order to identify the statistically optimal
+amount of clusters, different statistical models are analyzed separately
+and subsequently compared. To compare the different models, the
+information criteria Akaike Information Criterion (AIC; Akaike, 1974)
+and the Bayesian Information Criterion (BIC; Schwarz, 1978) were used.
+Lower AIC and BIC values for a model indicate a better model fit (Rost,
+2004). In cases of small differences between models with different
+amounts of clusters, the selection of the model with fewer clusters is
+recommended. To assess the reliability of the classification, the average
+latent class probabilities for most likely latent class membership are
+considered (Geiser, 2013).
+
+Since the number of schools varies in the five countries, and to make
+sure that each country contributes the same proportion of data into the
+LCAs, the school weights in all schools across the five countries were
+rescaled (Gonzalez, 2012) to a sample size of 150 from each country.
+This led to an equal weighting of the countries irrespective of the
+individual sample size within the country. Cases with missing values
+in any of the relevant variables were omitted from the analyses.
+
+All 14 items of question 3 in the school questionnaire of ICILS 2018
+were used in the analyses to answer the research question (Mikheeva
+& Meyer, 2020), covering facets like using ICT for information search,
+organization of databases, communication with various stakeholder
+
+
+
+
+675
+
+and management of various aspects of schools. The following list
+shows the items used in English:
+
+How often do you use ICT for the following activities?
+a) Search for information on the Internet or a network maintained by
+education authorities for its schools
+b) Provide information about an educational issue through a website
+c) Look up records in a database (e.g. in a student information system)
+d) Maintain, organize and analyze data (e.g. with a spreadsheet or database)
+e) Prepare presentations
+f) Communicate with teachers in your school
+g) Communicate with education authorities
+h) Communicate with principals and senior staff in other schools
+i) Communicate with parents
+j) Work with a learning management system (e.g. [Moodle])
+k) Use social media to communicate with the wider community about school-
+related activities
+l) Management of staff (e.g. scheduling, professional development)
+m) Preparing the curriculum
+n) School financial management
+Response categories: Every day, At least once a week but not every day, At least once
+a month but not every week, Less than once a month, Never
+
+
+For the second research question, descriptive statistics were calculated
+in order to illustrate the proportions of principals who can be
+categorized into the identified clusters for each country. For the third
+research question, the student achievement in the computer based CIL
+test were taken into account. For the analyses, mean difference
+analyses (t-Tests) were conducted for all countries together and for
+each country separately using the means of students score in the five
+tasks of the test module (plausible values) and the respective
+
+
+
+
+                                                                                 676
+
+weighting variables. The analyses for research questions 2 and 3 were
+conducted with the IEA IDB Analyzer 4.0.39 (Mirazchiyski, 2015).
+
+                                   Results
+
+To answer the first research question, we analyzed whether it is possible
+to identify different clusters across the five countries based on the
+leadership and management activities using ICT. As table 3 shows, the
+three-cluster model describes the data particularly well, because the
+AIC and the (sample size adjusted) BIC are not considerably smaller
+for the four-cluster model than for the three-cluster model, thus
+underlining the decision in favor of the less complex model.
+Furthermore, the three-cluster model has a higher quality of
+classification than the four-cluster model with average latent class
+probabilities of ≥ .89. Figure 2 shows the distribution of the three
+clusters. It becomes obvious that besides the level differences, different
+priorities can be identified which characterize the three clusters.
+
+Table 3.
+Results of latent class analyses
+ Number           AIC           BIC          Sample size      Average Latent
+ of cluster                                  adjusted BIC          Class
+                                                               Probabilities
+      2        12795.60       12934.96         12842.86             ≥ .93
+      3        12440.96       12652.41         12512.67             ≥ .89
+      4        12273.05       12556.59         12369.21             ≥ .87
+      5        12209.69       12565.32         12330.30             ≥ .80
+ Note: The cluster solution highlighted in italics is pursued further in this
+ article.
+
+
+Cluster 1: Comprehensive digital school management (34 % of all
+principals in the five countries): This cluster is marked by a high
+
+
+
+
+677
+
+probability of the principals making use of ICT at least once a week
+across all domains: For all activities, the probabilities are above 60
+percent.
+
+Cluster 2: Partial digital school management (55 % of all principals in
+the five countries): This cluster can be characterized by using ICT at
+least once a week only for management activities in a narrower sense.
+For four leadership and management activities that could be viewed
+as being more oriented towards the pedagogical part of school
+management, the probability that school principals will conduct them
+using ICT at least once a week is less than 50 percent: Prepare
+presentations, preparing the curriculum, use social media to
+communicate with the wider community and work with a learning
+management system.
+
+Cluster 3: Rudimentary digital school management (12 % of all
+principals in the five countries): This cluster can be characterized by
+usage patterns that are focused on very few areas: Only for the
+activities ‘communicate with teachers in the school’, ‘search for
+information on the internet’, and ‘communicate with education
+authorities’, the probability that school principals will conduct them
+using ICT at least once a week is more than 50 percent.
+
+
+
+
+                                                                   678
+
+            Figure 2. Distribution of the identified clusters
+
+Table 4 shows the results for research question 2, indicating the
+proportions of principals who can be categorized into the three
+clusters. The extent to which the proportion per country differs
+significantly from the mean value is also calculated.
+
+Table 4.
+Distribution of principals across the clusters
+                    Cluster 1            Cluster 2           Cluster 3
+                 %     SE             %     SE            %     SE
+Chile           43.67 5.86    ●      41.83 5.81    ▼     14.51 3.59    ●
+Denmark         29.73 5.07    ●      68.46 5.00    ▲      1.81 1.06 ▼
+Germany         22.31 5.20    ▼       62.85 6.46     ●    14.85 5.88      ●
+Republic     of 32.14 4.22    ●       49.59 5.24     ●    18.27 3.98      ●
+Korea
+United States    40.46 4.96      ●    50.49 5.60     ●     9.04 4.43      ●
+Average          33.66 2.28           54.64 2.52          11.70 1.83
+Notes: SE – Standard Error; Significances in the percentages are calculated
+in comparison to the average frequency of each cluster.
+
+
+
+679
+
+● no significant difference to overall average; ▼ significantly lower
+percentage than the overall average; ▲ significantly higher percentage
+than the overall average.
+
+
+The results for cluster 1 initially show that the proportion of school
+principals in Germany who can be assigned to this cluster is
+significantly lower than the average across the five countries. Only
+slightly more than one-fifth (22 %) of school administrators in
+Germany use ICT for leadership and management activities, which are
+characterized by ‘Comprehensive digital school management’. In
+Chile, on the contrary, 44 % and thus the majority of the school
+principals can be assigned to this cluster, as well as a high proportion
+of school principals from the United States (40 %).
+
+For cluster 2, it is clear that the proportion of school principals in
+Denmark who can be assigned to this cluster is significantly higher
+than the mean value (55 %). Almost 70 percent of school administrators
+in Denmark perform leadership and management activities with ICT,
+which can be described as ‘Partial digital school management’. In
+contrast, the proportion of school principals who can be assigned to
+this cluster in Chile is significantly below the average (42 %). In all
+other four countries, the largest proportion of school principals can be
+assigned to this cluster.
+
+Looking at cluster 3, it is clear that once again Denmark shows a
+significant deviation from the average value. In this cluster, which is
+characterized by a rather low, infrequent use of ICT, only a very small
+proportion (approx. 2 %) of school principals in Denmark can be
+classified. On average, the proportion in this cluster is 11 percent
+across all five participating countries.
+
+
+
+
+                                                                         680
+
+In regard to the third research question, the results show that when
+considering the five countries together there is no significant relation
+between the identified clusters and the average level of students'
+competence in CIL opting for a 95 percent confidence level. Similarly,
+there are no significant differences when the five countries are
+considered separately.
+
+                     Discussion and Conclusions
+
+The results show that it is empirically possible to identify clusters of
+school principals’ digital leadership and management activities
+(research question 1). Concerning the first cluster (comprehensive), there
+is a slightly lower probability of using ICT for presentations, preparing
+curricula, and working with          learning management systems,
+suggesting that either these activities connected to pedagogical
+management are less frequent in the daily practice of principals or that
+ICT is less frequently used for these activities. In cluster 3
+(rudimentary), the activity ‘search for information in the internet’
+should be considered more specifically. One could argue that this is an
+activity that is part of everybody’s everyday routine, and it might not
+be connected to school management. Then this group is only using ICT
+for communication with principal collaborators (teachers and
+authorities). Also it should be taken into consideration that there are
+some principals in this cluster who have started using ICT for basic
+administrative tasks connected to working with and communicating
+data and information.
+
+Furthermore, we see variation in regard to the distribution of
+principals across clusters between countries (research question 2). For
+Germany, the result that the proportion of principals in cluster 1
+‘Comprehensive digital school management’ is significantly below
+
+
+
+681
+
+average is not surprising, as ICT was not considered a priority at the
+time of data collection. While there have been numerous developments
+since then (see, e.g., German Federal Ministry of Education and
+Research, 2023), it‘s doubtful that this situation has changed
+significantly as principals in Germany are facing many challenges
+which might lead to matters of ICT being relegated to the fringe. There
+is a need for school principals to understand their new role to set
+directions in schools when it comes to school leadership (Dexter, 2018).
+Almost no Danish schools are in the cluster of limited use (rudimentary
+digital school management), and the results thereby confirm that
+Danish schools are highly digitized as it has been intended and
+promoted in a number of Government initiatives during the last three
+decades (Bundsgaard et al., 2019; Caeli & Bundsgaard, 2020).
+However, the results also show that most Danish principals are not
+among the cluster 1-respondents of comprehensive digital school
+management. Thus, most Danish principals do not use ICT intensely
+for a variety of pedagogical activities. This can be considered
+somewhat surprising in view of the fact that Danish principals
+historically have prioritized the pedagogical aspects of school
+management and are encouraged to do so by the educational
+authorities (Danmarks Evalueringsinstitut, 2006, 2017). In Chile, on the
+other hand, where schools are equipped with different levels of
+technology from region to region and are less well equipped with
+software compared to other countries (Fraillon et al., 2020), principals
+use ICT relatively regularly for various work tasks, which is reflected
+in a particularly high percentage in the cluster of comprehensive digital
+school management. This shows that the integration of ICT into the
+day-to-day work of school principals depends not only on the
+educational policy framework and the availability of resources, but
+
+
+
+
+                                                                     682
+
+also on further country and school-specific differences that still require
+further research.
+
+The analyses for research question 3 showed that the patterns of ICT
+use by principals do not have a significant impact on pupils' CIL in any
+of the countries studied. The comparison within Europe based on
+ICILS 2018 results (Fraillon et al., 2020) indicates that pupils in
+Denmark achieve significantly better CIL results than pupils in
+Germany. However, as this study shows, this cannot be explained by
+the use of ICT by principals, which also differs between the two
+countries. The results presented could either indicate that there simply
+is no significant relation between the ICT use pattern of principals and
+students' competence in CIL or that a possible link is mediated by
+various factors that were not taken into account in the context of this
+study. This would echo insights regarding the importance of context
+when trying to assess the impact of educational leadership. The ICILS
+Framework takes many additional factors into account. Future
+research around educational leadership research could therefore look
+into possible links between the activities of principals making use of
+ICT and those factors. Future research should also look more deeply
+into possible reasons why certain countries have school principals with
+such high usage patterns. Also looking into possible barriers to using
+ICT for principals appears to be fruitful.
+
+
+
+
+683
+
+                               References
+
+Akaike, H. (1974). A New Look At The Statistical Model
+       Identification. In: Parzen, E., Tanabe, K., & Kitagawa, G.
+       (Eds.), Selected Papers of Hirotugu Akaike (pp. 215–222).
+       Springer. https://doi.org/10.1007/978-1-4612-1694-0_16
+
+Akhtar, S. (2022). Exploring the school stakeholders’ understanding
+       and knowledge about information and communication
+       technology and its application in improving management
+       functions: a comparative study in the urban context.
+       International Journal of Education and Development using
+       Information and Communication Technology, 18(2), 143–162.
+
+Allen, N., Grigsby, B., & Peters, M. L. (2015). Does leadership matter?
+       Examining the Relationship Among Transformational
+       Leadership, School Climate, and Student Achievement.
+       International Journal of Educational Leadership Preparation, 10(2),
+       1–22.
+
+Apsorn, A., Sisan, B., & Tungkunanan, P. (2019). Information and
+       Communication Technology Leadership of School
+       Administrators in Thailand. International Journal of Instruction,
+       12(2), 639–650. https://doi.org/10.29333/iji.2019.12240a
+
+Arham, A. F., Norizan, N. S., Arham, A. F., Hasbullah, N. N., Malan,
+       I. N. B., & Alwi, S. (2022). Initializing The Need For Digital
+       Leadership: A Meta Analysis Review On Leadership Styles In
+       Educational Sector. Journal of Positive School Psychology, 6(8),
+       2755–2773.
+
+Bass, B. M. (1985). Leadership and Performance beyond Expectations. Free
+       Press.
+
+
+
+                                                                        684
+
+Baydar, F. (2022). The Role of Educational Leaders in the
+       Development of Students’ Technology Use and Digital
+       Citizenship. Malaysian Online Journal of Educational Technology,
+       10(1), 32–46. https://doi.org/10.52380/mojet.2022.10.1.367
+
+Burns, J. M. (1978). Leadership. Harper & Row.
+
+Caeli, E. N., & Bundsgaard, J. (2020). Computational thinking in
+       compulsory education: A survey study on initiatives and
+       conceptions. Educational Technology Research and Development,
+       68(1), 551–573. https://doi.org/10.1007/s11423-019-09694-z
+
+Daniëls, E., Hondeghem, A., & Dochy, F. (2019). A review on
+       leadership and leadership development in educational
+       settings. Educational Research Review, 27, 110–125.
+       https://doi.org/10.1016/j.edurev.2019.02.003
+
+Danmarks Evalueringsinstitut (2006). Skoleledelse i folkeskolen [School
+       leadership in primary schools]. Danmarks Evalueringsinstitut.
+
+Danmarks Evalueringsinstitut (2017). Pæ dagogisk ledelse [Pedagogical
+       leadership]. Danmarks Evalueringsinstitut.
+
+Dexter, S. (2018). The Role of Leadership for Information Technology
+       in Education: Systems of Practices. In J. Voogt, G. Knezek, R.
+       Christensen, & K.-W. Lai (Eds.), Second Handbook of Information
+       Technology in Primary and Secondary Education (pp. 483–498).
+       Springer International Publishing. https://doi.org/10.1007/978-
+       3-319-71054-9_32
+
+Dexter, S., & Richardson, J. W. (2020). What does technology
+       integration research tell us about the leadership of
+       technology? Journal of Research on Technology in Education,
+       52(1), 17–36. https://doi.org/10.1080/15391523.2019.1668316
+
+
+
+685
+
+Eickelmann, B., Bos, W., Gerick, J., Goldhammer, F., Schaumburg, H.,
+       Schwippert, K., Senkbeil, M., & Vahrenhold, J. (Eds.). (2019).
+       ICILS 2018 #Deutschland Computer- und informationsbezogene
+       Kompetenzen von Schülerinnen und Schülern im zweiten
+       internationalen Vergleich und Kompetenzen im Bereich
+       Computational Thinking [ICILS 2018 #Germany Computer and
+       information-related competencies of students in the second
+       international comparison and competencies in computational
+       thinking]. Waxmann. https://doi.org/10.25656/01:18166
+
+Eickelmann, B., & Vennemann, M. (2017). Teachers‘ attitudes and
+       beliefs regarding ICT in teaching and learning in European
+       countries. European Educational Research Journal, 16(6), 733–761.
+       https://doi.org/10.1177/1474904117725899
+
+Fiş Erümit, S., & Keleş, E. (2021). Lessons from K-12 Education in
+       Asia-Pacific Countries Successful in the PISA: ICT Integration
+       Dimension. Sakarya University Journal of Education, 11(3), 452–
+       481. https://doi.org/10.19126/suje.940080
+
+Fraillon, J., Ainley, J., Schulz, W., Friedman, T., & Duckworth, D.
+       (2020). Preparing for life in a digital world. IEA International
+       Computer and Information Literacy Study 2018 International
+       Report. IEA. https://doi.org/10.1007/978-3-030-38781-5
+
+Fullan, M. G. (1993). Why Teachers Must Become Change Agents.
+       Educational Leadership, 50(6), 12–17.
+
+Geiser, C. (2013). Data Analysis with Mplus. The Guilford Press.
+
+Gerick, J. (2018). School level characteristics and students’ CIL in
+       Europe – A latent class analysis approach. Computers &
+
+
+
+
+                                                                          686
+
+       Education, 120, 160–171.
+       https://doi.org/10.1016/j.compedu.2018.01.013
+
+German Federal Ministry of Education and Research (2023).
+       Fortschrittsbericht DigitalPakt Schule 2022–2023 [Progress report
+       DigitalPakt School 2022–2023]. German Federal Ministry of
+       Education and Research.
+       https://www.digitalpaktschule.de/files/Fortschrittsbericht_Dig
+       italPakt_Schule_2022-2023.pdf
+
+Gonzalez, E. J. (2012). Rescaling Sampling Weights and Selecting
+       Mini-Samples from Large-Scale Assessment Databases. In D.
+       Hastedt, & M. von Davier (Eds.), IERI Monograph Series: Issues
+       and Methodologies in Large-Scale Assessments: Volume 5 (pp. 117–
+       134). IEA & ETS.
+
+Grissom, J. A., Egalite, A. J., & Lindsay, C. A. (2021). How Principals
+       Affect Students and Schools: A Systematic Synthesis of Two
+       Decades of Research. Research Report. Wallace Foundation.
+       https://wallacefoundation.org/sites/default/files/2023-09/How-
+       Principals-Affect-Students-and-Schools.pdf
+
+Håkansson Lindqvist, M., & Pettersson, F. (2019). Digitalization and
+       school leadership: on the complexity of leading for
+       digitalization in school. The International Journal of Information
+       and Learning Technology, 36(3), 218–230.
+       https://doi.org/10.1108/IJILT-11-2018-0126
+
+Hall, G., & Hord, S. (2019). Implementing Change: Patterns, Principles,
+       and Potholes. Pearson.
+
+Hope, W. C., & Stakenas, R. G. (1999). Leading the technology
+       revolution: A new challenge to principals. In F. Kochan (Ed.),
+
+
+
+687
+
+       Southern Regional Council on Educational Administration 1999
+       Yearbook: Leadership for the 21st Century (pp. 25–31). Distributed
+       by ERIC Clearinghouse.
+
+Ismail, S. N., Omar, M. N., & Raman, A. (2021). The authority of
+       principals’ technology leadership in empowering teachers’
+       self-efficacy towards ICT use. International Journal of Evaluation
+       and Research in Education, 10(3), 878–885.
+       https://doi.org/10.11591/ijere.v10i3.21816
+
+Karakose, T., Polat, H., & Papadakis, S. (2021). Examining Teachers’
+       Perspectives on School Principals’ Digital Leadership Roles
+       and Technology Capabilities during the COVID-19 Pandemic.
+       Sustainability, 13(23), 23. https://doi.org/10.3390/su132313448
+
+Kupaysinovna, K. S., & Abduvokhid, I. A. (2021). Advanced
+       Experiences In The Use Of Digital Technologies In Teaching
+       Fine Arts. On The Example Of Finland And South Korea.
+       Turkish Journal of Computer and Mathematics Education, 12(7),
+       939–946.
+
+Lazarsfeld, P. F., & Henry, N. W. (1968). Latent Structure Analysis.
+       Houghton Mifflin.
+
+Leithwood, K., & Louis, K. S. (2012). Linking Leadership to Student
+       Learning. Jossey-Bass.
+
+Leithwood, K., & Sun, J. (2012). The nature and effects of
+       transformational school leadership: A Meta-Analytic Review
+       of Unpublished Research. Educational Administration Quarterly,
+       48(3), 387–423. https://doi.org/10.1177/0013161X11436268
+
+
+
+
+                                                                       688
+
+Leithwood, K., Sun, J., & Pollock, K. (Eds.). (2017). How School Leaders
+        Contribute to Student Success. Springer.
+        https://doi.org/10.1007/978-3-319-50980-8
+
+Leithwood, K., Sun, J., & Schumacker, R. (2020). How School
+        Leadership Influences Student Learning: A Test of “The Four
+        Paths Model”. Educational Administration Quarterly, 56(4), 570–
+        599. https://doi.org/10.1177/0013161X19878772
+
+Mazza, J. (2015). The use of social media tools by school principals to
+        communicate between home and school. A Dissertation in
+        Educational and Organizational Leadership. University of
+        Pennsylvania. ProQuest Dissertations Publishing.
+
+McCutcheon, A. L. (1987). Latent Class Analysis. SAGE.
+
+Mikheeva, E., & Meyer, S. (2020). Analyzing ICILS 2018 data using
+        the IEA IDB Analyzer. In E. Mikheeva, & S. Meyer (Eds.), IEA
+        International Computer and Information Literacy Study 2018. User
+        Guide for the International Database (pp. 39–75). IEA Secretariat.
+
+Mirazchiyski, P. (2015). Analyzing ICILS 2013 data using the IEA IDB
+        Analyzer. In M. Jung, & R. Carstens (Eds.), ICILS 2013 User
+        Guide for the International Database (pp. 49–86). IEA.
+
+Mulford, B. (2003). School Leaders: Challenging Roles and Impact on
+        Teacher and School Effectiveness. OECD Commissioned Paper.
+        http://www.oecd.org/education/school/37133393.pdf
+
+Muthén, L. K., & Muthén, B. O. (2012). Mplus software (Version 7).
+        Muthén & Muthén.
+
+Mwambo, L. J. (2019). The Impact of Principals Use of Information
+        and Communication Technologies (ICTS) in Effective
+
+
+
+689
+
+       Administration in Public Secondary Schools in Fako Division.
+       International Journal of Trend in Scientific Research and
+       Development 3(2), 687–701. https://doi.org/10.31142/ijtsrd21468
+
+Nababan, T. M., Purba, Z. S., Batu, J. S. L., & Sianipar, G. (2021).
+       School Leadership Strategies in the Digital Era. In B. Sinaga, R.
+       Husein, & J. Rajagukguk (Eds.), Proceedings of the 6th Annual
+       International Seminar on Transformative Education and
+       Educational Leadership (AISTEEL 2021) (pp. 103–106). Atlantis
+       Press https://doi.org/10.2991/assehr.k.211110.068
+
+Nadrljanski, Đ., Nadrljanski, M., & Pavlinović, M. (2022).
+       Digitalization of Education. In M. Ivanović, A. Klašnja-
+       Milićević, & L. C. Jain (Eds.), Handbook on Intelligent Techniques
+       in the Educational Process: Vol 1 Recent Advances and Case Studies
+       (pp. 17–39). Springer.
+
+Navaridas-Nalda, F., Emeterio, M. C.-S., Fernández-Ortiz, R., &
+       Arias-Oliva, M. (2020). The strategic influence of school
+       principal leadership in the digital transformation of schools.
+       Computers in Human Behavior, 112. 106481.
+       https://doi.org/10.1016/j.chb.2020.106481
+
+Petersen, A.-L. (2014). Teachers’ Perceptions of Principals’ ICT
+       Leadership. Contemporary Educational Technology, 5(4), 302–
+       315. https://doi.org/10.30935/cedtech/6132
+
+Petko, D., & Prasse, D. (2018). Exploring the Impact of Stakeholder
+       Engagement on the Integration of Educational Technology in
+       Elementary Schools: Expanding the Will-Skill-Tool Model
+       with Contextual Variables. In E. Langran, & J. Borup (Eds.),
+       Proceedings of Society for Information Technology & Teacher
+       Education International Conference (pp. 1068-1074). Association
+
+
+                                                                       690
+
+       for the Advancement of Computing in Education (AACE).
+       https://www.learntechlib.org/primary/p/182657/.
+
+Pietsch, M., Tulowitzki, P., & Cramer, C. (2022). Innovating teaching
+       and instruction in turbulent times: The dynamics of
+       principals’ exploration and exploitation activities. Journal of
+       Educational Change, 24, 549–581. https://doi.org/10.1007/s10833-
+       022-09458-2
+
+Pollock, K., & Hauseman, D. C. (2018). The Use of E-mail and
+       Principals’ Work: A Double-Edged Sword. Leadership and
+       Policy in Schools, 18, 382–393.
+       https://doi.org/10.1080/15700763.2017.1398338
+
+Pont, B., Nusche, D., & Moorman, H. (2008). Improving school
+       leadership, Volume 1: Policy and Practice. OECD Publishing.
+       https://doi.org/10.1787/9789264044715-en
+
+Ramos-Pla, A., Tintoré, M., & Arco, I. del (2021). Leadership in times
+       of crisis. School principals facing COVID-19. Heliyon, 7(11),
+       e08443. https://doi.org/10.1016/j.heliyon.2021.e08443
+
+Robinson, V. M. J., Lloyd, C. A., & Rowe, K. J. (2008). The Impact of
+       Leadership on Student Outcomes: An Analysis of the
+       Differential Effects of Leadership Types. Educational
+       Administration Quarterly, 44(5), 635–674.
+       https://doi.org/10.1177/0013161X08321509
+
+Rohatgi, A., Bundsgaard, J., & Hatlevik, O. E. (2020). Digital Inclusion
+       in Norwegian and Danish Schools—Analysing Variation in
+       Teachers’ Collaboration, Attitudes, ICT Use and Students’ ICT
+       Literacy. In T. S. Frønes, A. Pettersen, J. Radišić, N. Buchholtz,
+       & Frønes (Eds.), Equity, Equality and Diversity in the Nordic
+
+
+
+691
+
+       Model of Education (pp. 139–172). Springer International
+       Publishing.
+
+Rost, J. (2004). Lehrbuch Testtheorie – Testkonstruktion [Textbook Test
+       Theory – Test Construction]. Hans Huber Verlag.
+
+Rojas Briñez, D. K., Duart, J. M., & Galvis Panqueva, Á . H. (2023).
+       Findings and derived challenges concerning how school
+       leaders should support ICT integration at schools. School
+       Leadership & Management, 43(5), 497–524.
+       https://doi.org/10.1080/13632434.2023.2237514
+
+Ruloff, M., & Petko, D. (2021). School principals’ educational goals
+       and leadership styles for digital transformation: Results from
+       case studies in upper secondary schools. International Journal of
+       Leadership in Education. 1–19.
+       https://doi.org/10.1080/13603124.2021.2014979
+
+Schmitz, M.-L., Antonietti, C., Consoli, T., Cattaneo, A., Gonon, P., &
+       Petko, D. (2023). Transformational leadership for technology
+       integration in schools: Empowering teachers to use
+       technology in a more demanding way. Computers & Education
+       204, 104880. https://doi.org/10.1016/j.compedu.2023.104880
+
+Schwarz, G. (1978). Estimating the Dimension of a Model. The Annals
+       of Statistics, 6(2), 461–464.
+       https://doi.org/10.1214/aos/1176344136
+
+Storte, D., Webb, M.E., Bottino, R., Passey, D., Kalas, I., Bescherer, C.,
+       Smith, J., Angeli, C., Katz, Y.J., Micheuz, P., Røsvik, S., Brinda,
+       T., Fluck, A.E., Magenheim, J., Anderson, B., & Fuschek, G.
+       (2019). Coding, Programming and the Changing Curriculum for
+
+
+
+
+                                                                          692
+
+       Computing in Schools. University of Tasmania. Report.
+       https://hdl.handle.net/102.100.100/495503
+
+Stuart, L. H., Mills, A. M., & Remus, U. (2009). School leaders, ICT
+       competence and championing innovations. Computers &
+       Education, 53(3), 733–741.
+       https://doi.org/10.1016/j.compedu.2009.04.013
+
+Sun, J., & Leithwood, K. (2012). Transformational School Leadership
+       Effects on Student Achievement. Leadership and Policy in
+       Schools, 11(4), 418–451.
+       https://doi.org/10.1080/15700763.2012.681001
+
+Tan, C. Y. (2018). Examining school leadership effects on student
+       achievement: the role of contextual challenges and constraints.
+       Cambridge Journal of Education, 48(1), 21–45.
+       https://doi.org/10.1080/0305764X.2016.1221885
+
+Tan, C. Y., Gao, L., & Shi, M. (2022). Second-order meta-analysis
+       synthesizing the evidence on associations between school
+       leadership and different school outcomes. Educational
+       Management Administration & Leadership, 50(3), 469–490.
+       https://doi.org/10.1177/1741143220935456
+
+Ten Bruggencate, G., Luyten, H., Scheerens, J., & Sleegers, P. (2012).
+       Modeling the Influence of School Leaders on Student
+       Achievement. Educational Administration Quarterly, 48(4), 699–
+       732. https://doi.org/10.1177/0013161X11436272
+
+Tiede, J., Grafe, S., & Hobbs, R. (2015). Pedagogical Media
+       Competencies of Preservice Teachers in Germany and the
+       United States: A Comparative Analysis of Theory and
+
+
+
+
+693
+
+       Practice. Peabody Journal of Education, 90(4), 533–545.
+       https://doi.org/10.1080/0161956X.2015.1068083
+
+Tulowitzki, P., Gerick, J., & Eickelmann, B. (2022). The role of ICT for
+       school leadership and management activities: an international
+       comparison. International Journal of Educational Management,
+       36(2), 133–151. https://doi.org/10.1108/IJEM-06-2021-0251
+
+Ü nlü , A., & Schurig, M. (2016). Computational typologies of
+       multidimensional end-of-primary-school performance profiles
+       from an educational perspective of large-scale TIMSS and
+       PIRLS surveys. Current Issues in Comparative Education, 18(1),
+       6–15. https://doi.org/10.52214/cice.v18i1.11525
+
+Vachkova, S., Petryaeva, E. Y., Milyaeva, D. A., Ageeva, N. S., &
+       Mikhailova, S. V. (2021). Analytical Review of Education
+       Policies on Digital Transformation of School Education
+       Worldwide. In S. Vachkova, & S. S.-C. Chiang (Eds.),
+       Education and City: Qualitiy Education for Modern Cities (pp.
+       248–270). European Publisher.
+
+Vermeulen, M., Van Acker, F., Kreijns, K., & Buuren, H. van (2015).
+       Does transformational leadership encourage teachers’ use of
+       digital learning materials. Educational Management
+       Administration & Leadership, 43(6), 1006–1025.
+       https://doi.org/10.1177/1741143214535749
+
+Wendt, H., & Kasper, D. (2016). Subject-specific strength and
+       weaknesses of fourth-grade students in Europe: a comparative
+       latent profile analysis of multidimensional proficiency
+       patterns based on PIRLS/TIMSS combined 2011. Large-Scale
+       Assessments in Education, 14(4). https://doi.org/10.1186/s40536-
+       016-0026-2
+
+
+                                                                       694
+
+Witthöft, J., Aydin, B., & Pietsch, M. (2024). Leading digital
+       innovation in schools: the role of the open innovation mindset.
+       Journal of Research on Technology in Education, 1–20.
+       https://doi.org/10.1080/15391523.2024.2398528
+
+
+
+About the authors:
+
+Julia Gerick is a full professor for Empirical Educational Research with
+a special focus on School Development Research at the Institute of
+Educational Sciences at TU Braunschweig. Her research focuses on
+school improvement, school quality, school leadership, digital
+transformation in schools and large-scale assessments.
+
+E-mail: j.gerick@tu-braunschweig.de
+
+Authorship     credit   details:   Conceptualization,     Methodology,
+Validation, Formal analysis, Resources, Data Curation, Writing -
+Original Draft, Writing - Review & Editing, Supervision.
+
+
+
+Pierre Tulowitzki is a full professor and holds the Chair of
+Educational Management and School Improvement at the School of
+Education of the FHNW University of Applied Sciences and Arts
+Northwestern Switzerland. His research interests cover educational
+leadership, educational change and improving schools and school
+systems.
+
+E-mail: pierre.tulowitzki@fhnw.ch
+
+
+
+
+695
+
+Authorship credit details: Conceptualization, Methodology,
+Validation, Writing - Original Draft, Writing - Review & Editing,
+Supervision.
+
+
+
+Birgit Eickelmann is a full professor for School Pedagogy and Teacher
+Education at the Institute of Educational Sciences at Paderborn
+University. Her research focuses on the development of teaching and
+learning and school improvement in the context of the digital
+transformation.
+
+E-mail: birgit.eickelmann@uni-paderborn.de
+
+Authorship     credit   details:   Conceptualization,    Methodology,
+Validation, Writing - Original Draft, Supervision.
+
+
+
+Jeppe Bundsgaard is a full professor in Danish subject didactics at the
+Danish School of Education, Aarhus University. His research focuses
+of critical information literacy, progressive teaching and learning, and
+ict in education.
+
+E-mail: jebu@edu.au.dk
+
+Authorship credit details: Methodology, Validation, Writing -
+Original Draft, Supervision.
+
+
+
+Christiane Annemann is a scientific researcher at the Institute of
+Educational Sciences at TU Braunschweig. Her research focuses on
+schools and digital media, with an emphasis on the perspectives of
+teachers and school leaders.
+
+
+
+                                                                     696
+
+E-mail: c.annemann@tu-braunschweig.de
+
+Authorship credit details: Data curation, Validation, Writing -
+Original Draft, Writing - Review & Editing
+
+
+
+Claudia Menge is a scientific researcher at the Institute of Educational
+Sciences at TU Braunschweig and PhD student at Leibniz University
+Hannover in Germany. Her research focuses on teacher strain and
+well-being, beliefs about diversity and school leadership.
+
+E-mail: claudia.menge@tu-braunschweig.de
+
+Authorship credit details: Data curation, Validation, Writing -
+Original Draft, Writing - Review & Editing
+
+
+
+
+697

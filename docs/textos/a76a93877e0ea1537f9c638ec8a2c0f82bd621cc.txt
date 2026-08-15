@@ -1,0 +1,918 @@
+Journal of Business Economics and Management
+                                                                                           ISSN 1611-1699 / eISSN 2029-4433
+                                                                                                2021 Volume 22 Issue 1: 1–20
+                                                                                   https://doi.org/10.3846/jbem.2020.13675
+
+
+
+
+    MULTI-CRITERIA RANKING OF ORGANIZATIONAL FACTORS
+      AFFECTING THE LEARNING QUALITY OUTCOMES IN
+             ELEMENTARY EDUCATION IN SERBIA
+
+     Vladislava EPIFANIĆ 1, Snežana UROŠEVIĆ 2, Andrea DOBROSAVLJEVIĆ                                                    2,
+
+                     Gordana KOKEZA 3, Nikola RADIVOJEVIĆ 4*
+                                            1IQ Individual, Novi Sad, Serbia
+                          2Technical Faculty in Bor, University of Belgrade, Bor, Serbia
+               3Faculty of Technology and Metallurgy, University of Belgrade, Belgrade, Serbia
+                                 4Technical College, Kosovska 8, Kragujevac, Serbia
+
+
+                                  Received 03 June 2020; accepted 21 September 2020
+
+
+      Abstract. The research within this paper is motivated by the opinion that different organizational
+      factors in primary education can have a stronger or weaker impact on the quality of the learning
+      outcome. Organizational factors, criteria analyzed in this paper, are school management, school
+      infrastructure, students’ foreknowledge, teacher competencies, curriculum content, student motiva-
+      tion, and the quality of the teaching process. Using SWARA (Step-wise Weight Assessment Ratio
+      Analysis) method of multi-criteria decision-making, the answers of elementary school principals,
+      members of the panel of experts, were processed. The calculation within this method was per-
+      formed using fuzzy numbers to ensure the reliability of expert evaluations. The results of the applied
+      method, in the form of weighting coefficients of the criteria, indicate that school management has
+      an influence on the selection and building of teachers’ competencies while the given competence
+      can indirectly affect the overall success of students through the establishment of an adequate school
+      infrastructure, which affects the knowledge quality. Knowing the factor that has the highest impact
+      enables principals to manage this factor and contribute to enhancing the knowledge quality. This
+      research contributes to raising awareness of the importance of particular organizational factors in
+      elementary education and the need to improve them.
+
+      Keywords: SWARA method, fuzzy number, organizational factors, quality of learning outcomes,
+      elementary education, school management, teacher competencies.
+
+      JEL Classification: I21, D81, D83.
+
+
+
+Introduction
+A school is a system consisting of a number of functionally connected elements that make
+up the subsystems of a given system. The important elements of the school as a system are
+
+*Corresponding author. E-mail: radivojevic034@gmail.com
+
+
+Copyright © 2020 The Author(s). Published by Vilnius Gediminas Technical University
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.
+org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author
+and source are credited.
+
+2              V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+the following: managers, teachers, teaching and students. In order for a school to effectively
+achieve its planned goals, it is necessary to have an appropriate organization, coordination
+between all relevant elements and processes, continuous changes in accordance with con-
+temporary tendencies, teamwork, and above all the creation of new and the dissemination
+of existing knowledge.
+    The basis for assessing the quality of an educational process is the educational outcome,
+which include the knowledge, abilities, skills and attitudes of students acquired through for-
+mal education at both the elementary and secondary school levels (Fauth et al., 2014). Learn-
+ing outcomes are the knowledge, skills and competences, in the narrow sense, that a person
+has acquired through learning and which are demonstrated after learning. The results of the
+learning process help students see the extent to which they have adopted the foreseen cur-
+ricula that will enable them to enroll into the next desired level of education.
+    A review of the available literature showed that organizational factors have a significant
+impact on the quality of learning outcomes in elementary education and are a framework
+for sustainability in elementary education. This research recognizes the potential of factors
+such as managerial skills of principals, school managers, teaching resources, infrastructure,
+and curriculum management, which highlights Wahyono (2015), then prior knowledge and
+motivation of students (Lin et al., 2016; Won et al., 2020), and the quality of the teaching
+process (Asfani et al., 2016), to achieve a certain level of impact on the quality of learning
+outcomes. While many studies deal with the influence of individual factors on various aspects
+related to higher education (Haapakorpi, 2011; Ďurišová et al., 2015; Cruickshank, 2017),
+the influence of these factors as a set should be investigated in more detail in relation to the
+quality of initial knowledge in elementary education. The research within this paper begins
+with the observation of factors as a set of organizational factors of influence, but it is also con-
+sidered that the factors within such a set have a different level of influence. Therefore, there
+is a need to evaluate the level of influence of individual organizational factors from the set.
+    School organization, as an institution, is under the purview of human resources, primar-
+ily teachers, associates and employees holding strategic positions, i.e., the school principal.
+Chang et al. (2015) recognize the impact that school principals have on students and the
+success that students achieve. Accordingly, a research question is formed which reads: “To
+what extent do organizational factors in elementary education affect the quality of learning
+outcomes, based on the assessments of primary school principals?”
+    Therefore, hypothesis H0 is formed: There is no difference in the influence of organi-
+zational factors in elementary education on the quality of learning outcomes based on the
+assessments of elementary school principals.
+    By testing the set hypothesis and answering the set research question, a base which facili-
+tates the process decision-making and the creation of sustainable solutions within elementary
+education institutions is created. At the core of this base is the emphasis on organizational
+factors in elementary education and their potential to influence the quality of knowledge out-
+comes. In order to achieve better outcomes, it is necessary to strengthen those organizational
+elements that affect them most and which have thus far not been sufficiently represented.
+Accordingly, this paper seeks to make a contribution to the theme of improving the quality
+of learning outcomes in elementary education.
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                               3
+
+    In this paper, the authors sought to highlight the impact of organizational factors on the
+quality of learning outcomes in elementary school. The research represents a contribution
+to solving the subject problems, but also has a practical application as an auxiliary tool for
+decision-makers, that is, managers and employees of the school. Survey data should inform
+decision makers to the possibility that the organizational factor has the most significant
+influence on achieving the desired goal. In this way, decision makers can direct necessary
+activities that will influence a given factor in order to achieve the planned goals in the most
+efficient manner.
+    This research is structured in following manner: a section dedicated to the overview of
+prevailing literary attitudes and understandings concerning the quality of learning outcomes
+and organizational factors that may have an influence on it, a methodology section, section
+of the results of the conducted research, a discussion section and a section of conclusions
+derived from the research results.
+
+
+1. Overview of prevailing literary attitudes and understandings from the field
+of this research
+Research into the impact of organizational factors on the quality of learning outcomes is a
+topic addressed by a small number of researchers, while most of the research has primarily
+concerned itself with the quality of knowledge in secondary schools and higher education
+institutions. In order to obtain new findings that enable the improvement of the quality of
+learning outcomes in elementary education, as a knowledge base to which all subsequent
+ones are upgraded, a brief review of previous research on attitudes regarding the quality
+of learning outcomes and organizational factors that can influence the quality of learning
+outcomes is presented.
+
+1.1. Overview of prevailing attitudes about the quality of learning outcomes
+The period of attending elementary school is very important for acquiring knowledge and
+certain skills, which necessarily influences the results that students will achieve during their
+future education. Smiljanić (2013) defines and understands learning as a relatively permanent
+change in an individual, which is the result of his experiences and is driven by the needs of
+that individual. Kokeza et al. (2016) find that the dynamics of changes in education are fast
+and large, and that old models of education evolve into new, more advanced models. The
+contribution of the study is to raise awareness of the fact that innovation readiness is very
+important, and that innovation helps businesses achieve higher levels of competitiveness and
+business success (Abdi et al., 2018; Gerasymchuk, 2018).
+    Brinson (2015) confirms that different learning outcomes are achieved for students who
+have adopted the material by traditional methods compared to students who have adopted
+the material by using modern methods using virtual learning capabilities provided by mod-
+ern information technologies. A study examining the impact of Lithuanian higher education
+institutions on the local economy showed that higher education institutions significantly
+determine the success of the local economy, indicating the importance of the correlation
+between the quality of higher education and its outcomes (Vaiciukevičiute et al., 2019).
+
+4             V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+1.2. Overview of prevailing attitudes about organizational factors that may
+influence the quality of learning outcomes
+Overview of prevailing attitudes about organizational factors that may influence the quality
+of learning outcomes. This paper analyses the importance of strategic management, strate-
+gic analysis, planning, selection and strategic change, which represents the framework for
+sustainability in elementary education, and which are within the purview of the human
+resources placed in strategic positions. Effective human resource management in elementary
+education is gaining in importance in all educational institutions, since the knowledge they
+possess is the most significant resource of such an organization.
+    Blume et al. (2010), exploring the way of knowledge transfer, i.e., moderators (open and
+closed, i.e., human resources and information systems), conclude that the importance of hu-
+man resources as moderators of knowledge transfer is greater than closed systems as mod-
+erators. Motivation factors and infrastructural conditions are most important in knowledge
+transfer.
+    Organizational factors that influence the quality of learning outcomes are the infra-struc-
+tural conditions, the quality of elementary school educational outcomes is greatly influenced
+by teachers and their knowledge and competences, students’ backgrounds, students’ motiva-
+tion, school management, and the curriculum.
+
+1.2.1. School management
+Organizational factor, which is considered one of the key factors of quality, is management.
+According to Alibabić (2009), management can be viewed according to at least two levels:
+management of educational activities, i.e., management of the education system and educa-
+tional institution/organization and management of the educational process, i.e., educational
+programs and learning projects.
+    Cheng (1994), Robinson et al. (2008), and Sammons et al. (2011) explore how manage-
+ment-principal is related to school performance (such as school organizational character-
+istics, teacher performance, and student performance), and concludes that the principal is
+a key factor which influences school performance. The principal is the person responsible
+for motivating and mobilizing the intellectual and social potential of the school. A school
+cannot be successful without a successful principal. Strong leadership is a major factor that
+can support and encourage teachers, develop clear goals and policies, and achieve teacher
+participation for better outcomes as well as for their professional development. Strong leader-
+ship is associated with high organizational effectiveness, strong organizational culture, a posi-
+tive principal-teacher relationship, greater participation in decision-making, higher teacher
+education and professionalism, greater teacher satisfaction and teacher commitment and
+positive student performance, especially with respect to attitudes toward school and learning.
+    As an organizational factor, school management also has its own view of the mutual
+impact of organizational factors on the quality of learning outcomes. Conducting research
+in Hong Kong’s high school education system, Cheng and Mok (2007) found significant cor-
+relation between management’s influence on employee performance, and employees (who
+directly participate in students’ work) influence on outcomes.
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                                  5
+
+1.2.2. School infrastructure
+Dihovični and Krunić (2018) points to the importance of technology in the function of facili-
+tating the learning process and evaluating outcomes. Research shows that school conditions
+and equipment affect the organizational aspects of the school and the process of education
+and learning (Murillo & Román, 2011; Barrett et al., 2019). Brinson (2015) illustrates that
+student learning success in virtual classrooms is greater than student learning in traditional
+classrooms, in all categories of learning outcomes (knowledge and understanding, research
+skills, practical skills, perception, analytical skills and social and scientific communication).
+Research has shown that there is an impact of electronic media on student outcomes, such as
+satisfaction and learning efficiency. Classroom equipment and the integration of information
+and communication technologies into the teaching process which entails the question of the
+professors’ expertise (Gil-Flores et al., 2017). Information and communication technologies
+(ICTs) are starting to play an increasingly important role in the way we communicate, learn
+and live (Dihovični & Krunić, 2018). The challenge is to effectively utilize these technologies
+in a way that serves the interests of students.
+    The possibilities of information technologies go towards the application of virtual reality in
+higher education as well and, accordingly, research was conducted comparing the application
+and content of learning, as well as the elements that shape virtual content and learning content.
+It has been observed that learning theories need to be more heavily considered when develop-
+ing virtual applications in order to make them more relevant to learning outcomes, which will
+increase the accuracy of simulation (Radianti et al., 2020). Given the fact that mobile devices
+provide an opportunity to stimulate creativity, research findings confirm that there is significant
+correlation between creativity and education, indicating the need for teachers to take this into
+account, in practice. Meaningful learning is significantly influenced by the following factors:
+location, interconnection of communication channels and the planning of the entire process
+(Jahnke & Liebscher, 2020; Stahl et al., 2014; Chen et al., 2018; Jeong et al., 2019).
+    Recognizing emotions by integrating text and visual channels with users, during work,
+and their connection to motivation, learning style and understanding of the material. The
+results indicate the need to make special reference to this aspect, since it significantly deters
+the quality of learning outcomes and their performance (Yadegaridehkordi et al., 2019).
+
+1.2.3. Elementary school students’ foreknowledge
+Foreknowledge reflects all of the previously acquired knowledge. Klassen and Kim (2019)
+find that foreknowledge enables students to better understand the course material, to actively
+participate in the classes and to more easily adopt new knowledge on the basis of exist-
+ing ones. Therefore, as prior knowledge affects the speed and quality of acquisition of new
+knowledge, it can also affect the quality of initial knowledge, so it can rightly be considered
+one of the influential factors.
+
+1.2.4. Teachers competences
+Teaching quality is always regarded as an important indicator of the quality of education and
+school effectiveness (Singh, & Sarkar 2015). A large number of educational research conduct-
+
+6             V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+ed using different methodologies, under different educational contexts (Teddlie & Reynolds,
+2000), has shown that some teachers contribute more to their students’ progress than others,
+and that differences in students’ educational attainment are the result of classroom processes
+rather than school variables (e.g., school equipment, school climate).
+    Based on their research, Klassen and Kim (2019) recognize the need to improve the
+method of assessing the choice of future teachers and their competencies, in order to im-
+prove the outcome of education itself. А similar view was expressed by other authors, such
+as Atteberry et al. (2015), Darling-Hammond (2010), Jackson et al. (2014), Marks and Moss
+(2016), and Patterson et al. (2016).
+    The importance of keeping in mind gender diversity and educational status when creat-
+ing employee motivation programs is hinted at by authors (Hitka et al., 2017), who state, in
+light of the aforementioned, that it contributes to employee satisfaction and loyalty, as well
+as the more efficient fulfillment of business goals and an increase in market competitiveness.
+    The importance of educators’/teachers’ competences in contemporary society is a key
+issue in a quality education system (Kunter et al., 2013; Long et al., 2014).
+
+1.2.5. Curriculum content
+The curriculum for quality basic education signifies a wide range of different understandings.
+The term curriculum refers to programs, program documents or simply parts of school cur-
+riculum that relate only to teaching.
+    Allan (1996) outlines the basic steps in the transition to a curricular concept of outcome-
+based education that involves defining educational outcomes for knowledge, skills, attitudes,
+and values that students should possess after completing a particular level of education.
+Learning outcomes (results, achieved effects) determine the knowledge, skills, attitudes, and
+values that each student should develop within compulsory elementary education. He states
+that planning outcomes for higher education are increasingly successful. Monitoring the link
+between the curriculum and the expected outcomes is considered important, stressing that it
+is necessary to define outcomes and compare goals and outcomes that are not synonymous.
+Therefore, the results of learning outcomes are also used as a starting point for the further
+development of new curricula, thus facilitating the development of information systems in
+the field of program design that are adapted to the adoption of new curricula.
+
+1.2.6. Pupils’ motivation
+Modern psychology attaches great importance to motivation. One of the most significant
+problems in teaching is the question: how to motivate, demotivate and/or under-motivate
+students to learn? Trebješanin (2014) believes that not only power (being able) but also
+wanting (being motivated) is required for success in learning. Vesić (2003) claims that one
+of the main tasks for work motivation is finding a strategy for motivating, whereby the given
+programs must take into account the individual characteristics of people as well as the social
+and cultural conditions under which they live and work.
+    Arsić et al. (2011) argue that students’ motivation for work can be indirect and a reflec-
+tion of employees’ satisfaction as it is related to teacher productivity and thus the quality of
+the education system. It is considered that the quality of work of a particular school and its
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                                7
+
+success depends to a large extent on the way the school is managed, the quality of teaching,
+and the type and quality of the processes that take place within the school.
+
+1.2.7. Quality of the teaching process
+The quality of the educational process can best be achieved and controlled by defining
+standards of quality for learning outcomes and a systematic control of the achievement
+of standards. Quality control of education is first and foremost a control of the quality
+of student learning outcomes upon successful completion of the program (learning out-
+comes). It should be directly and transparently linked to how students will learn (teaching
+and teaching materials) and how what they know, understand or know how to do will be
+verified. Quality measurement also covers processes such as: external evaluation of the
+school as an institution and its curriculum, following the Rulebook on the Evaluation of
+the Quality of Work of Institutions (2012), which follows the Rulebook on Quality Stan-
+dards for Institutions (2012).
+
+
+2. Methodology
+The basic idea that influenced this research paper came from the fact that during the manage-
+ment of an educational institution one must insist on the formulation and applicability of such
+a strategy that should enable the educational institution, in this case, the elementary school,
+to achieve the best possible success. In this way, the educational/upbringing institution adapts
+better to its environment and has a greater influence on it. The quality of the strategy involves
+looking at and learning about the opportunities and weaknesses of the institution.
+    Quality of the learning outcomes may arise as an indicator of successful management of
+organizational factors in an educational institution. The aim of the research is to examine
+management’s assessment of the role and importance of the influence of organizational fac-
+tors on the quality of elementary education, so that the application of the given knowledge
+enables an increase in the educational level and better learning outcomes through the ef-
+ficient management of organizational factors.
+    The modern education system and strategies for long-term management of an educa-
+tional institution are related to the importance of the influence of organizational factors
+within the institution itself. This paper analyzes an assessment by managers (school prin-
+cipals) on the impact of organizational factors (ranking by importance), in an elementary
+school educational-upbringing institution, on the quality of teaching and learning outcomes.
+    Velazquez et al. (2010) state that not all considered criteria are of the same importance
+during multi-criteria analyzes, and that each of them has a certain weight in accordance
+with the significance it achieves. The research implementation plan within this paper can be
+presented in the following steps: 1. defining research criteria; 2. selection of research method;
+3. formation of a panel of experts; 4. collecting expert responses after ranking the criteria
+according to the assumed impact; 5. data processing using the selected method; 6. analysis of
+the obtained result. Each of the considered organizational factors in the research conducted
+within this paper can be considered as one of the criteria. The multicriteria method chosen
+to conduct this research is Step-wise Weight Assessment Ratio Analysis (SWARA), because,
+
+8              V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+as Hashemkhani et al. (2018) state, it is able to calculate the weight coefficients of the criteria
+without taking alternatives into account. A panel consisting of 21 experts has been formed,
+which will be discussed in more detail in subchapter 2.1. Sample. Expert panel responses
+are collected and data are processed via the SWARA method using fuzzy numbers to ensure
+the reliability of the results and solve the problem of subjectivity in the expert responses.
+Obtained results should provide the possibility to test defined hypothesis H0: There is no
+difference in the influence of organizational factors in elementary education on the quality of
+learning outcomes based on the assessments of elementary school principals.
+
+2.1. Sample
+Principals from 21 elementary schools from the territory of the Novi Sad, the South Bačka
+District in Serbia, participated in this research. Of these, 11 were male (52.4%) and 10 were
+female (47.6%), and out of those 28.6% belonged to the 41 to 50 age categories while 66.7%
+belonged to the 51 to 65 age categories. Schools were selected by random sampling, and 35%
+of them were surveyed in the cited administration. Principals’ opinions are taken into consid-
+eration within this paper because they can be considered as leaders and decision makers in
+the implementation of the reforms within the school system. Data collection was organized
+in September 2018 and the response rate is 100%.
+
+2.2. Instruments
+In order to investigate the impact of organizational factors on learning outcomes in elemen-
+tary education, a questionnaire was designed for principals on the rank of the assessed sig-
+nificance of the stated organizational factor, i.e., its impact on learning outcomes. Organiza-
+tional factors, that are the subject of this research, are derived from the previous researches
+of various different authors, who perceived the outcome of learning quality in higher educa-
+tion (Shahjahan & Torres, 2013; Määttä & Uusiautti, 2012; Rubio-Alcala et al., 2019). These
+researches motivated the creation of the questionnaire that consists of 7 factors, which are
+presented in the Table 1, where the principals were instructed to assign number 7 to the
+factor of highest importance and number 1 to the factor with the least significance on the
+quality of learning outcomes.
+
+Table 1. Examined criteria
+
+                     Criteria                           Given rank
+School management                                           C1
+School infrastructure                                       C2
+Elementary school students’ foreknowledge                   C3
+Teachers’ competences                                       C4
+Curriculum content                                          C5
+Pupils’ motivation                                          C6
+Quality of the teaching process                             C7
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                               9
+
+2.3. Step-wise Weight Assessment Ratio Analysis (SWARA) method
+The data were analyzed using the Step-wise Weight Assessment Ratio Analysis (SWARA) sta-
+tistical method (SWARA) which is one of the more recent Multi-criteria Decision Making –
+MCDM methods (Hashemkhani & Saparauskas, 2013). It was first presented by Keršuliene
+et al. (2010). The basic feature of the SWARA method is reflected in its ability to assess the
+opinions of experts or decision makers on the relationship of criteria of importance in the
+weighting process (Narayanan & Jinesh, 2018). Therefore, the backbone of this method is that
+it enables one to evaluate the opinion of experts on the order of key factors that influence the
+final decision making in any field. More specifically, this method assigns a weighting to each
+of the factors or criteria according to which a decision is to be made. In order to arrive at
+the weighting value, it is necessary to go through several steps, which are described in detail
+in the work of Aghdaie et al. (2014).
+     In comparison to other MCDM methods, such as AHP or Shannon’s Entropy, it is proven
+that SWARA has priority (Mardani et al., 2017; Banihabib et al., 2020). Comparing results
+of AHP and SWARA by ROC value Panahi et al. (2017) find that SWARA technique has a
+proper accuracy.
+
+2.4. The calculating procedure for the SWARA method using fuzzy numbers
+The application of fuzzy logic in the calculation of SWARA weights helps to cope with uncer-
+tainty (Vatansever & Akgül, 2019). Fuzzy logic in multi-criteria decision making contributes
+in making a comprehensive and reasonable decision (Tsaur et al., 2002). The advantage of
+using fuzzy numbers instead of crisp numbers in the calculations of weighting coefficients
+using multicriteria methods, in conditions of uncertainty or subjectivity of the answers of a
+group of experts, is reflected in obtaining more reliable results (Yurdakul & İç, 2009).
+    As stated by Brown (1971), the concept of fuzzy sets was introduced by Zadeh in 1965.
+In practice, experts may face difficulty in providing an accurate assessment due to a lack
+of knowledge or experience in a particular field, the uniqueness of tasks, or an insufficient
+basis for comparing the significance of the criteria. To deal with this kind of uncertainty,
+we can apply triangular fuzzy numbers instead of crisp numbers, as can be see on Figure 1
+(Radionovs & Uzga-Rebrovs, 2017). A fuzzy number is prepared as follows: Ã = (a1, a2, a3).
+This presentation can be interpreted as a membership function:
+
+                                         0           for x < a1 ;
+                                         
+                                          x – a1     for a1 ≤ x ≤ a2 ;
+                                          a2 – a1
+                               µ A (x ) =                                                 (1)
+                                           a3 – x    for a2 ≤ x ≤ a3 ;
+                                           a3 – a2
+                                          
+                                          0         for x > a3 .
+
+    At the same time, the parameters of the membership function indicate the smallest pos-
+sible, expected and the highest possible value (Gani & Assarudeen, 2012; Živković & Nikolić,
+2016).
+
+10             V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+                        µ A (x )
+
+
+
+
+                                    Figure 1. Triangular fuzzy number
+
+    The calculation of weighting criteria using the SWARA method begins with decision
+makers sorting the criteria in descending order, according to the expected significance. Fuzzy
+numbers are applied in the second step of the SWARA method whereby decision makers
+determine the comparative importance of the average value s j (Ghorabaee et al., 2018).
+The other steps of the SWARA method are applied in the same manner as in the procedure
+without fuzzy numbers, using the following formulas for the calculation of a coefficient kj
+(2), recalculated weights q j (3) and the final relative weights of the criteria w
+                                                                                   j (4) (Petrović
+et al., 2019):
+                                            1,        j =1
+                                      kj =                  ;                                (2)
+                                               
+                                             s j (+)1, j > 1
+
+                                                  1,         j =1
+                                                  
+                                           q j =  x j–1            ;                                         (3)
+                                                   k ,       j >1
+                                                   j
+                                                      q j
+                                                j =
+                                                w          ,                                                    (4)
+                                                     n
+                                                     ∑ qk
+                                                        k =1
+where j denotes the criterion (Hashemkhani et al., 2018), x j denotes recalculated criteria
+value and n denotes the number of criteria in the research.
+    Finally, by defuzzification of the numbers, a final weighting value is obtained for each of
+the criteria.
+
+
+3. Results
+In order to evaluate the impact of organizational factors on the quality of learning outcomes
+in elementary education, and to learn about the possibilities of successfully managing these
+factors in order to achieve and maintain high quality of learning outcomes, which ultimately
+affects the image of the schools themselves, principals defined the ranking criteria. Seven
+criteria were ranked with seven scores, according to which the significance of the criteria
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                                          11
+
+was defined. The most important criterion was assigned a score of 7, as the criterion with the
+highest level of importance in relation to the quality of learning outcomes. Table 2 shows the
+rank values for each criterion assigned by the school principals.
+
+Table 2. Rank values for the tested criteria (the meaning of the criteria has been provided under Table 1)
+
+  Principal (decision maker)        C1         C2        C3         C4        C5        C6         C7
+                1                    4          5         2         3          6         1          7
+                2                    7          5         1         7          4         3          6
+                3                    2          6         4         3          7         1          5
+                4                    2          1         5         6          3         4          7
+                5                    7          2         1         3          6         4          5
+                6                    2          5         1         6          3         4          7
+                7                    3          2         1         7          4         6          5
+                8                    2          6         4         5          1         3          7
+                9                    1          5         6         4          2         3          7
+               10                    2          5         1         4          6         3          7
+               11                    5          3         1         6          4         2          7
+               12                    6          5         3         2          4         7          1
+               13                    4          1         7         2          3         6          5
+               14                    4          5         7         3          1         2          6
+               15                    6          3         2         4          1         5          7
+               16                    2          5         3         7          1         4          6
+               17                    6          2         1         5          3         4          7
+               18                    1          6         4         7          2         3          5
+               19                    6          5         1         3          1         2          4
+               20                    6          5         3         7          2         1          4
+               21                    4          5         6         3          7         2          1
+          Mean rank                 3.90      4.14       3.05      4.62      3.38       3.33      5.52
+
+    The presented table makes it possible to summarize the principals’ estimates, by criteria,
+and to calculate the arithmetic mean of each of them. Based on the obtained arithmetic mean
+values, and the first step of the SWARA method, the criteria were ranked from best to worst.
+The ranking of criteria based on the mean values of the assigned ranks has been presented
+under Table 3.
+    Following the previously explained calculation procedure using the fuzzy SWARA meth-
+od, the comparative significance of the average value s j is performed by comparing each
+criterion against the previous criterion and assigning to them fuzzy numbers based on the
+estimated relative importance of one criterion considered in relation to another. After this
+step, the calculation of the kj coefficient is continued by applying formula (2) in the third
+step. The fourth step involves calculating the recalculated weight q j using formula (3), while
+                                            j are obtained by applying formula (4) and defuzzi-
+the final relative weights of the criteria w
+
+12              V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+Table 3. Rank criteria based on mean rank values
+
+     Criteria                Average value
+       C7                          5.52
+       C4                          4.62
+       C2                          4.14
+       C1                          3.90
+       C5                          3.38
+       C6                          3.33
+       C3                          3.05
+
+
+fication of triangular fuzzy numbers. The indicated steps of the fuzzy SWARA method have
+been presented under Table 4.
+    From Table 4, it can be seen that the final ranking of the criteria in descending order is
+as follows: C7 (quality of teaching process), C4 (teacher competencies), C2 (infrastructure
+conditions at school), C1 (school management), C5 (curriculum content), C6 (student mo-
+tivation), C3 (elementary school students’ foreknowledge). This result has been illustrated by
+a graph in Figure 2 for easier visualization of the estimated impact strengths.
+    This method contributes to the evaluation of the significance of certain organizational fac-
+tors in relation to others. Weighting coefficients obtained by applying the fuzzy SWARA meth-
+od can be used for further calculations in combination with other multi-criteria management
+decision-making methods that will contribute to improving the quality of learning outcomes.
+    Based on the results presented in Table 4 and Figure 2, it can be observed that, accord-
+ing to the elementary school principals who took part in this research, the C7 criterion, i.e.,
+the quality of the teaching process, is the most significant criterion while the C3 criterion
+is elementary school students’ prior knowledge, is the criterion of least importance. This
+ranking of criteria shows that management considers that elementary school students’ prior
+knowledge is a factor that does not directly influence the learning outcome itself, by placing
+the emphasis on the quality of the teaching process, as well as on the competences of the
+
+
+
+
+            Figure 2. Final weighting coefficients obtained using the fuzzy SWARA method
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                                               13
+
+employees, probably considering that the staff and a properly implemented teaching process
+can offset different backgrounds and students’ motivation. Such an attitude may also explain
+why the curriculum is not among the most important criteria, probably respecting the given
+but retaining the possibility that a good teaching staff with its competencies is a significant
+mediator between the curriculum, students’ prior knowledge and the quality of learning
+outcomes, by implementing the curriculum (according to the competences available), while
+taking into account the individuality of children, contemporary educational tendencies in
+the form of an assertive approach, where circumstances allow, adapting the infrastructure
+to the teaching units, which will make the content of the course more interesting and thus
+stimulate the students’ active participation in teaching, supporting both critical thinking
+while taking into account the individuality of each child. The specificity of the ranking of the
+above criteria is the view that the principals do not see their own role in the organizational
+factors, that determine the quality of learning outcomes, as dominant although they do affect
+human resources in a systematic way, which leaves an impression of needing to raise aware-
+ness of the importance of taking responsibility for decision making, all in order to improve
+the quality of student learning outcomes.
+
+Table 4. Final values of fuzzy SWARA weights obtained by number defragmentation
+
+ Crit.            s j                    kj                     q j                    j
+                                                                                          w               Final
+                                                                                                         weights
+
+  C7                              1       1       1       1        1      1      0.487   0.451   0.422    0.452
+  C4     0.618   0.772   0.931   1.618   1.772   1.931   0.518   0.564   0.618   0.252   0.255   0.261    0.255
+  C2     0.703   0.855   0.964   1.703   1.855   1.964   0.264   0.304   0.363   0.128   0.137   0.153    0.138
+  C1     0.934   0.721   0.843   1.934   1.721   1.843   0.143   0.177   0.188   0.070   0.080   0.079    0.078
+  C5     0.748   0.885   0.973   1.748   1.885   1.973   0.072   0.094   0.107   0.035   0.042   0.045    0.042
+  C6     0.782   0.897   0.993   1.782   1.897   1.993   0.036   0.049   0.060   0.018   0.022   0.025    0.022
+  C3     0.684   0.827   0.960   1.684   1.827   1.960   0.019   0.027   0.036   0.009   0.012   0.015    0.012
+ Sum                                                     2.052   2.216   2.372                            1.000
+
+
+
+4. Discussion
+Evaluation of the significance of observed organizational factors in elementary education
+within this paper is conducted using the fuzzy SWARA method. As stated by Mardani et al.
+(2017) one of the advantages of this method is that there is no need to check consistency of
+expert assessments.
+    Elementary school principals took part in this research as members of experts panel. In
+order to obtain more reliable and accurate results, according to their assessment, fuzzy num-
+bers were incorporated in the calculation using SWARA method. Application of this method
+leads to the results in the form of weighting coefficients of the oberved organisational factors
+in elementary education (criteria). The quality of the teaching process is evalauated to be the
+most significant criterion, with the weighting coefficient of 0.452. Principals assessed that
+
+14            V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+the criterion of elementary school students’ foreknowledge is the least influential criterion,
+with weighting coefficient of 0.012, when considering the impact on the quality of initial
+knowledge in primary education in relation to other considered criteria.
+    The calculation performed by the fuzzy SWARA method yielded a result, in the form of
+weighting coefficients, which indicates that the influence of each of the organizational factors
+is different. Accordingly, hypothesis H0, which reads “There is no difference in the influence
+of organizational factors in elementary education on the quality of learning outcomes based on
+the assessments of elementary school principals”, is rejected.
+    The principals attached the highest significance, for the quality of learning outcomes, on
+the quality of the teaching process as well as on teachers’ competencies, thus placing greater
+emphasis on teacher accountability, while not perceiving their own role as predominantly
+responsible for the outcomes, rather assessing it as moderately significant. Such an attitude
+could indicate the need to raise the awareness of school management, i.e., principals, about
+their own importance and make them assume responsibility for human resources manage-
+ment, without shying away from the responsibility for the possible risks in assessing the suc-
+cess of work results, since school management, with their selection of quality (competent)
+staff, is inevitably connected with potential school achievement, even over school infrastruc-
+ture, as employees are those who also take care of the classroom infrastructure, often seek-
+ing to refine it in a manner consistent with the teaching units in order to further enhance
+students’ knowledge, as the greater the resulting knowledge the better the ultimate success. A
+competent staff follows contemporary achievements, educates itself, and applies this knowl-
+edge while taking into account the interactive approach to teaching, which makes the content
+interesting, and its applicability. The foregoing is some of the reasons why principals should
+not neglect their own importance and responsibility in the aforementioned management of
+the institution, as well as human resources.
+    Among the previous research related to the quality of the teaching process, there are those
+in which the opinions of the students themselves have been taken into account (Nawi et al.,
+2015; Leon et al., 2017). The obtained results are in accordance with the statements of Araujo
+et al. (2016) who recognized the impact of the quality of teaching staff and teaching practice
+in preschool education, with the proviso that in this case a significant impact of this factor
+was recognized in institutions for the elementary education of students.
+
+
+Conclusions
+In order to encourage an improvement in the quality of the institutions’ work, and raise the
+quality of learning outcomes, it is necessary to raise awareness of the importance and the mu-
+tual influence of certain organizational factors, according to the opinion of school principals
+(management), as well as the need for their improvement. The organizational factors covered
+by this research are: school management; school infrastructure; elementary school students’
+foreknowledge; curriculum content; student motivation; and quality of the teaching process.
+    Within this paper, the ranking of organizational factors using the fuzzy SWARA method
+is performed, including an example of the application of multi-criteria methods for solving
+the problem of improving and optimizing the quality of learning outcomes in elementary
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                               15
+
+education. Principals of elementary schools have shown understanding and awareness of
+the difference in the influence of different organizational factors on the learning of students.
+    Under conditions of rapid technological development, changes in educational work are
+continuous, with new upgraded models replacing old ones. Under these conditions, em-
+ployees play an important role since activities in the educational work are expanded daily,
+taking into account the active encouragement of student initiatives, risk taking, stimulating
+curiosity, support for teamwork, humanity and expertise. At the same time, the development
+of creativity, flexibility and the encouragement of individual development are considered
+equally significant, at the same time enabling young people to learn life skills. The goals of
+educational work are the basis for the conception of educational programs, but they are also
+the essence for determining the criteria for assessing their success.
+    Through the research results, it was determined that out of seven assessed organizational
+factors teaching process quality and teaching competences connected with it are important
+for good quality learning outcomes. As well, that better management of human resources
+would contribute to a better and more practical organization of the functioning of the basic
+educational-upbringing institution. Human resources, as such, are the only living organiza-
+tional resource that, with other organizational resources, work organization, good working
+conditions, legislative regulation in this field, have a direct and very significant impact on
+the quality of learning outcomes in elementary education.
+    Regarding the limitations of the research itself, it can be said that although the impact
+assessment was mentioned, it cannot be spoken about a real impact because it was a cross-
+sectional study and not a longitudinal study. A longitudinal study could give the answer as
+to whether the obtained rank of the significance of influences on the quality of learning out-
+comes is always as stated. Furthermore, the aforementioned administration where the survey
+was conducted also includes schools that are from smaller towns, and it is assumed that the
+quality of the research could be raised in the future by examining schools from other regions.
+    Results about the perceived significance of factors are important for future studies on the
+management of organizational factors in elementary schools in order to ensure the quality
+of the outcome knowledge. These empirical research findings may form the basis for some
+future research in this field, as well as for improving the quality of learning outcomes in
+educational institutions, at all levels, from pre-school to higher education. Further research
+into the quality of elementary education should focus on: management competencies, teacher
+competencies, correlation of school equipment with student success, adaptation of curricula
+to educational trends, motivation of teachers and school management for better quality work
+and results. In addition, it would be interesting for future research to examine experts, such
+as education inspection experts (external evaluators), and see how they would rank the above
+criteria, since the quality of institutions’ performance in accordance with the prescribed stan-
+dards is part of their job description.
+
+
+Author contributions
+VE and SU conceived the study. AD and SU were responsible for the design and development
+of the data analysis. VE was responsible for data collection and AD was responsible for analy-
+sis. GK and NR were responsible for data interpretation. VE wrote the first draft of the article.
+
+16              V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+
+Disclosure statement
+Authors declare that they do not have any competing financial, professional, or personal
+interests from other parties.
+
+
+References
+Abdi, K., Mardani, A., Senin, A., Tupenaite, L., Naimaviciene, J., Kanapeckiene, L., & Kutut, V. (2018).
+    The effect of knowledge management, organizational culture and organizational learning on inno-
+    vation in automotive industry. Journal of Business Economics and Management, 19(1), 1–19.
+    https://doi.org/10.3846/jbem.2018.1477
+Aghdaie, M. H., Hashemkhani Zolfani, S., & Zavadskas, E. K. (2014). Synergies of data mining and
+    multiple attribute decision making. Procedia – Social and Behavioral Sciences, 110, 767–776.
+    https://doi.org/10.1016/j.sbspro.2013.12.921
+Alibabić, Š. (2009). Profesionalizacijamenadžmenta u obrazovanju. Obrazovanje odraslih, IX(2), 9–20.
+Allan, J. (1996). Learning outcomes in Higher Education. Studies in Higher Education, 21(1), 93–108.
+    https://doi.org/10.1080/03075079612331381487
+Araujo, M. C., Carneiro, P., Cruz-Aguayo, Y., & Schady, N. (2016). Teacher quality and learning out-
+    comes in kindergarten. The Quarterly Journal of Economics, 131(3), 1415–1453.
+    https://doi.org/10.1093/qje/qjw016
+Arsić, M., Urošević, S., Nikolić, Đ., & Voza, D. (2011, May 26-28). Ispitivanje zadovoljstva zaposlenih u
+    obrazovnim institucijama. In VII Majska konferencija o strategijskom menadžmentu (pp. 390–400).
+    Technical Faculty in Bor, Zaječar, Srbija.
+Asfani, K., Suswanto, H., & Wibawa, A. P. (2016). Influential factors of students’ competence. World
+    Transactions on Engineering and Technology Education, 14(3), 416–420.
+Atteberry, A., Loeb S., & Wyckoff, J. (2015). Do first impressions matter? Predicting early career teacher
+    effectiveness. AERA Open, 1(4), 1–23. https://doi.org/10.1177/2332858415607834
+Banihabib, M. E., Chitsaz, N., & Randhir, T. O. (2020). Non-compensatory decision model for incor-
+    porating the sustainable development criteria in flood risk management plans. SN Applied Sciences,
+    2(1), 6. https://doi.org/10.1007/s42452-019-1695-6
+Barrett, P., Treves, A., Shmis, T., Ambasz, D., & Ustinova, M. (2019). The impact of school infrastructure
+    on learning: A synthesis of the evidence. The World Bank. https://doi.org/10.1596/978-1-4648-1378-8
+Blume, B. D., Ford, J. K., Baldwin, T. T., & Huang, J. L. (2010). Transfer of training: A meta-analytic
+    review. Journal of Management, 36(4), 1065–1105. https://doi.org/10.1177/0149206309352880
+Brinson, J. R. (2015). Learning outcome achievement in non-traditional (virtual and remote) versus
+    traditional (hands-on) laboratories: A review of the empirical research. Computers & Education, 87,
+    218–237. https://doi.org/10.1016/j.compedu.2015.07.003
+Brown, J. G. (1971). A note on fuzzy sets. Information and Control, 18(1), 32–39.
+    https://doi.org/10.1016/S0019-9958(71)90288-9
+Chang, Y., Leach, N., & Anderman, E. M. (2015). The role of perceived autonomy support in principals’
+    affective organizational commitment and job satisfaction. Social Psychology of Education, 18(2),
+    315–336. https://doi.org/10.1007/s11218-014-9289-z
+Chen, J., Wang, M., Kirschner, P. A., & Tsai, C. C. (2018). The role of collaboration, computer use,
+    learning environments, and supporting strategies in CSCL: A meta-analysis. Review of Educational
+    Research, 88(6), 799–843. https://doi.org/10.3102/0034654318791584
+Cheng, Y. C. (1994). Principal’s leadership as a critical factor for school performance: Evidence from
+    multi‐levels of primary schools. School Effectiveness and School Improvement, 5(3), 299–317.
+    https://doi.org/10.1080/0924345940050306
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                                          17
+
+Cheng, Y. C., & Mok, M. M. C. (2007). School‐based management and paradigm shift in education: An
+   empirical study. International Journal of Educational Management, 21(6), 517–542.
+   https://doi.org/10.1108/09513540710780046
+Cruickshank, V. (2017). The influence of school leadership on student outcomes. Open Journal of Social
+   Sciences, 5(9), 115–123. https://doi.org/10.4236/jss.2017.59009
+Darling-Hammond, L. (2010). Teacher education and the American future. Journal of Teacher Educa-
+   tion, 61(1–2), 35–47. https://doi.org/10.1177/0022487109348024
+Dihovični, Dj., & Krunić, V. (2018). Creating and encrypting e-commerce database for selling mechani-
+   cal elements. Applied Engineering Letters, 3(3), 85–89. https://doi.org/10.18485/aeletters.2018.3.3.1
+Ďurišová, M., Kucharčíková, A., & Tokarčíková, E. (2015). Assessment of higher education teaching
+   outcomes (Quality of higher education). Procedia-Social and Behavioral Sciences, 174, 2497–2502.
+   https://doi.org/10.1016/j.sbspro.2015.01.922
+Fauth, B., Decristan, J., Rieser, S., Klieme, E., & Büttner, G. (2014). Student ratings of teaching quality
+   in primary school: Dimensions and prediction of student outcomes. Learning and Instruction, 29,
+   1–9. https://doi.org/10.1016/j.learninstruc.2013.07.001
+Gani, A. N., & Assarudeen, S. M. (2012). A new operation on triangular fuzzy number for solving fuzzy
+   linear programming problem. Applied Mathematical Sciences, 6(11), 525–532.
+   https://doi.org/10.13140/2.1.3405.8881
+Gerasymchuk, V. H. (2018). Factors of successful management of organization. Tekstilnaindustrija,
+   66(2), 52–60.
+Ghorabaee, M. K., Amiri, M., Zavadskas, E. K., & Antucheviciene, J. (2018). A new hybrid fuzzy
+   MCDM approach for evaluation of construction equipment with sustainability considerations. Ar-
+   chives of Civil and Mechanical Engineering, 18(1), 32–49. https://doi.org/10.1016/j.acme.2017.04.011
+Gil-Flores, J., Rodríguez-Santero, J., & Torres-Gordillo, J. J. (2017). Factors that explain the use of ICT
+    in secondary-education classrooms: The role of teacher characteristics and school infrastructure.
+    Computers in Human Behavior, 68, 441–449. https://doi.org/10.1016/j.chb.2016.11.057
+Haapakorpi, A. (2011). Quality assurance processes in Finnish universities: Direct and indirect out-
+   comes and organisational conditions. Quality in Higher Education, 17(1), 69–81.
+   https://doi.org/10.1080/13538322.2011.554311
+Hashemkhani Z. S., & Saparauskas, J. (2013). New application of SWARA method in prioritizing sus-
+   tainability assessment indicators of energy system. Inzinerine Ekonomika-Engineering Economics,
+   24(5), 408–414. https://doi.org/10.5755/j01.ee.24.5.4526
+Hashemkhani, Z. S. H., Yazdani, M., & Zavadskas, E. K. (2018). An extended stepwise weight assess-
+   ment ratio analysis (SWARA) method for improving criteria prioritization process. Soft Computing,
+   22(22), 7399–7405. https://doi.org/10.1007/s00500-018-3092-2
+Hitka, M., Kozubikova, L., & Potkany, M. (2017). Education and gender-Based differences in employee
+    motivation. Journal of Business Economics and Management, 19(1), 80–95.
+    https://doi.org/10.3846/16111699.2017.1413009
+Jackson, C. K., Rockoff, J. E., & Staiger, D. O. (2014). Teacher effects and teacher-related policies. Annual
+    Review of Economics, 6(1), 801–825. https://doi.org/10.1146/annurev-economics-080213-040845
+Jahnke, I., & Liebscher, J. (2020). Three types of integrated course designs for using mobile technologies
+    to support creativity in higher education. Computers & Education, 146, 103782.
+    https://doi.org/10.1016/j.compedu.2019.103782
+Jeong, H., Hmelo-Silver, C. E., & Jo, K. (2019). Ten years of computer-supported collaborative learning:
+    A meta-analysis of CSCL in STEM education during 2005–2014. Educational Research Review, 28,
+    100284. https://doi.org/10.1016/j.edurev.2019.100284
+Keršulienė, V., Zavadskas, E. K., & Turskis, Z. (2010). Selection of rational dispute resolution method by
+   applying new step-wise weight assessment ratio analysis (SWARA). Journal of Business Economics
+
+18              V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+     and Management, 11(2), 243–258. https://doi.org/10.3846/jbem.2010.12
+Klassen, R., & Kim, L. (2019). Selecting teachers and prospective teachers: A meta-analysis. Educational
+    Research Review Journal, 26, 32–51. https://doi.org/10.1016/j.edurev.2018.12.003
+Kokeza, G., Urošević S., & Radosavljević, D. (2016). Razvoj kompetencija zaposlenihkao element
+   menadžmentaljudskih resursa – saposebnimosvrtomna tekstilnu industriju. Tekstilna industrija,
+   64(4), 72–83.
+Kunter, M., Klusmann, U., Baumert, J., Richter, D., Voss, T., & Hachfeld, A. (2013). Professional compe-
+   tence of teachers: Effects on instructional quality and student development. Journal of Educational
+   Psychology, 105(3), 805. https://doi.org/10.1037/a0032583
+Leon, J., Medina-Garrido, E., & Núñez, J. L. (2017). Teaching quality in math class: The development of
+   a scale and the analysis of its relationship with engagement and achievement. Frontiers in Psychol-
+   ogy, 8, 895. https://doi.org/10.3389/fpsyg.2017.00895
+Lin, J. W., Yen, M. H., Liang, J., Chiu, M. H., & Guo, C. J. (2016). Examining the factors that influence
+    students’ science learning processes and their learning outcomes: 30 years of conceptual change
+    research. Eurasia Journal of Mathematics, Science and Technology Education, 12(9), 2617–2646.
+    https://doi.org/10.12973/eurasia.2016.000600a
+Long, C. S., Ibrahim, Z., & Kowang, T. O. (2014). An analysis on the relationship between lecturers’
+   competencies and students’ satisfaction. International Education Studies, 7(1), 37–46.
+   https://doi.org/10.5539/ies.v7n1p37
+Määttä, K., & Uusiautti, S. (2012). How to enhance the smoothness of university students’ study paths.
+   International Journal of Research Studies in Education, 1(1), 47–60.
+   https://doi.org/10.5861/ijrse.2012.v1i1.16
+Mardani, A., Nilashi, M., Zakuan, N., Loganathan, N., Soheilirad, S., Saman, M. Z. M., & Ibrahim, O.
+   (2017). A systematic review and meta-Analysis of SWARA and WASPAS methods: Theory and ap-
+   plications with recent fuzzy developments. Applied Soft Computing, 57, 265–292.
+   https://doi.org/10.1016/j.asoc.2017.03.045
+Marks, A. B., & Moss, S. A. (2016). What predicts law student success? A longitudinal study correlat-
+   ing law student applicant data and law school outcomes. Journal of Empirical Legal Studies, 13(2),
+   205–265. https://doi.org/10.1111/jels.12114
+Murillo, F. J., & Román, M. (2011). School infrastructure and resources do matter: analysis of the inci-
+  dence of school resources on the performance of Latin American students. School Effectiveness and
+  School Improvement, 22(1), 29–50. https://doi.org/10.1080/09243453.2010.543538
+Narayanan, A. K., & Jinesh, N. (2018). Application of SWARA and TOPSIS methods for supplier selec-
+   tion in a casting unit. International Journal of Engineering Research & Technology, 7(5), 456–458.
+Nawi, A., Hamzah, M. I., Ren, C. C., & Tamuri, A. H. (2015). Adoption of mobile technology for teach-
+   ing preparation in improving teaching quality of teachers. International Journal of Instruction, 8(2),
+   113–124. https://doi.org/10.12973/iji.2015.829a
+Panahi, S., Khakzad, A., & Afzal, P. (2017). Application of stepwise weight assessment ratio analysis
+   (SWARA) for copper prospectivity mapping in the Anarak region, central Iran. Arabian Journal of
+   Geosciences, 10(22), 484. https://doi.org/10.1007/s12517-017-3290-8
+Patterson, F., Knight, A., Dowell, J., Nicholson, S., Cousans, F., & Cleland, J. (2016). How effective are
+    selection methods in medical education? A systematic review. Medical Education, 50(1), 36–60.
+    https://doi.org/10.1111/medu.12817
+Petrović, G., Mihajlović, J., Ćojbašić, Ž., Madić, M., & Marinković, D. (2019). Comparison of three
+    fuzzy MCDM methods for solving the supplier selection problem. Facta Universitatis, Series: Me-
+    chanical Engineering, 17(3), 455–469. https://doi.org/10.22190/FUME190420039P
+
+Journal of Business Economics and Management, 2021, 22(1): 1–20                                       19
+
+Radianti, J., Majchrzak, T. A., Fromm, J., & Wohlgenannt, I. (2020). A sistematic review of immersive
+   virtual reality applications forhigher education: Design elements, lessons learned, and research
+   agenda. Computers & Education, 147, 103778. https://doi.org/10.1016/j.compedu.2019.103778
+Radionovs, A., & Užga-Rebrovs, O. (2017). Software tool implementing the fuzzy AHP method in
+   ecological risk assessment. Information Technology and Management Science, 20(1), 34–39.
+   https://doi.org/10.1515/itms-2017-0006
+Robinson, V. M., Lloyd, C. A., & Rowe, K. J. (2008). The impact of leadership on student outcomes: An
+   analysis of the differential effects of leadership types. Educational Administration Quarterly, 44(5),
+   635–674. https://doi.org/10.1177/0013161X08321509
+Rubio-Alcala, F. D., Arco-Tirado, J. L., Fernandez-Martin, F. D., López-Lechuga, R., Barrios, E., &
+   Pavon-Vazquez, V. (2019). A systematic review on evidences supporting quality indicators of bi-
+   lingual, plurilingual and multilingual programs in higher education. Educational Research Review,
+   27, 191–204. https://doi.org/10.1016/j.edurev.2019.03.003
+Rulebook on Quality Standards for Institutions. (2012). Official Gazette of the Republic of Serbia,
+   Nos. 7/2011 and 68/2012.
+Rulebook on the Evaluation of the Quality of Work of Institutions. (2012). Official Gazette of the Re-
+   public of Serbia, No. 9/2012.
+Sammons, P., Gu, Q., Day, C., & Ko, J. (2011). Exploring the impact of school leadership on pupil out-
+   comes: Results from a study of academically improved and effective schools in England. Internation-
+   al Journal of Educational Management, 25(1), 83–101. https://doi.org/10.1108/09513541111100134
+Shahjahan, R. A., & Torres, L. E. (2013). A “global eye” for teaching and learning in higher education:
+   A critical policy analysis of the OECD’s AHELO study. Policy Futures in Education, 11(5), 606–620.
+   https://doi.org/10.2304/pfie.2013.11.5.606
+Singh, R., & Sarkar, S. (2015). Does teaching quality matter? Students learning outcome related to
+    teaching quality in public and private primary schools in India. International Journal of Educational
+    Development, 41, 153–163. https://doi.org/10.1016/j.ijedudev.2015.02.009
+Smiljanić, V. (2013). Razvojna psihologija. Faculty of Philosophy, Belgrade.
+Stahl, G., Koschmann, T., & Suthers, D. D. (2014). Computer-supported collaborative learning. In
+    R. K. Sawyer (Ed.), Cambridge handbook of the learning sciences (2nd ed., pp. 479–500). Cambridge
+    University Press. https://doi.org/10.1017/CBO9781139519526.029
+Teddlie, C., & Reynolds, D. (2000). The international handbook of school effectiveness research. Falmer
+   Press.
+Trebješanin, B. (2014). Promene u shvatanjudeteta. Journal of Applied Psychology, 7(4), 549–563.
+    https://doi.org/10.19090/pp.2014.4.549-563
+Tsaur, S. H., Chang, T. Y., & Yen, C. H. (2002). The evaluation of airline service quality by fuzzy MCDM.
+    Tourism Management, 23(2), 107–115. https://doi.org/10.1016/S0261-5177(01)00050-4
+Vaiciukevičiute, A., Stankevičiene, J., & Bratčikoviene, N. (2019). Higher education institutions impact
+    on the economy. Journal of Business Economics and Management, 20(3), 507–525.
+    https://doi.org/10.3846/jbem.2019.10156
+Vatansever, K., & Akgül, Y. (2019). Multicriteria decision making models for website evaluation. IGI
+    Global. https://doi.org/10.24327/ijcar.2017.3399.0281
+Velazquez, M. A., Claudio, D., & Ravindran, A. R. (2010). Experiments in multiple criteria selection
+    problems with multiple decision makers. International Journal of Operational Research, 7(4), 413–
+    428. https://doi.org/10.1504/IJOR.2010.032419
+Vesić, D. (2003). Menadžment ljudskih resursa i kvalitet. Center for Applied Psychology, Belgrade.
+
+20             V. Epifanić et al. Multi-criteria ranking of organizational factors affecting the learning quality...
+
+Wahyono, I. (2015). Kompetensi Manajerial Kepala Sekolah Dalam Peningkatan Profesionalisme Guru
+   di SMK Bustanul Falah Kembiritan Genteng Banyuwangi. Jurnal Ar-Risalah, 11(1), 50–64.
+   https://doi.org/10.22373/crc.v1i1.306
+Won, S., Anderman, E. M., & Zimmerman, R. S. (2020). Longitudinal relations of classroom goal struc-
+  tures to students’ motivation and learning outcomes in health education. Journal of Educational
+  Psychology, 112(5), 1003–1019. https://doi.org/10.1037/edu0000399
+Yadegaridehkordi, E., Binti Mohd Noor, N. F., Bin Ayub, M. N., Binti Affal, H., & Binti Hussin, N.
+   (2019). Affective computing in education: A systematic review and future research. Computers &
+   Education, 142, 103649. https://doi.org/10.1016/j.compedu.2019.103649
+Yurdakul, M., & İç, Y. T. (2009). Analysis of the benefit generated by using fuzzy numbers in a TOPSIS
+   model developed for machine tool selection problems. Journal of Materials Processing Technology,
+   209(1), 310–317. https://doi.org/10.1016/j.jmatprotec.2008.02.006
+Živković, Ž., & Nikolić, Đ. (2016). Osnove matematičke škole strategijs kogmenadžmenta. Technical
+   Faculty in Bor, Serbia.

@@ -1,0 +1,1116 @@
+EPISTEME KOINONIA
+             Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                  Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                  Hecho el depósito de Ley: FA2018000022
+                                              ISSN: 2665-0282
+                                      FUNDACIÓN KOINONIA (F.K).
+                                       Santa Ana de Coro, Venezuela
+
+
+            Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+                         http://dx.doi.org/10.35381/e.k.v4i7.1175
+
+Gamificación: Estrategia para la enseñanza de operaciones elementales de
+                               matemáticas
+
+        Gamification: Strategy for teaching elementary math facts
+
+
+                      Danny Rafael Rosero-Guanotásig
+                            drosero90@gmail.com
+            Pontificia Universidad Católica del Ecuador, Ambato
+                                    Ecuador
+                   https://orcid.org/0000-0002-5706-7578
+
+                      Ricardo Patricio Medina-Chicaiza
+                        patricio_medina@hotmail.com
+            Pontificia Universidad Católica del Ecuador, Ambato
+                                    Ecuador
+                   https://orcid.org/0000-0002-2736-8214
+
+
+
+
+                         Recepción: 26 de noviembre 2020
+                          Revisado: 20 de diciembre 2020
+                          Aprobación: 01 de febrero 2021
+                          Publicación: 20 de febrero 2021
+
+
+
+
+                                                                                                  98
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+                                                  RESUMEN
+La gestión educativa constituye un desafío en estos tiempos de cambio, gracias al apoyo
+de las tecnologías y de herramientas tecnológicas se estimulan los ambientes de
+formación brindando a los niños y jóvenes mediante el juego nuevas formas de
+enseñanza-aprendizaje. El propósito general de la investigación es analizar la
+importancia de la gamificación como estrategia en la enseñanza de las matemáticas de
+una Unidad Educativa de Educación Básica. El estudio es una investigación descriptiva
+documental con diseño bibliográfico, ya que se utilizaron técnicas de exploración
+documental para fundamentar la estrategia educativa como la gamificación y la
+enseñanza de las matemáticas. Se utilizó la técnica Iadov propuesta por (Kuzmina, 1970)
+para validar la estrategia didáctica de gamificación a través de una encuesta de
+satisfacción. Se concluye que para su aplicación es pertinente una capacitación a los
+docentes, donde se familiaricen con el entorno de la herramienta y sus diferentes
+funciones.
+
+Descriptores: Juego de simulación; programa informático didáctico; proceso de
+aprendizaje; gestión de la educación; red informática. (Palabras tomadas del Tesauro
+UNESCO).
+
+                                                  ABSTRACT
+Educational management constitutes a challenge in these times of change, thanks to the
+support of technologies and technological tools, training environments are stimulated by
+offering children and young people through play new forms of teaching-learning. The
+general purpose of the research is to analyze the importance of gamification as a strategy
+in the teaching of mathematics in an Educational Unit of Basic Education. The study is a
+descriptive documentary research with bibliographic design, since documentary
+exploration techniques were used to support the educational strategy such as gamification
+and the teaching of mathematics. The Iadov technique proposed by (Kuzmina, 1970) was
+used to validate the didactic gamification strategy through a satisfaction survey. It is
+concluded that for its application a training for teachers is pertinent, where they become
+familiar with the environment of the tool and its different functions.
+
+Descriptors: Simulation game; educational computer program; learning process;
+management of education; computer network. (Words taken from the UNESCO
+Thesaurus).
+
+
+
+
+                                                                                                        99
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+INTRODUCCIÓN
+El proceso de enseñanza-aprendizaje constituye una tarea noble y significativa cuyo
+principal fin es la formación integral de buenos ciudadanos en medio de un contexto social
+en constante movimiento, los Estados mediante su poder ministerial delega ante los
+ministerios respectivos la organización, planificación y ejecución de estrategias que
+garanticen la buena marcha de las actividades planteadas. En este sentido el Ministerio
+de Educación del Ecuador, plantea una visión crítica a la pedagogía, ya que promueve el
+aprendizaje significativo por medio de la interpretación y resolución de problemas, de esta
+manera los estudiantes deberán alcanzar la metacognición (Ministerio de Educación,
+2020). Por tanto, en el País ecuatoriano dentro de los lineamientos de la Constitución y
+concretamente en el Plan Nacional para el Buen Vivir 2017 – 2021 (Constitución de la
+República del Ecuador, 2017), se plantea en el objetivo 7 lo siguiente: “incentivar una
+sociedad participativa, con un Estado cercano al servicio de la ciudadanía, y enmarcados
+en los lineamientos de la Ley Orgánica de Educación Intercultural (Reglamento General
+a la Ley Orgánica de Educación Intercultural, 2017) que abarca los subniveles:
+Preparatoria, Básica media, Básica superior; en la cual comprende la Básica Elemental
+que hace referencia a 2do, 3er y 4to de básica enfocada a estudiantes de 6 a 8 años,
+donde una de las asignaturas es Matemática, entre otras. Se busca impulsar la
+participación activa de los equipos educativos para lograr los objetivos académicos en
+las instituciones educativas y su entorno. Por ello el órgano encargado de la orientación
+y apoyo en materia educativa busca implementar acciones que contribuyan al desarrollo
+de la gestión educativa, al respecto el Ministerio de Educación del Ecuador (2012):
+establece:
+     El principal propósito de los estándares es orientar, apoyar y monitorear la
+     acción de los actores del sistema educativo hacia su mejora continua.
+     Adicionalmente, ofrecen insumos para la toma de decisiones de políticas
+     públicas para la mejora de la calidad del sistema educativo.
+
+
+
+                                                                                                        100
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                   Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+Estas mejoras deben facilitar la búsqueda de nuevas estrategias y herramientas que
+contribuyan a un mejor desarrollo de los niños, adolescentes y jóvenes en proceso de
+formación. Las exigencias actuales de la era tecnológica obligan a los docentes a innovar
+permanentemente, volviéndose imperecedera la incorporación de estrategias que
+respondan adecuadamente a los procesos formativos y que promuevan la colaboración,
+criticidad y conocimiento. (Holguín-García, Holguín-Rangel, & García-Mera, 2020, p.72)
+En este sentido, de acuerdo al informe del censo 2017, presentado por el INEC, en el
+país existe un incremento del porcentaje de hogares con acceso a internet del 14,7% a
+nivel nacional, 15,2% en el área urbana, y 11,3% en el área rural; según esta importación
+esto constituye las condiciones optimistas en cuanto a entornos tecnológicas favorables
+para ser utilizado en diversos campos, uno de ellos la educación. (Instituto Nacional de
+Estadísticas y Censos, 2017). Esta ventaja competitiva contribuye a utilización de las
+tecnologías, para una innovación en el campo educativo, al respecto Macanchí-Pico,
+Bélgica-Marlene, & Campoverde-Encalada, (2020) manifiestan que la innovación, en el
+campo educativo es apreciada como una estrategia para favorecer en logro de los
+objetivos institucionales y penetrar en todos los ámbitos, proceso y espacio educativo,
+estableciendo los escenarios para desarrollar una nueva cultura. Favoreciendo la
+producción de nuevas formas de enseñar que incentive en los estudiantes el interés por
+sus materias. En este mismo orden de ideas, Farías y Pérez (2010) afirman que motivar
+a los estudiantes de la presente época es una tarea difícil que actualmente enfrentan
+muchos docentes, sobre todo en el área de las llamadas ciencias exactas, como las
+Matemáticas; cuyo aprendizaje resulta complejo e incluso agotador para la mayoría de
+los estudiantes. Una alternativa para lograr la atención de los estudiantes es adoptar
+estrategias de juegos, que en el ámbito académico se las conoce como Gamificación
+(Prieto et al., 2014); que se convierte en una línea de acción lúdica; con el afán de mejorar
+la calidad de la enseñanza y aprendizaje de la Matemática. En este sentido, la
+Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (Unesco,
+
+
+                                                                                                        101
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+2014) promueven el uso del juego, no sólo para hacer más eficaz el proceso pedagógico,
+sino también para alcanzar el interés, el disfrute y la motivación que el estudiante
+necesita.(Gilbert & Sarah, 1982). Sin embargo, de acuerdo a información recolectada
+mediante una encuesta a estudiantes de quinto año de Educación Básica, detallaron que
+no utilizan estrategias didácticas para el aprendizaje y comprensión de operaciones
+elementales en el área de matemáticas, de allí la importancia de indagar sobre las
+herramientas disponibles que faciliten el estudio y compresión de esta materia. Por todo
+lo planteado la investigación tuvo como objetivo general analizar la importancia de la
+gamificación como estrategia en la enseñanza de las matemáticas de una Unidad
+Educativa de Educación Básica.
+
+METODOLOGÍA
+El estudio es una investigación descriptiva documental con diseño bibliográfico, el
+enfoque fue cuantitativa, ya que se utilizaron técnicas de exploración documental para
+fundamentar la estrategia educativa como la gamificación en beneficio de la enseñanza
+de las matemáticas. Desde la perspectiva del análisis sintético permitió el estudio de la
+información recopilada, se empleó como instrumento de investigación la ficha o guía de
+análisis documental, lo que contribuyó a extraer las ideas y contrastarlas. Así como
+investigaciones, artículos científicos y datos estadísticos. Así mismo, posterior a la
+evaluación de varias plataformas tecnológicas, se utilizó la herramienta Classcraft (2020)
+para insertar contenido de la unidad quinta del libro de matemática para quinto año de
+educación básica, como en el artículo de García et al (2018); así como la herramienta
+Genial.ly (2020) propuesta por García y Neira (2017).
+Cabe destacar que, se utilizó la técnica Iadov propuesta por (Kuzmina, 1970) para validar
+la estrategia didáctica de gamificación a través de una encuesta de satisfacción que
+incluye tres preguntas cerradas de opción múltiple, las cuales dan paso al Índice de
+Satisfacción Individual (ISI) y al aplicar la fórmula se obtiene el Índice de Satisfacción
+
+
+
+                                                                                                        102
+
+                                                  EPISTEME KOINONIA
+                     Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                          Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                          Hecho el depósito de Ley: FA2018000022
+                                                      ISSN: 2665-0282
+                                              FUNDACIÓN KOINONIA (F.K).
+                                               Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+Grupal (ISG). De esta representación, dio como resultado la respuesta de diez docentes
+del nivel de Educación Básica.
+
+
+RESULTADOS Y DISCUSIÓN
+Visión del uso de la gamificación en el aprendizaje
+El uso y la utilización de la gamificación como estrategia de impacto en públicos
+determinados, fue el sector empresarial los pioneros en ponerlo en operación, donde
+fidelizan a sus clientes mediante artículos de colección. Por otra parte, las aerolíneas
+ganaban la lealtad de sus usuarios con sus programas de millas, a esta altura la
+educación no podía quedar excluida de esta ola innovativa; donde la experiencia lúdica
+toma gran importancia al trasladar las emociones y sensaciones de los videojuegos al
+espacio educativo.
+Por otro lado, en cuanto a los límites de aprendizaje según Hammer y Lee (2011),
+mencionan que la gamificación desvanece los aprendizajes formales e informales, por
+tanto, se proyecta a los estudiantes hacia una diferente forma de conocimiento. La
+palabra gamificación se asimila como el uso del entono, las reglas y roles de personajes
+que manejan los juegos enfocados hacia la formación. Así, el valor agregado que aporta
+es en la habilidad para generar una nueva experiencia durante el aprendizaje; puesto que
+recoge elementos como (monedas, trofeos, insignias, medallas, poderes) y los destina
+hacia un entorno análogo del juego, en este caso concierne al salón de clase.
+Existen varias experiencias desarrolladas mediante la gamificación, por ello existe un
+historial de la literatura sobre estas prácticas, donde en su gran mayoría hay resultados
+afirmativos (Hamari et al., 2014). La forma de educar a través de la ludificación
+(gamificación) es algo que se lleva a cabo de manera habitual, esta práctica se lleva a
+cabo por cuantiosos maestros a nivel mundial. Se ha comentado en varias ocasiones, en
+el cual la rutina del juego en las aulas constituye una destreza muy frecuente utilizadas
+
+
+
+                                                                                                          103
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+por los docentes del nivel general básica; a su vez no es nada nuevo en la enseñanza
+aprendizaje tanto como para el bachillerato o en la universidad.
+En tal sentido, la gamificación conlleva a la mejora en las prácticas de enseñanza-
+aprendizaje en las distintas etapas educativas, como lo planteó Aguilera et al. (2020) en
+su trabajo de investigación al evidenciar el gran potencial de la gamificación, pues generó
+gran interés en sus alumnos al impartir clases. En concordancia, Mallitasig y Freire (2020)
+tras aplicar la gamificación durante una unidad del plan de clases, afirman que sus
+estudiantes alcanzaron grandes aprendizajes significativos.
+Así mismo, en otros niveles de formación es interesante como a nivel superior, la
+ludificación enganche los intereses y el estímulo de los estudiantes; en consecuencia,
+contribuya al incremento del nivel de responsabilidad en la formación como proceso.
+(Ardila, 2019). Entonces, para un ideal plan de gamificación, lo apropiado es potenciar
+herramientas que se ejecuten de manera fácil para optimizar la enseñanza, captar el
+interés, conseguir las ventajas de la red informática y en si toda la tecnología en general
+(Sánchez et al., 2020).
+Por otro lado, Classcraft es una plataforma web enfocada a involucrar el uso de la
+gamificación en las aulas y contribuir a la optimización de la enseñanza. En resumen,
+aporta una serie de elementos, entornos y hasta varios comportamientos que de manera
+general aparecen en videojuegos para ejecutarlos en una o en muchas asignaturas.
+Como resultado, actúa como columna vertebral durante las lecciones, pruebas o
+exámenes, y a la misma vez brinda recompensas que se adquieren por el cumplimiento
+de las mismas, también se traslada a la vida real para así motivar aún más a los
+estudiantes (Mora y Camacho 2019).
+Durante el desarrollo del presente trabajo se tomó en consideración los estándares de
+(Garcia et al., 2018), el cual manifiesta como primer paso que atrae el interés de los
+alumnos, como segundo paso explora actividades prácticas, el tercero explica los
+contenidos, el cuarto paso es donde se refuerza el conocimiento adquirido, el último paso
+
+
+                                                                                                        104
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+conlleva una evaluación a los alumnos. No obstante, el autor manifiesta de manera
+general y no profundiza ningún proceso. Por otro lado, los autores Mora y Camacho
+(2019) propone tres fases, la fase inicial compuesta de la ambientación del aula, la
+segunda fase es el desarrollo, y su última fase la evaluación.
+A continuación, se muestra el resultado obtenido de la revisión documental-bibliográfica
+sobre la gamificación, mediante una matriz en el mismo se observa el empleo de diversas
+herramientas lúdicas manejadas por los docentes que transforman el aprendizaje en
+actividades de emular o simular, por esta razón se las consideran como estrategias
+didácticas. En la tabla 1 se visualizan las actividades innovadoras más utilizadas de la
+gamificación en diversos escenarios educativos.
+
+
+Tabla 1.
+Matriz sobre la revisión documental sobre la gamificación desde la visión de varios
+autores.
+
+    Autor      Año           Estrategia                                    Sistemática
+ Valda &      2015      Plataforma CER                   ✔ El docente además de insertar contenido en la
+ Arteaga                                                   plataforma, introduce insignias para motivar a
+                                                           los estudiantes conformen alcancen los logros
+                                                           esperados.
+ Torres,      2018      Plataformas e-                   ✔ Se validó los indicadores mediante un estudio
+ et al.                 learning                           Delphi con expertos
+                        Duolingo                         ✔ Se procede a realizar varios grupos de
+                        Babble aprende                     estudiantes.
+                        idiomas                          ✔ EL docente selecciona una aplicación para
+                        Edmodo                             cada grupo de alumnos
+                        English                          ✔ Al finalizar el docente mide el grado de
+                        Aprende inglés con                 interacción con la aplicación asignada, y el
+                        Aba                                desempeño alcanzado.
+                        Aprende inglés con               ✔ Este resultado permite al docente considerar
+                        Wlingua                            que aplicación puede ser considerada como
+                        Classdojo                          estrategia pedagógica.
+ Díez,        2017      Aplicación propia                ✔ Se establece la dificultad al iniciar ka
+ Bañeres &                                                 aplicación.
+ Serra                                                   ✔ La    aplicación    contiene    4    ejercicios
+                                                           consecutivos
+
+
+                                                                                                        105
+
+                                            EPISTEME KOINONIA
+               Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                    Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                    Hecho el depósito de Ley: FA2018000022
+                                                ISSN: 2665-0282
+                                        FUNDACIÓN KOINONIA (F.K).
+                                         Santa Ana de Coro, Venezuela
+
+
+               Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+                                                     ✔ Conforme realice de manera exitosa los retos
+                                                       la aplicación le asigna puntos de experiencia,
+                                                       caso contrario se le penaliza por cada
+                                                       equivocación.
+                                                     ✔ Al superar un nivel se almacena a manera de
+                                                       ranking los puntajes de forma descendente de
+                                                       todos los alumnos.
+Navarro     2017    Plataforma Kahoot                ✔ El autor realiza unas entrevistas grupales a
+                                                       docentes
+                                                     ✔ Se evalúan los resultados obtenidos durante la
+                                                       investigación
+                                                     ✔ Con gran mayoría los docentes acertaron que
+                                                       es una herramienta que ofrece grandes
+                                                       ventajas como el aumento de la participación,
+                                                       el interés y la motivación en los alumnos.
+Corchuelo   2018    Plataforma                       ✔ Se presentó a los estudiantes las mecánicas
+                    Classdojo                          de la plataforma, las reglas, los objetivos y las
+                                                       recompensas.
+                                                     ✔ Se crean cuantas, para el docente, alumnos y
+                                                       padres de familia, a su vez de instala la
+                                                       aplicación en dispositivos móviles.
+                                                     ✔ Se desarrollan dinámicas de juego de manera
+                                                       grupal e individual acorde a la asignatura a
+                                                       impartir, aquí se incluyen quiz, sopa de letras,
+                                                       crucigramas, entre otros; las cuales fueron
+                                                       realizadas a través de aplicativos como
+                                                       Kahhot y Educaplay.
+                                                     ✔ Al finalizar los alumnos en dependencia de sus
+                                                       puntajes alcanzados,         se    asigna     las
+                                                       recompensas las cuales son aplicadas por
+                                                       ellos cuando lo decidan.
+García,     2018    Classcraft                       ✔ El docente a través de un diario recopila la
+et al.              Alexia                             actitud, el interés y los comentarios de los
+                                                       alumnos.
+                                                     ✔ EL docente da un seguimiento a cada
+                                                       estudiante en la plataforma institucional
+                                                       Alexia.
+                                                     ✔ Se realiza un registro de toda la
+                                                       documentación como pruebas, tareas,
+                                                       ejercicios.
+Mora y      2019    Classcraft                       ✔ El docente a través del uso la plataforma
+Camacho                                                Classcraft pretende impulsar el trabajo en
+                                                       equipo a través la cooperación de pequeños
+
+
+                                                                                                    106
+
+                                               EPISTEME KOINONIA
+                  Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                       Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                       Hecho el depósito de Ley: FA2018000022
+                                                   ISSN: 2665-0282
+                                           FUNDACIÓN KOINONIA (F.K).
+                                            Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+                                                             grupos, por otro, que los alumnos logren
+                                                             apreciar sus cualidades individuales.
+ González,    2020     Plataforma Khan       ✔ El docente aplica pre test para diagnosticar del
+ et al.                Academy                 tema a tratar.
+                                             ✔ Se desarrolla durante seis horas clase el tema
+                                               en la plataforma Khan Academy
+                                             ✔ Finalmente se aplica un post test para evaluar
+                                               los aprendizajes alcanzados.
+ Aguilera,    2020     Plataforma            ✔ El docente explica sobre el contenido de la
+ et al.                Classdojo               clase.
+                       Aplicación móvil:     ✔ Cada estudiante realiza la actividad en la
+                       Series Lógicas de       aplicación Series Lógicas de Lucas.
+                       Lucas                 ✔ El docente registra los aciertos, el tiempo y los
+                                               puntos obtenidos para cada alumno y realiza
+                                               un seguimiento en la plataforma Classdojo.
+ Cruz &       2020     Plataforma Quizizz ✔ El docente realiza un diagnóstico previo al uso
+ Cabero                Plataforma Edmodo       de la plataforma, los alumnos deben ingresar
+                       (juego de triángulos)   a Quizizz y realizar la evaluación.
+                                             ✔ Posterior a realizar la prueba el docente
+                                               entrega a los alumnos el enlace en la
+                                               plataforma Edmodo en dónde en base a 4
+                                               retos los alumnos refuerzan los contenidos
+                                               preparados por el docente.
+ Mallitasig   2020     Plataforma Kahoot     ✔ El docente desarrollo con sus estudiantes en
+ & Freire              Aplicación móvil        la plataforma Kahoot una unidad completa.
+                       Plickers              ✔ Con la aplicación móvil Plickers evaluó los
+                                               resultados alcanzados.
+
+Fuente: Elaboración propia (2021).
+
+Se observa en la matriz de la figura 1, la gran acogida y utilización de esta práctica se
+lleva a cabo maestros a nivel mundial, lo que demuestra el gran apoyo que brinda en
+desarrollo de estrategias pedagógicas en beneficios de los niños y jóvenes estudiantes.
+De acuerdo con Kob (1974), citado por Rodríguez-Cepeda (2017:54); consideró que la
+experiencia se refiere a toda serie de actividades que permiten aprender, considerando
+que el aprendizaje está condicionado a la experiencia vivida y consta de cuatro etapas
+que incluyen: la experiencia concreta, una observación reflexiva, la conceptualización
+abstracta y una experimentación activa. En este sentido, se propone trabajar mediante
+
+
+                                                                                                       107
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+cuatro fases para la didáctica de gamificación: introducción, descubrimiento de
+contenidos, desarrollo de contenidos, evaluación de contenidos, las cuales se muestran
+a continuación:
+
+Primera fase. Introducción
+Este este primer apartado se explican las instrucciones, el uso de Classcraft, y se entrega
+los accesos hacia la plataforma. Hay dos documentos generados de forma automática
+cuando se crean los usuarios, estos archivos contienen las reglas, deberes y derechos
+que les otorga el uso de esta plataforma. Finalmente, hay otro documento donde se
+redacta un pacto con el estudiante, en donde se compromete en llegar hasta el final de
+los contenidos planificado por su docente.
+
+Figura 1.
+Introducción.
+
+
+
+
+Fuente: https://game.classcraft.com/
+
+                                                                                                        108
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                   Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+A cada alumno se asigna un usuario y una contraseña, posterior a ello la plataforma
+solicita ingresar el rol del personaje creado, este puede ser: curandero, mago o hechicero;
+cada personaje posee poderes diferentes los cuáles a futuro le permite usar de forma
+individual o grupal cuando el docente imparta sus clases. Conforme las clases avancen,
+el alumno podrá equipar a su personaje con múltiples accesorios como cambios de ropa,
+mejoras de su armadura o incluso adquirir una mascota.
+Todo aquello que complemente al uso de la plataforma influye de manera gradual en la
+asimilación de contenidos, despierta el interés en grande hacia los estudiantes para así
+realizar las actividades y tareas que a posterior se detalla en la siguiente fase. Cabe
+destacar que, tanto como los alumnos y los docentes se observan cambios, puesto que
+en sus estudiantes la predisposición hacia aprendizaje se incrementa. Lo mismo ocurre
+en el maestro, quien se verá más entusiasmado, es decir, permite una generación de
+contenido más amplia y didáctica.
+
+
+Segunda fase. Descubrimiento de contenidos
+Se explica las misiones y las tareas que hay en cada una de ellas, así como las acciones
+diarias a ejecutarse al inicio de cada clase. En este apartado, la plataforma tiende a
+sobresalir, debido a que al iniciar la clase de manera ineludible el profesor debe iniciar la
+clase con la ejecución de una dinámica, la misma selecciona a uno o varios alumnos e
+interactúa con ellos en temas relacionado con la clase. Por ejemplo, la plataforma
+preguntará al alumno sobre que se trató la clase pasada, a parte de las preguntas existen
+varias dinámicas listas para ser ejecutadas; por tal motivo, desde el comienzo se
+despertará y se mantendrá el interés de los estudiantes (Figura 2). Por tanto, el punto de
+vista didáctico tiene como objetivo apoyar en la disposición de los educadores para
+contribuir de manera positiva en el conjunto de operaciones en la respuesta que seda a
+los problemas en el aula, de igual manera los estudiantes aprenden las operaciones
+elementales de manera ludificada.
+
+
+                                                                                                        109
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+Figura 2.
+Ubicación de contenidos.
+
+
+
+
+Fuente: https://game.classcraft.com/
+
+
+Es aquí, donde cada estudiante percibe gran contenido de valor con respecto a su
+aprendizaje en las operaciones elementales, conforme su dedicación, su esfuerzo y
+perseverancia, la plataforma asigna bonos, monedas, o experiencia. Además, cuando
+sus participantes envían las tareas antes de la fecha asignada, los círculos verdes
+comprenden las misiones, al ingresar en la primera de ellas, se despliega un saludo de
+bienvenida, y explica de manera breve su funcionalidad. A su vez, las misiones se
+desbloquean de manera automática cada vez que el estudiante complete un reto, podrá
+visibilizar en su mapa el próximo desafío.
+
+
+Tercera fase. Desarrollo de contenidos
+En este apartado se explica sobre los puntos de experiencia que cada alumno obtiene si
+cumple con las tareas asignadas a tiempo, las actividades planificadas en la plataforma,
+así como exploraciones interactivas permiten a los alumnos vivir una experiencia
+diferente, gran parte de los contenidos han sido desarrollado en diversos aplicativos en
+
+                                                                                                        110
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+línea, así como Genial.ly, y para reforzar lo comprendido se utilizó los formularios de
+Google y Educaplay (Figura 3).
+
+Figura 3.
+Desarrollo de contenidos.
+
+
+
+
+Fuente: https://game.classcraft.com/
+
+
+Cada contenido está estructurado de manera que los estudiantes lo desarrollen y no
+sientan el sentimiento de la rutina. Por el contrario, cada reto para cada misión es
+diferente, es decir, a experiencia del alumno al sumergirse en la plataforma e interactuar
+en la misma da como resultado una mejora considerable y en la facilitación del proceso
+enseñanza-aprendizaje.
+Cabe destacar el aspecto esencial en esta fase, es la incorporación de herramientas de
+clase como dinámicas previas al desarrollo de los contenidos del docente. Sin embargo,
+de una amplia gama de subniveles o actividades, la idónea para esta estrategia didáctica
+
+
+
+                                                                                                        111
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+es la denominada “Los jinetes de Vay”, con la cual se promueve una mayor participación
+de los estudiantes que posean bajos puntajes en la jornada educativa.
+Similarmente, al finalizar la clase el docente debe implementar una actividad evaluativa
+de los conocimientos adquiridos durante esa jornada. Así, la actividad recomendable para
+esta estrategia es “La batalla de jefes”, en la cual el docente asigna preguntas de forma
+individual o grupal, con la finalidad de obtener puntuaciones para cada uno de ellos y
+sumarlas a sus avatares o personajes.
+Por otro lado, el docente tiene la opción de asignar puntuaciones en forma de
+recompensas a los estudiantes o equipos que contribuyan positivamente durante la
+jornada educativa, a través de la actividad denominada “La rueda del destino”. A su vez,
+puede penalizarlos con una disminución de puntos si su comportamiento fue negativo. Lo
+que facilita y suscita la cooperación y el trabajo en equipo, así como el cambio de actitud
+en los estudiantes.
+
+
+Cuarta fase. Evaluación
+Para la última etapa dentro del Classcraft se elaboró una evaluación en Kahoot sobre la
+unidad 5, conformadas por interrogantes de verdadero y falso, seleccionando la
+respuesta correcta, entre otras. Como se ha visto en otras investigaciones al insertar
+herramientas tecnológicas para medir el aprendizaje sobre algún conocimiento, el
+estudiante responde mejor ante nuevos entornos, en dependencia sobre la efectividad
+de la gamificación, la evaluación revela datos con los cuales el docente podrá ajustar
+algún cambio o mejora en la plataforma de ser requerido.
+
+
+
+
+                                                                                                        112
+
+                                                 EPISTEME KOINONIA
+                    Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                         Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                         Hecho el depósito de Ley: FA2018000022
+                                                     ISSN: 2665-0282
+                                             FUNDACIÓN KOINONIA (F.K).
+                                              Santa Ana de Coro, Venezuela
+
+
+                   Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+Figura 4.
+Evaluación.
+
+
+
+
+Fuente: https://game.classcraft.com/
+
+
+Para la evaluación se tomó en consideración una herramienta digital freemium, llamada
+Kahoot, la cual lleva varios años en uso por muchos docentes para reforzar los contenidos
+impartidos, pero su principal utilización al momento de evaluar, permite a los estudiantes
+competir de manera sana por los primeros lugares. Cabe destacar, que se le puede
+utilizar para evaluar equipos de alumnos, esto desde luego genera una discusión y da
+paso al análisis, y a la emisión de criterios sobre sus posibles respuestas.
+
+
+Validación de la estrategia didáctica
+A continuación, se presenta la validación de la estrategia didáctica de gamificación a
+través de la técnica Iadov, la cual evalúa la satisfacción de los educadores del área de
+educación básica respecto a la propuesta; seleccionándose a 10 de ellos, quienes
+mencionaron los siguientes resultados en las tres preguntas cerradas y en el índice de
+satisfacción individual (ISI):
+
+                                                                                                         113
+
+                                                  EPISTEME KOINONIA
+                     Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                          Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                          Hecho el depósito de Ley: FA2018000022
+                                                      ISSN: 2665-0282
+                                              FUNDACIÓN KOINONIA (F.K).
+                                               Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+Tabla 2.
+Resultados ISI Iadov.
+
+                            Respuesta pregunta                                                    Resultado
+  Docente                                                                                                   Nivel de
+                 1              2                       3                         ISI           Escala
+                                                                                                          satisfacción
+      1         No           Sí             Me gusta mucho                         1                A
+      2        No se         Sí             Me gusta mucho                         2                A
+      3        No se        No se           Me gusta mucho                         2                A
+                                                                                                                 Clara
+                                           Me gusta más de lo
+      4         No             Sí                                                  2                A         Satisfacción
+                                            que me disgusta
+      5         No             Sí           Me gusta mucho                         1                A
+      6         No             Sí           Me gusta mucho                         1                A
+                                                                                                          Más satisfecho
+                                          Me disgusta más de
+      7         No          No se                                                  3                B          que
+                                           lo que me gusta
+                                                                                                           insatisfecho
+                                                                                                              Clara
+      8         No             Sí            Me gusta mucho                        1                A
+                                                                                                           Satisfacción
+                                                                                                          Más satisfecho
+                                          Me disgusta más de
+      9         No          No se                                                  3                B          que
+                                           lo que me gusta
+                                                                                                           insatisfecho
+                                                                                                              Clara
+     10         No             Sí            Me gusta mucho                        1                A
+                                                                                                           Satisfacción
+
+Fuente: Elaboración propia (2021).
+
+En ese sentido, a nivel individual se denota una escala mayoritariamente de A, que
+equivale a una clara satisfacción de los estudiantes respecto a la estrategia didáctica.
+Aunque también, algunos estudiantes se sienten más satisfechos que insatisfechos
+predomina un nivel idóneo de complacencia. Posteriormente, se obtuvo un 0.90 como
+índice de satisfacción grupal (ISG) con su respectiva fórmula, asumiéndose que los
+docentes de Educación Básica tienen una clara satisfacción por la estrategia didáctica,
+en satisfacción al manejo de la gamificación en el proceso de enseñanza-aprendizaje y
+comprensión de operaciones elementales en el área de matemáticas.
+
+
+
+
+                                                                                                                      114
+
+                                               EPISTEME KOINONIA
+                  Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                       Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                       Hecho el depósito de Ley: FA2018000022
+                                                   ISSN: 2665-0282
+                                           FUNDACIÓN KOINONIA (F.K).
+                                            Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+                        𝐴 (+1) + 𝐵 (+0.5) + 𝐶(0) + 𝐷(−0.5) + 𝐸 (−1)
+                 𝐼𝑆𝐺 =
+                                              𝑁
+                        8 (+1) + 2 (+0.5) + 0(0) + 0(−0.5) + 0 (−1)
+                  𝐼𝑆𝐺 =
+                                             10
+                                              9
+                                     𝐼𝑆𝐺 =
+                                             10
+                                                  𝐼𝑆𝐺 = 0.90
+
+
+Además, dentro de las dos preguntas abiertas los docentes señalan que la fase de
+descubrimiento de contenidos es aquella que más les agrada, pues el docente debe
+iniciar la clase con la ejecución de una dinámica, la misma que selecciona a uno o varios
+alumnos e interactúa con ellos en temas relacionado con la clase. De esta forma, el
+aprendizaje se realiza de forma didáctica, promoviéndose la resolución de problemas en
+entornos digitales y los estudiantes aprenden las operaciones elementales de manera
+ludificada. Sin embargo, dentro de los aspectos negativos de esta estrategia es su
+aplicabilidad, ya que algunos docentes que no tienen los conocimientos necesarios
+referentes al manejo de la herramienta tecnológica, por otro lado, existe en algunos
+miembros, una resistencia a migrar de una enseñanza tradicional a una digital. Por ello,
+es necesario que previo a la implementación de estas estrategias didácticas se realicen
+actividades de capacitación sobre todos en los aspectos de manejo de la herramienta y
+sus diferentes funcionalidades.
+
+
+
+
+                                                                                                       115
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+CONCLUSIÓN
+Al indagar sobre las nuevas formas de enseñanza-aprendizaje en la formación del área
+en concreto de matemáticas, se evidenciaron las bases teóricas sustentan la utilidad de
+la gamificación, las investigaciones realizadas apoyan la realización de una estrategia
+didáctica por medio de los recursos tecnológicos como una alternativa en la enseñanza
+de las operaciones elementales en estudiantes de quinto año de básica, así se consiguió
+evidenciar que diferentes estrategias lúdicas refuerzan el trabajo de los docentes con sus
+estudiantes.
+El diagnóstico posibilitó evidenciar que las estrategias didácticas durante la enseñanza
+de las operaciones elementales que utilizan los docentes actualmente no han conseguido
+aportar resultados efectivos en sus estudiantes, a través de una encuesta con preguntas
+cerradas realizada a los alumnos, se registró en su totalidad el bajo interés en la
+asignatura. Por tal motivo, la metodología de la gamificación se origina con la finalidad
+de hallar opciones para modificar la situación actual y aportar como un instrumento de
+ayuda en los educandos cuyo propósito sea desarrollar el conocimiento sobre las
+operaciones elementales.
+La estrategia didáctica está forjada en una plataforma virtual, dónde su propósito recae
+en transformar un proceso de enseñanza habitual e integrarlo como una oferta
+innovadora en la plantilla de docentes, por medio de actividades diarias y destrezas
+lúdicas. Como consecuencia fortifica los contenidos dotados por su docente que se
+evidencia en la satisfacción de los mismos con la estrategia propuesta; donde sus fases
+son cuatro, introducción de la estrategia, descubrimiento de contenidos, desarrollo de
+contenidos, y evaluación. Sin embargo, para su aplicación es pertinente una capacitación
+a los docentes, donde se familiaricen con el entorno de la herramienta y sus diferentes
+funciones.
+
+
+
+
+                                                                                                        116
+
+                                                   EPISTEME KOINONIA
+                      Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                           Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                           Hecho el depósito de Ley: FA2018000022
+                                                       ISSN: 2665-0282
+                                               FUNDACIÓN KOINONIA (F.K).
+                                                Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+FINANCIAMIENTO
+No monetario.
+
+
+AGRADECIMIENTOS
+A la Pontificia Universidad Católica del Ecuador, Ambato; por motivar el desarrollo de
+esta investigación.
+
+
+REFERENCIAS CONSULTADAS
+
+Aguilera, C., Santos, C., Pinargote, B. & Erazo, J. (2020). Gamificación: estrategia
+       didáctica motivadora en el proceso de enseñanza aprendizaje del primer grado de
+       educación básica. [Gamification: motivating didactic strategy in the teaching-
+       learning process of the first grade of basic education]. Revista Cognosis, 5(2), 51-
+       70. DOI: https://dx.doi.org/10.33936/cognosis.v5i3.2083.
+
+Ardila, J. (2019). Supuestos teóricos para la gamificación de la educación superior.
+       [Theoretical assumptions for gamification of higher education] Magis, Revista
+       Internacional de Investigación en Educación, 12(24), 71-84. DOI:
+       https://dx.doi.org/10.11144/Javeriana.m12-24.stge.
+
+Classcraft. 2020. Classcraft. Recuperado 20 de octubre de 2020. Recuperado de:
+      http://bit.ly/38z6ksN.
+
+Constitución de la República del Ecuador. (2017). Plan Nacional de Desarrollo 2017-
+       2021-Toda una Vida. [National Development Plan 2017-2021-A Lifetime].
+       Gobierno       Electrónico       de       Ecuador.     Recuperado        de:
+       https://www.gobiernoelectronico.gob.ec/normativa/.
+
+Corchuelo-Rodríguez, C. (2018). Gamificación en educación superior: experiencia
+      innovadora para motivar estudiantes y dinamizar contenidos en el aula.
+      [Gamification in higher education: innovative experience to motivate students and
+      stimulate content in the classroom]. Edutec. Revista Electrónica De Tecnología
+      Educativa, (63), 29-41.DOI: https://doi.org/10.21556/edutec.2018.63.927
+
+
+
+
+                                                                                                           117
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+Cruz-Pichardo, I. M., & Cabero-Almenara, J. (2020). Una experiencia gamificada en el
+      aprendizaje de los triángulos en geometría: grado de aceptación de la
+      tecnología. [A gamified experience in learning triangles in geometry: degree of
+      acceptance of technology]. Revista Prisma Social, (30), 65-87. Recuperado de:
+      https://revistaprismasocial.es/article/view/3744
+
+Díez, J., Bañeres, D. & Serra, M. (2017). Experiencia de gamificación en Secundaria en
+       el Aprendizaje de Sistemas Digitales. [Gamification experience in Secondary in
+       Learning Digital Systems]. Education in the Knowledge Society (EKS), 18(2), 85-
+       105. DOI: https://dx.doi.org/10.14201/eks201718285105
+
+Farias, D. & Pérez, D. (2010). Motivación en la Enseñanza de las Matemáticas y la
+       Administración. [Motivation in the Teaching of Mathematics and Administration].
+       Formación universitaria, 3, 33-40. DOI: https://dx.doi.org/10.4067/S0718-
+       50062010000600005.
+
+García, F., Valls, C. & Gisbert, M. (2018). Diseño e implementación de un cambio
+      metodológico en el ámbito científico mediante la gamificación y el modelo de las
+      5E.[Design and implementation of a methodological change in the scientific field
+      through gamification and the 5E model]. Edutec. Revista Electrónica de
+      Tecnología             Educativa,          (66),           65-78.          DOI:
+      https://dx.doi.org/10.21556/edutec.2018.66.1187
+
+García, M. y Neira, R. (2017). Análisis para la gamificación de un curso de Formación
+      Profesional. [Analysis for the gamification of a Professional Training course]. IE
+      Comunicaciones: Revista Iberoamericana de Informática Educativa, (26), 46-60.
+      Recuperado de: https://scholar.google.com/citations?user=fSjuppYAAAAJ&hl=en
+
+Genial.ly (2020). Genially, the Tool for Bringing Your Content to Life. Genially.
+      Recuperado de http://bit.ly/2LugiCW
+
+Gilbert, R. & Sarah, A. (1982). El ordenador en la escuela. [ The computer at school]
+       Perspectiva: revista trimestral de educación, (12), 4 - Unesco Digital Library. DOI:
+       https://bit.ly/35CwOYG.
+
+González, E., García, D., Erazo, C. & Erazo, J. (2020). Khan Academy: Estrategia
+     metodológica para el aprendizaje de las gráficas de funciones trigonométricas. [
+     Methodological strategy for learning the graphs of trigonometric functions]
+     EPISTEME               KOINONIA,          3(6),          78-101.           DOI:
+     https://dx.doi.org/10.35381/e.k.v3i6.816
+
+                                                                                                        118
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+Hamari, J., Koivisto, J. & Sarsa, H. (2014). Does Gamification Work? A Literature Review
+     of Empirical Studies on Gamification. 2014 47th Hawaii International Conference
+     on System Sciences, Waikoloa, HI, USA, 2014, 3025-3034. DOI:
+     https://dx.doi.org/10.1109/HICSS.2014.377
+
+Hammer, J. & Lee, J. (2011). Gamification in Education: What, How, Why Bother?
+    Academic Exchange Quarterly,15, 1-5.
+
+Holguín-García, F.; Holguín-Rangel, E.; & García-Mera, N. (2020). Gamificación de la
+      enseñanza de las matemáticas: una revisión sistemática. [Gamification of
+      mathematics teaching: a systematic review]. Telos: revista de Estudios
+      Interdisciplinarios  en   Ciencias    Sociales,    22    (1),  62-75.    DOI:
+      www.doi.org/10.36390/telos221.05
+
+Kuzmina, N. V. (1970). Metódicas investigativas de la actividad pedagógica. [Investigative
+     methods of pedagogical activity ]. Moscú, Rusia: Editorial Leningrado.
+
+Instituto Nacional de Estadísticas y Censos. (2017). Encuesta Multipropósito.
+        [Multipurpose Survey]. Recuperado de www.inec.gob.ec
+
+Macanchí-Pico, M., Bélgica Marlene O.., & Campoverde-Encalada, M. (2020). Innovación
+     educativa, pedagógica y didáctica. Concepciones para la práctica en la Educación
+     Superior. [Educational, pedagogical and didactic innovation. Conceptions for
+     practice in Higher Education]. Universidad y Sociedad, 12(1), 396-403.
+
+Mallitasig, A. & Freire, T. (2020). Gamificación como técnica didáctica en el aprendizaje
+       de las Ciencias Naturales. [Gamification as a didactic technique in the learning of
+       Natural Sciences]. INNOVA Research Journal, 5(3), 164-81. DOI:
+       https://dx.doi.org/10.33890/innova.v5.n3.2020.1391.
+
+Ministerio de Educación del Ecuador (2020). Pasa la voz. [Spread the word]. Recuperado
+       de: https://educacion.gob.ec/pasa-la-voz/.
+
+Mora, M. y Camacho, J. (2019). Classcraft: inglés y juego de roles en el aula de educación
+      primaria. [Classcraft: English and Role Play in the Primary Education Classroom]
+      Apertura            (Guadalajara,         Jal.).11(1),          56-73.          DOI:
+      https://dx.doi.org/10.32870/ap.v11n1.1433.
+
+
+
+
+                                                                                                        119
+
+                                                EPISTEME KOINONIA
+                   Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                        Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                        Hecho el depósito de Ley: FA2018000022
+                                                    ISSN: 2665-0282
+                                            FUNDACIÓN KOINONIA (F.K).
+                                             Santa Ana de Coro, Venezuela
+
+
+                  Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+Navarro, G. (2017). Tecnologías y nuevas tendencias en educación: aprender jugando.
+      El caso de Kahoot. [Technologies and new trends in education: learning by playing.
+      The case of Kahoot]. Opción: Revista de Ciencias Humanas y Sociales, (83), 252-
+      77.
+
+Prieto M., Díaz, D., Sanz, M. & Reyes, E. (2014). Experiencias de aplicación de
+       estrategias de gamificación a entornos de aprendizaje universitario. [Experiences
+       of applying gamification strategies to university learning environments] ReVisión,
+       7(2), 7. DOI: https://bit.ly/2L2Mf4R
+
+Reglamento General a la Ley Orgánica de Educación Intercultural. (2017). Ley orgánica
+     de Educación Intercultural. [Organic Law of Intercultural Education]. Recuperado
+     de https://bit.ly/3oNRnYJ
+
+Rodríguez-Cepeda, R. (2018) Los modelos de aprendizaje de Kolb, Honey y Mumford:
+      implicaciones para la educación en ciencias. [Kolb, Honey, and Mumford's Models
+      of Learning: Implications for Science Education]. Sophia 14(1); 51-64. DOI:
+      http://dx.doi.org/10.18634/sophiaj.14v.1i.698
+
+Sánchez, D., Langer, M. & Kaur, R. (2020). Gamification in the Classroom: Examining the
+     Impact of Gamified Quizzes on Student Learning. Computers & Education, 144,
+     103666. doi: https://dx.doi.org/10.1016/j.compedu.2019.103666
+
+Torres, A., Romero, L., Amor, M. y Björk, S. (2018). Modelo Teórico Integrado de
+      Gamificación en Ambientes E-Learning (E-MIGA). [Integrated Theoretical Model of
+      Gamification in E-Learning Environments (E-MIGA)]. Revista Complutense de
+      Educación, 29(1), 129-45. doi: https://dx.doi.org/10.5209/RCED.52117.
+
+Unesco. (2014). Enseñanza y aprendizaje: Lograr la calidad para todos. [Teaching and
+     Learning: Achieving Quality for All]. París, Francia: Organización de las Naciones
+     Unidas         para         la          Educación.         Recuperado          de:
+     https://unesdoc.unesco.org/ark:/48223/pf0000225654_spa
+
+Valda, F. & Arteaga, C. (2015). Diseño e implementación de una estrategia de
+      gamificacion en una plataforma virtual de educación. [Design and implementation
+      of a gamification strategy in a virtual education platform]. Fides et Ratio - Revista
+      de Difusión cultural y científica de la Universidad La Salle en Bolivia, 9(9), 65-80.
+      doi: http://bit.ly/3nIY79Y.
+
+
+
+                                                                                                        120
+
+                                                      EPISTEME KOINONIA
+                         Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes
+                                              Año IV. Vol IV. N°7. Enero – Junio. 2021
+                                              Hecho el depósito de Ley: FA2018000022
+                                                          ISSN: 2665-0282
+                                                  FUNDACIÓN KOINONIA (F.K).
+                                                   Santa Ana de Coro, Venezuela
+
+
+                        Danny Rafael Rosero-Guanotásig; Ricardo Patricio Medina-Chicaiza
+
+
+
+
+©2021 por los autores. Este artículo es de acceso abierto y distribuido según los términos y condiciones de la licencia
+         Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)
+                                (https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+
+
+
+                                                                                                                  121

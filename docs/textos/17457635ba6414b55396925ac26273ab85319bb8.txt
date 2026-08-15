@@ -1,0 +1,561 @@
+REVISTA PERSPECTIVAS
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661                              REVISTA PERSPECTIVAS
+
+
+        ANÁLISIS DE DATOS PARA LA OPTIMIZACIÓN
+         EFICIENTE DE HORARIOS Y APRENDIZAJE
+                      AUTOMÁTICO
+       Data analysis for efficient schedule optimization and Machine
+                                   Learning
+
+                       Rogelio Escobedo Mitre 1                  isc.rogelio.em@tectijuana.edu.mx
+                       Ángeles Quezada Cisnero 2                 angeles.quezada@tectijuana.edu.mx
+                       Bogart Yair Marquez Lobato            3   bogart@tectijuana.edu.mx
+                       Arnulfo Alanis Garza 4                    alanis@tectijuana.edu.mx
+
+                       1, 2, 3, 4
+                                    Tecnológico Nacional de México (Instituto Tecnológico de Tijuana)
+
+
+
+
+ RESUMEN
+En los últimos años, la integración de técnicas                     optimización, algoritmos de agrupamiento
+de aprendizaje automático (AP), en los sistemas                     o clasificación, algoritmos genéticos u otros
+de gestión escolar ofrece varias oportunidades                      enfoques de aprendizaje automático que puedan
+para mejorar la eficiencia y la toma de decisiones                  adaptarse al problema específico.
+en el ámbito educativo. Al aplicar el AP en
+la educación, se pueden obtener beneficios                          Palabras Clave: aprendizaje            automático,
+significativos. Sin embargo, es importante tener                    automatización, horarios.
+en cuenta que la integración exitosa de técnicas
+de AP en los sistemas de gestión escolar requiere                      ABSTRACT
+una infraestructura de datos sólida, la recopilación
+adecuada de datos y la consideración de cuestiones                  In recent years, the integration of machine learning
+éticas y de privacidad. Además, el AP no debe                       (ML) techniques into school management systems
+reemplazar la interacción humana en la educación,                   offers several opportunities to enhance efficiency
+sino complementarla y mejorarla, brindando a los                    and decision-making in the educational field.
+educadores y estudiantes herramientas adicionales                   Applying ML in education can yield significant
+para el éxito educativo. Debido al incremento                       benefits. However, it is important to note that
+en la retícula de la carrera de Ingeniería en                       the successful integration of ML techniques into
+Sistemas Computacionales es necesario llevar a                      school management systems requires a robust
+cabo una predicción más confiable y de manera                       data infrastructure, proper data collection, and
+automática de los horarios por semestre. Para                       consideration of ethical and privacy issues.
+abordar el problema de generación de horarios                       Furthermore, ML should not replace human
+de manera manual, se llevó a cabo un análisis                       interaction in education but rather complement
+exhaustivo del proceso existente. Esto implica                      and improve it by providing educators and
+recopilar información relevante sobre cómo se                       students with additional tools for educational
+realiza actualmente la generación de horarios por                   success. Due to the increased complexity in the
+semestre en la institución educativa. Se estudio el
+                                                                    curriculum of the Computer Systems Engineering
+enfoque actual utilizado para generar los horarios,
+                                                                    program, it is necessary to carry out a more
+además analizar los problemas y las limitaciones
+                                                                    reliable and automated prediction of semester
+asociadas al proceso manual. Se investigarán
+diferentes técnicas de Machine Learning que                         schedules. To address the manual scheduling
+podrían aplicarse al problema de generación                         generation problem, a comprehensive analysis
+de horarios. Esto podría incluir algoritmos de                      of the existing process was conducted. This
+
+
+Fecha de Recepción: 23/nov/2023. Fecha de Aceptación: 01/mar/2024 DOI: https://doi.org/10.47187/perspectivas.6.2.223
+
+
+                                                                                                                      37
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661                REVISTA PERSPECTIVAS
+
+
+involved gathering relevant information on how
+                                                        estudiantes, utilizando algoritmos de regresión y
+semester schedules are currently generated in the
+                                                        clasificación para identificar factores que influyen
+educational institution. The current approach used
+                                                        en el éxito o fracaso escolar. Otros trabajos han
+for scheduling was studied, along with an analysis
+                                                        abordado la optimización de la planificación de
+of the problems and limitations associated with the
+manual process. Various ML techniques that could        horarios, aplicando algoritmos de agrupamiento
+be applied to the scheduling generation problem         y programación lineal para asignar eficientemente
+were investigated. This could include optimization      recursos y minimizar conflictos [3] [4].
+algorithms, clustering or classification algorithms,
+genetic algorithms, or other machine learning           Además, se han desarrollado sistemas de
+approaches that can be adapted to the specific          recomendación de asignaturas y cursos, utilizando
+problem.                                                técnicas de filtrado colaborativo y análisis de
+                                                        contenido para sugerir opciones académicas
+Keywords:      Machine     learning,    automation,     adaptadas a las preferencias y habilidades de cada
+schedules.                                              estudiante [5] [6].
+
+                 I. Introducción                        En universidades como Waterloo han desarrollado
+En los últimos años, el avance de la tecnología ha      un sistema que se basa en una filosofía "dirigida por
+transformado muchos aspectos de nuestra sociedad,       la demanda", donde los estudiantes eligen primero
+y el ámbito educativo no ha sido una excepción.         sus cursos y el sistema intenta encontrar el mejor
+La integración de técnicas de Aprendizaje               horario para maximizar el número de solicitudes
+Automático (Machine Learning) en los sistemas           satisfechas donde el problema se descompone
+de gestión escolar ha surgido como una solución         en subproblemas manejables que se resuelven
+prometedora para mejorar la eficiencia y la toma        secuencialmente utilizando una heurística ávida
+de decisiones en las instituciones educativas [1]       para asignar horarios a secciones y un algoritmo
+[2].                                                    de relajación lagrangiana para asignar aulas, sin
+                                                        embargo la asignación de profesores no se hace
+En la actualidad, las instituciones educativas          automática a las secciones de los cursos; ese
+se enfrentan a desafíos constantes en la gestión        proceso generalmente se realiza manualmente con
+y organización de sus actividades académicas.           antelación [18].
+El seguimiento y análisis manual de datos
+estudiantiles, la planificación de horarios y la        Se sabe, con antelación, que la situación de
+adaptación de los programas educativos a las            horarios automáticos no es una situación nueva,
+necesidades individuales de los estudiantes son         y tampoco algo esporádico, ya que universidades
+tareas que demandan un tiempo considerable y            como Don Bosco ya que es sabido que el proceso de
+pueden resultar propensas a errores.                    elaboración de horarios académicos sigue siendo
+                                                        realizado de manera manual, ya que personal
+A su vez la falta de atención en la programación        docente y administrativo se reúne previo al inicio
+de horarios en instituciones de educación básica        del período a iniciar para analizar en detalle
+y media, resalta la importancia de considerar           las estadísticas relacionadas con la población
+cuándo es más propicio el aprendizaje, a diferencia     estudiantil, el cuerpo docente y las instalaciones
+de la programación de horarios universitarios, la       disponibles. Este análisis tiene como objetivo
+programación de horarios escolares se centra en         principal la creación de horarios que permitan una
+las clases y no en los estudiantes [17].                gestión eficiente de los recursos institucionales
+                                                        [19].
+En la literatura científica y en la industria, se han
+realizado avances significativos en el desarrollo de    La programación de horarios académicos plantea
+sistemas de gestión escolar basados en Aprendizaje      un desafío particular que reside en la problemática
+Automático. Algunos estudios se han centrado en         más amplia de la asignación de recursos. En la
+la predicción del rendimiento académico de los          comunidad científica, se conoce este desafío
+
+
+
+
+38
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661                     REVISTA PERSPECTIVAS
+
+
+como el "Problema de Programación de Horarios           se les suministra más información.
+Universitarios". Este tipo de problemas implica
+la generación de horarios para tareas específicas,      Ciclo de vida del ML. Existe un ciclo básico para
+con el objetivo de cumplir de manera óptima con         poder realizar proyectos de machine learning,
+condiciones y requisitos particulares. A lo largo       como se muestra en la Figura 1.
+del tiempo, se han abordado estos problemas de
+programación de horarios utilizando diversos            Figura 1
+enfoques, tales como algoritmos basados en la           Componentes de ML
+Colonia de Hormigas, Búsqueda Tabú, Coloreo de
+Grafos y Algoritmos Genéticos, entre otros [20].
+
+En este contexto, el presente proyecto de análisis
+                                                        Fuente: Elaboración propia (imagen de referencia tomada de https://
+de datos para la optimización eficiente de horarios     keepcoding.io/blog/ciclo-de-vida-de-un-proyecto-en-machine-learning/)
+y aprendizaje automático tiene como objetivo
+abordar estas problemáticas para ofrecer una
+solución integral y adaptada a la carrera de                II. II. Principales algoritmos de ML
+Ingeniería en Sistemas Computacionales, que
+permita optimizar la gestión académica con              Algoritmo de aprendizaje supervisado
+respecto a la cantidad de materias abiertas por
+semestre para mejorar la oferta académica para          El algoritmo de aprendizaje supervisado es una
+estudiantes de tal forma que se brinde un mejor         técnica de ML en la que se utilizan conjuntos
+rendimiento en el avance reticular. A través de         de datos etiquetados para entrenar un modelo
+un enfoque innovador y personalizado, se busca          y realizar predicciones sobre nuevos datos no
+establecer una base sólida para la transformación       etiquetados. Este tipo de algoritmo se basa en la idea
+de las prácticas educativas y sentar las bases para     de que existe una relación entre las características
+futuros avances en la gestión escolar impulsada         o variables de entrada y una variable de salida
+por la inteligencia artificial                          deseada, y el objetivo es aprender esta relación a
+                                                        partir de los datos de entrenamiento [9].
+
+          II. Conceptos relacionados                    Los algoritmos más utilizados en el aprendizaje
+   II. I. Aprendizaje Automático                        supervisado incluyen árboles de decisión,
+                                                        clasificación de Naive Bayes Ingenuo, regresión
+El aprendizaje automático, conocido como Machine        por mínimos cuadrados, regresión logística,
+Learning en inglés (ML), es una disciplina dentro       métodos de ensamble y Máquinas de Soporte
+del campo de la inteligencia artificial que se centra   Vectorial por sus siglas en inglés SVM (support
+en el desarrollo de algoritmos y modelos capaces        vector machines). Cada algoritmo tiene sus propias
+de aprender y mejorar automáticamente a través          ventajas y desventajas, y su elección dependerá del
+del análisis de datos. Estos algoritmos tienen la       problema específico y los datos disponibles.
+capacidad de identificar patrones complejos y
+realizar predicciones o tomar decisiones basadas        Árboles de decisión:
+en ellos, sin requerir una programación específica
+para cada tarea [7]. El aprendizaje automático se       Los árboles de decisión son ampliamente utilizados
+basa en principios estadísticos y computacionales,      en el análisis de datos y la toma de decisiones
+utilizando técnicas que permiten a las máquinas         automatizada, ya que son fáciles de interpretar
+procesar y analizar grandes volúmenes de datos          y pueden manejar conjuntos de datos grandes y
+con el fin de extraer información relevante.            complejos. Además, son una base importante para
+Al utilizar estos datos, los algoritmos pueden          algoritmos más avanzados, como Random Forests
+descubrir relaciones y regularidades ocultas, lo        y Gradient Boosting, que combinan múltiples
+que les permite aprender y adaptarse a medida que       árboles de decisión para mejorar su rendimiento
+
+
+
+
+                                                                                                                           39
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661               REVISTA PERSPECTIVAS
+
+
+predictivo. [11]                                       soluciones informáticas que permiten automatizar
+                                                       y simplificar estos procesos.
+Clasificador Bayesiano Ingenuo (Naive Bayes):
+                                                       En cuanto al desarrollo del contexto de
+Es un algoritmo de clasificación en el campo del       intervención, es importante mencionar que existen
+aprendizaje automático y la minería de datos.          diferentes sistemas de gestión escolar disponibles
+Este clasificador se basa en el teorema de Bayes       en el mercado. Sin embargo, la implementación
+y asume que las características (o variables) que      de técnicas de aprendizaje automático (machine
+se utilizan para la clasificación son independientes   learning) en este tipo de sistemas es una tendencia
+entre sí, lo que se conoce como una suposición         emergente que ofrece ventajas adicionales.
+"ingenua (naive)" [12].
+                                                       El Análisis de datos propuesto para la optimización
+Regresión por mínimos cuadrados:                       eficiente de horarios utilizará técnicas de
+                                                       aprendizaje automático para analizar y procesar
+Es un método estadístico utilizado para modelar        los datos relacionados con la gestión académica y
+la relación entre una variable dependiente (o          administrativa de una institución educativa.
+respuesta) y una o más variables independientes
+(o predictores) en un conjunto de datos. El objetivo   El proyecto de Análisis de datos para la
+principal de la regresión por mínimos cuadrados        optimización eficiente de horarios y Aprendizaje
+es encontrar una ecuación o modelo que minimice        Automático busca abordar esta problemática,
+la suma de los cuadrados de las diferencias entre      ofreciendo una solución innovadora y eficiente
+los valores observados y los valores predichos por     para mejorar la gestión y el rendimiento de
+el modelo. En otras palabras, se busca ajustar una     las instituciones educativas. Al aprovechar las
+línea o una superficie de manera que se minimice       capacidades del machine learning, se espera que
+la suma de los errores cuadrados. [13]                 el sistema pueda proporcionar análisis predictivos
+                                                       y recomendaciones basadas en datos, permitiendo
+Regresión logística:                                   a las instituciones educativas tomar decisiones
+                                                       informadas y mejorar su eficacia.
+Es un método estadístico y un modelo de
+regresión utilizado para analizar la relación entre    En resumen, el contexto de intervención del
+una variable binaria dependiente (es decir, una        proyecto se enmarca en la necesidad de modernizar
+variable que toma dos valores, típicamente 0 y 1) y    y optimizar la gestión escolar a través del uso de
+una o más variables independientes. A diferencia       técnicas de machine learning. Con el objetivo de
+de la regresión lineal, que se utiliza para predecir   superar los desafíos y limitaciones de los sistemas
+valores continuos, la regresión logística se           tradicionales, el proyecto busca ofrecer una
+emplea para problemas de clasificación, como la        solución innovadora que mejore la eficiencia, la
+predicción de la probabilidad de pertenecer a una      toma de decisiones y el rendimiento general de las
+de las dos categorías [14].                            instituciones educativas.
+
+                                                       Se llevarán a cabo diversas actividades durante el
+                   III. Propuesta                      desarrollo del proyecto. Estas actividades incluirán
+Debido al avance de la tecnología el desarrollo de     la recopilación y análisis de datos relevantes, la
+sistemas de gestión escolar ha sido una respuesta      identificación de los requerimientos específicos
+a la necesidad de optimizar la administración y        de nuestra institución educativa, específicamente
+el manejo de la información en las instituciones       en el departamento de Sistemas y Computación
+educativas. Tradicionalmente, estas tareas se          y de la carrera de Ingeniería en sistemas
+realizaban de manera manual y consumían una            computacionales, la creación de algoritmos de
+gran cantidad de tiempo y recursos. Sin embargo,       machine learning adaptados a las necesidades del
+con el avance de la tecnología, se han desarrollado    sistema de gestión escolar, y la implementación
+
+
+
+
+40
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661                 REVISTA PERSPECTIVAS
+
+
+de un entorno de prueba para validar y ajustar la        estudiantil.
+solución propuesta.
+                                                         Además, se consideró el periodo de ingreso de
+                                                         los estudiantes, dividiéndolo en dos categorías:
+                     IV. Metodología                     aquellos que ingresaron en el primer semestre
+En la Figura 2 se describe el proceso metodológico,      del año (enero-junio) y aquellos que lo hicieron
+llevado a cabo en esta investigación, el cual            en el segundo semestre (agosto-diciembre). Esta
+consiste en los siguientes pasos: definición de la       división se basó en la suposición de que el contexto
+muestra, obtención de datos, análisis de datos y         académico podría variar según el momento en
+presentación de los datos.                               que los estudiantes comenzaron su formación,
+                                                         lo que podría influir en su rendimiento y en sus
+Figura 2                                                 experiencias educativas.
+Proceso metodológico de la investigación
+                                                         El rendimiento académico de los estudiantes
+                                                         también se convirtió en un criterio de estratificación
+Fuente: Elaboración propia.                              crucial. Se categorizaron los estudiantes en función
+                                                         de su desempeño académico, considerando
+    IV.I. Definición de la muestra                       aspectos como el promedio de calificaciones, la
+                                                         tasa de aprobación y otras métricas relacionadas.
+En este proyecto, se utilizó un muestreo estratificado   Esta estratificación permitió analizar si existían
+para seleccionar los periodos que formaron parte del     diferencias significativas en el rendimiento de los
+estudio diagnóstico. La muestra fue seleccionada         estudiantes en función de sus logros previos.
+considerando la
+                                                            IV.II. Obtención de datos
+información con la que se cuenta con respecto
+a las bases de datos almacenadas, considerando           El análisis de datos es una parte crucial en la
+también diferentes estratos relevantes para el           toma de decisiones informadas, y la calidad
+estudio, como, por ejemplo, semestre cursado del         de la información utilizada es esencial para
+alumnado, periodo de ingreso del mismo (enero-           obtener resultados precisos. En este contexto,
+junio o agosto-diciembre), rendimiento académico,        la información utilizada se obtuvo de múltiples
+entre otros.                                             fuentes, principalmente de fuentes primarias. La
+                                                         fuente principal de datos en este caso fue el Sistema
+El proceso de selección de la muestra fue ejecutado      de Información Escolar (SIE). Este sistema, que
+de manera cuidadosa. En particular, se puso un           actúa como un repositorio central de información
+énfasis especial en la información contenida en          relacionada con cuestiones académicas y de
+las bases de datos institucionales, contenidas en        planificación educativa, proporcionó una base
+el sistema escolar desde 11 años atrás y las bases       sólida para el análisis.
+de datos almacenadas y procesadas en archivos
+de Excel, las cuales se convirtieron en una fuente       Un aspecto importante a destacar es el acceso
+invaluable de datos para llevar a cabo este estudio.     directo a los horarios almacenados en el sistema SIE.
+                                                         Esto permitió una recopilación de datos eficiente
+Uno de los principales criterios utilizados para la      y precisa, ya que los horarios son componentes
+estratificación de la muestra fueron los semestres       esenciales para el análisis, especialmente en un
+cursados por el alumnado, tomando como base las          entorno educativo. El acceso a estos datos en tiempo
+cantidades de materias ofertadas por semestre y la       real y de manera directa garantizó la integridad y
+cantidad de alumnos que tomaron dichas materias.         actualidad de la información utilizada.
+De esta manera, se aseguró que cada estrato de
+semestre estuviera representado en la muestra en         Además, para contar con un panorama más completo
+proporción a su importancia relativa en la población     y para rastrear tendencias y patrones a lo largo del
+
+
+
+
+                                                                                                             41
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661                  REVISTA PERSPECTIVAS
+
+
+ tiempo, se aprovecharon los archivos de Excel que        relacionan entre sí.
+ contenían el historial de horarios recopilados y
+ actualizados semestre tras semestre. Estos archivos      Por último, se llevaron a cabo comparaciones
+ históricos proporcionaron una perspectiva a largo        minuciosas entre grupos o categorías de datos
+ plazo y permitieron evaluar la evolución de los          para identificar diferencias significativas. Estas
+ horarios y su impacto en la planificación educativa.     comparaciones se llevaron a cabo siguiendo un
+                                                          enfoque estadístico sólido, lo que permitió obtener
+ En resumen, el análisis de datos se basó en una sólida   conclusiones fundamentadas y relevantes.
+ combinación de fuentes primarias, incluyendo el
+ sistema SIE, la colaboración del departamento            En la figura 2 se muestra la información de grupos
+ de servicios escolares, el acceso a los horarios         por semestre y periodo, en la que se pueden
+ en tiempo real y el uso de archivos históricos en        observar las cantidades de grupos creadas a partir
+ formato Excel.                                           de la información recopilada:
+
+ A continuación, se presenta una representación de        Figura 4
+ los horarios correspondientes al periodo académico       Tabla comparativa del historial de materias abiertas
+ AGO-DIC 2023, junto con la estructura utilizada          por semestre a lo largo de un periodo 7 años.
+ por el sistema para generar y formatear los informes
+ que sirven como fundamento para su posterior
+ archivo en formato Excel, como se muestra en la
+ figura 2.
+
+Figura 3
+Concentrado de materias, indicando el catedrático
+asignado, así como grupo, horario y aula
+                                                                      V. Presentación de los datos
+
+                                                          Para poder visualizar mejor la información y poder
+                                                          hacer un análisis estadístico se generaron tablas en
+Fuente: Elaboración propia.
+                                                          Excel, así como gráficas para poder visualizar de
+                                                          forma clara y precisa dicha información generada
+     IV.III. Obtención de datos                           durante el análisis de datos.
+
+ La información se ha sometido a un proceso de            Durante la fase de presentación de resultados, se ha
+ organización, con el objetivo de crear una estructura    puesto un fuerte énfasis en la creación de informes
+ coherente que facilite el análisis. Esta organización    que destaquen de manera clara y concisa los
+ se ha llevado a cabo utilizando diversas herramientas    hallazgos esenciales obtenidos a través del análisis.
+ y técnicas, como tablas, hojas de cálculo y otros        Estos informes se han estructurado de manera que
+ formatos apropiados para asegurar que los datos          sean fácilmente accesibles y comprensibles para los
+ sean de fácil acceso y comprensión.                      interesados y partes involucradas en el proyecto.
+
+ Para profundizar en el análisis, se realizó un           En particular, para mejorar la visualización de
+ estudio de correlación entre las variables presentes     los datos y permitir un análisis estadístico más
+ en el conjunto de datos. Esta fase fue esencial          efectivo, se ha llevado a cabo la creación de tablas
+ para identificar las relaciones y dependencias           en formato Excel. Estas tablas han sido diseñadas
+ entre las variables. Para lograrlo, se emplearon         con precisión y han sido organizadas de manera
+ técnicas avanzadas, como la matriz de correlación        lógica, lo que facilita la revisión de los datos y
+ y gráficos de dispersión, que proporcionaron             la realización de cálculos estadísticos cuando es
+ una visión más clara de cómo las variables se            necesario.
+
+
+
+
+42
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661                REVISTA PERSPECTIVAS
+
+
+Además, se han creado gráficos y visualizaciones        La gráfica nos muestra la cantidad de grupos
+adecuadas para representar visualmente la               por semestre que se proyectaron en el periodo
+información generada durante el análisis de             enero-junio y agosto diciembre 2022, con esta
+datos. Estas representaciones visuales permiten         información se genera la proyección de grupos para
+una comprensión más rápida e intuitiva de los           el semestre enero-junio 2023, iniciando el primer
+patrones, tendencias y relaciones presentes en          semestre hasta el noveno. Con esta información se
+los datos. Se ha prestado especial atención a la        puede proyectar la cantidad de grupos que deberán
+claridad y la precisión en la presentación de estos     ofertarse tomando en consideración los grupos de
+gráficos, asegurando que sean herramientas              alumnos que estén en situación normal en cuanto a
+efectivas para comunicar los resultados a las           su carga académica, así como alumnos que tengan
+partes interesadas.                                     alguna materia reprobada.
+
+En resumen, se ha realizado un esfuerzo                 Figura 5
+significativo en la generación de informes que          Comparativo de cantidad de materias abiertas por
+simplifican la comunicación de los hallazgos clave,     semestre en el año 2022
+aprovechando gráficos, tablas y visualizaciones
+apropiadas. El objetivo final es proporcionar una
+plataforma sólida para la toma de decisiones
+basadas en datos y garantizar que los resultados
+del análisis sean fácilmente accesibles y
+comprensibles para todos los involucrados.
+
+La información con la que se trabajó para poder
+realizar el proceso de análisis y evaluación de los
+periodos desde 2012 se obtuvo del programa SIE
+y se trabajó directamente en una hoja de cálculo
+donde se ordenó la información de tal forma que                           V. Resultados
+se pueda visualizar y trabajar para próximos            Posterior al análisis y procesamiento de la
+semestres.                                              información los datos obtenidos de la sección
+                                                        anterior se procedieron a utilizar herramientas
+Primero, se debe observar cuántos grupos en             como Box Plot para generar diagramas de caja y
+total del primer semestre del periodo inmediato         bigotes, ya que con esta herramienta gráfica nos
+anterior. Enseguida se evalúa el segundo semestre       permite visualizar la distribución y las estadísticas
+del mismo periodo para analizar cuántos posibles        resumidas de un conjunto de datos. por lo tanto, es
+repetidores serán candidatos a tomar las mismas         muy útil para identificar la simetría, la dispersión
+materias del semestre en el que se requiere trabajar.   y la presencia de valores atípicos en un conjunto de
+Posteriormente se evalúa el segundo semestre del        datos de una manera visual y puede proporcionar
+año inmediato anterior de tal forma que se pueda        una comprensión rápida de la distribución de
+ver el avance y las diferencias/similitudes que se      los datos sin necesidad de una representación
+pueden presentar, tomando en cuenta el periodo de       detallada de cada punto de datos.
+ingreso de los jóvenes (ingreso directo en agosto,
+o ingreso posterior al semestre propedéutico).          Para lograr una proyección más precisa de la
+                                                        cantidad de materias a abrir por semestre, se utilizó
+Después de analizar los periodos de cada semestre       la herramienta de Box Plot, donde se analizó la
+se muestra la cantidad de grupos, por semestre,         trayectoria desde agosto de 2012 hasta enero de
+de 3 periodos consecutivos, que son los que se          2023, abarcando 22 semestres consecutivos, es
+requiere analizar para poder tomar las decisiones       decir, un historial de 11 años. Esto nos permite
+pertinentes para el siguiente semestre, como se         obtener un promedio de la cantidad de materias a
+muestra en la Figura 4.                                 abrir por semestre.
+
+
+
+
+                                                                                                           43
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661               REVISTA PERSPECTIVAS
+
+
+Con los datos recopilados para el segundo semestre,    Figura 8
+se obtuvo que existe un rango mínimo de 14             Exploración de datos
+grupos y un máximo de 32 grupos. La herramienta
+utilizada arroja un promedio de 22.5 grupos, con
+una variación de más o menos 4 grupos por período,
+como se muestra en la figura 4.
+
+Figura 6
+Diagrama caja y bigotes
+
+
+                                                       El modelo de aprendizaje automático fue entrenado
+                                                       utilizando la técnica de Random Forest, la cual
+                                                       ha demostrado ser altamente eficaz en la tarea de
+                                                       predecir y recomendar configuraciones de grupos
+Posteriormente se utilizó la herramienta Python        y horarios.
+para el desarrollo de un módulo que muestre en
+pantalla el resultado del análisis de la información   El modelo generó proyecciones basadas en la
+proporcionada. El despliegue de la plataforma          información de entrada y los resultados se extrajeron
+se inició con la incorporación de las librerías        en un formato CSV. Estas proyecciones ofrecieron
+esenciales. La incorporación de Pandas, Random         recomendaciones de alto valor para la planificación
+Forest y Numpy, conocidas por su profunda              de grupos estudiantiles.
+capacidad y funcionalidad, sentaron las bases
+sólidas sobre las cuales se construyó el marco de      Figura 9
+trabajo. Estas bibliotecas desempeñan un rol de        Predicciones.
+importancia crítica en las fases de procesamiento,
+análisis y modelado de los datos, asegurando la
+robustez y efectividad de todo el sistema.
+
+La subsiguiente etapa implicó la transferencia de
+datos al sistema. Se procedió a la importación de
+conjuntos de datos preexistentes que albergaban
+información pertinente a cursos, horarios de clases,
+capacidad de aulas y la demanda estudiantil.
+
+Figura 7
+Cargado de datos.
+
+
+
+
+                                                             VI. Conclusiones y trabajo futuro
+Con el fin de obtener un conocimiento más              En esta investigación, se aborda el proceso de
+profundo de los datos, se llevó a cabo un análisis     generación de horarios por semestre para la carrera
+exploratorio exhaustivo. Durante este proceso, se      de Ingeniería en Sistemas Computacionales.
+identificaron patrones y tendencias significativas     Actualmente, este proceso se realiza de manera
+que contribuyeron a una comprensión más clara de       manual al final de cada semestre con el objetivo
+las necesidades y preferencias de la institución con   de proyectar la cantidad de grupos que se deben
+respecto a la distribución de grupos y horarios.       habilitar para el siguiente periodo académico.
+
+
+
+
+44
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661              REVISTA PERSPECTIVAS
+
+
+Aunque hasta ahora el proceso manual ha brindado             REDI, pp. 131-134, 2016.
+un pronóstico confiable, requiere una cantidad        [4]    A. D. Luca, «Uso de la Técnica de Transfer
+significativa de horas hombre para llevarlo a cabo.          Learning en Machine Learning para la
+                                                             Clasificación de Productos en el Banco
+Para resolver este desafío y mejorar la eficiencia           Alimentario de La Plata,» SEDICI, pp.
+del proceso de generación de horarios, se puede              1-16, 2021.
+considerar la aplicación de técnicas de aprendizaje   [5]    B. A. A. BENITEZ, GENERACION DE
+automático.                                                  HORARIOS MEDIANTE SISTEMAS,
+                                                             México, D.F.: Instituto Politécnico
+El desarrollo de sistemas de software para                   Nacional. Centro de Investigación en
+resolver este problema siempre es de alto valor.             Computación, 2007.
+Una herramienta propuesta en esta investigación       [6]    E. B. Cañón, «Modelo predictivo del
+es generar los horarios de manera automática                 progreso en el aprendizaje de los estudiantes
+usando aprendizaje automático, como lo es un                 de uniminuto aplicando técnicas de machine
+algoritmo de aprendizaje supervisado. Como                   learning,» de Scielo, Mexico, 2021.
+sabemos la matrícula de la carrera de Sistemas        [7]    D. Hinestroza Ramírez, «El Machine
+Computacionales ha estado en constante                       Learning a través de los tiempos, y los
+crecimiento por tal motivo es necesario que se               aportes a la humanidad,» Universidad
+automatice este proceso.                                     Libre, pp. 1-17, 2019.
+                                                      [8]    keepcoding, «keepcoding.io,» 2 diciembre
+Como trabajo futuro se llevará a cabo el uso de              2022. [En línea]. Available: https://
+técnicas de aprendizaje supervisado como lo es el            keepcoding.io/blog/ciclo-de-vida-de-un-
+uso de algoritmos de clasificación de bayes ingenuo          proyecto-en-machine-learning/.
+(Naïve Bayes), para que con esas técnicas se lleve    [9]    O. Simeone, «A Very Brief Introduction
+a cabo el aprendizaje y se haga la predicción                to Machine Learning With Applications to
+de manera automática con la información que                  Communication Systems,» de IEEE, 2018.
+actualmente nos proporciona el sistema SIE.           [10]   B. Zarco García, «Algoritmos de
+                                                             clasificación supervisados y semi-
+En resumen, el análisis del proceso manual                   supervisados: análisis y comparativa,»
+existente y la presentación de información                   UPM, pp. 1-12, 2020.
+relevante permitirían identificar los desafíos y      [11]   "Introduction to Machine Learning with
+las limitaciones en la generación de horarios.               Python" de Andreas C. Müller y Sarah
+Basándose en esto, se explorarían soluciones                 Guido. Libro "Pattern Recognition and
+de aprendizaje automático y se desarrollaría un              Machine Learning" de Christopher M.
+sistema automatizado para mejorar la eficiencia              Bishop.
+y la precisión en la generación de horarios en la     [12]   "Introduction to Information Retrieval"
+institución educativa.                                       de Christopher D. Manning, Prabhakar
+                                                             Raghavan, y Hinrich Schütze.
+                                                      [13]   "An Introduction to the Analysis of
+                VII. Referencias                             Variance" de Ronald A. Fisher.
+[1]   J. O. Yunga Pedraza, «Estudio del estado        [14]   "Logistic Regression: A Self-Learning
+      del arte sobre la predicción de deserción              Text" de David G. Kleinbaum y Mitchel
+      universitaria usando machine learning,» de             Klein. Libro "Introduction to the Practice
+      Universidad Salesiana, Ecuador, 2023.                  of Statistics" de David S. Moore, George P.
+[2]   A. U. Castaneda, «Un viaje hacia la                    McCabe y Bruce A. Craig.
+      inteligencia artificial en la educación,»       [15]   "The Elements of Statistical Learning" de
+      Realidad y Reflexion, pp. 121-136, 2022.               Trevor Hastie, Robert Tibshirani y Jerome
+[3]   C. Russo, «Tratamiento Masivo de Datos                 Friedman.
+      Utilizando Técnicas de Machine Learning,»       [16]   “Support Vector Machines" de Nello
+
+
+
+
+                                                                                                        45
+
+VOLUMEN 6, N˚2 / JULIO - DICIEMBRE 2024 / e - ISSN: 2661   REVISTA PERSPECTIVAS
+
+
+     Cristianini y John Shawe-Taylor.
+[17] Víctor Fabio Suarez, Omar Danilo
+     Castrillón, «Diseño de una metodología
+     basada en técnicas inteligentes para la
+     distribución de procesos Académicos en
+     ambientes de trabajo job shop.
+[18] Michael W. Carter, “A Comprehensive
+     Course Timetabling and Student Scheduling
+     System at the University of Waterloo” 2001
+[19] Elias Ventura, Eva Marcela, Mendoza
+     Pacas, Carlos Rafael, “Análisis y diseño de
+     un planificador automatizado de horarios
+     universitarios”, 2002
+[20] Mireya Flores Pichardo, “Revisión de
+     Algoritmos Genéticos Aplicados al
+     Problema de la Programación de Cursos
+     Universitarios” 2011.
+
+
+
+
+46

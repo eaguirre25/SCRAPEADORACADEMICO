@@ -1,0 +1,970 @@
+Entramado vol.18, No. 1 Enero - Junio de 2022, e-7505 (ISSN 1900-3803 / e-ISSN 2539-0279)
+
+
+
+
+              Logro educativo de las instituciones con estudiantes de
+              minorías étnicas en Colombia *
+                         Deisy Lorena Galvis-Molano
+                         Asistente Centro de investigación Facultad de Ciencias Económicas, Universidad Militar Nueva Granada, Bogotá - Colombia.
+                         asistente2.gesma@unimilitar.edu.co      https://orcid.org/0000-0003-4508-4095
+
+                         Adriana Carolina Silva-Arias
+                         Docente Investigador, Universidad Militar Nueva Granada, Bogotá - Colombia.
+                         adriana.silva@unimilitar.edu.co          https://orcid.org/0000-0003-1610-881X
+
+                         Jaime Andrés Sarmiento-Espinel
+                         Docente Investigador, Universidad Militar Nueva Granada, Bogotá - Colombia.
+                         jaime.sarmiento@unimilitar.edu.co       https://orcid.org/0000-0002-1945-6054
+
+
+                                                                                                                                                        Resumen
+                          P a l a b r a s c l av e                El objetivo de esta investigación fue analizar las diferencias en el rendimiento académico de las
+Ciencia y tecnología
+
+
+
+
+                          Grupo vulnerable;                       instituciones educativas colombianas rurales que atendieron a estudiantes pertenecientes a minorías
+                          rendimiento escolar;                    étnicas con respecto a las demás instituciones rurales. Mediante un modelo logístico ordinal, se estima
+                          movilidad social; gestión               la asociación entre las características de los colegios y del contexto con el desempeño bajo, medio, o
+                          educativa; población rural              alto en las pruebas estandarizadas Saber 11° de 2019. Se evidenció que siete de cada diez instituciones
+                          (Tesauro de la UNESCO).                 educativas con estudiantes de minorías étnicas tuvieron un bajo desempeño. En contraste, cuatro de
+                                                                  cada diez estudiantes tuvieron bajo desempeño en el resto de las instituciones educativas rurales. El bajo
+                                                                  acceso a una adecuada infraestructura y a docentes calificados afectó significativamente el rendimiento
+                                                                  académico de los estudiantes. Además, el menor logro educativo se asoció a la implementación de
+                                                                  modelos educativos flexibles, ausencia de personal de apoyo administrativo y al reducido tamaño de
+                                                                  las sedes educativas que atendieron a minorías étnicas. Por tanto, se recomienda priorizar mejoras en
+                                                                  la infraestructura educativa, formación docente y en la gestión escolar, para disminuir las brechas en el
+                                                                  logro educativo.
+
+
+                          Educational achievement of institutions with ethnic
+                          minority students in Colombia
+                                                                                                                                                     Abstract
+                          Keywords                                This research aimed to analyze the differences in the academic performance of rural Colombian
+                          Vulnerable group; school                educational institutions that served students belonging to ethnic minorities concerning other rural
+                          performance; social mobility;           institutions. Using an ordinal logistic model, the association between the characteristics of the schools
+                          educational    management;              and the context is estimated with low-, medium-, or high-performance in the 2019 Saber 11 standardized
+                          rural population (UNESCO                tests. Seven out of ten educational institutions with students of ethnic minorities had a low achievement.
+                          Thesaurus).                             In contrast, four out of ten students had low performance in the rest of the rural educational institutions.
+                                                                  Low access to adequate infrastructure and qualified teachers significantly affected students’ academic
+                                                                  performance. In addition, the lower educational achievement was associated with the implementation
+                                                                  of flexible educational models, the absence of administrative support personnel, and the small size
+                                                                  of the educational centers that served ethnic minorities. Therefore, it is recommended to prioritize
+                                                                  improvements in educational infrastructure, teacher training, and school management to reduce
+                                                                  educational achievement gaps.
+
+                          Recibido: 25/06/2021   Aceptado: 15/12/2021
+
+                          * Este es un artículo Open Access bajo la licencia BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+                          Cómo citar este artículo: GALVIS-MOLANO, Deisy Lorena; SILVA-ARIAS, Adriana Carolina; SARMIENTO-ESPINEL, Jaime Andrés. Logro educativo de las
+                          instituciones con estudiantes de minorías étnicas en Colombia. En: Entramado. Enero-Junio, 2022 vol. 18, no. 1, e-7505 p. 1-16
+                          https://doi.org/10.18041/1900-3803/entramado.1.7505
+  112
+    1
+
+                                                                                                                        Galvis-Molano, et al.
+
+                                                          Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+Realização educacional de instituições com estudantes de
+minorias étnicas na Colômbia
+                                                                                                                           Resumo
+P a l av r a s - c h av e    O objectivo desta investigação era analisar as diferenças no desempenho académico das instituições
+Grupo vulnerável;            educativas rurais colombianas que servem estudantes de minorias étnicas em relação a outras instituições
+desempenho escolar;          rurais. Utilizando um modelo ordinal logit, estimamos a associação entre as características da escola e do
+mobilidade social; gestão    contexto com baixo, médio, ou alto desempenho nos testes padronizados de 2019 Saber 11°. Descobriu
+educativa; população rural   que sete em cada dez escolas com alunos de minorias étnicas tiveram um mau desempenho. Em contraste,
+(Thesaurus UNESCO).          quatro em cada dez estudantes tiveram um desempenho deficiente nas restantes escolas rurais. O baixo
+                             acesso a infra-estruturas adequadas e a professores qualificados afectou significativamente o desempenho
+                             académico dos estudantes. Além disso, o menor aproveitamento escolar foi associado à implementação
+                             de modelos educativos flexíveis, à falta de pessoal de apoio administrativo e à pequena dimensão das
+                             escolas ao serviço das minorias étnicas. Por conseguinte, recomenda-se que se dê prioridade à melhoria
+                             das infra-estruturas educativas, à formação de professores e à gestão escolar, a fim de reduzir as lacunas no
+                             desempenho escolar.
+
+1. Introducción
+
+De acuerdo con la Organización de las Naciones Unidas para la Educación la Ciencia y la Cultura (UNESCO, 2016),
+las zonas rurales de los países en vía de desarrollo, como es el caso de Colombia, han estado rezagadas en términos
+educativos. Las desventajas educativas se han incrementado en comunidades que han padecido discriminación sistemática,
+exclusión, marginación y pobreza. Entre los grupos de población en condiciones de alta vulnerabilidad social en Colombia
+se encuentran las minorías étnicas (Fundación Empresarios por la Educación, 2018).
+
+Colombia constitucionalmente se reconoce como un país pluriétnico y multicultural. La prevalencia de las inequidades
+económicas, sociales y regionales tiene efectos adversos en la población vulnerable, como es el caso de los grupos étnicos
+minoritarios (Wang, 2017). Según la Encuesta de Calidad de Vida, para el 2018 se estimó que el 9,34% del total de la
+población colombiana se reconocía como población negra, afrocolombiana, raizal y palenquera – NARP (Departamento
+Administrativo Nacional de Estadística [DANE], 2020). No obstante, las minorías étnicas han presentado rezagos en el
+logro académico y no han sido integradas de manera suficiente por el sistema educativo, y en general por la sociedad
+(Gracia, 2015).
+
+En términos educativos, los estudiantes miembros de comunidades étnicas han tenido un menor acceso al sistema
+educativo y un bajo desempeño académico en comparación con sus pares (Roncancio, Cutter y Nardocci, 2020). A partir
+de los resultados en las pruebas estandarizadas Saber 11° del 2019, como medida de logro educativo, los estudiantes
+miembros de comunidades étnicas se ubicaron en el percentil 25, mientras que el promedio de los resultados de los demás
+estudiantes se ubicaron en el percentil 50 (Instituto Colombiano para la Evaluación de la Educación [ICFES], 2020). Estas
+desigualdades educativas en el largo plazo se traducen en menores posibilidades de superar las adversidades, menores
+ingresos y trampas de pobreza intergeneracionales (Del Pozo Serrano, Martínez Idárraga, Manzanares Moya y Zolá Pacochá,
+2017).
+
+Estudios previos señalan que las desigualdades educativas que han enfrentado las minorías étnicas han estado relacionadas
+con algunas de sus características individuales, familiares, ubicación geográfica, nivel de pobreza, y en general, su contexto
+social (García, Espinosa, Jiménez y Parra, 2013). Sin embargo, existen otros factores institucionales que podrían intensificar
+las brechas educativas, tales como una infraestructura inapropiada, el bajo nivel de calidad y pertinencia de los programas
+educativos, la ausencia de recursos pedagógicos, la baja cualificación de los educadores, entre otros aspectos (Lorente
+Rodríguez, 2019).
+
+La gestión escolar y los recursos institucionales son factores inherentes en los procesos de mejora del rendimiento aca-
+démico (Dlouhá y Pospíšilová, 2018). Además, el contexto de las instituciones cobra mayor importancia para la población
+socialmente vulnerable. En particular, los estudiantes de minorías étnicas requieren un trabajo mayor para su integración y
+permanencia en el sistema educativo (Gulosino y Miron, 2017).
+                                                                                                                                                 113
+                                                                                                                                                 2
+
+          Entramado                                                                 Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+      Algunas estrategias implementadas para mejorar la infraestructura, recursos financieros y calidad educativa, han permitido
+      que las instituciones a pesar de las condiciones adversas y las desventajas sociales, logren mejorar el desempeño acadé-
+      mico de los estudiantes (Campbell, 2018). Por ejemplo, las instituciones en Uganda que tuvieron más recursos financieros
+      durante el 2016 para mejorar la infraestructura, aumentar la cualificación de los docentes y participar en capacitaciones
+      brindadas por el gobierno central, lograron mejorar las prácticas pedagógicas al interior de las instituciones que tenían bajo
+      desempeño académico (Naamara, Nabasumba y Nabadda, 2017).
+
+      Así mismo, el docente es el insumo educativo que mayor impacto genera en la calidad, sobre todo en instituciones con
+      estudiantes que presentan un bajo rendimiento (Arias, 2017). De acuerdo con un experimento realizado en Ecuador entre
+      los años 2012 y 2018, se encontró que el efecto causado por la formación adecuada de los docentes es tres veces mayor
+      para estudiantes de bajo desempeño, quienes suelen tener un menor nivel socioeconómico. Además, se encontró que tener
+      docentes con altos niveles de formación durante cuatro años equivale a aumentar el aprendizaje de los estudiantes en seis
+      meses (Araujo, Carneiro, Cruz y Schady, 2016).
+
+      De la misma forma, el fortalecimiento de las condiciones físicas de las instituciones educativas, la adquisición de equipo
+      tecnológico y las capacitaciones al personal directivo-docente pueden impactar positivamente en la calidad educativa,
+      específicamente en indicadores de aprobación y deserción. En particular, Cabrera Hernández y Pérez Campuzano (2018)
+      señalaron que los programas educativos que impulsan los mecanismos de focalización y apoyo prioritario a escuelas con
+      alta marginación, como el Programa Escuelas de Calidad (PEC) en México, han logrado un efecto positivo en el logro aca-
+      démico, particularmente en el desempeño académico en español y matemáticas.
+
+      En el caso de Colombia, Duarte, Bos y Moreno (2012) evidenciaron que el 37,5% de la varianza en los resultados de las
+      pruebas Saber 5° y 9° de 2013 se relacionó con las características de las instituciones. Principalmente, con las condiciones
+      físicas de las aulas y la conexión adecuada a servicios públicos. De igual forma, Celis, Jiménez y Jaramillo (2012) encontraron
+      que el 11% de las variaciones del puntaje en las pruebas estandarizadas en la educación media del año 2009, se explicaron
+      por las diferencias entre el nivel socioeconómico del establecimiento, el sector de la sede y la ubicación de la misma.
+
+      Por tanto, los elementos que han condicionado el logro educativo de los estudiantes en condiciones desfavorables han sido
+      las inequidades de factores escolares en los centros educativos, las cuales reproducen las desigualdades e imposibilitan una
+      efectiva movilidad social (Blanco, 2009). En síntesis, el contexto de las instituciones educativas puede contribuir a mitigar
+      los problemas de cobertura y calidad que persisten en ciertas zonas. No obstante, al presentarse escenarios de escasez en
+      los recursos institucionales puede limitar las oportunidades de aprendizaje y profundizar las brechas de desigualdad social.
+
+      En Colombia son limitadas las investigaciones que han analizado el desempeño académico de las instituciones ubicadas en
+      las zonas rurales que atendieron a estudiantes pertenecientes a minorías étnicas. El objetivo de esta investigación es anali-
+      zar qué factores están asociados a las brechas en el rendimiento académico de las instituciones educativas que atendieron
+      a estudiantes pertenecientes a minorías étnicas en las áreas rurales de Colombia.
+
+      El documento comprende siete secciones. Después de la introducción, se presenta el contexto de vulnerabilidad social
+      de las minorías étnicas y la política etnoeducativa en Colombia. Las secciones 3 y 4 presentan las características de las
+      instituciones educativas rurales que atendieron a los grupos étnicos y la metodología empleada. En las secciones 5 y 6 se
+      exponen los resultados y la discusión a la luz de los hallazgos. La última sección presenta las principales conclusiones de
+      esta investigación.
+
+      2. Contexto educativo de las comunidades étnicas en Colombia
+
+      Las minorías étnicas en Colombia se agrupan en seis comunidades: indígenas, población negra, afrocolombiana, raizal -
+      palenquera (NARP), y población gitana (DANE, 2021a). En términos educativos para el año 2018, 798.174 niños, niñas
+      y adolescentes miembros de minorías étnicas se encontraban matriculados en colegios públicos y privados del país
+      (Ministerio de Educación Nacional, 2018b).
+
+      A partir de la información presentada en el informe del Programa de las Naciones Unidas para el Desarrollo (PNUD, 2014),
+      en Colombia uno de cada tres niños que nacieron en comunidades indígenas vivieron en condiciones de pobreza extrema.
+      Este condicionante tiene una incidencia mayor en los primeros años de vida, donde el desarrollo físico y mental se ven
+  3
+114
+
+                                                                                                                      Galvis-Molano, et al.
+
+                                                        Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+limitados (Ackert, Crosnoe y Leventhal, 2019). Por lo tanto, aquellos niños en contextos de pobreza extrema no tienen las
+mismas oportunidades educativas, que otros niños con mejores condiciones de vida.
+
+Los datos de las pruebas Saber 11° del 2019 evidenciaron que, cinco de cada diez estudiantes miembros de alguna minoría
+étnica estaban en el estrato 1, mientras que esta proporción para los demás estudiantes fue tres de cada diez. Parte de
+esta situación puede estar asociada a la ausencia o acceso limitado a bienes y servicios básicos al interior de sus hogares
+(DANE, 2018).
+
+Los ingresos y los años de educación de los padres son variables que afectan el desempeño escolar de cada uno de los
+estudiantes (Ghiardo y Dávila, 2020). Al respecto, se identificó que entre los estudiantes que pertenecían a minorías étni-
+cas, el 31,2% de los padres y el 26,1% de las madres no alcanzaron ningún nivel de escolaridad, mientras que el porcentaje
+de padres y madres de los demás estudiantes en esta misma situación era 23,6% y 16,7%, respectivamente (DANE, 2019).
+
+Otro de los factores que se considera relevante tener en cuenta en el rendimiento escolar es el acceso al capital cultural en
+el hogar de los estudiantes. Según Lagravinese, Liberati y Resce (2020) existe una relación positiva entre el logro académico
+de los estudiantes y la disponibilidad de libros en el hogar. En relación con lo anterior, más de la mitad de los estudiantes
+pertenecientes a minorías étnicas en el 2019, tuvieron disponibles entre cero y diez libros en el hogar. Además, el acceso
+a recursos como un computador o el servicio de internet tan solo fue del 37% para los estudiantes miembros de minorías
+étnicas.
+
+Las características mencionadas previamente visibilizan el estado de vulnerabilidad de los estudiantes miembros de mino-
+rías étnicas, así como plantea la relevancia de analizar la gestión escolar en las instituciones educativas que atendieron a la
+población socialmente vulnerable. Los estudiantes pertenecientes a minorías étnicas, desde el principio de su trayectoria
+educativa se han enfrentado a condiciones sociales y económicas desfavorables. Las instituciones educativas deberían ser
+los escenarios propicios para la educación y la mejora continua en los procesos de formación.
+
+En cuanto a las políticas educativas enfocadas en grupos étnicos, la Ley General de Educación de 1994 postuló la construc-
+ción de modelos educativos dirigidos a atender las necesidades particulares de los grupos étnicos, en aras de cerrar las
+brechas de desigualdad educativa (Palacios, Sanchez y Córdoba, 2015). Así, la política etnoeducativa ha pretendido comple-
+mentar la educación tradicional con el conocimiento ancestral y cultural, propio de las minorías étnicas.
+
+La etnoeducación pretende integrar criterios de interculturalidad, multiculturalidad y diversidad. Dentro de los objetivos
+del modelo de etnoeducación, se resalta la importancia de la gestión escolar para superar las dificultades de calidad y
+cobertura. Además, contempla la necesidad de promover el trabajo intersectorial y la participación de las comunidades
+étnicas en temas educativos (Gracia, 2015).
+
+Entre el 2014 y 2018, las instituciones gubernamentales lograron implementar el modelo etnoeducativo en 97 de los 102
+pueblos indígenas que residieron en Colombia. No obstante, este programa solo incluyó a 75.520 jóvenes indígenas. Esta
+política educativa se desarrolló en tres etapas. Inicialmente se elaboraron guías y planes de trabajo, posteriormente ini-
+ciaron los espacios de discusión entre los pueblos indígenas y los funcionarios públicos, para finalmente realizar la fase de
+socialización realizando 114 talleres regionales (Ministerio de Educación Nacional, 2018a).
+
+Este modelo educativo ha logrado avances en la cobertura y el fortalecimiento de la diversidad multicultural de los grupos
+étnicos (Pérez Dávila, 2018). Sin embargo, en el transcurso del programa se han presentado deficiencias en la capacidad de
+gestión en los establecimientos educativos, así como dificultades en los procesos organizacionales (García Araque, 2017).
+
+Algunos profesores que hicieron parte del modelo etnoeducativo, manifestaron que los aspectos planteados en la
+política nacional, no se articularon con la realidad que vivían los grupos étnicos. Asimismo, la escasez de instrumentos de
+aplicación pedagógica, material escolar, capacitaciones, cualificación de los docentes y técnicas de seguimiento, impidieron
+el mejoramiento en el desempeño académico de los estudiantes pertenecientes a esta población (Palacios, 2017).
+
+Además, variables exógenas al modelo etnoeducativo, como son el desplazamiento masivo, la falta de alternativas para susti-
+tuir la economía ilegal, principalmente en las regiones del Pacífico, y el poco o nulo acceso a otros derechos fundamentales,
+fueron factores que incidieron en el alcance de la política etnoeducativa (Piarpusan, Rosero, Solarte, Daza y Corella, 2020).
+                                                                                                                                               115
+                                                                                                                                               4
+
+          Entramado                                                                               Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+      3. Caracterización de las instituciones de educación media rural con minorías étnicas en
+      Colombia
+
+      Los rezagos en el desempeño académico persisten en Colombia, principalmente en las zonas rurales donde reside el 64%
+      de las minorías étnicas (DANE, 2021a) . Las minorías étnicas han presentado mayor grado de analfabetismo y desigualdades
+      educativas que el promedio de la población. Estos condicionantes educativos aunados a la situación de pobreza y a la co-
+      existencia de múltiples circunstancias desfavorables, dificultan el desarrollo integral de estas comunidades (García Araque,
+      2017).
+
+      En la Figura 1 se presenta la distribución espacial de las sedes educativas de educación media en las zonas rurales que
+      atendieron a estudiantes pertenecientes a minorías étnicas en el año 2019.
+
+
+
+
+               Figura 1. Distribución espacial de las instituciones rurales de educación media con alumnos miembros de comunidades étnicas -2019.
+               Fuente: Elaboración propia con datos obtenidos de DANE (2019).
+
+
+      La mayoría de estos centros educativos se ubicaron principalmente en los extremos de Colombia, en departamentos que
+      han presentado altos niveles de pobreza, como Vaupés, Vichada, Guainía y La Guajira. De acuerdo con el DANE (2021b),
+      para el 2018 más de la mitad de la población tuvo necesidades básicas insatisfechas en estos departamentos. En particular,
+      en Vaupés y Vichada alrededor del 68% de la población total tenían necesidades básicas insatisfechas. Lo que refleja un alto
+      grado de vulnerabilidad de quienes habitan estos territorios.
+
+      Otros departamentos con un alto porcentaje de sedes con estudiantes de grupos étnicos fueron Chocó, Cauca y Putu-
+      mayo. Al revisar algunos indicadores de bienestar se encontró que para el 2018, el 20% de la población chocoana vivía en
+      situación de miseria (DANE, 2021b). Para este mismo periodo, la incidencia de la pobreza multidimensional en el depar-
+      tamento del Cauca fue 32.6% para la población NARP, cuatro puntos porcentuales más que el resto del departamento
+      (DANE, 2021a).
+  5
+116
+
+                                                                                                                                  Galvis-Molano, et al.
+
+                                                                    Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+En la Tabla 1 se analizan algunos insumos de la gestión escolar, como los indicadores de eficiencia institucional, el nivel
+educativo de los docentes, y la implementación de modelos educativos. Además, se consideraron otras características ge-
+nerales de los centros educativos. Estas variables se comparan entre las sedes rurales que atendieron a minorías étnicas y
+las demás sedes rurales colombianas para el año 2019.
+
+En la muestra hay 3.351 sedes rurales de educación media, de las cuales el 26,38% atendieron estudiantes de minorías
+étnicas. A partir de los resultados en las pruebas Saber 11° de los últimos tres años, el ICFES hace una clasificación de
+calidad de los planteles educativos. En el caso de las sedes rurales con estudiantes pertenecientes a minorías étnicas, el
+67% se encontraban en clasificación baja y tan solo un 5% en categoría alta. Respecto a las demás sedes rurales, el 38.3%
+estuvieron en la categoría baja y 16.4% en clasificación alta. Por tanto, la mayoría de las sedes que atendieron a minorías
+étnicas obtuvieron un desempeño relativamente más bajo que sus pares en las pruebas estandarizadas.
+
+El ICFES también calcula el Nivel Socioeconómico del Establecimiento (NSE) con base en los bienes físicos y culturales
+que tienen los hogares de los estudiantes que asisten a un plantel educativo. De esta forma, clasifica a las instituciones
+en cuatro niveles socioeconómicos, siendo 1 el nivel más bajo y 4 el más alto. La mayoría de las sedes que atendieron a
+estudiantes de comunidades étnicas se encontraban en el nivel socioeconómico más bajo (NSE 1), en comparación con las
+demás sedes rurales donde la mitad de las instituciones se encontraban en el segundo nivel (NSE 2). En general, los niveles
+socioeconómicos de los estudiantes que asistieron a las sedes educativas rurales fueron bajos, pero enfrentaron una mayor
+vulnerabilidad social los hogares de minorías étnicas.
+
+El principal prestador del servicio de educación en las áreas rurales de Colombia es el Estado Colombiano, siendo casi el
+único para las minorías étnicas. No obstante, se observa el uso de alianzas público-privadas para prestar el servicio público
+de educación por medio de esquemas de concesión-administración. Además, el 65% de las sedes con minorías étnicas
+utilizaron un modelo educativo diferente al tradicional, como el etnoeducativo y otros modelos educativos flexibles.
+
+Estas instituciones de educación media rurales tuvieron un número de estudiantes relativamente bajo, siendo ligeramente
+superior el de las sedes con minorías étnicas. Mientras que en el área urbana las sedes tuvieron en promedio 135 estu-
+diantes, en la ruralidad este número fue de 58 para las sedes que atendieron minorías étnicas, y 49 para las demás sedes
+rurales. La relación alumnos por docente es aproximadamente el doble en el área rural que en la urbana (15 frente a 7).
+En cuanto al apoyo de personal administrativo en todos los niveles educativos de las sedes rurales, se presentó un grupo
+considerable de sedes que no contaban con personal administrativo. La relación fue en promedio de un administrativo por
+cada 125 estudiantes en las sedes con minorías étnicas, y de uno por cada 100 en las demás sedes rurales.
+
+Al analizar el perfil de los docentes, se evidenció que las sedes que atendieron a estudiantes de minorías étnicas en educa-
+ción media tuvieron profesores con un menor nivel de formación académica. Además, el promedio de docentes etnoedu-
+cadores fue bajo, a pesar de que esta figura fue promovida por el Programa de Nacional de Etnoeducación. Respecto a la
+infraestructura y servicios como el internet, radio y demás tecnologías de la información y comunicación (TIC), se observó
+que ambos tipos de sedes tuvieron un acceso relativamente bajo.
+
+Tabla 1.
+Características de las instituciones rurales de educación media en Colombia – 2019
+                                                                        Con minorías étnicas                              Demás sedes
+                                                                Media/Frecuencia (Desv. estándar)            Media/Frecuencia (Desv. estándar)
+ Clasificación plantel educativo
+    Baja                                                                             0,669                                    0,383
+    Media                                                                            0,284                                    0,454
+    Alta                                                                             0,048                                    0,164
+ Nivel socioeconómico del establecimiento
+    NSE 1                                                                            0,515                                    0,395
+    NSE 2                                                                            0,466                                    0,495
+    NSE 3                                                                            0,015                                    0,048
+    NSE 4                                                                            0,005                                    0,062
+                                                                                                                        Continúa en la página siguiente
+                                                                                                                                                           6
+                                                                                                                                                           117
+
+           Entramado                                                                         Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+                                                                         Con minorías étnicas                          Demás sedes
+                                                                 Media/Frecuencia (Desv. estándar)         Media/Frecuencia (Desv. estándar)
+       Sector-Modalidad prestación servicio
+          No oficial                                                              0,017                                    0,094
+          Oficial-Directa                                                         0,931                                    0,884
+          Oficial-Concesión                                                       0,006                                    0,002
+          Oficial-Administración                                                  0,046                                    0,020
+
+       Modelo etnoeducativo                                                       0,373                                    0,000
+
+       Modelo educativo flexible                                                  0,275                                    0,390
+       Número de estudiantes en educaciónmedia                                   57,543                                    48,591
+                                                                                (44,824)                                  (38,235)
+       Alumnos por docente                                                       15,717                                    14,719
+                                                                                (13,129)                                  (12,313)
+       Número de docentes por nivel de formación
+                                                                                  0,011                                    0,006
+          Bachiller pedagógico
+                                                                                 (0,116)                                   (0,090)
+                                                                                  0,036                                    0,004
+          Bachiller técnico
+                                                                                 (0,279)                                   (0,073)
+                                                                                  0,029                                    0,007
+          Normalista superior
+                                                                                 (0,226)                                   (0,083)
+                                                                                  0,079                                    0,001
+          Etnoeducador
+                                                                                 (0,491)                                   (0,028)
+                                                                                  0,032                                    0,015
+          Técnico en educación
+                                                                                 (0,226)                                   (0,151)
+                                                                                  1,663                                    1,430
+          Licenciado
+                                                                                 (2,224)                                   (1,993)
+                                                                                  1,037                                    0,874
+          Posgrado en educación
+                                                                                 (1,899)                                   (1,680)
+                                                                                  0,684                                    0,641
+          Profesional diferente a licenciado
+                                                                                 (1,122)                                   (1,120)
+                                                                                  0,008                                    0,010
+       Administrativos por alumno
+                                                                                 (0,011)                                   (0,020)
+       Acceso a electricidad                                                      0,949                                    0,976
+
+       Disponibilidad aulas de informática                                        0,798                                    0,850
+
+       Acceso a internet                                                          0,603                                    0,677
+
+       Acceso a servicios TIC                                                     0,229                                    0,236
+
+       Tasa municipal de aprobación en educación media                            0,915                                    0,923
+
+       Tasa municipal de reprobación en educación media                           0,056                                    0,047
+                                                                              137.760,734                               145.185,366
+       Población municipal
+                                                                             (456.049,175)                             (660.397,204)
+                                                                                 27,870                                    20,108
+       Proporción municipal de personas con NBI
+                                                                                (20,181)                                  (15,241)
+       Número de sedes                                                              884                                    2.467
+      Nota: desviación estándar en paréntesis.
+      Fuente: elaboración propia con datos obtenidos de ICFES (2020) y DANE (2019).
+  7
+118
+
+                                                                                                                                   Galvis-Molano, et al.
+
+                                                                   Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+En términos de eficiencia escolar y calidad educativa, también se presentaron disparidades significativas entre la población
+de estudio y la población de referencia. Una medida que se puede utilizar para esta comparación es el Índice Sintético de la
+Calidad Educativa (ISCE) de 2019. El ISCE toma valores en una escala de 1 a 10, siendo 10 el valor más alto que un plantel
+educativo puede obtener. Este indicador se compone de cuatro dimensiones relacionadas con el logro educativo: progreso,
+desempeño, eficiencia y ambiente escolar.
+
+La dimensión de progreso se calculó a partir del nivel de desempeño en insuficiente y en avanzado en las pruebas
+de matemáticas y lenguaje. Respecto a la segunda dimensión se tuvieron en cuenta los resultados en las pruebas de
+matemáticas y lenguaje. El componente de eficiencia se estimó a través de la tasa de aprobación que presentó cada
+establecimiento educativo.
+
+De esta forma, al estimar el ISCE para el 2019, encontramos que este indicador fue más bajo para las sedes que atendieron
+minorías étnicas (5,31), respecto al resto de sedes rurales (6,14). Este resultado refleja las diferencias que presentaron los
+componentes del ISCE en ambos grupos de análisis, principalmente en el componente de progreso.
+
+En la Figura 2 se muestra el comportamiento de cada uno de los competentes del ISCE. Los valores de las dimensiones de
+progreso y desempeño varían entre 1 y 4 cada uno, mientras que el valor máximo de la dimensión de eficiencia es de 2. El
+componente que presentó mayor rezago entre las sedes con estudiantes miembros de minorías étnicas fue el componente
+de progreso. Respecto a los componentes de eficiencia y desempeño no se encontraron diferencias significativas, aunque
+en cualquier caso fueron menores para las instituciones que atendieron a minorías étnicas en todos los componente
+
+
+
+
+Figura 2. Componentes del Índice de Calidad Educativa (ISCE) para instituciones rurales de educación media que atendieron minorías étnicas – 2019.
+Fuente: Elaboración propia con datos obtenidos de ICFES (2020) y DANE (2019).
+
+
+4. Metodología
+
+Esta investigación se desarrolla bajo un enfoque cuantitativo. El universo de estudio está conformado por las sedes
+educativas con grado 10° y 11°, ubicadas en las zonas rurales de Colombia durante 2019. Las fuentes de información fueron
+el Censo de Educación Formal (EDUC), realizado por el DANE; los resultados de la prueba estandarizada Saber 11°; y la
+clasificación de calidad educativa de las instituciones realizadas por el ICFES.
+
+Con el propósito de medir la incidencia de las características institucionales en la probabilidad de clasificar una sede
+educativa rural con bajo, medio o alto desempeño académico, estimamos un modelo de regresión logística ordinal. El
+objetivo de la modelación es tratar de explicar el comportamiento de una variable cuantitativa, teniendo en cuenta el
+orden natural de clasificación de la variable dependiente, en este caso la clasificación ordenada del desempeño académico
+de las sedes. Además, permite el uso de variables relacionadas con la calidad educativa que son continuas y categóricas. Esta
+metodología ha sido previamente utilizada para modelar el rendimiento escolar (Heredia, Rodríguez y Vilalta, 2012) y para
+conocer la incidencia de características individuales en el logro académico (Minchón-Medina, Timaná-Palacios, Minchón-
+Benites y Minchón-Benites, 2019).
+                                                                                                                                                           119
+                                                                                                                                                           8
+
+            Entramado                                                                                   Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+       La ecuación que representa el modelo es la siguiente.
+
+
+
+       Donde,
+
+       Yi= Variable dependiente
+       z: Scoring logístico. En el cuál z: Bo + B1X2+...BkXk
+       u: Es una variable aleatoria que se distribuye logísticamente
+
+       En la ecuación (1), denota la variable dependiente relacionada con la clasificación de calidad de los planteles educativos:
+       bajo, medio o alto desempeño. Esta variable se estableció a partir del índice general que obtuvieron las instituciones (ver
+       Tabla 2). Este indicador tiene en cuenta el logro educativo en las pruebas Saber 11° y la varianza entre los resultados de
+       los estudiantes que asistieron a la misma sede. Entre más altos y más homogéneos los puntajes de los estudiantes, más alta
+       resulta la clasificación de la sede educativa.
+                                              Tabla 2.
+                                              Categorías de clasificación de calidad educativa
+                                                 Categoría de clasificación            Rango del Índice General
+                                                             Baja                                0 ≤ 𝐼𝐺 ≤ 0,62
+                                                            Media                           0,62 < 𝐼𝐺 ≤ 0,70
+                                                             Alta                                 𝐼𝐺 > 0,70
+                                              Fuente: ICFES (2014).
+
+       Entre las variables utilizadas para explicar el resultado ordinal de clasificación de las sedes educativas, se utilizaron variables
+       relacionadas con las características y los recursos de las instituciones educativas. Estas variables se agruparon en tres
+       categorías: recursos institucionales, eficiencia escolar y recursos administrativos.
+
+       En el primer grupo se encuentran variables relacionadas con el acceso a servicios de electricidad, bienes TIC, internet, aulas
+       de informática y perfil académico de los docentes. En el segundo grupo se utilizaron indicadores escolares, como las tasas
+       de aprobación y reprobación, la relación alumno-docente y la atención a población vulnerable. Por último, en recursos
+       administrativos se incluyeron variables como el número de administrativos en la sede, la modalidad del servicio, el sector
+       de la sede y la participación en modelos educativos flexibles. Otras variables de contexto incluidas fueron el departamento,
+       la proporción de personas con necesidades básicas insatisfechas (NBI) a nivel municipal, la población por municipio, el total
+       de estudiantes y docentes en media, así como el Nivel Socioeconómico del Establecimiento (NSE).
+
+       5. Resultados
+       Teniendo en cuenta la estrategia metodológica expuesta en la anterior sección, la Tabla 3 presenta los efectos marginales
+       de las variables asociadas a la clasificación de rendimiento académico obtenida por la institución educativa.
+
+       Tabla 3.
+       Efectos marginales del modelo logístico ordinal de clasificación de desempeño para instituciones rurales de educación media en Colombia - 2019
+                                                                                                   Bajo               Medio                    Alto
+                                                                                                   0,151      ***     -0,137     ***          -0,014     ***
+        Con minorías étnicas
+                                                                                                  (0,031)            (0,029)                  (0,003)
+        Nivel socioeconómico del establecimiento (ref. NSE 1)
+                                                                                                  -0,071      ***     0,061      ***          0,010      ***
+            NSE 2
+                                                                                                  (0,024)            (0,021)                  (0,004)
+                                                                                                  -0,370      ***     0,075                   0,295      ***
+            NSE 3
+                                                                                                  (0,042)            (0,080)                  (0,070)
+                                                                                                  -0,410      ***     -0,423     ***          0,834      ***
+            NSE 4
+                                                                                                  (0,044)            (0,092)                  (0,080)
+                                                                                                                                Continúa en la página siguiente
+1209
+
+                                                                                                                               Galvis-Molano, et al.
+
+                                                                 Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+                                                                                     Bajo                 Medio                    Alto
+ Sector-Modalidad prestación servicio (ref. Oficial-Directa)
+                                                                                     -0,080               0,068                   0,012
+     No oficial
+                                                                                    (0,078)              (0,064)                 (0,014)
+                                                                                     0,272      *         -0,252      *           -0,020      ***
+     Oficial-Concesión
+                                                                                    (0,144)              (0,137)                 (0,008)
+                                                                                     0,414      ***       -0,389      ***         -0,026      ***
+     Oficial-Administración
+                                                                                    (0,079)              (0,075)                 (0,006)
+                                                                                     0,302      ***       -0,281      ***         -0,022      ***
+     Modelo etnoeducativo
+                                                                                    (0,045)              (0,043)                 (0,004)
+                                                                                     0,089      ***       -0,080      ***         -0,009      ***
+     Otro modelo educativo flexible
+                                                                                    (0,026)              (0,024)                 (0,003)
+                                                                                     -0,002     ***       0,002       ***         0,000       ***
+ Número de estudiantes en educación media
+                                                                                    (0,000)              (0,000)                 (0,000)
+                                                                                     -0,001               0,001                   0,000
+ Alumnos por docente
+                                                                                    (0,001)              (0,001)                 (0,000)
+                                                                                     -0,078     ***       0,067       ***         0,011       ***
+ Docentes con posgrado
+                                                                                    (0,021)              (0,018)                 (0,004)
+                                                                                     -3,619     ***       3,183       ***         0,436       ***
+ Administrativos por alumno
+                                                                                    (0,975)              (0,873)                 (0,143)
+                                                                                     0,066                -0,060                  -0,007
+ Sin acceso a electricidad
+                                                                                    (0,083)              (0,076)                 (0,008)
+                                                                                     0,177      ***       -0,162      ***         -0,015      ***
+ Sin aulas de informática
+                                                                                    (0,033)              (0,031)                 (0,004)
+                                                                                     0,086      ***       -0,077      ***         -0,009      ***
+ Sin acceso a internet
+                                                                                    (0,024)              (0,022)                 (0,003)
+                                                                                     0,036                -0,032                  -0,004
+ Sin acceso a servicios TIC
+                                                                                    (0,024)              (0,021)                 (0,003)
+                                                                                     -0,010               0,009                   0,001
+ Tasa municipal de aprobación en educación media
+                                                                                    (0,007)              (0,006)                 (0,001)
+                                                                                     -0,010               0,008                   0,001
+ Tasa municipal de reprobación en educación media
+                                                                                    (0,008)              (0,007)                 (0,001)
+                                                                                     0,014      ***       -0,012      ***         -0,002      ***
+ Proporción municipal de personas con NBI
+                                                                                    (0,001)              (0,001)                 (0,000)
+Nota: Errores robustos en paréntesis. * p<0,1, ** p<0,05, *** p<0,01.
+Fuente: Elaboración propia con datos obtenidos de ICFES (2020) y DANE (2019).
+
+De esta forma, se analizó la incidencia de los factores institucionales sobre la probabilidad de que la sede hubiera
+presentado un nivel bajo, medio o alto de desempeño académico. Como grupo base de comparación se consideró una sede
+educativa con las siguientes características: estaba ubicada en Antioquia, no atendió a estudiantes pertenecientes a minorías
+étnicas, con un NSE de primer nivel, del sector oficial, modalidad prestación directa del servicio, con un modelo educativo
+tradicional. Además, tenía acceso a electricidad, internet, con aulas de sistemas y acceso a servicios TIC. Por otro lado, no
+contaba con docentes con formación Posgradual. Las demás variables de control se fijaron en el promedio de la muestra.
+
+Los hallazgos muestran que las sedes a las que asistieron estudiantes de minorías étnicas presentaron una mayor probabilidad
+de obtener una clasificación más baja que las demás sedes rurales. En ese sentido, la probabilidad de que la sede se ubicara
+en una clasificación baja fue aproximadamente 15 puntos porcentuales mayor para las sedes que atendieron a minorías
+étnicas. Estos resultados evidencian que al medir el logro educativo a partir de las pruebas estandarizadas Saber 11°, las
+instituciones con estudiantes pertenecientes a minorías étnicas presentaron menores puntajes.
+                                                                                                                                                        121
+                                                                                                                                                        10
+
+          Entramado                                                                  Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+      Por otra parte, al analizar las brechas de calidad educativa por NSE, se encontró que a medida que aumenta el nivel
+      socioeconómico del establecimiento aumentó la probabilidad de que tuviera un nivel más alto de desempeño. Por ejemplo,
+      cuando se comparan los niveles NSE extremos, la probabilidad de que una sede con NSE 4 obtuviera una clasificación
+      baja fue aproximadamente 41 puntos porcentuales menor que una con NSE 1. Asimismo, la probabilidad de obtener
+      una clasificación alta de desempeño académico fue menor para las sedes educativas con minorías étnicas en 83 puntos
+      porcentuales.
+
+      El sector de la institución y la modalidad de prestación de servicio en la sede también estuvieron asociados con la calidad
+      educativa. No hubo diferencias significativas en el área rural entre el sector privado y las sedes oficiales que prestaron el
+      servicio de forma directa. Sin embargo, cuando el servicio oficial fue prestado en las zonas rurales a través de modalidades
+      de concesión o administración, se incrementó probabilidad de una educación de menor calidad.
+
+      En específico, si el servicio educativo oficial fue prestado a través de entidades particulares, la probabilidad de obtener un
+      desempeño académico bajo fue aproximadamente entre 25 y 41 puntos porcentuales superior a la de una sede oficial-
+      directa. En ese sentido, ese tipo de alianzas o contratos no aportó para mejorar los resultados de los estudiantes en las
+      pruebas estandarizadas en las zonas rurales de Colombia.
+
+      Otras variables analizadas se relacionan con los recursos administrativos de las instituciones. En particular, si una institución
+      practicó un modelo etnoeducativo o algún otro modelo educativo flexible, presentó una mayor probabilidad de obtener
+      una clasificación baja de desempeño académico. La probabilidad de obtener una clasificación baja aumentó en 30 puntos
+      porcentuales bajo el modelo etnoeducativo (aumentó en 9 puntos porcentuales cuando implementaron un modelo
+      educativo flexible) y la probabilidad de obtener una clasificación media disminuyó en 28 puntos porcentuales (disminuyó
+      en 8 puntos porcentuales cuando implementaron un modelo educativo flexible).
+
+      En cuanto a la relevancia del nivel de formación de los profesores, al pasar de analizar una sede con docentes con
+      posgrado, frente a una que no tenía profesores con este nivel de formación, la probabilidad de obtener un desempeño
+      académico superior fue mayor en las sedes educativas que tuvieron docentes con posgrado. En particular, la probabilidad
+      de obtener un logro educativo medio-alto fue 8 puntos porcentuales superior si contaban con profesores con posgrado.
+      Adicionalmente, contar con un mayor número de personal de apoyo administrativo por alumno, aumentó la probabilidad
+      de un mayor logro educativo en la educación rural.
+
+      5. Discusión
+
+      Los resultados visibilizan las desigualdades en la calidad educativa de las zonas rurales del país. Estas inequidades se
+      profundizaron en las sedes donde asistieron estudiantes miembros de minorías étnicas. Así mismo, se demostró que las
+      desigualdades de factores escolares, como el acceso a servicios de conexión, aulas de informática, formación académica de
+      los docentes, los modelos educativos, la modalidad de prestación del servicio, entre otros; incidieron en el logro educativo
+      de los estudiantes, y por tanto, en la clasificación de calidad de las sedes educativas a las que asistieron.
+
+      Al analizar el Nivel Socioeconómico del Establecimiento (NSE), el cual es calculado a partir de las características individuales
+      de todos los estudiantes que asisten a una misma sede, se confirma la perspectiva teórica que postula que las condiciones
+      socioeconómicas de los estudiantes tienen un alto impacto en el desempeño académico de los mismos, y en la clasificación
+      de calidad de las instituciones (García et al., 2013).
+
+      En particular, en los contextos rurales los estudiantes con menores niveles socioeconómicos, entre los que se encuentran
+      los pertenecientes a minorías étnicas, asistieron a colegios de menor calidad educativa. Por el contrario, los estudiantes con
+      mayores recursos económicos y mejor capital cultural asistieron a instituciones públicas que presentaron alto desempeño
+      académico.
+
+      Respecto al sector y modalidad de prestación del servicio, los hallazgos determinan que cuando se implementó en los
+      colegios oficiales rurales un modelo etnoeducativo o modelos educativos flexibles, así como un modelo en concesión o
+      administrado por privados, fue menor el desempeño académico.
+      Este resultado evidenciado sería contrario a lo evidenciado en áreas urbanas. Por ejemplo, en Bogotá la gerencia privada de
+      escuelas públicas mejoró el logro educativo y contribuyó a cerrar las brechas en el desempeño académico (López-Sánchez,
+      Virgüez-Clavijo, Sarmiento-Espinel y Silva-Arias, 2015; López-Sánchez,Virgüez-Clavijo, Silva-Arias y Sarmiento-Espinel, 2017).
+ 11
+122
+
+                                                                                                                      Galvis-Molano, et al.
+
+                                                        Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+Una explicación de este resultado es que los estudiantes de las zonas rurales, y en particular los pertenecientes a minorías
+étnicas, presentaron dinámicas y contextos diferentes a los estudiantes de las zonas urbanas. Además, la educación en las
+zonas rurales ha presentado profundas debilidades en la planeación educativa y limitaciones en la contratación de servicios
+(Cuellar Medina, 2013).
+
+Así mismo, en contextos rurales de otros países hay evidencia que demuestra que los proyectos gestionados por algunas
+fundaciones prestadoras del servicio educativo, especialmente para los estudiantes pertenecientes a minorías étnicas,
+contribuyeron a mejorar aspectos del contexto social y cultural, como los hábitos de los estudiantes, las prácticas sociales y
+mejorar la relación entre la institución y los padres de familia (Barrera-Osorio et al., 2020). En este sentido, para mejorar la
+calidad y los resultados en las pruebas estandarizadas, se requiere realizar esfuerzos en conjunto con otras organizaciones
+estatales y de la sociedad civil. Aún más importante, para instituciones educativas rurales de difícil acceso, donde coexisten
+diversas problemáticas en torno a las vulnerabilidades sociales de las minorías étnicas y el contexto.
+
+Adicionalmente, de acuerdo con los resultados el modelo etnoeducativo no logró cerrar las brechas en el desempeño
+académico de los estudiantes pertenecientes a minorías étnicas rurales en las pruebas Saber 11°. Sin embargo, varios
+autores han reconocido que esta metodología ha promovido la participación de las comunidades étnicas dentro del
+proceso de enseñanza, así como ha logrado incentivar la identidad cultural y la cohesión social (García Araque, 2017; García,
+Maldonado y Rodríguez, 2014; Palacios et al., 2015).
+
+En este sentido, las acciones formuladas en cada modelo educativo han permitido el acceso a la educación de niños y
+jóvenes en circunstancias desfavorables (Pérez Dávila, 2018), como aquellos pertenecientes a minorías étnicas. Además, la
+mejora en las tasas de cobertura en las zonas rurales, especialmente la de estudiantes pertenecientes a minorías étnicas,
+se debió principalmente a la implementación de modelos educativos flexibles.
+
+Cabe aclarar que los resultados no sugieren que las instituciones con programas de educación flexible, como el
+etnoeducativo, deban dejar de recibir apoyos para implementar estos modelos. Por el contrario, se considera relevante
+que las instituciones con población socialmente vulnerable dispongan de intervenciones más integrales y sostenidas a lo
+largo del tiempo, para reducir las brechas en las oportunidades de aprendizaje.
+
+En concordancia con los resultados, los esfuerzos deberían estar enfocados en inversiones en infraestructura como
+acceso a servicios públicos, internet, aulas de informática, bienes y servicios TIC, formación docente, así como personal
+administrativo para la orientación del desarrollo integral de los estudiantes.
+
+En cuanto a la cualificación de los docentes, los resultados demostraron la importancia de una adecuada formación de los
+profesores para mejorar el desempeño académico de los estudiantes. Este resultado es análogo al de otras investigaciones
+donde se demuestra que la formación de los docentes y el desarrollo de su práctica profesional son elementos inherentes
+para aumentar la calidad en el proceso de enseñanza y aprendizaje. Además, una formación adecuada promueve las buenas
+prácticas pedagógicas al interior de las aulas, contribuye a consolidar procesos de inclusión educativa y crea un ambiente
+de excelencia académica (Araujo et al., 2016; Bertoni et al., 2020).
+
+En relación con el acceso a servicios y recursos educativos, los resultados evidenciaron que contar con aulas de informática
+y servicios de internet incrementaron la calidad educativa. De acuerdo con Cruz-Carbonell, Hernández-Arias y Silva-Arias
+(2020), la ausencia de una infraestructura adecuada y de recursos tecnológicos dificulta el proceso de formación académica
+y el acceso a nuevos conocimientos. El acceso a los computadores e internet es especialmente relevante para la población
+socialmente vulnerable, como los estudiantes pertenecientes a minorías étnicas, ya que tuvieron menor acceso en sus
+comunidades.
+
+Con respecto al acceso a los bienes y servicios TIC, en el universo de estudio no se encontró una relación significativa
+con el logro educativo, aunque son herramientas añadidas a los modelos pedagógicos que pueden convertirse en recursos
+valiosos para el aprendizaje (Hamidi, Meshkat, Rezaee y Jafari, 2011). Lo anterior cobra relevancia después del período
+de estudio analizado, ya que se ha priorizado el aprendizaje remoto mediante el acceso a bienes y servicios TIC debido
+al cierre escolar por la pandemia del Covid-19. Por tanto, desde la gestión escolar y la planeación estratégica, se debe
+priorizar el acceso a la conectividad y bienes tecnológicos que contribuyan a cerrar las brechas de desigualdad en el logro
+educativo, con mayor urgencia en las zonas rurales y en las instituciones donde asisten minorías étnicas.
+                                                                                                                                               123
+                                                                                                                                               12
+
+          Entramado                                                                   Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+      6. Conclusiones
+
+      La materialización de la educación de calidad como un derecho fundamental para todo ser humano, debe ser prioridad
+      de la sociedad. La igualdad de oportunidades educativas se considera indispensable para la población en condiciones de
+      vulnerabilidad social, como las minorías étnicas, quienes debido a sus condicionantes sociales se encuentran inmersos en
+      una mayor marginación. De esta forma, la igualdad de oportunidades educativas cobra relevancia para mejorar el bienestar,
+      la movilidad social y otras libertades de estos grupos poblacionales.
+
+      Investigaciones previas se han enfocado en analizar y demostrar la incidencia del contexto individual y familiar en el
+      desempeño académico. Esta investigación realiza un análisis de las características de los colegios y del contexto que
+      incidieron en aumentar las brechas en el rendimiento académico en las sedes educativas rurales que atendieron a
+      estudiantes pertenecientes a minorías étnicas en Colombia.
+
+      Esta investigación contribuye a la literatura demostrando la relevancia que tienen las características y el contexto de
+      las instituciones educativas en el desempeño académico. A diferencia de otras investigaciones, el análisis se centra en las
+      circunstancias y los factores asociados a la prestación del servicio educativo. Además, esta investigación se enfoca en las
+      brechas educativas de los estudiantes pertenecientes a minorías étnicas, quienes requieren de una atención diferenciada
+      debido a que afrontan múltiples condicionantes sociales. Los resultados de la investigación podrían ser utilizados como
+      insumos de política pública para disminuir las brechas educativas en las sedes educativas de las zonas rurales donde
+      asistieron grupos socialmente vulnerables.
+
+      La investigación visibiliza las desigualdades en la calidad de la prestación del servicio entre de las sedes educativas que
+      atendieron a minorías étnicas en las zonas rurales de Colombia. Las desigualdades en las condiciones de las sedes educativas
+      fueron la falta de acceso a servicios públicos, de conexión a internet, salas de cómputo, y la ausencia de profesores con
+      formación posgradual; factores que incidieron en el menor logro educativo de los estudiantes y en la clasificación de baja
+      calidad de las sedes educativas a las que asistieron las minorías étnicas.
+
+      Además, una sede educativa rural que atendió a estudiantes pertenecientes a minorías étnicas, en promedio no tuvo acceso
+      a personal administrativo, implementaron modelos educativos flexibles y tuvieron menor número de estudiantes. Todas
+      estas características se asociaron al bajo rendimiento académico. Además, la modalidad de servicio sugiere replantear los
+      modelos de gestión escolar de alianzas público-privadas rurales, así como focalizar los recursos humanos más calificados
+      en las sedes de menor tamaño, dado que es un insumo fundamental en la calidad educativa.
+
+      Los hallazgos de esta investigación dan sustento de la importancia de mejorar la infraestructura, capital humano y la gestión
+      escolar para disminuir las brechas en el logro educativo, especialmente para los estudiantes pertenecientes a minorías
+      étnicas. Por ejemplo, consolidar alianzas con instituciones educativas de alta calidad, como el programa de Aulas sin
+      Fronteras, con la finalidad de socializar proyectos y buenas prácticas, lo cual sirve para enriquecer el trabajo de los pares
+      y disminuir las desigualdades en las oportunidades educativas.
+
+      Por otra parte, cuando los recursos financieros son limitados, como ocurre en las instituciones del sector oficial, la
+      capacidad de gestión de las instituciones es fundamental para priorizar los proyectos y los modelos etnoeducativos, para
+      que impacten positivamente el desempeño académico y respondan a las necesidades de los grupos étnicos minoritarios.
+
+      Así mismo, se recomienda reconocer que el ejercicio de gestionar programas y proyectos al interior de las instituciones
+      educativas que atienden a grupos vulnerables tiene una serie de elementos transversales que afectan las dinámicas del
+      proceso educativo. Esto implica que los procesos en las instituciones sean reflexivos, con el propósito de entender las
+      fortalezas y falencias relacionadas con el entorno, los recursos educativos, y así asumir diferentes retos que permitan
+      consolidar una educación inclusiva y de calidad. Por tanto, es prioritario atender las carencias en infraestructura y
+      capacitación del personal docente de los colegios rurales que son pluriétnicos y multiculturales.
+
+      Por último, se considera relevante mencionar las limitaciones que presenta la investigación. Algunos aspectos relevantes de
+      los procesos internos de las instituciones no fueron considerados, debido a las limitaciones de la información. Por ejemplo,
+      procesos de planificación al interior de las instituciones, prácticas pedagógicas en el aula, el perfil de los gestores, la gestión
+      del talento humano, entre otros.
+ 13
+124
+
+                                                                                                                                      Galvis-Molano, et al.
+
+                                                                     Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+Esto implicaría desarrollar estudios complementarios con un enfoque cualitativo que permita conocer percepciones y
+evaluar la gestión de las instituciones educativas, principalmente aquellas que atienden a estudiantes de minorías étnicas.
+Esta investigación sugiere varias líneas de investigación futuras que logren responder algunos interrogantes en términos de
+gestión escolar para poblaciones socialmente vulnerables, como las minorías étnicas. En particular, dado que se evidenció
+falta de cobertura en energía, internet y en los bienes y servicios TIC, sería relevante evaluar el impacto en el logro
+educativo por el cierre escolar de los estudiantes rurales pertenecientes a minorías étnicas, debido a la emergencia
+sanitaria del Covid-19.
+
+                                                                 Agradecimientos
+
+Producto derivado del proyecto IMP-ECO-3116 financiado por la Vicerrectoría de Investigaciones de la Universidad Militar
+Nueva Granada - Vigencia 2020-2022.
+
+
+                                                             Conflicto de intereses
+
+Los autores declaran no tener ningún conflicto de intereses.
+
+                                                           Referencias bibliográficas
+
+1.    ACKERT, Elizabeth; CROSNOE, Robert; LEVENTHAL, Tama. New Destinations and the Early Childhood Education of Mexican-Origin Children. En:
+      Demography, September 03, 2019, vol. 56, no. 5, p. 1607-1634. https://doi.org/10.1007/s13524-019-00814-1
+2.    ARAUJO, María Caridad; CARNEIRO, Pedro; CRUZ, Yyannú; SCHADY, Norbert. Teacher quality and learning outcomes in kindergarten. En: The
+      Quarterly Journal of Economics, August, 2016, vol. 131, no. 3, p. 1415-1453. https://doi.org/10.1093/qje/qjw016
+3.    ARIAS, Jairo. Problemas y retos de la educación rural colombiana. En: Revista educación y ciudad, 2017, vol. 5, no. 33, p. 53-62. https://doi.
+      org/10.36737/01230425.v0.n33.2017.1647
+4.    BARRERA-OSORIO, Felipe; BLAKESLEE, David S; HOOVER, Matthew; LINDEN, Leigh; RAJU, Dhushyanth; RYAN, Stephen P. Delivering Education
+      to the Underserved through a Public-Private Partnership Program in Pakistan. En: The Review of Economics and Statistics, 2020, p. 1-47. https://doi.
+      org/10.1162/rest_a_01002
+5.    BERTONI, Eleonora; ELACQUA, Gregory; MÉNDEZ, Carolina; MONTALVA, Verónica; MUNEVAR, Isabela; WESTH OLSEN, Anne Sofie; ROMÁN,
+      Alonso. Seleccionar y asignar docentes en América Latina y el Caribe: Un camino para la calidad y equidad en educación. En: Nota técnica del BID,
+      4/1/2020, 2020, no. 1900. https://doi.org/10.18235/0002329
+6.    BLANCO, Emilio. La desigualdad de resultados educativos. Aportes a la teoría desde la investigación sobre eficacia escolar. En: Revista Mexicana
+      de Investigacion Educativa, Octubre-Diciembre, 2009, vol. 14, no. 43, p. 1019-1049. https://www.comie.org.mx/revista/v2018/rmie/index.php/nrmie/
+      article/view/530
+7.    CABRERA HERNÁNDEZ, Francisco; PÉREZ CAMPUZANO, María Elena. Autonomía de gestión para la calidad y equidad educativa: una evaluación
+      del Programa Escuelas de Calidad (PEC). En: Revista Mexicana de Análisis Político y Administración Pública, 2018, vol. 7, no. 2, p. 153-174. http://www.
+      remap.ugto.mx/index.php/remap/article/view/274
+8.    CAMPBELL, Meghan. Equality and the right to education let’s talk about sex education. En: CAMPBELL, Meghan; FREDMAN, Sandra; TAYLOR, Helen
+      (Eds.), Human Rights and Equality in Education: Comparative Perspectives on the Right to Education for Minorities and Disadvantaged Groups. Bristol
+      University Press, 2018. p. 111-128. https://doi.org/10.2307/j.ctv2867w4.12
+9.    CELIS, Marly Tatiana; JIMÉNEZ, Óscar Andrés; JARAMILLO, Juan Felipe. ¿Cuál es la brecha de la calidad educativa en Colombia en la educación media
+      y en la superior? En: INSTITUTO COLOMBIANO PARA LA EVALUACIÓN DE LA EDUCACIÓN (Ed.), Estudios sobre la calidad de la educación en
+      Colombia. Bogotá: Icfes, 2012. p. 67-98. https://www.icfes.gov.co/documents/20143/232527/Estudios+sobre+calidad+de+la+educacion+en+Colom-
+      bia+2012.pdf
+10.   CRUZ-CARBONELL,Valeria; HERNÁNDEZ-ARIAS, Ángel Fabián; SILVA-ARIAS, Adriana Carolina. Cobertura de las TIC en la educación básica rural
+      y urbana en Colombia. En: Revista Científica Profundidad Construyendo Futuro, 2020, vol. 13, no. 13, p. 39-48. https://doi.org/10.22463/24221783.2578
+11.   CUELLAR MEDINA, Yolanda. Análisis de la prestación del servicio educativo rural durante el periodo 2002-2011 en el Municipio de Florencia (Ca-
+      quetá Colombia). Trabajo de grado como requisito parcial para optar al título de Magíster en Desarrollo Rural. Bogotá D.C.: Pontificia Universidad
+      Javeriana. 2013. 138 p. http://hdl.handle.net/10554/12416
+12.   DEL POZO SERRANO, Francisco José; MARTÍNEZ IDÁRRAGA, Jairo Alberto ; MANZANARES MOYA, María Asunción ; ZOLÁ PACOCHÁ, Ana
+      Isabel Pedagogía Social y pedagogía escolar para la paz en las instituciones educativas y comunidades vulnerables de la región Caribe Colombiana. En:
+      Revista de Paz y Conflictos, 2017, vol. 10, no. 2, p. 15-39. https://revistaseug.ugr.es/index.php/revpaz/article/view/6491
+13.   DEPARTAMENTO ADMINISTRATIVO NACIONAL DE ESTADÍSTICA. Educación Formal - EDUC [Base de datos]. 2018. https://www.dane.gov.co/
+      index.php/estadisticas-por-tema/educacion/poblacion-escolarizada/educacion-formal
+
+                                                                                                                                                                 125
+                                                                                                                                                                 14
+
+            Entramado                                                                                  Vol. 18 No. 1, 2022 (Enero - Junio)
+
+
+
+
+      14.   DEPARTAMENTO ADMINISTRATIVO NACIONAL DE ESTADÍSTICA. Educación Formal - 2019 [Base de datos]. 2019. http://microdatos.dane.gov.
+            co/index.php/catalog/669
+      15.   DEPARTAMENTO ADMINISTRATIVO NACIONAL DE ESTADÍSTICA. Los efectos del COVID-19, una oportunidad para reafirmar la realización
+            de los derechos humanos de las poblaciones afrodescendientes en el desarrollo sostenible. En: Conferencia regional sobre población y desarrollo,
+            Septiembre, 2020. https://www.dane.gov.co/files/investigaciones/boletines/grupos-etnicos/presentacion-grupos-etnicos-conf-reg-poblacion-y-desar-
+            rollo-2020-sep.pdf
+      16.   DEPARTAMENTO ADMINISTRATIVO NACIONAL DE ESTADÍSTICA. Comunidades Negras, Afrocolombianas, Raizales y Palenqueras. Resultados
+            del Censo Nacional de Población y Vivienda 2018. 2021a. https://www.dane.gov.co/files/investigaciones/boletines/grupos-etnicos/informe-resulta-
+            dos-comunidades-narp-cnpv2018.pdf
+      17.   DEPARTAMENTO ADMINISTRATIVO NACIONAL DE ESTADÍSTICA. Indicador de Necesidades Básicas Insatisfechas (NBI) Censo nacional de
+            población y vivienda 2018 [Base de datos]. 2021b. https://www.dane.gov.co/files/censo2018/informacion-tecnica/CNPV-2018-NBI.xlsx
+      18.   DLOUHÁ, Jana; POSPÍŠILOVÁ, Marie. Education for Sustainable Development Goals in public debate: The importance of participatory research in
+            reflecting and supporting the consultation process in developing a vision for Czech education. En: Journal of Cleaner Production, 20 January, 2018,
+            vol. 172, p. 4314-4327. https://doi.org/10.1016/j.jclepro.2017.06.145
+      19.   DUARTE, Jesús; BOS, María Soledad; MORENO, José Martín. Calidad, Igualdad y Equidad en la Educación Colombiana (Análisis de la prueba SABER
+            2009). En: Notas técnicas del Banco Interamericano de Desarrollo, 2012, no. 396. https://publications.iadb.org/publications/spanish/document/Cali-
+            dad-igualdad-y-equidad-en-la-educaci%C3%B3n-colombiana-(An%C3%A1lisis-de-la-prueba-SABER-2009).pdf
+      20.   FUNDACIÓN EMPRESARIOS POR LA EDUCACIÓN. Ideas para tejer: Reflexiones sobre la educación en Colombia 2010-2018. 2018. 132 p. https://
+            fundacionexe.org.co/ideas-para-tejer-reflexiones-sobre-la-educacion-en-colombia-2010-2018/
+      21.   GARCÍA ARAQUE, Fabio Alberto. La etnoeducación como elemento fundamental en las comunidades afrocolombianas. En: Diálogos sobre Educa-
+            ción, 2017, vol. 8, no. 15, p. 1-21. https://doi.org/10.32870/dse.v0i15.565
+      22.   GARCÍA, Mauricio; ESPINOSA, José; JIMÉNEZ, Felipe; PARRA, Juan David. Separados y desiguales. Educación y clases sociales en Colombia. Bogotá:
+            Centro de Estudios de Derecho Justicia y Sociedad, Dejusticia. 2013. 115 p. https://www.dejusticia.org/wp-content/uploads/2017/04/fi_name_recur-
+            so_591.pdf
+      23.   GARCÍA, Sandra; MALDONADO, Darío; RODRÍGUEZ, Catherine. Propuestas para el mejoramiento de la calidad de la educación básica y media en
+            Colombia. En: Cuadernos de Fedesarrollo, 2014, no. 49. http://hdl.handle.net/11445/150
+      24.   GHIARDO, Felipe; DÁVILA, Óscar. Educación superior y estructura social en chile: aproximaciones desde tres grupos generacionales. En: Ultima
+            década, 2020, vol. 28, no. 53, p. 40-77. https://doi.org/10.4067/S0718-22362020000100040
+      25.   GRACIA, Luz Carlina. Avances en acceso a la educación de grupos étnicos en Colombia y el mundo. En: Misión Jurídica: Revista de Derecho y Ciencias
+            Sociales, 2015, vol. 8, no. 8, p. 149-167. https://doi.org/10.25058/1794600X.94
+      26.   GULOSINO, Charisse; MIRON, Gary. Evaluating the locational attributes of education management organizations (EMOs). En: Journal of School
+            Choice, 2017, vol. 11, no. 3, p. 357-398. https://doi.org/10.1080/15582159.2017.1302265
+      27.   HAMIDI, Farideh; MESHKAT, Maryam; REZAEE, Maryam; JAFARI, Mehdi. Information technology in education. En: Procedia Computer Science, 2011,
+            vol. 3, p. 369-373. https://doi.org/10.1016/j.procs.2010.12.062
+      28.   HEREDIA, Jobany; RODRÍGUEZ,Aída ;VILALTA, José. Empleo de la regresión logística ordinal para la predicción del rendimiento académico. En: Revista
+            investigación operacional, 2012, vol. 33, no. 3, p. 252-267. https://go.gale.com/ps/i.do?id=GALE%7CA360118894&sid=googleScholar&v=2.1&it=r&link-
+            access=abs&issn=02574306&p=IFME&sw=w&userGroupName=anon%7Eff60bcd6
+      29.   INSTITUTO COLOMBIANO PARA LA EVALUACIÓN DE LA EDUCACIÓN. Clasificación de establecimientos y sedes. Diciembre, 2014. https://
+            www.icfes.gov.co/documents/20143/193495/Presentacion+clasificacion+de+establecimientos+y+sedes.pdf
+      30.   INSTITUTO COLOMBIANO PARA LA EVALUACIÓN DE LA EDUCACIÓN. Resultados Saber 11° 2019-1 y 2019-2 [Base de datos]. 2020. https://
+            www.icfes.gov.co/investigadores-y-estudiantes-posgrado/acceso-a-bases-de-datos
+      31.   LAGRAVINESE, Raffaele; LIBERATI, Paolo; RESCE, Giuliano. The impact of economic, social and cultural conditions on educational attainments. En:
+            Journal of Policy Modeling, 2020, vol. 42, no. 1, p. 112-132. https://doi.org/10.1016/j.jpolmod.2019.03.007
+      32.   LÓPEZ-SÁNCHEZ, Ángela Rocío;VIRGÜEZ-CLAVIJO, Andrés Felipe; SARMIENTO-ESPINEL, Jaime Andrés; SILVA-ARIAS, Adriana Carolina. El efecto
+            de la gerencia privada de escuelas públicas en el desempeño estudiantil en la educación media en Colombia. En: Ecos de Economía: A Latin American
+            Journal of Applied Economics, 2015, vol. 19, no. 41, p. 108-136. https://doi.org/10.17230/ecos.2015.41.5
+      33.   LÓPEZ-SÁNCHEZ, Ángela Rocío;VIRGÜEZ-CLAVIJO, Andrés Felipe; SILVA-ARIAS, Adriana Carolina; SARMIENTO-ESPINEL, Jaime Andrés. Desigual-
+            dad de oportunidades en el sistema de educación pública en Bogotá. En: Lecturas de Economía, 2017, no. 87, p. 165-190. https://doi.org/10.17533/udea.
+            le.n87a06
+      34.   LORENTE RODRÍGUEZ, Míriam. Problemas y limitaciones de la educación en América Latina. Un estudio comparado. En: Foro de Educación, 2019,
+            vol. 17, no. 27, p. 229-251. https://doi.org/10.14516/fde.645
+      35.   MINCHÓN-MEDINA, Carlos; TIMANÁ-PALACIOS, Daphne; MINCHÓN-BENITES, Marco; MINCHÓN-BENITES, Félix. Regresión ordinal para mo-
+            delar logros de aprendizaje en educación primaria - Región La Libertad. En: Revista de investigación estadística, 2019, vol. 2, no. 1, p. 1-11. https://
+            revistas.unitru.edu.pe/index.php/REDIES/article/view/2815
+      36.   MINISTERIO DE EDUCACIÓN NACIONAL. Informe de gestión 2014-2018. 2018a, no. 38. https://www.mineducacion.gov.co/1780/articles-385377_
+            recurso_10.pdf
+ 15
+126
+
+                                                                                                                                       Galvis-Molano, et al.
+
+                                                                     Logro educativo de las instituciones con estudiantes de minorías étnicas en Colombia
+
+
+
+
+37.   MINISTERIO DE EDUCACIÓN NACIONAL. Plan Especial de Educación Rural. Hacia el Desarrollo Rural y la Construcción de Paz. 17 de Julio, 2018b.
+      https://www.mineducacion.gov.co/1759/articles-385568_recurso_1.pdf
+38.   NAAMARA, Winfred; NABASUMBA, Sylvia; NABADDA, Christine. Educational inequality and quality of life: A comparative study of secondary
+      schools in Central and Northern Uganda. En: Arts and Social Sciences Journal, 2017, vol. 8, no. 6. https://doi.org/10.4172/2151-6200.1000316
+39.   ORGANIZACIÓN DE LAS NACIONES UNIDAS PARA LA EDUCACIÓN LA CIENCIA Y LA CULTURA. Desglosar el Objetivo de Desarrollo
+      Sostenible 4: Educación 2030, guía. 2016. https://unesdoc.unesco.org/ark:/48223/pf0000246300_spa
+40.   PALACIOS, Fernando. La etnoeducación en Antioquia, teoría y prácticas sin instrumentos. Implementación de políticas públicas etnoeducativas. Tra-
+      bajo de Grado Maestría en Gobierno y Políticas Públicas. Medellín: Universidad EAFIT. 2017. 45 p. https://repository.eafit.edu.co/handle/10784/12307
+41.   PALACIOS, Glenda; SANCHEZ, Fabio; CÓRDOBA, Carlos. Etnoeducación y desempeño escolar en la región pacífica colombiana. En: Documentos
+      CEDE, 2015, no. 36. http://hdl.handle.net/1992/8610
+42.   PÉREZ DÁVILA, Fredy Luis. Políticas educativas en Colombia: en busca de la calidad. En: Actualidades Pedagógicas, 2018, no. 71, p. 193-213. https://doi.
+      org/10.19052/ap.4430
+43.   PIARPUSAN, Esteban David; ROSERO, María Mercedes; SOLARTE, Alejandro; DAZA, Danny Alexander; CORELLA, Carlos Andrés. 2. Procesos
+      Comunitarios y Etnoeducación. En: Nariño, territorio intercultural. Etnoeducación, cultura e identidad de los pueblos de Nariño. Libros Universidad
+      Nacional Abierta y a Distancia, 2020. p. 31-49. https://hemeroteca.unad.edu.co/index.php/book/article/view/3961
+44.   PROGRAMA DE LAS NACIONES UNIDAS PARA EL DESARROLLO. Informe sobre Desarrollo Humano 2014. Sostener el Progreso Humano:
+      Reducir vulnerabilidades y construir resiliencia. 2014. https://hdr.undp.org/sites/default/files/hdr14-report-es.pdf
+45.   RONCANCIO, Doris Jimena; CUTTER, Susan L.; NARDOCCI, Adelaide Cássia. Social vulnerability in Colombia. En: International Journal of Disaster
+      Risk Reduction, November, 2020, vol. 50. https://doi.org/10.1016/j.ijdrr.2020.101872
+46.   WANG, Jian. Reflections on the Difficulties of Educational Development in Minority Areas of Western China. En: Chinese Education & Society, 2017,
+      vol. 50, no. 1, p. 4-11. https://doi.org/10.1080/10611932.2016.1262180
+
+
+
+
+                                                                                                                                                                 127
+                                                                                                                                                                 16

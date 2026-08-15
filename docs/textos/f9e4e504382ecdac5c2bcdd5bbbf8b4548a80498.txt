@@ -1,0 +1,867 @@
+S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                                   Volume 30, Issue (11), 2025
+
+
+
+
+A Secure Web-Based School Management System Using
+     Role-Based Access: Case Study from Nigeria
+
+
+
+
+             S. Sabo (1)
+             A. M. Umaru (2)
+             U. L. Mohammed (3)
+             L. A. Yusuf (4*)
+
+                                                                                                   Received: 28/07/2025
+                                                                                                   Revised:  23/09/2025
+                                                                                                   Accepted: 24/09/2025
+
+       © 2025 University of Science and Technology, Aden, Yemen. This article can
+        be distributed under the terms of the Creative Commons Attribution
+       License, which permits unrestricted use, distribution, and reproduction in
+       any medium, provided the original author and source are credited.
+
+             ‫ يمكن إعادة استخدام‬.‫اليمن‬       ، ‫المركز الرئيس عدن‬     ،‫جامعة العلوم والتكنولوجيا‬ 2025 ©
+               .‫شيطة االستشهاد بالمؤلف والمجلة‬  ‫ر‬    ‫اإلبداع‬     ‫المادة المنشورة حسب رخصة مؤسسة المشاع‬
+                                                      ‫ي‬
+
+
+
+
+      ‫ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ‬
+      1 Faculty of Computing and Sciences, Department of Computer Science, Azman University Kano, Nigeria
+      2 Faculty of Science, Department of Computer Science, Yusuf Maitama Sule University, Kano, Nigeria
+      3 Faculty of Engineering, Department of Computer Engineering Technology, Damaturu, Nigeria
+      4 Faculty of Science, Department of Computer Science, National Open University of Nigeria, Nigeria.
+
+      *Corresponding Author’s Email: lyusuf@noun.edu.ng
+                                                                                                                                 50
+         https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                                 `
+                                                                                                                                 `
+
+           S. Sabo   A. M. Umaru       U. L. Mohammed                  L. A. Yusuf
+           Volume 30, Issue (11), 2025
+
+
+
+
+         A Secure Web-Based School Management System Using Role-Based
+                        Access: Case Study from Nigeria
+                     Shamsu Sabo                         Abubakar Muhammad Umaru                        Umar Lirwan Mohammed
+         Faculty of Computing and Sciences,            Faculty of Science, Department of         Faculty of Engineering, Department of
+          Department of Computer Science,            Computer Science, Yusuf Maitama Sule         Computer Engineering Technology,
+                  Azman University                                 University                             Damaturu, Nigeria
+                   Kano, Nigeria                                 Kano, Nigeria                          ulmohdgwd@gmail.com
+        shamsu.s@azmanuniversity.edu.ng                    amumaru@yumsuk.edu.ng
+
+                                                            Lawan Abdullahi Yusuf
+                                                               Faculty of Science,
+                                                       department of Computer Science,
+                                                      National Open University of Nigeria.
+                                                                Abuja, Nigeria.
+                                                             lyusuf@noun.edu.ng
+
+         Abstract— The presence of manual and disjointed digital            This study examines Imamu Hafsin Model International
+     systems in secondary schools across Nigeria leads to inefficiencies    School in Kano to determine whether problems can be solved
+     in the processes of student registration, grade management, and ID     with a new, straightforward technical solution. Designing and
+     card distribution. This article presents a secure web-based School     implementing a safe, role-based, web-based school
+     Management System (SMS) that was created with Node.js,                 management system that tackles these issues is the primary
+     Express.js, MySQL, and Bcrypt for Imamu Hafsin Model                   goal of this research. It guarantees the significance of this
+     International School in Kano. Among its main features are easy         system in enhancing administrative effectiveness, data
+     login recovery, a tiered role-based access control system,
+                                                                            security, and operational workflows in settings with
+     automated ID card creation, and demographic analysis tools. The
+     system has undergone field testing and has shown improved
+                                                                            constrained resources, paving the way for a more
+     performance compared to Fedena and OpenSIS in areas such as            comprehensive digital transformation in Nigerian secondary
+     security, access control, and localization. This development           education.
+     enhances administrative effectiveness within resource-limited
+     settings.
+                                                                                               II. LITERATURE REVIEW
+                                                                                      Several studies have demonstrated the efficacy of
+        Keywords— Modern School Management Resources; Node.js               digital school management systems (SMS) in raising
+     and Express.js; School Data Analysis; Nigerian Secondary School        academic and administrative achievement. However, their
+     Education; Role-Based Access Control (RBAC)                            technological adaptability and robustness remain significant
+                                                                            challenges, particularly in resource-constrained environments
+                         I. INTRODUCTION                                    like Nigerian secondary schools. Among the key functions
+               The use of information technology (IT) by school             provided by open-source platforms such as Fedena and
+     administration is becoming increasingly relevant and                   OpenSIS are the scheduling of schedules and the maintenance
+     practically required in an era of rapid technological                  of student records. These systems do, however, have serious
+     improvement. Due to expanding curricula and rising student             technical shortcomings: Fedena's lack of a modular design
+     enrollment, schools are facing more administrative                     makes it difficult to incorporate localized features that
+     challenges. However, manual labor or fragmented digital                support Nigeria's different educational curricula, while
+     systems are frequently used to carry out necessary tasks,              OpenSIS is dependent on outdated database schemas that
+     including processing academic results, assigning staff, and            restrict scalability and obstruct real-time data processing [7].
+     providing student ID cards. These techniques raise the                 Their successful implementation in Nigerian public
+     possibility of inaccurate data, postponed reporting, and               secondary schools has been hampered by these design
+     ineffective processes [1].                                             problems as well as the insufficient ICT infrastructure
+     A contemporary school administration system that employs a             described in [8], which includes low-bandwidth networks and
+     role-based platform to manage these challenges streamlines             an unstable power supply. There are more technological
+     key academic and administrative functions. These                       challenges in implementing cloud-based solutions in
+     technologies facilitate safe data processing, enable real-time         educational contexts. Research points to erratic internet
+     student     performance       monitoring,     and     enhance          access and low levels of digital literacy as obstacles [9], but
+     communication between parents, instructors, administrators,            the real problem is the absence of efficient server-side
+     and students [2][3]. Role-based access control (RBAC), a               synchronization methods, which frequently results in data
+     fundamental part of these systems, improves accountability             loss when switching from offline to online. The PHP- and
+     and protects sensitive data by allocating appropriate                  MySQL-built parent-student portal mentioned in [3] provides
+     capabilities based on user roles. [4][5][6].                           grade viewing and attendance tracking, but it is designed for
+     Many secondary schools in Nigeria still use outdated                   higher education settings and does not have any secondary
+     practices, such as writing everything by hand, which slows             school-specific features like parent-teacher communication
+     down instruction and increases the possibility of mistakes.            tools or local language support. Performance problems in
+
+
+51                                                                                                https://journals.ust.edu/index.php/JST
+`
+`
+X
+X
+
+                                                                   S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                          Volume 30, Issue (11), 2025
+
+
+
+low-bandwidth contexts are further aggravated by their             A. System Architecture
+dependence on synchronous data calls.                              The three components of the system were data, application,
+Security is still a major issue when implementing SMS.             and presentation. This facilitates management, upgrades, and
+Password vulnerabilities are addressed by the proposal to          future tool connectivity (see Figure 3.1).
+employ bcrypt encryption and security-question-based                    a. Presentation Layer: The user side is called the
+account recovery [5]; however, many systems do not                          Presentation Layer (Frontend). HTML5, CSS3
+successfully implement these precautions. For example, the                  (Bootstrap), and JavaScript were used in its
+system in [4] lacks multi-factor authentication and uses                    construction.      Students,      employees,      and
+simple MD5 hashing, which is vulnerable to brute-force                      administrators have the appropriate access, and it
+attacks because of its low entropy, exposing private student                functions on many devices.
+information. Higher education has embraced Role-Based                   b. Application Layer (Backend): Using Node.js and
+Access Control (RBAC) [10], [11], with systems granting                     Express.js, this is the primary logic. It manages
+rights to positions such as clerks, lecturers, and students.                permissions, sessions, routing, and API.
+Nevertheless, these implementations frequently depend on                    Additionally, it manages reporting, result
+static permission models that do not allow for dynamic role                 processing, and ID card generation.
+adjustments, and their use for extensive administrative chores          c. Data Layer (Database): All of the records,
+is limited by their concentration on particular functions, like             including those of students, instructors, subjects,
+exam portals [12]. In order to achieve role separation, the                 results, and administrators, were stored in MySQL.
+study in [6] used a PHP-based framework to create RBAC for                  It was selected because of its speed and backend
+result processing in Nigerian polytechnics. However, it left                compatibility.      This     architecture    supports
+out sophisticated capabilities that are necessary for wider                 asynchronous        processing      and    full-stack
+administrative use, such as automatic credential recovery or                functionality, aligning with modern web application
+secure session management.                                                  design principles in the educational domain.
+The necessity of technically sound, context-specific systems
+in secondary schools has been highlighted by recent studies.            Figure 3.1: Three-Tier Architecture of the School
+Through real-time data entry, a study on spreadsheet tools in                         Management System
+K–12 education [13] showed how they might track classroom
+decisions and student performance. These tools are
+susceptible to unwanted access, nevertheless, because they do
+                                                                                         Presentation Layer
+not store data in an encrypted manner and do not apply access
+                                                                                     (HTML5, CSS3, Bootstrap, JS)
+control beyond simple password security. Similarly, the lack
+of secure RBAC and user-friendly design were noted as                               • Responsive UI
+adoption hurdles in an assessment of the integration of digital                     • Role-based Access
+tools in school administration [14]. The systems under                              • Navigation Interface
+evaluation lacked capability for asynchronous data
+processing to handle sporadic connectivity and depended on
+monolithic architectures with hardcoded user interfaces that
+do not scale with different user skill levels. Furthermore, a
+number of digital solutions used in school administration are                              Application Layer
+hindered by poor adaptability to changing classroom                                       (Node.js +Express.js)
+technologies, a lack of support for scalable ICT infrastructure,                    •   Business Logic
+and a lack of technological integration with teacher practices,                     •   API Routing
+according to recent systematic reviews [15].                                        •   Session and Role Control
+The proposed system incorporates digital ID card production
+via PDFKit, hierarchical RBAC with dynamic role                                     •   ID and Document Generation
+assignment, secure login procedures using bcrypt with salted
+hashing, and localized analytics using optimized MySQL
+queries in order to fill these technical deficiencies. These
+features are especially designed to fulfill the operational                                   Data Layer
+requirements of secondary school environments in Nigeria                                  (MYSQL Database)
+while addressing the noted drawbacks, which include low                             •   Student
+scalability, insufficient security, and a lack of contextual
+                                                                                    •   Teachers
+adaptation.
+                                                                                    •   subject
+       III. METHODOLOGY AND SYSTEM DESIGN                                           •   Assessments
+The objective of this endeavor was to create a safe, role-                          •   Admins
+based, and user-friendly School Management System (SMS).
+                                                                                    •   Demographic Data
+The design was based on the system requirements as well as
+our observations from the case study at Imamu Hafsin Model
+International School. During construction, we prioritized an
+easy-to-use interface, a straightforward structure, and safe
+data handling. Security and access control were incorporated
+from the start.
+
+                                                                                                                                    52
+         https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                                    `
+                                                                                                                                    `
+
+          S. Sabo   A. M. Umaru       U. L. Mohammed               L. A. Yusuf
+          Volume 30, Issue (11), 2025
+
+
+
+     B. Technologies and Libraries Utilized                             suitability for a school environment were taken into
+     We employed a suite of trustworthy open-source technologies        consideration while choosing it. The primary technologies we
+     to ensure the system functions properly and remains secure.        employed and their functions within the system are listed in
+     Each tool's speed, stability, community support, and               Table 3.1.
+
+                                             Table 3.1. System Components and Their Roles
+       Component            Technology / Library                   Role in the System
+       Backend              Node.js, Express.js                    Runs the server, handles requests, APIs, and session control
+       Frontend             HTML5, CSS3 (Bootstrap), JavaScript Provides a simple, responsive interface for users
+       Database             MySQL                                  Stores and organizes student, staff, and school data
+       Security             bcrypt.js, express-session             Protects passwords and keeps sessions secure
+       File Handling        Multer                                 Manages uploading and saving of student photos
+       Document Output      PDFKit                                 Creates downloadable ID cards and result sheets
+     This set of tools was chosen because it is reliable, well-         registration, secure authentication, file handling, session
+     supported by active communities, and works well for building       control, and dynamic document generation.
+     real-time, interactive web applications.
+                                                                        a. Student Registration and Login
+     C. Database Schema Design                                          Upon enrollment, a system-generated unique identifier is
+     The system's database schema reflects the core academic and        given to each student. A simplified login process enables
+     administrative processes of a typical secondary school. It is      parents or students to retrieve login information using the
+     normalized for efficient data retrieval and designed to uphold     student's complete name and class, improving accessibility,
+     referential integrity. Major tables include:                       especially in low-resource settings. This method ensures
+           • students – Captures bio-data, gender, class,               correct identification without requiring memorization of
+               guardian contact info, and profile photo paths.          complicated IDs. The duplicate-prevention mechanism,
+           • teachers – Stores institutional login details, roles,      which verifies entries against the guardian's phone number to
+               and recovery information.                                prevent numerous registrations of the same student, is also
+           • subjects – Tracks subject entries, assessments, and        connected to the name and class combination. Here is an
+               results.                                                 illustration of how this logic is handled by the server-side
+           • teacher_subjects / classes – Maps teachers to              endpoint:
+               classes and subjects they handle.                        app.post('/find-details', (req, res) => {
+           • admins – Manages role-based admin accounts                   const { firstname, surname, class } = req.body;
+               (Super Admin, Assistant Super Admin, Admin).               // Retrieve studentID from database
+           • form_master_assessments – Records non-                     });
+               academic metrics like attendance and conduct.            An endpoint defined by app.post('/find-details',...) manages
+     An example schema for the student's table may be found             requests to retrieve student information. The frontend form's
+     below. The SQL script that follows defines the table that          first name, last name, and class are extracted by req.body. The
+     contains the necessary student information, such as names,         right student ID linked to those details is subsequently
+     class, guardian details, gender, and profile picture path. The     retrieved by the backend via database queries.
+     main purpose is to give every student a special ID created by
+     the system and to keep their personal details and guardian         b. Staff Registration and Authentication
+     contact well recorded. The system also checks the student’s        The email address used for staff registration must already be
+     name, class, and guardian’s phone number to make sure the          in the system's database, having been pre-entered by the
+     record is correct and not repeated. If all three are the same as   system administrator or developer at setup. Only staff who
+     another record, the new one is seen as a duplicate and             are allowed can create an account. The system does not keep
+     removed from the database.                                         passwords the way they are typed. The system does not keep
+     CREATE TABLE students (                                            the real password. It changes it into a code that cannot be read.
+       id INT AUTO_INCREMENT PRIMARY KEY,                               This way, even if someone gets into the database, they cannot
+       student ID VARCHAR (20) UNIQUE,                                  see or use the password. The code excerpt that follows shows
+       first name VARCHAR (50),                                         how a staff member's password is scrambled before being
+       surname VARCHAR (50),                                            saved in the teachers table:
+       other name VARCHAR (50),                                         bcrypt.hash(password, saltRounds, (err, hashedPassword) =>
+       class VARCHAR (20),                                              {
+       guardian Phone VARCHAR(15),                                         if (err) {
+       gender ENUM('Male', 'Female'),                                         console.error('Error hashing password:', err);
+       student Picture VARCHAR(255)                                           return res.status(500).json({ success: false, message:
+     );                                                                 'Server error' });
+                                                                           }
+     D. Backend Functionalities                                            // Add the hashed password and further user information to
+     The backend, powered by Node.js and Express.js,                    the teachers table
+     orchestrates all critical functionalities, including user          });
+                                                                        In the above snippet, a safe hashed password is produced by
+
+
+53                                                                                            https://journals.ust.edu/index.php/JST
+`
+`
+X
+X
+
+                                                                  S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                         Volume 30, Issue (11), 2025
+
+
+
+bcrypt.hash() using hashing with the specified number of          The new admin information is saved in the database with the
+saltRounds. If hashing is successful, the generated hash—         INSERT         INTO           administrators        query.
+rather than the password in plain text—is added to the
+database along with other staff information. Any hashing or       Error handling guarantees that server or database problems
+server problems are recorded and graciously returned. The         are      accurately       reported        and       logged.
+system verifies credentials during login by comparing the
+entered password with the hash that has been stored:              Only after successful verification does the login logic allow
+Passwords entered during login are compared to hashes that        access to the dashboard after comparing the given credentials
+have been kept.                                                   with the database:
+bcrypt.compare(inputPassword, storedHashedPassword, (err,         app.post('/adminLogin', (req, res) => {
+match) => {                                                         const { username, password } = req.body;
+if (match) { req.session.loggedin = true;
+req.session.teacher = teacher; } });                                // Use BINARY for case-sensitive username matching
+The input is compared to the hashed password that was saved         db.query('SELECT * FROM admins WHERE BINARY
+using                                         bcrypt.compare().   username = ?', [username], (err, results) => {
+In order to preserve the login status, a session is formed, and        if (err) {
+the teacher's data is saved in req.session if authentication is            console.error('Error querying database for admin
+successful. By limiting system access to pre-authorized           login:', err);
+personnel, this approach ensures strong protection of                      return res.status(500).send('Server error');
+sensitive user data.                                                   }
+
+c. Administrative Access and Privileges                                if (results.length === 0) {
+Three levels of administration are identified by the proposed             return res.status(400).send('No admin found');
+system: administrator, assistant super administrator, and              }
+super administrator. Each level possesses a distinct set of
+abilities, and only the super administrator can add, modify, or         const user = results[0];
+delete further administrative accounts. To maintain consistent          if (bcrypt.compareSync(password, user.password)) {
+control, the super admin role cannot be removed or                         req.session.user = user;
+transferred. Administrators and assistant super administrators             res.redirect('/admin-dashboard.html'); // Redirect to
+can only perform operational duties as part of their positions;   the admin dashboard
+they are unable to change administrative accounts.                      } else {
+The system has both admin registration (for new account                    res.status(400).send('Incorrect password');
+creation) and admin login (for authentication) to ensure safe           }
+and traceable management. Only the super administrator has           });
+the ability to add a new admin record to the database after       });
+signup after verifying the information. By doing this,             Within the above block:
+unauthorized account creation is avoided, and administrative      The system checks the username exactly as it is typed,
+access accountability is upheld.                                  whether in small or capital letters. If the name is found, it
+app.post('/admin-signup', (req, res) => {                         compares the password entered with the one already saved.
+   const { username, password, email, phone } = req.body;         When the two matches, the admin is logged in and taken to
+                                                                  their main page. These checks make sure that only approved
+  // Hash password before storing                                 people can use admin rights, keeping the system safe and
+  const hashedPassword = bcrypt.hashSync(password, 10);           private.
+
+   db.query(                                                      d. User Interface Design
+     'INSERT INTO admins (username, password, email,              The system was optimized for various roles and offered a
+phone) VALUES (?, ?, ?, ?)',                                      clean and responsive interface that made task execution and
+     [username, hashedPassword, email, phone],                    navigation easy.
+     (err, results) => {                                               • Student Portal: Supports retrieval of login
+       if (err) {                                                           credentials, profile viewing, and result access.
+          console.error('Error inserting new admin:', err);            • Staff Portal: Provides subject-specific result entry,
+          return res.status(500).send('Server error');                      assessments, and form master duties.
+       }                                                               • Admin Dashboard: Facilitates system-wide
+       res.status(201).send('New admin account created                      monitoring, analytics, and account management.
+successfully');                                                   We added more interface features to make the system easier
+     }                                                            to use and to improve how it works. Modal pop-ups that offer
+   );                                                             instant feedback and validation notifications are among these
+});                                                               capabilities, as are Bootstrap-enhanced forms for data
+Here:                                                             submission, login, and registration. In order to enhance
+                                                                  navigation and clarity, particularly when working with huge
+The password is secured by hashing it prior to insertion using    datasets, tabulated result displays were included with
+bcrypt.hashSync(password,                                 10).    pagination. People can click a button to download report
+
+
+                                                                                                                                   54
+         https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                                   `
+                                                                                                                                   `
+
+          S. Sabo   A. M. Umaru       U. L. Mohammed               L. A. Yusuf
+          Volume 30, Issue (11), 2025
+
+
+
+     cards and ID cards in PDF. This makes the system simple to         admin dashboard make it simple for school managers to
+     use and helps teachers and students without needing much           comprehend the makeup of the personnel and kids and
+     explanation.                                                       facilitate well-informed decision-making.
+
+     E. Academic Result Management                                      H. Security Framework
+     The result management module includes exam results and             We didn't wait until the last minute to consider security. From
+     continuous assessment (CA). While the class form master            the beginning, we integrated it into the system. Ensuring
+     keeps track of extracurricular characteristics like attendance     system functionality and protecting user data are the
+     and discipline, each subject instructor has the authority to       objectives.
+     input student scores for the topics they are assigned. This        To prevent unauthorized access, passwords are scrambled
+     guarantees that performance is continuously tracked in both        rather than being kept in their original form. When a user
+     the behavioral and academic domains.                               registers, the system employs cookies to safeguard the
+     Student score submission is managed via the following              session.
+     endpoint. Its job is to take in scores, check that they are        Workers can reset their passwords by answering recovery
+     correct, save them in the database, and prevent duplicates         questions instead of calling the administrator.
+     from being entered:                                                The database uses secure queries, which prevents hackers
+     app.post("/api/submitScores", (req, res) => {                      from employing SQL injection to get access. Together, these
+       const scores = req.body.scores;                                  elements give the system security and data protection.
+       const sql = `INSERT INTO subjects (...) VALUES (...)
+                ON DUPLICATE KEY UPDATE ...`;                           I. Information Gathering and User Assessment
+       // Validate and process scores                                   At Imamu Hafsin Model International School in Kano, a pilot
+     });                                                                study was carried out to assess the suggested system in an
+     Here, the teacher's marks are gathered from the frontend by        actual environment. 50 participants in all—20 students, 15
+     req.body.scores. By using INSERT... ON DUPLICATE KEY               instructors, and 15 administrative staff—were purposefully
+     UPDATE, the SQL query makes sure that, rather than adding          chosen.
+     a new duplicate entry, a record for a student and subject that          a. Interview Process: Following participants' use of
+     already exists is updated. Only acceptable values—such as                   the system, semi-structured interviews were
+     scores between 0 and 100—are kept in the database thanks to                 performed to gather data. The focus of each 15–25-
+     the validation phase.                                                       minute interview was on the participants' platform
+     The system then produces reports by term or session in                      experiences.
+     response to the user's request, ensuring consistent and            Themes for the Interview and Sample Questions:
+     verifiable academic records throughout assessment periods.         Five major themes were examined in the interviews:
+                                                                             • Usability — for example, "How simple was it to log
+     F. ID Card and Result PDF Generation                                        in and use the system?
+     Report sheets and ID cards can be dynamically created in a              • Speed and performance, such as "Did you
+     professional format by using the PDFKit library for document                experience any delays or errors when entering data
+     development. There is no need for manual processing because                 or retrieving results?"
+     each generated document is broadcast straight to the browser.           • Reliability and accuracy- for example, "Were the ID
+     To ensure legitimacy and personalization, the PDFs contain                  cards and results generated accurately and
+     the school's branded logo, institutional details, and data                  consistently?"
+     unique to students or personnel.                                        • Security and trust. -for example, "Do you feel that
+     For example, the following code snippet illustrates how a                   your data is secure when using the system?"
+     student report PDF is created:                                          • Total contentment - for example, "How pleased are
+     . let doc = new PDFDocument({                                               you with the system in comparison to manual
+       layout: session === 'whole session' ? 'landscape' : 'portrait'            procedures?"
+     });                                                                     b. Data collection and analysis: During the interviews,
+     const filename = `Student_Report_${studentID}.pdf`;                         responses were noted and categorized thematically.
+     The PDFDocument object in this code determines the report's                 Where needed, simple statistics were used to
+     layout. Landscape mode is used if the report spans the entire               summarize what participants said. The conclusions
+     session; otherwise, portrait mode is used by default. Based on              in the Results and Discussion section were based on
+     their student ID, the filename variable ensures that every                  how the system worked, how easy it was to use, and
+     student's report has a distinct name. This automated document               what users thought about it.
+     generation reduces administrative complexity and supports
+     self-service access, enabling students and staff to download                  IV. IMPLEMENTATION AND TESTING
+     or view records on demand without waiting for manual               The next step is to put the system to use in a real school and
+     processing.                                                        check that it works properly after it has been designed and
+                                                                        built. Testing makes sure everything works the way it should,
+     G. Demographic Analytics and Visualization                         while implementation brings all the parts together so the
+     Real-time data on employees and students is automatically          system can run as a whole.
+     gathered and displayed by the system. It retrieves                 A. System Implementation
+     information, including subject lists, class enrollment, and        Accessible through https://www.imamhafsin.com.ng, the
+     gender distribution, using SQL queries. Visual charts on the       proposed system was successfully implemented in a real-
+
+
+55                                                                                            https://journals.ust.edu/index.php/JST
+`
+`
+X
+X
+
+                                                                      S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                             Volume 30, Issue (11), 2025
+
+
+
+world production environment. The web-based school                    details or sign in directly with their student ID. Once inside,
+management system (SMS) is role-based, aligning with the              they can see their profile and class information, check their
+distinct roles of administrators, staff, and students. The            results for each term or session, and download a digital ID
+modular design principle ensured security and responsiveness          card in PDF with the school’s logo. Everyone can utilize the
+across all system layers, and the functionality integrated into       portal easily, even those without a lot of digital experience or
+each user portal is described in the subsections below.               access to expensive gadgets. This process is demonstrated in
+B. Student Portal                                                     Figure 4.1, which shows the student login interface and result
+Students use a simple login page to get into the system. They         display.
+can either type in their full name and class to get their login
+
+
+
+
+                                  Figure 4.1: Student portal showing login screen and academic results
+    a.   Staff Portal                                                     •    Form masters manage non-academic performance
+    •    Secure access to the staff portal can be obtained via                 metrics, including punctuality, behavior, and
+         institutional email credentials or system-assigned                    general conduct, which contribute to the overall
+         staff identity numbers. The system's Role-Based                       student assessment.
+         Access Control (RBAC) structure states that the                   • All staff can update their personal profile
+         staff member's allocated role determines how access                   information and generate downloadable, institution-
+         privileges are dynamically assigned within the                        branded staff ID cards.
+         portal.                                                      This role-based framework guarantees that staff interactions
+    •    Subject teachers are granted access to input                 are secure, efficient, and in line with institutional duties.
+         academic       records,    including      Continuous         Figure 4.2, which displays the staff dashboard and result entry
+         Assessment scores (CA1, CA2) and end-of-term                 interface, provides an example of this capabilities.
+         examination results for their assigned subjects.
+
+
+
+
+                                                                                                                                         56
+         https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                                         `
+                                                                                                                                         `
+
+          S. Sabo   A. M. Umaru       U. L. Mohammed              L. A. Yusuf
+          Volume 30, Issue (11), 2025
+
+
+
+
+                                          Figure 4.2: Staff dashboard with result entry interface
+            b. Administrative Dashboard                                           delete a Super Admin via the dashboard; they may
+     The admin dashboard is the main place where everything is                    only be removed directly from the database.
+     controlled. Access is given based on the person’s role in the     Additionally, the dashboard has a few helpful tools:
+     system. There are three roles:                                         • Real-time analytics to monitor academic
+         i.    Admin: Can check student results, add, update, or                  achievement.
+               remove student records, and view demographic                 • Numbers of students by gender and class are
+               details. They can see staff information but cannot                 displayed.
+               create or change staff accounts.                             • Numbers of employees by gender and department
+        ii.    Assistant Super Admin: Can do everything an                        are displayed.
+               Admin can do, plus add or edit staff and Admin               • A brief overview of how staff members share roles.
+               accounts. They can remove Admins but not Super               • Reports, such as student results, that are available for
+               Admins. They also have full access to student results              download as PDFs.
+               and reports.                                            School administrators may more easily keep track of events
+       iii.    Super administrator: Has complete authority over        and make prompt choices thanks to these tools. An
+               the system. They have the ability to modify system      illustration of the dashboard containing the settings and data
+               settings, manage all staff and student records, and     is provided in Figure 4.3.Bottom of Form
+               add, alter, or remove any role. It is not possible to
+
+
+
+
+                           Figure 4.3: Admin dashboard displaying demographic charts and navigation menus
+
+
+57                                                                                           https://journals.ust.edu/index.php/JST
+`
+`
+X
+X
+
+                                                                  S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                         Volume 30, Issue (11), 2025
+
+
+
+C. System Testing                                                 were among the phases. At each step, we examined the
+To ensure that the system functions properly, maintains           system's overall performance in real-world scenarios as well
+accurate data, and complies with security regulations, we         as the functionality of its component pieces separately.
+tested it at various stages. Unit testing, integration testing,   Table 4.1 summarizes the outcome of key functional tests
+user acceptability testing (UAT), and a unique security check     conducted during integration and user acceptance phases.
+
+                                    Table 4.1. Summary of Functional Testing Results
+       Test Case                             Expected Outcome                   Actual Result                    Status
+       Student login using full name and     Login details retrieved and user   Successful                       Pass
+       class                                 logged in
+       Staff enters CA and exam results      Result saved and accessible by     Successful                       Pass
+                                             student
+       Admin edits student profile           Changes reflected in system        Successful                       Pass
+       Staff password reset via recovery     Only correct answers allow         Secure reset triggered           Pass
+       questions                             password reset
+       PDF download of ID card               ID card displays correct name and  Generated                        Pass
+                                             branding
+
+     a. Unit Testing                                              These test scenarios confirmed that authentication, role-based
+Unit tests were performed on individual components to verify      workflows, and dynamic content generation were functioning
+logic accuracy and expected behaviors. The following key          cohesively across the system. The system responded with
+modules were tested:                                              accuracy and stability under simulated operational loads.
+     • Student and Staff Registration – Validated input                c. User Acceptance Testing (UAT)
+          field formatting, mandatory field completion, and       User Acceptance Testing was conducted at Imamu Hafsin
+          prevention of duplicate entries.                        Model International School with a pilot group comprising
+     • Login Authentication – Tested for secure handling          students, staff, and administrative users. The objective was to
+          of hashed passwords and correct login validation.       evaluate how well the system met real-world user needs and
+     • Result Entry and Updates – Ensured accurate                whether it aligned with the operational workflows of the
+          computation of continuous assessment scores and         school.
+          examination totals.                                     During testing, all major user roles were able to interact with
+     • PDF Generation – Confirmed correct formatting of           the system effectively:
+          ID cards and result sheets.                                  • Students were able to retrieve login credentials using
+All unit tests were completed successfully, with no critical                only their names and class, access academic results,
+failures, confirming that core functionalities were                         view profile information, and download ID cards in
+implemented as intended.                                                    PDF format.
+     b. Integration Testing                                            • Teachers navigated the result entry interface
+Integration testing verified the coordination between the                   smoothly and completed subject assessments
+frontend interface, backend logic, and the MySQL database.                  without technical difficulties.
+Key scenarios tested during this phase included:                       • Employees are taken to their own customized
+     • User login for students, staff, and admins, with                     portals, which are tailored to their individual tasks
+          session tracking and appropriate redirects based on               and responsibilities, after logging in with system-
+          assigned roles                                                    generated staff IDs.
+     • Retrieval of student login credentials using student            • Through a safe, role-based access system,
+          name and class                                                    administrative users could monitor users, manage
+     • Staff login via either pre-registered email or                       staff and student information, and see demographic
+          automatically generated unique staff ID in                        charts.
+          combination with password                               Testing revealed that the system was reliable, user-friendly,
+     • Credential recovery for staff accounts using security      and completely functional for all kinds of users. The software
+          questions and answers                                   is ready to be used in a real classroom setting because no
+     • Role-specific access enforcement, such as Form             significant problems arose and users were able to finish their
+          Masters     submitting      non-academic    records     activities with little to no help.
+          (attendance, behavior, punctuality)                          d. Security Testing
+     • Student and staff profile management, including            To make sure the system’s security was working properly, a
+          updates and role assignments                            full security check was carried out. The review addressed a
+     • Consistent data flow from registration to academic         number of important topics:
+          result entry, profile viewing, and extracurricular           • Password Security: Bcrypt hashing was used to
+          assessments                                                       verify that passwords were securely stored, and salt
+     • File upload and storage of student profile pictures                  was added for further security.
+          using Multer                                                 • Database Security: It was discovered that all
+     • PDF generation of ID cards, academic results, and                    database queries used parameterized statements,
+          non-academic reports through PDFKit.                              which helps to guard against SQL injection attacks.
+
+
+
+                                                                                                                                    58
+         https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                                    `
+                                                                                                                                    `
+
+          S. Sabo   A. M. Umaru       U. L. Mohammed             L. A. Yusuf
+          Volume 30, Issue (11), 2025
+
+
+
+         •    Session Handling: The security, HTTP-only, and                   verification stages, frequently took more than ten
+              expiration settings of the session cookies were                  minutes for each kid. The suggested solution reduces
+              confirmed.                                                       work completion time by more than 90% because ID
+          • Password Recovery: The system only allowed                         cards and results are generated promptly after data is
+              password resets for verified users who correctly                 entered. This indicates a considerable increase in
+              answered their security questions.                               efficiency and a decrease in the administrative
+     All these checks were successfully passed, suggesting that the            burden.
+     system follows fundamental cybersecurity best practices.         Furthermore, gender distribution, teacher-subject mappings,
+     The system's successful testing demonstrates that it is          and class-wise student counts were automatically calculated
+     completely operational, complies with critical security          from the system's database and shown on the admin
+     requirements, and is ideally adapted to the daily requirements   dashboard. Institutional data were used to validate these
+     of a contemporary secondary school.                              demographic indicators.
+                                                                       All functionalities were validated using test scenarios,
+                  V. 5. RESULTS AND DISCUSSION                        organized user workflows, and feedback from the pilot phase.
+     After testing and installation, the system's technical           Multiple concurrent logins during stress testing proved the
+     evaluation and practical application were used to gauge its      system's stability and scalability. The platform was suitable
+     efficacy. The evaluation's findings are presented in this        for the local educational environment, according to the
+     section, emphasizing the system's performance in several         interview data.
+     important functional areas, including administrative             These results offer compelling proof of the platform's
+     assistance, academic record management, access control, and      influence, integrating qualitative and quantitative information
+     usability. The results show how the deployment at the case       to validate the system's usefulness, dependability, and
+     study institution affected user response.                        efficiency in a secondary school setting in Nigeria.
+     A. System Evaluation
+                                                                      B. Comparative Analysis with Existing Systems
+     Following development and implementation, the case study
+                                                                      The comparison analysis summarized in Table 5.1
+     institution evaluated the system's usability, security,
+                                                                      demonstrates the suggested system's contextual and
+     performance, and role-based capabilities. The system
+                                                                      functional advantages. In contrast to other platforms, it
+     effectively accomplished all of the expected essential
+                                                                      provides      real-time    statistics,  flexible   multi-level
+     features, such as student registration, academic result
+                                                                      administrative access, and automation for ID card generation,
+     entering, ID card generation, and secure login. Role-based
+                                                                      all of which directly answer local school management
+     access effectively provides access based on the user's role,
+                                                                      demands. These characteristics are particularly important in
+     allowing:
+                                                                      the context of secondary schools in Nigeria. Localized
+         i.    The student or parent enters the portal by obtaining
+                                                                      workflows, for example, lessen reliance on foreign templates
+               the student's login credentials through a simplified
+                                                                      that don't correspond with the way Nigerian institutions
+               retrieval process.
+                                                                      assign staff duties, organize academic sessions, or keep track
+        ii.    Teachers can use structured interfaces to enter both
+                                                                      of ongoing assessments. The solution reduces the learning
+               academic and non-academic records.
+                                                                      curve and guarantees that employees may adjust without
+       iii.    Administrators can download system reports,
+                                                                      requiring significant retraining by integrating well-known
+               examine real-time analytics, and manage accounts.
+                                                                      procedures. Similar to this, automated ID card production
+     During the pilot implementation, quantifiable performance
+                                                                      addresses a persistent administrative issue in many schools:
+     measures were collected in addition to qualitative feedback to
+                                                                      delays in issuance of identification cards frequently result in
+     support the efficacy of the system:
+                                                                      gaps in record-keeping and security. Instant PDF-based ID
+            a) System response time: Using browser developer
+                                                                      cards give students and employees validated credentials that
+               tools, this was measured across 50 login and result
+                                                                      improve responsibility and trust. In Nigeria, where
+               retrieval attempts. Under normal network
+                                                                      government regulations, school inspectors, and even parents
+               conditions, it took an average of 1.8 seconds for
+                                                                      frequently request gender-disaggregated data to track
+               students to log in and 2.4 seconds for results to be
+                                                                      educational equity, administrators can also monitor student
+               retrieved.
+                                                                      enrollment trends with the help of gender- and class-based
+            b) Error rate: This is calculated by keeping track of
+                                                                      demographic tracking. Last but not least, the multi-tiered
+               every task completed during pilot use, including
+                                                                      administrative structure ensures that authority is
+               result entries, logins, and registrations. Errors
+                                                                      appropriately allocated among principals, assistants, and
+               occurred in less than 2% of operations, primarily as
+                                                                      department heads, reflecting the actual hierarchy seen in the
+               a result of user data entry; however, they were
+                                                                      majority of Nigerian schools. By solving these context-
+               promptly fixed.
+                                                                      specific inadequacies, the suggested approach is not simply
+            c) Productivity gains: Comparing manual and system-
+                                                                      technically superior but also realistically aligned with the
+               based processes revealed substantial benefits. For
+                                                                      realities of Nigerian secondary education.
+               instance, manually creating ID cards or compiling
+               results, which involved paperwork and several
+
+
+
+
+59                                                                                          https://journals.ust.edu/index.php/JST
+`
+`
+X
+X
+
+                                                                        S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                               Volume 30, Issue (11), 2025
+
+
+
+                               Table 5.1: Comparative Feature Analysis of School Management Systems
+Feature                       Fedena / OpenSIS       Other Reviewed          Proposed System Relevance in Nigerian Context
+                                                     Systems
+Localized to Nigerian         Not supported          Not supported           Fully supported    Nigerian schools follow unique
+curriculum and                                                               with localized     term/session structures and CA-
+school types                                                                 access structures  based assessments, requiring
+                                                                                                workflows aligned with local
+                                                                                                practice.
+Credential retrieval          Not available          Not available           Fully supported    Many parents/students forget
+via student name and                                                         (automated         IDs; using name + class reduces
+class                                                                        lookup enabled)    barriers to access in low-
+                                                                                                resource settings.
+Secure staff password         Not implemented        Partially               Fully              Protects against unauthorized
+recovery                                             implemented             implemented with access, critical in environments
+                                                                             bcrypt and         with shared devices.
+                                                                             security Q&A
+Gender- and class-            Not available          Not available           Fully supported    Nigerian inspectors and
+based demographic                                                            with admin         stakeholders demand gender-
+tracking                                                                     analytics          disaggregated data for reporting
+                                                                                                and policy compliance.
+Role-specific                 Basic only             Not enforced            Strongly enforced Reflects real school hierarchies
+functionality for staff                                                      with RBAC          (subject teachers, form masters,
+                                                                             model              admins). Prevents role overlap.
+Auto-generated ID             Not available          Not available           Available for      Instant ID cards reduce printing
+cards (PDF format)                                                           students and staff delays, improve security, and
+                                                                                                support daily school operations.
+Multi-tiered                  Not supported          Not supported           Fully              Mirrors Nigerian school
+administrative control                                                       implemented:       management structure where
+(3 roles)                                                                    Admin, Assistant   principals, deputies, and
+                                                                             Super Admin,       assistants share different
+                                                                             Super Admin        responsibilities.
+Integration of result         Not supported          Not supported           Fully supported    Nigerian schools emphasize
+and behavioural                                                                                 both academics and behaviour;
+assessments                                                                                     integration ensures holistic
+                                                                                                assessment.
+ C. User Feedback
+ Imamu Hafsin Model International School's administrative               favored the new approach over the manual procedures and
+ and academic staff provided input during the real                      outdated digital tools they had previously employed. They
+ implementation of the suggested system. Selected comments              particularly valued its support for local workflows, role-based
+ that illustrate their experiences with the platform's document         access, and ease of use. All things considered, the approach
+ automation, access control, and usability are displayed in             increased employee happiness and increased the
+ Table 5.2. It is evident that the majority of participants             effectiveness of school administration.
+                                                 Table 5.2. Live Deployment User Feedback
+          User Role                       Feedback
+          Subject Teacher                 “The result entry page was simple and direct, compared to what we previously used.”
+          Administrative Staff            “We like the ID card feature, especially being able to download it ourselves.”
+          Front Desk Officer              “Wonderful. I only needed the student's name and class to obtain the login
+                                          credentials.”
+          Student                         “I didn't require assistance to enter my site and view my results; it was easy..”
+          Parent                          “This is really beneficial; I can quickly and burden-free monitor my child's
+                                          progress.”
+ Table 5.3, which includes the approximate percentage of                summary of participant input across the five interview themes
+ participants who had favorable experiences, provides a                 to supplement these testimonies.
+
+
+
+
+                                                                                                                                          60
+          https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                                          `
+                                                                                                                                          `
+
+          S. Sabo   A. M. Umaru       U. L. Mohammed              L. A. Yusuf
+          Volume 30, Issue (11), 2025
+
+
+
+                                         Table 5.3. Summary of User Evaluation by Theme
+      Theme                       Example Question                                                               Positive       Feedback
+                                                                                                                 (%)
+      Ease of use                 How easy was it to log in and navigate the system?                             85%
+      Speed               and     Did you encounter any delays or errors while retrieving results or             82%
+      performance                 entering data?
+      Reliability         and     Were the ID cards and results generated accurate and consistent?               90%
+      accuracy
+      Security and trust          Do you feel that your data is secure when using the system?                    82%
+      Overall satisfaction        How satisfied are you with the system compared to manual processes?            84%
+     The system's performance, security, and usability are             All of these suggestions could improve the system's
+     validated by the interview responses and descriptive data. In     adaptability and functionality. Although they each face
+     the context of a secondary school in Nigeria, this provides       unique difficulties, when combined, they have the potential
+     thorough confirmation of the system's efficacy and                to significantly improve the system for secondary schools in
+     supplements the quantitative evaluation that was previously       Nigeria.
+     presented (system reaction times, mistake rates, and
+     productivity improvements).                                       Acknowledgments
+     The testimonies and condensed comments show that the              This research work was supported by the staff and
+     approach is applicable, user-friendly, and adaptable to the       administration of Imamu Hafsin Model International School,
+     secondary school setting in Nigeria.                              Kano, Nigeria. The authors are also grateful to the students
+                                                                       and teachers who participated in the pilot testing phase of the
+                          VI. CONCLUSION                               system.
+     The design, creation, and practical implementation of a safe,
+     role-based, web-based school management system that is                                    REFERENCES
+     suited to the demands of secondary schools in Nigeria are         [1] S. Yusuf, O. B. Ayoku, and I. B. Funmilayo,
+     presented in this paper. The platform, which was created          “Management information system in Nigerian secondary
+     especially for Imamu Hafsin Model International School in
+     Kano, integrates demographic analysis, digital ID card            schools: challenges and way forward,” Int. J. Educ. Innov.
+     creation, access control, and academic record administration      Res., vol. 1, no. 2, pp. 180–190, Jul. 2022, doi:
+     into a single, cohesive solution.                                 10.31949/ijeir.v1i2.2476.
+     When compared to other options, its implementation                [2] A. J. Idris, “Effect of concept mapping technique on
+     demonstrated clear gains in usability, workflow alignment         academic performance among secondary school geography
+     with the school, and overall administrative efficiency. The
+     system's seamless implementation shows how digital tools          students in Katsina State, Nigeria,” Int. J. Learn. Dev. Innov.,
+     that are carefully created with local school surroundings in      2024. [Online]. Available: https://gscjournal.com/IJLDI
+     mind can enhance daily operations, particularly in                [3] J. T. Ibibo and A. O. M. Abuassba, “Implementation of a
+     environments with limited resources.                              computerized educational administrative information system:
+                        VII. FUTURE WORK                               A case study of Bayelsa State Post-Primary Schools Board,”
+     Future improvements to the system could include developing        Int. J. Bus. Sci. Technol., 2020. [Online]. Available:
+     a mobile application that would allow students, parents, and      http://www.ijbst.fuotuoke.edu.ng/97
+     staff to check things on their phones. This will improve the      [4] R. S. Sandhu, E. J. Coyne, H. L. Feinstein, and C. E.
+     effectiveness of viewing updates about fees, grades, or           Youman, “Role-based access control models,” IEEE
+     assignments.
+     A basic Learning Management System (LMS) might be a               Comput., vol. 29, no. 2, pp. 38–47, Feb. 1996.
+     helpful addition. This would facilitate the easier exchange of    [5] L. Liu, X. Xu, Z. Yan, T. Tan, N. Niu, and Z. Jia, “Role-
+     assignments, tests, and other resources between educators and     based access control in educational administration system,”
+     learners. It might reduce the need for other tools like Google    in Proc. MATEC Web Conf., vol. 139, Dec. 2017, Art. no.
+     Classroom. Naturally, it won't be easy to keep it sufficiently
+                                                                       00120, doi: 10.1051/matecconf/201713900120.
+     simple and teach everyone how to use it correctly.
+     Another step that could save time and improve the security of     [6] A. A. Onashoga, A. A. Alli, and T. Ogunseye, “Enhanced
+     fee collection is the addition of online payment options.         role-based access control mechanism for electronic
+     Online payment tracking was another option available to           examination system,” Int. J. Comput. Netw. Inf. Secur., vol.
+     parents. However, security is crucial in this case; it would be   6, no. 3, pp. 1–9, Feb. 2014, doi: 10.5815/ijcnis.2014.03.01.
+     required to adhere to local laws and ensure that financial and
+                                                                       [7] T. Aremu, Y. Agboola, and O. Aremu, “The challenges
+     personal data is secure.
+     Finally, offline access could help schools in areas with poor     and opportunities of adopting cloud-based student result
+     internet. When offline, teachers and students could still         management systems (SRMS) by public schools in Nigeria,”
+     update information, and it would synchronize later. The           ResearchGate, 2020, doi: 10.13140/RG.2.2.21504.40965.
+     difficulty would be in ensuring that data is not corrupted when   [8] A. Odumabo, M. Asokere, and O. Olapade, “A parent-
+     numerous people update it simultaneously.
+                                                                       student control web-based learning management system
+
+
+61                                                                                           https://journals.ust.edu/index.php/JST
+`
+`
+X
+X
+
+                                                                 S. Sabo, A. M. Umaru, U. L. Mohammed, L. A. Yusuf
+                                                                                        Volume 30, Issue (11), 2025
+
+
+
+(PaSELS),” Int. J. Appl. Res. Technol., vol. 12, no. 10, Oct.
+2023. [Online]. Available: http://www.esxpublishers.com
+[9] F. A. M. Zukriyani and N. Azizan, “Student academic
+planner system: A review,” Malaysian J. Sci. Health
+Technol., vol. 9, no. 1, pp. 63–73, Apr. 2023, doi:
+10.33102/mjosht.v9i1.326.
+[10] I. Ajayi and H. T. Ekundayo, “The application of
+information and communication technology in Nigerian
+secondary schools,” Int. NGO J., 2009. [Online]. Available:
+www.academicjournals.org/INGOJ
+[11] A. M. Win and K. L. Myint, “Model using access control
+mechanism in student data management,” Int. J. Trend Sci.
+Res.        Dev.,      2019.       [Online].       Available:
+http://creativecommons.org/licenses/by/4.0
+[12] K. Fadairo, Information System for a Secondary School
+in Nigeria: A Case Study on CHSA, Bachelor’s Thesis, Turku
+Univ. Appl. Sci., Turku, Finland, Spring 2013, 52 pp.
+[13] O. M. Dada, K. J. Adedotun, F. S. Oyedepo, and A. K.
+Raji, “Leveraging role-based access control for secure and
+efficient result processing in academic environments,”
+SSAAP          J.,     2024.       [Online].       Available:
+www.ssaapublications.com
+[14] S. Nurollahian, H. Keuning, and E. Wiese, “Teaching
+well-structured code: A literature review of instructional
+approaches,” in Proc. 2025 IEEE/ACM 37th Int. Conf. Softw.
+Eng. Educ. Train. (CSEE&T), 2025, pp. 205–216, doi:
+10.1109/cseet66350.2025.00027.
+[15] S. K. Amemasor, S. O. Oppong, B. Ghansah, B. B.
+Benuwa, and D. D. Essel, “A systematic review on the impact
+of teacher professional development on digital instructional
+integration and teaching practices,” Front. Educ., vol. 10, p.
+1541031, 2025, doi: 10.3389/feduc.2025.1541031.
+
+
+
+
+                                                                                                                      62
+         https://doi.org/10.20428/jst.v30i11.3194
+                                                                                                                      `
+                                                                                                                      `

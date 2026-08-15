@@ -1,0 +1,1112 @@
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29                                        ARTÍCULO CIENTÍFICO
+
+
+
+https://doi.org/10.18004/pdfce/2076-054x/2026.032.62.007
+
+
+
+              Brechas de aprendizaje en Paraguay: un análisis aplicado de
+               determinantes y desigualdades con datos del SNEPE 2018
+
+                        Segmentation and learning gaps in upper secondary
+                         education: evidence from Paraguay’s 2018 SNEPE
+
+                                                  Diego Lovera1 , Gabriela Villalba2
+
+                             1
+                               Universidad Nacional de Asunción, Facultad de Ciencias
+                                        Económicas. San Lorenzo, Paraguay.
+                                    2
+                                     University of Sussex. Brighton, Reino Unido.
+
+Recibido: 03/09/2025                                                                                    Aceptado: 29/11/2025
+
+
+Editor responsable: Marcela Achinelli Facultad de Ciencias Economicas - UNA. San Lorenzo, Paraguay.
+
+
+                                                                       RESUMEN
+Esta investigación examina las desigualdades en el desempeño académico en Paraguay utilizando
+los microdatos del Sistema Nacional de Evaluación del Proceso Educativo (SNEPE) 2018, aplicado a
+estudiantes del año de la Educación Media. El análisis utiliza modelos de regresión lineal múltiple
+con interacciones para identificar si el gradiente socioeconómico varía según la gestión escolar, e
+incorpora un conjunto amplio de controles individuales e institucionales. Asimismo, aplica la des-
+composición Oaxaca–Blinder para estimar la proporción de las brechas atribuible a diferencias en
+dotaciones observables y aquella asociada a retornos diferenciales. Los resultados evidencian una
+brecha significativa entre el sector público y el privado, más marcada en lengua castellana que en
+matemática, junto con un gradiente socioeconómico pronunciado. El análisis muestra desventajas
+adicionales para estudiantes rurales, repetidores, quienes trabajan durante la secundaria y aque-
+llos que hablan en el hogar una lengua distinta al castellano. La interacción entre nivel socioeconó-
+mico y gestión escolar revela que las ventajas de los hogares de mayor nivel se amplifican en el sec-
+tor privado. La descomposición Oaxaca–Blinder confirma que, si bien parte de las desigualdades se
+explica por diferencias en dotaciones, una fracción relevante corresponde a retornos diferenciales,
+lo que refleja segmentación estructural en el sistema educativo paraguayo. Este trabajo representa
+una contribución pionera en el uso de microdatos del SNEPE para el análisis econométrico de la
+educación en Paraguay, llenando un vacío en la literatura nacional, dialogando con la evidencia
+internacional y ofreciendo insumos clave para el diseño de políticas públicas.
+PALABRAS CLAVE: Brechas de aprendizaje, SNEPE 2018, desigualdad socioeconómica, descom-
+posición Oaxaca–Blinder.
+              Este es un artículo publicado en acceso abierto bajo una licencia Creative Commons
+                                                                               7
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…       Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+                                                              ABSTRACT
+This research examines inequalities in academic performance in Paraguay using microdata from
+the National System for the Evaluation of the Educational Process (SNEPE) 2018, that was applied
+to students in the third year of their secondary education. The analysis uses multiple linear regres-
+sion models with interactions to identify whether the socioeconomic gradient varies according to
+school management and incorporates a broad set of individual and institutional controls. Likewise,
+it applies the Oaxaca–Blinder decomposition to estimate the proportion of the gaps attributable
+to differences in observable endowments and that associated with differential returns. The results
+show a significant gap between the public and private sectors, more marked in Spanish language
+than in mathematics, together with a pronounced socioeconomic gradient. The analysis shows
+additional disadvantages for rural students, repeaters, those who work during high school, as well
+for those who speak a language different from Spanish at home. The interaction between socioe-
+conomic status and school management reveals that the advantages of higher-level households
+are amplified in the private sector. The Oaxaca-Blinder decomposition confirms that, although part
+of the inequalities is explained by differences in endowments, a relevant fraction corresponds to
+differential returns, which reflects structural segmentation in the Paraguayan education system.
+This work represents a pioneering contribution to the use of microdata from the SNEPE for the
+econometric analysis of education in Paraguay, filling a gap in the national literature, dialoguing
+with international evidence and offering key inputs for the design of public policies.
+
+
+KEY WORDS: Learning gaps, SNEPE 2018, socioeconomic inequality, Oaxaca–Blinder
+decomposition
+AUTOR CORRESPONDIENTE: Gabriela Noemi Villalba Marecos. MSc. Development Economics
+y/o PhD Candidate in Economics. University of Sussex. Brighton, Reino Unido.
+Email: g.villalba-marecos@sussex.ac.uk
+
+CONTRIBUCIÓN DE LOS AUTORES: DL y GNVM participaron en el diseño de la investigación, la
+construcción y depuración de la base de datos, el análisis econométrico, la discusión de resulta-
+dos y la elaboración de conclusiones. Ambos autores realizaron conjuntamente la revisión final
+de la investigación.
+
+FINANCIAMIENTO: Esta investigación recibió financiamiento parcial a través de los Fondos Con-
+cursables de Investigación de la Facultad de Ciencias Económicas de la Universidad Nacional de
+Asunción (Resolución N.º 19/2024 del Consejo Directivo).
+
+CONFLICTO DE INTERÉS: Ambos autores no poseen ningún conflicto de interés en la realización
+de este trabajo.
+
+Proceso de revisión: Evaluación por pares a doble ciego.
+
+
+
+
+                                                                              8
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29           Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+                                                              INTRODUCCIÓN
+Las desigualdades educativas constituyen uno de los principales retos para el desarrollo de las
+naciones, dado que estas afectan la acumulación de capital humano, restringen la movilidad
+social y reducen la productividad agregada (Becker, 1964; Hanushek y Woessmann, 2011). La
+economía de la educación ha contribuido a comprender este fenómeno al combinar la teoría
+económica de la inversión en capital humano con el análisis de políticas y reformas educativas,
+utilizando herramientas econométricas que permiten medir las brechas de rendimiento y esti-
+mar el peso relativo de sus determinantes (Psacharopoulos y Patrinos, 2018).
+La literatura destaca que la calidad de la educación, más allá del acceso, constituye un factor cla-
+ve para el crecimiento económico sostenido (Hanushek y Kimko, 2000; Hanushek y Woessmann,
+2012). En esta línea, Barro (1991, 2001) enfatiza que la educación de calidad es un determinante
+central, al impactar directamente sobre la acumulación de capital humano y la productividad de
+largo plazo. Sus análisis muestran, además, que el efecto de la educación sobre el crecimiento no
+es homogéneo, mientras la expansión de la educación primaria resulta clave en países de menor
+ingreso, en economías más avanzadas adquieren mayor relevancia la educación secundaria y
+terciaria, lo que resalta la importancia de considerar tanto la cantidad como el nivel educati-
+vo. Asimismo, evaluaciones internacionales estandarizadas como Programme for International
+Student Assessment (PISA), Trends in International Mathematics and Science Study (TIMSS) y
+Estudio Regional Comparativo y Explicativo (ERCE) evidencian que las diferencias de aprendizaje
+entre países y dentro de ellos responden en gran medida a factores socioeconómicos, al tipo de
+escuela y a condiciones contextuales (OECD, 2019; Pagliarani, S. 2025). Cuando estas desigual-
+dades se acumulan a lo largo de la trayectoria educativa, amplían brechas de ingreso, restringen
+oportunidades y perpetúan la pobreza intergeneracional (Ferreira y Gignoux, 2014).
+En este contexto, América Latina se caracteriza por altos niveles de desigualdad socioeconómi-
+ca y segmentación escolar, presentando un panorama especialmente desafiante. Estudios de
+la región documentan que los estudiantes de menor nivel socioeconómico y de zonas rurales
+obtienen sistemáticamente resultados más bajos en pruebas estandarizadas (Llach et al., 2009;
+Mizala y Torche, 2012; Fernández, 2024; Näslund-Hadley, 2024). A pesar de la significativa ex-
+pansión de la matrícula en las últimas décadas, estas brechas de rendimiento persisten y, en
+contextos de alta estratificación, incluso tienden a ampliarse (OECD, 2023; Vegas y Petrow, 2008).
+Para Paraguay, Lovera y Villalba (2022) reportan avances importantes en indicadores educati-
+vos básicos entre 2001 y 2020, como la reducción de la tasa de analfabetismo del 9,6% al 5,5%
+y el incremento del promedio de años de estudio de 6 a 9 años, con alrededor del 90% de la
+población completando la educación escolar básica. Un antecedente temprano en el análisis de
+rendimiento académico en Paraguay es el estudio de Baird y Elías (2014), quienes aplican un
+modelo multinivel a los datos del Segundo Estudio Regional Comparativo y Explicativo (SERCE)
+y encuentran que los recursos escolares tienen un impacto limitado en el aprendizaje, mientras
+que las características individuales y familiares son determinantes más relevantes.
+
+
+                                                                  9
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+En la misma línea, Suárez Enciso, Elías y Zarza (2016) utilizan el Tercer Estudio Regional Compara-
+tivo y Explicativo (TERCE) y confirman que tanto los factores individuales como los contextuales
+socioeconómicos inciden en el desempeño estudiantil. Más recientemente, se han difundido es-
+tudios descriptivos basados en el Sistema Nacional de Evaluación del Proceso Educativo (SNEPE);
+Pérez (2024) explora el rendimiento en matemáticas con énfasis en diferencias de género y Rive-
+ros (2023) examina los resultados del SNEPE 2018 con una aproximación descriptiva y cualitativa.
+En conjunto, estos aportes han contribuido a visibilizar las desigualdades educativas en el país,
+aunque con enfoques principalmente descriptivos o comparativos regionales. Persiste, por tanto,
+un vacío en el uso de los microdatos del Sistema Nacional de Evaluación del Proceso Educativo
+(SNEPE), implementado desde 2015, para realizar análisis econométricos que estimen rigurosa-
+mente las brechas de aprendizaje y sus determinantes estructurales.
+La evaluación censal del SNEPE, aplicada a estudiantes de tercer y sexto grado de la Educación
+Escolar Básica, y tercero de la Educación Media, constituye una fuente privilegiada para este pro-
+pósito. En este estudio, la atención se concentra en los resultados de 3º de la Educación Media,
+dado que capturan el rendimiento al final de la trayectoria escolar obligatoria y permiten anali-
+zar con mayor claridad su vínculo con la transición a la educación superior y el mercado laboral.
+La aplicación 2018, la más reciente publicada, ofrece datos censales de rendimiento en lengua
+castellana y matemáticas junto con información socioeconómica e institucional. A diferencia de
+pruebas muestrales como PISA o ERCE, el SNEPE permite un análisis exhaustivo y desagregado
+a nivel nacional, aunque su potencial ha sido poco aprovechado en la investigación académica
+aplicada.
+En contraste, países como México y Chile han logrado explotar sus evaluaciones nacionales
+(ENLACE, SIMCE) para analizar políticas, trayectorias educativas y desigualdades de aprendizaje
+(De Hoyos Navarro, 2018; de Hoyos Navarro, 2021), generando evidencia robusta para el di-
+seño de políticas. La ausencia de estudios similares en Paraguay subraya la relevancia de esta
+investigación.
+Desde el punto de vista metodológico, la literatura en economía de la educación ha avanzado
+hacia el uso de métodos de inferencia causal, como diferencias en diferencias (DiD), estudios de
+eventos y diseños cuasiexperimentales (Angrist y Pischke, 2009; Cunningham, 2021), posibles
+cuando se cuenta con datos longitudinales y reformas que permitan definir grupos de tratamien-
+to y control. Estas condiciones no se cumplen en el caso del SNEPE 2018, que corresponde a una
+evaluación censal de corte transversal.
+Bajo estas condiciones, la presente investigación ofrece un análisis de las brechas de rendimien-
+to académico en Paraguay, basado en evidencia empírica. Para ello emplea un enfoque eco-
+nométrico que utiliza modelos de regresión lineal múltiple con interacciones para examinar si el
+gradiente socioeconómico, es decir, la pendiente que mide la asociación entre el nivel socioe-
+conómico de los estudiantes y su rendimiento académico, varía según el tipo de gestión esco-
+lar (pública/privada), incorporando un conjunto amplio de controles a nivel individual e institu-
+cional (Wooldridge, 2010; OECD, 2019). También, se aplica la descomposición Oaxaca–Blinder
+
+                                                                          10
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+(Oaxaca, 1973; Blinder, 1973), para cuantificar la proporción de la brecha atribuible a diferencias
+en dotaciones observables y la asociada a retornos diferenciales de dichas características. En
+ausencia de datos longitudinales o reformas con potencial de identificación causal claros, esta
+combinación metodológica constituye una estrategia sólida para aislar y cuantificar desigualda-
+des asociadas a factores observables, proporcionando estimaciones ajustadas y detalladas que
+sirven de base para el diseño de políticas educativas basadas en evidencia.
+Este trabajo constituye el primer análisis nacional de las brechas de rendimiento académico en
+Paraguay basado en microdatos del SNEPE 2018, con un enfoque econométrico que combina
+modelos de regresión con interacciones y descomposición Oaxaca–Blinder. Los resultados mues-
+tran una brecha significativa de rendimiento entre el sector público y privado, más marcada en
+lengua castellana que en matemáticas, también confirma que el rendimiento académico de los
+estudiantes está fuertemente asociado a su nivel socioeconómico (NS) y evidencia desventajas
+adicionales para estudiantes rurales, repetidores y aquellos que trabajan durante la secundaria.
+Asimismo, se observa que el uso de una lengua distinta al castellano en el hogar se asocia con
+desempeños más bajos, lo que adquiere especial relevancia en un país oficialmente bilingüe
+como Paraguay, donde el guaraní es hablado ampliamente en los hogares, pero las oportuni-
+dades laborales formales dependen casi exclusivamente del español o, en algunos casos, del
+inglés. La descomposición Oaxaca–Blinder revela que una parte de las brechas de aprendizaje se
+debe a que los estudiantes difieren en características observables (como nivel socioeconómico,
+repitencia o idioma del hogar). Sin embargo, otra parte se explica porque esas mismas caracte-
+rísticas “rinden” de forma desigual según el grupo, lo que indica que el sistema educativo genera
+retornos diferenciados y, en consecuencia, segmentación estructural.
+Al llenar un vacío en la literatura nacional y dialogar con la evidencia internacional, este estudio
+aporta resultados importantes y metodológicamente robustos con implicaciones directas para
+políticas públicas.
+
+
+                                                MATERIALES Y MÉTODOS
+Este estudio es de carácter cuantitativo, con un diseño no experimental y transversal. Se adopta
+un enfoque descriptivo-explicativo, orientado a caracterizar las brechas educativas, estimar la
+asociación de factores individuales, institucionales y contextuales con el rendimiento académico
+y la descomposición de las brechas en explicados y no explicados.
+Se emplearon microdatos provenientes del Sistema Nacional de Evaluación del Proceso Educa-
+tivo (SNEPE), correspondientes a la evaluación censal aplicada en 2018 a estudiantes del Tercer
+Curso de la Educación Media en Paraguay. La evaluación censal del SNEPE, implementada por
+el Ministerio de Educación y Ciencias (MEC), constituye la única evaluación de carácter censal
+a nivel nacional de educación, lo que garantiza la cobertura de todos los estudiantes del ni-
+vel evaluado. La base de datos contiene información individual (puntajes en lengua castellana
+y matemática, sexo, nivel socioeconómico, repitencia, edad, asistencia, idioma principal en el
+hogar y condición laboral) e institucional (zona geográfica, tipo de gestión escolar, tamaño de
+
+                                                              11
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…                         Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+matrícula, relación alumno–docente, indicadores de infraestructura y ubicación departamental
+y distrital). Se excluyeron observaciones con información incompleta en las variables principales,
+conformando muestras finales independientes para lengua castellana y matemáticas según la
+disponibilidad de datos en cada prueba. La Tabla 1 presenta la definición y el nivel de agregación
+de las principales variables utilizadas en el análisis.
+Tabla 1. Definición de Variables
+
+
+Variable                               Descripción                                                                   Tipo                   Nivel
+
+z_CAST                                 Puntaje estandarizado en Lengua Castellana                                    Continua               Estudiante
+
+z_MATE                                 Puntaje estandarizado en Matemática                                           Continua               Estudiante
+                                       Ubicación geográfica de la escuela (1 = urbana, 0 =
+Zona                                                                                                                 Binaria                Escuela
+                                       rural)
+                                       Tipo de gestión de la institución (1 = privada/
+Gestión escolar                                                                                                      Binaria                Escuela
+                                       subvencionada, 0 = pública)
+Nivel Socioeconómico (NS)              Índice socioeconómico del estudiante                                          Continua               Estudiante
+
+Mujer                                  Sexo del estudiante (1=mujer, 0 = varón)                                      Binaria                Estudiante
+                                       Ha repetido al menos un grado durante su
+Repitencia                                                                                                           Binaria                Estudiante
+                                       trayectoria escolar
+                                       Idioma principal hablado en el hogar. (1=Castellano,
+Idioma del hogar                                                                                                     Categórica             Estudiante
+                                       2=Guaraní, 3=Otro)
+                                       Situación laboral del estudiante (1=No trabaja,
+Condición laboral                                                                                                    Categórica             Estudiante
+                                       2=Trabaja en casa, 3=Trabaja fuera)
+IDSCH                                  Identificador único de la institución educativa                               Categórica             Escuela
+                                       Número total de estudiantes matriculados en la
+Tamaño de la escuela                                                                                                 Continua               Escuela
+                                       institución
+Libros para docentes                   Disponibilidad de libros para uso docente                                     Índice                 Escuela
+                                       Acceso y uso de tecnologías de la información por
+Uso de TIC por docentes                                                                                              Índice                 Escuela
+                                       parte de los docentes
+Departamentos                          Departamentos (0-17). Incluye Capital                                         Categórica             Territorial
+
+
+Nota: Las variables dependientes corresponden a los puntajes estandarizados en Lengua Castellana y Matemática.
+Los modelos incorporan controles individuales e institucionales y efectos fijos departamentales.
+
+Para garantizar la comparabilidad de los puntajes de las pruebas en castellano y matemáticas
+entre estudiantes y grupos, se calcularon valores z (z-scores). Estos se obtuvieron mediante
+la fórmula:
+
+                                                                              𝑿𝑿𝑿𝑿𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊 − 𝝁𝝁𝝁𝝁
+                                                             𝒛𝒛𝒛𝒛𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊 =
+                                                                                         𝝈𝝈𝝈𝝈
+
+
+
+
+                                                                                    12
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29                                           Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+donde Xis el puntaje bruto del estudiante i en la escuela s, μ es la media del puntaje para la
+muestra y σ corresponde a la desviación estándar del rendimiento.
+Este proceso permitió estandarizar los puntajes originales, transformándolos en unidades de
+desviación estándar respecto a la media, homogeneizando las métricas y facilitando la com-
+paración entre subgrupos, independientemente de las escalas originales. De esta manera, los
+coeficientes de las regresiones pueden interpretarse como cambios en desviaciones estándar
+del rendimiento académico.
+Para estimar las asociaciones entre las variables independientes y el rendimiento académico, se
+utilizaron tres especificaciones de regresión lineal múltiple (OLS), con errores estándar robustos,
+ajustados por agrupación a nivel de escuela y efectos fijos departamentales 1. El ajuste de errores
+estándar por escuela permite capturar la correlación intra-institución, mientras que los efectos
+fijos departamentales controlan por heterogeneidad estructural no observable a nivel territorial.
+Modelo 1 (M1): efectos principales con controles individuales
+
+
+                                         𝒛𝒛𝒛𝒛𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊 = 𝜷𝜷𝜷𝜷𝟎𝟎𝟎𝟎 + 𝜷𝜷𝜷𝜷𝟏𝟏𝟏𝟏 𝑼𝑼𝑼𝑼𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟐𝟐𝟐𝟐 𝑷𝑷𝑷𝑷𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟑𝟑𝟑𝟑 𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝒊𝒊𝒊𝒊 + 𝜽𝜽𝜽𝜽⊤ 𝑿𝑿𝑿𝑿𝒊𝒊𝒊𝒊 + 𝜹𝜹𝜹𝜹𝒅𝒅𝒅𝒅 + 𝜺𝜺𝜺𝜺𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊
+
+
+
+Modelo 2 (M2): añade controles institucionales
+
+
+                               𝒛𝒛𝒛𝒛𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊 = 𝜷𝜷𝜷𝜷𝟎𝟎𝟎𝟎 + 𝜷𝜷𝜷𝜷𝟏𝟏𝟏𝟏 𝑼𝑼𝑼𝑼𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟐𝟐𝟐𝟐 𝑷𝑷𝑷𝑷𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟑𝟑𝟑𝟑 𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝒊𝒊𝒊𝒊 + 𝜽𝜽𝜽𝜽⊤ 𝑿𝑿𝑿𝑿𝒊𝒊𝒊𝒊 + 𝝀𝝀𝝀𝝀⊤ 𝒁𝒁𝒁𝒁𝒊𝒊𝒊𝒊 + 𝜹𝜹𝜹𝜹𝒅𝒅𝒅𝒅 + 𝜺𝜺𝜺𝜺𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊
+
+
+
+Modelo 3 (M3): incluye interacción NS × gestión escolar
+
+
+            𝒛𝒛𝒛𝒛𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊 = 𝜷𝜷𝜷𝜷𝟎𝟎𝟎𝟎 + 𝜷𝜷𝜷𝜷𝟏𝟏𝟏𝟏 𝑼𝑼𝑼𝑼𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟐𝟐𝟐𝟐 𝑷𝑷𝑷𝑷𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟑𝟑𝟑𝟑 𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝒊𝒊𝒊𝒊 + 𝜷𝜷𝜷𝜷𝟒𝟒𝟒𝟒 (𝑷𝑷𝑷𝑷𝒊𝒊𝒊𝒊 × 𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝑵𝒊𝒊𝒊𝒊 ) + 𝜽𝜽𝜽𝜽⊤ 𝑿𝑿𝑿𝑿𝒊𝒊𝒊𝒊 + 𝝀𝝀𝝀𝝀⊤ 𝒁𝒁𝒁𝒁𝒊𝒊𝒊𝒊 + 𝜹𝜹𝜹𝜹𝒅𝒅𝒅𝒅 + 𝜺𝜺𝜺𝜺𝒊𝒊𝒊𝒊𝒊𝒊𝒊𝒊
+
+
+donde zis es el puntaje estandarizado del estudiante i en la escuela s, Us indica la zona geográfica
+(urbana/rural), Ps el tipo de gestión escolar (privada/pública), NSi el índice socioeconómico, Xi
+representa los controles individuales, Zs los controles institucionales, δd los efectos fijos depar-
+tamentales y εis el término de error.
+M1 estima efectos principales con controles individuales; M2 añade controles institucionales y
+M3 incluye una interacción que permite examinar variaciones contextuales en los efectos. De
+esta forma, es posible identificar si la pendiente que mide la asociación entre el nivel socioeco-
+nómico de los estudiantes y su rendimiento académico, varía según el tipo de gestión escolar, es
+decir, escuelas públicas y privadas.
+
+
+1
+    La base abarca los 17 departamentos y la capital del pais.
+
+
+                                                                                                 13
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…                                Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+Asimismo, la inclusión de controles individuales (sexo, repitencia, idioma principal del hogar y
+condición laboral) busca aislar el efecto neto de las variables principales al considerar caracte-
+rísticas personales relevantes para el aprendizaje. Los controles institucionales (tamaño de la es-
+cuela, libros para docentes y acceso a tecnología de docentes) capturan diferencias en recursos y
+condiciones entre centros educativos, mientras que los efectos fijos departamentales controlan
+por factores estructurales comunes a las escuelas dentro de cada territorio. En conjunto, estas
+especificaciones permiten estimar brechas ajustadas y comprender no solo la magnitud de los
+factores estructurales asociados al rendimiento, sino también cómo interactúan entre sí, de ma-
+nera a configurar las desigualdades observadas.
+Estas especificaciones se estimaron2 por separado para los puntajes estandarizados en lengua
+castellana y matemáticas. Esta estrategia garantiza consistencia metodológica y la comparabili-
+dad de los resultados entre ambas áreas de aprendizaje, lo que permite examinar si los deter-
+minantes individuales e institucionales operan de manera similar o diferencial según la com-
+petencia evaluada. Adicionalmente, se estimaron especificaciones alternativas para verificar la
+robustez de los resultados, incluyendo modelos más parsimoniosos y estimaciones separadas
+por área geográfica.
+Posteriormente, se implementó la descomposición Oaxaca–Blinder (Oaxaca, 1973; Blinder,
+1973) con base en los modelos obtenidos. Lo cual permite analizar en qué medida las brechas
+observadas en el rendimiento entre escuelas públicas y privadas responden a diferencias en ca-
+racterísticas observables o a retornos diferenciales de dichas características.
+Este método separa la diferencia total ΔY (para este caso el rendimiento entre escuelas públicas
+y privadas), en tres componentes: dotaciones, que reflejan las diferencias en características ob-
+servables como nivel socioeconómico y tipo de gestión escolar; coeficientes, que capturan cómo
+estas características impactan en el rendimiento en cada grupo; y la interacción, que combina
+ambos efectos. La ecuación utilizada para esta descomposición fue:
+
+
+                                     (����
+                          𝛥𝛥𝛥𝛥𝛥𝛥𝛥𝛥 = ��        − ����
+                                      𝑿𝑿𝑿𝑿𝟏𝟏𝟏𝟏����
+                                                 𝑿𝑿𝑿𝑿𝟐𝟐𝟐𝟐� 𝜷𝜷𝜷𝜷𝟐𝟐𝟐𝟐 + ����
+                                                         )��          𝑿𝑿𝑿𝑿𝟐𝟐𝟐𝟐 (�𝜷𝜷𝜷𝜷
+                                                                      ��         ��� 𝟏𝟏𝟏𝟏 −�
+                                                                                           𝜷𝜷𝜷𝜷
+                                                                                            �� 𝟐𝟐𝟐𝟐 ) + (
+                                                                                                         ����𝟏𝟏𝟏𝟏 − ����
+                                                                                                         𝑿𝑿𝑿𝑿       𝑿𝑿𝑿𝑿𝟐𝟐𝟐𝟐 )(𝜷𝜷𝜷𝜷𝟏𝟏𝟏𝟏 − 𝜷𝜷𝜷𝜷𝟐𝟐𝟐𝟐 )
+                                                                                                        �������������
+                                            Dotaciones                      Coeficientes                              Interacción
+
+
+
+En cuanto a las consideraciones éticas, se respetaron los principios fundamentales de confiden-
+cialidad y privacidad de los datos. Al tratarse de datos anónimos, no fue posible identificar a
+ningún individuo, asegurando el cumplimiento de las normativas internacionales y nacionales
+en investigación educativa. Además, el análisis se realizó exclusivamente con fines académicos,
+enmarcándose en un enfoque que busca contribuir al conocimiento y a la formulación de políti-
+cas públicas basadas en evidencia.
+
+
+2
+ Las estimaciones se realizaron en Stata 18, utilizado para estadística descriptiva, regresiones y descomposición Oaxaca–Blin-
+der. Python 3.11 se empleó de manera complementaria para el procesamiento de datos, generación de figuras y validaciones
+de robustez.
+
+
+                                                                                       14
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29          Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+                                               RESULTADOS Y DISCUSIÓN
+En esta sección se presentan los principales resultados del estudio, comenzando con un análisis
+descriptivo de las brechas en el rendimiento académico, según zona de residencia y tipo de
+gestión escolar. Seguidamente, se examina cómo estas diferencias se modifican al controlar por
+características individuales, institucionales y contextuales mediante modelos de regresión y pos-
+teriormente, se profundiza en su descomposición utilizando el método Oaxaca–Blinder.
+La Tabla 2, presenta las brechas brutas en puntajes estandarizados (z-scores) por zona y tipo
+de gestión escolar para las pruebas de lengua castellana y matemática. En el caso de la zona
+geográfica, los estudiantes urbanos obtienen en promedio 0,33 desviaciones estándar más que
+los rurales en castellano, una diferencia de magnitud mediana (d de Cohen = 0,33; p < 0,001).
+En matemática, la brecha urbana–rural es mucho menor (0,08 desviaciones estándar), aunque
+igualmente significativa debido al gran tamaño muestral (d = 0,08; p <0,001).
+Las diferencias por tipo de gestión son más pronunciadas. En lengua castellana, los estudiantes
+de escuelas privadas superan a los de escuelas públicas en 0,49 desviaciones estándar, lo que co-
+rresponde a un efecto de magnitud mediana-alta (d = 0,49; p < .001). En matemática, la brecha
+privada–pública es de 0,41 desviaciones estándar (d = 0,41; p < 0,001).
+Tabla 2. Brechas brutas en puntajes estandarizados (z-scores) por zona y gestión escolar
+
+                                                     Media
+                                                                       Media
+                                                  Rural/Pública                               Dif.                                   d de
+      Prueba               Comparación                             Urbana/Privada                             t           p
+                                                        1                                    (1–2)                                  Cohen
+                                                                         2
+
+ Castellano             Urbana – Rural            -0,24           0,09                     0,33          -36,1       <0,001        0,33
+
+ Matemática             Urbana – Rural            -0,06           0,02                     0,08          -8,22       <0,001        0,08
+
+ Castellano             Privada – Pública         -0,11           0,38                     0,49          -52,49      <0,001        0,49
+
+ Matemática             Privada – Pública         -0,09           0,31                     0,41          -43,34      <0,001        0,41
+
+Nota. Puntajes estandarizados (z-scores; media = 0, DE = 1). La diferencia de medias (Diff) está expresada en des-
+viaciones estándar, por lo que en este caso coincide con el tamaño del efecto de Cohen’s d. Valores de referencia de
+Cohen: 0,20 = pequeño, 0,50 = mediano, 0,80 = grande.
+
+En conjunto, estos resultados indican que las desigualdades asociadas al tipo de gestión escolar
+son sustancialmente mayores a las diferencias atribuibles a la zona geográfica y que las brechas
+tienden a ser más amplias en castellano que en matemática.
+La Figura 1, panel A y B complementan esta información, presentando las distribuciones comple-
+tas de los puntajes estandarizados. El Panel A ilustra las distribuciones de puntajes estandariza-
+dos en castellano y matemática, según la zona de residencia. En castellano, la curva de densidad
+para el grupo urbano se desplaza hacia valores positivos en comparación con la rural, reflejando
+la diferencia media observada. En matemática, si bien la distancia entre distribuciones es menor,
+persiste una ligera ventaja para el grupo urbano. El Panel B presenta las distribuciones de punta-
+jes estandarizados en Castellano y Matemática, según la gestión escolar (pública o privada/sub-
+vencionada). En ambas pruebas, la curva correspondiente a las escuelas privadas se encuentra
+
+                                                                  15
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+desplazada hacia la derecha en relación con la de las escuelas públicas, lo que indica un mejor
+desempeño promedio de los estudiantes del sector privado. En Castellano, esta diferencia es
+más marcada, con una mayor concentración de estudiantes privados en puntajes por encima
+de la media y una menor dispersión hacia valores bajos. En Matemática, la brecha también es
+visible, aunque ligeramente menor en magnitud.
+Figura 1. Panel A- Distribuciones de puntajes estandarizados (z-scores) en castellano y matemática según zona de
+residencia
+
+
+
+
+Panel B -Distribuciones de puntajes estandarizados (z-scores) en Castellano y Matemática según gestión escolar
+
+
+
+
+Nota. Los puntajes están estandarizados (z-scores; media = 0, DE = 1). La línea continua corresponde a estudiantes
+de escuelas privadas y la línea discontinua a estudiantes de escuelas públicas.
+
+
+
+
+                                                                          16
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+En síntesis, el análisis descriptivo demuestra que las desigualdades educativas son más marcadas,
+según el tipo de gestión escolar que por la zona de residencia y que éstas tienden a ser mayores
+en Castellano que en Matemática. Sin embargo, estas diferencias corresponden a brechas brutas,
+sin controlar por factores individuales ni institucionales. En la siguiente sección, se evalúa en qué
+medida estas disparidades persisten al ajustar por dichas características.
+
+
+FACTORES ASOCIADOS AL RENDIMIENTO ACADÉMICO
+Con el objetivo de identificar los determinantes del rendimiento en Castellano y Matemáti-
+cas, se estimaron tres modelos (M1, M2 y M3) de regresión lineal, utilizando el método de
+Mínimos Cuadrados Ordinarios (OLS) para cada materia. Estos modelos incorporan progresi-
+vamente distintos grupos de variables explicativas: características individuales del estudiante,
+factores institucionales y la interacción entre nivel socioeconómico y tipo de gestión escolar.
+Todas las especificaciones incluyen efectos fijos departamentales, lo cual permite controlar
+por factores regionales inobservables constantes, como el contexto socioeconómico más am-
+plio, políticas educativas locales o brechas en infraestructura. Es menester recordar que los
+puntajes fueron transformados a una escala estandarizada (z-score), con media cero y desvia-
+ción estándar igual a uno. Por lo tanto, los coeficientes de las regresiones indican cambios en
+el rendimiento expresados en desviaciones estándar. Por ejemplo, si en la escala original de la
+prueba una desviación estándar equivale a 100 puntos, un coeficiente de 0,27 representa una
+diferencia cercana a 27 puntos.
+La Tabla 3 presenta las especificaciones del modelo OLS, lo cual permite examinar la estabilidad
+de los coeficientes bajo distintas combinaciones de controles para el desempeño en castellano.
+La columna (1), reporta los resultados con los efectos principales de las variables individuales,
+socioeconómicas y escolares básicas. Aquí se observa que asistir a una escuela privada o subven-
+cionada se asocia con un puntaje promedio significativamente mayor en castellano (0,27 des-
+viaciones estándar), incluso tras controlar por nivel socioeconómico (NS), repetición de grado,
+trabajo del estudiante y lengua hablada en el hogar. Asimismo, residir en zona urbana muestra
+una asociación positiva y significativa (0,10 desviaciones estándar), y el NS tiene un efecto posi-
+tivo robusto sobre el rendimiento (0,185 desviaciones estándar).
+La columna (2), extiende el análisis incorporando controles institucionales claves: el tamaño de
+la escuela, la disponibilidad de libros para docentes y el uso de tecnologías digitales por parte del
+profesorado. Todos estos factores muestran asociaciones positivas y significativas con el rendi-
+miento, lo que indica que condiciones escolares más favorables también contribuyen, de manera
+independiente, al desempeño académico. La inclusión de estos controles reduce ligeramente el
+coeficiente de la variable urbana (de 0,10 a 0,06), lo que sugiere que parte del efecto urbano
+podría estar mediado por diferencias en la calidad o los recursos escolares.
+Por último, la columna (3) introduce una interacción entre NS y gestión escolar, lo que permite
+evaluar si el efecto del NS varía si el estudiante asiste a una escuela pública o privada. El re-
+sultado muestra que el efecto del NS sobre el rendimiento es significativamente mayor en las
+
+                                                              17
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…          Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+escuelas privadas (0,32 desviaciones estándar), mientras que el efecto base del NS en escuelas
+públicas se mantiene positivo y significativo. Este hallazgo revela una amplificación de las des-
+igualdades dado que los estudiantes de mayor NS se benefician más cuando asisten a escuelas
+privadas. El coeficiente principal de gestión privada disminuye ligeramente (de 0,27 a 0,21), lo
+que sugiere que parte del efecto promedio se debe a su combinación con estudiantes de mayor
+nivel socioeconómico.
+Tabla 3. Regresiones OLS sobre desempeño en Castellano (z-score)
+
+                       Variable                                       1                     2                            3
+ Zona
+ Urbana                                                   0,103***             0,064**                       0,071***
+                                                          (0,025)              (0,026)                       (0,026)
+ Gestión escolar
+ Privada/Subvencionada (ref. Pública)                     0,268***             0,279***                      0,210***
+                                                          (0,034)              (0,034)                       (0,037)
+ Nivel Socioeconómico (NS)                                0,185***             0,164***
+                                                          (0,019)              (0,019)
+ NS × Privada                                             ---                  ---                           0,321***
+                                                                                                             (0,020)
+ NS × Pública                                             ---                  ---                           0,119***
+                                                                                                             (0,047)
+ Controles individuales
+ Mujer                                                    0,082***             0,082***                      0,083***
+                                                          (0,012)              (0,012)                       (0,012)
+ Repite curso                                             –0,369***            –0,361***                     –0,360***
+                                                          (0,015)              (0,015)                       (0,015)
+ Guaraní (ref. Castellano)                                –0,117***            –0,101***                     –0,106***
+                                                          (0,017)              (0,017)                       (0,017)
+ Trabaja en casa (ref. No trabaja)                        –0,127***            –0,119***                     –0,116***
+                                                          (0,014)              (0,014)                       (0,014)
+ Trabaja fuera (ref. No trabaja)                          –0,155***            –0,148***                     –0,144***
+                                                          (0,017)              (0,017)                       (0,017)
+ Controles institucionales
+ Tamaño de escuela                                        ---                  0,00047**                     0,00052**
+                                                                               (0,0002)                      (0,0002)
+ Libros disponibles para docentes                         ---                  0,041**                       0,038*
+                                                                               (0,020)                       (0,020)
+ Docentes usan TIC                                        ---                  0,069***                      0,068***
+                                                                               (0,026)                       (0,026)
+ Efectos fijos departamentales                            Sí                   Sí                            Sí
+ Observaciones                                            31.551               31.551                        31.551
+ R² ajustado                                              0,120                0,123                         0,124
+
+ Nota: Estimaciones mediante Mínimos Cuadrados Ordinarios (OLS). Errores estándar robustos entre paréntesis,
+ agrupados a nivel de escuela (IDSCH). La variable dependiente es el puntaje estandarizado en Castellano (z-score). El
+ Modelo 1 incluye efectos principales con controles individuales y nivel socioeconómico; el Modelo 2 incorpora con-
+ troles institucionales; el Modelo 3 añade una interacción entre el nivel socioeconómico y el tipo de gestión escolar.
+ Todos los modelos controlan por efectos fijos departamentales.
+***p < 0,01, **p < 0,05, *p < 0,10,
+
+
+                                                                          18
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+En los tres modelos, los resultados también confirman asociaciones negativas consistentes con
+factores de vulnerabilidad: ser hablante de guaraní, repetir grado y trabajar (tanto dentro como
+fuera del hogar), están sistemáticamente asociados con un menor desempeño. Repetir un curso
+se asocia con una disminución cercana a 0,37 desviaciones estándar en el puntaje de castellano.
+De manera similar, los estudiantes que trabajan fuera del hogar obtienen en promedio 0,15 des-
+viaciones estándar menos, lo cual refleja el costo académico de compatibilizar estudio y empleo.
+El efecto de hablar guaraní en el hogar también es significativo: implica una reducción de alrede-
+dor de 0,11 desviaciones estándar respecto a quienes hablan castellano, evidenciando barreras
+lingüísticas en el aprendizaje. Incluso el trabajo dentro del hogar tiene un impacto negativo (0,12
+desviaciones estándar), mostrando cómo las responsabilidades domésticas interfieren con el
+rendimiento escolar. Estas asociaciones son robustas a la inclusión de controles institucionales y
+efectos fijos departamentales. Finalmente, los efectos fijos por departamento permiten capturar
+diferencias sistemáticas entre regiones, que podrían reflejar desigualdades estructurales o varia-
+ciones en la implementación de políticas.
+Análogamente a lo realizado para el desempeño en lengua castellana, la tabla 4 (anexo 1) pre-
+senta tres modelos de regresión OLS que permiten identificar los factores asociados al desempe-
+ño en Matemáticas y evaluar la estabilidad de los coeficientes bajo diferentes especificaciones.
+En la columna (1) se aprecia que asistir a una escuela privada o subvencionada se asocia con un
+puntaje promedio significativamente mayor (0,32 desviaciones estándar), mientras que el nivel
+socioeconómico también ejerce un efecto positivo, aunque más moderado (0,11 desviaciones
+estándar). La columna (2) incorpora controles institucionales, entre los cuales destaca el uso de
+TIC por parte de los docentes, asociado positivamente con el rendimiento (0,12 desviaciones
+estándar). La magnitud del coeficiente de gestión privada se mantiene elevada (0,30 desviacio-
+nes estándar), mientras que el de nivel socioeconómico se reduce levemente (0,09 desviaciones
+estándar), lo que confirma la relevancia de los factores escolares en el aprendizaje matemático.
+Finalmente, la columna (3) introduce la interacción entre NS y tipo de gestión escolar. El efecto
+del NS resulta significativo y pronunciado en las escuelas privadas (0,30 desviaciones estándar),
+mientras que en las públicas es pequeño y estadísticamente no significativo (0,03 desviaciones
+estándar). Este resultado sugiere que las diferencias socioeconómicas se amplifican dentro del
+sector privado, mientras que en el público tienden a ser menos determinantes en el desempeño.
+En cuanto a las características individuales, los resultados confirman la relación con factores de
+vulnerabilidad; repetir curso implica una disminución de 0,25 desviaciones estándar en el pun-
+taje de matemáticas, mientras que trabajar fuera del hogar se asocia con una reducción de 0,10
+y trabajar en casa con una disminución cercana a 0,04. El hecho de hablar guaraní en el hogar
+también presenta un efecto negativo, aunque de menor magnitud y significancia intermitente
+según la especificación. A diferencia de lo observado en Castellano, el género no muestra un
+efecto estadísticamente significativo en Matemáticas.
+
+
+
+
+                                                              19
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+La Figura 2 (anexo 2) presenta los márgenes predictivos del rendimiento académico en Castella-
+no (Panel A) y Matemáticas (Panel B), en función del nivel socioeconómico (NS), diferenciados
+por tipo de gestión escolar (pública vs. privada). Los márgenes estimados derivan del modelo
+reportado en la columna (3), que incorpora una interacción entre gestión escolar y nivel socioe-
+conómico, junto con controles individuales e institucionales y efectos fijos departamentales.
+Para castellano (Panel A), en ambos sectores se observa una relación positiva entre nivel socioe-
+conómico y desempeño, aunque con una pendiente mucho más empinada en el sector privado.
+En las escuelas públicas, avanzar del nivel más bajo (–2) al más alto (+2) en NS se asocia con un
+incremento aproximado de 0,7 desviaciones estándar en Castellano. En las privadas, el mismo
+cambio equivale a cerca de dos desviaciones estándar adicionales. Esto indica que, mientras en
+el sector público las diferencias socioeconómicas inciden, pero de manera más atenuada, en el
+privado se amplifican marcadamente, reforzando las desigualdades de origen.
+Esta diferencia en pendientes es consistente con el coeficiente positivo y estadísticamente sig-
+nificativo de la interacción y confirma la existencia de un efecto diferencial del NS según el tipo
+de gestión. Lo cual revela un patrón distributivo importante, aunque el sector privado exhibe
+puntajes promedio más altos, también amplifica de manera más intensa las desigualdades de
+origen. Es decir, el rendimiento académico en castellano de los estudiantes privados está más
+fuertemente condicionado por el capital socioeconómico familiar, lo que genera una mayor dis-
+persión entre estudiantes de distinto NS. En cambio, en las escuelas públicas el gradiente es más
+plano, lo que sugiere que las condiciones escolares tienden a moderar, aunque no eliminar, las
+brechas asociadas al origen familiar.
+En Matemática (Panel B) hay marcadas diferencias según la gestión escolar. Mientras que en
+escuelas públicas el efecto del nivel socioeconómico es reducido y apenas significativo, en las
+escuelas privadas/subvencionadas se observa una pendiente mucho más pronunciada, indican-
+do una asociación fuerte entre ventaja económica y mayor rendimiento. Este patrón confirma
+la existencia de un efecto amplificador de la desigualdad; los beneficios del mayor nivel socioe-
+conómico se concentran en contextos institucionales más favorables. Estos resultados refuerzan
+los hallazgos del modelo 3 y sugieren que el entorno escolar modula el impacto del origen social
+sobre el desempeño.
+En conjunto, los resultados de ambas materias confirman un patrón robusto; el nivel socioeco-
+nómico y el tipo de gestión escolar son determinantes centrales del desempeño académico. En
+castellano y matemáticas, los estudiantes de escuelas privadas o subvencionadas obtienen en
+promedio puntajes significativamente más altos, incluso tras controlar por características indi-
+viduales e institucionales. Asimismo, en ambas asignaturas se observa que el nivel socioeconó-
+mico tiene un efecto positivo claro, reflejando el papel de los recursos y capitales familiares en
+el aprendizaje. Estos hallazgos sugieren que, tanto en competencias lingüísticas como en habili-
+dades numéricas, las desigualdades de origen social se trasladan directamente a los resultados
+escolares
+
+
+                                                                          20
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+Pese a estas similitudes, emergen diferencias relevantes en la magnitud de los efectos. En cas-
+tellano, el efecto del nivel socioeconómico es más elevado (0,18 desviaciones estándar en el
+modelo base) y su interacción con la gestión privada amplifica fuertemente el gradiente (0,32
+desviaciones estándar). En matemáticas, en cambio, el impacto del nivel socioeconómico es más
+moderado en promedio (0,11 desviaciones estándar) y solo se vuelve pronunciado en las escue-
+las privadas, donde la interacción alcanza 0,30 desviaciones estándar. En las escuelas públicas, el
+gradiente socioeconómico es significativo en castellano, pero prácticamente plano en matemá-
+ticas, lo que indica que las diferencias por origen familiar se expresan con mayor claridad en las
+habilidades lingüísticas que en las numéricas dentro de este sector.
+Los factores de vulnerabilidad se manifiestan de manera consistente en ambas materias, aunque
+con distinta intensidad. Repetir curso constituye el predictor negativo más fuerte en los dos ca-
+sos, con una penalidad de –0,37 desviaciones estándar en castellano y –0,25 en matemáticas. El
+trabajo también se asocia a menores desempeños, siendo el efecto más severo en matemáticas
+para quienes trabajan fuera del hogar (–0,10) y en castellano para quienes compaginan estudio
+con trabajo doméstico (–0,12). El idioma también marca diferencias: hablar guaraní en el hogar
+reduce en 0,11 desviaciones estándar el rendimiento en castellano, mientras que en Matemá-
+ticas el efecto es menor (–0,04) y menos robusto. En conjunto, estos resultados muestran que
+las desventajas sociales y lingüísticas afectan a ambas áreas, pero tienen un peso relativamente
+mayor en el rendimiento en lengua castellana.
+Los resultados permiten extraer varias implicancias relevantes desde la economía de la edu-
+cación. En primer lugar, el hecho de que el gradiente socioeconómico sea más empinado en
+las escuelas privadas indica que estas instituciones tienden a amplificar las ventajas de origen,
+operando como espacios donde los recursos familiares se traducen con mayor intensidad en
+logros académicos. En contraposición, el sector público presenta un gradiente más atenuado, lo
+que sugiere una capacidad relativa, aunque limitada, de compensar las desigualdades iniciales.
+Sin embargo, la persistencia de asociaciones negativas ligadas a factores como la repitencia, el
+trabajo y el uso del guaraní en el hogar revela que las brechas estructurales siguen reproducién-
+dose dentro del propio sistema público. Así, el panorama que surge no es de convergencia, sino
+de trayectorias diferenciadas según origen social y tipo de escuela: mientras el sector privado
+concentra y potencia el capital socioeconómico, el sector público amortigua parcialmente las
+disparidades, pero sin lograr revertirlas de manera sustantiva.
+Los resultados de los modelos OLS dejan en evidencia que el sistema educativo paraguayo no
+solo refleja, sino que también contribuye a reproducir desigualdades socioeconómicas. El hecho
+de que las escuelas privadas conviertan con mayor intensidad los recursos familiares en logros
+académicos sugiere que estas funcionan como mecanismos de amplificación de las ventajas
+de origen, mientras que las públicas apenas logran amortiguar las desventajas, sin revertirlas
+sustantivamente.
+
+
+
+
+                                                              21
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+No obstante, las estimaciones anteriores no permiten distinguir si las brechas promedio entre
+sectores se explican principalmente por diferencias en la composición de los estudiantes (capital
+socioeconómico, idioma, trayectorias escolares) o por retornos diferenciales a esas caracterís-
+ticas que dependen del entorno institucional. Precisamente, la siguiente sección recurre a la
+descomposición Oaxaca–Blinder para desagregar la brecha público–privada en matemáticas y
+castellano, aportando evidencia sobre el peso relativo de las dotaciones iniciales y de los meca-
+nismos escolares en la reproducción de la desigualdad educativa.
+
+
+DESCOMPOSICIÓN DE LAS BRECHAS
+Los resultados de la descomposición Oaxaca–Blinder (Oaxaca, 1973; Blinder, 1973) permiten
+profundizar en la comprensión de las brechas de rendimiento académico entre escuelas públi-
+cas y privadas en Paraguay, un eje central de segmentación del sistema educativo nacional. Esta
+metodología descompone la diferencia promedio en puntajes en dos partes: (i) la atribuible a
+diferencias en características observables de los estudiantes y las instituciones (nivel socioeco-
+nómico, repetición, idioma del hogar, recursos escolares, entre otros), y (ii) la asociada a retor-
+nos diferenciales de esas mismas características, lo que revela desigualdades en cómo el sistema
+traduce esas dotaciones en logros de aprendizaje.
+La Tabla 5 (Panel A) presenta las estimaciones para lengua castellana y matemáticas. En prome-
+dio, la diferencia alcanza –0,55 desviaciones estándar en lengua castellana y –0,47 en matemá-
+ticas, ambas estadísticamente significativas y de magnitud sustantiva. Estos resultados confir-
+man que el tipo de gestión escolar constituye un eje central de desigualdad educativa. Tanto en
+castellano como en matemáticas, la mayor parte de la brecha se explica por una combinación
+de factores de composición (dotaciones iniciales de los estudiantes y recursos escolares) y dife-
+rencias en retornos (efectividad con que esas características se traducen en logros). Sin embargo,
+el componente de interacción atenúa parcialmente la desigualdad, sin llegar a revertirla, lo que
+indica que la segmentación estructural del sistema sigue reproduciéndose más allá de los mati-
+ces específicos en cada materia (anexo 3).
+Al analizar cada asignatura por separado, emergen patrones diferenciados. Siguiendo con la Ta-
+ble 5 (Panel B) se reportan las contribuciones de variables relevantes en el rendimiento de la
+lengua castellana. El nivel socioeconómico (NS) se confirma como el principal factor explicativo
+de la brecha en dotaciones (–0,15), seguido de la repitencia y el idioma del hogar.
+A nivel de retornos, la disponibilidad de recursos pedagógicos, como libros (–0,07), y el propio
+nivel socioeconómico (–0,07) contribuyen a ampliar el diferencial, sugiriendo que incluso con
+condiciones similares, las escuelas públicas generan rendimientos más bajos que las privadas. El
+componente de interacción positivo en NS (+0,08) mitiga en parte estas diferencias, aunque no
+logra compensarlas plenamente.
+
+
+
+
+                                                                          22
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+ En matemáticas Tabla 5 (Panel C), el perfil socioeconómico (–0,10) y el idioma del hogar (–0,05)
+ constituyen los principales factores, a los que se suman el déficit en infraestructura escolar y ac-
+ ceso a TIC (–0,075). Entre los retornos, las desventajas se concentran precisamente en la efectivi-
+ dad con que los recursos disponibles se traducen en aprendizajes: tanto las TIC docentes (–0,13)
+ como los libros (–0,07) rinden menos en las escuelas públicas. Si bien los términos de interacción
+ positivos (ej. TIC +0,056, NS+0,083) muestran cierta capacidad de compensación, esta es clara-
+ mente insuficiente frente al peso de las desigualdades acumuladas.
+ La comparación entre castellano y matemáticas revela diferencias en la composición de la brecha.
+ En castellano, las dotaciones (–0.336; 61%) y los coeficientes (–0.318; 58%) contribuyen en mag-
+ nitudes similares, lo que indica que la desigualdad responde tanto a diferencias en las condicio-
+ nes de origen (nivel socioeconómico –0.152, repitencia –0.040, idioma del hogar –0.045) como
+ a la menor efectividad con que las escuelas públicas convierten recursos en aprendizajes (libros
+–0.073, nivel socioeconómico –0.073). En matemáticas, en cambio, predominan ligeramente las
+ dotaciones (–0.357; 76%) sobre los coeficientes (–0.369; 79%), con factores clave asociados al
+ perfil socioeconómico (–0.103), el idioma del hogar (–0.046) y la repitencia (–0.034). Entre los
+ retornos, destacan las menores ganancias en el uso de TIC (–0.129) y libros (–0.071) en las es-
+ cuelas públicas. En conjunto, los resultados sugieren que en castellano las políticas deberían cen-
+ trarse en mejorar la efectividad pedagógica y de gestión para elevar los retornos de los recursos
+ disponibles, mientras que en matemáticas resulta más urgente compensar desigualdades de
+ origen mediante apoyos focalizados a estudiantes en contextos socioeconómicos y lingüísticos
+ desfavorables. La segmentación del sistema educativo paraguayo refleja así una combinación de
+ desigualdades de composición, de retornos institucionales y un efecto de interacción limitado,
+ lo que configura un patrón complejo de reproducción social que demanda políticas integrales.
+
+
+ALCANCE, ROBUSTEZ Y LIMITACIONES
+Los principales resultados presentados, modelos OLS, análisis de márgenes predictivos y des-
+composición Oaxaca–Blinder, ofrecen un panorama convergente sobre la forma en que el siste-
+ma educativo paraguayo reproduce desigualdades socioeconómicas. Mientras las regresiones
+muestran asociaciones negativas consistentes con factores de vulnerabilidad y un efecto am-
+plificador del nivel socioeconómico, los márgenes predictivos permiten visualizar la magnitud
+diferencial de esas pendientes entre tipos de gestión escolar. La descomposición Oaxaca–Blinder
+confirma que las brechas público-privadas en castellano y matemáticas se deben tanto a dotacio-
+nes iniciales (capital socioeconómico, idioma, trayectoria escolar) como a retornos diferenciales
+que dependen del entorno institucional. Esta secuencia de resultados no solo refuerza la validez
+del diagnóstico, sino que aporta evidencia original para un contexto de país de ingreso medio,
+donde los estudios sobre segregación escolar y desigualdad educativa son todavía escasos.
+En términos de robustez, los hallazgos se mantienen estables al introducir controles adicionales
+de heterogeneidad individual e institucional, incluyendo efectos fijos departamentales y errores
+
+
+                                                              23
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+agrupados a nivel de escuela. Asimismo, se contrastaron modelos más parsimoniosos y otros más
+completos, obteniéndose resultados consistentes en magnitud y dirección de los coeficientes.
+La comparación entre áreas de conocimiento muestra un patrón robusto: en ambas materias, el
+nivel socioeconómico constituye el principal determinante de las brechas, aunque su traducción
+en resultados varía según el campo (retornos más decisivos en Castellano, dotaciones más rele-
+vantes en Matemáticas). La convergencia entre los tres enfoques empíricos empleados refuerza
+la solidez de los resultados y la coherencia de las conclusiones principales.
+No obstante, el estudio presenta limitaciones que deben reconocerse. Primero, las asociaciones
+estimadas no implican necesariamente causalidad, ya que factores no observados como moti-
+vación estudiantil, calidad docente o expectativas familiares podrían estar influyendo. Segun-
+do, el análisis se basa en puntajes estandarizados que capturan competencias cognitivas, pero
+dejan fuera dimensiones no académicas y socioemocionales igualmente relevantes. Tercero, la
+categorización de gestión escolar en “pública” y “privada” agrupa realidades heterogéneas (por
+ejemplo, escuelas rurales vs. urbanas, privadas de élite vs. subvencionadas). Estas limitaciones
+no reducen la importancia de los hallazgos, pero sí subrayan la necesidad de futuros trabajos
+que profundicen en mecanismos causales.
+
+
+                                                        CONCLUSIONES
+El análisis confirma la existencia de brechas sustantivas en el desempeño académico en Para-
+guay entre estudiantes de gestión pública y privada en el último año de la Educación Media. Con
+puntajes estandarizados, la diferencia bruta a favor del sector privado es del orden de aproxima-
+damente 0,49 desviaciones estándar en lengua castellana y 0,41 en matemáticas. Esta asimetría
+se mantiene tras controlar por composición individual e institucional y al incorporar efectos fijos
+departamentales y errores agrupados a nivel de escuela, lo que señala que las desigualdades no
+se limitan a diferencias de acceso o de dotaciones visibles, sino que remiten también a formas
+diferenciadas de producción de aprendizajes a nivel escolar.
+Los resultados por asignatura revelan una heterogeneidad central para la interpretación y el di-
+seño de política. Lengua castellana exhibe las brechas más amplias y persistentes, con un papel
+protagónico del idioma del hogar: quienes no usan castellano en la vida doméstica presentan
+un rezago sistemático, aun tras condicionar por nivel socioeconómico y controles institucionales.
+En matemáticas, las diferencias son también significativas, pero de menor tamaño relativo, lo
+que sugiere que el lenguaje de escolarización actúa como cuello de botella especialmente en
+castellano. La ruralidad agrava este patrón: los estudiantes rurales obtienen puntajes más bajos
+en ambas áreas, con rezagos más marcados en castellano, en parte por la mayor prevalencia
+de guaraní como lengua de socialización y por condiciones escolares menos favorables. En el
+plano individual, la repitencia y el trabajo durante la secundaria se asocian consistentemente
+con menor rendimiento; estos factores operan como mecanismos de acumulación de desven-
+tajas, especialmente entre estudiantes de menor nivel socioeconómico y en contextos rurales.
+
+
+                                                                          24
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+En contraste, las diferencias por género son más acotadas: ventaja leve de las niñas en Castella-
+no y resultados relativamente equilibrados en Matemáticas. Las estimaciones con interacciones
+muestran que el gradiente socioeconómico es más pronunciado en el sector privado, eviden-
+ciando que los hogares de mayor nivel socioeconómico capitalizan mejor las oportunidades de
+aprendizaje en dichas escuelas.
+La descomposición Oaxaca–Blinder ayuda a dimensionar la estructura de las brechas: en cas-
+tellano, alrededor de tres quintas partes de la diferencia agregada se asocian a dotaciones ob-
+servables (nivel socioeconómico, idioma del hogar, recursos e insumos escolares), mientras que
+una proporción también relevante se vincula a retornos diferenciales de esas características; en
+matemáticas, la contribución de las dotaciones es relativamente mayor, pero los retornos siguen
+representando una fracción sustantiva. En ambos casos, el término de interacción atenúa par-
+cialmente la brecha agregada, lo que sugiere que, si bien la composición y los retornos empujan
+en la dirección de mayor desigualdad, hay combinaciones de características entre grupos que
+moderan ese diferencial. En conjunto, el patrón es consistente con procesos de segmentación
+estructural: no solo importan quiénes asisten a cada tipo de escuela, sino también cómo cada
+escuela convierte esas dotaciones en aprendizaje.
+Estos hallazgos dialogan con la literatura sobre funciones de producción educativa y desigualda-
+des en países de ingresos medios, que subraya el rol del capital socioeconómico y del contexto
+institucional (Hanushek y Woessmann, 2012; Ferreira y Gignoux, 2014), y se enlazan con la evi-
+dencia sobre economía del lenguaje: aprender en una lengua distinta a la materna puede limitar
+el rendimiento y, a la postre, los retornos en el mercado laboral. En el caso paraguayo, la tensión
+es particularmente visible: el país es oficialmente bilingüe, pero el mercado laboral formal se
+organiza casi exclusivamente en castellano (y en segmentos de mayor productividad, inglés). Por
+ello, el rezago en lengua castellana entre estudiantes guaraní-hablantes no es solo un problema
+escolar: tiene implicancias directas para la movilidad educativa y laboral.
+Desde la perspectiva de política pública, los resultados sugieren una estrategia por capas. En el
+corto plazo, y dentro de lo más factible, se requiere fortalecer la escuela pública donde se con-
+centran los estudiantes de menor nivel socioeconómico: asegurar recursos pedagógicos (biblio-
+tecas, materiales, TIC) con uso instruccional efectivo mediante desarrollo profesional docente, y
+acompañamiento académico focalizado para repetidores y estudiantes que trabajan. En paralelo,
+urge atender la brecha urbano–rural con incentivos y apoyos específicos para escuelas rurales,
+incluida la dotación y retención de docentes. En el mediano plazo, es indispensable una política
+lingüística pedagógicamente sofisticada que reconozca el guaraní como activo cultural y, a la
+vez, garantice la adquisición sólida de competencias en castellano como lengua vehicular de la
+escolarización y del trabajo, evitando que el bilingüismo se traduzca en desventaja. Estas priori-
+dades se alinean con el ODS 4 (educación de calidad) y el ODS 10 (reducción de desigualdades),
+y apuntan a cerrar tanto la brecha de dotaciones como la de retornos.
+
+
+
+
+                                                              25
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+Puntualmente para los decisores de política pública, los resultados sugieren un conjunto de in-
+tervenciones priorizadas y complementarias. Primero, las brechas persistentes en lengua caste-
+llana indican la necesidad de políticas de apoyo lingüístico temprano y sostenido en Educación
+Media, especialmente en escuelas públicas, rurales y con alta proporción de estudiantes guara-
+ní-hablantes. Ello incluye estrategias pedagógicas bilingües efectivas, no meramente formales,
+materiales adaptados y formación docente específica en enseñanza de castellano como segunda
+lengua. Segundo, dado el rol de la repitencia y el trabajo adolescente como mecanismos de acu-
+mulación de desventajas, se requieren dispositivos de acompañamiento académico focalizado
+y políticas de permanencia escolar que articulen educación y protección social. Tercero, la evi-
+dencia de retornos diferenciales por gestión sugiere que cerrar la brecha no depende solo de
+redistribuir recursos, sino de fortalecer la capacidad de las escuelas públicas para transformar
+insumos en aprendizaje, mediante desarrollo profesional docente, liderazgo escolar y uso pe-
+dagógico efectivo de recursos. Finalmente, la heterogeneidad territorial observada refuerza la
+necesidad de una política explícita para la Educación Media rural, con incentivos a la dotación
+y retención de docentes calificados y apoyos específicos a escuelas aisladas. En conjunto, estas
+líneas apuntan a una estrategia integral que combine equidad en las dotaciones con mejoras en
+la efectividad escolar, condición necesaria para que la Educación Media funcione como un ver-
+dadero mecanismo de movilidad educativa y laboral.
+En este marco, iniciativas recientes como la política Hambre Cero3 adquieren especial relevancia.
+Al reducir restricciones materiales severas en hogares vulnerables, este tipo de programas tiene
+el potencial de incidir indirectamente sobre varios de los mecanismos de desventaja identifi-
+cados en el estudio, como la repitencia, y el trabajo adolescente, particularmente en escuelas
+públicas y rurales. No obstante, la evidencia presentada sugiere que los efectos de políticas de
+alivio material difícilmente se traduzcan en mejoras sostenidas de aprendizaje si no se articulan
+con intervenciones pedagógicas explícitas. En particular, para contextos con alta prevalencia de
+estudiantes guaraní-hablantes y bajos puntajes en lengua castellana, el impacto de programas
+como Hambre Cero podría verse potenciado si se complementa con apoyos académicos focali-
+zados, estrategias lingüísticas adecuadas y fortalecimiento de la capacidad escolar para transfor-
+mar mejores condiciones de asistencia en aprendizajes efectivos.
+La contribución de la investigación es doble. En lo empírico, constituye un trabajo pionero en el
+análisis econométrico con microdatos censales del SNEPE 2018 para la Educación Media, ofre-
+ciendo evidencia inédita sobre la magnitud y estructura de las brechas por gestión, territorio, NS
+e idioma. En lo metodológico, combina regresiones con interacciones, que permiten captar he-
+terogeneidad del gradiente socioeconómico por gestión y contexto, con descomposiciones co-
+herentes con las especificaciones, lo que facilita distinguir entre desigualdades por composición
+
+
+
+3
+    https://hambrecero.gobiernodelparaguay.gov.py/
+
+
+
+                                                                          26
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+y por efectividad diferencial de las escuelas. Este andamiaje aporta claridad diagnóstica y un
+puente operativo hacia el diseño de intervenciones.
+Finalmente, el estudio reconoce sus limitaciones, el diseño es transversal y no permite inferen-
+cias causales; pueden persistir inobservables (aspiraciones, prácticas pedagógicas finas, clima
+escolar) y selección en la asistencia a escuelas. Si bien los datos presentan una estructura jerár-
+quica (estudiantes dentro de escuelas), este estudio priorizó modelos OLS con errores agrupa-
+dos y efectos fijos, más consistentes con la tradición de la economía aplicada y con el enfoque
+en desigualdades estructurales. Esta decisión metodológica no impide, sin embargo, que futuras
+investigaciones exploren alternativas complementarias, como modelos multinivel. En la agenda
+futura también se incluye, el seguimiento de cohortes con datos longitudinales para estimar
+valor agregado escolar; el aprovechamiento de reformas educativas para identificar efectos con
+diseños cuasiexperimentales; y la vinculación de los resultados con trayectorias terciarias y labo-
+rales, a fin de cuantificar cómo las brechas al final de la secundaria se traducen en oportunida-
+des y retornos. En suma, reducir la desigualdad educativa en Paraguay exige actuar tanto sobre
+quiénes acceden a qué recursos como sobre la manera en que esos recursos se transforman en
+aprendizaje. El país puede avanzar combinando equidad, bilingüismo bien enseñado y efectivi-
+dad escolar, de modo que la Educación Media opere como verdadero puente hacia la educación
+superior y el trabajo de calidad, y no como un filtro que consolide desventajas.
+
+
+                                          REFERENCIAS BIBLIOGRÁFICAS
+Angrist, J. D., y Pischke, J.-S. (2009). Mostly harmless econometrics: An empiricist’s companion. Prin-
+       ceton University Press. https://press.princeton.edu/books/paperback/9780691120355/
+       mostly-harmless-econometrics
+Baird, K. E., y Elías, R. (2014). Factores asociados al logro académico en Paraguay: un análisis
+       multinivel. Revista Paraguaya de Educación, 1(4), 15–35. https://openurl.ebsco.com/
+       results?sid=ebsco:ocu:record&bquery=IS+2305-1787¿+AND+IP+4+AND+DT+2014&link_
+       origin=scholar.google.com&searchDescription=Revista%20Paraguaya%20de%20
+       Educaci%C3%B3n%2C%202014%2C%20Issue%204
+Pérez, S. (2024). Desempeño en matemáticas según género en el sistema educativo de Paraguay:
+       Un análisis del reporte SNEPE 2018. Revista Científica UCOM Scientia, 2(1), 63–78. https://
+       doi.org/10.62544/ucomscientia.v2i1.16
+Barro, R. J. (1991). Economic growth in a cross section of countries. The Quarterly Journal of
+      Economics, 106(2), 407-443. https://doi.org/10.2307/2937943
+Barro, R. J. (2001). Human capital and growth. American Economic Review, 91(2), 12-17. https://
+       doi.org/10.1257/aer.91.2.12
+Becker, G. S. (1964). Human capital. National Bureau of Economic Research. https://www.nber.
+       org/books-and-chapters/human-capital-theoretical-and-empirical-analysis-special-refe-
+       rence-education-first-edition
+
+
+                                                              27
+
+Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…    Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29
+
+
+
+Blinder, A. S. (1973). Wage discrimination: Reduced form and structural estimates. Journal of
+       Human Resources, 8(4), 436-455. https://doi.org/10.2307/144855
+Cunningham, S. (2021). Causal inference: The mixtape. Yale University Press. https://mixtape.
+       scunning.com/
+De Hoyos Navarro, R. E., Estrada, R., y Vargas, M. J. (2018). Predicting individual wellbeing throu-
+       gh test scores: Evidence from a national assessment in Mexico (Policy Research Working
+       Paper No. 8459). World Bank Group. https://documents.worldbank.org/en/publication/
+       documents-reports/documentdetail/430991527704569745
+De Hoyos Navarro, R. E., Estrada, R., y Vargas, M. J. (2021). What do test scores really captu-
+       re? Evidence from a large-scale student assessment in Mexico. World Development, 146,
+      105524. https://doi.org/10.1016/j.worlddev.2021.105524
+Fernández, R. (2024). Education inequalities in Latin America and the Caribbean (NBER Wor-
+       king Paper No. 32126). National Bureau of Economic Research. https://doi.org/10.3386/
+       w32126
+Ferreira, F. H., y Gignoux, J. (2014). The measurement of educational inequality: Achievement and
+       opportunity. The World Bank Economic Review, 28(2), 210-246. https://doi.org/10.1093/
+       wber/lht004
+Hanushek, E. A., y Kimko, D. D. (2000). Schooling, labor-force quality, and the growth of nations.
+       American Economic Review, 90(5), 1184-1208. https://doi.org/10.1257/aer.90.5.1184
+Hanushek, E. A., y Woessmann, L. (2011). The economics of international differences in educa-
+       tional achievement. En E. A. Hanushek, S. Machin y L. Woessmann (Eds.), Handbook of
+       the economics of education (Vol. 3, pp. 89-200). Elsevier. https://hanushek.stanford.edu/
+       publications/economics-international-differences-educational-achievement
+Hanushek, E. A., y Woessmann, L. (2012). Do better schools lead to more growth? Cognitive skills,
+       economic outcomes, and causation. Journal of Economic Growth, 17(4), 267-321. https://
+       doi.org/10.1007/s10887-012-9081-x
+Llach, J., Adrogué, C., Gigaglia, M., y Orgales, C. R. (2009). Do longer school days have enduring
+       educational, occupational, or income effects? A natural experiment in Buenos Aires, Ar-
+       gentina. Economía, 10(1), 1-43. http://www.jstor.org/stable/40608333
+Lovera, D. J., y Villalba Marecos, G. N. (2022). Diagnóstico del desarrollo Paraguay, 2001-2020.
+       Ciencias Económicas, 3(5), 90-106. Universidad Nacional de Asunción. https://revistas�-
+       cientificas.una.py/index.php/reco/article/view/2508
+Mizala, A., y Torche, F. (2012). Bringing the schools back in: The stratification of educational
+       achievement in the Chilean voucher system. International Journal of Educational Develop-
+       ment, 32(1), 132-144. https://doi.org/10.1016/j.ijedudev.2010.09.004
+
+
+
+
+                                                                          28
+
+Población y Desarrollo. Enero - Junio 2026; 32 (62): 7 - 29    Lovera, Villalba. Brechas de aprendizaje en Paraguay: un análisis aplicado…
+
+
+
+Näslund-Hadley, E. (2024). Inequality, education, and skills in Latin America: Evidence from the
+       regional learning assessment. Inter-American Development Bank. https://publications.
+       iadb.org/publications/english/document/Inequality-Education-and-Skills-in-Latin-Ameri-
+       ca-Evidence-from-the-Regional-Learning-Assessment.pdf
+Oaxaca, R. (1973). Male–female wage differentials in urban labor markets. International Econo-
+       mic Review, 14(3), 693-709. https://doi.org/10.2307/2525981
+OECD. (2019). PISA 2018 results (Volume I): What students know and can do. OECD Publishing.
+       https://doi.org/10.1787/5f07c754-en
+OECD. (2023). PISA 2022 results (Volume I): The state of learning and equity in education. OECD
+       Publishing. https://doi.org/10.1787/53f23881-en
+Pagliarani, S. (2025). Evidence from Latin American countries in PISA 2022. Journal of Multilin-
+       gual Education Research, 15(1), 45–68. https://doi.org/10.1080/15348431.2025.2501990
+Psacharopoulos, G., y Patrinos, H. A. (2018). Returns to investment in education: A decennial
+       review of the global literature (Policy Research Working Paper No. 8402). World Bank.
+       http://hdl.handle.net/10986/29672
+Riveros, R. R. (2023). Datos estadísticos de la Educación en el 3° Curso del Nivel Medio del estu-
+       dio SNEPE 2018: ¿Tenemos el camino allanado para desarrollar futuros universitarios para
+       el siglo XXI? Revista Científica UCOM Scientia, 1(1), 104–122. https://doi.org/10.62544/
+       ucomscientia.v1i1.7
+Suárez Enciso, S., Elías, R., y Zarza, D. (2016). Factores asociados al rendimiento académico
+       de estudiantes de Paraguay: un análisis de los resultados del TERCE. REICE: Revista Ibe-
+       roamericana sobre Calidad, Eficacia y Cambio en Educación, 14(4), 113–133. https://doi.
+       org/10.15366/reice2016.14.4.006
+Vegas, E., y Petrow, J. (2008). Raising student learning in Latin America: The challenge for the
+       twenty-first century (Latin American Development Forum). World Bank. https://openk�-
+     nowledge.worldbank.org/entities/publication/75f436eb-cfca-57b3-b52b-198a18fffd03
+Wooldridge, J. M. (2010). Econometric analysis of cross section and pa-
+     nel data (2.ª ed.). MIT Press. https://mitpress.mit.edu/9780262232586/
+     econometric-analysis-of-cross-section-and-panel-data/
+
+
+
+
+                                                              29

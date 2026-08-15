@@ -1,0 +1,867 @@
+Volume 9, No. 2, 2023
+                                               Record and Library Journal                                                    e-ISSN: 2442-5168
+                                                       https://e-journal.unair.ac.id/index.php/RLJ
+
+
+
+
+           Uncovering patterns of author productivity in
+           educational leadership and management in
+           Indonesia: A bibliometric study using lotka’s law
+           Rahmat Fadhli1 , Baiquni Rahmat2, Cecep Ibrahim3 , Berlian Eka
+           Kurnia4
+           1School of Computing and Information System, The University of Melbourne,
+
+           Australia
+           1Manajemen Pendidikan, Fakultas Ilmu Pendidikan dan Psikologi, Universitas
+
+           Negeri Yogyakarta
+           2Faculty of Education, Monash University, Australia
+           2Manajemen Pendidikan, Fakultas Ilmu Pendidikan dan Psikologi, Universitas
+
+           Negeri Yogyakarta                                                                                                                 Paper Type:
+           3Department of Library and Information Science, Halu Oleo University,
+                                                                                                                                        Literature Review
+           Indonesia
+           4Main Library, Universitas Muhammadiyah Jember, Indonesia
+
+
+           Abstract                                                                                                                 Submitted: 29 May 2023
+           Background of the study: The rapid development in the field of educational leadership                                       Revised: 30 June 2023
+                                                                                                                                    Accepted: 3 August 2023
+           and management (EDLM) recently has led to an increase in the number of publications.                                    Online: 18 December 2023
+           In line with this, bibliometric analysis has been widely conducted to assess various fields
+           of study, particularly in Indonesia. The abundance of publications also necessitates an
+           examination of the extent to which authors' productivity levels contribute to the field of
+                                                                                                                                           * Correspondence:
+           EDLM in Indonesia.                                                                                                                 Rahmat Fadhli
+           Purpose: This research aims to explore the pattern of author productivity by testing
+           Lotka's Law on publications in the field of EDLM in Indonesia.
+                                                                                                                                                     E-mail:
+           Method: The testing is conducted using the complete count and straight count methods                               rfadhli@student.unimelb.edu.au
+           to compare the results obtained from both approaches. The data for the study were
+           collected from all 44 Indonesian accredited journals in the EDLM field. A total of 7,796
+           articles were screened based on specific criteria, resulting in a final sample of 5,158
+           articles with 6,604 authors (complete count) and 4,301 authors (straight count).
+           Findings: The results of the study indicate that the productivity levels of authors in the
+           field of EDLM in Indonesia do not align with Lotka's law. While, most productive
+           authors tend to publish their publication in a single journal only.
+           Conclusion: The study also reveals a disparity in the productivity levels between the
+           two methods, as well as a tendency for productive authors to publish their work in a
+           single journal.
+           Keywords: lotka laws, educational leadership and management, bibliometrics
+ 306Page
+
+
+
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                  Introduction
+                          Education is a critical component of a country's development, and educational
+                  leadership and management (EDLM) play a vital role in ensuring the quality and effectiveness
+                  of education systems. Globally, educational leadership and management are particularly
+                  important due to the country's vast and diverse population, and complex social and economic
+                  challenges. This development certainly has an impact on research and scholarships in
+                  educational leadership and management. Like in Asia, the trend of research development from
+                  1995-2012 was in the early stages of development. Several significant trends that emerged
+                  include K-12 school leadership, school change, effects and improvements, and organisational
+                  behaviour in the education context. (Hallinger & Chen, 2015). Another study shows the
+                  dominance of the most productive centres of scholarship from Hong Kong and Singapore,
+                  followed by China, Taiwan, Malaysia, and Thailand. (Hallinger & Bryant, 2013).
+                          As research in the field of EDLM continues to develop globally, there is an increasing
+                  trend in research that reveals the publication trends in EDLM. Hallinger & Kovačević (2021)
+                  analysed the same publications from 21 Scopus journals, with a total of 22,492 articles
+                  published from 1960 to 2018. The results showed that the research direction in EDLM is
+                  Leadership for Learning, Leading Change, Leading Teachers, and School Effectiveness and
+                  School Improvement. Hallinger's (2020) study also conducted science mapping in EDLM in
+                  Asia, Africa, and Latin America. The findings indicated that the global literature on EDLM is
+                  undergoing significant changes in composition and recommended strengthening the quality and
+                  scope of research in developing regions of the world.
+                          Several scientific literature on science mapping of EDLM research currently not only
+                  focuses on global contexts. Hallinger & Hammad (2019) conducted a specific study on Arab
+                  societies. The study showed the low volume of EDLM research in Arab societies, even
+                  conceptual publications were only at 20%. Other studies such as Gümüş et al., (2020) focused
+                  on the science mapping of EDLM publications in Turkey. The results showed the research focus
+                  on the field of leadership for learning, leading teachers, and administrative behaviour and
+                  effects in Turkey. Other results were also found in the context of EDLM publications in
+                  Malaysia, indicating that most literature is still contemporary, highlighting the need for the
+                  development of topics and methods for future research (Adams et al., 2021).
+                          In addition to analysing publication trends through science mapping, some studies also
+                  explore publication trends from other perspectives. Mohamed et al. (2020) conducted a
+                  bibliometric study on the pattern of the 100 most-cited publications. They found that the highest
+                  global contributions came from the United States, United Kingdom, and Canada, while from
+                  Asia, it was Hong Kong, Thailand, Singapore, and Malaysia. Furthermore, Gömeç & Bozkuş
+                  (2021) also analysed publication trends in the field of EDLM and stated that authors from the
+                  United States dominate global publications, followed by the United Kingdom and Australia.
+                  Specifically in Asia, authors from Hong Kong dominate in the 6th position globally, followed
+                  by China (13th), Malaysia (14th), Thailand (15th), and Singapore (20th). This means that both the
+                  quality of publications indicated by citations and the authors from Southeast Asia also dominate
+                  in Asia and globally.
+                          The bibliometric method is one of the methods used to obtain an overview of publication
+                  trends mentioned above. Bibliometrics is a method of applying mathematics and statistical
+                  analysis to examine the productivity and frequency of scientific works, author productivity,
+                  patterns and influences of authors on other scientific works, frequency of occurrence of words
+    307
+
+
+
+
+                  in texts, and other similar analyses (Latief, 2014). The bibliometric laws of Zipf, Bradford, and
+                  Lotka are the pillars of bibliometrics, scientometrics, and infometrics that have been widely
+                  applied in recent research. This field has emerged as the most active field of library and
+       Page
+
+
+
+
+                  information science used to understand the patterns and productivity of various fields of
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                  literature (Mathankar, 2018).
+                          In Indonesia, EDLM research has also been an important area of study, with scholars
+                  investigating issues such as educational policy, leadership development, school administration,
+                  management, and improvement. Furthermore, the Indonesian context presents unique
+                  challenges and opportunities that may differ from other countries, which can be seen from the
+                  diverse types of publications in this field. The growth of EDLM publications in Indonesia is
+                  also reflected in the emergence of academic journals. However, the reputation of Indonesian
+                  journals poses a new challenge for authors to determine high-quality journals for publication.
+                          Therefore, it is crucial to understand the current state of research and scholarship in
+                  educational leadership and management in Indonesia, as it can help identify trends, gaps, and
+                  opportunities for improvement. A comprehensive analysis of scholarly output in this field can
+                  offer valuable insights into the significant research themes, theories, and methods used by
+                  scholars, as well as the research gaps that need to be addressed to advance the field. Despite
+                  limited bibliometric analysis on EDLM in Indonesia, recent studies have explored this field in
+                  elementary education (Adi et al., 2021), economic and finance (Aminy et al., 2021; Firmansyah
+                  & Faisal, 2020) health information systems (Madjido et al., 2019), and other areas.
+                          One rarely conducted bibliometric analysis is the Lotka's law bibliometric analysis.
+                  Lotka's law is used to describe the productivity distribution of authors in writing articles. Lotka's
+                  law explains an inverse relationship between the number of articles written and the number of
+                  authors who write them. It states that as the number of articles written increases, the number of
+                  authors who write them decreases. This law suggests that around 60% of all authors in a specific
+                  field make a single contribution (Wahyudi & Wijayanti, 2018). In the context of calculating
+                  author productivity, there are three techniques: adjusted count, complete count, and straight
+                  count. The adjusted count technique assesses each author's contribution to an article. In other
+                  words, the count of one article is divided by the number of authors involved. The complete
+                  count technique assigns a full value of 1 to each author of an article. On the other hand, the
+                  straight count technique only considers the first author as the contributor to each manuscript.
+                  Through bibliometric analysis, this study aims to reveal patterns of author productivity using
+                  lotka’s law in EDLM research in Indonesia, providing insights into the current state of research
+                  and scholarship in this crucial field. This study also aims to examine the differences in author
+                  productivity patterns when using the complete count and straight count techniques.
+
+                  Method
+                  Search Criteria
+                          The selection of journals was based on the Science and Technology Index (SINTA)
+                  database. SINTA is an appropriate facility to find accredited national journals for scientific
+                  publication (Saputra, 2020). This platform categorizes journals into six categories based on
+                  manuscript screening, management feasibility, and timeliness of publication, which are SINTA
+                  1 to SINTA 6 (Ahmadi, 2019). The existence of the SINTA database is one of the reliable
+                  national databases used by researchers to find journals that meet national standards.
+                          The search for journals in the SINTA database was conducted using the keywords
+                  "Educational Management" OR "Educational Administration" OR "Educational Leadership" or
+                  their equivalent in Indonesian. A total of 47 journals with a focus and scope in the field of
+                  EDLM were identified, but after initial analysis, two journals were eliminated as their
+                  publications were not related to the field of EDLM. The journal data was then exported to
+    308
+
+
+
+
+                  Microsoft Excel along with the e-ISSN of each journal. Then the e-ISSN was used to search for
+                  articles in each journal using the Publish or Perish (PoP) software. PoP was used because it
+                  allows users to edit the presented result list, facilitate removal of duplicate entries, and dynamic
+       Page
+
+
+
+
+                  sorting with eight metadata elements (Jacsó, 2009). The e-ISSN data of each journal is used for
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                  searching with a time criteria from 2013-2022. One journal was also eliminated during the PoP
+                  search process because its e-ISSN was not valid. Finally, the search process is conducted on 44
+                  selected journals.
+
+                  Data Extraction and Cleaning
+                          The e-ISSN data of each journal was used for a time-based search from 2013-2022,
+                  from 44 selected journals with the document types of conceptual paper, research paper, and
+                  literature review. The metadata of each journal was then exported in BibTex format, which is a
+                  bibliographic management tool used to create and manage bibliographic references in LaTeX
+                  documents. This file type can be edited using a text editor or a reference management software,
+                  and new references can be added or existing ones can be modified.
+                          The use of BibTex was chosen because some of the PoP metadata results were truncated,
+                  with some parts of the field being replaced by dots […], especially in the Author, Title, and
+                  Publication columns. The BibTex data of each journal was then imported using Mendeley
+                  software to update the truncated data. This was done to ensure that all entries had complete
+                  data. After each entry had complete data, the data was exported into comma-separated values
+                  (CSV) files. A data cleaning process was then conducted to identify incomplete entries, wrongly
+                  entered entries, or redundant data. After the data cleaning process, 2640 data entries were
+                  eliminated from the study.
+
+                  Data Analysis
+                          The data is further analyzed using R Studio with the bibliometrix package and the
+                  Biblioshiny app. A total of 5,157 articles are analyzed for the research. Each author in the
+                  articles is assigned an author(s) ID to distinguish one author from another. The grouped data in
+                  CSV format is then analyzed using the Biblioshiny app.
+                          This research employs a quantitative approach aimed at determining the productivity of
+                  authors in publishing on the topic of EDLM in Indonesia. Bibliometric analysis using Lotka’s
+                  law is used in this study. The data analysis process begins with categorizing articles based on
+                  the number of authors. Then, the estimation of the Lotka’s law parameters n and C is conducted.
+                                                   𝐶
+                  The equation used is: Y (x) = 𝑛 (1)
+                                                  𝑋
+                  To determine the estimation value of parameters n and C, the formula used is:
+                             ̅̅̅̅
+                       𝛴𝑋𝑌−𝑛 𝑋𝑌
+                  b = 𝛴𝑋 2 −𝑛 ̅̅̅̅
+                              𝑋2
+                                                                                                                        1
+                  with b = -n, and the value of C is obtained from the following equation C =                            1
+                                                                                                                       𝛴 𝑛
+                                                                                                                        𝑋
+                          Next, the calculation of the theoretical distribution of Lotka’s law is carried out using
+                                                   1
+                  the following equation yx = C 𝑥𝑛
+                          Testing of Lotka’s law is conducted using the Kolmogorov-Smirnov test (K-S test) with
+                  a critical value of α = 0.05 (95% confidence level). The purpose of this test is to determine
+                  whether the observed distribution is in accordance with Lotka’s law. If the Dmaks value is greater
+                  than the critical value, then the null hypothesis (H 0) is rejected, and the alternative hypothesis
+                  (H1) is accepted.
+
+                  Result and Discussion
+                          The global development of publications also has an impact on publications in
+    309
+
+
+
+
+                  Indonesia, including in the field of educational leadership and management (EDLM). The
+                  results of this study reveal a dramatic trend in the increase of the number of publications and
+                  EDLM journals over the past 10 years. This trend is illustrated in the following figure.
+       Page
+
+
+
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+
+                                  1000
+
+                                   800
+
+                                   600
+
+                                   400
+
+                                   200
+
+                                      0
+                                           2013    2014    2015     2016    2017    2018     2019    2020    2021     2022
+
+                                                          Number of Publication       Number of Journal
+
+                                            Figure 1. EDLM publication in Indonesia
+                          Specifically, Figure 1 shows an increase in the number of publications over the past
+                  10 years. Although there were slight declines in 2015 and 2021 compared to the previous
+                  years, they were not significant.
+
+                  Calculating the Values of Parameters n and C for complete count
+                          The determination of the values of n and C begins with calculating the number of
+                  authors and articles. Table 1 shows that the number of authors producing x articles in 10 years
+                  ranges from 1 to 151 articles. The data is then analyzed using an algorithmic function to
+                  calculate the parameters of Lotka’s Law. The third and fourth columns represent the values of
+                  log X (represented by the annotation X) and the values of log y (represented by the annotation
+                  Y), respectively. The values of XY and X2 in the fifth and sixth columns are also calculated.
+                  These values are used as the basis for calculating the estimated values of the parameters n and
+                  C in Lotka’s Law.
+                          Determining the values of n and C begins with calculating the number of authors and
+                  articles. In Table 1, it can be observed that the number of authors producing x articles in 10
+                  years ranges from 1 to 151 articles. The subsequent data is analyzed using an algorithm
+                  function. The calculation results are used to determine the parameters of Lotka's Law. The
+                  third and fourth columns represent the values of log X (notated as X) and log y (notated as Y),
+                  respectively. Additionally, the values of XY and X2 are included in the fifth and sixth columns.
+                  These values are used as the basis for calculations to estimate the values of parameters n and
+                  C in Lotka's law.
+                                  Tabel 1. Estimating the parameters in Lotka's Law calculation.
+                     Number of       Number of
+                                                      X=log x         Y=log y           XY                X2
+                     articles (x)    authors (y)
+                           1             5432          0.00000         3.73496        0.00000          0.00000
+                           2              598          0.30103         2.77670        0.83587          0.09062
+                           3              215          0.47712         2.33244        1.11286          0.22764
+                          …                …              …               …              …                …
+                         151                1          2.17898         0.00000        0.00000          4.74794
+                        Σ=31             6604         37.26605        27.11636       19.58405         52.60311
+
+                         The equation used to determine the productivity pattern based on Lotka's law is as
+    310
+
+
+
+
+                  follows:
+                         Y(x) = C/xn, specifically
+       Page
+
+
+
+
+                         Y(x) = The number of authors with x articles
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                          C = 1,2,3,…,k (constanta)
+                          X = The number of articles contributed by individual authors.
+                          n = exsponent
+                          The calculation to determine the estimated values of the parameters in Lotka's Law
+                  can be seen in Table 1. To obtain the value of n, the following equation is used:.
+                          log yx = log C – n log x
+                          for example Y = log yx
+                                               X = log x
+                                    a = log C
+                                    b = -n
+                          So that, y = a + bX
+                          The calculated values in Table 1 are then inserted into the least square method equation
+                  to estimate the value of n as follows.
+                          a = 𝑦̅ − 𝑏𝑥̅ ; and
+                                    ̅ )(𝑦−𝑦 ̅)
+                          b = 𝛴 (𝑥−𝑥
+                                 𝛴 (𝑥−𝑥̅ )2
+                          b = -1.66742763
+                          Since b = -n, then n = 1.66742763.
+                          Next, calculations are performed to obtain the value of C by distributing the values in
+                  the table as follows.
+                                               Table 2. Calculating the Value of Parameter C
+                                    Number of publications
+                                                 (x)                    𝑥𝑛               1/𝑥 𝑛
+                                                  1                      1                 1
+                                                  2               3.176477126        0.314814167
+                                                  3               6.245470525        0.160116039
+                                                  …                     …                 …
+                                                 151              4298.197503        0.000232656
+                                                Total                                 1.94765586
+
+                         The estimated values of Lotka's law parameters in Table 1 are then inserted into the
+                                 1
+                  equation: C = 1
+                                     ∑ 𝑛
+                                      𝑥
+                                        1
+                          With ∑ 𝑥𝑛 = 1.94765586 Then the value of C is obtained as follows 0.513437728.
+                          Based on the calculations in the table 2, the productivity pattern of authors in the field
+                  of EDLM is determined to be: 𝑦𝑥 .𝑥 1.66742763 = 0.513437728. This means that a certain
+                  number of authors contributing to a specific article, with an exponent of 1.66742763, account
+                  for 51.34% of the total number of authors. Lotka stated that the number of authors contributing
+                  to one article is around 60% of the total contributing authors. Next, the results are distributed
+                  into the table for theoretical calculations of Lotka's law.
+
+                    Table 3. Percentage of Authors' Observational Data and Theoretical Calculation of Lotka's
+                                       Law with the Pattern 𝑦𝑥 .𝑥 1.66742763 = 0.513437728
+                         Number Number
+                                                % of authors based
+                             of         of                                                               % estimated
+                                                  on observational             𝑥𝑛            C
+    311
+
+
+
+
+                         articles    authors                                                                authors
+                                                        data
+                            (x)        (y)
+                             1        5432           82.25318                   1       0.513437728      51.34377281
+       Page
+
+
+
+
+                             2         598            9.05512             3.176477126 0.513437728        16.16374706
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                              3               215                 3.25560                6.245470525           0.513437728              8.220961512
+                              …                …                     …                        …                     …                         …
+                             151               1                  0.01514                4298.197503           0.513437728               0.01194542
+                             Total           6604                  100%                                                                      100
+
+                        According to Table 3, the observed data shows that 82.25% of the 5432 authors
+                contribute to one article, while Lotka's law calculation suggests it to be 51.34%. In general,
+                Lotka's law demonstrates an inverse relationship between the number of authors and the
+                number of articles produced. The more articles are produced, the fewer authors contribute to
+                them. Conversely, the fewer articles are produced by individual authors, the greater the
+                number of authors.
+                        Next, a Kolmogorov-Smirnov test is conducted to examine whether Lotka's law can
+                be applied to the data group, as shown in the following table.
+                                 Table 4. Kolmogorov-Smirnov Test for complete count test
+                                                                                     Cumulative
+         Number Number                                              Theoretical
+                                  % Number         Cumulative                          Sum of
+            of           of                                         Frequency
+                                   of authors           sum                          Theoretical    Dmax F0(x)-Sn(x)
+         articles    authors                                         of Lotka's
+                                       [y']          y'[Sn(x)]                      Frequencies
+           (x)          (y)                                          Law [Yx]
+                                                                                      y'[F0(x)]
+            1          5432      0.822531799 0.822531799 0.513437728 0.513437728 0.309094070804
+            2           598      0.090551181       0.91308298      0.161637471 0.675075199 0.238007781291
+            3           215      0.032556027 0.945639007 0.082209615 0.757284814 0.188354192822
+            …           …               …                …               …               …                …
+           151           1       0.000151423             1         0.000119454            1         0.000000000000
+
+                          The result of the Kolmogorov-Smirnov (K-S test) is used to compare the theoretical
+                  cumulative frequency with the observed cumulative frequency. The maximum deviation
+                  (Dmax) is formulated to measure the discrepancy.
+                          Dmax = max | F0 (x) – Sn (x) |
+                          The critical value of K-S for α = 0.05 is calculated using the equation 1.36/√N,
+                  resulting in 0.016735372. Meanwhile, the calculated value of D max is 0.309094070804. Since
+                  the critical value is larger than the maximum deviation, the null hypothesis is not accepted,
+                  indicating that the productivity of the authors not inline to Lotka's law.
+
+                  Calculating the Values of Parameters n and C for straight count
+                          There is a significant difference in the calculation of authors using the straight count
+                  method. In this method, there are 4301 authors who have written articles ranging from one to
+                  seventeen times according to the criteria of this research. At this stage, the values of
+                  parameters n and C will be calculated.
+                                  Tabel 5. Estimating the parameters in Lotka's Law calculation.
+                     Number of       Number of
+                                                       X=log x        Y=log y           XY               X2
+                     articles (x)    authors (y)
+                          1             3804           0.00000         3.58024        0.00000         0.00000
+                          2              321           0.30103         2.50651        0.75453         0.09062
+                          3              100           0.47712         2.00000        0.95424         0.22764
+    312
+
+
+
+
+                          …               …               …               …              …               …
+                          17              1            1.23045         0.00000        0.00000         1.51400
+       Page
+
+
+
+
+                        Σ=12            4301           8.83160        13.43056        5.68235         7.81366
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+
+                          In Table 5, there are only 12 groups of articles written by 4301 authors. Next, the
+                  calculation of the value of n is performed using the formula:
+                          a = 𝑦̅ − 𝑏𝑥̅ ; and
+                                    ̅ )(𝑦−𝑦 ̅)
+                          b = 𝛴 (𝑥−𝑥
+                                 𝛴 (𝑥−𝑥̅ )2
+                          b = -1.897458663
+                          Therefore, the value of n is determined to be 1.897458663. Next, the analysis of the
+                  value of C is conducted by distributing it according to the following table.
+                                               Table 6. Calculating the Value of Parameter C
+                                    Number of publications
+                                                 (x)                    𝑥𝑛                1/𝑥 𝑛
+                                                  1                      1                  1
+                                                  2                3.725563527        0.268415769
+                                                  3                8.041144348        0.124360409
+                                                 …                      …                  …
+                                                 17                216.1354307        0.004626729
+                                                Total                                 1.632957973
+
+                    The estimated values of Lotka's law parameters in Table 6 are then inserted into the
+                                1
+                  equation: C = 1
+                                     ∑ 𝑛
+                                       𝑥
+                              1
+                  With ∑ 𝑥𝑛 = 1.632957973, Then the value of C is obtained as follows 0.612385632
+                  Based on the calculations in the table 5, the productivity pattern of authors in the field of
+                  EDLM with straight count method is determined to be: 𝑦𝑥 .𝑥 1.897458663 = 0.612385632. This
+                  means that a certain number of authors contributing to a specific article, with an exponent of
+                  1.897458663, account for 61,23% of the total number of authors. Next, the results are
+                  distributed into the table for theoretical calculations of Lotka's law.
+                   Table 7. Percentage of Authors' Observational Data and Theoretical Calculation of Lotka's
+                                        Law with the Pattern 𝑦𝑥 .𝑥 1.897458663 = 0.612385632
+                   Numbe        Numbe
+                                               % of authors
+                      r of        r of                                                             % estimated
+                                                 based on               𝑥𝑛                C
+                   articles     authors                                                               authors
+                                            observational data
+                      (x)         (y)
+                                                                                    0.61238563
+                        1        3804          88.44454778               1                        61.23856316
+                                                                                          2
+                                                                    3.72556352      0.61238563
+                        2         321          7.463380609                                        16.43739604
+                                                                         7                2
+                                                                    8.04114434      0.61238563
+                        3         100          2.325040688                                        7.615652762
+                                                                         8                2
+                       …           …                 …                  …               …                 …
+                                                                    216.135430      0.61238563
+                       17           1          0.023250407                                        0.283334218
+                                                                         7                2
+                    Total        4301              100%                                                  100
+                           Based on Table 7, it can be observed that in the observed data, 88.44% of the 3804
+    313
+
+
+
+
+                  authors contribute to one article, while according to the Lotka's law calculation, it is 61.23%.
+                  In the final stage, a K-S test is conducted as follows.
+       Page
+
+
+
+
+                                           Table 8. Kolmogorov-Smirnov Test for complete count test
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+
+                                                                                                           Cumulative
+         Number          Number                                                      Theoretical
+                                         % Number              Cumulative                                     Sum of
+            of              of                                                       Frequency
+                                         of authors                sum                                     Theoretical          Dmax F0(x)-Sn(x)
+         articles        authors                                                     of Lotka's
+                                             [y']               y'[Sn(x)]                                 Frequencies
+           (x)             (y)                                                        Law [Yx]
+                                                                                                             y'[F0(x)]
+               1           3804         1.435471698           1.435471698           0.612385632           0.612385632           0.823086066492
+               2            321         0.121132075           1.556603774            0.16437396           0.776759592           0.779844181567
+               3            100         0.037735849           1.594339623           0.076156528            0.85291612           0.741423503002
+              …             …                …                     …                     …                      …                     …
+              17             1          0.000377358           1.623018868           0.002833342                  1              0.623018867925
+
+                           The critical value of K-S for α = 0.05 is calculated using the equation 1.36/√N,
+                   resulting in 0.020737394. Meanwhile, the calculated value of D max is 0.823086066492. Since
+                   the critical value is larger than the maximum deviation, the null hypothesis is not accepted,
+                   indicating that the productivity of the authors not conforms to Lotka's law.
+
+                   Methods comparison
+                           The research findings indicate a significant difference between the two methods,
+                   particularly in terms of the number of authors. The difference in the number of authors
+                   between the two methods is 2,303 authors. However, both Lotka methodologies applied in
+                   this study yield the same result, which is the rejection of the hypothesis or inconsistency with
+                   Lotka's law. The dominance of authors with a single publication occurs in both methods, with
+                   82.25% in the complete count and 88.44% in the straight count. This research emphasizes that
+                   the productivity level of authors in the field of educational leadership and management in
+                   Indonesia is still low.
+                           The findings of this research are consistent with the study conducted by Aksel &
+                   Bozkuş (2022) that found similar patterns in the publication of educational administration and
+                   management journals in the Scopus database. In fact, that study revealed that the proportion
+                   of authors with a single publication reached 0.971. Other studies, such as Kahraman & Bozkus
+                   (2022) examining a specific subfield in EDLM, found a proportion of 0.89, and Gömeç &
+                   Bozkuş (2021) with a proportion of 0.804.
+
+                   Author productivity distribution
+                          This study also analyzed the distribution of authors in both methods. The analysis was
+                   conducted using the Biblioshiny App, examining the productivity over a 10-year period of
+                   publication. The results for both methods are as follows:
+    314Page
+
+
+
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+
+                                 Figure 2. Authors' Production over Time pada metode complete count
+
+
+
+
+                               Figure 3. Authors' Production over Time pada metode straight count
+                          Based on Figure 2 and Figure 3, there are 10 productive authors based on the complete
+                  count and straight count methods. The most active author according to the complete count
+                  method is Yudana IM with a publication count of 151 articles, followed by Natajaya IN (141
+                  articles) and Sunu GKA (94 articles) (see Figure 2). A significant difference can be observed
+                  in the most productive authors using the straight count method. The most active authors using
+                  this method are Huda N (17 articles), Damanik R (11 articles), and Kurniawan A (10 articles)
+                  (see Figure 3). The analysis reveals that productive authors in the complete count method do
+                  not necessarily serve as the first/main authors.
+                          Further analysis also revealed that most productive authors only published their work
+                  in one journal, while the rest published their work in various journals ranging from 2 to 10
+                  different journals. This information suggests that while some authors may choose to focus on
+                  publishing in a single journal, many others have chosen to diversify their publications across
+                  multiple journals. This research also found evidence of suboptimal journal management in the
+                  field of EDLM in Indonesia. In several journals, there was a concentration of high publication
+                  numbers within a single year. Additionally, there was a tendency for journals published by
+                  organizations to be dominated by authors from the same organization. However, further
+                  investigation is needed to explore this phenomenon in future research. This may be a strategic
+                  decision to reach a wider audience or to address different research questions in different
+    315
+
+
+
+
+                  contexts. Understanding the publication patterns of authors in the field of EDLM can help
+                  researchers and practitioners to better navigate the landscape of scholarly literature in this
+       Page
+
+
+
+
+                  field.
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+
+                  Conclusion
+                          The results of the analysis of the productivity pattern of EDLM authors in Indonesia
+                  from 2013 to 2022 using the complete count method show that the parameter values of Lotka's
+                  law are an exponent (n) of 1.66742763 and C of 0.513437728. This means that authors
+                  contributing 1 article account for 51.34% of the total number of authors. The K-S test indicates
+                  that the distribution of author productivity does not align with Lotka's law.
+                          Similarly, in the analysis using the straight count method, the parameter values of
+                  Lotka's law are an exponent (n) of 1.897458663 and C of 0.612385632. In this method, authors
+                  contributing 1 article account for 61.23% of the total number of authors. The K-S test also
+                  confirms that the distribution of author productivity does not conform to Lotka's law.
+                          Furthermore, there is a significant disparity between the productivity levels of authors
+                  in the complete count analysis and the straight count analysis. Most productive authors tend to
+                  publish their articles in a single journal only. This study recommends conducting additional
+                  analyses using the adjusted count method to gain a more comprehensive understanding of
+                  author productivity in the field. Future research needs to enhance the criteria for selecting
+                  journals to be analysed.
+                          This study is confined to the analysis of the productivity of authors in the field of EDLM
+                  in accredited journals in Indonesia. Further research could also incorporate the adjusted count
+                  method in calculating author productivity. Additionally, other bibliometric analyses are
+                  warranted in the field of EDLM in Indonesia.
+
+                  Acknowledgments
+                         We would like to acknowledge and thank all those who have given valuable
+                  contributions to this study
+
+                  Authors’ Contributions
+                         All authors have contributed to the final manuscript. The contribution of all authors:
+                  conceptualization, methodology, formal analysis, writing original draft preparation, writing
+                  review and editing. All authors have read and agreed to the published version of the manuscript.
+
+                  Conflict of Interest
+                         All authors have no conflict of interest related to this study.
+
+                  Funding
+                        This study did not receive any funding.
+
+                  References
+                  Adams, D., Thien, L. M., Chuin, E. C. Y., & Semaadderi, P. (2021). The elusive Malayan tiger
+                            ‘captured’: A systematic review of research on educational leadership and
+                            management in Malaysia. Educational Management Administration & Leadership,
+                            174114322199869. https://doi.org/10.1177/1741143221998697
+                  Adi, Y. K., Arifin, S., & Simbolon, M. E. (2021). The research trends in elementary education:
+                            A bibliometric and content analysis from Indonesia accredited journals. Journal of
+    316
+
+
+
+
+                            Physics:       Conference     Series,    1933(1).      https://doi.org/10.1088/1742-
+                            6596/1933/1/012071
+                  Ahmadi, A. (2019). The use of SINTA (Science and technology index) database to map the
+       Page
+
+
+
+
+                            development of literature study in Indonesia. International Journal of Mechanical
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                             Engineering and Technology, 10(2), 918–923.
+                  Aksel, U., & Bozkuş, K. (2022). Action research in educational administration and management
+                             journals indexed by Scopus. GESJ: Education Science and Psychology, 62(1), 36–
+                             55. https://doi.org/https://eric.ed.gov/?id=ED622359
+                  Aminy, M. M., Syapriatama, I., Fahdiansyah, R., Suhirman, G., & Salahuddin, M. (2021).
+                             Mapping the trend of islamic economic studies indexed in Sinta website: A
+                             bibliometric analysis. Share: Jurnal Ekonomi Dan Keuangan Islam, 10(2), 311.
+                             https://doi.org/10.22373/share.v10i2.10465
+                  Firmansyah, E. A., & Faisal, Y. A. (2020). Bibliometric analysis of islamic economics and
+                             finance      journals      in     Indonesia.    AL-MUZARA’AH,        7(2),     17–26.
+                             https://doi.org/10.29244/jam.7.2.17-26
+                  Gömeç, D., & Bozkuş, K. (2021). Leadership in educational management research: The
+                             bibliometric analysis of the last 20 years. GESJ: Education Science and Psychology,
+                             4(61), 3–24. https://eric.ed.gov/?id=ED618260
+                  Gümüş, S., Bellibaş, M. Ş., Gümüş, E., & Hallinger, P. (2020). Science mapping research on
+                             educational leadership and management in Turkey: a bibliometric review of
+                             international publications. School Leadership and Management, 40(1), 23–44.
+                             https://doi.org/10.1080/13632434.2019.1578737
+                  Hallinger, P. (2020). Science mapping the knowledge base on educational leadership and
+                             management from the emerging regions of Asia, Africa and Latin America, 1965–
+                             2018. Educational Management Administration & Leadership, 48(2), 209–230.
+                             https://doi.org/10.1177/1741143218822772
+                  Hallinger, P., & Bryant, D. (2013). Mapping the terrain of educational leadership and
+                             management in East Asia. Journal of Educational Administration, 51(5), 618–637.
+                             https://doi.org/10.1108/JEA-05-2012-0066
+                  Hallinger, P., & Chen, J. (2015). Review of research on educational leadership and management
+                             in Asia: A comparative analysis of research topics and methods, 1995–2012.
+                             Educational Management Administration and Leadership, 43(1), 5–27.
+                             https://doi.org/10.1177/1741143214535744
+                  Hallinger, P., & Hammad, W. (2019). Knowledge production on educational leadership and
+                             management in Arab societies: A systematic review of research. Educational
+                             Management          Administration         &      Leadership,     47(1),       20–36.
+                             https://doi.org/10.1177/1741143217717280
+                  Hallinger, P., & Kovačević, J. (2021). Science mapping the knowledge base in educational
+                             leadership and management: A longitudinal bibliometric analysis, 1960 to 2018.
+                             Educational Management Administration and Leadership, 49(1), 5–30.
+                             https://doi.org/10.1177/1741143219859002
+                  Jacsó, P. (2009). Calculating the h‐index and other bibliometric and scientometric indicators
+                             from Google Scholar with the Publish or Perish software. Online Information
+                             Review, 33(6), 1189–1200. https://doi.org/10.1108/14684520911011070
+                  Kahraman, S., & Bozkus, K. (2022). The bibliometric analysis of the research on the training
+                             of educational managers. GESJ: Education Science and Psychology, 64(3), 68–85.
+                             https://doi.org/https://eric.ed.gov/?id=ED622932
+                  Latief, K. A. (2014). Bibliometrics dan Hukum-Hukumnya: Sebuah Pengantar. In Dimensi
+                             Metodologis: Ilmu Sosial dan Humaniora (pp. 87–106). Pusataka Larasan.
+    317
+
+
+
+
+                             https://repository.ar-raniry.ac.id/id/eprint/1927/1/Bibliometrics    dan     Hukum-
+                             Hukumnya - Sebuah Pengantar - ktb.pdf
+                  Madjido, M., Espressivo, A., Maula, A. W., Fuad, A., & Hasanbasri, M. (2019). Health
+       Page
+
+
+
+
+                             information system research situation in Indonesia: A bibliometric analysis. Procedia
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)
+
+       Fadhli | Uncovering patterns of author productivity in educational leadership and management in Indonesia: A bibliometric study using lotka’s law
+
+
+
+                            Computer Science, 161, 781–787. https://doi.org/10.1016/j.procs.2019.11.183
+                  Mathankar, A. R. (2018). Bibliometrics: An overview. International Journal of Library &
+                            Information              Science             (IJLIS),           7(3),        9–15.
+                            http://www.iaeme.com/ijlis/issues.asp?JType=IJLIS&VType=7&IType=3
+                  Mohamed, A., Zabidi, A., Razak, A., & Abdullah, Z. (2020). Most-cited research publications
+                            on educational leadership and management: A bibliometric analysis. International
+                            Online       Journal       of      Educational      Leadership,       4(2), 33–50.
+                            https://ejournal.um.edu.my/index.php/IOJEL/article/view/27476
+                  Saputra, A. (2020). Pemanfaatan Science and Technology Index (SINTA) untuk Publikasi
+                            Karya Ilmiah dan Pencarian Jurnal Nasional Terakreditasi. Media Pustakawan,
+                            27(1), 56–68. https://doi.org/https://doi.org/10.37014/medpus.v27i1.674
+                  Wahyudi, A., & Wijayanti, A. (2018). Tentang dalil lotka. perbedaan antara complete count
+                            dengan straight count : Studi produktivitas penulis pada Majalah Visi Pustaka
+                            periode terbit tahun 2005-2014. Media Pustakawan, 25(1), 32–38.
+                            https://doi.org/https://doi.org/10.37014/medpus.v25i1.189
+    318Page
+
+
+
+
+To cite this document:
+Fadhli, R., Rahmat, B., Ibrahim, C., & Kurnia, B. E. (2023). Uncovering patterns of author productivity in educational leadership and
+management in Indonesia: A bibliometric study using lotka’s law. Record and Library Journal, 9(2), 306-318.
+DOI 10.20473/rlj.V9-I2.2023.306-318
+Open access under Creative Commons Attribution-Share A like 4.0 International Licence
+(CC-BY-SA)

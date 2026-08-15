@@ -1,0 +1,753 @@
+TYPE Original Research
+                                                                                                                          PUBLISHED 17 November 2023
+                                                                                                                          DOI 10.3389/fpsyg.2023.1280038
+
+
+
+
+                                                    Measuring educational leadership
+OPEN ACCESS                                         in Singapore: re-examining the
+                                                    psychometric properties of the
+EDITED BY
+Margaret Terry Orr,
+Fordham University, United States
+
+REVIEWED BY
+María Teresa De La Garza Carranza,
+                                                    Multifactor Leadership
+Tecnológico Nacional de México, Mexico
+Michael Anthony Machin,
+University of Southern Queensland, Australia
+                                                    Questionnaire
+*CORRESPONDENCE
+John Chee Keng Wang                                 John Chee Keng Wang 1*, Woon Chia Liu 1, Ying Hwa Kee 1,
+  john.wang@NIE.EDU.SG                              Betsy Ng 1, Lilian Chua 1 and Liang Hu 2
+RECEIVED 19 August 2023
+ACCEPTED 06 November 2023
+                                                    National Institute of Education, Nanyang Technological University, Singapore, Singapore, 2 Zhejiang
+                                                    1
+
+
+PUBLISHED 17 November 2023
+                                                    University, Hangzhou, China
+
+CITATION
+Wang JCK, Liu WC, Kee YH, Ng B, Chua L and          Introduction: The Multifactor Leadership Questionnaire (MLQ-5X) has been used
+Hu L (2023) Measuring educational leadership
+in Singapore: re-examining the psychometric         frequently to assess leadership in different settings. Despite its popularity, there
+properties of the Multifactor Leadership            are many critiques of the MLQ-5X such as its questionable multidimensional
+Questionnaire.                                      structure, lack of connection to the theory and the different factor structures of the
+Front. Psychol. 14:1280038.
+doi: 10.3389/fpsyg.2023.1280038                     measurement tool. The purpose of this study was to re-examine the psychometric
+                                                    properties of the MLQ-5X in the Singapore educational context using two datasets.
+COPYRIGHT
+© 2023 Wang, Liu, Kee, Ng, Chua and Hu. This        Methods: A total of 872 teachers (40.1% male and 59.9% female) from 20
+is an open-access article distributed under the
+                                                    secondary schools in Singapore completed two sets of MLQ-5X, one set for their
+terms of the Creative Commons Attribution
+License (CC BY). The use, distribution or           immediate reporting officer and one set for their school leaders.
+reproduction in other forums is permitted,
+                                                    Results: Congeneric Confirmatory Factor Analysis, Rho’s coefficients, and AVE were
+provided the original author(s) and the
+copyright owner(s) are credited and that the        used to analyze MLQ-5X’s convergent validity and internal consistency. After five items
+original publication in this journal is cited, in   were deleted, the MLQ-5X showed acceptable internal consistency and convergent
+accordance with accepted academic practice.
+                                                    validity. Eight measurement models were tested with the original 36 items and the
+No use, distribution or reproduction is
+permitted which does not comply with these          reduced items MLQ-5X. Latent factor correlation matrix with confidence intervals was
+terms.                                              used to assess the discriminant validity of the MLQ-5X. The results provided support
+                                                    for a nine first-order factors and three second-order factors model (transformation
+                                                    [IIA, IIB, IM, IS, IC, CR], transactional (MBEA), and non-leadership (MBEP and LF).
+                                                    Discussion: The discriminant validity of the hierarchical measurement model of
+                                                    MLQ-5X is supported using dataset 2.
+
+                                                    KEYWORDS
+
+                                                    congeneric CFA, convergent validity, discriminant validity, MLQ-5X, transformational-
+                                                    transactional leadership
+
+
+
+
+                                                    Introduction
+                                                         Due to students’ consistent and high performance on international benchmarked student
+                                                    achievement tests like the Trends in Mathematics and Science Study (TIMSS), Progress
+                                                    International Reading Literacy Study (PIRLS), and Progress for International Student
+                                                    Assessment (PISA), Singapore’s educational system has recently gained recognition on a global
+                                                    scale. Many studies have been investigated contributing factors such as students’ motivation
+                                                    (e.g., Wang et al., 2019), teachers’ motivation (Wang et al., 2019) and classroom processes (e.g.,
+                                                    Liu et al., 2020; 2023). One area that has been less studied is school leadership as a contributing
+                                                    factor to school processes and student achievement. It is a crucial field of research because it
+
+
+Frontiers in Psychology                                                     01                                                               frontiersin.org
+
+Wang et al.                                                                                                                  10.3389/fpsyg.2023.1280038
+
+
+
+
+emphasizes the significance of the environments in which schools                exemplifies the traits of passive leaders who only act when expectations
+operate (Hallinger, 2018). Gopinathan and his colleagues (Gopinathan            are not met (Bass, 1995; Avolio et al., 1999).
+et al., 2008; Deng and Gopinathan, 2016) have attributed Singapore’s                 Laissez-faire (LF) leaders adopt a hands-off strategy and do not try
+high performance in education system to its teacher quality, school             to incentivize their followers or offer any other kind of internal or
+leadership, system characteristics (such as standards, academic                 external reinforcement. Additionally, LF leaders avoid setting
+expectations, accountability measures) and education reform.                    expectations, which causes them to put off making decisions and
+     In educational leadership studies, most studies focused on school          fixing problems (Northouse, 2012).
+leaders or principals (Dimmock and Tan, 2013), the other key                         The MLQ-5X is suggested to be unpinned by nine first-order
+personnels such as heads of department or immediate supervisors are             factors and three second-order factors (Bass and Avolio, 1997), as
+largely ignored. In the Singapore context, school leaders play                  described above. The instrument has 45 items with 36 items measuring
+important roles in supporting teachers in their professional learning           the nine factors as well as nine items measuring outcome of leadership
+and motivational outcomes (Lai et al., 2016; Lee and Nie, 2016). Thus,          variables such as effort, effectiveness, and satisfaction. Although many
+the perceptions of teachers toward their leaders could influence                studies have supported the nine first-order factors measurement
+teachers’ behaviors in school and classroom. Lee and Nie (2016) found           model of the MLQ-5X (e.g., Muenjohn and Armstrong, 2008; Xu
+that both immediate supervisors and principals have an impact on                et al., 2016), other studies have identified eight first-order factor model
+teachers’ perceptions. It is thus valuable to examine leadership at             (Avolio et al., 1995), six first-order factors model (e.g., Vandenberghe
+both levels.                                                                    et al., 2002; Bass et al., 2003), and five first-order factors model to
+     The Multifactor Leadership Questionnaire (MLQ-5X) has been                 be more suitable (Bycio et al., 1995). Some studies have identified
+used frequently to evaluate leadership in different settings (Avolio and        certain items to have very low factor loadings and high error variances
+Bass, 2004). A recent review of 29 studies by Bajcar and Babiak (2022)          (e.g., Batista-Foguet et al., 2021; Moreno-Casado et al., 2021). This
+reported problematic psychometric properties including factor                   shows that there is a need to re-examine the MLQ-5X at the item-level
+structures. They concluded that different studies used different factor         before moving to the nine first-order factors structure. The current
+structures, and despite the high correlations among some factors, in            study uses a congeneric method of Confirmatory Factor Analysis
+addition very few studies examined the validity of higher-order factors         (CFA) to investigate the constructs’ unidimensionality. Congeneric
+(Tepper and Percy, 1994; Densten and Sarros, 1997; Carless, 1998;               CFA refers to the method of evaluating several factors inside the
+Vandenberghe et al., 2002; Bajcar and Babiak, 2022). This has given             framework of multifactor CFA models, or from single-factor CFA
+rise to numerous criticisms of the MLQ-5X, including those about its            models to multifactor CFA models (Sinclair et al., 2006). This
+dubious multidimensional structure, lack of relationship to the theory,         approach helps to determine the quality of the items and factors free
+and the measuring tool’s various factor structures (see Batista-Foguet          from error disturbances from other factors. It is an appropriate
+et al., 2021). This indicates that the psychometric properties of the           method for item reduction.
+MLQ-5X still warrant attention. The purpose of this study was to                     Although MLQ-5X has been conceptualized as a hierarchical
+re-examine the psychometric properties of the MLQ-5X in the                     measurement model with three second-order factors (transformational,
+Singapore educational context.                                                  transactional, and lassie-faire), none of the previous studies have
+     MLQ-5X is based on transformational leadership theory or full-             provided strong evidence for its existence. Only one study has validated
+range leadership (FRL). MLQ-5X was developed to assess leaders’                 the existence of three higher factors with six first-order factors model
+behavior, which includes transformational, transactional, and laissez-          with the 36-items MLQ-5X (Avolio et al., 1999). Most studies have
+faire (Bass and Avolio, 1997; Avolio and Bass, 2004). Transformational          used the nine first-order factor model for MLQ-5X, but this is highly
+leaders encourage followers to see beyond their own self-interest and           problematic as there are very high correlations between the factors
+go above and beyond (Antonakis et al., 2003). The transformational              measuring transformational leadership, the correlation coefficients
+construct comprise of five factors: (1) idealized influence attributed          were close to or higher than 0.90 (Xu et al., 2016; Batista-Foguet et al.,
+(IIA) refers to conceptions of leaders as revered role models held by           2021; Moreno-Casado et al., 2021). In a few studies, CR factor was
+followers; (2) idealized influence behavior (IIB) refers to the observed        merged with transformational leadership factors (Avolio et al., 1999;
+actions of a leader who is believed to uphold high moral and ethical            Vandenberghe et al., 2002; Alonso et al., 2010; Edwards et al., 2012)
+standards; (3) inspirational motivation (IM) is demonstrated in                 and MBEP was combined with LF to form one single factor (Bass et al.,
+leaders when they encourage and inspire followers to show dedication            2003; Heinitz et al., 2005; Kanste et al., 2007; Edwards et al., 2012).
+to the group’s shared vision; (4) intellectual stimulation (IS) is when         Hence, there is a need to examine the construct validity and
+leaders encourage people to be innovative, challenge established                discriminant validity of the MLQ-5X. In this study, we tested an
+practices, and suggest ways to make things better; and (5)                      alternative model with CR load to transformation leadership and
+individualized consideration (IC) refers to the capacity of a leader to         MBEP and LF to form a non-leadership higher order factor (Model 8).
+assist, motivate, and direct subordinates (Bass, 1995; Avolio et al.,
+1999; Yukl, 2006).
+     Transactional leadership is when the leader bases his or her               Purposes of the study
+relationship with his or her followers on rewarding or disciplining
+them depending on their behavior and performance characteristics.                    The purpose of the present study was to examine the psychometric
+There are three factors that define the transactional leader: (1)               properties of MLQ-5X using two sets of data. Specifically, using a
+contingent rewards (CR) is how leaders reward followers based on                congeneric CFA technique, we intended to assess the unidimensionality
+results; (2) management by exception active (MBEA) is when the                  of the four items associated with each MLQ component as well as their
+leaders uses negative reinforcement or corrective criticism on                  internal consistency and convergent validity. Secondly, we aimed to
+followers; and (3) management by exception passive (MBEP)                       test the proposed measurement model (nine first-order factors with
+
+Frontiers in Psychology                                                    02                                                               frontiersin.org
+
+Wang et al.                                                                                                                   10.3389/fpsyg.2023.1280038
+
+
+
+
+three higher-order factors) against seven alternative models,                     may be biased at the population level (Raykov, 1998). Rho’s coefficients
+comparing the fit statistics from original 36 items models and the                were employed instead. Acceptable reliability is defined as a composite
+reduced items models. The discriminant validity will also be examined.            reliability coefficient (rho) of better than 0.60 (Bagozzi and Yi, 1988).
+                                                                                  We used the AVE index to check for convergent validity. The AVE
+                                                                                  index is a measure of shared or common variance in a latent variable.
+Method                                                                            It is amount of variance that is captured by the latent variable in
+                                                                                  relation to the amount of variance due to measurement error (Dillion
+Participants                                                                      and Goldstein, 1984). The value needs to be greater than 0.50 to
+                                                                                  be accepted (Fornell and Larcker, 1981). Convergent validity examines
+    A total of 872 teachers from 20 secondary schools in Singapore were           the extent to which measures hypothesized to indicate the respective
+recruited. There were 40.1% male teachers and 59.9% female teachers,              constructs load highly on the constructs (Bagozzi and Kimmel, 1995).
+these teachers were from different subjects ranging from languages to             Next, we conducted congeneric CFA on each of factor of MLQ-5X
+physical education. The teachers taught from less than 1 year to 44 years         using EQS for Windows 6.4 (Bentler, 2006). Following reduction of
+(mean number of years of teaching experience = 12.99 years). The                  items, a second congeneric CFA was conducted in the affected factors.
+teachers completed two sets of MLQ-5X, one set for their immediate                     Various criteria were used, to evaluate a good model fit. They
+reporting officer and one set for their school leaders. In this study, the        were: Satorra-Bentler scaled Chi-square statistics, robust non-norm
+responses related to immediate reporting officers will be used as dataset         fit index (NNFI), robust root mean square error of approximation
+1 and the responses to school leaders will be used as dataset 2.                  (RMSEA), robust comparative fit index (CFI), and robust IFI. These
+                                                                                  robust indices and scaled chi-square outperform the ML indices when
+                                                                                  the data are non-normal (Curran et al., 1996). Yu and Muthen (2002)
+Procedures                                                                        recommend that a good fit is achieved when the robust RMSEA is 0.05
+                                                                                  or less, and when robust fit indices are close to or greater than 0.95.
+    Before beginning the investigation, the university’s Ethical Review                Next, CFA was carried out on the MLQ-5X to investigate its
+Board’s ethical approval was sought and approved (IRB-2020-02-017).               factorial validity. Eight measurement models were compared. The first
+Permission to conduct research in school was granted by the Ministry              seven models were selected based on the review by Bajcar and Babiak
+of Education, Singapore. Following that, arrangements for survey                  (2022) as the most common measurement models being tested. The
+administration were prepared and contacts with the school leaders of              first model (Model 1) was a nine first-order factors model (IIA, IIB, IM,
+the schools were formed. Under the direction of a researcher, the                 IS, IC, CR, MBEA, MBEP, LF). The second model (Model 2) was a six
+questionnaires were distributed in a quiet classroom setting. Teachers            first-order factors model [(IIA, IIB, IM), IS, IC, CR, MBEA, (MBEP,
+were informed that their participation in the study was voluntary, that           LF)]. The third model (Model 3) was a six first-order factors model (as
+they could discontinue at any moment, and that the study would keep               with Model 2) with two high order factors [transformation (IIA, IIB,
+their answers confidential. The teachers provided informed consent                IM), IS, IC, CR], versus transactional [MBEA, (MBEP, LF)]. The fourth
+and took approximately 30 min to complete the MLQ-5X.                             model (Model 4) was a six first-order factors (as with Model 2) with
+                                                                                  three higher order factors model {transformation [(IIA, IIB, IM), IS],
+                                                                                  transactional (IC, CR), and non-leadership MBEA, (MBEP, LF)}. The
+Measures                                                                          fifth model (Model 5) was a hierarchical model comprising nine first-
+                                                                                  order factors and two higher-order factors [transformational (IIA, IIB,
+     The MLQ-5X (Avolio et al., 1999) was used to capture both                    IM, IS, IC) versus transactional (CR, MBEA, MBEP, LF)]. The sixth
+transformational leadership style ─ idealized influence attributes                model (Model 6) was a hierarchical model with the nine first-order
+(IIA), idealized influence behavior (IIB), inspirational motivation               factors and three higher-order factors [transformation (IIA, IIB, IM,
+(IM), intellectual stimulation (IS), individual consideration (IC);               IS, IC), transactional (CR, MBEA, MBEP), and Laissez-faire (LF)]. This
+transactional leadership style ─ contingent reward (CR), management-              is the hierarchical structure proposed by Avolio et al. (1995). Model 7
+by-exception (active) (MBEA), management-by-exception (passive)                   was a hierarchical model with the nine first-order factors and four
+(MBEP); and laissez-faire (LF). There are 4 items each for the nine               higher-order factors (Model 7, transformation ([IIA, IIB, IM, IS, IC],
+subscales. Responses were captured on a 5-point Likert scale (1 = Not             CR, MBEA, non-leadership [MBEP, LF])). Finally, Model 8 was a
+at all to 5 = Frequently, if not always). There were also nine items              hierarchical model with the nine first-order factors and three higher-
+measuring the outcomes of leadership but were not included in the                 order factors [transformation (IIA, IIB, IM, IS, IC, CR)], transactional
+analysis. The first part of the MLQ assessed the teachers’ perceptions            (MBEA), and non-leadership (MBEP and LF). The CFA on the eight
+of their immediate reporting officers’ leadership style (dataset 1) and           models was conducted twice. One with the original 36 items and one
+the second part examined their perceptions toward their school                    after item reduction for comparisons.
+principals (dataset 2).                                                                The confidence intervals of the latent factor correlation between
+                                                                                  each pair of components were analyzed to test for discriminant
+                                                                                  validity (ϕ-coefficients). When the correlations are significantly below
+Data analysis                                                                     unity (1.00), the measure’s discriminant validity is supported
+                                                                                  (Bagozzi, 1981).
+    In the first dataset, the MLQ-5X’s convergent validity and internal                To validate the modified measurement model of the MLQ-5X,
+consistency were estimated. As Cronbach’s (1951) coefficient alpha (α)            we used a second dataset and conducted CFAs on those models that
+presupposes that there are no measurement error covariances, this                 obtain satisfactory model fits.
+
+
+Frontiers in Psychology                                                      03                                                             frontiersin.org
+
+Wang et al.                                                                                                                                   10.3389/fpsyg.2023.1280038
+
+
+
+
+Results                                                                                         models for the MLQ-5X due to the lack of discriminant validity of
+                                                                                                the first-order constructs.
+     The internal consistency coefficients (rho), AVE and the fit                                    The next step of the analysis was to use dataset 2 to check the
+statistics and factor loadings of the congeneric CFA are shown in                               factorial structure of Model 8. The fit indices were adequate (Scaled
+Table 1. While all the subscales had satisfactory rho’s coefficients of                         χ2 = 976.68, df = 417; NNFI = 0.932; CFI = 0.939; IFI = 0.939;
+0.70 and above, four of the nine subscales of MLQ-5X showed                                     RMSEA = 0.042, CI of RMSEA = 0.038 and 0.045). Therefore,
+unsatisfactory AVE values (<0.50). The factor loadings of some of the                           we concluded that the MLQ-5X is better represented with a nine first-
+items are lower than 0.60, the low factor loadings indicate low shared                          order factors and three second-order factors transformation (IIA, IIB,
+variance with the constructs measured. The NNFI and chi-square also                             IM, IS, IC and CR), transactional (MBEA), and non-leadership (MBEP
+indicate some misspecifications of the items within the factors (IB, IS,                        and LF). The latent factor correlations with confidence intervals among
+IC, CR and MBEP). After initial consideration, five items (IIA4, IC3,                           the three higher order factors are presented in Table 6. Figure 1 shows
+CR2, BMEA2, BMEP3) were deleted, and the internal consistency                                   the original proposed factor structure of the MLQ-5X (Avolio and
+coefficients and congeneric CFA was repeated. As shown in Table 2,                              Bass, 2004) and Figure 2 shows the final factor structure of the revised
+the AVE of the five factors improved and the fit statistics and                                 MLQ-5X with 31 items. As all the latent factor correlation coefficients
+chi-square are almost perfect. This provides support for the reduction                          are significantly lower than 1.00, the discriminant validity of the
+of the five items. The convergent validity and internal consistency of                          hierarchical measurement model of MLQ-5X is supported.
+the MLQ-5X are supported.
+     Table 3 shows the fit indices of the eight measurement models
+with full MLQ-5X items and Table 4 shows the fit statistics of the eight                        Discussion
+models after five items were deleted. When the modification indices
+of all the measurement models were examined, it was found that two                                   Leadership in schools has contributed much to the effectiveness
+error variances correlated with each other strongly (IM4 and CR4),                              of Singapore education success. However, there is a lack of research in
+the two error variances are allowed to be correlated in the estimation.                         this domain, particularly at the middle management level. The present
+None of the eight measurement models fit the data before item                                   study aimed to assess the psychometric properties of an established
+deletion (see Table 3). Table 4 shows Models 1, 7 and 8 after 5 items                           yet problematic leadership questionnaire, MLQ-5X using two sets of
+are deleted have satisfactory fit indices.                                                      data. The teachers responded to the MLQ-5X, one for their immediate
+     Next, the discriminant validity of the MLQ-5X is assessed                                  supervisors, and one for their school principals.
+using the latent factor correlation matrix with confidence intervals                                 We tested the internal consistency, convergent validity,
+(see Table 5). It was found that the confidence intervals (CI) of the                           discriminant validity and tested several measurement models.
+latent factor correlations between IIB and IM, IC and IIA, CR and                               Previous studies commonly used the Cronbach’s (1951) coefficients to
+IC, and MBEP and LF exceeded 1.00. This shows that IIA, IIB, IC,                                examine reliability and mean scores of the subscale to compute
+IM, and CR are not empirically justified as independent constructs.                             correlations among the factors. These methods are problematic as it
+Therefore, Models 1 and Model 7 are not suitable measurement                                    assumes that there is no measurement error covariances between the
+
+
+TABLE 1 Reliability coefficients, fit indices and item loadings of each single factor.
+
+ Model                       Loadings                 Rho            AVE           χ2(2)          NNFI         CFI         IFI        SRMR          RMSEA (90% CI)
+ (scale/item
+ coding)
+ Idealized attributes     0.75; 0.79; 0.91; 0.55       0.85           0.58          3.66           0.996       0.999      0.999        0.011          0.033 (0.000, 0.087)
+
+ Idealized behaviors      0.64; 0.79; 0.71; 0.75       0.81           0.53         20.14           0.945       0.982      0.982        0.025          0.110 (0.070, 0.156)
+
+ Inspirational            0.73; 0.78; 0.78; 0.70       0.84           0.56          9.74           0.980       0.993      0.993        0.016          0.071 (0.031, 0.119)
+ motivation
+
+ Intellectual             0.68; 0.64; 0.82; 0.77       0.82           0.52         28.77           0.922       0.974      0.974        0.032          0.134 (0.093. 0.179)
+ stimulation
+
+ Individual               0.78; 0.61; 0.56; 0.86       0.80           0.51         26.59           0.924       0.975      0.975        0.036          0.128 (0.087, 0.173)
+ consideration
+
+ Contingent reward        0.63; 0.53; 0.67; 0.68       0.73           0.40         11.77           0.948       0.983      0.983        0.024          0.081 (0.041, 0.128)
+
+ Management-by-           0.62; 0.45; 0.75; 0.61       0.70           0.38          4.58           0.985       0.995      0.985        0.017          0.041 (0.000, 0.093)
+ exception (active)
+
+ Management-by-           0.66; 0.77; 0.48; 0.78       0.77           0.47         39.76           0.862       0.954      0.954        0.042          0.159 (0.118, 0.203)
+ exception (passive)
+
+ Laissez-faire            0.69; 0.77; 0.67; 0.62       0.78           0.48          0.09           1.00        1.00        1.00        0.002          0.000 (0.000, 0.000)
+NNFI, Non-Normed Fit Index; CFI, Comparative Fit index; GFI, Goodness-of-Fit Index.
+RMSEA, Root Mean Square Error of Approximation; CI, confidence interval for relevant point estimates.
+
+
+
+
+Frontiers in Psychology                                                                    04                                                                frontiersin.org
+
+Wang et al.                                                                                                                                       10.3389/fpsyg.2023.1280038
+
+
+
+
+TABLE 2 Reliability coefficients, fit indices and item loadings of the single factor with item deletion.
+
+ Model (scale/                     Loadings                Rho             AVE             χ2(2)            NNFI          CFI              IFI           RMSEA (90% CI)
+ item coding)
+ Idealized attributes             0.74; 0.78; 0.91          0.86            0.67            0.02            1.003         1.000           1.001            0.000 (0.000, 0.000)
+
+ Individual consideration         0.78; 0.60; 0.86          0.80            0.57            0.97            1.002         1.000           1.001            0.000 (0.000, 0.058)
+
+ Contingent reward                0.67; 0.63; 0.69          0.70            0.44            0.01            1.007         1.000           1.003            0.000 (0.000, 0.000)
+
+ Management-by-                   0.62; 0.76; 0.61          0.70            0.44            0.37            1.007         1.000           1.003            0.000 (0.000, 0.042)
+ exception (active)
+
+ Management-by-                   0.69; 0.82; 0.72          0.78            0.55            0.00            1.003         1.000           1.001            0.000 (0.000, 0.000)
+ exception (passive)
+NNFI, Non-Normed Fit Index; CFI, Comparative Fit index; GFI, Goodness-of-Fit Index.
+RMSEA, Root Mean Square Error of Approximation; CI, confidence interval for relevant point estimates.
+
+
+
+TABLE 3 Results of the CFAs across models with no item deletion.
+
+ Model                                               Scaled χ2                df                NNFI                 CFI                    IFI               RMSEA (CI)
+ Model 1: 9 factors                                   1539.45                 558                  0.879             0.893                 0.893             0.051 (0.048, 0.054)
+
+ Model 2: 6 factors                                   1754.92                 579                  0.860             0.871                 0.872             0.055 (0.052, 0.058)
+
+ Model 3: 6 first-order factors and 2                 1798.36                 587                  0.858             0.867                 0.868             0.055 (0.053, 0.058)
+ higher order factors
+
+ Model 4: 6 first-order factors and 3                 1789.93                 585                  0.858             0.868                 0.869             0.055(0.052, 0.058)
+ higher order factors
+
+ Model 5: 9 first-order factors and 2                 1764.28                 584                  0.861             0.871                 0.871             0.055 (0.025, 0.058)
+ higher order factors
+
+ Model 6: 9 first-order factors and 3                 1630.89                 582                  0.876             0.885                0.8786             0.052 (0.049, 0.055)
+ higher order factors
+
+ Model 7: 9 first-order factors and 4                 1616.37                 579                  0.876             0.886                 0.887             0.052 (0.049, 0.055)
+ higher order factors
+
+ Model 8: 9 first-order factors and 3                 1750.18                 582                  0.862             0.872                 0.873             0.055 (0.052, 0.058)
+ higher order factors (CR to
+ transformational)
+NNFI, Non-Normed Fit Index; CFI, Comparative Fit index; GFI, Goodness-of-Fit Index; RMSEA, Root Mean Square Error of Approximation; CI, confidence interval for relevant point
+estimates.
+
+
+TABLE 4 Results of the CFAs across models after item deletion.
+
+ Model                                                   Scaled χ2              df                 NNFI               CFI                IFI                RMSEA (CI)
+ Model 1: 9 factors                                         852.97              397                 0.934             0.944             0.944              0.041 (0.037, 0.045)
+
+ Model 2: 6 factors                                         1110.82             418                 0.905             0.915             0.915              0.050 (0.046, 0.053)
+
+ Model 3: 6 first-order factors and 2 higher order          1138.35             426                 0.904             0.912             0.913              0.050 (0.046, 0.053)
+ factors
+
+ Model 4: 6 first-order factors and 3 higher order          1126.51             424                 0.905             0.914             0.914              0.050(0.046, 0.083)
+ factors
+
+ Model 5: 9 first-order factors and 2 higher order          1070.16             423                 0.912             0.920             0.921              0.048 (0.044, 0.051)
+ factors
+
+ Model 6: 9 first-order factors and 3 higher order          1786.51             423                 0.815             0.832             0.833              0.069 (0.066, 0.072)
+ factors
+
+ Model 7: 9 first-order factors and 4 higher order          1025.96             418                 0.917             0.925             0.926              0.046 (0.043, 0.050)
+ factors
+
+ Model 8: 9 first-order factors and 3 higher order          924.98              418                 0.931             0.938             0.938              0.042 (0.039, 0.046)
+ factors (CR to transformational)
+NNFI, Non-Normed Fit Index; CFI, Comparative Fit index; GFI, Goodness-of-Fit Index.
+RMSEA, Root Mean Square Error of Approximation; CI, confidence interval for relevant point estimates.
+
+
+
+
+Frontiers in Psychology                                                                   05                                                                        frontiersin.org
+
+Wang et al.                                                                                                                                                         10.3389/fpsyg.2023.1280038
+
+
+
+
+TABLE 5 Latent factor correlations with confidence intervals (sample 1).
+
+  Variable                               1                     2                   3                     4                    5                     6                    7                    8
+  1. Idealized attributes              1.00
+
+  2. Idealized behaviors               . 86*                  1.00
+                                      (0.02)
+                                    0.82, 0.90
+
+  3. Inspirational                    . 88*                 . 99*                1.00
+    motivation                        (0.02)                 (0.01)
+                                    0.84, 0.92            0.97, 1.01
+
+  4. Intellectual                      . 87                 . 92*               . 91*                  1.00
+    stimulation                       (0.02)                 (0.02)              (0.02)
+                                    0.83, 0.91            0.88, 0.96           0.87, 0.95
+
+  5. Individual                       . 97*                 . 84*               0.90*                 0.93*                 1.00
+    consideration                     (0.02)                 (0.02)              (0.02)               (0.02)
+                                   0.93, 0.1.01           0.80, 0.88           0.86, 0.94           0.89, 0.97
+
+  6. Contingent reward                 . 94*                 . 93*               0.92*                 0.93*                1.00*                  1.00
+                                      (0.02)                 (0.03)              (0.02)               (0.03)                (0.02)
+                                    0.90, 0.98            0.87, 0.99           0.88, 0.96           0.87, 0.99            0.96, 1.04
+
+  7. Management-by-                  −0.38*                 −0.10*             . -0.22*              −0.24*               −0.33*                −0.26*                 1.00
+    exception (active)                (0.04)                 (0.05)              (0.05)               (0.05)                (0.05)                (0.05)
+                                  −0.46, −0.30            −0.20, 0.00        −0.32, −0.12         −0.34, −0.14          −0.43, −0.23          −0.36, −0.16
+
+  8. Management-by-                  −0.71*                 −0.69*             −0.69*                −0.68*               −0.70*                −0.72*                0.40*                 1.00
+    exception (passive)               (0.03)                 (0.04)              (0.04)               (0.04)                (0.04)                (0.04)               (0.05)
+                                  −0.77, −0.65          −0.77, −0.61         −0.77, −0.61         −0.76, −0.60          −0.78, −0.62          −0.80, −0.64           0.30, 0.50
+
+  9. Laissez-faire                    −0.78*                 −0.71*             −0.69*                −0.68*               −0.73*                −0.72*                0.37*                 0.97*
+                                      (0.03)                 (0.03)              (0.04)               (0.04)                (0.03)                (0.04)               (0.05)               (0.02)
+                                  −0.84, −0.72          −0.77, −0.65         −0.77, −0.61         −0.76, −0.60          −0.79, −0.67          −0.80, −0.64            0.36, 38             0.93, 1.01
+*p < 0.05. In each cell, first row = latent factor correlation, second row = SE of latent correlation coefficient, last row = correlation confidence intervals within plus/minus 2 SE.
+
+
+
+TABLE 6 Latent factor correlations with confidence intervals of the                                     a qualitative content analysis of the wording of the four items linked
+higher order factors (sample 2).
+                                                                                                        to each of the nine MLQ factor. They suggested that some of the items
+                                                      1                            2                    are problematic within CR, MBEA, MBEP. For example, three of the
+                                                                                                        items in CR factor includes economic and emotional exchange, but
+  1. Transformational
+                                                                                                        one item is linked to an individual’s commitment to pursue
+  2. Transactional                                 −0.47*
+                                                                                                        performance standards. Together with the results of the congeneric
+                                                    (0.04)
+                                                                                                        CFA, the reduction of the items is justifiable.
+                                                 −0.55, −0.39
+                                                                                                             This study provided a clear method of item reduction through
+  3. Non-leadership                                −0.75*                        0.64*                  congeneric CFA, which is a novel approach (Markland and Ingledew,
+                                                    (0.04)                       (0.04)                 1997). Congeneric CFA emphasizes a methodological improvement
+                                                 −0.83, −0.67                 0.56, 0.72                to the MLQ-5X whilst considering the integrity of the construct. In
+*p < 0.05. In each cell, first row = latent factor correlation, second row = SE of latent               this study, one item was deleted from each of the five factors of
+correlation coefficient, last row = correlation confidence intervals within plus/minus 2 SE.            MLQ-5X and the reduced factor structure exhibited better fit by
+                                                                                                        keeping items that are truly working well in the model.
+items in a factor. The use of rho’s coefficient and latent factors are more                                  We compared eight measurement models of the MLQ-5X in this
+appropriate (Raykov, 1998).                                                                             study. With the original MLQ-5X, none of the eight measurement
+    The results supported the internal reliability of the nine factors of                               models provided adequate fit. After the five items were deleted, the
+MLQ-5X. However, four out of nine factors had unsatisfactory AVE                                        results showed that the nine first-order factors model (Model 1), nine
+values of lower than 0.50. If a construct exhibits convergent validity,                                 first-order factors and two higher order factors (Model 7) and nine
+according to Fornell and Larcker (1981), the average variance                                           first-order factors and three higher order factors (Model 8) may
+extracted (AVE) must be at least.50 (this means the variance explained                                  be suitable according to the fit indices. However, Models 1 and 7 lack
+by the construct is more than measurement error). Two items also had                                    discriminant validity in that some of the first-order factors are not
+low factor loadings from the congeneric CFA. After the deletion of five                                 empirically independent constructs. Thus Model 8 is the most valid
+items (IIA4, IC3, CR2, BMEA2, BMEP3), the results of the congeneric                                     measurement model.
+CFA supported the unidimensionality of the five factors (IIA, IC, CR,                                        The use of a second dataset supported Model 8, a nine first-order
+BMEA, BMEP). Recently, Batista-Foguet et al. (2021) have conducted                                      factors and three higher-order factors model. In this model, CR is
+
+
+Frontiers in Psychology                                                                            06                                                                                    frontiersin.org
+
+Wang et al.                                                                                                               10.3389/fpsyg.2023.1280038
+
+
+
+
+                                 IIA1
+                                 IIA2
+                                 IIA2                                 IIA
+                                 IIA2
+                                 IIB1
+                                 IIB2
+                                 IIB3                                 IIB
+                                 IIB4
+                                 IM1
+                                 IM2
+                                 IM3                                   IM
+                                 IM4                                                                   Transformaonal
+                                 IS1                                                                      Leadership
+                                 IS2
+                                 IS3                                   IS
+                                  IS4
+                                 IC1
+                                 IC2
+                                 IC3                                   IC
+                                 IC4
+                                 CR1
+                                 CR2
+                                                                       CR
+                                 CR3
+                                 CR4
+                                 MBEA1                                                                     Transaconal
+                                  MBEA2
+                                                                      MBEA                                   Leadership
+                                 MBEA3
+                                 MBEA4
+                                 MBEP1
+                                 MBEP2
+                                 MBEP3                                MBEP
+                                 MBEP4
+                                 LP1
+                                 LP2
+                                                                                                          Non-Leadership
+                                 LP3                                  LP
+                                 LP4
+
+    FIGURE 1
+    Original proposed factorial structure of the MLQ-5X (36-items).
+
+
+
+
+grouped as transformational leadership factor, MBEA as transactional             explain how contingent reward is linked to intrinsic motivation is
+factor, and MBEP and LF as non-leadership factor. The factor structure           cognitive evaluation theory (Ryan and Deci, 2017). If one perceives
+and discriminant validity are supported. MBEP and LF have been                   that the rewards enhance his/her sense of competency and autonomy
+grouped as non-leadership factor in many previous studies using CFA              (informational functional significance), his/her intrinsic motivation
+(e.g., Rowold, 2005; Moreno-Casado et al., 2021), so it is not an issue.         for the task will be enhanced. It is thus not surprising that CR can
+Should CR be grouped under transformational leadership? The                      be grouped into transformational leadership. Previous studies have
+content analysis of Batista-Foguet et al. (2021) shows that the wording          also supported the inclusion of CR with the five transformation
+of the items in CR should be grouped as transformational leadership              leadership dimensions (Lowe et al., 1996; Vandenberghe et al., 2002;
+factor, rather than transactional leadership. The argument for this can          Judge and Piccolo, 2004; Boamah and Tremblay, 2019). One other
+be explained from Vroom’s (1964) Expectancy Theory of Motivation.                finding is that two of the items in MLQ-5X seem to be related (IM4
+People can be motivated if they achieved the outcomes in the                     and CR4). A careful analysis of the two items shows similarity, both
+workplace and receiving rewards is a way to prove that they have                 items relate to confidence and satisfaction when outcomes
+achieved the outcomes that they valued. Another theory that can                  are achieved.
+
+
+Frontiers in Psychology                                                     07                                                          frontiersin.org
+
+Wang et al.                                                                                                            10.3389/fpsyg.2023.1280038
+
+
+
+
+                                  IIA1
+                                  IIA2                           IIA
+                                  IIA3
+
+                                  IIB1
+                                  IIB2
+                                  IIB3                           IIB
+                                  IIB4
+                                   IM1
+                                   IM2
+                                   IM3                            IM
+                                    IM4                                                            Transformaonal
+
+                                   IS1                                                                Leadership
+                                   IS2
+                                   IS3                             IS
+                                   IS4
+                                   IC1
+                                   IC2                            IC
+                                   IC4
+
+                                   CR1
+                                   CR3                            CR
+                                   CR4
+                                   MBEA1
+                                                                                                       Transaconal
+                                   MBEA3                          MBEA
+                                   MBEA4                                                                Leadership
+
+                                   MBEP1
+                                   MBEP2                          MBEP
+                                   MBEP4
+                                   LP1                                                                 Non-Leadership
+                                   LP2
+                                   LP3                             LP
+                                   LP4
+    FIGURE 2
+    Finalized factorial structure of the MLQ-5X (31-items).
+
+
+
+
+    In conclusion, the current study shows evidence of a nine first-         well-established inventory to measure characteristics of leadership.
+order factors and three higher-order factors measurement model for           Second, this study did not examine the concurrent validity and
+the MLQ-5X. The findings affirm that the MLQ-5X is an appropriate            predictive validity of the refined MLQ-5X. Future studies should
+measurement tool to assess leadership in the educational setting.            investigate the MLQ-5X refinement’s concurrent and predictive
+With a proper measurement tool in place, researchers can then move           validity in relation to other factors such school atmosphere, teacher
+on to look at leadership in three dimensions (transformational,              motivation, performance, and other outcome variables. Thirdly,
+transactional, and non-leadership). For example, the impact of               this study did not examine the invariance measurement structure
+different types of leaderships on school climate, teachers’, and             of the MLQ-5X between gender and years of teaching experience.
+students’ outcomes.                                                          Future studies should examine the invariance of the new
+    There are several possible limitations that need to                      measurement model. Fourthly, the MLQ-5X was administered to
+be acknowledged. First, some researchers may question the use of             teachers belonging to different departments and different schools,
+CFA in item deletion of measurement tool. However, according to              with each teacher completing the inventory to describe their
+Larwin and Harvey (2012), a congeneric CFA is appropriate for                immediate supervisors and principals. The nature of the data is
+item deletion with established questionnaires, while exploratory             hierarchical and thus the multilevel effects of the MLQ-5X need to
+factor analysis (EFA) is more pertinent for examining new                    be examined in future studies. Finally, the longitudinal score
+questionnaires. In view of this, congeneric CFA is thought to                stability at the level of the latent construct could be examined by
+be more suited than EFA since the MLQ-5X is regarded as a                    testing the longitudinal factor invariance (Conroy et al., 2003).
+
+
+
+
+Frontiers in Psychology                                                 08                                                          frontiersin.org
+
+Wang et al.                                                                                                                                                 10.3389/fpsyg.2023.1280038
+
+
+
+
+Data availability statement                                                                          Funding
+    The raw data supporting the conclusions of this article will                                         The author(s) declare financial support was received for the
+be made available by the authors, without undue reservation.                                         research, authorship, and/or publication of this article. This project is
+                                                                                                     funded by the Education Research Funding Programme of the
+                                                                                                     Ministry of Education, Singapore (OER 12/19 LWC).
+Ethics statement
+    The studies involving humans were approved by Nanyang                                            Conflict of interest
+Technological University IRB. The studies were conducted in
+accordance with the local legislation and institutional requirements.                                    The authors declare that the research was conducted in the
+The participants provided their written informed consent to                                          absence of any commercial or financial relationships that could
+participate in this study.                                                                           be construed as a potential conflict of interest.
+
+
+
+Author contributions                                                                                 Publisher’s note
+    JW: Conceptualization, Investigation, Methodology, Writing –                                         All claims expressed in this article are solely those of the authors
+original draft. WL: Funding acquisition, Investigation, Writing –                                    and do not necessarily represent those of their affiliated organizations,
+review & editing. YK: Writing – review & editing. BN: Writing –                                      or those of the publisher, the editors and the reviewers. Any product
+review & editing. LC: Writing – review & editing. LH: Writing –                                      that may be evaluated in this article, or claim that may be made by its
+review & editing.                                                                                    manufacturer, is not guaranteed or endorsed by the publisher.
+
+
+
+References
+  Alonso, M. F., Saboya, R. P., and Guirado, C. I. (2010). Transformational and                        Bycio, P., Hackett, R. D., and Allen, J. S. (1995). Further assessments of Bass’s (1985)
+transactional leadership: an analysis of the factor structure of the Multifactor Leadership          conceptualization of transactional and transformational leadership. J. Appl. Psychol. 80,
+Questionnaire (MLQ) in a Spanish sample. Psicothema 22, 495–501. doi: 10.1037/                       468–478. doi: 10.1037/0021-9010.80.4.468
+t83613-000
+                                                                                                        Carless, S. A. (1998). Assessing the discriminant validity of transformational leader
+  Antonakis, J., Avolio, B. J., and Sivasubramaniam, N. (2003). Context and leadership:              behaviour as measured by the MLQ. J. Occup. Organ. Psych. 71, 353–358. doi: 10.1111/
+an examination of the nine-factor full-range leadership theory using the                             j.2044-8325.1998.tb00681.x
+multifactor leadership questionnaire. Leadersh. Q. 14, 261–295. doi: 10.1016/
+                                                                                                       Conroy, D. E., Elliot, A. J., and Hofer, S. M. (2003). A 2x2 achievement goals
+S1048-9843(03)00030-4
+                                                                                                     questionnaire for sport: evidence for factorial invariance, temporal stability, and external
+  Avolio, B. J., and Bass, B. M. (2004). Multifactor leadership questionnaire. Manual and            validity. Journal of Sport and Excercise Psychology 25, 456–476. doi: 10.1123/jsep.25.4.456
+sampler set: Multifactor Leadership Questionnaire, manual and sample set (3rd). Redwood
+                                                                                                       Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests.
+City, CA: Mind Garden.
+                                                                                                     Psychometrika 16, 297–334. doi: 10.1007/BF02310555
+ Avolio, B. J., Bass, B. M., and Jung, D. I. (1995). MLQ Multifactor Leadership
+                                                                                                        Curran, P. J., West, S. G., and Finch, J. F. (1996). The robustness of test statistics to
+Questionnaire: technical report. Redwood City, CA: Mind Garden.
+                                                                                                     nonnormality and specification error in confirmatory factor analysis. Psychol. Methods
+  Avolio, B. J., Bass, B. M., and Jung, D. I. (1999). Re-examining the components of                 1, 16–29. doi: 10.1037/1082-989X.1.1.16
+transformational and transactional leadership using the Multifactor Leadership
+                                                                                                       Deng, Z., and Gopinathan, S. (2016). PISA and high-performing education systems:
+Questionnaire. J. Occup. Organ. Psych. 72, 441–462. doi: 10.1348/096317999166789
+                                                                                                     explaining Singapore’s education success. Comp. Educ. 52, 449–472. doi:
+  Bagozzi, R. (1981). An examination of the validity of two models of attitude. Multivar.            10.1080/03050068.2016.1219535
+Behav. Res. 16, 323–359. doi: 10.1207/s15327906mbr1603_4
+                                                                                                      Densten, U., and Sarros, J. (1997). Re-thinking transformational leadership factors.
+  Bagozzi, R. P., and Kimmel, S. K. (1995). A comparison of leading theories for the                 Caulfield East, VIC: Monash University.
+prediction of goal directed behaviours. Br. J. Soc. Psychol. 34, 437–461. doi:
+                                                                                                       Dillion, W. R., and Goldstein, M. (1984). Multivariate analysis: methods and
+10.1111/j.2044-8309.1995.tb01076.x
+                                                                                                     applications. New York: Wiley.
+  Bagozzi, P. R., and Yi, Y. (1988). On the evaluation of structural equation models. J.
+                                                                                                       Dimmock, C., and Tan, C. Y. (2013). Educational leadership in Singapore: tight
+Acad. Mark. Sci. 16, 74–94. doi: 10.1007/BF02723327
+                                                                                                     coupling, sustainability, scalability, and succession. J. Educ. Adm. 51, 320–340. doi:
+  Bajcar, B., and Babiak, J. (2022). Transformational and transactional leadership in the            10.1108/09578231311311492
+polish organizational context: validation of the full and short forms of the multifactor
+                                                                                                       Edwards, G., Schyns, B., Gill, R., and Higgs, M. (2012). The MLQ factor structure in
+leadership questionnaire. Front. Psychol. 13:908594. doi: 10.3389/fpsyg.2022.908594
+                                                                                                     a UK context. Leadersh. Org. Dev. J. 33, 369–382. doi: 10.1108/01437731211229304
+  Bass, B. M. (1995). Theory of transformational leadership redux. Leadersh. Q. 6,
+                                                                                                       Fornell, C., and Larcker, D. (1981). Evaluating structural equation models with
+463–478. doi: 10.1016/1048-9843(95)90021-7
+                                                                                                     unobservable variables and measurement error. J. Mark. Res. 18, 39–50. doi:
+ Bass, B. M., and Avolio, B. J. (1997). Full range leadership development: Manual for the            10.1177/002224378101800104
+Multifactor Leadership Questionnaire. Palo Alto, CA.: Mind Garden.
+                                                                                                       Gopinathan, S., Wong, B., and Tang, N. (2008). The evolution of school leadership
+  Bass, B. M., Avolio, B. J., Jung, D. I., and Berson, Y. (2003). Predicting unit performance        policy and practice in Singapore: responses to changing socio-economic and political
+by assessing transformational and transactional leadership. J. Appl. Psychol. 88, 207–218.           contexts (insurgents, implementers, innovators). J. Educat. Administr. History 40,
+doi: 10.1037/0021-9010.88.2.207                                                                      235–249. doi: 10.1080/00220620802507250
+  Batista-Foguet, J. M., Esteve, M., and van Witteloostuijn, A. (2021). Measuring                     Hallinger, P. (2018). Bringing context out of the shadows of leadership. Educat. Manag.
+leadership an assessment of the Multifactor Leadership Questionnaire. PLoS One                       Admin. Leader. 46, 5–24. doi: 10.1177/1741143216670652
+16:e0254329. doi: 10.1371/journal.pone.0254329
+                                                                                                      Heinitz, K., Liepmann, D., and Felfe, J. (2005). Examining the factor structure of the
+  Bentler, P. M. (2006). EQS for windows (version 6.1). Encino, CA: Multivariate Software.           MLQ. Eur. J. Psychol. Assess. 21, 182–190. doi: 10.1027/1015-5759.21.3.182
+  Boamah, S. A., and Tremblay, P. (2019). Examining the factor structure of the MLQ                    Judge, T. A., and Piccolo, R. F. (2004). Transformational and transactional leadership:
+transactional and transformational leadership dimensions in nursing context. West. J.                a meta-analytic test of their relative validity. J. Appl. Psychol. 89, 755–768. doi:
+Nurs. Res. 41, 743–761. doi: 10.1177/0193945918778833                                                10.1037/0021-9010.89.5.755
+
+
+
+
+Frontiers in Psychology                                                                         09                                                                             frontiersin.org
+
+Wang et al.                                                                                                                                               10.3389/fpsyg.2023.1280038
+
+
+
+
+  Kanste, O., Miettunen, J., and Kyngäs, H. (2007). Psychometric properties of the                     Northouse, P. G. (2012). Leadership: theory and practice (6th). Thousand Oaks, CA:
+Multifactor Leadership Questionnaire among nurses. J. Adv. Nurs. 57, 201–212. doi:                   Sage Publications.
+10.1111/j.1365-2648.2006.04100.x
+                                                                                                       Raykov, T. (1998). A method for obtaining standard errors and confidence intervals
+  Lai, C., Li, Z., and Gong, Y. (2016). Teacher agency and professional learning in                  of composite reliability for congeneric measures. Appl. Psychol. Meas. 22, 369–374. doi:
+crosscultural teaching contexts: accounts of Chinese teachers from international schools             10.1177/014662169802200406
+in Hong Kong. Teach. Teach. Educ. 54, 12–21. doi: 10.1016/j.tate.2015.11.007
+                                                                                                      Rowold, J. (2005). Multifactor leadership questionnaire. Psychometric properties of the
+  Larwin, K., and Harvey, M. (2012). A demonstration of a systematic item-reduction                  German translation by Jens Rowold. Redwood City, CA: Mind Garden.
+approach using structural equation modeling. Pract. Assess. Res. Eval. 17, 1–19. doi:
+                                                                                                       Ryan, R. M., and Deci, E. L. (2017). Self-deteremination theory: basic psychological
+10.7275/0nem-w659
+                                                                                                     needs in motivation, development, and wellness. New York: The Guilford Press
+  Lee, A. N., and Nie, Y. (2016). Teachers' perceptions of school leader empowering
+                                                                                                       Sinclair, C., Dowson, M., and McInerney, D. (2006). Motivations to teach:
+behaviors on psychological empowerment: a moderated path analysis. New Waves
+                                                                                                     psychometric perspectives across the first semester of teacher education. Teach. College
+Educat. Res. Develop. 19, 36–58. doi: 10.1177/1741143215578448
+                                                                                                     Record 108, 1132–1154. doi: 10.1111/j.1467-9620.2006.00688.x
+  Liu, W. C., Wang, C. K. J., Reeve, J., Kee, Y. H., and Chian, L. K. (2020). What
+                                                                                                       Tepper, B. J., and Percy, P. M. (1994). Structural validity of the Multifactor
+determines teachers’ use of motivational strategies in the classroom? A self-
+                                                                                                     Leadership Questionnaire. Edu. Psychol. Meas. 54, 734–744. doi: 10.1177/00131
+determination theory perspective. J. Educ. 200, 185–195. doi: 10.1177/0022057419881171
+                                                                                                     64494054003020
+  Liu, W. C., Kong, L. C., Wang, C. K. J., Kee, Y. H., Ng, B., Lam, K., et al. (2023). A
+                                                                                                       Vandenberghe, C., Stordeur, S., and D’hoore, W. (2002). Transactional and
+qualitative study into the personal factors influencing secondary school teachers' motivating
+                                                                                                     transformational leadership in nursing: structural validity and substantive relationship.
+styles. Front. Psychol. Sect. Educat. Psychol. 14:1127090. doi: 10.3389/fpsyg.2023.1127090
+                                                                                                     Eur. J. Psychol. Assess. 18, 16–29. doi: 10.1027//1015-5759.18.1.16
+   Lowe, K. B., Kroeck, K. G., and Sivasubramaniam, N. (1996). Effectiveness correlates
+                                                                                                       Vroom, V. H. (1964). Work and motivation. Oxford, England: Wiley.
+of transformational and transactional leadership: a meta-analytic review of the MLQ
+literature. Leadersh. Q. 7, 385–425. doi: 10.1016/S1048-9843(96)90027-2                                Wang, C. K. J., Liu, W. C., Kee, Y. H., and Chian, L. K. (2019). Competence, autonomy,
+                                                                                                     and relatedness in the classroom: understanding students’ motivational processes using
+  Markland, D., and Ingledew, D. K. (1997). The measurement of exercise motives:
+                                                                                                     the self-determination theory. Heliyon 5:e1983. doi: 10.1016/j.heliyon.2019.e1983
+factorial validity and invariance across gender of a revised Exercise Motivations
+Inventory. Br. J. Health Psychol. 2, 361–376. doi: 10.1111/j.2044-8287.1997.tb00549.x                  Xu, L., Wubbena, Z., and Stewart, T. (2016). Measurement invariance of second-order
+                                                                                                     factor model of the Multifactor Leadership Questionnaire (MLQ) across K-12 principal
+  Moreno-Casado, H., Leo, F. M., López-Gajardo, M., Garciia-Cavlvo, T., and
+                                                                                                     gender. J. Educ. Adm. 54, 727–748. doi: 10.1108/JEA-01-2015-0001
+Sánchez-Oliva, D. (2021). Adaptation and validation of the MLQ-5X Leadership Scale to
+the Spanish educational context. Ann. Psychol. 37, 311–322. doi: 10.6018/analesps.425351               Yu, C., and Muthen, B. (2002). “Evaluation of model fit indices for latent variable
+                                                                                                     models with categorical and continuous outcomes” in Paper presented at the American
+  Muenjohn, N., and Armstrong, A. (2008). Evaluating the structural validity of the
+                                                                                                     Educational Research Association (New Orleans)
+Multifactor Leadership Questionnaire (MLQ), capturing the leadership factors of
+transformational-transactional leadership. Contemp. Manag. Res. 4, 3–14. doi: 10.7903/                 Yukl, G. (2006). Leadership in organizations (6th). Upper Saddle River, NJ: Pearson-
+cmr.704                                                                                              Prentice Hall.
+
+
+
+
+Frontiers in Psychology                                                                         10                                                                          frontiersin.org

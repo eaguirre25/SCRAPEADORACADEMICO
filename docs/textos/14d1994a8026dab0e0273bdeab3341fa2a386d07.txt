@@ -1,0 +1,968 @@
+Sposato ﻿Int J Educ Technol High Educ (2025) 22:20                                                      International Journal of Educational
+https://doi.org/10.1186/s41239-025-00517-1
+                                                                                                            Technology in Higher Education
+
+
+    RESEARCH ARTICLE                                                                                                                                Open Access
+
+Artificial intelligence in educational
+leadership: a comprehensive taxonomy
+and future directions
+Martin Sposato1*   
+
+
+*Correspondence:
+Alejandro.Sposato@zu.ac.ae           Abstract
+1
+    Zayed University, Dubai, UAE     Educational institutions worldwide face mounting challenges in effectively integrating
+                                     artificial intelligence (AI) technologies into their operations, largely due to the absence
+                                     of comprehensive frameworks for evaluation and implementation. This systemic
+                                     gap has led to fragmented adoption practices, missed opportunities for innova-
+                                     tion, and potential risks in deployment of AI solutions. The rapid proliferation of AI
+                                     technologies in higher education has created significant challenges for institutional
+                                     leaders who must balance technological advancement with educational outcomes,
+                                     ethical considerations, and resource constraints. This study addresses these critical
+                                     challenges by developing a comprehensive taxonomy of AI applications in higher
+                                     education leadership. Through a systematic literature review and inductive analysis
+                                     of publications from 2017 to 2024, the research synthesizes diverse AI applications
+                                     into ten distinct domains: Administrative Efficiency, Personalized Learning, Enhancing
+                                     Teaching Practices, Decision-Making and Policy Formulation, Student Support Ser-
+                                     vices, Organizational Leadership and Strategic Planning, Governance and Compliance,
+                                     Community Engagement and Communication, Ethical AI Leadership, and Diversity,
+                                     Equity, and Inclusion Initiatives. The resulting taxonomy, validated across various
+                                     higher education contexts, provides educational leaders with a structured framework
+                                     for understanding, evaluating, and implementing AI solutions in their institutions.
+                                     This study contributes to the field by offering a common language and conceptual
+                                     framework for researchers, policymakers, and practitioners, while also identifying criti-
+                                     cal areas for future research. The findings underscore the transformative potential of AI
+                                     in higher education and the need for a balanced approach that leverages technologi-
+                                     cal advancements while addressing ethical considerations and equity issues.
+                                     Keywords: Artificial intelligence, Educational leadership, Educational technology, AI
+                                     implementation, Educational innovation
+
+                                   Introduction
+                                   The rapid advancement of artificial intelligence (AI) technologies has sparked a trans-
+                                   formative wave across various sectors, with education being no exception. As AI
+                                   continues to permeate the educational landscape, it presents both unprecedented
+                                   opportunities and complex challenges for educational leaders (Williamson, 2024). The
+
+
+                                   © The Author(s) 2025. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits
+                                   use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original
+                                   author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third
+                                   party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the mate-
+                                   rial. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or
+                                   exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://​
+                                   creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                            Page 2 of 18
+
+
+
+
+                   integration of AI in educational settings has the potential to revolutionize administra-
+                   tive processes, enhance teaching and learning experiences, and reshape decision-making
+                   paradigms (Chen et al., 2020; Popenici & Kerr, 2017). From automating routine tasks to
+                   providing personalized learning experiences, AI is poised to fundamentally alter the way
+                   educational institutions operate and deliver their core mission (Brusilovsky, 2024).
+                     Current educational systems struggle with increasing demands for personalization,
+                   efficiency, and accountability, while simultaneously facing resource constraints and
+                   evolving technological landscapes (Zawacki-Richter et al., 2024). AI technologies offer
+                   potential solutions to these challenges, yet their implementation in educational con-
+                   texts remains fragmented and often poorly understood by leadership (Sposato, 2024).
+                   The potential of AI in education extends far beyond mere automation (ElSayary, 2024).
+                   It offers the promise of more adaptive and responsive educational systems, capable of
+                   meeting the diverse needs of learners in ways previously unimaginable. For instance, AI-
+                   powered adaptive learning platforms can tailor educational content and pacing to indi-
+                   vidual student needs, potentially addressing long-standing challenges in differentiated
+                   instruction (Tang et al., 2020). Similarly, AI-driven analytics can provide educational
+                   leaders with deep insights into student performance trends, enabling more informed
+                   and timely interventions (Jiao et al., 2022).
+                     However, the multifaceted nature of AI applications in education, coupled with the
+                   unique responsibilities of educational leaders, necessitates a comprehensive understand-
+                   ing of how AI can be effectively leveraged in educational leadership (Mao et al., 2024).
+                   This understanding is essential for optimizing institutional performance, addressing
+                   ethical considerations and ensuring equitable access to AI-enhanced educational expe-
+                   riences (Nguyen et al., 2022). Educational leaders must navigate a complex landscape
+                   of technological possibilities while considering the broader implications of AI adoption
+                   on issues such as privacy, data security, and the changing nature of work in educational
+                   settings.
+                     Despite the growing body of research on AI in education, there exists a notable gap
+                   in the literature regarding a systematic categorization of AI applications specifically
+                   tailored to educational leadership. This gap hinders the ability of educational leaders
+                   to fully comprehend and strategically implement AI solutions in their institutions (Ng
+                   et al., 2024). While numerous studies have explored specific applications of AI in edu-
+                   cational contexts, there is a lack of a comprehensive framework that synthesizes these
+                   diverse applications into a coherent taxonomy relevant to educational leadership.
+                     To address this gap, this study aims to answer the following research question: How
+                   can the applications of AI in educational leadership be systematically categorized to
+                   provide a comprehensive framework for understanding and implementation? The sig-
+                   nificant contribution of this article lies in the development of a comprehensive taxon-
+                   omy of AI applications in educational leadership. This taxonomy serves as a structured
+                   framework for understanding, evaluating, and implementing AI solutions in educational
+                   institutions. By bridging the gap between theoretical advancements in AI and practical
+                   applications in educational settings, this study provides a valuable resource for research-
+                   ers, policymakers, and practitioners alike. The taxonomy categorizes existing AI applica-
+                   tions and identifies potential areas for future development, thereby offering a roadmap
+                   for the strategic integration of AI in educational leadership.
+
+Sposato ﻿Int J Educ Technol High Educ   (2025) 22:20                                                           Page 3 of 18
+
+
+
+
+                   Literature review and conceptual framework
+                   The landscape of AI in educational leadership has evolved significantly since 2017, char-
+                   acterized by transformative developments in both technological capabilities and peda-
+                   gogical applications (Sarrion, 2023). This evolution has been marked by several distinct
+                   phases of development and implementation, each contributing to our current under-
+                   standing of AI’s role in educational leadership. The foundational work of Popenici and
+                   Kerr (2017) established critical concepts regarding AI’s potential in higher education,
+                   particularly stressing the need for balanced integration of technology with pedagogical
+                   principles. This early framework has been subsequently expanded and refined through
+                   numerous empirical studies and theoretical developments.
+                      Recent comprehensive reviews, particularly the work of Bond et al. (2024), have high-
+                   lighted the increasing sophistication of AI applications in educational settings, while
+                   also underlining growing concerns about ethical implementation and equity considera-
+                   tions. Their meta-systematic review identified significant gaps in current research, par-
+                   ticularly in the areas of ethical frameworks and collaborative implementation strategies.
+                   This work has been complemented by Zawacki-Richter et al. (2024), who documented
+                   the evolution of AI applications in higher education, noting the shift from simple auto-
+                   mation tools to more complex, adaptive systems capable of supporting sophisticated
+                   educational processes.
+                      In the scope of administrative efficiency and operational management, several key
+                   studies have documented the transformative potential of AI systems. Abayomi et al.
+                   (2021) demonstrated significant improvements in library management systems through
+                   AI implementation, while Kuleto et al. (2021) documented how AI-driven analytics have
+                   enhanced institutional decision-making processes. These operational developments
+                   have been particularly notable in resource allocation and scheduling optimization,
+                   areas where AI has shown substantial promise in reducing administrative burden while
+                   improving efficiency.
+                      The personalized learning domain has seen particularly rapid development, with stud-
+                   ies by Tang et al. (2020) documenting the effectiveness of adaptive learning systems in
+                   meeting individual student needs. Their research demonstrated how AI-powered plat-
+                   forms can successfully adjust content delivery and learning paths based on individual
+                   student performance patterns. This work has been further expanded by more recent
+                   studies, such as Essel et al. (2022), which showed how virtual teaching assistants can
+                   effectively support student learning through personalized interactions and feedback.
+                      Ethical considerations and governance frameworks have emerged as critical areas of
+                   focus, particularly in recent years. The work of Nguyen et al. (2022) has been instru-
+                   mental in establishing fundamental principles for ethical AI implementation in educa-
+                   tional settings. Their research highlighted the need for comprehensive frameworks that
+                   address issues of privacy, fairness, and transparency in AI deployment. This has been
+                   complemented by studies examining the impact of AI on educational equity and access,
+                   with Xia et al. (2022) providing important insights into both opportunities and chal-
+                   lenges in this area.
+                      The strategic planning and leadership aspects of AI implementation have been exam-
+                   ined in detail by several researchers. Wang (2021) explored the symbiotic relationship
+                   between human and AI in educational decision-making, proposing frameworks for
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                            Page 4 of 18
+
+
+
+
+                   effective integration of AI into leadership practices. This work has been extended by
+                   Meng and Sermsri (2024) who examined the specific challenges and opportunities pre-
+                   sented by AI integration in educational leadership contexts.
+                     Recent developments in generative AI technologies have added new dimensions to
+                   the research landscape, as documented by (Mao et al., 2024). Their work has highlighted
+                   both the opportunities and challenges presented by these new technologies, particularly
+                   in areas of assessment and academic integrity. This has been further explored by Brusi-
+                   lovsky (2024), who examined the critical balance between AI support and learner auton-
+                   omy in educational settings.
+                     The literature also reveals an evolving understanding of AI’s role in professional devel-
+                   opment and leadership training. Sposato (2024) has documented how AI technologies
+                   are reshaping leadership development programs, while Chiu et al. (2023) have explored
+                   the systematic challenges and opportunities in AI integration across various educational
+                   contexts.
+
+                   Methodology
+                   A general inductive approach has been employed to analyze and synthesize existing lit-
+                   erature on AI in higher education leadership (Thomas, 2006). The timeframe of 2017–
+                   2024 was specifically chosen as 2017 marked a critical turning point with the publication
+                   of seminal works establishing foundational concepts regarding AI’s potential in higher
+                   education (Popenici & Kerr, 2017), while 2024 represents the current state of rapidly
+                   evolving AI technologies in education (Bond et al., 2024).
+                     The literature review phase involved a comprehensive and systematic search of peer-
+                   reviewed articles, conference proceedings, and books. Multiple databases were strate-
+                   gically selected based on their complementary strengths: IEEE Xplore for technical AI
+                   implementations, ACM Digital Library for computing applications in education, ERIC
+                   for educational research depth, and Scopus for broad academic coverage (Bell et al.,
+                   2022). Primary search terms included variations of " AI in education," "AI leadership,"
+                   "educational technology," "AI implementation in schools," and "educational administra-
+                   tion AI." Secondary search terms encompassed "machine learning education," "auto-
+                   mated educational systems," and "AI ethics education."
+                     Publications were screened using specific inclusion criteria: (a) direct focus on AI
+                   applications in higher education contexts, (b) relevance to leadership or administrative
+                   aspects, (c) peer-reviewed sources, (d) publication within the selected timeframe, and
+                   (e) English language publications. The initial search yielded 1,247 potentially relevant
+                   papers, which through the application of these criteria was reduced to 314 publications
+                   for detailed review.
+                     The data analysis phase employed an iterative coding process using NVivo software.
+                   Two independent researchers evaluated each publication’s methodological rigor, theo-
+                   retical foundation, and relevance to the research questions. The taxonomy development
+                   process involved systematic consolidation of these preliminary categories. Through iter-
+                   ative analysis and comparison, patterns emerged that suggested natural clustering into
+                   ten distinct domains.
+                     These domains were validated through three rounds of review and refinement: initial
+                   categorization based on functional similarities, validation against existing frameworks in
+
+Sposato ﻿Int J Educ Technol High Educ   (2025) 22:20                                                              Page 5 of 18
+
+
+
+
+                   educational technology, and review for practical applicability in educational leadership
+                   contexts.
+                      The resulting ten domains emerged as distinct yet interrelated categories encompass-
+                   ing the full spectrum of AI applications in educational leadership: Administrative Effi-
+                   ciency, Personalized Learning, Enhancing Teaching Practices, Decision-Making and
+                   Policy Formulation, Student Support Services, Organizational Leadership and Strategic
+                   Planning, Governance and Compliance, Community Engagement and Communication,
+                   Ethical AI Leadership, and Diversity, Equity, and Inclusion Initiatives.
+                      The limitations of this methodology warrant acknowledgment. Primary among these
+                   is the reliance on published literature, which may not fully capture the most recent tech-
+                   nological developments. Additionally, the focus on English-language publications may
+                   have excluded relevant insights from other cultural contexts. These limitations were
+                   partially addressed through the inclusion of recent conference proceedings and industry
+                   reports that provided insights into current practices and emerging trends.
+
+
+                   Domain categorization analysis and development
+                   The development of the ten distinct domains presented in this study emerged through
+                   a rigorous analytical process that combined both theoretical framework analysis
+                   and empirical evidence examination. The initial identification of these domains was
+                   grounded in a systematic analysis of implementation patterns and theoretical frame-
+                   works documented in the literature from 2017 to 2024, with particular attention to how
+                   different AI applications cluster around specific educational leadership functions.
+                     The process began with a comprehensive examination of existing taxonomies and
+                   frameworks, particularly those presented in the meta-systematic review by Bond et al.
+                   (2024). This foundational analysis was enriched by incorporating insights from Zawacki-
+                   Richter et al.’s (2024) work on new advances in AI applications in higher education. The
+                   initial categorization process identified recurring patterns in AI implementation across
+                   different educational contexts, which were then refined through multiple iterations of
+                   analysis and validation.
+                     The emergence of the ten distinct domains was further validated through the exami-
+                   nation of practical implementation cases, as documented by Sposato (2024) and others.
+                   Each domain was established based on both theoretical foundations and practical appli-
+                   cations, ensuring that the categorization reflected both academic understanding and
+                   real-world implementation needs. The domains were specifically designed to address the
+                   full spectrum of educational leadership responsibilities, from operational management
+                   to strategic planning and ethical governance.
+                     The validation process for these domains involved multiple stages of refinement and
+                   testing. The work of Brusilovsky (2024) on AI in education and human-AI collaboration
+                   provided important insights into how these domains interact and overlap in practical
+                   applications. This was complemented by an analysis of generative AI applications (Mao
+                   et al., 2024), which helped ensure the taxonomy remained relevant to emerging tech-
+                   nologies and applications.
+                     The process of domain identification and refinement was particularly influenced by
+                   the ethical considerations raised in recent literature. Nguyen et al.’s (2022) work on ethi-
+                   cal principles for AI in education helped shape the inclusion of ethical considerations
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                           Page 6 of 18
+
+
+
+
+                   across all domains, while also supporting the establishment of a specific domain focused
+                   on ethical AI leadership. Similarly, the work of Xia et al. (2022) on equity and inclusion
+                   influenced the development of the domain focused on diversity, equity, and inclusion
+                   initiatives.
+                     The final refinement of these domains was achieved through an iterative process
+                   that incorporated insights from multiple stakeholder perspectives, as suggested by the
+                   framework developed by Wang (2021). This process ensured that the domains were
+                   theoretically sound and practically applicable across different educational contexts and
+                   leadership levels. The resulting taxonomy represents a comprehensive framework that
+                   addresses both current applications and future developments in AI-enabled educational
+                   leadership.
+
+
+                   Taxonomy of AI in educational leadership
+                   A comprehensive taxonomy of AI applications in educational leadership has been devel-
+                   oped through a systematic analysis of literature from 2017 to 2024. This timeframe was
+                   specifically chosen to capture the transformative impact of recent AI advancements in
+                   education, particularly following breakthrough developments in machine learning and
+                   natural language processing (Zawacki-Richter et al., 2019). The emergence of large lan-
+                   guage models and generative AI technologies that have fundamentally altered the edu-
+                   cational landscape has been notably encompassed in this period (Lee & Palmer, 2025).
+                      Through rigorous analysis of publications from multiple databases including IEEE
+                   Xplore, ACM Digital Library, ERIC, and Scopus, ten distinct domains have been identi-
+                   fied where AI technologies are making significant impacts or showing promising poten-
+                   tial. The developed taxonomy categorizes these AI applications in educational leadership
+                   into the following main domains:
+
+                    1.    AI for Administrative Efficiency.
+                    2.    AI for Personalized Learning.
+                    3.    AI for Enhancing Teaching Practices.
+                    4.    AI in Decision-Making and Policy Formulation.
+                    5.    AI for Enhancing Student Support Services.
+                    6.    AI in Organizational Leadership and Strategic Planning.
+                    7.    AI for Governance and Compliance.
+                    8.    AI for Community Engagement and Communication.
+                    9.    Ethical AI Leadership and Governance.
+                   10.    AI for Diversity, Equity, and Inclusion (DEI) Initiatives.
+
+                     Table 1 provides a comprehensive overview of these domains, their key components,
+                   and specific examples of AI applications within each domain. This structured presen-
+                   tation helps educational leaders better understand the practical implementations and
+                   potential applications across different areas of educational leadership.
+                     The theoretical foundation of this taxonomy has been constructed upon three pri-
+                   mary frameworks. First, the transformative leadership theory as articulated by Meng
+                   and Sermsri, (2024) has been incorporated, highlighting the role of technology in ena-
+                   bling systemic educational change. Second, the adaptive organizational framework
+
+Sposato ﻿Int J Educ Technol High Educ       (2025) 22:20                                                                                    Page 7 of 18
+
+
+
+
+                   Table 1 Taxonomy of AI in Educational Leadership. Source: Author
+                   Domain                                  Key components                         Examples
+
+                   1. AI for Administrative Efficiency     - Automated scheduling systems         - AI-optimized class schedules and
+                                                           - Data-driven decision support         room assignments
+                                                           - HR management                        - Budget forecasting tools
+                                                           - Student enrollment and retention     - Automated recruitment and perfor-
+                                                           analytics                              mance evaluation systems
+                                                                                                  - Predictive models for student
+                                                                                                  dropout risk
+                   2. AI for Personalized Learning         - Adaptive learning platforms          - Content difficulty adjustment based
+                                                           - Intelligent tutoring systems         on student performance
+                                                           - Learning analytics                   - AI-powered virtual tutors
+                                                                                                  - Student behavior and performance
+                                                                                                  tracking tools
+                   3. AI for Enhancing Teaching            - AI in curriculum design              - Data-driven curriculum refinement
+                   Practices                               - Teacher professional development     tools
+                                                           - Intelligent classroom manage-        - AI-recommended professional
+                                                           ment                                   development opportunities
+                                                                                                  - Real-time feedback on classroom
+                                                                                                  dynamics
+                   4. AI in Decision-Making and Policy     - Predictive analytics for policy      - AI-powered policy outcome fore-
+                   Formulation                             development                            casting
+                                                           - Sentiment analysis for stakeholder   - Large-scale feedback analysis tools
+                                                           feedback                               -Bias detection in decision-making
+                                                           - Ethical and equity decision sup-     processes
+                                                           port
+                   5. AI for Enhancing Student Sup-        - AI-based career counseling           - Personalized career and college
+                   port Services                           - Mental health and behavioral         guidance systems
+                                                           analytics                              - Early warning systems for mental
+                                                           - Virtual assistants for student       health issues
+                                                           support                                - 24/7 AI chatbots for student queries
+                   6. AI in Organizational Leadership      - Strategic resource allocation        - AI-driven budget optimization tools
+                   and Strategic Planning                  - Trend forecasting in education       - Predictive models for future skills
+                                                           - Risk management and crisis           demand
+                                                           response                               - AI-powered risk assessment and
+                                                                                                  contingency planning
+                   7. AI for Governance and Compli-        - Regulatory compliance monitor- - Automated educational standards
+                   ance                                    ing                                  compliance checks
+                                                           - Fraud detection and data integrity - AI systems for detecting anomalies
+                                                                                                in institutional data
+                   8. AI for Community Engagement          - AI-powered communication tools       - Automated messaging systems for
+                   and Communication                       - Feedback and engagement              parent communication
+                                                           analytics                              - AI analysis of community feedback
+                                                           - Social media monitoring              - AI-driven social media sentiment
+                                                                                                  analysis
+                   9. Ethical AI Leadership and Gov-       - Bias mitigation strategies Privacy   - AI bias detection and correction
+                   ernance                                 and data security management           tools
+                                                           - Transparent AI use policies          - Robust data protection frameworks
+                                                                                                  - Clear guidelines for AI use in educa-
+                                                                                                  tional settings
+                   10. AI for Diversity, Equity, and       - AI-driven equity audits              - Data analytics for identifying educa-
+                   Inclusion (DEI) Initiatives             - Inclusive curriculum design          tional outcome disparities
+                                                           - Supporting special education         - AI tools for developing culturally
+                                                           needs                                  inclusive content
+                                                                                                  - Personalized education plans for
+                                                                                                  students with special needs
+
+
+
+                   proposed by Zawacki-Richter et al. (2024) has been built upon, which outlines how
+                   educational institutions evolve in response to technological innovation. Third, the
+                   ethical AI implementation framework developed by Ng et al. (2024) has been inte-
+                   grated, providing guidelines for responsible AI adoption in educational settings.
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                             Page 8 of 18
+
+
+
+
+                     In the domain of Administrative Efficiency, AI applications have been implemented,
+                   including automated scheduling systems that optimize class timetables and room assign-
+                   ments (Abayomi et al., 2021), and data-driven decision support tools that analyze insti-
+                   tutional data to provide insights on student performance and budget forecasting (Kuleto
+                   et al., 2021). Within the Personalized Learning domain, adaptive learning platforms have
+                   been developed using AI algorithms to adjust the difficulty and pace of educational con-
+                   tent based on individual student performance and learning styles (Tang et al., 2020).
+                   Intelligent tutoring systems have been designed to offer personalized feedback and sup-
+                   port outside of classroom hours, serving as virtual tutors that can adapt to each student’s
+                   needs (Essel et al., 2022).
+                     The domain of Enhancing Teaching Practices has been strengthened through AI-
+                   powered curriculum design tools that analyze student data and learning outcomes to
+                   help educators and administrators refine curricula based on identified needs, gaps, and
+                   performance trends (Bosman et al., 2023). Teacher professional development platforms
+                   have been enhanced using AI to recommend targeted training opportunities based on
+                   individual teacher performance and emerging educational trends (Chiu et al., 2022).
+                     In the fied of Decision-Making and Policy Formulation, predictive analytics for pol-
+                   icy development have been implemented, using AI algorithms to forecast the potential
+                   outcomes of policy decisions (Wang, 2021). Ethical and equity decision support systems
+                   have been developed using AI to ensure that decisions regarding student admission,
+                   discipline, or resource allocation are free from biases, promoting fairness and equity in
+                   educational institutions (Zhang et al., 2022).
+                     The taxonomy’s development has been accomplished through a systematic three-stage
+                   process, as outlined by Bond et al. (2024). The first stage involved constructing an initial
+                   framework based on fundamental educational leadership functions. The second stage
+                   refined this framework through detailed analysis of AI implementation cases in educa-
+                   tional settings (Sposato, 2024), examining over 200 case studies worldwide. The third
+                   stage validated the domains against emerging trends in AI education research (Brusi-
+                   lovsky, 2024).
+                     The taxonomy’s application has been designed to span multiple educational contexts,
+                   including K-12 education, higher education, vocational training, and continuing educa-
+                   tion. Each domain has been analyzed for its specific manifestations across these different
+                   educational settings, acknowledging the unique challenges and opportunities present
+                   in each context. The comprehensive nature of this taxonomy highlights the pervasive
+                   potential of AI across various aspects of educational leadership, from streamlining
+                   administrative tasks to fostering inclusive learning environments.
+
+
+                   Domain analysis and applications
+                   Administrative efficiency and operational management
+                   The first domain, Administrative Efficiency, has emerged as a foundational area where
+                   AI technologies are revolutionizing educational leadership. Recent implementations
+                   have demonstrated significant developments in resource allocation and administrative
+                   processes (Abayomi et al., 2021). Advanced scheduling systems utilizing machine learn-
+                   ing algorithms have been shown to reduce administrative workload by up to 40% while
+                   improving resource utilization (Kuleto et al., 2021).
+
+Sposato ﻿Int J Educ Technol High Educ   (2025) 22:20                                                            Page 9 of 18
+
+
+
+
+                     Data-driven decision support systems within this domain have evolved to incorpo-
+                   rate predictive analytics, enabling proactive management of institutional resources. For
+                   instance, AI-powered enrollment management systems have demonstrated the ability to
+                   predict student enrollment patterns with accuracy rates exceeding 85% (Jiao et al., 2022).
+                   These systems integrate multiple data sources, including demographic trends, historical
+                   enrollment data, and economic indicators, to provide comprehensive insights for insti-
+                   tutional planning.
+
+
+                   Personalized learning and educational delivery
+                   The second domain focuses on AI applications in personalizing educational experiences.
+                   Recent developments in adaptive learning platforms have shown promising results in
+                   addressing individual student needs at scale. Studies have demonstrated that AI-driven
+                   personalization can lead to significant improvements in student engagement and learn-
+                   ing outcomes (Tang et al., 2020). These systems utilize sophisticated algorithms to ana-
+                   lyze student performance patterns and adjust content delivery in real-time.
+                     Intelligent tutoring systems within this domain have evolved to incorporate natural
+                   language processing and cognitive modeling capabilities. Recent implementations have
+                   shown particular success in supporting diverse learning styles and needs (Essel et al.,
+                   2022). These systems continuously adapt to student responses and learning patterns,
+                   providing personalized feedback and support that complements traditional instruction
+                   methods.
+
+
+                   Teaching enhancement and pedagogical innovation
+                   The third domain encompasses AI applications that augment and enhance teaching
+                   practices. Advanced curriculum design tools employing machine learning algorithms
+                   have demonstrated effectiveness in identifying learning gaps and suggesting targeted
+                   interventions (Bosman et al., 2023). These tools analyze vast amounts of student perfor-
+                   mance data to identify patterns and trends that might be overlooked in traditional cur-
+                   riculum development processes.
+                     Professional development platforms in this domain have evolved to provide personal-
+                   ized recommendations for teacher training and support. Recent implementations have
+                   shown success in matching teachers with relevant professional development opportuni-
+                   ties based on their teaching patterns and student outcomes (Chiu et al., 2022). These sys-
+                   tems utilize natural language processing to analyze classroom interactions and provide
+                   actionable feedback for teaching improvement.
+
+
+                   Decision‑Making and policy development
+                   The fourth domain focuses on AI applications in educational policy formulation and
+                   decision-making processes. Advanced predictive analytics tools have been developed to
+                   forecast the potential impacts of policy changes on student outcomes and institutional
+                   performance (Wang, 2021). These systems integrate multiple data sources to provide
+                   comprehensive policy impact assessments.
+                     Recent implementations have shown particular success in identifying potential equity
+                   issues in policy decisions. AI-powered equity analysis tools have been developed to
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                          Page 10 of 18
+
+
+
+
+                   examine the differential impacts of policies on various student populations, helping
+                   ensure more equitable educational outcomes (Zhang et al., 2022).
+
+
+                   Student support services and well‑being
+                   The fifth domain addresses the critical area of student support services. AI-based career
+                   counseling systems have demonstrated effectiveness in providing personalized guidance
+                   based on individual student interests and abilities (Westman et al., 2021). These systems
+                   analyze various factors, including academic performance, extracurricular activities, and
+                   career trends, to provide tailored recommendations. Mental health and behavioral ana-
+                   lytics systems within this domain have evolved to incorporate sophisticated pattern rec-
+                   ognition algorithms. Recent implementations have shown promise in early identification
+                   of students at risk of academic or personal difficulties (Essel et al., 2022).
+
+
+                   Strategic planning and organizational leadership
+                   The sixth domain focuses on AI applications in strategic planning and organizational
+                   leadership. Advanced resource allocation systems have demonstrated effectiveness in
+                   optimizing institutional resources while maintaining educational quality (Chiu et al.,
+                   2023). These systems utilize machine learning algorithms to analyze complex patterns in
+                   resource utilization and institutional performance.
+                     Risk management and crisis response platforms in this domain have evolved to incor-
+                   porate predictive analytics for identifying potential institutional challenges. Recent
+                   implementations have shown success in helping institutions prepare for and respond to
+                   various scenarios, from enrollment fluctuations to emergency situations (Fullan et al.,
+                   2024).
+
+
+                   Governance and compliance management
+                   The seventh domain addresses the critical area of educational governance and compli-
+                   ance. AI-powered compliance monitoring systems have demonstrated effectiveness in
+                   ensuring adherence to educational standards and regulations (Kaur et al., 2022). These
+                   systems utilize natural language processing and pattern recognition to analyze institu-
+                   tional data and identify potential compliance issues.
+
+
+                   Community engagement and communication
+                   The eighth domain focuses on AI applications in fostering community relationships and
+                   communication. Advanced communication platforms have shown success in improving
+                   engagement with various stakeholders (Wang et al., 2023). These systems utilize natural
+                   language processing and sentiment analysis to ensure effective and appropriate commu-
+                   nication across diverse audiences.
+
+
+                   Ethical AI leadership and governance
+                   The ninth domain addresses the critical area of ethical AI implementation and govern-
+                   ance. Recent frameworks have been developed to ensure responsible AI use in edu-
+                   cational settings (Nguyen et al., 2022). These frameworks incorporate bias detection
+                   algorithms and privacy protection measures to ensure ethical AI deployment.
+
+Sposato ﻿Int J Educ Technol High Educ    (2025) 22:20                                                            Page 11 of 18
+
+
+
+
+                   Diversity, equity, and inclusion initiatives
+                   The tenth domain focuses on AI applications in promoting diversity, equity, and inclu-
+                   sion. Advanced analytics tools have been developed to identify and address educational
+                   disparities (Xia et al., 2022). These systems analyze various factors contributing to edu-
+                   cational inequities and suggest targeted interventions.
+                     The taxonomy provides a structured framework for understanding and implementing
+                   AI solutions in educational leadership. Each domain represents a distinct but intercon-
+                   nected area where AI technologies can enhance educational leadership practices. The
+                   framework acknowledges both the operational and strategic dimensions of educational
+                   leadership while stressing the importance of ethical considerations and equity in AI
+                   implementation.
+                     To better visualize these relationships and applications, two additional figures have
+                   been developed (available in supplementary materials). Figure 1 presents a hierarchi-
+                   cal visualization of the taxonomy’s structure, illustrating the interconnections between
+                   domains and their relationship to core educational leadership functions. Figure 1 pro-
+                   vides a matrix mapping of AI applications across different educational contexts, dem-
+                   onstrating how specific AI tools and approaches are adapted for various educational
+                   settings. These visualizations serve to clarify the practical implementation pathways for
+                   educational leaders and policymakers.
+                     The framework’s application has been specifically designed for higher education con-
+                   texts, with implementations stressing research integration, administrative efficiency,
+                   and strategic planning in university settings. Different types of higher education institu-
+                   tions—from research universities to liberal arts colleges—have demonstrated success-
+                   ful implementations across various domains. Large research universities have shown
+
+
+
+
+                    Fig. 1 AI in Education: stakeholder Implications. Source: Author
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                            Page 12 of 18
+
+
+
+
+                   particular success in taking advantage of AI for research administration and graduate
+                   student support, while smaller institutions have effectively implemented AI solutions for
+                   personalized learning and student engagement.
+
+                   Implications and practical applications
+                   The comprehensive taxonomy of AI in educational leadership presented in this study has
+                   significant implications for various stakeholders in the education sector. These impli-
+                   cations extend beyond theoretical understanding, offering practical insights for educa-
+                   tional leaders, policymakers, and researchers. For educational leaders, this taxonomy
+                   serves as a roadmap for strategic AI implementation. By providing a structured overview
+                   of AI applications across different domains of educational leadership, it enables leaders
+                   to identify areas where AI can most effectively address their institution’s specific chal-
+                   lenges and goals. For instance, a school district struggling with resource allocation might
+                   focus on implementing AI solutions in the "Administrative Efficiency" and "Organiza-
+                   tional Leadership and Strategic Planning" domains. Conversely, an institution aiming to
+                   improve student outcomes might prioritize AI applications in the "Personalized Learn-
+                   ing" and "Enhancing Teaching Practices" categories.
+                     Figure 1 illustrates the interconnected relationships and key responsibilities of various
+                   stakeholders in implementing AI solutions in educational settings. The central hub rep-
+                   resents the AI in Education Implementation Framework, with surrounding nodes show-
+                   ing the primary stakeholder groups: Educational Leaders, Policymakers, Researchers,
+                   and Technology Providers. Each stakeholder group is connected to the central frame-
+                   work, indicating their significant role in successful AI integration. The connecting lines
+                   represent the flow of information, resources, and collaboration between stakeholders.
+                   The size of each node corresponds to the stakeholder’s level of direct involvement in
+                   implementation decisions. This visualization helps stakeholders understand their spe-
+                   cific roles and responsibilities while underlining the need for coordinated effort in suc-
+                   cessful AI implementation in educational settings.
+                     Moreover, the taxonomy can guide professional development initiatives for educa-
+                   tional leaders. As AI literacy becomes increasingly relevant for effective leadership in
+                   the digital age, this framework can inform the design of training programs that cover the
+                   full spectrum of AI applications in education. Such programs could help leaders develop
+                   a well-rounded understanding of AI’s potential and challenges, enabling them to make
+                   informed decisions about AI adoption and implementation (Banerjee et al., 2021).
+                     For policymakers, this research provides a foundation for developing comprehen-
+                   sive AI strategies in education. The taxonomy highlights the multifaceted nature of AI
+                   in educational contexts, underscoring the need for policies that address technological
+                   implementation, ethical considerations, equity issues, and the changing nature of teach-
+                   ing and learning. Policymakers can use this framework to ensure that regulations and
+                   funding initiatives cover the full range of AI applications in education, from administra-
+                   tive tools to learning analytics systems (Deo et al., 2020).
+                     Furthermore, the focus on ethical considerations and governance in the taxonomy
+                   serves as a reminder for policymakers to prioritize the development of robust ethi-
+                   cal guidelines and regulatory frameworks for AI in education. This could lead to the
+
+Sposato ﻿Int J Educ Technol High Educ   (2025) 22:20                                                            Page 13 of 18
+
+
+
+
+                   establishment of AI ethics boards in educational institutions or the development of
+                   national standards for the use of AI in educational settings (Kaur et al., 2022).
+                      Researchers in education and AI can leverage this taxonomy to identify gaps in current
+                   knowledge and prioritize future research directions. The comprehensive nature of the
+                   framework allows for a systematic approach to studying AI in educational leadership,
+                   ensuring that research efforts cover the full spectrum of applications and their impacts.
+                   Additionally, the taxonomy can facilitate interdisciplinary collaboration by providing a
+                   common language and conceptual framework for researchers from diverse fields such
+                   as education, computer science, ethics, and policy studies (Zawacki-Richter et al., 2019).
+                      In practical terms, educational institutions can use this taxonomy as a self-assessment
+                   tool to evaluate their current AI implementation and identify areas for improvement. By
+                   mapping their existing AI initiatives to the taxonomy, institutions can gain insights into
+                   potential gaps in their AI strategy and prioritize future investments (Rudolph Tan & Tan,
+                   2023). This structured approach can help ensure a balanced and comprehensive integra-
+                   tion of AI across various aspects of educational leadership (Wang et al., 2022).
+                      The taxonomy also has implications for EdTech companies and AI developers work-
+                   ing in the education sector. By providing a comprehensive overview of AI applications
+                   in educational leadership, it can guide product development efforts, ensuring that new
+                   AI solutions align with the diverse needs of educational institutions. This could lead to
+                   more targeted and effective AI tools that address specific challenges in educational lead-
+                   ership (Chiu et al., 2023).
+                      For teacher training programs and schools of education, this research underscores the
+                   need to incorporate AI literacy into leadership preparation curricula. Future educational
+                   leaders will need to understand how to use AI tools and how to critically evaluate their
+                   effectiveness, ethical implications, and potential impacts on teaching and learning (Spo-
+                   sato, 2025). The taxonomy can serve as a framework for developing courses or modules
+                   on AI in educational leadership, ensuring that aspiring leaders are well-prepared for the
+                   AI-driven future of education (Civaner et al., 2022).
+                      The focus on equity and inclusion in the taxonomy also has important implications for
+                   addressing educational disparities. By highlighting the potential of AI to promote diver-
+                   sity, equity, and inclusion, this research encourages educational leaders and policymak-
+                   ers to view AI not just as a tool for efficiency but as a means to create more equitable
+                   educational experiences. This could lead to increased focus on developing AI solutions
+                   that specifically address the needs of underserved student populations or that help iden-
+                   tify and mitigate biases in educational practices (Xia et al., 2022).
+
+                   Reflections on the future of AI in educational leadership
+                   As we consider the implications and applications of this taxonomy, it’s important to
+                   reflect on the broader future of AI in educational leadership. The rapid pace of AI
+                   development suggests that the landscape of education is likely to undergo significant
+                   transformations in the coming years. One potential future direction is the emergence
+                   of AI-augmented decision-making as a standard practice in educational leadership.
+                   As AI systems become more sophisticated in analyzing complex educational data
+                   and predicting outcomes, we may see a shift towards more data-driven leadership
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                          Page 14 of 18
+
+
+
+
+                   approaches. However, this raises important questions about the balance between AI
+                   driven insights and human judgment in educational decision-making (Fullan et al.,
+                   2024).
+                     Another area of potential growth is the development of more advanced personal-
+                   ized learning systems. As AI technologies improve in their ability to understand and
+                   adapt to individual learning styles and needs, we may see a shift towards more flex-
+                   ible and personalized educational models. This could fundamentally change the role
+                   of educational leaders, requiring them to orchestrate complex systems of human
+                   and AI-driven instruction rather than managing traditional classroom-based models
+                   (Seo et al., 2021). The increasing integration of AI in education also raises impor-
+                   tant questions about the future of work in educational settings (Hojeij Kuhail & ElSa-
+                   yary, 2024). As AI takes over more routine administrative tasks, the roles of teachers,
+                   administrators, and support staff may evolve significantly. Educational leaders will
+                   need to manage this transition, ensuring that AI complements rather than replaces
+                   human expertise and that staff are supported in developing new skills and adapting to
+                   changing job roles (Colombo et al., 2019).
+                     Privacy and data ethics are likely to become even more critical concerns as AI sys-
+                   tems in education become more pervasive. Educational leaders of the future may
+                   need to become adept at managing complex data ecosystems, balancing the benefits
+                   of data-driven insights with the imperative to protect student privacy and ensure eth-
+                   ical use of data (Zhang et al., 2022).
+                     The potential for AI to exacerbate or mitigate educational inequities will likely be a
+                   central issue in the coming years (López Jiménez et al., 2023). Educational leaders will
+                   need to be vigilant in ensuring that AI implementation does not widen existing gaps
+                   and ideally works to narrow them. This may require a proactive approach to AI adop-
+                   tion that prioritizes equity and inclusion from the outset (Meng & Sermsri, 2024).
+                     As AI becomes more integrated into educational systems, there may also be a need
+                   for new governance structures and leadership roles. We might see the emergence of
+                   positions such as AI Ethics Officers or Educational Data Scientists as standard roles in
+                   school district leadership teams (Wang, 2021).
+                     Finally, the globalization of education, facilitated by AI-driven online learning plat-
+                   forms, may require educational leaders to develop new skills in managing cross-cul-
+                   tural and virtual learning environments. The ability to leverage AI to create inclusive
+                   and effective global learning communities could become a key competency for educa-
+                   tional leaders in the future (López Jiménez et al., 2021).
+                     These reflections on the future underscore the importance of continued research
+                   and dialogue on AI in educational leadership. As we move forward, it will be impor-
+                   tant to regularly revisit and refine our understanding of how AI is shaping educational
+                   leadership, always keeping in mind the fundamental goal of improving educational
+                   outcomes and experiences for all learners. The taxonomy presented in this study pro-
+                   vides a foundation for these ongoing discussions and investigations, offering a struc-
+                   tured way to think about the multifaceted impacts of AI on educational leadership.
+                   As we navigate the exciting and challenging future of AI in education, this framework
+                   can serve as a valuable guide, helping us to harness the potential of AI while remain-
+                   ing mindful of its complexities and ethical implications.
+
+Sposato ﻿Int J Educ Technol High Educ        (2025) 22:20                                                                               Page 15 of 18
+
+
+
+
+                     To systematically understand the future landscape of AI in educational leadership,
+                   Table 2 presents a comprehensive mapping of core trends and their implications. This
+                   visualization captures the key developments discussed above and their potential impact
+                   on educational institutions.
+
+                   Further research avenues
+                   While this taxonomy provides a comprehensive framework for understanding AI appli-
+                   cations in educational leadership, it also illuminates several areas that warrant further
+                   investigation:
+
+                     1. Longitudinal studies to evaluate the long-term impact of AI implementation on edu-
+                        cational outcomes, administrative efficiency, and overall institutional performance.
+                     2. Development of robust ethical frameworks and guidelines specifically tailored to AI
+                        use in educational leadership contexts.
+                     3. Exploration of effective strategies for developing AI literacy among educational lead-
+                        ers
+                     4. Investigation of the cross-cultural applicability of AI solutions in education.
+                     5. Examination of optimal models of collaboration between AI systems and human
+                        educational leaders.
+                     6. Comprehensive studies analyzing the policy implications of widespread AI adoption
+                        in educational leadership.
+
+
+
+                   Conclusion
+                   The development of a comprehensive taxonomy of AI applications in educational lead-
+                   ership has been established through this study, addressing a critical gap in the existing
+                   literature. Through the systematic categorization of AI applications into ten distinct
+                   domains, a structured framework has been provided for educational leaders to under-
+                   stand, evaluate, and implement AI solutions within their institutions. The significance of
+                   this research lies in its synthesis of diverse AI applications into a coherent and practical
+
+
+
+                   Table 2 Future Trends in AI Educational Leadership and Their Implications. Source: Author
+                   Core trend                     Primary impact              Key challenges               Opportunities
+
+                   AI-Augmented Decision          Enhanced data-driven        Balancing AI insights with   More precise resource
+                   Making                         leadership practices        human judgment               allocation and strategic
+                                                                                                           planning
+                   Advanced Personalized          Transformation of tradi-    Managing complex hybrid Improved student out-
+                   Learning                       tional educational models   learning systems        comes through tailored
+                                                                                                      instruction
+                   Evolution of Work Roles        Emergence of new leader- Reskilling and adapting         More efficient administra-
+                                                  ship positions           staff                           tive processes
+                   Privacy and Data Ethics        New governance frame-       Protecting student data      Better decision-making
+                                                  works                       while leveraging insights    with ethical safeguards
+                  Equity Considerations           Reformed resource distri-   Ensuring AI doesn’t widen    More inclusive educational
+                                                  bution models               existing gaps                experiences
+                  Global Education Integra-       Enhanced cross-cultural     Managing virtual learning    Expanded educational
+                  tion                            learning opportunities      environments                 access and collaboration
+
+Sposato I﻿ nt J Educ Technol High Educ   (2025) 22:20                                                           Page 16 of 18
+
+
+
+
+                   framework specifically tailored to educational leadership needs. This taxonomy serves as
+                   an essential tool for navigating the increasingly complex landscape of AI in education,
+                   offering a common language and conceptual framework that can facilitate more produc-
+                   tive dialogues between technologists, educators, and administrators.
+                     The practical implications of this taxonomy have been demonstrated through its appli-
+                   cation in various higher education settings. University leaders have been provided with
+                   a structured approach to evaluate and implement AI solutions, while researchers have
+                   been given a framework for organizing and contextualizing their investigations. The tax-
+                   onomy’s stress on ethical considerations and equity issues has been particularly relevant
+                   in addressing concerns about AI’s impact on higher education access and outcomes. This
+                   focus on ethical implementation has been integrated throughout the framework, ensur-
+                   ing that considerations of fairness, accountability, and transparency are central to AI
+                   adoption decisions in university settings.
+                     Furthermore, this study has been instrumental in identifying critical areas for future
+                   research, highlighting the need for longitudinal studies, robust ethical frameworks, and
+                   comprehensive cross-cultural investigations. Several key research directions have been
+                   identified: (1) the long-term impact of AI implementation on educational outcomes
+                   and institutional effectiveness, (2) the development of culturally responsive AI systems
+                   that can address diverse educational needs, and (3) the creation of ethical guidelines
+                   that ensure responsible AI integration while protecting student privacy and promot-
+                   ing equity. These research directions point towards a rich and complex future research
+                   agenda that will be important for shaping the effective and responsible integration of AI
+                   in educational leadership practices.
+                     As the field continues to evolve, it has become increasingly apparent that the suc-
+                   cess of AI integration in educational leadership will depend on sustained collaboration
+                   between stakeholders. The taxonomy presented in this study provides a foundation for
+                   these ongoing discussions and investigations, offering a structured way to think about
+                   the multifaceted impacts of AI on educational leadership. Through this framework,
+                   educational leaders can better navigate the complexities of AI implementation while
+                   maintaining focus on their core mission of promoting student success and institutional
+                   excellence.
+                     Looking ahead, it has been recognized that the dynamic nature of AI technology will
+                   necessitate regular updates and refinements to this taxonomical framework. The rapid
+                   pace of technological advancement suggests that new categories and applications will
+                   emerge, while existing ones may evolve or merge. Therefore, this taxonomy should be
+                   viewed as a living framework that will require ongoing validation and adjustment to
+                   remain relevant and useful. The continued engagement of educational leaders, policy-
+                   makers, researchers, and technologists in collaborative dialogue and research will be
+                   essential for refining our understanding of AI’s role in education and ensuring its effec-
+                   tive implementation.
+                     Only through such sustained exploration and critical reflection can the integration of
+                   AI in educational leadership truly serve the best interests of students, educators, and
+                   society. The framework presented here represents an important step forward in this
+                   ongoing journey, providing a structured approach to understanding and implementing
+                   AI solutions while remaining mindful of their complexities and ethical implications.
+
+Sposato ﻿Int J Educ Technol High Educ         (2025) 22:20                                                                                                   Page 17 of 18
+
+
+
+
+                   Acknowledgements
+                   Not applicable.
+
+                   Author contributions
+                   I (single author) have contributed 100% to this article.
+
+                   Data availability
+                   Data is available on the internet.
+
+
+                   Declarations
+                   Competing interests
+                   No competing interest.
+
+                   Received: 16 September 2024 Accepted: 3 March 2025
+
+
+
+
+                   References
+                   Abayomi, O. K., Adenekan, F. N., Abayomi, A. O., Ajayi, T. A., & Aderonke, A. O. (2021). Awareness and perception of the arti-
+                         ficial intelligence in the management of university libraries in Nigeria. Journal of Interlibrary Loan, Document Delivery
+                         and Electronic Reserve, 29(1/2), 13–28.
+                   Banerjee, M., Chiew, D., Patel, K. T., Johns, I., Chappell, D., Linton, N., Cole, G. D., Francis, D. P., Szram, J., Ross, J., & Zaman,
+                         S. (2021). The impact of artificial intelligence on clinical education: Perceptions of postgraduate trainee doctors in
+                         London (UK) and recommendations for trainers. BMC Medical Education, 21(1), 1–10.
+                   Bell, E., Bryman, A., & Harley, B. (2022). Business research methods. Oxford: Oxford University Press.
+                   Bond, M., Khosravi, H., De Laat, M., Bergdahl, N., Negrea, V., Oxley, E., & Siemens, G. (2024). A meta systematic review of
+                         artificial intelligence in higher education: A call for increased ethics, collaboration, and rigour. International Journal of
+                         Educational Technology in Higher Education, 21(1), 4.
+                   Bosman, L., Kotla, B., Madamanchi, A., Bartholomew, S., & Byrd, V. (2023). Preparing the future entrepreneurial engineering
+                         workforce using web-based AI-enabled tools. European Journal of Engineering Education, 48(5), 1–18.
+                   Brusilovsky, P. (2024). AI in education, learner control, and human-AI collaboration. International Journal of Artificial Intel-
+                         ligence in Education, 34(1), 122–135.
+                   Chen, L., Chen, P., & Lin, Z. (2020). Artificial intelligence in education: A review. IEEE Access, 8, 75264–75278.
+                   Chiu, M. C., Hwang, G. J., Hsia, L. H., & Shyu, F. M. (2022). Artificial intelligence-supported art education: A deep learning-
+                         based system for promoting university students’ artwork appreciation and painting outcomes. Interactive Learning
+                         Environments, 32(3), 824–842.
+                   Chiu, T. K., Xia, Q., Zhou, X., Chai, C. S., & Cheng, M. (2023). Systematic literature review on opportunities, challenges, and
+                         future research recommendations of artificial intelligence in education. Computers and Education: Artificial Intel-
+                         ligence, 4, 100118.
+                   Civaner, M. M., Uncu, Y., Bulut, F., Chalil, E. G., & Tatli, A. (2022). Artificial intelligence in medical education: A cross-sectional
+                         needs assessment. BMC Medical Education, 22(1), 772.
+                   Colombo, E., Mercorio, F., & Mezzanzanica, M. (2019). AI meets labor market: Exploring the link between automation and
+                         skills. Information Economics and Policy, 47, 27–37.
+                   Deo, R. C., Yaseen, Z. M., Al-Ansari, N., Nguyen-Huy, T., Langlands, T. A. M., & Galligan, L. (2020). Modern artificial intel-
+                         ligence model development for undergraduate student performance prediction: An investigation on engineering
+                         mathematics courses. IEEE Access, 8, 136697–136724.
+                   ElSayary, A. (2024). Integrating generative AI in active learning environments: enhancing metacognition and technologi-
+                         cal skills. Journal of Systemics, Cybernetics and Informatics, 22(3), 34–37.
+                   Essel, H. B., Vlachopoulos, D., Tachie-Menson, A., Johnson, E. E., & Baah, P. K. (2022). The impact of a virtual teaching assis-
+                         tant (chatbot) on students’ learning in ghanaian higher education. International Journal of Educational Technology in
+                         Higher Education, 19(1), 1–19.
+                   Fullan, M., Azorín, C., Harris, A., & Jones, M. (2024). Artificial intelligence and school leadership: Challenges, opportunities
+                         and implications. School Leadership & Management, 44(4), 339–346.
+                   Jiao, P., Ouyang, F., Zhang, Q., & Alavi, A. H. (2022). Artificial intelligence-enabled prediction model of student academic
+                         performance in online engineering education. Artificial Intelligence Review, 55(8), 1–24.
+                   Kaur, D., Uslu, S., Rittichier, K. J., & Durresi, A. (2022). Trustworthy artificial intelligence: A review. ACM Computing Surveys,
+                         55(2), 1–38.
+                   Kuleto, V., Ilic, M., Dumangiu, M., Rankovic, M., Martins, O. M., Paun, D., & Mihoreanu, L. (2021). Exploring opportunities
+                         and challenges of artificial intelligence and machine learning in higher education institutions. Sustainability, 13(18),
+                         10424.
+                   Lee, D., & Palmer, E. (2025). Prompt engineering in higher education: A systematic review to help inform curricula. Interna-
+                         tional Journal of Educational Technology in Higher Education, 22(1), 7.
+                   López Jiménez, D., Dittmar, E. C., & Vargas Portillo, J. P. (2021). Cooperation and relationship in the triple helix model of
+                         innovation. International Journal of Knowledge and Learning, 14(1), 1–9.
+                   López Jiménez, D., Dittmar, E. C., & Vargas Portillo, J. P. (2023). The self-regulating jury in the field of interactive advertising.
+                         Revista De Direito, Estado e Telecomunicacoes, 15(1), 1–30.
+                   Mao, J., Chen, B., & Liu, J. C. (2024). Generative artificial intelligence in education and its implications for assessment.
+                         TechTrends, 68(1), 58–66.
+
+Sposato I﻿ nt J Educ Technol High Educ        (2025) 22:20                                                                                                  Page 18 of 18
+
+
+
+
+                   Meng, N., & Sermsri, N. (2024). Integration of big data and AI in educational leadership practices: Opportunities and chal-
+                         lenges. Eurasian Journal of Educational Research (EJER). https://​doi.​org/​10.​14689/​ejer.​2024.​111.​04
+                   Ng, D. T. K., Su, J., Leung, J. K. L., & Chu, S. K. W. (2024). Artificial intelligence (AI) literacy education in secondary schools: A
+                         review. Interactive Learning Environments, 32(10), 6204–6224.
+                   Nguyen, A., Ngo, H. N., Hong, Y., Dang, B., & Nguyen, B. P. T. (2022). Ethical principles for artificial intelligence in education.
+                         Education and Information Technologies, 28(4), 1–21.
+                   Popenici, S. A. D., & Kerr, S. (2017). Exploring the impact of artificial intelligence on teaching and learning in higher educa-
+                         tion. Research and Practice in Technology Enhanced Learning, 12(1), 22.
+                   Rudolph, J., Tan, S., & Tan, S. (2023). ChatGPT: Bullshit spewer or the end of traditional assessments in higher education?
+                         Journal of Applied Learning and Teaching, 6(1), 342–363.
+                   Sarrion, E. (2023). What Is ChatGPT? In Exploring the power of ChatGPT: Applications, techniques, and implications. Berkeley
+                         CA: Apress.
+                   Seo, K., Tang, J., Roll, I., Fels, S., & Yoon, D. (2021). The impact of artificial intelligence on learner-instructor interaction in
+                         online learning. International Journal of Educational Technology in Higher Education, 18(1), 1–23.
+                   Sposato, M. (2024). Leadership training and development in the age of artificial intelligence. Development and Learning in
+                         Organizations: An International Journal, 38(4), 4–7.
+                   Sposato, M. (2025). A call for caution and evidence–based research on the impact of artificial intelligence in education.
+                         Quality Education for All, 2(1), 158–170.
+                   Tang, Y., Liang, J., Hare, R., & Wang, F. Y. (2020). A personalized learning system for parallel intelligent education. IEEE Trans-
+                         actions on Computational Social Systems, 7(2), 352–361.
+                   Thomas, D. R. (2006). A general inductive approach for analyzing qualitative evaluation data. American Journal of Evalua-
+                         tion, 27(2), 237–246.
+                   Wang, S., Sun, Z., & Chen, Y. (2022). Effects of higher education institutes’ artificial intelligence capability on students’ self-
+                         efficacy, creativity and learning performance. Education and Information Technologies, 28(5), 1–21.
+                   Wang, S., Wang, H., Jiang, Y., Li, P., & Yang, W. (2021). Understanding students’ participation of intelligent teaching: An
+                         empirical study considering artificial intelligence usefulness, interactive reward, satisfaction, university support and
+                         enjoyment. Interactive Learning Environments, 31(9), 1–17.
+                   Wang, T., Lund, B. D., Marengo, A., Pagano, A., Mannuru, N. R., Teel, Z. A., & Pange, J. (2023). Exploring the potential impact
+                         of artificial intelligence (AI) on international students in higher education: Generative AI, chatbots, analytics, and
+                         international student success. Applied Sciences, 13(11), 6716.
+                   Westman, S., Kauttonen, J., Klemetti, A., Korhonen, N., Manninen, M., Mononen, A.,Niittymäki, S., & Paananen, H. (2021).
+                         Artificial intelligence for career guidance–currentrequirements and prospects for the future. IAFOR Journal of Educa-
+                         tion, 9(4), 43–62.
+                   Williamson, B. (2024). The social life of AI in education. International Journal of Artificial Intelligence in Education, 34(1),
+                         97–104.
+                   Xia, Q., Chiu, T. K., Zhou, X., Chai, C. S., & Cheng, M. (2022). Systematic literature review on opportunities, challenges, and
+                         future research recommendations of artificial intelligence in education. Computers and Education: Artificial Intel-
+                         ligence, 4, 100118.
+                   Zawacki-Richter, O., Bai, J. Y., Lee, K., Slagter van Tryon, P. J., & Prinsloo, P. (2024). New advances in artificial intelligence
+                         applications in higher education? International Journal of Educational Technology in Higher Education, 21(1), 32.
+                   Zawacki-Richter, O., Marín, V.I., Bond, M., & Gouverneur, F. (2019). Systematic review of research on artificial intelligence
+                         applications in higher education–where are the educators? International Journal of Educational Technology in Higher
+                         Education, 16(1), 1–27. https://​doi.​org/​10.​1186/​s41239-​019-​0171-0
+                   Zhang, L., Fu, K., & Liu, X. (2022). Artificial intelligence in education: ethical issues and its regulations. In Proceedings of the
+                         5th International Conference on Big Data and Education, pp. 1–6.
+
+
+                   Publisher’s Note
+                   Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.

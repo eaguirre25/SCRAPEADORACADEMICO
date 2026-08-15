@@ -1,0 +1,213 @@
+International Journal of Scientific Research in Engineering and Management (IJSREM)
+            Volume: 07 Issue: 01 | January - 2023              Impact Factor: 7.185              ISSN: 2582-3930
+
+
+
+             Review on School Management System
+                   Harshal Pawar                                                  Siddheshvar Patil
+        Department: Information Technology                                 Department: Information Technology
+                 GHRIET PUNE                                                        GHRIET PUNE
+             harshalpawar2888@gmail.com
+                                                                              mrsiddheshvarpatil@gmail.com
+
+                     Aniket Patil                                                    Kartik Metkar
+        Department: Information Technology                                 Department: Information Technology
+                 GHRIET PUNE                                                        GHRIET PUNE
+            aniketpatil22048@gmail.com                                           metkarkartik@gmail.com
+
+                                               Prof.Smita Battalwar
+                                          Department: Artificial Intelligence
+                                                 GHRCEM, PUNE
+                                             smita.battalwar@raisoni.net
+
+
+ABSTRACT                                                       Keywords
+Our team created the School Management                         Admission, Library, Attendance, Bus Tracking, Fees report,
+Application specially for students to make managing
+                                                               Live classroom, Dynamic report, education system etc. [3]
+the everyday work of the institute and the smooth
+operation of the school administration. Software for
+school management is used for management,                      1    INTRODUCTION
+administration, and learning activities in colleges and        Information technology is critical to the growth of
+schools. managing the timetable, exams, class tests,           every nation's educational system. Accessing to
+attendance, money collecting, and finances for the             educational information is made very simple and
+students and the staff.                                        quick with the use of information and communication
+                                                               technologies. The communication network in many
+Your broad phrases must be any phrase that can be              colleges and universities has become much more
+used to categories the given material properly, such           powerful      thanks    to    ongoing     technological
+as algorithms, security, or pattern recognition. It is         developments. Today, nothing is ignored or missing,
+difficult to keep information about students, faculty,         resulting in historic levels of fulfillment among
+and parents on paper in the present school                     parents, teachers, students, and supervisors. There is
+management system. When someone tries to get any of            no requirement that professors give mountains of
+the stored information, it becomes a complex and               pamphlets to dozens or hundreds of students. These
+time-consuming operation due to the large amount of            methods were combined with technology in the
+information. While parents and teachers now have               sixteenth century, following the Industrial Revolution,
+more responsibilities than only looking after students,        to make the procedure more powerful and successful.
+it may be challenging for them to keep an eye on
+                                                               Institutions started using technology in education in
+them. While the task of storing and retrieving
+                                                               the 19th and 20th centuries. Currently, the dominant
+                                                               source of the potent technologies used in educational
+                                                               institutions all over the world is information and
+information is challenging, it also calls for a large          communication technology. In this information age, it
+number of extra workers.[2]                                    appears that many companies could benefit from
+
+© 2023, IJSREM       | www.ijsrem.com                  DOI: 10.55041/IJSREM17618                          |    Page 1
+
+           International Journal of Scientific Research in Engineering and Management (IJSREM)
+            Volume: 07 Issue: 01 | January - 2023            Impact Factor: 7.185            ISSN: 2582-3930
+
+
+incentives to improve services thanks to rapid               stakeholders) members. oversees the timely and
+advancements in technology. Several significant              proper scheduling of all school events. [5,7]
+factors, such as the ongoing development of
+information technology, information interchange,             3     Research Methodology
+increased community expectations, management of              The goal of the research is to locate the information
+modern perceptions and applications cause                    communication technology infrastructure that is
+organizations around the world to develop new                already in place in the schools for the implementation
+applications for survival. In order to address the needs     of the information management system. The
+of rural teachers in terms of creating, building, and        descripting research was carried out in preparation for
+maintaining school-based resources, a system for             management information system installation at
+overall administration of school-based resources was         schools. Primary and secondary schools in Hyderabad
+designed. It can be used to systematically plan and          division were the subject of the investigation. The
+manage a lot of school-based resources so that               study's respondents included both public and private
+teachers in rural areas can quickly and simply look for      schools. Data gathering involved the use of a
+what they need. Also, the system has the ability to          questionnaire. The first section of the questionnaire
+link many teaching resources and create standardized         asks for demographic data about the respondents. The
+teaching resources, such as websites and network             second section of the questionnaire asks about
+courses. [4]                                                 technological resources that can be used to create an
+                                                             information system and managers' and principals'
+2    Literature Review                                       preferences. The majority of the items in a question
+Automation of school administration tasks is the main        are of the liker scale, which ranges from strongly
+focus of school management in the initial stage of           agree to neutral to strongly disagree. Managers and
+technology in school information systems. The                principals of the schools who are employed as
+technology is now being used by school                       administrators made up the study's population. This
+administrators to develop information systems in the         system can combine all the media content into the
+daily administrative workforce, which is continuously        systematic resources, such a whole web-based course
+growing. The usage of information systems is                 for a school or a theme website. Rural teachers should
+generally justified by increased productivity through        develop an effective web course instructional design
+information processing, improved management                  before beginning this activity, upload the media
+efficiency as a result of fulfilling information needs,      resources into the resource library, and then start
+and improved performance in competitions as a result         developing the web course. [8]
+of strategic planning. Through the processing of
+information, school information management systems           4     System requirements
+aim to assist administrative and educational tasks for       4.1    Hardware Requirements
+school officials. Definition of school management
+information systems as "management information
+systems designed to fit the structure, administrative
+function, educational procedures, and special demands
+of the school." Information systems support
+innovations as well as information processing. Thus,
+school management information systems help the
+school's environmental flexibility. It allows the school
+to specify and understand the distribution of both
+internal and external information. As a result, school
+administration serves the needs and desires of both          4.2    Software Requirements
+internal (teachers and students) and external (other                 i    Front-end: AngularJS
+                                                                     ii   Back-end: Java, Spring boot, MySQL
+
+
+© 2023, IJSREM       | www.ijsrem.com                  DOI: 10.55041/IJSREM17618                     |     Page 2
+
+          International Journal of Scientific Research in Engineering and Management (IJSREM)
+            Volume: 07 Issue: 01 | January - 2023          Impact Factor: 7.185           ISSN: 2582-3930
+
+
+                                                           5   Architecture
+
+
+
+
+                                Fig 1: Architecture of School Management System
+
+
+6   DETAILED FUNCTION DESIGN OF
+    KEY SUBSYSTEMS                                         Resource management is the practice of planning,
+                                                           scheduling, and allocating people, money, and
+                                                           technology to a project or program. In essence, it is
+Two important components of the system are the             the process of allocating resources to achieve the
+Resource management system and the Resource                greatest organizational value.
+developing management system. The main task in
+finishing the entire system is to understand how the
+two sections function. The detailed function design of
+the two sections will then be covered.
+
+    1. The Resource management system:
+
+This system has the function of the resource
+categories management, uploading resources,
+approving resources, searching resources, browsing
+resources and downloading resources. The resource
+categories management. In order to make the resource
+management in a rational and sequential marmer and
+improve the efficiency of searching the resources, we
+first make categorization of the different resources.
+
+    2. Resource developing management system:
+
+
+© 2023, IJSREM      | www.ijsrem.com                 DOI: 10.55041/IJSREM17618                    |    Page 3
+
+           International Journal of Scientific Research in Engineering and Management (IJSREM)
+            Volume: 07 Issue: 01 | January - 2023            Impact Factor: 7.185           ISSN: 2582-3930
+
+
+7    ACKNOWLEDGMENTS                                         http://www.ijarse.com/images/fullpdf/1521550705_D
+I would like to convey my sincere appreciation to my         ACE2041ijarse. pdf. [Accessed: 10- Augest-2019].
+professor Prof. Smita Battalwar for giving me the
+chance to complete this amazing thesis on the issue of       [7] M. Norwood, October 30th, 2018, ABC11
+school management systems. They also assisted me in          Eyewitness News, “Fayetteville child found shivering
+conducting extensive research, and I am very                 inside wrong school bus”. [Online]. Available:
+appreciative of them.                                        https://abc11.com/fayetteville-child-found shivering-
+                                                             inside-wrong-school1bus/4577211/. [Accessed: 23-
+                                                             Mar 2019].
+8     REFERENCES
+                                                             [8] B. Abdul-Kaderm, “Three-year-old girl dies in
+[1] Quintero, M. O'nate Lopez, J., Rua, J. et al. -          Abu Dhabi school bus”, Gulf News, October 07,
+“Intelligent erratic driving diagnosis based on              2014.               [Online].              Available:
+artificial neural networks”. In: ANDESCON 2010,              http://gulfnews.com/news/uae/crime/girl-4-dies-in-
+IEEE, pp. 1–6 ,2010                                          school-bus-in-abu dhabi11.1395617. [Accessed: 23-
+                                                             Mar-2019].
+[2] Fahmi, A. (2019). Polarisasi Manajemen Strategik
+Pendidikan Dalam Implementasi Full Day School.               [9] Olarte-Ulherr, October 10, 2014, Khaleej Times,
+Jurnal Visionary: Penelitian dan Pengembangan                “Abu Dhabi school bus tragedy: Family still in
+dibidang Administrasi Pendidikan, 4                          shock”.             [Online].              Available:
+                                                             http://www.khaleejtimes.com/nation/crime/abu-dhabi-
+[3] A. Ferguson, September 29, 2016, City News               school-bus tragedy-family1still-in-shock. [Accessed:
+(Toronto), “Exclusive: Toddler dropped off at wrong          23- Mar-2019].
+school bus stop, found by stranger”. [Online].
+Available:                                                   [10] Visscher, A.J.; Bloemen, P.P.M. (1999).
+https://toronto.citynews.ca/2016/09/29/exclusive             Evaluation of the use of computer assisted
+toddler-dropped-off-wrong-school1bus-stop-found-             management information systems in Dutch schools.
+stranger/. [Accessed: 23- Mar-2019].                         Journal of Research on Computing in Education, 32
+                                                             (1), 172-188.
+[4] Ismail, I. (2016). Character education based on
+religious values: an Islamic perspective. Ta'dib: Jurnal     [11] Maya, R. (2017). Analisa Kebijakan Publik
+Pendidikan Islam, 21(1), 41-58.                              Konversi IAIN Menjadi UIN. Edukasi Islami: Journal
+                                                             Pendidikan Islam, 3(05).
+[5] S. C. Savitha, S. Natya, and J. Parinitha, “Smart
+College Bus Tracking Management System and its               [12] Primarni, A. (2016). Pendidikan holistic: format
+Application” International Journal of Emerging               baru pendidikan Islam membentuk karakter
+Technologies and Engineering (IJETE), Volume 1,              primperan. Al Mawardi Prima.
+Issue 5, pp 142-147, June 2014. [Online]. Available:
+http://www.ijete.org/wp-                                     [13] Sari, W. I., Aliman, A., & Djuwita, P. (2017).
+content/uploads/2014/06/140158.pdf. [Accessed: 23-           Strategi Kepala Sekolah dalam Meningkatkan Disiplin
+Mar12019].                                                   Guru. Manajer Pendidikan, 11(3).
+
+[6] S. Sangeetha, S. Krishnapriya, Ms. S Janani,             [14] Subaidi, S. (2014). Konsep Pendidikan Islam
+“School Bus Tracking and Security System”                    dengan Paradigma Humanis. Tarbawi: Jurnal
+International Journal of Advance Research in Science         Pendidikan Islam, 11(2).
+and Engineering (IJARSE), Volume No.07, Special              [15] Umam, M. K. (2017). Analisis Lingkungan
+Issue No (02), pp 218-227, March 2018. [Online].             Strategik Dalam Corak Penyelenggaraan Pendidikan
+Available:                                                   Islam. Al-Hikmah: Jurnal Kependidikan Dan Syariah,
+                                                             5(1).
+
+© 2023, IJSREM       | www.ijsrem.com                  DOI: 10.55041/IJSREM17618                    |    Page 4
+
+        International Journal of Scientific Research in Engineering and Management (IJSREM)
+         Volume: 07 Issue: 01 | January - 2023         Impact Factor: 7.185   ISSN: 2582-3930
+
+
+
+
+© 2023, IJSREM   | www.ijsrem.com                DOI: 10.55041/IJSREM17618           |    Page 5

@@ -1,0 +1,842 @@
+Jurnal Ilmiah                                                                  Volume 8, No. 2 September 2025
+TELSINAS                                                                            e-ISSN 2621-5276 (online)
+
+
+      Artificial Intelligence in Educational Leadership: Strategic, Analytical,
+       Interactive, and Decision-Making Applications for the Digital Age
+                  Abdul Wali Sirat1, Musawer Hakimi2*, Bilal Himmat3, Wahidullah Enayat4
+            1
+                Department of History, Education Faculty, Samangan University, Samangan, Afghanistan
+                   2
+                     Computer Science Department, Samangan University, Samangan, Afghanistan
+                       3
+                         Computer Science Department, Kabul University, Kabul, Afghanistan.
+                                    4
+                                      Ondokuz Mayıs University, Samsun, Türkiye
+
+                                       *Corresponding: musawer@adc.edu.in
+
+ DOI:                                                Received:            Accepted:             Publish:
+ https://doi.org/10.38043/telsinas.v8i2.7044         21 June 2025         29 August 2025        25 September 2025
+
+ABSTRACT: AI (artificial intelligence) is becoming an increasingly important factor in educational leadership by
+sharpening organizational strategy, analytical decision-making, interaction, and creativity. This article aims to
+systematically review AI applications in educational leadership contexts that can help both leaders and followers
+identify significant opportunities, challenges, or outcomes as part of effective leadership practice in a digital age. A
+qualitative systematic literature review was conducted using several credible databases (IEEE Xplore, Science
+Direct, MDPI, Wiley Online Library, Web of Science) and included work published from 2018 to 2025. A search
+strategy was developed to include specific keywords pertaining to AI and educational leadership along with peer-
+reviewed and English language studies. After applying stringent inclusion and exclusion criteria during the review,
+35 studies were selected and analyzed in depth. The analysis points to the possibilities of AI to boost strategic
+planning, efficiency in resource allocation, predictive decision making, performance monitoring and evidence-based
+supportive approaches to personalized learning. AI opens up intentions and engagements between leaders, educators,
+and learners, and serves as an evidence-based resource for leader innovation in practice. The review and commentary
+also highlight key issues for research and practice, namely the ethical implementation of AI in education,
+methodological rigor, and transparency in reporting effects, and the critical role of human and AI collaborative
+tandem as a leadership practice for maximization. In conclusion, AI has the potential to advance educational leaders'
+effectiveness toward more efficient, informed, and innovative models, while also informing research and practice
+implications.
+
+Keyword: Artificial Intelligence; Educational Leadership; Decision-Making; Strategic Planning; Interactive
+Learning
+
+I.     INTRODUCTION
+       The use of Artificial Intelligence (AI) in education leadership has been an agent of transformation,
+shaping decision-making, administrative methods, and trends in pedagogy. AI provides educational
+leaders with more sophisticated tools to analyze, enabling strategic evaluation of institutional
+performance, resource use, and student accomplishment. Specifically, AI-enhanced decision systems
+allow school leaders to utilize extensive education data to project trends, identify gaps, and design targeted
+interventions [1], [7]. These systems also enhance strategic planning by yielding predictive insights that
+are not possible with traditional analytical processes, thus helping leaders make evidence-based and data-
+driven decisions [9], [10].
+       AI surpasses analytics in developing interactive and collaborative environments. Debate platforms
+driven by AI and intelligent tutoring systems provide personalized learning, enhancing students'
+engagement as well as giving leaders immediate feedback on the quality of instruction [6]. This
+coevolution of human decision makers with AI technologies has been framed as cooperation that amplifies
+the capacity to lead without compromising ethical and instructional control [12], [33]. Educational leaders
+are increasingly being urged to understand both the potential and the limitations of AI tools, particularly
+related to transparency, equity, and inclusivity in decision-making [15], [34]. Ethical considerations are
+also critically important in the implementation of AI in schools and higher education institutions, such as
+bias mitigation and data privacy [15], [17].
+
+
+210
+
+Jurnal Ilmiah                                                          Volume 8, No. 2 September 2025
+TELSINAS                                                                    e-ISSN 2621-5276 (online)
+
+
+       AI implementation in leadership also applies to administrative and operational efforts. Applications
+include predicting enrollment; evaluations of staff performance; and the optimization of curriculum and
+resource allocation, among others, demonstrate the breadth of AI's potential [3], [5].In addition, the
+evolving AI environment demands that leaders develop new competencies such as digital literacy, AI
+management, and judgment in order to evaluate machine-generated suggestions [23], [31]. Scholars argue
+that effective use of AI in educational leadership requires both technology know-how and human-
+computer mediation capability such that AI supports as well as complements human judgment [7], [12],
+[33].
+
+
+
+
+                              Figure 1 AI-Driven Personalized Education System
+
+       Artificial Intelligence (AI) has significantly transformed educational leadership through the
+possibility of adaptive learning environments that adapt to the unique requirements of learners. The
+proposed AI-Driven Personalized Education System incorporates major components such as course
+assessment, adaptive learning, learning analytics, personalized instruction, and knowledge acquisition to
+deliver an effective and personalized education experience.
+       This system utilizes sophisticated AI techniques such as knowledge inference, machine learning,
+reinforcement learning, computer vision, and natural language processing for the analysis of learning map
+data, student data, and teacher evidence. The system generates responsive content as well as pedagogical
+decisions based on granular course data, learning goals, personality, and teacher data with the aim of
+optimizing learning outcomes.
+       This form of AI based framework will circumvent barriers with regard to welcoming learners with
+diverse learning profiles, fostering student engagement, and optimizing learning outcomes. The
+framework supports teachers in making data-informed decisions, optimizing learning pathways, and
+meeting the needs of learners. As [7][5] noted, the area of AI-enhanced educational leadership is most
+likely to opens opportunities, along with challenges of ethical considerations and responsible use.
+Evidence still points to the transformative power of AI, citing the cooperative coexistence of human
+instructors and AI agents in transforming the learning.
+       In responding to the evolving role of artificial intelligence (AI) in school leadership, the current
+study is guided by three research objectives. First, it seeks to explore how AI enhances strategic and data-
+informed decision-making by education leaders with special reference to its potential for optimizing
+resource utilization, policy implementation, and institutional performance. Second, the research seeks to
+contrast chances and dilemmas concerning implementation of AI-facilitated interactive tools and
+intelligent systems in school administration with special reference to their potential to promote teaching,
+learning, and bureaucratic work while ensuring ethical and equitable practices. Third, the study seeks to
+frame a model of symbiotic collaboration between education leaders and AI technologies with specific
+
+
+211
+
+Jurnal Ilmiah                                                          Volume 8, No. 2 September 2025
+TELSINAS                                                                    e-ISSN 2621-5276 (online)
+
+
+focus on how AI can complement human judgment in administrative, strategic, and pedagogical decision-
+making. Together, these objectives create a cogent foundation for investigating the transformative
+function of AI in the digital age of educational leadership [1][7][8].
+
+State Of the Art
+        The integration of artificial intelligence (AI) into educational leadership has emerged as a
+revolutionary force in strategic, analytical, interactive, and decision-making functions. AI technologies
+support educational leaders by making data-driven decision-making, resource allocation optimization, and
+institutional effectiveness possible [1]–[3]. Early studies centered on the ability of AI to augment
+leadership practices, allowing administrators to tap into real-time analytics and predictive data for more
+informed governance [4], [5]. Davenport [6] highlighted the transformation from traditional analytics to
+AI-based decision-making, with an underlining of the strategic advantages of automating education
+management.
+        AI has multiple educational uses from intelligent learning systems and performance monitoring and
+administrative decision-making support [7]–[10]. AI systems were demonstrated by Chen et al. [11] and
+Cukurova et al. [12] to facilitate interactive learning and enhance the capacity of leaders to make
+pedagogical decisions, and Cantú-Ortiz et al. [13] proposed AI measures and policies in alignment with
+digital transformation objectives. Recent research emphasizes human-AI symbiosis, where leadership
+roles are aided by intelligent systems to increase efficiency, accuracy, and responsiveness [14]–[16].
+        Despite these opportunities, challenges exist, including ethical issues, openness, and digital
+illiteracy among leaders [17]–[19]. García and Hernández [20] identified ethical issues in AI-driven
+education systems, while Haenlein and Kaplan [21] and Hwang et al. [22] identified data quality,
+algorithmic bias, and explainability hurdles. Fullan et al. [23], Wang [24], and Arar et al. [25] emphasized
+the importance of inspiring human-machine teamwork in leadership contexts to bridge these gaps.
+        Empirical evidence has examined actual uses of AI in schools and higher education. Dogan and
+Arslan [26], Marrone et al. [27], and Kafa [28] examined school leader attitudes toward AI
+implementation and reported both optimism and worry regarding adoption. Systematic reviews by Matos
+et al. [29], de Souza Zanirato Maia et al. [30], and Zawacki-Richter et al. [31] indicate emerging trends in
+AI applications across teaching, learning, and administrative decision-making. Moreover, organizational
+studies by Shrestha et al. [32], Rajagopal et al. [33], and Stone et al. [34] suggest AI’s role in strategic
+management, marketing, and governance within educational institutions.
+        Collectively, these studies underscore that AI has enormous potential to enhance educational
+leadership by using data-driven methods, interactive decision-making, and administrative efficiency.
+However, long-term application is contingent upon overcoming ethical concerns, proficiency in
+technology, and effective human-AI collaboration to ensure optimal benefits and minimum risks [35].
+
+II.   METHODS
+      This study employs a qualitative systematic literature review to analyze AI applications in
+educational leadership, focusing on strategic, analytical, and decision-making practices.
+
+Research Design
+       This study utilizes a systematic review procedure of three phases that are systematic in nature, in
+accordance with Braun and Clarke [1], to examine Artificial Intelligence (AI) engagement in educational
+leadership, specifically strategic, analytical, interactive, and decision-making in educational settings
+within the digital context.
+       Planning the Review: Planning included setting concrete research questions, inclusion and
+exclusion criteria, and search strategy to guide an exhaustive and reproducible review [2], [3]. The
+research questions revolve around: (i) AI applications in educational leadership, (ii) effectiveness and
+limitations of AI-based decision-making, (iii) emerging trends and innovations in combining AI, and (iv)
+loopholes and future research directions. Databases employed in the current study are IEEE Xplore,
+MDPI, ScienceDirect, Emerald, and Wiley Online Library, employing publications from 2018 to 2025 to
+cover recent studies.
+
+
+
+212
+
+Jurnal Ilmiah                                                          Volume 8, No. 2 September 2025
+TELSINAS                                                                    e-ISSN 2621-5276 (online)
+
+
+       Carrying Out the Review: Systematic searching was done using keywords such as "AI in
+educational leadership," "AI-driven decision-making," "AI for strategic management in education," and
+"interactive AI tools in education" [4], [5]. Boolean operators and phrase searching were utilized to narrow
+the queries in an effort to bring out the necessary studies. A multi-phase method of screening
+identification, title screening, abstract screening, and full-text review was employed to procure relevance
+and quality. Individual studies were examined for methods, AI tools utilized, outcomes, datasets, and
+claimed limitations [2], [6].
+       Reporting the Review: Synthesized data of extracted information were used to determine key
+trends, emerging patterns, and insights into how AI can enhance leadership, decision-making, and
+organizational strategies in education. This step also emphasizes unresolved issues, including ethical
+concerns, implementation obstacles, and human-AI collaboration needs in leadership positions [7], [8].
+Reporting gives priority to transparency, rigor, and reproducibility so that results give good evidence-
+based reasons for future research and practical applications in AI-enabled educational leadership.
+
+
+
+
+                       Figure 2. Systematic Literature Review (SLR) Process Framework
+
+       This study employs a Systematic Literature Review (SLR) to provide a structured and rigorous
+synthesis of research on image-based deepfake detection. Given the fragmented and rapidly evolving
+nature of this field, a systematic approach ensures comprehensive coverage, transparency, and
+reproducibility. The review follows established guidelines. [5] incorporating explicit search strategies,
+inclusion and exclusion criteria, quality assessment, and data extraction. By consolidating diverse
+methods such as convolutional networks, transformers, biometric analysis, and hybrid approaches this
+SLR identifies trends, strengths, and limitations while highlighting unresolved challenges, guiding future
+research, and supporting evidence-based conclusions.
+
+Research question
+       The study is guided by four research questions, as outlined below:
+       RQ1: How can artificial intelligence enhance decision-making processes in educational leadership
+and school administration?
+       RQ2: What are the key challenges and ethical considerations faced by educational leaders in
+implementing AI-assisted systems?
+       RQ3: How does the integration of AI influence human-machine collaboration, leadership
+effectiveness, and strategic planning in educational institutions?
+
+Review Protocol Development
+       A structured review protocol was developed outlining research questions, inclusion/exclusion
+criteria, search strategies, databases, and data extraction methods, ensuring transparency, reproducibility,
+and systematic synthesis of relevant deepfake detection studies.
+
+
+213
+
+Jurnal Ilmiah                                                             Volume 8, No. 2 September 2025
+TELSINAS                                                                       e-ISSN 2621-5276 (online)
+
+
+
+Data Sources and Search Strategy
+      This review searched systematically for peer-reviewed articles published between 2018 and 2025
+from top databases, including IEEE Xplore, ScienceDirect, MDPI, Wiley Online Library, and Web of
+Science. Keywords and Boolean operators related to AI and educational leadership were used in the
+search, such as "artificial intelligence in education," "educational leadership," "AI-supported decision-
+making," "strategic leadership," "analytical leadership," "interactive learning technologies," and "AI-
+based school management." Only peer-reviewed, English-language articles were included. Screening was
+done at the title, abstract, and full-text levels, and the reference lists of the included studies were searched
+to identify other relevant studies. This way, there was a comprehensive, systematic, and high-quality
+coverage of AI usage in educational leadership.
+
+                                  Table 1. Data Sources and Search Strategy
+           Aspect           Description              Details
+                     Main sources             IEEE Xplore, ScienceDirect, MDPI, Wiley Online Library,
+ Databases
+                     searched                 Web of Science
+ Publication         Timeframe for
+                                              2018–2025
+ Period              included studies
+                     Language filter
+ Language                                     English
+                     applied
+                                              “Artificial intelligence in education,” “Educational
+                     Terms used in            leadership,” “AI-assisted decision-making,” “strategic
+ Keywords
+                     searches                 leadership,” “Analytical leadership,” “Interactive learning,”
+                                              “AI-driven school management”
+ Screening           Selection process        Title, abstract, full-text review, plus reference list check
+                     Article type and
+ Filters                                      Peer-reviewed, English only
+                     quality
+
+Inclusion and Exclusion Criteria
+       Inclusion: peer-reviewed studies on AI in educational leadership, covering strategic, analytical,
+interactive, or decision-making applications, 2018–2025, English. Exclusion: non-peer-reviewed,
+irrelevant, or unclear methodology studies.
+
+                                 Table 3. Inclusion and Exclusion Criteria
+           Inclusion Criteria                                   Exclusion Criteria
+                                                          Non-peer-reviewed articles, editorials, or
+ Peer-reviewed journal articles and conference papers
+                                                          opinion pieces
+ Published 2018–2025                                      Published outside 2018–2025
+                                                          Studies unrelated to AI in educational
+ Focus on AI applications in educational leadership
+                                                          leadership
+ Cover strategic, analytical, interactive, or decision-   Papers lacking methodology or evaluation
+ making aspects                                           metrics
+       Published in English                               Published in other languages
+
+Study Selection Process
+       The study selection process was conducted systematically in four stages to ensure transparency,
+rigor, and reproducibility. The objective was to identify and include the most relevant studies on Artificial
+Intelligence in Educational Leadership, focusing on strategic, analytical, interactive, and decision-making
+applications. The four stages were:
+    1. Identification – Initial retrieval of all potentially relevant articles.
+    2. Title Screening – Assessment of titles to remove irrelevant or duplicate studies.
+    3. Abstract Screening – Detailed evaluation of abstracts to retain studies aligned with the research
+         focus.
+
+214
+
+Jurnal Ilmiah                                                          Volume 8, No. 2 September 2025
+TELSINAS                                                                    e-ISSN 2621-5276 (online)
+
+
+    4. Full-Text Review – In-depth examination of full texts to ensure methodological rigor and
+       relevance.
+
+Round 1: Initial Search
+       A comprehensive search was conducted across IEEE Xplore, ScienceDirect, MDPI, Wiley Online
+Library, and Web of Science using keywords such as “artificial intelligence in education,” “educational
+leadership,” “AI-assisted decision-making,” “strategic leadership,” “analytical leadership,” “interactive
+learning technologies,” and “AI-driven school management.” This search retrieved a total of 2,850
+articles.
+
+                                Table 3. Initial Search Results (Round 1)
+       S/No              Database                                       Retrieved Articles
+       1                 IEEE Xplore                                    610
+       2                 ScienceDirect                                  780
+       3                 MDPI                                           450
+       4                 Wiley Online Library                           500
+       5                 Web of Science                                 510
+       Total                                                            2,850
+
+Round 2: Title Screening
+      Titles of all 2,850 articles were screened to remove irrelevant or duplicate studies. Only titles
+explicitly related to AI in educational leadership were retained. After this step, 250 articles remained.
+
+                              Table 4. Title Screening Results (Round 2)
+       S/No               Database                                   Remaining Articles
+       1                  IEEE Xplore                                55
+       2                  ScienceDirect                              70
+       3                  MDPI                                       40
+       4                  Wiley Online Library                       45
+       5                  Web of Science                             40
+       Total                                                         250
+
+Round 3. Abstract Screening
+       The abstracts of the 250 shortlisted studies were reviewed to retain only those focused on empirical,
+methodological, or practical contributions in AI-supported educational leadership. This step reduced the
+pool to 120 studies.
+
+                             Table 5. Abstract Screening Results (Round 3)
+       S/No             Database                                     Remaining Articles
+       1                IEEE Xplore                                  25
+       2                ScienceDirect                                35
+       3                MDPI                                         20
+       4                Wiley Online Library                         25
+       5                Web of Science                               15
+       Total                                                         120
+
+Round 4: Full-Text Review
+      The full texts of the 120 studies were examined in detail to evaluate methodological rigor, empirical
+evidence, and relevance to strategic, analytical, interactive, or decision-making applications of AI in
+educational leadership. Studies lacking clear methodology, empirical results, or direct relevance were
+excluded. The final selection included 35 high-quality studies for the systematic review.
+
+
+
+215
+
+Jurnal Ilmiah                                                            Volume 8, No. 2 September 2025
+TELSINAS                                                                      e-ISSN 2621-5276 (online)
+
+
+
+
+        Figure 3: Study selection flow diagram showing the four screening rounds from identification to
+                                              final inclusion.
+Quality Assessment
+       All 35 selected studies went through a rigorous test for quality to determine reliability, validity, and
+applicability. Key standards employed included readability of study objectives, clarity of methodology,
+description of the dataset and experiment design, congruence with research questions, and equity in results
+reporting. Synthesizing was done only for studies that met the minimum test of quality. This process
+ensured that the review rests on quality, robust evidence, and therefore provides a sound foundation for
+analysis and conclusions in AI in educational leadership.
+
+                                  Table 6. Quality Assessment Criteria
+       Criteria                 Description                                      Evaluation Focus
+ Research                                                                  Purpose alignment with study
+                         Clear articulation of aims and hypotheses
+ Objectives                                                                goals
+                         Detailed description of methods and               Reproducibility and
+ Methodology
+                         procedures                                        transparency
+
+
+
+216
+
+Jurnal Ilmiah                                                          Volume 8, No. 2 September 2025
+TELSINAS                                                                    e-ISSN 2621-5276 (online)
+
+
+       Criteria                 Description                                    Evaluation Focus
+ Dataset &               Comprehensive dataset and protocol             Validity and comparability of
+ Experiment              reporting                                      results
+ Research Relevance      Alignment with research questions              Contextual appropriateness
+                         Balanced presentation of positive and          Unbiased and comprehensive
+ Findings Reporting
+                         negative results                               insights
+
+Data Extraction
+       A formal data extraction form was used to capture information in a systematic manner from all 35
+included studies, employing consistency and completeness. Title, Authors, Year, and Publication Type
+were the key data points to situate each study within context. AI applications used in educational
+leadership were documented, such as strategic, analytical, interactive, or decision-making uses. Datasets
+used for experiments or case studies were recorded. Evaluation metrics such as effectiveness measures or
+performance indicators were noted. Noted limitations and areas for future work were teased out. Two
+passes through extraction were done, followed by a validation pass to ensure accuracy and eliminate
+conflicting information. This presented an accurate, high-quality dataset ready for synthesis and analysis.
+
+                                      Table 7. Data Extraction Items
+        Data Point                     Description                           Purpose
+ Title, Authors, Year,                                                 Contextualizing studies in
+                                 Bibliographic information
+ Publication Type                                                      timeline and venue
+                                 Techniques applied in educational     Understanding methodological
+ AI Methods
+                                 leadership                            approaches
+ Dataset Used                    Datasets or case study details        Assessing applicability and scope
+                                 Measures of effectiveness or
+ Evaluation Metrics                                                    Comparing study outcomes
+                                 performance
+ Limitations & Future            Reported challenges and               Identifying gaps and research
+ Directions                      recommendations                       opportunities
+ Extraction Rounds               Two-pass extraction process           Ensuring accuracy and reliability
+
+                                                                       Resolving discrepancies and
+ Validation                      Cross-check of extracted data
+                                                                       completeness
+
+III.   RESULTS
+
+       The results section presents the synthesized findings from the 35 selected studies, highlighting key
+trends, applications, and outcomes of AI in educational leadership. It provides a detailed analysis across
+strategic, analytical, interactive, and decision-making dimensions. These findings form the empirical
+foundation for the discussion and conclusions that follow.
+Objective 1: Strategic Applications of AI in Educational Leadership
+                      Table 8. Strategic Applications of AI in Educational Leadership
+ Themes                  Sub-Themes             Key Ideas                                      Citations
+                                                AI tools help leaders forecast institutional
+ Strategic Planning      AI-assisted planning                                                  [1], [21]
+                                                needs and optimize planning processes
+                                                AI supports the allocation of human,
+ Resource                Intelligent   resource                                                [3],
+                                                financial, and technological resources
+ Allocation              management                                                            [14][7]
+                                                efficiently
+ Long-Term                                      AI provides insights for policy
+                         Predictive analytics
+ Leadership                                     formulation, risk assessment, and              [15], [6]
+                         for decision-making
+ Initiatives                                    institutional growth strategies
+
+
+
+217
+
+Jurnal Ilmiah                                                           Volume 8, No. 2 September 2025
+TELSINAS                                                                     e-ISSN 2621-5276 (online)
+
+
+ Themes                 Sub-Themes                 Key Ideas                                     Citations
+                                                   AI systems track progress toward strategic
+ Institutional            Strategic performance
+                                                   goals      and     measure       leadership [7], [8]
+ Strategy                 monitoring
+                                                   effectiveness
+                                                   AI enables the adoption of new
+ Innovation         in
+                          AI-driven innovation     educational models and leadership [9], [17]
+ Leadership
+                                                   approaches
+       Artificial intelligence (AI) has a revolutionary function in enhancing strategic application in
+educational leadership to satisfy operational as well as long-term institutional needs. Strategic planning is
+among the core areas where AI tools assist leaders in predicting institutional needs and optimizing
+planning procedures. Through the analysis of big data sets and pattern recognition, AI assists managers
+in anticipating challenges, planning the distribution of resources, and developing strategies that are
+aligned with institutional objectives [1], [21]. This forecasting capacity allows schools to be better
+positioned in responding to changing needs and emerging trends in education.
+       AI facilitates intelligent management of financial, human, and technology resources in resource
+allocation. Through data-driven decisions, the leader will be in a position to maximize the utilization of
+resources, increase productivity, and reduce inefficiency, thereby ensuring smooth institutional operations
+[3], [14], [7]. Similar long-term leadership undertakings are facilitated by predictive analysis, which
+provides insights for policy formulation, risk assessment, and strategic expansion plans. Leaders can make
+fact-based decisions using AI, facilitating institutional strength and sustainable growth [15], [6].
+       Institutional strategy is supported by AI-based performance tracking tools that track progress
+against strategic goals and measure leadership effectiveness, allowing administrators to quantify
+outcomes accurately and make timely adjustments [17], [8]. Finally, AI powers innovation in leadership
+by enabling new models of education, administrative processes, and leadership behaviors. By aggregating
+nuanced information and providing actionable intelligence, AI supports adaptive, evidence-based
+leadership that enhances overall institutional performance [9], [10].
+Objective 2: Analytical and Interactive AI Applications in Educational Leadership
+             Table 9. Analytical and Interactive AI Applications in Educational Leadership
+ Themes                Sub-Themes            Key Ideas                                       Citations
+                                             AI supports informed decision-making by
+ Data-Driven            Predictive
+                                             analyzing large educational datasets for        [1], [12]
+ Decision-Making        Analytics
+                                             trends and patterns
+                                             AI tools enable real-time tracking of student
+ Performance            Continuous                                                           [28], [3],
+                                             performance, teacher efficiency, and
+ Monitoring             Evaluation                                                           [14]
+                                             institutional metrics
+                                             AI facilitates communication and
+ Interactive            Human-AI
+                                             collaboration among students, teachers, and     [15], [34]
+ Engagement             Collaboration
+                                             administrators
+ Risk and                                    AI helps identify potential risks and
+ Opportunity            Strategic Insights   opportunities in higher education               [7], [8]
+ Analysis                                    management
+                                             AI applications must adhere to ethical
+ Ethical and            Governance and
+                                             standards and support transparent decision-     [9], [19]
+ Responsible Use        Compliance
+                                             making
+      Artificial intelligence (AI) interactive and analytical applications in educational management
+enhance evidence-based decision-making, performance monitoring, and stakeholder engagement. Under
+evidence-based decision-making, AI applies predictive analytics to scan large sets of education data,
+picking up trends and patterns that guide administrators in making strategic decisions [1], [12]. These
+insights render decisions evidence-based, enhancing institutional effectiveness and efficiency.
+      Performance tracking is also an important application, where AI delivers constant monitoring of
+student performance, teacher influence, and administrative activities. Timeous measurement facilitates
+
+
+218
+
+Jurnal Ilmiah                                                           Volume 8, No. 2 September 2025
+TELSINAS                                                                     e-ISSN 2621-5276 (online)
+
+
+leaders to identify inefficiencies, identify areas of intervention, and make timely changes, thereby
+enhancing the productivity of institutions [28], [3], [14]. Human-AI collaboration increases interactive
+engagement, where the collaboration facilitates individual learning, enhances communication, and
+schedules administrative activities among students, teachers, and leaders [15], [34].
+      AI also supports risk and opportunity analysis, allowing leaders to foresee challenges and possible
+opportunities in institutional governance, thus enabling proactive and strategic decision-making [7], [8].
+Finally, ethical and responsible AI use is necessary, with compliance with governance frameworks,
+transparency, and accountability to maintain stakeholder trust and ensure fairness of outcomes [9], [19].
+These analytical and interactive resources combined equip school leaders with robust tools to enhance
+operational efficiency, engagement, and adaptive, data-driven decision-making, guaranteeing leadership
+success in the technologic era.
+Objective 3: AI-Driven Decision-Making and Innovation
+            Table 10. AI-Driven Decision-Making and Innovation in Educational Leadership
+ Themes                  Sub-Themes            Key Ideas                                         Citations
+                                               AI enables leaders to make informed
+ Evidence-Based          Data-Driven                                                             [30], [1],
+                                               decisions based on large-scale data analysis
+ Decision-Making         Insights                                                                [4]
+                                               and predictive models
+                         AI-Assisted
+ Policy and Strategy                           AI supports the design of policies and
+                         Policy                                                                  [3], [7]
+ Development                                   strategies aligned with institutional goals
+                         Formulation
+ Innovation in           Adaptive              AI fosters innovative approaches, enhancing
+ Leadership              Leadership            curriculum design, administrative efficiency,     [5], [9]
+ Practices               Models                and leadership practices
+                                               AI anticipates challenges, allowing leaders to
+                         Predictive Risk                                                         [7], [8],
+ Risk Management                               proactively mitigate risks and optimize
+                         Analysis                                                                [33]
+                                               institutional outcomes
+                                               AI provides continuous feedback on
+ Performance             Monitoring and
+                                               institutional performance, supporting             [9], [35]
+ Enhancement             Feedback
+                                               evidence-based improvements
+
+       Policy and strategy development is enhanced by AI-aided development, allowing managers to
+develop policies and long-term strategies that are in line with institutional objectives. With the application
+of predictive analytics and intelligent modeling, administrators are capable of efficiently allocating
+resources, adapting dynamically to evolving learning requirements, and optimizing strategic outcomes
+[3], [7].
+       Leadership innovation is supported through AI-based adaptive models. These models enable
+officials to experiment with innovative approaches in curriculum planning, educational practices, and
+administrative tasks, resulting in continuous improvement and enhanced operational effectiveness [5], [9].
+       AI also enables risk management in the form of early identification of possible challenges, allowing
+leaders to forecast risks in advance, foster resilience, and ensure institutional stability [7], [8], [33].
+Finally, AI-supported performance enhancement on the basis of continuous monitoring and feedback
+provides actionable insights, allowing systematic analysis and fortification of institutional processes [9],
+[35]. All these applications show how AI has the potential to drive data-based, innovative, and effective
+educational leadership in the digital age.
+AI Applications in Educational Leadership: Strategic to Innovative Practices
+      This thematic map is a uniform representation of the consolidated findings on AI applications in
+educational leadership, categorized under three research objectives. The map is straightforward in
+showing a rational flow from fundamental strategic uses to improved decision-making and innovation.
+      The initial objective establishes the strategic anchor, which focuses on the support that AI offers to
+high-level leadership activities. Strategic Planning is the overarching category, with sub-categories like
+
+
+219
+
+Jurnal Ilmiah                                                         Volume 8, No. 2 September 2025
+TELSINAS                                                                   e-ISSN 2621-5276 (online)
+
+
+Resource Allocation and Institutional Strategy reflecting on AI's support in resource optimization and
+guiding long-term vision through predictive analytics. This broadens the implication of moving away
+from intuitive and towards evidence-based strategic management academically.
+       The second objective expands into analytic and interactive territories, illustrating how AI enhances
+leadership dynamics. The Data-Driven Decision-Making topic has a close connection to Predictive
+Analytics and Performance Monitoring, with the essence of AI value not being merely in data processing
+but in the actionable knowledge. The most interesting is the appearance of Human-AI Collaboration as a
+distinct topic, with acknowledgement that effective implementation requires symbiotic interaction
+between leaders and AI systems and not full automation.
+       The third goal is achieved in innovation and evidence-based practice, demonstrating how AI
+transforms models of leadership. The tight coupling of Evidence-Based Decision-Making and Policy and
+Strategy Development demonstrates AI's capacity to ground our educational policy upon empirical fact
+rather than simple tradition. That Innovation in Leadership Practices is a prominent theme suggests that
+AI enables entirely new models of educational leadership as well as enhancing existing ones.
+       What is notable in this map is the manner in which it delineates the interconnectedness of these
+applications. For instance, Predictive Risk Analysis finds a place under a variety of objectives, which
+suggests its versatility in being applied to operational monitoring as much as strategic innovation. The
+map can easily distinguish that AI in educational leadership is not a single application but an
+interconnected system of capabilities that collectively maximize institutional performance, strategic
+vision, and evidence-based practice. This visualization provides educational leaders with a full model for
+viewing where and how AI can generate value across different areas of leadership.
+
+
+
+
+                    Figure 4. Thematic Map of AI Applications in Educational Leadership
+
+
+
+
+220
+
+Jurnal Ilmiah                                                            Volume 8, No. 2 September 2025
+TELSINAS                                                                      e-ISSN 2621-5276 (online)
+
+
+IV.   DISCUSSION
+
+          The use of artificial intelligence (AI) in educational leadership is actually redefining traditional
+administrative and strategic processes so that leaders can make more informed, effective, and creative
+decisions. This research defines three distinct areas of AI applications strategic, analytical and interactive,
+and decision-making with innovation each of which uniquely helps in the progression of educational
+leadership practice.
+          From a strategic point of view, AI facilitates effective planning and resource allocation through
+prediction of institutional demand, optimization of budgets, and monitoring long-term performance.
+Strategic planning through AI applications allows institutions to forecast problems, align goals with
+institutional missions, and optimize organizational performance [1], [2]. Resource usage gets more
+accurate as AI systems scan patterns in human, financial, and technological resources with the aim of
+being efficient and reducing waste [3], [4]. AI-based predictive analytics also aid leaders to assess likely
+risks and create long-term plans, helping ensure sustainable growth of institutions [5], [6].
+          Analytical and interactive uses of AI also add strength to leadership by allowing evidence-based
+assessment of institutional processes. AI supports tracking of performance, interaction analysis of
+students, and stakeholder engagement, allowing leaders to respond instantaneously to administrative and
+pedagogical challenges [7], [8]. AI-driven dashboards provide real-time feedback on teacher performance,
+student success, and operational efficiency, allowing for rapid intervention and informed decision-making
+[9], [10]. Human-machine partnership also allows for interactive engagement, where AI supplements
+conversation between leaders, staff, and students, facilitating collaboration and openness [6], [11].
+          Finally, AI-driven practices of innovation and decision-making allow leaders to exercise
+evidence-informed policy while facilitating creative patterns of institutional governance. Smart modeling
+practices and predictive analytics provide policy-makers with recommendations relevant to risk mitigation
+and policy experimentation [12], [1]. Innovation is facilitated by AI through adaptive models of
+leadership, which aid curriculum planning, evaluation processes, and institutional flexibility [3], [9].
+Continuous performance monitoring ensures interventions by the leadership are evidence-led, which
+enforces accountability and sustainable development [5], [10].
+          Overall, the findings confirm that AI is not merely a supportive tool but a transformative agent in
+educational leadership. Its applications span strategic planning, analytical evaluation, interactive
+engagement, and evidence-based decision-making, collectively enhancing efficiency, innovation, and
+institutional effectiveness. However, ethical considerations, data privacy, and the need for digital literacy
+among leaders remain critical challenges to address to fully harness AI’s potential in educational contexts
+[8], [7].
+
+V.    CONCLUSION
+
+       In This study explored the varied applications of artificial intelligence (AI) in educational
+leadership, focusing on strategic, analytical and interactive, and interactive decision-making innovation
+during the age of technology. Under strategic application, the findings demonstrate that AI significantly
+enhances leaders' ability to strategize well, distribute resources, and monitor long-term institutional
+performance. Through predictive analysis and data-based evaluations, AI supports the development of
+consistent strategies aligned with institutional goals and fostering sustainable advancement.
+       When it comes to analytic and interactive applications, AI enables educational leaders to monitor
+performance, monitor teaching and learning outcomes, and engage effectively with stakeholders,
+including students, instructors, and administrative personnel. AI-driven analytics and dashboards, in their
+use, allow leaders to identify improvement opportunities, use timely interventions, and foster an evidence-
+based decision-making culture. Interactive AI tools also support collaboration and communication,
+fostering a climate where feedback loops are accelerated and engagement by stakeholders is improved.
+       Finally, the study highlights AI use in decision-making and innovation. AI allows leaders to adopt
+evidence-based practices, evaluate risks, and pilot new modes of educational administration. By predictive
+analysis and smart modeling, leaders can make data-driven decisions that optimize operations efficiency,
+institutional effectiveness, and ongoing improvement. AI also triggers the implementation of new
+
+
+221
+
+Jurnal Ilmiah                                                           Volume 8, No. 2 September 2025
+TELSINAS                                                                     e-ISSN 2621-5276 (online)
+
+
+approaches to instruction and administration, fueling innovation in course design, workflow optimization,
+and policy implementation.
+        Finally, the research concludes that AI is a revolutionizing force in educational leadership, which
+enables more strategic, analytic, and creative work. Its implementation does enable more institutional
+efficiency, stakeholder engagement, and evidence-informed decision-making. While challenges from
+digital literacy, ethics, and data privacy are still around, the potential of AI to construct more robust
+leadership capacity and enable adaptive, future-focused schooling institutions is significant. By these
+abilities, education leaders will be in a position to deal with the complexities of the age of technology and
+make enduring institutional improvements.
+
+Recommendations
+       Based on this study's output, certain suggestions are given to ensure maximum effective AI
+integration in educational leadership. Schools should invest in AI-driven strategic instruments that enable
+planning, resource allocation, and long-term decision-making. Through the use of predictive analytics,
+leaders can predict institutional needs, optimize resource allocation, and enhance organizational
+effectiveness. Second, institutions must adopt AI-based analytical and interactive tools for monitoring
+performance, measuring learning results, and interacting with students, instructors, and administrative
+personnel. These tools can enhance transparency, facilitate evidence-based decision-making, and foster
+collaborative problem-solving. Third, leadership training courses need to incorporate digital and AI
+competence training so that the administrators can easily review AI-based insights and integrate them into
+their decision-making. Fourth, policymakers need to establish rigorous ethical guidelines and data privacy
+laws that would prevent dangers of AI use. Finally, a culture for continuous monitoring and feedback
+needs to be encouraged so that the leaders can assess AI tools' effectiveness and shift strategies as
+technology evolves. Implementing these recommendations can solidify leadership practices, enhance
+institutional performance, and generate a forward-thinking, innovative learning environment that
+leverages the strengths of AI capabilities.
+
+Future research
+       Future research will have to examine the long-term consequences of AI on educational leadership,
+considering context-specific applications, human-AI collaboration frameworks, ethical dimensions, and
+capacity development strategies. Research can look into emerging AI technologies for personalized
+learning, curriculum design, and educational institution innovation, and provide insights to enhance the
+effectiveness of leadership, equity, and sustainable educational achievements.
+
+REFERENCES
+
+[1] N. R. N. Berente, B. Gu, J. Recker, and R. Santhanam, “Managing artificial intelligence,” MIS
+    Quarterly, vol. 45, no. 3, pp. 1433–1450, 2021. doi: 10.25300/MISQ/2021/16274.
+[2] D. J. Borgohain, R. K. Bhardwaj, and M. K. Verma, “Mapping the literature on the application of
+    artificial intelligence in libraries (AAIL): a scientometric analysis,” Library Hi Tech, vol. 42, no. 1,
+    pp. 149–179, 2024. doi: 10.1108/LHT-07-2022-0331.
+[3] F. J. Cantú-Ortiz, N. Galeano Sánchez, L. Garrido, H. Terashima-Marin, and R. F. Brena, “An
+    artificial intelligence educational strategy for the digital transformation,” International Journal on
+    Interactive Design and Manufacturing (IJIDeM), vol. 14, no. 4, pp. 1195–1209, 2020. doi:
+    10.1007/s12008-020-00702-8.
+[4] L. Chen, P. Chen, and Z. Lin, “Artificial intelligence in education: A review,” IEEE Access, vol. 8,
+    pp. 75264–75278, 2020. doi: 10.1109/ACCESS.2020.2988510.
+[5] M. Cukurova, C. Kent, and R. Luckin, “Artificial intelligence and multimodal data in the service of
+    human decision‐making: A case study in debate tutoring,” British Journal of Educational Technology,
+    vol. 50, no. 6, pp. 3032–3046, 2019. doi: 10.1111/bjet.12829.
+[6] R. Dai, M. K. E. Thomas, and S. Rawolle, “The roles of AI and educational leaders in AI-assisted
+
+222
+
+Jurnal Ilmiah                                                           Volume 8, No. 2 September 2025
+TELSINAS                                                                     e-ISSN 2621-5276 (online)
+
+
+    administrative decision-making: a proposed framework for symbiotic collaboration,” Australian
+    Educational Researcher, vol. 52, no. 2, pp. 1471–1487, 2025. doi: 10.1007/s13384-024-00771-8.
+[7] T. H. Davenport, “From analytics to artificial intelligence,” Journal of Business Analytics, vol. 1, no.
+    2, pp. 73–80, 2018. doi: 10.1080/2573234X.2018.1543535.
+[8] J. de Souza Zanirato Maia, A. P. A. Bueno, and J. R. Sato, “Applications of artificial intelligence
+    models in educational analytics and decision making: A systematic review,” World, vol. 4, no. 2, pp.
+    288–313, 2023. doi: 10.3390/world4020019.
+[9] M. Dogan and H. Arslan, “The role of artificial intelligence in school leadership,” Revista de
+    Pedagogie Digitala, vol. 4, no. 1, pp. 23–30, 2025. doi: 10.61071/RPD.2531.
+[10] K. Arar, A. Tlili, and S. Salha, “Human-machine symbiosis in educational leadership in the era of
+     artificial intelligence (AI): Where are we heading?,” Educational Management Administration &
+     Leadership, 2024. doi: 10.1177/17411432241292295.
+[11] M. Fullan, C. Azorín, A. Harris, and M. Jones, “Artificial intelligence and school leadership:
+     Challenges, opportunities and implications,” School Leadership & Management, vol. 44, no. 4, pp.
+     339–346, 2024. doi: 10.1080/13632434.2023.2246856.
+[12] F. García and M. Hernández, “Ethical challenges in AI-based educational systems,” International
+     Journal of Educational Technology in Higher Education, vol. 18, no. 1, p. 28, 2021. doi:
+     10.1186/s41239-021-00269-7.
+[13] M. Haenlein and A. Kaplan, “A brief history of artificial intelligence: On the past, present, and future
+     of artificial intelligence,” California Management Review, vol. 61, no. 4, pp. 5–14, 2019. doi:
+     10.1177/0008125619864925.
+[14] G.-J. Hwang, H. Xie, B. W. Wah, and D. Gašević, “Vision, challenges, roles, and research issues of
+     artificial intelligence in education,” Computers and Education: Artificial Intelligence, vol. 1, p.
+     100001, 2020. doi: 10.1016/j.caeai.2020.100001.
+[15] J. Jameson, “e‐Leadership in higher education: The fifth ‘age’ of educational technology research,”
+     British Journal of Educational Technology, vol. 44, no. 6, pp. 889–915, 2013. doi:
+     10.1111/bjet.12103.
+[16] A. Kafa, “Exploring integration aspects of school leadership in the context of digitalization and
+     artificial intelligence,” International Journal of Educational Management, vol. 39, no. 8, pp. 98–115,
+     2025. doi: 10.1108/IJEM-11-2024-0703.
+[17] R. Marrone et al., “Perceptions and perspectives of Australian school leaders on integrating artificial
+     intelligence in schools,” School Leadership & Management, vol. 45, no. 1, pp. 30–52, 2024. doi:
+     10.1080/13632434.2024.2425019.
+[18] C. Keding, “Understanding the interplay of artificial intelligence and strategic management: Four
+     decades of research in review,” Management Review Quarterly, vol. 71, no. 1, pp. 91–134, 2021.
+     doi: 10.1007/s11301-020-00181-x.
+[19] H. Luan et al., “Challenges and future directions of big data and artificial intelligence in education,”
+     Frontiers in Psychology, vol. 11, p. 580820, 2020. doi: 10.3389/fpsyg.2020.580820.
+[20] T. Matos et al., “A systematic review of artificial intelligence applications in education: Emerging
+     trends and challenges,” Decision Analytics Journal, vol. 100571, 2025. doi:
+     10.1016/j.dajour.2025.100571.
+[21] R. Nishant, M. Kennedy, and J. Corbett, “Artificial intelligence for sustainability: Challenges,
+     opportunities, and a research agenda,” International Journal of Information Management, vol. 53, p.
+     102104, 2020. doi: 10.1016/j.ijinfomgt.2020.102104.
+[22] R. O. Okunlaya, N. Syed Abdullah, and R. A. Alias, “Artificial intelligence (AI) library services
+     innovative conceptual framework for the digital transformation of university education,” Library Hi
+
+
+223
+
+Jurnal Ilmiah                                                         Volume 8, No. 2 September 2025
+TELSINAS                                                                   e-ISSN 2621-5276 (online)
+
+
+     Tech, vol. 40, no. 6, pp. 1869–1892, 2022. doi: 10.1108/LHT-07-2021-0242.
+[23] F. Ouyang, M. Wu, L. Zheng, L. Zhang, and P. Jiao, “Integration of artificial intelligence
+     performance prediction and learning analytics to improve student learning in online engineering
+     course,” International Journal of Educational Technology in Higher Education, vol. 20, no. 1, p. 4,
+     2023. doi: 10.1186/s41239-022-00372-4.
+[24] J. L. Ruiz-Real, J. Uribe-Toril, J. A. Arriaza Torres, and J. de Pablo Valenciano, “Artificial
+     intelligence in business and economics research: Trends and future,” Business Economics and
+     Management (JBEM), vol. 22, no. 1, pp. 98–117, 2021. doi: 10.3846/jbem.2020.13641.
+[25] Y. R. Shrestha, S. M. Ben-Menahem, and G. Von Krogh, “Organizational decision-making structures
+     in the age of artificial intelligence,” California Management Review, vol. 61, no. 4, pp. 66–83, 2019.
+     doi: 10.1177/0008125619862257.
+[26] A. M. Smith and M. Green, “Artificial intelligence and the role of leadership,” Journal of Leadership
+     Studies, vol. 12, no. 3, pp. 85–87, 2018. doi: 10.1002/jls.21605.
+[27] M. J. Sousa and D. Wilks, “Sustainable skills for the world of work in the digital age,” Systems
+     Research and Behavioral Science, vol. 35, no. 4, pp. 399–405, 2018. doi: 10.1002/sres.2540.
+[28] M. Stone et al., “Artificial intelligence (AI) in strategic marketing decision-making: a research
+     agenda,” The Bottom Line, vol. 33, no. 2, pp. 183–200, 2020. doi: 10.1108/BL-03-2020-0022.
+[29] M. Hakimi, S. Zarinkhail, and F. A. Sahnosh, “Artificial Intelligence and Legal Reform in
+     Developing Countries: Advancing Ethical, Rights-Based, and Accountable Digital Governance,”
+     Jurnal Ilmiah Telsinas Elektro, Sipil dan Teknik Informasi, vol. 8, no. 2, pp. 127–144, 2025, doi
+     10.38043/telsinas.v8i2.6934
+[30] M. Hakimi, M. Sediqi, A. J. Kohistani, and T. Quraishi, “The Role of Digital Literacy and
+     Technology Adoption in Facilitating Social Transformation in Afghanistan,” Jurnal Ilmiah Dinamika
+     Sosial, vol. 9, no. 2, pp. 175–191, 2025, doi:10.38043/jids.v9i2.6809
+[31] Y. Wang, “Artificial intelligence in educational leadership: a symbiotic role of human-artificial
+     intelligence decision-making,” Journal of Educational Administration, vol. 59, no. 3, pp. 256–270,
+     2021. doi: 10.1108/JEA-10-2020-0216.
+[32] M. Hakimi, M. S. Zarinkhail, and S. Z. Musawi, "Exploring the fusion of enterprise
+     architecture, Blockchain, and AI in digital governance: A systematic review," Int. J. Softw.
+     Eng. Comput. Sci. (IJSECS), vol. 4, no. 2, pp. 497–511, 2024, doi:
+     10.35870/ijsecs.v4i2.2832.
+[33] M. Hakimi, M. Sediqi, A. J. Kohistani, and T. Quraishi, "The role of digital literacy and
+     technology adoption in facilitating social transformation in Afghanistan," J. Ilmiah
+     Dinamika Sosial, vol. 9, no. 2, pp. 175–191, 2025, doi: 10.38043/jids.v9i2.6809.
+[34] Y. Wang, “When artificial intelligence meets educational leaders’ data-informed decision-making:
+     A cautionary tale,” Studies in Educational Evaluation, vol. 69, p. 100872, 2021. doi:
+     10.1016/j.stueduc.2020.100872.
+[35] O. Zawacki-Richter, V. I. Marín, M. Bond, and F. Gouverneur, “A systematic review of research on
+     artificial intelligence applications in higher education: Where are the educators?,” International
+     Journal of Educational Technology in Higher Education, vol. 16, no. 1, pp. 1–27, 2019. doi:
+     10.1186/s41239-019-0171-0.
+
+
+
+
+224

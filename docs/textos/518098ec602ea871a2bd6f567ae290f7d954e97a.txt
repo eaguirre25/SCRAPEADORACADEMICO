@@ -1,0 +1,800 @@
+La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                                    Arroyo Ávila et. al.
+
+
+
+
+La inteligencia de negocios y la analítica de datos impulsando el
+desarrollo académico
+José René Arroyo Ávila1, José Alberto Zamora López2, María del Rosario de Fátima Alvídrez
+Díaz3, Oscar Alejandro Viramontes Olivas4, Víctor Alonso Domínguez Ríos5, Myrna Isela
+García Bencomo6, Efraín Torralba Chávez7, Edmundo José Aguirre Avilés8, Aldo Erubiel
+Arizmendi Armendáriz9
+
+                                      REVISIÓN DE LA LITERATURA
+ RESUMEN
+
+ La relación entre la Inteligencia de Negocios y la Analítica de Datos puede mejorar la toma de
+ decisiones estratégicas dentro de las instituciones educativas. El objetivo de la investigación fue
+ recopilar de diversas fuentes las principales aportaciones de diversos autores sobre ambos
+ conceptos; la naturaleza de la investigación fue no experimental (observacional), cuyo enfoque
+ del estudio fue cualitativo, transeccional descriptivo; el modo fue de campo (empíricos) a partir
+ de diversas fuentes documentales (bibliográficas). Entre los principales resultados se puede
+ comentar que la Inteligencia de Negocios y la Analítica de Datos aprovechan datos recopilados
+ en entornos educativos para extraer información valiosa y generar insights significativos. Estas
+ tecnologías permiten tomar decisiones informadas para mejorar la gestión escolar y la calidad de
+ la educación. La Analítica de Datos profundiza aún más, aplicando algoritmos para identificar
+ patrones y tendencias ocultas en grandes conjuntos de datos, ayudando a anticipar problemas
+ académicos, ajustar estrategias de enseñanza y personalizar el aprendizaje para satisfacer las
+ necesidades individuales de los estudiantes. A medida que estas tecnologías evolucionan, es
+ crucial encontrar un equilibrio entre la innovación educativa y la protección de la privacidad
+ estudiantil.
+
+ Palabras-clave: Inteligencia de negocios, analítica de datos, toma de decisiones.
+
+
+
+
+     1
+         rarroyo@uach.mx, https://orcid.org/0000-0002-8030-8472, Autor Correspondencia.
+     2 jzamora@uach.mx, https://orcid.org/0009-0004-0488-8315
+     3
+       malvidre@uach.mx, https://orcid.org/0000-0002-4251-8516
+     4
+       oviramon@uach.mx, https://orcid.org/0000-0002-0494-4127
+     5
+       vdomingu@uach.mx, https://orcid.org/0000-0002-2025-5719
+     6
+       mygarcia@uach.mx, https://orcid.org/0000-0002-0613-8233
+     7
+       etorralba@uach.mx, https://orcid.org/0000-0002-5679-2786
+     8
+       jaguir@uach.mx, https://orcid.org/0000-0002-7803-8880
+     9
+       aarizmen@uach.mx, https://orcid.org/0000-0002-7395-7490
+
+
+
+
+                       Brazilian Journal of Implantology and Health Sciences
+                            Volume 6, Issue 3 (2023), Page 1225-1242.
+
+            La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                               Arroyo Ávila et. al.
+
+
+
+
+  Business intelligence and data analytics driving academic
+  development
+  ABSTRACT
+
+  The relationship between Business Intelligence and Data Analytics can improve strategic
+  decision making within educational institutions. The aim of the research was to compile from
+  various sources the main contributions of various authors on both concepts; The nature of the
+  research was non-experimental (observational), whose study approach was qualitative,
+  descriptive transectional; The method was field (empirical) from various documentary sources
+  (bibliographic). Among the main results, it can be noted that Business Intelligence and Data
+  Analytics take advantage of data collected in educational environments to extract valuable
+  information and generate significant insights. These technologies allow informed decisions to
+  be made to improve school management and the quality of education. Data Analytics goes
+  even deeper, applying algorithms to identify hidden patterns and trends in large data sets,
+  helping to anticipate academic problems, adjust teaching strategies, and personalize learning
+  to meet individual student needs. As these technologies evolve, it is crucial to find a balance
+  between educational innovation and protecting student privacy.
+
+  Keywords: Business intelligence, data analytics, decision making.
+
+
+
+
+Institución afiliada – Universidad Autónoma de Chihuahua - México
+Dados da publicação: Artigo recebido em 24 de Janeiro e publicado em 14 de Março de 2024.
+ DOI: https://doi.org/10.36557/2674-8169.2024v6n3p1225-1242
+Autor correspondente: José René Arroyo Ávila rarroyo@uach.mx
+
+
+
+
+  This work is licensed under a Creative Commons Attribution 4.0
+  International License.
+
+
+
+
+                   Brazilian Journal of Implantology and Health Sciences
+                        Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+
+       INTRODUCCIÓN
+       Hoy en día, utilizar datos para demostrar que una institución educativa
+proporciona valor no es tarea fácil, la educación superior recopila una cantidad
+exorbitante de información que se puede utilizar para medir el desempeño de los
+estudiantes, el profesorado, las instalaciones y la institución en su conjunto. La
+educación necesita métricas de rendimiento que se puedan rastrear, medir y analizar. Y
+así la institución educativa podrá comprender cómo un programa, departamento, curso
+o incluso un estudiante está progresando hacia sus objetivos.
+       Existe una gran petición por parte de la comunidad educativa internacional para
+que los gobiernos en todo el mundo se involucren en proyectos de recopilación de datos
+para construir indicadores de desempeño clave, para los procesos educativos con fines
+de seguimiento.
+       Durante la última década, los sistemas educativos de todo el mundo han sido
+objeto de considerables reformas y cambios, todos buscando mejorar la calidad y
+gestión de la educación. Una característica clave de este cambio ha sido la revisión
+frecuente del estilo y el enfoque de las políticas, especialmente en el área de los
+indicadores de rendimiento, con un énfasis importante en la evaluación y el seguimiento
+de los resultados del aprendizaje de los estudiantes, de hecho, las actividades políticas
+actuales relacionadas con los indicadores de rendimiento educativos "basados en
+resultados" y sus vínculos con las crecientes demandas de rendición de cuentas,
+monitoreo de estándares, evaluación comparativa, efectividad escolar y reforma están
+generalizadas y bien establecidas en muchos países desarrollados.
+
+
+
+       METODOLOGÍA
+       A través de una exhaustiva revisión sistemática de la literatura en áreas como
+Inteligencia de Negocios, Analítica de Datos, Analítica Académica, Analítica de
+Aprendizaje y Toma de Decisiones basadas en Datos, se estableció el marco para el
+desarrollo de la investigación en estos dominios y sus fundamentos conceptuales
+esenciales. Se llevaron a cabo análisis de artículos procedentes de las publicaciones
+científicas más influyentes en idiomas tanto inglés como español. Posteriormente, se
+
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+procedió a examinar y reconocer tanto en la literatura específica de cada campo como
+en aquella que aborda estos campos de manera conjunta, los elementos de relevancia
+para comprender la relación entre Inteligencia de Negocios y Analítica de Datos en el
+contexto educativo. Se consideraron las perspectivas emergentes de esta revisión con
+el objetivo de identificar factores clave en esta intersección.
+
+
+
+        RESULTADOS
+Inteligencia de Negocios
+        En la última década del siglo XX, los sistemas de soporte para la toma de
+decisiones (DSS) eran el concepto dominante en la administración empresarial y
+comenzaba a utilizarse una totalmente nueva disciplina conocida como Inteligencia de
+Negocios, la cual ha ido evolucionando y tomando fuerza y en la que se han incluido los
+DSS, ya que la iniciativa central gira alrededor de los datos de las organizaciones, su
+conversión en conocimiento para que, tras el correspondiente estudio, apoyen en la toma
+de decisiones empresariales. En la actualidad, los sistemas de información son
+considerados la espina dorsal de las organizaciones y su soporte diario y el eje sobre el
+que se estructuran los sistemas de Inteligencia de Negocios (Joyanes, 2019).
+        Y fue el investigador de IBM Hans Peter Luhn en el año de 1958, quien divulgó
+por primera ocasión en la revista IBM Journal el concepto Inteligencia de Negocios para
+aludir a un sistema que sea automático, el cual obtiene información y la distribuye
+oportunamente a los sitios adecuados. Para el año de 1990, Howard Dresner es
+considerado como el padre de la Inteligencia de Negocios y la idealiza como los conceptos
+y procedimientos para optimizar la toma de decisiones en la empresa por medio de la
+utilización de sistemas basados en hechos de apoyo. La Inteligencia de Negocios conduce
+a la compañía hacia una superioridad competitiva por medio de la información
+privilegiada y propicia la resolución de los inconvenientes de la organización (García et
+al., 2021).
+        Puede decirse entonces que, la Inteligencia de Negocios, son esos recursos
+administrativos empresariales con los que las empresas recientes y modernas tienen la
+posibilidad de contar para obtener el máximo provecho de la información que posean
+tanto de sus consumidores como la de sus proveedores y hasta de la competencia incluso,
+todo con el propósito de conseguir ventajas competitivas en un mercado hostil y bastante
+dinámico. El desempeño de la gestión, la administración y control de la información como
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+           La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                              Arroyo Ávila et. al.
+
+
+
+un arma estratégica, pertenece a la Inteligencia de Negocios, con apoyo de herramientas
+tecnológicas y analíticas que ayudan a las empresas a maximizar su rendimiento
+generando efectividad operativa. Del mismo modo, la administración del conocimiento
+ayuda a tener una mejor comprensión y conocimiento del ámbito y de los procesos a partir
+de nuestra vivencia como individuos y empresas.
+       De modo que, la Inteligencia de Negocios, además de ser el grupo de herramientas
+y aplicaciones para el apoyo a la toma de decisiones, permite la entrada interactiva,
+analítica y multiplicación de la información corporativa de asignación crítica. Estas
+aplicaciones aportan un entendimiento preciado sobre la información operativa,
+identificando inconvenientes y oportunidades de negocio. Con ellas, los usuarios son
+capaces de tener acceso a enormes cantidades de información para entablar y examinar
+colaboraciones y entender tendencias que, a la postre, soportarán las decisiones de
+negocio.
+       Por ende, hay recursos que permanecen bastante correlacionados con la
+Inteligencia de Negocios, dichos recursos son: el razonamiento, los datos y la
+información. Los datos se convierten en información y está paralelamente en
+entendimiento. Por lo tanto, se considera a los datos como la unidad semántica más
+pequeña, y se corresponden con recursos primarios de información que por sí solos
+carecen de significado y no son útiles como apoyo a la toma de decisiones. Además,
+tienen la posibilidad de verse como un grupo de valores, que carecen de significado sobre
+el porqué de las cosas y no son utilizados para la acción.
+       En consecuencia, la información se puede conceptualizar como una colección de
+datos estructurados que contienen significado (relevancia, objetivo y contexto), y que por
+consiguiente es de gran ayuda para quién debería tomar decisiones, al reducir la
+incertidumbre.
+       Por lo tanto, el conocimiento es una combinación de vivencias, principios,
+información y habilidades adquiridas a través de la experiencia o la educación, la
+comprensión teórica o práctica de un tema (Muñoz et al., 2016).
+       Para ilustrar mejor, estos recursos son expresados de forma gráfica como la
+pirámide informacional, que representa las interrelaciones entre datos, información,
+conocimientos e inteligencia. Cada bloque es un paso hacia un grado superior: en primera
+instancia son los datos, después la información, posteriormente el conocimiento y al final
+la inteligencia. Cada paso responde a diferentes cuestiones sobre los datos iniciales y les
+añade valor. Cuanto más enriquecidos estén nuestros datos, más conocimientos y
+
+
+
+                 Brazilian Journal of Implantology and Health Sciences
+                      Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+perspectivas obtenemos de ellos para que se puedan tomar decisiones correctas
+fundamentadas en datos. En la Figura 1, se observa el flujo para la generación del
+conocimiento (Davenport & Prusak, 1998).
+
+
+
+
+       Figura 1. Pirámide informacional.
+       Fuente: Davenport & Prusak (1998).
+
+
+       En el caso especial de las instituciones educativas, además de automatizar sus
+procesos generales como registro, pago, gestión de calificaciones, gestión docente, entre
+otros, deben integrar la tecnología de la información en sus procesos educativos e
+incorporarla al plan de aprendizaje. Un ejemplo es el uso de un sistema de gestión de
+aprendizaje (LMS Learning Management System), que permite a los estudiantes
+interactuar con una variedad de herramientas sincrónicas y asincrónicas.
+       En este sentido, la creación de información en una institución educativa es
+permanente y el manejo de sus datos es absolutamente necesario. Los avances
+tecnológicos han dado como resultado el acceso a una gran cantidad de información que
+debe incluirse en reportes con información actualizada y divulgarse casi en tiempo real.
+Por lo tanto, una buena gestión de datos es una función compleja, pero esencial, de una
+buena dirección estratégica de una institución educativa.
+       Así pues, la comprensión de la Inteligencia de Negocios como recurso para las
+organizaciones educativas surge de la necesidad actual de información para tomar una
+decisión en base a datos obtenidos de diferentes procesos organizacionales. Asimismo,
+debe proporcionar métricas relevantes para medir los resultados del aprendizaje, tener
+información importante y confiable para monitorear las funciones vitales de la institución,
+ya que se considera una pieza clave para la gestión académica. El seguimiento a la gestión
+académica y de aprendizaje mediante el uso de sistemas de Inteligencia de Negocios se
+convierte en una realidad gracias a las mejoras de los indicadores clave de desempeño o
+KPI’s (Alvarez, 2021).
+
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+       Otro aspecto es la gestión de datos, que incluye analizar diferentes tipos de datos
+de la institución y el entorno en el que se encuentra, mediante el empleo de las tecnologías
+de la información, lo que permite la aplicación de la Inteligencia de Negocios,
+proporcionando las herramientas necesarias para aprovechar las transacciones de datos
+almacenadas y usar la información para respaldar las decisiones.
+       Para afrontar los nuevos desafíos y oportunidades disponibles, las instituciones
+educativas de todo el mundo tienen que utilizar enfoques innovadores. En general, las
+autoridades educativas no saben lo que está sucediendo en todos los departamentos o en
+cada área y para resolver estos problemas y mejorar el desempeño puede llevar años, pero
+la competencia puede ir más rápido.
+       Es en este contexto, es de trascendental importancia que las instituciones cuenten
+con un proceso formal de analítica, que pueda facilitar el proceso de toma de decisiones.
+Las herramientas de Inteligencia de Negocios desempeñan un papel trascendente en este
+proceso de competencia en el que se encuentran hoy en día, porque permiten modelar
+estructuras multidimensionales para crear consultas concisas por medio de un cuadro o
+tablero de mando que ayude como soporte para generar reportes. Las instituciones
+educativas que utilizan Inteligencia de Negocios para tomar decisiones recolectan piezas
+pequeñas, las mantienen simples y enfocadas para proporcionar un beneficio de manera
+inmediata y de manera crítica, demostrar el valor de las decisiones basadas en datos
+(Santos & Benites, 2020).
+
+
+Analítica de Datos
+       Sin duda, la automatización de procesos, la ola de cambios en la tecnología y el
+constante aumento del volumen de transacciones de las organizaciones han llevado al
+almacenamiento de una parte importante de su información en sus sistemas. A menudo,
+dicha información no se considera como tal, y mucho menos se analiza porque se tiene la
+idea errónea de que es falsa, y se cree que es difícil de obtener o requiere mucho trabajo
+para procesarla, a diferencia de los beneficios que brinda. Sin embargo, en los últimos
+años las empresas han notado que esta información puede resultar muy valiosa para el
+empoderamiento organizacional. En este contexto, surgen procesos y / o técnicas de
+análisis de datos, junto con el acceso a información interna y / o externa (cuantitativa y
+cualitativa), lo que permite a los gerentes ver la gestión de su organización de una manera
+más significativa (Condor, 2019).
+       De este modo, la Analítica de Datos es una disciplina centrada en extraer
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+conocimiento de los datos, incluido el análisis, la recopilación, la organización y el
+almacenamiento de datos, así como las herramientas y técnicas que se utilizan para
+trabajar con ellos, tiene como objetivo principal, emplear tecnologías y análisis estadístico
+sobre los datos para encontrar tendencias y resolver problemas. Cada vez más importante
+en los negocios como una forma de analizar y diseñar procesos, así como de mejorar la
+toma de decisiones y los resultados. Se fundamenta en una variedad de disciplinas,
+incluida la programación informática, modelos matemáticos y la estadística, para realizar
+análisis de datos con el fin de describir, predecir y mejorar el rendimiento. Para que se
+pueda garantizar un sólido análisis, los analistas de datos emplean una variedad de
+técnicas de gestión, que incluye minería de datos, limpieza de datos, transformación de
+datos, modelado de datos y más (Olavsrud, 2019).
+        De manera que, la Analítica de Datos proporciona a las organizaciones
+herramientas y metodologías para examinar todos sus datos (en tiempo real, historial,
+datos con o sin estructura, cuantitativos, cualitativos, etc.) para identificar modelos y crear
+conocimiento para notificar y, en algunos casos, automatizar decisiones, enlazando
+inteligencia y acciones. Las mejores soluciones existentes apoyan el proceso de analítica,
+desde el acceso, preparación y análisis de datos, hasta los resultados de análisis y
+monitoreo. Permite a las organizaciones transformar su negocio hacia una cultura digital,
+volverse más creativas y con visión hacia el futuro, para la toma de decisiones. Además
+de monitorear y generar informes de KPI tradicionales para encontrar modelos ocultos en
+los datos, las organizaciones que son potenciadas por el uso de algoritmos son
+consideradas como innovadoras y líderes en su ámbito. Al modificar el modelo, las
+organizaciones pueden crear una experiencia personalizada para los clientes, crear
+productos digitales conectados, optimizar las operaciones y aumentar la productividad de
+los empleados.
+        Utilizando la Analítica de Datos, las organizaciones permiten que todos aporten
+al triunfo de esta, desde los ingenieros y científicos de datos, hasta los analistas y
+programadores de la organización, así como los expertos y líderes organizacionales.
+Estimula a las personas que se encuentran dentro y fuera de la organización para
+colaborar. Por ejemplo, los científicos de datos pueden trabajar en estrecha colaboración
+con los clientes para ayudarlos a resolver sus problemas en tiempo real empleando
+interfaces de usuario cooperativas.
+        En tal sentido, la Analítica de Datos permite a la organización seguir adelante a
+través de la introducción de algoritmos en todas sus áreas, para optimizar importantes
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+          La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                             Arroyo Ávila et. al.
+
+
+
+procesos comerciales, se aplica a todas las industrias, incluidos los servicios financieros
+y los seguros, la producción, la energía, el transporte, el turismo, la logística, la salud, etc.
+Puede ayudar a predecir y administrar interrupciones, mejorar rutas, brindar un servicio
+al cliente proactivo, entregar ofertas masivas inteligentes, adelantarse a fallas inminentes
+de los equipos, gestionar el inventario, optimizar los precios y notificar el fraude (Hesse,
+2021).
+         La Analítica de Datos consta de varias etapas, que van desde la captura de datos
+hasta la producción de resultados, para que las empresas obtengan un valor empresarial
+óptimo. Existen cuatro clases o tipos de Analítica de Datos (Joyanes, 2019).
+         En los últimos años, la Analítica de Datos ha sido un tema de actualidad. Muchos
+son los autores que hablan sobre por qué las organizaciones deberían utilizar la Analítica
+de Datos. Con la cantidad de valor que puede aportar la Analítica de Datos, es tentador
+entrar de inmediato y tratar de obtener beneficios de manera rápida. Pero sin las bases
+adecuadas, es imposible lograr estos resultados. Entonces, ¿cuál es el primer paso para
+obtener estos valiosos conocimientos?
+         Comprender la progresión de la Analítica y comenzar en el lugar correcto ayudará
+a garantizar el éxito con la Analítica de Datos. La figura 2 explica el modelo de madurez
+de la Analítica de Datos (Kalsbeek, 2020).
+
+
+
+
+         Figura 2. Modelo de madurez de la Analítica de Datos.
+         Fuente: Douglas (2019).
+
+
+         De ahí que, la Analítica Descriptiva, es el proceso de utilizar datos actuales e
+históricos para identificar tendencias y relaciones. A veces se le llama la forma más
+simple de análisis de datos porque describe tendencias y relaciones, pero no profundiza.
+La Analítica Descriptiva es relativamente accesible y probablemente algo que su
+organización usa a diario. El software estadístico básico, como Microsoft Excel o las
+
+
+
+
+                 Brazilian Journal of Implantology and Health Sciences
+                      Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+herramientas de visualización de datos, como Google Charts y Tableau, pueden ayudar a
+analizar datos, identificar tendencias, relaciones entre variables y mostrar información
+visualmente. La Analítica Descriptiva es especialmente útil para comunicar los cambios
+a lo largo del tiempo y utiliza las tendencias como trampolín para un análisis más
+detallado para impulsar la toma de decisiones (Cote, 2021).
+       Ciertamente, la Analítica Descriptiva está estrechamente relacionada con la
+Inteligencia de Negocios, que utiliza técnicas como el modelado de regresión, el
+modelado de datos y la visualización. Por estos motivos, se permite conocer algunas de
+las siguientes actividades (Joyanes, 2019):
+           •   Descubrir cuáles productos son los más vendidos y las zonas geográficas
+               en las que se desarrolla la organización.
+           •   Observar la evolución histórica de la demanda de un producto o servicio
+               en determinados periodos de tiempo.
+           •   Identificar a las personas o empresas más influyentes en la división de
+               negocio de la organización.
+           •   Visualizar las noticias de prensa, radio, TV, redes sociales de mayor
+               repercusión, así como su situación geográfica, segmentos de población,
+               etcétera.
+       Después de hacer la pregunta principal de ¿qué sucedió?, es posible que se desee
+profundizar más y preguntar ¿por qué sucedió?, aquí es donde entra en juego la Analítica
+Diagnóstica. La Analítica Diagnóstica toma la información obtenida de los análisis
+descriptivos y profundiza para encontrar la causa de ese resultado. Las organizaciones
+hacen uso de este tipo de análisis, ya que crea más conexiones entre los datos e identifica
+patrones de comportamiento.
+       Es necesario recalcar, que un aspecto crítico de la Analítica Diagnóstica es la
+creación de información detallada. Cuando surgen nuevos problemas, es posible que ya
+haya recopilado ciertos datos relacionados con el problema. Al tener ya los datos a su
+disposición, acaba teniendo que repetir el trabajo y hace que todos los problemas estén
+interconectados (Gibson, 2021).
+       Seguidamente, la Analítica Predictiva, es una clasificación de la Analítica de
+Datos centrada en pronosticar la posibilidad de resultados futuros basados en datos
+pasados y métodos de análisis, que incluye modelado estadístico y aprendizaje
+automático. La Analítica Predictiva puede crear pronósticos con una precisión sustancial,
+permite a las organizaciones utilizar el pasado y presentar datos para proyectar patrones
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+          La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                             Arroyo Ávila et. al.
+
+
+
+y comportamientos con días, meses o años de anticipación. Para cada organización,
+grande o pequeña, la capacidad de anticipar el futuro es la clave para el crecimiento
+sostenible y a veces incluso la propia existencia de la organización depende de ello.
+         Los patrones se utilizan para construir un modelo que rastrea las tendencias clave
+después de que los datos recolectados hayan sido analizados. Posteriormente, los
+responsables de la toma de decisiones pueden utilizar el resultado para proponer pasos
+para obtener el mejor resultado (Funmilola & David, 2019).
+         Algunas de las tareas que permite la Analítica Predictiva son (Joyanes, 2019):
+            •   Anticiparse a los requerimientos del cliente en los diferentes puntos de
+                venta.
+            •   Detección de transacciones bancarias fraudulentas.
+            •   Identificar grupos de interés que comparten características similares:
+                demografía, geografía, preferencias de productos y más.
+         Finalmente, la Analítica Prescriptiva, permite "prescribir" un conjunto de
+diferentes acciones posibles y dirigirlas a la solución. En pocas palabras, estas revisiones
+están destinadas a brindar asesoramiento. El análisis descriptivo intenta determinar el
+impacto de decisiones futuras para brindar asesoramiento sobre posibles resultados antes
+de tomar una decisión. En el mejor de los casos, la Analítica Predictiva no solo ayuda a
+predecir lo que sucederá, sino también por qué sucederá, y brinda recomendaciones de
+acción basadas en pronósticos. Este tipo de analítica va más allá de la analítica descriptiva
+y predictiva al sugerir uno o más cursos de acción posibles. Básicamente, predicen
+múltiples futuros y permiten a las organizaciones evaluar muchos resultados posibles en
+función de sus acciones. La Analítica Prescriptiva utiliza una variedad de técnicas y
+herramientas, como reglas comerciales, algoritmos, aprendizaje automático y procesos de
+modelado por computadora. Estos métodos se aplican a la entrada de una variedad de
+conjuntos de datos, incluidos datos históricos, transaccionales, fuentes de datos en tiempo
+real y Big Data. Vale la pena señalar, que la Analítica Prescriptiva es relativamente
+compleja de administrar y la mayoría de las organizaciones aún no la han utilizado en sus
+operaciones diarias. Cuando se hace correctamente, puede tener un gran impacto en la
+forma en que una empresa toma decisiones y sus resultados comerciales. Las grandes
+organizaciones emplean con éxito la Analítica Prescriptiva para mejorar la producción, la
+planificación y el inventario en su cadena de suministro para garantizar que se entregue
+el producto correcto en el momento adecuado y mejorar la experiencia del cliente (Bachar,
+2020).
+
+
+
+                Brazilian Journal of Implantology and Health Sciences
+                     Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+
+La Analítica de Datos en la Educación
+       Se les ha denominado a los datos, “el nuevo petróleo” y las organizaciones de todo
+el mundo se esfuerzan por explotar los repositorios de datos que tienen en su poder, en
+un intento por extraer información procesable que les pueda dar una ventaja sobre la
+competencia. Pero la Analítica de Datos no es exclusiva del mundo de las grandes
+empresas. Las instituciones educativas de todo el mundo también se están sumando. Su
+adopción de la Analítica de Datos y el modelado predictivo tendrá un impacto
+significativo en la forma en que se comercializan los cursos e instituciones, se estructuran
+los planes de estudio y se supervisa y apoya a los estudiantes (Henebery, 2019).
+       La mayoría de los directivos de las instituciones de educación entienden que el
+uso de la Analítica de Datos puede transformar significativamente la forma en que
+trabajan al permitir nuevas formas de involucrar a los estudiantes actuales y futuros,
+aumentar la inscripción de estudiantes, mejorar las tasas de retención y finalización de
+estudiantes e incluso aumentar la productividad y la investigación del profesorado. Sin
+embargo, muchos directivos de colegios y universidades siguen sin estar seguros de cómo
+incorporar la Analítica de Datos en sus operaciones y lograr los resultados y mejoras
+previstos. ¿Qué funciona realmente? ¿Es una apuesta por nuevos talentos, tecnologías o
+modelos operativos? ¿O todo lo anterior?
+       La transformación mediante la Analítica de Datos puede resultar difícil para
+cualquier organización. En la educación, los desafíos se ven agravados por factores
+específicos del sector relacionados con la gobernanza y el talento. Los líderes de la
+educación no pueden simplemente hablar de labios para afuera sobre el poder de la
+Analítica, primero deben abordar algunos o todos los obstáculos más comunes. En
+muchas instituciones educativas, hay pocos incentivos (y mucha renuencia) para
+compartir datos. Como resultado, la mayoría de las instituciones de educación carecen de
+una buena higiene de datos, es decir, reglas establecidas sobre quién puede acceder a
+diversas formas de datos, así como políticas formales sobre cómo pueden compartir esos
+datos entre departamentos. La transformación a través de la Analítica de Datos es posible
+cuando los directivos de las instituciones educativas se esfuerzan por cambiar tanto las
+operaciones como la mentalidad (Krawitz, 2018).
+       La Analítica es un habilitador crítico para ayudar a las instituciones educativas a
+resolver problemas difíciles, pero los líderes de las instituciones de educación deben
+dedicar tanta energía a actuar sobre la información de los datos como a habilitar el análisis
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+          La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                             Arroyo Ávila et. al.
+
+
+
+de los datos. La implementación requiere cambios significativos en la cultura, la política
+y los procesos. Cuando los resultados mejoran porque una institución educativa
+implementó el cambio con éxito, incluso en un entorno limitado, el resto de las
+instituciones se da cuenta. Esto puede fortalecer la voluntad institucional de seguir
+avanzando y comenzar a abordar otras áreas de la organización que necesitan mejoras
+(Litman, 2019).
+        En nuestros días, las instituciones educativas están utilizando dos formas de
+Analítica de Datos: Analítica Académica y Analítica de Aprendizaje, la Analítica
+Académica es la aplicación de herramientas y estrategias de Inteligencia de Negocios para
+la toma de decisiones en instituciones educativas, refleja el papel del análisis de datos a
+nivel institucional, la Analítica de Aprendizaje es el análisis y la presentación de informes
+de los datos del alumno para facilitar el proceso de enseñanza-aprendizaje, también hace
+hincapié en el uso de datos de forma inteligente.
+
+Tabla 1. Comparación entre Analítica Académica y Analítica del Aprendizaje.
+                 Analítica Académica                            Analítica del Aprendizaje
+ La Analítica Académica está asociada con la       La Analítica de Aprendizaje está asociada con la
+ Inteligencia de Negocios.                         recolección, medición y análisis de datos sobre el
+                                                   alumno y su proceso de aprendizaje.
+ Se puede aplicar a cuatro niveles diferentes:     Puede adaptarse a todo el proceso
+ institucional, regional, nacional o               enseñanza – aprendizaje.
+ internacional.
+ Los principales beneficiados son administradores  Los principales beneficiados son el alumno e
+ y autoridades educativas.                         instructor.
+
+ Ayuda a los administradores para asegurar la        Ayuda a los alumnos e instructores para entender
+ utilización óptima de recursos.                     el patrón de éxito o fracaso.
+
+Fuente: (Moore, 2019).
+
+        En otras palabras, la Analítica de Aprendizaje es más específica que la Analítica
+Académica. El primero se centra en el aprendizaje, proceso que incluye analizar la
+relación entre alumno, contenido, institución y educador, mientras que la Analítica
+Académica involucra a los estudiantes y la institución. La tabla 1 proporciona una
+comparación de los dos tipos de Analítica (Long & Siemens, 2020).
+
+
+Inteligencia de Negocios y Analítica de Datos en la Educación
+        Es cierto que la educación se está volviendo cada vez más exigente, tanto en
+términos de administrar escuelas como negocio y proporcionar los recursos para educar
+a las mentes jóvenes. A menudo se espera que los administradores y las juntas escolares
+
+
+
+
+                 Brazilian Journal of Implantology and Health Sciences
+                      Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+hagan más con menos, con fondos vinculados a las colegiaturas cobradas, los resultados
+académicos, el tamaño de la población estudiantil, el tamaño de las clases, la asistencia
+diaria promedio, las ofertas de programas extraescolares (idiomas, música, bellas artes,
+deportes, etc.) y una variedad de otras medidas que detallan el desempeño escolar general.
+       La capacidad de las escuelas para atraer nuevos estudiantes y satisfacer a los
+padres, los grupos de gobierno, las autoridades educativas y las regulaciones
+gubernamentales se vuelve más difícil cada año. Desde hace mucho tiempo se exige a las
+escuelas que presenten informes a las partes interesadas y con condiciones operativas
+cada vez más duras, ya que es una actividad que requiere mucho tiempo y utiliza
+importantes recursos administrativos. Pero las escuelas tienen la oportunidad de reducir
+esta carga e incluso ampliar los conocimientos operativos capaces de mejorar la función
+empresarial y el rendimiento académico. ¿Cómo?, dirigiendo el gran volumen de datos
+recopilados de forma natural a un sistema de Inteligencia de Negocios.
+       Si bien no son tan grandes como las universidades, las escuelas de educación
+básica y media superior comparten muchos de los mismos problemas comerciales y de
+presentación de informes. En países donde las escuelas privadas son populares, no es raro
+que los presupuestos operativos anuales de las escuelas privadas alcancen las decenas de
+millones. Esto hace que el funcionamiento de esas instituciones sea complejo.
+       Las instituciones de educación están adoptando cada vez más la Inteligencia de
+Negocios y la Analítica de Datos para reducir la complejidad de la gestión y descubrir los
+hechos importantes sobre sus negocios. Una competencia que puede impulsar los
+resultados académicos, administrativos y relacionados con la fuerza laboral y ayudar a
+publicitar esos logros. La figura 7 muestra un esquema básico de Inteligencia de Negocios
+y Analítica Académica (Combita et al., 2018).
+
+
+
+       CONSIDERACIONES FINALES
+       En un entorno educativo, las herramientas de Inteligencia de Negocios se utilizan
+para medir, recopilar y analizar la actividad de toda la institución. La Analítica de Datos
+en la educación, no se trata solo de tecnología, se trata de redefinir por completo quién
+usa los datos y cómo. Si los colegios o universidades no han empleado estas
+herramientas, ya es hora de que hagan un cambio de cultura hacia decisiones basadas
+en datos. Lo que necesitan es una solución fácil de usar y personalizable, basada en la
+
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+nube, con inteligencia procesable que no requiera codificación compleja (Sriram, 2017)
+
+       Varias son las instituciones educativas que han utilizado modelos de datos para
+tomar decisiones y con eso, aumentar la retención de estudiantes, proporcionar
+transparencia de los informes financieros, mejorar la gestión de espacios, seguridad y
+protección, proporcionar visualización de operaciones en tiempo real y, sobre todo, el
+apoyo a la toma de decisiones basadas en datos. Por citar un ejemplo, una mejor
+retención de los estudiantes puede conducir a un aumento de las tasas de graduación.
+Cuando las instituciones educativas usan datos para gestionar, ahorran dinero, reducen
+el tiempo desde la inscripción hasta la graduación, y poseen formas más transparentes
+de rastrear los éxitos y mejorar los pronósticos (Pomeroy, 2014).
+
+       Expuesto lo anterior, existe un creciente interés en las instituciones educativas
+por tener un modelo de analítica basada en datos para elevar la toma de decisiones y
+mejorar el rendimiento. El tener un sistema de gestión educativa impulsado por datos
+analíticos, ofrecerá una mina de oro de datos que pueden impactar en el diseño del plan
+de estudios, la impartición de cursos, los estudiantes y el crecimiento de la institución.
+
+       La Inteligencia de Negocios y la Analítica de Datos son herramientas poderosas
+que, cuando se utilizan en conjunto, pueden mejorar significativamente la toma de
+decisiones estratégicas en las instituciones educativas. A través de la recopilación,
+análisis y presentación de datos, la Inteligencia de Negocios proporciona información
+valiosa que permite a los líderes comprender mejor el rendimiento de su organización y
+tomar decisiones informadas. Al combinar la Inteligencia de Negocios con la Analítica de
+Datos, las organizaciones pueden identificar y monitorear de manera efectiva los
+indicadores más relevantes para la organización. Esto les permite evaluar el rendimiento
+en tiempo real y realizar ajustes estratégicos según sea necesario. La Inteligencia de
+Negocios proporciona una visión completa de los datos y ayuda a identificar patrones y
+tendencias, lo que permite a las organizaciones anticipar cambios en el mercado y
+adaptarse rápidamente a ellos. El uso de la Inteligencia de Negocios y la Analítica de
+Datos también fomenta una cultura orientada a los datos dentro de la organización. Al
+basar las decisiones en datos objetivos y análisis profundos en lugar de intuiciones o
+suposiciones, se reduce la probabilidad de errores costosos y se promueve una toma de
+decisiones más precisa y fundamentada. Sin embargo, el uso efectivo de la Inteligencia
+
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+de Negocios y la Analítica de Datos presenta desafíos. La calidad y disponibilidad de los
+datos son fundamentales para obtener resultados precisos y confiables. Además, se
+necesita una mentalidad de liderazgo que valore y promueva el uso de la Inteligencia de
+Negocios y la Analítica de Datos en toda la organización. En conclusión, el uso de la
+Inteligencia de Negocios en combinación con la Analitica de Datos ofrece a las
+instituciones educativas una ventaja competitiva al mejorar la toma de decisiones
+estratégicas. Al aprovechar el poder de los datos y las métricas cuantitativas, las
+organizaciones pueden adaptarse rápidamente a los cambios del mercado, optimizar su
+rendimiento y alcanzar sus objetivos de manera más efectiva.
+
+
+
+
+REFERENCIAS
+
+Alvarez, B. (2021). Inteligencia de negocios para la toma de decisiones: Un enfoque
+       desde la dirección estratégica de instituciones educativas. https://0-doi-
+       org.biblioteca-ils.tec.mx/10.29394/Scientific.issn.2542-2987.2021.6.19.15.295-
+       312
+Bachar, D. (2020). Logility. Descriptive, Predictive and Prescriptive Analytics Explained.
+       https://www.logility.com/es/blog/descriptive-predictive-and-prescriptive-
+       analytics-explained/
+Combita, H., Combita, J., & Morales, R. (2018). Business intelligence governance
+       framework in a university: universidad de la costa case study. Repositorio:
+       Universidad de La Costa
+Condor, O. (2019). EY. Data Analytics: Una herramienta de gestión y detección.
+       https://www.ey.com/es_pe/big-data-analytics/data-analytics--una-
+       herramienta-de-gestion-y-deteccion
+Cote, C. (2021). Harvard Business School. What Is Descriptive Analytics?
+       https://online.hbs.edu/blog/post/descriptive-analytics
+Davenport, T. & Prusak, L. (1998). Working Knowledge: How Organizations Manage
+       What They Know, 1st edition. Harvard Business Review Press.
+Douglas, L. (2019). Gartner. Predicts 2019: Data and Analytics Strategy.
+       https://www.gartner.com/en/doc/374107-predicts-2019-data-and-analytics-
+       strategy
+Funmilola, B. & David, A. (2019). ResearchGate. Evaluation of Diagnostic Analysis and
+       Predictive Analysis for Decision Making.
+       https://www.researchgate.net/publication/335369231_Evaluation_of_Diagnos
+       tic_Analysis_and_Predictive_Analysis_for_Decision_Making
+García, A., Aguilar, N., Hernández, l., & Lancaster, E. (. (2021). La inteligencia de
+       negocios: herramienta clave para el uso de la información y la toma de
+       decisiones empresariales. Revista de Investigaciones Universidad del Quindío
+Gibson, P. (2021). Dataschool. Types of Data Analysis.
+
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.
+
+         La inteligencia de negocios y la analítica de datos impulsando el desarrollo académico
+                                            Arroyo Ávila et. al.
+
+
+
+       https://dataschool.com/fundamentals-of-analysis/types-of-data-analysis/
+Henebery, B. (2019). Theeducatoronline. How data analytics is shaking up the
+       education sector. https://www.theeducatoronline.com/k12/technology/e-
+       learning/how-data-analytics-is-shaking-up-the-education-sector/259565
+Hesse, M. (2021). What is Data Analytics? TIBCO. https://www.tibco.com/reference-
+       center/what-is-data-analytics
+Joyanes, L. (2019). Inteligencia de negocios y analítica de datos. AlfaOmega.
+Kalsbeek, R. (2020). Iteration Insights. Where to Start With The 4 Types of Analytics.
+       https://iterationinsights.com/article/where-to-start-with-the-4-types-of-
+       analytics/
+Krawitz, M. (2018). Mckinsey. How higher-education institutions can transform
+       themselves using advanced analytics.
+       https://www.mckinsey.com/industries/education/our-insights/how-higher-
+       education-institutions-can-transform-themselves-using-advanced-analytics
+Litman, S. (2019). The evolution of big data and learning analytics in American. Journal
+       of Asynchronous Learning Networks
+Long, P. & Siemens, G. (2020). Supporting Student Management with Business
+       Analytics in the UK Higher Education Sector: An Exploratory Case Study.
+       Intellectual Capital and Knowledge Management and Organizational Learning
+Moore, R. (2019). The Role of Data Analytics in Education. STEMPS Faculty Publications
+Muñoz, H., Osorio, R., & Zúñiga, L. (2016). Inteligencia de los negocios. Clave del Éxito
+       en la era de la información.. Biblioteca Digital ITESM.
+       https://dialnet.unirioja.es/servlet/oaiart?codigo=5826494
+Olavsrud, T. (2019). CIO. What is data analytics? Analyzing and managing data for
+       decisions. https://www.cio.com/article/3606151/what-is-data-analytics-
+       analyzing-and-managing-data-for-decisions.html
+Pomeroy, W. (2014). Academic Analytics in Higher Education: Barriers. Walden
+       Dissertations and Doctoral Studies
+Santos, J. & Benites, M. (2020). Inteligencia de negocios y su impacto en la gestión
+       universitaria de la. Revista Ciencia y Tecnología, 16
+Sriram, S. (2017). Creatix Campus. Using Academic Analytics to drive decision-making
+       in higher education institutions. https://www.creatrixcampus.com/blog/using-
+       academic-analytics-drive-decision-making-higher-education-institutions
+
+
+
+
+               Brazilian Journal of Implantology and Health Sciences
+                    Volume 6, Issue 3 (2023), Page 1225-1242.

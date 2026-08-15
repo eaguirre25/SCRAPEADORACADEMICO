@@ -1,0 +1,886 @@
+DOI: https://doi.org/10.37811/cl_rcm.v7i1.4639
+
+          Dashboard for the improvement of school management
+                                      in educational institutions
+
+                                                                                         Miguel Vite Ayala
+                                                                                   mviteayala@gmail.com
+                                                                  https://orcid.org/0000-0002-2602-900X
+                                                                                         (+51)969554125
+                                                                                             Piura – Perú
+
+                                                                           Judith Elizabeth Paredes Camacho
+                                                                                  julyparedesc007@hotmail.com
+                                                                  https://orcid.org/0000-0001-7674-5138
+                                                                                      +(593) 4 958738714
+                                                                                      Guayaquil – Ecuador
+
+                                                                                 María Alicia Quiroga Gallo
+                                                                                  mquirogallo@gmail.com
+                                                                  https://orcid.org/0000-0001-5127-4800
+                                                                                         (+51) 968976518
+                                                                                               Piura – Perú
+
+                                                                         Edgard Wilfredo Gonzales Gutierrez
+                                                                                    egoamor72@gmail.com
+                                                                    https://orcid.org/0000-0002-5116-5281
+                                                                                               Piura – Perú
+                                                                                          (+51) 985372408
+
+
+
+
+Correspondencia: ciro. mviteayala@gmail.com
+Artículo recibido 05 diciembre 2022 Aceptado para publicación: 26 diciembre 2022
+Conflictos de Interés: Ninguna que declarar
+Todo el contenido de Ciencia Latina Revista Científica Multidisciplinar, publicados en este sitio están disponibles bajo
+Licencia Creative Commons                  .
+Cómo citar: Vite Ayala, M., Paredes Camacho, J. E., Quiroga Gallo, M. A., & Gonzales Gutierrez , E. W. (2023).
+Dashboard for the improvement of school management in educational institutions. Ciencia Latina Revista
+Científica Multidisciplinar, 7(1), 3018-3037. https://doi.org/10.37811/cl_rcm.v7i1.4639
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3018
+
+                                       Vite Ayala y otros
+
+
+RESUMEN
+Las instituciones educativas carecen de un registro de indicadores definidos que sirvan como
+respaldo para la evaluación de los procesos de gestión escolar, resultando poco posible
+establecer cuál es el nivel de avance en los compromisos de gestión escolar establecidos en el
+Plan Anual de Trabajo, retardando la fluidez de los datos, incrementando los costos y empleando
+mucho tiempo para la toma de decisiones.
+El objetivo de este estudio es implementar un sistema de inteligencia de negocios basado en
+Dashboard que mejore la gestión escolar en las instituciones educativas; con este fin la pregunta
+de investigación es la siguiente: ¿Cuál es el diseño que deberá tener la propuesta de un
+“Dashboard” para mejorar la Gestión Escolar de los Directivos de Instituciones Educativas de
+Educación Secundaria del Distrito de Vice - Sechura?
+La pregunta de la investigación se respondió a través de un estudio descriptivo no experimental
+y corte transversal, en el que se aplicó como instrumento una encuesta para medir la apreciación
+que tienen los directivos de instituciones educativas respecto al uso de recursos informáticos de
+procesamiento de información, cuyos datos obtenidos fueron representados en el Dashboard
+utilizando Power BI y tablas dinámicas de Microsoft Excel, se identificaron los indicadores claves
+de las variables y dimensiones que tienen mayor impacto en el gestión escolar. En consecuencia,
+dicha herramienta brindó soporte a las instituciones en cuanto a la gestión y administración de
+información real y pertinente, reduciendo los tiempos establecidos y contribuyendo
+acertadamente en la mejora de la gestión.
+
+Palabras clave: inteligencia de negocios; indicadores de gestión; procesos de gestión escolar;
+power bi; gestión de la información.
+
+
+
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3019
+
+            Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+
+        Dashboard for the improvement of school management
+                             in educational institutions
+ABSTRACT
+Educational institutions lack a registry of defined indicators that serve as support for the
+evaluation of school management processes, making it difficult to establish the level of progress
+in the school management commitments established in the Annual Work Plan, delaying the
+fluidity of data, increasing costs and spending a lot of time for decision making.
+The objective of this study is to implement a Dashboard-based business intelligence system that
+improves school management in educational institutions; To this end, the research question is
+the following: What is the design that the proposal for a "Dashboard" should have to improve the
+School Management of the Directors of Educational Institutions of Secondary Education of the
+District of Vice - Sechura?
+The research question was answered through a non-experimental and cross-sectional descriptive
+study, in which a survey was applied as an instrument to measure the appreciation that managers
+of educational institutions have regarding the use of computer resources for information
+processing, whose data obtained were represented in the Dashboard using Power BI and
+Microsoft Excel dynamic tables, the key indicators of the variables and dimensions that have the
+greatest impact on school management were identified. Consequently, said tool provided
+support to the institutions in terms of the management and administration of real and pertinent
+information, reducing the established times and rightly contributing to the improvement of
+management.
+
+Keywords: business intelligence; management indicators; school management processes; power
+bi; information management.
+
+
+
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3020
+
+                                     Vite Ayala y otros
+
+
+INTRODUCCIÓN
+En el presente tiempo que vivimos en un mundo globalizado y con el avance vertiginoso
+de la tecnología, resulta esencial que los directivos escolares dispongan de estas
+herramientas para facilitar la extracción de datos que nos permita analizarlos de una
+manera eficaz dentro de un mundo que ha pasado de la gestión de la información a la
+gestión del conocimiento y que al mismo tiempo nos permita competir en este contexto
+de permanentes cambios y adaptaciones. De esta manera, el talento humano, la cultura
+del aprendizaje organizacional y el uso de las tecnologías se consideran esenciales para
+la toma de decisiones que vayan en relación con las metas establecidas en los
+instrumentos asociados a la gestión educativa; así como también en la búsqueda del
+posicionamiento institucional frente a la comunidad educativa y para trascender en ella.
+El Ministerio de Educación del Perú – MINEDU, ha implementado plataformas digitales
+que permiten automatizar procesos, tales como SIAGIE, especializada en matrícula y
+evaluación de los estudiantes y reporte de materiales educativos, SICRECE, para acceder
+a los resultados de las evaluaciones censales y SIMON, que permite registrar y obtener
+información acerca del proceso de monitoreo en los diferentes programas que se
+implementa en el sector educación; pero que éstas brindan información estática
+resultando muy poco provechosa para la toma de decisiones a cargo del personal
+directivo de las instituciones educativas.
+Valles, et al. (2019) señalan que para conocer la problemática respecto a la acreditación
+de instituciones educativas, se debe de tener en cuenta el sistema de monitoreo diseñado
+y proporcionado por SINEACE; correspondiente a la matriz propuesta por ella; sin
+embargo, no brinda la funcionalidad requerida para un adecuado monitoreo y control en
+el cumplimiento de los patrones de acreditación, en particular la falta de indicadores que
+son elemento clave para poder medir el desempeño, lo que genera demoras en la toma
+de decisiones por parte del organismo responsable de este proceso.
+Permanentemente crecen las necesidades de organizar mejor la información en las
+diferentes áreas de gestión escolar, pues se evidencia una innecesaria cantidad de
+documentos impresos, además que no se dispone de la información en el tiempo y
+espacio adecuados. Los directivos escolares con frecuencia se encuentran abrumados por
+documentos irrelevantes; en el caso de las instituciones educativas del distrito de Vice
+que brindan el servicio educativo en el nivel secundario, disponen de un servidor y
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3021
+
+           Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+servicios de internet brindado por el Ministerio de Educación, pero se desaprovechan
+estos espacios y recursos tecnológicos, por lo que resulta necesario aprovecharlos
+diseñando e implementando tableros de control y cuadros de mando que ayudarían a
+evaluar de manera permanente si se están logrando las metas planteadas dentro de los
+llamados compromisos de gestión escolar.
+De acuerdo a los informes de gestión anual, el proceso de manejo y organización de la
+información educativa se realizan haciendo uso de Microsoft Word y Excel, programas
+que consolidan la información, pero que no hacen uso de métricas, mediciones e
+indicadores de rendimiento, para garantizar un sólido diagnóstico y una oportuna toma
+de decisiones; tampoco se tiene el control en tiempo real del avance en el cumplimiento
+de los instrumentos de gestión escolar, se puede contar con planificaciones de toda
+índole, pero éstos no presenta información real y actualizada. Si un directivo se encuentra
+muy bien informado de los acontecimientos a nivel institucional por medio de datos
+reales y actualizados, puede tomar decisiones mucho más acertadas, aumentar la
+productividad y lograr que su institución sea eficiente y mejore la calidad educativa, al
+mismo tiempo que evita el stress y se fortalece socioemocionalmente.
+El personal no constituye recurso "comparable" con otros recursos organizacionales, sino
+que contribuyen a la ventaja competitiva de la empresa, porque solo el talento humano
+puede crear un vínculo entre los recursos humanos y los recursos organizacionales. La
+competencia se refiere al conocimiento que posee un empleado para establecer la
+relación entre eficiencia y la eficacia en función de sus habilidades laborales. (Alles, 2009;
+Chiavenato, 2009)
+La investigación aborda esta necesidad, específicamente de las instituciones educativas
+que ofrecen sus servicios educativos en el nivel de secundaria en el distrito de Vice, la
+cual pertenece a la Unidad de Gestión Educativa Local de Sechura (UGEL Sechura) de la
+región Piura, debido al cual se realizó el análisis de las diversas problemáticas, logrando
+de esta manera identificar que existe un manejo deficiente, así como también déficit en
+referencia al almacenamiento de la información; la cual es generada por los estudiantes
+y recopilada a través de datos históricos producto de las evaluaciones de logros de
+aprendizaje.
+Por otra parte tenemos que la Evaluación Censal de Estudiantes (ECE), la cual se aplica
+anualmente a nivel nacional en estudiantes que se encentran en el segundo y cuarto
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3022
+
+                                    Vite Ayala y otros
+
+
+grado del nivel primario y segundo año de educación secundaria, así mismo tenemos a
+la Evaluación Muestral de Estudiantes (EME), la cual se aplica a una muestra, cuya
+información posteriormente va a generar conocimiento que permita la toma de
+decisiones oportuna; sin embargo, no se cuenta con una de bases de datos organizada e
+integrada que permita el uso de esta información de manera óptima.
+La utilización de un Dashboard permitirá a los directivos tener una perspectiva clara de
+los avances en el desarrollo de los procesos de gestión escolar, tomando decisiones
+pertinentes, utilizando la información correcta y actualizada dentro de un contexto en
+donde existe un manejo excesivo de información. Cuando hay muchos datos y no se
+cuenta con las herramientas necesarias para analizar y extraer información invaluable, el
+personal incrementa la dedicación para extraer datos vacíos (Davenport, 2013).
+Consciente de esta realidad se propone la realización de un trabajo de investigación que
+se enmarca en la siguiente interrogante ¿Cuál es el diseño que deberá tener la propuesta
+de un “Dashboard” para mejorar la Gestión Escolar de los Directivos de Instituciones
+Educativas de Educación Secundaria del Distrito de Vice; en el distrito de Sechura? y,
+teniendo en cuenta también interrogantes como; ¿cuáles son los indicadores de gestión
+escolar que determinan el logro de metas?, así como también: ¿cuáles son las estrategias
+y fuentes de datos para mejorar los procesos de gestión escolar?, y por último: ¿a qué
+requerimientos responde el Dashboard para mejorar la gestión escolar?.
+Socialmente la investigación se fundamenta en el uso de los resultados para generar la
+reflexión e implementación de propuestas estratégicas de mejora de los procesos de
+gestión escolar, controlando adecuadamente los factores que pudieran incidir en la no
+consecución de las metas, lo cual permitirá mejorar la calidad educativa en nuestras
+instituciones educativas.
+Metodológicamente es sólido ya que proporciona procesos y herramientas comprobados
+y confiables para garantizar que otros directivos logren fundamentar sus decisiones,
+analizando la información real y actualizada, estableciendo estrategias para que ésta
+apunte al logro de los objetivos propuestos y contribuyan al cumplimiento de los
+indicadores y las metas institucionales.
+El objetivo general del estudio está dado por diseñar un panel de control o Dashboard
+para mejorar la Gestión Escolar en las Instituciones Educativas del distrito Vice, provincia
+de Sechura, durante el periodo lectivo 2022. Así mismo los objetivos específicos que se
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3023
+
+           Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+han logrado son: identificar los indicadores de gestión escolar que determinan el logro
+de metas; así como también determinar las estrategias y fuentes de datos para la mejora
+de los procesos de gestión escolar; y por último determinar los requerimientos a que
+debe responder el Dashboard para la mejora de la gestión escolar.
+En tal sentido se formula la hipótesis general: el uso del Dashboard mejorará la gestión
+escolar en las instituciones educativas del nivel secundario del distrito de Vice.
+
+
+METODOLOGÍA
+El tipo de estudio se considera en un marco descriptivo, no experimental, transaccional.
+La investigación no empírica se lleva a cabo sin ninguna manipulación de variables. Solo
+se observan los eventos tal como se evalúan en su espacio real, que luego serán
+analizados e interpretados. (Murillo, 2010). El proyecto a considerar en el estudio tendrá
+un nivel de propuesta descriptivo. Las obras descriptivas describen el contexto,
+considerándolo en términos de tiempo y espacio. (Hernández, 2016). El diseño
+propositivo se cimenta en necesidades, deseos o vacíos dentro de una organización,
+después de recibir la información, se formalizará la propuesta para implementación de
+Dashboard o tableros de control haciendo uso de la inteligencia de negocios a través de
+Power BI de Microsoft, aprovechando los datos disponibles en las instituciones
+educativas para generar información y construir conocimiento para la mejorar la gestión
+escolar. Una vez que se identifica el problema, comenzamos a explorar, profundizar y
+proponer una solución en un contexto específico. (Vara, 2010).
+
+
+RESULTADOS Y DISCUSIÓN
+La primera variable referente a dashboard tiene que ver en como el directivo presenta
+una noción para poseer información relevante y en tiempo real a través de un tablero de
+control. Está conformada por dos dimensiones; diseño del tablero de control y análisis de
+la información. La primera dimensión presenta indicadores tales como; organización de
+la información, canales de comunicación, relevancia de la información e indicadores
+claves de rendimiento y tiene que ver cómo los directivos organizan la información que
+publican, cuáles son las características de esa información, su relevancia en el contexto
+educativo e identificar indicadores que incidan en la mejora de la gestión escolar.
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3024
+
+                                                   Vite Ayala y otros
+
+
+Tabla 1
+Organización de la información
+                                                            Casi                                      Casi
+               Items                        Nunca                             A veces                              Siempre
+                                                          nunca                                     siempre
+                                            F      %      F      %            F         %           F      %       F           %
+ Publica información en
+                                            0     0.0     0         0.0       3       33.3          4   44.4       2      22.2
+ medios digitales
+ La información se refleja
+                                            0     0.0     0         0.0       0        0.0          4   44.4       5      55.6
+ para cada área de gestión.
+ Utiliza el espacio virtual en
+                                            0     0.0     0         0.0       0        0.0          6   66.7       3      33.3
+ forma estratégica.
+ Mantiene los registros
+                                            0     0.0     0         0.0       0        0.0          2   22.2       7      77.8
+ actualizados y seguros.
+ Emplea gráficos y/o barras
+                                            0     0.0     0         0.0       0        0.0          4   44.4       5      55.6
+ estadísticas.
+
+
+Figura 1
+Organización de la información
+
+                                       Organización de la información
+ 90
+                                                                                               77,8
+ 80
+                                                                66,7
+ 70
+ 60                                             55,6                                                                   55,6
+ 50               44,4                   44,4                                                                      44,4
+ 40           33,3                                                   33,3
+ 30                  22,2                                                                    22,2
+ 20
+ 10
+                                      0,0                     0,0                        0,0                    0,0
+  0
+      Publica información en La información está Utiliza el espacio virtual       Mantiene registros    Emplea gráficos y/ o
+        diferentes medios definida para cada área de manera estratégica.            actualizados y       barras estadísticas
+             digitales.           de gestión.                                      almacenados de
+                                                                                   manera segura.
+
+
+Este escenario muestra que el 22% de los directivos registran un resultado en el intervalo
+“muy alto”; un 44% se ubica en el intervalo “alto” y el 33% restante en el intervalo
+“medio”, o sea casi siempre los directivos de la muestra publican información, pero
+requieren el conocimiento de otras estrategias que les permitan analizar la información
+de una forma más rápida y eficiente. Con una tendencia similar, el 56% manifiesta que
+siempre organizan la información que publican en diferentes medios digitales, la definen
+para cada área de gestión o dimensión educativa y el 44% lo realiza casi siempre cuando
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3025
+
+           Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+publican información de índole educativa en los medios utilizados, esto quiere decir que
+se toma en cuenta los aspectos; pedagógico, institucional, administrativo y comunitario.
+El 33%, siempre utiliza el espacio virtual estratégicamente, el 67% lo realiza casi siempre
+y el 78% mantiene su registro de datos actualizados y seguros en las publicaciones que
+realiza, el 22% lo realiza casi siempre y en relación a si se ayudan de gráficos estadísticos,
+el 56% lo realiza siempre y un 44% lo hace casi siempre, pero se requiere mayores
+alcances acerca de la manera que deberá estar diseñado considerando las dimensiones
+de gestión escolar. Sin embargo, vale la pena señalar que el estudio aplicado en el
+presente contexto sólo implica la participación de directores, subdirectores y
+coordinadores pedagógicos. Por tal motivo, será necesario establecer en próximos
+estudios, la participación de docentes y algunos padres de familia para hacer del
+dashboard una estrategia de uso permanente y eficiente en todas las instituciones
+educativas.
+
+
+Tabla 2
+Canales de comunicación
+                                              Casi                      Casi
+              Items              Nunca                   A veces                     Siempre
+                                            nunca                     siempre
+                                F    %      F      %    F      %      F      %       F    %
+ Utiliza medios virtuales
+ para dar a conocer             0    0.0    0    0.0    3    33.3     4    11.1      5   55.6
+ información de su I.E..
+ Presenta     un     diseño
+ amigable y vistoso para la     0    0.0    0    0.0    1    11.1     4    22.2      6   66.7
+ comunicación.
+ Toma en cuenta el
+ contexto para publicar         0    0.0    0    0.0    1    11.1     6    55.6      3   33.3
+ información.
+ La     información      que
+ comunica es fácil de           0    0.0    0    0.0    0     0.0     2    11.1      8   88.9
+ comprender y analizar.
+ Se       acompaña        de
+ aplicativos,    programas      0    0.0    0    0.0    1    11.1     4    55.6      2   22.2
+ informáticos u otros.
+
+
+
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3026
+
+                                              Vite Ayala y otros
+
+
+
+
+Figura 2
+Canales de comunicación
+
+                                           Canales de Comunicación
+ 100
+                                                                                     88,9
+  90
+  80
+                                           66,7
+  70
+  60                 55,6                                   55,6                                      55,6
+  50
+  40          33,3                                              33,3
+  30                                   22,2                                                               22,2
+  20              11,1              11,1                 11,1                    11,1              11,1
+  10
+                                                                               0,0
+   0
+           Utiliza medios    Presenta un diseño Toma en cuenta el La información que         Se acompaña de
+        virtuales para dar a amigable y vistoso    contexto para      comunica es fácil de      aplicativos,
+       conocer información        para la       publicar información.   comprender y            programas
+             de su I.E.        comunicación.                              analizar.        informáticos u otros.
+
+
+
+
+A continuación, se describen los resultados de la dimensión que integra el diseño del
+tablero de control; a través del indicador Canales de Comunicación. La primera de ellas
+es la que corresponde que siempre o casi siempre los directivos, en un 67 %, hacen uso
+de medios virtuales para dar a conocer la información, el 89%, considera que sus diseños
+son siempre o casi siempre vistosos para el público, mientras que el factor predominante
+es que entre siempre y casi siempre se toma en cuenta el contexto para publicar a
+información en un 89%; además que un 100% considera que la información publicada
+resulta siempre o casi siempre fácil de comprender. También se considera que el 22%
+siempre se acompaña por aplicativos y el 56% considera que casi siempre se realiza. Los
+resultados que se revelan para cada uno de los indicadores nos indican que realmente se
+son de gran ayuda los medios virtuales, pues facilitan la difusión de información, pero
+aún se pueden mejorar estos aspectos a través de la utilización de aplicativos
+informáticos.
+
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3027
+
+            Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+Tabla 3. Relevancia de la información
+                                                            Casi                                 Casi
+             Items                        Nunca                            A veces                                Siempre
+                                                          nunca                                siempre
+                                         F      %         F      %        F        %           F     %            F           %
+ Identifica la información
+ clave para la toma de                   0     0.0        0      0.0      3       0.0          7       77.8       2       22.2
+ decisiones.
+ Establece un orden de
+ prioridad en la publicación             0     0.0        0      0.0      0       0.0          5       55.6       4       44.4
+ de información.
+ La información que utiliza
+ influye en la mejora de                 0     0.0        0      0.0      0       0.0          3       33.3       6       66.7
+ logro de aprendizajes.
+ La información procede
+ de fuentes oficiales y/o                0     0.0        0      0.0      0       0.0          0        0.0       9      100.0
+ confiables.
+
+Figura 3. Relevancia de la información
+
+                                         Relevancia de la Información
+ 120
+                                                                                                                        100
+ 100
+
+                     77,78
+  80
+                                                                                     66,67
+
+  60                                              55,56
+                                                       44,44
+  40                                                                            33,33
+                         22,22
+  20
+                                                                                                                 0,00
+   0
+       Identifica la información      Establece un orden de      La información que utiliza        La información procede de
+         clave para la toma de     prioridad para la publicación influye en la mejora de los           fuentes oficiales y/o
+              decisiones.                de la información.        logros de aprendizaje.                  confiables.
+
+
+De la figura 3, el 22.2% de los directivos indicaron que identifican la información clave
+para la toma de decisiones como muy relevante. El 77.8% de los usuarios indicaron que
+la información identificada es relevante como apoyo a sus labores. No se registran
+respuestas en que la información descrita resulta escasa o nada relevante como apoyo a
+sus labores. Con estos resultados se infiere que el grado de relevancia de la información
+identificada es muy relevante para la mayoría de los directivos en contraste con la poca
+relevancia que tiene la información para la minoría de los usuarios.
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3028
+
+                                               Vite Ayala y otros
+
+
+En referencia a que si establecen un orden de prioridad para publicar información; el
+100% lo considera muy relevante y relevante, tampoco se registran respuestas en que la
+información priorizada resulta escasa o nada relevante como apoyo a sus labores. Con
+relación a que si la información que utiliza influye en la mejora de los logros de
+aprendizaje; el 100% lo considera entre muy relevante y relevante. En esta línea, el 100%
+de directivos manifiestan que la información procede de fuentes oficiales, destacando
+entre ellos las plataformas; SIAGIE, SICRECE, SIMON y Perú Educa.
+Tabla 4. Indicadores claves de rendimiento
+              Items                     Nunca                Casi          A veces              Casi           Siempre
+                                                           nunca                              siempre
+                                        F        %         F      %       F            %      F     %          F            %
+ Emplea indicadores de                                                                                                  55.6
+                                        0       0.0        0     0.0      1       11.1        3    33.3        5
+ medición en su gestión.
+ Utiliza métricas.                      0       0.0        0     0.0      3       33.3        3    33.3        3        33.3
+ Le es útil la información                                                                                              77.8
+                                        0       0.0        0     0.0      2       22.2        6    0.0         7
+ generada en Excel.
+ Presenta            datos
+ actualizados de sus                    0       0.0        0     0.0      0        0.0        2    55.6        4        44.4
+ estudiantes
+
+
+Figura 4. Indicadores claves de rendimiento
+
+                                      Indicadores Claves de Rendimiento
+ 90
+                                                                                       77,8
+ 80
+ 70
+ 60                            55,6                                                                           55,6
+
+ 50                                                                                                                  44,4
+ 40                     33,3                33,3 33,3 33,3
+ 30                                                                       22,2
+ 20
+                 11,1
+ 10
+                                                                                 0,0                    0,0
+  0
+      Ha trabajado con indicadores     Utilizas métricas       Le ha servido la información Tiene actualizados datos de
+      de medición para mejorar su                                generada en Excel en el       sus estudiantes en los
+                gestión                                            proceso de toma de             últimos 3 años.
+                                                                        decisiones.
+
+
+De la figura 4 se evidencia que, el 55.6% de los directivos han tomado en cuenta
+indicadores de medición mencionando que siempre lo toman en cuenta, el 33.3% de los
+usuarios indicaron que casi siempre lo realizan y el 11,1% lo realiza a veces. Con estos
+resultados se infiere que todos los directivos toman como referencia indicadores para
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3029
+
+           Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+evaluar su gestión al frente de la institución. En relación a que si utilizan métricas
+entendidas como valores medibles que muestran el éxito en la implementación de los
+compromisos de gestión escolar; el 33.3%, en cada uno de los casos, que de una u otra
+manera; a veces, casi siempre o siempre lo realiza.
+En función a la interrogante si les es útil la información generada en Excel para la toma
+de decisiones, se establece que un mayoritario 77,8% considera que permanentemente
+le es útil y el 22,2% a veces les es útil. Como en los casos anteriores, no se registran
+respuestas en que la información resulta escasa o nada relevante en la toma de
+decisiones para la mejora de la gestión escolar. En esta línea, el 100% de directivos
+manifiestan que trabajan con aplicativos de Excel para elaboración del PEI y PAT y mapas
+de progreso de los aprendizajes. En respuesta a la pregunta si tiene actualizados la data
+de estudiantes en los tres últimos años, el 44,4% establece que siempre lo actualiza y el
+55% casi siempre lo implementa.
+La segunda dimensión de la variable independiente tablero de control o dashboard se
+denomina análisis de la información y establece indicadores tales como; uso y acceso a
+la información y evaluación de la información y se entiende sobre todo si los directivos
+cuentan con acceso a la información que les permita tomar decisiones pertinentes en la
+mejora de la gestión escolar, además que si la información les genera nuevos
+conocimientos.
+Tabla 5. Uso y acceso a la información
+                                             Casi                     Casi
+           Items               Nunca                   A veces                       Siempre
+                                           nunca                    siempre
+                               F    %      F      %    F     %      F     %      F        %
+ Tiene acceso a la
+ información de la gestión
+                               0   0.0     0    0.0    3     0.0    0     0.0    9      100.0
+ y la usa de manera
+ adecuada.
+ La información priorizada
+ se usa de manera              0   0.0     0    0.0    0     0.0    1    11.1    8      88.9
+ pertinente.
+ La     información      es
+ analizada y actualizada de    0   0.0     0    0.0    0     0.0    5    55.6    4      44.4
+ manera permanente.
+ Sistematiza la información
+ para mejorar la gestión       0   0.0     0    0.0    0     0.0    5    55.6    4      44.4
+ escolar.
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3030
+
+                                                  Vite Ayala y otros
+
+
+Figura 5. Uso y acceso a la información
+
+                                     Uso y acceso a la Información
+ 120
+                           100,0
+ 100                                                     88,9
+
+  80
+                                                                                   55,6                        55,6
+  60
+                                                                                       44,4                        44,4
+  40
+
+  20                                                 11,1
+                        0,0
+   0
+        Los directivos tiene acceso a La información priorizada se La información es actualizada Sistematiza la información
+       la información de la gestión y utiliza de manera pertinente.    y analizada de manera     para mejora de la gestión
+       la usan de manera adecuada.                                         permanente.                    escolar.
+
+
+De la figura 5 se puede interpretar que, el 100% de los directivos tienen acceso
+permanente a la información y la usan de manera adecuada, en una segunda
+interrogante, el 88.9% indicaron que siempre priorizan la información y lo utilizan de
+manera pertinente, mientras que el 11,1% lo realiza casi siempre. Con respecto al tercer
+ítems, si la información es actualizada y analizada de manera permanente, el 44,4%
+establecen que siempre lo hacen, en contraste con el 11,1% que casi siempre lo realiza.
+Preguntados si sistematizan la información, los directivos establecen que el 44,4%
+siempre lo realizan mientras que el 55,6% casi siempre lo toma en cuenta. Con estos
+resultados se deduce que los directivos tienen acceso y hacen uso adecuado de la
+información educativa, además que priorizan la información a utilizar y que esta se
+encuentra actualizando permanentemente. Se infiere que los directivos sistematizan la
+información para efectos de implementación de planes de mejora de los aprendizajes, así
+como para la ejecución de proyectos de innovación educativa.
+Tabla 6. Evaluación de la información
+ Items                                     Nunca            Casi           A veces            Casi              Siempre
+                                                            nunca                             siempre
+                                           F     %          F     %        F        %         F    %            F       %
+ La información aporta para el
+                                           0     0.0            0   0.0        0     0.0          2   22.2        7     77.8
+ logro de objetivos y metas.
+ La información utilizada
+ afecta positivamente las                  0     0.0            0   0.0        0     0.0          4   44.4        5     55.6
+ decisiones del equipo.
+ La información me genera
+                                           0     0.0            0   0.0        0     0.0          2   22.2        7     77.8
+ nuevos conocimientos.
+ La información es útil para
+                                           0     0.0        0       0.0    0        0.0       1       11.1      8       88.9
+ mejorar la gestión escolar.
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3031
+
+            Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+Figura 6. Evaluación de la información
+
+                                      Evaluación de la Información
+ 100
+                                                                                                              88,9
+  90
+                         77,8                                                    77,8
+  80
+  70
+  60                                                 55,6
+  50                                             44,4
+  40
+  30                 22,2                                                    22,2
+  20                                                                                                      11,1
+  10
+   0
+       La información priorizada   La información utilizada   La información utilizada me La información priorizada es
+        aporta para el logro de    afecta positivamente las    sirve para generar nuevos    útil para la mejora de la
+           objetivos o metas.       decisiones del equipo.           conocimientos.              gestión escolar.
+
+
+De la figura 6 se interpreta que, el 77,8% la información priorizada siempre les aporta
+para el logro de metas propuestas, mientras que para un 22,2% casi siempre lo
+consideran relevante. Con referencia a que si la información utilizada afecta
+positivamente las decisiones que toma el equipo directivo, el 55,6% manifiestan que
+persistentemente les aporta y el 44,4% que casi siempre contribuye en las decisiones que
+establecen. Con respecto que la información es útil para generar nuevos conocimientos,
+el 77,8% establecen que les es muy útil, en tanto que el 22,2% considera que casi siempre
+les resulta de mucha utilidad.
+Con respecto a que, si la información priorizada les es ventajosa para la mejora de la
+gestión escolar, un mayoritario 88,9% manifiesta que definitivamente es muy útil y un
+11,1% lo considera útil. A partir de esta información se tiene que los datos extraídos de
+las diversas fuentes de información, de ser procesadas adecuadamente con el aporte de
+herramientas tecnológicas como Power BI, coadyuvaran a planificar partiendo de un
+diagnóstico auténtico, que permita la consecución de las metas establecidas.
+La variable dependiente es referente a gestión escolar, se relaciona cómo el directivo
+realiza una comunicación efectiva tomando en cuenta su liderazgo escolar y desemboca
+en la transparencia de la gestión a través de la rendición de cuentas. Está conformada
+por cuatro dimensiones; comunicación efectiva, manejo de recursos, gestión
+participativa y toma de decisiones, pero que en esta oportunidad solo me referiré al
+liderazgo escolar por ser el que mejor se relaciona con la variable independiente tablero
+de control o dashboard.
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3032
+
+                                     Vite Ayala y otros
+
+
+La estrategia Tablero de Control o Dashboard; se fundamenta en base al análisis de
+indicadores claves que implementan las empresas que reciben el nombre de Business
+Intelligence (BI) con una amplia gama de herramientas para el manejo oportuno de
+grandes cantidades de datos. Por lo tanto, tener ingentes cantidades de datos sin
+herramientas para analizarlos y extraer información valiosa de ellos aumenta el tiempo
+que los empleados dedican a datos vacíos (Davenport, 2013).
+La implementación del dashboard diseñado con el software Power BI, proporciona un
+soporte significativo en la gestión y análisis de información en las instituciones educativas
+del distrito de Vice y permite identificar e interpretar de forma sencilla y confiable los
+datos obtenidos a través de la caracterización de estudiantes, docentes, padres de familia
+y aliados estratégicos, tomando como referencia la misión, visión y objetivos estratégicos
+establecidos en el PEI. En este sentido, Ortegón, (2021), menciona que la selección de
+actividades que estarán representadas en los tableros de control debe establecerse
+teniendo en cuenta la misión y visión de las instituciones. Otros factores a considerar son
+las actividades desarrolladas por los diferentes actores y las perspectivas de los usuarios”.
+(p. 36).
+Se debe enfatizar que escasamente nos servirá la tecnología si no se tiene el dominio
+esencial para poder generar conocimiento aprovechando sus recursos, de ahí la
+relevancia de relacionar la dimensión administrativa y/o soporte, en cuanto a la gestión
+de los recursos y las competencias del personal directivo o administrativo de la institución
+educativa, sin este vínculo, la gestión de la información y del conocimiento no se verán
+fortalecidas. Así (Tafur, 2018) afirma que las competencias directivas son facultades que
+orientan el éxito en la organización escolar en términos de resultados, formación del
+personal docente, habilidades para la gestión y el manejo eficiente de los recursos. Son
+las competencias laborales del director, tanto en el aspecto personal como profesional,
+y que representan un conjunto de habilidades, conocimientos y cualidades para
+desempeñar los deberes y funciones relacionados con su cargo.
+Respecto a la valoración de la utilidad, uso y relevancia de la información, coincido con
+Papic-Dominguez (2020), quien recogió la opinión de directivos en Chile describiendo los
+medios de comunicación organizacional interna mayormente utilizados por entre el
+equipo de directivos y profesores, demostrando que los medios más utilizados por los
+participantes son las reuniones (91,0%) y las circulares (89,0%). Se puede concluir que los
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3033
+
+           Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+directivos hacen uso de diversos medios de información y comunicación accesibles, como
+Facebook, Google Sites, Blogs, etc. para dar a conocer la información generada por la
+institución educativa, pero que también utilizan aplicaciones en WhatsApp, hacen uso de
+acciones de trabajo colegiado y generan documentos impresos para dar a conocer
+información a los diversos actores educativos.
+Con referencia a identificar los indicadores de gestión escolar que determinan el logro de
+metas en instituciones educativas del nivel de educación secundaria del distrito de Vice
+– 2022 y, en concordancia con la variable gestión escolar, Pascal et. al (2017): establece
+que la disponibilidad de información oportuna y confiable para supervisar las funciones
+centrales de una organización es un elemento clave en la gestión académica. A través de
+la implementación del dashboard, se identifican los indicadores claves en los diversos
+procesos de gestión escolar y se bosquejan para ser plasmados en él.
+En esta misma línea, Rodríguez (2017), en referencia a los indicadores de gestión
+establece que cuando se hace un diagnóstico en la organización se debe seleccionar un
+conjunto de indicadores para la orientación en una gestión por procesos. La medición es
+requisito de la gestión. Lo que no se mide no se puede gestionar y, por lo tanto, no se
+puede mejorar (p.40).
+En el caso de la presente investigación, los directivos de las instituciones educativas que
+ofrecen el servicio educativo en el nivel de educación secundaria en el distrito de Vice
+manifiestan que hacen uso de indicadores, pero que éstos son genéricos y están pre
+establecidos por parte del Ministerio de Educación, considerando que                 según lo
+establecido en la figura 7 de la presente investigación, el 100% han tomado en cuenta
+indicadores de medición de una u otra ocasión y que es base para la medición de la
+gestión escolar. Además, los resultados de la aplicación del instrumento esclarecen que
+los directivos realizan una planificación metódica; lo que se debe complementar es el uso
+de software, aplicaciones o cualquier tipo de herramientas tecnológicas útiles para
+facilitar el análisis de los datos que existe en abundancia en la institución educativa y que
+nos conlleva a generar información y posteriormente nuevos conocimientos. Al tomar en
+cuenta indicadores de gestión dentro de una gestión por procesos se deben afianzar las
+competencias de los directivos en relación al manejo de recursos informáticos,
+avanzando con la generación de tablas dinámicas de Excel y la propuesta del uso del
+software Power BI para gerenciar la institución educativa como una empresa.
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3034
+
+                                    Vite Ayala y otros
+
+
+En relación identificar los requerimientos del Dashboard que se materializan a través de
+la caracterización de los actores educativos y, a partir de ellos, los indicadores claves de
+rendimiento de las diferentes áreas de gestión educativa, Mora (2019) diseña una
+herramienta para la generación de reportes y listados específicos relacionados con el
+abandono, reprobación y aprobación de los estudiantes a partir de datos obtenidos en
+los cursos de la UNAD para su posible implementación, mediante el uso de las TICs e
+Inteligencia de Negocios. En el presente estudio se hace uso de la herramienta Power BI
+que nos permite conocer rápidamente el estado de la gestión escolar a partir de la
+extracción y transformación de datos en reportes obtenidos desde plataformas digitales
+del Ministerio de Educación relacionados con los dos primeros compromisos de gestión
+escolar, mediante el análisis de información, generándose reportes y listados detallados
+y visualizando estadísticas de estudiantes, docentes y padres de familia de las
+instituciones educativas.
+CONCLUSIONES
+1. La implementación de un dashboard permite analizar los indicadores, establecidos a
+   través de los instrumentos de gestión escolar y que son los que determinan el logro
+   de metas establecidas en ellos, proporcionando la información necesaria para
+   gestionar nuevos conocimientos y generando un mayor nivel de satisfacción de los
+   miembros del equipo directivo de las instituciones educativas.
+2. Las instituciones educativas implementan una variedad de procesos que requieren de
+   una evaluación permanente para una toma de decisiones oportuna y pertinente. La
+   incorporación de registros de datos en las dimensiones; administrativo, institucional,
+   pedagógico y comunitario pueden ser representadas en herramientas digitales, las
+   cuales deben facilitar a los directivos las labores de análisis y toma de decisiones.
+3. La optimización de los procesos dentro de las instituciones educativas del distrito de
+   Vice, tras la implementación del dashboard, es evidente ya que el equipo directivo
+   implementa estrategias y fuentes de datos que les permiten monitorear, gestionar,
+   intervenir y representar la información, permitiéndoles mejorar los procesos de
+   gestión escolar manteniéndolos en niveles óptimos.
+4. Se ha logrado identificar los requerimientos del Dashboard que se materializan a
+   través de la caracterización de los actores educativos y, a partir de ellos, los
+   indicadores claves de rendimiento de las diferentes áreas de gestión educativa, los
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3035
+
+           Dashboard para mejora de la gestión escolar en instituciones educativas
+
+
+    cuales están en función al uso de indicadores e instrumentos de medición
+    desarrollados en Excel a través del uso de tablas dinámicas.
+LISTA DE REFERENCIAS
+Alvaro de la Cruz, F. M. (2020). La gestión escolar y la calidad educativa en las instituciones
+       educativas de la Parroquia El Cumbe. Repositorio de la Universidad Nacional
+       Mayor de San Marcos.
+Aristizabal, J. (2019). La inteligencia de negocios y la analítica del aprendizaje como
+        sistemas integrados de la gestión escolar. Revista de Estudios en Educación, 2(2),
+        49-75.
+Azpur, J. J. (2019). Habilidades Gerenciales y Gestión de los Recursos Humanos en la
+        Universidad Nacional San Cristobal de Huamanaga. Universidad César Vallejo.
+Barragán, J. J. (2020). Innovación tecnológica integral y gestión escolar en una institución
+        educativa de la ciudad de Valencia. Repositorio Universidad César Vallejo.
+Barzaga O., Vélez H., Nevaréz J., Arroyo M. (2019). Gestión de la información y toma de
+        decisiones en organizaciones educativas. Revista de Ciencias Sociales RCS, 25(2),
+        120-130.
+Bedor, J. (2019). Determinación y Aplicación de Indicadores Claves de Rendimiento.
+        Guayaquil: Universidad de Guayaquil.
+Bocanegra, S. (2019). Uso del Dashboard digital para el monitoreo de indicadores de las
+        Unidades de Investigación de la Universidad Nacional de San Martín - Tarapoto.
+        Repositorio de la Universidad Nacional de San Martín-Tarapoto.
+Calle, I. (2019). Dashboard Digital para el monitoreo de indicadores y metas de los
+        proyectos. Tarapoto: Universidad Nacional de San Martín.
+Chiavenato, I. (2009). Gestión del Talento Humano. Mexico DF: Mc Graw-
+        Hill/Interamericana editores.
+Cruz, A. d. (2020). La gestión escolar y la calidad educativa en las instituciones educativas
+        del nivel básico elemental de la Parroquia El Cumbe. El Cumbe - Ecuador:
+        Universidad Nacional Mayor de San Marcos.
+D., B. (2020). Relación entre innovación tecnológica y gestión escolar. Universidad César
+        Vallejo.
+Elizondo, A. (2005). La nueva escuela. Dirección, liderazgo y gestión escolar. Paidos:
+        Mexico.
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3036
+
+                                         Vite Ayala y otros
+
+
+Few, S. (2013). Information Dashboard Design. Estados Unidos: Analytics Press.
+García F, Juarez S y Salgado L. (2018). Gestión Escolar y Calidad Educativa. Revista Cubana
+         de Educación Superior, 7.
+Hernández G. y Fernández J. (2018). La planificación estratégica e indicadores de calidad
+         educativa. Revista Nacional de Administración, 9(1), 69-85.
+Mora, J. (2019). Implementación de una herramienta que permita la generación de
+         reportes para la gestión de información relacionada con el abandono, reprobación
+         y aprobación de los estudiantes de los cursos de la UNAD. Repositorio UNAD -
+         Bogotá.
+Norton, K. y. (2009). Cuadro de Mando, Una Herramienta de Gestión para la Toma de
+         Decisiones Directivas.
+Ortegon, M. V. (2021). Diseño de un Conjunto de Tableros de Control y Cuadros de Mando
+         para el Proceso de Toma de Decisiones en el ámbito Educativo. Medellin:
+         Universidad Nacional de Colombia.
+Oseda,     D.,      Mendivel    R.,   Durand    A.     .   (2020).    Sophia,   28(1),   207-235.
+         doi:https://doi.org/10.17163/soph.n28.2020.08
+Papic-Dominguez, K. (2020). Medios de comunicación organizacional interna en colegios
+         públicos     de    Chile.    Alteridad-Revista     de     Educación,   15(2),   241-255.
+         doi:(http://orcid.org/0000-0003-1091-4124)
+Rodriguez, J. (2017). Implementación de un Tablero de Control de Gestión para Toma de
+         Decisiones en una Empresa de Servicios Generales.
+Solis, H. (2020). Habilidades gerenciales, toma de decisiones y gestión de las instituciones
+         educativas        de    la     UGEL     07.       Saber      Servir,   1(3),    140-147.
+         doi:https://doi.org/10.54774/ss.2020.03.09
+Tafur, R. (2018). Las competencias directivas en la gestión de tres instituciones educativas
+         de Lima. Repositorio de la Pontificia Universidad Católica del Perú.
+Tarrillo, E. (2020). stilos de liderazgo y gestión administrativa en directores de
+         instituciones educativas públicas de Chiclayo. Repositorio Universidad César
+         Vallejo.
+Valencia, M. (2021). Diseño de un conjunto de tableros de. Repositorio Universidad
+         Nacional de Colombia.
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 3037
