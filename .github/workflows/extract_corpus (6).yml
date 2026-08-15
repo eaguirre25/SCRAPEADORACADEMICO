@@ -1,6 +1,11 @@
 name: Extracción de corpus (PDFs → texto)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'generate_drive_manifest.R'
+      - '.github/workflows/extract_corpus (6).yml'
   workflow_run:
     workflows: ["Academic Scraper"]
     types: [completed]
@@ -11,7 +16,7 @@ permissions:
 
 jobs:
   extract:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
 
@@ -43,7 +48,7 @@ jobs:
       - name: Asegurar carpeta data
         run: mkdir -p data
 
-      - name: Ejecutar extracción
+      - name: Ejecutar extracción y actualizar manifiesto de Drive
         env:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
@@ -56,15 +61,22 @@ jobs:
             GOOGLE_REFRESH_TOKEN="$GOOGLE_REFRESH_TOKEN" \
             DRIVE_FOLDER_ID="$DRIVE_FOLDER_ID" \
             Rscript extract_corpus.R
+          sudo -E env \
+            GOOGLE_CLIENT_ID="$GOOGLE_CLIENT_ID" \
+            GOOGLE_CLIENT_SECRET="$GOOGLE_CLIENT_SECRET" \
+            GOOGLE_REFRESH_TOKEN="$GOOGLE_REFRESH_TOKEN" \
+            DRIVE_FOLDER_ID="$DRIVE_FOLDER_ID" \
+            Rscript generate_drive_manifest.R
 
-      - name: Guardar corpus en GitHub
+      - name: Guardar corpus y manifiesto en GitHub
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/corpus.csv data/extraction_log.csv
+          git add data/corpus.csv data/extraction_log.csv data/drive_manifest.csv
           if git diff --cached --quiet; then
-            echo "Sin cambios en el corpus."
+            echo "Sin cambios en el corpus/manifiesto."
           else
-            git commit -m "Actualiza corpus de texto extraído de PDFs"
+            git commit -m "Actualiza corpus y manifiesto de PDFs de Drive"
+            git pull --rebase origin main
             git push
           fi
