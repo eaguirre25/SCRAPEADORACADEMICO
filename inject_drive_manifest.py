@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Enriquece docs/library_articles.json con IDs y URLs de Google Drive.
+"""Enriquece docs/library_articles.json con PDFs de Google Drive.
 
-Empareja primero por DOI real y, si falta, por título/año/autores contra el nombre
-normalizado del PDF en Drive. Esto evita perder vínculos cuando el manifiesto no
-puede reconstruir el DOI desde el filename.
+Regla de seguridad bibliográfica:
+1) DOI real exacto.
+2) Si no hay DOI utilizable, coincidencia ESTRICTA por título + año + autor.
+3) Si la coincidencia es ambigua, NO se vincula ningún PDF.
+
+Es preferible mostrar "PDF sin vincular" antes que abrir un trabajo incorrecto.
 """
 import csv, json, re, unicodedata
 from difflib import SequenceMatcher
@@ -15,6 +18,7 @@ if not ART.exists():
     raise SystemExit('Falta docs/library_articles.json')
 articles=json.loads(ART.read_text(encoding='utf-8'))
 
+STOP={'para','sobre','entre','desde','hacia','como','with','from','into','and','the','of','del','las','los','una','uno','unos','unas','por','con','sin','que','sus','this','that'}
 
 def norm(v):
     v=str(v or '').lower().strip()
@@ -24,73 +28,104 @@ def norm(v):
     v=re.sub(r'[^a-z0-9]+',' ',v)
     return re.sub(r'\s+',' ',v).strip()
 
-
 def doi_norm(v):
     v=str(v or '').lower().strip().replace('https://doi.org/','').replace('http://doi.org/','')
     return v if v.startswith('10.') and '/' in v else ''
 
-rows=[]
-by_doi={}
+def meaningful_tokens(v, minlen=4):
+    return [t for t in norm(v).split() if len(t)>=minlen and t not in STOP and not t.isdigit()]
+
+def author_tokens(v):
+    """Tokens distintivos de autor. Se usan solo como condición obligatoria de refuerzo."""
+    toks=meaningful_tokens(v,5)
+    # conservar hasta 8: apellidos compuestos y varios autores, sin convertir el autor en criterio laxo
+    return toks[:8]
+
+rows=[]; by_doi={}
 if MAN.exists():
     with MAN.open(encoding='utf-8-sig',newline='',errors='replace') as f:
         for r in csv.DictReader(f):
-            r['_name']=norm(r.get('filename'))
-            r['_slug']=norm(r.get('doi'))  # histórico: a veces esta columna contiene slug, no DOI
+            r['_hay']=norm(' '.join([r.get('filename',''),r.get('doi','')]))
             d=doi_norm(r.get('doi'))
-            if d:
-                by_doi[d]=r
+            if d: by_doi[d]=r
             rows.append(r)
 
-
-def score_article_file(a,r):
+def strict_score(a,r):
+    """Devuelve score solo si pasan simultáneamente título, año y autor."""
     title=norm(a.get('title'))
-    if not title:
-        return 0.0
-    hay=' '.join([r.get('_name',''),r.get('_slug','')]).strip()
-    if not hay:
-        return 0.0
-    # similitud base por título
-    s=SequenceMatcher(None,title,hay).ratio()
-    # coincidencia fuerte si el título aparece casi literal en el filename/slug
-    if title in hay:
-        s=max(s,0.96)
-    # tokens informativos del título
-    toks=[t for t in title.split() if len(t)>=5]
-    if toks:
-        overlap=sum(1 for t in toks if t in hay)/len(toks)
-        s=max(s,0.55+0.4*overlap)
-    year=norm(a.get('year'))
-    if year and year in hay:
-        s+=0.04
-    # apellido/autor como refuerzo, nunca como criterio único
-    authors=norm(a.get('authors'))
-    auth_toks=[t for t in authors.split() if len(t)>=5][:4]
-    if auth_toks and any(t in hay for t in auth_toks):
-        s+=0.03
-    return min(s,1.0)
+    hay=r.get('_hay','')
+    if not title or not hay: return 0.0
 
-linked=0
-fuzzy=0
+    # 1. Año obligatorio cuando está disponible en el registro.
+    year=norm(a.get('year'))
+    if year and year not in hay:
+        return 0.0
+
+    # 2. Autor obligatorio: al menos un token distintivo de autor debe figurar en filename/slug.
+    at=author_tokens(a.get('authors'))
+    if at and not any(t in hay for t in at):
+        return 0.0
+
+    # 3. Título: cobertura alta de tokens distintivos + similitud de secuencia.
+    tt=meaningful_tokens(title,4)
+    if not tt: return 0.0
+    overlap=sum(1 for t in tt if t in hay)/len(tt)
+    seq=SequenceMatcher(None,title,hay).ratio()
+
+    # Si el título entero está contenido, es una coincidencia muy fuerte.
+    if title in hay:
+        title_score=1.0
+    else:
+        # Los nombres de Drive pueden truncar títulos largos, pero no aceptamos coincidencias vagas.
+        # Exigimos al menos 78% de los tokens del título; para títulos cortos, 90%.
+        min_overlap=0.90 if len(tt)<=6 else 0.78
+        if overlap < min_overlap:
+            return 0.0
+        # La similitud global no puede ser demasiado baja aun con tokens coincidentes.
+        if seq < 0.58:
+            return 0.0
+        title_score=0.72*overlap + 0.28*seq
+
+    # refuerzo de autor: cuantos más tokens coinciden, mejor, pero no rescata un título insuficiente
+    auth_overlap=(sum(1 for t in at if t in hay)/len(at)) if at else 0.0
+    return min(1.0, 0.88*title_score + 0.12*auth_overlap)
+
+linked=0; strict_linked=0; ambiguous=0; unmatched=0
 for a in articles:
-    m=None
+    # limpiar cualquier vínculo heredado de builds previos antes de recalcular
+    for k in ('drive_file_id','drive_preview_url','drive_open_url','drive_filename','drive_match_method','drive_match_score'):
+        a.pop(k,None)
+
+    m=None; method=''; score=0.0
     d=doi_norm(a.get('doi'))
-    if d:
-        m=by_doi.get(d)
-    if not m and rows:
-        best=None; best_s=0.0
+    if d and d in by_doi:
+        m=by_doi[d]; method='doi_exact'; score=1.0
+    elif rows:
+        candidates=[]
         for r in rows:
-            sc=score_article_file(a,r)
-            if sc>best_s:
-                best_s=sc; best=r
-        # umbral conservador para evitar asociar un PDF equivocado
-        if best is not None and best_s>=0.82:
-            m=best; fuzzy+=1
+            sc=strict_score(a,r)
+            if sc>0: candidates.append((sc,r))
+        candidates.sort(key=lambda x:x[0], reverse=True)
+        if candidates:
+            best_s,best=candidates[0]
+            second_s=candidates[1][0] if len(candidates)>1 else 0.0
+            # Umbral alto + margen de unicidad. Si dos archivos son parecidos, no adivinar.
+            if best_s>=0.84 and (best_s-second_s>=0.07 or second_s==0):
+                m=best; method='strict_title_author_year'; score=best_s; strict_linked+=1
+            else:
+                ambiguous+=1
+
     if m:
-        a['drive_file_id']=m.get('drive_file_id','')
-        a['drive_preview_url']=m.get('preview_url','') or (f"https://drive.google.com/file/d/{m.get('drive_file_id','')}/preview" if m.get('drive_file_id') else '')
+        fid=m.get('drive_file_id','')
+        a['drive_file_id']=fid
+        a['drive_preview_url']=m.get('preview_url','') or (f'https://drive.google.com/file/d/{fid}/preview' if fid else '')
         a['drive_open_url']=m.get('open_url','') or m.get('web_view_link','')
         a['drive_filename']=m.get('filename','')
+        a['drive_match_method']=method
+        a['drive_match_score']=round(score,3)
         linked+=1
+    else:
+        unmatched+=1
 
 ART.write_text(json.dumps(articles,ensure_ascii=False),encoding='utf-8')
-print(f'Artículos enriquecidos con Drive: {linked} (por coincidencia de título/año/autor: {fuzzy})')
+print(f'PDFs Drive vinculados: {linked}; estrictos título+autor+año: {strict_linked}; ambiguos rechazados: {ambiguous}; sin vínculo: {unmatched}')
