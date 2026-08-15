@@ -8,6 +8,8 @@ on:
       - 'inject_library_link.py'
       - 'inject_library_ocr.py'
       - 'inject_library_pdf_viewer.py'
+      - 'inject_drive_manifest.py'
+      - 'data/drive_manifest.csv'
       - '.github/workflows/dashboard (2).yml'
   workflow_run:
     workflows: ["Análisis STM – Dirección Escolar"]
@@ -46,6 +48,7 @@ jobs:
           python generate_dashboard.py
           python generate_article_table.py
           python generate_research_library.py
+          python inject_drive_manifest.py
           python inject_library_ocr.py
           python inject_library_pdf_viewer.py
           python inject_library_link.py
