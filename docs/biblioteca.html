@@ -250,13 +250,26 @@ function exportAll(){let blob=new Blob([JSON.stringify(F,null,2)],{type:'applica
     return '<div class="fallback"><h2>'+e(a.title)+'</h2><p>'+e(a.authors||'')+(a.year?' · '+e(a.year):'')+'</p><p>No hay resumen ni texto interno. Usá <b>Sitio del artículo</b> para consultar la versión disponible.</p></div>'
   }
   function frame(src,label){if(!src)return'<div class="fallback"><h3>'+e(label)+'</h3><p>Esta fuente no está disponible.</p></div>';return'<iframe src="'+e(src)+'" style="width:100%;height:100%;border:0;background:#fff" allow="fullscreen"></iframe>'}
+  function pdfBody(a,drive,pdf){
+    if(drive){
+      const method=a.drive_match_method==='doi_exact'?'DOI exacto':(a.drive_match_method==='strict_title_author_year'?'título + autor + año':'vínculo verificado');
+      const fn=a.drive_filename||'archivo de Drive';
+      return '<div style="height:100%;display:flex;flex-direction:column;background:#fff">'
+        +'<div style="padding:7px 10px;background:#eef7ee;color:#173b17;border-bottom:1px solid #b8d8b8;font:12px Segoe UI,Arial,sans-serif"><b>PDF vinculado:</b> '+e(fn)+' · <b>criterio:</b> '+e(method)+'</div>'
+        +'<div style="flex:1;min-height:0">'+frame(drive,'PDF en Google Drive')+'</div></div>';
+    }
+    if(pdf){
+      return '<div class="fallback"><h3>PDF disponible, todavía sin vínculo seguro a Drive</h3><p>Para evitar abrir o descargar un trabajo equivocado, este PDF remoto no se incrusta automáticamente hasta que la asociación bibliográfica sea inequívoca.</p><p>Usá <b>Texto / resumen</b> o <b>Sitio del artículo</b> mientras tanto.</p></div>';
+    }
+    return '<div class="fallback"><h3>PDF no disponible</h3><p>Este registro no tiene un PDF vinculado de forma segura.</p></div>';
+  }
   async function renderUniversal(a,mode){
     const viewer=document.getElementById('viewer');if(!viewer)return;
     const drive=driveUrl(a),pdf=directPdf(a),site=sourceUrl(a),local=savedText(a),hasCorpus=!!a.text_file,hasAbstract=!!a.abstract;
     const bar='<div style="height:44px;display:flex;align-items:center;gap:7px;padding:6px 9px;background:#111820;border-bottom:1px solid #30363d;flex-wrap:wrap"><button id="uvRead" type="button" style="padding:5px 9px">'+(local||hasCorpus?'Texto completo':'Texto / resumen')+'</button>'+(drive||pdf?'<button id="uvPdf" type="button" style="padding:5px 9px">PDF'+(drive?' · Drive':'')+'</button>':'')+(site?'<button id="uvSite" type="button" style="padding:5px 9px">Sitio del artículo</button>':'')+'<span style="margin-left:auto;color:#8b949e;font-size:11px">'+(local||hasCorpus?'texto interno disponible':hasAbstract?'resumen interno disponible':'solo fuente externa')+'</span></div>';
     viewer.innerHTML='<div style="height:100%;display:flex;flex-direction:column">'+bar+'<div id="uvBody" style="flex:1;min-height:0"></div></div>';
     const body=document.getElementById('uvBody');
-    if(mode==='pdf') body.innerHTML=drive?frame(drive,'PDF en Google Drive'):frame(pdf,'PDF directo');
+    if(mode==='pdf') body.innerHTML=pdfBody(a,drive,pdf);
     else if(mode==='site') body.innerHTML=frame(site,'Sitio del artículo');
     else if(local) body.innerHTML=textBody(a,local,'Texto completo extraído/OCR');
     else if(hasCorpus){body.innerHTML='<div class="fallback"><p>Cargando texto completo…</p></div>';const txt=await corpusText(a);body.innerHTML=txt?textBody(a,txt,'Texto completo extraído por el scraper'):abstractBody(a)}
