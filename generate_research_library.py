@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""Genera una biblioteca de lecturas con buscador, selección semanal y fichado local."""
+from __future__ import annotations
+
+import csv
+import json
+from pathlib import Path
+
+DATA = Path("data/master_records.csv")
+DOCS = Path("docs")
+DOCS.mkdir(exist_ok=True)
+
+
+def s(v):
+    return str(v or "").strip()
+
+
+def read_records():
+    if not DATA.exists():
+        return []
+    csv.field_size_limit(20_000_000)
+    with DATA.open("r", encoding="utf-8-sig", newline="") as f:
+        rows = list(csv.DictReader(f))
+    out = []
+    for r in rows:
+        title = s(r.get("title"))
+        if not title:
+            continue
+        doi = s(r.get("doi"))
+        url = s(r.get("url")) or (f"https://doi.org/{doi}" if doi else "")
+        out.append({
+            "record_id": s(r.get("record_id")) or doi or title,
+            "title": title,
+            "authors": s(r.get("authors")),
+            "year": s(r.get("publication_year")),
+            "date": s(r.get("publication_date")),
+            "source": s(r.get("source")),
+            "origin": s(r.get("origin")),
+            "abstract": s(r.get("abstract")),
+            "keywords": s(r.get("keywords")),
+            "doi": doi,
+            "url": url,
+            "pdf_url": s(r.get("pdf_url")),
+            "relevance_score": s(r.get("relevance_score")),
+            "first_seen_date": s(r.get("first_seen_date")),
+        })
+    out.sort(key=lambda x: (x["first_seen_date"], x["year"], x["title"]), reverse=True)
+    return out
+
+
+HTML = r'''<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biblioteca de lecturas | SCRAPEADORACADEMICO</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#111820;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--blue:#58a6ff;--green:#3fb950;--yellow:#d29922;--red:#f85149}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;font-size:14px}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:20;background:#0b1018;border-bottom:1px solid var(--line);padding:13px 18px}.top{display:flex;gap:16px;justify-content:space-between;align-items:center}.brand{font-weight:800;font-size:1.2rem}.sub{color:var(--muted);font-size:.82rem;margin-top:3px}.nav{display:flex;gap:8px;flex-wrap:wrap}.btn,.nav a,button,select,input,textarea{border:1px solid var(--line);background:#0d1117;color:var(--text);border-radius:7px;padding:8px 10px;font:inherit}.nav a{display:inline-block}.primary{background:#1f6feb;border-color:#1f6feb}.success{background:#238636;border-color:#238636}.tools{display:grid;grid-template-columns:minmax(260px,1fr) 160px 150px 150px;gap:8px;margin-top:12px}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue)}
+main{display:grid;grid-template-columns:minmax(500px,1fr) 310px 430px;gap:10px;padding:10px 14px;height:calc(100vh - 116px)}.pane{border:1px solid var(--line);background:var(--panel);border-radius:9px;overflow:hidden;min-height:0}.pane-head{padding:10px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--panel2)}.pane-head h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;margin:0}.badge{font-size:.72rem;color:var(--muted)}
+.list{height:calc(100% - 43px);overflow:auto}.article{padding:10px 12px;border-bottom:1px solid #242b35;cursor:pointer}.article:hover,.article.active{background:#1c2530}.title{font-weight:650;line-height:1.35}.meta{color:var(--muted);font-size:.79rem;line-height:1.4;margin-top:4px}.tags{margin-top:5px}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:1px 6px;margin:2px 3px 0 0;font-size:.72rem;color:#c9d1d9}.status{color:var(--green)}
+.week{padding:10px;border-bottom:1px solid var(--line)}.week h3{font-size:.82rem;margin:0 0 8px}.weekly-item{padding:8px;border:1px solid #2a3441;border-radius:7px;margin-bottom:7px;cursor:pointer;background:#111820}.weekly-item:hover{border-color:var(--blue)}.weekly-item .why{color:var(--muted);font-size:.75rem;margin-top:4px;line-height:1.35}
+.detail{height:100%;overflow:auto;padding:12px}.detail h2{font-size:1.05rem;line-height:1.35;margin:0 0 6px}.actions{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0 14px}.field{border-top:1px solid #242b35;padding:9px 0}.label{color:var(--muted);font-size:.7rem;text-transform:uppercase;margin-bottom:4px}.value{white-space:pre-wrap;line-height:1.45}.sheet{margin-top:14px;border-top:2px solid var(--blue);padding-top:12px}.sheet h3{margin:0 0 9px;font-size:.95rem}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.form-group{margin-bottom:9px}.form-group label{display:block;color:var(--muted);font-size:.73rem;margin-bottom:4px}.form-group textarea,.form-group input,.form-group select{width:100%}.form-group textarea{min-height:70px;resize:vertical}.savebar{position:sticky;bottom:0;background:linear-gradient(transparent,#161b22 25%);padding-top:18px;display:flex;gap:7px}.empty{padding:18px;color:var(--muted);line-height:1.5}.small{font-size:.75rem;color:var(--muted)}
+@media(max-width:1250px){main{grid-template-columns:minmax(420px,1fr) 280px 380px}}@media(max-width:980px){header{position:static}.tools{grid-template-columns:1fr 1fr}main{height:auto;grid-template-columns:1fr}.pane{min-height:440px}.detail{max-height:none}}
+</style>
+</head><body>
+<header><div class="top"><div><div class="brand">Biblioteca y fichado de lecturas</div><div class="sub">SCRAPEADORACADEMICO · corpus propio + selección semanal + fichas de lectura</div></div><div class="nav"><a href="index.html">Dashboard</a><a href="articulos.html">Tabla completa</a><button onclick="exportSheets()">Exportar fichas</button></div></div>
+<div class="tools"><input id="q" placeholder="Buscar título, autor, resumen, palabras clave, DOI..." autofocus><select id="year"><option value="">Todos los años</option></select><select id="state"><option value="">Todos los estados</option><option>Pendiente</option><option>Por leer</option><option>Leyendo</option><option>Leído</option><option>Fichado</option><option>Usado</option></select><select id="sort"><option value="recent">Más recientes</option><option value="year">Año</option><option value="title">Título</option></select></div></header>
+<main>
+<section class="pane"><div class="pane-head"><h2>Artículos scrapeados</h2><span class="badge" id="count">Cargando…</span></div><div class="list" id="articles"></div></section>
+<section class="pane"><div class="pane-head"><h2>Selección semanal</h2><span class="badge">informes de ChatGPT</span></div><div class="list" id="weekly"><div class="empty">Todavía no hay informes sincronizados.</div></div></section>
+<section class="pane"><div class="detail" id="detail"><div class="empty"><strong>Elegí un artículo.</strong><br>Acá vas a poder abrirlo, marcarlo para leer y completar la ficha sin salir de la biblioteca.</div></div></section>
+</main>
+<script>
+let ARTICLES=[], WEEKLY=[], filtered=[], selected=null;
+const $=id=>document.getElementById(id); const KEY='scrapeador_fichas_v1';
+function loadSheets(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}} function saveSheets(x){localStorage.setItem(KEY,JSON.stringify(x))}
+function idFor(a){return a.record_id||a.doi||('weekly:'+norm(a.title))} function norm(v){return (v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function esc(v){return (v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))} function attr(v){return esc(v).replace(/"/g,'&quot;')}
+async function init(){ARTICLES=await fetch('library_articles.json',{cache:'no-store'}).then(r=>r.json()); try{WEEKLY=await fetch('weekly_reports.json',{cache:'no-store'}).then(r=>r.json())}catch(e){WEEKLY=[]} fillYears(); renderWeekly(); apply();}
+function fillYears(){[...new Set(ARTICLES.map(a=>a.year).filter(Boolean))].sort().reverse().forEach(y=>{let o=document.createElement('option');o.value=y;o.textContent=y;$('year').appendChild(o)})}
+function articleState(a){return (loadSheets()[idFor(a)]||{}).estado||'Pendiente'}
+function apply(){let q=norm($('q').value), y=$('year').value, st=$('state').value;filtered=ARTICLES.filter(a=>(!y||a.year===y)&&(!st||articleState(a)===st)&&(!q||norm([a.title,a.authors,a.abstract,a.keywords,a.doi,a.source,a.origin].join(' ')).includes(q)));let mode=$('sort').value;filtered.sort((a,b)=>mode==='title'?(a.title||'').localeCompare(b.title||''):mode==='year'?(b.year||'').localeCompare(a.year||''):((b.first_seen_date||'')+(b.year||'')).localeCompare((a.first_seen_date||'')+(a.year||'')));renderArticles()}
+function renderArticles(){let c=$('articles');c.innerHTML='';$('count').textContent=filtered.length.toLocaleString()+' resultados';filtered.slice(0,500).forEach(a=>{let d=document.createElement('div');d.className='article'+(selected&&idFor(selected)===idFor(a)?' active':'');let st=articleState(a);d.innerHTML=`<div class="title">${esc(a.title)}</div><div class="meta">${esc(shortAuthors(a.authors))} · ${esc(a.year||'s/f')} · ${esc(a.origin||a.source||'')}</div><div class="tags"><span class="tag status">${esc(st)}</span>${a.doi?'<span class="tag">DOI</span>':''}${a.pdf_url?'<span class="tag">PDF</span>':''}</div>`;d.onclick=()=>selectArticle(a);c.appendChild(d)});if(filtered.length>500)c.insertAdjacentHTML('beforeend','<div class="empty">Mostrando los primeros 500 resultados. Refiná la búsqueda para acotar.</div>')}
+function renderWeekly(){let box=$('weekly');box.innerHTML='';if(!Array.isArray(WEEKLY)||!WEEKLY.length){box.innerHTML='<div class="empty">Todavía no hay informes sincronizados. El próximo resumen semanal aparecerá acá.</div>';return}WEEKLY.slice().reverse().forEach(rep=>{let w=document.createElement('div');w.className='week';w.innerHTML=`<h3>${esc(rep.title||'Informe semanal')} <span class="small">${esc(rep.date||'')}</span></h3>`;(rep.items||[]).forEach(it=>{let d=document.createElement('div');d.className='weekly-item';d.innerHTML=`<div class="title">${esc(it.title||it.apa||'Sin título')}</div><div class="meta">${esc(it.authors||'')} ${esc(it.year||'')}</div>${it.why?`<div class="why">${esc(it.why)}</div>`:''}`;d.onclick=()=>chooseWeekly(it);w.appendChild(d)});box.appendChild(w)})}
+function chooseWeekly(it){let doi=norm(it.doi||'');let title=norm(it.title||'');let match=ARTICLES.find(a=>(doi&&norm(a.doi)===doi)||(title&&norm(a.title)===title));selectArticle(match||{record_id:'weekly:'+(it.doi||it.title||Math.random()),title:it.title||it.apa||'Texto del informe semanal',authors:it.authors||'',year:(it.year||'').toString(),doi:it.doi||'',url:it.url||'',pdf_url:it.pdf_url||'',abstract:it.abstract||'',keywords:it.keywords||'',origin:it.source||'Informe semanal',weekly_why:it.why||'',apa:it.apa||''})}
+function selectArticle(a){selected=a;renderArticles();showDetail(a)}
+function showDetail(a){let sheets=loadSheets(), id=idFor(a), f=sheets[id]||{};$('detail').innerHTML=`<h2>${esc(a.title||'Sin título')}</h2><div class="meta">${esc(a.authors||'')} · ${esc(a.year||'')} · ${esc(a.origin||a.source||'')}</div><div class="actions">${a.url?`<a class="btn" target="_blank" rel="noopener" href="${attr(a.url)}">Abrir fuente</a>`:''}${a.pdf_url?`<a class="btn" target="_blank" rel="noopener" href="${attr(a.pdf_url)}">Abrir PDF</a>`:''}${a.doi?`<a class="btn" target="_blank" rel="noopener" href="https://doi.org/${attr(a.doi)}">DOI</a>`:''}<button class="primary" onclick="quickRead()">Marcar para leer</button></div>${field('Resumen',a.abstract)}${field('Palabras clave',a.keywords)}${field('Por qué apareció en el informe semanal',a.weekly_why)}${field('Referencia APA',a.apa)}<div class="sheet"><h3>Ficha de lectura</h3><div class="grid2"><div class="form-group"><label>Estado</label>${select('estado',['Pendiente','Por leer','Leyendo','Leído','Fichado','Usado'],f.estado||'Pendiente')}</div><div class="form-group"><label>Relevancia</label>${select('relevancia',['','Central','Alta','Media','Contextual','Descartar'],f.relevancia||'')}</div></div>${ta('aporte','Aporte para mi investigación',f.aporte)}${ta('problema','Problema / pregunta del texto',f.problema)}${ta('marco','Marco conceptual',f.marco)}${ta('metodo','Metodología / corpus',f.metodo)}${ta('hallazgos','Hallazgos principales',f.hallazgos)}${ta('citas','Citas textuales + página',f.citas)}${ta('discusion','Discusión propia / qué cuestiono',f.discusion)}${ta('uso','Dónde podría usarlo / proyecto',f.uso)}<div class="form-group"><label>Etiquetas propias</label><input id="f_tags" value="${attr(f.tags||'')}" placeholder="regulación, afectos, dirección escolar..."></div><div class="savebar"><button class="success" onclick="saveCurrent()">Guardar ficha</button><button onclick="clearCurrent()">Borrar ficha</button><span class="small" id="saved"></span></div></div>`}
+function field(l,v){return v?`<div class="field"><div class="label">${esc(l)}</div><div class="value">${esc(v)}</div></div>`:''} function ta(id,l,v){return `<div class="form-group"><label>${esc(l)}</label><textarea id="f_${id}">${esc(v||'')}</textarea></div>`} function select(id,opts,val){return `<select id="f_${id}">${opts.map(o=>`<option ${o===val?'selected':''}>${esc(o)}</option>`).join('')}</select>`}
+function currentForm(){let ids=['aporte','problema','marco','metodo','hallazgos','citas','discusion','uso','tags'];let o={estado:$('f_estado').value,relevancia:$('f_relevancia').value,updated_at:new Date().toISOString(),title:selected.title||'',doi:selected.doi||'',authors:selected.authors||'',year:selected.year||''};ids.forEach(k=>o[k]=$('f_'+k).value);return o}
+function saveCurrent(){if(!selected)return;let x=loadSheets();x[idFor(selected)]=currentForm();saveSheets(x);$('saved').textContent='Guardado';renderArticles()}
+function quickRead(){if(!selected)return;let x=loadSheets(),id=idFor(selected),f=x[id]||{};f.estado='Por leer';f.title=selected.title||'';f.doi=selected.doi||'';f.updated_at=new Date().toISOString();x[id]=f;saveSheets(x);showDetail(selected);renderArticles()}
+function clearCurrent(){if(!selected)return;let x=loadSheets();delete x[idFor(selected)];saveSheets(x);showDetail(selected);renderArticles()}
+function exportSheets(){let data=JSON.stringify(loadSheets(),null,2),blob=new Blob([data],{type:'application/json'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='fichas_lectura_scrapeador.json';a.click();URL.revokeObjectURL(u)}
+function shortAuthors(v){let p=(v||'').split(';').map(x=>x.trim()).filter(Boolean);return p.length>3?p.slice(0,3).join('; ')+' et al.':p.join('; ')}
+['q','year','state','sort'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',apply));init();
+</script></body></html>'''
+
+
+def main():
+    records = read_records()
+    (DOCS / "library_articles.json").write_text(json.dumps(records, ensure_ascii=False), encoding="utf-8")
+    (DOCS / "biblioteca.html").write_text(HTML, encoding="utf-8")
+
+    # Añade el acceso a la biblioteca al dashboard generado, sin acoplar la lógica al generador principal.
+    index = DOCS / "index.html"
+    if index.exists():
+        text = index.read_text(encoding="utf-8")
+        needle = '<a href="articulos.html">Trabajar con tabla de articulos</a>'
+        replacement = needle + ' &middot; <a href="biblioteca.html">Biblioteca y fichado</a>'
+        if needle in text and 'href="biblioteca.html"' not in text:
+            index.write_text(text.replace(needle, replacement, 1), encoding="utf-8")
+
+    weekly = DOCS / "weekly_reports.json"
+    if not weekly.exists():
+        weekly.write_text("[]\n", encoding="utf-8")
+    print(f"Biblioteca generada: {len(records):,} artículos")
+
+
+if __name__ == "__main__":
+    main()
