@@ -9,6 +9,7 @@ on:
       - 'inject_library_ocr.py'
       - 'inject_library_pdf_viewer.py'
       - 'inject_drive_manifest.py'
+      - 'inject_universal_reader.py'
       - 'data/drive_manifest.csv'
       - '.github/workflows/dashboard (2).yml'
   workflow_run:
@@ -51,6 +52,7 @@ jobs:
           python inject_drive_manifest.py
           python inject_library_ocr.py
           python inject_library_pdf_viewer.py
+          python inject_universal_reader.py
           python inject_library_link.py
 
       - name: Check dashboard and STM files
