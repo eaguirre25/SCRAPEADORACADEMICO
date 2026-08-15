@@ -6,6 +6,7 @@ on:
     paths:
       - 'generate_research_library.py'
       - 'inject_library_link.py'
+      - 'inject_library_ocr.py'
       - '.github/workflows/dashboard (2).yml'
   workflow_run:
     workflows: ["Análisis STM – Dirección Escolar"]
@@ -44,6 +45,7 @@ jobs:
           python generate_dashboard.py
           python generate_article_table.py
           python generate_research_library.py
+          python inject_library_ocr.py
           python inject_library_link.py
 
       - name: Check dashboard and STM files
