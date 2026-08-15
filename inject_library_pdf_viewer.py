@@ -23,12 +23,14 @@ js = r'''
   function showSavedText(a){
     try {
       const fid = (typeof id==='function') ? id(a) : (a.record_id||a.doi||a.title);
-      const f = (window.F||F||{})[fid] || {};
+      const store = (typeof F!=='undefined') ? F : (window.F||{});
+      const f = store[fid] || {};
       if (f.ocr_text) {
         const viewer=document.getElementById('viewer');
         viewer.innerHTML='<div class="fallback" style="white-space:pre-wrap;font-family:Georgia,serif;line-height:1.55">'
           +'<div style="position:sticky;top:0;background:#fff;padding:8px 0 12px;font-family:Segoe UI,Arial,sans-serif;font-size:12px;color:#555">'
-          +'<b>Texto guardado · '+escapeV(f.ocr_language_label||'OCR/texto extraído')+'</b> · seleccionable y copiable'</n          +'</div>'+escapeV(f.ocr_text)+'</div>';
+          +'<b>Texto guardado · '+escapeV(f.ocr_language_label||'OCR/texto extraído')+'</b> · seleccionable y copiable'
+          +'</div>'+escapeV(f.ocr_text)+'</div>';
         return true;
       }
     } catch(e) { console.warn(e); }
@@ -66,15 +68,11 @@ js = r'''
   window.openReader = openReader = function(a){
     window.selected=a;
     baseOpenReader(a);
-    // Si ya se generó OCR/texto en una sesión anterior, priorizarlo: es lo más fiable para copiar citas.
     if(!showSavedText(a)) renderPdf(a);
   };
 })();
 </script>
 '''
-
-# Corregir accidentalmente una secuencia inválida si esta versión ya existiera.
-js = js.replace("+'</n          +", "+")
 
 if 'window.__libraryPdfViewerInstalled' not in html:
     html = html.replace('</body>', js + '\n</body>')
