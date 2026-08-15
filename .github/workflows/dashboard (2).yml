@@ -1,6 +1,11 @@
 name: Generar Dashboard
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'generate_research_library.py'
+      - '.github/workflows/dashboard (2).yml'
   workflow_run:
     workflows: ["Análisis STM – Dirección Escolar"]
     types: [completed]
@@ -13,7 +18,7 @@ permissions:
 
 jobs:
   dashboard:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
