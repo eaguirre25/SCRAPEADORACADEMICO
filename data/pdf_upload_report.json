@@ -1,21 +1,35 @@
 {
-  "generated_at": "2026-08-13T14:33:25",
+  "generated_at": "2026-08-16T13:42:31",
   "upload_after_date": "",
-  "records_considered": 5,
-  "with_pdf_url": 3,
+  "records_considered": 8,
+  "with_pdf_url": 6,
   "without_pdf_url": 2,
-  "downloaded_now": 1,
+  "downloaded_now": 3,
   "already_local": 0,
-  "download_failed": 2,
-  "uploaded_to_drive": 1,
+  "download_failed": 3,
+  "uploaded_to_drive": 3,
   "already_in_drive": 0,
   "drive_upload_failed": 0,
   "items": [
     {
-      "title": "The roles of AI and educational leaders in AI-assisted administrative decision-making: a proposed framework for symbiotic collaboration",
+      "title": "Liderazgo pedagógico y toma de decisiones en instituciones educativas.",
+      "year": "2025",
+      "pdf_file": "Chila Saltos et al - 2025 - Liderazgo pedagogico y toma de decisiones en instituciones educativas.pdf",
+      "pdf_url": "https://revista.gnerando.org/revista/index.php/RCMG/article/download/609/637",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "14 Translanguaging and written nonstandard language: Heterographic literacy in and outside school",
+      "year": "2023",
+      "pdf_file": "Imre Heltai et al - 2023 - 14 Translanguaging and written nonstandard language Heterographic literacy in and outside.pdf",
+      "pdf_url": "https://www.degruyter.com/document/doi/10.1515/9783110769609-014/pdf",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Evaluating Learning Management System (LMS) Effectiveness: An LPOMR Model Approach",
       "year": "2024",
-      "pdf_file": "Dai et al - 2024 - The roles of AI and educational leaders in AI-assisted administrative decision-making a pr.pdf",
-      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s13384-024-00771-8.pdf",
+      "pdf_file": "Supiani et al - 2024 - Evaluating Learning Management System (LMS) Effectiveness An LPOMR Model Approach.pdf",
+      "pdf_url": "https://pedagogia-fkip.unpak.ac.id/index.php/pedagogia/article/download/2/4",
       "drive_status": "uploaded"
     }
   ]
