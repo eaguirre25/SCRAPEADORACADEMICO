@@ -1,0 +1,49 @@
+name: Semantic laboratory
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/master_records.csv'
+      - 'output/topic_models/**'
+      - 'scripts/generate_semantic_lab.py'
+      - 'scripts/generate_llm_topic_labels.py'
+      - '.github/workflows/semantic_lab.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install LLM dependency
+        run: pip install -r requirements-semantic-lab.txt
+      - name: Propose LLM topic labels when API key is configured
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_LABEL_MODEL: ${{ vars.OPENAI_LABEL_MODEL || 'gpt-5' }}
+        run: |
+          if [ -n "$OPENAI_API_KEY" ]; then
+            python scripts/generate_llm_topic_labels.py
+          else
+            echo 'OPENAI_API_KEY is not configured; keeping existing labels and building the lab without a new LLM run.'
+          fi
+      - name: Build semantic laboratory
+        run: python scripts/generate_semantic_lab.py
+      - name: Commit generated outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/laboratorio.html output/topic_models/validation/topic_llm_labels.csv || true
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+          else
+            git commit -m 'update semantic laboratory'
+            git push
+          fi
