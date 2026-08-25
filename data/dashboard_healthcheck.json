@@ -1,25 +1,25 @@
 {
-  "generated_at_utc": "2026-08-22T14:46:50.310993+00:00",
+  "generated_at_utc": "2026-08-25T15:00:59.116008+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 9978005
+    "size_bytes": 9986481
   },
   "article_table": {
     "path": "docs/articulos.html",
     "exists": true,
-    "size_bytes": 10366123
+    "size_bytes": 10378098
   },
   "records": {
-    "master_high_relevance": 3245,
+    "master_high_relevance": 3248,
     "review": 93,
-    "rejected": 1947
+    "rejected": 1949
   },
   "stm_inputs_outputs": {
     "corpus": {
       "path": "data/corpus.csv",
       "exists": true,
-      "size_bytes": 101999468
+      "size_bytes": 101999516
     },
     "tabla_topicos": {
       "path": "output/tabla_topicos.csv",
