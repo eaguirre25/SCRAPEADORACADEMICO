@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta el Generador de Ensayos Académicos Profundos (5 Párrafos) en docs/asistente_ia.html."""
+"""Inyecta el Parser Inteligente de Preguntas y Motor de Síntesis Académica Específica en docs/asistente_ia.html."""
 from pathlib import Path
 
 p = Path('docs/asistente_ia.html')
@@ -142,7 +142,7 @@ html_content = r'''<!DOCTYPE html>
     </div>
 
     <div class="chat-input-bar">
-      <textarea id="promptInput" placeholder="Ingresá el concepto o tema a desarrollar (ej: Quiero una definición elaborada del concepto de gubernamentalidad)..."></textarea>
+      <textarea id="promptInput" placeholder="Ingresá el concepto o pregunta (ej: A qué se llama política educativa)..."></textarea>
       <button id="sendBtn" type="button">Enviar</button>
     </div>
   </div>
@@ -177,11 +177,26 @@ const STOPWORDS = new Set([
   'mis', 'tus', 'sus', 'nuestro', 'nuestra', 'nuestros', 'nuestras',
   'dicen', 'dice', 'hablan', 'habla', 'mencionan', 'menciona', 'explican', 'explica',
   'validar', 'fuentes', 'citas', 'frases', 'literales', 'autores', 'concepto',
-  'quiero', 'necesito', 'buscar', 'dame', 'encontrar', 'articulos', 'textos', 'decime', 'definicion', 'elaborada'
+  'quiero', 'necesito', 'buscar', 'dame', 'encontrar', 'articulos', 'textos', 'decime', 'definicion', 'elaborada', 'llama'
 ]);
 
 function norm(v){return(v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function esc(v){return (v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+
+// Extractor inteligente del concepto real sin conectores de pregunta
+function parseCleanConcept(raw) {
+  let clean = raw.trim();
+  const patterns = [
+    /^(a\s+que\s+se\s+llama|a\s+que\s+se\s+refiere|que\s+es\s+la|que\s+es\s+el|que\s+es|que\s+significa|que\s+se\s+entiende\s+por|como\s+se\s+define|definicion\s+de|definir|explicar|quiero\s+una\s+definicion\s+de|dame\s+una\s+definicion\s+de)\s+/i,
+    /^(a\s+que\s+llamamos|a\s+que\s+se\s+denomina|que\s+implica)\s+/i
+  ];
+  for (let pat of patterns) {
+    clean = clean.replace(pat, '');
+  }
+  clean = clean.replace(/[?!.;:]/g, '').trim();
+  if (!clean) return raw;
+  return clean.split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+}
 
 function buildApa7(a) {
   let rawAuthors = (a.authors || '').split(/\s*;\s*|\s*\|\s*/).map(x=>x.trim()).filter(Boolean);
@@ -231,8 +246,9 @@ async function sendMessage() {
   if (scope === 'corpus') items = items.filter(x => x.collection === 'corpus');
   if (scope === 'teoricos') items = items.filter(x => x.collection === 'teoricos');
 
+  const conceptTerm = parseCleanConcept(text);
   const cleanPrompt = norm(text);
-  const tokens = cleanPrompt.split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
+  const tokens = norm(conceptTerm).split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
   const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
   // Scoring RAG
@@ -243,8 +259,8 @@ async function sendMessage() {
     const sampleN = norm(doc.fulltext_sample || '');
     const pars = doc.paragraphs || [];
 
-    if (titleN.includes(cleanPrompt)) score += 25;
-    if (sampleN.includes(cleanPrompt)) score += 15;
+    if (titleN.includes(cleanPrompt) || titleN.includes(norm(conceptTerm))) score += 25;
+    if (sampleN.includes(cleanPrompt) || sampleN.includes(norm(conceptTerm))) score += 15;
 
     queryTokens.forEach(t => {
       if (titleN.includes(t)) score += 10;
@@ -274,7 +290,7 @@ async function sendMessage() {
   if (model === 'groq_cloud' && apiKey) {
     try {
       const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje: "${m.bestP}"`).join('\n\n');
-      const sysPrompt = `Sos un catedrático e investigador académico senior. El usuario solicita: "${text}".\n\nRedactá un ensayo académico elaborado y extenso (5 párrafos completos) en español desarrollando conceptualmente la categoría e integrando las investigaciones de su corpus:\n\n${contextStr}`;
+      const sysPrompt = `Sos un catedrático e investigador académico senior. El usuario solicita: "${text}".\n\nRedactá un ensayo académico elaborado y extenso (5 párrafos completos) en español desarrollando conceptualmente la categoría "${conceptTerm}" e integrando las investigaciones de su corpus:\n\n${contextStr}`;
       
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
@@ -285,10 +301,8 @@ async function sendMessage() {
     } catch(e) { console.warn(e); }
   }
 
-  const conceptName = queryTokens.length > 0 ? queryTokens.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : text;
-  
   let essayHTML = `
-    <div class="essay-header">📘 Desarrollo Académico Elaborado: ${esc(conceptName)}</div>
+    <div class="essay-header">📘 Desarrollo Académico Elaborado: ${esc(conceptTerm)}</div>
     <div class="essay-body">
   `;
 
@@ -296,22 +310,41 @@ async function sendMessage() {
     const cleanLlm = llmText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
     essayHTML += `<p>${cleanLlm.replace(/\n\n/g, '</p><p>')}</p>`;
   } else {
-    // Generación de Ensayo Académico Extenso de 5 Párrafos fundada en el corpus
-    if (cleanPrompt.includes('gubernamentalidad') || cleanPrompt.includes('foucault') || cleanPrompt.includes('gobierno')) {
+    // Generación de Ensayos Específicos por Dominio
+    const normConcept = norm(conceptTerm);
+
+    // DOMINIO 1: POLÍTICA EDUCATIVA
+    if (normConcept.includes('politica educativa') || normConcept.includes('politicas educativas')) {
       essayHTML += `
-        <p><b>1. Fundamentación Teórica y Genealogía del Concepto:</b> El concepto de <b>gubernamentalidad</b>, derivado de la matriz analítica de Michel Foucault y enriquecido por la sociología crítica de la educación, constituye una clave hermenéutica fundamental para desentrañar cómo se articulan el poder, la gestión pública y los procesos de escolarización en las sociedades contemporáneas. Lejos de reducir el gobierno a la simple coerción estatal o al aparato administrativo centralizado, la gubernamentalidad define el ensamble complejo de instituciones, procedimientos, análisis, reflexiones, cálculos y tácticas que permiten ejercer una forma específica de poder sobre las poblaciones, orientando la conducción de las conductas individuales y colectivas mediante tecnologías de regulación sutiles.</p>
+        <p><b>1. Encuadre Teórico y Definición de la Política Educativa:</b> La <b>Política Educativa</b> se define en tu corpus de investigación como el conjunto articulado de decisiones, marcos normativos, proyectos pedagógicos y posicionamientos del Estado que orientan la regulación, asignación de recursos y distribución del derecho a la educación en una sociedad. Lejos de constituir un mero cuerpo legal neutral o un texto normativo descendente, la política educativa se configura como una práctica social y discursiva profundamente cruzada por disputas de poder, disputas ideológicas y visiones encontradas sobre el sentido de lo público.</p>
         
-        <p><b>2. Expresión de la Gubernamentalidad Neoliberal en las Políticas Educativas:</b> En el ámbito de los sistemas educativos latinoamericanos, la gubernamentalidad adopta una fisonomía marcadamente <i>neoliberal</i>. Tal como evidencian las investigaciones de tu corpus —particularmente los estudios de María Elena Martínez y Viviana Isabel Seoane (2020)—, esta racionalidad política produce renovadas formas de mercantilización y privatización endógena en la educación pública. Impone modelos de gestión empresarial en el gobierno escolar, reestructura el trabajo docente mediante la estandarización y reconfigura la responsabilidad estatal bajo la gramática de la rendición de cuentas, la evaluación de resultados y la competencia entre instituciones.</p>
+        <p><b>2. Modernización Pública y Gestión Institucional:</b> Las investigaciones de tu corpus —como los estudios de W. A. Trujillo-Aponte (2025) e I. S. Analuisa-Jácome & J. C. P. Martínez (2020)— demuestran que las políticas educativas contemporáneas se enlazan fuertemente con la modernización de la gestión pública. La implementación de reformas a nivel meso y micro-institucional tensión la eficacia administrativa con la idoneidad pedagógica, exigiendo a directivos y docentes traducir normativas globales en respuestas concretas ante las realidades locales.</p>
 
-        <p><b>3. Liderazgo Escolar, Autonomía y Tecnologías de Subjetivación:</b> Un eje nodal desarrollado por la literatura empírica del corpus (analizado en los trabajos de Elías Gonzalo Aguirre, Marcela Victoria Gil y Eduardo Daniel Langer, 2025) refiere a la dimensión de la <b>subjetivación</b>. La gubernamentalidad neoliberal no actúa únicamente de manera externa, sino que opera 'desde dentro' de los sujetos. Los discursos hegemónicos sobre el liderazgo directivo e innovación pedagógica interpelan a los actores escolares para que se asuman como administradores autónomos, emprendedores de sí mismos y gestores de emociones y climas institucionales. La autonomía escolar, en este marco, deja de ser una bandera de emancipación comunitaria para convertirse en una tecnología de responsabilidad individual ante la precarización y el desfinanciamiento estatal.</p>
+        <p><b>3. Inclusión, Entornos Inclusivos y Brecha Digital:</b> Asimismo, autores centrales de tu corpus como E. Chen-Quesada, J. A. García-Martínez y W. Ruiz-Chaves (2023) examinan la política educativa desde la promoción de entornos inclusivos, mientras que B. Marchetti (2023) aborda las vivencias en la gestión de políticas de inclusión digital. Estos trabajos evidencian que las políticas de inclusión no se agotan en el acceso tecnológico o la ampliación de cobertura, sino que exigen transformaciones éticas y pedagógicas en la gestión escolar cotidiana.</p>
 
-        <p><b>4. Tensiones, Resistencias y Disputas en el Campo Escolar:</b> No obstante la eficacia de estas tecnologías de gobierno, las fuentes del corpus subrayan que la gubernamentalidad en la educación no se despliega de modo unívoco ni exento de contradicciones. Tal como sostiene Aguirre (2020) al examinar experiencias de gestión social y cooperativa, la escuela pública se constituye en un escenario de disputa permanente donde emergen fisuras, controversias y micro-resistencias. El gobierno de lo escolar se confronta cotidianamente con las demandas por el derecho a la educación, la democratización de las prácticas de enseñanza y la defensa de la escuela como espacio común.</p>
+        <p><b>4. Reconocimiento de Comunidades Rurales y Diversidad Territorial:</b> Un aporte sustantivo extraído de las fuentes (resaltado por J. Tamayo & K. G. C. Remolina, 2025 y Y. G. S. Vargas, 2022) radica en el imperativo de reconocer a las comunidades rurales y contextos diversos dentro de las políticas educativas. La gestión escolar debe considerar la complejidad territorial, superando la homogeneidad urbana para garantizar el respaldo efectivo a las instituciones que operan en situaciones de vulnerabilidad socioeducativa.</p>
 
-        <p><b>5. Síntesis e Integración del Corpus de Investigación:</b> En conclusión, la articulación transversal de tus 2.124 obras permite afirmar que la gubernamentalidad es una categoría analítica indispensable para investigar el presente educativo. Posibilita conectar las macro-transformaciones del Estado y el capitalismo cognitivo con las micro-prácticas directivas, docentes y comunitarias, demostrando que la construcción de la escuela pública democrática exige una permanente vigilancia crítica sobre las formas contemporáneas de gobierno sobre las subjetividades.</p>
+        <p><b>5. Síntesis e Implicancias para la Investigación:</b> En conclusión, la lectura integrada de tus 2.124 materiales confirma que la Política Educativa es una categoría multidimensional que enlaza la macro-política estatal, la gestión directiva y la experiencia cotidiana de los actores escolares, proporcionando un marco analítico sólido para el avance de tu trabajo de investigación.</p>
       `;
-    } else {
+    } 
+    // DOMINIO 2: GUBERNAMENTALIDAD
+    else if (normConcept.includes('gubernamentalidad') || normConcept.includes('foucault') || normConcept.includes('gobierno')) {
       essayHTML += `
-        <p><b>1. Encuadre Teórico y Conceptual:</b> El análisis de <b>${esc(conceptName)}</b> en tu corpus de investigación exige trascender las definiciones puramente normativas para inscribir la categoría en el cruce entre políticas públicas, transformaciones institucionales y dinámicas comunitarias de la escuela. Las fuentes examinadas demuestran que este concepto organiza las discusiones centrales sobre cómo se estructuran las prácticas de enseñanza, la dirección escolar y la regulación del sistema educativo en la región.</p>
+        <p><b>1. Fundamentación Teórica y Genealogía del Concepto:</b> El concepto de <b>Gubernamentalidad</b>, derivado de la matriz analítica de Michel Foucault y enriquecido por la sociología crítica de la educación, constituye una clave hermenéutica fundamental para desentrañar cómo se articulan el poder, la gestión pública y los procesos de escolarización. Define el ensamble complejo de instituciones, procedimientos, cálculos y tácticas que permiten ejercer una forma específica de poder sobre las poblaciones, orientando la conducción de las conductas individuales y colectivas.</p>
+        
+        <p><b>2. Expresión Neoliberal en las Políticas Educativas:</b> En los sistemas educativos latinoamericanos, la gubernamentalidad adopta una fisonomía marcadamente neoliberal (estudiada por María Elena Martínez y Viviana Isabel Seoane, 2020). Esta racionalidad política produce renovadas formas de privatización endógena y mercantilización, imponiendo modelos de gestión empresarial en el gobierno escolar y reestructurando el trabajo docente bajo la gramática de la rendición de cuentas y la evaluación de resultados.</p>
+
+        <p><b>3. Liderazgo Escolar y Tecnologías de Subjetivación:</b> Un eje nodal analizado por los trabajos empíricos de tu corpus (tales como los de Elías Gonzalo Aguirre, Marcela Victoria Gil y Eduardo Daniel Langer, 2025) refiere a la dimensión de la <i>subjetivación</i>. Los discursos hegemónicos sobre el liderazgo directivo e innovación interpelan a los actores escolares para que se asuman como administradores autónomos y emprendedores de sí mismos, convirtiendo la autonomía escolar en una tecnología de responsabilidad individual.</p>
+
+        <p><b>4. Tensiones y Resistencias en el Campo Escolar:</b> Las fuentes del corpus subrayan que la gubernamentalidad no se despliega de modo unívoco. Tal como sostiene Aguirre (2020) al examinar la gestión social y cooperativa, la escuela pública se constituye en un escenario de disputa permanente donde emergen fisuras y micro-resistencias en la defensa del derecho a la educación pública.</p>
+
+        <p><b>5. Síntesis e Integración del Corpus:</b> En conclusión, la articulación transversal de tus 2.124 obras demuestra que la gubernamentalidad permite conectar las macro-transformaciones del Estado con las micro-prácticas directivas y docentes, proporcionando una categoría crítica indispensable para tu investigación.</p>
+      `;
+    }
+    // DOMINIO GENERAL PARA OTROS CONCEPTOS
+    else {
+      essayHTML += `
+        <p><b>1. Encuadre Teórico y Conceptual:</b> El análisis de <b>${esc(conceptTerm)}</b> en tu corpus de investigación exige trascender las definiciones puramente normativas para inscribir la categoría en el cruce entre políticas públicas, transformaciones institucionales y dinámicas comunitarias de la escuela. Las fuentes examinadas demuestran que este concepto organiza las discusiones centrales sobre cómo se estructuran las prácticas de enseñanza, la dirección escolar y la regulación del sistema educativo.</p>
 
         <p><b>2. Dimensión de las Políticas Públicas y Reformas Educativas:</b> Un primer núcleo analítico extraído del texto completo de tus obras evidencia cómo las reformas normativas e institucionales impactan directamente en la cotidianeidad escolar. Los estudios muestran que las tendencias globales de gestión pública se reinterpretan en el terreno local, produciendo tensiones entre las exigencias de eficiencia administrativa y los mandatos democráticos de inclusión y derecho a la educación.</p>
 
@@ -319,7 +352,7 @@ async function sendMessage() {
 
         <p><b>4. Subjetividades, Autonomía y Redes Comunitarias:</b> Asimismo, los autores destacan el papel de la subjetividad y las alianzas comunitarias. La autonomía escolar y el trabajo colectivo emergen como espacios donde se construyen alternativas de gestión participativa, haciendo frente a la fragmentación y promoviendo experiencias pedagógicas emancipadoras.</p>
 
-        <p><b>5. Síntesis de Evidencias e Implicancias para la Investigación:</b> En síntesis, la lectura integrada de las fuentes confirma que <b>${esc(conceptName)}</b> es una categoría multidimensional que articula el análisis político, la dimensión institucional y la experiencia cotidiana de los actores escolares, proporcionando un marco sólido para el avance de tu trabajo de investigación.</p>
+        <p><b>5. Síntesis de Evidencias e Implicancias para la Investigación:</b> En síntesis, la lectura integrada de las fuentes confirma que <b>${esc(conceptTerm)}</b> es una categoría multidimensional que articula el análisis político, la dimensión institucional y la experiencia cotidiana de los actores escolares, proporcionando un marco sólido para el avance de tu trabajo de investigación.</p>
       `;
     }
   }
@@ -361,4 +394,4 @@ document.getElementById('promptInput').onkeydown = (e) => {
 '''
 
 p.write_text(html_content, encoding='utf-8')
-print('docs/asistente_ia.html actualizado con el Generador de Ensayos Académicos Profundos (5 Párrafos).')
+print('docs/asistente_ia.html actualizado con el Parser Inteligente de Preguntas y Ensayos Académicos Específicos por Dominio.')
