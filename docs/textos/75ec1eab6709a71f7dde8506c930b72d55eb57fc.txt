@@ -1,0 +1,1021 @@
+Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+
+
+ Aplicación de la gestión educativa con inteligencia artificial en la
+      enseñanza en educación superior y las ciencias sociales
+
+
+    Application of educational management with artificial intelligence in
+               higher education and social sciences teaching.
+
+
+  Aplicação da gestão educativa com inteligência artificial na docência do
+                   ensino superior e das ciências sociais.
+
+
+
+
+                                                           Piedra-Castro, Wilson Iván
+                                    Universidad de Panamá, Doctorado en Educación
+                                                                 wipiedra@uce.edu.ec
+                                              https://orcid.org/0000-0002-9565-9961
+
+
+
+
+                                     DOI / URL: https://doi.org/10.55813/gaea/ccri/v5/n2/538
+
+
+
+Como citar:
+Piedra Castro, W. I. (2024). Aplicación de la gestión educativa con inteligencia artificial en la
+enseñanza en educación superior y las ciencias sociales. Código Científico Revista De
+Investigación, 5(2), 52–70. https://doi.org/10.55813/gaea/ccri/v5/n2/538.
+
+
+Recibido: 18/09/2024              Aceptado: 28/10/2024           Publicado: 31/12/2024
+
+Código Científico Revista de Investigación               Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+Resumen
+La investigación analiza la implementación de la inteligencia artificial (IA) en la gestión
+educativa dentro de la educación superior y las ciencias sociales. El objetivo principal es
+examinar el potencial de la IA para optimizar procesos administrativos y pedagógicos, así como
+identificar los desafíos éticos asociados. Mediante una revisión bibliográfica en bases de datos
+académicas, se seleccionaron estudios recientes sobre aplicaciones y evaluaciones éticas de la
+IA en educación. Los resultados muestran que la IA mejora la personalización del aprendizaje,
+permite la automatización de tareas administrativas, y promueve el análisis de datos a gran
+escala, facilitando una toma de decisiones más informada. Sin embargo, la implementación de
+IA plantea preocupaciones éticas, como la privacidad de los datos estudiantiles, sesgos
+algorítmicos, y el posible deterioro de habilidades de análisis crítico en los estudiantes debido
+a la dependencia de sistemas automatizados. La discusión sugiere que, aunque la IA aporta
+beneficios significativos, su aplicación debe estar acompañada de marcos éticos y de
+transparencia. En conclusión, la IA representa una herramienta transformadora en la educación,
+cuya efectividad depende de una implementación responsable que equilibre eficiencia
+tecnológica y desarrollo humano.
+
+Palabras clave: inteligencia artificial; gestión educativa; educación superior; ciencias sociales;
+ética en IA.
+
+
+Abstract
+The research analyzes the implementation of artificial intelligence (AI) in educational
+management within higher education and social sciences. The main objective is to examine the
+potential of AI to optimize administrative and pedagogical processes, as well as to identify the
+associated ethical challenges. Through a literature review in academic databases, recent studies
+on applications and ethical evaluations of AI in education were selected. The results show that
+AI enhances personalization of learning, enables automation of administrative tasks, and
+promotes large-scale data analysis, facilitating more informed decision making. However, AI
+implementation raises ethical concerns, such as privacy of student data, algorithmic biases, and
+possible impairment of critical analysis skills in students due to reliance on automated systems.
+The discussion suggests that while AI brings significant benefits, its application must be
+accompanied by ethical frameworks and transparency. In conclusion, AI represents a
+transformative tool in education, whose effectiveness depends on responsible implementation
+that balances technological efficiency and human development.
+
+Keywords: artificial intelligence; educational management; higher education; social sciences;
+AI ethics.
+
+
+Resumo
+A investigação analisa a aplicação da inteligência artificial (IA) na gestão da educação no
+ensino superior e nas ciências sociais. O principal objetivo é examinar o potencial da IA para
+otimizar os processos administrativos e pedagógicos, bem como identificar os desafios éticos
+associados. Através de uma revisão da literatura em bases de dados académicas, foram
+selecionados estudos recentes sobre aplicações e avaliações éticas da IA na educação. Os
+resultados mostram que a IA melhora a personalização da aprendizagem, permite a
+automatização de tarefas administrativas e promove a análise de dados em grande escala,
+facilitando a tomada de decisões mais informadas. No entanto, a implementação da IA suscita
+preocupações éticas, como a privacidade dos dados dos estudantes, os enviesamentos
+
+                                               53
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+algorítmicos e a possível deterioração das capacidades de análise crítica dos estudantes devido
+à dependência de sistemas automatizados. O debate sugere que, embora a IA traga benefícios
+significativos, a sua aplicação deve ser acompanhada de quadros éticos e de transparência. Em
+conclusão, a IA representa uma ferramenta transformadora na educação, cuja eficácia depende
+de uma aplicação responsável que equilibre a eficiência tecnológica e o desenvolvimento
+humano.
+
+Palavras-chave: inteligência artificial; gestão da educação; ensino superior; ciências sociais;
+ética da IA.
+
+
+Introducción
+
+        La educación superior y las ciencias sociales enfrentan desafíos significativos en la era
+
+digital, caracterizada por la rápida evolución tecnológica y la necesidad de adaptarse a nuevas
+
+metodologías de enseñanza. La incorporación de la Inteligencia Artificial (IA) en la gestión
+
+educativa emerge como una solución potencial para mejorar la calidad y eficiencia de los
+
+procesos educativos. Sin embargo, la implementación de la IA en estos campos presenta
+
+interrogantes sobre su efectividad, impacto y viabilidad, especialmente en disciplinas que
+
+tradicionalmente han dependido de la interacción humana y el análisis crítico.
+
+        La integración de la IA en la educación superior y las ciencias sociales plantea varios
+
+problemas. Primero, existe una brecha en la comprensión y adopción de tecnologías avanzadas
+
+por parte de los educadores, lo que puede limitar su aplicación efectiva en entornos académicos
+
+(García Peña et al., 2020). Además, la resistencia al cambio y la falta de formación específica
+
+en IA dificultan su implementación en la enseñanza y gestión educativa. Segundo, la
+
+personalización del aprendizaje mediante IA puede enfrentar obstáculos debido a la diversidad
+
+de enfoques pedagógicos y la necesidad de adaptar las herramientas tecnológicas a contextos
+
+específicos (González Sánchez et al., 2023). Finalmente, surgen preocupaciones éticas y de
+
+privacidad relacionadas con el uso de datos estudiantiles en sistemas de IA, lo que requiere una
+
+consideración cuidadosa para evitar posibles malinterpretaciones o sesgos en los procesos
+
+educativos (Salmerón Moreira et al., 2023).
+
+
+
+                                               54
+
+Código Científico Revista de Investigación               Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+        Los factores que afectan la implementación de la IA en la gestión educativa incluyen la
+
+infraestructura tecnológica disponible, la capacitación del personal docente y administrativo, y
+
+la aceptación cultural de las tecnologías emergentes. La falta de recursos tecnológicos
+
+adecuados puede limitar la adopción de sistemas basados en IA, especialmente en instituciones
+
+con presupuestos restringidos (Chaves Ramírez, 2022). Asimismo, la formación insuficiente
+
+del personal en el uso de herramientas de IA puede resultar en una aplicación ineficaz o
+
+superficial de estas tecnologías. Además, las percepciones culturales y las actitudes hacia la
+
+tecnología influyen en la disposición de las instituciones y los individuos para adoptar la IA en
+
+la educación (Ocaña-Fernández et al., 2019).
+
+        La justificación para explorar la aplicación de la IA en la gestión educativa radica en su
+
+potencial para transformar y mejorar los procesos de enseñanza y aprendizaje. La IA puede
+
+facilitar la personalización del aprendizaje, adaptando el contenido y las metodologías a las
+
+necesidades individuales de los estudiantes, lo que puede conducir a una mayor retención y
+
+comprensión del material (Garcia Falckenheiner et al., 2023). Además, la automatización de
+
+tareas administrativas mediante IA puede liberar tiempo para que los educadores se concentren
+
+en actividades pedagógicas más significativas, mejorando la eficiencia operativa de las
+
+instituciones educativas (García Peña et al., 2020). La viabilidad de esta integración depende
+
+de la inversión en infraestructura tecnológica, la formación continua del personal y el desarrollo
+
+de políticas que aborden las preocupaciones éticas y de privacidad asociadas con el uso de IA
+
+en la educación (Salmerón Moreira et al., 2023).
+
+        El objetivo de este artículo es realizar una revisión bibliográfica exhaustiva sobre la
+
+aplicación de la gestión educativa con Inteligencia Artificial en la enseñanza en educación
+
+superior y las ciencias sociales. Se busca analizar las oportunidades y desafíos que presenta la
+
+integración de la IA en estos campos, evaluando su impacto en la calidad educativa, la
+
+eficiencia administrativa y la experiencia de aprendizaje de los estudiantes. Asimismo, se
+
+
+                                                55
+
+Código Científico Revista de Investigación                 Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+pretende identificar las mejores prácticas y recomendaciones para una implementación efectiva
+
+y ética de la IA en la gestión educativa, considerando las particularidades de las disciplinas de
+
+ciencias sociales y el contexto de la educación superior.
+
+        En síntesis, la incorporación de la Inteligencia Artificial en la gestión educativa de la
+
+educación superior y las ciencias sociales ofrece oportunidades significativas para innovar y
+
+mejorar los procesos educativos. No obstante, su implementación requiere una planificación
+
+cuidadosa, inversión en recursos tecnológicos y humanos, y una consideración ética profunda
+
+para garantizar que la IA se utilice de manera efectiva y responsable en la educación.
+
+
+
+Metodología
+
+        Para llevar a cabo la revisión sobre la aplicación de la inteligencia artificial en la gestión
+
+educativa, se realizó una búsqueda exhaustiva de artículos en la base de datos Scopus,
+
+seleccionando únicamente documentos publicados en el año 2024. La estrategia de búsqueda
+
+incluyó el uso de palabras clave específicas en inglés, como “application AND of AND
+
+educational” y “artificial AND intelligence”. Esta combinación permitió recuperar un total de
+
+1125 documentos que abordan la implementación de la inteligencia artificial en diversos
+
+contextos educativos, con un enfoque particular en la educación superior y las ciencias sociales.
+
+A continuación, se aplicaron filtros analíticos proporcionados por Scopus para organizar y
+
+evaluar la relevancia de los resultados. Una de las herramientas clave utilizadas fue el análisis
+
+de “documentos por afiliación” (ver Figura 1), la cual permitió identificar las instituciones
+
+académicas más productivas en el campo de estudio. Este análisis facilitó el reconocimiento de
+
+los centros de investigación y universidades líderes, así como las tendencias de publicación por
+
+afiliación, lo que aportó una visión amplia del interés académico y de la distribución geográfica
+
+de la investigación sobre inteligencia artificial en educación.
+
+
+
+
+                                                 56
+
+Código Científico Revista de Investigación                    Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+        Para el análisis de los datos, se excluyeron estudios que no cumplían con los criterios
+
+de relevancia y calidad, asegurando que la selección final de artículos incluyera únicamente
+
+aquellos con una contribución significativa al entendimiento de las aplicaciones de la
+
+inteligencia artificial en la gestión educativa. Los artículos seleccionados se clasificaron de
+
+acuerdo con el enfoque de cada estudio, incluyendo aplicaciones prácticas, análisis de impacto
+
+y discusiones éticas sobre el uso de inteligencia artificial en la educación. Esta clasificación
+
+permitió una estructuración coherente de la revisión, abordando las áreas más relevantes y
+
+actuales en la temática.
+
+        Además, se emplearon herramientas de análisis cuantitativo y cualitativo de Scopus, las
+
+cuales ayudaron a identificar patrones en el uso de inteligencia artificial en distintas áreas
+
+educativas, además de evaluar el crecimiento y la evolución de las publicaciones en el tema en
+
+los últimos años. La metodología de selección y análisis fue diseñada para garantizar que los
+
+resultados de la revisión reflejen el estado actual del conocimiento y las perspectivas futuras
+
+en el uso de inteligencia artificial en la gestión educativa.
+
+Figura 1.
+Documentos por afiliación de instituciones académicas según Scopus.
+
+
+
+
+Nota: La Figura 1 muestra las instituciones con mayor producción de documentos sobre el tema, de acuerdo con
+las analíticas de Scopus.
+
+
+
+
+                                                    57
+
+Código Científico Revista de Investigación               Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+Resultados
+
+        1.1.Impacto de la IA en la Personalización del Aprendizaje
+
+        La aplicación de la inteligencia artificial (IA) en el ámbito educativo ha marcado un
+
+cambio paradigmático en la forma en que se personaliza el aprendizaje, especialmente en la
+
+educación superior y las ciencias sociales. La IA permite crear experiencias de aprendizaje
+
+individualizadas, adaptadas no solo a los conocimientos previos de cada estudiante, sino
+
+también a sus habilidades, intereses y ritmo de aprendizaje (Chen et al., 2020). La
+
+implementación de sistemas inteligentes en la educación posibilita que el proceso formativo se
+
+centre cada vez más en las necesidades particulares de los alumnos, aumentando así la
+
+efectividad y eficiencia del aprendizaje.
+
+        Un componente central de la personalización del aprendizaje con IA es la capacidad de
+
+ajustar el contenido educativo a las características individuales de los estudiantes. Los sistemas
+
+de aprendizaje impulsados por IA pueden analizar grandes volúmenes de datos sobre el
+
+comportamiento y desempeño de los estudiantes en tiempo real, permitiendo una adaptación
+
+continua del contenido de enseñanza en función de su progreso y comprensión (Chen et al.,
+
+2020). Esta característica es particularmente valiosa en la educación superior, donde los
+
+estudiantes pueden tener diferentes niveles de preparación y requerimientos académicos.
+
+        Los algoritmos de IA analizan patrones de aprendizaje y pueden recomendar o
+
+modificar contenido para asegurar que cada estudiante avance de acuerdo con sus capacidades
+
+y comprensión. Un estudio realizado por Kumar et al. (2019) destaca que los sistemas de
+
+aprendizaje adaptativo que utilizan IA logran ajustar no solo la dificultad del material, sino
+
+también los tipos de actividades o ejercicios que se presentan, promoviendo un aprendizaje
+
+más profundo y menos fragmentado. Estos ajustes son esenciales para optimizar el proceso de
+
+enseñanza y minimizar la frustración o el desinterés que pueden surgir cuando el contenido no
+
+corresponde al nivel o estilo de aprendizaje del alumno.
+
+
+                                               58
+
+Código Científico Revista de Investigación               Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+        La retroalimentación inmediata es uno de los aspectos más valorados en la
+
+personalización del aprendizaje con IA. A través de sistemas de tutoría inteligente y análisis de
+
+datos, la IA puede identificar en tiempo real las áreas de mejora y fortalezas de cada estudiante,
+
+proporcionando una retroalimentación ajustada a sus necesidades. Esta capacidad de respuesta
+
+rápida y específica es crucial en el aprendizaje, ya que permite a los estudiantes recibir
+
+indicaciones para corregir errores o profundizar en conceptos mientras aún están en el proceso
+
+de aprenderlos (Wang & Heffernan, 2013).
+
+        La IA también facilita el diseño de itinerarios de aprendizaje personalizados, un proceso
+
+que implica la creación de secuencias de aprendizaje ajustadas a los objetivos y progresos de
+
+cada estudiante. Mediante algoritmos de aprendizaje automático, es posible prever el
+
+rendimiento futuro de un estudiante en determinadas áreas, adaptando las actividades y el
+
+contenido en función de los resultados obtenidos en evaluaciones anteriores. Esto permite que
+
+el estudiante se enfrente a retos adecuados a su nivel de competencia, lo que incrementa la
+
+probabilidad de éxito y reduce el riesgo de desmotivación o frustración (Pardo et al., 2018).
+
+        1.2.Incremento de la motivación y retención
+
+        El uso de IA en la educación puede contribuir de manera significativa a aumentar la
+
+motivación y la retención de conocimientos en los estudiantes. Al adaptar los contenidos
+
+educativos a los intereses y estilos de aprendizaje individuales, se genera una mayor
+
+implicación y compromiso en el proceso de aprendizaje (Baker & Inventado, 2014). Este
+
+alineamiento entre los materiales de estudio y las preferencias personales es un factor clave
+
+para mantener la atención del estudiante, evitando el abandono y mejorando la retención de la
+
+información a largo plazo.
+
+        Diversos estudios demuestran que los estudiantes muestran mayor satisfacción y
+
+menores tasas de deserción cuando se utilizan métodos personalizados en el proceso de
+
+aprendizaje (Dziuban et al., 2018). Por ejemplo, un estudio de Baker (2014) señala que los
+
+
+                                               59
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+estudiantes que reciben una educación adaptada a sus intereses y necesidades tienden a
+
+desarrollar una mayor autoconfianza y disposición hacia el aprendizaje, lo que fomenta una
+
+actitud positiva y proactiva en su educación.
+
+        En este contexto, la IA también permite el uso de análisis de sentimientos y patrones de
+
+comportamiento para detectar cambios en la motivación del estudiante y ofrecer intervenciones
+
+oportunas que puedan revitalizar su interés. Estas intervenciones pueden incluir desde
+
+modificaciones en el material de estudio hasta la introducción de elementos lúdicos o desafíos
+
+adicionales que estimulen el interés del estudiante, contribuyendo a una experiencia de
+
+aprendizaje más gratificante y efectiva (Kumar et al., 2019).
+
+        1.3.Automatización de Procesos Administrativos en Educación Superior
+
+        La introducción de la inteligencia artificial (IA) en la educación superior está
+
+transformando la forma en que las instituciones gestionan sus procesos administrativos,
+
+permitiéndoles optimizar recursos y mejorar la eficiencia de sus operaciones. La IA aplicada a
+
+la gestión administrativa ofrece una amplia gama de soluciones automatizadas, como la
+
+programación de clases, la evaluación de calificaciones, y el seguimiento de asistencia. Estas
+
+mejoras no solo permiten reducir la carga de trabajo de los docentes, liberándolos de tareas
+
+repetitivas, sino que también optimizan el uso de espacios y materiales, y facilitan una toma de
+
+decisiones informada basada en el análisis de grandes volúmenes de datos (Zawacki-Richter et
+
+al., 2019).
+
+        Los sistemas de IA son capaces de programar clases considerando factores como la
+
+disponibilidad de los docentes, el tamaño de las aulas y las preferencias de los estudiantes,
+
+maximizando así la utilización de los recursos de la institución. De acuerdo con Aljarrah et al.
+
+(2020), la programación de horarios y asignación de recursos mediante IA reduce los conflictos
+
+y duplica la eficiencia en la administración, lo que resulta en una experiencia académica más
+
+organizada y libre de errores humanos.
+
+
+                                                60
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+         Uno de los beneficios clave de esta automatización es la calificación automatizada de
+
+pruebas y tareas de tipo objetivo. Sistemas de IA, como los motores de análisis de respuestas
+
+múltiples y de reconocimiento de patrones en respuestas abiertas, pueden procesar grandes
+
+volúmenes de datos en cuestión de minutos. Según Luckin et al. (2016), la implementación de
+
+calificación automática no solo permite que los docentes reciban apoyo en las evaluaciones
+
+masivas, sino que también ayuda a los estudiantes a obtener retroalimentación inmediata,
+
+promoviendo un aprendizaje continuo y efectivo.
+
+         1.4.Facilitación de la toma de decisiones informada
+
+         La capacidad de la IA para procesar grandes volúmenes de datos en tiempo real y
+
+extraer información significativa de ellos es particularmente valiosa para la toma de decisiones
+
+estratégicas. La educación superior se enfrenta a desafíos constantes, como la deserción
+
+estudiantil, el rendimiento académico desigual y la necesidad de adaptación a demandas
+
+cambiantes. La IA puede ayudar a los administradores a anticipar problemas potenciales
+
+mediante el análisis predictivo y a diseñar intervenciones oportunas y específicas (Pardo et al.,
+
+2018).
+
+         Por ejemplo, los sistemas de IA pueden analizar datos relacionados con el rendimiento
+
+académico y la asistencia, identificar patrones que indiquen posibles riesgos de deserción, y
+
+sugerir estrategias de apoyo y retención antes de que los estudiantes abandonen los programas.
+
+Según un estudio de Pardo, A., Han, F., & Ellis, R. A. (2018), la IA aplicada en este contexto
+
+ha permitido a las instituciones desarrollar programas de tutoría y apoyo que se activan
+
+automáticamente para estudiantes en riesgo, lo cual ha mejorado las tasas de retención en hasta
+
+un 15%.
+
+         Además, los sistemas de IA ayudan en la gestión presupuestaria mediante el análisis de
+
+datos financieros y operativos, optimizando la asignación de recursos y permitiendo a las
+
+instituciones realizar inversiones estratégicas en áreas críticas. Esto es particularmente
+
+
+                                               61
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+importante en un contexto en el que las universidades enfrentan restricciones presupuestarias,
+
+y necesitan maximizar el uso de los fondos disponibles. La IA proporciona así una ventaja
+
+competitiva, facilitando decisiones estratégicas y reduciendo la probabilidad de errores
+
+humanos en procesos complejos de planificación y asignación de recursos.
+
+        1.5.Reducción del juicio crítico y la capacidad de análisis autónomo
+
+        La dependencia excesiva de sistemas automatizados en la educación puede tener
+
+repercusiones negativas en el desarrollo de habilidades de pensamiento crítico y autonomía
+
+intelectual de los estudiantes. Aunque la IA puede facilitar el acceso a la información y
+
+personalizar el aprendizaje, un enfoque indiscriminado en su uso puede desalentar la capacidad
+
+de los estudiantes para analizar y cuestionar la información de manera crítica. McQuillan
+
+(2022) advierte que la incorporación excesiva de IA en los procesos educativos puede llevar a
+
+una “mentalidad algorítmica”, en la que se prioriza la eficiencia y la respuesta automática sobre
+
+la reflexión profunda y el análisis independiente.
+
+        Este fenómeno puede resultar en una educación menos crítica y más pasiva, donde los
+
+estudiantes dependen de las recomendaciones y evaluaciones automatizadas sin cuestionar su
+
+validez o interpretar sus significados. Las ciencias sociales, que promueven la comprensión de
+
+contextos complejos y el análisis crítico, corren un riesgo particular de ver disminuida su
+
+riqueza educativa si se reduce la interacción humana en favor de la automatización (McQuillan,
+
+2022). Es fundamental, por lo tanto, encontrar un equilibrio en la aplicación de IA en la
+
+educación que permita aprovechar sus beneficios sin sacrificar las habilidades esenciales de
+
+juicio crítico.
+
+        1.6.Rol de la IA en la mejora de la investigación académica
+
+        La inteligencia artificial (IA) ha emergido como una herramienta invaluable en la
+
+investigación en ciencias sociales, transformando tanto los métodos tradicionales de
+
+recolección de datos como el análisis de fenómenos complejos. Su incorporación en la
+
+
+                                               62
+
+Código Científico Revista de Investigación             Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+investigación social permite una mayor precisión y profundidad en la obtención de resultados,
+
+amplía las capacidades metodológicas y promueve la colaboración interdisciplinaria. A
+
+continuación, se detallan algunas de las aplicaciones más relevantes de la IA en este contexto:
+
+         Uno de los aportes más notables de la IA en las ciencias sociales es la capacidad de
+
+recolectar y analizar grandes volúmenes de datos de manera rápida y eficiente, lo cual resulta
+
+fundamental en una era donde los datos digitales y masivos (big data) se han vuelto
+
+omnipresentes. En este ámbito, herramientas basadas en IA permiten obtener datos de
+
+plataformas de redes sociales, foros en línea y otras fuentes digitales, lo que facilita la
+
+identificación de patrones de comportamiento y tendencias en tiempo real (González-Bailón,
+
+2017).
+
+         La IA también ha demostrado ser una herramienta poderosa para apoyar el proceso de
+
+revisión de literatura, una fase esencial en cualquier investigación académica. Los
+
+investigadores se enfrentan a bases de datos y bibliotecas digitales que contienen millones de
+
+artículos científicos y fuentes relevantes, y navegar este mar de información puede ser un
+
+proceso abrumador. Herramientas de IA especializadas en recuperación de información y
+
+recomendación de documentos permiten automatizar la búsqueda de literatura relevante,
+
+identificando fuentes clave y resúmenes de investigaciones similares (Beel et al., 2016).
+
+         Además, los sistemas de recomendación académica basados en IA sugieren lecturas
+
+relacionadas, lo que permite a los investigadores ampliar sus referencias bibliográficas y
+
+descubrir estudios que podrían haber pasado desapercibidos. Esta tecnología facilita una
+
+revisión exhaustiva y organizada, aumentando la productividad de los investigadores y
+
+contribuyendo a la solidez del marco teórico. La IA incluso permite a los investigadores
+
+enfocarse en los estudios más relevantes mediante el análisis de citas y palabras clave, lo que
+
+optimiza el proceso de revisión y ayuda a los académicos a mantenerse actualizados en sus
+
+respectivos campos (Baker & Inventado, 2014).
+
+
+                                              63
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+        1.7.Realización de simulaciones y modelados complejos
+
+        La capacidad de la IA para realizar simulaciones y modelados complejos ha abierto
+
+nuevas posibilidades en las metodologías de investigación en ciencias sociales, particularmente
+
+en áreas que requieren el estudio de fenómenos dinámicos y no lineales. Las simulaciones
+
+basadas en IA, como los modelos de agentes, permiten a los investigadores replicar y analizar
+
+comportamientos sociales en entornos virtuales, lo que facilita la comprensión de fenómenos
+
+complejos como la difusión de información, el comportamiento de mercados económicos y la
+
+dinámica de redes sociales (Gilbert & Troitzsch, 2005).
+
+        En ciencias sociales, los modelos basados en agentes son especialmente útiles para
+
+estudiar fenómenos como la propagación de rumores, el cambio de opinión o la colaboración
+
+en grupos, ya que permiten observar cómo los individuos interactúan y responden a diferentes
+
+estímulos en un entorno controlado. Este tipo de modelado facilita la evaluación de hipótesis
+
+de manera segura y económica, sin necesidad de llevar a cabo experimentos a gran escala en
+
+el mundo real (Epstein, 2006). La IA permite ajustar los parámetros de las simulaciones y
+
+probar diferentes escenarios, lo que incrementa la flexibilidad y alcance de los modelos en
+
+ciencias sociales.
+
+
+
+Discusión
+
+        La aplicación de la inteligencia artificial (IA) en la educación superior y las ciencias
+
+sociales plantea tanto oportunidades como desafíos significativos que requieren una reflexión
+
+crítica y una evaluación ética rigurosa. La capacidad de la IA para optimizar procesos
+
+administrativos y apoyar el análisis y recolección de datos ha transformado los métodos de
+
+gestión en instituciones educativas, permitiendo a los docentes concentrarse en tareas
+
+pedagógicas y de investigación que realmente aportan al proceso educativo (Zawacki-Richter
+
+et al., 2019). Sin embargo, esta automatización, si bien aligera la carga administrativa, también
+
+
+                                               64
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+introduce riesgos potenciales para la privacidad y el manejo ético de los datos estudiantiles,
+
+dado el volumen y la naturaleza sensible de la información recopilada (UNESCO, 2021).
+
+        La capacidad de la IA para procesar y analizar grandes volúmenes de datos también
+
+facilita la recolección de información a una escala sin precedentes, permitiendo estudios
+
+sociales de mayor alcance y precisión. Esto supone una ventaja significativa para el avance en
+
+la comprensión de fenómenos complejos, ya que los investigadores pueden ahora acceder a
+
+herramientas que identifican patrones en tiempo real y personalizan los enfoques investigativos
+
+(González-Bailón, 2017). Sin embargo, esta capacidad de análisis plantea interrogantes éticos
+
+sobre el sesgo inherente a los algoritmos utilizados, los cuales, al ser entrenados en conjuntos
+
+de datos que reflejan estructuras y prejuicios sociales existentes, pueden perpetuar y amplificar
+
+desigualdades si no son supervisados adecuadamente (Birhane, 2021). La supervisión y
+
+auditoría continua de estos sistemas es, por tanto, indispensable para garantizar que las
+
+herramientas de IA se utilicen de manera justa y equitativa en el análisis de datos de ciencias
+
+sociales.
+
+        En el ámbito académico, la IA contribuye de manera notable a la productividad
+
+investigativa, apoyando la revisión de literatura y la búsqueda de fuentes relevantes a través de
+
+sistemas de recomendación que permiten al investigador obtener una visión panorámica de su
+
+campo de estudio en menor tiempo. Esto representa un beneficio importante en términos de
+
+eficiencia, ya que facilita el acceso a fuentes críticas y permite a los académicos concentrarse
+
+en análisis más profundos (Beel et al., 2016). Sin embargo, la dependencia excesiva de sistemas
+
+automatizados podría reducir la capacidad de análisis autónomo y juicio crítico de los
+
+estudiantes, quienes podrían tender a aceptar los resultados generados por la IA sin
+
+cuestionarlos o examinarlos detenidamente, lo cual sería particularmente problemático en áreas
+
+que exigen una evaluación crítica y reflexiva, como las ciencias sociales (McQuillan, 2022).
+
+
+
+
+                                               65
+
+Código Científico Revista de Investigación             Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+Este fenómeno refuerza la necesidad de equilibrar el uso de la tecnología con métodos
+
+tradicionales de enseñanza que fomenten habilidades analíticas e independientes.
+
+        Por otro lado, la IA ha ampliado las metodologías de investigación en ciencias sociales
+
+al permitir simulaciones y modelados complejos que ofrecen a los investigadores una
+
+perspectiva única sobre dinámicas sociales y fenómenos que difícilmente podrían ser
+
+replicados en el mundo real (Gilbert & Troitzsch, 2005). Estas simulaciones, como los modelos
+
+basados en agentes, son especialmente útiles en el estudio de interacciones sociales y la
+
+propagación de comportamientos, proporcionando a los científicos sociales una herramienta
+
+que les permite formular y probar hipótesis de manera controlada y segura. Sin embargo, estos
+
+modelos dependen en gran medida de los datos de entrada y las asunciones de los
+
+investigadores, lo que implica un riesgo de sesgo si no se considera adecuadamente la
+
+complejidad social en el diseño de los modelos. En este sentido, la ética en la construcción de
+
+modelos y la transparencia de los algoritmos se vuelve fundamental para evitar interpretaciones
+
+reduccionistas o deterministas de los fenómenos sociales (Kitchin, 2014).
+
+        Finalmente, la IA promueve la colaboración interdisciplinaria, integrando diversas
+
+herramientas analíticas en proyectos de investigación que involucran a especialistas de
+
+diferentes disciplinas. La capacidad de la IA para analizar grandes volúmenes de datos y su
+
+aplicación en contextos interdisciplinarios fomenta una comprensión más integral de los
+
+fenómenos sociales, uniendo perspectivas que enriquecen el análisis y la interpretación de los
+
+resultados (Kleinberg et al., 2015). Sin embargo, el uso de algoritmos opacos dificulta el
+
+entendimiento y control de las decisiones tomadas por la IA en estos contextos, lo cual puede
+
+generar desconfianza en su implementación en disciplinas que requieren transparencia y
+
+rendición de cuentas (Holmes et al., 2019). La UNESCO (2021) enfatiza la importancia de
+
+promover la transparencia en los algoritmos y su explicabilidad, de manera que tanto
+
+investigadores como participantes puedan comprender y evaluar las decisiones y resultados
+
+
+                                              66
+
+Código Científico Revista de Investigación             Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+generados por la IA, lo que fortalecerá la confianza en el uso ético de la tecnología en la
+
+investigación.
+
+
+
+Conclusión
+
+        La implementación de la inteligencia artificial en la educación superior y las ciencias
+
+sociales representa un avance significativo en la optimización de procesos administrativos, el
+
+análisis de datos y el desarrollo de metodologías innovadoras de investigación. Esta tecnología
+
+facilita la automatización de tareas rutinarias, liberando a los docentes de cargas
+
+administrativas y permitiéndoles centrarse en actividades pedagógicas y de investigación de
+
+mayor valor académico. Asimismo, la IA ha demostrado ser una herramienta poderosa en el
+
+ámbito investigativo, ofreciendo posibilidades avanzadas para la recolección y análisis de
+
+grandes volúmenes de datos, la optimización en la revisión de literatura y la creación de
+
+simulaciones y modelados complejos que expanden las capacidades metodológicas en ciencias
+
+sociales.
+
+        Sin embargo, la implementación de IA también conlleva desafíos éticos cruciales. La
+
+recolección y el procesamiento de datos personales suscitan preocupaciones sobre la privacidad
+
+y la protección de la información estudiantil, especialmente en un contexto en el que el volumen
+
+de datos utilizados por los sistemas de IA es cada vez mayor. Asimismo, el riesgo de sesgos en
+
+los algoritmos, si no se controla adecuadamente, puede perpetuar desigualdades sociales,
+
+afectando la equidad y justicia en la toma de decisiones educativas y administrativas. Por otro
+
+lado, la dependencia excesiva de sistemas automatizados en los procesos de enseñanza y
+
+aprendizaje plantea el riesgo de reducir la capacidad crítica y la autonomía intelectual de los
+
+estudiantes, quienes pueden llegar a aceptar las recomendaciones de la IA sin evaluarlas
+
+críticamente.
+
+
+
+
+                                              67
+
+Código Científico Revista de Investigación              Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+        Además, la opacidad de los algoritmos utilizados en la IA dificulta la transparencia y la
+
+comprensión de las decisiones que estos sistemas generan, lo que puede generar desconfianza
+
+entre los usuarios y limitar la adopción de estas tecnologías en contextos educativos. Es
+
+fundamental, por lo tanto, fomentar el desarrollo de algoritmos explicables y transparentes que
+
+permitan a los educadores, estudiantes e investigadores comprender las bases de las decisiones
+
+generadas por la IA.
+
+        En síntesis, la IA ofrece oportunidades transformadoras para la educación superior y las
+
+ciencias sociales, pero su implementación debe llevarse a cabo con precaución y atención a los
+
+principios éticos. La supervisión constante, la adopción de marcos legales adecuados, la
+
+promoción de prácticas inclusivas en el diseño de algoritmos y el equilibrio entre la tecnología
+
+y el pensamiento crítico son fundamentales para maximizar los beneficios de la IA en la
+
+educación y la investigación sin comprometer los derechos y valores fundamentales de los
+
+individuos involucrados. La integración responsable de la IA en estos campos permitirá que la
+
+tecnología contribuya de manera significativa al progreso académico, respetando siempre la
+
+dignidad y el bienestar de los estudiantes y la comunidad académica en general.
+
+
+
+Referencias bibliográficas
+
+Aljarrah, A., Thomas, M., & Shehab, M. (2020). Artificial Intelligence in Higher Education:
+        The State of Practice and Implications for Research. International Journal of
+        Educational       Technology       in     Higher       Education,     17(1),      55-68.
+        https://doi.org/10.1186/s41239-023-00392-8
+Baker, R. S., & Inventado, P. S. (2014). Educational data mining and learning analytics. En J.
+        A. Larusson & B. White (Eds.), Learning Analytics: From Research to Practice (pp.
+        61-75). Springer. https://doi.org/10.1007/978-1-4614-3305-7_4
+Beel, J., Gipp, B., Langer, S., & Breitinger, C. (2016). Research-paper recommender systems:
+        A literature survey. International Journal on Digital Libraries, 17(4), 305-338.
+        https://doi.org/10.1007/s00799-015-0156-0
+Birhane, A. (2021). Algorithmic injustice: A relational ethics approach. Patterns, 2(2), 100205.
+        https://doi.org/10.1016/j.patter.2021.100205
+Cajamarca-Correa, M. A., Cangas-Cadena, A. L., Sánchez-Simbaña, S. E., & Pérez-Guillermo,
+        A. G. (2024). Nuevas tendencias en el uso de recursos y herramientas de la Tecnología
+        Educativa para la Educación Universitaria . Journal of Economic and Social Science
+        Research, 4(3), 127–150. https://doi.org/10.55813/gaea/jessr/v4/n3/124
+
+                                               68
+
+Código Científico Revista de Investigación             Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+Chaves Ramírez, M. R. (2022). El papel de la inteligencia artificial en la educación superior.
+       Revista            Académica             Institucional,           3(2),           24–30.
+       https://rai.usam.ac.cr/index.php/raiusam/article/view/54
+Chen, L., Chen, P., & Lin, Z. (2020). Artificial intelligence in education: A review. IEEE
+       Access, 8, 75264-75278. https://doi.org/10.1109/ACCESS.2020.2988510
+Dziuban, C., Moskal, P., & Hartman, J. (2018). Adapting to learning styles: The impact of
+       adaptive learning technology on student performance. Online Learning, 22(3), 1-13.
+       https://doi.org/10.24059/olj.v22i3.1465
+Epstein, J. M. (2006). Generative Social Science: Studies in Agent-Based Computational
+       Modeling. Princeton University Press.
+Garcia Falckenheiner, A., Villanes Rojas, S., Felippe Mori, M., Cerna Barco, R., Paliza
+       Champi, L., & Pajuelo Aguirre, P. (2023). Impacto de la inteligencia artificial en la
+       Educación Superior. AD MAJOREM PATRIAE GLORIAM, 6(1), 9–19.
+García Peña, V. R., Mora Marcillo, A. B., & Ávila Ramírez, J. A. (2020). La inteligencia
+       artificial en la educación. Dominio de las Ciencias, 6(Extra 3), 648–666.
+       http://dx.doi.org/10.23857/dc.v6i3.1421
+Gilbert, N., & Troitzsch, K. G. (2005). Simulation for the Social Scientist. McGraw-Hill
+       Education.
+González Sánchez, J. L., Villota Garcia, F. R., Moscoso Parra, A. E., Garces Calva, S. W., &
+       Bazurto Arévalo, B. M. (2023). Aplicación de la Inteligencia Artificial en la Educación
+       Superior. Dominio de las Ciencias, 9(3), 1097–1108.
+González-Bailón, S. (2017). Decoding the Social World: Data Science and the Unintended
+       Consequences of Communication. MIT Press.
+Holmes, W., Bialik, M., & Fadel, C. (2019). Artificial Intelligence in Education: Promises and
+       Implications for Teaching and Learning. Boston: Center for Curriculum Redesign.
+Kitchin, R. (2014). The Data Revolution: Big Data, Open Data, Data Infrastructures and Their
+       Consequences. SAGE Publications.
+Kleinberg, J., Ludwig, J., Mullainathan, S., & Obermeyer, Z. (2015). Prediction policy
+       problems.        American         Economic         Review,        105(5),      491-495.
+       https://doi.org/10.1257/aer.p20151023
+Kumar, V., Kumar, U., & Basu, S. (2019). Adaptive learning: A review of AI-based
+       applications in educational technology. International Journal of Information and
+       Education Technology, 9(11), 798-803. https://doi.org/10.18178/ijiet.2019.9.11.1306
+Luckin, R., Holmes, W., Griffiths, M., & Forcier, L. B. (2016). Intelligence Unleashed: An
+       Argument for AI in Education. Pearson.
+McQuillan, D. (2022). Resisting AI: An Anti-fascist Approach to Artificial Intelligence.
+       Journal of Sociology, 58(4), 567-583.
+Ocaña-Fernández, Y., Valenzuela-Fernández, L. A., & Garro-Aburto, L. L. (2019).
+       Inteligencia artificial y sus implicaciones en la educación superior. Propósitos y
+       Representaciones, 7, 536–568.
+Pardo, A., Han, F., & Ellis, R. A. (2018). Combining university student self-regulated learning
+       indicators and engagement with online learning events to predict academic
+       performance. IEEE Transactions on Learning Technologies, 12(2), 200-212.
+       https://doi.org/10.1109/TLT.2018.2856808
+Piedra-Castro, W. I., Burbano-Buñay, E. S., Tamayo-Verdezoto, J. J., & Moreira-Alcívar, E.
+       F. (2024). Inteligencia artificial y su incidencia en la estrategia metodológica de
+       aprendizaje basado en investigación. Journal of Economic and Social Science
+       Research, 4(2), 178–196. https://doi.org/10.55813/gaea/jessr/v4/n2/106
+Piedra-Castro, W. I., Cajamarca-Correa, M. A., Burbano-Buñay, E. S., & Moreira-Alcívar, E.
+       F. (2024). Integración de la inteligencia artificial en la enseñanza de las Ciencias
+
+                                              69
+
+Código Científico Revista de Investigación             Vol. 5 – Núm. 2 / Julio – Diciembre – 2024
+
+
+       Sociales en la educación superior. Journal of Economic and Social Science
+       Research, 4(3), 105–126. https://doi.org/10.55813/gaea/jessr/v4/n3/123
+Popenici, S., & Kerr, S. (2017). Exploring the Impact of Artificial Intelligence on Teaching
+       and Learning in Higher Education. Research and Practice in Technology Enhanced
+       Learning, 12(1), 22-34. https://doi.org/10.1186/s41039-017-0062-8
+Salmerón Moreira, Y. M., Luna Alvarez, H. E., Murillo Encarnacion, W. G., & Pacheco
+       Gómez, V. A. (2023). El futuro de la Inteligencia Artificial para la educación en las
+       instituciones       de      Educación      Superior.     Conrado,        19,      27–34.
+       http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S1990-
+       86442023000400027&lng=es&tlng=pt.
+Santander-Salmon, E. S. (2024). Métodos pedagógicos innovadores: Una revisión de las
+       mejores prácticas actuales. Revista Científica Zambos, 3(1), 73-90.
+       https://doi.org/10.69484/rcz/v3/n1/13
+Silva Alvarado, J. C., & Herrera Navas, C. D. (2022). Estudio de Kahoot como recurso
+       didáctico para innovar los procesos evaluativos pospandemia de básica superior de la
+       Unidad Educativa Iberoamericano. Journal of Economic and Social Science
+       Research, 2(4), 15–40. https://doi.org/10.55813/gaea/jessr/v2/n4/23
+Terrazo-Luna, E. G., Riveros-Anccasi, D., Torres-Acevedo, C. L., Rojas-Quispe, A. E.,
+       Cencho Pari, A., Coronel-Capani, J., & Yaulilahua-Huacho, R. (2023). Habilidades
+       Perceptivas: Mejorando el Aprendizaje Remoto en Estudiantes de 5 años. Editorial
+       Grupo AEA. https://doi.org/10.55813/egaea.l.2022.30
+Thelwall, M. (2018). Sentiment analysis in social networks. Encyclopedia of Social Network
+       Analysis and Mining, 1-10.
+Torres-Torres, O. L. (2024). Evaluación de Genially como herramienta didáctica en la práctica
+       docente de la educación a distancia. Journal of Economic and Social Science
+       Research, 4(1), 1–18. https://doi.org/10.55813/gaea/jessr/v4/n1/82
+UNESCO. (2021). Recomendación sobre la Ética de la Inteligencia Artificial. Recuperado de
+       https://unesdoc.unesco.org/
+VanLehn, K. (2011). The relative effectiveness of human tutoring, intelligent tutoring systems,
+       and other tutoring systems. Educational Psychologist, 46(4), 197-221.
+       https://doi.org/10.1080/00461520.2011.611369
+Wang, Y., & Heffernan, N. T. (2013). The student skill model. User Modeling and User-
+       Adapted Interaction, 23(1), 1-39. https://doi.org/10.1007/978-3-642-30950-2_51
+
+
+
+
+                                              70

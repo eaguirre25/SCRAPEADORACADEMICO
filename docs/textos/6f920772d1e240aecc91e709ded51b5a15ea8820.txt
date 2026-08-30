@@ -1,0 +1,648 @@
+Jalali et al. BMC Medical Education (2025) 25:656                                                                                          BMC Medical Education
+https://doi.org/10.1186/s12909-025-07269-6
+
+
+
+
+ RESEARCH                                                                                                                                                    Open Access
+
+Psychometric properties of the educational
+leadership scale for nursing students
+Amir Jalali1, Ebrahim Ezzati2, Fatemeh Hadadian3, Shamsodin Rahmani4, Amirhossein Naghibzadeh5 and
+khalil Moradi6*
+
+
+
+  Abstract
+  Background Educational leadership plays a crucial role in the development of nursing students, significantly enhancing
+  their clinical skills and preparing them to lead advancements in healthcare. This comprehensive educational approach
+  ensures that nursing students are well-equipped to address contemporary healthcare challenges effectively.
+  Aim This study aimed to translate the Educational Leadership Scale for Nursing Students into Persian and evaluate its
+  psychometric properties among Iranian nursing students.
+  Methods This cross-sectional methodological study was conducted in two phases: translation and cultural adaptation,
+  followed by psychometric evaluation. After obtaining permission from the original scale developer, the scale was trans-
+  lated into Persian using the Pilot and Yang model. Face and content validity were assessed both qualitatively and quanti-
+  tatively. Construct validity was evaluated through exploratory factor analysis (EFA) and confirmatory factor analysis (CFA).
+  A convenience sample of 469 nursing students from nursing faculties in Kermanshah Province, Iran, completed the ques-
+  tionnaire. Internal consistency was evaluated using Cronbach’s alpha and McDonald’s omega coefficients. Test–retest reli-
+  ability was assessed using the intraclass correlation coefficient (ICC) in a subsample of 47 nursing students.
+  Results Exploratory and confirmatory factor analyses confirmed the three-factor structure of the Persian version
+  of the instrument, with 19 items accounting for 63.80% of the total variance. The model fit was excellent, as shown
+  by the CFI, GFI, TLI, RMSEA, and SRMR values. The scale demonstrated acceptable internal consistency reliabil-
+  ity, with Cronbach’s alpha at 0.924 and McDonald’s omega at 0.923. The ICC for the total score was 0.924 (95% CI:
+  0.910–0.936).
+  Conclusion The results of the present study indicate that the Persian version of the Educational Leadership Scale
+  for Nursing Students possesses acceptable psychometric properties. The results of face, content, and construct
+  validity, along with reliability indices (including internal consistency and test–retest reliability), indicate that this
+  instrument is an effective tool for evaluating educational leadership characteristics among Iranian nursing students.
+  However, to further confirm the validity and reliability of this scale, future studies with larger and more diverse sam-
+  ples of nursing students, including those in clinical settings, are recommended. Furthermore, examining the criterion
+  validity and discriminant validity of this instrument could contribute to a better understanding of its psychometric
+  characteristics.
+  Keywords Nursing student, Educational leadership, Psychometric properties, Validity, Reliability
+
+
+
+*Correspondence:
+khalil Moradi
+moradi.khalil12@gmail.com
+Full list of author information is available at the end of the article
+
+
+                                             © The Author(s) 2025. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+                                             International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long
+                                             as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if
+                                             you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or
+                                             parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated
+                                             otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not
+                                             permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To
+                                             view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+
+Jalali et al. BMC Medical Education   (2025) 25:656                                                               Page 2 of 10
+
+
+
+
+Introduction                                                     the validity and reliability of the Abbreviated Self-Lead-
+Nurses, as the largest segment of healthcare profession-         ership Questionnaire (ASLQ) in Korean for use among
+als, play a pivotal role in addressing the evolving health       nursing students; their work resulted in a valuable tool
+needs of communities in the contemporary era [1].                for enhancing future nurses’competencies by strengthen-
+Effective nursing leadership is a cornerstone in ensur-          ing students’self-leadership skills [12]. Additionally, Uns-
+ing optimal responses to these demands. Leadership is            worth et al. developed the Leading and Managing Care
+a fundamental component of the nursing profession,               (LMC) assessment tool to identify constructs relevant
+significantly influencing patient safety and outcomes [2,        to assessing clinical leadership competencies in nurs-
+3]. Consequently, incorporating leadership skills into           ing students. This tool employs a structured approach
+nursing education is paramount for preparing the future          to developing skills in prioritization, resources manage-
+nursing workforce to meet the challenges of modern               ment, communication, and risk management [13]. How-
+healthcare [4].                                                  ever, none of these instruments can comprehensively
+  A critical component of nursing education is the con-          or specifically assess educational leadership in nursing
+cept of educational leadership [5]. In academic discourse,       students.
+educational leadership is commonly conceptualized                  Bloom’s taxonomy (1956), widely recognized for its
+as the capacity to influence others and stimulate their          gradual classification of educational goals, serves to
+motivation, thereby facilitating the attainment of shared        facilitate and systematize learning in nursing, as it does
+objectives [6]. Educational leadership among nursing stu-        across all fields of science [14]. This theory, by system-
+dents is a multifaceted construct encompassing a diverse         atically categorizing educational objectives into three key
+array of skills and behaviors, including the ability to influ-   domains—cognitive, affective, and behavioral—serves
+ence and inspire peers, establish supportive and effective       as a theoretical foundation for developing self-reporting
+learning environments, collaborate on group projects,            tools aimed at enhancing educational leadership com-
+and engage in interprofessional partnerships. Nursing            petencies in nursing. These three dimensions form the
+students equipped with effective educational leadership          foundational pillars of nursing practice. In this regard,
+skills can play a pivotal role in curriculum development,        Karaman et al. [9] addressed the critical gap in the avail-
+mentorship, and the integration of innovative teaching           ability of a comprehensive and specialized tool for assess-
+methodologies. By cultivating leadership skills in nurs-         ing educational leadership among nursing students
+ing students, educators contribute to the preparation of         [9]. Building on Bloom’s taxonomy [14] as a theoretical
+a skilled and competent workforce capable of improving           framework, Karaman et al. designed the Educational
+the quality of patient care [7] while addressing the com-        Leadership Scale for Nursing Students. This instrument
+plexities of modern healthcare systems.                          comprises 19 items structured into three key leadership
+  Educational leadership plays a pivotal role in shaping         dimensions: visionary leadership, instructional leader-
+and advancing the nursing profession, influencing vari-          ship, and scientific leadership. Their work offers a com-
+ous aspects of nursing practice [8]. However, cultivating        prehensive framework that encompasses the multifaceted
+this leadership style requires capacity-building across all      dimensions of educational leadership and provides a
+levels of nursing education to foster quality learning and       structured approach for evaluating leadership competen-
+performance. The significance of educational leadership          cies among nursing students. The subscales of"Scientific
+is more pronounced than ever, necessitating substantial          and Visionary Leadership"include items from the cogni-
+changes and reforms in educational systems to integrate          tive, affective, and behavioral domains’outcomes, while
+this concept more fully into nursing curricula [8]. Conse-       outcomes from the affective and behavioral domains
+quently, given the importance of educational leadership          are included in the"Instructional Leadership"subscale.
+among nursing students, assessing it can play a cru-             By integrating the tool’s subscales with Bloom’s taxon-
+cial role in identifying the strengths and weaknesses of         omy, the scale systematically supports the cultivation of
+related skills in this student cohort, ultimately enhancing      students’multidimensional competencies while fostering
+the quality of nursing education [9].                            their professional growth and advancement [9].
+  Existing instruments for assessing nursing leadership            Cultural contexts inherent to various societies serve as
+have predominantly focused on nurses, with limited tools         pivotal determinants in the development and psychomet-
+designed specifically for nursing students. For instance,        ric evaluation of standardized instruments [15]. Factors
+the Self-Assessment Leadership Instrument (SALI) [10]            such as curricula, educational systems, resource avail-
+was developed to measure leadership among nurses. This           ability, national health priorities, and societal norms play
+instrument, also available in Spanish [11], can enhance          a significant role in shaping the level, quality, and dimen-
+leadership skills and professional development in under-         sions of educational leadership among nursing students
+graduate nursing students. Similarly, Park et al. examined       across diverse countries. Consequently, the application
+
+Jalali et al. BMC Medical Education   (2025) 25:656                                                            Page 3 of 10
+
+
+
+
+of instruments developed in this area to various countries      Participants and setting
+and languages necessitates adaptation and psychometric          The study involved 469 nursing students enrolled in the
+evaluation to align with the cultural context and prevail-      nursing faculties of Kermanshah Province (Kermanshah
+ing norms of the target populations. This process enhances      City and Sonqor City), Iran. To ensure adequate sam-
+the validity and reliability of results, ensuring that the      ple sizes for both Exploratory Factor Analysis (EFA) and
+instrument accurately reflects the educational leadership       Confirmatory Factor Analysis (CFA), participants were
+competencies of nursing students in different settings. Fur-    allocated to these analyses based on the recommended
+thermore, by adapting and validating the Educational Lead-      ratios of 2 to 20 participants per item for EFA [18] and a
+ership Scale for Nursing Students [9] to the cultural and       sample size ranging from 150 to 500 for CFA [19]. Given
+social context of each country, the specific needs of nursing   the 19-item Educational Leadership Scale, the 469 nurs-
+students in those regions can be appropriately addressed.       ing students were randomly divided into two groups:
+  A comprehensive literature review revealed an absence         160 for EFA and 309 for CFA. A convenience sampling
+of instruments designed to assess educational leadership        method was utilized to recruit nursing students in their
+among Iranian nursing students. This gap hinders the            second to fourth years who fulfilled the inclusion crite-
+standardized and comprehensive evaluation of this criti-        ria and provided consent to participate. Participants with
+cal concept. Iran’s nursing education system, which has         more than 10% missing data were excluded from the
+undergone significant changes in recent decades, plays          analysis [20]. The final response rate was 91.6%.
+a pivotal role in achieving the nation’s health goals [16].       Face validity was assessed using feedback from 20 nurs-
+However, leadership concepts have not been adequately           ing students, and content validity was evaluated by 14
+addressed in Iran’s nursing curricula, highlighting the         experts. The intraclass correlation coefficient (ICC) was
+need for curricular reform [17]. The development of             calculated using data from 47 students who participated
+an instrument to assess educational leadership among            in two phases 14 days apart. McDonald’s Omega and
+nursing students in Iran—where curricula have histori-          Cronbach’s Alpha reliability analyses were conducted
+cally paid limited attention to this concept—is of para-        using data from 309 participants in the CFA.
+mount importance. Evaluating educational leadership
+levels among students can reveal curricular strengths
+                                                                Study instrument
+and weaknesses in addressing and applying this concept.
+                                                                The study utilized the Educational Leadership Scale
+Such an instrument could enhance reflective educational
+                                                                for Nursing Students, originally developed by Funda
+approaches, standardize leadership training frameworks
+                                                                Karaman et al. in Turkey in 2023 [9]. This 19-item scale
+across institutions, strengthen educators’capacity to
+                                                                measures three dimensions of educational leadership:
+meet national and international standards and support
+                                                                Visionary Leadership (10 items), Instructional Leadership
+evidence-based active learning strategies. Consequently,
+                                                                (5 items), and Scientific Leadership (4 items). Respond-
+curricular modifications could significantly improve edu-
+                                                                ents rate each item on a 5-point Likert scale ranging from
+cational quality, producing competent nurses capable of
+                                                                1 ("Never Disagree") to 5 ("Strongly Agree"). Total scores
+meeting modern societies’evolving and complex health-
+                                                                range between 19 and 95 points, with higher scores indi-
+care needs, and ultimately enhancing standardized care.
+                                                                cating progressively higher educational leadership levels
+  To address this gap and consider the growing impor-
+                                                                among nursing students. The scale contains no inverse
+tance of educational leadership in nursing, this study
+                                                                items. It demonstrates strong construct validity and a
+aimed to adapt, translate, and psychometrically evaluate
+                                                                high Cronbach’s alpha coefficient of 0.92, confirming
+the Persian version of the Educational Leadership Scale
+                                                                excellent internal consistency [9].
+for Nursing Students for use in Iran. Moreover, the present
+study seeks to determine whether the Persian version of
+the instrument possesses acceptable validity and reliability.   Translation and cultural adaptation
+                                                                Following permission from the original developers, the
+                                                                Educational Leadership Scale for Nursing Students was
+Method
+                                                                translated and culturally adapted using the Polit and Yang
+Design
+                                                                model [21]. The process involved the following steps:
+This cross-sectional methodological study, conducted
+between April and July 2024, employed a psychometric
+                                                                  • Forward Translation: Two Iranian translators fluent
+evaluation of the Persian version of the Educational Lead-
+                                                                    in Persian and English independently translated the
+ership Scale for Nursing Students. The research design
+                                                                    scale from English to Persian.
+involved two primary phases: a translation and cultural
+                                                                  • Synthesis: A single Persian version was synthesized
+adaptation process, followed by a rigorous assessment of
+                                                                    after expert review of the translations.
+the scale’s psychometric properties.
+
+Jalali et al. BMC Medical Education   (2025) 25:656                                                             Page 4 of 10
+
+
+
+
+  • Back-Translation: Two additional bilingual transla-         A KMO value greater than 0.7 and a significant Bartlett’s
+    tors, blinded to the original scale, back-translated the    test (p < 0.05) indicated adequate sampling [27]. Factors
+    Persian version into English.                               with eigenvalues exceeding one and factor loadings above
+  • Reconciliation: A refined final Persian version was         0.5 were retained [28, 29].
+    developed through expert consultation.                        Confirmatory Factor Analysis (CFA) was employed
+  • Pre-testing and Cognitive Interviewing: Clarity and         to assess the effectiveness of each item in measuring
+    relevance were assessed via interviews with 10 nurs-        the scale’s factors. The following model fit indices were
+    ing students, who evaluated each item for difficulty,       evaluated: χ2/df < 3, RMSEA < 0.08 [30], GFI > 0.90, CFI
+    irrelevance, and ambiguity.                                 > 0.90, TLI > 0.90, IFI > 0.90, and AGFI > 0.80 [31, 32].
+
+                                                                Reliability assessment
+Psychometric evaluation                                         The internal consistency of the scale was evaluated using
+This phase assessed the validity (face, content, and con-       Cronbach’s alpha and McDonald’s ω coefficients. Both
+struct) and reliability (internal consistency) of the Persian   coefficients were deemed acceptable when exceeding 0.70
+version of the scale.                                           [33]. Test–retest reliability was assessed using the Intra-
+                                                                class Correlation Coefficient (ICC) on a subset of 10% of
+Face validity assessment                                        the sample (n = 47 nursing students) over two occasions,
+Quantitative face validity was evaluated by having 20           14 days apart [34]. An ICC of 0.75 or higher was deemed
+nursing students complete the questionnaire. Respond-           indicative of acceptable test–retest reliability [35].
+ents rated the importance of each item on a 5-point
+Likert scale ranging from"not important"to"completely           Data collection
+important."The impact score for each item was calcu-            This study used a demographic form to collect data on
+lated using the formula:                                        age, gender, marital status, and education level. The Edu-
+                                                                cational Leadership Scale for Nursing Students was also
+      Impact Score = Frequency × Importance
+                                                                administered. Data were collected in person at the nurs-
+  Items with an impact score above 1.5 were retained for        ing school, following the students’academic schedules.
+further analysis [22].                                          Collaboration with nursing faculty ensured questionnaire
+                                                                administration within classrooms. For students engaged
+Content validity assessment                                     in clinical rotations (fourth-year) who were not present
+Content validity was evaluated through qualitative and          on campus, researchers visited their respective hospitals
+quantitative methods. For qualitative assessment, 14            to facilitate questionnaire completion by participants.
+experts (five nursing faculty members, five nursing man-
+agers with master’s degrees, and four clinical nurses with      Statistical analysis
+master’s degrees) reviewed the scale’s items for grammat-       Data were analyzed using SPSS (version 26.0) and LIS-
+ical accuracy, wording, item placement, clarity, scoring,       REL (version 8.0). Normality was assessed via skew-
+and cultural relevance to Iran.                                 ness and kurtosis. For the Educational Leadership Scale
+  Quantitative content validity was determined using two        for Nursing Students, skewness and kurtosis values
+indices:                                                        for all items ranged from − 2 to 2, indicating approxi-
+                                                                mately symmetrical distributions. Statistical techniques
+  • Content Validity Ratio (CVR): Experts rated item            included Cronbach’s alpha, McDonald’s ω, Intraclass
+    necessity on a 3-point scale ("necessary,""useful but       Correlation Coefficient (ICC), and exploratory and con-
+    not necessary,""not necessary") [23, 24]. The CVR           firmatory factor analyses.
+    was evaluated against Lawshe’s table, with a mini-
+    mum acceptable value of 0.49 for 14 experts [25]            Results
+  • Content Validity Index (CVI): Experts rated item rel-       Descriptive results
+    evance on a 4-point scale (“not relevant” to “very rel-     A total of 160 nursing students participated in the EFA
+    evant”). A CVI ≥ 0.79 was deemed excellent per Polit        phase. The sample had a mean age of 23.19 years (SD =
+    and Beck’s criteria [26].                                   2.84), ranging from 20 to 33 years. The majority of par-
+  • Construct Validity Assessment                               ticipants were male (51.2%), single (96.9%), and in their
+                                                                second year of undergraduate studies (41.2%).
+ Exploratory Factor Analysis (EFA) was conducted with             For the CFA phase, the sample size consisted of 309
+Varimax rotation. The Kaiser–Meyer–Olkin (KMO) and              nursing students. The mean age was slightly higher
+Bartlett’s tests were used to evaluate sampling adequacy.       at 23.52 years (SD = 2.36), with an age range of 20 to
+
+Jalali et al. BMC Medical Education   (2025) 25:656                                                                     Page 5 of 10
+
+
+
+
+Table 1 Demographic characteristics of participants in the study       of the total variance. As shown in Table 2, all 19 items
+Variables                                N (%)
+                                                                       on the scale had factor loadings above 0.50 and were
+                                                                       assigned to the three factors: Visionary Leadership (10
+                                         EFA (160)      CFA (309)      items), Instructional Leadership (5 items), and Scien-
+Age (years)                              23.19 ± 2.84   23.52 ± 2.36   tific Leadership (4 items). Three factors were selected for
+Gender                  Male             82 (51.2)      142 (46)       analysis, identified by retaining only those with eigenval-
+                        Female           78 (48.8)      167 (54)       ues greater than, the scree plot, presented in Supplemen-
+Marital Status          Single           155 (96.9)     295 (95.5)     tary Fig. 1, visually confirms the three-factor structure of
+                        Married          5 (3.1)        14 (4.5)       the scale.
+Educational Level       Second Year      66 (41.2)      116 (37.5)
+                        Third Year       48 (30)        75 (24.3)      CFA of construct validity
+                        Fourth Year      46 (28.8)      118 (38.2)     A CFA was conducted on a sample of 309 nursing stu-
+                                                                       dents to validate the three-factor structure of the scale.
+                                                                       The results indicated a satisfactory model fit, with χ2 =
+                                                                       337.19, p < 0.0001, RMSEA = 0.07, NNFI/TLI = 0.94, CFI
+33 years. Most participants were female (54%), single
+                                                                       = 0.90, GFI = 0.90, SRMR = 0.048, and df = 149 (χ2/df
+(95.5%), and in their fourth year of undergraduate studies
+                                                                       = 2.26).
+(38.2%). A detailed breakdown of the demographic char-
+                                                                         The path diagram and factor loadings from the CFA
+acteristics for both phases is presented in Table 1.
+                                                                       are depicted in Fig. 1. Additionally, Pearson’s correlation
+                                                                       analysis revealed significant and positive relationships
+Face validity                                                          between the subscales and the overall scale, as shown in
+The qualitative face validity assessment identified items              Table 3. All first- and second-order factor loadings were
+8 and 11 as requiring clarification to eliminate ambi-                 statistically significant at the 95% confidence level (|λ|>
+guity. Following the necessary revisions, all items were               1.96). The Lambda coefficients (λ), which represent the
+retained for further analysis in the quantitative face                 standardized factor loadings for each factor, are pre-
+validity evaluation, as each item recorded an impact                   sented in Table 4.
+score greater than 1.5.
+                                                                       Reliability tests
+                                                                       Internal consistency
+Content validity                                                       The Cronbach’s alpha coefficient for the overall scale was
+Qualitative content analysis identified the need for modi-             0.924, indicating excellent internal consistency. For the
+fications in three items (4, 13, and 17) to enhance clarity            individual factors, Cronbach’s alpha ranged from 0.711 to
+and comprehensibility. Following expert review and revi-               0.903, demonstrating acceptable reliability for all factors
+sions, these items were deemed appropriate. The quanti-                (Table 4). Similarly, McDonald’s omega coefficient for
+tative content validity of the scale was assessed using the            the total scale was 0.923, and values for the three factors
+CVR, which was found to be 0.87. This value falls within               ranged from 0.710 to 0.903, further supporting the scale’s
+the acceptable range of 0.71 to 1. Additionally, the CVI,              reliability. These findings collectively demonstrate strong
+calculated using the Waltz and Bausell index, was 0.95,                internal consistency.
+with individual item scores ranging from 0.86 to 1. Sup-
+plementary Table 1.
+                                                                       Test–retest reliability
+                                                                       The Intraclass Correlation Coefficient (ICC) for the total
+EFA of construct validity                                              score of the scale was 0.924 (95% CI: 0.910–0.936), indi-
+EFA was conducted on a sample of 160 participants to                   cating high test–retest reliability (Table 4).
+examine the construct validity of the scale. The Kaiser–
+Meyer–Olkin (KMO) measure, a widely used indicator of                  Discussion
+sampling adequacy, was found to be 0.897. Bartlett’s test              The present study aimed to adapt and validate the Persian
+of sphericity was also conducted to assess the appropri-               version of the Educational Leadership Scale for Nursing
+ateness of factor analysis. The test yielded a significant             Students. The results confirmed the three-factor struc-
+result (χ2 = 2220.637, p < 0.001), confirming that the cor-            ture of the scale, namely Visionary Leadership, Instruc-
+relation matrix is not an identity matrix.                             tional Leadership, and Scientific Leadership, which
+  The EFA, using the Maximum Likelihood (ML) method                    accounted for 63.80% of the total variance. Exploratory
+and Varimax rotation, identified a three-factor solution               and confirmatory factor analyses demonstrated a good
+with eigenvalues greater than 1.0, accounting for 63.80%               model fit, indicating that this scale effectively measures
+
+Jalali et al. BMC Medical Education         (2025) 25:656                                                                    Page 6 of 10
+
+
+
+
+Table 2 Item factor loadings from exploratory factor analysis of the Persian version of the educational leadership scale for nursing
+students
+Factors                                           Items     Mean (sd)a         Factors                                      communality
+                                                                               1              2              3
+
+Scientific Leadership                             Q1        3.65(1.15)         .170           .122           .765           .629
+                                                  Q2        3.63(1.07)         .195            .178          .793           .698
+                                                  Q3        3.40(1.17)         .212            .213          .757           .663
+                                                  Q4        3.69(1.03)         .367            .256          .558           .511
+Instructional Leadership                          Q5        3.97(1.11)         .350            .798          .117           .773
+                                                  Q6        4.11(1.06)         .360            .733          .233           .721
+                                                  Q7        4.12(1.02)         .387            .711          .226           .707
+                                                  Q8        3.95(1.12)         .260            .769          .226           .711
+                                                  Q9        4.07(1.09)         .215            .812          .190           .742
+Visionary Leadership                              Q10       3.95(1.08)         .622            .177          .280           .497
+                                                  Q11       4.10(1.04)         .747            .126          .216           .621
+                                                  Q12       4.10(1.00)         .732            .285          .156           .641
+                                                  Q13       4.05(1.02)         .738            .351          .111           .680
+                                                  Q14       4.07(1.04)         .752            .298          .140           .675
+                                                  Q15       4.26(.95)          .630            .290          .167           .509
+                                                  Q16       4.13(.98)          .592            .242          .253           .473
+                                                  Q17       3.99(1.15)         .725            .283          .214           .652
+                                                  Q18       4.07(1.02)         .789            .222          .168           .699
+                                                  Q19       3.61(1.22)         .642            .254          .216           .523
+Eigenvalue                                                                     9.219           1.456         1.448
+Percentage of the Variance (%)                                                 48.523          7.664         7.620
+a
+    The mean and deviation of each item’s score
+
+
+
+the intended constructs. These findings align with                       research objectives, thereby bolstering the instrument’s
+research by Karaman et al. on the original version of the                credibility [37].
+scale [9], which reported 58.64% explained variance. This                  Reliability is another critical psychometric property.
+comparison suggests that the Educational Leadership                      The Educational Leadership Scale for Nursing Students
+Scale for Nursing Students exhibits cross-cultural gen-                  demonstrated high internal consistency, with a Cron-
+eralizability and can reliably measure educational leader-               bach’s alpha coefficient of 0.924 for the total scale and
+ship constructs in both Iranian and Turkish contexts.                    subscale values ranging from 0.711 to 0.903. These results
+  An essential aspect of evaluating an instrument is                     align with prior studies on educational leadership [38].
+examining its validity. In this study, the face and content              For instance, Aldighrir [39] reported a Cronbach’s alpha
+validity of the Educational Leadership Scale for Nursing                 of 0.89 for a similar instrument among faculty mem-
+Students were rigorously assessed. The qualitative face                  bers. Additionally, the McDonald’s omega coefficient (ω
+validity assessment identified the need for clarification in             = 0.923) further confirmed the reliability of the scale in
+certain items. After making revisions, all items achieved                this study. Test–retest reliability, assessed via intraclass
+impact scores greater than 1.5 during the quantitative                   correlation coefficient (ICC), yielded a total score ICC
+face validity evaluation, confirming their acceptability.                of 0.924 (95% CI: 0.910–0.936), consistent with Gustafs-
+This finding is consistent with Daud’s study [36], where                 son’s findings [40] (ICC range: 0.70–0.96). The high ICC
+face validity was established post-revision. For content                 underscores the scale’s temporal stability, a vital fea-
+validity, expert feedback was incorporated, yielding a                   ture for longitudinal and intervention studies [41]. Col-
+CVR of 0.87 and a CVI of 0.95. These values correspond                   lectively, these results validate the scale’s reliability and
+with Samad’s study [37], which reported CVR and CVI                      internal consistency, reinforcing its utility in educational
+values of 0.78 and 0.89, respectively. The results confirm               leadership research.
+strong content validity and comprehensive coverage of                      Among the identified factors,"Scientific Leadership"
+the target constructs. Ensuring face and content validity                emerged as the most influential, explaining 48.523% of the
+enhances participant comprehension and alignment with                    total variance. This underscores the critical role of scientific
+
+Jalali et al. BMC Medical Education   (2025) 25:656                                                                                            Page 7 of 10
+
+
+
+
+ Fig. 1 Final measurement model of the Persian version of the educational leadership scale for nursing students derived from confirmatory factor
+ analysis
+
+
+
+leadership in preparing nursing students for clinical set-                  Table 3 The correlations between the Persian version of the
+tings. Studies have demonstrated that scientific leadership                 educational leadership scale for nursing students and its sub-
+empowers nurses to effectively apply their scientific and                   scales
+leadership abilities in complex clinical situations [42].                   3               2                  1                  Factor
+Research in other fields, such as medical education, has
+identified scientific leadership as a key factor in improving                                                  1                  F. 1
+                                                                                                                                  Visionary Leadership
+the quality of education and learning [43]. These skills ena-
+                                                                                            1                  .677**             F. 2
+ble nurses to make informed decisions in complex clinical                                                                         Instructional Leadership
+scenarios [44, 45], contribute to enhancing healthcare qual-                1               .496**             .52**              F. 3
+ity, and improve patient outcomes [42, 46]. To address com-                                                                       Scientific Leadership
+plex clinical challenges effectively, students must cultivate               Correlations represent latent factor correlation estimates derived from the CFA
+their scientific and leadership skills [4, 44, 45]. The"clinical            model. All correlations were statistically significant at p <.01
+                                                                            **
+                                                                                 P < 0.01
+
+Jalali et al. BMC Medical Education             (2025) 25:656                                                                                                      Page 8 of 10
+
+
+
+
+Table 4 T-value, Pearson correlation coefficient, factor loadings, McDonald’s ω, and Cronbach’s Alpha of the Persian version of the
+educational leadership scale for nursing students
+Factor                                    No          t valuea          (λ)b           Rc               McDonald’s ω               ICC                              Cronbach’s
+                                                                                                                                                                    Alpha
+
+Factor 3                                  Q1          10.27             .61***         .55**            .71                        .711 (CI:.654—.76)               .711
+Scientific Leadership
+                                          Q2          11.3              .66***         .604**
+                                                                              ***
+                                          Q3          11.03             .64            .629**
+                                                                              ***
+                                          Q4          9.96              .59            .678**
+                                                                              ***
+Factor 2                                  Q5          15.14             .76            .751**           .833                       .831 (CI:.798—.86)               .831
+Instructional Leadership
+                                          Q6          15.41             .77***         .773**
+                                                                              ***
+                                          Q7          15.21             .76            .781**
+                                                                              ***
+                                          Q8          13.54             .70            .738**
+                                                                              ***
+                                          Q9          15.54             .78            .72**
+                                                                              ***
+Factor 1                                  Q10         11.06             .62            .67**            .903                       .903 (CI:.886-.919)              .903
+Visionary Leadership
+                                          Q11         13.61             .70***         .699**
+                                                                              ***
+                                          Q12         15.7              .77            .75**
+                                                                              ***
+                                          Q13         14.61             .74            .75**
+                                                                              ***
+                                          Q14         15.42             .76            .764**
+                                                                              ***
+                                          Q15         12.54             .65            .704**
+                                                                              ***
+                                          Q16         12.54             .65            .68**
+                                                                              ***
+                                          Q17         15.22             .75            .755**
+                                                                              ***
+                                          Q18         15.64             .77            .722**
+                                                                              ***
+                                          Q19         10.26             .56            .66**
+The Persian version of the Educational Leadership Scale for Nursing Students                            .923                       .924 (CI:.91-.936)               .924
+***
+      P < 0.001; **P < 0.01; * P < 0.05
+a
+    The calculated values of all factor loadings, both first-order and second-order, exceed 1.96, indicating statistical significance at the 95% confidence level
+b
+    The specific value, represented by the Lambda coefficient (λ), is calculated as the sum of the factor loadings for all variables associated with that factor
+c
+    Pearson Correlation Coefficient
+
+
+problem-solving"and"professional identity"subscales of                                      a potent factor in creating positive learning environments
+other scales correlate with this factor, highlighting the                                   and fostering student motivation [52]. This type of leader-
+importance of problem-solving and decision-making skills                                    ship empowers teachers and nurses to challenge students
+in clinical practice [47, 48]. These skills empower nurses                                  through innovative methods and engage them in more
+to address common and complex challenges in clinical                                        active learning processes [50–52].
+settings innovatively and effectively [49]. Clinical judg-                                    The third factor,"Visionary Leadership,"contributed
+ment and nursing performance involve the ability to assess                                  7.620% of the total variance and encompasses items
+clinical situations, identify patient needs, prioritize care,                               focused on creating a vision and motivating nursing stu-
+implement appropriate interventions, and evaluate patient                                   dents. This factor signifies the ability of nurses to inspire
+responses to treatment [43].                                                                and motivate others toward shared goals [53, 54]. In stud-
+   The second identified factor,"Instructional Leadership,"                                 ies on educational leadership across various disciplines,
+accounted for 7.664% of the total variance, ranking second                                  visionary leadership has been recognized as a crucial
+in the measurement of educational leadership. This finding                                  skill in enhancing service quality and fostering teamwork
+aligns with the study by Karaman et al., in which this fac-                                 [55]. This type of leadership empowers nurses to guide
+tor was also ranked second in importance [9]. This factor                                   clinical teams toward shared objectives by establishing
+comprises items related to instructional applications and                                   a common vision, thereby improving healthcare quality
+leadership abilities in educational settings. The significance                              [52]. Visionary leadership also equips nurses to respond
+of instructional leadership in nursing is particularly evi-                                 swiftly and make resilient decisions in emergency and
+dent in its ability to motivate students and enhance their                                  unexpected situations [56]. In essence, visionary leader-
+clinical skills [50, 51]. In other disciplines, such as teacher                             ship is a pivotal skill for improving healthcare quality and
+education, instructional leadership has been recognized as                                  advancing the standard of healthcare services [52].
+
+Jalali et al. BMC Medical Education        (2025) 25:656                                                                                                 Page 9 of 10
+
+
+
+
+Limitations                                                                      Data analyses were performed by A, J; F, H; and K, M. The final report and
+                                                                                 article were written by A, J; K, M; A, N; S, R; E, E; and F, H. All authors read and
+This study employed a cross-sectional design and utilized                        approved the final manuscript.
+convenience sampling to recruit nursing students from
+a western province in Iran. The investigation focused on                         Funding
+                                                                                 This study received partial funding from Kermanshah University of Medical
+evaluating the psychometric properties of the Persian                            Sciences, Iran.
+version of the Educational Leadership Scale for Nursing
+Students. However, the inherent limitations of the cross-                        Data availability
+                                                                                 The data analyzed during the current study are available from the correspond-
+sectional design and the specific nature of the sample                           ing author upon reasonable request.
+may restrict the generalizability of the findings. Addi-
+tionally, while the content and construct validity of the                        Declarations
+scale were assessed, criterion-related validity—includ-
+ing measures such as concurrent and predictive valid-                            Ethics approval and consent to participate
+                                                                                 This research study received ethical approval from the Ethics Commit-
+ity—was not examined. Furthermore, the extent to which                           tee of Kermanshah University of Medical Sciences (Ethics code: IR.KUMS.
+cultural and contextual factors influence responses to the                       REC.1402.257). Written permission was obtained from the scale’s developers
+scale remains unclear. Future research should explore the                        for its use. All participants provided written informed consent before participa-
+                                                                                 tion. The study was conducted in accordance with the principles outlined
+cultural adaptation of this instrument in more diverse                           in the Declaration of Helsinki. All research procedures adhered to relevant
+populations to better understand the influence of culture                        guidelines and regulations.
+on educational leadership and address the unique needs
+                                                                                 Consent for publication
+of nursing students across different regions of a country.                       Not applicable.
+
+Conclusion                                                                       Competing interests
+                                                                                 The authors declare no competing interests.
+This study successfully developed and validated a culturally
+appropriate instrument for assessing educational leader-                         Author details
+                                                                                 1
+ship among Iranian nursing students. The tool can serve as a                       Substance Abuse Prevention Research Center, Research Institute for Health, Ker-
+                                                                                 manshah University of Medical Sciences, Kermanshah, Iran. 2Department of Pre-
+valuable resource for educational and clinical administrators                    hospital Emergency, School of Paramedical, Kermanshah University of Medical
+to evaluate and enhance educational leadership competen-                         Sciences, Kermanshah, Iran. 3Department of Medical‑Surgical Nursing, School
+cies among students. Researchers and research managers                           of Nursing & Midwifery, Kermanshah University of Medical Sciences, Kermanshah,
+                                                                                 Iran. 4Department of Emergency and Critical Care Nursing, School of Nursing
+may also use this instrument to conduct further studies on                       and Midwifery, Urmia University of Medical Sciences, Urmia, Iran. 5Student
+educational leadership within Iran, contributing to broader                      Research Committee, Kermanshah University of Medical Sciences, Kermanshah,
+efforts to improve nursing education and practice.                               Iran. 6Department of Emergency and Critical Care Nursing, School of Nursing
+                                                                                 and Midwifery, Kermanshah University of Medical Sciences, Kermanshah, Iran.
+Abbreviations
+CVI	Content Validity Index                                                      Received: 17 October 2024 Accepted: 30 April 2025
+CVR	Content Validity Ratio
+KMO	Kaiser-Meyer-Olkin
+EFA	Exploratory Factor Analysis
+CFA	Confirmatory Factor Analysis
+TLI	Tucker-Lewis Index                                                          References
+NFI	Normed Fit Index                                                            1. Etowa J, Vukic A, Aston M, Iduye D, Mckibbon S, George A, et al. Experi-
+GFI	Goodness of Fit Index                                                           ences of nurses and midwives in policy development in low-and middle-
+RMSEA	Root Mean Square Error of Approximation                                       income countries: qualitative systematic review. International Journal of
+PC	Principal Components                                                             Nursing Studies Advances. 2023;5: 100116.
+SRMR	Standardized Root Mean Square Residual                                     2. Kim HO, Lee I, Lee BS. Nursing leaders’ perceptions of the state of
+KUMS	Kermanshah University of Medical Sciences                                      nursing leadership and the need for nursing leadership education
+                                                                                     reform: a qualitative content analysis from South Korea. J Nurs Manag.
+                                                                                     2022;30(7):2216–26.
+Supplementary Information                                                        3. Reime MH, Bell K, Albrigtsen B, Beisland EG. Baccalaureate nursing
+The online version contains supplementary material available at https://​doi.​       students’ reflections on professional development within the nursing
+org/​10.​1186/​s12909-​025-​07269-6.                                                 leadership role when participating in student-run teams: a qualitative
+                                                                                     content analysis of student’s reflection notes. SAGE Open Nursing. 2022;8:
+                                                                                     23779608221130604.
+  Supplementary Material 1.
+                                                                                 4. Alilyyani B, Althobaiti E, Al-Talhi M, Almalki T, Alharthy T, Alnefaie M, et al.
+                                                                                     Nursing experience and leadership skills among staff nurses and intern
+Acknowledgements                                                                     nursing students in Saudi Arabia: a mixed methods study. BMC Nurs.
+The authors thank the faculty members of the Student Research Committee of           2024;23(1):87.
+Kermanshah University of Medical Sciences. This research project has been reg-   5. Nowell L, Davidson S, Gospodinov J, Laing C, Shajani Z, Dewell S, et al.
+istered with code 4021004 at Kermanshah University of Medical Sciences, Iran.        Evaluating fundamental care knowledge to inform educational leader-
+                                                                                     ship. J Adv Nurs. 2023;79(3):1174–88.
+Authors’ contributions                                                           6. Taghavinia M, Maleki MR, Arabshahi KS. Educational leadership in educa-
+All authors participated and approved the study design. K, M; F, H and A, J          tion development centers: a qualitative study. Journal of Education and
+contributed to designing the study. E, E; S, R; and A, N collected the data.         Health Promotion. 2021;10(1):46.
+
+Jalali et al. BMC Medical Education         (2025) 25:656                                                                                               Page 10 of 10
+
+
+
+
+7.    Aydogdu ALF. Exploring different aspects of nursing leadership: an inte-       35. Koo TK, Li MY. A guideline of selecting and reporting intraclass correlation
+      grative review of qualitative studies. Mod Care J. 2023;20(4): e130402.            coefficients for reliability research. J Chiropr Med. 2016;15(2):155–63.
+8.    Girard N. Educational leadership in professional nursing. Perioperative        36. Daud RB, Johari S, Abdul-Hamid F, Junaini SN, bin Nordin MN. Face
+      Nursing Clinics. 2009;4(1):43–9.                                                   and content validity for the special education leadership (integration)
+9.    Karaman F, KavgaoĞlu D, Yildirim G, Rashidi M, Ünsal Jafarov G, Zahoor             questionnaire in Malaysia. Turkish Journal of Computer and Mathematics
+      H, et al. Development of the educational leadership scale for nursing              Education. 2021;12(11):5172–8.
+      students: a methodological study. BMC Nurs. 2023;22(1):110.                    37. Samad N, Noor MAM, Mansor M, Jumahat T. Measuring the content valid-
+10.   Söderman A, Östlund U, Harstäde CW, Blomberg K. Dignity-conserving care            ity of middle leadership competence model using content validity ratio
+      for persons with palliative care needs—identifying outcomes studied in             (CVR) analysis. International Journal of Business and Technology Manage-
+      research: an integrative review. Palliat Support Care. 2020;18(6):722–40.          ment. 2023;5(4):134–44.
+11.   Linares PF, Higueras ER, Martin-Ferreres ML, Torre MÁC, Capellades LW,         38. Rivera JG. Educational leadership attributes scale: a proposed instrument
+      Fernández-Puebla AG. Dimensions of leadership in undergraduate nurs-               for self-assessment of leadership attributes.
+      ing students. Validation of a tool. Nurse education today. 2020;95:104576.     39. Aldighrir WM. Development and psychometric evaluation of the educa-
+12.   Park H-J, Kim S-K, Yu S. Validity and reliability of the Korean version of         tional leadership scale for faculty members: insights from the network
+      the self-leadership questionnaire for nursing students. SAGE Open.                 analysis perspective. Eur J Educ. 2024;59(4):e12773.
+      2024;14(1): 21582440241239786.                                                 40. Gustafsson M, Blomberg K, Holmefur M. Test-retest reliability of the clini-
+13.   Unsworth J, Melling A, Porteous D. Development and evaluation of                   cal learning environment, supervision and nurse teacher (CLES+ T) scale.
+      the validity and reliability of the leading and managing care pre-regis-           Nurse Educ Pract. 2015;15(4):253–7.
+      tration nursing student assessment tool. SAGE Open Nursing. 2021;7:            41. Leyland AH, Groenewegen PP. Intraclass correlation coefficient (ICC). In: Ency-
+      23779608211000259.                                                                 clopedia of quality of life and well-being research. Springer; 2024. p. 3643–4.
+14.   M T. Physical activity. WHO (World Health Organization). Available from:       42. Kim HJ, Kawar LN, Rondinelli J, Aquino-Maneja EM, McGinnis JA, Scruth E,
+      http://​www.​who.​int/​topics/​physi​cal_​activ​ity/​en/.                          et al. The role of the nurse scientist and nursing research within a national
+15.   Pourshahri E, Mohammadi F, Shareinia H, Abadi F, Bijani M. Translation and         integrated health care system. Nurs Adm Q. 2024;48(3):237–47.
+      psychometric testing of the Persian version of nurses’ ethical decision-       43. Ismaya B, Sutrisno S, Darmawan D, Jahroni J, Kholis N. Strategy for leader-
+      making in end-of-life care scale. BMC Nurs. 2024;23(1):316.                        ship: how principals of successful schools improve education quality.
+16.   Farsi Z, Nasiri M, Sajadi SA, Khavasi M. Comparison of Iran’s nursing educa-       Al-Tanzim: Jurnal Manajemen Pendidikan Islam. 2023;7(1):247–59.
+      tion with developed and developing countries: a review on descriptive-         44. Koutsona A. Leadership and decision-making through crisis: the case of
+      comparative studies. BMC Nurs. 2022;21(1):105.                                     Covid-19 crisis. 2023.
+17.   Hozni SA, Hakkak M, Vahdati H, Nazarpoori AH. Nursing leadership               45. Parada CMGdL, Paz EPA, Nichiata LYI, Barbosa DA, Kantorski L. Advanced
+      competency learning-an integrative review. Future Med Educ J.                      practice nursing:“training” pillar in supporting the proposal in Brazil.
+      2019;8(4):46–54.                                                                   Revista Brasileira de Enfermagem. 2023;76(5): e20230118.
+18.   Anthoine E, Moret L, Regnault A, Sébille V, Hardouin J-B. Sample size used     46. Cross HR, Greenwood-Quaintance KE, Souli M, Komarow L, Geres HS,
+      to validate a scale: a review of publications on newly-developed patient           Hamasaki T, et al. Under the hood: the scientific leadership, clinical
+      reported outcomes measures. Health Qual Life Outcomes. 2014;12:1–10.               operations, statistical and data management, and laboratory centers of
+19.   Munro BH. Statistical methods for health care research. Philadelphia: Lip-         the antibacterial resistance leadership group. Clinical Infectious Diseases.
+      pincott williams & wilkins; 2005.                                                  2023;77(Supplement_4):S288–94.
+20.   Nulty DD. The adequacy of response rates to online and paper surveys:          47. Boles AM. Exploring student perceptions of problem-based learning and
+      what can be done? Assess Eval High Educ. 2008;33(3):301–14.                        clinical field experiences: a phenomenological study. Liberty University; 2024.
+21.   Polit DF, Yang FM. Measurement and the measurement of change: a                48. Adeleke BBC. Development of critical thinking skills in medical education
+      primer for the health professions. Philadelphia: Wolters Kluwer; 2016.             through teaching strategies: a perceptionof future teachers of profes-
+22.   Polit D, Beck C. Essentials of nursing research: appraising evidence for           sional subject for medical schools. 2024.
+      nursing practice. Lippincott Williams & Wilkins; 2020.                         49. Garvey L, Hood K, Willetts G, Weller-Newton J, Wheelahan J, Croy G. Nursing
+23.   Binti Hassan SA. Content validity of STEMTIP using CVR method. Int J               educators’ professional identity: challenges and consequences when adopting
+      Acad Res Bus Soc Sci. 2018;8:1118–25.                                              the flipped approach. Teaching and Learning in Nursing. 2023;18(2):257–62.
+24.   Lawshe C. A quantitative approach to content validity. Personnel psychol-      50. Munna AS. Instructional leadership and role of module leaders. Interna-
+      ogy/Berrett-Koehler Publishers; 1975.                                              tional Journal of Educational Reform. 2023;32(1):38–54.
+25.   Lawshe CH. A quantitative approach to content validity. Pers Psychol.          51. Mrayyan MT, Algunmeeyn A, Abunab HY, Kutah OA, Alfayoumi I,
+      1975;28(4):563–75.                                                                 Khait AA. Attributes, skills and actions of clinical leadership in nurs-
+26.   Woo K. Polit & Beck Canadian essentials of nursing research. Lippincott            ing as reported by hospital nurses: a cross-sectional study. BMJ Lead.
+      Williams & Wilkins; 2017.                                                          2023;7(3):leader-2022-000672.
+27.   Henson RK, Roberts JK. Use of exploratory factor analysis in published         52. Kilag OKT, Sasan JM. Unpacking the role of instructional leadership in
+      research: common errors and some comment on improved practice.                     teacher professional development. Advanced Qualitative Research.
+      Educ Psychol Measur. 2006;66(3):393–416.                                           2023;1(1):63–73.
+28.   Wolf EJ, Harrington KM, Clark SL, Miller MW. Sample size requirements for      53. Rosadi I, Setyaningsih S, Suhardi E. The influence of visionary leadership,
+      structural equation models: an evaluation of power, bias, and solution             organizational culture, self-efficacy, and work motivation on teacher
+      propriety. Educ Psychol Measur. 2013;73(6):913–34.                                 creativity. Journal of Educational Administration. 2024;41(1):30–55.
+29.   Jalali A, Sharifi A, Ezzati E, Babaei K, Chavoshani F, Rahmani S, et al.       54. Darmono, & Nuruzzaman, Muhammad & Wahyuni I, Setiawan RJ, Ma’ruf K.
+      Cultural adaptation and psychometric evaluation of the Persian version             Visionary leadership: the key to quality education. 2024;21:1371–88.
+      of the motivation for nursing student scale (MNSS). BMC Med Educ.              55. Ariani R, Hardhienata S, Entang M. Increasing work productivity through
+      2024;24(1):1117.                                                                   organizational culture, visionary leadership, and achievement motivation.
+30.   Byrne BM. Structural equation modeling with Mplus: basic concepts,                 In: SUJANA: education and learning review. 2023. p. 39-52.
+      applications, and programming. Routledge; 2013.                                56. Sari N, Omar M, Pasinringi SA, Zulkifli A, Sidin AI. Developing hospital resil-
+31.   Floyd FJ, Widaman KF. Factor analysis in the development and refinement            ience domains in facing disruption era in Indonesia: a qualitative study.
+      of clinical assessment instruments. Psychol Assess. 1995;7(3): 286.                BMC Health Serv Res. 2023;23(1):1395.
+32.   Jalali A, Naghibzadeh A, Mohammadi MM, et al. Translation and validation
+      of the Persian version of the Nursing Practice Readiness Scale (NPRS) for
+      new graduate nurses. BMC Nurs. 2024;23:760.                                    Publisher’s Note
+33.   McNeish D. Thanks coefficient alpha, we’ll take it from here. Psychol          Springer Nature remains neutral with regard to jurisdictional claims in pub-
+      Methods. 2018;23(3):412.                                                       lished maps and institutional affiliations.
+34.   Polit DF, Beck CT. Nursing research: generating and assessing evidence for
+      nursing practice. Lippincott Williams & Wilkins; 2008.

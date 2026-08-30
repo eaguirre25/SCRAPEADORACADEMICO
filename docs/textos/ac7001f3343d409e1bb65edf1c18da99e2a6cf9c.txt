@@ -1,0 +1,1186 @@
+TYPE Original Research
+                                                                                                               PUBLISHED 28 October 2022
+                                                                                                               DOI 10.3389/fpsyg.2022.1024017
+
+
+
+
+                                               Innate ability, health, motivation,
+OPEN ACCESS                                    and social capital as predictors of
+                                               students’ cognitive, affective and
+EDITED BY
+Khadijeh Irandoust,
+Imam Khomeini International University,
+Iran
+
+REVIEWED BY
+                                               psychomotor learning outcomes
+                                               in secondary schools
+Elahe Arab Ameri,
+University of Tehran,
+Iran
+Maghsoud Nabilpour,
+University of Mohaghegh Ardabili, Iran         Valentine Joseph Owan 1,2*, John Asuquo Ekpenyong 2,3,
+Maryam Abolhasani,
+Tehran University of Medical Sciences, Iran    Onyinye Chuktu 4, Michael Ekpenyong Asuquo 2,3, Joseph
+*CORRESPONDENCE                                Ojishe Ogar 3, Mercy Valentine Owan 2,3 and Sylvia Okon 5
+Valentine Joseph Owan
+owanvalentine@gmail.com                        1
+                                                Department of Educational Foundations, University of Calabar, Calabar, Nigeria, 2 Ultimate
+                                               Research Network (URN), Calabar, Nigeria, 3 Department of Educational Management, University of
+SPECIALTY SECTION
+                                               Calabar, Calabar, Nigeria, 4 Institute of Education, University of Calabar, Calabar, Nigeria,
+This article was submitted to                  5
+                                                 Department of Psychology, Caritas University, Amorji-Nike, Enugu State, Nigeria
+Educational Psychology,
+a section of the journal
+Frontiers in Psychology
+
+RECEIVED 20 August 2022
+ACCEPTED 11 October 2022                       Background: Previous studies assessing students’ learning outcomes and
+PUBLISHED 28 October 2022                      identifying contributing factors have often dwelt on the cognitive domain.
+CITATION                                       Furthermore, school evaluation decisions are often made using scores from
+Owan VJ, Ekpenyong JA, Chuktu O,               cognitive-based tests to rank students. This practice often skews evaluation
+Asuquo ME, Ogar JO, Owan MV and
+Okon S (2022) Innate ability, health,          results, given that education aims to improve the three learning domains. This
+motivation, and social capital as predictors   study addresses this gap by assessing the contributions of four students’ input
+of students’ cognitive, affective and
+                                               to their cognitive, affective and psychomotor skills (CAPs).
+psychomotor learning outcomes in
+secondary schools.                             Methods: A cross-section of senior secondary class II students (n=870),
+Front. Psychol. 13:1024017.
+doi: 10.3389/fpsyg.2022.1024017                sampled through the multistage procedure, participated in a physical survey.
+                                               Students’ Inputs Questionnaire (STIQ) and Learning Outcomes Questionnaire
+COPYRIGHT
+© 2022 Owan, Ekpenyong, Chuktu,                (LOQ) were used for data collection. Based on data obtained from a pilot
+Asuquo, Ogar, Owan and Okon. This is an        sample (n=412), principal axis factoring (PAF) was performed to assess the
+open-access article distributed under the
+terms of the Creative Commons Attribution
+                                               internal structure of the instruments following an oblique rotation. The KMO
+License (CC BY). The use, distribution or      value of sampling adequacy were 0.88 and 0.94, while the Bartlett’s test of
+reproduction in other forums is permitted,     sphericity were significant χ2(253)=5,010; p<0.001 and χ2(105)=3693.38,
+provided the original author(s) and the
+copyright owner(s) are credited and that       p<0.001 for the STIQ and LOQ, respectively. Confirmatory factor analysis was
+the original publication in this journal is    used to assess the models’ acceptability based on the maximum likelihood
+cited, in accordance with accepted
+academic practice. No use, distribution or
+                                               estimation technique. The main study used hierarchical linear regression for
+reproduction is permitted which does not       data analysis.
+comply with these terms.
+                                               Results: Findings indicated that innate ability, health, motivation and social
+                                               capital relatively and cumulatively predicted students’ overall, cognitive,
+                                               affective and psychomotor learning outcomes. The proportion of variance
+                                               explained by the predictors increased at different levels of the models with
+                                               the addition of new variables. Students’ social capital reduced the effect of
+                                               students’ innate ability regardless of their motivation and health status.
+                                               Conclusion/implication: This study has provided evidence that the four
+                                               students’ inputs are crucial predictors of their learning outcomes in the three
+                                               domains. This result is helpful for school management to provide services
+
+
+
+
+Frontiers in Psychology                                             01                                                           frontiersin.org
+
+Owan et al.                                                                                                          10.3389/fpsyg.2022.1024017
+
+
+
+
+                                                 aimed at improving the school climate for students’ motivation and social
+                                                 capital. The result can provide policymakers with a proper understanding of
+                                                 the constituents of learning outcomes and how policies can be aligned to
+                                                 secure quality student inputs for maximum productivity in education.
+
+                                                 KEYWORDS
+
+                                                 health, innate ability, motivation, social capital, factor analysis, structural equation
+                                                 modeling
+
+
+
+
+Introduction                                                                 Espinosa, 2017). These characteristics range from gender, age,
+                                                                             innate ability, health status, motivation and social relations
+     The primary reason for teaching and learning is the                     (Hindal et al., 2013a). Therefore, it is crucial to understand how
+modification and repositioning of students’ cognitive, affective             these variables affect students’ learning outcomes in the
+and psychomotor skills at all levels of education. Research has              cognitive, affective and psychomotor domains. In fact, while
+shown that an adequate evaluation of students’ learning in schools           many studies have addressed students’ poor learning outcomes,
+must focus on these three crucial aspects of learning (Sönmez,               the majority have only focused on the cognitive domain. The
+2017; Bitok, 2020; Noor et al., 2020). The need for holistic                 cognitive domain focuses on the students’ mental, intellectual
+evaluation of students’ learning is prompted by the fact that                and thinking abilities; the affective domain focus on learners’
+students’ success is central to the analysis of the education process        emotional and sociological abilities; whereas the psychomotor
+(Afkhaminia et al., 2018; Abushandi, 2021). Studies have also                domain deals with students’ physical, skill-based or kinaesthetic
+established that students’ learning achievements are critical                abilities. According to Hoque (2016), the cognitive domain
+parameters for assessing whether or not education goals have been            concerns students’ knowledge, whereas the affective and
+maximized (Ali, 2013; Etor et al., 2019). Therefore, assessment of           psychomotor domains concern students’ attitudes and skills.
+students’ achievements across the three domains of learning is               Since these domains focus on different learner traits, they
+worthwhile in holistically addressing issues associated with the             should be measured independently in relation to other
+teaching and learning process in schools and is also apt in                  predictors. Consequently, the current study was developed to
+evaluating the extent to which the school system’s goals are                 predict students learning outcomes across the three domains
+achieved. It is established that when students perform beyond the            based on their innate ability, health, motivation and
+average standard set by society in skills acquisition, cognitive             social capital.
+performance and affective attributes, they are considered excellent
+and as resources that can contribute meaningfully to society’s
+future development (Olaitan, 2017).                                          Literature review
+     Due to the importance of the subject, much research focus in
+the last two decades has investigated different factors with the             Studies on innate ability
+central aim of improving students’ learning outcomes (e.g., Casey
+and Goodyear, 2015; Meshulam et al., 2021; Baabdullah et al.,                     Innate ability is a natural talent or skill that has been with a
+2022; Villena-Taranilla et al., 2022). For instance, a study has             living thing from its inception. It is not a learnt habit but an
+proven that students’ breakfast and snack consumption is                     internal feature of the organism. For example, intelligence can
+positively associated with academic performance, cognitive                   be an inborn trait that students possess from their genetic
+function and physical activity (Masoomi et al., 2020). Similarly,            makeup/composition. It is a known fact in cognitive psychology
+the effect of learners’ demographic characteristics on academic              that genetic (just like environmental) factors are essential for
+performance has also been extensively considered by researchers              students’ cognitive development and ability (Hill et al., 2018;
+globally (Thoren et al., 2016; Owan et al., 2019; Owan, 2020;                Coleman et al., 2019; Deary et al., 2022). The literature has well
+Aduma et al., 2022). Such characteristics differ across populations          documented that students’ innate ability is crucial for all subjects
+and may be attributed to students’ genetic traits, experience, and           and determines the degree of school success (Leslie et al., 2015;
+choice (Boogert et al., 2018; Reitan and Stenberg, 2019; Mõttus              Meyer et al., 2015; Ito and McPherson, 2018; Heydera et al., 2020).
+et al., 2020).                                                               It has been found that students with good abilities achieve better
+     Specifically, studies have shown that students are                      (Cornelisz and van Klaveren, 2018; Yu, 2020; O'Connell and
+educational inputs in the education production process, and                  Marks, 2021; Melawati et al., 2022), especially in subjects such as
+their characteristics can affect the quality of educational                  mathematics (Semeraro et al., 2020), and algebra (O'Connell et al.,
+outcomes attainable in any school system (Apple et al., 2016;                2018). Furthermore, a study which used a machine learning
+
+
+
+Frontiers in Psychology                                                 02                                                          frontiersin.org
+
+Owan et al.                                                                                                                10.3389/fpsyg.2022.1024017
+
+
+
+
+algorithm discovered that students with low cognitive abilities face             support that students’ health is a significant predictor of
+the risks of having mental breaks during classes (Srimaharaj et al.,             educational outcomes, though the study only measured the
+2018), and such mental breaks affect their learning achievements                 cognitive dimension of educational outcomes.
+(Owan et al., 2022).
+     However, the cited studies all measured students’ achievement
+from the cognitive domain, with some studies being experimental                  Studies on motivation
+in nature. Thus, the documented relationship between students’
+ability and achievement is well-known in the cognitive domain.                        Motivation is the degree to which an individual chooses to direct
+Nevertheless, the degree to which students’ ability predict their                his or her attention and efforts toward a goal (Brown, 2007). To
+learning outcomes in the affective and psychomotor domains                       be “motivated” implies providing the impetus for oneself to make an
+remains unclear. To show the importance of the two aspects often                 effort toward a specific objective. A favorable association between
+ignored in the literature, Espinosa (2017) used cross-sectional                  student motivation and gains in reading comprehension (Sari and
+empirical data from Vietnam to illustrate the education process of               Suprapti, 2017) and achievement (Whitney and Bergin, 2018) has
+cognitive and emotional (affective) abilities. Affective abilities               been shown. However, Marsela (2017) found that student enthusiasm
+were analyzed as an educational outcome to quantify the                          to learn had a modest impact on students’ ability to read and
+production of educational results in a more realistic way. Results               comprehend. Studies have documented that students’ motivation
+showed that children’s inherent qualities impacted their cognitive               relates positively to their academic achievement (Momany et al.,
+and affective outcomes. Despite focusing on the two domains,                     2015) and learning outcomes (Georgiou and Kyza, 2018; Won et al.,
+Espinosa’s study did not consider the psychomotor aspect of                      2020; Cho et al., 2021; Howard et al., 2021). More specifically, it was
+learning. Consequently, the current study was undertaken to plug                 discovered that students’ self-test scores for extrinsic motivation rise
+these knowledge gaps in the literature by linking students’ innate               when their academic success rises and vice versa (Sivrikaya, 2019;
+ability to learning outcomes across the three domains (cognitive,                Wagbara and Furo, 2021).
+affective and psychomotor).                                                           To prove the strength of the relationship, there have been
+                                                                                 numerous studies showing a modest correlation between student
+                                                                                 motivation and achievement (Rosmayanti and Yanuarti, 2018),
+Studies on health                                                                especially in science (Khin and Swe, 2018) and English language
+                                                                                 (Ndruru et al., 2022). However, other researchers found a weak
+     Students’ health refers to the state of physical, social, and               positive correlation between motivation and students’ academic
+psychological wellbeing among learners in a given school. “It is                 achievement in English (Dewangga and Nasaruddin, 2020;
+related to the promotion of wellbeing, the prevention of mental                  Rahardjo and Pertiwi, 2020). The disagreement in the results of
+disorders, and the treatment and rehabilitation of people affected               the cited studies is attributable to various factors such as
+by mental disorders” (Obumse & Egenti, 2021, p. 119). A study has                geographic differences where they were conducted, demographic
+documented that school failure, grade repetition, and dropout are                differences of the respondents used, or the methodology and
+more likely for ill pupils than those who are otherwise healthy                  design used. Variations in the results of the literature reviewed
+(Shaw et al., 2015), indicating that the health status of students is            may also be due to the motivational profiles of respondents. For
+a determinant factor of their success in schools. According to                   instance, a study performed a latent profile analysis and found that
+McIsaac et al. (2015), nutritional deficiencies in the brain and                 students in Ohio showed differences in cognitive and social
+body impact a child’s dietary condition. Another student input                   engagement and academic performance based on their
+affecting their learning outcomes across the three learning                      motivational profiles (Xie et al., 2020). The result of Xie and his
+domains is intrinsic motivation (Sivrikaya, 2019). Accordingly,                  colleagues suggest that students with different levels and types of
+those who excelled across several tasks were more divergent and                  motivation achieve differently in school.
+visual–spatial in their thinking, had better working memory, and                      A Meta-analysis of empirical studies published between
+were less reliant on a specific study area (Hindal et al., 2013b).               2011 and 2019 was conducted by Boudadi and Gutiérrez-
+With this in mind, researchers found that students’ attitudes and                Colón (2020). Two key conclusions were reached from the
+reasoning skills significantly predicted their academic                          assessment of 68 publications culled from the top scholarly
+performance (Vilia et al., 2017; Luo et al., 2021; Greisel et al., 2022).        databases (Scopus and Web of Science), of which only 15 were
+     Similarly, McIsaac et al. (2015) revealed that students with low            included in the analysis. Results found many studies on
+academic performance were likelier to have unhealthy habits than                 motivation and engagement, but only a few demonstrated
+good ones. They further revealed that food quality, physical                     obvious correlations with learning outcomes. According to the
+activity, sugary beverage intake, breakfast skipping and not                     findings, there seem to be no robust associations between
+participating in physical exercise during the morning break were                 gamification, motivation, and cognitive operations. Thus, the
+all statistically significant associations. The cited research found             researchers found a gap and recommended more studies on
+that encouraging students to engage in healthy behaviors might                   the three variables to bridge the lacuna. On that note, the
+boost their academic performance. The findings cited above                       current study was undertaken to further expand the scope of
+
+
+
+Frontiers in Psychology                                                     03                                                            frontiersin.org
+
+Owan et al.                                                                                                           10.3389/fpsyg.2022.1024017
+
+
+
+
+the literature on motivation by focusing on Nigerian secondary                  (Cho et al., 2007; Gablinske, 2014). A child’s connection with
+school students.                                                                classmates also substantially impacts educational results
+                                                                                (Espinosa, 2017). Nevertheless, learning outcomes in the cited
+                                                                                studies were assessed mainly from the cognitive domain. In
+Studies on social capital                                                       fact, the review of Kuranchie and Addo (2017) revealed
+                                                                                various research gaps in the social capital theory and
+    The concept of social capital is a powerful tool for analyzing              difficulties that educators need to address to fully realize the
+why some students are more successful than others in the                        concept’s potential. The researchers found that their social
+school. Students’ achievement relies heavily on parental social                 capital favorably impacted students’ educational results. They
+capital, which includes their hopes, duties, and the extensive                  noted that the cognitive component of learning outcomes has
+social networks they have built for their children at home, in the              received more attention and recommended that future studies
+classroom, and the wider society. The cultural norms and values                 be more inclusive by focusing on the affective and
+that encourage students’ efforts, the school’s disciplinary and                 psychomotor dimensions of learning outcomes. The present
+academic atmosphere, and parents’ expectations and                              study addresses this gap raised by the review of Kuranchie and
+responsibilities for their children’s education all play a role in              Addo by linking four students’ inputs (students’ innate ability,
+the wide range of student achievement. In order to explain                      health, motivation and social capital) to the three areas of
+social patterns and processes that lead to racial gaps in school                learning outcomes – cognitive, affective and psychomotor
+success, Coleman (1988) established the notion of social capital.               skills (CAPs). Therefore, this study’s conceptual model is
+He said that parental participation and financial commitment                    presented in Figure 1.
+to a child’s education are significant determinants of academic                     Figure 1 shows four students’ inputs: innate ability, health,
+performance and that these factors are also influenced by the                   motivation and social capital. Furthermore, the central
+educational expectations, norms, and duties within a family or                  dependent variable is educational outcomes with three
+society. There is a correlation between countries’ social capital               dimensions: cognitive, affective, and psychomotor.
+levels and their citizens’ academic achievement (Mishra, 2020).                 We hypothesized that the four students’ input directly predicts
+However, high levels of social capital have been linked in some                 their learning outcomes generally and in the three dimensions.
+studies to a decrease in opportunities for personal and societal                In Figure 1, all predictive relationships are direct, without any
+development. More research is required to determine the                         indirect or mediation effect. Hierarchical regression analysis
+drawbacks of a strong social capital (Paxton, 1999; Woolcock                    was performed in the current study to analyze the
+and Narayan, 2000).                                                             contributions of these variables individually and collectively
+    Similarly, other researchers have identified social                         to students’ learning outcomes generally and across the
+relationships as a determinant of students’ learning outcomes                   three dimensions.
+
+
+
+
+    FIGURE 1
+    Conceptual model of the study showing the predictive and criterion variables.
+
+
+
+
+Frontiers in Psychology                                                    04                                                      frontiersin.org
+
+Owan et al.                                                                                                            10.3389/fpsyg.2022.1024017
+
+
+
+
+Materials and methods                                                           study. This sample is distributed according to the LEAs as follows:
+                                                                                Akamkpa (n = 94), Akpabuyo (n = 57), Bakassi (n = 14), Biase
+Research design and participants                                                (n = 89), Calabar Municipality (n = 365), Calabar South (n = 203),
+                                                                                and Odukpani (n = 93). The sampling procedure of this study is
+    The research design adopted for this study was the cross-                   pictorially depicted in the flowchart in Figure 2. The respondents’
+sectional research design. The cross-sectional design allows for                biodata reveals that 44.1% (n = 384) are males while 55.9%
+direct observation of the phenomena investigated and analysis                   (n = 486) are females. For students’ age, 48.9% (n = 425) are
+of the information collected at one time to produce faster                      between 10 and 20 years, while 51.1% (n = 445) are 21 years or
+results. The population of this study comprised 53,255 students                 older. Furthermore, 31.7% of the respondents (n = 276) are of
+(males = 26,206; females = 27,047) spread across 87 public                      schools in rural locations, 33.8% (n = 294) attend schools in
+secondary schools in Calabar Education Zone, Nigeria.                           semi-urban areas and 34.5% (n = 300) are students of urban
+    The Multistage sampling procedure involving stratified                      schools. Over half of the students (n = 439, 50.5%) are from
+proportionate and purposive sampling techniques was used for this               families with high socioeconomic status, whereas 49.5%
+study. At stage 1, stratified random sampling was used to divide the            (n = 431) are from families with low socioeconomic status.
+entire secondary schools in Calabar Education Zone into seven                   Similarly, 48.2% (n = 419) of the students are from families with
+strata according to Local Education Authorities (LEAs) available                an intact structure, while 51.8% (n = 451) are from
+(such as Akamkpa, Akpabuyo, Bakassi, Biase, Calabar-                            broken families.
+Municipality, Calabar-South and Odukpani). In stage 2, 30% of the
+schools in each LEA (stratum) were randomly selected, resulting
+in an overall selection of 26 schools for the study. Similarly, in stage        Instrumentation
+3, we purposively selected 15% of senior secondary class II (SSII)
+students in the participating schools as the sample for this study.                 Two instruments served the purpose of data collection in this
+Thus, a sample of 915 SSII students was randomly selected for the               study – the students’ inputs Questionnaire (STIQ) and Learning
+
+
+
+
+    FIGURE 2
+    The multistage sampling procedure of this study.
+
+
+
+
+Frontiers in Psychology                                                    05                                                        frontiersin.org
+
+Owan et al.                                                                                                               10.3389/fpsyg.2022.1024017
+
+
+
+
+Outcomes Questionnaire. The researchers designed both                            Validity Indices (I-CVIs) and the Scale-level Content Validity
+instruments due to an absence of an existing instrument in the                   Indices (S-CVIs) for all items and scales of the research instrument
+study’s setting. STIQ comprised 26 items, whereas LOQ contained                  are within the range of 0.80 to 0.99, respectively, all the items were
+30 items. The items in both instruments were generated based on                  retained with minor corrections made per the suggestion of
+an extensive review of related literature and previous instruments.              the experts.
+Students’ input is defined as the characteristics of students (such                  We conducted a pilot study to determine the dimensionality
+as their gender, age, innate ability, health status, motivation, and             and factorial structure of the instruments used for data
+social relations) that can affect how they learn in schools. A                   collection. SSII students (n = 412) were randomly selected from
+sample item from the STIQ is that I always struggle hard before                  non-participating schools in the population to take part in the
+understanding what teachers teach in the classroom. Learning                     pilot study. The data collected were subjected to an initial
+outcome is operationally defined as the extent to which there is a               screening using box plots (to check for outliers and normality)
+relatively permanent and observable change in students’ cognitive,               and inter-item correlation (for non-clustered items). These were
+affective and psychomotor attributes (CAPs) due to their                         done following the recommendations of instrument validation
+interaction with the (school) environment. A sample item from                    studies (e.g., Field, 2005; Bassey et al., 2020; Owan et al., 2021).
+the LOQ is I can carry out laboratory experiments independently.                 The preliminary screening test did not identify any
+LOQ was designed to measure two dimensions of learning                           non-clustered items across all the instruments since different
+outcomes - students’ affective and psychomotor. Students’                        items correlated with other items in the matrix. An exploratory
+cognitive skill (the third aspect of learning outcome) was                       factor analysis (EFA) using principal axis factoring (PAF) was
+measured directly using average sessional results scores across all              performed to understand the dimensionality and factorial
+the subjects. Students’ average scores for all the subjects in the               structure of the two instruments, with the extraction based on
+three terms were recorded for the selected students as their scores              Eigenvalues greater than 1. The default iteration time was
+for cognitive skills.                                                            maintained using the promax rotation to suppress factor
+                                                                                 loadings less than 0.30. The analysis was aided using SPSS
+                                                                                 (version 26), statistical software. Confirmatory factor analysis
+Validity and reliability of the instruments                                      (CFA) was used to examine the goodness of fit of the models,
+                                                                                 while Cronbach alpha reliability was used as a measure of
+     Quantitative content validity of the research instruments was               internal consistency (more on EFA, CFA and reliability in the
+carried out using 10 independent experts (four psychometrists                    result section).
+and six Educational Managers). These experts comprised five
+males and five females, all professors with over 10 years of
+academic experience. The six educational managers were from                      Ethical consideration
+specific fields such as economics of education (n = 2), policy
+analysis (n = 2), and educational administration and planning                        A comprehensive validity and regulatory data-gathering
+(n = 2). Two psychometrists had double doctorate degrees in                      procedure helped minimize any possible bias in the research.
+educational psychology and psychological testing, whereas the                    Since completing a survey posed no significant danger to the
+other two were PhD holders of educational measurement and                        participants, ethical approval was waived under the Nigerian Code
+evaluation. The experiences and diversity of these individuals                   for Health Research Ethics (NCHRE), which exempts survey
+qualified them as experts suitable for assessing the items in the                research (see https://bit.ly/3pK9ORh for further information on
+instruments. The experts independently judged the items’ degree                  this). Written informed consent was received from the respondents
+of relevance and clarity to their measured domains.                              since all the participants signed a form confirming that they were
+     All the items were scored for relevance and clarity, with higher            aware of the research and were willing to participate. For
+scores representing higher relevance and clarity of items to their               anonymity, respondents were told that the data gathered would
+measured domains. The results indicated that the item-level                      be de-identified and anonymised according to safe harbor
+Content Validity Index (I-CVI) realized for STIQ ranged from                     standards. The survey participants were informed that their replies
+0.83–0.99 (for relevance) and 0.91–0.99 (for clarity), while the                 would be anonymised before being compiled for objectivity and
+Scale Content Validity Indices (S-CVI) was 0.98 for both relevance               privacy. A range of equal intervals was used for all biodata (age,
+and clarity. For ELOQ, I-CVIs ranged from 0.90–0.99 (for                         gender, family type, parent socioeconomic status) to ensure that
+relevance) and 0.84–0.99 for (clarity), whereas S-CVI was 0.99 and               no one could be identified from aggregated data. Students’ names
+0.98 for relevance and clarity, respectively. The recommendations                were only collected to enable us to get an average score of their
+for revising, dropping and retaining an item as given by different               sessional results, and after recording them, their names will not
+researchers are as follows: For two experts, CVI must be at least                be entered during the coding process. The coded data was stored
+0.80; for three to five experts should be 0.99; for six experts, at least        in a computer accessible only to the researchers, with a security
+0.83; six to eight experts, at least 0.83; 9 to 10 experts, at least 0.78        system (strong password, antivirus software, and a firewall) to
+(Polit et al., 2007; Yusoff, 2019). Given that all Item-level Content            prevent unauthorized access to the obtained data. All participants
+
+
+
+Frontiers in Psychology                                                     06                                                          frontiersin.org
+
+Owan et al.                                                                                                              10.3389/fpsyg.2022.1024017
+
+
+
+
+were notified that their responses would be analyzed aggregately                                  Model1: CS = βIA + ε R 2  ( )                       (7)
+and published in a journal.
+
+
+
+Data collection and analysis                                                              Model 2 : CS = βIA + βSH + ε       ( R 2 , ∆R 2 )           (8)
+
+     The instruments were administered physically to the
+respondents at the selected schools with the help of seven trained
+research assistants. Permission to administer was granted by the
+principals and vice-principals of the schools following a previous
+                                                                                       Model 3 : CS = βIA + βSH + βSM + ε           ( R 2 , ∆R2 )     (9)
+
+letter of intent. Only students who accepted voluntarily participated
+in the study. After 2 months of the exercise, we retrieved 870
+completed copies of the 915 questionnaires administered. There
+was an attrition rate of approximately 5%. A preliminary
+                                                                               Model 4 : CS = βIA + βSH + βSM + βSSC + ε            ( R 2 , ∆R 2 ) (10)
+assessment of the returned copies of the instruments revealed no
+missing data since respondents were given 3 days to fill and return
+their copies. All responses were scored with a schedule prepared to
+guide the coding process. Hierarchical regression analysis was used
+                                                                                                  Model1: AS = βIA + ε R 2  ( )                      (11)
+
+for data analysis with SPSS (version 26) software.
+
+                                                                                                                            (
+                                                                                           Model 2 : AS = βIA + βSH + ε R 2 , ∆R 2         )         (12)
+Model specification
+
+    In fitting the hierarchical regression models, the general form
+of the simple and multiple linear regression equation was used,                        Model 3 : AS = βIA + βSH + βSM + ε           ( R 2 , ∆R 2 ) (13)
+such as:
+
+                             Ỳ = βX + ε                            (1)
+                                                                                                                                (
+                                                                               Model 4 : AS = βIA + βSH + βSM + βSSC + ε R 2 , ∆R 2            )     (14)
+
+    While the standardized multiple linear regression equation is
+given as:
+                                                                                                  Model1: PS = βIA + ε R 2 ( )                       (15)
+                 Ỳ = β1X1 + β2 X 2 + β3X3 + …βnXn                  (2)
+
+    Where: Ỳ = The dependent variable to be predicted.
+    β, β1–βn = The standardized regression coefficients of the                                                        (
+                                                                                       Model 2 : PS = βIA + βSH + ε R 2 , ∆R 2        )              (16)
+predictor variables.
+    X1–Xn = The predictor variables.
+    e = the error term in the model.
+    From the equations (1) and (2), the specific hierarchical
+                                                                                       Model 3 : PS = βIA + βSH + βSM + ε           ( R 2 , ∆R 2 )   (17)
+
+regression models of this study were derived as follows:
+
+
+                                            ( )
+                     Model1: LO = βIA + ε R 2                      (3)          Model 4 : PS = βIA + βSH + βSM + βSSC + ε            ( R 2 , ∆R 2 ) (18)
+
+                                            (
+               Model 2 : LO = βIA + βSH + ε R 2 , ∆R 2   )         (4)             Notes from equations (3)–(18); LO = Educational outcomes
+                                                                               generally; CS = Cognitive skills; AS = Affective skills;
+                                                                               PS = Psychomotor skills; IA = Innate ability; SH = Students’ health;
+        Model 3 : LO = βIA + βSH + βSM + ε       ( R 2 , ∆R 2 )    (5)
+                                                                               SM = Students’ motivation; SSC = Students’ social capital;
+                                                                               R2 = Coefficient of determination from the regression analysis;
+                                                                                ∆ R2 = The change in the coefficient of determination due to the
+                                                                               inclusion of new variables at different levels; ε = the stochastic
+    Model 4 : LO = βIA + βSH + βSM + βSSC + ε        ( R 2 , ∆R 2 ) (6)        error term (residual).
+
+
+
+Frontiers in Psychology                                                   07                                                               frontiersin.org
+
+Owan et al.                                                                                                                                       10.3389/fpsyg.2022.1024017
+
+
+
+
+Results                                                                                            were named students’ social capital (factor 1), students’ health
+                                                                                                   (factor 2), students’ motivation (factor 3), and students’ innate
+Exploratory factor analysis                                                                        ability (factor 4). Factors 1, 2, 3, and 4 accounted for 17.35%,
+                                                                                                   15.51%, 14.3%, and 12.37% of the cumulative variance explained.
+    The STIQ was evaluated for dimensionality using the PAF                                             For the LOQ, an inter-item correlation matrix revealed a
+based on the data collected from the 412 students who responded                                    determinant value of 0.000, which diverges from the identity
+to the instrument in the pilot study. The correlation determinant                                  matrix with a value of 0.00001. The inter-item correlation analysis
+matrix was used to examine the correlation among the factors—all                                   revealed three dysfunctional items (LO4, LO9 and LO11). These
+the items correlated with one or more other items in the matrix.                                   three items did not correlate with any other item in the matrix, not
+The KMO value of sampling adequacy was 0.88, while the                                             even among themselves. They were excluded from the Exploratory
+Chi-square associated with Bartlett’s test of sphericity was                                       factor analysis (EFA) because of their loneliness, among other
+significant, χ2(253) = 5,010; p < 0.001. This indicates the suitability                            items. The KMO value of sampling adequacy was 0.94, while
+of the sample size and data for factor analysis. The PAF analysis                                  Bartlett’s test of sphericity was significant, χ2(105) = 3693.38,
+revealed a four-factor solution that jointly accounted for 59.54%                                  p < 0.001. All these indicated that using PAF was plausible, given
+of the variance explained. A review of the scree plot further                                      the data from the sample of 412 students in the pilot study. The
+indicated that only factors had Eigenvalues greater than 1. The                                    analysis yielded a two-factor solution with a cumulative variance
+specific loadings of the various items to their respective latent                                  of 54.21% explained. The scree plot also revealed two notable
+factors ranged from 0.73 to 0.82 (see Table 1). After examining the                                factors with Eigenvalues greater than 1. The factors were named
+extracted factors and the items loading to them, the four factors                                  based on the nature of the items loaded onto them, as shown in
+
+
+TABLE 1 Exploratory factor analysis of the structure of the STIQ.
+
+Factors                              Items                                                                                     M            SD                   λ
+
+                                                                                                                                                         EFA             CFA
+Students’ social capital α = 0.89    STI15—I always share ideas with my classmates in school                                  3.49         1.70           0.82            0.82
+                                     STI18—Having a cordial relationship with fellow students distracts me                    3.50         1.69           0.81            0.81
+                                     STI20—I understand better when I study alone                                             3.51         1.69           0.79            0.79
+                                     STI19—I enjoy group study with other students                                            3.53         1.68           0.77            0.76
+                                     STI17—My friendship with other students stops at the school                              3.55         1.71           0.76            0.77
+                                     STI16—I do not like working with my peers in school                                      3.58         1.76           0.74            0.75
+Students’ health α = 0.89            STI26—I have headaches frequently                                                        3.38         1.69           0.80            0.79
+                                     STI22—I rarely fall sick                                                                 3.39         1.71           0.78            0.78
+                                     STI24—I eat meals with plenty of meat every day                                          3.38         1.69           0.78            0.78
+                                     STI23—Many days, I go to school without food                                             3.41         1.70           0.77            0.77
+                                     STI25—Sometimes, I sleep in class during lessons                                         3.43         1.73           0.76            0.76
+                                     STI21—I am always very active in extra-curricular activities                             3.43         1.69           0.73            0.72
+Students’ motivation α = 0.90        STI11—I have a deep interest in s subject area                                           3.42         1.71           0.76            0.76
+                                     STI9—Sometimes, I get tired of attending classes                                         3.47         1.72           0.76            0.76
+                                     STI12—My parents forced me to offer my subject area                                      3.57         1.70           0.76            0.76
+                                     STI13—I always want to participate in class discussion                                   3.42         1.73           0.75            0.75
+                                     STI14—Sometimes, I feel like I should stop going to school                               3.40         1.71           0.74            0.74
+                                     STI10—I do not like missing classes                                                      3.45         1.73           0.73            0.73
+Students’ innate ability α = 0.90    STI7—I always struggle before understanding what is taught                               3.48         1.76           0.81            0.81
+                                     STI4—Sometimes, I need additional effort to understand my subjects                       3.44         1.72           0.79            0.78
+                                     STI5—I still perform poorly academically despite putting in my best                      3.41         1.71           0.78            0.78
+                                     STI6—I do not have difficulties understanding my subjects                                3.42         1.736          0.78            0.78
+                                     STI8—I find it very easy to pass my examinations                                         3.52         1.753          0.76            0.77
+
+
+Instrument Total                     Kaiser-Meyer-Olkin (KMO) = 0.88
+                                     Bartlett’s Test of Sphericity at 253 df = 5010.42, p < 0.05
+                                     Cronbach Alpha = 0.78
+                                     Corr. Det. Matrix = 0.000
+
+Extraction Method: Principal Axis Factoring. Rotation Method: Promax with Kaiser Normalization. e Rotation converged in five iterations.
+
+
+
+
+Frontiers in Psychology                                                                   08                                                                     frontiersin.org
+
+Owan et al.                                                                                                                                10.3389/fpsyg.2022.1024017
+
+
+
+
+Table 2. Factor loadings ranged from 0.83 to 0.86 for factor 1                                dimensionality in the various instruments was theoretically
+(affective skills) and from 0.50 to 0.60 for factor 2 (psychomotor                            sound. Just like the revelation of the inter-item correlation matrix,
+skills). The two factors accounted for 42.35% and 11.86% of the                               the result of the CFA also revealed that some items (LO4, LO9 and
+shared variance.                                                                              LO11) were dysfunctional in the models, respectively. Thus, they
+                                                                                              were removed from the models and eliminated from the
+                                                                                              questionnaire used for the main study.
+Confirmatory factor analysis                                                                       The fits of the established CFA models to their existing
+                                                                                              theoretical models were evaluated using various fit indices.
+    The confirmatory factor analysis (CFA) was performed based                                Various fit indices were used due to their overlapping strengths
+on the Maximum Likelihood (ML) estimation technique. Analysis                                 and weaknesses and based on the recommendations of instrument
+of Moment Structure (Amos v.23) aided the analysis. “The CFA                                  validation studies. For example, Kline (2016) recommended that
+determines how well the variables measured their respective                                   at least four fit indices (χ2, RMSEA, CFI, and SRMR) should
+factors (constructs); evaluates the acceptability or otherwise of                             be used to decide whether to accept a CFA model. For the CFA
+hypothesized models based on theoretical models; verifies                                     models of this study, a broad spectrum of eight carefully selected
+whether the relationships established by the EFA between                                      fit indices was used to determine whether or otherwise to accept
+observed variables (indicators) and their supposed constructs                                 them. These include the use of Chi-Square, “Goodness of Fit
+exist” (Owan et al., 2021; p.11). The CFA was applied to all the                              Index” (GFI), “Normed Fit Index” (NFI), “Relative Fit Index”
+instruments to determine how various items could measure their                                (RFI), “Comparative Fit Index” (CFI), HOELTER’s Critical N,
+targeted latent constructs in this study.                                                     “Incremental Fit Index” (IFI), “Root Mean Square Error of
+    It was further used to verify the authenticity or otherwise of                            Approximation” (RMSEA), and “Tucker-Lewis Index” (TLI).
+the results of the exploratory factor analysis earlier presented in                                An assessment of the models revealed that the STIQ CFA
+Tables 1, 2. The CFA results were placed with the EFA in Tables 1,                            model had a significant Chi-square value, χ2 (224) = 265.89,
+2 for clarity and comparativeness. However, the CFA models are                                p < 0.05. Going by the Chi-square criteria, the model does not fit
+presented in Figures 3, 4 according to the two instruments. As                                the data. However, the Chi-square criterion is widely reported to
+may be seen in Tables 1, 2 or Figures 3, 4, the CFA loadings of the                           be sensitive to sample sizes (Gatignon, 2010; Owan et al., 2020),
+various items per construct were the same or approximately so,                                resulting in a Type I error (Myers et al., 2010). Values of 0.95, 0.95,
+indicating that the results of the EFA were valid and the                                     0.94., 0.99, and 0.99 were obtained for the GFI, NFI, RFI, IFI, TLI,
+
+TABLE 2 Exploratory factor analysis of the structure of the LOQ.
+
+Label                          Items                                                                                  M             SD                 λ
+
+                                                                                                                                              EFA               CFA
+Affective skills α = 0.90      LO10—I have regard for the views of others                                            3.46          1.70        0.86              0.86
+                               LO8—The disciplinary measures of my school are uncomfortable                          3.48          1.69        0.86              0.86
+                               LO1—I think good about myself always                                                  3.51          1.66        0.85              0.85
+                               LO7—I keep school rules and regulations                                               3.37          1.66        0.84              0.84
+                               LO3—Sometimes, I doubt my ability to do something well                                3.56          1.69        0.83              0.83
+                               LO2—I always want to lead other people                                                3.48          1.71        0.83              0.83
+                               LO6—I like to study independently                                                     3.53          1.72        0.83              0.83
+                               LO12—I give respect to teachers who deserve it                                        3.47          1.71        0.83              0.83
+                               LO5—I am always ready to solve the problem of other students                          3.43          1.70        0.83              0.83
+Psychomotor skills α = 0.71    EO17—I can carry out laboratory experiments independently                             3.45          1.66        0.60              0.60
+                               EO13—I can operate the computer effectively                                           3.43          1.74        0.54              0.55
+                               EO14—I have adequate skills to handle agricultural activities                         3.42          1.70        0.54              0.54
+                               EO18—I have the skills to handle practical exercises                                  3.31          1.69        0.54              0.55
+                               EO15—I am very effective in craftwork                                                 3.40          1.72        0.52              0.52
+                               EO16—I can manipulate mechanized instructional materials                              3.27          1.65        0.50              0.50
+
+
+Instrument total               Kaiser-Meyer-Olkin (KMO) = 0.94
+                               Bartlett’s Test of Sphericity at 105 df = 3693.38, p < 0.05
+                               Cronbach Alpha = 0.83
+                               Corr. Det. Matrix = 0.000
+
+Extraction Method: Principal Axis Factoring. Rotation Method: Promax with Kaiser Normalization. f Rotation converged in three iterations.
+
+
+
+
+Frontiers in Psychology                                                                  09                                                                frontiersin.org
+
+Owan et al.                                                                                                           10.3389/fpsyg.2022.1024017
+
+
+
+
+and CFI, respectively. These statistics range from 0.00 to 1.00, with        addition of student health to model 2 raised the proportion of
+higher values suggesting a better fit (Hooper et al., 2008). However,        variance explained by students’ input from 4% to 8% (an increase
+subsequent tests have shown that a value larger than 0.90 is                 of 4%). In model 3, student motivation was included, and the
+required to assure the adoption of misspecified models (Hu and               model observed an improvement in learning outcomes from 8%
+Bentler, 1999). All SEM algorithms currently employ these fit                to 11% (suggesting a 3% increment). Including students’ social
+indices (TLI and CFI) since they are among the metrics least                 capital in model 4 increased the variance explained by students’
+impacted by sample size (Fan et al., 1999; Shi et al., 2019). A model        input to learning outcomes by approximately 2%, bringing the
+fit of 0.80 or greater for the Tucker-Lewis Index (TLI) has been             total contribution of model 4%–13%. Based on these findings, it
+proposed as a good model fit (Hooper et al., 2008). However, it has          was concluded that students’ innate ability, health, motivation, and
+been argued that TLI values of 0.95 suggest a strong model fit (Hu           social capital all contribute 4%, 4%, 3%, and 2% to learning
+and Bentler, 1999). All the values for the STIQ model were greater           outcomes regarding cognitive skills, respectively. In a broad sense,
+than 0.90; hence the model can be said to have an acceptable fit by          students’ input contributes 13% to learning outcomes regarding
+these criteria. Lastly, an RMSEA value of 0.02 was obtained for the          cognitive skills. The relative and total contributions of student
+STIQ model. The RMSEA value reflects how well the model fits                 input were found to be significant.
+the population’s covariance matrix when parameter estimates are                   Regarding affective skills, the information in model 1 of
+unknown but optimum (Bassey et al., 2019). The RMSEA score is                Table 3 reveals that the first students’ input (innate ability)
+between 0 and 1, with lower values indicating a better fit to the            contributes 7% to learning outcomes in secondary schools.
+model (Hu and Bentler, 1999). According to Brown (2015), an                  Including students’ health in model 2 increased the percentage
+RMSEA value of 0.06 or less suggests a satisfactory model fit.               contribution of students’ input from 7% to 13%, indicating a 6%
+     For the LOQ model, the Chi-square criterion yielded a                   improvement. Model 3 included a third variable (student
+significant value, χ2(89) = 167.80, p < 0.001. For the GFI, NFI, RFI,        motivation), and the model showed a 4 per cent increase in
+IFI, TLI, and CFI, values of 0.95, 0.96, 0.95, 0.98, 0.97, and 0.98          learning outcomes in terms of affective skills from 13% to 17%.
+were obtained, respectively. Furthermore, an RMSEA value of 0.05             Adding students’ social capital to model 4 boosted the percentage
+was obtained for the LOQ model. These are all within acceptable              contribution of students’ input to learning outcomes in affective
+values except for the Chi-Square criterion, perhaps due to the               skills by 4%, bringing model 4’s overall contribution to 21%. These
+large sample used for the pilot study. Nevertheless, there was               results determined that innate ability, health, motivation, and
+sufficient evidence to retain both models. The Cronbach Alpha                social capital contribute 7%, 6%, 4%, and 4% to learning outcomes
+reliability technique was used to establish the internal consistency         in affective skills. Cumulatively, students’ input accounts for 21%
+of the instruments. The factors’ reliability coefficients (internal          of the total variance in learning outcomes in affective skills, with
+consistency) ranged from 0.89 to 0.90 for STIQ and 0.71 to 0.90              the remaining 79% of the unexplained variance due to other
+for LOQ, respectively (see Tables 1, 2).                                     factors not included in model 4. Students’ input was shown to
+                                                                             substantially impact learning outcomes, both relatively
+                                                                             and compositely.
+Prediction of students’ inputs on their                                           Regarding psychomotor skills, model 1 of Table 3 shows that
+learning outcomes in terms of CAPs                                           students’ input (innate ability) contributes 7% to secondary school
+                                                                             education results at the first level. The addition of students’ health
+    According to Table 3, the first students’ input (innate ability)         in model 2 raised the percentage contribution of students’ input
+contributes 4% to learning outcomes generally in secondary                   from 7% to 13%, suggesting a 6% increase. Model 3 included a
+schools. Including students’ health in model 2 increased the                 third variable (student motivation), resulting in a 4% improvement
+contribution of students’ input from 4% to 8%, a 4% increase.                in educational outcomes in psychomotor skills from 13% to 17%.
+In model 3, students’ motivation was added, and the model saw                With the inclusion of students’ social capital in Model 4, the
+an increase in learning outcomes, generally from 8% to 11%,                  percentage contribution of students’ input to learning outcomes
+indicating a 3% increase. In model 4, adding students’ social                in psychomotor skills increased by approximately 3%, bringing
+capital brought about a 2% change in the contribution of                     model 4’s total contribution to 20%. Based on these findings, it was
+students’ input to learning outcomes generally, taking the                   concluded that innate ability, health, motivation, and social capital
+cumulative contribution of model 4% to 13%. These results                    all contribute 7%, 6%, 4%, and 3% to learning outcomes in
+determined that students’ innate ability, health, motivation, and            psychomotor skills, respectively. In terms of psychomotor skills,
+social capital contribute to learning outcomes generally by 4%,              students’ input cumulatively accounts for 20% of the overall
+4%, 3%, and 2%, respectively. In a composite sense, students’                variation in learning outcomes, with the remaining 80% of the
+inputs contribute to learning outcomes generally by 13%. The                 unexplained variance attributable to other variables not included
+relative and composite contributions of students’ input                      in model 4. The contribution of students’ input relatively and
+were substantial.                                                            cumulatively to learning outcomes in terms of psychomotor skills
+    In terms of students’ cognitive skills, the first students’ input        was substantial.
+(innate ability) contributes 4% to learning outcomes in secondary                 The relative predictions of the specific students’ inputs
+schools in model 1, according to the information in Table 3. The             were used to fit the hierarchical regression models earlier
+
+
+
+Frontiers in Psychology                                                 10                                                          frontiersin.org
+
+Owan et al.                                                                                                10.3389/fpsyg.2022.1024017
+
+
+
+
+    FIGURE 3
+    Standardized latent-trait CFA model of the STIQ.
+
+
+
+
+specified for this study (see Table 4). Table 4 shows that              generally and in the aspect of cognitive skills in public
+students’ health, motivation and social capital made significant        secondary schools. This means that students’ social capital
+unique predictions to learning outcomes generally and in                weakened students’ innate ability prediction. This suggests
+terms of CAPs in public secondary schools. Students’ innate             that students’ social ties with other colleagues boost their
+ability made significant unique contributions to learning               overall performance but diminish how they generally rely on
+outcomes in terms of affective and psychomotor skills;                  their inherent abilities to achieve academic success. The
+however, the unique prediction of students’ innate ability was          following hierarchical regression models are fitted based on
+not significant in the model of their learning outcomes                 Table 4.
+
+
+
+Frontiers in Psychology                                            11                                                   frontiersin.org
+
+Owan et al.                                                                                                    10.3389/fpsyg.2022.1024017
+
+
+
+
+    FIGURE 4
+    Standardized latent-trait CFA model of the LOQ.
+
+
+
+
+               Model 1 : LO = 0.20IA + 201.31         ( 0.04 )   (19)        Model 2 : CS = 0.16IA + 0.20SH + 189.37    ( 0.08, 0.04 ) (24)
+
+
+   Model 2 : LO = 0.17 IA + 0.20SH + 197.27 ( 0.08, 0.04 )       (20)                Model 3 : CS =0.11IA + 0.16SH + 0.19SM
+                                                                                     +186.32 ( 0.11, 0.03)                               (25)
+
+
+           Model 3 : LO = 0.12IA + 0.16SH + 0.19SM +
+           194.01 ( 0.11, 0.03)                                  (21)          Model 4 : CS = 0.07 IA + 0.13SH + 0.14SM + 0.18SSC
+                                                                               +184 ( 0.13,0.02 )                                 (26)
+
+
+      Model 4 : LO = 0.07 IA + 0.13SH + 0.14SM + 0.18SSC
+      +191.57 ( 0.13, 0.02 )                             (22)                          Model 1 : AS = 0.26IA + 5.25 ( 0.07 )             (27)
+
+
+
+               Model 1 : CS = 0.20IA + 193.16     ( 0.04 )       (23)           Model 2 : AS = 0.23IA + 0.24SH + 5.09 ( 0.13, 0.06 )     (28)
+
+
+
+
+Frontiers in Psychology                                                 12                                                     frontiersin.org
+
+Owan et al.                                                                                                                                    10.3389/fpsyg.2022.1024017
+
+
+
+
+TABLE 3 Hierarchical regression results summary of the relative and composite contributions of students’ inputs to learning outcomes generally
+and in terms of CAPs.
+
+Variables                                  Model                     R               R2           Adj. R2           SE          ΔR2           ΔF            df1       df2
+Learning outcomes generally                    1                   0.20   a
+                                                                                    0.04              0.04         201.31        0.04       36.04***         1         868
+                                               2                   0.28b            0.08              0.08         197.27        0.04       36.88***         1         867
+                                               3                   0.33c            0.11              0.11         194.01        0.03       30.35***         1         866
+                                               4                   0.37d            0.13              0.13         191.57        0.02       23.19***         1         865
+Cognitive skills                               1                   0.20a            0.04              0.04         193.16        0.04       34.94***         1         868
+                                               2                   0.28  b
+                                                                                    0.08              0.08         189.37        0.04       36.03***         1         867
+                                               3                   0.33c            0.11              0.10         186.32        0.03       29.63***         1         866
+                                               4                   0.36d            0.13              0.13         184.04        0.02       22.64***         1         865
+Affective skills                               1                   0.26a            0.07              0.07          5.25         0.07       65.26***         1         868
+                                               2                   0.36b            0.13              0.12          5.09         0.06       55.57***         1         867
+                                               3                   0.42c            0.17              0.17          4.95         0.04       49.76***         1         866
+                                               4                   0.45d            0.21              0.20          4.86         0.04       35.86***         1         865
+Psychomotor skills                             1                   0.26a            0.07              0.07          3.09         0.07       62.36***         1         868
+                                               2                   0.35  b
+                                                                                    0.13              0.12          3.00         0.06       57.68***         1         867
+                                               3                   0.41c            0.17              0.17          2.92         0.04       46.79***         1         866
+                                               4                   0.45d            0.20              0.20          2.87         0.03       34.23***         1         865
+
+a
+  Predictors: (Constant), Innate ability.
+b
+  Predictors: (Constant), Innate ability, Students’ health.
+c
+ Predictors: (Constant), Innate ability, Students’ health, students’ motivation.
+d
+  Predictors: (Constant), Innate ability, Students’ health, students’ motivation, Students’ social capital.
+***p < 0.001.
+
+
+
+
+                   Model 3 : AS = 0.16IA + 0.20SH + 0.23SM                                              Discussion
+                   + 5.09 ( 0.17, 0.05 )                                                  (29)
+                                                                                                            This study was designed to examine the degree to which four
+                                                                                                        students’ input (innate ability, health, motivation, and social
+         Model 4 : AS = 0.10IA + 0.15SH + 0.18SM + 0.21SSC                                              capital) predict their learning outcomes across the cognitive,
+         + 4.86 ( 0.21, 0.03)                              (30)                                         affective and psychomotor domains. A quantitative cross-sectional
+                                                                                                        survey design was adopted for the study. This study discovered
+                                                                                                        that innate ability, health, motivation and social capital combined
+                                                                                                        predict students’ learning outcomes generally and in the
+                      Model1:
+                          =   PS 0.26IA + 3.09 ( 0.07 )                                   (31)
+                                                                                                        dimensions of cognitive, affective and psychomotor domains. This
+                                                                                                        finding is consistent with the result of Hindal et al. (2013a) that
+                                                                                                        learners’ characteristics influence academic achievement
+         Model 2 : PS = 0.22IA + 0.25SH + 3.00 ( 0.13, 0.06 ) (32)                                      significantly. In the same direction, other scholars (Apple et al.,
+                                                                                                        2016; Espinosa, 2017) have also found that students’ characteristics
+                                                                                                        predict their academic outcomes. Although these studies did not
+                   Model 3 : PS = 0.16IA + 0.20SH + 0.23SM                                              assess the composite prediction of students’ characteristics, the
+                   + 2.92 ( 0.17, 0.05 )                                                  (33)          current study has contributed to the literature. Nevertheless, the
+                                                                                                        similarity in the results of the studies shows a general agreement
+                                                                                                        across different contexts. The result is not surprising because
+                                                                                                        students’ learning ability is a product of their nature and nurture
+         Model 4 : PS = 0.10IA + 0.16SH + 0.17SM + 0.21SSC                                              (environment). Therefore, it is no surprise that students who
+         + 2.87 ( 0.20, 0.03)                              (34)
+                                                                                                        jointly possess nature-and environment-induced attributes such
+                                                                                                        as innate ability, health, motivation and social capital to varying
+                                                                                                        degrees can learn and achieve differently in secondary schools.
+    Where LO = Learning outcomes; CS = Cognitive skills;                                                    Relatively, this study showed that students’ innate ability
+AS = Affective skills; PS = Psychomotor skills; IA = Innate ability;                                    predicts their learning outcomes generally and in the cognitive,
+SH = Students health; SM = Students motivation; SSC = Students                                          affective and psychomotor domains. This study’s result provides
+social capital.                                                                                         further empirical support to other studies that earlier found that
+
+
+
+Frontiers in Psychology                                                                          13                                                           frontiersin.org
+
+Owan et al.                                                                                                               10.3389/fpsyg.2022.1024017
+
+
+
+
+TABLE 4 Prediction of specific students’ inputs to learning outcomes generally and in terms of CAPs.
+
+Variable                                  Model                          Predictors                        β                 t              SE
+Learning outcomes generally                  1              Innate ability                               0.20***            6.00            2.19
+                                             2              Innate ability                               0.17***            5.05            2.18
+                                                            Students’ health                             0.20***            6.07            1.71
+                                             3              Innate ability                               0.12***            3.43            2.23
+                                                            Students’ health                             0.16***            4.96            1.72
+                                                            students’ motivation                         0.19***            5.51            1.69
+                                             4              Innate ability                                0.07              1.93            2.30
+                                                            Students’ health                             0.13***            3.75            1.75
+                                                            students’ motivation                         0.14***            3.98            1.74
+                                                            Students’ social capital                     0.18***            4.82            1.76
+Cognitive skills                             1              Innate ability                               0.20***            5.91            2.11
+                                             2              Innate ability                               0.16***            4.96            2.09
+                                                            Students’ health                             0.20***            6.00            1.64
+                                             3              Innate ability                               0.11***            3.36            2.14
+                                                            Students’ health                             0.16***            4.90            1.65
+                                                            students’ motivation                         0.19***            5.44            1.63
+                                             4              Innate ability                                0.07              1.88            2.21
+                                                            Students’ health                             0.13***            3.70            1.68
+                                                            students’ motivation                         0.14***            3.93            1.68
+                                                            Students’ social capital                     0.18***            4.76            1.69
+Affective skills                             1              Innate ability                               0.26***            8.08            0.06
+                                             2              Innate ability                               0.23***            6.99            0.06
+                                                            Students’ health                             0.24***            7.45            0.04
+                                             3              Innate ability                               0.16***            4.98            0.06
+                                                            Students’ health                             0.20***            6.11            0.04
+                                                            students’ motivation                         0.23***            7.05            0.04
+                                             4              Innate ability                               0.10***            3.13            0.06
+                                                            Students’ health                             0.15***            4.65            0.04
+                                                            students’ motivation                         0.18***            5.19            0.04
+                                                            Students’ social capital                     0.21***            5.99            0.05
+Psychomotor skills                           1              Innate ability                               0.26***            7.90            0.03
+                                             2              Innate ability                               0.22***            6.79            0.03
+                                                            Students’ health                             0.25***            7.59            0.03
+                                             3              Innate ability                               0.16***            4.84            0.03
+                                                            Students’ health                             0.20***            6.28            0.03
+                                                            Students’ motivation                         0.23***            6.84            0.03
+                                             4              Innate ability                               0.10***            3.02            0.03
+                                                            Students’ health                             0.16***            4.85            0.03
+                                                            students’ motivation                         0.17***            5.01            0.03
+                                                            Students’ social capital                     0.21***            5.85            0.03
+
+***p < 0.001.
+
+
+
+
+students’ innate ability determines the success of students in                      a solid innate ability tended to achieve better learning outcomes
+schools (Leslie et al., 2015; Meyer et al., 2015; Ito and McPherson,                generally and in the cognitive, affective and psychomotor domains
+2018; Heydera et al., 2020). Although the cited studies all focused                 than those with a weak innate ability. The result of the current
+on students’ cognitive domain while measuring achievement, the                      study might be attributed to students’ genetic differences, which
+current study has addressed the shortcomings by proving that                        empowers students differently. For instance, some students are
+students’ innate ability is also a significant predictor of the affective           high achievers because they originate from families with good
+and psychomotor domains. The result suggests that students with                     intellectual genetic traits. Furthermore, because the genes in
+
+
+
+Frontiers in Psychology                                                        14                                                      frontiersin.org
+
+Owan et al.                                                                                                           10.3389/fpsyg.2022.1024017
+
+
+
+
+learners make them grasp course contents differently and at a                      Furthermore, it was proven in the current study that
+different pace, those with a good grasp are likelier to achieve better        students’ social capital is a significant predictor of their learning
+than those on the opposite end.                                               outcomes generally and across the three dimensions. The result
+     Similarly, this study showed that students’ health has a                 implies that increments in students’ social capital is associated
+significant individual prediction of their learning outcomes                  with increased student learning outcomes holistically and in the
+generally and in the cognitive, affective and psychomotor                     cognitive, affective and psychomotor dimensions. The result
+dimensions. The result corroborates another study that                        aligns with other studies that have identified social relationships
+documented that school failure, grade repetition, and dropout                 as a determinant of students’ learning outcomes (Cho et al.,
+are more likely for ill pupils than those who are otherwise                   2007; Gablinske, 2014; Espinosa, 2017). The result is not
+healthy (Shaw et al., 2015). Therefore, nutritional deficiencies              surprising because a school is a social entity that requires a
+in the brain and body impact a child’s dietary condition                      social network of relationships, and students may spend time
+(McIsaac et al., 2015). By implication, students with good                    and money building social networks in the hopes of receiving
+health tended to demonstrate better learning outcomes (across                 both personal and intellectual support in pursuit of their
+the three domains) than those with poor health. An                            academic objectives (Cho et al., 2007; Gablinske, 2014).
+explanation for this result is that students cannot learn                     However, one major surprise in the results of the present study
+effectively when they are sick, hungry, depressed or addicted                 is that students’ social capital weakened the prediction of their
+to substance use. Therefore, students’ poor learning outcomes                 innate ability for their overall and cognitive learning outcomes.
+among those with poor health conditions are attributable to                   The result suggests that students’ social ties with their colleagues
+the inability to process information, physical disability, lack of            could shift the onus of academic success from relying on one’s
+concentration, coordination and psychological imbalance.                      innate ability alone to social support from friends. By
+New studies also show that secondary school children who do                   implication, a person can learn from colleagues and derive
+better academically also engage in more healthy habits on an                  support from them to excel academically without relying on
+individual and population level (Grøtan et al., 2019; Luo et al.,             their abilities.
+2022). Furthermore, individuals who engage in risky activities,
+including not getting enough exercise, eating poorly, smoking,
+or abusing alcohol or other drugs, are more likely to do poorly               Limitations and suggestions for further
+in school and have a reduced chance of graduating (Bożek                      research
+et al., 2020; López-Bueno et al., 2020; Akah et al., 2022; Owan
+et al., 2022).                                                                    This study’s core strength is its use of a robust statistical
+     Regarding motivation, this study discovered its significant              procedure to link four predictors to three underresearched
+relative prediction of students’ learning outcomes broadly and                criterion variables. However, even though the study
+across the cognitive, affective and psychomotor dimensions.                   demonstrated strengths in its use of quantitative methods for
+This result implies that the more students are motivated to                   results generalization to the broader population, the use of the
+learn, the higher their chances of maintaining acceptable                     method was also a critical drawback. While the quantitative
+learning outcomes in secondary schools. The result of this                    technique allows generalizations to be made based on data from
+study strengthens the finding of researchers that also                        a substantial sample, it does not offer the opportunity to give a
+documented that students’ motivation relates positively to                    thorough justification for the relationships between the
+their academic achievement (Momany et al., 2015) and                          predictors and criterion variables in this research. Even though
+learning outcomes (Georgiou and Kyza, 2018; Won et al.,                       this in no way casts doubt on the findings of our study, future
+2020; Cho et al., 2021; Howard et al., 2021). Regarding the                   research should consider using a mixed methods approach to
+strength of the relationship, the current study found a weak                  address the overlapping limitations of quantitative and
+predictive relationship between motivation and students’                      qualitative approaches with their strengths. This study’s scope,
+learning outcomes generally and across the three domains.                     which did not permit the inclusion of control or moderating
+This result supports previous studies that found a weak                       factors such as students’ age, gender, class, and family
+positive correlation between motivation and students’                         background characteristics, among others, is another drawback.
+academic achievement (Dewangga and Nasaruddin, 2020;                          As a result, we could not determine, for example, whether the
+Rahardjo and Pertiwi, 2020). The result, however, differs                     four inputs affect learning outcomes across the three domains
+slightly from other studies that found a modest link between                  equally for male and female students or younger and older
+motivation and students’ learning outcomes (Khin and Swe,                     students. However, it is commonly accepted that no research
+2018; Rosmayanti and Yanuarti, 2018; Ndruru et al., 2022).                    can provide a comprehensive response to all the issues raised by
+Despite the tiny difference, one major similarity between all                 a topic at once. In addition, despite the best efforts of the
+the cited studies and the current one is that the relationship                researchers, no one study can fully account for all the control
+was proven to be statistically significant, although previous                 factors that potentially influence the link between two variables.
+research has been mainly on the cognitive domain.                             We, therefore, suggest that future research use a multigroup
+
+
+
+Frontiers in Psychology                                                  15                                                          frontiersin.org
+
+Owan et al.                                                                                                       10.3389/fpsyg.2022.1024017
+
+
+
+
+analysis to investigate the impact of moderating factors in the              1. The government provides inclusive primary healthcare to
+connection between the four inputs to students’ learning                        enable students to access them when needed. This would
+outcomes across the three domains.                                              keep both teachers and students healthy for quality
+                                                                                teaching and learning.
+                                                                             2. Students should always be encouraged to maintain a
+Conclusion                                                                      positive perception of themselves and their abilities. This is
+                                                                                critical in boosting their self-esteem and motivating them
+     This study provided evidence that students’ innate ability,                to learn for optimal learning outcomes.
+health, motivation and social capital jointly predict their                  3. Parents should ensure that students are given the right
+overall, cognitive, affective and psychomotor learning                          home environment to learn effectively. The food quality
+outcomes in secondary schools. The study also showed that                       provided to learners at home should be nutritious to keep
+these predictors are individually crucial in explaining the                     them healthy, sound and sharp for academic matters.
+variance in students’ overall, cognitive, affective and                      4. Students should often engage other colleagues and teachers
+psychomotor learning outcomes. The study proved that having                     in academic discussions, ask questions where there is a
+sound health, positive motivation, high intellectual ability and                need for clarity and assist others that are weaker in learning.
+social capital are crucial to boosting students’ overall                        This will boost students’ social capital, making learning fun
+performance across all subjects and promoting cognitive,                        through collaboration and friendly support.
+affective and psychomotor outcomes. The study also proved
+that students seeking academic success could rely on their
+social capital without over-burdening their innate ability. This          Data availability statement
+study contributes to the educational psychology literature by
+bridging the knowledge gap on the predictive relationship of                  The raw data supporting the conclusions of this article will
+students’ innate ability, health, motivation and social capital           be made available by the authors, without undue reservation.
+to their overall, affective and psychomotor learning outcomes.
+Although most previous studies have focused on students’
+cognitive learning outcomes as predicted by innate ability,               Ethics statement
+health, motivation, and social capital, the present study adds
+to it by testing their composite prediction.                                  Ethical review and approval was not required for the study on
+                                                                          human participants in accordance with the local legislation and
+                                                                          institutional requirements. The patients/participants provided
+Implications and recommendations                                          their written informed consent to participate in this study.
+
+    The result of this study can be helpful in school
+management to provide services aimed at improving the                     Author contributions
+school climate for students’ motivation and social capital. The
+result can also provide policymakers with a proper                            VO contributed to the conceptualization, design, data
+understanding of the constituents of learning outcomes and                collection, analysis, manuscript preparation and drafting process,
+how policies can be aligned to secure quality student inputs              editing and approval. JE contributed to the conceptualization,
+for maximum education productivity. The study can help                    design, data collection, analysis, manuscript preparation and
+educational stakeholders (such as parents, teachers, school               drafting process and approval. OC contributed to the data
+leaders, and the government) identify their roles in the                  collection, financial support, revision and supervision. MA
+education production process and how these roles can                      contributed to the design, data collection, technical support and
+be effectively coordinated through a policy framework to aid              approval. JO contributed to the data collection, manuscript
+the effective delivery of educational services in society. Lastly,        revision, software and approval. MO contributed to the data
+curriculum planners are primarily concerned with cognitive                collection, data cleaning, manuscript revision and approval. SO
+outcomes of the educational process in schools, while other               contributed to the data collection, manuscript revision
+aspects of educational outcomes are sometimes not adequately              and approval.
+captured in the schools’ planned contents, experiences and
+evaluation schedules in the Nigerian context. This study has,
+therefore, provided the need for the full articulation of                 Conflict of interest
+non-cognitive (affective) and practical skills (psychomotor)
+measures into the school curriculum for better assessment of                  The authors declare that the research was conducted in the
+students’ holistic learning outcomes in schools. Based on the             absence of any commercial or financial relationships that could
+findings of this study, it is recommended that:                           be construed as a potential conflict of interest.
+
+
+
+Frontiers in Psychology                                              16                                                         frontiersin.org
+
+Owan et al.                                                                                                                                           10.3389/fpsyg.2022.1024017
+
+
+
+
+Publisher’s note                                                                                  organizations, or those of the publisher, the editors and the
+                                                                                                  reviewers. Any product that may be evaluated in this article, or
+    All claims expressed in this article are solely those of the                                  claim that may be made by its manufacturer, is not guaranteed or
+authors and do not necessarily represent those of their affiliated                                endorsed by the publisher.
+
+
+
+References
+  Abushandi, E. (2021). Assessment for student success: delivering high-quality                     Deary, I. J., Cox, S. R., and Hill, W. D. (2022). Genetic variation, brain, and
+modules and improving educational methods in civil engineering prog. J. Educ. Soc.                intelligence differences. Mol. Psychiatry 27, 335–353. doi: 10.1038/s41380-
+Res. 11, 251–251. doi: 10.36941/jesr-2021-0044                                                    021-01027-y
+   Aduma, P. O., Owan, V. J., Akah, L. U., Alawa, D. A., Apie, M. A., Ogabor, J. O.,                Dewangga, I., and Nasaruddin, N. (2020). The effect of students' motivation and
+et al. (2022). Interactive analysis of demographic variables and occupational stress              behavior to the learning environment and its implication to students' achievement
+on university lecturers' job performance. Human. Soc. Sci. Lett. 10, 88–102. doi:                 in learning English. Sci. J. Fac. Teach. Train. Educ. 6, 64–73. doi: 10.35569/
+10.18488/73.v10i2.2952                                                                            biormatika.v6i1.685
+  Afkhaminia, F., Siamian, H., Behnampour, N., Moghimi, A., and Karimpour, S.                       Espinosa, A. M. G. (2017). Estimating the education production function for
+(2018). Study of student success indicators based on the viewpoints of the students               cognitive and non-cognitive development of children in Vietnam through structural
+of Mazandaran University of Medical Sciences. Acta Informatica. Medica 26:175.                    equation modelling using young lives database. master's thesis. Institute of
+doi: 10.5455/aim.2018.26.175-179                                                                  Education, University College London.
+  Akah, L. U., Owan, V. J., Uduigwomen, G. A., and Akpa, S. U. (2022).                              Etor, C. R., Obeten, R. B., and Obona, E. E. (2019). Management of skill-oriented
+Psychological variables and healthy meal consumption among first cycle students                   subjects and goal attainment in private secondary schools in Ikom education zone,
+in Calabar Metropolis, Nigeria. J. Educ. Res. Dev. Areas 3, 223–236. doi: 10.47434/               Cross River state, Nigeria. Glob. J. Educ. Res. 18, 27–34. doi: 10.4314/gjedr.
+JEREDA.3.2.2022.223                                                                               v18i1.4
+  Ali, S. (2013). Factors affecting academic achievement of students. Am. J. Educ.                  Fan, X., Thompson, B., and Wang, L. (1999). Effects of sample size, estimation
+Res. 1, 283–289. doi: 10.12691/education-1-8-3                                                    methods, and model specification on structural equation modelling fit indexes.
+                                                                                                  Struct. Equ. Modeling 6, 56–83. doi: 10.1080/10705519909540119
+  Apple, D., Duncan, W., and Ellis, W. (2016). Key learner characteristics for
+academic success. Int. J. Process Educ. 8, 61–82.                                                   Field, A. P. (2005). Discovering statistics using SPSS (2nd Edn.) Sage.
+  Baabdullah, A. M., Alsulaimani, A. A., Allamnakhrah, A., Alalwan, A. A.,                           Gablinske, P. B. (2014). A case study of student and teacher relationships and the
+Dwivedi, Y. K., and Rana, N. P. (2022). Usage of augmented reality (AR) and                       effect on student learning. (unpublished doctoral dissertation), University of
+development of e-learning outcomes: an empirical evaluation of students' e-learning               Rhode Island.
+experience. Comput. Educ. 177:104383. doi: 10.1016/j.compedu.2021.104383
+                                                                                                   Gatignon, H. (2010). Confirmatory factor analysis: Statistical analysis of
+  Bassey, B. A., Owan, V. J., and Eze, E. A. (2019). Nexus between students', teachers'           management data, Springer.
+and school system effectiveness: construction and factorial validity of a measuring
+                                                                                                    Georgiou, Y., and Kyza, E. A. (2018). Relations between student motivation,
+instrument. Br. J. Educ. 7, 62–75.
+                                                                                                  immersion and learning outcomes in location-based augmented reality settings.
+  Bassey, B. A., Owan, V. J., Ikwen, E. U., and Amanso, E. O. (2020). Teachers'                   Comput. Hum. Behav. 89, 173–181. doi: 10.1016/j.chb.2018.08.011
+attitudes towards learners with disability scale (TALDS): construction and
+                                                                                                     Greisel, M., Wekerle, C., Wilkes, T., Stark, R., and Kollar, I. (2022). Pre-service
+psychometric analysis. J. Soc. Sci. Res. 6, 518–530. doi: 10.32861/jssr.65.518.530
+                                                                                                  teachers' evidence-informed reasoning: do attitudes, subjective norms, and self-
+  Bitok, E. C. (2020). Teacher perception on the three domains of learning in Uasin               efficacy facilitate the use of scientific theories to analyse teaching problems? Psychol.
+Gishu County, Kenya. J. Res. Innov. Implic. Educ. 4, 25–36.                                       Learn. Teach. doi: 10.1177/14757257221113942
+  Boogert, N. J., Madden, J. R., Morand-Ferron, J., and Thornton, A. (2018).                         Grøtan, K., Sund, E. R., and Bjerkeset, O. (2019). Mental health, academic self-
+Measuring and understanding individual differences in cognition. Philosoph. Trans.                efficacy and study progress among college students–the SHoT study, Norway. Front.
+R Soc. B Biol. Sci. 373:20170280. doi: 10.1098/rstb.2017.0280                                     Psychol. 10:45. doi: 10.3389/fpsyg.2019.00045
+  Boudadi, N. A., and Gutiérrez-Colón, M. (2020). Effect of gamification on                         Heydera, A., Weidingera, A. F., Cimpianb, A., and Steinmayra, R. (2020). Teachers'
+students' motivation and learning achievement in second language acquisition                      belief that math requires innate ability predicts lower intrinsic motivation among
+within higher education: a literature review 2011-2019. EuroCALL Rev. 28, 57–69.                  low-achieving students. Learn. Instr. 65, 101220–101230. doi: 10.1016/j.
+doi: 10.4995/eurocall.2020.12974                                                                  learninstruc.2019.101220
+  Bożek, A., Nowak, P. F., and Blukacz, M. (2020). The relationship between                         Hill, W. D., Arslan, R. C., Xia, C., Luciano, M., Amador, C., Navarro, P., et al.
+spirituality, health-related behavior, and psychological wellbeing. Front. Psychol.               (2018). Genomic analysis of family data reveals additional genetic effects on
+11:1997. doi: 10.3389/fpsyg.2020.01997                                                            intelligence and personality. Mol. Psychiatry 23, 2347–2362. doi: 10.1038/
+                                                                                                  s41380-017-0005-1
+  Brown, H. D. (2007). Teaching by principles: An interactive oncoming to language
+pedagogy. 3th Edn. Pearson Education, Inc.                                                          Hindal, H., Reid, N., and Whitehead, R. (2013a). Gender and learner
+                                                                                                  characteristics. Eur. J. Educ. Res. 2, 83–96. doi: 10.12973/eu-jer.2.2.83
+  Brown, T. (2015). Confirmatory factor analysis for applied research. New York
+London: The Guilford Press.                                                                         Hindal, H., Reid, N., and Whitehead, R. (2013b). High ability and learner
+                                                                                                  characteristics. Int. J. Instr. 6, 60–76.
+  Casey, A., and Goodyear, V. A. (2015). Can cooperative learning achieve the four
+learning outcomes of physical education? A review of literature. Quest 67, 56–72.                   Hooper, D., Coughlan, J., and Mullen, M. R. (2008). Structural equation
+doi: 10.1080/00336297.2014.984733                                                                 modelling: guidelines for determining model fit. Electron. J. Bus. Res. Methods 6,
+                                                                                                  53–60.
+  Cho, M. H., Cheon, J., and Lim, S. (2021). Preservice teachers' motivation profiles,
+self-regulation, and affective outcomes in online learning. Distance Educ. 42, 37–54.               Hoque, M. E. (2016). Three domains of learning: cognitive, affective and
+doi: 10.1080/01587919.2020.1869528                                                                psychomotor. J. EFL Educ. Res. 2, 45–52.
+  Cho, H., Gay, G., Davidson, B., and Ingraffea, A. (2007). Social networks,                        Howard, J. L., Bureau, J., Guay, F., Chong, J. X., and Ryan, R. M. (2021). Student
+communication styles, and learning performance in a CSCL community. Comput.                       motivation and associated outcomes: a meta-analysis from self-determination
+Educ. 49, 309–329. doi: 10.1016/j.compedu.2005.07.003                                             theory. Perspect. Psychol. Sci. 16, 1300–1323. doi: 10.1177/1745691620966789
+  Coleman, J. S. (1988). Social capital in the creation of human capital. Am. J. Sociol.            Hu, L., and Bentler, P. M. (1999). Cutoff criteria for fit indexes in covariance
+94, S95–S120. doi: 10.1086/228943                                                                 structure analysis: conventional criteria versus new alternatives. Struct. Equ. Model.
+                                                                                                  Multidiscip. J. 6, 1–55. doi: 10.1080/10705519909540118
+  Coleman, J. R. I., Bryois, J., Gaspar, H. A., Jansen, P. R., Savage, J. E., Skene, N.,
+et al. (2019). Biological annotation of genetic loci associated with intelligence in a              Ito, T. A., and McPherson, E. (2018). Factors influencing high school students'
+meta-analysis of 87,740 individuals. Mol. Psychiatry 24, 182–197. doi: 10.1038/                   interest in STEM. Front. Psychol. 9, 1535–1548. doi: 10.3389/fpsyg.2018.
+s41380-018-0040-6                                                                                 01535
+  Cornelisz, I., and van Klaveren, C. (2018). Student engagement with computerised                  Khin, P. S., and Swe, K. (2018). The impact of students' motivation on their
+practising: ability, task value, and difficulty perceptions. J. Comput. Assist. Learn. 34,        academic achievement in science at the middle school level. J. Myanmar Acad. Arts
+828–842. doi: 10.1111/jcal.12292                                                                  Sci. 15, 219–231.
+
+
+Frontiers in Psychology                                                                      17                                                                          frontiersin.org
+
+Owan et al.                                                                                                                                        10.3389/fpsyg.2022.1024017
+
+
+
+
+  Kline, R. B. (2016). Principle and practice of structural equation modelling. 4th Edn.          Olaitan, A. W. (2017). Impact of family structure on the academic performance
+The Guilford Press.                                                                             of secondary school students in Yewa local government area of Ogun State, Nigeria.
+                                                                                                Int. J. Soc. Anthropol. Res. 3, 1–10.
+  Kuranchie, A., and Addo, H. (2017). The link between social capital and learning
+outcomes: a literature review. Soc. Sci. Human. J. 2, 87–100.                                     Owan, V. J. (2020). Effects of gender, test anxiety and test items scrambling on
+                                                                                                students' performance in mathematics: a quasi-experimental study. World J. Vocat.
+  Leslie, S. J., Cimpian, A., Meyer, M., and Freeland, E. (2015). Expectations of
+                                                                                                Educ. Train. 2, 56–75. doi: 10.18488/journal.119.2020.22.56.75
+brilliance underlie gender distributions across academic disciplines. Science 347,
+262–265. doi: 10.1126/science.1261375                                                              Owan, V. J., Bassey, B. A., Mbon, U. F., Okon, A. E., Egbula, E. O., Ekaette, S. O.,
+                                                                                                et al. (2020). Validation of an instrument and measurement of employee work-life
+  López-Bueno, R., López-Sánchez, G. F., Casajús, J., Calatayud, J., Gil-Salmerón, A.,          policies, psychological empowerment, and job commitment of academic staff in
+Grabovac, I., et al. (2020). Health-related behaviors among school-aged children and            universities. Mediterr. J. Soc. Sci. 11, 86–100. doi: 10.36941/mjss-2020-0022
+adolescents during the Spanish Covid-19 confinement. Frontiers. Pediatrics 8:573.
+doi: 10.3389/fped.2020.00573                                                                      Owan, V. J., Duruamaku-dim, J. U., and Eneje, S. (2019). Mode of test
+                                                                                                administration, birth variables, and student's academic achievement in mathematics
+  Luo, X., Liu, L., and Li, J. (2022). The effects of ARCS motivational instruction in          in Obubra local government area of Cross River state, Nigeria. Prestige J. Counsell.
+physical education on learning cognition and the health-related physical fitness of             Psychol. 2, 60–77.
+students. Front. Psychol. 13:786178. doi: 10.3389/fpsyg.2022.786178
+                                                                                                  Owan, V. J., Duruamaku-Dim, J. U., Okon, A. E., Akah, L. U., Agurokpon, D. C.,
+  Luo, M., Sun, D., Zhu, L., and Yang, Y. (2021). Evaluating scientific reasoning               Ubi, I. O., et al. (2022). Interlinking alcohol intake, mental stress, psychotic
+ability: student performance and the interaction effects between grade level, gender,           experiences and job performance of higher institutions' graduates: a structural
+and academic achievement level. Think. Skills Creat. 41:100899. doi: 10.1016/j.                 equation modelling. J. Educ. Health Promot. 11:312. doi: 10.4103/jehp.jehp_417_22
+tsc.2021.100899
+                                                                                                  Owan, V. J., Ekpenyong, J. A., and Asuquo, M. E. (2021). A structural equation
+  Marsela, S. (2017). The correlation between reading motivation and reading                    model of principals' communication patterns, funds management and school-
+achievement of the eleventh-grade students of MAN 2 Palembang. Diploma thesis.                  community relationship. J. Pedagogic. Sociol. Psychol. 3, 1–18. doi: 10.33902/
+UIN Raden Fatah Palembang.                                                                      JPSP.2020364435
+  Masoomi, H., Taheri, M., Irandoust, K., H'Mida, C., and Chtourou, H. (2020). The                Paxton, P. (1999). Is social capital declining in the United States? A multiple
+relationship of breakfast and snack foods with cognitive and academic performance               indicator assessment. Am. J. Sociol. 105, 88–127. doi: 10.1086/210268
+and physical activity levels of adolescent students. Biol. Rhythm. Res. 51, 481–488.
+doi: 10.1080/09291016.2019.1566994                                                                Polit, D. F., Beck, C. T., and Owen, S. V. (2007). Is the CVI an acceptable indicator
+                                                                                                of content validity? Appraisal and recommendations. Res. Nurs. Health 30, 459–467.
+  McIsaac, J. D., Kirk, S. F. L., and Kuhle, S. (2015). The association between health          doi: 10.1002/nur.20199
+behaviours and academic performance in Canadian elementary school students: a
+cross-sectional study. Int. J. Environ. Res. Public Health 12, 14857–14871. doi:                  Rahardjo, A., and Pertiwi, S. (2020). Learning motivation and students'
+10.3390/ijerph121114857                                                                         achievement in learning English. J. Engl. Lang. Teach. Literat. 1, 56–64.
+  Melawati, O., Evendi, E., Halim, A., Yusrizal, Y., and Elisa, E. (2022). The influence          Reitan, T., and Stenberg, S. Å. (2019). From classroom to conscription. Leadership
+of the use of student worksheet problem-based to increase problem solving skills                emergence in childhood and early adulthood. Leadersh. Q. 30, 298–319. doi:
+and learning outcomes. Pendidikan Sci. Educ. Res. J. 8, 346–355. doi: 10.29303/                 10.1016/j.leaqua.2018.11.006
+jppipa.v8i1.1205
+                                                                                                  Rosmayanti, D., and Yanuarti, H. (2018). The relationship between students'
+  Meshulam, M., Hasenfratz, L., Hillman, H., Liu, Y. F., Nguyen, M., Norman, K. A.,             motivation and their learning achievement. Profess. J. Engl. Educ. 1, 783–788. doi:
+et al. (2021). Neural alignment predicts learning outcomes in students taking an                10.22460/project.v1i6.p783-788
+introduction to computer science course. Nat. Commun. 12, 1–14. doi: 10.1038/
+                                                                                                    Sari, E. R., and Suprapti, M. (2017). The correlation study between students'
+s41467-021-22202-3
+                                                                                                motivation and reading comprehension of the fourth semester students of the state
+   Meyer, M., Cimpian, A., and Leslie, S. J. (2015). Women are underrepresented in              Islamic Institute of Surakarta in the academic year of 2015/2016. (Thesis, State
+fields where success is believed to require brilliance. Front. Psychol. 6:235. doi:             Islamic Institute of Surakarta).
+10.3389/fpsyg.2015.00235
+                                                                                                  Semeraro, C., Giofrè, D., Coppola, G., Lucangeli, D., and Cassibba, R. (2020). The
+  Mishra, S. (2020). Social networks, social capital, social support and academic               role of cognitive and non-cognitive factors in mathematics achievement: the
+success in higher education: a systematic review with a special focus on                        importance of the quality of the student-teacher relationship in middle school. PLoS
+'underrepresented' students. Educ. Res. Rev. 29:100307. doi: 10.1016/j.                         One 15:e0231381. doi: 10.1371/journal.pone.0231381
+edurev.2019.100307
+                                                                                                  Shaw, S. R., Gomes, P., Polotskaia, A., and Jankowska, A. M. (2015). The
+   Momany, J. M., Too, J., and Simiyu, C. (2015). Effect of students' age on academic           relationship between student health and academic performance: implications for
+motivation and academic performance among high school students in Kenya. Asian                  school psychologists. Sch. Psychol. Int. 36, 115–134. doi: 10.1177/0143034314565425
+J. Educ. e-Learn. 3, 337–342.
+                                                                                                  Shi, D., Lee, T., and Maydeu-Olivares, A. (2019). Understanding the model size
+   Mõttus, R., Wood, D., Condon, D. M., Back, M. D., Baumert, A., Costantini, G.,               effect on SEM fit indices. Educ. Psychol. Meas. 79, 310–334. doi: 10.1177/00
+et al. (2020). Descriptive, predictive and explanatory personality research: different          13164418783530
+goals, different approaches, but a shared need to move beyond the big few traits. Eur.
+J. Pers. 34, 1175–1201. doi: 10.31234/osf.io/hvk5p                                                Sivrikaya, A. H. (2019). The relationship between academic motivation and
+                                                                                                academic achievement of the students. Asian J. Educ. Train. 5, 309–315. doi:
+  Myers, N. D., Ahn, S., and Jin, Y. (2010). Sample size and power estimates for a              10.20448/journal.522.2019.52.309.315
+confirmatory factor analytic model in exercise and sport: a Monte Carlo approach.
+Res. Q. Exerc. Sport 82, 412–423. doi: 10.1080/02701367.2011.10599773                             Sönmez, V. (2017). Association of cognitive, affective, psychomotor and intuitive
+                                                                                                domains in education, Sönmez model. Univ. J. Educ. Res. 5, 347–356. doi: 10.13189/
+   Ndruru, F., Umiyati, M., and Ndruru, K. (2022). Relationship between Students'               ujer.2017.050307
+motivation and Reading comprehension achievement at the 4th semester students
+of English language education study program of STKIP Nias Selatan. KnE Soc. Sci.                  Srimaharaj, W., Chaising, S., Temdee, P., Chaisricharoen, R., and Sittiprapaporn, P.
+7, 457–470. doi: 10.18502/kss.v7i10.11313                                                       (2018). Brain cognitive performance identification for student learning in classroom.
+                                                                                                Glob. Wireless Summit 2018, 102–106. doi: 10.1109/GWS.2018.8686639
+  Noor, N. A. M., Saim, N. M., Alias, R., and Rosli, S. H. (2020). Students'
+performance on cognitive, psychomotor and affective domain in the course outcome                  Thoren, K., Heinig, E., and Brunner, M. (2016). Relative age effects in mathematics
+for embedded course. Univ. J. Educ. Res. 8, 3469–3474. doi: 10.13189/                           and reading: investigating the generalizability across students, time and classes.
+ujer.2020.080821                                                                                Front. Psychol. 7, 1–12. doi: 10.3389/fpsyg.2016.00679
+   Obumse, N. A., and Egenti, U. P. (2021). Influence of mental health status on                  Vilia, P. N., Candeias, A. A., Neto, A. S., Franco, M. D. G. S., and Melo, M. (2017).
+academic achievement of public secondary school students in Anambra state. Afric.               Academic achievement in physics-chemistry: the predictive effect of attitudes and
+J. Educ. Manage. Teach. Entrepreneursh. Stud. 3, 118–128.                                       reasoning abilities. Front. Psychol. 8:1064. doi: 10.3389/fpsyg.2017.01064
+  O'Connell, M., and Marks, G. N. (2021). Are the effects of intelligence on student              Villena-Taranilla, R., Tirado-Olivares, S., Cózar-Gutiérrez, R., and
+achievement and wellbeing largely functions of family income and social class?                  González-Calero, J. A. (2022). Effects of virtual reality on learning outcomes in K-6
+Evidence from a longitudinal study of Irish adolescents. Intelligence 84:101511. doi:           education: a meta-analysis. Educ. Res. Rev. 35:100434. doi: 10.1016/j.edurev.2022.1
+doi:10.1016/j.intell.2020.101511                                                                00434
+   O'Connell, K. A., Wostl, E., Crosslin, M., Berry, T. L., and Grover, J. P. (2018).             Wagbara, S. O., and Furo, P. T. (2021). Students' motivation and academic
+Student ability best predicts final grade in a college algebra course. J. Learn. Analyt.        achievement in basic science in Rivers state, Nigeria. Academicia 11, 1–9. doi:
+5, 167–181. doi: 10.18608/jla.2018.53.11                                                        10.5958/2249-7137.2021.02464.2
+
+
+
+
+Frontiers in Psychology                                                                    18                                                                        frontiersin.org
+
+Owan et al.                                                                                                                                 10.3389/fpsyg.2022.1024017
+
+
+
+
+  Whitney, S. D., and Bergin, D. A. (2018). Students' motivation and engagement               Xie, K., Vongkulluksn, V. W., Lu, L., and Cheng, S.-L. (2020). A person-centered
+predict reading achievement differently by ethnic group. J. Genet. Psychol. 179,            approach to examining high-school students' motivation, engagement and academic
+357–370. doi: 10.1080/00221325.2018.1527754                                                 performance. Contemp. Educ. Psychol. 62:101877. doi: 10.1016/j.cedpsych.
+                                                                                            2020.101877
+  Won, S., Anderman, E. M., and Zimmerman, R. S. (2020). Longitudinal relations
+of classroom goal structures to students' motivation and learning outcomes in health          Yu, H. (2020). Am I the big fish? The effect of ordinal rank on student academic
+education. J. Educ. Psychol. 112:1003. doi: 10.1037/edu0000399                              performance in middle school. J. Econ. Behav. Organ. 176, 18–41. doi: 10.1016/j.
+                                                                                            jebo.2020.05.006
+  Woolcock, M., and Narayan, D. (2000). Social capital: implications for
+development theory, research, and policy. World Bank Res. Obs. 15, 225–249. doi:              Yusoff, M. S. B. (2019). ABC of content validation and content validity index
+10.1093/wbro/15.2.225                                                                       calculation. Educ. Med. J. 11, 49–54. doi: 10.21315/eimj2019.11.2.6
+
+
+
+
+Frontiers in Psychology                                                                19                                                                    frontiersin.org

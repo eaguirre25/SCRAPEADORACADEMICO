@@ -1,0 +1,497 @@
+Available online at http://ijite.jredu.id
+                                                               International Journal
+      PUBLISHED BY
+                                                               of Information
+     JR
+                                                               Technology and
+ EDUCATION International Journal of Information Technology and Education (IJITE)
+           Education (IJITE) 2 (4), (September 2023) 142-152
+
+                                                                                              http://ijite.jredu.id
+
+
+Implementation of School Management Information Systems
+          at Vocational School State I Tomohon
+        Israel Yonatan Fredrik Kamu1*, Parabelem Tinno Dolf Rompas1, Mario Tulenan Parinsi1
+
+ 1Technology and Vocational Education Study Program Postgraduate of Universitas Negeri Manado,
+                                          Indonesia
+
+                              *Corresponding author: isseryonatan@gmail.com
+
+                                                     ARTICLE INFO
+                                                     Article history:
+           Received: July 20, 2023; Received in revised form: August 25, 2023; Accepted: September 07, 2023;
+                                         Available online: September 10, 2023;
+
+
+                                                     ABSTRACT
+
+This research discusses the implementation of the School Management Information System (SIMS) at
+SMK Negeri 1 Tomohon using the Rapid Application Development (RAD) method. School
+management, as a process of planning, organizing, directing, and controlling, is carried out by the
+school principal and his staff to achieve educational goals. The main goal of school management is to
+create an effective and efficient learning environment. Information systems, as entities with human,
+hardware, software, procedures, and data components, aim to collect, store, process, manage, and
+convey relevant information. SMK Negeri 1 Tomohon, as a vocational school in North Sulawesi, faces
+management challenges due to the use of conventional systems. Processes such as recording grades,
+registering students, compiling schedules, and collecting data on school fee payments often take time
+and are difficult. Therefore, this research is focused on implementing a School Management
+Information System using the programming languages PHP, HTML, CSS, and MySQL, with users
+consisting of Admin, Teachers, and Students, and using the RAD method. This research identifies
+problems in data management and school administration which are still manual, resulting in
+inefficiencies and potential errors. SIMS succeeded in making a positive impact with a structured
+interface, allowing easy access to information on grades, schedules, and learning activities. SIMS also
+facilitates systematic monitoring of student and teacher performance. This research concludes that
+SIMS can be an effective solution to support educational management at SMK Negeri 1 Tomohon with
+the potential for wider application in other school environments.
+
+                                                                                                                      142
+     International Journal of Information Technology and Education (IJITE)
+     Volume 2, Number 4, September 2023
+     e-ISSN: 2809-8463
+
+        Implementation of School Management Information Systems at Vocational School State I Tomohon
+              Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+Keywords: information, school, system management
+
+
+
+                                           INTRODUCTION
+
+       School management is a process that involves planning, organizing, directing, and controlling
+carried out by the school principal and his staff to achieve educational goals. The main goal of school
+management is to create an effective and efficient learning environment for students, teachers, and
+school staff. This process involves managing all operational and administrative aspects of the school,
+including human resources, financial resources, and educational facilities. Effective school
+management can improve the quality of education, achieve learning goals, and create an environment
+that supports student growth and development.
+       Information systems, as entities consisting of humans, hardware, software, procedures, and data
+components, aim to collect, store, process, manage, and convey information that is relevant and useful
+for users. Information systems can be used in various sectors, including education, to support decision-
+making, business operations, and data management. Development and management of information
+systems requires a good understanding of organizational needs, selection of appropriate technology,
+adequate infrastructure settings, and effective security and data protection.
+       SMK Negeri 1 Tomohon, as a vocational school in North Sulawesi Province, faces challenges in
+school management due to the use of conventional systems. Processes such as recording grades,
+registering new students, preparing schedules, and collecting data on school fee payments often
+experience difficulties and take time. By looking at the context of the problem, researchers are
+interested in conducting research with the title "Implementation of school management information
+systems in vocational school negeri i tomohon." This research aims to create and analyze an information
+system that can be used for education management at SMK Negeri 1 Tomohon.
+       In limiting the problem, this research focuses on the use of PHP, HTML, CSS, and MySQL
+programming languages. The application created will be a School Management Information System
+with users consisting of Admin, Teachers, and Students. The development method used is RAD (Rapid
+Application Development). Some of the issues identified involve manual processes in data collection,
+processing, and management, which can lead to errors and inefficiencies. The lack of efficiency in data
+collection and management, the absence of an efficient information system at SMK Negeri 1 Tomohon,
+as well as anticipation to improve the quality of the school became the focus of problem identification.
+       It is hoped that the results of this research can provide benefits, both theoretically by producing
+new concepts in managing information systems and practically by increasing operational efficiency at
+SMK Negeri 1 Tomohon through the implementation of information systems that suit the needs and
+challenges faced by the school.
+
+
+                                        LITERATURE REVIEW
+
+Understanding the System
+
+                                                                                                       143
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+       Implementation of School Management Information Systems at Vocational School State I Tomohon
+             Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+       A system is a collection of elements that interact with each other and work together to achieve
+certain goals. In a general context, a system is a unit consisting of components that are interconnected
+and interact regularly to carry out certain functions or achieve certain goals. A system is a series
+consisting of two or more components that are interconnected and interact with each other to achieve
+goals where the system is usually divided into smaller sub-systems that support the larger
+system(Romney and Steinbart, 2015).
+       Based on the understanding of the experts above, it can be concluded that a system is a series or
+collection of components that are interconnected and interact with each other in an organized
+transformation process. Systems can consist of sub-systems that support a larger system and can be
+viewed from a procedural and element perspective. In the context of information systems, a system is
+a collection of components in a company or organization that are related to the creation and flow of
+information. These components work together to achieve planned goals. Overall, a system is an entity
+consisting of elements that interact and influence each other to achieve goals and carry out an
+organized transformation process.
+
+System Characteristics
+       In defining a system, some approaches can focus on procedures or elements/components. In
+principle, a system is a group of elements that are interconnected and work together to achieve certain
+goals. Some experts have different approaches to defining the system, namely,
+       According to Jeperson Hutahaean (2015:3) the system can be said to be a good system, it has
+characteristics, namely:
+       1. Components
+       A system consists of several components that interact with each other, which means they work
+together to form a single unit. System components consist of components in the form of subsystems or
+parts of the system.
+       2. System Limits (boundaries)
+       System boundaries are areas that limit a system to other systems or the external environment.
+These system boundaries allow a system to be viewed as a unit. The boundaries of a system indicate the
+scope of the system.
+       3. External Environment of the System (environment)
+       The external environment of the system is outside the boundaries of the system which affects
+system operations. The environment can be beneficial which must be maintained and detrimental
+which must be maintained and controlled, otherwise, it will disrupt the survival of the system.
+       4. System connector (Interface)
+       The system liaison is a connecting medium between one subsystem and another subsystem. This
+link allows resources to flow from subsystems to other subsystems. The output from a subsystem will
+become input for another subsystem via a link.
+       5. System Input (Input)
+       Input is energy entered into the system, which can be in the form of maintenance (Maintenance
+Input), and input signals (Signal Input). Maintenance input is the energy entered so that the system
+can operate. The input signal is the energy that is processed to obtain the output. For example, in a
+
+
+                                                                                                      144
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+        Implementation of School Management Information Systems at Vocational School State I Tomohon
+              Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+computer system, a program is maintenance input, while data is an input signal to be processed into
+information.
+      6. System output (Output)
+      The system output is the result of energy that is processed and classified into useful output and
+waste. For example, computers produce heat which is waste, while information is the required output.
+      7. System Processing (Process)
+      A system is a processing part that will convert input into output. The production system will
+process raw materials into finished materials, the accounting system will process data into financial
+reports.
+      8. System goals
+      A system must have a goal or objective. The goals of the system determine the input the system
+needs and the output the system will produce.
+
+System Classification
+       Several aspects of the system allow users to classify the system based on viewpoints. The system
+classification in question (Tyoso, 2016), namely:
+       1) Natural Systems and Man-Made Systems
+       a) Natural systems are systems that occur through natural processes, not created by humans, for
+            example, the solar system, galactic system, reproductive system, and others.
+       b) Man-made systems are systems designed by humans. Artificial systems that involve human
+            interaction, for example, accounting systems, information systems, etc.
+       2) Deterministic Systems and Probabilistic Systems.
+       a) A deterministic system is a system that operates with predictable behavior. The interaction
+            of the parts can be detected with certainty so that the output of the system can be predicted,
+            for example, a computer system, is an example of a system whose behavior can be determined
+            based on the computer programs that are run.
+       b) A probabilistic system is a system whose future conditions cannot be predicted because it
+            contains elements of probability, for example, human systems.
+       3) Open System and Closed System.
+       a) An open system is a system that is connected and influenced by its external environment.
+            More specifically, it is also known as an automated system, which is part of a human-made
+            system and interacts with control by one or more computers as part of the system used in
+            modern society. This system receives input and produces output for other subsystems, for
+            example, the human cultural system.
+       b) A closed system is a system that is unrelated and unaffected by its external environment. This
+            system works automatically without any interference from outside parties. Theoretically,
+            this system exists, but in reality, there is no truly closed system, there is only a relatively
+            closed system (relatively closed, not truly closed).
+
+Information
+
+
+                                                                                                       145
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+        Implementation of School Management Information Systems at Vocational School State I Tomohon
+              Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+      information is a collection of data or facts that are organized or processed in a certain way so that
+they have meaning for the recipient(Anggraeni and Irviani, 2017). Information is data that has been
+managed and processed to provide meaning and improve the decision-making process(Romney &
+Steinbart, 2016). information is data that is processed and useful for users(Suryantara, 2017).
+Information is data that has been processed and is intended for a person, organization, or anyone who
+needs it (Mulyani, 2016).
+      From the experts' explanations above, it can be concluded that information is the result of
+processing or organizing data or facts that have meaning or value for the recipient. This information
+has been processed so that it is useful and useful for the user or recipient of the information.
+Information can also be used to assist in decision-making or improve certain processes.
+
+Information Cycle
+       The information cycle is a series of steps in processing information from beginning to end.
+Consists of four stages: input, processing, output, and feedback. Input involves collecting data from
+various sources. Processing involves manipulating data to produce meaningful information. Output
+involves the presentation of processing results to the user. Feedback involves evaluating output results
+and adjusting for improvement. The information cycle is important in processing information to
+produce useful information. Information processing, data is processed using a certain process model.
+For example, temperature in Fahrenheit is converted to Celsius through the use of a mathematical
+model in the form of a conversion formula (Japreson Hutaen, 2015). The data is processed through the
+model into information, which is then received by the recipient of the information. Recipients of this
+information then make decisions and take relevant actions, which in turn generate new amounts of
+data. This data then becomes input, processed again through the relevant model, and so on. This process
+is called the information cycle or data processing cycle.
+
+Information Systems
+      An information system is an organized combination of people, hardware, software,
+communication networks, and data resources that collect, change, and disseminate information
+(Anggraeni & Irviani, 2017). An information system is a system created by humans and consists of
+components in an organization to achieve goals, namely presenting information(Suryantara, 2017). An
+information system is a system that is defined as collecting, processing, storing, analyzing, and
+disseminating information for certain purposes. Like other systems, an information system consists of
+input (data, instructions) and output (reports) (Gilang Ramadhan, et al, 2017).
+      Based on the understanding conveyed by several sources, it can be concluded that an information
+system is an orderly combination involving people, hardware, software, communication networks, and
+data resources. This system functions to collect, change, and disseminate information with a specific
+purpose. Information systems are also systems created by humans and consist of components in
+organizations that aim to present information. As a system, an information system has input (data,
+instructions) and output (reports), and involves the processes of collecting, processing, storing,
+analyzing, and disseminating information.
+
+
+
+                                                                                                       146
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+       Implementation of School Management Information Systems at Vocational School State I Tomohon
+             Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+Information System Objectives
+       an information system aims to produce information from data that is processed into a form that
+is useful for its users (Nina Rahayu, Putri Sugiarti, and Siti Islamiyah, 2017).
+      1. Usefulness. The system must produce information that is accurate, timely, and relevant for
+           decision-making by management and operating personnel within the organization.
+      2. Economy (Economic). All parts of the system including reports, controls, and machines must
+           contribute a benefit value of at least the cost required.
+      3. Reliability. The system output must have a high level of accuracy and the system itself must
+           be able to operate effectively even when the human component is not present or when the
+           machine component is temporarily inoperative.
+      4. Subscription Services (Customer Service). The system must provide good or friendly service
+           to customers. So that this system can be of interest to customers.
+      5. Simplicity. The system should be simple enough so that its structure and operation can be
+           easily understood and the procedures easy to follow.
+      6. Flexibility. The system must be flexible enough to handle changes that occur, the importance
+           of which is justified in the conditions in which the system operates or in the needs imposed
+           by the organization.
+
+School Management
+       School management is a way of doing work involving many people to achieve educational goals
+effectively (Daryanto, 2013). Daryanto also added that school management is viewed from a scientific
+perspective, so school management is an application of administrative science in the field of schooling.
+
+
+                                               METHODS
+
+       The research method used is the RAD (Rapid Application Civilization) method. The RAD model
+is a model used in the incremental software development process, especially for carrying out work in a
+short time (Rosa & Salahuddin, 2018). The RAD method is a method adapted from the waterfall model
+with a very high-speed version by using the waterfall model in the development of each software
+component. See Figure 1.
+
+
+
+
+                                                                                                      147
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+        Implementation of School Management Information Systems at Vocational School State I Tomohon
+              Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+
+
+
+                                  Figure 1. Rapid Application Development
+
+       The RAD method in system development includes five main stages. The following are the five
+stages of RAD in system development:
+      a. Business Modeling
+       In business modeling, manual flows and school management information systems to be
+developed are represented using business flowcharts.
+      b. Data Modeling
+       In data modeling, there are stages where the database design is created and the implementation
+results are compiled into the school management information system database.
+      c. Process Modeling
+       At this stage, which is a stage in the design process, business functions have been defined and are
+related to data definition. In this stage, researchers began to design a school management information
+system using UML (Unified Modeling Language) tools.
+          ▪ Creation of Usecase Diagrams
+       At this stage, researchers will develop a system design based on the system requirements.
+          ▪ Creation of Usecase Scenarios
+       At this stage, the use case that was created in the previous stage has been defined.
+          ▪ Creation of Activity Diagrams
+       At this stage, the work sequence is designed from one activity to another. This stage is important
+to get a picture of parallel behavior or provide an explanation of the behavior in the use case diagram.
+          ▪ Creating Class Diagrams
+       A class structure in a system that involves relationships between classes and explanations of each
+class in the design modeling (logical view) of a system.
+          ▪ Creation of Sequence Diagrams
+
+
+                                                                                                       148
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+        Implementation of School Management Information Systems at Vocational School State I Tomohon
+              Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+      In this stage, the relationship between objects arranged in a time sequence is explained.
+Researchers pay attention to each stage in detail which has been developed to produce a better system.
+     d. Application Creation
+      In this stage, researchers integrate process modeling into the programming language stage.
+     e. Testing And Replacement
+      At this stage, researchers carry out trials with the aim of further understanding all the functions
+in the system being developed.
+
+
+
+
+                                      RESULTS AND DISCUSSION
+
+       The implementation of the management information system at SMK Negeri 1 Tomohon has
+produced a positive impact on the management process at the institution. Management information
+systems play an important role in managing information related to students, preparing lesson schedules,
+and school administration. Additionally, this system allows more effective use for teachers to provide
+feedback to students through the school management platform. Using SIMS can not only increase time
+efficiency but also make it easier to implement management systems in the school environment.
+       In developing the school management information system application, the Visual Studio Code
+text editor was used, as well as the PHP, HTML, and CSS (Bootstrap) programming languages, with
+support from the Codeigniter framework. This system uses a MySQL database and Apache server. The
+user interface of this school management information system is implemented by the process modeling
+at the Rapid Application Development (RAD) stage.
+       The Login page is the initial page for entering the school management information system
+following user authentication (admin, student teachers, and principal). See Figure 2.
+
+
+
+
+                                              Figure 2. Login page
+
+                                                                                                       149
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+        Implementation of School Management Information Systems at Vocational School State I Tomohon
+              Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+
+
+      The administrator page is a page for admins who have access rights to all menus and features
+contained in this school management information system. On this page, the admin can also add, edit,
+and delete data in the system. See Figure 3.
+
+
+
+
+                                          Figure 3. administrator page
+
+     The principal page is a page intended for the principal to control ongoing activities in the system.
+On this page, the school principal can also see reports about ongoing learning activities. See Figure 4.
+
+
+
+
+                                           Figure 4. Principal's Page
+
+      The teacher page is a page intended for subject teachers to carry out learning activities. The
+features found on this page are inputting and recapping absences, uploading materials and assignments,
+and creating discussion forums. See Figure 5.
+
+
+
+
+                                                                                                       150
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+       Implementation of School Management Information Systems at Vocational School State I Tomohon
+             Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+
+
+
+                                            Figure 5. Teacher Page
+
+      The student page is the access given to each student to view grades, and subject schedules, view
+and send assignments, as well as to carry out activities in discussion forums opened by the admin or
+subject teacher. And via this page, students can see announcements from the academic section. See
+Figure 6.
+
+
+
+
+                                             Figure 6. Student Page
+
+
+
+
+                                              CONCLUSION
+
+       School Management Information Systems (SIMS) make a significant contribution to increasing
+efficiency and transparency in school operations. The success of these applications depends on meeting
+functional standards, strict data security, and continuous development. SIMS allows the management
+of student data, attendance, and school finances to be more structured and easy to track. Monitoring
+student and teacher performance can be done more systematically through this platform.
+
+Suggestions
+Based on the conclusions above, several suggestions for maximizing the benefits of the School
+Management Information System (School SIM) are as follows:
+
+
+                                                                                                      151
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463
+
+       Implementation of School Management Information Systems at Vocational School State I Tomohon
+             Israel Yonatan Fredrik Kamu, Parabelem Tinno Dolf Rompas, Mario Tulenan Parinsi
+
+   1. There needs to be regular training for school staff to ensure a good understanding of the use of
+      the School Management Information System. This will increase the efficiency of application
+      use and ensure that all features are fully utilized.
+   2. The need for continuous development of the SIMS application. Update and add features as
+      needs emerge over time. Make sure the application is always up-to-date and responsive to
+      developments in the education system.
+   3. The a need for active involvement of all relevant parties, including teachers, students, and
+      school staff. Creating a shared understanding of the benefits of SIMS will increase participation
+      and support from the entire education community.
+   4. Increase awareness of data security among all users. Provide specific training on the importance
+      of protecting student personal information and school data so that they can be accessed safely.
+
+
+
+
+                                             REFERENCES
+
+Anggraeni, E. Y., & Irviani, R. (2017). Pengantar Sistem Informasi (Penyuntingan ke-1). Andi.
+Romney, M. B., & Steinbart, P. J. (2015). Sistem Informasi Akuntansi (Edisi Salemba Empat). Jakarta:
+    Salemba Empat.
+Hutahaean, J. (2015). Konsep Sistem Informasi. Deepublish.
+Tyoso, J. S. P. (2016). Sistem Informasi Manajemen. Yogyakarta: Deepublish
+Romney, M. B., & Steinbart, P. J. (2016). Accounting Information Systems (Edisi 14). Pearson
+    Education, Inc.
+Suryantara, I. G. N. (2017). Merancang Aplikasi Dengan Metodologi Extreme Programmings. Jakarta:
+    Pt.Elex Media Komputindo.
+Mulyani, E. (2016). Sistem Informasi Akuntansi. Yogyakarta: Andi.
+Ramadhan, G., Budiman, E., & Syakir, A. (2017). Pengembangan Media Informasi Pengenalan Lagu
+    Daerah Kalimantan Timur Berbasis Web. Prosiding Seminar Ilmu Komputer Dan Teknologi
+    Informasi, 2(1), 256-262.
+Rahayu, N., et al. (2017). SWOT Analysis Recruitment: PT Indo Taichen Textile Industry. Jurnal
+    Semnasteknomedia, 5(1).
+Daryanto, M. (2013). Administrasi dan Manajemen Sekolah.
+Jakarta: Rineka Cipta.
+Rosa, A. S., & Shalahuddin, M. (2018). Rekayasa Perangkat Lunak Terstruktur dan Berorientasi Objek.
+    Bandung: Informatika Bandung.
+
+
+
+
+                                                                                                      152
+    International Journal of Information Technology and Education (IJITE)
+    Volume 2, Number 4, September 2023
+    e-ISSN: 2809-8463

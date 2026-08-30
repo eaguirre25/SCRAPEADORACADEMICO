@@ -1,0 +1,885 @@
+DOI: https://doi.org/10.37811/cl_rcm.v7i1.4840
+
+
+                   Analíticas de aprendizaje y su potencial para
+                           una educación de calidad sostenible
+                                                                                    Javier Mella-Norambuena
+                                                                                   javier.mellan@usm.cl
+                                                                https://orcid.org/0000-0002-4288-142X
+                                                                             Departamento de Ciencias,
+                                           Universidad Técnica Federico Santa María, Concepción, Chile.
+                                                                 Programa de Doctorado en Educación,
+                                                 Universidad Católica de la Santísima Concepción, Chile.
+                                                              Cel. y WhatsApp. Chile. (+56) 97634 0786
+
+                                                                                           Fabiola Sáez-Delgado
+                                                                                        fsaez@ucsc.cl
+                                                               https://orcid.org/0000-0002-7993-5356
+                                    Centro Interdisciplinar de Investigación en Educación y Desarrollo.
+                                   Universidad Católica de la Santísima Concepción, Concepción, Chile.
+
+                                                                                         Yaranay López-Angulo
+                                                                                        yaralopez@udec.cl
+                                                                   https://orcid.org/0000-0002-3331-6875
+                                                                               Departamento de Psicología.
+                                                             Universidad de Concepción, Concepción, Chile.
+
+                                                                                                    Yenniffer Sáez
+                                                                                 yenniffer.sade@gmail.com
+                                                                   https://orcid.org/0000-0002-4722-8702
+                                                             Universidad de Concepción, Concepción, Chile.
+
+                                                                                              Verónica León-Ron
+                                                                                       mvleon@utn.edu.ec
+                                                                   https://orcid.org/0000-0002-2918-2544
+                                                             Universidad Técnica del Norte, Ibarra, Ecuador.
+
+
+
+
+Correspondencia: javier.mellan@usm.cl
+Artículo recibido 05 enero 2023 Aceptado para publicación: 26 enero 2023
+Conflictos de Interés: Ninguna que declarar
+Todo el contenido de Ciencia Latina Revista Científica Multidisciplinar, publicados en este sitio están disponibles bajo
+Licencia Creative Commons                   .
+Cómo citar: Mella-Norambuena, J., Sáez-Delgado, F., López-Angulo, Y., Sáez, Y., & León-Ron, V. (2023). Analíticas de
+aprendizaje y su potencial para una educación de calidad sostenible. Ciencia Latina Revista Científica Multidisciplinar,
+7(1), 5446-5468. https://doi.org/10.37811/cl_rcm.v7i1.4840
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5446
+
+                                   Mella-Norambuena y otros
+
+
+RESUMEN
+Este ensayo plateó que las analíticas de aprendizaje han mostrado beneficios, pero no todo su
+potencial, se requiere usar los datos que éstas proporcionan con énfasis en el aprendizaje para
+una gestión educativa y toma de decisiones efectivas y así avanzar hacia el logro del ODS4 sobre
+la calidad educativa en las universidades. Una educación de calidad sostenible es un gran reto
+incluso para países desarrollados y aunque las analíticas se están expandiendo como solución en
+respuesta a la demanda para retroalimentar el ecosistema educativo, aún existe una gran brecha
+para aprovechar sus múltiples beneficios. Se discute la aceptación de analítica por el profesorado,
+ausencia de un modelo de gestión, diferentes motivaciones institucionales para su uso, la falsa
+dicotomía “objetividad-subjetividad” de los datos, mucha ciencia de datos y poca ciencia de
+aprendizaje, y paradigmas de enseñanza, como posibles factores a mejorar para lograr el máximo
+potencial de las analíticas.
+
+Palabras clave: analíticas de aprendizaje; calidad de la educación; educación superior.
+
+
+
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5447
+
+        Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+
+                     Learning analytics and its potential for
+                           sustainable quality education
+ABSTRACT
+This paper argued that learning analytics have shown benefits, but not their full potential, it is
+required to use the data they provide with an emphasis on learning for effective educational
+management and decision-making to move towards the achievement of SDG4 on educational
+quality in universities. Sustainable quality education is a major challenge even for developed
+countries and although analytics is expanding as a solution in response to the demand to feed
+back into the education ecosystem, there is still a large gap to leverage its multiple benefits. The
+acceptance of analytics by faculty, lack of a management model, different institutional
+motivations for its use, the false dichotomy "objectivity-subjectivity" of data, too much data
+science and not enough learning science, and teaching paradigms are discussed as possible
+factors to improve in order to achieve the full potential of analytics.
+
+Keywords: learning analytics; quality of education; higher education.
+
+
+
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5448
+
+                                 Mella-Norambuena y otros
+
+
+INTRODUCCIÓN
+¿Cuál es el verdadero potencial de las analíticas del aprendizaje para aportar a la
+educación de calidad en el mundo contemporáneo? ¿cuáles son algunos de los factores
+que podrían estar influyendo para su uso efectivo en la gestión educativa? ¿cuánto de
+aprendizaje tiene la analítica de aprendizaje? ¿cómo se podría avanzar en su aplicación
+para la toma de decisiones en la Educación Superior? ¿cuál es la brecha existente para la
+contribución de las analíticas de aprendizaje en el logro de objetivos de desarrollo
+sustentable? Estas preguntas pueden parecer sencillas para algunos, pero no dejan de
+ser preguntas que cualquier investigador del área de educación requiere reflexionar para
+hacer una contribución a su desarrollo y maximizar sus beneficios como una herramienta
+con foco en la calidad de la educación.
+Analíticas de aprendizaje: definición
+Las Analíticas de Aprendizaje (en adelante AA) se refieren al proceso científico que
+recopila, examina y analiza sistemáticamente grandes conjuntos de datos para formular
+conclusiones y presentar opciones para tomar decisiones con el fin de mejorar los
+procesos de aprendizaje. Es decir, consiste en analizar datos educativos para mejorar la
+experiencia de aprendizaje (Avella et al., 2016). Existen cuatro formas de AA informadas
+en la literatura que permiten el análisis descriptivo, análisis de diagnóstico, análisis
+predictivo y análisis prescriptivo (Hernández-de-Menéndez et al., 2022). En definitiva, la
+AA son una nueva herramienta tecnológica considerada como una práctica de minería de
+conjunto de datos de las instituciones de Educación Superior (en adelante ES) para
+generar datos procesables a través de técnicas de modelado estadístico y predictivo con
+el propósito de comprender y optimizar el aprendizaje y los entornos en los que se
+produce, mejorar la toma de decisiones, el resultado y éxito de los estudiantes, los que
+son determinantes para la gestión educativa eficaz (Mella-Norambuena et al., 2022;
+Umer et al., 2021).
+Contextualización de las AA a nivel marco global y marco local
+Como antecedente es importante que tengamos a la vista la línea de tiempo que da
+cuenta de la trayectoria de las AA en investigación para su comprensión. En este sentido
+podeos señalar que la AA apareció en 1995 y hasta su desarrollo actual muestra tres fases
+de progreso cronológico (Mella-Norambuena et al., 2022). La Fase I denominada
+investigación y desarrollo inicial (1995-2005) se caracterizó por insuficiente base teórica
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5449
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+para soluciones eficaces a los problemas educativos, donde la tecnología del método de
+minería de datos aún no era perfecta, y había pocos estudios interdisciplinarios que
+sentaran bases para el establecimiento de posicionamientos teóricos. La Fase II
+denominada la etapa de establecimiento de la teoría (2005-2015) caracterizada por
+avances en la innovación tecnológica, surgimiento constante de nuevos métodos de
+ciencia de datos para estimular el desarrollo de la AA y consecuentemente la aparición
+de propuestas teóricas iniciales como la "analítica del aprendizaje social" que resolvieron
+algunos de los problemas educativos. La Fase III (2015 en adelante) caracterizado por la
+reconstrucción teórica, donde la composición de las AA ha ido cambiada proponiendo
+diferentes y nuevos aportes teóricos destinados a resolver problemas del área educativa
+(Zhang, Zhang, Jiang, Ordóñez de Pablos, & Sun, 2018). Desde esta perspectiva llama la
+atención que es un área reciente de investigación, así lo confirma la productividad
+observada de las bases de datos Scopus y Web of Science (WOS), donde el primer estudio
+aparece publicado en 2004 y 2011 respectivamente (ver Figura 1); además, aunque ha
+habido una clara delimitación de etapas, en todos los casos, el desarrollo teórico desde
+la educación es débil.
+Figura 1. Productividad científica en las bases de datos Scopus y WOS sobre AA
+
+                                   Learning Analytics
+        400
+        350
+        300
+        250
+        200
+        150
+        100
+         50
+          0
+           2004   2006    2008    2010    2012    2014     2016   2018   2020    2022
+
+                                         SCOPUS          WOS
+
+
+
+Situando el contexto de este ensayo, es importante considerar que Latinoamérica es una
+región tristemente caracterizada por sus profundas desigualdades y contrastes chocantes
+especialmente peligrosos en el sistema educativo porque perpetúan activamente las
+diferencias entre las clases sociales (Ochoa, 2019). América Latina presenta bajos
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5450
+
+                                Mella-Norambuena y otros
+
+
+indicadores de inversión en investigación, es conocida por el enorme desequilibrio en su
+distribución de renta y la consiguiente desigualdad de oportunidades entre las distintas
+clases sociales marcada por una baja calidad de la educación. Esta situación contribuye a
+perpetuar la desigualdad, puesto que aquellos con mejores ingresos tienen mayores
+probabilidades de conseguir los mejores resultados durante su formación (Cechinel et al.,
+2020).
+Existen revisiones sistemáticas de la literatura sobre las AA y su desarrollo
+específicamente en Latino América. Una primera revisión (Dos Santos, Cechinel, Nunes,
+& Ochoa, 2017) tuvo por objetivo identificar las iniciativas de AA en América Latina
+mediante la realización de un mapeo sistemático de artículos, donde se incluyó una
+muestra de 30 investigaciones; una segunda revisión (Cechinel, Ochoa, Lemos dos Santos,
+Carvalho, Rodés & Marques, 2020) tuvo por objetivo describe la evolución de las AA en
+América Latina, presentando las principales características de los estudios incluyendo 282
+investigaciones; una tercera revisión (Espinoza-Guanuche, Campoverde-Molina &
+Maldonado-Mahauad, 2020) tuvo por objetivo realizar un análisis bibliométrico de los
+estudios publicados por autores afiliados a instituciones de Educación Superior en
+Latinoamérica relacionados con AA. En las tres revisiones, los autores llegan a
+conclusiones similares, señalando que la región latinoamericana si bien ha empezado a
+incorporar las AA en las universidades, todavía se encuentra en las primeras fases de la
+investigación. También, se determina la necesidad de mayor cantidad de producción
+científica que permita consolidar avances en la región. Esto concuerda con lo advertido
+por Dos Santos et al. (2017) quien describe cómo las AA se han desarrollado ampliamente
+en los países anglosajones, destacando entre ellos principalmente Estados Unidos, Reino
+Unido, Canadá y Australia; mientras que América Latina muestra intentos aislados de
+desarrollo ya que se carece de una comunidad regional que fomente el intercambio de
+ideas, metodologías, herramientas y resultados locales en este campo.
+Específicamente, en el caso de Chile, dos universidades (Pontificia Universidad Católica
+de Chile y Universidad Austral de Chile) fueron parte del proyecto LALA (Comunidad de
+Analítica para América Latina) cuyo objetivo fue modernizar el proceso de toma de
+decisiones académicas en las Instituciones de Educación Superior (IES) de América Latina
+a través de AA donde además participaron dos universidades de Ecuador y tres
+universidades europeas (Maldonado-Mahauad et al.,2018; Ochoa, 2019). Esta
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5451
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+comunidad abierta discutió como poder ayudar a mejorar la calidad y reducir las
+desigualdades de la educación latinoamericana por medio del avance de las AA (Ochoa,
+2019). Otra investigación sobre AA en Chile (Chevreux, Henríquez, Guerra & Scheihing,
+2019) mostró la experiencia de la Universidad Austral de Chile sobre el desarrollo de
+herramientas analíticas útiles para incorporar a la ES y aunque se encuentran en una fase
+piloto, los hallazgos parciales demostraron que es posible conciliar el desarrollo de
+aprendizaje en un entorno rígido con estrategias adecuadas. Similarmente, datos de un
+estudio con enfoque mixto donde participaron dos universidades chilenas y dos
+ecuatorianas (Hilliger et al., 2020) reveló oportunidades para incorporar los servicios de
+AA con el propósito de facilitar procesos de toma de decisiones a las autoridades,
+profesores y estudiantes.
+Ahora bien, aunque las AA son un campo emergente en la educación (Avella, Kebritchi,
+Nunn, & Kanai, 2016), a su vez es una de las áreas de investigación del aprendizaje
+potenciado por la tecnología que está creciendo más rápidamente (Hernández-de-
+Menéndez, Morales-Menendez, Escobar, & Ramírez, 2022). La ES del siglo XXI sigue
+promoviendo los descubrimientos en el campo de las AA donde el avance de la tecnología
+ha proporcionado la oportunidad de consolidar su desarrollo con importantes aportes a
+la educación (Avella et al., 2016).
+AA y su contribución al Objetivo de Desarrollo Sostenible 4 sobre la Calidad de la
+Educación
+En septiembre de 2015, las Naciones Unidas, a través de su Asamblea General, desarrolló
+un plan 2030 que pretende lograr un futuro mejor y más sostenible para todas las
+naciones, contiene 17 Objetivos de Desarrollo Sostenible (en adelante ODS): (1) erradicar
+la pobreza; (2) acabar con el hambre; (3) garantizar la salud y el bienestar para todos; (4)
+Garantizar una educación de calidad para todos; (5) Lograr la igualdad de género; (6)
+Garantizar agua limpia y saneamiento; (7) garantizar una energía asequible y limpia; (8)
+promover el trabajo decente y el crecimiento económico sostenible; (9) construir una
+industria, una innovación e infraestructuras resistentes y sostenibles; (10) reducir las
+desigualdades; (11) construir ciudades y comunidades sostenibles; (12) garantizar un
+consumo y una producción sostenibles; (13) tomar medidas contra el clima; (14) proteger
+la vida bajo el agua; (15) proteger la vida en la tierra (16) promover la paz, la justicia y las
+instituciones inclusivas; y (17) fortalecer la Alianza Mundial para el Desarrollo Sostenible.
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5452
+
+                                Mella-Norambuena y otros
+
+
+Los 17 objetivos abordan temas de "crecimiento económico, desarrollo social y
+protección del medio ambiente" y se concretan en 169 metas (Anyim, 2021).
+Específicamente el ODS4 se centra en la Educación de Calidad, la cual se entiende como
+uno de los motores más poderosos y probados para garantizar el desarrollo sostenible,
+que puede aplicarse en diversos contextos educativos, formal y no formal, y que puede
+generar múltiples beneficios para la población en general. Así, el ODS4 busca "Garantizar
+una educación inclusiva, equitativa y promover el aprendizaje permanente para todas las
+personas, independiente del sexo, edad, raza, etnia, vulnerabilidad y personas con
+discapacidades o migrantes aplicado a la educación en todos los niveles, primaria,
+secundaria, terciaria, formación técnica y profesional y también desde la primera infancia
+hasta la edad adulta (Boeren, 2019; González, Colomo & Cívico, 2020).
+Una educación de calidad sostenible es un gran reto incluso para los países desarrollados
+donde las AA se está expandiendo gradualmente como solución en respuesta a la
+demanda emergente de procesamiento de datos en tiempo real para retroalimentar el
+ecosistema educativo (Verma, Singh, Lughofer, Cheng & Abualsaud, 2021). En este
+sentido, no hay duda de que la AA aportan una mejora masiva en la calidad de la
+educación, y, por tanto, es recomendable que las IES comiencen a utilizarlas (Patel &
+Desai, 2016). El objetivo principal de las AA es convertir los datos brutos en
+conocimientos procesables que permitan tomar mejores decisiones relacionadas con los
+procesos de enseñanza y aprendizaje para mejorar la calidad de la educación mediante
+la implementación de intervenciones a partir de los datos proporcionados (Hooda &
+Rana, 2020).
+En los últimos años, los investigadores y educadores han comenzado a explorar cómo
+pueden utilizar nuevas fuentes de datos provenientes del proceso de enseñanza y
+aprendizaje, junto con técnicas de análisis predictivo, para mejorar muchos aspectos de
+la experiencia educativa (Gaftandzhieva, Doneva, & Pashev, 2019). Las AA se presentan
+como un enfoque y conjunto único de recursos de la informática, la estadística, la
+psicología, la sociología y otras ciencias del comportamiento para manejar grandes
+volúmenes de datos de forma eficiente al medir, recopilar, analizar y comunicar datos
+sobre el aprendizaje y los entornos de aprendizaje con el potencial para examinar el
+funcionamiento y el rendimiento de los sistemas educativos, que son pertinentes para
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5453
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+hacer un seguimiento de la eficacia de los programas en pro de la consecución de ODS4
+en la Educación Superior (Natriello, 2021).
+Respecto de la importancia de las AA se destaca la utilización de modelos predictivos que
+proporcionan información procesable para la toma de decisiones a nivel del docente, de
+la universidad y de la política educativa (Avella et al., 2016). Esto desde mi perspectiva es
+una inmensa fortaleza, pues ¿quién no desearía poder tomar decisiones efectivas cuando
+se lidera alguna parte del sistema educativo para aportar de forma sólida a los actuales
+desafíos para una educación de calidad?
+Efectivamente son reconocidos los numerosos beneficios de las AA en el área de
+educación. Algunas de estas son destacadas por los investigadores especificando ventajas
+a nivel del estudiante (mejora del rendimiento académico, el compromiso y los resultados
+del aprendizaje, permite un aprendizaje personalizado, facilita la toma de decisiones
+respecto de su proceso de estudio) a nivel de docentes (permite entender
+comportamientos de estudio, permitiendo modificar el contenido de los cursos para
+alinearlo con las características de aprendizaje del estudiantado, mejora el proceso de
+retroalimentación, permite la mejora del rendimiento del docente, enseñanza
+personalizada y tomas de decisiones docentes efectivas), a nivel institucional (predice
+tasas de deserción, facilita la identificación de cursos claves que respondan a las
+necesidades, el despliegue de sistemas de intervención temprana, aumenta la retención,
+identifica oportunidades de empleo para los graduados y ayuda a orientar la educación
+en coherencia con las necesidades del mercado laboral, permite evaluar mejor los
+programas de aprendizaje para la compatibilidad ocupacional y es útil para la toma de
+decisiones basadas en la evidencia) y a nivel de investigación (permite identificar brechas
+en la educación para que la investigación pueda determinar cómo superar los problemas
+para el logro de una educación de calidad y toma de decisiones que oriente nuevos
+desafíos de investigación) (Avella et al., 2016; Hernández-de-Menéndez et al., 2022).
+Creo que es indiscutible que las AA son una herramienta clave para alcanzar una
+educación de calidad permitiendo en todos los niveles de actores orientar la toma de
+decisiones efectivas. Por la importancia que han mostrado las AA en las IES, muchas
+universidades ya las están utilizando y otras están ágilmente iniciando su incorporación.
+
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5454
+
+                                Mella-Norambuena y otros
+
+
+Problema delimitado en este ensayo
+A pesar del consenso en el potencial de las AA, aún no se logra transferir a las IES de
+manera consistente como se esperaría. Una revisión (Viberg et al., 2018) reveló que, en
+general, hay pocas pruebas que muestren mejoras en los resultados de aprendizaje de
+los estudiantes (9%), así como en el apoyo al aprendizaje y la enseñanza (35%) basado en
+el uso de AA. Del mismo modo, se encontraron pocas pruebas de que las AA se despliegan
+ampliamente (6%).
+Un problema común que ha surgido en la investigación es la dificultad del docente para
+integrar el uso de herramientas analíticas en sus prácticas diarias (Wise, & Jung, 2019).
+Un estudio adoptó un enfoque de revisión sistemática de la literatura para analizar el uso
+de las AA en las ciencias sociales en general y en el liderazgo y la gestión educativa en
+particular. El examen de la literatura mostró que el 58% de los artículos están
+relacionados con la enseñanza y el aprendizaje, el 34% con la gestión, y el 8% con la
+investigación (El Alfy, Gómez, & Dani, 2019). Esto me permite validar que efectivamente
+se requiere en todos casos aumentar el desarrollo de las AA.
+Pareciera que, aunque suenan prometedoras las AA, estas no han logado una integración
+profunda y definitiva en las IES. Hay muchos datos que se generan, es un volumen
+inmenso y con una frecuencia diaria de registros de nuevos datos, pero, por otro lado, se
+carece de su uso efectivo y de reflexiones educativas en sus interpretaciones. Puedo
+observar un claro desbalance que existe en el constructo de “analítica de aprendizaje”,
+con una preponderancia en la analítica y carencia en el aprendizaje. Esto es consistente
+con lo advertido en las fases de evolución cronológica del constructo, donde las teorías
+educativas y posicionamiento desde los paradigmas educativos son incipientes hasta la
+fecha. Es decir, no se avanza ni se logra mitigar problemáticas con abundantes datos, si
+estos no son miradas bajo el foco de la calidad de la educación y con claros modelos
+teóricos a la base.
+El uso de AA en las universidades demanda de forma urgente un modelo situado de toma
+de decisiones para los diferentes niveles comenzando desde el estudiante, docente,
+institucional e investigación (Wise, & Jung, 2019). Incluso se puede agregar el nivel
+político. Se reconoce que el proceso de utilización de datos analíticos para informar la
+toma de decisiones es complejo cuyos detalles de cómo se produce en contextos
+educativos es aún difuso. Las AA son consideradas como un campo de estudio emergente
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5455
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+y merece una mayor exploración (Guzmán-Valenzuela et al., 2021). El desarrollo de un
+sistema que funcione como eje entre los diferentes actores que integran las comunidades
+universitarias y los procesos de aprendizaje, que retroalimente al ecosistema educativo
+al servicio de los estudiantes, los profesores, la administración y los gestores de la
+educación (Miteva, Stefanov & Stefanova, 2016). Tradicionalmente, las decisiones
+tomadas por el profesorado y los administradores de las IES se basan en presunciones e
+hipótesis. Este proceso consume mucho tiempo y limita la calidad proporcionada en la
+ES. Desde los administradores, el profesorado y hasta el estudiantado, la comprensión de
+la educación a través de la AA puede mejorar el rendimiento y funcionamiento de las IES
+y ayudarles a afrontar los retos académicos para una mejora trascendente, profunda y
+definitiva hacia la calidad de la educación (Hooda & Rana, 2020).
+Por tanto, aunque es determinante la evidencia que ha demostrado los múltiples
+beneficios de las AA en las IES, también la literatura advierte algunos vacíos pendientes y
+desafíos los cuales se deben responder para maximizar sus beneficios y que esta
+herramienta logre un aporte sustancial al logro del ODS4 propuesto por la ONU referido
+a la calidad educativa. Toma relevancia poder usar la abrumadora cantidad de datos
+proporcionados por las AA para fines de calidad educativa en sus distintos niveles. Es
+decir, se requiere disminuir la brecha que existe entre la ciencia de datos y la educación
+para una eficaz gestión educativa y toma de decisiones. Parece haber múltiples factores
+que son eslabones aún no resueltos (Avella et al., 2016).
+Por lo anterior este ensayo se ha plateado la siguiente tesis: Las AA ya han mostrado
+beneficios, pero aún no todo su potencial, se requiere usar los datos que estas proporciona
+con énfasis en el aprendizaje para una gestión educativa y toma de decisiones efectivas y
+así avanzar hacia el logro del ODS4 sobre la calidad educativa en las IES.
+El propósito de este ensayo es discutir los posibles factores que afectan la consolidación
+del aporte de las AA y logro del verdadero potencial e impacto para una educación de
+calidad.
+DESARROLLO ARGUMENTAL
+Si bien se reconocen los beneficios de las AA en las universidades, se requiere discutir y
+reflexionar sobre la brecha que estas aún tienen respecto de su verdadero potencial para
+una efectiva gestión educativa y toma de decisiones para una educación de calidad.
+Algunos de los factores que podrían estar afectando de cuerdo al análisis de la literatura
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5456
+
+                                 Mella-Norambuena y otros
+
+
+que he realizado son los siguientes: (a) la aceptación del uso de AA por parte del
+profesorado, (b) la ausencia de un modelo de gestión en la comprensión de las AA en ES,
+(c) diferentes motivaciones institucionales para su uso; (d) la falsa dicotomía “objetividad-
+subjetividad” de los datos, (e) mucha ciencia de datos y poca ciencia de aprendizaje y (f)
+paradigmas de enseñanza.
+Respecto del primer factor que podría estar influyendo en el potencial de las AA para una
+efectiva gestión educativa y toma de decisiones que aporte a la calidad educativa está la
+aceptación del uso de AA por parte del profesorado en su ejercicio profesional, no es raro
+que la incorporación de esta herramienta sea lenta, pues se vincula directamente con
+tecnología. La evidencia es clara al señalar que, si bien las IES han hecho una inversión
+sustancial en la adopción de Sistemas de Gestión del aprendizaje (LMS de ahora en
+adelante por sus siglas en ingles “Learning Management Systems) para mejorar los
+procesos de enseñanza y aprendizaje, estos no son utilizados por el profesorado en toda
+su capacidad (Abdallah, Ahlan, & Abdullah, 2016). Así también lo confirmó Prieto et al.,
+(2021) quien evidenció que la adopción de la AA en la práctica diaria del aula sigue siendo
+lenta. Este autor advierte además que las lagunas de conocimiento se han postulado
+como factor crítico para los fracasos de la adopción de la AA. En esa misma línea, Al-
+Nuaimi y Al-Emran (2021) señalan que pesar de todo el esfuerzo puesto en la
+implementación de LMS, en muchas universidades, la participación y aceptación del LMS
+por parte del profesorado está por debajo de las expectativas. Así, la aceptación de la
+tecnología se ha convertido en una de las tendencias de investigación dominantes en el
+dominio de los LMS. Si bien se han realizado estudios de investigación en esta área,
+todavía existe una escasez de conocimiento sobre la implicación de los usuarios con este
+tipo de recursos (Ghapanchi, Purarjomandlangrudi, McAndrew, & Miao, 2020). Por lo
+anterior, se levanta como necesidad cambiar las actitudes de los docentes, las cuales son
+fundamentales en cualquier debate sobre la adopción y uso de las AA (Zanjani, Edwards,
+Nykvist, Geva, 2016). Con estos antecedentes, para que universidades aprovechen al
+máximo las AA es importante identificar aquellas variables que podrían estar afectando
+que el profesorado use las AA como parte de su docencia. Un modelo de Aceptación de
+la Tecnología es el propuesto por Davis et al. (1989), que integra factores psicológicos
+que afectarían la aceptación de la tecnología y consecuentemente su uso (ver Figura 2).
+Por una parte, se reconoce la existencia de variables externas (por ejemplo,
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5457
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+sociodemográficas contextuales), luego la utilidad percibida y la facilidad de uso percibida
+en un segundo nivel, finalmente las actitudes de las personas hacia el uso con la intención
+de uso, como determinantes importantes de la adopción por parte de los posibles
+usuarios de un determinado sistema tecnológico, en este caso las AA.
+Figura 2. TAM. Modelo de aceptación de tecnología propuesto por Davis et al. (1989)
+
+
+
+
+Siguiendo con los factores que podrían influir en la gestión educativa y toma de decisiones
+eficaz que aporte a la calidad educativa, es importante dar cuenta de la ausencia de un
+modelo de gestión en la comprensión de las AA en las IES. En la actualidad, las
+universidades enmarcan sus decisiones académicas y administrativas siguiendo un
+manual de procedimientos vigente y, en el caso de no tenerlo, siguiendo el plan operativo
+académico y/o administrativo anual. Sin embargo, teniendo en cuenta la complejidad de
+las decisiones educativas, estas herramientas administrativas no son suficientes para
+apoyar adecuadamente la tarea dado que, a nivel estratégico, las decisiones tomadas por
+administradores no tienen el impacto en la comunidad educativa que se esperaba (Niet,
+Díaz, & Montenegro, 2016). Por otro lado, si bien las AA ofrecen a las IES una valiosa
+información que puede servir de base para la toma de decisiones estratégicas, por
+ejemplo, sobre la asignación de recursos para la excelencia educativa. La investigación
+demuestra que los modelos de gestión a la base de la AA son escasos (Macfadyen, &
+Dawson, 2012). Con esto podemos señalar que puede haber mucho dato proporcionado
+por las AA, pero los números no son suficientes, se requiere un sólido modelo de gestión
+a la base para la toma de decisiones efectivas. En lo que respecta a la evidencia empírica,
+aunque es escasa, puedo poner ejemplos de tres investigaciones que han avanzado hacia
+una propuesta inicial de modelo de gestión basado en AA. Doneva et al. (2020) presentó
+tres modelos de AA con una herramienta informática diseñada para las necesidades de
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5458
+
+                                  Mella-Norambuena y otros
+
+
+quienes están a cargo de la toma de decisiones en las IES (gestores de programas,
+decanos y rector). La herramienta les permite supervisar el proceso de aprendizaje y
+tomar decisiones oportunas basadas en datos para mejorar los procesos institucionales
+en muchos aspectos. Un segundo estudio desarrollado por Acevedo et al. (2018) integró
+las técnicas de AA en una propuesta denominada Modelo de Sistema de Soporte de
+Decisiones (DSSM por sus siglas en inglés) con el propósito de ayudar a los a los
+administradores de instituciones educativas a desarrollar procesos de decisiones y
+mejorar el rendimiento de los estudiantes. Un tercer estudio desarrollado por Kurilovas
+(2019) tuvo por objetivo presentar una metodología para personalizar el aprendizaje
+mediante el uso de AA y tomar decisiones posteriores sobre la idoneidad, la aceptación
+y el uso de las unidades de aprendizaje personalizadas. Es decir, usar enfoques avanzados
+de aprendizaje automático para personalizar el aprendizaje, realizar análisis del
+aprendizaje y orientar la toma de decisiones para concretamente aportar a una calidad
+educativa de excelencia. Por lo tanto, se puede avanzar en un aporte sólido de las AA
+para la gestión educativa, en la medida que incorporen un modelo de gestión a la base,
+que permita con ese lente mirar los datos obtenidos. De esta forma se consigue una
+herramienta para el análisis inteligente de los datos acumulados en los LMS,
+proporcionando una oportunidad para aumentar la eficacia de seguimiento, garantía de
+calidad y evaluación de la formación impartida por medio de la toma efectiva de
+decisiones tanto por parte de gestores de programas, profesores y gestores universitarios
+(Doneva et al., 2020; Lytras et al., 2018).
+Pasando al tercer factor que podría estar influyendo en el potencial de las AA para una
+efectiva gestión educativa y toma de decisiones que aporte a la calidad educativa se
+encuentra las diferentes motivaciones institucionales para el uso que le dan a las AA.
+Algunos investigadores han criticado las AA puesto que las motivaciones para su
+implementación en las IES son diversas, y algunos de ellos se alejan de la mejora de los
+procesos de enseñanza aprendizaje y la calidad educativa. Esto queda en evidencia
+puesto que si se tratara de un foco educativo las AA de las universidades debería
+considerar su desarrollo con la participación activa de estudiantes y profesorado. Sin
+embargo, esto en muchos casos no ocurre, y por lo general, las unidades institucionales
+centrales tienen el control de los procesos de recopilación y análisis de los datos
+quedando relegados los estudiantes y profesores a un papel de observación y con escasa
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5459
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+comprensión de las técnicas de AA que se ponen en uso. Por lo anterior, una importante
+preocupación se destaca en la literatura que critica los intereses de las instituciones,
+donde muchas veces prevalecen aquellos en materia de calificaciones, persistencia y
+métricas de no finalización por sobre la motivación, el compromiso y la satisfacción de
+los estudiantes y las evaluaciones más formativas del aprendizaje (Guzmán-Valenzuela et
+al., 2021). Por tanto, se requiere resguardar que el uso de las AA sea bajo parámetros de
+calidad de educación y no para fines lucrativos.
+Respecto del cuarto factor que podría estar influyendo en el potencial de las AA para una
+efectiva gestión educativa y toma de decisiones que aporte a la calidad educativa está La
+falsa dicotomía “objetividad-subjetividad” de los datos cuando se trata del razonamiento
+científico. Los datos sirven para mejorar nuestra comprensión de los fenómenos del
+mundo, y se contextualizan dentro de la metodología de investigación. En consecuencia,
+es lógico que lo objetivo de la "objetividad" en la ciencia pueda ser en sí mismo filosófica
+y epistemológicamente engañosa. Así, se ha propuesto que, para mover el discurso
+estadístico hacia los principios de la buena ciencia, deberíamos reemplazar la falsa (y
+potencialmente engañosa) dicotomía de "subjetividad" u "objetividad" en el discurso
+estadístico con colecciones más amplias de atributos. Es importante destacar que, al
+cambiar el discurso dentro de estos atributos más amplios, como la transparencia y el
+consenso en lugar de la "objetividad", y la conciencia de las múltiples perspectivas y la
+dependencia del contexto en lugar de la "subjetividad", hacemos explícito y reconocemos
+el valor real de la subjetividad de manera que se pongan de manifiesto las diferentes
+formas de conocimiento para dar sentido al mundo. Este punto de vista es coherente con
+lo que la ciencia cognitiva nos dice sobre cómo los seres humanos dan sentido a la
+información, y reconoce que los datos y las estadísticas no pueden existir sin el contexto
+situado de la metodología de investigación en la realización de inferencias (Alhadad,
+2018). Por otra parte, las AA buscan el aprendizaje personalizado, y paradójicamente, en
+el paradigma de la educación tradicional, es casi imposible personalizar el aprendizaje de
+forma adecuada, ya que es imposible designar a un profesor bien preparado de acuerdo
+con el estilo de aprendizaje de cada estudiante en particular (Kurilovas, 2019).
+Avanzando en los factores que podría estar incluyendo en el potencial de las AA para una
+efectiva gestión educativa y toma de decisiones que aporte a la calidad educativa otro
+elemento es la mucha ciencia de datos y poca ciencia de aprendizaje. Es importante
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5460
+
+                                 Mella-Norambuena y otros
+
+
+destacar que el objetivo no es solo avanzar en los métodos técnicos, sino marcar la
+diferencia en la práctica. A medida que el campo madura, la atención se ha ampliado en
+consecuencia desde un enfoque inicial en el desarrollo de herramientas, técnicas y
+sistemas cada vez más sofisticados para trabajar con datos educativos, hacia la atención
+de las formas en que tales análisis pueden realmente impactar en la enseñanza y el
+aprendizaje. En este sentido, la cuestión del impacto está intrínsecamente centrada en el
+ser humano, ya que la analítica existe como parte de un sistema sociotécnico en el que
+la toma de decisiones humanas y las acciones consiguientes forman parte de cualquier
+solución analítica exitosa (Wise & Jung, 2019). Así también, se ha argumentado que la AA
+tiene una comprensión reducida de la educación y, por lo tanto, subestima la complejidad
+de los procesos de enseñanza y procesos de aprendizaje (Guzmán-Valenzuela et al.,
+2021). Esta crítica es comprensible desde la perspectiva que hasta la fecha no se observan
+modelos solidos desde la educación a la luz de las AA, aún existe una clara prevalencia de
+las ciencias de datos, lo que es preocupante. Por otro lado, al rastrear el desarrollo de la
+AA es posible destacar un cambio gradual de un enfoque tecnológico a un enfoque
+educativo; la introducción de herramientas, iniciativas y métodos que son significativos
+en el campo hoy en día; y los cuestiones que aún no se han abordado, pero es incipiente
+tal como lo ha advertido Guzmán-Valenzuela et al. (2021). Las AA deben diseñarse de
+forma que se ajuste a las prácticas pedagógicas del profesorado, dado que organizar la
+información desde la perspectiva de los docentes, no de las estructuras de datos facilitará
+además de su comprensión, motivación, la adherencia y uso. La atención a esta cuestión
+también puede plantear la necesidad de reconsiderar el diseño del aprendizaje antes de
+construir la analítica para que ambos puedan alinearse (Wise, & Jung, 2019).
+Finalmente, en este ensayo, un último factor que se incorporó que podría estar influyendo
+en el potencial de las AA para una efectiva gestión educativa y toma de decisiones que
+aporte a la calidad educativa son los paradigmas de enseñanza. En este contexto es
+crucial comprender que las AA representa un paradigma transdisciplinar que contempla
+la labor educativa desde diversos puntos de vista, tales como: el comportamiento y el
+rendimiento del estudiante, los paradigmas de aprendizaje, la interacción social y
+discursiva en el aprendizaje, la predicción del éxito y la deserción de los estudiantes, la
+evaluación y la retroalimentación, las emociones y el compromiso de los estudiantes, las
+interfaces adecuadas para recopilar datos multimodales y las herramientas de
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5461
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+visualización (Peña‐Ayala, 2018). Sin embargo, parece fácil decirlo, pero la movilidad de
+paradigmas tradicionales de enseñanza a nuevos paradigmas contemporáneos que
+desafíen a los docentes respecto no solo de sus competencias disciplinares y
+pedagógicos, sino también tecnológicas, no es una cuestión fácil ni rápida. Se requiere
+invertir tiempo, recursos para impulsar la promoción de nuevos paradigmas. Esto no es
+algo que se diga como una novedad, puesto que, desde hace unos veinte años, la
+introducción de la AA en las IES ha impulsado nuevos enfoques de investigación sobre la
+enseñanza y el aprendizaje (Guzmán-Valenzuela et al., 2021). Según Kurilovas (2016), la
+educación del futuro significa personalización más inteligencia. En el aprendizaje
+personalizado, lo primero que hay que hacer es aplicar perfiles (modelos) integrados del
+estudiantado. Que permitan al profesorado tener claridad de las reales necesidades y
+características de sus estudiantes (conocimientos, intereses, objetivos, rasgos cognitivos,
+tipo de comportamiento de aprendizaje, etc.).
+Con los antecedentes y argumentos anteriormente planteados, es posible señalar que el
+ODS4 afecta o impacta en casi todos los aspectos de la vida, al igual que la revolución
+tecnológica, potenciada por el Big Data y sus tecnologías relacionadas, entre ellas las AA.
+Por tanto, es inevitable que estos dos importantes ámbitos y su integración desempeñen
+un papel fundamental en la consecución de la Agenda 2030 de la ONU. Con un enfoque
+particular en la explotación de datos ricos y complejos, el sector educativo tiene acceso
+directo a los grandes datos de la educación, incluida la información relativa a la admisión
+de estudiantes, los recursos de aprendizaje, el rendimiento de la enseñanza y el
+aprendizaje, el progreso y los impactos de la investigación (Hassani, Huang, MacFeely, &
+Entezarian, 2021). La AA en tiempo real posibilita experiencias educativas personalizadas,
+ofrece un entorno de aprendizaje más alentador, proporciona recomendaciones
+informadas a profesores y estudiantes en función de sus puntos fuertes y débiles,
+también pueden facilitar la supervisión del comportamiento de los estudiantes en los LMS
+para contribuir a la ampliación de recursos de aprendizaje accesibles y ayudar a satisfacer
+la demanda siempre cambiante de nuevos cursos/habilidades y el desarrollo del plan de
+estudios de manera oportuna. Así también permite predecir los riesgos de abandono y
+disponer de sistemas de alerta temprana (Hassani, Huang, MacFeely & Entezarian, 2021).
+
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5462
+
+                                 Mella-Norambuena y otros
+
+
+CONCLUSIÓN
+A partir de lo presentado podríamos responder a la pregunta ¿las AA son una tierra
+prometida para la toma de decisiones educativas que aporte a la calidad de la educación?
+La tesis establecida en este ensayo que guió esta discusión fue: Las AA ya han mostrado
+beneficios, pero aún no todo su potencial, se requiere usar los datos que estas proporciona
+con énfasis en el aprendizaje para una gestión educativa y toma de decisiones efectivas y
+así avanzar hacia el logro del ODS4 sobre la calidad educativa en las IES.
+Como investigador del área de las AA pero a su vez como profesor de formación inicial y
+docente de Educación Superior, la postura ante esta tesis es que efectivamente hasta la
+fecha el posicionamiento teórico desde la educación es débil en las AA, lo que hace
+visualizar una alta cantidad de datos que no toman un sentido real y valioso para la
+gestión educativa y toma de decisiones que contribuya a cambios profundos para una
+mejor calidad de la educación, mientras sean producidos en ausencia de modelos
+teóricos educativos. Sin embargo, también es posible observar en el análisis de la
+evidencia que hay una inquietud inicial sobre esta problemática, se advierte que focalizar
+simplemente en la producción de datos sin un marco de referencia sólido en la educación
+pasan a ser sólo números.
+Dentro de los factores que se requieren considerar por su posible influencia en el
+verdadero potencial de las AA está: la aceptación del uso de AA por parte del profesorado,
+que requiere de la implementación urgente de modelos de aceptación de la tecnología
+para identificar las variables que limitan su aplicación en su ejercicio profesional; la
+necesidad de desarrollar un modelo de gestión en la comprensión de las AA en las IES;
+preciar y delimitar las motivaciones de uso de las AA a nivel institucional que sea con foco
+en la calidad de la educación; avanzar de la histórica falsa dicotomía “objetividad-
+subjetividad” de los datos dado que las AA son en contexto, en este caso en el aprendizaje
+y reconocen la subjetividad; avanzar en el balance del desarrollo de los componentes del
+constructo “analítica de aprendizaje”, que hasta la fecha tiene una preponderancia en las
+ciencias de datos (analíticas) más que en el aprendizaje (modelos educativos); y
+finalmente transitar a los nuevos de paradigmas de enseñanza mediados por tecnologías
+y hacia el desarrollo de procesos de enseñanza-aprendizaje personalizados, que desde
+un enfoque tradicional no es posible. Considero que en ningún caso este debate está
+cerrado, por el contrario, se encuentra en pleno curso y es necesario seguir investigando
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5463
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+y demostrando las aplicaciones y el impacto que tienen las AA en los contextos educativos
+de las IES.
+Revisiones bibliométricas recientes han concluido que el impacto de las publicaciones en
+la calidad educativa en el contexto de la Agenda 2030 y los ODS son un tema en proceso
+de desarrollo, con un crecimiento progresivo y continuo pero, donde aún no existen
+instituciones o autores que sean referencia debido a la baja producción poniendo de
+manifiesto la necesidad de implementar políticas a nivel global que se centren en diversas
+acciones relacionadas, con implicaciones tanto teóricas como prácticas (González,
+Colomo & Cívico, 2020).
+Por todo lo anterior es que planteo la necesidad urgente de comenzar las acciones que
+permitan utilizar las AA de manera óptima y considero que el primer paso para esto es el
+estudio y la compresión de la aceptación tecnológica por parte de los docentes, en
+particular la aceptación sobre los LMS, que es de las herramientas más utilizadas en las
+IES y que generan un gran volumen de datos con las interacciones docente-estudiante
+dentro del “aula virtual”. Dando este paso tendremos datos con un significado aplicable
+que nutra el sistema ecológico educativo, donde se puedan visualizar distintos procesos
+de enseñanza-aprendizaje y en primera instancia reconocer diferentes perfiles que a
+futuro puedan generar procesos educativos personalizables y de calidad.
+LISTA DE REFERENCIAS
+Abdallah, N., Ahlan, A., & Abdullah, O. (2016, November). Factors affecting instructors'
+        adoption of learning management systems: A theoretical framework. In 2016 6th
+        International Conference on Information and Communication Technology for The
+        Muslim          World            (ICT4M)           (pp.          13-18).           IEEE.
+        https://doi.org/10.1109/ICT4M.2016.016
+Alhadad, S. (2018). Visualizing data to support judgement, inference, and decision making
+        in learning analytics: Insights from cognitive psychology and visualization science.
+        Journal of Learning Analytics, 5(2), 60-85. https://doi.org/10.18608/jla.2018.52.5
+Al-Nuaimi, M., & Al-Emran, M. (2021). Learning management systems and technology
+        acceptance models: A systematic review. Education and Information
+        Technologies, 26(5), 5499-5533. https://doi.org/10.1007/s10639-021-10513-3
+
+
+
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5464
+
+                                   Mella-Norambuena y otros
+
+
+Anyim, W. (2021). Sustainable Development Goal on Quality Education: A Review of E-
+       Learning Resources and Pedagogy in the University System. Library Philosophy
+       and Practice (e-journal), 5578.
+Avella, J., Kebritchi, M., Nunn, S., & Kanai, T. (2016). Learning analytics methods, benefits,
+       and challenges in higher education: A systematic literature review. Online
+       Learning, 20(2), 13-29. https://files.eric.ed.gov/fulltext/EJ1105911.pdf
+Boeren, E. (2019). Understanding Sustainable Development Goal (SDG) 4 on “quality
+       education” from micro, meso and macro perspectives. International Review of
+       Education, 65(2), 277-294. https://doi.org/10.1007/s11159-019-09772-7
+Cechinel, C., Ochoa, X., Lemos dos Santos, H., Carvalho Nunes, J. B., Rodés, V., & Marques
+       Queiroga, E. (2020). Mapping learning analytics initiatives in Latin America. British
+       Journal         of        Educational          Technology,          51(4),         892-914.
+       https://doi.org/10.1111/bjet.12941
+Chevreux, H., Henríquez, V., Guerra, J., & Scheihing, E. (2019, September). Agile
+       development of learning analytics tools in a rigid environment like a university:
+       Benefits, challenges and strategies. In European Conference on Technology
+       Enhanced Learning (pp. 705-708). Springer, Cham.
+Davis, F. (1989). Perceived usefulness, perceived ease of use, and user acceptance of
+       information           technology.        MIS       Quarterly,       13(3),         319-340.
+       https://doi.org/10.2307/249008
+Doneva, R., Gaftandzhieva, S., Bliznakov, M., & Bandeva, S. (2020). Learning analytics
+       software tool supporting decision making in higher education. International
+       Journal    on    Information        Technologies    &   Security,    12(2).     https://ijits-
+       bg.com/contents/IJITS-N2-2020/2020-N2-04.pdf
+Dos Santos, H., Cechinel, C., Nunes, J., & Ochoa, X. (2017, October). An initial review of
+       learning analytics in Latin America. In 2017 Twelfth Latin American Conference on
+       Learning             Technologies         (LACLO)          (pp.         1-9).           IEEE.
+       https://doi.org/10.1109/LACLO.2017.8120913
+El Alfy, S., Gómez, J., & Dani, A. (2019). Exploring the benefits and challenges of learning
+       analytics in higher education institutions: A systematic literature review.
+       Information Discovery and Delivery, 47(1), 25-34. https://doi.org/10.1108/IDD-06-
+       2018-0018/full/html
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5465
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+Gaftandzhieva, S., Doneva, R., & Pashev, G. (2019). Learning analytics from the teacher’s
+       perspective: A mobile app. INTED2019 Proceedings, 2340-1079.
+Ghapanchi, A., Purarjomandlangrudi, A., McAndrew, A., & Miao, Y. (2020). Investigating
+       the impact of space design, visual attractiveness and perceived instructor
+       presence on student adoption of learning management systems. Education and
+       Information Technologies, 25(6), 5053-5066. https://doi.org/10.1007/s10639-
+       020-10204-5
+González, E., Colomo, E., & Cívico, A. (2020). Quality education as a sustainable
+       development goal in the context of 2030 agenda: Bibliometric approach.
+       Sustainability, 12(15), 5884. https://doi.org/10.3390/su12155884
+Guzmán-Valenzuela, C., Gómez-González, C., Rojas-Murphy Tagle, A., & Lorca-
+       Vyhmeister, A. (2021). Learning analytics in higher education: a preponderance of
+       analytics but very little learning? International Journal of Educational Technology
+       in Higher Education, 18(1), 1-19. https://doi.org/10.1186/s41239-021-00258-x
+Hassani, H., Huang, X., MacFeely, S., & Entezarian, M. (2021). Big data and the united
+       nations sustainable development goals (UN SDGs) at a glance. Big Data and
+       Cognitive Computing, 5(3), 28. https://doi.org/10.3390/bdcc5030028
+Hernández-de-Menéndez, M., Morales-Menendez, R., Escobar, C., & Ramírez Mendoza,
+       R. A. (2022). Learning analytics: state of the art. International Journal on
+       Interactive Design and Manufacturing, 1-22. https://doi.org/10.1007/s12008-
+       022-00930-0
+Hilliger, I., Ortiz‐Rojas, M., Pesántez‐Cabrera, P., Scheihing, E., Tsai, Y. S., Muñoz‐Merino,
+       P. J., ... & Pérez‐Sanagustín, M. (2020). Towards learning analytics adoption: A
+       mixed methods study of data‐related practices and policies in Latin American
+       universities. British Journal of Educational Technology, 51(4), 915-937.
+       https://doi.org/10.1111/bjet.12933
+Hooda, M., & Rana, C. (2020). Learning analytics lens: Improving quality of higher
+       education. International Journal of Emerging Trends in Engineering Research, 8(5).
+       https://doi.org/10.30534/ijeter/2020/24852020
+Kurilovas, E. (2019). Advanced machine learning approaches to personalise learning:
+       learning analytics and decision making. Behaviour & Information Technology,
+       38(4), 410-421. https://doi.org/10.1080/0144929X.2018.1539517
+
+          Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+  ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5466
+
+                                  Mella-Norambuena y otros
+
+
+Lytras, M., Aljohani, N., Visvizi, A., Ordonez De Pablos, P., & Gasevic, D. (2018). Advanced
+       decision-making in higher education: Learning analytics research and key
+       performance indicators. Behaviour & Information Technology, 37(10), 937-940.
+       https://doi.org/10.1080/0144929X.2018.1512940
+Macfadyen, L., & Dawson, S. (2012). Numbers are not enough. Why e-learning analytics
+       failed to inform an institutional strategic plan. Journal of Educational Technology
+       & Society, 15(3), 149-163. https://www.jstor.org/stable/jeductechsoci.15.3.149
+Maldonado-Mahauad, J., Hilliger, I., De Laet, T., Millecamp, M., Verbert, K., Ochoa, X., &
+       Pérez-Sanagustín, M. (2018, March). The LALA project: Building capacity to use
+       learning analytics to improve higher education in Latin America. In companion
+       proceedings of the 8th international learning analytics & knowledge conference
+       (pp. 630-637). Springer.
+Mella-Norambuena, J., Badilla-Quintana, M., & Angulo, Y. (2022). Modelos predictivos
+       basados en uso de analíticas de aprendizaje en educación superior: una revisión
+       sistemática. Texto livre, 15(e36310), 1-20. https://doi.org/10.35699/1983-
+       3652.2022.36310
+Miteva, D., Stefanov, K., & Stefanova, E. (2016). E-learning analytics for improvement of
+       education. In International Conference on e-Learning (1), 129-134.
+Natriello, G. (2021). Using Learning Analytics to Accelerate Change. In Reimagining Digital
+       Learning for Sustainable Development (pp. 282-292). Routledge. New York
+       https://doi.org/10.4324/9781003089698
+Niet, Y., Díaz, V., & Montenegro, C. (2016, September). Academic decision making model
+       for higher education institutions using learning analytics. In 2016 4th International
+       Symposium on Computational and Business Intelligence (ISCBI) (pp. 27-32).
+       https://doi.org/10.1109/ISCBI.2016.7743255
+Ochoa, X. (2019). Learning analytics in Latin America present an opportunity not to be
+       missed. Nature Human Behaviour, 3(1), 6-7. https://doi.org/10.1038/s41562-018-
+       0481-6
+Patel, M., & Desai, T. (2016). Big Data Analytics in Optimizing the Quality of Education:
+       Challenges. International Journal for Innovative Research in Science & Technology,
+       3(6), 165-167.
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5467
+
+       Analíticas de aprendizaje y su potencial para una educación de calidad sostenible
+
+
+Peña‐Ayala, A. (2018). Learning analytics: A glance of evolution, status, and trends
+       according to a proposed taxonomy. Wiley Interdisciplinary Reviews: Data Mining
+       and Knowledge Discovery, 8(3), e1243. https://doi.org/10.1002/widm.1243
+Prieto, L., Rodríguez-Triana, M., Martínez-Maldonado, R., Dimitriadis, Y., & Gašević, D.
+       (2019). Orchestrating learning analytics (OrLA): Supporting inter-stakeholder
+       communication about adoption of learning analytics at the classroom level.
+       Australasian        Journal       of       Educational        Technology,           35(4).
+       https://doi.org/10.14742/ajet.4314
+Viberg, O., Hatakka, M., Bälter, O., & Mavroudi, A. (2018). The current landscape of
+       learning analytics in higher education. Computers in Human Behavior, 89, 98-110.
+       https://doi.org/10.1016/j.chb.2018.07.027
+Umer, R., Susnjak, T., Mathrani, A., & Suriadi, L. (2021). Current stance on predictive
+       analytics in higher education: Opportunities, challenges and future directions.
+       Interactive                Learning                 Environments,                   1-26.
+       https://doi.org/10.1080/10494820.2021.1933542
+Verma, A., Singh, A., Lughofer, E., Cheng, X., & Abualsaud, K. (2021). Multilayered-quality
+       education ecosystem (MQEE): an intelligent education modal for sustainable
+       quality education. Journal of Computing in Higher Education, 33(3), 551-579.
+       https://doi.org/10.1007/s12528-021-09291-1
+Wise, A., & Jung, Y. (2019). Teaching with analytics: Towards a situated model of
+       instructional decision-making. Journal of Learning Analytics, 6(2), 53-69.
+       https://doi.org/10.18608/jla.2019.62.4
+Zanjani, N., Edwards, S. L., Nykvist, S., & Geva, S. (2016). LMS acceptance: The instructor
+       role.    The      Asia-Pacific     Education      Researcher,       25(4),     519-526.
+       https://doi.org/10.1007/s40299-016-0277-2
+Zhang, J., Zhang, X., Jiang, S., Ordóñez de Pablos, P., & Sun, Y. (2018). Mapping the study
+       of learning analytics in higher education. Behaviour & Information Technology,
+       37(10-11), 1142-1155. https://doi.org/10.1080/0144929X.2018.1529198
+
+
+
+
+         Ciencia Latina Revista Científica Multidisciplinar, Ciudad de México, México.
+ ISN 2707-2207/ISSN 2707-2215 (en línea), enero-febrero, 2023, Volumen 7, Número 1 p 5468

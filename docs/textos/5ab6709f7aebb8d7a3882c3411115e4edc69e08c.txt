@@ -1,0 +1,807 @@
+DOI: https://doi.org/10.56712/latam.v5i5.2754
+
+           Revisión sistemática: inteligencia artificial en la
+              transformación de la educación primaria
+ Systematic review: artificial intelligence in the transformation of primary
+                                  education
+
+                                                                                  Cinthia Paola Robalino Ibarra
+                                                                           cinthia.robalino@educacion.gob.ec
+                                                                      https://orcid.org/0009-0002-6552-4211
+                                                  Ministerio de Educación del Ecuador. EEB James Birch Rorer
+                                                                                            Milagro – Ecuador
+
+                                                                                Kattia Alcira Chicaiza Marchan
+                                                                            kattia.chicaiza@educacion.gob.ec
+                                                                       https://orcid.org/0009-0009-2620-5737
+                              Ministerio de Educación del Ecuador. Unidad Educativa Monseñor Juan Wiesneth
+                                                                                           Naranjito – Ecuador
+
+                                                                              Crisostomo Ricardo Coello Rivas
+                                                                         crisostomo.coello@educacion.gob.ec
+                                                                       https://orcid.org/0009-0000-0529-7913
+                              Ministerio de Educación del Ecuador. Unidad Educativa Monseñor Juan Wiesneth
+                                                                                           Naranjito – Ecuador
+
+                                                                               Alex Francisco Castillo Mainato
+                                                                            alex.castillom@educacion.gob.ec
+                                                                      https://orcid.org/0009-0000-4863-043X
+                              Ministerio de Educación del Ecuador. Unidad Educativa Monseñor Juan Wiesneth
+                                                                                          Naranjito – Ecuador
+
+                Artículo recibido: 21 de septiembre de 2024. Aceptado para publicación: 05 de octubre de 2024.
+                                                                   Conflictos de Interés: Ninguno que declarar.
+
+                                              Resumen
+La investigación busca analizar la transformación de la educación primaria a través de la inteligencia
+artificial (IA), destacando cómo esta tecnología está revolucionando el aprendizaje, la evaluación y la
+gestión educativa. La IA se presenta como una solución a problemas históricos como la inequidad
+educativa y las altas tasas de deserción escolar, especialmente en América Latina, ofreciendo
+personalización del aprendizaje y mejorando la eficiencia en el aula. El objetivo de este estudio busca
+realizar una revisión sistemática de la literatura sobre la implementación de IA en la educación
+primaria, la metodología que se utilizó fue el método PRISMA para la revisión sistemática, evaluando
+estudios entre 2016 y 2024. Se seleccionaron 13 artículos relevantes de bases de datos como Google
+Scholar, Scopus y Dialnet Plus, que tratan temas como el aprendizaje adaptativo, la evaluación
+automatizada y la personalización del aprendizaje en la educación primaria. Obteniendo como
+resultados los hallazgos revelan que la IA mejora la personalización del aprendizaje, la identificación
+temprana de dificultades y la automatización de evaluaciones, lo que aumenta la eficiencia en el
+proceso educativo. Sin embargo, desafíos como la brecha digital, la limitada infraestructura
+tecnológica y la formación insuficiente de los docentes son obstáculos significativos, particularmente
+en áreas rurales. Llegando a la conclusión que la IA tiene un gran potencial para transformar la
+educación primaria, pero su implementación efectiva requiere enfrentar los desafíos tecnológicos y
+éticos, además de desarrollar políticas públicas que garanticen el acceso equitativo y la capacitación
+docente.
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1952.
+
+        Palabras clave: revisión sistemática, PRIMA, inteligencia artificial, educación primaria
+
+
+
+                                               Abstract
+The research seeks to analyze the transformation of primary education through artificial intelligence
+(AI), highlighting how this technology is revolutionizing learning, assessment and educational
+management. AI is presented as a solution to historical problems such as educational inequality and
+high school dropout rates, especially in Latin America, offering personalization of learning and
+improving efficiency in the classroom. The objective of this study seeks to carry out a systematic
+review of the literature on the implementation of AI in primary education, the methodology used was
+the PRISMA method for systematic review, evaluating studies between 2016 and 2024. 13 relevant
+articles are selected from databases such as Google Scholar, Scopus and Dialnet Plus, which address
+topics such as adaptive learning, automated assessment and personalization of learning in primary
+education. The findings reveal that AI improves the personalization of learning, the early identification
+of difficulties and the automation of evaluations, which increases efficiency in the educational
+process. However, challenges such as the digital divide, limited technological infrastructure and
+insufficient teacher training are significant obstacles, particularly in rural areas. Concluding that AI has
+great potential to transform primary education, but its effective implementation requires facing
+technological and ethical challenges, in addition to developing public policies that guarantee equitable
+access and teacher training.
+        Keywords: systematic review, PRIMA, artificial intelligence, primary education
+
+
+
+
+Todo el contenido de LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades,
+publicado en este sitio está disponibles bajo Licencia Creative Commons.
+
+Cómo citar: Robalino Ibarra, C. P., Chicaiza Marchan, K. A., Coello Rivas, C. R., & Castillo Mainato, A. F.
+(2024). Revisión sistemática: inteligencia artificial en la transformación de la educación primaria.
+LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades 5 (5), 1952 – 1966.
+https://doi.org/10.56712/latam.v5i5.2754
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1953.
+
+INTRODUCCIÓN
+
+La inteligencia artificial (IA) está revolucionando múltiples sectores a nivel global, y la educación
+primaria en América Latina no es la excepción. A medida que los países de la región se enfrentan a
+desafíos históricos como la falta de equidad educativa, altas tasas de deserción escolar y limitaciones
+en recursos pedagógicos, la IA surge como una herramienta clave para transformar los sistemas
+educativos y mejorar el aprendizaje de los estudiantes en la primera etapa de su formación (Andrade
+et al., 2024).
+
+El uso de plataformas inteligentes de aprendizaje, asistentes virtuales y sistemas de evaluación
+automatizados está permitiendo una personalización del aprendizaje sin precedentes, adaptando los
+contenidos a las necesidades individuales de cada estudiante (González Angeletti, 2024). Además, la
+IA facilita la gestión eficiente de las aulas, la creación de materiales educativos interactivos y la
+identificación temprana de dificultades de aprendizaje, lo que puede tener un impacto significativo en
+la calidad educativa.
+
+A pesar de estas oportunidades, América Latina enfrenta obstáculos como la brecha digital, la falta de
+infraestructura tecnológica y la necesidad de formar a los docentes en el uso de estas herramientas.
+No obstante, los esfuerzos por integrar la IA en la educación primaria representan un paso crucial hacia
+la modernización y equidad del sistema educativo en la región, abriendo nuevas posibilidades para el
+futuro de millones de niños (Estrada-Araoz et al., 2024).
+
+La inteligencia artificial (IA) está emergiendo como una herramienta clave para transformar la
+educación primaria en Ecuador, un país que enfrenta desafíos significativos en términos de calidad
+educativa, desigualdad de acceso y recursos limitados. A medida que el sistema educativo busca
+modernizarse, la IA presenta oportunidades para personalizar el aprendizaje, facilitar la gestión
+educativa y optimizar el rendimiento estudiantil (Chounta et al., 2022). Mediante plataformas
+inteligentes, asistentes virtuales y sistemas de evaluación automatizados, los estudiantes de primaria
+pueden recibir una enseñanza adaptada a sus necesidades individuales, superando barreras
+tradicionales como las diferencias en ritmo de aprendizaje o la escasez de recursos didácticos.
+
+Sin embargo, la implementación de la IA en la educación primaria en Ecuador también enfrenta
+desafíos notables, como la brecha digital, la limitada infraestructura tecnológica en zonas rurales y la
+necesidad de capacitar a los docentes en el uso de estas nuevas herramientas. A pesar de estas
+dificultades, el gobierno y las instituciones educativas están empezando a explorar las posibilidades
+que la IA ofrece, sentando las bases para una mayor equidad y calidad en la educación. La
+transformación educativa impulsada por la IA en Ecuador tiene el potencial de cerrar brechas de
+aprendizaje y mejorar los resultados académicos en todo el país, preparando a los estudiantes para los
+retos del siglo XXI (Ruiz Muñoz & Yépez González, 2024).
+
+El objetivo de esta revisión sistemática es analizar y sintetizar la literatura existente sobre el impacto
+de la inteligencia artificial (IA) en la transformación de la educación primaria. A través de la recopilación
+y evaluación exhaustiva de estudios académicos, informes institucionales y documentos relevantes,
+esta investigación busca identificar las principales aplicaciones de la IA en el ámbito educativo, como
+el aprendizaje adaptativo, la evaluación automatizada y la personalización del aprendizaje. Además,
+pretende examinar los desafíos y oportunidades que la implementación de IA presenta en el contexto
+de la educación primaria, con un enfoque en la equidad educativa, la formación docente y la
+infraestructura tecnológica. Este análisis permitirá ofrecer una visión integral del estado actual de la IA
+en la educación primaria, resaltando las mejores prácticas y posibles áreas de mejora para futuras
+investigaciones y aplicaciones prácticas, especialmente en contextos con limitaciones tecnológicas
+como los de América Latina.
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1954.
+
+DESARROLLO
+
+La integración de la inteligencia artificial (IA) en el ámbito educativo ha generado un creciente interés
+en todo el mundo, debido a su potencial para transformar la forma en que los estudiantes aprenden y
+los docentes enseñan. La educación primaria, etapa crucial para el desarrollo cognitivo y social de los
+niños, se enfrenta a nuevos desafíos y oportunidades con la llegada de estas tecnologías. En Ecuador,
+como en otros países de América Latina, el uso de la IA en las escuelas plantea tanto expectativas
+como incertidumbres, en particular en relación con la equidad educativa, la brecha digital y la capacidad
+de las instituciones educativas para adaptarse a estas innovaciones. Este marco teórico explora los
+conceptos clave, teorías y enfoques relacionados con la IA en la educación primaria, con un énfasis
+especial en el contexto ecuatoriano (Sanhueza Salazar & Valdivia Guzmán, 2024).
+
+Inteligencia Artificial en la Educación
+
+La inteligencia artificial se refiere a sistemas o máquinas que imitan la inteligencia humana para
+realizar tareas y pueden mejorar sus capacidades mediante el aprendizaje basado en datos. En el
+ámbito educativo, la IA tiene una amplia gama de aplicaciones, desde sistemas de tutoría
+automatizados hasta herramientas para personalizar el aprendizaje, evaluar el progreso de los
+estudiantes y apoyar la gestión escolar (Sánchez, 2021).
+
+Aprendizaje Adaptativo
+
+Uno de los avances más significativos de la IA en la educación es el desarrollo del aprendizaje
+adaptativo, una metodología que utiliza algoritmos para ajustar el contenido y los recursos educativos
+al nivel y estilo de aprendizaje de cada estudiante. Según (Valencia Tafur & Figueroa Molina, 2023), las
+plataformas adaptativas analizan el desempeño y las respuestas de los estudiantes en tiempo real,
+modificando el contenido y las estrategias pedagógicas para optimizar el aprendizaje. Esta
+personalización es particularmente importante en la educación primaria, donde las diferencias
+individuales en el desarrollo cognitivo y el ritmo de aprendizaje son notables.
+
+La implementación del aprendizaje adaptativo en las aulas podría ayudar a superar algunos de los
+desafíos tradicionales, como la sobrecarga de aulas y la dificultad para atender las necesidades
+individuales de los estudiantes. Sin embargo, el éxito de estas plataformas depende en gran medida
+de la disponibilidad de tecnología y conectividad, aspectos que aún presentan limitaciones en muchas
+áreas del país, especialmente en las zonas rurales.
+
+Evaluación Automatizada
+
+Otro ámbito donde la IA ha mostrado un impacto significativo es en la evaluación automatizada de los
+estudiantes. Los sistemas basados en IA pueden corregir automáticamente exámenes y tareas,
+proporcionando retroalimentación instantánea tanto a los docentes como a los alumnos. Según
+(Zepeda Hurtado et al., 2024), la retroalimentación oportuna y precisa es un factor crucial para mejorar
+el rendimiento académico, ya que permite a los estudiantes corregir sus errores y a los docentes ajustar
+sus estrategias pedagógicas de manera más eficaz.
+
+En el contexto de la educación primaria, la evaluación automatizada podría liberar tiempo valioso para
+que los docentes se concentren en tareas más complejas, como la orientación pedagógica y el apoyo
+emocional a los estudiantes. Además, las herramientas de IA pueden proporcionar información
+detallada sobre las áreas de fortaleza y debilidad de los estudiantes, lo que facilita una enseñanza más
+centrada en el alumno. No obstante, la implementación de estas tecnologías plantea retos éticos, como
+la privacidad de los datos y la precisión de los algoritmos en la corrección de evaluaciones cualitativas.
+
+Educación Primaria
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1955.
+
+La educación primaria es una etapa fundamental en la formación de los niños, ya que sienta las bases
+para el desarrollo de habilidades cognitivas, sociales y emocionales. La educación primaria es
+obligatoria y se extiende desde los 6 hasta los 12 años de edad. Sin embargo, el sistema educativo
+enfrenta varios desafíos, entre ellos, la falta de equidad en el acceso a recursos, la calidad de la
+educación en zonas rurales y urbanas, y la formación insuficiente de los docentes en el uso de
+tecnologías educativas (Merino Luzón et al., 2023).
+
+Políticas Públicas y Tecnología en la Educación
+
+La importancia de la tecnología en la educación a través de diversas iniciativas, como el Plan Decenal
+de Educación 2006-2015, que incluyó la integración de TIC en las aulas. Sin embargo, la
+implementación de IA en las escuelas sigue siendo un área poco explorada. La falta de una estrategia
+nacional clara para la adopción de IA en la educación primaria ha frenado su desarrollo, y es necesario
+un mayor enfoque en políticas públicas que apoyen la modernización de la enseñanza (Bentancor et
+al., 2024).
+
+En este sentido, es fundamental que las políticas educativas no solo promuevan la infraestructura
+tecnológica, sino que también garanticen la formación continua de los docentes y el acceso equitativo
+a los recursos digitales. Además, la IA no debe verse como una solución aislada, sino como parte de
+un enfoque integral que incluya la mejora del currículo, la evaluación y el bienestar de los estudiantes.
+
+Oportunidades y Desafíos de la IA en la Educación Primaria
+
+La integración de la IA en la educación primaria en Ecuador presenta una serie de oportunidades, pero
+también desafíos significativos que deben ser abordados para garantizar su éxito.
+
+La IA tiene el potencial de transformar la educación primaria de varias maneras. En primer lugar, el uso
+de plataformas de aprendizaje adaptativo puede ayudar a reducir las brechas de rendimiento entre los
+estudiantes al ofrecer una enseñanza más personalizada y ajustada a las necesidades individuales. En
+segundo lugar, la evaluación automatizada puede mejorar la eficiencia en la corrección de tareas y
+exámenes, permitiendo a los docentes concentrarse en otras áreas pedagógicas cruciales. Finalmente,
+la IA puede facilitar la detección temprana de dificultades de aprendizaje, lo que permitiría intervenir a
+tiempo y mejorar los resultados académicos de los estudiantes con necesidades especiales
+(Carguacundo Ávila et al., 2024).
+
+No obstante, los desafíos para implementar IA en la educación primaria son considerables. La
+infraestructura tecnológica es limitada, especialmente en las zonas rurales, lo que restringe el acceso
+a estas innovaciones. Además, la formación docente es insuficiente en el uso de IA, lo que implica que
+muchos maestros no están preparados para aprovechar las nuevas herramientas disponibles. Por
+último, la cuestión de la brecha digital sigue siendo un obstáculo importante para garantizar una
+implementación equitativa de la IA en todo el país (Ubal Camacho et al., 2023).
+
+Teorías Pedagógicas y el Uso de IA
+
+La implementación de IA en la educación primaria también puede ser entendida a través del lente de
+diversas teorías pedagógicas. Por ejemplo, el constructivismo, propuesto por Jean Piaget, sugiere que
+los estudiantes construyen su propio conocimiento a través de la interacción con el entorno. En este
+contexto, la IA puede actuar como una herramienta para facilitar esa interacción, proporcionando a los
+estudiantes acceso a entornos de aprendizaje personalizados y adaptativos (Urquilla Castaneda,
+2023).
+
+Asimismo, la teoría del aprendizaje social enfatiza la importancia del aprendizaje a través de la
+observación e imitación de modelos. En este sentido, los sistemas de IA podrían servir como modelos
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1956.
+
+interactivos que guían a los estudiantes en la resolución de problemas y la adquisición de habilidades
+(Tomalá De La Cruz et al., 2023). La teoría del aprendizaje destaca la importancia del contexto en el
+proceso de aprendizaje. Las tecnologías basadas en IA, como los entornos de realidad aumentada,
+pueden crear contextos de aprendizaje inmersivos que ayuden a los estudiantes a aplicar los
+conocimientos en situaciones del mundo real.
+
+METODOLOGÍA
+
+La presente investigación sigue una metodología de revisión sistemática, cuyo objetivo es recopilar,
+analizar y sintetizar estudios relevantes sobre la implementación de la inteligencia artificial (IA) en la
+transformación de la educación primaria. Este enfoque permite una evaluación exhaustiva de la
+literatura disponible, identificando patrones, tendencias y vacíos en la investigación actual.
+
+La búsqueda de fuentes se realizará en bases de datos académicas como Google Scholar, Scopus,
+Dialnet Plus y repositorios especializados en educación y tecnología. Se incluirán estudios publicados
+entre 2018 y 2024, tanto en inglés como en español, con un enfoque en investigaciones sobre la IA en
+el contexto educativo de la educación primaria. Se considerarán artículos científicos, informes
+institucionales, tesis y documentos de políticas públicas. Se definieron ecuaciones y palabras claves
+basadas en el tema de investigación “inteligencia artificial”, “educación primaria”, se configuraron
+conectores de conjunción “Y”, “AND”, “O” y “OR”.
+
+Para el proceso de revisión sistemática se empleó el método PRISMA, en el que se identificaron y
+seleccionaron los documentos científicos, en la depuración se eliminaron los duplicados, además de
+aplicar los criterios de inclusión y exclusión. Se seleccionarán estudios que aborden el uso de IA en la
+personalización del aprendizaje, la evaluación automatizada, y el apoyo al aprendizaje adaptativo en la
+educación primaria. Se excluirán aquellos estudios que se centren en la educación superior o que traten
+temas tecnológicos sin aplicaciones educativas.
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1957.
+
+Figura 1
+
+Metodología PRISMA
+
+
+      A
+                  Google Académico          43
+      C
+      FI          Dialnet Plus              29
+      TI          Scopus                    24
+      N           Semantic scholar          22
+       E          Total:                    118
+      ID
+                                                                  Eliminados por ser duplicados
+                                                                             N= 24
+      CI
+      A
+      U               Artículos evaluados N= 94
+      L
+      A
+      V
+                                                                  Eliminados por evaluación de
+      E
+                                                                      título y resumen N=30
+      D
+      LI
+      BI
+      GI           Texto completo para evaluar la
+      E                  elegibilidad N= 64
+      L
+      E
+
+                                                                 Excluido por no ser concluyente
+                                                                  y por nivel de investigación N=
+                                                                                 51
+      N
+      Ó
+      SI
+       U           Artículos incluidos para revisión
+       L                         N= 13
+       C
+      IN
+
+
+
+
+Fuente: elaboración propia.
+
+RESULTADOS Y DISCUSIÓN:
+
+De los 13 artículos investigados en este estudio por año de publicación corresponden principalmente
+entre 2016 y 2024, al analizar los países donde se realizaron estos estudios se reconoce que España
+parece ser el país con más publicaciones relacionadas con el impacto de la inteligencia artificial (IA)
+en la educación. Esto sugiere que España ha realizado un considerable esfuerzo en investigar y analizar
+la implementación de la IA en el ámbito educativo. Además de España, otros países como Ecuador
+también han contribuido significativamente a la investigación sobre la inteligencia artificial en la
+educación, aunque con un enfoque en diferentes aspectos y desafíos específicos.
+
+
+
+
+           LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                  ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1958.
+
+Por ejemplo, estudios realizados en Ecuador destacan los beneficios de la IA en la mejora del
+rendimiento académico y la personalización del aprendizaje, pero también señalan importantes
+desafíos, como la brecha digital y la resistencia de los docentes. Autores como Morocho Cevallos et
+al. (2023) y Magallanes Ronquillo et al. (2023) se centran en los retos que enfrenta el sistema educativo
+ecuatoriano al integrar la IA, subrayando la necesidad de políticas inclusivas y la capacitación continua
+para los educadores.
+
+Además, Colombia ha sido otro país con una cantidad notable de publicaciones. En particular, el
+estudio de Bolaño-García et al. (2023) revisa el uso de la IA en la predicción del abandono escolar y la
+automatización de tareas administrativas, destacando aplicaciones como los sistemas de tutoría
+inteligente y los desafíos relacionados con la privacidad de los datos
+
+Tabla 1
+
+Investigación realizada en la revisión sistemática sobre la inteligencia artificial en la transformación de
+la educación primaria.
+
+   Autor, año y                  Tema                            Resultados y conclusiones
+      país
+ González-           El impacto de la                Destaca que la inteligencia artificial (IA) ha
+ González, CS        inteligencia artificial en la   avanzado significativamente en educación,
+ (2023). España      educación: transformación       mejorando la personalización del aprendizaje, la
+                     de la forma de enseñar y de     evaluación automatizada y la tutoría inteligente.
+                     aprender.                       Se enfatiza la importancia de adaptar el
+                                                     contenido a las necesidades individuales de los
+                                                     estudiantes y la objetividad en las evaluaciones.
+ Goenechea, C.,      Educación e Inteligencia        El estudio concluye que los futuros docentes de
+ & Valero-           Artificial: Un Análisis desde   Educación Primaria tienen un conocimiento
+ Franco, C.          la                              limitado sobre inteligencia artificial. Se
+ (2024). España      Perspectiva de los              recomienda integrar la IA en la formación
+                     Docentes en Formación           docente, fomentar la alfabetización digital y
+                                                     promover una reflexión ética sobre su uso en
+                                                     educación, asegurando que los futuros
+                                                     educadores estén preparados para enfrentar
+                                                     estos desafíos.
+ Ayuso del           La Inteligencia Artificial      Se encontró que el 53.9% del alumnado disfrutó
+ Puerto, D., &       como recurso                    la creación de proyectos, y el 92.1% valoró la
+ Gutiérrez           educativo durante la            importancia de completar tareas con éxito,
+ Esteban, P.         formación inicial del           generando satisfacción en el 78.9%. Sin embargo,
+ (2022). España      profesorado                     el 42.1% se sintió inseguro al usar las
+                                                     herramientas propuestas, y solo el 48.7%
+                                                     consideró tener los recursos necesarios para
+                                                     implementar proyectos de IA en su futura labor
+                                                     docente. Se destaca la necesidad de fomentar
+                                                     habilidades tecnológicas y la creación de
+                                                     recursos educativos abiertos.
+ Cisneros            Uso de la inteligencia          El estudio revela que la inteligencia artificial (IA)
+ Vásquez et al.,     artificial en la                es fundamental en la personalización del
+ (2024). Ecuador     personalización del             aprendizaje, utilizando herramientas como
+                     aprendizaje.                    chatbots y sistemas de recomendación. Se
+                                                     identifican técnicas como minería de datos
+                                                     educativos y sistemas multiagente que permiten
+                                                     analizar el rendimiento y comportamiento de los
+                                                     estudiantes, adaptando estrategias de
+                                                     enseñanza.
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1959.
+
+Morocho             Integración de la               La investigación sobre la integración de la
+Cevallos et al.,    Inteligencia Artificial en la   inteligencia artificial (IA) en la educación
+(2023). Ecuador     Educación.                      ecuatoriana reveló beneficios significativos,
+                                                    como mejoras en el rendimiento académico y la
+                                                    personalización del aprendizaje. Sin embargo,
+                                                    también se identificaron desafíos críticos,
+                                                    incluyendo la brecha digital y la resistencia
+                                                    docente. Se destacó la necesidad de
+                                                    capacitación continua para educadores y
+                                                    políticas claras que aborden cuestiones éticas y
+                                                    de privacidad. Estos hallazgos subrayan la
+                                                    importancia de un enfoque inclusivo y equitativo
+                                                    para la implementación de la IA en la educación.
+Martínez-           Impacto de la inteligencia      Los hallazgos indican que la IA mejora la
+Comesaña et         artificial en los métodos de    predicción del rendimiento académico y permite
+al., (2023).        evaluación en la educación      evaluaciones más objetivas y automatizadas
+España              primaria y secundaria:          mediante redes neuronales y procesamiento del
+                    revisión sistemática de la      lenguaje natural. Además, se destaca el uso de
+                    literatura.                     robots educativos para analizar el proceso de
+                                                    aprendizaje y la identificación de factores que
+                                                    hacen las clases más atractivas.
+Bolaño-García       Una revisión sistemática        Se identifican aplicaciones como sistemas de
+et al., (2023).     del uso de la inteligencia      tutoría inteligentes y herramientas que analizan
+Colombia            artificial en la educación.     datos para predecir el abandono escolar. Sin
+                                                    embargo, también se señalan desafíos, como la
+                                                    calidad de los datos, la resistencia de educadores
+                                                    a la automatización y preocupaciones sobre la
+                                                    privacidad. La investigación sugiere que, si se
+                                                    abordan estas limitaciones, la IA puede
+                                                    transformar efectivamente el proceso educativo y
+                                                    mejorar los resultados académicos.
+Magallanes          La inteligencia artificial      La investigación proporciona una visión
+Ronquillo et al.    aplicada en la innovación       equilibrada de los beneficios y desafíos de la
+(2023). Ecuador     educativa en el proceso de      aplicación de la IA en la educación, así como de
+                    enseñanza y aprendizaje         las medidas necesarias para garantizar una
+                                                    aplicación responsable y efectiva de la IA en el
+                                                    proceso de enseñanza y aprendizaje.
+Zafari, M.,         Aplicaciones de la              Los hallazgos muestran que la IA se utiliza
+Bazargani et al.,   inteligencia artificial en la   principalmente en áreas como el rendimiento
+(2022).             educación primaria y            estudiantil, la enseñanza y el comportamiento.
+Colombia            secundaria: una revisión        Las tecnologías más comunes son el aprendizaje
+                    sistemática de la literatura.   automático y los sistemas de tutoría inteligente,
+                                                    con una fuerte presencia en cursos de STEM,
+                                                    especialmente en matemáticas. Además, se
+                                                    destaca que la IA ha mejorado la personalización
+                                                    del aprendizaje y la automatización de tareas
+                                                    administrativas, beneficiando tanto a estudiantes
+                                                    como a docentes.
+Jaakkola et al.,    Inteligencia artificial y       La inteligencia artificial (IA) es una de las
+(2022). Croatia     educación.                      tecnologías emergentes actuales, presente en
+                                                    dispositivos inteligentes asequibles con
+                                                    capacidades para realizar tareas complejas
+                                                    (computación en el borde), acceder a redes
+                                                    rápidas, servicios en la nube y grandes
+                                                    volúmenes de datos. En la educación, la IA
+                                                    contribuye de dos maneras principales: (1) en el
+                                                    alcance y contenido de la educación, ya que
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1960.
+
+                                                    algunas profesiones desaparecerán, otras
+                                                    cambiarán y surgirán nuevas, requiriendo ajustes
+                                                    en la formación; y (2) en el proceso educativo,
+                                                    donde la IA actúa como reformador y facilitador,
+                                                    transformando el trabajo docente. El artículo
+                                                    analiza las oportunidades y desafíos que la IA
+                                                    plantea en la educación, aunque es difícil
+                                                    separarla de otros cambios tecnológicos que
+                                                    afectan el mundo laboral.
+ Kandlhofer et      Artificial intelligence and     La inteligencia artificial (IA) ya juega un papel
+ al., (2016)        computer science in             importante en la alfabetización en IA y ciencias
+ Austria            education: From                 de la computación será tan importante como la
+                    kindergarten to university.     alfabetización tradicional (leer y escribir). Con
+                                                    esta idea, se desarrolló un concepto educativo
+                                                    para promover la alfabetización en IA, compuesto
+                                                    por módulos para diferentes grupos de edad y
+                                                    niveles educativos. Estos módulos abordan
+                                                    temas fundamentales de IA, como la resolución
+                                                    de problemas mediante búsqueda, clasificación,
+                                                    grafos y estructuras de datos.
+ Guilherme, AA      La IA y la educación: la        En este artículo, primero evalúo la actual
+ (2017). Austria    importancia de las              tecnologización de la educación y el impacto que
+                    relaciones entre profesores     ha tenido en las relaciones dentro del aula;
+                    y alumnos                       segundo, caracterizo las relaciones yo-ello y yo-tú
+                                                    de Buber y sus implicaciones para la educación;
+                                                    Finalmente, investigo a través de un experimento
+                                                    mental si el desarrollo de la IA podría algún día
+                                                    reemplazar con éxito a los profesores humanos
+                                                    en el aula.
+ Torres et al.,     La Implementación de la         El documento presenta un análisis sobre la
+ (2023). Ecuador    Inteligencia Artificial en la   implementación de la inteligencia artificial (IA) en
+                    Educación: Análisis             la educación, destacando su potencial para
+                    Sistemático.                    transformar métodos tradicionales y personalizar
+                                                    el aprendizaje. Los sistemas de IA pueden
+                                                    analizar datos estudiantiles para proporcionar
+                                                    recomendaciones personalizadas y
+                                                    retroalimentación instantánea, mejorando la
+                                                    comprensión. Sin embargo, también plantea
+                                                    desafíos éticos, como la privacidad de datos y la
+                                                    equidad en el acceso a la tecnología. Aunque la
+                                                    IA no puede reemplazar completamente a los
+                                                    educadores, se subraya la necesidad de un
+                                                    equilibrio entre tecnología e interacción humana,
+                                                    así como una implementación responsable para
+                                                    maximizar sus beneficios educativos
+
+
+Fuente: elaboración propia.
+
+Al analizar los resultados de los 13 artículos en la revisión sistemática se pudo apreciar que los autores
+expresan que: Uno de los temas centrales del documento es cómo la inteligencia artificial está
+transformando la forma de enseñar y aprender. González-González (2023) subraya que la IA ha
+permitido una mayor personalización del aprendizaje, facilitando que el contenido educativo se adapte
+a las necesidades específicas de cada estudiante. Esto ha mejorado tanto la experiencia de aprendizaje
+como los resultados académicos, al tiempo que se garantiza una mayor objetividad en las evaluaciones
+gracias a la automatización de procesos. Estos avances no solo incrementan la eficiencia del sistema
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1961.
+
+educativo, sino que también promueven la equidad al ofrecer oportunidades de aprendizaje
+personalizadas para cada estudiante.
+
+En un análisis más específico, Cisneros Vásquez et al. (2024) resaltan que la IA está siendo utilizada
+en la personalización del aprendizaje mediante herramientas como chatbots y sistemas de
+recomendación, que permiten analizar el rendimiento de los estudiantes y ajustar las estrategias
+pedagógicas. Este uso de la minería de datos y los sistemas multiagente está optimizando la forma en
+que los docentes interactúan con los estudiantes, ofreciendo un enfoque más dirigido y efectivo.
+
+También explora la preparación de los futuros docentes en el uso de la inteligencia artificial. Goenechea
+y Valero-Franco (2024) concluyen que los docentes en formación aún presentan un conocimiento
+limitado sobre el uso de la IA en la enseñanza. Este hallazgo pone de manifiesto la necesidad de
+integrar la alfabetización digital en los programas de formación docente para garantizar que los futuros
+educadores estén capacitados para utilizar estas herramientas de manera efectiva. Se recomienda,
+además, fomentar una reflexión ética sobre el uso de la IA en la educación, asegurando que los
+docentes sean conscientes de los posibles retos éticos asociados, como la privacidad de los datos y
+la equidad en el acceso a la tecnología.
+
+Ayuso del Puerto y Gutiérrez Esteban (2022) complementan esta visión al señalar que, aunque muchos
+estudiantes valoran positivamente la integración de la IA en sus procesos formativos, existe un
+porcentaje significativo que aún se siente inseguro al usar estas herramientas. Esto resalta la
+importancia de proporcionar recursos y capacitación continua a los docentes para que puedan
+implementar proyectos educativos basados en IA con confianza y efectividad.
+
+Uno de los aspectos más discutidos en la literatura es la cuestión ética asociada al uso de la
+inteligencia artificial en la educación. Martínez-Comesaña et al. (2023) y Bolaño-García et al. (2023)
+coinciden en que, si bien la IA puede mejorar significativamente la calidad de la enseñanza, también
+plantea desafíos relacionados con la privacidad de los datos y la resistencia de algunos educadores
+ante la automatización de ciertas tareas. Ambos estudios concluyen que es fundamental que las
+políticas educativas aborden estos temas para garantizar una implementación responsable y ética de
+la IA en los centros educativos.
+
+Por otro lado, Morocho Cevallos et al. (2023) en su estudio sobre la integración de la IA en la educación
+ecuatoriana, subrayan que, aunque la IA ha traído beneficios significativos en términos de rendimiento
+académico y personalización del aprendizaje, la brecha digital sigue siendo un obstáculo crítico que
+debe abordarse mediante políticas inclusivas y equitativas.
+
+Los retos éticos y tecnológicos que acompañan la implementación de la IA en la educación. Se
+destacan preocupaciones relacionadas con la privacidad de los datos, la equidad en el acceso a la
+tecnología y la resistencia de algunos docentes a la automatización de ciertos procesos. Bolaño-García
+et al. (2023) señalan que, aunque la IA tiene el potencial de transformar el sistema educativo, aún
+enfrenta barreras importantes, como la calidad de los datos y la resistencia de algunos educadores a
+adoptar estas nuevas tecnologías.
+
+En resumen, la tabla 1 indica el impacto de la inteligencia artificial en la educación, destacando tanto
+sus beneficios como sus limitaciones. La personalización del aprendizaje, la automatización de tareas
+administrativas y la mejora en los procesos de evaluación son algunos de los principales beneficios
+mencionados. Sin embargo, también se hace evidente que la integración de la IA en la educación
+requiere una mayor formación docente, políticas claras que aborden los desafíos éticos y tecnológicos,
+y una reflexión profunda sobre el papel que debe jugar la tecnología en la educación del futuro.
+
+CONCLUSIONES
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1962.
+
+La inteligencia artificial ofrece oportunidades importantes para mejorar la educación primaria en
+Ecuador, pero su implementación requiere enfrentar una serie de desafíos, incluyendo la brecha digital,
+la falta de infraestructura y la necesidad de formación docente. Para lograr una integración efectiva de
+la IA en el sistema educativo, será fundamental desarrollar políticas públicas claras que fomenten el
+acceso equitativo a la tecnología, así como la capacitación continua de los maestros.
+
+Los estudios coinciden en que la IA tiene un gran potencial para mejorar la enseñanza y el aprendizaje,
+facilitando una mayor personalización y eficiencia en los procesos educativos. No obstante, se
+reconoce que su implementación exitosa depende en gran medida de la formación adecuada de los
+docentes y de la superación de los desafíos éticos y tecnológicos, tales como la privacidad de los datos
+y la equidad en el acceso a las herramientas tecnológicas. La formación docente y la creación de
+políticas claras son esenciales para maximizar los beneficios de la IA en la educación y asegurar una
+implementación responsable y efectiva.
+
+La implementación de la inteligencia artificial (IA) en la educación primaria está transformando los
+métodos de enseñanza y aprendizaje, ofreciendo beneficios como la personalización del aprendizaje y
+la automatización de la evaluación. Estudios revisados destacan que la IA puede mejorar la equidad
+educativa, facilitando la adaptación del contenido a las necesidades de cada estudiante. Sin embargo,
+existen desafíos importantes como la brecha digital y la necesidad de formar a los docentes en estas
+tecnologías. Superar estas barreras es crucial para maximizar el potencial de la IA en el ámbito
+educativo.
+
+Los estudios revisados subrayan la importancia de abordar los desafíos éticos y tecnológicos que
+acompañan la integración de la inteligencia artificial en la educación primaria. La privacidad de los
+datos y la equidad en el acceso a la tecnología son preocupaciones recurrentes. A pesar de estos
+obstáculos, la IA ofrece una oportunidad única para mejorar la enseñanza, la evaluación y el
+rendimiento académico de los estudiantes. Para garantizar su implementación exitosa, es esencial
+desarrollar políticas públicas que promuevan la equidad y la capacitación docente en estas nuevas
+herramientas.
+
+
+
+
+         LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1963.
+
+REFERENCIAS
+
+Andrade Peña, O. del R., Cuenca Zambrano, M. M., García Montenegro, S. J., Cuamacás Chafuelán, S.
+M., & Ramos Arias, E. A. (2024). La incidencia de la inteligencia artificial en la educación secundaria del
+Ecuador. Revista Imaginario Social, 7(1). https://doi.org/10.59155/is.v7i1.125
+
+Ayuso del Puerto, D., & Gutiérrez Esteban, P. (2022). La Inteligencia Artificial como recurso educativo
+durante la formación inicial del profesorado. RIED Revista Iberoamericana de Educación a Distancia,
+25 (2). https://doi.org/10.5944/ried.25.2.32332
+
+Bentancor, G., Velázquez, L., & Noguera Rosas, P. (2024). Inteligencia Artificial para personalizar el
+aprendizaje de Matemática. Una mirada a un curso de ALEKS para docentes de Educación Media de
+Uruguay . Revista Iberoamericana De Tecnología En Educación Y Educación En Tecnología, (37), e22.
+https://doi.org/10.24215/18509959.37.e22
+
+Bolaño-García, M., & Duarte-Acosta, N. (2023). Una revisión sistemática del uso de la inteligencia
+artificial en la educación. Revista Colombiana de Cirugía .
+
+Carguacundo Avila, F. L., García Vélez, K. N., Urgilés Herrera, D. G., Chica Sandoval, R. C., Suin Guaraca,
+A. M., & Andrade Medina, M. A. (2024). Integración de la IA en el Desarrollo del Material Educativo y
+Didáctico para Docentes del Subnivel Educación General Básica Media en la Asignatura de Ciencias
+Naturales.     Ciencia     Latina    Revista      Científica     Multidisciplinar,  8(2),      1152–1163.
+https://doi.org/10.37811/cl_rcm.v8i2.10557
+
+Chounta, I.-A., Bardone, E., Raudsep, A., & Pedaste, M. (2022). Exploring teachers’ perceptions of
+artificial intelligence as a tool to support their practice in Estonian K-12 education. International Journal
+of Artificial Intelligence in Education, 32(3), 725–755. https://doi.org/10.1007/s40593-021-00243-5
+
+Cisneros Vásquez, E., Nevárez Loza, R., Farez Cherrez, A., & Torres Montes, R. (2024). Uso de la
+inteligencia artificial en la personalización del aprendizaje. Conocimiento Global, 9(1), 75-83.
+Recuperado a partir de https://conocimientoglobal.org/revista/index.php/cglobal/article/view/339
+
+Estrada-Araoz , E. G., Quispe-Aquise , J. ., Malaga-Yllpa, Y., Larico-Uchamaco , G. R., Pizarro-Osorio, G.
+R., Mendoza-Zuñiga, M. ., Velasquez-Bernal , A. C., Roque-Guizada, C. E., & Huamaní-Pérez, M. I. (2024).
+Role of artificial intelligence in education: Perspectives of Peruvian basic education teachers. Data and
+Metadata, 3, 325. https://doi.org/10.56294/dm2024325
+
+Goenechea, C., & Valero-Franco, C. (2024). Educación e Inteligencia Artificial: Un Análisis desde la
+Perspectiva de los Docentes en Formación. REICE. Revista Iberoamericana Sobre Calidad, Eficacia Y
+Cambio En Educación, 22(2), 33–50. https://doi.org/10.15366/reice2024.22.2.002
+
+González Angeletti, V. C. (2024). Análisis Diseños Curriculares de Inteligencia Artificial en Educación
+Media. Revista Iberoamericana De Tecnología En Educación Y Educación En Tecnología, (37), e19.
+https://doi.org/10.24215/18509959.37.e19
+
+González-González, CS (2023). El impacto de la inteligencia artificial en la educación: transformación
+de      la     forma    de      enseñar      y    de     aprender.        Currículo,     36,    51–60.
+https://doi.org/10.25145/j.qurricul.2023.36.03
+
+Guilherme, AA (2017). IA y educación: la importancia de las relaciones entre profesores y alumnos. AI
+& SOCIETY, 34 , 47-54.
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1964.
+
+Jaakkola, H., Henno, J., Lahti, A., Järvinen, J. y Mäkelä, J. (2020). Inteligencia artificial y educación. 2020
+43a Convención Internacional sobre Tecnología de la Información, las Comunicaciones y la Electrónica
+(MIPRO), 548-555.
+
+Kandlhofer, M., Steinbauer, G., Hirschmugl-Gaisch, S., & Huber, P. (2016). Artificial intelligence and
+computer science in education: From kindergarten to university. 2016 IEEE Frontiers in Education
+Conference (FIE), 1-9.
+
+Magallanes Ronquillo, K. K., Plúas Pérez, L. del R., Aguas Veloz, J. F., & Freire Solís, R. L. (2023). La
+inteligencia artificial aplicada en la innovación educativa en el proceso de enseñanza y aprendizaje:
+Artificial intelligence applied to educational innovation in the teaching and learning process. LATAM
+Revista Latinoamericana De Ciencias Sociales Y Humanidades, 4(2), 1597–1613.
+https://doi.org/10.56712/latam.v4i2.706
+
+Martínez-Comesaña, M., Rigueira-Díaz, X., Larrañaga-Janeiro, A., Martínez-Torres, J., Ocarranza-Prado,
+I., & Kreibel, D. (2023). Impacto de la inteligencia artificial en los métodos de evaluación en la educación
+primaria y secundaria: revisión sistemática de la literatura. Revista de psicodidáctica, 28(2), 93–103.
+https://doi.org/10.1016/j.psicod.2023.06.001
+
+Merino Luzón, D. M., Rojas Catota, J. W., Gutiérrez Bautista, L. K., Suárez Urbina, L. V., & Páez Andrade,
+M. R. (2023). Recursos digitales con Inteligencia Artificial para mejorar el Aprendizaje de los
+Estudiantes de educación media: Digital resources with Artificial Intelligence to improve the Learning
+of Secondary Education Students. Revista Científica Multidisciplinar G-nerando, 4(2).
+https://doi.org/10.60100/rcmg.v4i2.141
+
+Morocho Cevallos, R. A., Cartuche Gualán , A. P., Tipan Llanos , A. M., Guevara Guevara , A. M., & Ríos
+Quiñónez , M. B. (2023). Integración de la Inteligencia Artificial en la Educación. Ciencia Latina Revista
+Científica Multidisciplinar, 7(6), 2032-2053. https://doi.org/10.37811/cl_rcm.v7i6.8832
+
+Ruiz Muñoz, G. F., & Yépez González, D. A. (2024). Transformando la Educación a través de la
+Inteligencia Artificial: Un Enfoque en el Aprendizaje Significativo. Revista Social Fronteriza, 4(2), 42191.
+https://doi.org/10.59814/resofro.2024.4(2)191
+
+Sánchez, Á. E. (2021). Literacidad digital enfocada en habilidades lectoras de hipertextos digitales en
+estudiantes             de           secundaria           básica.            Recuperado              de
+https://ciencia.lasalle.edu.co/doct_educacion_sociedad/61
+
+Sánchez-Camacho, R., & Grané, M. (2022). Instrumentos de Evaluación de Inteligencia Emocional en
+Educación Primaria: Una Revisión Sistemática. Revista de Psicología y Educación - Revista de
+Psicología y Educación. https://doi.org/10.23923/rpye2022.01.214
+
+Sanhueza Salazar, N. D., & Valdivia Guzmán, J. (2024). Secuencia didáctica que incorpora el uso de
+Inteligencia Artificial para evidenciar habilidades de literacidad digital en estudiantes de secundaria.
+Revista iberoamericana de tecnología en educación y educación en tecnología, 37, e17.
+https://doi.org/10.24215/18509959.37.e17
+
+Tomalá De La Cruz, M. A., Mascaró Benites, E. M., Carrasco Cachinelli, C. G., & Aroni Caicedo, E. V.
+(2023). Incidencias de la inteligencia artificial en la educación. Análisis del comportamiento de las
+líneas de crédito a través de la corporación financiera nacional y su aporte al desarrollo de las PYMES
+en Guayaquil 2011-2015, 7(2), 238–251. https://doi.org/10.26820/recimundo/7.(2).jun.2023.238-251
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1965.
+
+Torres, Á. F. R., Alarcón, K. E. O., Gaibor, J. A. G., Bermeo, S. D. R., & Castro, H. A. B. (2023). La
+Implementación de la Inteligencia Artificial en la Educación: Análisis Sistemático. Dominio de las
+Ciencias, 9(3), 2162–2178. https://doi.org/10.23857/dc.v9i3.3548
+
+Ubal Camacho, M., Tambasco, P., Martínez, S., & García Correa, M. (2023). El impacto de la Inteligencia
+Artificial en la educación. Riesgos y potencialidades de la IA en el aula. Revista interuniversitaria de
+investigación en tecnología educativa, 41–57. https://doi.org/10.6018/riite.584501
+
+Urquilla Castaneda, A. (2023). Un viaje hacia la inteligencia artificial en la educación. Realidad y
+reflexión, 56, 121–136. https://doi.org/10.5377/ryr.v1i56.15776
+
+Valencia Tafur, A. T., & Figueroa Molina, R. E. (2023). Incidencia de la Inteligencia Artificial en la
+educación. Educatio siglo XXI, 41(3), 235–264. https://doi.org/10.6018/educatio.555681
+
+Zafari, M., Bazargani, JS, Sadeghi-Niaraki, A. y Choi, S. (2022). Aplicaciones de la inteligencia artificial
+en la educación primaria y secundaria: una revisión sistemática de la literatura. IEEE Access, PP, 1-1.
+
+Zepeda Hurtado, M. E., Cardoso Espinosa, E. O., & Cortés Ruiz, J. A. (2024). Influencia de la inteligencia
+artificial en la educación media y superior. RIDE revista iberoamericana para la investigación y el
+desarrollo educativo, 14(28). https://doi.org/10.23913/ride.v14i28.1949
+
+
+
+
+ Todo el contenido de LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, publicados en
+                 este sitio está disponibles bajo Licencia Creative Commons              .
+
+
+
+
+          LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades, Asunción, Paraguay.
+                 ISSN en línea: 2789-3855, octubre, 2024, Volumen V, Número 5 p 1966.

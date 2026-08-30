@@ -1,0 +1,934 @@
+International Journal of Applied Research and Sustainable Sciences (IJARSS)
+Vol. 3 No. 5, 2025: 413 – 430
+
+ Applying Artificial Intelligence Technology To Web-Based
+ School Management System Administrative Task Automation
+
+ Fery Arung Tongka1, Chriscel Novian2, Harisna Indriya Putra3, Ema Utami4,
+ Hanif Al Fattah5
+ Amikom University Yogyakarta
+ Corresponding Author : Fery Arung Tongka feryarungtongka@gmail.com
+ ARTICLEINFO                      ABSTRACT
+ Keywords: Artificial            This research systematically reviews the use of
+ Intelligence, Administrative Artificial      Intelligence   (AI)    to    automate
+ Automation, School              administrative tasks in web-based school
+ Management System               management systems, analyzing 15 articles. It
+                                 identifies key AI modalities such as machine
+ Received : 20 March
+ Revised : 20 April              learning for scheduling, natural language
+ Accepted: 21 May                processing for documentation, and generative AI
+                                 for content creation. Despite significant potential
+ ©2025      Tongka,    Novian, for improving efficiency and reducing manual
+ Putra, Utami, Fattah: This is errors, challenges include limited AI literacy
+ an      open-access     article among educators and administrators. The study
+ distributed under the terms emphasizes the importance of algorithmic
+ of the Creative Commons interpretability and a multi-level implementation
+ Atribusi 4.0 Internasional.     approach. To optimize AI’s benefits, the research
+                                 recommends developing AI literacy programs,
+                                 establishing ethical and regulatory frameworks,
+                                 and building robust technological infrastructure.
+                                 These steps are essential for successful AI
+                                 integration, enabling resource reallocation from
+                                 administrative duties to core educational activities.
+
+
+
+
+  DOI: https://doi.org/10.59890/ijarss.v3i5.37                                    413
+( E – ISSN : 3026-0205
+  https://jpnmultitechpublisher.my.id/index.php/ijarss/index
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+INTRODUCTION
+        The evolution of the educational ecosystem in the digital age has
+experienced a substantial change in terms of administrative oversight. The
+current educational system is encountering challenges regarding efficiency,
+accuracy, and scalability in an administration that is becoming increasingly
+complex. Traditional administrative management, which is marked by manual
+procedures and dependence on the direct involvement of educators and
+administrators, is no longer sufficient to meet the growing operational demands
+of the education sector (Y. Su et al., 2021). This situation leads to an unequal
+distribution of time and resources, favoring administrative tasks over critical
+educational activities. The introduction of a web-based school management
+system represents a strategic approach to addressing this issue; however, the
+automation framework driven by artificial intelligence has yet to be fully
+optimized. The technology of artificial intelligence (AI) has demonstrated
+significant transformative capabilities across multiple industries, including the
+field of education. The abilities of artificial intelligence in handling complex
+information, recognizing patterns, and making decisions based on data present
+transformative opportunities for the automation of educational administration
+(Tangkudung et al., 2024). An online school management system enhanced by
+artificial intelligence has the capability to create significant operational
+efficiencies by reducing manual tasks, speeding up administrative procedures,
+and enhancing the accuracy of educational data management.
+        In the realm of school administrative management, the operational
+responsibilities encompass a broad range of activities, including the oversight of
+student data, the organization of academic schedules, the management of
+assessments, attendance tracking, inventory control, and other related
+administrative functions. Traditional systems that depend on manual processing
+encounter challenges such as inefficiency in time, susceptibility to human
+mistakes, and restrictions in data availability (Hossain et al., 2024). These
+challenges are increasingly experienced as the intricacies of educational
+administration grow and the requirements for more comprehensive reporting
+intensify. Cutting-edge AI-driven methods in educational administration
+systems offer extensive answers to these issues. Artificial intelligence technology
+possesses the ability to streamline administrative tasks through several methods,
+including natural language processing for handling documents and forms,
+machine learning for making predictions and suggestions based on past trends,
+and computer vision for automating tasks related to identification and
+verification (Al-jaf et al., 2024). The incorporation of these technologies into
+online systems provides ideal accessibility via a uniform interface that can be
+utilized across multiple devices.
+        While earlier studies have investigated the adoption of information
+technology-driven school management systems, discussions specifically
+addressing the application of artificial intelligence for automating administrative
+tasks remain comparatively scarce. Risnawati and Hermawan (2023) examine the
+effectiveness of the digital school management system in optimizing
+administrative processes, but the AI dimension is only partially mentioned.
+
+
+
+414
+
+                  International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                  Vol. 3 No. 5, 2025: 413 – 430
+
+Meanwhile, (Chukwudi et al., 2024) discuss the potential of AI in the context of
+education in general without in-depth elaboration on the administrative aspect.
+This identified gap in the literature highlights the necessity for a comprehensive
+review of the current application of artificial intelligence in the automation of
+educational administration processes. This study seeks to methodically examine
+the existing research environment concerning the incorporation of artificial
+intelligence technology in online school management systems, particularly
+highlighting the automation of administrative responsibilities. Utilizing the
+Systematic Literature Review method, this research aims to identify, assess, and
+compile pertinent scientific insights to develop a thorough understanding of the
+possibilities, obstacles, and optimal strategies in the deployment of AI
+technology for the automation of educational administration. This systematic
+review aims to aid in the creation of a conceptual framework for designing and
+executing a web-based school management system that enhances artificial
+intelligence technology.
+        The findings of this research hold considerable importance for creating an
+education management system that is better suited and more responsive to the
+current requirements of institutions. By identifying patterns of successful AI
+implementation, this study provides an empirical basis for innovation in
+educational administrative systems that aligns with the Education 4. 0 paradigm.
+In the long run, enhancing administrative procedures via AI technology could
+enable institutions to redirect their emphasis from administrative challenges to
+improving the quality of learning, which is fundamental to education. (Garg et
+al., 2024). In the context of national strategy, this research addresses the urgent
+necessity for the digital transformation of education as outlined in numerous
+national educational policies. The integration of artificial intelligence in the
+school management system signifies a significant advancement towards
+achieving the goal of an education system that utilizes technology and adjusts to
+the changing landscape of the digital age. Hence, the organized investigation into
+the application of artificial intelligence in the automation of educational
+administration holds significant importance within the current educational
+environment.
+
+RESEARCH METHODS
+        This research employs the Systematic Literature Review (SLR)
+methodology to identify, assess, and interpret findings that are pertinent to the
+utilization of artificial intelligence technology in automating administrative tasks
+within a web-based school management system. This organized method pertains
+to the protocols created by Kitchenham and Charters, which have been adjusted
+to fit the specific research context. The SLR process is carried out in a series of
+organized phases to guarantee the thoroughness and impartiality of the
+analytical findings. The preliminary phase of research involves the development
+of research questions that direct the exploration and examination of existing
+literature. The development of the research questions is guided by the PICOC
+(Population, Intervention, Comparison, Outcomes, and Context) framework to
+guarantee the clarity and significance of the questions in relation to the study's
+
+
+                                                                                           415
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+focus. Based on this framework, four research questions were determined: (1)
+What are the characteristics of the implementation of AI technology in a web-
+based school management system? (2) What are the AI modalities applied in the
+automation of educational administrative tasks? (3) How does the
+implementation of AI impact the efficiency and effectiveness of administrative
+management? (4) What are the challenges and strategies in the integration of AI
+technology in the educational administrative system?
+        The literature search strategy was developed with two complementary
+approaches: automated search and manual search. Automated searches are
+carried out on six academic databases: ScienceDirect, Scopus, SpringerLink, and
+the Education Resources Information Center (ERIC). The search string is
+constructed from a combination of the main terminology with Boolean operators:
+("artificial intelligence" OR "AI" OR "machine learning" OR "deep learning" OR
+"natural language processing") AND ("school management system" OR
+"education management system" OR "learning management system") AND
+("administrative task" OR "administration" OR "automation" OR "web-based").
+Manual searches were conducted on the proceedings of leading conferences in
+the field of educational technology and reputable journals with Impact Factor
+>2.0 that were not indexed in the main database. The study selection applies
+inclusion and exclusion criteria that are set a priori. Inclusion criteria include: (1)
+publication in 2020-2025; (2) articles in English or Indonesian; (3) focus on the
+implementation of AI in the administrative context of education; (4) web-based
+implementation; and (5) present empirical data or substantive conceptual
+frameworks. Exclusion criteria include: (1) articles that do not go through the
+peer-review process; (2) focus on the use of AI for learning, not administration;
+(3) the study is not comprehensive or superficial; and (4) non-web-based
+implementation of AI.
+      The data extraction procedure utilizes a standardized extraction form that
+encompasses publication metadata, research attributes, methodological
+approaches, utilized AI technologies, contextual applications, and significant
+conclusions. Two researchers performed independent data extraction, followed
+by a reconciliation process to reduce potential bias in interpretation. The
+evaluation of the study's quality utilizes an adapted version of the Quality
+Assessment Checklist, which was created based on the Kitchenham framework
+and modified to suit the specific context of the research topic. Data synthesis is
+conducted utilizing a narrative-thematic methodology alongside axial coding
+techniques to discern emerging themes and discern implementation patterns.
+The classification of themes is conducted according to four dimensions: the
+nature of AI technology, the category of automated administrative duties, the
+context in which it is implemented, and the effect on system efficiency. A
+comparative analysis was performed to determine optimal practices and insights
+gained from the different implementations examined. The application of meta-
+analysis is contemplated for specific elements that exhibit methodological
+equivalence and provide sufficient representation of quantitative data.
+
+
+
+
+416
+
+                             International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                             Vol. 3 No. 5, 2025: 413 – 430
+
+RESEARCH RESULTS
+  1. Introduction to Results
+       A. Journal Article Screening
+  Identification
+
+
+
+
+                      Journals identified from the                  The journal is deleted before
+                      Database (n = 309)                            filtering ;
+                                                                    Duplicate records deleted (n
+                                                                    = 102 )
+
+
+
+
+                   Screened journals                             Excluded journals
+                   (n =207 )                                     (n = 95 )
+
+
+
+
+                   Journals sought to take                       Journals that are not taken
+                   (n = 112 )                                    (n = 56 )
+  Screening
+
+
+
+
+                   Journals that are assessed for
+                   eligibility                                      Excluded journals:
+                   (n = 56 )                                        Reason 1 (n = 25 )
+                                                                    Reason 2 (n = 16)
+                                                                    etc.
+   Included
+
+
+
+
+                   Journals included in the survey
+                   (n = 15 )
+                   Journals of included studies
+                   (n = 15 )
+
+
+                                             Figure 01. Prisma Flowchart
+
+       1. Identification: At this stage, an initial search is performed to identify
+          relevant journal articles from various databases. In your research, a total
+          of 309 journals were successfully identified. However, not all of these
+          journals are immediately processed further. At this stage, the process of
+          eliminating duplication is also carried out, namely journals that appear
+          more than once in searches from various sources. A total of 102 journal
+          articles were deleted because they were considered duplicates, leaving 207
+          journals ready for further screening.
+
+
+
+
+                                                                                                      417
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+      2. Screening: After the identification stage, the remaining journals undergo
+         a screening process. In this process, abstracts and journal titles are
+         examined to ensure their relevance to the research topic. Of the 207
+         journals screened, 95 of them were excluded because they did not meet
+         the initial criteria that had been set. At this stage, articles that do not fit the
+         research focus or other inclusion criteria are removed.
+      3. Eligibility: After passing the initial screening stage, 112 journals were
+         examined in more depth. However, of these, 56 journals could not be
+         retrieved or excluded for various reasons, for example, because the full
+         text was not available, or because the journals did not meet the expected
+         methodological or quality requirements.
+      4. Included: In the final stage, the remaining journals are evaluated for
+         eligibility for inclusion in the final review of the study. A total of 56
+         journals have been evaluated for eligibility, but only 15 journals were
+         finally included in the study because they met all the criteria that have
+         been set.
+        The PRISMA flowchart reflects the systematic flow of the literature
+selection process in a systematic review, starting from the identification to the
+final selection of journals that are worthy of inclusion in the research analysis.
+
+
+      B. A brief summary of key findings
+
+                                    Tabel 1. Synthesis
+
+ Ye         Heading       Author and        Method       Key Findings        Relevance to
+   s                          Year                                          Research Title
+ 1       A Survey on      (Tjoa &        Systematic      Categorize        High –
+         Explainable      Guan, 2021)    Review          various AI        Highlights
+         Artificial                                      interpretabilit   important
+         Intelligence                                    y approaches      aspects of
+         (XAI): Toward                                   from simple       interpretability
+         Medical XAI                                     to complex        and
+                                                         with a focus      transparency in
+                                                         on medical        the
+                                                         applications.     implementatio
+                                                         Discuss the       n of AI that can
+                                                         importance of     be applied to
+                                                         algorithmic       school
+                                                         transparency      management
+                                                         in a sector       systems,
+                                                         that requires     particularly in
+                                                         high              the
+                                                         accountability    management of
+                                                         .                 sensitive
+                                                                           student data
+                                                                           and
+                                                                           administrative
+                                                                           aspects that
+
+
+418
+
+                 International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                 Vol. 3 No. 5, 2025: 413 – 430
+
+                                                                          require
+                                                                          accountability.
+2   A preliminary      (Tjoa &         Simulation       Changes in        Low – Focuses
+    simulation         Guan, 2021)     and              occupancy         on building
+    study about                        Modeling         patterns due      energy, but
+    the impact of                                       to COVID-19       shows how
+    COVID-19                                            affect energy     data analysis
+    crisis on                                           needs in          can help with
+    energy                                              mixed             the
+    demand of a                                         building          management of
+    building mix                                        complexes         school facilities
+    at a district in                                    including         which is an
+    Sweden                                              schools, with     administrative
+                                                        increased         aspect.
+                                                        electricity
+                                                        demand but a
+                                                        decrease in
+                                                        system energy
+                                                        demand.
+3   Artificial         (Huynh-The Literature            Exploration of    Medium –
+    intelligence       et al., 2023) (Tjoa &            the role of AI    Provides
+    for the                          Guan,              in metaverse      insights into AI
+    metaverse: A                     2021)Survey        development       technologies
+    survey                                              through           that can be
+                                                        various           implemented
+                                                        technical         in educational
+                                                        aspects such      virtual
+                                                        as NLP,           environments,
+                                                        computer          including
+                                                        vision,           potential
+                                                        blockchain,       applications in
+                                                        and neural        web-based
+                                                        interfaces, as    school
+                                                        well as           management
+                                                        potential         systems.
+                                                        applications
+                                                        including
+                                                        education.
+4   Addressing         (Chanchlani     Literature       The article       Low - Focuses
+    the indirect       et al., 2020)   Review           discusses the     on the health
+    effects of                                          indirect          aspect, but
+    COVID-19 on                                         impact of         touches on
+    the health of                                       COVID-19 on       service system
+    children and                                        the health of     changes
+    young people                                        children and      relevant to
+                                                        adolescents       digital
+                                                        and the           transformation
+                                                        transformatio     in education.
+                                                        n of health
+
+
+
+
+                                                                                          419
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+                                                   service
+                                                   delivery.
+ 5     A deep           (Wang et       Experimenta The              Low –
+       learning         al., 2009)     l Research  development      Although it
+       algorithm                                   of a deep        demonstrates
+       using CT                                    learning         AI's
+       images to                                   algorithm for    capabilities in
+       screen for                                  the diagnosis    visual analysis,
+       Corona virus                                of COVID-19      its applications
+       disease                                     from high-       are specific to
+       (COVID-19)                                  accuracy CT      the medical
+                                                   images is        field and are
+                                                   even able to     not directly
+                                                   detect cases     related to
+                                                   where nucleic    educational
+                                                   acid tests       administration.
+                                                   were initially
+                                                   negative.
+ 6     Addressing       (McLoughli     Mixed-      Evaluation of    Medium –
+       Food             n et al.,      Method      food             Demonstrate
+       Insecurity       2020)          Case Study  distribution     how a school
+       through a                                   strategies in    management
+       Health Equity                               four large       system can
+       Lens: a Case                                school           utilize location-
+       Study of Large                              districts        based data
+       Urban School                                during the       analysis and
+       Districts                                   pandemic         resource
+       during the                                  with an          coordination
+       COVID-19                                    equity           for critical
+       Pandemic                                    approach,        administrative
+                                                   involves a
+                                                   geospatial
+                                                   and
+                                                   qualitative
+                                                   analysis of
+                                                   school
+                                                   policies.
+ 7     Trends in        (McLoughli     Big Data    An analysis of   High -
+       Educational      n et al.,      Analysis    17.9 million     Identifies
+       Technology:      2020)                      Facebook         educational
+       What                                        posts from       technology
+       Facebook,                                   educational      trends relevant
+       Twitter, and                                institutions,    to the
+       Scopus Can                                  131,760          development of
+       Tell us about                               #EdTech          web-based
+       Current                                     tweets, and      school
+       Research and                                29,636 Scopus    management
+       Practice                                    articles shows   systems, as
+                                                   educational      well as
+                                                   technology       demonstrates
+                                                   trends           the importance
+
+
+420
+
+                    International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                    Vol. 3 No. 5, 2025: 413 – 430
+
+                                                           including         of practical
+                                                           increased use     aspects and
+                                                           of digital        equality in
+                                                           media and         technology
+                                                           tools and a       implementatio
+                                                           focus on          n.
+                                                           distance
+                                                           learning.
+8    Generative          (Banh &          Conceptual       The               High –
+     artificial          Strobel,         Review           progression       Generative AI
+     intelligence        2023)                             from              can be
+                                                           discriminative    implemented
+                                                           AI to             in the
+                                                           generative AI     automation of
+                                                           allows for the    administrative
+                                                           creation of       tasks such as
+                                                           creative          document
+                                                           content based     creation,
+                                                           on user           reporting, and
+                                                           prompts, with     communication
+                                                           the potential     in the school's
+                                                           and               management
+                                                           challenges        system.
+                                                           that come
+                                                           with it.
+9    Machine             (Sørensen et     Scoping          A review of       Very High –
+     learning in         al., 2023)       Review           12 studies        Directly
+     general                                               shows             discusses the
+     practice:                                             potential but     automation of
+     scoping                                               limited           administrative
+     review of                                             research on       tasks using
+     administrative                                        the               machine
+     task support                                          application of    learning,
+     and                                                   machine           highlighting
+     automation                                            learning to       research gaps
+                                                           administrativ     and application
+                                                           e tasks in        potentials that
+                                                           general           are highly
+                                                           practice, with    relevant to the
+                                                           a primary         context of the
+                                                           focus on          school
+                                                           scheduling        management
+                                                           and relatively    system.
+                                                           low physician
+                                                           engagement.
+10   Quo vadis           (Jiang et al.,   Historical       The history of    Medium -
+     artificial          2022)            Review           the               Provides a
+     intelligence?                                         development       historical and
+                                                           of AI, the        philosophical
+                                                           challenges it     context of AI
+
+
+                                                                                             421
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+                                                      faces, and its    that helps
+                                                      role in           understand the
+                                                      various           position of
+                                                      sectors           technology in
+                                                      including         the
+                                                      industry,         development of
+                                                      healthcare,       AI-based
+                                                      transportation    school
+                                                      , and             management
+                                                      education, as     systems.
+                                                      well as
+                                                      thoughts on
+                                                      the long-term
+                                                      symbiotic
+                                                      relationship
+                                                      between AI
+                                                      and humans.
+ 11    A breathable,      (Peng et al.,   Experimenta Development       Very Low -
+       biodegradable      2020)           l Research  of e-skins        Focus on the
+       , antibacterial,                               with multi-       development of
+       and self-                                      functional        wearable
+       powered                                        structures that   technology that
+       electronic skin                                can monitor       has minimal
+       based on all-                                  physiological     relevance to a
+       nanofiber                                      signals and       web-based
+       triboelectric                                  movements in      school
+       nanogenerator                                  real-time and     management
+       s                                              self-powered.     system.
+ 12    The Multilevel     (Peng et al.,   Theoretical Theorizing        Medium -
+       Administrativ      2020)           Analysis    about how         Discusses the
+       e State and the                                administrativ     concept of the
+       Future of                                      e structures at   administrative
+       Public                                         one level of      state that is
+       Administratio                                  government        relevant to the
+       n Research                                     affect public     structural
+                                                      governance at     context of the
+                                                      another, and      management of
+                                                      the               the educational
+                                                      importance of     administrative
+                                                      research on       system,
+                                                      multi-level       although does
+                                                      administrativ     not specifically
+                                                      e systems.        discuss AI
+                                                                        technology.
+ 13    Utilization of     (Aldiab et      Case Review A review of       High – Directly
+       Learning           al., 2019)                  the LMS           analyzes web-
+       Management                                     features that     based learning
+       Systems                                        are               management
+       (LMSs) in                                      commercially      systems in the
+       higher                                         available and     context of
+       education                                      used in 28        higher
+
+
+422
+
+                 International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                 Vol. 3 No. 5, 2025: 413 – 430
+
+      system: A case                                    Saudi Arabian     education that
+      review for                                        universities,     can be applied
+      Saudi Arabia                                      with a            to school
+                                                        comparative       management
+                                                        analysis and      systems,
+                                                        their             although it
+                                                        dependence        does not
+                                                        on ICT            specifically
+                                                        infrastructure.   address AI.
+ 14   Artificial       (J. Su et al.,   Scoping         A review of       High –
+      Intelligence     2023)            Review          16 empirical      Discusses the
+      (AI) Literacy                                     studies on AI     implementatio
+      in Early                                          literacy in       n of AI in the
+      Childhood                                         early             context of
+      Education:                                        childhood         education that
+      The                                               education,        can be the
+      Challenges                                        identified        foundation of
+      and                                               challenges        knowledge for
+      Opportunities                                     such as lack of   the
+                                                        teacher           development of
+                                                        knowledge         an AI-based
+                                                        and               school
+                                                        curriculum        management
+                                                        design, as        system that
+                                                        well as           considers user
+                                                        opportunities     literacy.
+                                                        to improve
+                                                        children's AI
+                                                        literacy.
+ 15   Age-Related      (Wong et         Literature      Analysis of       Very Low -
+      Differences in   al., 2020)       Review          differences in    Focus on the
+      Immunologica                                      immunologic       biomedical
+      l Responses to                                    al responses      aspects of
+      SARS-CoV-2                                        to SARS-CoV-      COVID-19 with
+                                                        2 based on        minimal
+                                                        age and its       relevance to
+                                                        implications      school
+                                                        for health and    management or
+                                                        education         AI technology.
+                                                        policies.
+
+
+DISCUSSION
+Modalities of AI Technology in Educational Administrative Automation
+       Exploration of the implementation of artificial intelligence technology in
+the administrative context of education identifies various modalities that have
+transformative potential. Machine learning algorithms are the main foundation
+in the administrative automation approach, with dominant applications in the
+scheduling and coordination functions of educational resources. (Sørensen et al.,
+
+
+
+                                                                                          423
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+2023) revealed that research related to the implementation of machine learning
+in administrative tasks is still limited in number, but shows significant potential
+in improving operational efficiency. Natural Language Processing (NLP)
+technology represents a crucial dimension in educational administrative
+automation, particularly in the processing of documentation and institutional
+communication. NLP's capabilities in extracting information, classifying
+documents, and automating communication responses offer a solution to the
+substantial administrative burden in the education ecosystem. (Huynh-The et al.,
+2023) illustrates how NLP can be leveraged in educational contexts as part of the
+broader metaverse technology ecosystem, offering the potential for more
+immersive interactions in administrative management.
+       The emergence of generative AI marks a significant development in the
+AI technology landscape that is applicable to administrative automation. (Banh
+& Strobel, 2023) describes the distinctive characteristics of generative AI capable
+of generating original content based on user prompts, offering revolutionary
+capabilities in the automation of the creation of administrative documents,
+assessment reports, and institutional communications. The implementation of
+generative AI in the administrative context of education allows for the
+personalization of content at massive scale, simultaneously maintaining
+institutional consistency and reducing administrative workload.
+       The diversification of the implementation of AI modalities in the
+educational administrative ecosystem has been significantly accelerated with the
+development of neural computing architectures that facilitate the application of
+deep learning-based algorithms. This paradigm transcends the limitations of
+conventional machine learning through the integration of recognition-based
+algorithms that are able to identify complex patterns in multidimensional
+administrative data. The significance of this evolution lies in the system's ability
+to extract operational insights from heterogeneous datasets that include non-
+structured administrative documentation, temporal presence data, and
+multivariable assessment matrices. A comprehensive analysis of the
+implementation of AI in the administrative context of education indicates that
+the integration of multiple modalities—including linguistic computing,
+predictive analytics, and recommendation systems—results in a technology
+ecosystem that is adaptive to contextual variability in the administrative
+operations of educational institutions. This constellation of technological
+modalities, when implemented within the framework of an integrated system,
+has the potential to overcome the fragmentation of administrative processes that
+are characteristic of conventional management, as well as offer a comprehensive
+solution to the problem of inefficiency and error propagation in the educational
+administrative process chain.
+
+Implementation of AI in Web-Based School Management Systems
+      An analysis of the implementation of AI in a web-based school
+management system reveals the continuity of evolution from a conventional
+Learning Management System (LMS) to an integrated platform that leverages AI
+capabilities. (Aldiab et al., 2019) identify the spectrum of features in learning
+management systems implemented in higher education institutions, illustrating
+
+
+424
+
+                 International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                 Vol. 3 No. 5, 2025: 413 – 430
+
+the reliance on robust ICT infrastructure. The transition to an AI-based school
+management system requires a comprehensive evaluation of the existing
+technology infrastructure to ensure adequate compatibility and capabilities.
+Trends in the development of educational technology as identified by (Kimmons
+et al., 2021) shows a significant shift towards an integrated web-based platform
+with automated analytics and decision-making capabilities. Analysis of big data
+from various digital sources reveals the transformation of educational
+technology implementation, with a significant increase in the use of digital media
+and collaborative tools integrated in the education ecosystem. The
+implementation of AI in this system represents a logical evolution that optimizes
+the potential of institutional data for administrative efficiency.
+         The implementation of AI technology in the administrative context of
+education requires consideration of interpretability and transparency aspects.
+(Tjoa & Guan, 2021) emphasizing the significance of algorithm interpretability in
+a sector that requires high accountability, which has direct implications for the
+design of AI-based school management systems. The construction of a system
+that allows transparency of algorithmic decision-making is imperative to build
+stakeholder trust and meet regulatory requirements related to education data
+management.
+         The architecture of a web-based school management system that
+integrates AI technology is undergoing a paradigmatic transformation from a
+conventional service-oriented model to an intelligence-driven platform that
+optimizes the orchestration of administrative processes in an adaptive manner.
+This functional diversification manifests itself in the development of AI-based
+microservices designed specifically for administrative aspects such as
+anticipatory resource allocation, automated documentation processing, and
+dynamic scheduling optimization. This implementation framework goes beyond
+a monolithic approach by adopting a modular strategy that facilitates
+progressive scalability and institutional adaptability based on the heterogeneity
+of operational needs. A comparative analysis of existing implementations
+identified significant trends in the development of conversational AI-based front-
+ends that provide natural language interfaces for interaction with administrative
+systems, improving functional accessibility for stakeholders with digital literacy
+variability. Simultaneously with these trends, the evolution of administrative
+back-ends is leading to the implementation of event-driven architecture-based
+systems that facilitate real-time responses to administrative triggers, going
+beyond the limitations of batch processing in conventional systems. This
+convergence of developments has resulted in an administrative technology
+ecosystem that is responsive to the operational dynamics of contemporary
+educational institutions.
+
+Challenges of AI Implementation in Educational Administrative Automation
+       The implementation of AI in educational administrative automation faces
+a complex spectrum of challenges, spanning technical, institutional, and
+sociocultural dimensions. The technical aspects include the limitations of
+infrastructure and system interoperability, while the institutional dimension
+
+
+                                                                                          425
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+relates to organizational resistance and reformulation of work processes. The
+sociocultural dimension includes aspects of digital literacy and resistance to
+change from educators and administrators.
+        The main challenge in the implementation of AI in the administrative
+context of education is identified in the limitations of AI literacy among educators
+and school administrators. (J. Su et al., 2023) identify AI knowledge and skills
+deficits among educators as significant barriers, which has implications for
+institutional capacity to adopt AI-based solutions. The development of a
+comprehensive AI literacy program is an essential prerequisite in facilitating the
+transition to an AI-based administrative system.
+        Historical perspective on the evolution of AI as described by (Jiang et al.,
+2022) reveals fluctuations in the development and adoption of AI technologies,
+which illustrates the complexity of implementation in an applicative context. A
+pragmatic approach to the implementation of AI in the administrative context of
+education requires realistic expectations of technological capabilities as well as
+anticipation of potential limitations in specific applications in the education
+ecosystem.
+
+Prospects for the Development of a Web-Based School Management System
+with AI Integration
+        Analysis of educational technology trends indicates significant prospects
+for the development of web-based school management systems that integrate AI
+capabilities for administrative automation. The evolution from conventional
+web-based systems to integrated platforms that leverage AI represents a
+development trajectory that is consistent with educational technology trends
+globally.
+        The prospects for the implementation of AI in the administrative context
+of education are fundamentally related to the potential reallocation of resources
+from administrative functions to instructional functions. (McLoughlin et al.,
+2020) demonstrate how technology can facilitate the efficient distribution of
+educational resources through spatial and demographic data analysis,
+illustrating the potential use of AI in administrative optimization. The
+implementation of AI in an administrative context has the potential to result in
+significant efficiencies that allow educational institutions to relocate human and
+financial resources to instructional aspects that represent the core of the
+educational mission.
+        A multi-level approach to the implementation of AI in administrative
+systems as suggested by (Trondal, 2025) offers a conceptual framework for
+understanding the interactions between different levels of administration in the
+educational ecosystem. Designing systems that accommodate institutional
+complexity and facilitate interoperability between different levels of
+administration is imperative to optimize the potential of AI in the administrative
+context of education. The multi-level approach not only optimizes operational
+efficiency but also facilitates policy alignment and implementation between the
+various levels of administration in the education ecosystem.
+
+
+
+
+426
+
+                 International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                 Vol. 3 No. 5, 2025: 413 – 430
+
+CONCLUSION
+        Based on a systematic review of the implementation of AI technology in
+the automation of administrative tasks in a web-based school management
+system, this study reveals several fundamental conclusions. First, AI modalities
+integrated in the administrative context of education show transformative
+potential, particularly through machine learning for scheduling optimization,
+natural language processing for documentation processing, and generative AI for
+automated administrative content creation. Significant gains were observed in
+operational efficiency, reduction of manual errors, and reallocation of resources
+from administrative functions to essential instructional activities. The results of
+the analysis indicate that the optimal implementation of AI technology in school
+management systems requires a multi-level approach that accommodates
+institutional complexity and facilitates interoperability between administrative
+levels, as well as paying attention to the interpretability aspect of algorithms to
+build stakeholder trust and meet regulatory requirements.
+        Recommendations for the development of a web-based school
+management system with AI integration cover several strategic aspects. First, the
+development of comprehensive AI literacy programs for educators and
+administrators is an essential prerequisite for overcoming the challenges of
+knowledge deficit. Second, the construction of ethical and regulatory
+frameworks governing the implementation of AI in the administrative context of
+education should be prioritized to guarantee data privacy and algorithmic
+justice. Third, the development of a robust technological infrastructure is an
+essential foundation for the implementation of an effective AI-based system.
+Further research is needed to explore the long-term impact of AI implementation
+on the culture of educational organizations, as well as identify optimal
+mechanisms for achieving a balance between administrative efficiency and
+fundamental educational values. Through a holistic and collaborative approach,
+the transformative potential of AI in the educational administrative ecosystem
+can be optimally realized.
+
+
+
+
+                                                                                          427
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+REFERENCE
+Al-jaf, K., Öz, C., Mahmud, H., Rashid, T. A., Al-jaf, K., Öz, C., Mahmud, H., &
+     Rashid, T. A. (2024). Leveraging Chatbots for Effective Educational
+     Administration : A Systematic Review Leveraging Chatbots for Effective
+     Educational       Administration :        A         Systematic      Review.
+     https://doi.org/10.20944/preprints202410.0238.v1
+
+Aldiab, A., Chowdhury, H., Kootsookos, A., Alam, F., & Allhibi, H. (2019).
+    Utilization of Learning Management Systems (LMSs) in higher education
+    system: A case review for Saudi Arabia. Energy Procedia, 160(2018), 731–737.
+    https://doi.org/10.1016/j.egypro.2019.02.186
+
+Banh, L., & Strobel, G. (2023). Generative artificial intelligence. Electronic Markets,
+    33(1), 1–17. https://doi.org/10.1007/s12525-023-00680-1
+
+Chanchlani, N., Buchanan, F., & Gill, P. J. (2020). Addressing the indirect effects
+   of COVID-19 on the health of children and young people. Cmaj, 192(32),
+   E921–E927. https://doi.org/10.1503/cmaj.201008
+
+Chukwudi, U. M., Aniekan, U. R., & Imoh, S. G. (2024). Examining the Credibility
+   of Artificial Intelligence ( AI ) in Educational Management : Implications for
+   Administration and Planning. 1(1), 14–30.
+
+Garg, L., Agarwal, D., Gupta, D., Goel, P., & Jain, P. (2024). An Intelligent
+    Approach to Admissions using Blockchain and Artificial Intelligence. 2024
+    1st International Conference on Advanced Computing and Emerging Technologies
+    (ACET), 1–5.
+
+Hossain, R., Sohag, H. J., Hasan, F., Ahmed, S., Al- Amin, & Islam, M. M. (2024).
+   Prospective Artificial Intelligence (AI) Applications in the University
+   Education Level: Enhancing Learning, Teaching and Administration
+   through a PRISMA Base Review Systematic Review. Pakistan Journal of Life
+   and Social Sciences, 22(2), 9173–9191. https://doi.org/10.57239/PJLSS-2024-
+   22.2.00694
+
+Huynh-The, T., Pham, Q. V., Pham, X. Q., Nguyen, T. T., Han, Z., & Kim, D. S.
+   (2023). Artificial intelligence for the metaverse: A survey. Engineering
+   Applications       of       Artificial   Intelligence,    117,       1–24.
+   https://doi.org/10.1016/j.engappai.2022.105581
+
+Jiang, Y., Li, X., Luo, H., Yin, S., & Kaynak, O. (2022). Quo vadis artificial
+     intelligence?       Discover       Artificial     Intelligence,     2(1).
+     https://doi.org/10.1007/s44163-022-00022-8
+
+Kimmons, R., Rosenberg, J., & Allman, B. (2021). Trends in Educational
+   Technology: What Facebook, Twitter, and Scopus Can Tell us about Current
+   Research      and      Practice.     TechTrends,    65(2),      125–136.
+   https://doi.org/10.1007/s11528-021-00589-6
+
+
+428
+
+                  International Journal of Applied Research and Sustainable Sciences (IJARSS)
+                                                                  Vol. 3 No. 5, 2025: 413 – 430
+
+Mambu, J. G. Z., Pitra, D. H., Rizki, A., Ilmi, M., Nugroho, W., & Natasya, V.
+   (2023). Pemanfaatan Teknologi Artificial Intelligence ( AI ) Dalam Menghadapi
+   Tantangan Mengajar Guru di Era Digital. 06(01), 2689–2698.
+
+McLoughlin, G. M., McCarthy, J. A., McGuirt, J. T., Singleton, C. R., Dunn, C. G.,
+   & Gadhoke, P. (2020). Addressing Food Insecurity through a Health Equity
+   Lens: a Case Study of Large Urban School Districts during the COVID-19
+   Pandemic.       Journal    of     Urban       Health,      97(6),     759–775.
+   https://doi.org/10.1007/s11524-020-00476-0
+
+Peng, X., Dong, K., Ye, C., Jiang, Y., Zhai, S., Cheng, R., Liu, D., Gao, X., Wang, J.,
+    & Wang, Z. L. (2020). A breathable, biodegradable, antibacterial, and self-
+    powered electronic skin based on all-nanofiber triboelectric nanogenerators.
+    Science Advances, 6(26). https://doi.org/10.1126/sciadv.aba9624
+
+Sørensen, N. L., Bemman, B., Jensen, M. B., Moeslund, T. B., & Thomsen, J. L.
+    (2023). Machine learning in general practice: scoping review of
+    administrative task support and automation. BMC Primary Care, 24(1), 1–14.
+    https://doi.org/10.1186/s12875-023-01969-y
+
+Su, J., Ng, D. T. K., & Chu, S. K. W. (2023). Artificial Intelligence (AI) Literacy in
+     Early Childhood Education: The Challenges and Opportunities. Computers
+     and Education: Artificial Intelligence, 4(October 2022), 100124.
+     https://doi.org/10.1016/j.caeai.2023.100124
+
+Su, Y., Chen, G., Li, M., Shi, T., & Fang, D. (2021). Design and Implementation of
+     Web Multimedia Teaching Evaluation System Based on Artificial
+     Intelligence     and     jQuery.    Mobile     Information   Systems,   2021.
+     https://doi.org/10.1155/2021/7318891
+
+Tangkudung, R. R. S., Wartabone, I. N., Meisy, C., Rivaly, F., Komalig, M.,
+    Radjak, A. A., & Injili, L. K. (2024). Online Management System for Universities
+    Based on A Website. 5(11), 5197–5204.
+
+Tjoa, E., & Guan, C. (2021). A Survey on Explainable Artificial Intelligence (XAI):
+    Toward Medical XAI. IEEE Transactions on Neural Networks and Learning
+    Systems, 32(11), 4793–4813. https://doi.org/10.1109/TNNLS.2020.3027314
+
+Trondal, J. (2025). The Multilevel Adminiﬆrative State and the Future of Public
+    Adminiﬆration Research The Multilevel Administrative State and the Future
+    of Public Administration ABSTRACT. International Journal of Public
+    Administration,                      48(5–6),                     321–333.
+    https://doi.org/10.1080/01900692.2024.2412273
+
+Wang, S., Kang, B., Ma, J., Zeng, X., Xiao, M., Guo, J., Cai, M., Yang, J., Li, Y.,
+   Meng, X., & Xu, B. (2009). Kobashigawa, J., Youn, H.S., Iskander, M. and
+   Yun, Z., 2009, June. Comparative study of genetic programming vs. neural
+   networks for the classification of buried objects. In 2009 IEEE Antennas and
+
+
+                                                                                           429
+
+Tongka, Novian, Putra, Utami, Fattah
+
+
+      Propagation Society International Symposium (pp. 1-4). IEEE. Antennas and
+      Propagation       Society       International     Symposium,         1–4.
+      https://doi.org/10.1007/s00330-021-07715-1
+
+Wong, L. S. Y., Loo, E. X. L., Kang, A. Y. H., Lau, H. X., Tambyah, P. A., & Tham,
+  E. H. (2020). Age-Related Differences in Immunological Responses to SARS-
+  CoV-2. Journal of Allergy and Clinical Immunology: In Practice, 8(10), 3251–3258.
+  https://doi.org/10.1016/j.jaip.2020.08.026
+
+
+
+
+430

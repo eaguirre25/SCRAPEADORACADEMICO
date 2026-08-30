@@ -1,0 +1,336 @@
+International Journal of Information and Education Technology, Vol. 10, No. 9, September 2020
+
+
+
+            Integration of School Management Systems Using a
+                      Centralized Database (ISMSCD)
+                                              Romeo E. Balcita and Thelma D. Palaoag
+
+
+                                                                                 workers. Client’s records needs to be checked and updated
+   Abstract—School have different departments and offices with                   from time to time now but they are doing this by manual
+interrelated functionalities that needs one’s cooperation in                     searching and writing. Transactions are very slow, records
+order to function well. Offices are scattered across the campus                  errors are greater, miscommunications can happen anytime,
+and transfer of information is affected. The need to build an
+integrated School Management System using a centralized
+                                                                                 error in computations, mishandling of data, slow production
+database will make school services of better quality. The need to                of reports and performance of employees are not that
+integrate technologies like barcodes, use of internet, video                     satisfying. This will result to student’s perception that the
+cameras, sensors and the use of a better framework are needed                    school is of low quality in all aspect of its services [3].
+to cope up with the changing needs of the society and in                            School managers are the head of the institution. They need
+providing quality school service. Thus this study aimed to build                 to analyze lots of data in order to come up with decision
+such system, implement the system and identify the level of
+acceptability. Features of the system include enrollment,
+                                                                                 making. Major success of the school lies on them. Providing
+assessment, report generation and providing decision support                     them tools that helps them in their decision making is very
+module. The system is based from a standardized school                           essential nowadays. They need decision support systems to
+management framework derived from different existing school                      provide a quality service that satisfies clients. Some are no
+management systems. This is under qualitative as well as                         yet familiar how powerful information technology is. They
+descriptive research. Agile AWE model is used in the project                     use computers but not as efficient as the computer can
+development. This is implemented in an institution that uses
+manual process of school management. Manager, staff, teachers,
+                                                                                 provide [4]. They use standalone applications that provide
+students and guardian will provide the needed system                             similar result of that of manual process. Other school
+requirements and at the same time they will be the respondents                   managers that tried using SMS verify that their productivity
+in getting the level of acceptability. Feedbacks are continuously                and performance improves beyond their expectations. A
+gathered and helps identify possible improvements. This system                   complete SMS provide all their needed information
+is beneficial to institutions currently using manual process in                  necessary in their decision making process.
+their departments. This is a fully functional and configurable
+system that will suit to the needs and surely provide quality
+                                                                                    Computerized information systems have been developed
+service.                                                                         and applied in schools throughout the world, and shows
+                                                                                 significant improvement especially in the decision-making
+  Index Terms—School management system, centralized                              process. But an incomplete SMS will not provide the most
+database.                                                                        efficient service. Incomplete SMS lacks other modules. It
+                                                                                 contains the key components but other offices are not
+                                                                                 integrated due to prioritizing components. An incomplete
+                         I. INTRODUCTION                                         SMS have problems like less integration of office services [5].
+   School Management System (SMS) is an information and                          Some reports are still manually prepared. Human errors are
+data processing system that consist of integrated sub-systems                    greater and still time consuming for other manual processes.
+for managers, teachers, staff, guardians and students. SMS                          Thus, the aim of this study is to integrate SMS using a
+aims to help school management to improve all the services                       centralized database. The need to use a carefully analyzed
+provided by the school. The adaptation of technologies as                        framework must be considered to improve the performance
+well as improving features of SMS will continue to carry on,                     of SMS. This study will also identify SMS features, build the
+as the needs of people concern in the services of the                            SMS, identify technology needed and incorporate it,
+institution continuously changing. Faster and convenient                         implement and verify the level of acceptability of the system.
+service using different platforms is of primary concern [1].
+Schools using standalone applications in different offices are
+not sufficient anymore to provide quality services. It limits                                  II. CONCEPTUAL FRAMEWORK
+the capability of users providing output slowly and of low                          Building a School Management System (SMS) needs
+standards [2].                                                                   strong foundation like finding the right components and
+   Other schools are still using manual process. The growing                     analyzing existing frameworks for improvement [6].
+number of clients affects already the services provided by                          The need to adapt to the latest trends in Information
+                                                                                 Technology (IT) will help improve the quality of education
+   Manuscript received January 13, 2020; revised April 7, 2020.                  and handling various activities of the school. The use of
+   R. E. Balcita is with the Northern Philippines College for Maritime,          technology changed the quality of education for the better [7].
+Science and Technology, Brgy. Lingsat, San Fernando City, La Union,
+Philippines (e-mail: romeo_balcita@yahoo.com).                                   It makes procedures and systems, better integrate with
+   T. D. Palaoag is with the University of the Cordilleras, College of           factions, departments and various stakeholders. Productivity
+Information     Technology,     Baguio    City,   Philippines   (e-mail:         and performance are enhanced, maximizing employee’s
+tpalaoag@gmail.com).
+
+doi: 10.18178/ijiet.2020.10.9.1446                                         704
+
+              International Journal of Information and Education Technology, Vol. 10, No. 9, September 2020
+
+potentials or even recognize them Using information systems             is used. Fig. 4 shows the Agile AWE model used in the
+increases managerial effectiveness by directing strategies [8].         system development of the SMS.
+But all this is possible only by using an efficient system. A
+system builds with a modeled framework which delivers the
+key functionalities making work much easier for
+administrators, faculty, students and other stakeholders [9].
+   Schools have different offices with their own policies and
+procedures [10]. Components needed for building SMS must
+be identified together with its functionalities and procedure.
+Literature review of existing system is conducted to identify
+these components. Common components and added
+components must be identified for the scope and delimitation
+of the study. Also, the framework of the system must be built
+based on the user requirements and components of existing
+                                                                                         Fig. 4. AWE development cycle.
+systems. For this study, an SMS framework must be
+presented, showing the key components and system modules
+                                                                           AWE model is good for system development in a web
+of the system.
+                                                                        platform and supports fast pace development of
+   Proving the system’s effectiveness is an essential part. It
+                                                                        multi-systems [12]. System of the different offices is created
+shows the quality of the system and gives assurance to users
+                                                                        one by one until all the components of SMS are done.
+[11]. Feedbacks and tools to measure effectiveness must be
+presented. Fig. 1 shows the factors affecting system’s
+effectiveness.
+                                                                                        III. DISCUSSION OF FINDINGS
+
+                                                                          A. Components of SMS
+                                                                           School management is directly related to business
+                                                                        management methods [13]. Business management has three
+                                                                        primary organizational management processes, the resource
+                                                                        management, processes management and outcomes
+                                                                        management [14]. This has leads to the pyramid model of
+                                                                        school management consisting of three components, resource
+                                                                        management, processes management and outcomes
+            Fig. 1. Factors affecting system effectiveness.             management [15].
+                                                                           For the resource management, this element deals with the
+  Information use is determined by two factors, information             handling of inventory as well as purchases. The proper
+and systems quality which lead to user satisfaction.                    handling of resources and budget management contributes to
+Feedbacks from users will determine the systems effectives.             the improvement of the school [16].
+A tools must be used to measure the system effectives like the             Processes Management involves task like evaluation,
+Technology Acceptance Model (TAM), see Fig. 2.                          syllabus development, administrative processes, schedule
+                                                                        planning, organizing, arranging, eliminating, and updating
+                                                                        processes of school. Policies and procedures, collaborations
+                                                                        and integration of different offices involved [17].
+                                                                           Outcomes management concerns with the processing of
+                                                                        output, discovering standards, generation of reports as well as
+                                                                        suggested revisions for improvements [18].
+               Fig. 2. Technology acceptance model.                        This pyramid model of school management provides
+                                                                        insights about the components, modules, functions and
+   This study uses the System Usability Scale (SUS) to                  features of the SMS. But using this model requires good
+identify the level of acceptability. It has ten (10) questions          management.
+that are based from the factors affecting systems acceptance.              Good management results to quality service. Nowadays
+This is best for surveys with small sample size. Fig. 3 shows           effective management requires the help of technology [19].
+the score guide of the result in using SUS.                             Technologies like barcoded identification (ID), use of
+                                                                        internet, video cameras, sensors and computer systems [20].
+                                                                        Barcoded ID’s is still one of the cheapest ways to handle
+                                                                        different services. Barcode gives unique identification that
+                                                                        can be applied for instant searching of records. It can be used
+                                                                        student entrances, assessment, library transactions, and
+                                                                        academic concerns. The use of internet for school services
+                                                                        provides another improvement. School websites can provide
+                       Fig. 3. SUS score guide.                         availability of information to all people concerned. With
+                                                                        student’s online account, one can view his own records like
+  For this study, the Agile Web Engineering (AWE) model                 grades, schedules, and assessment concerns. Teachers can
+
+                                                                  705
+
+              International Journal of Information and Education Technology, Vol. 10, No. 9, September 2020
+
+enter grades anytime anywhere and view needed information
+with the availability of the internet. Student’s guardian online
+account, giving them information to student’s attendance and
+grade monitoring which will give them ease of mind.
+   Finding the needed components for SMS is very essential.
+SMS wide scope makes it complicated to identify the needed
+components. Existing SMS like Engage, ELCEN, FeKara,
+MySchool, AscendSMS, and SchoolTool were studied and
+analyzed which results to identifying the four key
+components of SMS: admission, fees, assessment and
+academics module
+   Admissions. Student fees associated with their details and
+parent details will be processed here along with fee receipts.
+Modules associated with these includes: admission inquiry,
+admission form, confirmation of fees, online accounts
+associated with the school websites.
+   Fees Management. This includes various transactions
+concerning payments of students. Providing updated                                  Fig. 5. SMS components integration framework.
+mapping with account and generating comprehensive fee
+reports.                                                                    Administrator. This module handles accounts of
+   Student Assessment. This includes ways to assess students             employees. System settings are managed here regarding
+as well as recording outputs. It also provides ways for easy             school year and semester.
+communication between student and teacher.                                  Manager. Different analytical reports were presented in
+   Academic. This includes functions like updating daily                 this module for decision making. It includes reports like
+classwork, assigning homework, organize lesson plan,                     financial reports, student academic relating to other factor
+syllabus scheduling and updating completed lesson.                       report, examination questionnaire difficulty status, quality
+   Other components of SMS include admission management,                 assurance report and guardian to student monitoring report.
+fees, academic management, inventory, hotel management,                     Deans. Subject entry can be handled in this module and
+guardian, teacher, employees management, student transport,              also with the registrar module. Student academic inputs are
+report generation, online module and library management.                 manage here. Reports in this module includes class roster
+                                                                         report and subject schedules.
+  B. Architectural Framework
+                                                                            Accounting. This module manages fees both for student
+   This study uses 3- tier architecture. MySQL server runs as            and employees. Permits as well as receipts are printed in this
+backend data tier, business rules represented in PHP as the              module. Reports includes student term fees and student
+middle logic tier and web server as the third presentation tier.         balances.
+   Tier-1. MySQL server is chosen as the system’s backend                   Guardian Portal. This module handles guardian inquiries.
+repository for its strengths in referential integrity, triggers,         From student payments, grades, appointments, call slips,
+and supports of multiple users’ access. Connectivity between             student attendance and schedule.
+MySQL server to the application is an easy task to PHP.                     Librarian. This module handles borrower’s library
+   Tier-2. Business logics govern the policies involved in               transactions. Management regarding book inventory is also
+school management. Modules are created using PHP codes.                  feature here. Reports include book listing, active borrowers,
+The PHP files reside on the platform as the web server                   and data analytic report regarding mostly borrowed books.
+connector on the presentation tier. The business logics are                 Student Portal. This module features management of
+stored in PHP due its portability and platform independence.             student inquiries. Grades and schedule can be viewed by
+A PHP file is portable to multiple operating systems though it           students. Downloadable forms are also available for students.
+was created in a single operating system.                                   Academic Affairs. This handles grade management. It
+   Tier-3. Presentation is based on HTML. This is used                   handles settings of grading systems. It also handles the
+develop the interface and interaction between users and the              management of evaluation system both for students and
+system.                                                                  instructors.
+   Fig. 5 shows the SMS components integration framework.                   Security Office. This module handles the entry
+It consists of components like the administrator, registrar,             management for employees, students and visitors. It has a
+guardian portal, student portal, library, accounting, academic           generation of reports for daily and specified number of days.
+affairs, student affairs office, student body organization,                 Clinic. This module features management of student and
+security office, clinic, human resource office, maintenance              employee health concerns. It also covers the management of
+and dean’s account.                                                      inventory of medicines in the school. Records of students
+   Registrar. This module handles managing departments,                  with disabilities and medical history were managed here.
+degrees, curriculum and subjects. Student records as well as                Human Resource Office. This module manages daily time
+guardians are managed here including the processing of                   record of employees. It also handles the management of
+accounts. Since registrar handles enrollment data, subject               employee records.
+offerings, class card, enrollment list, and Student Affairs                 Student Body Organization. This module handles
+Office (SAO) report are managed here.                                    management of student school officers. It covers the
+
+
+                                                                   706
+
+              International Journal of Information and Education Technology, Vol. 10, No. 9, September 2020
+
+information dissemination to officers by email and text                computed average is 87%. The usability score ranged under
+messaging system.                                                      “acceptable” and has achieved a grade scale of “A” with an
+   Student Affairs Office. This module manages the                     adjective equivalent rating “Best Imaginable”.
+attendance monitoring and verification of students. It also
+manages the election system of student school officers.
+   Maintenance Office. This module features management of
+equipment and materials in the school. It covers the inventory
+and check-up schedule as well as purchasing new items.
+Schedule management system for custodians is also
+presented in this module.
+  C. SMS Screenshots                                                                     Fig. 7. SUS score equivalent.
+  Fig. 6 below shows the different screenshots of the SMS.
+User accounts are categorized based on their functionalities.
+These different modules are interconnected with their
+functionalities making flow of information faster.
+
+
+
+
+                                                                                       Fig. 8. Respondents SUS SCore.
+
+
+
+
+                  Fig. 6. Screenshots of the SMS.
+
+
+  D. Level of Acceptability
+   The SUS questionnaire is given to twenty four (24)                               Fig. 9. SUS Questionnaire 5 point scale.
+respondents. Breakdown are the following: one (1)
+administrator, one (1) manager, two (2) registrar, two (2)               After one month testing, the system is immediately
+teachers, three (3) librarians, five (5) students and five(5)          implemented. After six months, SUS questionnaire is given
+parents. Fig. 7 shows the chart of the different respondents           to the respondent to identify their level of acceptability.
+and Fig. 8 shows the percentage on every questions. The                Based on the result, the respondents are satisfied with the
+                                                                       performance of the system. According to the school staff,
+
+                                                                 707
+
+                   International Journal of Information and Education Technology, Vol. 10, No. 9, September 2020
+
+their performance and services provided to the students were                           [9]  P. C. Lai, “The literature review of technology adoption models and
+                                                                                            theories for the novelty technology,” JISTEM - Journal of Information
+improved. Students were also satisfied with the system and                                  Systems and Technology Management, vol. 14, no. 1, pp. 21-38, 2017.
+their queries were now immediately answered.                                           [10] F. Ugwoke, “A computerized educational administrative information
+   Fig. 9 shows the SUS questionnaire with the 5 point scale                                system for post-primary school management board (PPSMB) Enugu
+                                                                                            state,” Journal of Software Engineering and Simulation, vol. 2, no. 9,
+answer of the respondents. Some of the respondents, in the                                  pp. 18–28, 2015.
+part of students and guardians, were not that familiar in using                        [11] P. Kalay and D. Chen, “Effects of integrating a computerized
+computers that gives lower ratings to the system but majority                               information system on decision making processes in school
+of respondents gives high rating. R represents Registrar                                    management,” in Proc. SITE 2004--Society for Information
+                                                                                            Technology & Teacher Education International Conference, 2004.
+personnel, A for administrator, M for Manager, D for deans,                            [12] N. Serbedzija, “E-school: A web-based school management system,”
+C for cashier, L for librarian, S for students, G for guardians                             in Proc. the IASTED International Conference on Computers and
+and T for teachers.                                                                         Advanced Technology in Education, 2003.
+                                                                                       [13] M. Markus, “Alfred P. Sloan School of management. Power, politics,
+                                                                                            and MIS implementation,” Communications of the ACM, vol. 26, no. 6,
+                                                                                            pp. 430–444, 1983.
+                             IV. CONCLUSION                                            [14] V. Banabakova, M. Stoilova, and I. Dacheva, “The management of
+                                                                                            changes in the system of school education,” Knowledge International
+   Integration of SMS using a centralized database and with                                 Journal, vol. 28, no. 3, pp. 743–752, 2018.
+the use of technologies truly enhances quality of service                              [15] Y. Guan, W. Shi, and D. Wu, “The design and development of a school
+                                                                                            file management system for standardized,” in Proc. 2012 International
+provided by school in every way. User’s level of                                            Conference on Computer Science and Electronics Engineering, 2012.
+acceptability proves that the system improves services of the                          [16] Y. Usman, “Educational resources: An integral component for
+school. User feedbacks are also gathered and help in the                                    effective school administration,” Research on Humanities and Social
+                                                                                            Sciences, vol. 6, no. 13, 2016.
+improvement of the system. The different existing systems,                             [17] S. Chen, B. Mulgrew, and P. M. Grant, “A clustering technique for
+frameworks and studies became the key component in                                          digital communications channel equalization using radial basis
+building the system more efficient. This is not only beneficial                             function networks,” IEEE Trans. on Neural Networks, vol. 4, pp.
+                                                                                            570-578, July 1993.
+to school managers but more importantly to the students and
+                                                                                       [18] R. Dy, M. J. Laridab, and B. Tanguilig, “e-DoX:DEPED student grade
+guardians who are the main concern of school management                                     records management system with implementation of advanced
+system.                                                                                     encryption standard and PKI infrastructure,” International Journal of
+                                                                                            Sciences: Basic and Applied Research, vol. 11, no. 1, pp. 112-158,
+                                                                                            2013.
+                         CONFLICT OF INTEREST                                          [19] K. Bipath, “Challenges faced by the school management team (SMT)
+      The authors declare no conflict of interest.                                          regarding school safety in South Africa,” International Journal of
+                                                                                            Sciences and Research, vol. 73, no. 3, Mar. 2017.
+                                                                                       [20] C. Cheng, School Effectiveness and School-Based Management,
+                        AUTHOR CONTRIBUTIONS                                                Routledge, 2013.
+  Romeo Balcita conceived and designed the analysis,                                   Copyright © 2020 by the authors. This is an open access article distributed
+collected the data, contributed data or analysis tools,                                under the Creative Commons Attribution License which permits unrestricted
+performed the analysis, build the system, and wrote the paper.                         use, distribution, and reproduction in any medium, provided the original
+                                                                                       work is properly cited (CC BY 4.0).
+Dr. Therma Palaoag gives insights in making the research.
+                                                                                                              Romeo E. Balcita was born in Bokod, Benguet,
+                                REFERENCES                                                                    Philippines on July 14, 1982. He finished the primary
+                                                                                                              school at Amallapay Elementary School at
+[1]     O. Benjamin and O. Kingsley, “Automated school management system                                      Amallapay, Tubao, La Union, Philippines; secondary
+        – Recipe for viable educational system in developing countries,”                                      school at Tubao National High School at Tubao, La
+        International Journal of Engineering Trends and Technology, vol. 25,                                  Union, Phils. He graduated with a bachelor of science
+        no. 3, 2015,                                                                                          in computer science at Colegio De Dagupan at
+[2]     F. N. Ugwoke and C Samuel, “A Computerized educational                                                Dagupan City, Phils.; master of information
+        administrative information system for post-primary school                      technology (2009) at the University of the Cordilleras at Baguio City, Phils.
+        management board (PPSMB) enugu state,” Journal of Software                     Currently he is working as the dean of Computer Dept. at Northern
+        Engineering and Simulation, vol. 2, issue 9, pp. 18-28, 2015.                  Philippines College for Maritime, Science and Technology, Lingsat, San
+[3]     K. Beycioglu, “Current issues in educational management and                    Fernando City, La Union, Philippines. He is the co-author of two papers
+        leadership,” Journal of Management Development, vol. 3, December               entitled: Employee-Client Service Management Evaluation Based on Facial
+        2011.                                                                          Recognition and, School Intrusion Notification and Alarm System Using
+[4]     A. A. Owojori and T. O. Asaolu, “Critical Evaluation of personnel              Face Recognition, both presented at (WCSE 2018) Bangkok, 28-30 June,
+        management problems in the nigerian school system,” Int J Edu Sci.,            2018.
+        vol. 2, no. 1, pp. 1-11, 2010.
+[5]     R. E. Anderson and S. Dexter, “School technology leadership: An                                       Thelma Domingo Palaoag is the college research
+        empirical investigation of prevalence and effect,” Educational                                        coordinator and department head of computer science
+        Administration Quarterly, vol. 41, no. 1, pp. 49-82, 2005.                                            in College of Information Technology and Computer
+[6]     K. Cowan, K. Vaillancourt, E. Rossen, and K. Pollitt, A Framework for                                 Science, University of the Cordilleras, Baguio City,
+        Safe and Successful Schools, Bethesda, MD: National Association of                                    Philippines.
+        School Psychologists, 2013.
+[7]     A. Yuen, N. Law, and K. Wong, “ICT implementation and school
+        leadership: Case studies of ICT integration in teaching and learning,”
+        Journal of Educational Administration, vol. 41, no. 2, pp. 158-170,
+        2013.
+[8]     O. Ogochukwu and C. Ezenwegbu, “Page application of management
+        information system in Chukwuemeka Odumegwu,” IOSR Journal of
+        Mobile Computing & Application, vol. 6, issue 1, 2019.
+
+
+
+
+                                                                                 708

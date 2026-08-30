@@ -1,0 +1,861 @@
+ORIGINAL RESEARCH
+                                                                                                                                                  published: 29 April 2021
+                                                                                                                                         doi: 10.3389/fpsyg.2021.641806
+
+
+
+
+                                                Psychological Impact of COVID-19
+                                                on College Students After School
+                                                Reopening: A Cross-Sectional Study
+                                                Based on Machine Learning
+                                                Ziyuan Ren 1† , Yaodong Xin 2† , Junpeng Ge 3† , Zheng Zhao 1 , Dexiang Liu 1*,
+                                                Roger C. M. Ho 4 and Cyrus S. H. Ho 4
+                                                1
+                                                 Department of Medical Psychology and Ethics, School of Basic Medicine Sciences, Cheeloo College of Medicine,
+                                                Shandong University, Jinan, China, 2 School of Statistics and Management, Shanghai University of Finance and Economics,
+                                                Shanghai, China, 3 School of Biology Engineering, Shandong Jianzhu University, Jinan, China, 4 Department of Psychological
+                                                Medicine, Yong Loo Lin School of Medicine, National University of Singapore, Singapore, Singapore
+
+
+
+                                                COVID-19, the most severe public health problem to occur in the past 10 years, has
+                                                greatly impacted people’s mental health. Colleges in China have reopened, and how
+                                                to prevent college students from suffering secondary damage due to school reopening
+                                                remains elusive. This cross-sectional study was aimed to evaluate the psychological
+                           Edited by:
+                       Fushun Wang,             impact of COVID-19 after school reopening and explore via machine learning the factors
+         Nanjing University of Chinese          that influence anxiety and depression among students. Among the 478 valid online
+                     Medicine, China
+                                                questionnaires collected between September 14th and September 20th, 74 (15.5%)
+                      Reviewed by:
+                        Xiaolu Zhou,
+                                                showed symptoms of anxiety (by the Self-Rating Anxiety Scale), and 155 (32.4%) showed
+  Shanghai Normal University, China             symptoms of depression (by Patient Health Questionnaire-9). Descriptive analysis of
+                     Eleni Vousoura,
+                                                basic personal characteristics indicated that students at a higher grade, having relatives
+ American College of Greece, Greece
+                                                or friends who have been infected, fearing being infected, and having a pessimistic
+                   *Correspondence:
+                          Dexiang Liu           attitude to COVID-19 easily experience anxiety or depression. The Synthetic Minority
+               liudexiang@sdu.edu.cn            Oversampling Technique (SMOTE) was utilized to counteract the imbalance of retrieved
+     † These authors have contributed           data. The Akaike Information Criterion (AIC) and multivariate logistic regression were
+    equally to this work and share first        performed to explore significant influence factors. The results indicate that exercise
+                            authorship
+                                                frequency, alcohol use, school reopening, having relatives or friends who have been
+                   Specialty section:           infected, self-quarantine, quarantine of classmates, taking temperature routinely, wearing
+         This article was submitted to          masks routinely, sleep quality, retaining holiday, availability of package delivery, take-out
+      Psychology for Clinical Settings,
+               a section of the journal
+                                                availability, lockdown restriction, several areas in school closed due to COVID-19, living
+               Frontiers in Psychology          conditions in the school, taking the final examinations after school reopening, and the
+       Received: 15 December 2020               degree to which family economic status is influenced by COVID-19 are the primary
+          Accepted: 29 March 2021               influence factors for anxiety or depression. To evaluate the effect of our model, we used
+           Published: 29 April 2021
+                                                5-fold cross-validation, and the average area under the curve (AUC) values of the receiver
+                            Citation:
+    Ren Z, Xin Y, Ge J, Zhao Z, Liu D,          operating characteristic (ROC) curves of anxiety and depression on the test set reached
+         Ho RCM and Ho CSH (2021)               0.885 and 0.806, respectively. To conclude, we examined the presence of anxiety and
+Psychological Impact of COVID-19 on
+       College Students After School
+                                                depression symptoms among Chinese college students after school reopening and
+ Reopening: A Cross-Sectional Study             explored many factors influencing students’ mental health, providing reasonable school
+         Based on Machine Learning.             management suggestions.
+          Front. Psychol. 12:641806.
+    doi: 10.3389/fpsyg.2021.641806              Keywords: COVID-19, anxiety, depression, college student, machine learning
+
+
+
+Frontiers in Psychology | www.frontiersin.org                                         1                                             April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                               COVID-19 Psychological Impact on Students
+
+
+
+INTRODUCTION                                                                Bangladesh (Khan et al., 2020). It is necessary and urgent to
+                                                                            improve college students’ mental status, and any exacerbation
+COVID-19 (coronavirus disease 2019), the most severe public                 due to strict school regulations after school reopening is
+health problem to occur in the past 10 years, has dramatically              unacceptable (Giannopoulou et al., 2020; Kalok et al., 2020).
+impacted the medical health service systems worldwide, causing                 Whether universities should implement strict regulations
+57,882,183 confirmed cases and 1,377,395 confirmed deaths up                remains controversial (Beijing News, 2020). Some think it is
+to 22 November 2020 (World Health Organization, 2020). It                   irrational to sacrifice students’ mental health to prevent COVID-
+was first discovered in Wuhan, the Hubei province’s capital                 19 transmission. Others believe the strict regulation will not
+city, China, and rapidly spread to other regions (Guan et al.,              cause mental damage to college students. COVID-19 will not be
+2020a,b). Indeed, after strict regulations were administrated               the last pandemic, so it is of great significance to accumulate
+across China, including quarantine, mask-wearing, large-scale               experience to avoid severe damage to college students’ mental
+nucleic acid assay, etc., the situation of COVID-19 in China                health during the next pandemic event. However, no published
+significantly improved (Tang et al., 2020; Tu et al., 2020).                articles have investigated the current psychological status of
+From 19 November to 21 November 2020, the number of new                     students under these regulations. To this end, we conducted this
+cases discovered in China was 11 (National Health Commission                cross-sectional study via an online questionnaire to ascertain
+of the People’s Republic of China, 2020). However, more                     the psychological impact after school reopening on students
+psychologists find that psychological problems, especially post-            among five universities across China. Further, we performed
+traumatic anxiety and depression, also matter after this dreadful           machine learning to screen out risk and protective factors that
+disaster (Mazza et al., 2020; Pappa et al., 2020; Shader, 2020;             influence the college students’ mental health status, including
+Vindegaard and Benros, 2020).                                               school regulation, family situation, and personal living styles.
+   Due to the severity of COVID-19 in the first half of this                These influence factors may provide some sensible advice for
+year, universities across China were closed, and all the students           the school administrative department to prevent college students
+stayed at home and took online courses. In May and June,                    from mental diseases.
+several universities in the so-called low-risk area reopened. Their
+students came back to attend their final exams, while most
+universities did not reopen until September 2020 (Ministry of
+                                                                            MATERIALS AND METHODS
+Education of the People’s Republic of China, 2020; People’s Daily,          Ethics Statement
+2020). Additionally, strict regulations were announced to protect           This cross-sectional study was approved by the Ethics Committee
+college students from being infected (Ministry of Education of              of Shandong University as a human-involved study with the
+the People’s Republic of China, 2020). For example, students must           serial number ECSBMSSDU2020-1-056. The Declaration of
+wear masks and accept temperature testing before they can come              Helsinki was strictly followed, and no identifying information
+into the classroom. Besides, delivery services and free entry to the        was collected. This cross-sectional study’s data collection was
+campus are no longer allowed.                                               conducted between September 14th and September 20th, mainly
+   Even before the COVID-19, college students are susceptible to            among five universities across China: Shandong University,
+mental health challenges facing unprecedented levels of distress,           Shandong Normal University, Qingdao University (Qingdao,
+and early adulthood is one of the peak periods for many mental              Shandong province), Shanghai Tech University, and Shanghai
+disorders (de Girolamo et al., 2012). Seventy-five percent of               University of Finance and Economics (Shanghai). Because
+patients with mental health disorders had the first onset before 25         of COVID-19, an online anonymous questionnaire website
+(Kessler et al., 2007). In China, it is reported that the prevalence        (www.wenjuan.com) was used. Therefore, no formal consent was
+of suicidal ideation was 9.2% among college students in Jilin               acquired. All participants voluntarily ticked off the informed
+province, 2019, and the two most significant risk factors were              consent in the first item.
+being a senior and family relationship (Wang et al., 2019).
+College students play a crucial role in the development of a                Participants
+country. Therefore, with media attention on the college campus,             Among the 548 invited subjects, 508 subjects were invited
+the high rates of mental disorder prevalence have become a                  to complete the questionnaire by the investigators, and 40
+growing public health problem in many countries. During the                 were invited by a free open access online questionnaire
+COVID-19, young adults and college students faced more mental               distribution platform, www.wjx.cn. Among all the 548 retrieved
+challenges, including academic pressure, employment pressure,               questionnaires, 478 were valid to study further. Two retrieved
+and family pressure. Many previous studies demonstrated that                questionnaires left blanks, 66 left obvious and invalid options,
+COVID-19 has led to profound mental and behavioral changes                  and 2 had an IP address outside China.
+among college students (Alemany-Arrebola et al., 2020; Huckins
+et al., 2020; Ma et al., 2020; Zhai and Du, 2020). Cao et al.               Designed Questionnaire
+performed a cross-sectional study in China and found that 0.9%              Basic Personal Characteristics
+of the respondents were experiencing severe anxiety, 2.7% were              Two sets of basic personal characteristics were listed in the
+experiencing moderate anxiety, and 21.3% were experiencing                  questionnaire: demographic characteristics and personal
+mild anxiety (Cao et al., 2020). Similarly, college students’ anxiety       perspectives on COVID-19. Demographic characteristics
+and depression rates during the early stages of COVID-19 were               included gender, major, grade, and family location. Personal
+not optimistic in the United States (Kecojevic et al., 2020) and            perspectives on COVID-19 included fear of being infected,
+
+Frontiers in Psychology | www.frontiersin.org                           2                                     April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                            COVID-19 Psychological Impact on Students
+
+
+
+attitude to COVID-19, history of psychological counseling,               school reopening), and self-quarantine after school reopening.
+and need for psychological counseling. In this study,                    The “retaining holiday (whether to shorten or cancel the holiday
+“psychological counseling” means college students received               after school reopening)” here refers to the fact that a number
+psychological counseling from their school. In China, the                of universities in China have shortened or canceled some
+impact of the COVID-19 on college students’ mental health                holidays in order to minimize the students’ total in-school
+has drawn public attention. After the school reopening, the              time after school reopening during COVID-19. “Holiday” here
+university might provide psychological counseling for all                includes weekends and statutory holidays in China. The family
+students. The detailed options for each question are presented           situation means the impact of COVID-19 on family, including
+in Table 1.                                                              having relatives or friends who have been infected and the
+                                                                         degree to which family economic status was influenced by
+Assessment of Anxiety and Depression                                     COVID-19. The personal living style includes exercise frequency,
+The classic Zung’s Self-rating Anxiety Scale (SAS) was used              alcohol use, sleep quality, and satisfaction with school living
+to evaluate the participants’ anxiety degree (Zung, 1971); it            conditions. The detailed options for each question are presented
+includes 20 self-reported items about moods, sleep, sense                in Table 2.
+of pain, etc. After the standardized scoring algorithm, four
+anxiety degree grades were defined. A score of 20–49 was
+considered as no anxiety, 50–59 as mild anxiety, 60–69 as                Statistics
+moderate anxiety, and 70–80 as severe anxiety. Zhou et al.               Correlation analysis was performed for univariate analysis to
+demonstrated that the reliability and validity of SAS applied in         primarily determine whether factors have relations with students’
+Chinese college students were acceptable. The criterion defining         anxiety or depression conditions in a descriptive view. More
+normal/mild/moderate/severe anxiety was suitable for Chinese             specifically, for independent variables from two categories or
+(Yongan, 2012). The Cronbach’s alpha was 0.906 for SAS in the            multiple unordered categories, we used the chi-square test. For
+current study.                                                           the cells in which the samples numbered <5, we used Fisher’s
+   The Patient Health Questionnaire-9 (PHQ-9) was used                   exact test. For explanatory variables from multiple ordered
+to evaluate the depression degree (Kroenke et al., 2001); it             categories, we used Somer’s d to measure the consistency between
+includes nine self-reported items with a score of 0–4 for                the two (that is, whether the two tend to move in the same or
+each question. After the standardized scoring algorithm, five            opposite directions).
+depression degree grades were defined. A score of 0–4 was                   Logistic regression was performed for multivariate analysis
+considered as no depression, 5–9 as mild depression, 10–14 as            to determine the association between a particular factor and
+moderate depression, 15–19 as moderate to severe depression,             students’ psychological status quantitively, other factors being
+and 20–27 as severe depression. This scale has been confirmed to         equal. First, we divided the samples into five equal parts in
+be a reliable and valid tool in assessing mental health in Chinese       order to perform 5-fold cross-validation. Second, the Synthetic
+adolescents (Xingchen et al., 2014). In this study, the Cronbach’s       Minority Oversampling Technique (SMOTE) was performed
+alpha for PHQ-9 was 0.918.                                               on the training dataset to preprocess the retrieved data. As is
+                                                                         acknowledged to all, the number of positive and negative samples
+Influence Factor Selection                                               of medical data is often uneven, which could strongly affect
+All the influence factors included in our questionnaire were             the effectiveness of the Logistic regression model. SMOTE is an
+acquired from a 20-subject pre-survey. We randomly invited 20            oversampling algorithm that generates extra samples based on
+subjects included in the pre-survey from Shandong University.            the original dataset. By setting a specific scale, SMOTE can make
+Two investigators (Y.X and J.P) searched the Pubmed and                  the dataset balanced using methods of oversampling. The Akaike
+retrieved 30 potential influence factors. We asked 20 subjects           Information Criterion (AIC) and binary logistic regression were
+whether they agreed a certain factor might significantly influence       performed to explore significant influence factors. The accuracy,
+students’ psychological condition. Therefore, we selected those          sensitivity (recall), specificity (accuracy = (TP + TN)/(TP +
+factors which are agreed by most subjects (>10/20). After                TN + FP + FN), sensitivity = TP/(TP + FN), specificity
+considering all the retrieved influence factors comprehensively,         = TN/(TN + FP), where TP is correct positive assignments,
+three sets of questions were included in our questionnaire:              TN is correct negative assignments, FP is incorrect positive
+school regulations, family situation, and personal living style.         assignments, and FN is incorrect negative assignments) and
+School regulations mean the regulations announced during                 area under the curve (AUC) values of the receiver operating
+COVID-19 to prevent disease transmission across schools,                 characteristic (ROC) curves were used to evaluate the machine
+including school reopening, routine mask-wearing, routine                learning model.
+temperature-taking, several areas in school being closed due                Data collection and descriptive analysis were performed
+to COVID-19, final examinations being taken after school                 using Excel 2016 (Microsoft, Washington, D.C., US). Univariate
+reopening, retaining holiday (whether to shorten or cancel the           analyses were performed using IBM SPSS Statistics 24.0
+holiday after school reopening), availability of package delivery        (International Business Machines Corporation, Armonk, NY,
+(after school reopening), take-out food availability (after school       USA). Multivariate analyses were performed using the R
+reopening), lockdown restriction (whether to allow free access to        language(R Core Team, 2020). A P-value <0.05 was considered
+campus after school reopening), quarantine of classmates (after          statistically significant.
+
+
+Frontiers in Psychology | www.frontiersin.org                        3                                     April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                                    COVID-19 Psychological Impact on Students
+
+
+
+TABLE 1 | Descriptive analysis of basic characteristics.
+
+Variable (n = 478)             All participants (%)                      Anxiety                           P-value                  Depression                    P-value
+
+                                                                 NO                         YES                              NO                   YES
+
+Gender
+  Male                           205        42.9%          168        82.0%        37             18.0%     0.18       140        68.3%      65         31.7%       0.77
+  Female                         273        57.1%          236        86.4%        37             13.6%   Chi-square   183        67.0%      90         33.0%   Chi-square
+Major
+  Medicine/Biology               100        20.9%          87         87.0%        13             13.0%     0.64       63         63.0%      37         37.0%       0.64
+  Psychology                     151        31.6%          129        85.4%        22             14.6%   Chi-square   107        70.9%      44         29.1%   Chi-square
+  Science/Engineering             59        12.3%          51         86.4%        9              15.3%                40         67.8%      19         32.2%
+  Others                         168        35.1%          137        81.5%        31             18.5%                113        67.3%      55         32.7%
+Grade
+  Fresher                        110        23.0%          100        90.9%        10             9.1%      0.03       82         74.5%      28         25.5%       0.35
+  Sophomore                      182        38.1%          154        84.6%        28             15.4%   Chi-square   119        65.4%      63         34.6%   Chi-square
+  Junior                         139        29.1%          116        83.5%        23             16.5%                92         66.2%      47         33.8%
+  Senior (4th/5th) and above      47        9.8%           34         72.3%        13             27.7%                30         63.8%      17         36.2%
+Family location
+  Rural/County areas             227        47.5%          194        85.5%        33             14.5%     0.59       158        69.6%      69         30.4%       0.37
+  City                           251        52.5%          210        83.7%        41             16.3%   Chi-square   165        65.7%      86         34.3%   Chi-square
+Fear of being infected
+  Very low                       186        38.9%          169        90.9%        17             9.1%     <0.001      140        75.3%      46         24.7%     <0.001
+  Low                            152        31.8%          131        86.2%        21             13.8%   Somer’s d    100        65.8%      52         34.2%    Somer’s d
+  Medium                          92        19.2%          71         77.2%        21             22.8%                55         59.8%      37         40.2%
+  High                            33        6.9%           22         66.7%        11             33.3%                20         60.6%      13         39.4%
+  Very high                       15        3.1%           11         73.3%        4              26.7%                8          53.3%       7         46.7%
+Attitude to COVID-19
+  Very pessimistic                30        6.3%           24         80.0%        6              20.0%    <0.001      17         56.7%      13         43.3%     <0.001
+  Pessimistic                     36        7.5%           25         69.4%        11             30.6%   Somer’s d    21         58.3%      15         41.7%    Somer’s d
+  Medium                         100        20.9%          78         78.0%        22             22.0%                54         54.0%      46         46.0%
+  Optimistic                     120        25.1%          102        85.0%        18             15.0%                78         65.0%      42         35.0%
+  Very optimistic                192        40.2%          175        91.1%        17             8.9%                 153        79.7%      39         20.3%
+History of counseling
+  Yes                            215        45.0%          183        85.1%        32             14.9%     0.74       154        71.6%      61         28.4%       0.09
+  No                             263        55.0%          221        84.0%        42             16.0%   Chi-square   169        64.3%      94         35.7%   Chi-square
+Need for counseling
+  Yes                             60        12.6%          32         53.3%        28             46.7%                26         43.3%      34         56.7%
+  No                             352        73.6%          321        91.2%        31             8.8%                 266        75.6%      86         24.4%
+  Not sure                        66        13.8%          51         77.3%        15             22.7%                31         47.0%      35         53.0%
+
+Counseling here means psychological counseling received from school or from others. Somer’s d was used to measure the consistency of ordered categories. Chi-square test was
+used to measure correlations between unordered categories.
+
+
+
+
+RESULTS                                                                                      74 (15.5%) showed mild depression). We divided subjects into
+                                                                                             two sets—anxiety (depression) and normal (normal)—for further
+Presence of Anxiety and Depression                                                           influence factor exploration.
+Symptoms
+This survey’s response variables were anxiety and depression                                 Descriptive Analysis of Basic Personal
+evaluated by SAS and PHQ-9, respectively. Among all the                                      Characteristics
+478 valid subjects, 74 (15.5%) showed symptoms of anxiety                                    The basic personal characteristics of the 478 valid subjects are
+(among which 4 (0.8%) showed severe anxiety, 15 (3.1%) showed                                displayed in Table 1. College students at a higher grade, fear
+moderate anxiety, and 55 (11.5%) showed mild anxiety). Besides,                              being infected, and have a more pessimistic attitude to COVID-
+155 (32.4%) showed symptoms of depression (among which 9                                     19 were more likely to report anxiety or depression, while gender,
+(1.9%) showed severe depression, 26 (5.4%) showed moderate to                                major, and family location did not significantly differ. After
+severe depression, 46 (9.6%) showed moderate depression, and                                 comparing 215 (45%) subjects who have received psychological
+
+
+Frontiers in Psychology | www.frontiersin.org                                           4                                            April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                         COVID-19 Psychological Impact on Students
+
+
+
+TABLE 2 | Descriptive statistics of influence factors.
+
+Influence factors                                          Anxiety                                                     Depression
+
+                                          NO                         Yes                 P-value         No                       Yes                P-value
+
+School regulation
+School reopening
+  Yes                              397          85.40%        68           14.60%          F-P     314        67.50%       151          32.50%         F-P
+  No                                7           53.80%         6           46.20%         0.008     9         69.20%        4           30.80%         0.58
+Wearing masks routinely
+  Yes                              246          84.80%        44           15.20%         C-P      202        69.70%       88           30.30%         C-P
+  No                               158          84.00%        30           16.00%         0.817    121        64.40%       67           35.60%        0.227
+Taking temperature routinely
+  Yes                              339          84.30%        63           15.70%         C-P      267        66.40%       135          33.60%         C-P
+  No                               65           85.50%        11           14.50%         0.791    56         73.70%       20           26.30%        0.215
+Several areas in school closed due to COVID-19 (136 reported not sure)
+  Yes                              135          82.80%        28           17.20%         C-P      101        62.00%       62           38.00%         C-P
+  No                               149          83.20%        30           16.80%         0.918    132        73.70%       47           26.30%         0.02
+Taking the final examination after school reopening
+  Yes                              237          86.80%        36           13.20%         C-P      190        69.60%       83           30.40%         C-P
+  No                               167          81.50%        38           18.50%         0.11     133        64.90%       72           35.10%        0.275
+Retaining holiday (119 reported not sure)
+  Yes                              100          86.20%        16           13.80%         C-P      80         69.00%       36           31.00%         C-P
+  No                               200          82.30%        43           17.70%         0.351    165        67.90%       78           32.10%        0.839
+Availability of package delivery (28 reported not sure)
+  Yes                              313          86.50%        49           13.50%         C-P      244        67.40%       118          32.60%         C-P
+  No                               68           77.30%        20           22.70%         0.032    60         68.20%       28           31.80%        0.889
+Take-out availability (31 reported not sure)
+  Yes                              41           67.20%        20           32.80%         C-P      36         59.00%       25           41.00%         C-P
+  No                               335          86.80%        51           13.20%        <0.001    264        68.40%       122          31.60%        0.147
+Lockdown restriction (19 reported not sure)
+  Yes                              364          85.60%        61           14.40%         C-P      287        67.50%       138          32.50%         C-P
+  No                               23           67.60%        11           32.40%         0.005    22         64.70%       12           35.30%        0.736
+Quarantine of classmates
+  Yes                              51           75.00%        17           25.00%         C-P      36         52.90%       32           47.10%         C-P
+  No                               353          86.10%        57           13.90%         0.019    287        70.00%       123          30.00%        0.005
+Self-quarantine after school reopening
+  Yes                               9           47.40%        10           52.60%         C-P       7         36.80%       12           63.20%         C-P
+  No                               395          86.10%        64           13.90%        <0.001    316        68.80%       143          31.20%        0.003
+Family situation
+Having relatives or friends who have been infected
+  Yes                               4           50.00%         4           50.00%          F-P      2         25.00%        6           75.00%         F-P
+  No                               400          85.10%        70           14.90%         0.023    321        68.30%       149          31.70%        0.016
+The degree of family economic status influenced by COVID-19 (1 for little, 5 for much)
+  1                                136          94.40%         8           5.60%                   110        76.40%       34           23.60%
+  2                                87           74.40%        30           25.60%          S       71         60.70%       46           39.30%          S
+  3                                119          88.10%        16           11.90%         0.066    90         66.70%       45           33.30%         0.06
+  4                                35           70.00%        15           30.00%          p       31         62.00%       19           38.00%          p
+  5                                27           84.40%         5           15.60%         0.004    21         65.60%       11           34.40%        0.053
+Personal living style
+Exercise frequency (past 1 week)
+  nearly 0 time                    87           82.10%        19           17.90%                  62         58.50%       44           41.50%
+  1 time                           79           78.20%        22           21.80%          S       64         63.40%       37           36.60%          S
+  2 times                          89           88.10%        12           11.90%        −0.046    69         68.30%       32           31.70%       −0.092
+  3 times                          45           83.30%         9           16.70%          p       41         75.90%       13           24.10%          p
+  more than 4 times                104          89.70%        12           10.30%         0.045    87         75.00%       29           25.00%        0.002
+
+                                                                                                                                                   (Continued)
+
+Frontiers in Psychology | www.frontiersin.org                                       5                                   April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                                     COVID-19 Psychological Impact on Students
+
+
+
+TABLE 2 | Continued
+
+Influence factors                                                Anxiety                                                           Depression
+
+                                            NO                              Yes                  P-value             No                       Yes                P-value
+
+Alcohol use (past 2 week)
+  nearly 0 time                     314           88.00%            43            12.00%                       251        70.30%       106          29.70%
+  1 time                             52           76.50%            16            23.50%             S         42         61.80%       26           38.20%          S
+  2 times                            18           66.70%             9            33.30%          0.124        16         59.30%       11           40.70%        0.102
+  3 times                             9           64.30%             5            35.70%             p          7         50.00%        7           50.00%          p
+  more than 4 times                  11           91.70%             1            8.30%           0.002         7         58.30%        5           41.70%         0.03
+Self-rating sleep quality (1 for very poor, 5 for very good)
+  1                                  39           81.30%             9            18.80%                       29         60.40%       19           39.60%
+  2                                  58           73.40%            21            26.60%             S         45         57.00%       34           43.00%          S
+  3                                  94           81.70%            21            18.30%          −0.089       70         60.90%       45           39.10%       −0.147
+  4                                  96           86.50%            15            13.50%             p         69         62.20%       42           37.80%          p
+  5                                 117           93.60%             8            6.40%           <0.001       110        88.00%       15           12.00%       <0.001
+Satisfaction of living conditions in school (1 for very unsatisfied, 5 for very satisfied)
+  1                                  52           85.20%             9            14.80%                       43         70.50%       18           29.50%
+  2                                  83           80.60%            20            19.40%             S         69         67.00%       34           33.00%          S
+  3                                 110           78.00%            31            22.00%          −0.059       82         58.20%       59           41.80%       −0.043
+  4                                  81           89.00%            10            11.00%             p         64         70.30%       27           29.70%          p
+  5                                  78           95.10%             4            4.90%           0.005        65         79.30%       17           20.70%        0.141
+
+F-P, P-value of Fisher’s test; C-P, P-value of the Chi-square test; S, Somer’s d; p, P-value of Somer’s d.
+
+
+
+counseling with the other students who did not, no significant                                   psychological problems. Finally, in personal living style, students
+difference in the presence of expression/anxiety symptoms was                                    who exercise more, drink less, sleep better, and are satisfied with
+observed for students who had received counseling (p = 0.74 for                                  their living conditions reported a healthier psychological state.
+anxiety, and p = 0.09 for depression) compared with the control
+group, which means that the effect of current psychological
+counseling is limited. Besides, 60 (12.6%) students reported
+                                                                                                 Construction of the Logistic Regression
+that they need psychological counseling. Notably, 66 (13.8%)                                     Model
+students reported that they had no idea whether they need                                        SMOTE was performed to counteract the imbalance of the
+professional psychological counseling; the presence of anxiety                                   retrieved data (15.5% of subjects showed a symptom of anxiety,
+was 22.7%, and that of depression was 53% in this group, which                                   and 32.4% of subjects show a symptom of depression). When
+is nearly three times the presence of anxiety and two times                                      using SMOTE, we need to determine three parameters: k,
+the presence of depression observed in the group of students                                     perc.over, and perc.under. k represents the number of nearest
+who reported that they did not need counseling. Therefore,                                       neighbors used to generate new instances of the minority classes.
+the group of students who are not sure whether they need                                         perc.over decides how many additional cases to generate from the
+psychological counseling appears particularly vulnerable for                                     minority classes (known as oversampling). perc.under decides
+experiencing clinically significant depression or anxiety.                                       how many extra cases from the majority classes are selected for
+                                                                                                 each case generated from the minority class (known as under-
+                                                                                                 sampling). As shown in Figure 1A, for the SAS dataset, when k =
+Descriptive Analysis of Influence Factors                                                        6, perc.over = 500, and perc.under = 120, the AUC reaches the
+The characteristics of the 17 influence factors in our                                           maximum. Similarly, for the PHQ9 dataset, when k = 2, perc.over
+questionnaires are displayed in Table 2. In the set of school                                    = 400, and perc.under = 125, the AUC reaches the maximum
+regulations, school reopening, several areas in schools being                                    (Figure 1B). Since we had divided the dataset into five equal
+closed due to COVID-19, lockdown restriction, and availability                                   parts, we selected one part as the test set each time and using
+of package delivery alleviated college students’ anxiety or                                      SMOTE to process the other four groups. A new dataset was thus
+depression. A significant relationship between depression or                                     utilized in the construction of the logistic regression model for
+anxiety and take-out availability, quarantine of classmates, and                                 anxiety and depression.
+self-quarantine after school reopening was found (p < 0.05).                                        The AIC (Table 3) was applied to select proper influence
+Other risk factors were of no statistical significance (p > 0.05).                               factors for inclusion in the logistic regression model. Among
+In terms of family situation, having relatives or friends who have                               the 17 influence factors acquired from a 20-subject pre-survey,
+been infected and the family economic status being influenced                                    13 factors (taking temperature routinely, retaining holiday, self-
+to a strong degree by COVID-19 were significantly related to                                     rated sleep quality, taking the final examination after school
+
+
+Frontiers in Psychology | www.frontiersin.org                                                6                                      April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                            COVID-19 Psychological Impact on Students
+
+
+
+
+ FIGURE 1 | The Synthetic Minority Oversampling Technique (SMOTE): (A) anxiety; (B) depression. AUC, area under the curve.
+
+
+
+
+reopening, lockdown restriction, exercise frequency, quarantine                    0.806, which indicates that the predictive power of our models is
+of classmates, take-out availability, alcohol use, availability of                 excellent. The average sensitivity (recall) of the models reached
+package delivery, school reopening, self-quarantine after school                   83.21 and 75.3%, respectively. The average specificity of the
+reopening, and the degree to which family economic status is                       models reached 80.38 and 71.80%, respectively. The sensitivity
+influenced by COVID-19) were extracted according to the AIC                        and specificity were both acceptable.
+for anxiety, while 15 factors (routinely wearing masks, having
+relatives or friends who have been infected, satisfaction with
+living conditions in the school, taking temperature routinely,                     DISCUSSION
+several areas in school being closed due to COVID-19, self-
+rated sleep quality, taking the final examination after school                     In this study, we performed a cross-sectional survey to investigate
+reopening, lockdown restriction, exercise frequency, quarantine                    the presence of anxiety and depression symptoms among Chinese
+of classmates, take-out availability, alcohol use, availability of                 college students after school reopening and explored a series of
+package delivery, self-quarantine after school reopening, and                      factors influencing students’ mental health.
+the degree to which family economic status is influenced by                            First, the descriptive statistics of basic personal characteristics
+COVID-19) were extracted for depression.                                           were utilized to test whether these basic characteristics would
+    We used a conventional generalized linear model, Logistic                      affect students’ emotional status. The result shows that students
+regression, to analyze the data after selecting factors. For each                  having relatives or friends who have been infected, fearing being
+factor, we set the first level as the control group. The results                   infected, having a more pessimistic attitude toward COVID-19
+of the logistic regression are presented in Table 4. The binary                    were more likely to report psychological problems. Moreover,
+logistic regression finally extracted 12 significant influence factors             we found that students at a higher grade easily got anxious and
+(excluding sleep quality from the list of 13 above) for anxiety                    depressed. First, senior students must participate in a practicum,
+and 12 (excluding taking temperature routinely, taking the final                   which has been demonstrated as a risk factor for stress and
+examination after school reopening, and availability of package                    anxiety (Cheung et al., 2016). Besides, senior students faced
+delivery from the list of 15 above) for depression (p < 0.05).                     more mental challenges, including greater academic pressure,
+                                                                                   graduation pressure, etc. Furthermore, due to the pandemic of
+                                                                                   COVID-19, these pressures were amplified. Of the participants,
+Evaluation of the Logistic Regression                                              60 (12.6%) reported needing psychological help, and 66 (13.8%)
+Model                                                                              reported that they had no idea whether they needed psychological
+When applying a logistic regression model, it is crucial to avoid                  help. These students would be more vulnerable than others for
+overfitting. To evaluate our model effectively, we first divided                   lacking awareness of the importance of psychological health and
+the dataset into five equal parts, using four of them to train                     not getting prompt treatment. Therefore, it is necessary to give
+a regression model. Then, we tested the generated model to                         students universal mental health education. Besides, among the
+see whether there was a significant difference. The ROC curves                     478 subjects, 215 (45%) had received psychological counseling
+of 5-fold cross-validation were plotted to evaluate our logistic                   from school. However, it had not resulted in a significant
+regression model (Figure 2), where the shadow area represents                      improvement of their mental health, which indicates that the
+the 95% confidence interval of the ROC curve. The anxiety                          effect of current psychological help for college students is limited.
+model’s average accuracy was 81.42%, and that of the depression                    Several potential reasons probably cause this. Firstly, the effect
+model was 73.5%. On the test dataset, the average AUC of the                       of current psychological help, especially online counseling, for
+anxiety model was 0.885, and that of the depression model was                      college students is limited. Many Chinese university counselors
+
+
+Frontiers in Psychology | www.frontiersin.org                                  7                                             April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                              COVID-19 Psychological Impact on Students
+
+
+
+TABLE 3 | The Akaike Information Criterion (AIC) values of the 17 influence factors       would need training in psychological service. Moreover, it may
+for anxiety and depression.                                                               still require a longer time to observe therapeutic changes of the
+In/Out         Influence factor                        Df    Deviance       AIC
+                                                                                          psychological survey. Universities are essential in dealing with
+                                                                                          the mental status of college students (Zhai and Du, 2020). It
+Anxiety                                                                                   is impractical to provide face-to-face professional psychological
+               <none>                                         447.52      507.52          counseling to every college student due to financial limitations
+Out            wearing masks routinely                 1      446.65      508.65          and psychologists’ numbers. Besides selecting students in need
+Out            having relatives or friends who have    1      447.49      509.49          by way of the influence factors discussed above, tele-counseling is
+               been infected                                                              particularly important in this area. Previous studies have reported
+Out            satisfaction of living conditions in    4       441.6       509.6
+                                                                                          that tele-counseling or digital mental health interventions
+               school (1 for very unsatisfied, 5 for
+               very satisfied)
+                                                                                          have developmental prospects (Levin et al., 2016, 2017; Lattie
+In             taking temperature routinely            1      451.68      509.68          et al., 2019). However, some also reported that the current
+Out            several areas in school closed due      1      446.72      510.72          situation of college psychological centers’ website effectiveness
+               to COVID-19                                                                is compromised. Seidel et al. reported that only half of all
+In             retaining holiday                       1      456.94      512.94          138 analyzed websites provided information about remote
+In             self-rating sleep quality (1 for very   4      463.64      515.64          counseling. Approximately two-thirds of them had directions for
+               poor, 5 for very good)                                                     students experiencing a mental health emergency (Seidel et al.,
+In             taking final examination after school   1      457.95      515.95          2020). Indeed, how to provide professional psychological help to
+               reopening
+                                                                                          students in need remains controversial (Lungu and Sun, 2016;
+In             lockdown restriction                    1      462.73      518.73
+                                                                                          Webermann and Murphy, 2020).
+In             exercise frequency (past 1 week)        4      472.48      524.48
+In             quarantine of classmates                1      467.86      525.86
+                                                                                              Second, univariate and multivariate analysis extracted 17
+In             take-out food availability              1      470.69      526.69
+                                                                                          significant factors influencing college students’ mental status.
+In             alcohol use (past 2 week)               4      476.08      528.08          Among these influence factors, four factors of healthier personal
+In             availability of package delivery        1      472.56      528.56          lifestyles—higher exercise frequency, lower alcohol use, higher
+In             school reopening                        1      473.96      531.96          sleep quality, and higher satisfaction with living conditions in
+In             self-quarantine after school            1      476.11      534.11          the school—were closely related to a lower risk of psychological
+               reopening                                                                  problems. Several studies in the literature have demonstrated
+In             the degree of family economic           4      482.45      534.45          that these influence factors play a crucial role in public mental
+               status influenced by COVID-19 (1                                           health (Walsh, 2011; Velten et al., 2018; Oftedal et al., 2019).
+               for little, 5 for much)
+                                                                                          Notably, it was reported that sleep problems among adolescents
+Depression
+                                                                                          and young adults during the COVID-19 epidemic, especially
+               <none>                                         1205.8      1275.8
+In             taking the final examination after      1      1208.5      1276.5
+                                                                                          college students, are common and negatively associated with
+               school reopening                                                           students’ projections of trends in COVID-19 (Zhou et al.,
+Out            retaining holiday                       1       1203        1277           2020). Zhang et al. found that sleep problems may mediate
+In             taking temperature routinely            1      1209.2      1277.2          the pandemic’s impact on mental health (Zhang et al., 2020).
+Out            school reopening                        1      1205.8      1277.8          Therefore, more attention should be paid to insomnia currently.
+In             several areas in school closed due      1      1212.5      1278.5          As for the two family situation influence factors, having relatives
+               to COVID-19                                                                or friends who have been infected and unstable family income
+In             availability of package delivery        1      1213.7      1279.7          would cause psychological problems. In terms of the 11 school
+In             exercise frequency (past 1 week)        4       1227        1289
+                                                                                          regulation influence factors, quarantine was a robust factor
+In             the degree of family economic           4      1230.2      1292.2
+                                                                                          associated with clinical symptoms of anxiety and depression
+               status influenced by COVID-19 (1
+               for little, 5 for much)                                                    (Khan et al., 2020; Tang et al., 2020,a; Xin et al., 2020) compared
+In             take-out food availability              1      1228.2      1294.2          with the control group, suggesting that reducing unnecessary
+In             satisfaction of living conditions in    4      1233.9      1295.9          quarantine measures can effectively improve students’ mental
+               school (1 for very unsatisfied, 5 for                                      health. The protective regulations, such as lockdown restriction,
+               very satisfied)                                                            were mostly related to better mental health, unexpected before
+In             alcohol use (past 2 week)               4      1240.1      1302.1          this investigation. This result suggests that college students
+In             wearing masks routinely                 1      1235.3      1303.3          would rather endure some inconvenience in daily life than
+In             lockdown restriction                    1      1237.3      1303.3
+                                                                                          be probably infected with the virus, except for some daily
+In             having relatives or friends who have    1      1238.5      1306.5
+                                                                                          necessities, such as delivery and retaining holiday. With the
+               been infected
+In             quarantine of classmates                1       1239        1307
+                                                                                          rate of the virus spread slowing down, schools at all levels are
+In             self-quarantine after school            1      1256.2      1324.2
+                                                                                          reopening. Although the pandemic situation has been much
+               reopening                                                                  improved, finding the balance between protecting students
+In             self-rating sleep quality (1 for very   4      1272.8      1334.8          from coronavirus infection and preventing students from the
+               poor, 5 for very good)                                                     pressure of delayed schooling, compromised living conditions,
+“In” means included in the logistic regression model; “Out” means excluded from the
+                                                                                          and physical health is challenging for policymakers. In this study,
+logistic regression model; DF, degrees of freedom.                                        we screened the significant influence factors associated with
+
+
+Frontiers in Psychology | www.frontiersin.org                                         8                                      April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                           COVID-19 Psychological Impact on Students
+
+
+
+TABLE 4 | Binary logistic regression model.
+
+                                                                Anxiety                                         Depression
+
+                                           OR(95% CI)                             P-value    OR(95% CI)                              P-value
+
+School regulation
+School reopening
+  Yes                                           reference                                        none
+  No                                     21.99(6.84,70.68)                        <0.001
+Wearing masks routinely
+  Yes                                                                                         reference
+  No                                                                                        2.33(1.71,3.17)                          <0.001
+Taking temperature routinely
+  Yes                                           reference                                     reference
+  No                                      1.88(1.10,3.23)                          0.021    0.7(0.47,1.03)                          0.067 (out)
+Several areas in school closed due to COVID-19
+  Yes                                             none                                        reference
+  No                                                                                        0.64(0.45,0.9)                            0.011
+Taking the final examination after school reopening
+  Yes                                           reference                                     reference
+  No                                      2.40(1.53,3.79)                         <0.001    1.27(0.96,1.7)                          0.099 (out)
+Retaining holiday
+  Yes                                           reference                                        none
+  No                                      1.85(1.07,3.21)                          0.028
+Availability of package delivery
+  Yes                                           reference                                     reference
+  No                                      3.53(2.06,6.03)                         <0.001    1.13(0.77,1.64)                        0.5329 (out)
+Tale-out food availability
+  Yes                                           reference                                     reference
+  No                                      0.21(0.12,0.37)                         <0.001    0.39(0.26,0.58)                          <0.001
+Lockdown restriction
+  Yes                                           reference                                     reference
+  No                                      4.35(2.33,8.33)                         <0.001    2.63(1.67,4.17)                          <0.001
+Quarantine of classmates
+  Yes                                           reference                                     reference
+  No                                      0.23(0.12,0.42)                         <0.001    0.32(0.22,0.48)                          <0.001
+Self-quarantine after school reopening
+  Yes                                           reference                                     reference
+  No                                      0.15(0.07,0.33)                         <0.001    0.13(0.07,0.26)                          <0.001
+Family situation
+Having relatives or friends who have been infected
+  Yes                                             none                                        reference
+  No                                                                                        0.08(0.03,0.24)                          <0.001
+The degree of family economic status influenced by COVID-19 (1 for little, 5 for much)
+  1                                             reference                                     reference
+  2                                       4.56(2.31,9.00)                         <0.001    1.86(1.23,2.8)                            0.003
+  3                                        1.00(0.5,2.04)                          0.990    1.37(0.92,2.05)                           0.124
+  4                                       4.7(2.15,10.28)                         <0.001    3.28(1.91,5.64)                          <0.001
+  5                                      4.35(1.69,11.18)                          0.002    2.26(1.26,4.06)                           0.006
+Personal living style
+Exercise frequency (past 1 week)
+  nearly 0 time                                 reference                                     reference
+  1 time                                  1.48(0.80,2.73)                          0.215    0.65(0.43,1.01)                           0.053
+  2 times                                 0.54(0.28,1.03)                          0.060    0.75(0.49,1.15)                           0.185
+  3 times                                 0.90(0.40,2.03)                          0.802    0.45(0.26,0.78)                           0.004
+  more than 4 times                       0.37(0.18,0.74)                          0.005    0.42(0.28,0.63)                          <0.001
+
+                                                                                                                                        (Continued)
+
+Frontiers in Psychology | www.frontiersin.org                                       9                        April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                                       COVID-19 Psychological Impact on Students
+
+
+
+TABLE 4 | Continued
+
+                                                                     Anxiety                                                                Depression
+
+                                               OR(95% CI)                                P-value                         OR(95% CI)                              P-value
+
+Alcohol use (past 2 week)
+  nearly 0 time                                  reference                                                                reference
+  1 time                                     1.86(1.06,3.26)                                 0.029                      1.76(1.21,2.56)                           0.003
+  2 times                                    3.97(1.67,9.44)                                 0.002                      3.79(2.03,7.06)                          <0.001
+  3 times                                    9.21(1.78,47.58)                                0.008                     4.47(1.88,10.63)                           0.001
+  more than 4 times                          0.15(0.02,1.11)                                 0.064                      1.02(0.37,2.79)                           0.975
+Self-rating sleep quality (1 for very poor, 5 for very good)
+  1                                              reference                                                                reference
+  2                                          1.73(0.72,4.19)                            0.221 (out)                     0.73(0.39,1.37)                           0.326
+  3                                          1.66(0.70,3.94)                                 0.254                      0.78(0.43,1.4)                            0.406
+  4                                          1.15(0.49,2.67)                                 0.747                      0.66(0.37,1.18)                           0.165
+  5                                          0.61(0.24,1.54)                                 0.296                      0.17(0.09,0.32)                          <0.001
+Satisfaction of living conditions in school (1 for very unsatisfied, 5 for very satisfied)
+  1                                                none                                                                   reference
+  2                                                                                                                     2.44(1.31,4.53)                           0.005
+  3                                                                                                                     3.32(1.85,5.94)                          <0.001
+  4                                                                                                                     1.48(0.79,2.76)                           0.217
+  5                                                                                                                     3.04(1.61,5.75)                           0.001
+
+OR, odds ratio; CI, confidence interval; “out” means no statistical significance; “none” means excluded by AIC.
+
+
+
+
+ FIGURE 2 | Evaluation of the logistic model by 5-fold cross-validation. (A) anxiety; (B) depression. AUC, area under the curve.
+
+
+
+anxiety and depression among college students. According to our                                   mental health. Simultaneously, schools should ensure that some
+findings, several preventive interventions should be mentioned.                                   services closely related to students’ daily life, such as delivery
+First, schools should provide professional psychological help for                                 service, will be maintained.
+students suffering from COVID-19, especially having relatives                                        Previous studies have demonstrated that college students have
+or friends who have been infected. Schools should also provide                                    been suffering extreme mental pressure during this pandemic,
+more financial aids for students in poverty during COVID-19.                                      and proposed some countermeasures. Chi’s study supported
+Besides, schools should encourage students to develop healthy                                     interventions promoting resilience, even remotely, to subjects
+lifestyles, including daily exercise and lower alcohol use. Besides,                              with specific risk factors of developing poor mental health during
+schools should emphasize the importance of sleep, especially                                      COVID-19 or other pandemics with social isolation (Chi et al.,
+in this particular period. Finally, some strict regulations should                                2020). Chen et al. found that isolation policy had a complex
+be applied, such as wearing masks and taking temperature                                          influence on the symptoms of obsessive–compulsive disorder,
+routinely. These measurements would even improve students’                                        fear, hypochondria, depression, and neurasthenia via various
+
+
+
+Frontiers in Psychology | www.frontiersin.org                                                10                                          April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                 COVID-19 Psychological Impact on Students
+
+
+
+factors and introduced a six-step intervention strategy to alleviate         among schools. We just used the Chi-square test to prove
+young people’s psychological problems while in isolation (Chen               no significant differences between city areas and rural areas.
+et al., 2020). Similar studies were performed in many other                  Second, some infrequent influence factors, which certain
+countries, including the United States (Huckins et al., 2020;                subjects mentioned, were not included in the questionnaire.
+Son et al., 2020), Saudi Arabia (Alkhamees et al., 2020), India              Third, more psychological clinical trials should be performed
+(Kapasia et al., 2020), Bangladesh (Khan et al., 2020), and Jordan           to discover the susceptibility to other mental problems
+(Naser et al., 2020). Huckins et al. reported that compared                  such as alexithymia (Tang et al., 2020,b) and PTSD after
+with U.S. college students in the prior academic terms, the                  school reopening.
+Winter 2020 term individuals were more sedentary, anxious,
+and depressed. A wide variety of behaviors, including increased              CONCLUSION
+phone usage, decreased physical activity, and fewer locations
+visited, were associated with fluctuations in COVID-19 news                  In this study, we performed a cross-sectional survey to investigate
+reporting (Huckins et al., 2020).                                            the prevalence of anxiety and depression among Chinese
+    Some previous studies have also reported some “hub influence             college students after school reopening and explored a series
+factors” that serve as mediators between “ordinary influence                 of factors influencing students’ mental health. Many studies
+factors” and psychological problems. For example, as mentioned               have demonstrated that college students have been suffering
+above, Zhang et al. utilized R software’s mediation package to               extreme mental pressure during the pandemic. For example,
+find that the severity of the COVID-19 outbreak indirectly affects           Cao et al. performed a cross-sectional study in China and
+negative emotions by affecting sleep quality (Zhang et al., 2020).           found that 0.9% of the respondents were experiencing severe
+Such mediators also include resilience, social support, and coping           anxiety, 2.7% were experiencing moderate anxiety, and 21.3%
+(Yang et al., 2020a). These “hub factors” could be considered                were experiencing mild anxiety. Also, influence factors and some
+“targets” for psychological interventions, including psychological           so-called “hub influence factors” were mentioned. Currently,
+counsel to strengthen one’s resilience and coping ability, social            the pandemic’s control status varies worldwide. The situation
+support from friends or family, and even medical intervention.               of COVID-19 in China significantly improved and the school
+For example, the appropriate application of some hypnotics                   reopens. However, in some other countries, the school might
+has been proved to be effective for anxiety and depression                   reopen after a period of time. To the best of our knowledge,
+patients without significant side effects (Yang et al., 2020b).              this is the first published article examining college students’
+The “sleep quality” factor derived in our study is one of the                mental status after school reopening. Therefore, we evaluated
+previously discovered “hub influence factors” (Zhang et al., 2020).          the school regulation measures based on college students’ mental
+Therefore, we highly suggested that schools encourage students               health, which could provide sensitive suggestions for school
+to get enough sleep times and higher sleep quality.                          management worldwide.
+    In our study, we did not find any relationship between
+majors and the mental health of college students. However, many              DATA AVAILABILITY STATEMENT
+previous studies have reported that the psychological impact
+of the pandemic on college students majoring in psychology                   The raw data supporting the conclusions of this article will be
+or medicine-related subjects is more significant. Guidotti et al.            made available by the authors, without undue reservation.
+found that a notable percentage of neuropsychology trainees
+reported increased personal mental health symptoms (i.e.,                    ETHICS STATEMENT
+anxiety/depression; 74/54%) as well as several other personal
+stressors (Guidotti Breting et al., 2020). Similar situations                The studies involving human participants were reviewed and
+occurred in Nepal (Khanal et al., 2020; Shrestha, 2020) and China            approved by Ethics Committee of Shandong University. Written
+(Xiao et al., 2020). To conclude, as for psychological/medical               informed consent for participation was not required for this
+students, COVID-19 might cause enormous psychological                        study in accordance with the national legislation and the
+stress. And psychological interventions should be implemented.               institutional requirements.
+Besides, more clinical studies should be conducted to prove
+this point.                                                                  AUTHOR CONTRIBUTIONS
+    This study has some strengths. First, this is the first published
+article examining college students’ mental status after school               Data collection was fulfilled by ZR, JG, and ZZ. Statistical
+reopening to the best of our knowledge. Second, the subjects                 analyses were performed by YX. The manuscript was written by
+included in this study were from several different schools                   ZR and YX. The study was designed by ZR, JG, and DL. The
+across China, which increases this study’s universality. Third,              manuscript was revised by DL, RH, and CH. All authors read and
+the application of machine learning algorithms, including                    approved the final manuscript.
+SMOTE, AIC, multivariate logistic regression, and ROC curves,
+is appropriate and reasonable, increasing the study’s scientificity          FUNDING
+and reliability.
+    This study also has some limitations. First, the sample                  This work was supported by the National Key Research and
+was relatively small. It is not easy to explore differences                  Development Program of China (No. 2017YFC0820203).
+
+
+Frontiers in Psychology | www.frontiersin.org                           11                                      April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                                              COVID-19 Psychological Impact on Students
+
+
+
+REFERENCES                                                                                      Khan, A. H., Sultana, M. S., Hossain, S., Hasan, M. T., Ahmed, H. U., and Sikder, M.
+                                                                                                   T. (2020). The impact of COVID-19 pandemic on mental health and wellbeing
+Alemany-Arrebola, I., Rojas-Ruiz, G., Granda-Vera, J., and Mingorance-Estrada,                     among home-quarantined Bangladeshi students: a cross-sectional pilot study.
+   Á. C. (2020). Influence of COVID-19 on the perception of academic self-                         J. Affect. Disord. 277, 121–128. doi: 10.1016/j.jad.2020.07.135
+   efficacy, state anxiety, and trait anxiety in college students. Front. Psychol.              Khanal, P., Devkota, N., Dahal, M., Paudel, K., and Joshi, D. (2020).
+   11:570017. doi: 10.3389/fpsyg.2020.570017                                                       Mental health impacts among health workers during COVID-19 in a low
+Alkhamees, A. A., Alrashed, S. A., Alzunaydi, A. A., Almohimeed, A. S., and                        resource setting: a cross-sectional survey from Nepal. Global. Health 16:89.
+   Aljohani, M. S. (2020). The psychological impact of COVID-19 pandemic                           doi: 10.1186/s12992-020-00621-z
+   on the general population of Saudi Arabia. Compr. Psychiatry 102:152192.                     Kroenke, K., Spitzer, R. L., and Williams, J. B. (2001). The PHQ-9: validity
+   doi: 10.1016/j.comppsych.2020.152192                                                            of a brief depression severity measure. J. Gen. Intern. Med. 16, 606–613.
+Beijing News (2020). In Jiangxi province, all closed campus management has been                    doi: 10.1046/j.1525-1497.2001.016009606.x
+   abolished, combining “humanization” with scientific prevention and control.                  Lattie, E. G., Adkins, E. C., Winquist, N., Stiles-Shields, C., Wafford, Q. E., and
+   Available online at: https://www.bjnews.com.cn/detail/160042055315203.html                      Graham, A. K. (2019). Digital mental health interventions for depression,
+   (accessed November 25, 2020).                                                                   anxiety, and enhancement of psychological well-being among college students:
+Cao, W., Fang, Z., Hou, G., Han, M., Xu, X., Dong, J., et al. (2020). The                          systematic review. J. Med. Internet Res. 21:e12869. doi: 10.2196/12869
+   psychological impact of the COVID-19 epidemic on college students in China.                  Levin, M. E., Haeger, J. A., Pierce, B. G., and Twohig, M. P. (2017). Web-
+   Psychiatry Res. 287:112934. doi: 10.1016/j.psychres.2020.112934                                 based acceptance and commitment therapy for mental health problems in
+Chen, B., Sun, J., and Feng, Y. (2020). How have COVID-19 isolation policies                       college students: a randomized controlled trial. Behav. Modif. 41, 141–162.
+   affected young people’s mental health? - Evidence from Chinese college                          doi: 10.1177/0145445516659645
+   students. Front. Psychol. 11:1529. doi: 10.3389/fpsyg.2020.01529                             Levin, M. E., Hayes, S. C., Pistorello, J., and Seeley, J. R. (2016). Web-based self-help
+Cheung, T., Wong, S. Y., Wong, K. Y., Law, L. Y., Ng, K., Tong, M. T., et al. (2016).              for preventing mental health problems in universities: comparing acceptance
+   Depression, anxiety and symptoms of stress among baccalaureate nursing                          and commitment training to mental health education. J. Clin. Psychol. 72,
+   students in hong kong: a cross-sectional study. Int. J. Environ. Res. Public Health             207–225. doi: 10.1002/jclp.22254
+   13:779. doi: 10.3390/ijerph13080779                                                          Lungu, A., and Sun, M. (2016). Time for a change: college students’ preference for
+Chi, X., Becker, B., Yu, Q., Willeit, P., Jiao, C., Huang, L., et al. (2020). Prevalence           technology-mediated versus face-to-face help for emotional distress. Telemed.
+   and psychosocial correlates of mental health outcomes among chinese college                     J. E-Health 22, 991–1000. doi: 10.1089/tmj.2015.0214
+   students during the Coronavirus disease (COVID-19) pandemic. Front.                          Ma, Z., Zhao, J., Li, Y., Chen, D., Wang, T., Zhang, Z., et al. (2020). Mental
+   Psychiatry 11:803. doi: 10.3389/fpsyt.2020.00803                                                health problems and correlates among 746 217 college students during the
+de Girolamo, G., Dagani, J., Purcell, R., Cocchi, A., and McGorry, P. D.                           coronavirus disease 2019 outbreak in China. Epidemiol. Psychiatr. Sci. 29:e181.
+   (2012). Age of onset of mental disorders and use of mental health services:                     doi: 10.1017/S2045796020000931
+   needs, opportunities and obstacles. Epidemiol. Psychiatr. Sci. 21, 47–57.                    Mazza, M. G., De Lorenzo, R., Conte, C., Poletti, S., Vai, B., Bollettini, I.,
+   doi: 10.1017/S2045796011000746                                                                  et al. (2020). Anxiety and depression in COVID-19 survivors: role of
+Giannopoulou, I., Efstathiou, V., Triantafyllou, G., Korkoliakou, P., and Douzenis,                inflammatory and clinical predictors. Brain Behav. Immun. 89, 594–600.
+   A. (2020). Adding stress to the stressed: senior high school students’ mental                   doi: 10.1016/j.bbi.2020.07.037
+   health amidst the COVID-19 nationwide lockdown in Greece. Psychiatry Res.                    Ministry of Education of the People’s Republic of China (2020). 20 questions about
+   2020:113560. doi: 10.1016/j.psychres.2020.113560                                                the resumption of school and class under normalization of Epidemic prevention
+Guan, W. J., Liang, W. H., Zhao, Y., Liang, H. R., Chen, Z. S., Li, Y.                             and controls (in Chinese). Available online at: http://www.moe.gov.cn/jyb_
+   M., et al. (2020a). Comorbidity and its impact on 1590 patients with                            xwfb/moe_1946/fj_2020/202006/t20200612_465535.html (accessed November
+   COVID-19 in China: a nationwide analysis. Eur. Respir. J. 55:2000547.                           25, 2020).
+   doi: 10.1183/13993003.00547-2020                                                             Naser, A. Y., Dahmash, E. Z., Al-Rousan, R., Alwafi, H., Alrawashdeh, H. M.,
+Guan, W. J., Ni, Z. Y., Hu, Y., Liang, W. H., Ou, C. Q., He, J. X., et al. (2020b).                Ghoul, I., et al. (2020). Mental health status of the general population,
+   Clinical characteristics of Coronavirus disease 2019 in China. N. Engl. J. Med.                 healthcare professionals, and university students during 2019 coronavirus
+   382, 1708–1720. doi: 10.1056/NEJMoa2002032                                                      disease outbreak in Jordan: a cross-sectional study. Brain Behav. 10:e01730.
+Guidotti Breting, L. M., Towns, S. J., Butts, A. M., Brett, B. L., Leaffer, E.                     doi: 10.1002/brb3.1730
+   B., and Whiteside, D. M. (2020). 2020 COVID-19 American Academy                              National Health Commission of the People’s Republic of China (2020). Notification
+   of Clinical Neuropsychology (AACN) Student Affairs Committee                                    for the coronavirus disease (COVID-19) pandemic (in Chinese) Available online
+   survey of neuropsychology trainees. Clin. Neuropsychol. 2020, 1–30.                             at: http://www.nhc.gov.cn/xcs/yqfkdt/gzbd_index.shtml (accessed November
+   doi: 10.1080/13854046.2020.1809712                                                              22, 2020).
+Huckins, J. F., daSilva, A. W., Wang, W., Hedlund, E., Rogers, C., Nepal, S.                    Oftedal, S., Kolt, G. S., Holliday, E. G., Stamatakis, E., Vandelanotte, C., Brown,
+   K., et al. (2020). Mental health and behavior of college students during                        W. J., et al. (2019). Associations of health-behavior patterns, mental health
+   the early phases of the COVID-19 pandemic: longitudinal smartphone and                          and self-rated health. Prev. Med. 118, 295–303. doi: 10.1016/j.ypmed.2018.
+   ecological momentary assessment study. J. Med. Internet Res. 22:e20185.                         11.017
+   doi: 10.31234/osf.io/4enzm                                                                   Pappa, S., Ntella, V., Giannakas, T., Giannakoulis, V. G., Papoutsi, E.,
+Kalok, A., Sharip, S., Abdul Hafizz, A. M., Zainuddin, Z. M., and Shafiee, M. N.                   and Katsaounou, P. (2020). Prevalence of depression, anxiety, and
+   (2020). The psychological impact of movement restriction during the COVID-                      insomnia among healthcare workers during the COVID-19 pandemic: a
+   19 outbreak on clinical undergraduates: a cross-sectional study. Int. J. Environ.               systematic review and meta-analysis. Brain Behav. Immun. 88, 901–907.
+   Res. Public Health 17:8522. doi: 10.3390/ijerph17228522                                         doi: 10.1016/j.bbi.2020.05.026
+Kapasia, N., Paul, P., Roy, A., Saha, J., Zaveri, A., Mallick, R., et al. (2020). Impact        People’s Daily (2020). To investigate and inspect the prevention before
+   of lockdown on learning status of undergraduate and postgraduate students                       school reopening (in Chinese). Available online at: http://paper.people.com.
+   during COVID-19 pandemic in West Bengal, India. Child. Youth Serv. Rev.                         cn/rmrb/html/2020-06/05/nw.D110000renmrb_20200605_3-02.htm (accessed
+   116:105194. doi: 10.1016/j.childyouth.2020.105194                                               November 25, 2020).
+Kecojevic, A., Basch, C. H., Sullivan, M., and Davi, N. K. (2020). The                          R Core Team (2020). R: A Language and Environment for Statistical Computing.
+   impact of the COVID-19 epidemic on mental health of undergraduate                               Vienna: R Foundation for Statistical Computing. Available online at: https://
+   students in New Jersey, cross-sectional study. PLoS ONE 15:e0239696.                            www.R-project.org/ (accessed September 26, 2020).
+   doi: 10.1371/journal.pone.0239696                                                            Seidel, E. J., Mohlman, J., Basch, C. H., Fera, J., Cosgrove, A., and Ethan, D. (2020).
+Kessler, R. C., Amminger, G. P., Aguilar-Gaxiola, S., Alonso, J., Lee, S., and Ustün,              Communicating mental health support to college students during covid-19:
+   T. B. (2007). Age of onset of mental disorders: a review of recent literature.                  an exploration of website messaging. J. Commun. Health 45, 1259–1262.
+   Curr. Opin. Psychiatry 20, 359–364. doi: 10.1097/YCO.0b013e32816ebc8c                           doi: 10.1007/s10900-020-00905-w
+
+
+
+
+Frontiers in Psychology | www.frontiersin.org                                              12                                                 April 2021 | Volume 12 | Article 641806
+
+Ren et al.                                                                                                                          COVID-19 Psychological Impact on Students
+
+
+
+Shader, R. I. (2020). COVID-19 and depression. Clin. Ther. 42, 962–963.                        pandemic in China: disease awareness, anxiety disorder, depression,
+   doi: 10.1016/j.clinthera.2020.04.010                                                        and behavioral activities. Int. J. Environ. Res. Public Health 17:5047.
+Shrestha, S. L. (2020). Prevalence of psychological effect of COVID-19 on medical              doi: 10.3390/ijerph17145047
+   professionals in a tertiary care center. J. Nepal Med. Assoc. 58, 550–553.               Xin, M., Luo, S., She, R., Yu, Y., Li, L., Wang, S., et al. (2020). Negative cognitive and
+   doi: 10.31729/jnma.5087                                                                     psychological correlates of mandatory quarantine during the initial COVID-19
+Son, C., Hegde, S., Smith, A., Wang, X., and Sasangohar, F. (2020). Effects of                 outbreak in China. Am. Psychol. 75, 607–617. doi: 10.1037/amp0000692
+   COVID-19 on college students mental health in the US: an interview-survey                Xingchen, H., Yingli, Z., and Wei, L. (2014). The reliability and validity
+   study. J. Med. Internet Res. 22:e21279. doi: 10.2196/21279                                  test of the patient health questionnaire depression scale (PHQ-9) in
+Tang, B., Xia, F., Tang, S., Bragazzi, N. L., Li, Q., Sun, X., et al. (2020). The              adolescent (in Chinese). Psychol. J. Sichuan Province. 27, 357–360. Available
+   effectiveness of quarantine and isolation determine the trend of the COVID-                 online at: http://www.psychjm.net.cn/ch/reader/view_abstract.aspx?file_no=
+   19 epidemics in the final phase of the current outbreak in China. Int. J. Infect.           201404021&flag=1
+   Dis. 95, 288–293. doi: 10.1016/j.ijid.2020.03.018                                        Yang, D., Tu, C. C., and Dai, X. (2020a). The effect of the 2019 novel
+Tang, W., Hu, T., Hu, B., Jin, C., Wang, G., Xie, C., et al. (2020a). Prevalence and           coronavirus pandemic on college students in Wuhan. Psychol. Trauma 12,
+   correlates of PTSD and depressive symptoms one month after the outbreak of                  6–14. doi: 10.1037/tra0000930
+   the COVID-19 epidemic in a sample of home-quarantined Chinese university                 Yang, L., Yu, Z., Xu, Y., Liu, W., Liu, L., and Mao, H. (2020b). Mental status of
+   students. J. Affect. Disord. 274, 1–7. doi: 10.1016/j.jad.2020.05.009                       patients with chronic insomnia in China during COVID-19 epidemic. Int. J.
+Tang, W., Hu, T., Yang, L., and Xu, J. (2020b). The role of alexithymia                        Soc. Psychiatry 66, 821–826. doi: 10.1177/0020764020937716
+   in the mental health problems of home-quarantined university students                    Yongan, Z. (2012). Application of the Self-Rating Anxiety Scale in College
+   during the COVID-19 pandemic in China. Pers. Individ. Dif. 165:110131.                      Students in China (in Chinese). Master’s thesis. Southern Medical University,
+   doi: 10.1016/j.paid.2020.110131                                                             Guangzhou, China.
+Tu, H., Tu, S., Gao, S., Shao, A., and Sheng, J. (2020). Current epidemiological and        Zhai, Y., and Du, X. (2020). Addressing collegiate mental health amid COVID-19
+   clinical features of COVID-19; a global perspective from China. J. Infect. 81,              pandemic. Psychiatry Res. 288:113003. doi: 10.1016/j.psychres.2020.113003
+   1–9. doi: 10.1016/j.jinf.2020.04.011                                                     Zhang, Y., Zhang, H., Ma, X., and Di, Q. (2020). Mental health problems during
+Velten, J., Bieda, A., Scholten, S., Wannemüller, A., and Margraf, J. (2018).                  the COVID-19 pandemics and the mitigation effects of exercise: a longitudinal
+   Lifestyle choices and mental health: a longitudinal survey with German                      study of college students in China. Int. J. Environ. Res. Public Health 17:3722.
+   and Chinese students. BMC Public Health 18:632. doi: 10.1186/s12889-018-                    doi: 10.3390/ijerph17103722
+   5526-2                                                                                   Zhou, S. J., Wang, L. L., Yang, R., Yang, X. J., Zhang, L. G., Guo, Z.
+Vindegaard, N., and Benros, M. E. (2020). COVID-19 pandemic and mental health                  C., et al. (2020). Sleep problems among Chinese adolescents and young
+   consequences: systematic review of the current evidence. Brain Behav. Immun.                adults during the coronavirus-2019 pandemic. Sleep Med. 74, 39–47.
+   89, 531–542. doi: 10.1016/j.bbi.2020.05.048                                                 doi: 10.1016/j.sleep.2020.06.001
+Walsh, R. (2011). Lifestyle and mental health. Am. Psychol. 66, 579–592.                    Zung, W. W. (1971). A rating instrument for anxiety disorders. Psychosomatics 12,
+   doi: 10.1037/a0021769                                                                       371–379. doi: 10.1016/S0033-3182(71)71479-0
+Wang, M., Kou, C., Bai, W., Song, Y., Liu, X., Yu, W., et al. (2019).
+   Prevalence and correlates of suicidal ideation among college students: a                 Conflict of Interest: The authors declare that the research was conducted in the
+   mental health survey in Jilin Province, China. J. Affect. Disord. 246, 166–173.          absence of any commercial or financial relationships that could be construed as a
+   doi: 10.1016/j.jad.2018.12.055                                                           potential conflict of interest.
+Webermann, A. R., and Murphy, C. M. (2020). How can psychology help reduce
+   gender-based violence and misconduct on college campuses? Am. Psychol.                   Copyright © 2021 Ren, Xin, Ge, Zhao, Liu, Ho and Ho. This is an open-access
+   doi: 10.1037/amp0000705. [Epub ahead of print].                                          article distributed under the terms of the Creative Commons Attribution License (CC
+World Health Organization (2020). Coronavirus disease (COVID-19) pandemic.                  BY). The use, distribution or reproduction in other forums is permitted, provided
+   Available online at: https://www.who.int/emergencies/diseases/novel-                     the original author(s) and the copyright owner(s) are credited and that the original
+   coronavirus-2019 (accessed November 22, 2020).                                           publication in this journal is cited, in accordance with accepted academic practice.
+Xiao, H., Shu, W., Li, M., Li, Z., Tao, F., Wu, X., et al. (2020). Social                   No use, distribution or reproduction is permitted which does not comply with these
+   distancing among medical students during the 2019 Coronavirus disease                    terms.
+
+
+
+
+Frontiers in Psychology | www.frontiersin.org                                          13                                                  April 2021 | Volume 12 | Article 641806

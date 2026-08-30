@@ -1,0 +1,497 @@
+Journal of Economics and Business Letters                                                Volume 5
+E-ISSN 2686-6056                                                                             Issue 4
+P-ISSN 2798-8651                                                                August Edition 2025
+https://doi.org/10.55942/jebl.v5i4.855
+
+ Teacher competence, school management, and organizational culture
+ as joint drivers of teacher productivity: Evidence from SMA Negeri 66
+                                  Jakarta
+                                              Didi Wahyudi
+
+  Master of Management, Sekolah Tinggi Ilmu Ekonomi Kusuma Negara, Jl. Raya Bogor KM No.24
+             Pasar Rebo, RT.3/RW.4, Cijantung, Jakarta Timur, Jakarta 13770, Indonesia
+                               e-mail: didi@stiekusumanegara.ac.id
+
+                                                                                        Received 20 June 2025
+                                                                                         Revised 28 July 2025
+                                                                                     Accepted 09 August 2025
+
+
+                                                ABSTRACT
+
+This study investigates whether teacher competence, school management, and organizational culture
+jointly and separately shape teacher productivity in a public urban high school context. Using a census of
+63 teachers at SMA Negeri 66 Jakarta, we administered multi-item Likert instruments aligned with national
+education standards and management/culture frameworks. Psychometric screening yielded high internal
+consistency across scales (α ≈ 0.88–0.96), and classical OLS assumptions (normality, homoskedasticity,
+linearity, absence of harmful multicollinearity) were satisfied. Bivariate analyses showed that competence
+had the strongest zero-order association with productivity (r ≈ 0.92; R² ≈ 81%), followed by organizational
+culture (r ≈ 0.61; R² ≈ 37%) and school management (r ≈ 0.44; R² ≈ 19%). In the simultaneous model,
+all predictors remained positive and significant, with combined explanatory power around 38–39% (p <
+.001). Notably, organizational culture exhibited the largest marginal coefficient when controlling for the
+other variables, indicating that a collaborative, disciplined, and trust-rich culture amplifies the translation
+of individual competencies into observable performance. Managerially, the results imply that targeted
+improvements in budgeting transparency and cycle discipline, structured peer learning (e.g., lesson study,
+peer observation), and timely, specific recognition can elevate productivity beyond its already favorable
+baseline. The findings support a triadic productivity model in which capability (competence), systems
+(management), and norms (culture) operate as complementary levers of performance.
+
+Keywords: teacher competence, school management, organizational culture, teacher productivity, SMA
+Negeri 66 Jakarta
+
+
+
+
+               Journal of Economics and Business Letters is licensed under a Creative Commons
+Attribution 4.0 International License.
+
+Journal of Economics and Business Letters
+
+1. INTRODUCTION
+
+         Globalisation has reshaped social, economic, and cultural life by accelerating technological
+diffusion—computers, the internet, satellites, and mobile devices—so profoundly that information can be
+accessed “at the touch of a button,” altering lifestyles, social interaction, learning, and work (Tilaar, 2005).
+This technological revolution democratises opportunity by flattening competitive playing fields, yet it also
+enlarges exposure to social risks such as cybercrime and youth delinquency (Tilaar, 2005). Within this
+disruption, education stands out as the most strategic institution for transforming knowledge and national
+values: it remains the most credible pathway for nations to lift citizens from poverty, ignorance, and
+underdevelopment, and to cultivate human capital able to compete globally (Naisbit & Aburdene, 1999).
+Investing in education not only equips individuals with skills and technology mastery but also fosters a
+healthy business climate conducive to economic growth. For Indonesia, education must be conceived as
+a systematic, continuous effort—across family, society, and formal institutions—to add value to human
+life in social, cultural, economic, and political dimensions, supported by high-quality human resources
+responsive to change (Mulyasa, 2006).
+         Three requirements are consistently emphasised for education to contribute meaningfully to
+human capital formation: adequate facilities, quality learning resources, and—decisively—professional
+teachers and education personnel (Djojonegoro in Mulyasa, 2006). While urban schools often possess
+sufficient infrastructure and sound curricula, evaluations frequently reveal unremarkable outcomes. This
+gap underscores that facilities and curricula are necessary but not sufficient; the defining factor is the
+human element—especially teacher quality—integrating intellectual, moral, creative, and spiritual
+capacities (Mulyasa, 2006). Consequently, the first reform priority is professionalising teachers through
+tiered and continuous development across formal, informal, and non-formal learning pathways (Mulyasa,
+2006).
+         Teacher quality drives outcomes. Teachers carry a dual macro-function, the quality of national
+education rests significantly on teachers’ competence (Hanushek, 2011). Teachers carry a dual macro-
+function: they transfer knowledge and model character formation. In this sense, the quality of national
+education rests significantly on teachers’ competence. Historical accounts—such as Ki Hadjar
+Dewantara’s Tamansiswa—illustrate that outstanding teaching can thrive even with minimal facilities
+when teachers are exemplary; many Tamansiswa alumni became accomplished societal figures (Ki
+Supriyoko, 2007). The contemporary debate on school quality often over-invests in curriculum, buildings,
+and testing while neglecting a serious, comprehensive discussion of teachers’ classroom effectiveness and
+professionalism (Ki Supriyoko, 2007). Persistent challenges—truancy during instructional time, student
+brawls, and low academic attainment—further justify the urgency of competent teachers who can create
+engaging, motivating, and productive learning climates (Mulyasa, 2006). Competent teachers are central
+actors in planning, delivering, and evaluating instruction; their competence shapes the learning climate and
+student motivation (Tschannen-Moran & Woolfolk Hoy, 2001).
+         Evidence from developing-country settings consolidates this view. Syntheses by Simon and
+Alexander (in Mulyasa, 2006) show two levers of teacher impact on student achievement: the effective
+time teachers devote to classroom work and teachers’ instructional quality. Competent teachers are central
+actors in planning, delivering, and evaluating instruction; their competence shapes the learning climate and
+student motivation, ultimately raising productivity at the teacher level (Mulyasa, 2006). In Indonesia,
+statutory expectations reinforce this professional mandate. Undang-Undang No. 14 Tahun 2005 requires
+teachers to plan, deliver, assess, and evaluate learning professionally; sustained improvements in teacher
+performance hinge on school support and leadership that integrate teacher competence with organisational
+systems.
+         School management is the second pillar. Management is vital to all organisations, and educational
+institutions are no exception. The effectiveness of school management—planning, organising, actuating,
+and controlling—determines whether a school’s resources are optimally aligned to attain its objectives. In
+practice, management weaknesses have been identified as core contributors to crises in Indonesian
+education, especially the shortage of professional educational administrators and the misplacement of
+
+                                                                                                             49
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+personnel lacking required competencies (source file). Decentralisation and school-based management
+(SBM) respond to these issues by granting autonomy to schools and inviting stakeholder participation,
+thereby demanding strong managerial capacity from principals and professional teacher performance to
+realise SBM’s promise. In this configuration, the principal is the most consequential single factor in
+building an effective school. As administrator and educational manager, the principal must exhibit
+conceptual, human-relation, and technical skills: seeing the school as an integrated whole, collaborating
+effectively with personnel, and mastering methods, processes, and classroom management techniques
+(source file).
+         The leadership role is codified in governance regulations. Peraturan Pemerintah No. 38 Tahun
+1992 defines education managers (including principals) as responsible actors for institutional
+administration; principals bear accountability for educational delivery, school administration, staff capacity
+building, and the stewardship of facilities and infrastructure (Republik Indonesia, 1992). Empirical
+indications align with this: communication patterns and conflict-management styles of principals jointly
+contribute to teaching performance, and effective classroom management and teaching performance, even
+if with modest effect sizes, are linked to student achievement. In short, professional school management—
+embodied in capable leadership—creates the conditions for teacher productivity, including monitoring,
+feedback, and motivation systems that sustain high performance.
+         Organisational culture constitutes the third lever. Culture comprises shared values, beliefs,
+assumptions, and expectations that guide thinking and behaviour in pursuit of organisational goals.
+Organisational culture comprises shared values and norms… and is associated with productivity,
+commitment, and performance (Hartnell, Ou, & Kinicki, 2011). It offers a coherent framework for
+reconciling individual differences and coordinating action. In corporate and public settings, culture is
+repeatedly associated with productivity, performance, commitment, self-efficacy, and ethical conduct.
+Schein (2004) highlights the reciprocal relationship between leadership and culture across organisational
+life cycles; leadership both shapes and is shaped by culture. Numerous studies identify cultural values and
+behavioural norms that enable sustained success. In Indonesia’s public sector, Keputusan Menteri PAN
+No. 25/KEP/M.PAN/04/2002 articulates a “budaya kerja aparatur negara” encompassing values,
+systems, and behavioural standards expected of civil service personnel, intended to enhance both
+individual self-actualisation and unit performance (KemenPAN, 2002). Empirical studies further report
+that supportive organisational culture elevates organisational commitment, job satisfaction, and human-
+resource performance.
+         The productivity lens integrates these three domains. Schools seeking excellence must therefore
+orchestrate individual, team, and organisational performance through aligned teacher competence
+development, empowering management practices, and value-consistent cultural norms. In this triad, the
+principal’s managerial acumen is pivotal to align goals, resources, and behaviours; teacher competence is
+the engine that converts resources into learning results; and culture is the glue that ensures consistency,
+motivation, and ethical action (Schein, 2004; Mulyasa, 2006).
+         Against this theoretical and policy backdrop, the study localises its inquiry at SMA Negeri 66
+Jakarta. Preliminary interviews indicate generally good teacher productivity and notable individual
+achievements, supported by attendance monitoring and school rules that reinforce work discipline.
+Teacher competence is reported to be adequate: strong motivation to fulfil professional tasks, subject-fit
+qualifications, and ongoing self-development. The school’s management is also assessed positively: the
+principal demonstrates high managerial role enactment, implements open and clean governance, and
+invests in learning facilities to make teachers’ work more effective. Importantly, the school articulates an
+organisational culture—in its educational handbook—centred on professional service and output–
+outcome orientation, with values that emphasise innovation, open communication, equality, and non-
+discriminatory leader–subordinate relations. These cultural elements aim to meet stakeholder expectations
+and foster teacher satisfaction in their work.
+         These observations, however, do not imply there is no scope for improvement. Even with
+favourable conditions, the literature suggests that gains in teacher productivity require deliberate
+alignment: (1) strengthening teacher competence across pedagogic, professional, personal, and social
+
+                                                                                                           50
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+domains; (2) enhancing managerial systems that provide clarity of goals, supportive supervision, and
+performance feedback; and (3) institutionalising a culture that normalises collaboration, continuous
+improvement, and shared accountability (Mulyasa, 2006; Schein, 2004). The legal–regulatory environment
+already sets expectations for teacher professionalism (UU No. 14/2005) and school leadership
+responsibilities (PP No. 38/1992), while public-sector culture directives (KEP/M.PAN/2002) offer a
+normative base for behavioural consistency and service excellence.
+        From here, the study positions four research questions around the partial and simultaneous effects
+of teacher competence, school management, and organisational culture on teacher productivity; and it
+proposes descriptive assessments of each construct within SMA Negeri 66 Jakarta. The underlying logic
+model is straightforward: competent teachers design and enact high-quality instruction; effective
+management mobilises resources and maintains performance conditions; and an enabling culture sustains
+motivation, commitment, and ethical practices. If the three are present and mutually reinforcing, teacher
+productivity—manifest in disciplined attendance, effective instructional delivery, timely task completion,
+and value-adding contributions to school goals—should rise (Mulyasa, 2006).
+        In sum, the background establishes (i) a global imperative for competitive, ethical, and human-
+centred education in a high-tech era (Tilaar, 2005; Naisbitt & Aburdene, 1999; Amich, 2005); (ii) a national
+mandate to professionalise teachers and strengthen school management under decentralised governance
+(UU No. 14/2005; PP No. 38/1992; SBM policy discourse); and (iii) a behavioural case for robust
+organisational culture as the performance backbone (Schein, 2004; A; KemenPAN, 2002). Within SMA
+Negeri 66 Jakarta, early indications of good practice provide a credible setting to test whether—controlling
+for context—the three predictors significantly and jointly shape teacher productivity. The study’s
+contribution is thus both practical and theoretical: practically, it guides leadership and policy choices in
+staffing, development, governance, and culture-building; theoretically, it integrates human capital,
+management, and culture into a coherent framework of school-level productivity that can be replicated
+across comparable Indonesian contexts (Mulyasa, 2006).
+
+2. METHOD
+
+         This empirical, explanatory study tests whether Teacher Competence (X1), School Management
+(X2), and Organizational Culture (X3)—identified in the introduction as decisive levers of school
+effectiveness—affect Teacher Work Productivity (Y) at SMA Negeri 66 Jakarta. The design is
+correlational–causal, estimating both partial and simultaneous effects among the predictors and the
+outcome. The site is SMA Negeri 66 Jakarta (Jl. Bango III, Pondok Labu, Cilandak, Jakarta Selatan); data
+collection ran from April to August 2012.
+         The population comprises all 63 teachers at SMA Negeri 66 Jakarta in 2012. Given the modest
+frame and the intent to maximize statistical power without sampling error, the study uses total sampling
+(census): every eligible teacher is invited, irrespective of rank or functional position. This approach assumes
+a relatively homogeneous staff structure and eliminates sampling–frame coverage issues commonly faced
+in stratified designs.
+         Guided by the background’s emphasis on human capital and institutional conditions, the
+independent variables are: Teacher Competence (X1)—the integrated set of pedagogical, professional,
+personal, and social capabilities enacted in professional duties; School Management (X2)—the P-O-L-C
+cycle (planning, organizing, leading, controlling) applied to core school subsystems (curriculum, students,
+personnel, finance, and facilities); and Organizational Culture (X3)—the shared values and norms that
+shape behavior (e.g., proactivity, team orientation, trust, orderliness, discipline, exemplary conduct). The
+dependent variable Teacher Work Productivity (Y) is conceptualized as the input–output relationship
+reflected in (1) rewards received, (2) work conditions, (3) recognition, (4) supervisory/peer support, and
+(5) successful task completion. All constructs are measured on a five-point Likert scale (1 = strongly
+disagree to 5 = strongly agree) with multi-item indicators as specified in the operationalization matrix. The
+content domain references the national education framework and standard HR/performance literature
+used in the instrument blueprint.
+
+                                                                                                            51
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+2.1 Instruments and Data Sources
+
+        Primary data are collected via a self-administered, closed-ended questionnaire distributed to all
+teachers. Secondary documentation (e.g., internal productivity records, regulations, and relevant
+textbooks) supplements construct scoping and triangulates descriptive statistics. The questionnaire items
+for each dimension/indicator follow the operational grid and use identical Likert anchors to preserve scale
+comparability across constructs.
+
+2.2 Validity and Reliability Procedures
+
+          Content (face) validity is first reviewed by a language/content expert to ensure clarity and relevance
+to teachers’ work context. Construct validity is then checked using item–total correlations (Pearson
+product–moment); items with significant, positive correlations to their scale total are retained. Scale
+reliability is assessed using Cronbach’s alpha internal consistency; coefficients meeting conventional
+thresholds are considered acceptable. These steps align with the instrument testing procedures and criteria
+reported in your methods chapter.
+
+2.3 Descriptive Statistics and Assumption Tests
+
+        Descriptive analysis summarizes central tendency and dispersion (mean, median, mode, variance,
+standard deviation) and visualizes frequency distributions (tables/histograms) to profile each construct.
+Before hypothesis testing, classical OLS assumptions are assessed: (1) Normality via the Lilliefors
+procedure; decisions follow the Lo vs. Ltable rule at α = 0.05; (2) Homoskedasticity/Heteroskedasticity
+via scatterplot inspection and variance diagnostics; models are preferred when residual variance is
+patternless and VIF ≤ 2 as a practical guardrail in this context; (3) Multicollinearity via inter-predictor
+correlations; values < 0.90 indicate no harmful redundancy; (4) Linearity and model significance via
+standard F-tests and pattern checks, consistent with the linear specification used in subsequent regression.
+
+2.4 Hypotheses and Analytical Strategy
+
+        The core hypotheses translate the introduction’s causal logic into testable relations: H1–H3 posit
+positive, significant partial effects of X1, X2, and X3 on Y; H4 posits a positive, significant simultaneous
+effect      of     X1,       X2,      X3      on      Y.     Analysis     proceeds      in      two     tiers:
+(1) Bivariate tests using Pearson correlations (r) with t-tests for significance at α = 0.05, evaluating the
+zero-order          association         between         each       predictor        and          productivity.
+(2) Multivariate tests using multiple linear regression (OLS): ( \hat{Y} = a + b_1 X_1 + b_2 X_2 + b_3
+X_3 + e ). Model fit is evaluated with R² and Adjusted R² to quantify explained variance; F-tests assess
+overall model significance; t-tests evaluate each coefficient’s contribution while holding others constant.
+Reporting follows standard practice (estimate, standard error, t, p-value, 95% CI), with diagnostics
+documented for transparency.
+        Data collection adheres to institutional norms for confidentiality and voluntary participation;
+responses are aggregated and used solely for research. Given the census design and single-school scope,
+external validity is analytic rather than statistical; inferences generalize to settings that share key
+characteristics (public urban high schools with similar governance and HR regimes). To mitigate common-
+method bias, the instrument mixes positively and neutrally worded items, preserves anonymity, and
+separates predictor and outcome sections.
+        Link to theoretical frame and local policy. This design operationalizes the background’s triadic
+performance theory—human capability (competence), managerial systems (school management), and
+normative glue (culture)—within Indonesia’s educational governance and professionalism mandates. By
+measuring these constructs rigorously and testing their effects on teacher productivity at SMA Negeri 66
+Jakarta, the method provides an evidence-based adjudication of the study’s central claim that teacher
+
+
+                                                                                                             52
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+professionalism, managerial quality, and cultural strength jointly shape productivity outcomes in public
+schooling.
+
+3. RESULT AND DISCUSSION
+
+3.1 Respondent Profile and Instrument Quality
+
+       The respondent pool comprises all teachers at SMA Negeri 66 Jakarta during the study period,
+representing a mature and experienced staff. Most teachers fall within the 30–39 age bracket, the majority
+are female, and the dominant educational attainment is a bachelor’s degree. Years of service cluster
+between eleven and twenty years, signaling a workforce with institutional memory and sustained classroom
+exposure. These features matter because they often correlate with more stable instructional routines and
+a richer repertoire of pedagogical strategies, reducing the variance in individual performance that
+sometimes appears in less experienced faculties.
+       The measurement instruments demonstrate strong psychometric adequacy. Item screening using
+item–total correlations yields the following: Teacher Competence (X1) retains twenty valid items; School
+Management (X2) retains twenty-four; Organizational Culture (X3) retains fourteen; and Teacher
+Productivity (Y) retains ten. Cronbach’s alpha results indicate very high internal consistency for all scales,
+with coefficients ranging approximately from 0.88 to 0.96. These values exceed conventional thresholds,
+suggesting the indicators cohere well around their respective constructs. The classical OLS assumptions
+are also satisfied: residuals are normally distributed, collinearity checks are within tolerable bounds,
+variance appears homoscedastic, and linear fit is appropriate. Consequently, the data and model are suitable
+for inferential tests and the interpretation of regression estimates.
+
+3.2 Descriptive Signals from the Constructs
+
+         Descriptive patterns are favorable across the three predictors. Teachers report high agreement
+with statements tapping the breadth and depth of professional competence—particularly in developing
+diverse instructional models and in maintaining personal integrity and consistency. On School
+Management, the most positively viewed elements relate to curriculum planning and the availability of
+operational guidance, though the budgeting process (RAPBS) is perceived as an area requiring additional
+clarity and transparency. Organizational Culture is similarly strong on teamwork and trust, yet openness
+in teamwork emerges as a relatively weaker node. The outcome variable, Teacher Productivity, records
+high levels of agreement overall, with managerial recognition from the principal standing out as a key
+motivational and evaluative signal.
+
+3.3 Bivariate Effects on Teacher Productivity
+
+        Three single-predictor models quantify the gross contribution of each construct to productivity.
+First, Teacher Competence (X1) exhibits a very strong correlation with Productivity (Y), explaining
+roughly four-fifths of the variance in a bivariate specification. The slope is positive and significant,
+indicating that improvements in competence—spanning pedagogical knowledge, professional mastery of
+subject matter and technology, ethical comportment, and social capability—are associated with higher
+productivity outcomes. This aligns with the study’s theoretical framing that what teachers know and can
+do is the most immediate engine of classroom output and effectiveness.
+        Second, School Management (X2) shows a moderate-to-strong positive association with
+Productivity, accounting for just under one-fifth of variance in the bivariate context. This magnitude
+suggests that plans, routines, resource allocation, supportive supervision, and transparent financial
+governance function as important contextual enablers for individual performance, even if they exert less
+influence than competence when examined in isolation.
+        Third, Organizational Culture (X3) demonstrates a strong positive bivariate link with Productivity,
+explaining over one-third of variance. Cultural attributes such as proactivity, teamwork, trust, discipline,
+
+                                                                                                           53
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+orderliness, and exemplary conduct improve the ease with which teachers work, reduce coordination
+frictions, and heighten consistency in delivering instructional responsibilities. The presence of a shared
+value system appears to guide behavior toward collective goals and to amplify the motivational ecology of
+the school.
+
+3.4 Simultaneous Effects and Shared Variance
+
+         When the three predictors are analyzed simultaneously in a multiple regression model, the
+combined explanatory power reaches approximately 38–39 percent. All coefficients remain positive and
+statistically significant, confirming that competence, management, and culture each contribute to
+productivity once the overlap among them is controlled. An intriguing shift occurs in the relative
+magnitudes of the standardized or comparable coefficients: Organizational Culture emerges as the
+strongest marginal predictor in the simultaneous model, followed by Teacher Competence and School
+Management. This shift implies that, although competence dominates the bivariate view, part of
+competence’s effect is shared with or transmitted through management routines and cultural norms. Said
+differently, the more the organization offers enabling systems and a supportive ethos, the more fully
+teachers can convert their capabilities into measurable output. See table 1
+
+               Table 1. Summary of Key Relationships (Bivariate and Simultaneous)
+
+ Model          Direction   Strength (r/R)     Explained        Significance   Interpretation
+                                               Variance (R²)
+ X1 → Y         Positive    Very      Strong   ≈81%             p<0.05         Competence is a powerful direct
+                            (r≈0.92)                                           driver of productivity.
+ X2 → Y         Positive    Moderate–Strong    ≈19%             p<0.05         Management provides enabling
+                            (r≈0.44)                                           structures and clarity.
+ X3 → Y         Positive    Strong (r≈0.61)    ≈37%             p<0.05         Culture fosters cohesion, trust, and
+                                                                               consistent behavior.
+ X1+X2+X3       All         R≈0.62             ≈38–39%          p<0.001        Culture shows the largest marginal
+ →Y             Positive                                                       effect in the joint model.
+
+        This combination of results is robust to assumption checks and is consistent with the study’s causal
+logic: competence readies the individual to perform, management supplies the operational runway, and
+culture acts as the adhesive and amplifier that turns many individual efforts into a sustained organizational
+pattern of productivity.
+
+3.5 Interpretive Themes
+
+         First, Teacher Competence behaves like an engine at the classroom level. It encompasses
+pedagogical depth (understanding learners, learning theories, curriculum design), professional mastery
+(subject matter, assessment practice, educational technology), ethical steadiness (integrity, responsibility),
+and social skills (communication, collaboration, empathy). In the bivariate analysis, it explains the largest
+share of variation in productivity. However, when management and culture enter the simultaneous model,
+the competence coefficient declines, implying that competence ‘translates’ into output more effectively
+under certain organizational conditions. In practice, this means that development programs and
+certifications yield the greatest returns when the school’s management cycle and cultural norms do not
+work at cross-purposes to classroom excellence.
+         Second, School Management functions as a systemic lever. Planning, organizing, leading, and
+controlling processes—particularly curriculum alignment, workload distribution, targeted professional
+development, and transparent budgeting—create predictability and resource sufficiency. The weaker node
+in the descriptive profile is RAPBS, which suggests potential bottlenecks or limited visibility into financial
+flows. Addressing this node could improve the timeliness of material support for instruction and
+professional development, thereby raising productivity indirectly. The regression results show that
+
+                                                                                                                 54
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+management’s marginal effect is smaller than culture’s in the simultaneous model, but still positive and
+significant, indicating its role as a stabilizer and enabler of sustained performance.
+         Third, Organizational Culture emerges as the largest marginal predictor when all three constructs
+are considered together. Culture reflects the shared meanings that inform day-to-day choices: proactivity,
+teamwork, trust, discipline, orderliness, and role-modeling behavior. Such norms reduce coordination
+costs, improve psychological safety, and enable peer learning. The relatively weaker aspect—openness in
+teamwork—pinpoints a pragmatic improvement lever: structures for reflective practice (e.g., lesson study),
+peer observation with feedback, and team charters with explicit communication commitments can raise
+openness, which in turn should strengthen knowledge transfer and collaborative problem-solving.
+
+3.6 Managerial Implications for SMA Negeri 66 Jakarta
+
+        Given the school’s favorable baseline—competent and motivated teachers, supportive leadership
+recognition, structured curriculum processes, and a growing culture of collaboration—the path to higher
+productivity involves targeted fine-tuning rather than wholesale redesign. Three priorities are
+recommended. First, enhance RAPBS transparency and cycle discipline to ensure that facilities,
+instructional materials, and development activities are scheduled and funded with minimal friction.
+Second, embed openness in teamwork through regularized structures: lesson study cycles, peer
+observations with formative feedback, and team retrospectives that convert experience into organization-
+wide learning. Third, maintain and calibrate performance recognition to be timely, specific, and linked to
+observable instructional practices; this signal appears strongly associated with perceived productivity and
+can reinforce desired behaviors.
+        Monitoring should accompany implementation. For budgeting, track variance between planned
+and executed line items and measure lead times from request to fulfillment. For teamwork openness, use
+short pulse surveys on psychological safety and knowledge sharing, and triangulate with participation rates
+in peer observation. For recognition, analyze distribution patterns to avoid over-concentration and ensure
+alignment with transparent criteria. These metrics enable timely course corrections and foster a culture of
+evidence-informed management.
+
+4. CONCLUSION
+
+The evidence from SMA Negeri 66 Jakarta substantiates a clear, triadic performance architecture: teacher
+competence functions as the immediate engine of classroom output; school management supplies the
+operational runway through planning, resource alignment, and supervisory support; and organizational
+culture acts as the adhesive that coordinates effort, reduces friction, and sustains motivation. Although
+competence dominates in bivariate terms, culture emerges as the strongest marginal driver once overlap
+among predictors is controlled, implying that professional skills yield the highest returns within a
+cooperative, disciplined, and trust-based social system. Practically, three priorities follow. First, tighten
+RAPBS transparency and cycle discipline to ensure timely provisioning for instruction and professional
+development. Second, institutionalize openness in teamwork via lesson study cycles, structured peer
+observation with formative feedback, and team retrospectives that convert experience into shared know-
+how. Third, maintain and calibrate recognition practices so they are timely, specific, and visibly tied to
+effective instructional behaviors. Taken together, these moves are likely to raise productivity beyond its
+strong baseline by converting individual capabilities into collective, durable performance patterns. More
+broadly, the study affirms that investments in professional development must proceed in tandem with
+management process reliability and culture-building if schools are to achieve stable gains in teacher
+productivity and student learning outcomes in comparable Indonesian public high-school settings.
+
+Ethical Approval
+Not Applicable
+
+
+
+                                                                                                          55
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL
+
+Journal of Economics and Business Letters
+
+Informed Consent Statement
+Not Applicable
+
+Disclosure Statement
+The Authors declare that they have no conflict of interest
+
+Data Availability Statement
+The data presented in this study are available upon request from the corresponding author for privacy.
+
+Funding
+This study did not receive any external funding.
+
+Notes on Contributors
+
+Didi Wahyudi
+Didi Wahyudi is affiliated with Master of Management, Sekolah Tinggi Ilmu Ekonomi Kusuma Negara
+
+REFERENCES
+
+Amich,      Alhumami.          Pendidikan    dan     Pembangunan       Ekonomi.       Diakses      dari     situs
+        http://www.kompas.com/kompas-cetak/05/05/03/opini/1724873.html
+Hanushek, E. A. (2011). The economic value of higher teacher quality. Economics of Education Review, 30(3),
+        466–479. https://doi.org/10.1016/j.econedurev.2010.12.00
+Hartnell, C. A., Ou, A. Y., & Kinicki, A. (2011). Organizational culture and organizational effectiveness:
+        A meta-analytic investigation of the competing values framework’s theoretical suppositions. Journal
+        of Applied Psychology, 96(4), 677–694. https://doi.org/10.1037/a0021987
+Keputusan Menteri Pendayagunaan Aparatur Negara No.25/Kep/M.PAN/04/2002 tgl 25 April 2002.
+Mulyasa, E. 2006. (2006). Menjadi Guru Profesional. Remaja Rosdakarya. Bandung
+Naisbit, John dan Aburdence, Patracia. (1999) dalam Megatrend (2000). terj. FX Budijanto, Binarupa
+        Aksara, Jakarta.
+Peraturan Pemerintah No.38 tahun 1992 Pasal 3 Ayat 3
+Schein, Edgar H. (2004), Organizational Culture and Leadership, Third Edition, Jossey –Bass Publishers, San
+        Francisco.
+Tilaar, H.A.R. (2005). Manifesto Pendidikan Nasional : Tinjauan dari Perspektif Postmodernisme dan Studi Kultural.
+        Penerbit Buku Kompas. Jakarta
+Tschannen-Moran, M., & Woolfolk Hoy, A. (2001). Teacher efficacy: Capturing an elusive construct.
+        Teaching and Teacher Education, 17(7), 783–805. https://doi.org/10.1016/S0742-051X(01)00036-1
+Ki Supriyoko. (2007), 9 Juli . ”Revitalisasi Pendidikan Nasional”, Kompas, p.6
+
+
+
+
+                                                                                                               56
+Volume 5, Issue 4 available at https://journal.privietlab.org/index.php/JEBL

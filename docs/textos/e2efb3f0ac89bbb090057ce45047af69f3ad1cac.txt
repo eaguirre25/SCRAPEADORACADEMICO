@@ -1,0 +1,881 @@
+www.revistatribunal.org
+                                 Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballestero, Eva
+                                                    María de Lourdes Loaiza Massuh y Diego Abraha Lara Flor
+
+
+                                                                                                                                www.revistatribunal.org
+
+
+
+
+ISSN: 2959-6513 - ISSN-L: 2959-6513 Volumen 5. No. 12 / Julio – Septiembre 2025
+Páginas 01 - 20
+
+          Impacto de la inteligencia artificial en la transformación de los procesos de
+                       enseñanza aprendizaje en la educación superior
+          Impact of artificial intelligence on the transformation of teaching-learning processes in
+                                                higher education
+         Impacto da inteligência artificial na transformação dos processos de ensino-aprendizado
+                                             na educação superior
+
+                      Gloria Ángélica Valderrama Barragán                                       Henry Fernando Vallejo Ballesteros
+                      gvalderranbe@unemi.edu.ec                                                 hvallejo@ueb.edu.ec
+                      Universidad Estatal de Milagro. Guayas,                                   Universidad Estatal de Bolívar, Guaranda,
+                      Ecuador                                                                   Ecuador
+
+
+                                                                                                Diego Abrahan Lara Flor
+                      Eva María de Lourdes Loaiza Massuh                                        diego.lara.flor@gmail.com
+                      eva.loaizam@ug.edu.ec                                                     Investigador independiente.
+                      Universidad de Guayaquil. Guayaquil, Ecuador                              Guayaquil, Ecuador
+
+                                                          http://doi.org/10.59659/revistatribunal.v5i12.190
+
+                                    Artículo recibido 15 de abril 2025 | Aceptado 26 de mayo 2025 | Publicado 1 de julio 2025
+
+
+                                                                                                                                Resumen
+     Palabras clave:              La presente revisión analiza la incidencia de la IA en la innovación de los métodos de enseñanza-
+                                  aprendizaje en la educación universitaria, con atención a América Latina. El objetivo fue identificar
+    Competencias Digitales;
+                                  oportunidades, desafíos y limitaciones de la incorporación de la IA en las universidades de la región.
+    Educación superior; IA;       Se consultaron 146 registros en repositorio de datos como Scielo, Scopus y Redalyc, aplicando
+    Inclusión educativa;          criterios de inclusión que consideraron artículos publicados entre 2016 y 2025, revisados por pares
+    Personalización del           y enfocados en educación superior; se excluyeron documentos no académicos o sin revisión por
+    aprendizaje;                  pares. Tras el proceso de selección, se analizaron 14 estudios. Los resultados muestran que la IA
+    Transformación digital        facilita la personalización de la enseñanza y la gestión educativa, pero enfrenta barreras como
+                                  brechas digitales, resistencia al cambio y limitaciones éticas y de infraestructura. Se concluye que
+                                  aplicar la IA demanda inversión, formación continua y marcos regulatorios para una integración
+                                  inclusiva y sostenible.
+
+
+                                                                                                                                  Abstract
+      Keywords:                   This review considers the incidence of AI on the modification of teaching-learning processes in
+                                  university education, focusing on Latin America. The aim was to identify opportunities, difficulties,
+     Digital Competencies;        and limitations of AI integration in universities in the region. A total of 146 records were consulted
+     Higher Education; AI;        in databases such as Scielo, Scopus, and Redalyc, applying inclusion criteria that considered peer-
+     Educational Inclusion;       reviewed articles published between 2016 and 2025, focused on higher education; non-academic
+     Personalized Learning;       documents or those without peer review were excluded. After the selection process, 14 studies were
+     Digital Transformation       analyzed. The results show that AI facilitates personalized learning and academic management but
+                                  encounter handicaps such as digital divides, confrontation to change, and ethical and infrastructure
+                                  limitations. It is concluded that AI adoption requires investment, continuous training, and regulatory
+                                  frameworks to achieve inclusive and sustainable integration.
+
+
+                                                                                                                                             1
+
+                         Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballesteros,
+                                   Eva María de Lourdes Loaiza Massuh y Diego Abrahan Lara Flor
+
+
+                                                                                                                      Resumo
+  Palavras-chave:         Esta revisão analisa o impacto da IA na transformação dos processos de ensino-aprendizagem no
+Competências Digitais;    ensino superior, com foco na América Latina. O objetivo foi identificar oportunidades, desafios e
+Ensino Superior; IA;      limitações da integração da IA nas universidades da região. Foram consultados 146 registros em
+Inclusão Educacional;     bases de dados como Scielo, Scopus e Redalyc, aplicando critérios de inclusão que consideraram
+Personalização da         artigos revisados por pares, publicados entre 2016 e 2025, focados no ensino superior; documentos
+Aprendizagem;             não acadêmicos ou sem revisão por pares foram excluídos. Após o processo de seleção, 14 estudos
+Transformação Digital     foram analisados. Os resultados mostram que a IA facilita a personalização da aprendizagem e a
+                          gestão acadêmica, mas enfrenta barreiras como desigualdades digitais, resistência à mudança e
+                          limitações éticas e de infraestrutura. Conclui-se que a adoção da IA requer investimento, formação
+                          contínua e marcos regulatórios para alcançar uma integração inclusiva e sustentável.
+
+
+
+
+                                                                                                          INTRODUCCIÓN
+
+         La acogida de la inteligencia artificial (IA) en la educación del nivel superior ha supuesto un cambio
+ profundo en la forma en que se diseñan y desarrollan los procesos de enseñanza y aprendizaje a nivel global.
+ Con la utilización de sistemas inteligentes, algoritmos de aprendizaje automático y plataformas adaptativas,
+ la IA está transformando los roles tradicionales dentro de las universidades, facilitando la personalización
+ del aprendizaje, una gestión académica más eficiente y la creación de ambientes educativos flexibles e
+ inclusivos (Corzo-Zavaleta et al., 2025; Chamoli et al., 2024; Barroso et al., 2016). Sin embargo, estas
+ transformaciones no se presentan de forma homogénea en todas las regiones; en Latinoamérica y,
+ particularmente, en Ecuador, la integración de la IA en la educación superior enfrenta retos estructurales,
+ culturales y tecnológicos que limitan su alcance e impacto (Kroff y Ferrada, 2024; Ayala, 2024).
+
+         A nivel mundial, la IA se considera que ha tomado fuerza, de tal forma que se consolida como una
+ herramienta básica para la innovación educativa, permitiendo adaptar contenidos y metodologías a las
+ demandas concretas de cada estudiante y automatizando tareas administrativas, lo que libera recursos para
+ actividades de mayor valor, como la interacción entre docentes y estudiantes o el desarrollo curricular
+ innovador. Además, contribuye a mejorar la precisión en la evaluación, la administración de información
+ académica y mejora en la utilización de recursos institucionales (Ayuso del Puerto y Gutiérrez, 2022). No
+ obstante, la literatura especializada indica que en América Latina la implementación de estas tecnologías
+ está marcada por desigualdades en el acceso, deficiencias en infraestructura y una brecha en la formación
+ de habilidades digitales de docentes y estudiantes (Corzo-Zavaleta et al., 2025; Ayala, 2024).
+
+         En América Latina, países entre ellos México y Brasil avanzan vertiginosamente en la aceptación de
+ herramientas de IA en sus centros del nivel superior, aunque la expansión regional sigue siendo limitada
+ debido a obstáculos como la falta de recursos tecnológicos, la escasa conectividad en zonas rurales y
+ periurbanas, y la insuficiente capacitación en competencias digitales. Además, la resistencia al cambio,
+ influenciada por métodos pedagógicos tradicionales, dificulta la integración fluida de la IA en los procesos
+
+                                                                     Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                        Volumen 5. No. 12 / Julio – septiembre 2025
+    2
+
+                    Impacto de la inteligencia artificial en la transformación de los procesos de
+                    enseñanza aprendizaje en la educación superior
+
+educativos. Estas limitaciones restringen la capacidad de las universidades para un mejor aprovechamiento
+de las ventajas que trae consigo el empleo de la IA y profundizan inequidades y acceso a una educación de
+calidad (Corzo-Zavaleta et al., 2025; Ayala, 2024).
+
+       El interés por explorar el potencial de la IA en la educación superior ha ido creciendo en Ecuador,
+aunque la adopción masiva aún enfrenta importantes barreras. Entre las principales dificultades se
+encuentran las mencionadas anteriormente, que limitan el aprovechamiento pleno de las oportunidades que
+brinda la IA. Asimismo, existen inquietudes legales, éticas y de privacidad relacionadas con la protección
+de datos personales en la educación mediados por IA.
+
+       A pesar de estos desafíos, algunas instituciones ecuatorianas han logrado implementar soluciones
+basadas en IA para el análisis y gestión de datos, la personalización del aprendizaje y la racionalización de
+procedimientos administrativos. Estas experiencias evidencian la capacidad de la IA para incrementar la
+calidad y eficiencia educativa y promover la equidad en el acceso a recursos avanzados. Sin embargo, la
+mayoría de las universidades del país se encuentran en etapas iniciales de adopción, lo que subraya la
+necesidad de esquemas de financiamiento y políticas de desarrollo digital y marcos regulatorios claros que
+permitan una integración más amplia, ética y segura de la IA en la educación superior.
+
+       En este marco, los autores declaran como propósito del presente estudio analizar el impacto de la IA
+en la transformación de los procesos de enseñanza-aprendizaje en la educación superior, con especial
+atención a la problemática en América Latina y específicamente en Ecuador. Se identifican las
+oportunidades, retos y limitaciones que enfrentan estudiante y docentes a la hora de adoptar la IA en las
+universidades, además de proponer recomendaciones para una ejecución eficaz, eficiente, inclusiva y
+sostenible de estas tecnologías en el sistema educativo de la educación superior de la región.
+
+                                                                                                                        MÉTODO
+
+       La revisión sistemática se desarrolló en la presente investigación siguiendo las directrices
+establecidas por el protocolo PRISMA, con el propósito de asegurar un procedimiento riguroso, transparente
+y replicable en la identificación, selección, análisis y síntesis de la literatura científica que aborda el impacto
+de la IA en la transformación de los procesos de enseñanza y aprendizaje en la educación superior, con
+especial atención en América Latina y Ecuador. Este enfoque metodológico permitió estructurar un marco
+sólido para examinar la evolución y los efectos de la IA en contextos universitarios específicos.
+
+       El corpus de estudio estuvo compuesto por artículos científicos relacionados con la forma en que se
+aplica la IA en la educación superior, extraídos de bases de datos académicas reconocidas entre las que se
+encuentran Scielo, Dialnet, Scopus y Redalyc. Para la búsqueda se utilizaron términos precisos como
+“inteligencia artificial”, “educación superior”, “procesos de enseñanza-aprendizaje”, “transformación
+educativa”, “América Latina” y “Ecuador”. Se establecieron criterios de inclusión que contemplaron
+
+                                                                      Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                         Volumen 5. No. 12 / Julio – septiembre 2025
+  3
+
+                         Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballesteros,
+                                   Eva María de Lourdes Loaiza Massuh y Diego Abrahan Lara Flor
+
+publicaciones entre 2016 y 2025, en español, inglés y portugués, que abordaran directamente la
+implementación, efectos o desafíos de la IA en entornos universitarios. Por otro lado, se descartaron
+documentos sin revisión por pares, informes técnicos no académicos y aquellos que no centraban su análisis
+en la educación superior.
+
+        La selección final de estudios se llevó a cabo en tres etapas: identificación, filtrado e inclusión. Como
+queda reflejado en la Figura 1, inicialmente se detectaron 146 registros en las bases de datos consultadas.
+Posteriormente, se eliminaron duplicados, documentos ilegibles o irrelevantes. Tras solicitar y revisar los
+textos completos, se evaluó su elegibilidad y se excluyeron aquellos que no cumplían con los criterios
+definidos, resultando en una muestra definitiva de 14 estudios para la revisión sistemática. Este proceso
+garantizó la calidad y pertinencia de la información analizada.
+
+        Para la extracción y sistematización de los datos, se diseñó una matriz que permitió registrar aspectos
+clave de cada artículo, tales como autoría, año de publicación, contexto geográfico, objetivos, metodología
+empleada, hallazgos principales y limitaciones identificadas. A continuación, se decidió llevar a cabo un
+análisis descriptivo, tanto cualitativo como cuantitativo, con el fin de detectar tendencias, patrones y vacíos
+en la literatura existente. Este análisis facilitó una visión integral sobre el estado actual del tema objeto de
+análisis.
+
+        El estudio consideró tres variables fundamentales: (1) la integración tecnológica, que se refiere al
+grado y forma en que la IA ha sido incorporada en los procesos educativos y administrativos de las
+instituciones docentes del nivel superior; (2) las competencias digitales de docentes y estudiantes, que
+incluyen las habilidades y conocimientos tecnológicos adecuados para utilizar con precisión las herramientas
+basadas en IA; y (3) los desafíos y barreras contextuales, que comprenden factores estructurales, culturales,
+éticos y legales que obstaculizan la adopción y uso efectivo de la IA en el ámbito universitario. Estas
+dimensiones permitieron penetrar en el fenómeno desde una perspectiva multidimensional.
+
+        Además, este método facilitó una comprensión crítica y profunda sobre la situación actual y las
+perspectivas para el futuro del impacto de la IA en la educación superior, enfatizando las particularidades y
+necesidades propias de la región latinoamericana y el contexto ecuatoriano. La revisión también destacó la
+importancia de desarrollar políticas educativas y estrategias institucionales que promuevan la inclusión
+digital y la ética en el uso de tecnologías emergentes. Finalmente, se subrayó la importancia de potenciar la
+capacitación constante de los actores educativos para enfrentar los retos que plantea la integración de la IA
+en los procesos académicos.
+
+
+
+
+                                                                  Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                     Volumen 5. No. 12 / Julio – septiembre 2025
+  4
+
+                   Impacto de la inteligencia artificial en la transformación de los procesos de
+                   enseñanza aprendizaje en la educación superior
+
+
+
+
+                                               Figura 1. Diagrama de flujo
+
+                                                                                       RESULTADOS Y DISCUSIÓN
+
+       Mediante la sistemática revisión de la literatura, se destacan las posibilidades que brinda la IA para
+adecuar el aprendizaje a las necesidades individualizadas de cada centro, elevar la calidad educativa y
+mejorar la eficiencia en la gestión institucional. Asimismo, se reconocen los retos y restricciones vinculados
+a la infraestructura tecnológica, las desigualdades en el acceso digital, la formación del profesorado y las
+cuestiones éticas y de privacidad. Además, se destacan las barreras contextuales que dificultan una adopción
+equitativa y efectiva de estas tecnologías en las universidades de la región. Finalmente, el estudio propone
+recomendaciones orientadas a promover una integración inclusiva, perdurable y consciente en el empleo de
+la IA en la enseñanza educativa del nivel superior en Latinoamérica, con miras a potenciar su rol como motor
+de innovación y desarrollo académico en Ecuador y América Latina.
+
+
+
+
+                                                                     Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                        Volumen 5. No. 12 / Julio – septiembre 2025
+  5
+
+                       Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballestero, Eva
+                                          María de Lourdes Loaiza Massuh y Diego Abraha Lara Flor
+
+Tabla 1. Panorama actual de investigaciones sobre IA en educación universitaria
+
+       Autor/año                               Título del artículo                                                                      Contexto                     Base de datos
+                                                                                                    Análisis cualitativo del impacto de la IA en la educación
+                                  Impacto de la Inteligencia Artificial en la
+      Ayala (2024)                                                                               superior, enfocándose en personalización del aprendizaje, apoyo        Dialnet
+                                  transformación de la Educación Superior
+                                                                                                                  docente y gestión académica.
+ Ayuso del Puerto y           La Inteligencia Artificial como recurso educativo                    Uso de IA como herramienta educativa en la formación inicial
+                                                                                                                                                                        Scopus
+  Gutiérrez (2022)              durante la formación inicial del profesorado                          de docentes, evaluando beneficios y retos pedagógicos.
+      Barroso et al.       The use of learning objects in augmented reality in the               Aplicación de objetos de aprendizaje en realidad aumentada para
+                                                                                                                                                                        Scopus
+         (2016)                             teaching of medicine                                                    la enseñanza de medicina.
+   Castrillón et al.         Prediction of academic performance using artificial                 Uso de técnicas de IA para predecir el rendimiento académico en
+                                                                                                                                                                        Scielo
+       (2020)                               intelligence techniques                                                    educación superior.
+  Chamoli y Patiño          Impacto de la Inteligencia Artificial en la Educación                      Análisis del impacto de la IA en la educación jurídica en
+                                                                                                                                                                        Scielo
+      (2024)                             Jurídica Latinoamericana                                      América Latina, identificando oportunidades y desafíos.
+                            A comprehensive AI policy education framework for                      Propuesta de un marco integral para políticas educativas sobre
+      Chan (2023)                                                                                                                                                       Scopus
+                                    university teaching and learning                                             IA en la enseñanza universitaria.
+ Corzo-Zavaleta et             Uso de la inteligencia artificial en la educación                  Estudio bibliométrico sobre la aplicación de IA en la educación
+                                                                                                                                                                        Scielo
+    al. (2025)                    universitaria: exploración bibliométrica                                                universitaria.
+  Kroff y Ferrada            Inteligencia Artificial en la educación universitaria:                 Revisión sobre innovaciones y retos de la IA en la educación
+                                                                                                                                                                        Scielo
+      (2024)                        Innovaciones, desafíos y oportunidades                                                   superior.
+                              La inteligencia artificial en la educación superior.                  Análisis de las oportunidades y amenazas que presenta la IA
+ León y Viña (2017)                                                                                                                                                     Redalyc
+                                         Oportunidades y amenazas                                                    para la educación superior.
+                              Personalización del aprendizaje con inteligencia                   Estudio sobre la personalización del aprendizaje mediante IA en
+ López et al. (2023)                                                                                                                                                   Latindex
+                                    artificial en la educación superior                                                educación superior.
+                                                                                                                                                                       Emerging
+ Sousa y de Freitas         Gamificación: un estudio en la Formación Inicial del                   Exploración del desconocimiento y uso de gamificación en la
+                                                                                                                                                                    Sources Citation
+      (2022)                         Profesorado de Educación Física                                    formación inicial de docentes de educación física.
+                                                                                                                                                                         Index
+
+                                                                   Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                      Volumen 5. No. 12 / Julio – septiembre 2025
+  6
+
+                   Impacto de la inteligencia artificial en la transformación de los procesos de
+                   enseñanza aprendizaje en la educación superior
+
+     Autor/año                                 Título del artículo                                                                        Contexto                    Base de datos
+                         El desempeño pedagógico docente influenciado por las                             Análisis del impacto de las competencias digitales en el
+Valverde (2024)                                                                                                                                                          Scielo
+                                       competencias digitales                                                         desempeño pedagógico docente.
+                          Competencias docentes, una innovación en ambientes                             Estudio sobre innovaciones en competencias docentes en
+Vega et al. (2021)                                                                                                                                                       Scielo
+                            virtuales de aprendizaje en educación superior                                         ambientes virtuales de aprendizaje.
+                             La Revolución de la Inteligencia Artificial en la
+                                                                                                     Revisión sobre avances, perspectivas y desafíos de la IA en la
+    Viera (2024)            Educación Universitaria: Avances, Perspectivas y                                                                                             Dialnet
+                                                                                                                       educación universitaria.
+                                      Desafíos en la Era Digital
+
+
+
+
+                                                                     Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                        Volumen 5. No. 12 / Julio – septiembre 2025
+7
+
+                     Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballestero, Eva
+                                        María de Lourdes Loaiza Massuh y Diego Abraha Lara Flor
+
+       Los trabajos recopilados en la Tabla 1 muestran una variedad tanto temática como geográfica
+respecto a la aplicabilidad de la IA en la educación superior, abarcando un total de 14 investigaciones
+publicadas entre los años 2016 y 2025. De estos estudios, cinco fueron obtenidos de la base de datos Scielo,
+cuatro de Scopus, dos de Dialnet, uno de Redalyc, uno de Latindex y otro del Emerging Sources Citation
+Index. Esta diversidad de fuentes refleja el interés creciente y la expansión del análisis sobre IA en diferentes
+contextos académicos y regiones. Además, la distribución de los estudios evidencia la pluralidad de enfoques
+y metodologías utilizadas para abordar la forma en que impacta la IA en las universidades. Este conjunto de
+investigaciones proporciona una base sólida para lograr una comprensión de las tendencias y desafíos que
+enfrenta la integración de la IA en la educación superior.
+
+       La mayor parte de los trabajos se centralizan en elementos como la personalización del aprendizaje,
+competencias digitales docentes, innovación educativa y desafíos éticos y técnicos de la IA en el ámbito
+universitario. Por ejemplo, mientras Ayala (2024) y López et al. (2023) abordan la transformación y
+personalización del aprendizaje mediante IA, otros como Castrillón et al. (2020) y Corzo-Zavaleta et al.
+(2025) se enfocan en aplicaciones prácticas como la predicción del rendimiento académico y análisis
+bibliométricos. Desde esta variedad se muestra un panorama amplio que combina análisis cualitativos,
+estudios empíricos y revisiones bibliográficas, evidenciando tanto oportunidades como retos en la
+integración de la IA en la educación superior latinoamericana.
+
+       Comparativamente, Scielo destaca como la base de datos con mayor cantidad de artículos contenidos
+(5), seguida por Scopus (4), lo que refleja la importancia de estas plataformas para la propagación de
+conocimientos en la esfera de tecnología educativa en Latinoamérica. Dialnet, con dos artículos, se orienta
+más hacia el contexto iberoamericano, mientras que Redalyc, Latindex y Emerging Sources Citation Index
+aportan perspectivas complementarias desde revistas especializadas regionales y temáticas. La presencia de
+artículos recientes, especialmente de 2023 a 2025, demuestra el interés ascendente y producción científica
+sobre la IA en la educación del nivel superior, con un enfoque particular en los desafíos y potencialidades
+en contextos latinoamericanos y ecuatorianos. Este panorama sugiere un campo en expansión que combina
+innovación tecnológica con análisis crítico de su impacto pedagógico y social.
+
+       Las bases de datos reflejadas en la tabla son plataformas académicas reconocidas que facilitan el
+acceso y la difusión de investigaciones científicas en América Latina y el mundo. Scielo y Redalyc son
+sistemas de acceso abierto que agrupan revistas científicas iberoamericanas, con un fuerte énfasis en la
+calidad editorial y la visibilidad regional. Scopus, por su parte, es una base de datos internacional de gran
+prestigio que indexa revistas de alto impacto en múltiples disciplinas, incluyendo educación y tecnología.
+Dialnet es una plataforma española que ofrece un amplio repositorio de documentos científicos en lengua
+española y portuguesa, dirigido al campo de las ciencias sociales y humanísticas.
+
+
+                                                                 Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                    Volumen 5. No. 12 / Julio – septiembre 2025
+  8
+
+                   Impacto de la inteligencia artificial en la transformación de los procesos de
+                   enseñanza aprendizaje en la educación superior
+
+       Latindex es un sistema regional de información que recopila y evalúa publicaciones académicas
+provenientes de Latinoamérica, el Caribe, España y Portugal, promoviendo altos estándares de calidad
+editorial. Por su parte, el Emerging Sources Citation Index, que forma parte de Web of Science, se enfoca
+en revistas emergentes con potencial para generar impacto científico. Estas bases de datos aseguran que las
+fuentes consultadas sean rigurosas, accesibles y diversas para analizar el impacto de la IA en la educación
+superior.
+
+
+
+
+                                                                     Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                        Volumen 5. No. 12 / Julio – septiembre 2025
+  9
+
+                    Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballestero, Eva
+                                       María de Lourdes Loaiza Massuh y Diego Abraha Lara Flor
+
+Tabla 2. Síntesis crítica de estudios sobre IA y educación superior
+
+   Autor/año                       Objetivos                            Metodología utilizada                              Hallazgos principales            Limitaciones señaladas
+                                                                  Enfoque cualitativo, diseño no
+                       Analizar el impacto de la IA en la                                                          La IA potencia la personalización      Retos en privacidad de datos,
+                                                                   experimental, metodología
+                   transformación de la educación superior,                                                             del aprendizaje, apoyo al        equidad en acceso tecnológico
+  Ayala (2024)                                                        descriptiva; revisión
+                    enfocándose en personalización, apoyo                                                          profesorado, evaluación, retención    y necesidad de capacitación en
+                                                                   documental y observación
+                         docente y gestión académica.                                                               estudiantil y gestión académica.              ética digital.
+                                                                            directa.
+   Ayuso del        Explorar el uso de la IA como recurso                                                         La IA facilita recursos innovadores     Limitada experiencia práctica
+                                                                     Revisión bibliográfica y
+   Puerto y          educativo en la formación inicial del                                                          para la formación docente, pero          en algunos contextos y
+                                                                  análisis crítico de experiencias
+   Gutiérrez         profesorado, evaluando beneficios y                                                           requiere adaptación pedagógica y        resistencia al cambio entre
+                                                                             educativas.
+    (2022)                   retos pedagógicos.                                                                           formación continua.                       docentes.
+                                                                      Estudio descriptivo con
+                   Evaluar el uso de objetos de aprendizaje                                                         La realidad aumentada mejora la        Alcance limitado a contextos
+ Barroso et al.                                                    aplicación práctica de objetos
+                   en realidad aumentada para la enseñanza                                                          comprensión y motivación en la       específicos; necesidad de mayor
+    (2016)                                                         de aprendizaje en entornos de
+                                 de medicina.                                                                              enseñanza médica.                  integración curricular.
+                                                                        realidad aumentada.
+                                                                                                                      Las técnicas de IA permiten
+                      Predecir el rendimiento académico              Estudio cuantitativo con                                                               Dependencia de calidad y
+  Castrillón et                                                                                                     identificar estudiantes en riesgo,
+                       mediante técnicas de inteligencia          aplicación de algoritmos de IA                                                           cantidad de datos; posibles
+   al. (2020)                                                                                                          facilitando intervenciones
+                                    artificial.                       para análisis predictivo.                                                          sesgos en modelos predictivos.
+                                                                                                                                tempranas.
+                                                                                                                    La IA ofrece oportunidades para
+                      Analizar el impacto de la IA en la               Revisión documental y                                                               Falta de estudios empíricos y
+  Chamoli y                                                                                                         modernizar la educación jurídica,
+                     educación jurídica latinoamericana,             análisis crítico de literatura                                                       resistencia cultural en algunas
+ Patiño (2024)                                                                                                       pero enfrenta barreras éticas y
+                   identificando oportunidades y desafíos.                  especializada.                                                                         instituciones.
+                                                                                                                             tecnológicas.
+                                                                                                                     Un marco de políticas claras es
+                   Proponer un marco integral de políticas             Revisión y propuesta                                                                 Necesidad de validación
+                                                                                                                      esencial para una integración
+  Chan (2023)          educativas para la enseñanza y              conceptual basada en análisis                                                            práctica y adaptación a
+                                                                                                                      efectiva y ética de la IA en la
+                    aprendizaje con IA en universidades.              de políticas existentes.                                                                contextos diversos.
+                                                                                                                           educación superior.
+
+
+
+                                                                Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                   Volumen 5. No. 12 / Julio – septiembre 2025
+ 10
+
+                  Impacto de la inteligencia artificial en la transformación de los procesos de
+                  enseñanza aprendizaje en la educación superior
+
+  Autor/año                         Objetivos                               Metodología utilizada                              Hallazgos principales              Limitaciones señaladas
+                                                                                                                        Crecimiento significativo en la
+   Corzo-                                                                                                                                                      Limitación en la cobertura de
+                   Explorar bibliométricamente el uso de                  Análisis bibliométrico de                    producción científica sobre IA en
+Zavaleta et al.                                                                                                                                                bases de datos y posible sesgo
+                     IA en la educación universitaria.                    publicaciones científicas.                  educación universitaria, con énfasis
+   (2025)                                                                                                                                                       en selección de documentos.
+                                                                                                                             en América Latina.
+   Kroff y           Revisar innovaciones, desafíos y                                                                     La IA impulsa innovaciones           Falta de estudios longitudinales
+                                                                      Revisión narrativa de literatura
+   Ferrada         oportunidades de la IA en la educación                                                             pedagógicas, pero enfrenta desafíos      y evaluación de impacto a largo
+                                                                                reciente.
+    (2024)                     universitaria.                                                                         técnicos, éticos y de infraestructura.                plazo.
+                                                                                                                       La IA presenta oportunidades para
+León y Viña        Analizar oportunidades y amenazas de                  Revisión teórica y análisis                  mejorar la educación, pero también       Enfoque teórico; necesidad de
+  (2017)              la IA en la educación superior.                             crítico.                            amenazas como la deshumanización              estudios aplicados.
+                                                                                                                                y desigualdad.
+                       Estudiar la personalización del                     Estudio descriptivo con                    La IA permite adaptar contenidos y       Limitaciones en infraestructura
+ López et al.
+                   aprendizaje mediante IA en educación                  análisis de casos y revisión                 ritmos de aprendizaje, mejorando la        tecnológica y capacitación
+   (2023)
+                                  superior.                                      documental.                                 experiencia educativa.                       docente.
+                     Explorar el conocimiento y uso de                                                                Desconocimiento generalizado de la         Muestra limitada y enfoque
+ Sousa y de                                                               Estudio cualitativo con
+                   gamificación en la formación inicial de                                                             gamificación, aunque se reconoce           regional; necesidad de
+Freitas (2022)                                                        entrevistas y análisis temático.
+                       docentes de educación física.                                                                       su potencial motivador.                 formación específica.
+                                                                                                                                                                      Limitación en la
+                      Analizar cómo las competencias                       Estudio cuantitativo con                     Competencias digitales elevan la
+  Valverde                                                                                                                                                     representatividad de la muestra
+                     digitales influyen en el desempeño                      encuestas y análisis                       calidad pedagógica y facilitan el
+   (2024)                                                                                                                                                        y variables contextuales no
+                             pedagógico docente.                                 estadístico.                            uso de tecnologías como la IA.
+                                                                                                                                                                        consideradas.
+                        Investigar innovaciones en                      Estudio de caso con análisis                     Innovaciones en competencias
+ Vega et al.                                                                                                                                                   Enfoque limitado a un contexto
+                    competencias docentes en ambientes                     cualitativo y revisión                       docentes mejoran la interacción y
+  (2021)                                                                                                                                                          institucional específico.
+                         virtuales de aprendizaje.                             documental.                               gestión en ambientes virtuales.
+                                                                                                                      La IA ofrece avances significativos,
+                  Revisar avances, perspectivas y desafíos              Revisión narrativa y análisis                                                          Falta de estudios y evaluación
+Viera (2024)                                                                                                             pero presenta desafíos éticos,
+                   de la IA en la educación universitaria.              crítico de literatura reciente.                                                          de impacto a largo plazo.
+                                                                                                                       técnicos y de formación docente.
+
+
+                                                                    Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                       Volumen 5. No. 12 / Julio – septiembre 2025
+11
+
+                     Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballestero, Eva
+                                        María de Lourdes Loaiza Massuh y Diego Abraha Lara Flor
+
+       La revisión de los estudios detallados en la Tabla 2, demuestra que la IA está provocando cambios
+significativos en la educación superior, especialmente en sectores relacionados con la personalización
+educativa, el apoyo a la labor docente, la evaluación y la gestión académica. Varios autores resaltan que la
+IA impulsa la innovación pedagógica, facilita la identificación temprana de estudiantes vulnerables y
+contribuye a la modernización de campos específicos, como la educación en derecho y medicina. No
+obstante, se enfatiza que para aprovechar al máximo estos avances es necesario contar con marcos
+regulatorios claros, promover la formación continua del profesorado y ampliar la integración curricular.
+
+       Aunque los beneficios son evidentes, la mayor parte de los estudios académicos coinciden en que
+existen desafíos significativos para la implementación efectiva de la IA en el ámbito educativo. Entre los
+obstáculos más significativos se reconocen la protección de la privacidad de los datos, la igualdad en el
+acceso a la tecnología, la resistencia a cambiar los métodos y enfoques tradicionales utilizados por ciertos y
+determinados docentes y la necesidad de fortalecer las competencias digitales. Asimismo, se identifican
+limitaciones metodológicas, tales como la escasez de estudios empíricos, la representatividad limitada de las
+muestras y la falta de investigaciones que garanticen el análisis continuo de tal manera que faciliten la
+evaluación del impacto duradero de estas tecnologías en los entornos educativos.
+
+Avances, retos y perspectivas para integrar la tecnología y la IA en las universidades
+
+       La integración tecnológica en la educación superior representa una transformación profunda y
+multifacética que está siendo impulsada principalmente por el avance de la IA y tecnologías afines como la
+realidad aumentada. Diversos estudios recientes evidencian cómo estas tecnologías están revolucionando
+los procesos de enseñanza y aprendizaje, así como la gestión académica y administrativa de las instituciones
+educativas.
+
+       En este sentido, Ayala (2024) realiza un análisis cualitativo que destaca el papel decisivo de la IA
+para personalizar el aprendizaje, ofrecer apoyo al profesorado, automatizar la evaluación y optimizar la
+gestión académica. De acuerdo con su estudio, la IA impulsa la personalización de los procesos educativos
+según las demandas particulares de cada uno de los estudiantes, lo que conduce a mejoras notables en la
+retención y el progreso desde el punto de vista académico. No obstante, también señala los desafíos
+asociados a esta incorporación, específicamente en lo que respecta a la privacidad de los datos y la igualdad
+en el acceso a la tecnología, aspectos que requieren una atención cuidadosa para asegurar una adopción ética
+y con responsabilidad de la IA en el contexto universitario.
+
+       Ayuso del Puerto y Gutiérrez (2022), complementando esta visión, centran su análisis en la
+formación inicial del profesorado y el empleo de la IA como herramienta educativa. Su investigación destaca
+que, aunque la IA proporciona recursos innovadores que enriquecen los procesos de enseñanza y
+aprendizaje, su incorporación exitosa depende de una adecuada adaptación pedagógica y del entrenamiento
+
+                                                                 Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                    Volumen 5. No. 12 / Julio – septiembre 2025
+  12
+
+                   Impacto de la inteligencia artificial en la transformación de los procesos de
+                   enseñanza aprendizaje en la educación superior
+
+continuo de los docentes. Asimismo, advierten que la resistencia al cambio por parte del profesorado
+representa un desafío significativo para la adopción de estas tecnologías, lo cual recalca la necesidad de
+implementar un conjunto de acciones que fomenten la aceptación y el desarrollo de habilidades digitales
+entre los educadores.
+
+       Por otra parte, Barroso et al. (2016) investigan el uso de objetos de aprendizaje basados en realidad
+aumentada en la enseñanza de la medicina. Su estudio descriptivo indica que esta tecnología mejora la
+comprensión de los contenidos y también aumenta la motivación de los estudiantes. No obstante, los autores
+advierten que la aplicación de la realidad aumentada aún está limitada a contextos específicos y que para
+maximizar su impacto es necesario integrarla de manera más amplia en los currículos académicos, lo que
+implica un desafío para las instituciones educativas en términos de diseño curricular y recursos tecnológicos.
+
+       En el ámbito de la evaluación prospectiva del rendimiento escolar, Castrillón et al. (2020) aplican
+técnicas de IA para identificar estudiantes en riesgo. Su estudio cuantitativo demuestra que estas
+herramientas permiten anticipar dificultades académicas y facilitar intervenciones tempranas que pueden
+mejorar los resultados educativos. Sin embargo, también señalan que la efectividad de estos modelos
+predictivos depende considerablemente de la calidad y el volumen de datos que se tengan, lo que plantea
+desafíos relacionados con la gestión y protección de la información estudiantil.
+
+       López et al. (2023) exploran cómo la IA posibilita la personalización del aprendizaje en la educación
+superior, resaltando que esta tecnología facilita la adecuación de los contenidos y el ritmo educativo a las
+particularidades de cada estudiante, lo que mejora la experiencia formativa. Sin embargo, señalan que la
+adopción de estas herramientas enfrenta obstáculos relacionados con la infraestructura tecnológica y la
+formación del profesorado, lo que pone de relieve la necesidad de realizar inversiones y establecer políticas
+que fortalezcan estos aspectos para asegurar una integración exitosa.
+
+       En cuanto a las competencias digitales de docentes y estudiantes, Valverde (2024) evidencia que
+estas habilidades son determinantes para el desempeño pedagógico y la integración exitosa de tecnologías
+como la IA en el aula. Su estudio cuantitativo muestra que docentes con mayores competencias digitales
+pueden aprovechar mejor las herramientas tecnológicas, lo cual tiene una repercusión positiva en una mejora
+de la calidad educativa. No obstante, el autor advierte que estas competencias deben ser fortalecidas
+mediante formación continua y actualizaciones permanentes para responder a los rápidos cambios
+tecnológicos.
+
+       Vega et al. (2021) resaltan la innovación en las competencias docentes dentro de espacios virtuales
+de formación, demostrando que el fortalecimiento de estas habilidades contribuye a mejorar tanto la
+interacción como la gestión educativa en espacios digitales. No obstante, su estudio se circunscribe a un
+contexto institucional particular, lo que indica la importancia de extender la investigación a otros escenarios
+
+
+                                                                     Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                        Volumen 5. No. 12 / Julio – septiembre 2025
+  13
+
+                        Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballesteros,
+                                  Eva María de Lourdes Loaiza Massuh y Diego Abrahan Lara Flor
+
+para obtener una comprensión más amplia de la variedad de necesidades y retos presentes en la preparación
+de los docentes.
+
+       Bajo una óptica más estructural, Chan (2023) sugiere un marco completo de políticas educativas que
+den prioridad a la formación continua en IA tanto para docentes como para estudiantes. Su planteamiento
+resalta que los docentes incorporen ética y responsablemente la IA, garantizando que el desarrollo de
+habilidades digitales sea suficiente para un uso eficaz y reflexivo de estas tecnologías en la educación
+superior.
+
+       Sousa Mendes et al. (2022) revelan un desconocimiento generalizado sobre la gamificación entre
+docentes de educación física en formación inicial, lo que subraya la necesidad de capacitaciones específicas
+para que estos profesionales puedan aprovechar el potencial motivador y pedagógico de estas estrategias
+digitales. Este hallazgo evidencia una brecha en la formación digital que debe ser atendida para mejorar la
+calidad educativa en diversas áreas.
+
+       Corzo-Zavaleta et al. (2025) realizan un análisis bibliométrico que demuestra un desarrollo
+significativo en la producción científica sobre IA en educación universitaria, especialmente en América
+Latina. Sin embargo, identifican brechas importantes en la formación digital que reducen la adopción
+efectiva de estas tecnologías en la región, lo que indica la necesidad de políticas y programas que fortalezcan
+las competencias digitales de docentes y estudiantes.
+
+       Los desafíos y barreras contextuales para la integración tecnológica en la educación superior son
+múltiples y complejos. Chamoli y Patiño (2024) analizan el impacto de la IA en la educación jurídica
+latinoamericana y señalan que, aunque la IA ofrece oportunidades para modernizar la enseñanza, enfrenta
+barreras culturales, éticas y tecnológicas que dificultan su implementación. Además, destacan la falta de
+estudios empíricos que permitan evaluar y orientar mejor el uso de estas tecnologías en contextos
+específicos. León y Viña (2017) advierten sobre amenazas asociadas a la IA en la educación superior, como
+la posible deshumanización del proceso educativo y la ampliación de desigualdades, especialmente en
+contextos con acceso limitado a tecnologías. Los autores consideran que estos riesgos requieren una atención
+crítica y regulatoria para evitar que la tecnología profundice las brechas existentes en la educación.
+
+       Kroff et al. (2024) examinan las innovaciones y los retos que presenta la IA en la educación
+universitaria, destacando dificultades técnicas, éticas y de infraestructura. Además, señalan la falta de
+estudios longitudinales que permitan evaluar el impacto a largo plazo de estas tecnologías en el aprendizaje,
+lo que limita la comprensión de sus efectos sostenibles y reales. De manera complementaria, Ayala (2024)
+y Viera (2024) coinciden en señalar que la protección de datos, el acceso desigual a la tecnología y la
+ausencia de marcos regulatorios claros son obstáculos fundamentales para una integración ética y efectiva
+de la IA en la educación superior. Ambos autores subrayan la importancia de desarrollar políticas y
+
+
+                                                                 Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                    Volumen 5. No. 12 / Julio – septiembre 2025
+  14
+
+                   Impacto de la inteligencia artificial en la transformación de los procesos de
+                   enseñanza aprendizaje en la educación superior
+
+regulaciones que aseguren la protección de los derechos de estudiantes y docentes, así como la equidad en
+el acceso a las herramientas tecnológicas.
+
+       Corzo-Zavaleta et al. (2025) añaden que existen limitaciones metodológicas en la investigación sobre
+IA en educación, tales como sesgos en la selección de documentos y cobertura insuficiente de bases de datos,
+lo que afecta la comprensión global y objetiva del uso de estas tecnologías en la educación universitaria.
+Así, se resalta la importancia de fortalecer la calidad y diversidad de las investigaciones para fundamentar
+mejores prácticas y políticas. Finalmente, Ayuso del Puerto y Gutiérrez (2022) destacan la resistencia al
+cambio entre los docentes como una barrera cultural recurrente que dificulta la aceptación de tecnologías
+innovadoras como la IA en los procesos educativos. Esta resistencia lógicamente está relacionada con
+factores como la falta de formación, temor a la obsolescencia profesional o incertidumbre sobre el impacto
+de la tecnología en la enseñanza, lo que subraya la necesidad de estrategias de acompañamiento y formación
+que faciliten la transición hacia modelos educativos más tecnológicos.
+
+       En resumen, incorporar las tecnologías, particularmente la IA y herramientas afines, en la educación
+superior brinda importantes oportunidades para adecuar el aprendizaje a las necesidades individuales,
+optimizar la gestión institucional y lograr la mejora en la calidad de la experiencia educativa. No obstante,
+para lograr una implementación efectiva, es fundamental disponer de una formación apropiada tanto para
+docentes como para estudiantes, promover el desarrollo de destrezas digitales y enfrentar los retos éticos,
+culturales y estructurales que se presentan. Para ello, es fundamental establecer políticas claras, marcos
+normativos sólidos y estrategias de capacitación que promuevan una adopción responsable, equitativa e
+inclusiva de estas tecnologías, asegurando que la revolución digital en la educación superior beneficie a
+todos los actores involucrados y contribuya a la construcción de un futuro educativo más justo y efectivo.
+
+Propuestas para alcanzar una integración eficaz, inclusiva y perdurable de las tecnologías en la
+educación superior
+
+       Se proponen varias recomendaciones que abarcan distintos ámbitos de acción. En primer lugar, en
+lo que respecta a la política y regulación, es crucial desarrollar marcos normativos claros acerca de la
+aplicabilidad ética y responsable de la IA y la protección de datos (Ayala, 2024; Viera, 2024; León y Viña,
+2017; Kroff et al., 2024). Asimismo, se debe promover políticas igualitarias en el acceso a tecnologías y
+conectividad para reducir las brechas digitales existentes (Ayala, 2024; Corzo-Zavaleta et al., 2025; León y
+Viña, 2017) e incentivar estudios longitudinales y empíricos sobre el impacto de la IA y otras tecnologías
+en la educación (Kroff et al., 2024; Chamoli y Patiño, 2024; Corzo-Zavaleta et al., 2025).
+
+       En segundo lugar, en cuanto a la formación docente y estudiantil, es fundamental implementar
+programas de formación continua en competencias digitales y uso pedagógico de la IA (Valverde, 2024;
+Chan, 2023; Sousa Mendes et al., 2022). También se aconseja fomentar la capacitación específica en
+
+
+                                                                     Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                        Volumen 5. No. 12 / Julio – septiembre 2025
+  15
+
+                        Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballesteros,
+                                  Eva María de Lourdes Loaiza Massuh y Diego Abrahan Lara Flor
+
+estrategias innovadoras como la gamificación y la realidad aumentada (Barroso et al., 2016; Sousa Mendes
+et al., 2022) y desarrollar estrategias de acompañamiento para reducir la resistencia al cambio tecnológico
+en los docentes (Ayuso del Puerto y Gutiérrez, 2022; Chamoli y Patiño, 2024).
+
+       Finalmente, en lo que respecta a la infraestructura y los recursos, se recomienda invertir en
+infraestructura tecnológica adecuada y con eficiencia para apoyar la integración de la IA (López et al., 2023;
+Barroso et al., 2016) y asegurar la disponibilidad y calidad de los datos para sistemas predictivos y
+personalizados (Castrillón et al., 2020). Además, es importante integrar de manera transversal las tecnologías
+emergentes en los currículos académicos de todas las áreas (Chan, 2023), diseñar acciones para la inclusión
+de estudiantes y docentes con diferentes niveles de competencias digitales (Valverde, 2024; Vega et al.,
+2021), promover la investigación y el desarrollo de tecnologías accesibles y adaptadas a contextos diversos
+(Chamoli y Patiño, 2024), establecer sistemas de monitoreo y evaluación de la influencia de la tecnología
+en la educación y la gestión (Kroff et al., 2024) y fomentar la retroalimentación de usuarios (docentes y
+estudiantes) para ajustar las estrategias tecnológicas (López et al., 2023; Vega et al., 2021).
+
+                                                                                                                    Discusión
+
+       El examen sistemático de la literatura acerca del impacto de la IA en la transformación de los
+procesos de enseñanza y aprendizaje en la educación superior muestra un escenario complejo y diverso,
+marcado tanto por importantes progresos como por desafíos constantes. Las investigaciones analizadas
+coinciden en que la IA ha generado nuevas oportunidades con el fin de adaptar el aprendizaje, automatizar
+procesos administrativos y optimizar la gestión académica, lo que ha permitido a las instituciones
+universitarias repensar sus modelos educativos y administrativos. Sin embargo, la magnitud y la profundidad
+de estos cambios varían considerablemente entre regiones y contextos institucionales, especialmente en
+América Latina y Ecuador, donde las brechas estructurales y formativas condicionan la adopción y el
+impacto de estas tecnologías.
+
+       Un aspecto sobresaliente identificado en los estudios es la particularidad de la IA para ajustar los
+contenidos y las estrategias pedagógicas según las particularidades de cada estudiante, lo cual tiene una
+contribución positiva en experiencias de aprendizajes más inclusiva y eficiente (Ayala, 2024; López et al.,
+2023). Esta personalización, respaldada por sistemas inteligentes y algoritmos de aprendizaje automático,
+ha demostrado ser particularmente útil en la identificación temprana de estudiantes en riesgo académico y
+en la provisión de apoyos diferenciados. No obstante, la generalización de estos beneficios se ve limitada
+por la desigualdad en el acceso a la tecnología y la conectividad, especialmente en zonas rurales y
+periurbanas de América Latina, donde la infraestructura tecnológica sigue siendo insuficiente (Corzo-
+Zavaleta et al., 2025; Kroff y Ferrada, 2024).
+
+
+
+
+                                                                 Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                    Volumen 5. No. 12 / Julio – septiembre 2025
+  16
+
+                      Impacto de la inteligencia artificial en la transformación de los procesos de
+                      enseñanza aprendizaje en la educación superior
+
+       En términos de competencias digitales, la literatura destaca la importancia de la formación continua
+tanto para docentes como para estudiantes. La insuficiente capacitación adecuada en el manejo de
+herramientas de IA y la persistencia de enfoques pedagógicos tradicionales constituyen obstáculos
+significativos para la integración efectiva de estas tecnologías (Ayuso del Puerto y Gutiérrez, 2022;
+Valverde, 2024). A diferencia de contextos como el europeo o el norteamericano, donde la formación digital
+es parte integral de los programas educativos, en América Latina la brecha de competencias digitales sigue
+siendo un reto crítico, limitando la capacidad de los actores educativos para el aprovechamiento pleno del
+potencial de la IA.
+
+       La revisión también pone de manifiesto la necesidad de marcos normativos claros y actualizados que
+regulen el empleo ético y con responsabilidad de la IA en la educación superior. Preocupaciones relacionadas
+con la privacidad de los datos, la igualdad en el acceso a la tecnología y la protección de los derechos de los
+usuarios emergen como temas recurrentes en la literatura (Ayala, 2024; Viera, 2024; León y Viña, 2017).
+La ausencia de políticas sólidas en estos ámbitos puede no solo disminuir la adopción de la IA, sino también
+profundizar las desigualdades existentes y generar resistencias entre los docentes y estudiantes.
+
+       En comparación con investigaciones internacionales, como la de Holmes et al. (2021), que examina
+el impacto de la IA en la educación superior en el Reino Unido, se observa que los retos en América Latina
+son más pronunciados en cuanto a infraestructura y formación digital. Mientras que en países desarrollados
+la discusión se centra en la sofisticación de los algoritmos y la ética de su uso, en la región latinoamericana
+persisten desafíos básicos de acceso y capacitación. Por otro lado, Luckin et al. (2016) subrayan la
+importancia de la colaboración interdisciplinaria y la co-creación de soluciones tecnológicas entre
+educadores, tecnólogos y responsables políticos, un enfoque que aún no se ha consolidado en la mayoría de
+las universidades latinoamericanas.
+
+       Un elemento distintivo del contexto latinoamericano, evidenciado en los estudios revisados, es la
+resistencia al cambio por parte de algunos sectores docentes, influida por la falta de familiaridad con las
+nuevas tecnologías y la percepción de amenaza a los modelos pedagógicos tradicionales (Ayuso del Puerto
+y Gutiérrez, 2022; Chamoli y Patiño, 2024). Esta resistencia, sumada a la insuficiencia de recursos
+tecnológicos y a la falta de incentivos institucionales, limita la adopción de la IA y ralentiza los procesos de
+innovación educativa. Además, la literatura señala la escasez de estudios empíricos y longitudinales que
+permitan evaluar el impacto real y sostenido de la IA en los resultados de aprendizaje y en la equidad
+educativa, lo que dificulta la toma de decisiones informada y la formulación de políticas efectivas (Kroff et
+al., 2024; Corzo-Zavaleta et al., 2025).
+
+       A manera de resumen, aunque la IA ofrece oportunidades significativas para transformar la
+educación superior en América Latina, su adopción efectiva, inclusiva y sostenible requiere superar barreras
+estructurales, fortalecer las competencias digitales y desarrollar marcos normativos adecuados. La
+                                                                        Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                           Volumen 5. No. 12 / Julio – septiembre 2025
+  17
+
+                        Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballesteros,
+                                  Eva María de Lourdes Loaiza Massuh y Diego Abrahan Lara Flor
+
+experiencia internacional sugiere que la colaboración entre actores educativos, invertir en infraestructura y
+la promover una cultura de innovación son claves para avanzar en este proceso. Sin embargo, el contexto
+regional demanda estrategias adaptadas a las realidades locales, que consideren tanto las limitaciones como
+las potencialidades de los sistemas educativos latinoamericanos.
+
+       Entre la principales limitaciones del estudio se destaca en primer lugar, que esta revisión sistemática
+se basa principalmente en fuentes secundarias y publicaciones académicas indexadas en bases de datos
+reconocidas, lo que puede excluir experiencias innovadoras o estudios relevantes publicados en fuentes no
+indexadas o en informes técnicos institucionales. En segundo lugar, la mayoría de los estudios revisados
+presentan enfoques descriptivos o exploratorios, con escasez de investigaciones empíricas longitudinales
+que permitan evaluar el impacto real y sostenido de la IA en la educación superior, lo que limita la
+generalización de los hallazgos y la formulación de recomendaciones más precisas para la región.
+
+                                                                                                      CONCLUSIONES
+
+       Las evidencias reunidas en este estudio confirman que la IA está jugando un papel transformador en
+la educación superior, especialmente en áreas como la personalización del aprendizaje, la automatización de
+tareas administrativas y la modernización de la gestión académica. Los sistemas inteligentes y las
+plataformas adaptativas posibilitan la adecuación de contenidos y metodologías a las necesidades
+individuales de los estudiantes, lo que contribuye a mejorar la retención, el rendimiento académico y la
+eficiencia institucional. Sin embargo, este impacto positivo no se distribuye de manera uniforme en la región,
+ya que factores como la infraestructura tecnológica, la conectividad y la disponibilidad de recursos continúan
+condicionando el alcance de la IA en los entornos universitarios de América Latina y, en particular, de
+Ecuador.
+
+       La revisión sistemática indica que uno de los principales retos para la integración efectiva de la IA
+en la educación superior es la brecha en competencias digitales tanto de docentes como de estudiantes. La
+falta de formación especializada y la persistencia de métodos pedagógicos tradicionales limitan el
+aprovechamiento completo de las herramientas basadas en IA. Además, la resistencia al cambio y la escasez
+de programas de capacitación continua dificultan la transición hacia modelos educativos más flexibles,
+innovadores y centrados en el estudiante.
+
+       Otro hallazgo importante es la necesidad de establecer marcos normativos y éticos claros que regulen
+el uso de la inteligencia artificial en la educación superior. Las preocupaciones relacionadas con la
+privacidad de los datos, la equidad en el acceso a la tecnología y la protección de los derechos de los usuarios
+son temas recurrentes en la literatura revisada. Sin una regulación adecuada y sin políticas de inclusión
+tecnológica, existe el riesgo de profundizar las desigualdades educativas y de limitar los beneficios
+potenciales de la IA. Por ello, resulta fundamental que las instituciones y los gobiernos trabajen de manera
+
+
+                                                                 Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                    Volumen 5. No. 12 / Julio – septiembre 2025
+  18
+
+                     Impacto de la inteligencia artificial en la transformación de los procesos de
+                     enseñanza aprendizaje en la educación superior
+
+colaborativa para establecer directrices que garanticen una adopción responsable, segura y equitativa de
+estas tecnologías.
+
+        Finalmente, aunque algunas universidades ecuatorianas y latinoamericanas han logrado avances en
+la implementación de soluciones de IA, la mayoría aún se encuentra en fases iniciales de adopción. El estudio
+recomienda fortalecer la inversión en infraestructura, promover la investigación aplicada y fomentar alianzas
+interinstitucionales para compartir buenas prácticas y recursos. Asimismo, se destaca la necesidad de realizar
+estudios empíricos y longitudinales que permitan evaluar el impacto real de la IA en los resultados de
+aprendizaje y en la equidad educativa, superando así las limitaciones metodológicas identificadas en la
+literatura.
+
+                                                                                                               REFERENCIAS
+
+Ayala, A. R. (2024). Impacto de la Inteligencia Artificial en la transformación de la Educación Superior.
+           Ciencia       Latina    Revista      Científica      Multidisciplinar,    8(2),    7219-7229.
+           https://doi.org/10.37811/cl_rcm.v8i2.11126
+Ayuso, D., y Gutiérrez Esteban, P. (2022). La Inteligencia Artificial como recurso educativo durante la
+           formación inicial del profesorado. RIED-Revista Iberoamericana De Educación a
+           Distancia, 25(2), 347–362. https://doi.org/10.5944/ried.25.2.32332
+Barroso, J., Cabero, J., y Moreno Fernández, A. M. (2016). The use of learning objects in augmented reality
+             in the teaching of medicine. Innoeduca. International Journal of Technology and Educational
+             Innovation, 2(2), 77–83. https://doi.org/10.20548/innoeduca.2016.v2i2.2028
+Castrillón, D., Sarache, W., y Ruiz-Herrera, S. (2020). Prediction of academic performance using artificial
+            intelligence             techniques. Formación              universitaria, 13(1),          93-
+            102. https://dx.doi.org/10.4067/S0718-50062020000100093
+Chamoli, A., y Patiño García, L. (2024). Impacto de la inteligencia artificial en la educación jurídica
+          latinoamericana. Aula Virtual, 5(12), e342..https://doi.org/10.5281/zenodo.13286966
+Chan, C. (2023). comprehensive AI policy education framework for university teaching and learning. Int J
+           Educ Technol High Educ 20, 38. https://doi.org/10.1186/s41239-023-00408-3
+Corzo-Zavaleta, J., Navarro-Castillo, Y., y Ugaz-Rivero, M. (2025). Uso de la inteligencia artificial en la
+          educación       universitaria:     exploración     bibliométrica. Desde      el      Sur, 17(1),
+          e0010.https://doi.org/10.21142/des-1701-2025-0010
+Holmes, W., Bialik, M., y Fadel, C. (2021). Artificial Intelligence in Education: Promises and Implications
+          for Teaching and Learning. Center for Curriculum Redesign.
+Kroff, F., Coria, D., y Ferrada, C. A. (2024). Inteligencia Artificial en la educación universitaria:
+           Innovaciones,       desafíos   y     oportunidades. Revista  espacios,   45(05),    120–
+           135. https://doi.org/10.48082/espacios-a24v45n05p09
+León Rodriguez, G. de la C., y Viña Brito, S. M. (2017). La inteligencia artificial en la educacion superior.
+          Oportunidades y amenazas. INNOVA Research Journal, 2(8.1), 412–422.
+          https://doi.org/10.33890/innova.v2.n8.1.2017.399
+López López, H.L., Rivera Escalera, A., Cruz García, C.R. Personalización del aprendizaje con inteligencia
+          artificial en la educación superior. (2023). Revista Digital De Tecnologías Informáticas Y
+          Sistemas, 7(1), 123-128. https://doi.org/10.61530/redtis.vol7.n1.2023.165.123-128
+
+
+                                                                       Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                          Volumen 5. No. 12 / Julio – septiembre 2025
+  19
+
+                       Gloria Ángélica Valderrama Barragán, Henry Fernando Vallejo Ballesteros,
+                                 Eva María de Lourdes Loaiza Massuh y Diego Abrahan Lara Flor
+
+Luckin, R., Holmes, W., Griffiths, M., y Forcier, L.B. (2016). Intelligence Unleashed: An Argument for AI
+            in Education. Pearson.
+Sousa Mendes, D., de Lima, M. R., y de Freitas, T. A. R. (2022). Gamificación, "no tengo ni idea de lo que
+          es": un estudio en la Formación Inicial del Profesorado de Educación Física. Alteridad. Revista
+          de Educación, 17(1). https://doi.org/10.17163/alt.v17n1.2022.01
+Valverde Rolando, E. (2024). El desempeño pedagógico docente influenciado por las competencias
+          digitales. Episteme Koinonía. Revista Electrónica de Ciencias de la Educación, Humanidades,
+          Artes y Bellas Artes, 7(13), 438-455.https://doi.org/10.35381/e.k.v7i13.3259
+Vega Lebrún, C. A., Sánchez Cuevas, M., Rosano Ortega, G., y Amador Pérez, S. E. (2021). Competencias
+          docentes, una innovación en ambientes virtuales de aprendizaje en educación
+          superior. Apertura, 13(2), 6–21. http://doi.org/10.32870/Ap.v13n2.2061
+Viera, I. A. (2024). La Revolución de la Inteligencia Artificial en la Educación Universitaria: Avances,
+            Perspectivas y Desafíos en la Era Digital. Revista Docentes 2.0, 17(2), 170–176.
+            https://doi.org/10.37843/rted.v17i2.539
+
+
+
+
+                                                                Tribunal. Revista en Ciencias de la Educación y Ciencias Jurídicas
+                                                                                   Volumen 5. No. 12 / Julio – septiembre 2025
+  20

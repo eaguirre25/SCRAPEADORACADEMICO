@@ -1,0 +1,947 @@
+E-ISSN 2281-4612             Academic Journal of Interdisciplinary Studies                                  Vol 10 No 1
+     ISSN 2281-3993                          www.richtmann.org                                                 January 2021
+
+.
+
+                                                                                                    Research Article
+                                                                                                       © 2021 Yohana et.al..
+                                                       This is an open access article licensed under the Creative Commons
+                                                                     Attribution-NonCommercial 4.0 International License
+                                                                        (https://creativecommons.org/licenses/by-nc/4.0/)
+
+                                        Received: 20 August 2020 / Accepted: 2 November 2020/ Published: 17 January 2021
+
+
+
+                Study of the Influence of Education and Literation of
+           Entrepreneurship in Vocational High Schools: Indonesian Case
+
+                                                    Corry Yohana1
+
+                                          Rizki Firdausi Rachma Dania1
+
+                                             Dorojatun Prihandono2
+                   1
+                     Jakarta State University, Jl. R.Mangun Muka Raya, RT.11/RW.14, Rawamangun,
+               Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220, Indonesia
+               2
+                State University of Semarang, Kampus Sekaran Gunungpati - Kecamatan Gunung Pati,
+                                        Semarang, 50229 Central Java, Indonesia
+
+DOI: https://doi.org/10.36941/ajis-2021-0004
+
+Abstract
+
+     This paper aims to explain the factors that influence of entrepreneurship education and entrepeneurship
+     literacy of vocational students (SMK). A paper based on research on 1,440 vocational grade XI students in 12
+     provinces in Indonesia obtained through random techniques, in the sense that each student has the same
+     opportunity. Primary data collection is done through the distribution of questionnaires to students and
+     analyzed by SEM techniques through the help of the Lisrel program version 8.70. The study found that the
+     variables of school management, the role of teachers, teaching factories, and community participation had a
+     positive influence on supporting facilities variables and entrepreneurship education variables. Facility support
+     itself has a positive effect on entrepreneurship education, furthermore it has a positive effect on students'
+     entrepreneurial literacy. On the other hand, external cooperation indicators contribute the strongest value for
+     the school management variable, competent educator indicators of the teacher role variable, production
+     training in the factory teaching variable, production marketing assistance in the community participation
+     variable, and capital assistance information in the supporting facilities variable. In the entrepreneurship
+     education variable, the indicator that contributes the strongest value is the identification of business
+     prospects, while the entrepeneurship literacy variable is an indicator of business creativity. The implication is
+     that entrepreneurship education efforts need to pay more attention to the above influence variables as well as
+     indicators that have the effect strength of each variable.
+
+Keywords: entrepreneurship, literacy, students, vocational
+
+
+
+1.     Introduction
+
+The Indonesian government has long been implementing entrepreneurship education for vocational
+high school (SMK) students in particular, as an effort to expand the number of entrepreneurs but also
+to overcome graduate unemployment which is increasing every year. Entrepreneurship education is
+given in schools with the hope of motivating vocational graduates to be creative and innovative in
+utilizing the potential of the environment, trading, and others as the foundation of life after graduating
+
+
+                                                            34
+
+     E-ISSN 2281-4612        Academic Journal of Interdisciplinary Studies                    Vol 10 No 1
+     ISSN 2281-3993                     www.richtmann.org                                   January 2021
+
+
+from school. To support entrepreneurship education in schools, the regulation also requires that
+principals (especially vocational) have entrepreneurial competence to produce graduates who are
+independent, creative, innovative, and able to create jobs.
+      Entrepreneurship is a strategic element that is considered capable of overcoming the problem of
+unemployment, especially graduates of vocational secondary education (SMK). The number of
+graduates of unemployed vocational education is increasing every year. In 2014 there were 1,332,521
+people, and in 2018 there were 1,731,743 people (Central Statistics Agency, 2019). It is certain that this
+number continues to grow, not only because of the number of graduates in 2019 and 2020 who are
+faced with limited employment opportunities, but also because of the dismissal of mass workers for
+preventing the Covid-19 pandemic outbreak. The government is trying to restore the economic passion,
+suppress and overcome unemployment, one of which is expected from the creation of the small and
+medium scale entrepreneurial sector through the utilization of the potential of the local environment,
+culinary business, retail trade, motorcycle repair shops, electronic services, and others.
+      Economists argue that a country's economic resilience can be seen from the indicator of the ratio
+of the number of entrepreneurs to the population. The average developed country that has a stable
+economy, has a ratio of 14 percent is a businessman compared to its population. In Indonesia the ratio
+of the number of entrepreneurs is still low, although from year to year the number shows an upward
+trend. Data from the Central Statistics Agency (2019) noted the number of entrepreneurs in Indonesia
+rose from 1.56 percent in 2014, and increased to 3.1 percent in 2016 from a population of 270 million.
+Efforts that need to be done are how that number can increase up to 14 percent. Until 2020, the number
+of entrepreneurs tends not to increase, or even decrease due to various reasons (Bisnis, 2019).
+      Entrepreneurship education is expected to produce students who are capable of entrepreneurship
+and increase the number of entrepreneurs. Through this education seeks to develop student
+entrepreneurship literacy so that it can be realized and utilized after graduation later. Literacy of
+entrepreneurship education is not only limited to the introduction and understanding of theory and
+conceptualism, but also allows for the creation and innovation of making and applying business forms
+as the foundation of work. On that basis the development of entrepreneurship education in vocational
+schools must be taken seriously, not only as additional lessons in schools. Education in major
+vocational schools is indeed an effort to develop certain knowledge and skills to prepare students to
+work in the formal sector, but also provides a second alternative so students can also create and
+innovate to create jobs independently. The latter is an effort for students who are not absorbed into
+the formal employment sector and reduce the unemployment rate. The government has issued a policy
+to stimulate and encourage graduates in entrepreneurship by providing loan capital assistance.
+      However, it is certain that entrepreneurship education is not only limited to classroom learning
+between teachers and students, but is more influenced by many factors. All these influencing factors
+must be clear and synergistic so that entrepreneurship education can motivate, encourage and realize
+students' creativity and innovation to cultivate the business world in the non-formal sector. Among
+the factors that are thought to influence entrepreneurship education are school management, the role
+of teachers, teaching factories, community participation, and support for learning facilities. Therefore,
+this paper wants to explain the influence of school management factors, the role of teachers, teaching
+factories, community participation, and supporting learning facilities as exogenous latent variables in
+entrepreneurship education and entrepreneurial literacy of vocational students as endogenous latent
+variables. The discussion will also show the contribution of the indicators that show strength in
+influencing each variable studied.
+
+2.     Literature Review
+
+Before this paper builds a theoretical framework to discuss the problem being studied, it is necessary
+to put forward the definition of each latent variable used here, namely: school management, the role
+of teachers, teaching factory, community participation, support for learning facilities, on
+entrepreneurship education and entrepreneurship literacy students.
+
+                                                   35
+
+      E-ISSN 2281-4612       Academic Journal of Interdisciplinary Studies                     Vol 10 No 1
+      ISSN 2281-3993                    www.richtmann.org                                    January 2021
+
+
+2.1     School Management
+
+In a simple school can be interpreted as a place for learning meetings between teachers and students.
+At school there are various elements that support learning, human and non-human. The human
+elements at school are the principal, teachers, administrative staff, library staff, security officers,
+cleaning staff, students, and others. Non-human elements, such as: school buildings, teacher rooms,
+classrooms, laboratories, practice rooms, curriculum, school libraries, school grounds, and others.
+       The school is led by the principal to manage all elements in his educational institution. Many
+experts believe that the successful implementation of education in schools is largely determined by the
+leadership of the principal: differences in achievement among schools are often caused by differences
+in the management of each school principal. The challenge of a school principal must have strength in
+vision and goals, oriented towards achievement, as an agent of change, courage to take risks, motivator
+and facilitator, democratic and egalitarian, believe in science and technology, implement a reward and
+punishment system, self-awareness, coaching harmonious and synergistic working relationships, etc.
+(Nanus, 2001; Goleman, 2002; Dahl, 2003; Davis, 2004; Luthans, 2004; Robbins, 2006; Usman, 2006;
+Mathis and Jackson, 2006; Wibowo, 2007; Thoha, 2008; Schein, 2014; Colquitt, Lephine, and Wesson,
+2015; Anderson, 2016).
+       In the context of school management, the success or failure of entrepreneurship education is
+largely determined by the principal. Supporting entrepreneurship education in schools requires a
+strong vision and goals from the principal, especially in developing student literacy. The various roles
+and functions need to be realized by the principal of entrepreneurship education, namely: providing
+facilities to support entrepreneurial learning, developing economic activities in the school
+environment, fostering cooperative relationships with parties outside the school, training and
+internships in business and industrial institutions , and others. Deakins et al (2005), Arensburg (2015),
+Vera van Zyl (2006), Lackéus (2015), Samino (2013), Wiyatno and Muhyadi (2013), and Iswadi (2016)
+show that literacy in entrepreneurship is largely determined by vision and the purpose of the principal
+as the basis for the management of educational institutions, and other roles.
+
+2.2     Teacher’s Role
+
+Another human element in schools is the status of the teacher who supports the complexity of the role
+in carrying out the main task of teaching. As a teacher not only acts as an educator in transforming the
+value of science and technology to students, but also other roles. Sociologically what is meant by status
+is the position or place of someone who has a certain set of rights and obligations which can be seen in
+terms of position, science, wealth, etc. (Parsons, 2012; Horton and Hunts, 1984; Soekanto, 2018; Sorokin,
+2018). The other role of the teacher is as a motivator, facilitator, mentor, instructor, and others.
+       In entrepreneurship education, the teaching of the core theory and practice of entrepreneurial
+literacy is carried out by teachers, both in certain subjects and / or integration into other subjects.
+Various roles need to be realized by the teacher, not only related to the planting of entrepreneurship
+education curriculum, but also in motivating, facilitating, providing assistance, guiding, and others. As
+a motivator, teachers need to arouse students' interest and concern for the entrepreneurial aspect by
+providing an overview of local potential, giving examples of successful entrepreneurs, the number of
+entrepreneurs around, and so on. As a facilitator, roles that can be realized provide supportive learning
+facilities, foster relationships with business people, invite experts / instructors / successful
+entrepreneurs, and so on. In the role of assistance, for example: traveling around the area identifying
+local potential, visiting business places, and others. Seikkula-Leino et al (2010), Diegoli, Gutierrez, and
+García-De los Salmones, Daniyati (2013), Apriliani (2015), and Mudawama (2018) show the importance
+of the teacher's role in arousing interest, becoming a facilitator of learning, providing assistance,
+fostering relationships with business people, and others to develop student entrepreneurship literacy.
+
+
+
+                                                    36
+
+      E-ISSN 2281-4612       Academic Journal of Interdisciplinary Studies                     Vol 10 No 1
+      ISSN 2281-3993                    www.richtmann.org                                    January 2021
+
+
+2.3     Teaching Factory
+
+Teaching Factory (Tefa) Implementation is an effort of vocational schools to foster cooperation with
+the business world and the industrial world. Tefa is an actual situation-based learning concept to
+increase the relevance of vocational education to the needs of the world of work and strengthen the
+skills of vocational students to enter the labor market (see: Directorate of Vocational Education, 2015;
+Haris, 2013). Business and industry players should not only provide training and apprenticeship
+facilities, by developing curricula that are in line with business and industry needs, but should also
+encourage students' interest, creativity and innovation for entrepreneurship, both as suppliers needed
+by business and industry or independent. Implicitly the Tefa program should also be a place for
+students to learn, explore, motivate and prepare themselves for entrepreneurial literacy, so that after
+completing their education they can create and open businesses as jobs and sources of life.
+       Various studies have indeed shown that the implementation of the Tefa program is quite effective
+in producing vocational graduates who are absorbed as workers in the business and industrial world
+(Zainudin, 2012; Yunanto, 2016; Sari, 2017; Perdana, 2018; Mustari et al, 2017). But on the other hand
+Tefa has not been able to attract interest and encourage vocational education graduates (SMK) to create
+and innovate in developing business for their own lives and the environment. One obstacle of the Tefa
+program is that it has not yet developed a curriculum that can produce student skills to open business
+opportunities, and limited equipment for entrepreneurship education (Yunanto, 2016; Arifman, 2017;
+Anwar and Wailanduw, 2018).
+
+2.4     Community Participation
+
+Entrepreneurship education literacy requires community involvement, especially business actors
+around the school. Participation can be defined as the involvement of a person or group of people to
+strive for the success of an activity, so as to achieve the expected goals. Davis and Newstrom (2000)
+argue that participation is the mental and emotional involvement of a person or group to achieve goals
+and take responsibility in them. In simple terms, the community itself can be defined as a group of
+people who live together within certain administrative boundaries or territories for a long time and
+support a shared culture (Horton and Hunt, 1984; Koentjaraningrat, 2016; Soekanto, 2018).
+      On that basis community participation can be interpreted as the mental and emotional
+involvement of a person or group that is motivated to contribute in supporting the literacy of
+entrepreneurship education in schools. Community participation is an effort to support of
+entrepreneurship education, both inside and outside of school. There are at least 4 (four) forms of
+community participation, namely: financial assistance, business skills development, infrastructure and
+business property assistance (for example: provision of buildings and business space, personal
+computers, laptops, wifi, etc.), business production training, marketing assistance , suppliers of raw
+materials, and others (see: Wiratno, 2016; Normina, 2016; Eriza and Saragih, 2019).
+
+2.5     Facility Support
+
+Entrepreneurship education for vocational students requires the support of learning facilities at
+schools. Facilities are everything to support efforts to achieve certain goals. Thus, the supporting
+facilities for entrepreneurship education are everything that is used to support, accelerate, develop
+students' entrepreneurial literacy.
+       Entrepreneurship education facilities are physical appearance and abilities (buildings, practice
+rooms, laboratories, etc.), as well as equipment, materials, modules, etc. that enable practical learning
+(Sofyan, Ari Pradhanawati, and Nugraha, 2013; Sedaya and Sulandari, 2019). The purpose of supporting
+facilities is an effort to simplify and accelerate the process of identification and understanding that can
+arouse student interest, creativity, and innovation in entrepreneurship after completing their
+education.
+
+                                                    37
+
+      E-ISSN 2281-4612        Academic Journal of Interdisciplinary Studies                     Vol 10 No 1
+      ISSN 2281-3993                     www.richtmann.org                                    January 2021
+
+
+2.6     Entrepreneurship Education (EELS)
+
+The essence of entrepreneurship education is teacher learning to students. Gagne (1977) argues that
+learning is a set of individual processes, which change a person's environmental stimuli into a number
+of information, which in turn can lead to learning outcomes in the form of long-term memory. Briggs
+(1991) argues that learning is a series of events that affect learning, so that it is easier to interact with
+the environment. In this paper, learning is defined as the process of teacher interaction with students
+and learning resources in a learning environment for behavior change (see also: Law of the Republic of
+Indonesia No. 20/2003).
+      This paper refers to entrepreneurship education as a learning interaction between teachers and
+students inside and outside of school. The purpose of learning is to instill theory, concepts and practice
+to foster skills (literacy) about entrepreneurship. Kao (1995), Zimmerer (2005), Dubrin (2013), Drucker
+(2007), Robert and Coulter (2018) argue that entrepreneurship is a process in which a person or group
+uses organized efforts & infrastructure to find opportunities and create value to fulfill needs. In other
+words, entrepreneurship is someone who is creative, innovative, and able to make it happen in the
+form of business values in order to improve the welfare of themselves and the community.
+      Assuming that entrepreneurship is not only based on talent but also can be learned.
+Entrepreneurship education is the deliberate dissemination and cultivation of values through
+mentoring, teaching and training activities that take place at school and outside of school to develop
+independent and entrepreneurial student abilities (see: Dalle, 2017; Biography Dale, 2018; Sari, 2019).
+Entrepreneurship education is a holistic process that aims to enable students to translate ideas
+creatively, innovatively, productively, and responsively to take advantage of existing potential.
+Entrepreneurship education can be integrated into all subjects (intracurricular), extracurricular
+activities, self-development activities, business practices, local potential content, and so on
+(Curriculum Center, 2010; Hapsari, 2017).
+
+2.7     Entrepeneurship Literacy Students (LACH)
+
+Entrepreneurship education aims to develop student literacy as an unlimited ability to know or
+identify, but also to understand, interpret, create, and realize business forms after completing studies
+(see: Montoya, 2018). The theory and practice of entrepreneurship learning are expected to foster
+creativity and innovation to be independent and entrepreneurial after completing secondary education
+(vocational school), through the utilization of local potential, cooperation with business actors, goods
+suppliers, service providers, and others.
+      At the same time, experts believe that entrepreneurial literacy needs to underpin a number of
+traits of business behavior to achieve success. These characteristics include: self-confidence, initiative,
+task and result oriented, risk taking, leadership behavior, forward-looking, disciplined, working
+together, building good relationships, learning new things, utilizing science and technology, positive
+thinking , increase added value, be creative and innovative to make changes, sensitive to the
+environment, seek information continuously, and others (see: Meredith et al, 1982; Meredith, 1992;
+Hisrich, Peters, and Shepherd, 2009; Bev, 2014). Entrepreneurship education aims to prevent and
+prevent vocational education graduates from becoming unemployed.
+
+2.8     Theoretical Framework and Hypothesis
+
+Based on the above constructed a theoretical framework for approaching the problems and put forward
+a hypothesis that will be sought explanation.
+
+
+
+
+                                                     38
+
+     E-ISSN 2281-4612        Academic Journal of Interdisciplinary Studies                     Vol 10 No 1
+     ISSN 2281-3993                     www.richtmann.org                                    January 2021
+
+
+
+
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+Hypothesis:
+     School Management (SM), Teacher's Role (TR), Teaching Factory (TFA), and Community
+        Participation (CPA) has an influence on Facility Support (FSU) and Entrepreneurship
+        Education (EELS).
+     Facility Support (FSU) has an influence on Entrepreneurship Education (EELS).
+     Entrepreneurship Education (EELS) has an influence on Entrepeneurship Literacy Students
+        (LACH).
+
+3.     Methodology
+
+This paper is the result of studies in 24 vocational high schools (SMK) in 12 of 34 provinces in Indonesia,
+namely: West Sumatra, Jambi, Lampung, Jakarta, West Java, Banten, Central Java, East Java, Bali, West
+Nusa Tenggara, Sulawesi South and South Kalimantan. From each province, 2 (two) vocational schools
+were taken as a sample of educational implementers in the fields of technology and engineering
+expertise, agribusiness and agrotechnology, business and management, and tourism. Each of these
+areas of expertise has a minimum of 50 expertise programs, and each expertise program includes several
+expertise competencies (there are as many as 150 expertise programs). For example, the field of
+technology and engineering includes 13 expertise programs, one of which is a mechanical engineering
+expertise program consisting of competencies in machining engineering, welding engineering, metal
+casting engineering, industrial mechanical engineering, design and machining engineering, metal
+fabrication engineering and manufacturing. Or the area of tourism expertise consisting of hospitality
+expertise programs and tourism services that include competencies in business travel tourism
+expertise, hospitality, marine tourism and ecotourism, hotels and restaurants; culinary competencies
+include culinary expertise; cosmetology includes competencies in skin and hair beauty expertise,
+fashion includes fashion and design skills competencies, and so on (see: Directorate General of Primary
+and Secondary Education Regulation No. 06 / D.D5 / KK / 2018).
+      The subjects of this study were class XI students with a sample of 60 students from each school.
+The total sample was 1,440 people who were obtained through random techniques, meaning that every
+grade XI student had the same chance of being a research sample. Data collection is done by
+distributing questionnaires to students, coupled with interviews and conducting remote discussions
+
+                                                    39
+
+      E-ISSN 2281-4612            Academic Journal of Interdisciplinary Studies                       Vol 10 No 1
+      ISSN 2281-3993                         www.richtmann.org                                      January 2021
+
+
+(online) with a number of school principals and teachers. Specifically the use of the questionnaire as a
+data collection tool, previously tested on 30 students to determine the level of validity and reliability
+using the product moment criteria from Pearson and Cronbach Alpha with the help of the SPSS version
+24.0 program. Only question items that prove to be valid and reliable are used in field research.
+      Research analysis using Structural Equation Modeling (SEM) with the help of Lisrel program 8.70.
+The analysis mainly includes CFA to determine the validity and reliability of question items related to
+the research indicators, GOF models, the structure of the relationship of the variables studied, and the
+contribution of the indicators for each variable (Joreskog and Sorborn, 1993; Ferdinand, 2002;
+Kusnendi, 2009; Hair et al, 2010; Haryono and Wardoyo, 2017).
+
+4.      Findings
+
+4.1     Characteristic Respondent
+
+The questionnaire was answered by 61.74% of the male student questionnaire, and 38.26% of the female
+students (see: table 1). Of the 24 sample vocational schools there are those who carry out education in
+the same areas of expertise, expertise programs, and competency expertise (for example: mechanical
+engineering, electric power, computer and informatics engineering, tourism, etc.), but there is also
+only one area of expertise, for example: maritime. Overall students said that they received
+entrepreneurship education in the learning process at school. Students come from parents with varied
+jobs ranging from traders in the market, opening kiosks, private drivers, taxi drivers, laborers,
+fishermen, farmers, and others. Most (84.24%) parents of students with a relatively low income of
+4,000,000 million - 6,000,000 rupiah a month, only 15.76% said their parents earn more than 6,000,000
+rupiah a month, namely working as government employees central government, regional government
+officials, military, police, teachers, business people, and others (currently USD $ 1 = 14,500 rupiah).
+      As many as 89.24% of student respondents answered that they chose vocational education
+because they wanted to work immediately after graduation, with the reason they wanted to help their
+parents, 5.56% answered they wanted to work while continuing their education to university, and
+5.20% answered no Tofu. This answer is in line with the large number of student respondents (88.54%)
+who answered that they were not interested in becoming entrepreneurs, even though they received
+entrepreneurship education at school. The reasons stated: because they consider themselves not
+talented, do not have the capital, can not help parents directly, and do not have certainty so it is not
+guaranteed to get a steady income. As many as 2.78% of the student respondents answered that they
+were quite interested in becoming entrepreneurs, if they did not find work in the formal sector
+(government and private), as well as getting business capital assistance and business guidance. As many
+as 8.68% of students said they did not know or it was up to later after completing their studies.
+
+Table 1. Distribution of Respondents (N = 1440)
+
+ Field of Expertise Expertise Program        Expertise competence             Men      (%) Women (%) Total     (%)
+                                             Machining technique               90 (9.25)    25 (1.74) 115 (7.99)
+                    Mechanical engineering   Casting technique                 32 (2.22)     5 (0.35)  37 (2.57)
+                                             Welding techniques                23 (1.60)     5 (0.35)  28 (1.95)
+                                             Installation techniques           72 (5.00)    14 (0.97) 86 (5.97)
+ A. Technology & Electric power              Cooling technique                 52 (3.61)    12 (0.83) 64 (4.44)
+ Engineering                                 Network engineering               23 (1.60)     7 (0.49)  30 (2.08)
+                 Graphic techniques          Graphic design                    37 (2.57)    23 (1.60)  60 (4.17)
+                                             Graphic production                42 (2.92)    18 (1.25)  60 (4.17)
+                    Automotive engineering   Technical light vehicle           48 (3.34)    12 (0.83)  60 (4.17)
+                                             Automotive body techniques        50 (3.47)    10 (0.70)  60 (4.17)
+ B. Technique       Technique                Software engineering              35 (2.43)    25 (1.74)  60 (4.17)
+ Computer &         computer &               Computer & Network Engineering    38 (2.64)    33 (2.29)  71 (4.93)
+ Communication      informatics              Multimedia                        30 (2.08)    19 (1.32)  49 (3.37)
+
+
+                                                        40
+
+  E-ISSN 2281-4612                 Academic Journal of Interdisciplinary Studies                                Vol 10 No 1
+  ISSN 2281-3993                              www.richtmann.org                                               January 2021
+
+
+ Field of Expertise Expertise Program              Expertise competence               Men        (%) Women (%) Total      (%)
+ C. Agribusiness  Agribusiness plants             Landscape and gardening              32 (2.22)     28 (1.95)  60 (4.17)
+ &                   Livestock agribusiness       Agribusiness poultry                 45 (3,13)     15 (1.04)  60 (4.17)
+ Agrotechnology  Agricultural engineering         Agricultural machine tools           52 (3.61)      8 (0.56)  60 (4.17)
+                                                   Agribusiness fishery bream           12 (0.83)     8 (0.56)   20 (1.39)
+ D. Maritime        Fishery                        Ornamental fish agribusiness         14 (0.97)      5 (0.35)   19 (1.32)
+                                                   Seaweed agribusiness                 15 (1.04)      6 (0.42)  21 (1.46)
+                     Hotels and tourism services Travel agent                          65 (4.51)     25 (1.74)  90 (9.25)
+                     Culinary                     Cullinary art                        35 (2.43)     42 (2.92)  77 (5.35)
+ E. Tourism          Beauty                       Spa and beauty therapy               22 (1.53)     38 (2.64)  60 (4.17)
+                                                   Hair and skin beauty                  17 (1.18)    44 (3.06)  61 (4.24)
+                     Fashion                      Fashion design                       30 (2.08)     42 (2.92)  72 (5.00)
+ F. Art of Design    Creative designs and prod. Creative craft of batik and textile     5 (0.35)      6 (0.42)   11 (0.77)
+ &                   Art                          Art painting                          8 (0.56)      4 (0.28)  12 (0.83)
+ Creative            The art of broadcast. & film Production & Broadcast Radio Prog.   15 (1.04)     22 (1.53)  37 (2.57)
+                    Total                                                              939 (65.21) 501 (34.79) 1440 (100.00)
+
+
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+4.2   CFA
+
+Confirmatory Factor Analysis (CFA) is one of the widely used validity and reliability tests. CFA is used
+to test unidimensional, validity and reliability of construct measurement models that cannot be
+measured directly or also called descriptive measurement theory models or confirmatory factor models
+that show the operationalization of variables or research constructs into measurable indicators
+formulated in the form of equations and / or specific path charts. (Joreskog and Sorborn, 1993;
+Ferdinand, 2002; Kusnendi, 2008; Hair et al, 2010; Haryono and Wardoyo, 2017; Sarjono and Yulianita,
+2019). The purpose of the CFA is to confirm or test the model, which is a measurement model whose
+formulation is derived from theory. CFA can be said to have two focuses, namely: whether indicators
+that are conceptualized are unidimensional, precise, and consistent; and what are the dominant
+indicators that make up the construct under study.
+
+4.2.1 Validity and Reliability
+
+The CFA should be implemented as a test of validity to determine whether the indicator variable
+actually forms the latent variable being studied (Joreskog and Sorborn, 1993; Ferdinand, 2002;
+Kusnendi, 2008; Hair et al, 2010; Haryono and Wardoyo, 2017; Sarjono and Yulianita, 2019). The validity
+test is related to the measurement of variables so they are valid or not. The validity test is done by
+comparing the loading factor to a minimum of 0.5. If the load factor value is greater than 0.5 then the
+indicator is valid. Reliability tests show how well the gauge can produce relatively similar results if
+repeated measurements on the same object. Reliability values were measured with Construct Reliability
+(CR) and Variance Extract (VE). It is said to be reliable if CR values> 0.70 and VE> 0.50.
+      Error measurement (ei) is intended to overcome the effect of parameter estimators and large or
+small size variances provided that the higher the loading factor value means the smaller the error value,
+thus indicating that the indicator truly reflects the latent variable. Below is shown the results of the
+validity and reliability of the indicators of each variable studied. Table 2 shows the validity and
+reliability test results.
+
+Table 2. Validity and Reliability Results
+Variables             Indicators                                              SLF ei     CR      VE     Conclusion
+School                x1 = Entrepreneurial education administration           0.95 0.10
+Management            x2 = Entrepreneurial support facilities                 0.94 0.12 0.9117 0.7769 Valid & Reliable
+(SM)                  x3 = External cooperation                               0.74 0.45
+
+                                                              41
+
+  E-ISSN 2281-4612          Academic Journal of Interdisciplinary Studies                      Vol 10 No 1
+  ISSN 2281-3993                       www.richtmann.org                                     January 2021
+
+
+Variables        Indicators                                       SLF ei      CR     VE     Conclusion
+Teacher’s        x4 = The role of educators                       0.84 0.29
+Role             x5 = The role of the facilitator                 0.87 0.24 0.8982 0.7464 Valid & Reliable
+(TR)             x6 = The role of mentors                         0.88 0.23
+Teaching         x7 = Production training/internship              0.57 0.68
+Factory          x8 = Experts                                     0.88 0.22 0.8662 0.6933 Valid & Reliable
+(TFA)            x9 = Management training                         0.99 0.02
+Community        x10 = Production marketing                       0.84 0.29
+Participation    x11 = Production training                        0.90 0.18 0.9075 0.7659 Valid & Reliable
+(CPA)            x12 = Supplier                                   0.88 0.23
+                 x13 = Entrepreneurial practice in schools        0.80 0.35
+Facility         x14 = Use of school partner equipment            0.71 0.50
+Support          x15 = Business management guidance               0.85 0.27 0.9221 0.7050 Valid & Reliable
+(FSU)            x16 = Production and marketing assistance        0.97 0.06
+                 x17 = Capital and business equipment             0.84 0.29
+                 x18 = Entrepreneurial skills                     0.88 0.22
+Entrepreneurship x19 = Identification of business prospects       0.83 0.31
+Education        x20 = Entrepreneurial life expectancy            0.95 0.10 0.9167 0.6905 Valid & Reliable
+(EELS)           x21 = Active search for information              0.81 0.35
+                 x22 = Product marketing capabilities             0.66 0.57
+Entrepeneurship x23 = Competence and entrepreneurial skills       0.90 0.19
+Literacy         x24 = Increased business interest                0.92 0.16
+Students         x25 = Job orientation                            0.92 0.16 0.9380 0.7524 Valid & Reliable
+(LACH)           x26 = Creativity in business                     0.78 0.39
+                 x27 = Alternative job substitutes                0.81 0.34
+
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+4.2.2 Goodness of Fit Models
+
+Goodness of Fit model is a test match or the good fit between the observations (observation frequency)
+acquired a certain frequency based on the expectation (expected frequencies). Through the test results
+can be seen whether whole or partial indicators suggest that the model Fit or SEM've been good, and
+able to answer the theory is built. In modeling system conformance test is very important, because the
+analysis of the structural model in SEM started based on statistical indicators Goodness-of-Fit (GFI) on
+output LISREL (Joreskog and Sorborn, 1993; Ferdinand, 2002; Kusnendi, 2009; Hair et al, 2010; Haryono
+and Wardoyo, 2017). Overall, a summary of the critical value of the model match testing can be seen
+from the summary in table 3.
+
+Table 3. Eligibility Criteria for SEM Model
+  Goodness-of-Fit                                              Cutt-off-Value     Results    Conclusion
+  RMR (Root Mean Square Residual)                             ൑ 0,05 atau ൑ 0,1   0.0021      Good Fit
+  RMSEA (Root Mean square Error of Approximation)                  ൑ 0,08         0.0023      Good Fit
+  P-value                                                          ൒ 0,05         0.06125     Good Fit
+  GFI (Goodness of Fit)                                            ൒ 0,90           0.93      Good Fit
+  AGFI (Adjusted Goodness of Fit Index)                            ൒ 0,90          0.92       Good Fit
+  CFI (Comparative Fit Index)                                      ൒ 0,90          0.94       Good Fit
+  Normed Fit Index (NFI)                                           ൒ 0,90           0.93      Good Fit
+  Non-Normed Fit Index (NNFI)                                      ൒ 0,90          0.95       Good Fit
+  Incremental Fit Index (IFI)                                      ൒ 0,90          0.94       Good Fit
+  Relative Fit Index (RFI)                                         ൒ 0,90          0.92       Good Fit
+
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+                                                    42
+
+  E-ISSN 2281-4612           Academic Journal of Interdisciplinary Studies                   Vol 10 No 1
+  ISSN 2281-3993                        www.richtmann.org                                  January 2021
+
+
+Table 3 shows, all indicators show that the SEM model is Fit or good. Data from the questionnaire has
+been able to answer the theory is built.
+
+4.3   Structural Relationship Analysis
+
+Data processing using the help of the Lisrel 8.70 program produces a structural model of the variables
+and indicators studied, as follows.
+
+
+
+
+Diagram 2. Standardized Loading Factor
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+Tabel 4 . Hypothesis Test Results
+
+             Hypothesis                            Coefficient             Conclusion
+             SM  FSU                                 0.81                 Significant
+             TR  FSU                                 0.84                 Significant
+             TFA  FSU                                0.89                 Significant
+             CPA  FSU                                0.78                 Significant
+             SM  EELS                                0.65                 Significant
+             TR  EELS                                0.81                 Significant
+             TFA  EELS                               0.67                 Significant
+             CPA  EELS                               0.75                 Significant
+             FSU  EELS                               0.73                 Significant
+             EELS  LACH                              0.86                 Significant
+
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+4.4   Relationship of Indicators in Variables
+
+Based on the results of structural testing (diagram 2) it can be seen the relationship between indicators
+
+                                                   43
+
+     E-ISSN 2281-4612        Academic Journal of Interdisciplinary Studies                      Vol 10 No 1
+     ISSN 2281-3993                     www.richtmann.org                                     January 2021
+
+
+and the variables studied. The aim is to find out how the contribution value of the indicators contained
+in each variable used. The results of the relationship of indicators to their variables.
+
+Table 5. Relationship of Indicators in Variables
+
+ Variables        Indicators                                    Loading value Construct Coeff. Contribution
+ School           x1 = Entrepreneurial education administration     0.10           0.95          0.0950
+ Management       x2 = Entrepreneurial support facilities           0.12           0.94           0.1128
+ (SM)             x3 = External cooperation                         0.45           0.74           0.3330
+ Teacher’s        x4 = The role of educators                        0.29           0.84          0.2436
+ Role             x5 = The role of the facilitator                  0.24           0.87          0.2088
+ (TR)             x6 = The role of mentors                          0.23           0.88          0.2024
+ Teaching         x7 = Production training/internship               0.68           0.57          0.3876
+ Factory          x8 = Experts                                      0.22           0.88           0.1936
+ (TFA)            x9 = Management training                          0.02           0.99          0.0198
+ Community        x10 = Production marketing                        0.29           0.84          0.2436
+ Participation    x11 = Production training                         0.18           0.90           0.1620
+ (CPA)            x12 = Supplier                                    0.23           0.88          0.2024
+                  x13 = Entrepreneurial practice in schools         0.22           0.88           0.1936
+ Facility         x14 = Use of school partner equipment             0.31           0.83           0.2573
+ Support          x15 = Business management guidance                0.10           0.95          0.0950
+ (FSU)            x16 = Production and marketing assistance         0.35            0.81         0.2835
+                  x17 = Capital and business equipment              0.57           0.66          0.3762
+                  x18 = Entrepreneurial skills                      0.35           0.80          0.2800
+ Entrepreneurship x19 = Identification of business prospects        0.50            0.71         0.3550
+ Education        x20 = Entrepreneurial life expectancy             0.27           0.85          0.2295
+ (EELS)           x21 = Active search for information               0.06           0.97          0.0582
+                  x22 = Product marketing capabilities              0.29           0.84          0.2436
+ Entrepreneurship x23 = Competence and entrepreneurial skills       0.19           0.90           0.1710
+ Literacy         x24 = Increased business interest                 0.16           0.92           0.1472
+ Students         x25 = Job orientation                             0.16           0.92           0.1472
+ (LACH)           x26 = Creativity in business                      0.39           0.98          0.3822
+                  x27 = Alternative job substitutes                 0.34            0.81         0.2754
+
+Source: Study of the influence of education and literation of entrepreneurship in vocational high
+schools: Indonesian case
+
+5.     Discussion
+
+Hypothesis test results show that school management (SM), the role of teachers (TR), teaching factory
+(TFA), and community participation (CPA) have a positive effect on support facilities (FSU) and
+entrepreneurial education (ELLS). Furthermore, entrepreneurial education literacy (ELLS) has a
+significant and positive effect on entrepeneurship literacy students (LACH). These results indicate that
+the success or failure of entrepreneurial education literacy in developing student knowledge and skills
+is strongly influenced by school management, the role of teachers, teaching factory, community
+participation, and the availability of learning support facilities.
+      The school management variable (SM) has a positive effect on the supporting facilities (FSU)
+variable with a coefficient of 0.81 and entrepreneurial education (EELS) with a coefficient of 0.65. In
+this paper, the school management variable includes only 3 (three) indicators, namely:
+entrepreneurship education administration, entrepreneurial support facilities, and external
+cooperation relationships. The analysis shows that the external cooperation indicator (x3) has the
+strongest contribution to the school management variable of 0.3330, followed by the entrepreneurial
+education support facility management indicator (x2) of 0.1128, and the entrepreneurial education
+
+
+                                                    44
+
+  E-ISSN 2281-4612           Academic Journal of Interdisciplinary Studies                     Vol 10 No 1
+  ISSN 2281-3993                        www.richtmann.org                                    January 2021
+
+
+administration management indicator (x1)) of 0.0950. These results indicate that students perceive the
+importance of schools in fostering cooperative relationships with various parties outside the school in
+entrepreneurship education (EELS), especially business actors in society and industry. Another aspect
+is the importance of schools managing literacy support facilities for entrepreneurship education, both
+inside and outside of schools. The administration of entrepreneurship education is placed the lowest
+by students, perhaps because it is considered a school affair that is not directly related to students.
+       Another variable is the role of the teacher (TR), which has a positive effect on the supporting
+facilities variable (FSU) with a coefficient of 0.84 and entrepreneurial education (EELS) with a
+coefficient of 0.67. Similar to school management variables, this teacher role variable also only includes
+three indicators, namely: the role of educators, facilitators, and mentoring. The results of the analysis
+show that students perceive the importance of the role of the teacher as educator (x4) which
+contributes the strongest value of 0.2436, followed by the facilitator role indicator (x5) of 0.2088, and
+the mentoring role indicator (x6) of 0.2024. As the role of educators, students require teachers to have
+good competence in implementing entrepreneurial education. Teachers will find it difficult to play the
+optimal role of educators if they do not have adequate knowledge and abilities, not only in mastering
+theory but also in practice. Another role expected by the teacher is to become a facilitator, related to
+the facilitation of learning entrepreneurial theory, concepts and practices, one of which is through
+collaboration with business and industry actors. Students also consider the important role of teacher
+mentoring in entrepreneurship education, especially in providing tutoring and learning assistance.
+       The factory teaching variable (TFA) also has a positive influence on the supporting facilities
+variable (FSU) with a coefficient of 0.89 and entrepreneurial education (EELS) with a cofficient of 0.67.
+Teaching factory is a production / service-based learning model that refers to the standards and
+procedures that apply in the business world and industry. The teaching factory model in schools is
+based on learning activities that are in accordance with reality by involving the industrial sector to
+develop student competencies. The aim is to transfer knowledge and production skills to students, so
+that graduates are ready to work and can be absorbed in industrial companies (Directorate of
+Vocational Education, 2015; Directorate of Vocational Education, 2017). However, the teaching factory
+is also expected to increase the creativity and self-reliance of students' work. In this paper the teaching
+factory (TFA) variable includes three indicators, namely: the production training function, the function
+of providing experts (experts) and the management training function. The analysis showed that the
+production training/internship indicator (x7) contributed the strongest value of 0.3876, followed by
+the indicator of training by experts (x8) of 0.1936, and the management training indicator (x9) of 0.0198.
+Implicitly, students perceive that in the teaching factory implementation emphasizes the importance
+of training on production, so that it can be applied if they are involved in entrepreneurship later.
+       The community participation variable (CPA) has a positive effect on the supporting facilities
+(FSU) variable with a coefficient of 0.78 and entrepreneurial education (EELS) with a coefficient of 0.75.
+This paper contains only 3 (three) indicators that are deemed to provide reinforcement for the EELS
+variable, namely: production marketing assistance, production training in business activities in the
+community, and suppliers of manufactured goods. From the analysis it was found that the production
+marketing indicator (x10) gave the strongest contribution to the community participation variable of
+0.2436, followed by the opportunity indicator as a supplier of production goods (x12) of 0.2024, and the
+indicator of the implementation of production training in business carried out by community members
+( x11) of 0.1620. These results indicate that in the context of community involvement, production
+marketing material is a very important lesson given in entrepreneurship education. Entrepreneurship
+education also needs to be directed at learning about opportunities and the possibility of becoming a
+supplier of goods to the type of business in society, so that it can stimulate students to produce the
+needs of these goods if they are going to be entrepreneurs in the future. Community participation in
+such entrepreneurship education will increase interest and equip students' knowledge and skills in
+entrepreneurship.
+        The supporting facilities variable (FSU) has a positive effect on the student entrepreneurial
+education (EELS) of 0.73. In this paper, 5 (five) indicators are used to see their contribution to the FSU
+
+                                                    45
+
+  E-ISSN 2281-4612            Academic Journal of Interdisciplinary Studies                     Vol 10 No 1
+  ISSN 2281-3993                         www.richtmann.org                                    January 2021
+
+
+variable, namely: infrastructure in schools, use of school partner equipment, business management
+guidance, identification of business opportunities, and assistance in equipment procurement. The
+results of the analysis show that the indicator of capital assistance and business equipment (x17) has
+the strongest contribution to the FSU variable of 0.3762, followed by the production and marketing
+assistance indicator (x16) of 0.2835, the indicator of school partner equipment use (x14) of 0, 2573, the
+entrepreneurial practice indicator in schools (x13) is 0.1936, and the business management guidance
+indicator (x15) is 0.0950. From these results it can be seen that the main indicator emphasized by
+students is the importance of business capital assistance and business equipment when entering the
+world of entrepreneurship. They also think that an important facilitation in running a business is
+production and marketing assistance, especially from business and industry players. Entrepreneurship
+will have good prospects, if it is supported by smooth production and clear marketing objectives.
+Therefore students assume that the use of equipment owned by school partners will not only provide
+skills but also the possibility of being open suppliers of goods and services needed in business and
+industrial activities.
+       All of the above variables have a positive effect on entrepreneurial education (EELS), and EELS
+itself has a positive effect on entrepeneurship literacy students (LACH). (LACH), especially related to
+entrepreneurial ability. There are five indicators used in this EELS variable, namely: entrepreneurial
+ability, identification of business prospects, life expectancy of entrepreneurs, active information
+seeking, product marketing ability. The results of the analysis show that the business opportunity
+identification indicator (x19) contributes the strongest value to entrepreneurial education of 0.3550,
+followed by the entrepreneurial skills indicator (x18) of 0.2800, the product marketing capability
+indicator (x22) of 0.2436, the indicator life expectancy of entrepreneurs (x20) of 0.2295, and finally the
+indicator of activeness in seeking information about types of business (x21) is 0.0582. Students tend to
+view that the most important aspect of entrepreneurship education is the ability to identify local
+potentials as business prospects that are still open for use. Entrepreneurship education, both
+theoretical and practical, will not attract students' interests if it is not supported by efforts to identify
+local potentials and seek it as a source of employment and income. The role of schools is to foster
+students' business skills, develop knowledge and ability to market products, attract and convince
+students that entrepreneurship can be a job and income, and encourage students to seek information
+and deepen knowledge, mastery, and skills about the type of business to be carried out later.
+       The application of entrepreneurial education (EELS) is an effort to develop entrepeneurship
+literacy students (LACH). Entrepeneurship literacy students (LACH) is seen from 5 (five) indicators,
+namely: entrepreneurial competencies and skills, increased business interest, work orientation,
+creativity in doing business, and alternative work substitutes. The results of the analysis show that the
+indicators of creativity in doing business (x26) have the strongest contribution to the LACH variable of
+0.3822. followed by alternative job replacement indicators (x27) 0.2754, indicators of entrepreneurial
+competence and skills (x23) 0.1710, and increased business interest (x24) and work orientation (x25) of
+0.1472. From these results students emphasized that being an entrepreneur really requires the growth
+of creativity, so that it can be an alternative job if you don't get it in the formal sector. This must be
+supported by entrepreneurial education in schools which is able to foster competence and skills of
+students to create and develop certain types of businesses, and vice versa. Students' entrepreneurial
+competence and skills must be sought, especially if they are faced with a lack of student interest in
+making it a job and income after completing their education.
+       This study found that school management (SM), the role of teachers (TR), teaching factory (TFA),
+and community participation (CPA) have an effect on the variable utilization of supporting facilities
+for entrepreneurial learning (FSU). Of these variables, the teaching factory (TFA) ranks first in giving
+a positive effect on the use of supporting facilities (FSU) of 0.89, followed by TR, SM, and CPA variables.
+Furthermore, the five variables (SM, TR, SM, CPA, and FSU) also have a positive effect on the
+entrepreneurial education variable (EELS). The fifth influence must lead to the application of
+entrepreneurial education for vocational students, not only making students familiar with and
+understanding the theory, concepts and practices of entrepreneurship learning, but also being able to
+
+                                                     46
+
+     E-ISSN 2281-4612        Academic Journal of Interdisciplinary Studies                    Vol 10 No 1
+     ISSN 2281-3993                     www.richtmann.org                                   January 2021
+
+
+generate interest and be creative in developing this type of business. These variables also determine
+the success or failure of the implementation of entrepreneurship education in students. Through
+entrepreneurship education, it is hoped that graduates will no longer only want to be workers in the
+formal environment (government and private), on the contrary, they are determined to be independent
+by creating their own jobs in the non-formal business sector. Entrepreneurship education is expected
+to be able to increase the number of entrepreneurial graduates of the SMK.
+      The results of the analysis show that the teacher role variable (TR) has the highest positive effect
+on entrepreneurial education (EELS) with a coefficient of 0.81, followed by community participation
+with a coefficient of 0.75, supporting facilities with a coefficient of 0.73, teaching factory with a
+coefficient value of 0.7, and school management with a coefficient of 0.65. These results indicate that
+the most important element in EELS lies in the teacher's role as educators, facilitators, and mentors in
+fostering students' entrepreneurial knowledge and skills. On that basis, teachers must be competent
+by mastering entrepreneurial theory, concepts and practices, especially if entrepreneurship education
+is not carried out monolithically but is integrated into all subjects being taught. Teachers who are less
+competent will not arouse interest and convince students that entrepreneurship can be an alternative
+job in the non-formal sector. Entrepreneurship education needs to instill the view of students that
+entrepreneurship in the non-formal sector can also provide income security and increase welfare.
+      Community participation (CPA) is the next variable that has a positive effect on entrepreneurship
+education (EELS) with a coefficient value of 0.75. This positive influence is the role and function of
+society as a marketing medium for production businesses, providers of experts, and suppliers of
+products for business activities. As a marketing place, this will happen if the types of production that
+are pursued are aligned to meet the needs of the community, whether based on the utilization of local
+potential and / or others. On the other hand, participation can also be in the form of skill building for
+individuals or community groups classified as experts and supporting business activities, as well as
+management training.
+      Furthermore, supporting facilities (FSU) have a positive effect on entrepreneurial education with
+a coefficient value of 0.73. This variable is important, especially in facilitating the implementation of
+educational practices, both inside and outside of school. Supporting facilities in schools need to be
+available for practical entrepreneurship learning, supplemented by business management guidance,
+and information on production and marketing capital assistance. Facilities outside school include the
+use of equipment owned by business and industrial actors, as well as assistance in the provision of
+equipment and business capital.
+      In the following discussion, the teaching factory variable (TFA) becomes the next variable that
+has a positive effect on entrepreneurship education (EELS). Teaching factory is a complement to
+entrepreneurship learning by providing training and internships in real experiences by involving
+business and industry players, mentoring from experts in the world of business and industry, and
+management training. Teaching factories require collaboration between schools and business and
+industry players, especially in terms of equipment utilization and production practices. It is not
+surprising that this external collaboration is considered a determinant of entrepreneurial education
+knowledge and skills.
+
+6.     Conclusion
+
+The above description shows that entrepreneurship education has a positive effect on entrepeneurship
+literacy students (LACH). However, literacy in entrepreneurship education is strongly influenced by
+various variables, including: school management, the role of teachers, teaching factory, and community
+participation. From the analysis, it is known that the role of teachers as educators, facilitators, and
+mentors occupies the highest position in entrepreneurial education literacy, followed by variables of
+community participation, availability of learning support facilities, teaching factory, and school
+management. This result does not mean that in the implementation of entrepreneurship education, it
+is sufficient to pay attention to the variable of the teacher's role, on the contrary ignoring other
+
+                                                   47
+
+   E-ISSN 2281-4612               Academic Journal of Interdisciplinary Studies                               Vol 10 No 1
+   ISSN 2281-3993                            www.richtmann.org                                              January 2021
+
+
+variables, but it must be done simultaneously by giving special emphasis to the role of the teacher,
+especially teacher competence in mastery and ability entrepreneurial theories, concepts, and practices.
+      On the other hand, external cooperation indicators contribute the strongest value for the school
+management variable, competent educator indicators of the teacher role variable, production training
+in the factory teaching variable, production marketing assistance in the community participation
+variable, and capital assistance information in the supporting facilities variable. In the
+entrepreneurship education literacy variable, the indicator that contributes the strongest value is the
+identification of business prospects, while the student achievement variable is an indicator of business
+creativity. The implication is that entrepreneurship education literacy efforts need to pay more
+attention to the above influence variables as well as indicators that have the effect strength of each
+variable.
+
+References
+
+Anderson, T. D. (2016). Transforming Leadership, New York Washington D.C: St. Lucie Press.
+Aprilini, A. F. (2015). Role of Teachers in Improving Interest of Business Entrepreneurship at SMK 17 Magelang,
+      Thesis, Yogyakarta State University. https://eprints.uny.ac.id/ 28408/1/skripsi%20suci%20fitri%20apriliani
+      %20nim.%2013802242003.pdf.
+Arensburg, L. (2015). The Role of Entrepreneurship Education in Finnish High Schools, Thesis, Aalto University
+      School Business. http://epub.lib.aalto.fi/en/ethesis/pdf/13920/ hse_ ethesis_13920.pdf.
+Anwar, N., A.G. Wailanduw. (2018). Implementation Evaluation and Inhibiting Factors and Teaching Factory Supporters
+      at SMK Negeri 3 Surabaya, JPTM, Vol. 07 (01), 94-101. https://jurnalmahasiswa.unesa.ac.id/index.php/jurnal-
+      pendidikan-teknik-mesin/article/ viewFile/25206/23096
+Arifman, R. N. (2017). Teaching Factory Implementation in SMKN 1 Magelang Light Vehicle Engineering Expertise
+      Program, Automotive Engineering Study Program, Faculty of Engineering, Yogyakarta State University.
+Bisnis. (2019). Hipmi Ready to Boost the Number of New Entrepreneurs in Indonesia. https://www. Hipmi Ready to
+      Boost the Number of New Entrepreneurs in Indonesia jawapos.com/ekonomi/bisnis/28/06/2019/hipmi-siap-
+      dongkrak-jumlah-pengusaha-baru-di-indonesia/
+Briggs, L. J. (1991). Instructional Design: Principles and Applications, Publisher: Educational Technology.
+Central Statistics Agency. (2019). Statistics Indonesia, Jakarta: Central Statistics Agency.
+Colquitt, J. A., Lephine, J. A., Wesson, M. J. (2015). Organizational Behavior Improving Performance and Commitmen
+      in the Workplace, New York: McGraw Hill/Irwin.
+Dahl, R. L. (2003). Management, Jakarta: Gramedia.
+Daniyati. (2013). Role of Teachers in Education Learning Entrepreneurship in State Vocational School 7 Yogyakarta,
+      Journal of Office Administration Education, 1 - 9. https://www.e-jurnal.com/2017/02/peran-guru-dalam-
+      pembelajaran.html.
+Davis, K., & Newstrom, J. W. (2000). Behavior in Organizations, Publisher: Erlangga.
+Deakins, D., Glancey, K., Menter, I., & Wyper, J. (2005). Enterprise Education: The Role of Head Teachers, The International
+      Entrepreneurship and Management Journal, 1, 241 – 263. https://link.springer.com/article/10.1007/s11365-005-1131-9.
+Diegoli, R. B., Gutierrez, H. S. M., and García-De los Salmones, M. d. M. (2018). Teachers as Entrepreneurial Role Models:
+      The Impact of a Teachers Entrepreneurial Experience and Student Learning Styles in Entrepreneurial Intentions,
+      Journal of Entrepreneurship Education: Research Articles, Vol. 21(1). https://www.abacademies.org/articles/tea chers-
+      as-entrepreneurial-role-models-the-impact-of-a-teachers-entrepreneurial-experience-and-student-learning-styles-
+      in-entrepr-6991.html.
+Directorate of Vocational Education. (2015). Grand Design Teaching Factory and Technopark Development at SMK, Director
+      General of Primary and Secondary Education - Ministry of Education and Culture of the Republic of Indonesia.
+Directorate General of Primary and Secondary Education No. 06 / D.D5 / KK / 2018.
+Directorate of Vocational Education. (2015). Grand Design Teaching Factory and Technopark Development at SMK,
+      Director General of Primary and Secondary Education - Ministry of Education and Culture of the Republic of
+      Indonesia.
+Directorate of Vocational Education. (2017). Teaching Factory Management, Director General of Primary and
+Drucker, P. F. (2007). Innovation and Entrepreneurship, Publisher: Routledge.
+Eriza, F., & Saragih, R. H. (2019). The Effect of Community Participation in Empowerment of Medium Small
+      Businesses on Economic Improvement Community of Village Namorambe, Journal Governance Opinion, Vol.
+      4 (1), 16-39. file:///c:/users/toshiba/ downloads/249-145-559-1-10-20190717.pdf.
+
+
+                                                            48
+
+   E-ISSN 2281-4612              Academic Journal of Interdisciplinary Studies                               Vol 10 No 1
+   ISSN 2281-3993                           www.richtmann.org                                              January 2021
+
+
+Ferdinand, A. (2002). Structural Equation Modeling in Management Research: Application of Complex Models in
+      Research for Master's Thesis & Doctoral Dissertation, Publisher: BP Undip.
+Gagne, R. M. (1977). Conditions of Learning, Publisher: Thomson Learning.
+Goleman, D. (2002). Emotional Intelligence, Publisher: Bantam Books.
+Hair Jr. J. F., William C., Black Ba. J.,& Babin R. E. A. (2010). Multivariate Data Analysis. United States: Pearson.
+Haris, A. (2013). Teaching Factory as an Educational System Development in Vocational High Schools, Business Tips,
+      Vol. 5 (3), 167 – 178. http://journal.unwidha.ac.id/ index.php /KIATBISNIS/article/viewFile/1039/194
+Haryono, S., Wardoyo, P (2013). Structural Equation Modeling (SEM) for Management Research with AMOS 18.00.
+      Jakarta: Luxima Metro Media.
+Horton, P. B., & Hunt C. L. (1984). Sociology, Publisher: McGraw-Hill.
+Hisrich, R., Peters, M., & Shepherd, D. (2009). Entrepreneurship, Publisher: McGraw-Hill/Irwin.
+Iswadi. (2016). Entrepreneurship Principal, Journal of Educational Managers, Vol. 10(5), 416-420.
+      file:///c:/users/toshiba/downloads/1291-2456-1-sm.pdf.
+Joreskog, K. G, & Sorborn, D. (1993). LISREL 8. Structural Equation Modeling With the SIMPLIS Command
+      Languanges. Chicago: SSI Inc.
+Kao, R. W. Y. (1995). Entrepreneurship: A Wealth-Creation and Value Adding Process, Publisher: Prentice Hall.
+Koentjaraningrat. (2016). Introduction to Anthropology, Publisher: Gramedia.
+Kusnendi (2009). Structural Equation Modelling, Bandung: Alfabeta.
+Lackéus, M. (2015). Entrepreneurship Education: What, Why, When, How, Entrepreneurship 30 Background Paper,
+      LEED: OECD. https://www.oecd.org/cfe/leed/BGP_Entre preneurship-in-Education.pdf.
+Law of the Republic of Indonesia No. 20/2003 About the National Education System.
+Luthans, F. (2004). Organizational Behavior, New York: McGraw-Hill, Inc.
+Mathis R. L., Jackson, J. H. (2006). Human Resources Management, Jakarta: Salemba Empat.
+Meredith, G. G. (1992). Small Business in Australia, Publisher: McGraw-Hill.
+Meredith, Grant G., Meredith, G. G., Nelson, R. E, Neck, Neck, P. A., & International Labor Office. (1982). The
+      Practice of Entrepreneurship, Publisher: International Labor Office.
+Montoya, S. (2018). Defining Literacy. Hamburg, Germany: Unesco Institut For Statistics.
+Mudawama. (2018). Teacher Entrepreneurship Efforts in Increasing Entrepreneurial Interest in Class XI Students of
+      SMK Negeri 1 Wonorejo Pasuruan, Thesis, Maulana Malik Ibrahim State Islamic University Malang.
+      http://etheses.uin-malang.ac.id/11804/1/14130025.pdf.
+Nanus, B. (2001). Visionary Leadership, Publisher: Prenhallindo.
+Normina. (2016). Community Participation in Education, Journal Beranda, Vol. 14 (26), 71 - 85. http://jurnal.uin-
+      antasari.ac.id/index.php/ittihad/article/view/874.
+Parsons, T. (2012). The Social System, Publisher: Quid Pro, LLC.
+Robbins, S. P. (2006). Essentials of Organization Behavior, New Jersey: Prentice-Hall International Inc.
+Robbins, S. P., & Coulter, M. (2018). Management, NJ : Pearson.
+Samino. (2013). The Role of the Principal in the Development of Entrepreneurship in Advancing the Elementary School of
+      Muhammadiyah in the Western City Special Program, Journal of Education Management, Vol. 8(2), 149 – 157.
+      https://publikasi ilmiah.ums.ac.id/bitstream/ handle/11617/3180/4.%20Samino.pdf?sequence=1&isAllowed=y.
+Sarjono, H., & Yulainita, W. (2019). Structural Equation Modeling (SEM): An Introduction, Application for Business
+      Research, Publisher: Salemba Empat.
+Schein, E. H. (2014). Organizational Culture and Leaderhip, San Fransico: Jossey-Bass publishers.
+Sedaya, C. P, & Sulandari, S. (2019). Analysis of Business Station Facilities City of Semarang, Journal Of Public Policy
+      And Management Review, No. 8 (4), 1 - 7. https://ejournal3. undip.ac.id/index.php/jppmr/article/
+      view/24951/22237.
+Seikkula-Leino, J., Ruskovaara, E., Ikavalko, M., Mattila, J. and Rytkola, T. (2010), Promoting Entrepreneurship Education:
+      The Role of the Teacher?", Education + Training, Vol. 52 (2), 117-127. https://doi.org/10.1108/00400911011027716.
+Soekanto, S. (2018). Sociology An Introduction, Publisher: Rajawali Press.
+Sofyan, I. L., Pradhanawati, A., & Nugraha, H. S. (2013). Effect of Facilities and Service Quality on Loyalty, Through
+      Consumer Satisfaction as Intervening Variables in the Star Clean Car Wash Semarang, Diponegoro Journal of
+      Social and Politics, 1 - 12. http://ejournals1. undip.ac.id/index.php/.
+Sorokin, P. (2018). Social and Cultural Dynamics, Publisher: Springer International Publishing.
+Thoha, M. (2008). Organizational Behavior: Basic Concepts and Applications, Jakarta: RajaGrafindo Persada
+      Publisher.
+Usman, H. (2006). Management: Theory, Practice, and Research Research, Jakarta: Bumi Aksara.
+Vera van Zyl, E. (2006). The Role of School Managers in Developing Entrepreneurial Skills of Grade 9 learners, Thesis,
+      University of South Africa. https://pdfs.semanticscholar.org/ e703/609f157d89b760cfd62b6752f7626150ae62.pdf
+
+
+                                                            49
+
+   E-ISSN 2281-4612             Academic Journal of Interdisciplinary Studies                          Vol 10 No 1
+   ISSN 2281-3993                          www.richtmann.org                                         January 2021
+
+
+Wibowo, (2007). Performance Management, Jakarta: RajaGrafindo.
+Wiratno, B. (2016). Community Participation in Education, Journal of Social Sciences Education, Vol. 2 (1), 28 - 34.
+     http://journals.ums.ac.id/index.php/jpis/article/viewFile/ 2062/1564.
+Wiyatno, & Muhyadi. (2013). The Role of School Head of Business Competency in Improving Quality of Education
+     in SMP N 3 Jetis, Bantul, Journal of Educational Management Accountability, Vol. 1(1), 162 – 174.
+     https://doi.org/10.21831/amp.v1i1.2338
+Yunanto, D. (2016). Teaching Factory Implementation in SMK 2 Gedangsari Gunungkidul, Vidya Karya Journal, Vol.
+     31 (1), 29 – 36. https://ppjp.ulm.ac.id/journal/index.php/ JVK/ article/viewFile/3971/3564.
+Zimmerer, T. W. (2005). Essentials of Entrepreneurship and Small Business Management, USA Pearson Prentice Hall.
+
+
+
+
+                                                        50

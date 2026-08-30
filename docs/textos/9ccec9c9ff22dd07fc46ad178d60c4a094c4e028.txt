@@ -1,0 +1,1010 @@
+PJER, Vol 3, Issue 2 (2020)                                                        Evaluation of school…
+
+      EVALUATION OF SCHOOL MANAGEMENT
+        COMMITTEE (SMC) ON QUALITY OF
+          EDUCATION: A CASE OF SINDH
+Lubna Naz
+PHD Scholar,
+Applied Economics Research Centre, University of Karachi,
+Sindh, Pakistan
+Email: lubna@aerc.edu.pk
+
+Naeem-uz-Zafar
+Chief Economist Sindh,
+Planning & Development Department, Govt of Sindh,
+Sindh, Pakistan
+Email: naeemuzzafar@hotmail.com
+
+Noman Saeed
+Assistant Professor
+Applied Economics Research Centre, University of Karachi,
+Sindh, Pakistan
+Email: economanics@yahoo.com
+                    ------------------------------------------------------------
+
+ABSTRACT
+The right to education is not only indicating the right to access to education but also
+emphasizing the right to quality education. To improve the quality of education, World
+Bank and other donor agencies introduced the need of community involvement in
+school management system in achieving the right to education. Thus, multiple reform
+programs initiated based on community involvement known as school-Based
+Management (SBM) or School Management Committee (SMC). Given this, to improve
+the quality education, many countries initiated multiple reform programs and
+indicated the need of community involvement through community-school partnership.
+Therefore, in Pakistan, like other provinces, Sindh has also formed School
+Management Committee (SMC). This study is an attempt to evaluate the impact of
+community involvement i.e. SMC on quality of education in Sindh province, Pakistan.
+For the analysis, the study has used Sindh Education Management Information System
+(SEMIS) database for the year 2013-14. To evaluate the impact of SMC intervention,
+the study has constructed different measures of quality education such as school
+environment index, teacher’s resource index, promotion rate, repetition rate, and
+dropout rate. Further, the study has also assessed the quality of matching based on
+different measures of matching quality. Since the study has selected those schools of
+                                                  33
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+
+Sindh in which SMC is functional. Hence, to control the problem of self-selection bias,
+the study has used a semi-parametric propensity score matching technique (PSM). The
+overall findings of the study provide useful insights and reveals that the establishment
+of SMC has positive and significant impact on access to school and quality of school
+measures except the one i.e. student’s dropout rate. The study recommends that an
+impact evaluation is one of the best ways to provide evidence-based useful insights for
+the policymakers to improve educational outcomes for future generations.
+
+KEYWORDS
+School Management Committee, Quality of Education, Impact Evaluation, program
+Evaluation, Propensity score matching, Average Treatment Effect
+
+INTRODUCTION
+In Pakistan, one of the key performance social indicators particularly, education,
+remained a challenge since its independence in 1947. The right to education is not only
+indicating the right to access to education but also emphasizing the right to quality
+education. The access to good quality education is entailed for the development of
+societies as a whole. Generally, the quality of education is assessed on the basis of key
+performance indicators such as increase in student’s class enrolment, number of
+qualified teachers and number of institutes in a country. To improve the quality of
+education, World Bank and other donor agencies introduced the need of community
+involvement in school management system. Thus, multiple reform programs initiated
+based on community involvement known as school-Based Management (SBM) or
+School Management Committee (SMC). Therefore, in Pakistan, like other provinces,
+Sindh has also formed SMC in 1990. SMC was formed to control all aspects of school
+management such as students’ enrollment, teachers’ attendance, classroom teaching,
+school finance and outcome of the student. However, according to SEMIS 2013-14,
+SMC is functional in around 82 percent of the public schools in Sindh. But the
+deteriorating condition and current decline in the enrollment is alarming, this need an
+in-depth assessment. Thus, this study aims to assess the impact of School Management
+Committee (SMC) on quality education in Sindh for the year 2013-14.
+
+According to UNESCO (2003), the primary source to assess the quality education is
+to focus the student’s learning outcomes but the desired quality can be achieved if the
+input, process, and output ensure the quality in terms of efficiency, effectiveness and
+excellence and social justice. Nonetheless, it does not only impact the learner’s
+cognitive development but also ensures a successful and productive future to our future
+generation. Unfortunately, in Pakistan, education remained one of the deprived fields
+and it has been facing serious challenges in the areas of access, quality, and
+governance. However, since its inception, the government of Pakistan took various
+initiatives for building concrete educational foundation of the country and proposed
+
+                                           34
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+
+considerable attention to the betterment of the educational outcomes. Additionally,
+education is one of the most powerful and supported factor for achieving the
+sustainable development in a country. Thus, Pakistan, like other developing countries
+of the world also signed the 17 Sustainable Development Goals (SDGs) agenda 2030
+in September 2015.
+
+The state of Pakistan has partially successful in providing access to education, but it
+has not been able to ensure the quality of education. Recently, the education sector was
+in the federal domain but after the 18th amendment in the 1973 constitution subject to
+the education, which was made in 2010 under the Article 25-A, the education sector
+was devolved to the provincial domain. It is, therefore, provincial Govt.’s
+responsibility to provide prime education to all. Thus, each provincial Govt. initiated
+several reform programs to provide and improve the quality education. The
+establishment of provincial education foundation is also a result of 18th amendment.
+The Sindh Education Foundation (SEF) initiated a number of reform programs based
+on school interventions, particularly in remote areas of Sindh. In this context, the
+government of Sindh introduced a sector reform program for primary as well as
+secondary education known as the Sindh Education Sector Reform Program (SERP).
+Additionally, this program was financially supported by the World Bank during the
+Fiscal Year 2006/07 to 2011/12. The Second Sindh Education Sector Reform Program
+(SERP-II) was arrived to improve the quality of service delivery and to increase the
+student’s participation in schools. Improvement in educational governance ensures the
+improved levels of access, quality and participation in education which ultimately
+reduces various problems related to service delivery (UNESCO, 2009). This indicates
+the need and the interest of community involvement in education for better planning
+and management which can help to increase the demand for education and improve
+the quality of education by improving the enrolment, attainment, and achievement of
+the students (Watt, 200l). Additionally, studies conducted in Latin America, North
+America, Sub-Saharan Africa, and Southeast Asia found positive impact of
+community-school involvement on outcomes for students, schools and community
+(DeSteffano et al., 2006; Vagas, 2005; Henderson & Mapp, 2002; Watt, 2001;
+Mozumder & Halim, 2006). Further, Bray (2001) observed that community
+participation increased community interest in education and also increased equity in
+access to education. Finally, in almost all the studies reported three stakeholders in
+school-based mechanism such as school, parents and community members and the
+most common term used in the literature is School Management Committee (SMC).
+
+In Sindh, a number of reform programs introduced under SERP-II for instance,
+community-based committee is formed called School Management Committee (SMC)
+which is one of the core factor of the SERP-II reform program agenda. Further to this,
+the need of community involvement is also indicated in the minimum standards for
+
+                                          35
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+
+quality education in Pakistan, developed by the interprovincial technical working
+groups (IPTWGs) on quality and governance of education. However, SMC is a
+triangular committee consisting of its three members namely school, parents and local
+community. SMC is formed to provide a support to the head-teachers in order to
+deliver quality education without any delay to the children, the monitoring of teacher’s
+attendance and performance in the classroom. Finally, SMC is also formed to improve
+the student’s performance by increasing the student’s enrolment and reducing the
+dropout from the school. To improve the quality education, multiple reform programs
+have been initiated by the Govt. of Sindh mainly under the umbrella of SERP.
+However, the impact assessment studies, for evaluating the quality education, are very
+limited in number.
+
+Thus, there is a need to evaluate an in-depth assessment of such interventions/programs
+on the overall quality of education. Thus, a number of related studies conducted to
+examine the impact of SMC in improving the quality education such as Asim (2013)
+evaluated the trends in education system of public schools in Sindh province for the
+periods of 2004-05 and 2011-12 using descriptive analysis. Further to this, the study
+also validated the statistics by robustness checks based on household-school level
+census collected independently in three districts of rural Sindh namely Mirpurkhas,
+Matiari, and Sanghar. However, Kumar (2016) and Meher and Patel (2018) studied the
+role and functioning of SMC in public schools in district Kullu of Himachal Pradesh
+and elementary schools in Jharsuguda district of India respectively. Their study found
+that SMC has positively improved the quality of education. Similarly, another study
+conducted by Rout (2015) to assess the role of SMC in rural elementary schools in
+Balasore district of India and revealed that SMC has successfully achieved universal
+enrolment by proper monitoring pupil’s attendance and absenteeism and also
+efficiently developed school infrastructure. Further, the study revealed that the SMC
+allocated funds has also been utilized properly. Osei-Owusu and Sam (2012) analyzed
+the role of SMC to improve the quality education and teaching in Ashanti Mampong
+Municipal Township Basic schools in Ghana-West Africa, based on simple random
+sampling. However, the study found SMC ineffective to monitor the head teachers,
+teachers, and student’s attendance but found very effective for developing better
+school-community relationship. This study contributes to the existing literature by
+empirically assessing the impact of SMC on quality education in Sindh.
+
+This study is an attempt to assess the impact of one of the SERP programs that is
+School Management Committee (SMC). The objectives of the study are twofold. In
+the first step, to evaluate the impact of SMC intervention, the study has constructed
+different measures of quality education such as school environment index, teacher’s
+resource index (measures of access to school), promotion rate, repetition rate and
+dropout rate (measures of quality of education). However, in the second step, the study
+
+                                          36
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+
+evaluated the ex-post treatment effect of SMC on quality education measures using a
+semi-parametric propensity score matching technique (Jimenez & Sawada, 1998;
+Sawada, 1999; and Sawada & Ragatz, 2005). Since the study has selected those schools
+of Sindh in which SMC is functional. Thus, to control the problem of self-selection
+bias, the study has used a semi-parametric propensity score matching technique (PSM)
+for treatment (schools with SMC) and control (schools without SMC). The overall
+findings reveal useful insights to the policy makers to improve the quality of education
+and reveals that the establishment of SMC has positive and significant impact on
+access to school and quality of school measures except the one i.e. student’s dropout
+rate.
+
+The study is organized in such a way that after the introduction, the study is providing
+the relevant literature review and then in the next section, the study is discussing the
+proposed models based on different outcome variables and also providing the detailed
+construction of each variable used in the model. Additionally, the section is also
+discussing the source of data used for the analytical purpose. Furthermore, Section 4
+is presenting the propensity score matching technique which is generally employed for
+an impact evaluation. Additionally, section 5 is described as the results section of the
+study which consists of descriptive as well as empirical insights drawn from the study.
+Finally, the last section concludes the study by discussing the overall findings of the
+study.
+
+Model specification and source of data
+To evaluate the impact of SMC intervention on different aspects of quality education,
+such quality indicators are the outcome variables that are discussed in detail in the
+following econometric models. For instance, the model, given in equation 1, is
+basically discussing the general model which is consisting of the outcome of interest,
+treatment variable and different covariates used in the analysis.
+Yi = β0 + β1Ti + β2Vi + β3Wi +β4Zi + ∊            (1)
+
+Where,
+         Yi is the outcome of variable for school i (i.e. Quality and Access indices),
+         T is the treatment variable for whether the school received the intervention or
+         not. This is binary in nature,
+         Vi is the student’s enrolment based indices such as student’s flow rates
+         Wi is the teachers’ characteristics on average by school i. Such as gender of
+         the teacher, teacher’s qualification, type of training acquired their
+         designation, etc.
+         Zi denotes the school characteristics including number of classrooms in the
+         school, building condition, availability of washroom, drinking water facility,
+         electricity facility, etc.
+
+                                           37
+
+PJER, Vol 3, Issue 2 (2020)                                            Evaluation of school…
+
+Here, in the following models, each outcome variable and covariates are discussed in
+detail.
+Yi = β0 + β1Ti + β2Vi + β3 Zi + ∊          (2)
+Yi = β0 + β1Ti + β2Vi + β3Wi + ∊           (3)
+In equation 2, the outcome of interest is teacher’s resource index, a quality measure of
+access to school. Since teacher’s characteristics are comprised of numerous indicators,
+thus, a single variable composite index is constructed using principal component
+analysis (PCA). Such characteristics are comprised of teacher’s designation (PST, JST,
+HST, SS, SLT, OT, PTI, WIT, HMs, DT, others), their academic qualification
+(doctorate, M.Phil., masters, bachelor, intermediate, matriculation and below matric),
+type of post and professional training (PTC, CT, B.Ed., M.Ed., other trained and
+untrained). These indicators were initially discrete in nature, first converted by taking
+proportion of each variable from the total number of teachers and PCA is applied.
+
+Similarly, PCA is also applied to construct another access to school outcome variable
+in equation 3 i.e. the school environment index. This index is constructed using a
+number of school-level indicators which are first converted into a dummy and scale
+variable. A scale variable is defined as the variable which was initially discrete in
+nature, converted into a scale of ranges from 0 to 2. A scale of 2 is assigned to the
+highest level or degree, 1 is assigned to moderate degree and 0 to the lowest degree.
+For example, in case of school facility index, a scale ranges from 0 to 2 is assigned to
+a variable pupil-classroom ratio in such a way that a scale value of 2 is assigned if the
+ratio ranges from 1 to 25, scale value of 1 if the ratio is 26 to 50 and a scale value of 0
+if the ratio value is above 50. The school facility index is constructed using 10 school-
+level indicators namely boundary wall, building condition, type of building, electricity
+connection, electric fan availability, drinking water facility, library facility, and pupil-
+classroom ratio. Thus, PCA is applied to construct a composite- school facility index
+based on the variables discussed above.
+
+However, PCA is a commonly used statistical technique for transforming orthogonally
+a large number of indicators into a composite index (indices) which can be further
+defined as the process of converting correlated variables to linearly uncorrelated
+components. Each component of PCA is a linear (weighted) combination of original
+indicators that follows the common arrangement. The construction of first PCA i.e.
+school facility index is consisting of 9 indicators. Out of these 9 indicators, 6 indicators
+have 2 dimensions and 3 having 3 dimensions.
+
+Principal component analysis
+In general, PCA is basically a linear combination of p variables or indicators with n-
+dimensional vectors x1, x2,….,xn. Hence, an (n x p) matrix of X, its jth column is the
+vector xj of values for the jth variable. Thus, a linear combination of the columns of
+
+                                            38
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+                      𝑝
+matrix X is given as ∑𝑗=1 𝑎𝑗𝑥𝑗 = Xa, where “a” is a vector of constants a1, a2,…,ap.
+these PCs can be written as:
+                          PC1 = a11X1 + …. + a1p Xp = Xa1
+                                             .
+                                             .
+                                             .
+                              PCp = ap1X1 + …. + app Xp = Xap
+
+Since eigenvectors ak of the covariance matrix are used to find weights for the linear
+combination and the eigenvalues S corresponding to each eigenvector a are the
+variances of the linear combinations or PC. Moreover, another symmetric p x p matrix
+similar to covariance matrix S, with exact eigenvalues (for k=1, 2,…, p), corresponding
+to eigenvectors to create an orthogonal set of eigenvectors ak, which is known as PC
+                                                                𝑝
+loadings. To find p new linear combinations i.e. Xak = ∑𝑗=1 𝑎𝑗𝑘𝑥𝑗, a Lagrange
+multiplier approach can be used with the restriction of orthogonal coefficient vectors,
+which maximizes the variance subject to the condition that the new linear combinations
+are not correlated with the earlier linear combinations. The newly obtained linear
+combinations Xak are known as
+the principal components.
+
+Thus, the first and second components are not co-correlated each other. Similarly,
+every following component is not correlated with the preceding one. Since it is of the
+interest that to obtain a largest eigenvalue or variation, the corresponding eigenvector
+a1 is considered. The first PC explains the greater variation, the second PC displays
+second-largest amount (less than the first PC) and so on. Thus, PCA is an appropriate
+technique which converts a large number of original variables (9 in case of school
+facility and 26 variables in case of teacher’s index) into small set of linear
+combinations that explains the total variation of the data (Dillon and Goldstein, 1984).
+Further, PCA is also a best-suited technique for removing the problem of simultaneity
+and multi co-linearity may arise among the original set of variables because it
+maximizes the variance relative to minimization of least square distance (Jha and
+Murthy, 2003).
+
+Hence, the first principal component is used for school facility index and for teacher’s
+quality index as well. For school facility index, the first PC explains 33% of the total
+variation and 62% of the variance, using first three components. However, for
+teacher’s index, it explains 13% of the total variation and 65% variation for first 10
+components. Detailed summary of both the indices is provided in Annexure 2.
+Yi = β0 + β1Ti + β2Wi +β3Zi + ∊           (4)
+Yi = β0 + β1Ti + β2Wi +β3Zi + ∊            (5)
+
+                                            39
+
+PJER, Vol 3, Issue 2 (2020)                                          Evaluation of school…
+
+Yi = β0 + β1Ti + β2Wi +β3Zi + ∊            (6)
+
+However, the outcome variables given in above equations are the measures of quality
+education. These outcome variables namely student’s promotion rate, repetition rate,
+dropout rate called student’s flow rates that are constructed using cohort student flow
+rate method by taking class wise enrollment and number of repeaters.
+
+The cohort student-flow rate method, adopted from UNESCO, is used for calculating
+the student- flow rates (promotion rate, repetition rate, and dropout rate) by taking
+class-wise enrolment and numbers of repeaters. To calculate the class-wise promotion
+rate, the number of students from a cohort enrolled in a given class at a given school
+year t+1( i.e. 2013-14)is divided by the number of students from the same cohort
+enrolled in the previous class in preceding school year t (i.e. 2012-13). Like promotion
+rate, the student’s repetition rate is also derived by dividing the number of repeaters in
+a given class in a given year t+1 (i.e. 2013-14) by the enrollment of same class but in
+the previous year t (i.e. 2012-13). Finally, the student’s class-wise dropout rate is
+calculated by subtracting the former student’s flow rates (promotion rate and repetition
+rate) from 100.
+
+Data source
+In assessing the impact of SMC on quality education, this study has constructed a
+number of variables using different techniques. In particular, at school level, this study
+has constructed five outcome variables namely, student’s promotion rate, repetition
+rate, dropout rate (student’s flow rates), school environment rate and teacher’s resource
+index. Moreover, student’s promotion rate (measure of access to school), student’s
+repetition and dropout rates (measures of quality of education) are constructed using
+cohort student flow rate method. Additionally, the latter two indices are constructed,
+for assessing the quality of education, using a composite index methodology i.e.
+principal component analysis (PCA).
+
+The school-level analysis is solely based on the Annual School Census called Sindh
+Education Management Information System (SEMIS), provided by the School
+Education and Literacy Department of Govt. of Sindh. SEMIS data provides
+comprehensive education profile of Sindh province which comprises of information
+such as school infrastructure and availability of school facilities, class-wise enrolment
+and number of repeaters and detailed teacher’s information by gender and district. For
+impact evaluation of SMC, the study has used 2013-14 SEMIS dataset having 46,724
+numbers of schools in province of Sindh out of which 6,207 schools are (temporary
+and permanently) closed.
+
+
+
+                                           40
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+
+Estimation technique: propensity score matching
+Matching technique is being used in various fields of study where one has two
+comparison groups, a group of treated individuals (Y1) called treatment and a control
+group of untreated individuals (Y0). Moreover, the technique provides one of the
+possible solutions to the problem of selection bias by selecting on observable
+characteristics (X) through random selection. The treatment binary variable denoted
+by P, with a value (P = 1) if the individual undergoes treatment and (P = 0) if the
+individual is not treated.
+
+In addition to this, there are two potential outcomes for each group. Yi (1) denotes the
+potential outcome of treated group and Yi (0) denotes the potential outcome of
+untreated group. Thus, the treatment effect, commonly known as the causal effect, is
+defined as the difference between these two potential outcomes which can be written
+as:
+TEi = Yi (1) - Yi (0)                (7)
+
+Moreover, the matching technique randomly selects the potential outcomes and their
+difference from the population. However, an individual effect for both the treated and
+untreated is not observable. Hence, an average treatment effect (ATE) is estimated.
+There are two parameters of interest or treatment effects. One is average treatment
+effect (ATE), which can be defined as the expected difference between the two
+outcomes and can be written as:
+ATE = E (Y1) – E (Y0)            (8)
+ATT = E [Y(1) | P = 1] – E [Y (0) | P = 1]              (9)
+
+However, the average treatment effect on treated (ATT) is the difference between the
+outcomes of those randomly selected individuals who were treated. The ATT is
+constructed to deal with the problem of “selection-bias”.
+
+In equation 9, the term on right hand E [Y (0) | P = 1] is called counterfactual mean,
+which is for those being treated was not observed because outcomes (both) for the
+same individuals cannot be observed at the same time; or in this case, a counterfactual
+is a possibility of what would have happened if the participating school not received
+(SMC) intervention Gertler et al. (2007). Thus, considering the expected outcome for
+untreated individuals E [Y (0) | P = 0] is not appropriate because it shows that factors
+which define treatment indicator also defines the outcome variable. Since both
+individuals (treated and untreated) differ even in the absence of treatment and leading
+to a problem of self-selection bias.
+
+The comparison of average effects conditional on treatment status can be stated as:
+
+
+                                          41
+
+PJER, Vol 3, Issue 2 (2020)                                                               Evaluation of school…
+
+
+
+E [Y(1) | P = 1] - E [Y(0) | P = 0] =   E [Y(1) | P = 1] - E [Y(0) | P= 1] + E [Y(0) | P = 1] - E [Y(0) | P = 0] 10
+
+                     ATE                                      ATT                           Selection Bias
+Thus, the true ATT can be estimated if the term E [Y (0) | P = 1] - E [Y (0) | P = 0] or
+self-selection bias becomes equal to zero.
+
+In experimental studies, the assignment to treatment is random and can be identified
+directly. But in non-experimental studies, two strong assumptions are required to deal
+the selection bias problem.
+
+Unconfoundedness / Conditional Independence (CIA)
+Conditional on observable characteristics X, treatment P and potential outcomes Y (0)
+and Y (1) are independent. The assumption of CIA states as:
+                            Y (0), Y (1) ⊥ P | X , ∀ X
+
+The above notion is called unconfoundedness which implies that the selection is only
+based on observable covariates. According to Rosenbaum and Rubin (1983), the
+potential outcomes are independent of treatment conditional on X as well as
+conditional on balancing score (propensity score, PScore) – the probability of an
+individual who receives treatment based on his observed characteristics X. The
+assumption of unconfoundedness/CIA, conditional on PScore can be stated as:
+                         Y (0), Y (1) ⊥ P | Prob (X) , ∀ X
+
+Overlap / Common Support Condition
+Besides with the independence, the overlap assumption is also a strong assumption
+which eliminates the chance of perfect predictability of treatment P given covariates
+X should satisfy the overlap assumption which can be stated as:
+                               0 < Prob (P = 1 | X) < 1
+
+The probability of treated group must lie between 0 and 1 and it ensures that
+individuals with same characteristics X having positive propensity of being treated and
+untreated (Heckman, LaLonde, and Smith, 1999). Moreover, the condition of strong
+ignorability holds if both unconfoundedness and overlap assumptions are valid
+(Rosenbaum & Rubin, 1983).
+
+For propensity scores, let’s consider a model based on binary choice probit model
+                         Prob (P = 1| X) = G (Xβ) = Prob(X)
+Let us choose a propensity score Prob(X) at random and two individuals having same
+propensity score. One of them is treated and other does not. The average treatment
+
+                                                         42
+
+PJER, Vol 3, Issue 2 (2020)                                            Evaluation of school…
+
+effect conditional on propensity score is as follows:
+          E (Y| P = 1, P (X)) – (E (Y| P = 0, Prob (X)) = E (Y1 – Y0 | P (X))
+
+These propensity scores are estimated via logit or probit model of estimation. Thus,
+such matching technique is called semi-parametric matching. However, matching can
+be obtained through different algorithms such as Nearest Neighbor Matching (NN)
+(with or without replacement), caliper matching, radius matching, Kernel matching,
+and stratification matching.
+
+The current study employs NN matching, the most commonly used and proposed by
+Abadie and Imbens (2006). Furthermore, the study also presents Kernel matching by
+graphical representation (see Figures 2 through 6 in Annexure 1).
+
+RESEARCH FINDINGS AND DISCUSSIONS
+This section is providing the descriptive analysis which is basically consisting of the
+outcome variables used in drawing the empirical findings of the study. Moreover, the
+section is also discussing the empirical analysis for instance, the average treatment
+effect of SMC using Propensity Score Matching technique.
+
+Descriptive analysis
+The descriptive analysis of school-level data for the year 2013-14 can be depicted from
+the following figures. In general, the analysis is providing the description of schools
+in which SMC is functional and schools without SMC in Sindh province.
+
+However, the analysis is describing the pupil-class ratio, pupil-teacher ratio, schools’
+facilities, teacher’s training by class-level and student’s flow rates for primary by SMC
+status for the year 2013-14.
+ 50
+                    42
+ 40
+                                                              28            28
+ 30
+ 20                               15
+ 10
+   0
+                     Pupil-Classroom                            Pupil-Teacher
+
+                                 Functional        Not Functional
+
+            Figure 1: Pupil-Classroom Ratio & Pupil-Teacher Ratio by SMC
+
+                                              43
+
+PJER, Vol 3, Issue 2 (2020)                                                                 Evaluation of school…
+
+The figure 1 is depicting the measures of quality education in Sindh that are pupil per
+classroom and per teacher ratios in schools in which SMC is functional and not
+functional for the year of 2013-14. However, a low pupil-classroom ratio is considered
+as a good measure of quality education. Above figure indicates that the overall pupil-
+classroom ratio is 42 per classroom in schools where SMC is functional, which is much
+higher than a ratio of 15 in schools where SMC is not functional. Additionally, as per
+international criteria, the pupil-teacher ratio should not exceed a ratio of 40:1, however,
+in case of Sindh, the pupil-teacher ratio remained 28:1 for schools where SMC is
+functional and not functional.
+
+  Boundary wall                   10.70%
+                                                                                                      89.30%
+
+   Toilet Facility           7.80%
+                                                                                                         92.20%
+
+ Drinking Water             6.50%
+                                                                                                          93.50%
+
+      Electricity                8.50%
+                                                                                                        91.50%
+
+                 0.00% 10.00% 20.00% 30.00% 40.00% 50.00% 60.00% 70.00% 80.00% 90.00% 100.00%
+
+                                            SMC Not Functional        SMC Functional
+
+                    Figure 2: Schools with Basic Facilities by SMC
+Figure 2 is showing the status of basic facilities available in public schools of Sindh
+for the year of 2013-14. Additionally, the figure is also distinguishing the facilities by
+SMC. Moreover, the figure is illustrating that the condition of schools with basic
+facilities in which SMC is functional is significantly better than the schools where
+SMC is not functional which ensures the quality education in such schools.
+        .60
+        .50
+        .40
+        .30
+        .20
+        .10
+        .00
+                      Elementary
+
+
+
+
+                      Elementary
+
+
+
+
+                      Elementary
+
+
+
+
+                      Elementary
+
+
+
+
+                      Elementary
+
+
+
+
+                      Elementary
+                 Higher Secondary
+
+
+
+
+                 Higher Secondary
+
+
+
+
+                 Higher Secondary
+
+
+
+
+                 Higher Secondary
+
+
+
+
+                 Higher Secondary
+
+
+
+
+                 Higher Secondary
+                        Secondary
+
+
+
+
+                        Secondary
+
+
+
+
+                        Secondary
+
+
+
+
+                        Secondary
+
+
+
+
+                        Secondary
+
+
+
+
+                        Secondary
+                          Primary
+
+
+
+
+                          Primary
+
+
+
+
+                          Primary
+
+
+
+
+                          Primary
+
+
+
+
+                          Primary
+
+
+
+
+                          Primary
+                          Middle
+
+
+
+
+                          Middle
+
+
+
+
+                          Middle
+
+
+
+
+                          Middle
+
+
+
+
+                          Middle
+
+
+
+
+                          Middle
+
+
+
+
+                     PTC Ratio           CT Ratio       B.Ed. Ratio    M.Ed. Ratio     Untrained   Other Trained
+                                                                                         Ratio
+
+                                                    Functional        Not Functional
+
+            Figure 3: Average Number of Teachers by Training, Level & SMC
+
+                                                             44
+
+PJER, Vol 3, Issue 2 (2020)                                                       Evaluation of school…
+
+The assessment of quality teachers is also very important element of quality education.
+The figure 3 is depicting the average number of trained teachers across the different
+levels of class in schools of Sindh where SMC is functional and not functional for the
+year of 2013-14. Thus, in a broader way, the above figure reveals that most of the
+trained teachers are associated with the schools in which SMC is functional. Moreover,
+the PTC trained teachers are greater in belong to primary followed by elementary.
+However, the M.Ed. qualified teachers (belong to middle, secondary and higher
+secondary) are greater in SMC schools. Additionally, the figure is also presenting the
+condition of untrained teachers in both types of schools, which shows that the average
+number of untrained teachers is higher in schools where SMC is not functional.
+ 100       878887
+  90     79                                                                                        81.9
+  80
+  70                                                                                       65616262.9
+                   60
+  60
+  50                                                                                39.8
+  40                    35393837
+  30                                   18                                21
+  20                                                                       131212.7
+  10                                         0 0 0 0.30.2 0 0 0 0.10.1
+   0
+          Functional        Not              Functional       Not        Functional           Not
+                         Functional                        Functional                      Functional
+               Promotion Rate                    Repeatition Rate                 Dropout Rate
+
+                              1 to 2        2 to 3   3 to 4   4 to 5     5 to 6
+
+                        Figure 4: Student’s Flow Rates by SMC
+The figure 4 is presenting the class-wise student’s flow rates for primary level of
+education in schools of Sindh where SMC is functional and not functional. The figure
+depicts that the student’s promotion rate in each class is significantly higher in those
+school where SMC is functional schools. Moreover, class-wise repetition rate is
+slightly higher in SMC functional schools than schools in which SMC is not functional.
+Additionally, the repetition rate for class 1 to 3 is zero that is because of the government
+of Sindh’s policy through which all the students of class 1 to 3 were promoted.
+However, the dropout rate in each class is significantly lower in schools where SMC
+is functional as compare to the schools in which SMC is not functional. Furthermore,
+the figure also shows that the biggest dropout occurs for class 1 to 2 and class 5 to 6 in
+both types of schools. However, the dropout from class 5 to 6 reflects the transition
+from primary to middle-level schools and in some areas of Sindh; children who
+graduated from class 5 were not able to find any nearby middle-level school (Ali,
+2011).
+
+                                                     45
+
+PJER, Vol 3, Issue 2 (2020)                                            Evaluation of school…
+
+Empirical findings: Estimates of PSM
+The study is evaluated the ex-post average treatment effects of SMC on quality
+education, discussed in this section. Since the Probit model is used to estimate the
+propensities, thus the estimated coefficients, given in tables 1, 2 & 3 in Annexure 1,
+are not the marginal effects which cannot be interpreted directly. Following tables are
+providing the empirical findings of the impact of SMC on all the measures of quality
+education.
+
+                                         Table 1
+                Average Treatment Effects of SMC on Teacher’s Index
+ Matched/Unmatched                 Treated     Controls       Difference        T-stat
+ Unmatched                          11.96         11.70          0.26            6.14
+ Matched ATT                        11.96         11.78          0.18            2.21
+The estimates of average treatment effect on treated (ATT) from matched sample and
+the estimates of average treatment effect from unmatched sample are given in table 1.
+Further, the table provides the estimates of treated group, control group and their
+differences as well, which is the desired coefficient, for both the matched and
+unmatched samples. Additionally, the estimates of ATT; in case of this study, the
+average treatment impact of SMC on teachers’ index – measure of access to school, is
+positive and statistically significant. The positive difference coefficient of value 0.18
+shows an increase of 18 percent after matching which reveals that the SMC has
+efficiently improved the student’s access to school by improving the quality of teachers
+in Sindh. These findings are consistent with the studies of Brinkerhoff (2003), King &
+Ozler (2005) and Baral et al. (2019). Whereas, the studies conducted by Khan (2003)
+and Pryor (2005) provide negative impact of SMC.
+
+The positive impact of SMC on teachers’ quality ensures improved school
+accountability which can be measured by teacher’s academic and professional
+qualification, reduction in teachers’ absenteeism, increase in teaching time, etc. In this
+case, the teachers’ quality index – a measure of school accountability, is based on
+teacher’s academic, professional qualification (training), and gender of the teacher.
+Though the difference coefficient (difference of treated and control) of unmatched
+sample is also positive and statistically significant but the coefficient is higher than the
+ATT which is indicating an upward bias in estimating the SMC impact on teacher’s
+resource index or on access to school
+measure.
+                                          Table 2
+           Average Treatment effect of SMC on School Environment Index
+ Sample                               Treated       Controls Difference           T-stat
+ Unmatched                              0.35           -0.61          0.96         29.82
+                                            46
+
+PJER, Vol 3, Issue 2 (2020)                                         Evaluation of school…
+
+ Matched ATT                           0.35         -0.53          0.87         16.0
+The above table provides the impact of SMC on another measure of access to
+school that is school environment index. The estimated difference coefficients
+for the unmatched and matched samples are positive and statistically significant
+and reveal that the former is higher than the later, indicating an upward bias.
+Thus, the positive impact of SMC on school environment index provides that
+the implementation of SMC has increased the student’s access to school in the
+province of Sindh. Studies evaluated the impact of school-based management
+(SBM) found that the role of community involvement particularly SMC,
+improves the school infrastructure. In addition to this, these studies also report
+that schools with SBM have more learning material and resources, better class
+environment (in terms of pupil-teacher ratio), and improved infrastructure as
+compare to non-SBM schools (Gertler et al. 2006; di Gropello and Marshall
+2005; and Muskin 1999).
+
+                                        Table 3
+     Average Treatment effect of SMC on Students’ Flow Rates (Promotion Rate,
+                             Repetition Rate & Dropout Rate)
+     Variable               Sample           Treated Controls Difference T-stat
+  Promotion Rate Unmatched                    32.32      23.47          8.84      19.63
+                     Matched ATT              32.32      25.34          6.97       3.92
+  Repetition Rate Unmatched                    0.06       0.02          0.04       2.53
+                     Matched ATT               0.06       0.01          0.05       3.08
+   Dropout Rate Unmatched                     67.62      76.50         -8.88     -19.69
+                     Matched ATT              67.62      74.64         -7.02      -3.95
+Table 3 presents the average treatment effect of SMC on student’s flow rates such
+as promotion rate, repetition rate, and dropout rate. Here, the student’s flow rates are
+considered as the measure of quality of education. Hence, the above table discusses
+the impact of SMC on each flow rate. In general, all the three estimated difference
+coefficients are statistically significant and positive except the dropout rate which is
+negative for both unmatched and matched samples and indicating a decline in student’s
+dropout rate in Sindh over the period of 2013-14. The estimated coefficient depicts a
+decline of around 7 percent. Thus, it leads to improve the quality of education in Sindh.
+Additionally, the difference in both the difference coefficients provides an upward bias
+in estimating the ATT on student’s dropout rate. Furthermore, the table is also
+discussing the ATT on student’s promotion rate and repetition rate. The estimated
+findings are providing the positive and statistically significant results of ex-post
+treatment effect of SMC. However, the difference coefficients for promotion rate and
+                                           47
+
+PJER, Vol 3, Issue 2 (2020)                                          Evaluation of school…
+
+repetition rate provide an increase of around 7 percent and 0.05 percent respectively.
+Hence, it is evident from the above discussion that the implementation of SMC has
+significantly improved the quality of education in Sindh over the period of 2013-14.
+These findings are consistent with the findings of Skoufias and Shapiro (2006) that
+evaluated the impact of SBM on students’ survival i.e. dropout, repetition and failure
+rates using propensity score matching technique. Their study found that a community
+participation resulted a decline in dropout, repetition and failure rates of the students
+in Mexico. Moreover, the studies conducted by Marshall et al. (2008); Di Gropello and
+Marshall (2005); Pellini (2005); and Gertler et al. (2006) also found positive impact of
+community involvement on student’s survival rates. Finally, King & Ozler (1998)
+found positive effect on student’s promotion rate.
+
+                                          Table 4
+                                 Average Percentage Bias
+  Group                  Pseudo R2       LR Chi-Square         Mean Absolute Bias
+  Unmatched                 0.04              774.58*                   70.6
+  Matched                  0.003              263.23*                    3.3
+          Note: * indicates level of significance at 1%, ** at 5% &*** at 10%
+In addition, to estimate the plausible ATT, the assessment of the matching quality (of
+the covariates) is also very important for evaluating the impact of SMC on quality of
+education. However, there are various measures which assess the quality of matching
+namely standardized percentage bias-suggested by Rosenbaum and Rubin (1985), t-
+test for homogenous mean value of each exogenous variable – also suggested by
+Rosenbaum and Rubin (1985), Pseudo R2 – suggested by Sianesi (2004) and graphical
+assessment of quality check. Table… is providing the reduction in average percentage
+bias after matching from 70.6 to 3.3 which indicates that covariates are matched
+efficiently. Additionally, the reduction in Pseudo R2 after matching is also an
+endorsement of the efficient matching quality check. Furthermore, the standardized
+percentage bias for each variable before and after matching is also assessed, provided
+in table A4 which reveals the reduction in almost all the bias calculated before and
+after matching. In addition to this, the table is also providing the t-test calculated for
+equal variances in both the matched and unmatched samples, also an indication of
+efficient quality match. Finally, figure 3 in Annexure 1, is depicting the reduction in
+standardized percentage bias, the panel 1 of the figure is presenting the bias before
+matching and panel depicts the reduction in percentage bias after matching. However,
+figure 2 in Annexure 1, is the scatter diagram across each covariate for both matched
+and unmatched samples. The figure is also ensuring the efficient matching of the
+variables by minimizing the after matched percentage bias to zero. Conclusively, now
+it is evident to say that matching indicators revealed the success in matching and thus,
+the covariates for the both the treated and control groups are similar for estimating the
+
+                                           48
+
+PJER, Vol 3, Issue 2 (2020)                                          Evaluation of school…
+
+ATT.
+
+RECOMMENDATIONS
+A number of studies empirically evaluated the impact of school-based management
+(SBM) and found positive, negative and mixed results quality education. In Pakistan,
+the recent education reform programs such as SERP-II and SDGs 2030, reports lessons
+from past failures of (MDGs and SERP) reform programs based on efficient
+monitoring and governance in the education system. Thus, the evaluation of such
+reform programs provides evidence-based useful insights for the policymakers to
+design more effective education-related policies. This study is, therefore, an attempt to
+evaluate the impact of SMC intervention on the overall quality education in province
+Sindh using a sophisticated empirical approach commonly known as semi-parametric
+propensity score matching technique.
+
+The overall findings of the study conclude that SMC has helped in improving the
+quality of education particularly, in province Sindh. Moreover, the study reveals that
+the average treatment effect of SMC on all the measures of access to school and quality
+education used in the study namely school environment index, teacher’s index,
+student’s flow rates, mainly student’s promotion rate, and repetition rate, found
+significantly positive. Whereas, one of the student’s flow rates that is student’s dropout
+rate found significantly negative over the period of 2013-14 which ensures the
+improvement in the quality education particularly in schools where SMC is functional.
+Further to this, the findings also ensure that improved school facilities and quality of
+teachers are positively affected by SMC. Moreover, the study also assessed the quality
+of matching by different measures of quality check. It is evident from the overall
+matching quality assessment that matching is successful and hence, both the treated
+and untreated groups are similar to estimate the average treatment effect of SMC on
+quality education.
+
+Finally, on the basis of the findings drawn, the study recommends that in order to
+achieve further improvement in schools, the government of Sindh should empower
+community involvement in rest of the public schools in which SMC is not functional.
+In addition to this, the government should empower teachers through their
+participation in decision making process and government should introduce teacher’s
+professional training programs. For this, the government of Sindh should allocate more
+SMC funds for making school management effective in these schools. Furthermore,
+the findings of the study also recommend that the government should initiate more
+school-level interventions and reform programs to further improve the education
+system of Sindh and Pakistan.
+
+
+
+                                           49
+
+PJER, Vol 3, Issue 2 (2020)                                            Evaluation of school…
+
+REFERENCES
+
+Abadie, A., & Imbens, G. W. (2006). Large sample properties of matching estimators for
+          average treatment effects. Econometrica, 74(1), 235-267.
+Ali, S. (2011). Policy analysis of education in Sindh. United Nations Educational, Scientific
+          and Cultural Organization (UNESCO).
+Asim, S. (2013). The public school system in Sindh: Empirical insights.
+Baral, R., Sahu, N., & Meher, V. (2019). The Attitude of Teachers and Parents of Students
+          towards the Implementation of School Management Committee (SMCs) at Elementry
+          Level. International Journal of Theory and Application in Elementary and Secondary
+          School Education, 1(2), 58-74.
+Bray, M. (2001). Community partnerships in education: Dimensions, variations and
+          implications. Paris: Unesco.
+Brinkerhoff, D. W., & Keener, S. C. (2003). District-level service delivery in rural
+          Madagascar: Accountability in health and education. Report Prepared for the
+          World Bank, Research Triangle Institute, NC.
+DeStefano, J., Hartwell, A., Moore, A. M. S., & Benbow, J. (2006). A cross-national
+          cost-benefit analysis of complementary (out-of-school) programs. Journal of
+          International Cooperation in Education, 9(1), 71-88.
+Dillon, W. R. & Goldstein, M. (1984). Multivariate analysis, methods and applications.
+          John Wiley & Sons, Inc., ISBN 0-471-08317- 8.
+Di Gropello, E., & Marshall, J. H. (2005). Teacher effort and schooling outcomes in rural
+          Honduras. Incentives to Improve Teaching, 307.
+Gertler, P., Patrinos, H. A., & Rubio-Codina, M. (2007). Methodological issues in the
+          evaluation of school-based management reforms. Unpublished manuscript,
+          World Bank, Washington, DC.
+Gertler, P., Patrinos, H., & Rubio-Codina, M. (2006). Empowering parents to improve
+          education: Evidence from rural Mexico. The World Bank.
+Henderson, A. T., & Mapp, K. L. (2002). A New Wave of Evidence: The Impact of
+          School, Family, and Community Connections on Student Achievement. Annual
+          Synthesis, 2002.
+Heckman, J. J., LaLonde, R. J., & Smith, J. A. (1999). The economics and econometrics
+          of active labor market programs. In Handbook of labor economics (Vol. 3, pp.
+          1865-2097). Elsevier.
+Jha, R., & Murthy, K. B. (2003). An inverse global environmental Kuznets curve
+          . Journal of Comparative Economics, 31(2), 352-368.
+Jimenez, E., & Sawada, Y. (1998). Do Community-Managed Schools Work? An
+          Evaluation of El Salvador's EDUCO Program. Working Paper Series on Impact
+          Evaluation of Education Reforms. Paper No. 8.
+Khan, S. R. (2003). Participation via collective action in government and NGO schools in
+          Pakistan. Development in Practice, 13(4), 361-376.
+King, E. M., & Ozler, B. (2005). What’s decentralization got to do with learning? School
+          autonomy and student performance. Kyoto University: Interfaces for Advanced
+          Economic Analysis. DP, 54(2005), 51-60.
+King, E., & Ozler, B. (1998). What’s decentralization got to do with learning? The case
+
+                                             50
+
+PJER, Vol 3, Issue 2 (2020)                                           Evaluation of school…
+          of Nicaragua’s school autonomy reform. Development Economics Research Group,
+          Working Paper Series on Impact Evaluation of Education Reforms, 9, 278200
+          -1099079877269.
+Kumar, S. (2016). Roles and Functions of School Management Committees (SMCs) Of Govt.
+          Middle Schools in District Kullu of Himachal Pradesh: A Case Study. Scholarly
+          research journal for humanity science & English language, 3(17), 3876-3886.
+Meher, V., & Patel, I. (2018). Functioning of school management committee at
+          elementary level. International Journal of Recent Scientific Research, 9(5),
+          26954-26958.
+Mozumder, P., & Halim, N. (2006). Social capital fostering human capital: The role of
+          community participation in primary school management in Bangladesh. Journal
+          of International Development: The Journal of the Development Studies
+          Association, 18(2), 151-162.
+Muskin, J. A. (1999). Including local priorities to assess school quality: the case of Save
+          the Children community schools in Mali. Comparative Education Review, 43(1),
+          36-63.
+Osei-Owusu, B., & Sam, F. K. (2012). Assessing the role of School Management
+          Committees (SMCs) in improving quality teaching and learning in Ashanti
+          Mampong municipal basic schools. Journal of emerging trends in educational
+          research and policy studies, 3(5), 611-615.
+Pellini, A. (2005). Decentralisation of education in Cambodia: Searching for spaces of
+          participation between traditions and modernity. Compare: A Journal of
+          Comparative and International Education, 35(2), 205-216.
+Pryor, J. (2005). Can community participation mobilise social capital for improvement of
+          rural schooling? A case study from Ghana. Compare: A Journal of Comparative
+          and International Education, 35(2), 193-203.
+Rosenbaum, P. R., & Rubin, D. B. (1983). The central role of the propensity score in
+          observational studies for causal effects. Biometrika, 70(1), 41-55.
+Rout, S. K. (2015). Functioning of school management committee in rural elementary
+          school: A case study.
+Sawada, Y., & Ragatz, A. B. (2005). Decentralization of education, teacher behavior, and
+          outcomes. Incentives to improve teaching, 255.
+Sawada, Y. (1999). Community participation, teacher effort, and educational outcome:
+          the case of El Salvador's EDUCO program.
+Sianesi, B. (2004). An evaluation of the Swedish system of active labor market programs
+          in the 1990s. Review of Economics and statistics, 86(1), 133-155.
+Skoufias, E., & Shapiro, J. (2006). Evaluating the impact of Mexico's quality schools
+          program: the pitfalls of using nonexperimental data. The World Bank.
+United Nations Educational, Scientific and Cultural Organization (UNESCO). 2003.
+          Ministerial Communique: Ministerial Round Table Meeting on Quality
+          Education on October 3 and 4, 2003.
+Vegas, E. (Ed.). (2005). Incentives to improve teaching: Lessons from Latin America.
+          The World Bank.
+Watt, P. (2001). Community Support for Basic Education in Sub-Saharan Africa. Africa
+          Region Human Development Working Paper Series.
+
+                                            51

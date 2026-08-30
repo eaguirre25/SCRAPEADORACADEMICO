@@ -1,0 +1,2681 @@
+Especialización
+en Estadística Aplicada
+Facultad de Ingeniería y Ciencias Básicas
+
+
+
+
+  Análisis Correlacional de Gestión Escolar, Liderazgo Directivo y
+     Calidad Educativa basado en el Modelo de Ecuaciones
+                  Estructurales. Estudio de Caso
+
+       Correlational Analysis of School Management, Managerial
+      Leadership and Educational Quality based on the Structural
+                      Equation Model. Case Study
+                                           Julián Andrés Palomino Murcia1
+         1
+             Lic. Matemáticas y Física - Universidad del Valle - jandres.palomino@gmail.com
+
+
+
+
+                                                           Resumen
+    Contexto. El Ministerio de Educación Nacional de Colombia viene implementando, desde hace más de dos décadas,
+    diversas estrategias que buscan mejorar la calidad de la educación desde diversos aspectos de la Gestión Escolar. No
+    obstante, a pesar de que se cuenta con orientaciones para la implementación de acciones situadas en dichos aspectos,
+    año tras año, los resultados de medición de la calidad educativa siguen siendo bajos, lo que evidencia acciones de
+    gestión escolar poco eficientes. Propósito. En atención a lo anterior, este estudio formuló una estrategia de análisis
+    correlacional a partir de el estudio de variables endógenas asociadas a las características de estudiantes del nivel de
+    educación media, percepción del liderazgo directivo, gestión escolar y calidad educativa en la Institución Educativa
+    Oficial Monseñor Ramón Arcila. Metodología. Para ello, se aplicó, bajo la metodología CRISP-DM, la modelación de
+    ecuaciones estructurales PLS-SEM utilizando la herramienta R Studio. Resultados. Se encuentra que las variables
+    de origen, experiencia e identidad no influyen de manera significativa en los resultados de las pruebas externas
+    (SABER 11) y la correlación entre los constructos Gestión Escolar, Liderazgo Directivo y Calidad Educativa en el mejor
+    modelo de ecuaciones estructurales evidencia una influencia dominante entre los dos primeros y débil entre estos y
+    la valoración de Calidad Educativa. Conclusiones. El modelo de ecuaciones estructurales sugiere que la institución
+    educativa requiere focalizar la atención en los aspectos de dimensión académica y dimensión directiva para mejorar
+    la percepción sobre Gestión Escolar, la cual presenta alta correlación con el Liderazgo Directivo que se explica con
+    mayor fuerza por la capacidad de consideración personal del equipo directivo. Además, es preciso un diagnóstico de
+    las necesidades de la comunidad y seguimiento al egresado para orientar las acciones hacia un mayor impacto, como
+    indicador principal de la percepción de Calidad Educativa.
+        Palabras clave— calidad educativa, gestión escolar, liderazgo directivo, ecuaciones estructurales
+
+                                                            Abstract
+    Context.The Colombian Ministry of National Education has been implementing, for more than two decades, various
+    strategies that seek to improve the quality of education from different aspects of School Management. However, despite
+    the fact that there are guidelines for the implementation of actions in these aspects, year after year, the results of
+    educational quality measurement continue to be low, which is evidence of inefficient school management actions.
+    Purpose. In view of the above, this study formulated a correlational analysis strategy based on the study of endogenous
+    variables associated with the characteristics of middle school students, perception of management leadership, school
+    management and educational quality in the Official Educational Institution Monseñor Ramón Arcila. Methodology.
+    For this purpose, PLS-SEM structural equation modeling using the R Studio tool was applied under the CRISP-DM
+    methodology. Results. It is found that the variables of origin, experience and identity do not significantly influence the
+    results of the external tests (SABER 11) and the correlation between the constructs School Management, Managerial
+    Leadership and Educational Quality in the best structural equation model evidences a dominant influence between the
+    first two and a weak influence between these and the assessment of Educational Quality. Conclusions. The structural
+    equation model suggests that the educational institution needs to focus attention on the aspects of the academic and
+    managerial dimensions in order to improve the perception of School Management, which is highly correlated with
+    Managerial Leadership, which is most strongly explained by the managerial team’s capacity for personal consideration.
+    In addition, a diagnosis of the needs of the community and graduate follow-up is necessary to guide actions towards a
+    greater impact, as the main indicator of the perception of Educational Quality..
+         Keywords— educational quality, school management, managerial leadership, structural equations model
+
+
+
+                                                                1
+
+J. Palomino                                                                                                1   Introducción
+
+
+
+1.   Introducción                                                      directivos docentes en las instituciones educativas
+                                                                       como actores escolares que influyen los resultados
+   Contexto de la investigación o estudio. El Ministerio               educativos.
+de Educación Nacional, MEN, viene implementando desde
+hace más de dos décadas diversas estrategias que                     No obstante, a pesar de las orientaciones para la
+buscan mejorar la calidad de la educación desde diversos         implementación de acciones situadas en dichos aspectos,
+aspectos, tales como:                                            año tras año, los resultados de medición de la calidad
+                                                                 educativa son bajos. En el caso de las instituciones
+     Fortalecimiento de la gestión escolar. El MEN               educativas oficiales, la mayoría de ellas a nivel nacional,
+     publicó la Guía 34 para asegurar el desarrollo de las       obtienen puntajes en las pruebas Saber 11 por debajo de
+     actividades de planeación, seguimiento, evaluación          la media global teórica (250 puntos) como se observa en la
+     y mejora de los planteles educativos en las áreas y         figura 1, lo que demuestra poca eficacia de las estrategias
+     procesos institucionales.                                   mencionadas.
+
+     Medición de calidad educativa. Junto con el
+     ICFES, el MEN ha implementado mecanismos de
+     evaluación estatales para la medición de resultados
+     educativos denominadas prueba SABER 3, 5, 7,
+     9 y 11. Estas pruebas toman como referente los
+     aprendizajes y competencias establecidas en los
+     documentos marcos de referencia y estos a su
+     vez, los referentes de calidad educativa (estándares
+     básicos de competencias, lineamientos curriculares,
+     derechos básicos de aprendizaje, matrices de
+     referencia).
+
+     Promoción de la investigación. El fomento de la             Figura 1: Porcentaje de IEO en Colombia con promedio
+     investigación educativa, creación de comunidades            global menor o igual a 250 puntos en la prueba Saber 11
+     colaborativas y de aprendizaje, y publicación               según datos del ICFES 2015-2022. Elaboración propia
+     de experiencias significativas como estrategia
+     para promover mejores métodos de enseñanza,                     Esta gráfica se construyó tomando como población
+     evaluación, gestión escolar, integración de la              las instituciones educativas oficiales y no oficiales a
+     comunidad, pertinencia educativa, entre otras.              nivel nacional de calendario A con jornadas académicas
+     Como documento de apoyo se encuentra publicada              diurnas (mañana, tarde, única, completa u ordinaria) que
+     la Guía 37 “ruta del saber hacer”.                          reportaron puntajes en el segundo semestre del año, a
+                                                                 partir del 2015.
+     Seguimiento de la cobertura, inclusión, deserción
+                                                                     De otra parte, las mediciones del MEN sobre
+     y retención. Al respecto se ha emitido diversas
+                                                                 la gestión escolar en su diferentes aspectos se ha
+     directivas y publicado guías frente a las condiciones
+                                                                 centrado en indicadores de gestión desde una perspectiva
+     de accesibilidad y permanencia de niños, niñas,
+                                                                 administrativa-gerencial que no reflejan el impacto de las
+     jóvenes y adolescentes con capacidades disimiles
+                                                                 políticas o estrategias en el contexto escolar, por lo que
+     y demás condiciones diferenciales (género, étnica,
+                                                                 no permiten definir una ruta óptima de mejoramiento, se
+     desplazamiento, entre otras) a las cuales se les hace
+                                                                 centran en el producto y no en el proceso. .Esto crea una
+     seguimiento desde los reportes que cada institución
+                                                                 debilidad en el sistema educativo, porque los índices y
+     educativa realiza a través de la plataforma SIMAT
+                                                                 cálculos estadísticos no reflejan en su totalidad aspectos
+     (Sistema de Matrícula) y la medición de indicadores
+                                                                 cualitativos a mejorar"Parra-Martínez (Parra-Martínez,
+     de gestión.
+                                                                 2017).
+     Mejoramiento de la convivencia escolar. Este                    Además, se centra la medición de la calidad educativa
+     aspecto se ha tenido en cuenta como un                      en los resultados de las pruebas Saber dejando de lado
+     componente de los programas de impacto escolar              otros referentes tales como intereses de los estudiantes
+     para la adecuación de los manuales de convivencia           y acudientes, impacto en la comunidad, pertinencia y
+     y formulación del plan de acción de los comités de          eficiencia del plan de estudios, eficiencia de los procesos,
+     convivencia escolar, aportando orientaciones para           entre otros. Según Naranjo et al. (Naranjo Mayorga et al.,
+     la promoción, prevención, atención y seguimiento            2017)
+     de situaciones que afectan el ambiente escolar y
+     vulneran los derechos sexuales y reproductivos de                 En las últimas tres décadas, los procesos
+     niños, niñas, jóvenes y adolescentes. Lo anterior en              de reforma educativa para implementar la
+     el marco de la ley 1620 de 2013.                                  gestión como un mecanismo estratégico de
+                                                                       calidad educativa no han surtido los efectos
+     Evaluación del desempeño. La Guía 31 del MEN                      esperados y por el contrario los resultados
+     establece las orientaciones para la evaluación anual              muestran un grado preocupante según los
+     del desempeño de administrativos, docentes y                      últimos datos de las pruebas internacionales.
+
+
+                                                             2
+
+J. Palomino                                                                                                     1   Introducción
+
+
+
+    En este punto, la Gestión Escolar se ha convertido en            en diferentes países y desde diferentes perspectivas:
+un asunto de particular interés en tanto debe establecer             conceptos, su relación con la calidad educativa,
+los ideales de funcionamiento institucional que deben                dimensiones y variables asociadas, modelos y estilos,
+seguir las organizaciones educativas para dar respuesta              su relación con los resultados de aprendizaje, el análisis
+a las exigencias de una sociedad altamente cambiante y               técnico administrativo, el papel de la familia y el estado,
+diversificada.                                                       entre otros. Para Cabrera y Adan (Cabrera y Adan, 2017)
+                                                                     la gestión escolar se entiende como
+    Importancia de la investigación. La educación
+                                                                           El ámbito de la cultura organizacional,
+cumple un papel importante como potenciadora del
+                                                                           conformada por directivos, el equipo docente,
+desarrollo individual, local, regional y nacional, función
+                                                                           las normas, las instancias de decisión y los
+que claramente trasciende al ámbito de la gestión escolar,
+                                                                           actores y factores que están relacionados con
+por tanto, es deber del estado promover y garantizar
+                                                                           la “forma” peculiar de hacer las cosas en la
+su mejora permanente, responsabilidad que se traslada
+                                                                           escuela, el entendimiento de sus objetivos e
+a los rectores/directores/gerentes en las instituciones
+                                                                           identidad como colectivo, la manera como se
+educativas. Si bien se cuenta con lineamientos para la
+                                                                           logra estructurar el ambiente de aprendizaje y
+gestión escolar, que apuntan a la atención de diversos
+                                                                           los nexos con la comunidad donde se ubica
+aspectos de las escuelas en busca de la calidad educativa,
+                                                                           (sep, citado en pec, 2010:17).
+es importante que estos se adapten conforme a las
+dinámicas complejas y condiciones endógenas de la                        De esta forma, la gestión escolar, requiere del director
+institución educativa.                                               un conocimiento profundo de las dinámicas institucionales,
+    Aunque la valoración de diferentes aspectos asociados            tanto de los procesos como interpersonales. En
+a la gestión escolar y de la calidad educativa resulta               este sentido, Navarro (2005), citado por Quintana
+ciertamente de mayor complejidad, se requiere una                    (Quintana-Torres, 2018), concluye que “solamente a través
+metodología de estudio sistémica, global e integral,                 de la comprensión de los valores, prácticas, creencias y
+sustentada en una concepción holística de la calidad                 cultura de lo magisterial y de lo escolar, se podrá construir
+educativa y "que permita ser una herramienta que sirva               una visión auténtica de gestión para la escuela”.
+para observar, analizar, realizar crítica constructiva e                 La gestión escolar se desarrolla en el marco de la
+interpretar lo que sucede a lo interno de la organización            cultura organizacional que puede llegar a transformar,
+y su quehacer diario-(Alvarez, 2019). Esta metodología               pues no hay duda, como plantea Alvariño et al (2000)
+permitiría conocer la mejor ruta hacia el mejoramiento               citados por Mejía y Olvera (Mejía y Olvera, 2010), que
+institucional, priorizando los aspectos a atender según su                 Ella incide en el clima organizacional,
+estado y grado de influencia. Así, la valoración integral de               en las formas de liderazgo y conducción
+la gestión escolar y de la calidad educativa, se convierte en              institucionales, en el aprovechamiento óptimo
+una herramienta para la dirección y planeación estratégica.                de los recursos humanos y del tiempo, en la
+    Aun cuando en los últimos dos años, el porcentaje                      planificación de tareas y la distribución del
+de IEO con puntajes globales por debajo de la media                        trabajo y su productividad, en la eficiencia
+teórica ha disminuido, la cantidad de instituciones que                    de la administración y el rendimiento de los
+se encuentra en dicho rango es alta, por lo que, de                        recursos materiales, y por cada uno de esos
+no tomar decisiones estratégicas pertinentes en cada                       conceptos, en la calidad de los procesos
+institución educativa, es posible que la mejora sea lenta,                 educacionales.
+que la brecha con las instituciones educativas no oficiales
+no se reduzca de forma notable y que no se garantice                     En consecuencia, el análisis de la gestión escolar no
+una educación adecuada para los niños, niñas, jóvenes y              debe realizarse únicamente desde la perspectiva de la
+adolescentes.                                                        dirección, sino de los diferentes actores que en ella se
+    En este sentido, resulta pertinente implementar el               relacionan y de esta manera tener una mejor comprensión
+tratamiento y análisis correlacional de datos cuantitativos          de la realidad de las personas en el contexto del trabajo
+y cualitativos, en cada ciclo de formación, para determinar          escolar. Según Ramírez y Chica (Ramírez Aristizábal,
+las características que debe reunir la institución para lograr       Chica Lasso, et al., 2017)
+valoraciones aceptables de la calidad y establecer rutas de                La situación por la que atraviesa la
+mejoramiento con atención a variables críticas.                            teoría de la gestión educativa ha sido
+    Puesto que la investigación es de tipo confirmatoria                   consecuencia de teorías y estrategias propias
+se formula como hipótesis predictiva: "La percepción de                    del «management»; mas no gestada desde la
+la gestión escolar se encuentra correlacionada con la                      institución escolar, con sus diversos actores,
+percepción de calidad educativa institucional".                            y mucho menos ha tenido una depuración
+                                                                           crítica. La teoría entonces de la gestión
+   Antecedentes. El marco teórico se estableció a partir                   escolar debe reconfigurarse para hacer
+de tres enfoques: gestión escolar, calidad educativa y,                    posible la interpretación de esa pluralidad
+gestión escolar y liderazgo.                                               de formas de comprensión, y para ello debe
+                                                                           valerse de nuevas nociones que capten mejor
+  Gestión escolar. La gestión escolar ha sido                              el carácter plural de la vida de las instituciones
+ampliamente estudiada durante los últimos 40 años                          escolares.
+
+
+                                                                 3
+
+J. Palomino                                                                                                     1   Introducción
+
+
+
+     En resumen, la gestión escolar son las acciones de                     construcción de una ciudadanía crítica, asunto
+diseño, planificación, organización, ejecución, control y                   que desborda el desarrollo de competencias
+mejora de procesos interrelacionados en la institución                      básicas y especializadas. Se relaciona
+educativa, permeadas por el estilo de liderazgo directivo                   también con las demandas culturales que
+y condicionado por las características psicosociales de los                 se desprenden de la creciente movilidad
+diferentes actores y por la cultura institucional para el éxito             poblacional; de los nuevos esquemas de
+escolar.                                                                    producción económica; del afianzamiento
+     Finalmente, cabe retomar la reflexión entorno a                        de las desigualdades educativas y sociales;
+los enfoques de la gestión escolar en el contexto                           de los límites de los modelos de desarrollo
+latinoamericano de Pérez-Ruiz (Pérez-Ruiz, 2014) donde                      imperantes y de los riesgos que se
+plantea                                                                     desprenden de las crecientes demandas de
+                                                                            recursos; como así también de la intervención
+      En este esfuerzo de demarcación existen                               que ellos propician sobre el medio ambiente.
+      posturas que proponen la necesidad de                                 (Ibídem)
+      conceptualizar la gestión escolar más allá de
+      una visión meramente gerencial o circunscrita                       En efecto la calidad educativa no se circunscribe
+      al horizonte organizacional, sin establecer                     únicamente al estudio de los logros cognitivos de los
+      claramente sus lógicas de articulación con                      estudiantes, como usualmente se ha determinado en
+      las políticas públicas, así como con los                        Colombia. Esta debería establecerse sobre las bases de
+      dispositivos institucionales que le dan sentido                 la eficiencia del sistema educativo escolar en sus distintos
+      al sistema educativo [. . . ] De estos aportes                  referentes. Al respecto, Manrique y Puente (Manrique y
+      se recupera la pertinencia de trazar la gestión                 Puente, 2001) referencian,
+      desde diferentes niveles de articulación que                          Gento considera necesario analizar la calidad
+      la afectan y la componen. En términos                                 como efecto, para lo cual hace referencia a los
+      teórico-metodológicos, esto último implica                            indicadores como rasgos configurativos que
+      estudiar la escuela como parte de un                                  pondrán de manifiesto el grado de calidad
+      entramado de relaciones más amplio que                                alcanzado y ofrecerán el perfil de calidad
+      desborda sus propios límites, por cuanto su                           de la institución. Aun cuando no es fácil
+      presencia está mediada por elementos de                               una determinación de niveles de calidad en
+      diversa magnitud y complejidad.                                       instituciones educativas, Gento elabora el
+                                                                            concepto de institución educativa de calidad
+    Planteamiento que es compartido por Figueroa
+                                                                            como «aquella en la que sus alumnos
+(Alvarez, 2019) quien expresa que la gestión escolar
+                                                                            progresan educativamente al máximo de sus
+“es un sistema cuyas propiedades o procesos no son
+                                                                            posibilidades y en las mejores condiciones
+reducibles a las de sus partes constituyentes. Al contrario,
+                                                                            posibles» (Gento, 1996, 55).
+integra los planteamientos de la administración educativa,
+pero toma responsabilidad de otras particularidades                       Es importante, entonces, conocer los referentes de
+acordes a la complejidad de las instituciones educativas”.            calidad educativa que contribuyen a un efecto global en la
+                                                                      escuela y las discusiones en la literatura sobre el asunto:
+     Calidad educativa. La calidad educativa, también ha
+                                                                            Intereses
+sido ampliamente estudiada en las últimas décadas
+analizando la polisemia que esta adquiere en la                             Quintana-Torres          (Quintana-Torres,    2018)
+complejidad de los contextos educativos y en su desarrollo                  retomando el planteamiento de Casassus (1999)
+histórico; “el problema de la calidad de la educación                       de la calidad como un concepto relativo y dinámico,
+reviste multiplicidad de matices que remiten a variadas                     y por tanto no absoluto, establece que "dado que el
+preguntas y ponen de manifiesto la naturaleza polisémica                    juicio de buena o mala calidad depende del interés
+del término” (Orozco Cruz, Olaya Toro, Villate Duarte,                      que se tenga por el objeto o representación, se
+et al., 2009). En este sentido, el asunto de la calidad no                  clasifican tres tipos de manifestación del interés,
+puede abordarse desde una sola concepción de forma                          que son fundamento de la comprensión del asunto
+absoluta, su comprensión exige consideraciones más                          de la calidad"; necesidades, expectativas y deseos.
+amplias que atiendan el carácter complejo y naturaleza                      En este sentido, la calidad debe entenderse más
+dinámica de los contextos escolares. La calidad educativa                   como una capacidad que como cualidad, es decir,
+dependerá, entre otras, de las características del sujeto o                 desde la potencialidad de la institución educativa de
+entidad que la valora, de las condiciones relacionales, del                 cumplir con ciertos intereses y no como un atributo
+flujo de comunicación entre la institución educativa y quien                adquirido.
+valora la calidad educativa, de los referentes de medición,
+                                                                            Pruebas estándar
+incluso, de las demandas políticas, económicas, culturales
+y ambientales que rodean la escuela. En palabras de                         Aplicación de pruebas que miden el desarrollo
+Orozco et al,                                                               de competencias de los estudiantes en diferentes
+                                                                            etapas de su formación escolar, tales como
+      [. . . ] El problema de la educación de calidad                       las pruebas SABER en el contexto nacional, y
+      se articula, entonces, a los procesos de                              las pruebas PISA (Programme for International
+
+
+                                                                  4
+
+J. Palomino                                                                                                1   Introducción
+
+
+
+     Student Assessment. Programa para la Evaluación                    con la forma de enseñanza/aprendizaje, satisfacción
+     Internacional de Alumnos) en el contexto                           por el prestigio o reconocimiento del éxito personal,
+     internacional. Con relación a la valoración a partir               y la autorrealización (de Franco, Morillo, y Castro,
+     de pruebas estándar y de patrones de calificación                  2013).
+     de las instituciones educativas, Parra-Martínez
+                                                                        Cualificación docente
+     (Parra-Martínez, 2017) sostiene que una de las
+     desventajas se refleja en que                                      Otro referente a tener en cuenta, se relaciona con
+                                                                        el grado de formación y desempeño de los docentes
+          [. . . ] se apartan de representar las                        y directivos docentes, con lo que se supone que un
+          condiciones ciertas de la relación                            mayor nivel de capacitación profesional redundaría
+          didáctica-pedagógica-social-contextual                        en ambientes y estrategias de enseñanza más
+          de cada plantel, a fin de cuentas,                            efectivas.
+          se forman seres humanos, se ejerce
+                                                                      Los referentes mencionados describen, desde un
+          por seres humanos y el objetivo de
+                                                                  primer nivel de análisis, el fenómeno de la calidad
+          la educación no es aportar operarios
+                                                                  educativa aportando diferentes grados de realidad, no
+          para las empresas, sino ciudadanos con
+                                                                  excluyentes entre si, del desempeño de la institución.
+          formación integral, es decir, en el ser,
+                                                                  Después, los descriptores se deben profundizar e
+          hacer, conocer, convivir para la sociedad,
+                                                                  interrelacionar de modo tal que las generalizaciones
+          el país y el planeta.
+                                                                  describan los hechos atendiendo la complejidad y
+     Retención y equidad                                          dinamismo de los ambientes escolares.
+                                                                      Contrario a lo que se plantea, en el contexto
+     En el contexto colombiano, el MEN ha implementado            colombiano, la medición de calidad educativa como
+     diferentes mediciones que pretenden describir la             política de estado no se ha enfocado en los paradigmas
+     calidad educativa a partir del desempeño asociado            de los intereses, reconocimiento o impacto, sino en los
+     a la retención estudiantil, entre estas: deserción,          resultados de las pruebas estandarizadas aplicadas por
+     repitencia,   aprobación/reprobación,     traslados,         el ICFES, bajo el supuesto de que altos resultados en
+     ocupación de capacidad instalada, cobertura e                esto último redunda de manera positiva en los demás
+     inclusión.                                                   aspectos, aunque hay una particular preocupación por los
+     Impacto                                                      indicadores de deserción escolar mayormente desde una
+                                                                  perspectiva de gestión que de transformación educativa o
+     Otro enfoque de la calidad educativa en la                   de análisis integrado. Cabrera y Adan (Cabrera y Adan,
+     escuela se establece en la transformación que los            2017), en una revisión y conceptualización de la calidad
+     procesos formativos generan con diferentes niveles           educativa plantean que
+     de alcance y en diferentes rangos de tiempo:
+     familiar, respecto a la percepción del clima en                    [. . . ] Aunque la calidad no es posible
+     el hogar; social, asociado a la influencia en el                   determinarla con exactitud, principalmente
+     entorno; académico, con relación al desempeño                      por      las  limitaciones   de    la    forma
+     del estudiante como efecto de la formación en la                   de operacionalizarla utilizadas en las
+     etapa anterior o la tasa de ingreso a programas                    diferentes aproximaciones al problema, las
+     de educación formal posterior inmediato a la                       informaciones disponibles en relación a la
+     graduación; laboral, indicado con la tasa de                       repitencia, deserción, relevancia curricular y
+     incorporación de los estudiantes o egresados de                    magnitud del efecto de la educación en el
+     la institución educativa al campo laboral. (Delgado,               desarrollo social, apuntan a que la calidad de
+     2014)                                                              los sistemas educativos latinoamericanos es
+                                                                        deficiente.
+     Gestión académica
+     También se relaciona la calidad educativa con                    Gestión escolar y liderazgo. No es posible hablar
+     aspectos administrativos para la prestación del              de instituciones exitosas sin una adecuada gestión, con
+     servicio: tiempo efectivo de enseñanza/aprendizaje,          competencias de liderazgo que involucre todos los actores
+     cumplimiento del plan de estudio, satisfacción del           que intervienen en los procesos, directa o indirectamente,
+     estudiante, desarrollo del proceso educativo con             y con una concepción evolutiva de la realidad de las
+     relación a otros procesos, pertinencia del plan de           instituciones educativas como ecosistemas. Esto es,
+     estudios, gasto en recursos para el aprendizaje,             las instituciones educativas conforman un ecosistema
+     entre otros.                                                 que determina, de acuerdo al contexto, la naturaleza
+     Cabe mencionar que, en particular, la satisfacción           de las relaciones endógenas entre sus miembros y
+     del estudiante puede estar asociada a varios                 sus procesos. Las relaciones de causa y efecto se
+     aspectos modificables por él como coagente de su             ven modificadas por cambios de dichas relaciones y
+     proceso de formación, a saber: cumplimiento de               de las evoluciones que puedan presentar los procesos
+     necesidades básicas, percepción de seguridad y               de manera individual. En consecuencia, no podemos
+     bienestar, satisfacción por la pertenencia al plantel,       pensar la gestión de instituciones educativas desde una
+     satisfacción por el sistema de trabajo en relación           perspectiva reduccionista de una relación causal lineal y
+
+
+                                                              5
+
+J. Palomino                                                                                                  1   Introducción
+
+
+
+por lo tanto predecible. Por el contrario, (Gairín, 2010)                a otros, ni el propietario de las iniciativas de
+“en el paradigma de la complejidad, la incertidumbre                     mejora.
+deja de ser predecible y las relaciones causa-efecto
+o los procesos explicativos sobre la realidad no son                   En el modelo de liderazgo descentralizado, todos
+ya determinables aumentando la información”. Así, la               los miembros deben participar en las decisiones y
+gestión de instituciones educativas debe obedecer a                proyectos de la institución, definido también como
+criterios de creatividad, innovación y gestión estratégica a       liderazgo distribuido o compartido (Torrecilla, 2006). El
+través del aprendizaje, que favorezca la auto-organización         liderazgo ya no se entiende como una función exclusiva
+espontánea.                                                        del directivo sino de un grupo de personas que trabajan
+     La gestión toma entonces, una dimensión diferente a           de forma colegiada en la búsqueda del mejoramiento de
+la de establecer procesos de seguimiento y control de              la institución con relación a su propia evolución. No con
+las actividades institucionales para la toma de decisiones,        ello desea afirmarse que la centralización es inadecuada,
+busca en el nuevo paradigma, desarrollar en cada una               pero en el tránsito hacia el cambio, la participación de
+de las partes la competencia para dar respuestas más               los diferentes actores es fundamental, en cuanto aportan
+acertadas a las situaciones, es decir, la capacidad de             elementos de análisis complementarios e integradores
+intervenir la realidad y generar los cambios que se                para la gestión. Esto favorece la construcción de una
+requieren en el ecosistema. Lo anterior, implica del               idea común acerca del futuro de la institución educativa,
+directivo, nuevos modelos de liderazgo para la gestión del         el significado de cambio, e identificar las posibles
+cambio. Al respecto Cuevas y Díaz (López y Rosas, 2005)            implicaciones en el establecimiento de los objetivos y
+plantean                                                           metas relevantes a su área, experiencia o responsabilidad
+                                                                   y la forma como debe ser el cambio. Además, favorece
+      [. . . ] la situación privilegiada del director              la mejora de los recursos comunicativos verbales y no
+      con relación a los mecanismos de influencia                  verbales y de los conflictos inherentes a ellos. Al respecto
+      y control organizativos, le convierte (según                 Pareja (de la Reguera, 2009) considera que cada
+      Coronel, 1996) en el centro de todas las                     actor genera mayor disposición frente a las propuestas
+      miradas, siendo ese el motivo por el que se                  de cambio al sentirse parte de ellas, promueve mayor
+      le suele identificar con el líder (o al menos se             conocimiento de la institución, entre otras.
+      espera de él que lo sea).                                        De esta manera se esperaría que la estrategia de
+                                                                   liderazgo genere en la institución educativa “madurez
+    De esta forma, los resultados que se obtengan en
+                                                                   organizacional” caracterizada en una organización
+la institución, van a depender en gran medida del estilo
+                                                                   que aprende, es decir, una organización capaz de
+de liderazgo y gestión del equipo directivo. Lo anterior
+                                                                   adaptarse, capaz de auto-regularse, capaz de asumir
+no quiere decir que exista un estilo de liderazgo y
+                                                                   responsabilidades conjuntas de mejora, de gestión,
+gestión ideal o puro, sino una estrategia de liderazgo
+                                                                   auto-reflexión, pero también con una visión proyectiva, con
+capaz de adaptarse al dinamismo de la institución
+                                                                   capacidad de enfrentar la incertidumbre y la complejidad
+educativa y que movilice las transformaciones deseables.
+                                                                   que implica una institución dinámica, capaz de interpretar
+En este sentido, el estilo de liderazgo debe propender,
+                                                                   nuevos paradigmas emergentes.
+por un lado, la participación de los miembros de la
+institución de modo que se comprometan con los objetivos               En particular, la gestión y el liderazgo que se
+institucionales y el rol que desempeñan en relación a              implementan en la institución educativa, deben considerar
+los mismos y, por otro lado, el manejo adecuado de los             cuáles son los impactos que producen sobre el
+recursos físicos y financieros que genere el ambiente              aprendizaje de los estudiantes, cuanto es el indicador
+adecuado para el alcance de los objetivos. Esto es, un             de efectividad más importante en el paradigma actual y
+liderazgo descentralizado, participativo, donde el líder es        un elemento para elevar la calidad de la institución. El
+un agente moral, preocupado por los valores, capaz de              liderazgo y la gestión pueden moldear, de forma indirecta,
+transmitir su visión (imagen mental de lo que desea                las condiciones en que se enseña y se aprende en la
+para la institución) y comprometer los demás miembros              escuela o favorecer la eficacia de tales condiciones.
+generando entornos de trabajo, es decir, “que orienta                  En general, un liderazgo eficaz y una gestión efectiva
+los programas de enseñanza-aprendizaje, las prioridades,           en una institución educativa ha de reflejarse en el
+planes, procedimientos, etc.” (López y Rosas, 2005).               mejoramiento de la valoración de la calidad educativa,
+En palabras de Marcelo y Estebaranz (1999) citado por              medida de forma integral en todas las dimensiones de
+Cuevas et al (Ibídem)                                              la gestión escolar. Como ejemplo para determinar los
+                                                                   referentes que contribuyan en la redacción de indicadores,
+      El liderazgo no tiene por qué ser un rol que                 Rodríguez      (Rodríguez, 2000), a partir de diversas
+      se ejerce de forma unipersonal, y en ese                     investigaciones sobre modos de gestión escolar existentes
+      sentido el liderazgo compartido por Equipos                  en escuelas de diferente dependencia administrativa en
+      Directivos o por equipos de gestión, como el                 la ciudad de Caracas-Venezuela y con el objetivo de
+      Equipo Técnico de Coordinación Pedagógica                    establecer las relaciones con la calidad de la enseñanza
+      puede tener una gran influencia a efectos de                 y los resultados del aprendizaje, formula los elementos
+      la mejora global de la enseñanza. Lo cual no                 involucrados en tres aspectos asociados: la gestión
+      quiere decir, como apunta Escudero (1997),                   escolar, la gestión pedagógica y los resultados.
+      que estos equipos sean el órgano que dirige                      En resumen, el estilo de liderazgo conforma una
+
+
+                                                               6
+
+J. Palomino                                                                             2   Metodología de la investigación
+
+
+
+variable mediadora que podría explicar entre la gestión                 Además, Figueroa señala (Alvarez, 2019),
+escolar y la calidad educativa; el adecuado estilo
+de liderazgo en la gestión escolar sería clave para                       [...] la tarea de la gestión educativa no es
+obtener mayor impacto sobre los resultados en la                          simple ni se le atribuye a un solo factor,
+institución educativa, es decir, sobre la calidad educativa,              es compleja y puede entenderse como una
+entendiendo que, la calidad educativa es la representación                nueva forma de interpretar la organización
+de la realidad en el instante que se mide, puesto que                     escolar, considerando la mediación entre
+obedece a las condiciones temporales de un sistema que                    el futuro y el presente, prever aunque
+se encuentra en constante cambio e influencias externas                   la predicción no sea posible, mantener
+impredecibles. En palabras de Pedraja (Rejas, 2011) “para                 una reacción rápida y planeada ante las
+estudiar el impacto de la gestión y el liderazgo en las                   circunstancias, mediando el conocimiento y
+organizaciones educativas es menester considerar una                      la acción para ello se necesita una acción
+perspectiva integradora”; de esta forma, los resultados no                centrada coherente integral contrariamente a
+sólo se miden en los estudiantes y en la institución sino                 las acciones parciales de los querellantes
+también la percepción, compromiso y satisfacción de los                   sociales, (Pozner 2000).
+actores relevantes en los procesos.
+                                                                      De acuerdo a lo anterior, este estudio presenta una
+    Conclusiones generales                                         metodología alternativa de análisis integral para la toma de
+    La calidad educativa, constreñida por los diversos             decisiones y verificación de las correlaciones entre gestión
+factores internos y externos a las instituciones educativas,       escolar, liderazgo directivo y calidad educativa aplicable a
+configura un ideal integrador de su pluralidad de                  cualquier institución educativa.
+significados. Esto es, la capacidad de cumplir y sostener
+los rasgos configurativos de la calidad (como satisfacción
+de intereses, como el grado en que se adecúan o cumplen            2.     Metodología de la investigación
+estándares, como el grado de consistencia y eficiencia
+para los procesos, como transformación de sujetos e                    Metodología de Investigación Esta sección expone la
+impacto, como cumplimiento y garantía de deberes y                 definición de variables, construcción del instrumento de
+derechos) entorno a la gestión escolar y procesos                  recolección de datos, muestreo, estrategia de análisis de
+educativos que articulan lo didáctico, lo pedagógico, lo           datos y técnica aplicada para la formulación del modelo
+social y lo contextual.                                            correlacional.
+    De acuerdo a Quintana (Quintana-Torres, 2018),
+
+      El principal propósito que oficialmente se le                2.1.    Operacionalización de las variables y
+      otorga a la gestión escolar es la búsqueda
+                                                                           recolección de datos
+      de la calidad educativa; sin embargo, es
+      evidente que la insuficiente comprensión                         Inicialmente se definieron 194 variables clasificadas en
+      de estos dos conceptos y su forma de                         4 categorías (Anexo 1):
+      relacionarse con la realidad educativa y
+      la fundamentación pedagógica acarrean                               Variables de identificación personal; identifican las
+      dinámicas que conducen a las instituciones a                        características biopsicosociales de la persona (5
+      aparentar mejoras y terminan por obstaculizar                       ítems).
+      los procesos de maduración que pueden tener
+      las instituciones que asumen con rigor sus                          Variables de origen o iniciales; identifican las
+      expectativas y necesidades.                                         personas según sus condiciones de origen asociado
+                                                                          al entorno familiar y condiciones de vivienda (17
+    La calidad educativa, o mejor, la valoración de                       ítems).
+la calidad educativa es un “fenómeno” inherente a
+la gestión escolar; la gestión escolar es la actuación                    Variables de asignación y experiencia; identifican las
+sobre la realidad de la institución educativa, mientras la                características de la persona con relación al rol que
+valoración de la calidad educativa es la representación                   ejerce en la institución educativa (13 ítems).
+de la realidad y del efecto que la gestión tiene en
+ella. Claramente, la búsqueda de mejores valoraciones                     Variables de gestión: características asociadas a
+de la calidad educativa implican mejores estrategias                      los factores gestión escolar, liderazgo y calidad
+de gestión y, en consecuencia, de decisión, lo que                        educativa (159 ítems de escala Lickert).
+requiere el conocimiento de las condiciones que nutren
+la realidad contextual y sobre las cuales adquieren                    La información sobre las características se recolectó
+sentido las dinámicas institucionales; la naturaleza de            mediante la técnica de encuesta aplicada con un
+las relaciones, interconexiones e interacciones entre los          formulario de Google de manera presencial y remota a
+diferentes procesos y actores de la escuela para modelar,          una muestra de 110 estudiantes de grado undécimo (76 %)
+intervenir y predecir su comportamiento, aun cuando                con resultados reportados en la prueba SABER y que no
+este supera nuestro entendimiento, e incluso, nuestra              estuvieran categorizados en SIMAT con alguna necesidad
+capacidad de intervención.                                         educativa especial.
+
+
+                                                               7
+
+J. Palomino                                                                               2   Metodología de la investigación
+
+
+
+2.2.    Métodos
+                                                                                                 v(v + 1)
+                                                                                          gl =            −q                  (1)
+    Una vez recolectada la información se realiza el                                                2
+análisis de los datos en tres momentos a saber:                         Donde v es el número de variables observadas en la
+el primero, correspondiente al análisis descriptivo de              red bayessiana y q el número de parámetros a estimar.
+cada ítem, permitiendo eliminar de la base de datos
+ítems correspondientes a preguntas no resueltas, de                      La especificación del modelo se representa en la red
+poca variabilidad o no necesarias para los momentos                 bayesiana (Figura 3). Se observa que cada uno de
+siguientes. En el segundo momento se realiza el análisis            los constructos se asocia con los indicadores (variables
+correlacional con la herramienta pycaret de Google Colab            artificiales) definidos a partir del conjunto de variables de
+tomando como variable objetivo el ítem Puntaje Global               gestión, luego de la depuración (159 ítems).
+prueba SABER para identificar algún tipo de influencia                   La Tabla 1 presenta el cálculo del coeficiente alpha de
+con las tres primeras categorías de variables (exógenas).           Cronbach para las variables artificiales que se definen en
+Finalmente, se definen variables artificiales a partir de las       relación a cada constructo.
+variables de la cuarta categoría con las cuales se aplica
+La técnica estadística PLS-SEM (por sus siglas en inglés                         Variables de gestión    α = 0.978
+Partial Least Squares - Structural Equation Modeling).                           Factor    Indicador     α
+    PLS-SEM es una técnica multivariada no paramétrica                           GE        Dacad         0.913
+que permite analizar simultáneamente un conjunto de                                        Dcomun        0.877
+relaciones de dependencia y validar modelos teóricos y                                     Ddirect       0.821
+empíricos, teniendo como objetivo maximizar la cantidad                                    Dadm          0.825
+de varianza explicada (maximiza el coeficiente de                                LD        Toler         0.867
+determinación [R2]).                                                                       Consid        0.932
+    El modelo causal se formula utilizando un grafo de                                     Estim         0.901
+Redes Bayesianas que representa la interrelación de las                                    Motiv         0.895
+variables (endógenas y exógenas) como se representa                                        Cohes         0.900
+en la Figura 2). Según Ortiz (Ortiz y Fernández-Pera,                                      Satis         0.592
+2018), "permiten al investigador representar gráficamente                                  Implic        0.896
+sus hipótesis, facilitando que éstas sean convertidas en las                               Caris         0.949
+ecuaciones necesarias para el análisis". Estos diagramas                         CE        reten         No aplica
+representan las relaciones entre las variables medidas                                     result        No aplica
+(observadas o indicadores) con las variables latentes                                      impact        0.688
+(constructos).
+    El modelo explica las interrelaciones del grafo a partir              Tabla 1: Consistencia interna de las variables
+de dos elementos: (i) unas ecuaciones estructurales y (ii)
+                                                                     Dacad: Dimensión académica (pertinencia, recursos
+las funciones que determinan las interrelaciones de las
+                                                                         educativos, tiempo de formación, cumplimiento de la
+variables (modelo de medida), interpretando los resultados
+                                                                         planeación, metodología).
+de manera independiente.
+                                                                     Dcomun: Dimensión comunitaria; inclusión, inducción,
+       Tanto en un modelo de medida como en                             formación complementaria, relaciones verticales
+       un modelo estructural, diferentes parámetros                     y horizontales, solución de conflictos, seguridad
+       han de ser especificados y estimados. Los                        interna.
+       parámetros a ser especificados son: Libres,
+       fijos y restringidos. (Jackson et al., 2009;                  Ddirect: Dimensión directiva; horizonte, reconocimiento,
+       Schmitt, 2011). (Ibídem)                                           comunicación, relaciones estratégicas, seguridad
+                                                                          externa).
+    Hair et al.      (Hair Jr, 2021) establecieron una               Dadm: Dimensión administrativa; adminstración de
+metodología de nueve etapas para aplicar la PLS-SEM:                    recursos de infraestructura, apoyo, tiempo y talento
+1) especificación del modelo estructural, 2) especificación             humano.
+del modelo de medida, 3) recolección de datos y
+examinación, 4) estimación del modelo, 5) evaluación de              Toler: Tolerancia psicológica; capacidad para conservar
+medidas formativas, 6) evaluación de medidas reflectivas,                 actitud positiva, resolver conflictos y reducir la
+7) evaluación del modelo estructural, 8) análisis avanzados               tensión.
+y 9) interpretación de resultados.
+                                                                     Consid: Consideración individual; capacidad para
+                                                                         atender con respecto las diferencias y necesidades
+   Construcción del modelo
+                                                                         personales, estimular con reconocimientos y prestar
+                                                                         apoyo técnico o personal.
+    Como ya se había mencionado, la formulación del
+modelo inicia con la especificación del modelo estructural y         Estim: Estimulación intelectual; capacidad para impulsar
+de medida verificando que esté ïdentificado", esto es, que                procesos de creatividad e innovación y fomentar el
+los grados de libertad sean mayores iguales a cero.                       desarrollo de conocimientos técnicos.
+
+
+                                                                8
+
+J. Palomino                                                                  2   Metodología de la investigación
+
+
+
+
+Figura 2: Ejemplo del modelo PLS-SEM. Los constructos C1 y C3 se miden reflexivamente; C2 se mide formativamente.
+Elaboración propia
+
+
+
+
+Figura 3: Modelo teórico. Relación entre gestión escolar (GE), liderazgo directivo (LD) y calidad educativa (CE).
+Elaboración propia
+
+
+
+
+                                                       9
+
+J. Palomino                                                                                   3   Resultados y discusión
+
+
+
+ Motiv: Motivación; capacidad de crear en las personas                      puede reducir la validez de contenido
+      compromiso, propiciar altos estándares de                             del modelo de medida (Bollen &
+      rendimiento y establecer metas moderadamente                          Diamantopoulos, 2017).
+      desafiantes y factibles.
+                                                                   Puede observarse que el procedimiento descrito
+ Cohes: Cohesión; capacidad para consolidar el trabajo         para el tratamiento de los datos coincide con las seis
+     en equipo y generar sentimiento de lealtad.               fases iterativas de la metodología CRISP-DM (Figura 4)
+                                                               publicada en 1999 para estandarizar los procesos de
+ Satis: Satisfacción; capacidad para incrementar el placer     minería de datos en todas las industrias.
+      por cumplir metas.
+
+ Implic: Implicación; capacidad para involucrar las
+      diferentes personas con los procesos y ceder
+      el liderazgo con poder y autonomía para tomar
+      decisiones.
+
+ Caris Carisma e inspiración; capacidad para generar
+      admiración, respeto, credibilidad y entusiasmo,
+      involucrar las personas en una visión compartida,
+      fomentar la identidad con la institución y convertirse
+      en agente de cambio.
+
+ reten: Retención; definida por la antiguedad en la
+      institución.
+
+ result: Resultado; Puntaje Global prueba SABER 11.
+
+ impact: Impacto; efecto de la escuela en los ámbitos
+     familiar, entorno y académico.
+
+
+                                                               Figura 4: Fases del proceso de modelado metodología
+   Evaluación del modelo
+                                                               CRISP-DM. Las flechas indican relaciones más habituales
+                                                               entre las fases, aunque se pueden establecer relaciones
+    Posteriormente se obtienen los estadísticos para
+                                                               entre cualquier fase. El círculo exterior simboliza la
+evaluar la fiabilidad y validez psicométrica del modelo
+                                                               naturaleza cíclica del proceso de modelado.
+de medida y el modelo estructural; en el primer caso
+se estiman métricas de validez convergente (AVE por                 1. Entendimiento del problema; incluye la comprensión
+sus siglas en inglés, coeficientes de ítem global),                    de los objetivos y requerimientos del proyecto.
+validez discriminante (HTMT, criterio Fornell-Larcker),
+                                                                    2. Comprensión de datos; análisis descriptivo de datos.
+colinealidad entre indicadores (VIF por sus siglas en
+inglés), consistencia interna (α-Cronbach, rhoC, rhoA),             3. Preparación de datos; formulación del modelo con
+significancia y relevancia de los pesos (weights/loadins).             machine learning.
+En el segundo caso, se estiman los coeficientes de
+                                                                    4. Modelado; evaluación comparativa de modelos en
+determinación (R2 ), relevancia predictiva (RMSE o MAE
+                                                                       machine learning.
+por sus siglas en inglés), tamaño y significancia de los
+coeficientes path y tamaño de efectos (f 2 ).                       5. Evaluación; testeo del modelo.
+    Finalmente se re-especifica el modelo de ser necesario
+                                                                    6. Implementación; uso del modelo para el análisis del
+hasta obtener los resultados esperados o los mejores
+                                                                       “fenómeno”.
+resultados de las métricas, teniendo en cuenta que, según
+Hair et. al. (Hair Jr, 2021)
+                                                               3.     Resultados y discusión
+           Los indicadores rara vez deben
+           eliminarse de los modelos de medición                    Al realizar el análisis correlacional de las variables de
+           formativa, ya que la medición formativa             inicio y experiencia respecto a la variable Puntaje Global,
+           requiere que los indicadores capturen               se encuentra que los coeficientes están por debajo de 0.5,
+           completamente todo el dominio de                    lo que indica que las variables exógenas a la institución
+           un constructo, tal como lo define                   educativa no presentan ninguna influencia importante
+           el investigador en la etapa de                      sobre los resultados obtenidos por los estudiantes en la
+           conceptualización.                                  prueba SABER 11.
+           A diferencia de los modelos de medición                  Respecto al modelo de ecuaciones estructurales de la
+           reflexivos, los indicadores formativos              Figura 3, se realizaron las evaluaciones mencionadas en
+           no son intercambiables y, por lo                    la metodología (ver Anexo 2). Respecto a la evaluación del
+           tanto, eliminar incluso un indicador                modelo de medida se obtienen los siguientes resultados:
+
+
+                                                           10
+
+J. Palomino                                                                                            4    Conclusiones
+
+
+
+          Métricas de Análisis                                     No obstante, el poder predictivo del modelo es alto, el
+          convergente consistencia               discrim      cual se interpreta de acuerdo a los criterios de (Shmueli et
+          AVE IG        α      rhoC      rhoA    F-L          al., 2019) citado por (Hair Jr, 2021); todos los indicadores
+  Umb     0.50 0.70     0.71                     >paths       en el análisis PLS-SEM tienen un valor de error cuadrático
+  GE      0.50 0.87     0.66   0.78      1       0.71         medio (RMSE) más bajo en comparación con el punto de
+  LD      0.65 0.94     0.94   0.94      1       0.80         referencia del modelo de regresión lineal.
+  CE      0.33 0.83     -0.08 0.32       1       0.57              Finalmente, al considerar el efecto mediador del
+                                                              constructo LD, se encuentra que este no es significativo
+Tabla 2: Resumen de métricas para evaluar el modelo de        en el modelo estructural. De acuerdo a los resultados
+medida inicial                                                anteriores, se re-especifica el modelo de manera iterativa
+                                                              hasta encontrar el que proporciona mejores métricas
+   Se puede observar que,
+                                                              (Figura 5) al aplicar el mismo proceso de evaluación
+      Los constructos GE y LD son representados por sus       descrito y que no comprometa la validez de contenido del
+      respectivos conjuntos de indicadores.                   constructo.
+                                                                   Evaluación del modelo de medida
+      Los coeficientes path calculados respecto al ítem
+      global (IG) indican correlación positiva entre los                Métricas de Análisis
+      constructos y sus indicadores.                                    convergente consistencia                discrim
+                                                                        AVE IG        α      rhoC       rhoA    F-L
+      La consistencia de los indicadores para los
+                                                                Umb     0.50 0.70     0.71                      >paths
+      constructos GE y LD presentan valores de fiabilidad
+      por encima del umbral.                                    GE      0.65 0.83     0.74 0.85         1       0.81
+                                                                LD      0.66 0.94     0.93 0.93         1       0.81
+      El constructo CE no sobrepasa los umbrales de AVE         CE      1      0.52   1      1          1       1
+      y de fiabilidad.
+                                                              Tabla 3: Resumen de métricas para evaluar el modelo de
+      Todos los constructos cumplen el criterio de            medida re-especificado
+      Fornell-Larcker (AVE >paths), lo que señala una
+      correlación sustancial con sus indicadores.                 Puede observarse que todas las métricas han
+     De otra parte, la validez discriminante detectadas       mejorado, cumpliendo los criterios de sus umbrales, dando
+con el ratio HTMT son significantes y muestran que las        mayor consistencia al modelo. A pesar de que varios
+correlaciones entre los indicadores que miden el mismo        indicadores presentan pesos no significativos, sus cargas
+constructo son mayores que las correlaciones entre los        son significativas mayores que 5 y sus valores VIF son
+indicadores que miden diferentes constructos. El ratio más    en su mayoría menores a 3, evidenciando una correlación
+bajo es del constructo CE.                                    baja entre los indicadores dando consistencia y confianza
+     Al revisar la significancia y relevancia de los pesos    al modelo.
+utilizando el bootstrapping de R Studio, se encuentra que
+las variables artificiales o indicadores reten y result del        Evaluación del modelo estructural
+constructo CE no cumplen los criterios para conservarse            Se encuentra que el poder explicativo y tamaño del
+en el modelo.                                                 efecto del modelo re-especificado, es igual al al del modelo
+     Los indicadores Estim, Cohes, Implic del constructo      inicial. Aspecto que es consistente con una relevancia
+LD y Dcomun del constructo GE tienen pesos muy bajos          positiva del producto de los coeficientes path, todos
+no son significativos y sus valores VIF son mayores a         significativos.
+3, evidenciando una correlación moderada que reduce la             El poder predictivo del modelo es alto con el efecto
+confianza en el modelo. No obstante, sus valores loading      mediador del constructo LD bajo, pero significativo.
+son significantivos mayores que 5, por lo que, la decisión
+de consevarlos depende de las métricas obtenidas en
+cada iteración de re-especificación del modelo.               4.    Conclusiones
+     En la evaluación del modelo estructural, se estima
+que el 27 % de la Calidad Educativa se explica por la             El propósito de este artículo fue analizar la correlación
+influencia de la Gestión Escolar y el Liderazgo Directivo,    entre la valoración de calidad educativa y la percepción de
+poder explicativo débil. Mientras que el 51 % del Liderazgo   la gestión escolar y liderazgo directivo aplicando la técnica
+Directivo es explicado por la influencia de la Gestión        PLS-SEM, en el contexto de la institución educativa
+Escolar. Deberá ser considerado, entonces, el caso            Monseñor Ramón Arcila, ciclo de educación media, desde
+probable de mediación del Liderazgo Directivo entre la        la percepción de los estudiantes. Bajo la suposición de la
+Gestión Escolar y la Calidad Educativa. Capacidad que se      correcta percepción de los estudiantes se encontró que,
+verifica al calcular el tamaño del efecto donde se observa
+que hay un gran efecto de GE sobre LD, mientras que                 No se evidencia relación estadística entre los
+el efecto de GE y LD sobre CE es bajo. Aspecto que es               resultados de la prueba SABER 11 con variables
+consistente con una relevancia positiva del producto de los         como edad, sexo, condiciones de vivienda, nivel de
+coeficientes path, aunque el coeficiente entre LD y CE no           estudio de los padres, relaciones familiares, grupo,
+es significativo.                                                   antiguedad, entre otras.
+
+
+                                                           11
+
+J. Palomino                                                                                             4   Conclusiones
+
+
+
+
+Figura 5: Modelo teórico re-especificado. Relación entre gestión escolar (GE), liderazgo directivo (LD) y calidad
+educativa (CE). elaboración propia
+
+
+      El constructo gestión escolar se define con                  1. Es preciso que la escuela realice un diagnóstico de
+      mayor influencia por las variables asociadas a las              las necesidades de la comunidad y seguimiento al
+      dimensiones académica y directiva.                              egresado para orientar sus acciones hacia un mayor
+                                                                      impacto.
+      El constructo liderazgo directivo se define con
+      mayor influencia por la consideración individual,            2. Se deben revisar los procesos de gestión académica
+      es decir, por la capacidad de los directivos                    que permitan mayor asociación de los resultados
+      (coordinadores y rector) para atender con                       académicos con las acciones de formación
+      respeto las diferencias y necesidades personales,               escolares.
+      estimular con reconocimientos por desempeño o
+      cumplimiento de metas y prestar apoyo técnico o              3. El factor liderazgo aparece como un indicador
+      personal.                                                       de la gestión escolar, por lo tanto, resulta
+                                                                      coherente fortalecer las estrategias de dirección,
+      La valoración de la calidad educativa no presenta               especialmente en lo que respecta a la
+      relación estadística con la antigüedad del estudiante           comunicación, acercamiento con los estudiantes y
+      o el puntaje global obtenido en la prueba SABER 11.             transformación de la cultura escolar.
+
+      La valoración de calidad educativa presenta mayor             Finalmente, esta forma de relacionarse con la realidad
+      asociación con la percepción del impacto, aunque          educativa permitió conocer las dinámicas, desde la visión
+      este indicador no lo explica totalmente, lo que resulta   de los estudiantes, cuyo desconocimiento podría conducir
+      coherente con la teoría y el valor de coeficiente ítem    a aparentar mejoras que terminan por obstaculizar los
+      global (0.524) en el modelo re-especificado.              procesos de maduración de la institución educativa.
+                                                                No obstante, los resultados obtenidos de este estudio
+      El modelo de ecuaciones estructurales establece
+                                                                permiten una mirada parcial de la realidad actual de la
+      que el desempeño escolar no se explica por la
+                                                                institución educativa, por lo que es recomendable ampliar
+      gestión escolar.
+                                                                este tipo de estudios a otros actores institucionales en
+      Se encontró una correlación sustancial directa            cada ciclo de formación de forma que se incremente la
+      entre la percepción de gestión escolar y liderazgo        capacidad de comprender su realidad y la interpretación
+      directivo.                                                de sus necesidades y expectativas.
+                                                                    La aplicación de la técnica estadística PLS-SEM para
+    Conforme a lo anterior, la técnica aplicada permitió        el análisis de las dinámicas escolares puede ser replicada
+identificar aspectos específicos a atender en la institución    por otras instituciones educativas, permitiendo una mirada
+educativa de estudio que podrían favorecer una mayor            más profunda y específica de sus condiciones sociales
+valoración de calidad educativa desde la visión de los          particulares, identificar desafíos, retos y limitaciones y,
+estudiantes, a partir de los cuales se sugiere:                 proponer acciones de mejora más eficientes.
+
+
+
+                                                            12
+
+J. Palomino                                                                                                 Referencias
+
+
+
+Referencias
+Alvarez, I. M. F. (2019). Gestión escolar y desempeño en las instituciones de educación media. un análisis confirmatorio
+      con sistemas de ecuaciones estructurales. Revista Naturaleza, Sociedad y Ambiente, 6(1), 69–87.
+Cabrera, M. T. F., y Adan, I. A. R. (2017). Gestión educativa estratégica y gestión escolar del proceso de
+      enseñanza-aprendizaje: una aproximación conceptual. Reencuentro. Análisis de problemas universitarios, 28(73),
+      45–61.
+de Franco, M. F., Morillo, R., y Castro, E. (2013). Gestión de la calidad educativa en centros escolares del subsistema
+      de educación básica. Omnia, 19(2), 112–124.
+de la Reguera, J. A. P. F. (2009). Liderazgo y conflicto en las organizaciones educativas. educación y educadores,
+      2009, volumen 12, número 1, pp. 137-152. D-Universidad de La Sabana.
+Delgado, H. B. (2014). El impacto de la calidad educativa. Apuntes de Ciencia & Sociedad, 4(1), 11.
+Gairín, J. (2010). Gestionar la complejidad de los centros educativos. el liderazgo educativo. los equipos directivos en
+      centros de secundaria, elementos básicos del éxito escolar. Madrid: Ministerio de Educación.
+Hair Jr, G. T. M. y. R. C. M. y. S. M. y. D. N. P. y. R. S., Joseph F y Hult. (2021). Modelado de ecuaciones estructurales
+      de mínimos cuadrados parciales (pls-sem) usando r: un libro de trabajo. Springer Nature.
+López, M. C., y Rosas, F. D. (2005). El liderazgo educativo en centros de secundaria. un estudio en el contexto
+      multicultural de ceuta. Revista Iberoamericana de Educación, 37 (2), 1–18.
+Manrique, C. R. C., y Puente, R. T. (2001). La gestión de calidad en educación. Educación, 10(19), 57–75.
+Mejía, F., y Olvera, A. (2010). Gestión escolar: un asunto de mercado, de estado o de sociedad. algunas experiencias
+      internacionales. Revista Latinoamericana de Estudios Educativos (México), 40(1), 9–52.
+Naranjo Mayorga, N., y cols. (2017). Enfoques de la gestión escolar: una aproximación desde el contexto
+      latinoamericano.
+Orozco Cruz, J. C., Olaya Toro, A., Villate Duarte, V., y cols. (2009). ¿ calidad de la educación o educación de calidad?:
+      una preocupación más allá del mercado. Revista Iberoamericana de educación.
+Ortiz, M. S., y Fernández-Pera, M. (2018). Modelo de ecuaciones estructurales: Una guía para ciencias médicas y
+      ciencias de la salud. Terapia psicológica, 36(1), 51–57.
+Parra-Martínez, J. E. (2017). La gestión eficaz en educación y su importancia en acción gerencial educativa de
+      colombia. Aibi revista de investigación, administración e ingeniería, 5(2), 16–22.
+Pérez-Ruiz, A. (2014). Enfoques de la gestión escolar: uma aproximação a partir do contexto latino-americano.
+      Educación y educadores, 17 (2), 357–369.
+Quintana-Torres, Y. E. (2018). Calidad educativa y gestión escolar: una relación dinámica. Educación y educadores,
+      21(2), 259–281.
+Ramírez Aristizábal, B., Chica Lasso, M. F., y cols. (2017). Horizontes críticos de la gestión escolar: perspectiva
+      latinoamericana. Aula: revista de pedagogía de la Universidad de Salamanca.
+Rejas, L. P. (2011). Gestión y liderazgo educacional: una perspectiva integradora en la economía del conocimiento.
+      Revista de ciencias sociales, 17 (1), 32–47.
+Rodríguez, N. (2000). Gestión escolar y calidad de la enseñanza. Educere, 4(10), 39–46.
+Torrecilla, F. J. M. (2006). Dirección escolar para el cambio: Del liderazgo transformacional al liderazgo distribuido.
+      REICE: Revista Iberoamericana sobre calidad, eficacia y cambio en educación, 4(4), 11–24.
+
+
+
+
+                                                           13
+
+    ANEXO 1
+Variables de Estudio
+
+                                                                                                                                 Formulario Estudiantes
+
+Ítem      Categoría         Tipo de variable       Escala   Etiqueta                                                                                                    Pregunta o afirmación
+
+ 1                             Cuantitativa         >0        I_1      ¿Cuál es su edad en años cumplidos? [*Escriba en dígitos, por ejemplo: 16]
+
+ 2                         Cualitativa - Nominal    0-1       I_2      ¿Cuál es su sexo?
+
+ 3     De identificación   Cualitativa - Nominal    1-3       I_3      ¿Cuál es su nacionalidad?
+
+ 4                         Cualitativa - Nominal    0-5       I_4      Indique el tipo de discapacidad que presenta
+
+ 5                         Cualitativa - Nominal    0-6       I_5      Seleccione el grupo o grupos poblaciones de los cuales hace parte
+
+ 6                         Cualitativa - Ordinal    1-5       O_1      ¿Con qué frecuencia asiste al servicio de salud?
+
+ 7                         Cualitativa - Nominal    1-8       O_2      Entre semana, despúes de la jornada académica ¿a cuál de las siguientes actividades dedica más tiempo? [*Seleccione máximo tres opciones]
+
+ 8                         Cualitativa - Ordinal    1-5       O_3      ¿Qué considera acerca de los ingresos económicos de su hogar?
+
+ 9                         Cualitativa - Nominal   1 - 11     O_4      ¿Con cuáles de las siguientes personas vive actualmente?
+
+10                         Cualitativa - Ordinal   0 - 13     O_6      ¿Cuál es el nivel de formación académica de la madre?
+         De origen o
+          iniciales
+11                         Cualitativa - Ordinal    1-6       O_7      Indique la actividad principal de la madre
+
+12                         Cualitativa - Ordinal   0 - 13     O_8      ¿Cuál es el nivel de formación académica del padre?
+
+13                         Cualitativa - Ordinal    1-6       O_9      Indique la actividad principal del padre
+
+14                         Cualitativa - Nominal    1-5      O_10      ¿Quién es su acudiente en la institución educativa?
+
+15                         Cualitativa - Ordinal   0 - 13    O_11      ¿Cuál es el nivel de formación académica del acudiente?
+
+16                         Cualitativa - Ordinal    1-6      O_12      Indique la actividad principal del acudiente
+
+17                         Cualitativa - Ordinal    1-5      O_13      ¿Cómo percibe la relación que tiene con los integrantes de su familia?
+
+18                         Cualitativa - Ordinal    0-2      O_14      ¿Sientes confianza con tu familia?
+
+         De origen o
+19                         Cualitativa - Ordinal    0-2      O_15      ¿Te sientes seguro con tu familia?
+          iniciales
+
+20                         Cualitativa - Ordinal    1-5      O_16      ¿Con qué frecuencia comparte actividades de integración familiar?
+
+21                         Cualitativa - Nominal    0-6      O_17      Seleccione los servicios públicos con los cuales cuenta en su vivienda
+
+22                         Cualitativa - Nominal    1-4      O_18      ¿Cuenta en su casa con los recursos tecnológicos necesarios para realizar las tareas escolares?
+
+23                         Cualitativa - Ordinal    1-4       A_1      ¿Cuántos años lleva en la institución educativa? [*No incluye el año actual]
+
+24                         Cualitativa - Nominal    1-2       A_2      Seleccione la jornada escolar a la que pertenece
+
+25                         Cualitativa - Nominal    1-5       A_3      Seleccione el grupo al que pertenece
+
+26                         Cualitativa - Ordinal   1,3,5      A_4      La cantidad de estudiantes en el aula en relación a la capacidad del espacio, es
+
+       De asignación y
+27                         Cualitativa - Nominal   1,3,5      A_5      La institución educativa permite la matrícula de niños, niñas, jóvenes y adolescentes con cualquier tipo de condición
+        experiencia
+
+28                         Cualitativa - Ordinal    1-5       A_6      El nivel en que la institución educativa ha influido en la mejora de las relaciones de mi hogar, es
+
+29                         Cualitativa - Ordinal    1-5       A_7      El nivel en que la institución educativa ha influido en la mejora del entorno en aspectos de convivencia, medio ambiente o atención de necesidades de la comunidad, es
+
+30                         Cualitativa - Ordinal    1-5       A_8      El nivel de egresados que ingresan inmediatamente a la universidad, es
+
+31                         Cualitativa - Ordinal    1-5       A_9      El nivel de reconocimiento o prestigio de la institución educativa en la comunidad externa, es
+
+                                                                                                                                   Formulario Estudiantes
+
+Ítem     Categoría          Tipo de variable       Escala    Etiqueta                                                                                                  Pregunta o afirmación
+
+32                         Cualitativa - Ordinal    1-5       A_10      El nivel académico de los docentes de la institución educativa, es
+
+33                         Cualitativa - Ordinal    1-5       A_11      Su nivel de satisfacción por pertenecer a la institución, es
+       De asignación y
+        experiencia
+34                         Cualitativa - Ordinal    1-5       A_12      Ve en los docentes y directivos el propósito de educar a los estudiantes
+
+35                             Cuantitativa        0 - 500    Ae_13     Escriba el puntaje global que obtuvo en el último simulacro o prueba Saber [*Escriba el número con dígitos, por ejemplo: 276]
+
+36                                                            P_HI1     Respecto a la Misión institucional
+
+37                         Cualitativa - Ordinal    1-5       P_HI2     Respecto a la Visión institucional
+
+38                                                            P_HI3     Respecto a los Principios y Valores institucionales
+
+39                                                           P_Amb1     Las relaciones entre estudiantes al interior del aula favorecen espacios de convivencia basados en el respeto mútuo
+
+40                                                           P_Amb2     Mis compañeros de estudio me motivan a alcanzar buenos resultados
+
+41                         Cualitativa - Ordinal    1-5      P_Amb3     Al trabajar en equipo, confío plenamente en que mis compañeros de estudio harán su parte del trabajo en tiempo y forma
+
+42                                                           P_Amb4     Mis compañeros de estudio me apoyan cuando tengo una urgencia familiar, calamidad o situación difícil
+
+43                                                           P_Amb5     Puedo confiar aspectos personales en mis compañeros de estudio
+
+44                       Cualitativa - Ordinal      5-1      P_Amb6     He tenido conflictos con mis compañeros de estudio que han afectado el trabajo en equipo
+
+45                                                           P_Amb7     Logro solucionar los conflictos con los compañeros de forma amena y pacífica
+
+46                                                           P_Amb8     Mis opiniones han sido escuchadas y tenidas en cuenta por mis compañeros
+
+47                                                           P_Amb9     Los docentes están dispuestos a asumir retos y tomar riesgos
+                           Cualitativa - Ordinal    1-5
+48                                                           P_Amb10    Observo interés de los docentes por innovar en su trabajo
+
+49                                                           P_Amb11    Cuando se toman decisiones relacionadas con la disciplina y el orden, las directivas de la institución educativa actúan de manera justa
+         Pertinencia
+50                                                           P_Amb12    Cuando se toman decisiones relacionadas con la disciplina y el orden, el personal docente de la institución educativa actúa de manera justa
+
+51                       Cualitativa - Ordinal      1-5      P_Amb13    Cuando hay agresiones o amenazas entre estudiantes, los docentes y directivas de la institución intervienen
+
+52                                                           P_Amb14    Hay ocasiones en las que los docentes son agredidos o amenazados por estudiantes
+
+53                                                           P_Amb15    Entre los compañeros del grupo se realizan burlas
+
+54                                                           P_Amb16    Entre los compañeros del grupo se presentan insultos, gestos y amenazas
+                           Cualitativa - Ordinal    5-1
+55                                                           P_Amb17    Entre los compañeros del grupo se presentan peleas estando en la institución educativa
+
+56                                                           P_Amb18    Entre los compañeros del grupo se presentan peleas estando fuera de la institución educativa
+
+57                                                           P_Amb19    En el aula se pierden las cosas
+
+58                                                           P_Amb20    Hay estudiantes que ofenden los compañeros del grupo por condiciones relacionadas con su sexo, etnia, aspecto físico, cultura, discapacidad física o mental, diversidad de género, condición social o académica
+
+59                                                           P_Amb21    Hay docentes o directivos que ofenden los estudiantes por condiciones relacionadas con su sexo, etnia, aspecto físico, cultura, discapacidad física o mental, diversidad de género, condición social o académica
+
+60                                                           P_Amb22    Algunos compañeros del grupo portan armas
+                           Cualitativa - Ordinal    5-1
+61                                                           P_Amb23    Me han amenazado con arma dentro de la institución educativa
+
+62                                                           P_Amb24    Compañeros de mi grupo consumen o portan drogas cuando están en la institución educativa
+
+63                                                           P_Amb25    He sentido presión para consumir drogas cuando estoy en la institución educativa
+
+                                                                                                                           Formulario Estudiantes
+
+Ítem    Categoría     Tipo de variable       Escala   Etiqueta                                                                                                   Pregunta o afirmación
+
+64                                                    P_Amb26    Algunos compañeros del grupo se involucran en conflictos de pandillas
+
+65                                                    P_Amb27    Algunos compañeros del grupo dañan las instalaciones o las dotaciones
+
+66                                            5-1     P_Amb28    He sentido incomodidad con propuestas, comentarios, gestos, sonidos o insinuaciones de tipo sexual por parte de un compañero
+                     Cualitativa - Ordinal
+67                                                    P_Amb29    He sentido incomodidad con propuestas, comentarios, gestos, sonidos o insinuaciones de tipo sexual por parte de un docente o directivo
+
+68     Pertinencia                                    P_Amb30    Evito pasar por algunos lugares dentro del plantel por miedo a que alguien me ataque
+
+69                                            1-5     P_Amb31    En la institución educativa son atendidas las situaciones en las que los estudiates dicen haber sido objeto de agresiones o injurias cometidas por docentes o directivos
+
+70                                                    P_Amb32    En la institución, durante el año, se otorgan reconocimientos por buen desempeño en diferentes aspectos (académico y/o disciplinario, capacidad deportiva, relaciones con los compañeros, entre otros)
+
+71                   Cualitativa - Ordinal    1-5     P_Amb33    Mi esfuerzo recibe reconocimientos justos
+
+72                                                    P_Amb34    El nivel de exigencia en la institución es acorde con los reconocimientos y estímulos
+
+                                                                 Los espacios cerrados de la institución cuentan con condiciones adecuadas de iluminación, temperatura, ventilación, espacio, volumen de ruídos, etc. [*Espacios cerrados: salones, oficinas, talleres, laboratorios,
+73                                                    E_Cond1
+                                                                 aula de informática, biblioteca, cafetería, restaurante, y demás]
+
+74                                                    E_Cond2    Los espacios abiertos y cerrados (salones, oficinas, talleres, canchas, zonas verdes, y demás) de la institución son de bajo riesgo de accidentes
+
+75                                                    E_Cond3    Los espacios institucionales conservan condiciones de limpieza, higiene y salubridad
+                     Cualitativa - Ordinal    1-5
+76                                                    E_Cond4    Los espacios institucionales cuentan con mobiliarios cómodos, adecuados y en buen estado
+
+                                                                 El rector gestiona la disponibilidad oportuna y suficiente de recursos pedagógicos (libros de texto, materiales audiovisuales, software educativo, materiales artísticos y deportivos, entre otros) para su desempeño
+77                                                    E_Cond5
+                                                                 escolar
+
+78                                                    E_Cond6    Recibo los insumos necesarios para realizar las actividades de aprendizaje
+
+79                                                     E_At1     En la institución se hace una programación de todas las actividades que se realizan durante el año lectivo
+                                              1-5
+80                                                     E_At2     El tiempo no escolar es suficiente para realizar los deberes académicos habituales
+
+81                                            5-1      E_At3     He sentido sobrecarga de responsabilidades académicas
+        Eficiencia   Cualitativa - Ordinal
+82                                                     E_At4     Las actividades institucionales se realizan conforme a lo planeado
+
+83                                            1-5      E_At5     En la institución educativa se garantiza el uso óptimo del tiempo de clase (sin desperdicio, interrupción o destinación a otros asuntos)
+
+84                                                     E_At6     En la institución educativa se evita interrumpir las jornadas de clase
+
+85                                                    E_ATH1     La institución educativa cuenta con los docentes requeridos
+
+86                                                    E_ATH2     Los estudiantes reciben inducción que facilita su adaptación a la institución
+                                              1-5
+87                                                    E_ATH3     Conozco claramente mis deberes y compromisos en la institución educativa
+                     Cualitativa - Ordinal
+88                                                    E_ATH4     La institución promueve acciones de formación, capacitación o entrenamiento relacionadas con mi desarrollo personal
+
+89                                            5 -1    E_ATH5     El tiempo entre actividades de formación, capacitación o entrenamiento en la instiución educativa supera los 3 meses
+
+90                                            1-5     E_ATH6     Los docentes tienen las competencias necesarias para realizar lo que la institución requiere en la atención de estudiantes diversos y aplicación de proyectos pedagógicos
+
+
+91                                                      C_1      Es claro cómo los docentes definen y articulan los contenidos de las áreas para que todos los estudiantes desarrollen de forma integral las competencias
+
+
+
+92     Competencia   Cualitativa - Ordinal    1-5       C_2      Se cumplen los planes de estudio definidos para el año lectivo
+
+
+
+93                                                      C_3      Los planes de estudio responden a las necesidades de los estudiantes, el entorno y el sector laboral
+
+                                                                                                                           Formulario Estudiantes
+
+Ítem    Categoría     Tipo de variable       Escala   Etiqueta                                                                                                   Pregunta o afirmación
+
+
+94                                                      C_4      Al iniciar un nuevo proceso de aprendizaje los docentes buscan despertar el interés de los estudiantes y descubrir qué conocimientos y capacidades tienen al respecto
+
+                     Cualitativa - Ordinal    1-5
+
+95                                                      C_5      Al iniciar un nuevo proceso de aprendizaje los docentes desarrollan, junto con los estudiantes, actividades para comprender los conceptos de estudio
+
+
+
+96                                                      C_6      Los docentes plantean situaciones en las que los estudiantes deben aplicar los nuevos conceptos en diferentes contextos
+
+
+
+97                                                      C_7      A partir de los resultados de las evaluaciones, los docentes promueven espacios de reflexión en los que el estudiante reconoce lo que aprendió, los pasos que realizó y cómo pueden mejorar su aprendizaje
+
+
+
+98                   Cualitativa - Ordinal    1-5       C_8      Los docentes identifican fortalezas y debilidades a partir de evaluaciones ajustadas a las diferentes características y condiciones de los estudiantes para diseñar estrategias de aprendizaje y superación
+
+       Competencia
+                                                                 Los docentes definen los objetivos, las estrategias pedagógicas y las formas de evaluar los avances de los estudiantes con base en la misión y visión institucional, las necesidades de los estudiantes y sus
+99                                                      C_9
+                                                                 intereses de continuar sus estudios o de ingresar al campo laboral
+
+
+100                                                    C_10      Los docentes usan los resultados de las evaluaciones externas (simulacros, pruebas SABER) para ajustar el plan de estudios, las actividades didácticas y mejorar sus propios mecanismos de evaluación
+
+
+                                                                 Las estrategias pedagógicas (enseñaza y evaluación) de los docentes permiten que todos los estudiantes puedan aprender, independientemente de sus condiciones personales, sociales culturales y económicas
+101                                                    C_11
+                                                                 [* condiciones personales: cognitivas, psicológicas, físicas, sexuales, ritmos y estilos de aprendizaje, embarazo, …]
+
+
+102                  Cualitativa - Ordinal    1-5      C_12      Los docentes establecen estrategias para disminuir las diferencias entre los estudiantes que tienen altos y bajos desempeños
+
+
+
+103                                                    C_13      Los docentes aseguran que los estudiantes aprendan permanente y autónomamente, y puedan transferir lo que aprendieron a otras situaciones y contextos
+
+
+104                                                   D_Com1     La institución establece mecanismos para atender las sugerencias, quejas y reclamos de los estudiantes
+
+105                                                   D_Com2     En la institución me proporcionan la información sufiente y adecuada sobre el desarrollo de las actividades escolares
+
+106                                                   D_Com3     Hay apertura para comunicarse con el rector
+                     Cualitativa - Ordinal    1-5
+107                                                   D_Com4     Existe comunicación fluida y oportuna entre los diferentes miembros de la institución
+
+                                                                 El rector establece vínculos con organizaciones externas con el fin de generar redes de apoyo, fortalecer el trabajo institucional y aliviar las situaciones de pobreza y vulnerabilidad de los estudiantes en sus
+108                                                   D_Rel1
+                                                                 hogares
+
+109                                                   D_Rel2     El rector establece vínculos con la comunidad con el fin de generar redes de apoyo, fortalecer el trabajo institucional y aliviar las situaciones de pobreza y vulnerabilidad de los estudiantes en sus hogares
+
+                                                                 El rector establece vínculos con los padres de familia y acudientes con el fin de generar redes de apoyo, fortalecer el trabajo institucional y aliviar las situaciones de pobreza y vulnerabilidad de los estudiantes en
+110                                                   D_Rel3
+                                                                 sus hogares
+
+111                                                   D_Amb1     Se siente seguro(a) dentro de las instalaciones
+        Dirección                             1-5
+112                  Cualitativa - Ordinal            D_Amb2     Se sientoe seguro(a) alrededor de la institución
+
+113                                                   D_Amb3     Los parques y zonas deportivas que están cerca de la institución son seguros
+
+114                                           5 -1    D_Amb4     Le han hecho propuestas, gestos, comentarios, sonidos o insinnuaciones de tipo sexual alrededor de la institución
+
+115                                                   D_CTol1    El(la) coordinador(a) de mi sede/jornada... Expresa y anima a tener actitud positiva
+
+116                                                   D_CTol2    El(la) coordinador(a) de mi sede/jornada... Demuestra actitud tolerante y calmada
+
+117                  Cualitativa - Ordinal    1-5     D_CTol3    El(la) coordinador(a) de mi sede/jornada... Usa sentido del humor para atenuar conflictos
+
+118                                                   D_CTol4    El(la) coordinador(a) de mi sede/jornada... Ayuda a crear ambientes de satisfacción en la institución educativa
+
+119                                                   D_CTol5    El(la) coordinador(a) de mi sede/jornada... Favorece espacios de convivencia y solución de conflictos basados en el respeto mútuo
+
+                                                                                                                          Formulario Estudiantes
+
+Ítem   Categoría    Tipo de variable       Escala   Etiqueta                                                                                                    Pregunta o afirmación
+
+120                                                 D_Ccons1 El(la) coordinador(a) de mi sede/jornada... Concede atención personal
+
+121                                                 D_Ccons2 El(la) coordinador(a) de mi sede/jornada... Tiene en cuenta a los estudiantes en aspectos no escolares (cumpleaños, incapacidad, calamidad, etc.)
+
+122                                                 D_Ccons3 El(la) coordinador(a) de mi sede/jornada... Tiene en cuenta las condiciones personales de los estudiantes para su acompañamiento escolar
+
+123                Cualitativa - Ordinal    1-5     D_Ccons4 El(la) coordinador(a) de mi sede/jornada... Está dispuesto(a) a dar apoyo técnico a las personas [apoyo técnico: ayuda sobre procesos, procedimientos o información relacionada con aspectos escolares]
+
+124                                                 D_Ccons5 El(la) coordinador(a) de mi sede/jornada... Está dispuesto(a) a apoyar las personas emocionalmente
+
+125                                                 D_Ccons6 El(la) coordinador(a) de mi sede/jornada... Me apoya cuando tengo una urgencia familiar, calamidad o situación difícil
+
+126                                                 D_Ccons7 El(la) coordinador(a) de mi sede/jornada... Me apoya en situaciones de beneficio personal
+
+127                                                 D_Ccons8 El(la) coordinador(a) de mi sede/jornada... Hace reconocimiento público a los funcionarios y estudiantes por sus aportes a la institución
+
+128                                                 D_Cest1     El(la) coordinador(a) de mi sede/jornada... Impulsa en los estudiantes propuestas de creatividad e innovación
+
+129                                                 D_Cest2     El(la) coordinador(a) de mi sede/jornada... Fomenta en las personas el mejoramiento de sus capacidades y educación
+                   Cualitativa - Ordinal    1-5
+130                                                 D_Cest3     El(la) coordinador(a) de mi sede/jornada... Da apertura para solicitar y gestionar apoyo de capacitación
+
+131                                                 D_Cest4     El(la) coordinador(a) de mi sede/jornada... Facilita el cumplimiento de las normas más que imponerlas
+
+132                                                 D_Cmot1     El(la) coordinador(a) de mi sede/jornada... Propicia altos estándares de rendimiento
+
+133                                                 D_Cmot2     El(la) coordinador(a) de mi sede/jornada... Establece metas moderadamente desafiantes y factibles (alcanzables)
+
+134                                                 D_Cmot3     El(la) coordinador(a) de mi sede/jornada... Es capaz de motivar en las personas compromiso con la institución
+
+135                                                 D_Cmot4     El(la) coordinador(a) de mi sede/jornada... Me motiva a dar los mejor de mi
+                   Cualitativa - Ordinal    1-5
+136                                                 D_Ccoh1     El(la) coordinador(a) de mi sede/jornada... Incentiva el trabajo colaborativo que redunde en la conformación de equipos de trabajo sólidos
+
+137                                                 D_Ccoh2     El(la) coordinador(a) de mi sede/jornada... Aún en condiciones adversas (difíciles), propicia mantener el esfuerzo con los estudiantes y docentes
+
+138                                                 D_Ccoh3     El(la) coordinador(a) de mi sede/jornada... Aún en condiciones adversas (difíciles), propicia mantener el esfuerzo para cumplir los objetivos institucionales
+
+139                                                 D_Csat1     El(la) coordinador(a) de mi sede/jornada... Promueve el vínvulo personal con la institución
+
+140    Dirección                                    D_Cimp1     El(la) coordinador(a) de mi sede/jornada... Da instrucciones y comparte información detallada acerca de los nuevos proyectos de la institución educativa
+
+141                                                 D_Cimp2     El(la) coordinador(a) de mi sede/jornada... Propicia la búsqueda conjunta de soluciones a las dificultades, reconociendo que no es el único responsable del éxito o fracaso
+                   Cualitativa - Ordinal    1-5
+142                                                 D_Cimp3     El(la) coordinador(a) de mi sede/jornada... Delega responsabilidades en los estudiantes para el cumplimiento de los objetivos institucionales
+
+143                                                 D_Cimp4     El(la) coordinador(a) de mi sede/jornada... Confía en mis ideas y desempeño al concederme autonomía para tomar decisiones
+
+144                                                 D_Cimp5     El(la) coordinador(a) de mi sede/jornada... Espera recibir ideas para el mejoramiento institucional, de su gestión y tomar decisiones
+
+145                                                 D_Ccar1     El(la) coordinador(a) de mi sede/jornada... Tiene los conocimientos y destrezas para dirigir la sede/jornada
+
+146                                                 D_Ccar2     El(la) coordinador(a) de mi sede/jornada... Orienta con criterio técnico (basadado en las normas, conocimientos específicos, aspectos institucionales)
+
+147                                                 D_Ccar3     El(la) coordinador(a) de mi sede/jornada... Genera credibilidad
+                   Cualitativa - Ordinal    1-5
+148                                                 D_Ccar4     El(la) coordinador(a) de mi sede/jornada... Ofrece un trato justo y sin favoritismo
+
+149                                                 D_Ccar5     El(la) coordinador(a) de mi sede/jornada... Actúa con integridad y ejemplo
+
+150                                                 D_Ccar6     El(la) coordinador(a) de mi sede/jornada... Promueve entusiasmo por la institución
+
+                                                                                                                            Formulario Estudiantes
+
+Ítem   Categoría    Tipo de variable       Escala   Etiqueta                                                                                                      Pregunta o afirmación
+
+151                                                 D_Ccar7     El(la) coordinador(a) de mi sede/jornada... Genera orgullo al estar con él(ella)
+
+152                                                 D_Ccar8     El(la) coordinador(a) de mi sede/jornada... Tiene una visión de la institución educativa que yo comparto
+                   Cualitativa - Ordinal    1-5
+153                                                 D_Ccar9     El(la) coordinador(a) de mi sede/jornada... Es comprometido(a) y altruista con la institución [sobrepone la institución a sus propias necesidades]
+
+154                                                 D_Ccar10    El(la) coordinador(a) de mi sede/jornada... Busca el mejoramiento continuo de la institución
+
+155                                                 D_RTol1     El(la) rector(a)...... Expresa y anima a tener actitud positiva
+
+156                                                 D_RTol2     El(la) rector(a)...... Demuestra actitud tolerante y calmada
+
+157                                                 D_RTol3     El(la) rector(a)...... Usa sentido del humor para atenuar conflictos
+                   Cualitativa - Ordinal    1-5
+158                                                 D_RTol4     El(la) rector(a)...... Ayuda a crear ambientes de satisfacción en la institución educativa
+
+159                                                 D_RTol5     El(la) rector(a)...... Favorece espacios de convivencia y solución de conflictos basados en el respeto mútuo
+
+160                                                 D_Rcons1 El(la) rector(a)...... Concede atención personal
+
+161                                                 D_Rcons2 El(la) rector(a)...... Tiene en cuenta a las personas en aspectos no escolares (cumpleaños, incapacidad, calamidad, etc.)
+
+162                                                 D_Rcons3 El(la) rector(a)... Tiene en cuenta las condiciones personales de los estudiantes para su acompañamiento escolar
+
+163                                                 D_Rcons4 El(la) rector(a)...... Está dispuesto(a) a dar apoyo técnico a las personas [apoyo técnico: ayuda sobre procesos, procedimientos o información relacionada con aspectos escolares]
+                   Cualitativa - Ordinal    1-5
+164                                                 D_Rcons5 El(la) rector(a)...... Está dispuesto(a) a apoyar las personas emocionalmente
+
+165                                                 D_Rcons6 El(la) rector(a)...... Me apoya cuando tengo una urgencia familiar, calamidad o situación difícil
+
+166    Dirección                                    D_Rcons7 El(la) rector(a)...... Me apoya en situaciones de beneficio personal
+
+167                                                 D_Rcons8 El(la) rector(a)...... Hace reconocimiento público a los funcionarios y estudiantes por sus aportes a la institución
+
+168                                                 D_Rest1     El(la) rector(a)...... Impulsa en los estudiantes propuestas de creatividad e innovación
+
+169                                                 D_Rest2     El(la) rector(a)...... Fomenta en las personas el mejoramiento de sus capacidades y educación
+                   Cualitativa - Ordinal    1-5
+170                                                 D_Rest3     El(la) rector(a)...... Da apertura para solicitar y gestionar apoyo de capacitación
+
+171                                                 D_Rest4     El(la) rector(a)...... Facilita el cumplimiento de las normas más que imponerlas
+
+172                                                 D_Rmot1     El(la) rector(a)...... Propicia altos estándares de rendimiento
+
+173                                                 D_Rmot2     El(la) rector(a)...... Establece metas moderadamente desafiantes y factibles (alcanzables)
+
+174                                                 D_Rmot3     El(la) rector(a)...... Es capaz de motivar en las personas compromiso con la institución
+
+175                                                 D_Rmot4     El(la) rector(a)...... Me motiva a dar los mejor de mi
+                   Cualitativa - Ordinal    1-5
+176                                                 D_Rcoh1     El(la) rector(a)...... Incentiva el trabajo colaborativo que redunde en la conformación de equipos de trabajo sólidos
+
+177                                                 D_Rcoh2     El(la) rector(a)...... Aún en condiciones adversas (difíciles), propicia mantener el esfuerzo con los estudiantes y docentes
+
+178                                                 D_Rcoh3     El(la) rector(a)...... Aún en condiciones adversas (difíciles), propicia mantener el esfuerzo para cumplir los objetivos institucionales
+
+179                                                 D_Rsat1     El(la) rector(a)...... Promueve el vínvulo personal con la institución
+
+180                Cualitativa - Ordinal    1-5     D_Rimp1     El(la) rector(a)...... Da instrucciones y comparte información detallada acerca de los nuevos proyectos de la institución educativa
+
+181                                                 D_Rimp2     El(la) rector(a)...... Propicia la búsqueda conjunta de soluciones a las dificultades, reconociendo que no es el único responsable del éxito o fracaso
+
+                                                                                                                                Formulario Estudiantes
+
+Ítem   Categoría    Tipo de variable       Escala   Etiqueta                                                                                                     Pregunta o afirmación
+
+182                                                 D_Rimp3    El(la) rector(a)...... Delega responsabilidades en los estudiantes para el cumplimiento de los objetivos institucionales
+
+183                Cualitativa - Ordinal    1-5     D_Rimp4    El(la) rector(a)...... Confía en mis ideas y desempeño al concederme autonomía para tomar decisiones
+
+184                                                 D_Rimp5    El(la) rector(a)...... Espera recibir ideas para el mejoramiento institucional, de su gestión y tomar decisiones
+
+185                                                 D_Rcar1    El(la) rector(a)...... Tiene los conocimientos y destrezas para dirigir el equipo
+
+186                                                 D_Rcar2    El(la) rector(a)...... Orienta con criterio técnico (basadado en las normas, conocimientos específicos, aspectos institucionales)
+
+187                                                 D_Rcar3    El(la) rector(a)...... Genera credibilidad
+                   Cualitativa - Ordinal    1-5
+188    Dirección                                    D_Rcar4    El(la) rector(a)...... Ofrece un trato justo y sin favoritismo
+
+189                                                 D_Rcar5    El(la) rector(a)...... Actúa con integridad y ejemplo
+
+190                                                 D_Rcar6    El(la) rector(a)...... Promueve entusiasmo por la institución
+
+191                                                 D_Rcar7    El(la) rector(a)...... Genera orgullo al estar con él(ella)
+
+192                                                 D_Rcar8    El(la) rector(a)...... Tiene una visión de la institución que yo comparto
+                   Cualitativa - Ordinal    1-5
+193                                                 D_Rcar9    El(la) rector(a)...... Es comprometido(a) y altruista con la institución [sobrepone la institución a sus propias necesidades]
+
+194                                                 D_Rcar10   El(la) rector(a)...... Busca el mejoramiento continuo de la institución
+
+                                                                                                                                         c
+
+Ítem      Opción de respuesta 1                  Opción de respuesta 2                        Opción de respuesta 3                     Opción de respuesta 4                    Opción de respuesta 5         Opción de respuesta 6        Opción de respuesta 7
+
+ 1
+
+ 2     Femenino                       Masculino
+
+ 3     Colombiana                     Venezolana                                  Otra
+
+ 4     Auditiva                       Física                                      Visual                                      Psicosocial                             Múltiple                              Ninguna
+
+ 5     Diversidad sexual              Indígena                                    Afrodescendiente                            Raizal                                  Desplazado                            Condición de pobreza         Ninguno
+
+ 6     Muy pocas veces                Pocas veces                                 Regularmente                                Seguido                                 Muy seguido
+
+ 7     Hacer tareas escolares         Hacer tareas domésticas                     Ayudar en el trabajo de un familiar         Trabajar para conseguir dinero          Actividades físicas o deportivas      Actividades recreativas      Actividades artísticas
+
+       Les falta bastante para cubrir Les falta poco para cubrir los gastos                                                                                           Cubren bastante más de los gastos
+ 8                                                                                Cubren más o menos los gastos mínimos       Cubren algo más de los gastos mínimos
+       los gastos mínimos             mínimos                                                                                                                         mínimos
+                                                                                                                              La pareja, esposo(a) de mi mamá o mi
+ 9     Vivo solo                      Mamá                                        Papá                                                                                Mi pareja [esposo(a), novio(a)]       Abuelo(a)                    Hermanos(as)
+                                                                                                                              papá
+
+10 Primaria incompleta                Primaria completa (hasta 5°)                Secundaria incompleta                       Secundaria completa (hasta 9°)          Media incompleta                      Media completa (hasta 11°)   Técnico profesional
+
+                                      Trabaja sin contrato en una actividad que   Trabaja con contrato en una actividad que   Es incapacitado permanentemente para
+11 Busca empleo                                                                                                                                                       Vive de jubilación, pensión o renta   Está en otra situación
+                                      le genera algún ingreso                     le genera algún ingreso                     trabajar
+
+12 Primaria incompleta                Primaria completa (hasta 5°)                Secundaria incompleta                       Secundaria completa (hasta 9°)          Media incompleta                      Media completa (hasta 11°)   Técnico profesional
+
+                                      Trabaja sin contrato en una actividad que   Trabaja con contrato en una actividad que   Es incapacitado permanentemente para
+13 Busca empleo                                                                                                                                                       Vive de jubilación, pensión o renta   Está en otra situación
+                                      le genera algún ingreso                     le genera algún ingreso                     trabajar
+
+14 Madre y/o padre                    Pareja de mi madre/padre                    Abuelo(a)                                   Otro familiar                           Apoderado
+
+15 Primaria incompleta                Primaria completa (hasta 5°)                Secundaria incompleta                       Secundaria completa (hasta 9°)          Media incompleta                      Media completa (hasta 11°)   Técnico profesional
+
+                                      Trabaja sin contrato en una actividad que   Trabaja con contrato en una actividad que   Es incapacitado permanentemente para
+16 Busca empleo                                                                                                                                                       Vive de jubilación, pensión o renta   Está en otra situación
+                                      le genera algún ingreso                     le genera algún ingreso                     trabajar
+
+17 Muy mala                           Mala                                        Regular                                     Buena                                   Muy buena
+
+18 No                                 Si, con algunos                             Si, con todos
+
+19 No                                 Si, con algunos                             Si, con todos
+
+20 Muy pocas veces                    Pocas veces                                 Regularmente                                Seguido                                 Muy seguido
+
+21 Energía                            Acueducto                                   Alcantarillado                              Recolección de basura                   Gas domiciliario o cilindro           Internet fijo o móvil        Ninguno
+
+22 No, en ningún momento              No, pero me prestan                         Si, pero debo compartirlos                  Si, totalmente
+
+23 1 año                              2 a 3 años                                  4 a 5 años                                  más de 5 años
+
+24 am                                 pm
+
+25 11-1                               11-2                                        11-3                                        11-4                                    11-5
+
+26 Inferior                           Igual                                       Superior
+
+27 No                                 No sé                                       Si
+
+28 Muy bajo                           Bajo                                        Medio                                       Alto                                    Muy alto
+
+29 Muy bajo                           Bajo                                        Medio                                       Alto                                    Muy alto
+
+30 Muy bajo                           Bajo                                        Medio                                       Alto                                    Muy alto
+
+31 Muy bajo                           Bajo                                        Medio                                       Alto                                    Muy alto
+
+                                                                                                                    c
+
+Ítem   Opción de respuesta 1            Opción de respuesta 2            Opción de respuesta 3                     Opción de respuesta 4                     Opción de respuesta 5           Opción de respuesta 6   Opción de respuesta 7
+
+32 Muy bajo                    Bajo                             Medio                                     Alto                                    Muy alto
+
+33 Muy bajo                    Bajo                             Medio                                     Alto                                    Muy alto
+
+34 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+35
+
+36 No la conozco               No la recuerdo                   La recuerdo, pero no es de mi interés     La recuerdo y me gusta parcialmente     La recuerdo y me gusta en su totalidad
+
+37 No la conozco               No la recuerdo                   La recuerdo, pero no es de mi interés     La recuerdo y me gusta parcialmente     La recuerdo y me gusta en su totalidad
+
+38 No los conozco              No los recuerdo                  Los recuerdo, pero no son de mi interés   Los recuerdo y me gustan parcialmente   Los recuerdo y me gustan en su totalidad
+
+39 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+40 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+41 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+42 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+43 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+44 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+45 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+46 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+47 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+48 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+49 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+50 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+51 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+52 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+53 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+54 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+55 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+56 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+57 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+58 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+59 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+60 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+61 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+62 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+63 Nunca                       Casi nunca                       Algunas veces                             Casi siempre                            Siempre
+
+                                                                                                         c
+
+Ítem   Opción de respuesta 1           Opción de respuesta 2           Opción de respuesta 3           Opción de respuesta 4             Opción de respuesta 5   Opción de respuesta 6   Opción de respuesta 7
+
+64 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+65 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+66 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+67 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+68 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+69 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+70 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+71 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+72 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+73 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+74 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+75 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+76 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+77 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+78 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+79 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+80 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+81 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+82 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+83 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+84 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+85 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+86 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+87 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+88 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+89 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+90 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+91 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+92 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+93 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+                                                                                                         c
+
+Ítem   Opción de respuesta 1           Opción de respuesta 2           Opción de respuesta 3           Opción de respuesta 4             Opción de respuesta 5   Opción de respuesta 6   Opción de respuesta 7
+
+
+94 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+95 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+96 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+97 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+98 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+99 Nunca                       Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+100 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+101 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+102 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+
+103 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+
+104 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+105 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+106 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+107 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+108 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+109 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+110 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+111 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+112 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+113 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+114 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+115 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+116 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+117 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+118 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+119 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+                                                                                                         c
+
+Ítem   Opción de respuesta 1           Opción de respuesta 2           Opción de respuesta 3           Opción de respuesta 4             Opción de respuesta 5   Opción de respuesta 6   Opción de respuesta 7
+
+120 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+121 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+122 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+123 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+124 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+125 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+126 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+127 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+128 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+129 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+130 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+131 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+132 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+133 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+134 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+135 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+136 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+137 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+138 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+139 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+140 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+141 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+142 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+143 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+144 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+145 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+146 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+147 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+148 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+149 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+150 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+                                                                                                         c
+
+Ítem   Opción de respuesta 1           Opción de respuesta 2           Opción de respuesta 3           Opción de respuesta 4             Opción de respuesta 5   Opción de respuesta 6   Opción de respuesta 7
+
+151 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+152 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+153 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+154 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+155 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+156 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+157 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+158 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+159 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+160 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+161 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+162 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+163 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+164 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+165 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+166 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+167 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+168 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+169 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+170 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+171 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+172 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+173 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+174 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+175 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+176 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+177 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+178 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+179 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+180 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+181 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+                                                                                                         c
+
+Ítem   Opción de respuesta 1           Opción de respuesta 2           Opción de respuesta 3           Opción de respuesta 4             Opción de respuesta 5   Opción de respuesta 6   Opción de respuesta 7
+
+182 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+183 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+184 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+185 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+186 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+187 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+188 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+189 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+190 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+191 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+192 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+193 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+194 Nunca                      Casi nunca                      Algunas veces                   Casi siempre                    Siempre
+
+                                                                                                    Formulario Estudiantes
+
+Ítem      Opción de respuesta 8            Opción de respuesta 9      Opción de respuesta 10          Opción de respuesta 11      Opción de respuesta 12     Opción de respuesta 13    Opción de respuesta 14
+
+ 1
+
+ 2
+
+ 3
+
+ 4
+
+ 5
+
+ 6
+
+       Otra actividad diferente a las
+ 7
+       de esta lista
+
+ 8
+
+       Hijos de la pareja de mi                                     Otros familiares diferentes a   Otras personas que no son
+ 9                                      Hijos míos
+       mamá o mi papá                                               los esta lista                  mis familiares
+
+10 Tecnología                           Profesional universitario   Especialización                 Maestría                    Doctorado                  No estudió                 No sé
+
+11
+
+12 Tecnología                           Profesional universitario   Especialización                 Maestría                    Doctorado                  No estudió                 No sé
+
+13
+
+14
+
+15 Tecnología                           Profesional universitario   Especialización                 Maestría                    Doctorado                  No estudió                 No sé
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+    ANEXO 2
+Modelo de Ecuaciones
+ Estructurales (SEM)
+
+                                                  Anexo
+
+                                    Julián Andrés Palomino Murcia
+
+
+Se presentan los resultados de la evaluación estadística realizada al modelo formativo formulado con la técnica
+PLS-SEM en R Studio.
+
+
+1. Evaluación del modelo teórico inicial
+
+1.1 Métricas estadísticas del modelo de medición formaivo
+
+Análisis de consistencia interna ( α − Cronbach) y validez convergente (AVE)
+
+##     alpha rhoC    AVE rhoA
+## GE 0.664 0.778 0.500 1.000
+## LD 0.939 0.935 0.645 1.000
+## CE -0.081 0.322 0.326 1.000
+##
+## Alpha, rhoC, and rhoA should exceed 0.7 while AVE should exceed 0.5
+
+Validez convergente resoecto al ítem global
+Constructo Gestión Escolar, GE
+
+##         GE_G
+## R^2    0.758
+## AdjR^2 0.756
+## GE     0.871
+
+Constructo Calidad Educativa, CE
+
+##         CE_G
+## R^2    0.685
+## AdjR^2 0.682
+## CE     0.827
+
+Constructo Liderazgo Directivo, LD
+
+##         LD_G
+## R^2    0.892
+## AdjR^2 0.891
+## LD     0.944
+
+
+
+
+                                                      1
+
+Validez discriminante (HTMT)
+
+                   Original Est.      Bootstrap Mean        Bootstrap SD     T Stat.    2.5% CI    97.5% CI
+GE -> LD                   0.843               0.843               0.061     13.805       0.707       0.957
+GE -> CE                   0.889               0.963               0.261      3.405       0.607       1.605
+LD -> CE                   0.578               0.676               0.183      3.159       0.420       1.147
+
+
+Significancia y relevancia de los pesos (weights/loadings)
+Weights
+
+                                               Bootstrap
+                         Original Est.             Mean       Bootstrap SD    T Stat.   2.5% CI    97.5% CI
+GE_Dadm -> GE                      0.214            0.199            0.137      1.567     -0.077      0.444
+GE_Dcomun ->                       0.053            0.059            0.120      0.438     -0.168      0.302
+GE
+GE_Dacad -> GE                    0.409             0.405            0.127      3.219      0.159      0.640
+GE_Ddirect -> GE                  0.568             0.557            0.161      3.523      0.261      0.866
+CE_reten -> CE                   -0.135            -0.129            0.192     -0.704     -0.508      0.278
+CE_result -> CE                   0.065             0.060            0.166      0.394     -0.264      0.387
+CE_Impact -> CE                   1.005             0.969            0.071     14.090      0.833      1.029
+Toler -> LD                       0.139             0.139            0.163      0.852     -0.197      0.457
+Consid -> LD                      0.476             0.454            0.207      2.303      0.035      0.866
+Estim -> LD                      -0.190            -0.178            0.239     -0.794     -0.618      0.316
+Motiv -> LD                       0.225             0.237            0.186      1.207     -0.113      0.645
+Cohes -> LD                      -0.008            -0.003            0.228     -0.033     -0.498      0.418
+Satis -> LD                       0.336             0.325            0.205      1.633     -0.049      0.735
+Implic -> LD                     -0.124            -0.114            0.206     -0.604     -0.505      0.318
+Caris -> LD                       0.338             0.287            0.207      1.635     -0.119      0.673
+
+
+Loadings
+
+                                               Bootstrap
+                         Original Est.             Mean       Bootstrap SD    T Stat.   2.5% CI    97.5% CI
+GE_Dadm -> GE                      0.704            0.673            0.114      6.178      0.429      0.850
+GE_Dcomun ->                       0.250            0.250            0.178      1.401     -0.085      0.599
+GE
+GE_Dacad -> GE                    0.804             0.786            0.088      9.162      0.587      0.915
+GE_Ddirect -> GE                  0.893             0.873            0.064     13.879      0.725      0.971
+CE_reten -> CE                   -0.040            -0.033            0.218     -0.182     -0.463      0.396
+CE_result -> CE                   0.032             0.024            0.194      0.166     -0.356      0.415
+CE_Impact -> CE                   0.988             0.954            0.069     14.306      0.837      0.999
+Toler -> LD                       0.696             0.670            0.101      6.877      0.449      0.848
+Consid -> LD                      0.849             0.816            0.072     11.729      0.651      0.928
+Estim -> LD                       0.787             0.753            0.079      9.898      0.573      0.887
+Motiv -> LD                       0.824             0.788            0.078     10.628      0.614      0.912
+Cohes -> LD                       0.825             0.790            0.082     10.062      0.591      0.916
+Satis -> LD                       0.822             0.780            0.079     10.450      0.607      0.906
+Implic -> LD                      0.758             0.720            0.091      8.316      0.499      0.866
+Caris -> LD                       0.849             0.800            0.082     10.345      0.594      0.923
+
+
+Colinealidad entre indicadores
+
+
+                                                       2
+
+## GE :
+##    GE_Dadm GE_Dcomun   GE_Dacad GE_Ddirect
+##      1.476     1.064      1.490      1.571
+##
+## LD :
+## Toler Consid Estim Motiv Cohes Satis Implic       Caris
+## 1.741 3.196 4.207 2.778 3.817 2.659 3.190         2.968
+##
+## CE :
+## CE_reten CE_result CE_Impact
+##     1.027    1.018     1.012
+
+
+1.2 Métricas estadísticas del modelo estructural formativo
+
+Poder explicativo
+
+##           CE    LD
+## R^2    0.265 0.510
+## AdjR^2 0.251 0.505
+## GE     0.341 0.714
+## LD     0.212     .
+
+Tamaño del efecto
+
+##       GE    LD    CE
+## GE 0.000 1.040 0.078
+## LD 0.000 0.000 0.031
+## CE 0.000 0.000 0.000
+
+Poder predictivo
+
+##
+## PLS in-sample metrics:
+##      CE_reten CE_result CE_Impact Toler Consid Estim Motiv Cohes Satis Implic
+## RMSE    0.808     0.710     0.653 0.518 0.537 0.478 0.483 0.513 0.477 0.466
+## MAE     0.732     0.562     0.528 0.409 0.440 0.377 0.394 0.426 0.385 0.384
+##      Caris
+## RMSE 0.423
+## MAE 0.346
+##
+## PLS out-of-sample metrics:
+##      CE_reten CE_result CE_Impact Toler Consid Estim Motiv Cohes Satis Implic
+## RMSE    0.824     0.722     0.688 0.532 0.558 0.496 0.502 0.539 0.501 0.487
+## MAE     0.743     0.570     0.557 0.415 0.453 0.392 0.409 0.445 0.403 0.399
+##      Caris
+## RMSE 0.433
+## MAE 0.355
+##
+## LM in-sample metrics:
+##      CE_reten CE_result CE_Impact Toler Consid Estim Motiv Cohes Satis Implic
+## RMSE    0.750     0.660     0.624 0.503 0.514 0.470 0.469 0.501 0.460 0.458
+## MAE     0.649     0.526     0.507 0.388 0.422 0.365 0.369 0.418 0.358 0.376
+
+
+                                            3
+
+  ##      Caris
+  ## RMSE 0.414
+  ## MAE 0.328
+  ##
+  ## LM out-of-sample metrics:
+  ##      CE_reten CE_result CE_Impact Toler Consid Estim Motiv Cohes Satis Implic
+  ## RMSE    0.873     0.771     0.726 0.533 0.556 0.507 0.504 0.549 0.516 0.498
+  ## MAE     0.745     0.620     0.581 0.404 0.459 0.399 0.394 0.454 0.403 0.410
+  ##      Caris
+  ## RMSE 0.438
+  ## MAE 0.344
+
+  Distribución del error predictivo de CE (reten, result, impact)
+
+
+Distribution of predictive error ofDistribution
+                                    CE_reten of predictive error ofDistribution
+                                                                    CE_result of predictive error of CE_Impact
+             0.8
+
+
+
+
+                                                          0.8
+
+
+
+
+                                                                                                      0.5
+             0.6
+
+
+
+
+                                                          0.6
+
+
+
+
+                                                                                                      0.4
+                                                                                                      0.3
+   Density
+
+
+
+
+                                                Density
+
+
+
+
+                                                                                            Density
+             0.4
+
+
+
+
+                                                          0.4
+
+
+
+
+                                                                                                      0.2
+             0.2
+
+
+
+
+                                                          0.2
+
+
+
+
+                                                                                                      0.1
+                                                          0.0
+
+
+
+
+                                                                                                      0.0
+             0.0
+
+
+
+
+                     −2    −1    0     1                        −2   −1   0    1    2                          −2   −1   0   1    2
+
+                   N = 110 Bandwidth = 0.2772                   N = 110 Bandwidth = 0.255                   N = 110 Bandwidth = 0.2428
+
+
+  Distribución del error predictivo de LD (Toler, Consid, Estim, Motiv)
+
+
+
+
+                                                                          4
+
+Distribution of predictive
+                         Distribution
+                           error of Toler
+                                      of predictive Distribution
+                                                    error of Consid
+                                                                 of predictiveDistribution
+                                                                              error of Estim
+                                                                                           of predictive error of Motiv
+
+
+
+
+                                                   0.6
+                0.8
+
+
+
+
+                                                                                                                            0.8
+                                                                                         0.8
+                                                   0.5
+                0.6
+
+
+
+
+                                                                                                                            0.6
+                                                   0.4
+
+
+
+
+                                                                                         0.6
+     Density
+
+
+
+
+                                        Density
+
+
+
+
+                                                                              Density
+
+
+
+
+                                                                                                                 Density
+                                                   0.3
+                0.4
+
+
+
+
+                                                                                                                            0.4
+                                                                                         0.4
+                                                   0.2
+                0.2
+
+
+
+
+                                                                                                                            0.2
+                                                                                         0.2
+                                                   0.1
+                0.0
+
+
+
+
+                                                                                         0.0
+
+
+
+
+                                                                                                                            0.0
+                                                   0.0
+
+
+
+
+                      −2    0   1                        −2    0   1                           −2.0 −0.5   1.0                    −2    0   1
+
+               N = 110 Bandwidth = 0.1877         N = 110 Bandwidth = 0.1969            N = 110 Bandwidth = 0.1607         N = 110 Bandwidth = 0.1771
+
+
+     Distribución del error predictivo de LD (Cohes, Satis, Implic, Caris)
+
+
+
+
+                                                                          5
+
+Distribution of predictive Distribution
+                           error of Cohes
+                                        of predictiveDistribution
+                                                      error of Satis
+                                                                  of predictive Distribution
+                                                                                error of Implic
+                                                                                             of predictive error of Caris
+
+
+
+
+                                                                                          0.8
+
+
+
+
+                                                                                                                               1.0
+                                                    0.8
+                 0.6
+
+
+
+
+                                                                                                                               0.8
+                                                                                          0.6
+                                                    0.6
+
+
+
+
+                                                                                                                               0.6
+      Density
+
+
+
+
+                                         Density
+
+
+
+
+                                                                               Density
+
+
+
+
+                                                                                                                    Density
+                 0.4
+
+
+
+
+                                                                                          0.4
+                                                    0.4
+
+
+
+
+                                                                                                                               0.4
+                 0.2
+
+
+
+
+                                                                                          0.2
+                                                    0.2
+
+
+
+
+                                                                                                                               0.2
+                 0.0
+
+
+
+
+                                                    0.0
+
+
+
+
+                                                                                          0.0
+
+
+
+
+                                                                                                                               0.0
+                       −2    0   1                        −2   0   1   2                        −2.0 −0.5   1.0                      −1.5   0.0   1.0
+
+                N = 110 Bandwidth = 0.1902         N = 110 Bandwidth = 0.1673            N = 110 Bandwidth = 0.1721           N = 110 Bandwidth = 0.1284
+
+
+
+
+      1.3 Evaluación del efecto mediador del constructo LD
+      ##       GE    LD    CE
+      ## GE 0.000 0.000 0.151
+      ## LD 0.000 0.000 0.000
+      ## CE 0.000 0.000 0.000
+
+      ##         Original Est. Bootstrap Mean                  Bootstrap SD                         T Stat.            2.5% CI
+      ##           0.151443435    0.197224284                   0.102079767                     1.483579357       -0.005263282
+      ##              97.5% CI
+      ##           0.405873291
+
+      Producto de los paths
+
+      ## [1] 0.05165906
+
+
+      2. Evaluación del modelo teórico re-especificado
+
+      2.1 Métricas estadísticas del modelo de medición formaivo
+
+      Análisis de consistencia interna ( α − Cronbach) y validez convergente (AVE)
+
+
+                                                                           6
+
+##    alpha rhoC    AVE rhoA
+## GE 0.744 0.847 0.651 1.000
+## LD 0.928 0.931 0.658 1.000
+## CE 1.000 1.000 1.000 1.000
+##
+## Alpha, rhoC, and rhoA should exceed 0.7 while AVE should exceed 0.5
+
+Validez convergente resoecto al ítem global Constructo Gestión Escolar, GE
+
+##         GE_G
+## R^2    0.692
+## AdjR^2 0.689
+## GE     0.832
+
+Constructo Calidad Educativa, CE
+
+##         CE_G
+## R^2    0.275
+## AdjR^2 0.268
+## CE     0.524
+
+Constructo Liderazgo Directivo, LD
+
+##         LD_G
+## R^2    0.890
+## AdjR^2 0.889
+## LD     0.943
+
+Validez discriminante (HTMT)
+
+                   Original Est.    Bootstrap Mean          Bootstrap SD     T Stat.     2.5% CI    97.5% CI
+GE -> LD                   0.833               0.833               0.052     16.109        0.724       0.922
+GE -> CE                   0.539               0.537               0.081      6.657        0.366       0.680
+LD -> CE                   0.450               0.449               0.076      5.909        0.296       0.595
+
+
+Significancia y relevancia de los pesos (weights/loadings)
+Weights
+
+                                               Bootstrap
+                         Original Est.             Mean       Bootstrap SD    T Stat.    2.5% CI    97.5% CI
+GE_Dadm -> GE                    0.239              0.230            0.129       1.856     -0.042      0.459
+GE_Dacad -> GE                   0.418              0.423            0.128       3.265      0.172      0.664
+GE_Ddirect -> GE                 0.554              0.545            0.154       3.596      0.261      0.854
+CE_Impact -> CE                  1.000              1.000            0.000         NA       1.000      1.000
+Toler -> LD                      0.121              0.118            0.148       0.817     -0.170      0.398
+Consid -> LD                     0.464              0.454            0.174       2.662      0.111      0.799
+Estim -> LD                     -0.204             -0.194            0.207      -0.986     -0.591      0.208
+Motiv -> LD                      0.218              0.231            0.174       1.252     -0.119      0.615
+Cohes -> LD                     -0.014             -0.008            0.210      -0.064     -0.446      0.397
+
+
+                                                       7
+
+                                         Bootstrap
+                        Original Est.        Mean       Bootstrap SD   T Stat.   2.5% CI   97.5% CI
+Satis -> LD                      0.323       0.324             0.191    1.696     -0.022      0.698
+Caris -> LD                      0.289       0.243             0.187    1.548     -0.129      0.583
+
+
+Loadings
+
+                                         Bootstrap
+                        Original Est.        Mean       Bootstrap SD   T Stat.   2.5% CI   97.5% CI
+GE_Dadm -> GE                    0.717       0.694             0.106    6.750      0.458      0.857
+GE_Dacad -> GE                   0.805       0.792             0.086    9.341      0.591      0.922
+GE_Ddirect -> GE                 0.889       0.876             0.058   15.230      0.747      0.975
+CE_Impact -> CE                  1.000       1.000             0.000      NA       1.000      1.000
+Toler -> LD                      0.693       0.675             0.092    7.506      0.482      0.840
+Consid -> LD                     0.861       0.838             0.063   13.718      0.692      0.937
+Estim -> LD                      0.794       0.770             0.070   11.413      0.618      0.888
+Motiv -> LD                      0.825       0.798             0.072   11.401      0.625      0.914
+Cohes -> LD                      0.827       0.802             0.074   11.100      0.635      0.921
+Satis -> LD                      0.826       0.793             0.072   11.481      0.631      0.911
+Caris -> LD                      0.841       0.802             0.076   11.071      0.617      0.920
+
+
+Colinealidad entre indicadores
+
+## GE :
+##    GE_Dadm  GE_Dacad GE_Ddirect
+##      1.473     1.433      1.570
+##
+## LD :
+## Toler Consid Estim Motiv Cohes        Satis       Caris
+## 1.722 2.999 4.036 2.772 3.816         2.540       2.880
+##
+## CE :
+## CE_Impact
+##         1
+
+
+2.2 Métricas estadísticas del modelo estructural formativo
+Poder explicativo
+
+##           CE    LD
+## R^2    0.252 0.514
+## AdjR^2 0.238 0.510
+## GE     0.330 0.717
+## LD     0.210     .
+
+Tamaño del efecto
+
+##       GE    LD    CE
+## GE 0.000 1.058 0.073
+## LD 0.000 0.000 0.030
+## CE 0.000 0.000 0.000
+
+
+                                                 8
+
+Poder predictivo
+
+##
+## PLS in-sample metrics:
+##      CE_Impact Toler Consid Estim Motiv Cohes Satis Caris
+## RMSE     0.656 0.520 0.536 0.479 0.484 0.512 0.477 0.423
+## MAE      0.531 0.410 0.436 0.379 0.396 0.426 0.385 0.346
+##
+## PLS out-of-sample metrics:
+##      CE_Impact Toler Consid Estim Motiv Cohes Satis Caris
+## RMSE     0.696 0.539 0.557 0.495 0.502 0.536 0.493 0.434
+## MAE      0.561 0.423 0.448 0.391 0.408 0.444 0.401 0.357
+##
+## LM in-sample metrics:
+##      CE_Impact Toler Consid Estim Motiv Cohes Satis Caris
+## RMSE     0.636 0.515 0.526 0.476 0.472 0.503 0.464 0.418
+## MAE      0.512 0.399 0.433 0.372 0.374 0.417 0.358 0.332
+##
+## LM out-of-sample metrics:
+##      CE_Impact Toler Consid Estim Motiv Cohes Satis Caris
+## RMSE     0.736 0.551 0.553 0.502 0.504 0.540 0.490 0.443
+## MAE      0.590 0.427 0.451 0.391 0.396 0.445 0.380 0.352
+
+Distribución del error predictivo de CE (impact)
+
+
+
+                      Distribution of predictive error of CE_Impact
+          0.5
+          0.4
+Density
+
+          0.3
+          0.2
+          0.1
+          0.0
+
+
+
+
+                         −2              −1               0             1   2
+
+                                      N = 110 Bandwidth = 0.2456
+
+
+Distribución del error predictivo de LD (Toler, Consid, Estim, Motiv)
+
+
+                                                    9
+
+Distribution of predictive
+                0.8
+                         Distribution
+                           error of Toler
+                                      of predictive Distribution
+                                                    error of Consid
+                                                                 of predictiveDistribution
+                                                                              error of Estim
+                                                                                           of predictive error of Motiv
+
+
+
+
+                                                                                                                         0.8
+                                                   0.6
+
+
+
+
+                                                                                      0.8
+                                                   0.5
+                0.6
+
+
+
+
+                                                                                                                         0.6
+                                                                                      0.6
+                                                   0.4
+     Density
+
+
+
+
+                                        Density
+
+
+
+
+                                                                           Density
+
+
+
+
+                                                                                                              Density
+                0.4
+
+
+
+
+                                                                                                                         0.4
+                                                   0.3
+
+
+
+
+                                                                                      0.4
+                                                   0.2
+                0.2
+
+
+
+
+                                                                                                                         0.2
+                                                                                      0.2
+                                                   0.1
+                0.0
+
+
+
+
+                                                                                      0.0
+
+
+
+
+                                                                                                                         0.0
+                                                   0.0
+
+
+
+
+                      −2   0   1   2                     −2    0   1                        −2.0 −0.5   1.0                    −2.0 −0.5   1.0
+
+               N = 110 Bandwidth = 0.1905         N = 110 Bandwidth = 0.1966         N = 110 Bandwidth = 0.1669         N = 110 Bandwidth = 0.1772
+
+
+     Distribución del error predictivo de LD (Cohes, Satis, Caris)
+
+
+
+
+                                                                         10
+
+Distribution of predictive error of Cohes
+            0.7
+                                    Distribution of predictive error ofDistribution
+                                                                        Satis       of predictive error of Caris
+
+
+
+
+                                                                                                      1.0
+                                                         0.8
+            0.6
+
+
+
+
+                                                                                                      0.8
+            0.5
+
+
+
+
+                                                         0.6
+            0.4
+
+
+
+
+                                                                                                      0.6
+  Density
+
+
+
+
+                                               Density
+
+
+
+
+                                                                                            Density
+                                                         0.4
+            0.3
+
+
+
+
+                                                                                                      0.4
+            0.2
+
+
+
+
+                                                         0.2
+
+
+
+
+                                                                                                      0.2
+            0.1
+            0.0
+
+
+
+
+                                                         0.0
+
+
+
+
+                                                                                                      0.0
+                   −2    −1     0     1                        −2    −1        0   1   2                    −1.5    −0.5     0.5
+
+                  N = 110 Bandwidth = 0.1893                   N = 110 Bandwidth = 0.1653                   N = 110 Bandwidth = 0.1265
+
+
+
+
+ 2.3 Evaluación del efecto mediador del constructo LD
+ ##       GE    LD    CE
+ ## GE 0.000 0.000 0.151
+ ## LD 0.000 0.000 0.000
+ ## CE 0.000 0.000 0.000
+
+ ##         Original Est. Bootstrap Mean                   Bootstrap SD                T Stat.                  2.5% CI
+ ##           0.150529973    0.184510879                    0.089070516            1.690008983              0.007033859
+ ##              97.5% CI
+ ##           0.361423837
+
+ Producto de los paths
+
+ ## [1] 0.04967349
+
+
+
+
+                                                                          11

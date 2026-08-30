@@ -1,0 +1,1015 @@
+ISSN 1809-4031
+                                                                                   eISSN 1809-4309
+                                                    https://doi.org/10.5212/PraxEduc.v.21.24571.001
+
+                                                                                              Sección: Artículos
+
+    Desigualdades en el desempeño académico en educación secundaria en el
+                                               Perú: un análisis multinivel
+
+    Educational inequalities in academic performance in secondary education
+                                                in Peru: a multilevel analysis
+
+              Desigualdades educacionais no desempenho acadêmico no ensino
+                                   secundário no Peru: uma análise multinível
+
+                                                                          Myrian Luz Ricaldi Echevarria
+                                                                 https://orcid.org/0000-0003-4251-0562
+
+Resumen: Este estudio examina las desigualdades en el desempeño académico en matemáticas, lectura y
+ciencias sociales en estudiantes peruanos, considerando variables como género, gestión escolar y ubicación
+geográfica. A través de modelos multinivel, se cuantificaron las disparidades y se estimó la variabilidad en
+los niveles individual, escolar y regional. Los resultados indican que los estudiantes de áreas urbanas y de
+instituciones privadas presentan un rendimiento significativamente superior. Además, se observó una
+asociación significativa entre la comprensión lectora y el desempeño en ciencias sociales. Estos hallazgos
+resaltan la necesidad de políticas educativas basadas en evidencia para reducir desigualdades estructurales en
+el sistema educativo.
+Palabras clave: Desigualdad educativa. Educación secundaria. Análisis multinivel.
+
+Abstract: This study examines academic performance inequalities in mathematics, reading, and social
+sciences among peruvian students, considering gender, school management, and geographic location. Using
+multilevel models, disparities were quantified, and variance was estimated at the individual, school, and
+regional levels. Results indicate that students in urban areas and private schools achieve significantly higher
+performance. Additionally, a strong association between reading proficiency and social sciences achievement
+was observed. These findings underscore the need for evidence-based educational policies to address
+structural inequalities in the education system.
+Keywords: Educational inequality. Secondary education. Multilevel analysis.
+
+Resumo: Este estudo investiga as desigualdades no desempenho acadêmico em matemática, leitura e
+ciências sociais entre estudantes peruanos, considerando variáveis como gênero, gestão escolar e localização
+geográfica. Por meio de modelos multiníveis, quantificaram-se as disparidades e estimou-se a variabilidade
+nos níveis individual, escolar e regional. Os resultados indicam que estudantes de áreas urbanas e escolas
+privadas apresentam desempenho significativamente superior. Além disso, observou-se uma forte
+
+
+ Universidad Tecnológica del Perú. Doctora en Educación por la Universidad Nacional Federico Villarreal. E-mail:
+<C23170@utp.edu.pe>.
+
+
+                                               Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                    Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                   1
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+associação entre a proficiência em leitura e o rendimento em ciências sociais. Esses achados destacam a
+necessidade de políticas educacionais baseadas em evidências para mitigar desigualdades estruturais no
+sistema educacional.
+Palavras-chave: Desigualdade educacional. Educação secundária. Análise multinível.
+
+
+Introducción
+
+          La desigualdad educativa se refiere a las diferencias sistemáticas en el acceso, la calidad y
+los resultados de la educación entre distintos grupos de estudiantes. Estas disparidades están
+determinadas por factores socioeconómicos, geográficos, de género o de gestión institucional
+(Tiramonti, 2016; UNESCO, 2022). Dubet (2011) argumenta que la desigualdad educativa no solo
+se manifiesta en la oferta educativa, sino también en cómo los sistemas escolares reproducen o
+agravan las brechas sociales preexistentes. En América Latina, diversos estudios han identificado
+una fuertemente correlación entre la estratificación económica y la desigualdad educativa,
+señalando la ausencia de políticas de equidad efectivas como un factor clave en su persistencia
+(Tedesco, 2018). El desempeño académico se define como el nivel de logro de los estudiantes en
+distintas áreas del conocimiento, evaluado a través de pruebas estandarizadas, calificaciones
+escolares y otros indicadores de aprendizaje (OECD, 2021). Este concepto está influenciado por
+múltiples factores, que incluyen las condiciones individuales del estudiante, el contexto familiar,
+escolar y social (Tene-Tenempaguay et al., 2024). Investigaciones han demostrado que el
+desempeño académico es un predictor clave del éxito profesional y social futuro, por lo que subraya
+la importancia de comprender sus determinantes para diseñar políticas educativas eficaces (Wang
+et al., 2023).
+        La relación entre desigualdad educativa y desempeño académico ha sido ampliamente
+estudiada. Bourdieu y Passeron (1977) sostienen que el capital cultural influye significativamente
+en el rendimiento escolar, perpetuando las diferencias de clase social. Estudios recientes han
+encontrado que las brechas de desempeño en matemáticas y lectura están estrechamente
+relacionadas con el nivel socioeconómico y el acceso a recursos educativos de calidad (Cervini et
+al., 2015; Cervini et al., 2016; Gamboa y Krüger, 2016; Quiroz et al., 2018; Rodríguez Rodríguez y
+Guzmán Rosquete, 2019). En este sentido, la desigualdad educativa no solo afecta la equidad en el
+acceso a la educación, sino que también impacta directamente en las oportunidades de aprendizaje
+y en los logros académicos de los estudiantes.
+        En el Perú, este vínculo presenta una dimensión estructural crítica. El sistema educativo
+peruano muestra uno de los niveles más altos de segregados socioeconómica en América Latina
+(Murillo & Carrillo, 2020), un mecanismo que intensifica las desigualdades al incidir directamente
+en el rendimiento académico (Murillo & Carrillo, 2021) dentro de un marco de “desgobierno del
+mercado educativo” (Balarin & Escudero, 2019) lo que limita las oportunidades educativas de los
+más vulnerables.
+        La desigualdad educativa es un fenómeno complejo que afecta el desempeño académico de
+los estudiantes y está influenciada por variables como el género, la edad, la ubicación geográfica y
+el tipo de gestión escolar. La literatura sobre este tema ha documentado cómo estas variables
+interactúan para generar disparidades en las tasas de exclusión, abandono y logros académicos.
+Diversos estudios han demostrado que los diferentes grupos de edad pueden enfrentar distintos
+niveles de exclusión o tasas de abandono, lo que en última instancia afecta sus logros educativos
+(Ministerio de Educación, Centro de estudios, 2020). El género, por su parte, también es un factor
+relevante en la desigualdad educativa, ya que existen evidencias sobre diferencias significativas en
+términos acceso, permanencia y éxito académico (Ministerio de Educación Nacional, 2022). Los
+estudios muestran que los niños y las niñas pueden tener un desempeño diferente en varias
+
+                                            Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                 Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                           2
+
+                                                                           Myrian Luz Ricaldi Echevarria
+
+materias, y que las expectativas sociales y las normas culturales influyen en sus experiencias
+educativas (Santos Rego et al., 2020; Tene-Tenempaguay et al., 2024). Abordar estas desigualdades
+resulta esencial para garantizar la equidad en el sistema educativo.
+         Asimismo, la ubicación geográfica juega un papel determinante en la desigualdad educativa.
+Se han identificado marcadas diferencias en los resultados académicos entre áreas urbanas y rurales,
+así como entre distintas regiones dentro de un mismo país (Ministerio de Educación, 2022).
+Factores como el acceso a recursos educativos, la infraestructura escolar y la calidad docentes varían
+significativamente según la zona geográfica, lo que genera brechas en el rendimiento académico.
+En el Perú, estas brechas reflejan dinámicas de segregación socioespacial, donde la oferta educativa
+en territorios pobres tiende a ser homogéneamente deficiente (Carrillo & Murillo, 2021). A esto se
+suma una desigualdad persistente en el gasto educativo familiar que favorece a zonas urbanas y
+grupos de mayores ingresos (Cuenca & Urrutia, 2019).
+         La desigualdad en el desempeño en matemáticas, lectura y ciencias sociales persiste y está
+vinculada a factores estructurales como el estatus socioeconómico, el género y las prácticas
+institucionales. Esta desigualdad tiene raíces en barreras sistémicas históricas, incluidas la
+segregación educativa y la discriminación estructural, que han afectado a grupos marginados.
+Dichas brechas en el aprendizaje tienen consecuencias a largo plazo, impactando la movilidad social
+y la estabilidad económica de los estudiantes (Suleiman et al., 2024).
+          Numerosos estudios han señalado que los estudiantes de bajos ingresos enfrentan mayores
+dificultades académicas debido a factores como la financiación insuficiente, el acceso limitado a
+recursos educativos de calidad y la menor participación de los padres en su proceso educativo (Liu
+et al., 2022; Rodríguez, 2021; Wang et al., 2023). Por ejemplo, investigaciones han demostrado que
+los estudiantes de entornos socioeconómicos desfavorecidos suelen obtener puntajes
+significativamente más bajos en matemáticas y lectura en comparación con sus pares de ingresos
+más altos (Michael & Kyriakides, 2023).
+         Las controversias en torno a la desigualdad educativa se centran en la efectividad de las
+políticas e intervenciones destinadas a reducir estas brechas. Un tema recurrente en la literatura es
+la disparidad de género en el rendimiento académico (Capdevila & Bellmunt, 2016; Chávez Vaca et
+al., 2020; García-Peña, 2023; Lorenzo-Rumbo et al., 2024; Molina-Muñoz et al., 2022; Sarmiento
+Silva et al., 2012; Vieites et al., 2024). Sin embargo, la magnitud y dirección de estas diferencias
+varían según la materia evaluada, la edad de los estudiantes y el contexto específico. El impacto del
+género en el rendimiento académico no es homogéneo en todos los niveles educativos. Mientras
+que, a nivel escolar, algunos estudios identifican una ventaja para los varones en matemática
+(Giménez & Barrado, 2020; Giménez et al., 2021; Izaguirre & Di Capua, 2020; Krüger, 2020;
+Meisenberg, 2016; Rodríguez Rosero et al., 2021), otros encuentran que las niñas obtienen mejores
+resultados en lectura (Cárcamo et al., 2020; Rodríguez Rosero et al., 2021; Tsai et al., 2018; Vieites et
+al., 2024). Estas diferencias pueden estar influenciadas por sesgos educativos y sociales, lo que
+refuerza la necesidad de implementar estrategias para mitigar estas disparidades. Por otro lado, a
+nivel superior Rincón-Báez & Arias-Velandia (2019) confirmaron diferencias estadísticamente
+significativas en los puntajes entre hombres y mujeres, destacando disparidades basadas en el origen
+social del examen Saber Pro de 2016-2018.
+        Es importante precisar que, la influencia del género puede interactuar con otros factores,
+como el estatus socioeconómico y el tipo de escuela, lo que dificulta aislar el efecto del género
+(García-Peña, 2023; Santos Rego et al., 2020). Es crucial reconocer la naturaleza multifacética de las
+disparidades de género en la educación y reconocer que estas disparidades no están determinadas
+únicamente por las habilidades inherentes, sino que están significativamente moldeadas por
+factores sociales y culturales. El tipo de gestión escolar (pública o privada) es otro factor que influye
+
+                                            Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                 Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                            3
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+en los resultados académicos (Molina-Muñoz et al., 2022; Navarro-Saldaña et al., 2022; Verdugo et
+al., 2023), aunque la evidencia no es completamente consistente, ya que se han encontrado que los
+factores tradicionales como la gestión no fueron predictores significativos del riesgo de
+rendimiento académico (Muelle, 2016). Existen estudios que indican que los estudiantes de
+instituciones privadas obtienen, en promedio, mejores resultados académicos que sus pares en
+escuelas públicas (Navarro-Saldaña et al, 2022; Muelle, 2023; Verdugo et al., 2023). Esta disparidad
+subraya la importancia de examinar cómo los diferentes estilos de gestión y fuentes de financiación
+afectan la calidad educativa y el éxito de los estudiantes (Tene-Tenempaguay et al., 2024). Sin
+embargo, otros hallazgos sugieren que se obtienen mejores resultados en instituciones de gestión
+pública (Rodríguez Rosero, 2021). Estos resultados pueden sugerir que existen otros factores
+determinantes tales como el clima escolar el cual es más relevante que el tipo de escuela (Rodríguez
+de Luque, 2024).
+        Adicionalmente, la ubicación geográfica influye significativamente en el acceso a una
+educación de calidad y, por ende, en el desempeño académico. Estudios han demostrado que la
+segregación educativa está fuertemente correlacionada con el nivel socioeconómico y la
+distribución geográfica de los estudiantes (Abellán, 2023; Alonso-Pastor et al., 2024; Favila Tello &
+Hernández Bárriga, 2019; Favila & Huape, 2023; Ison et al., 2015; Muelle, 2016, 2019, 2023). En
+este sentido, se ha identificado que los estudiantes en zonas rurales debido a diferencias en
+infraestructura, acceso a docentes capacitados y disponibilidad de recursos educativos muestran
+menores resultados académicos (Rodríguez Rosero, 2021).
+        Las investigaciones revisadas destacan la interacción compleja entre el género, el tipo de
+gestión escolar y la ubicación geográfica en la determinación del rendimiento académico. Estos
+factores no operan de manera aislada, sino que interactúan para producir diferentes niveles de
+desigualdad en distintos contextos (Abadia et al., 2018; García-Peña, 2023). En particular, Gómez-
+Talal (2024) ha señalado que el género influye de manera diferencial en el desempeño en
+matemática, lectura y ciencias sociales dependiendo del tipo de escuela y la región geográfica.
+       Abordar la desigualdad en el rendimiento académico requiere un enfoque integral que
+contemple no solo reformas educativas, sino también intervenciones sociales más amplias.
+Estrategias como el fortalecimiento de la participación comunitaria, la inversión en infraestructura
+educativa y la implementación de políticas de equidad pueden contribuir a reducir estas brechas
+(Chen et al., 2018). Además, es fundamental reconocer la importancia de la comprensión lectora
+como una habilidad transversal que impacta el rendimiento académico en distintas disciplinas
+(Rodríguez-García & Arias-Gago, 2021; Rogiers et al., 2020).
+        La urgencia de estas intervenciones aumenta al considerar que las desigualdades educativas
+peruanas conectan bajos aprendizajes en la escuela con trayectorias laborales precarias (Jaramillo &
+Balarin, 2023), en un contexto regional donde puede darse la “paradoja del progreso desigual”
+(Cuenca & Pérez, 2025), mejorando promedios mientras aumentan las brechas. En este contexto,
+el presente estudio tiene como objetivo analizar las desigualdades en el desempeño académico en
+matemáticas, lectura y ciencias sociales entre estudiantes peruanos, considerando factores como el
+género, el tipo de gestión escolar, la zona geográfica y el departamento. Los objetivos específicos
+son:
+        - Cuantificar las brechas en el desempeño académico promedio en matemáticas, lectura y
+ciencias sociales según género, tipo de gestión escolar, zona geográfica y departamento.
+        - Estimar el impacto relativo de cada variable (género, gestión escolar, zona geográfica) y
+sus interacciones en el desempeño académico, utilizando modelos multinivel para desglosar las
+fuentes de varianza a nivel individual, escolar y regional.
+
+                                           Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                          4
+
+                                                                                       Myrian Luz Ricaldi Echevarria
+
+Método
+
+
+Participantes
+
+         Este estudio transversal descriptivo analizó datos de 119 859 estudiantes peruanos del
+segundo grado de educación secundaria pertenecientes a instituciones de Educación Básica
+Regular. La información proviene de una base de datos secundaria correspondiente a la Evaluación
+Nacional de Logros de Aprendizaje de Estudiantes (ENLA) 2023, la cual evaluó el desempeño en
+lectura, matemática y ciencias sociales. El uso de la base de datos anonimizada, de dominio público
+para fines académico, eximió la evaluación por un comité de ética, respetándose en todo momento
+la confidencialidad y el uso responsable de la información.
+         Se empleó un diseño de muestreo probabilístico, estratificado y bi-etápico, para garantizar
+representatividad nacional. En cuanto a las características sociodemográficas de la muestra (Tabla
+1), el 49.8% de los participantes fueron mujeres y el 50.2% hombres. Respecto al tipo de gestión
+de la institución educativa, el 78% de los estudiantes asistían a instituciones públicas, mientras que
+el 22% estudiaban en colegios de gestión privada. Asimismo, el 79.1% de los participantes residían
+en zonas urbanas, en contraste el 20.9% provenían de zonas rurales.
+                Tabla 1 - Características de los participantes y de las instituciones a las que pertenecen
+ Variables                             Categorías                   n                           %
+ Género                                Femenino                    59 739                     49.8
+                                       Masculino                   60 120                     50.2
+
+ Tipo de gestión de la institución     Público                     93 477                     78
+ educativa                             Privado                     26 382                     22
+
+ Área geográfica                       Urbana                      94 797                     79.1
+                                       Rural                       25 062                     20.9
+
+ Total                                                             119 859                    100
+
+Fuente: Elaboración propia.
+
+
+Procedimiento y análisis de datos
+
+        En primer lugar, se aplicaron estadísticas básicas y visualización de datos para explorar
+tendencias generales y detectar desigualdades significativas. Posteriormente, se aplicaron modelos
+de regresión multinivel, adecuados para muestras con estructura jerárquica. Estos modelos son una
+respuesta a la necesidad de analizar la relación entre los individuos y el medio en donde se
+desenvuelven (De la Cruz, 2008), dado que separar una compleja estructura en unidades más
+simples permite tener un mejor conocimiento de la realidad.
+       En el caso del presente estudio, los estudiantes están anidados dentro de colegios y éstos
+dentro de departamentos, un modelo multinivel permite desglosar la varianza en el desempeño
+académico en matemática, lectura y ciencias sociales en tres niveles: individual, escolar y regional.
+Los niveles de análisis considerados fueron:
+          - Nivel 1: Características del estudiante (género, nivel de desempeño).
+          - Nivel 2: Características escolares (tipo de gestión, zona geográfica).
+          - Nivel 3: Características regionales (departamento).
+
+
+                                                  Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                       Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                       5
+
+      Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+        Finalmente, se realizaron análisis de interacción para explorar cómo los efectos de las
+variables cambian en función del contexto educativo y social.
+
+
+Resultados
+
+        Las puntuaciones nacionales en la ENLA 2023 revelaron un rendimiento promedio de
+561.53 (±76.35) en matemática, 584.72 ( ±65.95) en lectura y 513.05 (±104.33) en ciencias
+sociales. Respecto al área geográfica (Tabla 2) se analizaron las diferencias en los desempeños en
+matemática, lectura y ciencias sociales según el área geográfica (urbana y rural) mediante la prueba
+U de Mann-Whitney, dado que las variables no seguían una distribución normal (p < .001, prueba
+Kolmogorov- Smirnov). Los puntajes promedio fueron consistentemente más altos en el área
+urbana en todas las disciplinas evaluadas.
+       La prueba U de Mann-Whitney confirmó diferencias significativas (p < .001) entre las
+puntuaciones de estudiantes urbanos y rurales en matemática (U = 840 774 865, Z = -71.26, lectura
+(U = 752 217 933.5, Z = -89.44) y ciencias sociales (U = 834 702 236.00, Z = -72.51). Los
+estudiantes de áreas urbanas obtuvieron rangos promedio más altos: 63 591.79 vs. 46 079.30 en
+matemática, 64 525.96 vs. 42 545.78 en lectura y 63 655.85 vs. 45 836.99 en ciencias sociales en
+comparación con sus pares de áreas rurales.
+ Tabla 2 - Estadísticos descriptivos, resultados de la U de Mann- Whitney y correlaciones para matemática, lectura y
+                                        ciencias sociales según el área geográfica
+                            Urbano               Rural
+  Variables                 M         DE         M        DE      Z             p       1          2        3
+  1.        Matemática      570       73         529      80      -71.26        < .001  1
+  2.        Lectura         593       63         552      65      -89.44        < .001  .73**      1
+  3.        Ciencias        525       100        470      109     -72.51        < .001  .67**      .76** 1
+  sociales
+Fuente: M = Media, DE = Desviación estándar, Z= Valor estandarizado de la prueba Z, p = probabilidad de
+significación, ** p < .001.
+
+        En la Figura 1, se comparan los resultados en matemática, lectura y ciencias sociales según
+el área geográfica (urbana o rural). Se observa que, en el área urbana en promedio los estudiantes
+alcanzan mejores resultados en los tres cursos. Individualmente, los mejores puntajes están en
+ciencias sociales tanto en la zona urbana como en la rural y los inferiores también en ciencias
+sociales en ambas zonas geográficas. La distribución más dispersa es en ciencias sociales, en la zona
+urbana y rural, en contraste con la de lectura en el área urbana y rural que muestra resultados más
+homogéneos.
+
+
+
+
+                                                Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                     Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                       6
+
+                                                                                     Myrian Luz Ricaldi Echevarria
+
+          Figura 1 - Diagrama de caja para matemática, lectura y ciencias sociales según el área geográfica
+
+
+
+
+Fuente: Elaboración propia.
+
+         Las diferencias observadas podrían reflejar desigualdades en el acceso a infraestructura
+educativa, formación docente y materiales de aprendizaje. El análisis comparativo entre
+instituciones públicas y privadas mostró desempeños superiores en las segundas (Tabla 3). En
+matemática, los estudiantes de colegios privados obtuvieron un rango promedio de 224 816.06
+frente a 167 081.02 en colegios públicos (U= 7 533 784 534, Z = -138.188, p < .001), con un
+tamaño del efecto considerable (r = 0.50). Patrón similar se observó en lectura y ciencias sociales,
+con diferencias significativas a favor del sector (p < 0.001).
+Tabla 3 - Puntaje en matemática, lectura y ciencias sociales según tipo de gestión
+                                          Pública                                    Privada
+ Variables                                M                   DE                     M                 DE
+ 1.       Matemática                      552                75                      594               72
+ 2.       Lectura                         575                64                      618               61
+ 3.       Ciencias sociales               500                103                     558               97
+Fuente: M = Media, DE = Desviación estándar, ** p < .001.
+
+         En la Figura 2, considerando el tipo de gestión se comparan los resultados en matemática,
+lectura y ciencias sociales. Los resultados revelan que, en las instituciones privadas, en promedio,
+los estudiantes alcanzan mejores resultados en las tres pruebas. Individualmente, los mejores
+puntajes están en ciencias sociales tanto en instituciones públicas como privadas y los inferiores
+también en ciencias sociales en ambas zonas geográficas. La distribución más dispersa es en ciencias
+sociales, en instituciones públicas y privadas, así como en matemática correspondiente a
+instituciones públicas, en contraste con la de lectura en instituciones públicas y privadas que
+muestra resultados más homogéneos.
+
+
+
+
+                                                 Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                      Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                     7
+
+      Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+          Figura 2 - Diagrama de caja para matemática, lectura y ciencias sociales según el tipo de gestión
+
+
+
+
+Fuente: Elaboración propia.
+
+        En la Figura 3, se comparan los resultados en lectura según el género. Los datos muestran
+que, en promedio, las mujeres obtienen puntajes más altos en lectura en comparación con los
+hombres. Además, se observa que la distribución de los puntajes es más homogénea en las mujeres,
+mientras que en los hombres hay una mayor dispersión en los resultados. La presencia de valores
+atípicos sugiere que algunos estudiantes de ambos géneros presentan un desempeño
+significativamente inferior o superior al promedio del grupo. Estos resultados refuerzan la
+importancia de considerar diferencias de género en el diseño de estrategias pedagógicas enfocadas
+en mejorar la comprensión lectora en ambos grupos.
+
+
+
+
+                                                Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                     Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                               8
+
+                                                                                 Myrian Luz Ricaldi Echevarria
+
+                     Figura 3 - Diagrama de caja comparativo del nivel de lectura por género
+
+
+
+
+Fuente: Elaboración propia.
+
+        En cuanto al análisis multinivel, el modelo nulo (Tabla 4) permitió descomponer la varianza
+en matemática, lectura y ciencias sociales en tres niveles jerárquicos: estudiantes (nivel 1), gestión
+escolar (nivel 2) y departamento (nivel 3). Se identificó que la mayor proporción de la variabilidad
+se encuentra a nivel individual se encuentra a nivel individual, con 81.08% en matemática, 78.23%
+en lectura y 84.16% en ciencias sociales.
+         El impacto de la gestión escolar fue mayor en lectura (ICC = 14.28%) que en matemática
+(ICC = 10%) y ciencias sociales (ICC = 10.48%). A nivel departamental, la variabilidad fue más
+significativa en matemática (ICC = 8.92%), seguida de lectura (ICC = 7.49%) y ciencias sociales
+(ICC = 5.36%). Esto indica que, en matemática el 8,92% de su variabilidad es atribuible a
+diferencias entre departamentos y el 10% a diferencias entre escuelas, mientras que el 81.08% de la
+variabilidad restante se encuentra dentro de las escuelas, entre los estudiantes.
+                 Tabla 4 - Resumen del modelo nulo para matemática, lectura y ciencias sociales
+ Área            Intercepto          Var           ICC       Var              ICC           Var       R2 ***
+                 (promedio           D             D         GE               GE            Res.
+                 estimado)
+
+ Matemática      572 (DE =17.4, p=     498            8.92%      565            10%            5085   17.3%
+                 .012)
+ Lectura         595 (DE = 18, p=      305            7.49%      627            14.28%         3763   19.8%
+                 .015)
+ Ciencias        526 (DE =24.4,        556            5.36%      1149           10.48%         9810   14.8%
+ sociales        p=. 024)
+
+Fuente: Var = Varianza, ICC= Coeficiente de correlación intraclase, D = Departamento, GE = Gestión escolar, Var.
+Res = Varianza residual, R2 *** = Coeficiente de determinación condicional.
+
+        Los resultados del modelo nulo justifican la necesidad de avanzar hacia un modelo 2, en el
+que se incluyan los efectos principales de las variables explicativas de interés. Este modelo permitirá
+
+
+                                               Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                    Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                   9
+
+      Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+identificar si las desigualdades observadas en el modelo nulo se explican por diferencias individuales
+o si persisten incluso después de controlar por características específicas del estudiante y del
+contexto escolar. La transición hacia el modelo 2 también permite avanzar en el cumplimiento del
+objetivo específico de cuantificar las brechas en el desempeño académico según género, tipo de
+gestión escolar, zona geográfica y departamento.
+        En la Tabla 5, el análisis multinivel de efectos principales mostró diferencias significativas
+según género, zona geográfica y nivel de logro. En matemática, los hombres obtuvieron 1.62
+puntos más en promedio que las mujeres (p < .001), mientras que en lectura las mujeres superaron
+a los hombres en 0.76 puntos (p < .001). En ciencias sociales, las diferencias de género no fueron
+significativas. Respecto a la zona geográfica, los estudiantes de zonas urbanas obtuvieron, en
+promedio, puntajes superiores a los de zonas rurales: -8.15 puntos en matemáticas, -3.97 en lectura
+y -5.66 en ciencias sociales (p < .001 para todas las comparaciones). El desempeño académico
+aumentó significativamente según el nivel de logro, con los estudiantes en el nivel “satisfactorio”
+obteniéndose incrementos sustanciales en matemáticas (β = 213.89), lectura (β = 200.46) y ciencias
+sociales (β = 294.13, p < .001).
+        El análisis de la varianza reveló que la mayor parte de la variabilidad en los puntajes
+académicos se encuentra a nivel individual, explicada por la varianza residual. No obstante, también
+se observaron varianzas pequeñas pero significativas a nivel de departamento y gestión escolar.
+Para matemáticas, la varianza a nivel de departamento fue de 21.84, mientras que en gestión escolar
+fue de 2.82, con valores similares observados en lectura y ciencias sociales. Estos resultados
+refuerzan la necesidad de un enfoque multinivel, ya que las características contextuales explican
+parte de la variación en el rendimiento académico.
+
+        Los coeficientes de determinación (𝑅2) indicaron que el modelo capturó entre el 82.5% y el
+86.1%. de la variabilidad total en los tres dominios, validando su solidez y justificando la progresión
+hacia el análisis del modelo 3, donde se examinarán las interacciones entre las variables predictoras
+para identificar patrones más complejos de desigualdad educativa.
+            Tabla 5 - Modelo multinivel de efectos principales para matemática, lectura y ciencias sociales
+ Variable                     Matemática                   Lectura                        Ciencias sociales
+ Intercepto                   583.64 (1.52) ***            579.07(1.98) **                512.97(2,28) **
+ Género (F-M)                 -1.62 (0.18) ***             0.76(0.14) ***                 0.12(0.22) ns
+ Área geográfica (Rural. -8.15 (0.24) ***                  -3.97(0.19) ***                -5.66(0.30) ***
+ Urbana)
+ Nivel: Inicio                81.54 (0.22) ***             66.60 (0.25) ***               95.69 (0.33) ***
+ Nivel: En proceso            141.47 (0.28) ***            127.37 (0.26) ***              181.26 (0.31) ***
+ Nivel: Satisfactorio         213.89 (0.33) ***            200.46 (0.29) ***              294.13 (0.39) ***
+ Varianza.            Nivel 21.84 (DE = 4.67, 5.27 (DE = 2,30, ICC= 9.87 (DE = 3.14, ICC=
+ departamento                 ICC=0.02)                    0.01)                          0.01)
+ Varianza. Nivel gestión      2.82 (DE = 1.68, ICC= 7.36 (DE =2.71, ICC= 9,58 (DE = 3,09, ICC=
+                              0.003)                       0.01)                          0.01)
+ Varianza residual            965.15(DE = 31.07)           595.47 (DE =24.40)             1489.30 (DE =38.59)
+ Marginal R2                  0.825                        0.856                          0.859
+ Condicional R2               0.829                        0.859                          0.861
+Fuente: *** p <. 001, ** p< .01, ns: no significativo.
+
+         El modelo 3 (interacciones) presentado en la Tabla 6, permitió identificar efectos
+significativos y patrones importantes en el desempeño académico en matemáticas, lectura y ciencias
+sociales. En general, los niveles más altos de desempeño académico se asociaron con incrementos
+sustanciales en los puntajes, especialmente en el nivel "satisfactorio" (matemáticas: β = 218.54,
+lectura: β = 200.74, ciencias sociales: β = 297.55, p < .001).
+
+
+
+                                              Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                   Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                10
+
+                                                                                     Myrian Luz Ricaldi Echevarria
+
+        En matemáticas, el género tuvo un efecto significativo, con los hombres superando en
+promedio a las mujeres (β = -2.45, p < .001). En lectura, en cambio, las mujeres mostraron un
+desempeño ligeramente superior (β = 0.57, p < .01). En ciencias sociales, las diferencias de género
+no fueron significativas. La zona geográfica fue un predictor relevante en los tres dominios, con
+los estudiantes de áreas rurales obteniendo puntajes más bajos en promedio (matemáticas: β = -
+4.96, lectura: β = -4.22, ciencias sociales: β = -4.41, p < .001).
+        En cuanto a las interacciones, las combinaciones entre género, área geográfica y niveles de
+desempeño no fueron significativas, excepto en matemáticas, donde las mujeres en el nivel
+"satisfactorio" obtuvieron un desempeño significativamente menor que los hombres (β = -7.64, p
+< .001). Además, la interacción entre área geográfica y nivel de desempeño reveló que las
+diferencias entre estudiantes de áreas rurales y urbanas fueron más marcadas en niveles superiores
+de desempeño.
+         Respecto a los componentes de varianza, los resultados indicaron que la mayor parte de la
+variabilidad se atribuye al nivel residual (individual). Sin embargo, las diferencias entre
+departamentos y tipos de gestión escolar también fueron significativas, lo que justifica el uso del
+modelo multinivel. Los coeficientes de determinación marginal y condicional (𝑅2) evidenciaron la
+solidez del modelo, explicando entre el 82.7% y el 86.1% de la variabilidad total. Estos hallazgos
+resaltan la importancia de considerar tanto factores individuales como contextuales en el análisis
+del desempeño académico y justifican la necesidad de explorar interacciones complejas para
+comprender mejor las desigualdades educativas.
+                       Tabla 6 - Interacciones clave para matemática, lectura y ciencias sociales
+ Variable                               Matemática              Lectura                      Ciencias sociales
+ Intercepto                             585.23 (1.77) ***       579.34(2.05) ***             513.87(2,43) ***
+ Género (F-M)                           -2.45 (0.30) ***        0.57(0.21) **                0.18(0.31) ns
+ Área geográfica (Rural. Urbana)        -4.96 (0.32) ***        -4.22(0.22) ***              -4.41(0.33) ***
+ Nivel: Inicio                          85.63(0.26) ***         66.77 (0.26) ***             98.06 (0.38) ***
+ Nivel: En proceso                      146.50 (0.35) ***       128.39 (0.28) ***            182.50 (0.36) ***
+ Nivel: Satisfactorio                   218.54 (0.51) ***       200.74 (0.36) ***            297.55 (0.50) ***
+ Género-Área geográfica                 0.18 (0.60) ns          -0.65 (0.41) ns              0.41 (0.61) ns
+ Género- Nivel: En inicio               -1.51 (0.50) **         0.15 (0.51) ns               -0.30 (0.75) ns
+ Género- Nivel: En proceso              -1.23 (0.69) ns         0.02 (0.55) ns               -0.16 (0.71) ns
+ Género- Nivel: Satisfactorio           -7.64 (0.99) ***        1.35 (0.70), p= .055         -1,49 (0.98) ns
+ Área geográfica- Nivel: En inicio      18.14 (0.51) ***        4.29 (0.51) ***              12.68 (0.75) ***
+ Área geográfica- Nivel: En proceso 20.25 (0.69) ***            6.68 (0.56) ***              8.67 (0.71) ***
+ Área geográfica- Nivel: Satisfactorio 20.05 (1.00) ***         4.73 (0.71) ***              14.44 (0.99) ***
+ Género-Área geográfica-Nivel: En -0.16 (1.01) ns               -0.51 (1.01) ns              1.26 (1.50) ns
+ inicio
+ Género-Área geográfica-Nivel: En -0.91 (1.38) ns               -1.11 (1.11) ns              1.32 (1.42) ns
+ proceso
+ Género-Área         geográfica-Nivel: -0.04 (1.99) ns          -2.45 (1.40), p = .081       3.45 (1.96) ns
+ Satisfactorio
+ Varianza.             Departamento 21.24 (4.61)                5.28 (2.30)                  9.77 (3.13)
+ (Intercepto)
+ Varianza.       Gestión       escolar 4.49 (2.12)              7.97 (2.82)                  10.98 (3.31)
+ (Intercepto)
+ Varianza residual                      950.62(30.83)           594.63 (24.38)               1484.58 (38.53)
+ Marginal R2                            0.827                   0.856                        0.859
+ Condicional R2                         0.832                   0.860                        0.861
+Fuente: *** p <. 001, ** p< .01, ns: no significativo.
+
+      Para evaluar la calidad del ajuste y la contribución explicativa de las variables incluidas, se
+compararon tres modelos jerárquicos de regresión multinivel: un modelo nulo (Modelo 1), un
+modelo con efectos principales (Modelo 2) y un modelo con interacciones clave (Modelo 3). Esta
+
+
+                                                 Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                      Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                     11
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+comparación se realizó utilizando los criterios de información de Akaike (AIC) y bayesiano (BIC),
+así como la log-verosimilitud restringida (-2LL). Los resultados muestran que el modelo 1, que
+únicamente descompone la varianza en niveles jerárquicos sin incluir predictores, tuvo un valor de
+AIC de 3 898 649.27 y un BIC de 3 898 804.37. Estos valores disminuyeron drásticamente en el
+modelo 2, con un AIC de 1 371 744.33 y un BIC de 1 371 755.02, indicando una mejora significativa
+en el ajuste al incluir predictores individuales, escolares y regionales. Finalmente, el modelo 3
+presentó los menores valores de AIC (1 354 985.65) y BIC (1 355 127.49), confirmando que la
+incorporación de interacciones específicas entre las variables mejoró aún más el ajuste del modelo.
+         Para determinar la significancia estadística de estas diferencias, se realizaron pruebas de
+razón de verosimilitud entre los modelos. La comparación entre el modelo 1 y el modelo 2 mostró
+un cambio significativo en el ajuste (𝜒 2 = 2 526 874.94, 𝑝 < .001), indicando que los efectos
+principales explicaron una proporción considerable de la variabilidad. Asimismo, la comparación
+entre el modelo 2 y el modelo 3 también fue significativa (𝜒 2 = 16 760.68, p < .001), confirmando
+que las interacciones clave aportaron valor explicativo sustancial.
+
+         En términos de ajuste general, el coeficiente de determinación marginal y condicional (𝑅2)
+reflejaron mejoras entre los modelos. En el modelo 3, el 𝑅2 marginal fue de 0.827 para matemática,
+0.856 para lectura y 0.859 para ciencias sociales, mientras que el 𝑅2 condicional alcanzó valores de
+0.832, 0.860 y 0.861, respectivamente. Esto confirma que el modelo 3 capturó de manera más
+efectiva la variabilidad en los puntajes académicos, justificando su elección como el más adecuado
+para describir las desigualdades en el desempeño académico.
+        En la Figura 4, se ajustó un modelo lineal mixto para analizar el impacto del género, área
+geográfica y nivel de desempeño en matemática, considerando efectos aleatorios por departamento
+y tipo de gestión. El modelo mostró un excelente ajuste, con un R² marginal de 82.7% (explicando
+la varianza atribuible a los efectos fijos) y un R² condicional de 83.2% (incluyendo efectos
+aleatorios).
+       Los efectos principales revelaron diferencias significativas en los puntajes de matemática
+según el género (p < .001), el área geográfica (p < .001) y el nivel de desempeño en matemática (p
+< .001). Los hombres obtuvieron puntajes ligeramente mayores que las mujeres (diferencia
+promedio de 2.45 puntos), y los estudiantes de zonas urbanas superaron a los de zonas rurales por
+4.96 puntos en promedio. Además, los puntajes incrementaron sustancialmente con cada nivel de
+desempeño: desde "en inicio" (+85.63 puntos) hasta "satisfactorio" (+218.54 puntos), en
+comparación con "previo al inicio".
+        En cuanto a las interacciones, se observó una interacción significativa entre género y nivel
+de desempeño (p < .001), donde las diferencias de género se ampliaron en niveles superiores,
+alcanzando una brecha de -7.64 puntos en el nivel "satisfactorio". Asimismo, la interacción entre
+área geográfica y nivel de desempeño (p < .001) mostró que los estudiantes de zonas urbanas
+superaron consistentemente a los de zonas rurales en todos los niveles, con diferencias de hasta
++20.25 puntos. Los efectos aleatorios por departamento (varianza = 21.24) y tipo de gestión
+(varianza = 4.49) explicaron una pequeña proporción de la varianza total, lo que indica que las
+diferencias entre regiones y tipos de escuela tienen un impacto moderado en los puntajes de
+matemática.
+
+
+
+
+                                           Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                          12
+
+                                                                             Myrian Luz Ricaldi Echevarria
+
+                      Figura 4 - Desempeño en matemática según género y nivel de logro
+                                     Figura 4.1 - Área geográfica urbana
+
+
+
+
+Fuente: Elaboración propia.
+
+
+
+                                      Figura 4.2 - Área geográfica rural
+
+
+
+
+Fuente: Elaboración propia.
+
+        Por otro lado, se evidencian diferencias significativas en el desempeño académico entre
+estudiantes de zonas rurales y urbanas. En lectura, el puntaje promedio en áreas urbanas fue de
+579.34 (DE = 2.05), mientras que en áreas rurales fue de 575.31 (DE = 2.05). En ciencias sociales,
+el puntaje promedio urbano fue de 513.87 (DE = 2.43) y en el ámbito rural fue de 509.10 (DE =
+2.43).
+
+                                             Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                  Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                             13
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+        Además, el desarrollo de habilidades lectoras y de comprensión en ciencias sociales se
+correlacionan fuertemente con el rendimiento académico general. Los estudiantes en nivel
+satisfactorio de lectura obtuvieron un puntaje promedio de 200.73 (DE = 0.36), mientras que
+aquellos en el nivel previo al inicio alcanzaron 66.77 (DE = 0.25). En ciencias sociales, los
+estudiantes en el nivel satisfactorio lograron 297.55 (DE = 0.50), en contraste con los 98.05 (DE
+= 0.38) obtenidos en el nivel previo al inicio.
+        El impacto del nivel de lectura y ciencias sociales varía según el área geográfica. En las zonas
+urbanas, los estudiantes con niveles más altos muestran una ventaja considerable, mientras que, en
+las zonas rurales, la mejora es más moderada. Por ejemplo, en lectura, la interacción entre el área
+geográfica y el nivel satisfactorio mostró una diferencia de 4.73 puntos (p < 0.001), mientras que
+en ciencias sociales esta diferencia fue de 14.43 puntos (p < 0.001). Estos resultados subrayan la
+importancia de considerar no solo los efectos principales, sino también las relaciones dinámicas
+entre los factores contextuales para comprender las desigualdades educativas.
+
+
+Discusión
+
+        Los hallazgos de este estudio confirman la existencia de desigualdades significativas en el
+desempeño académico en matemáticas, lectura y ciencias sociales, determinadas por factores como
+el género, el tipo de gestión escolar, la zona geográfica y el departamento. Estos resultados
+concuerdan con estudios previas que han documentado la estrecha relación entre la desigualdad
+educativa y la estratificación social y económica (Dubet, 2011; Tedesco, 2018; UNESCO, 2022).
+En el Perú, estos hallazgos se explican por un sistema educativo de alta segregación socioeconómica
+(Murillo & Carrillo, 2020), que opera en un marco de desgobierno del mercado educativo (Balarin
+& Escudero, 2019). Como han señalado investigaciones anteriores, la desigualdad educativa no solo
+se refleja en el acceso diferencial a recursos, sino también en la reproducción de brechas
+estructurales dentro del sistema escolar (Bourdieu & Passeron, 1977).
+         Uno de los hallazgos más relevantes es la marcada diferencia en el rendimiento académico
+entre estudiantes de instituciones públicas y privadas, con una ventaja significativa a favor de las
+segundas. Este resultado es consistente con estudios previos que han identificado el tipo de gestión
+escolar como un factor clave en la explicación de las diferencias en el aprendizaje (Navarro-Saldaña
+et al., 2022; Verdugo et al., 2023). Esta ventaja refleja la segmentación del sistema, donde la
+composición socioeconómica de las escuelas, más que la gestión en sí incide directamente en el
+rendimiento (Murillo & Carrillo, 2021). Sin embargo, algunas investigaciones sugieren que el
+impacto de la gestión escolar no es homogéneo y que otros factores, como el clima escolar y la
+calidad docente, pueden desempeñar un papel más determinante que el tipo de gestión en sí
+(Rodríguez de Luque, 2024). Esto subraya la necesidad de considerar un enfoque integral que
+analice no solo el tipo de gestión, sino también las condiciones pedagógicas y organizativas dentro
+de las instituciones educativas.
+         El análisis de la variable geográfica revela una brecha significativa entre el ámbito urbano y
+rural en el rendimiento académico, lo que coincide con investigaciones que han identificado
+desigualdades en la distribución de recursos educativos y la calidad de la infraestructura escolar
+según la ubicación geográfica (Ministerio de Educación, 2022). Esta brecha se ve agravada por
+desigualdades históricas en el gasto educativo (Cuenca & Urrutia, 2019) y por una oferta educativa
+territorialmente homogénea en contextos de pobreza (Carrillo & Murillo, 2021). Los estudiantes
+de zonas urbanas obtienen puntajes superiores en todas las disciplinas evaluadas, lo que evidencia
+barreras estructurales que limitan las oportunidades educativas en contextos rurales (Alonso-Pastor
+et al., 2024; Favila & Huape, 2023; Ison et al., 2015). En este sentido, se requiere el diseño de
+
+
+                                            Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                 Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                           14
+
+                                                                          Myrian Luz Ricaldi Echevarria
+
+políticas públicas que garanticen una distribución equitativa de los recursos educativos y reduzcan
+las disparidades entre zonas urbanas y rurales.
+        En relación con el género, los resultados indican diferencias en el desempeño académico
+dependiendo del área evaluada. Mientras que las mujeres muestran un desempeño superior en
+lectura, los hombres obtienen mejores resultados en matemáticas, un hallazgo ampliamente
+documentado en la literatura (Cárcamo et al., 2020; Giménez & Barrado, 2020; Vieites et al., 2024).
+Sin embargo, la magnitud de estas diferencias varía según el nivel de logro académico, lo que sugiere
+que las disparidades de género están moduladas por factores contextuales y pedagógicos (Tene-
+Tenempaguay et al., 2024). Adicionalmente, la interacción entre género y otras variables, como el
+nivel socioeconómico y el tipo de escuela, dificulta atribuir las diferencias exclusivamente a factores
+de género (García-Peña, 2023). Estas interacciones resaltan la necesidad de un análisis
+interseccional en un sistema segregado, donde el género potencia las ventajas asociadas a la posición
+socioeconómica y la ubicación geográfica.
+         El desempeño en matemáticas, lectura y ciencias sociales también estuvo influenciado por
+el nivel de logro previo de los estudiantes, con diferencias más marcadas en niveles avanzados. Este
+hallazgo coincide con estudios que indican que los estudiantes con habilidades académicas más
+desarrolladas tienden a beneficiarse de un aprendizaje acumulativo, mientras que aquellos con un
+bajo desempeño inicial enfrentan mayores dificultades para cerrar la brecha (Wang et al., 2023;
+Michael & Kyriakides, 2023). Este patrón es coherente con la paradoja del progreso desigual
+regional (Cuenca & Pérez, 2025), donde los más aventajados capturan la mayor parte de las mejoras
+del sistema. Además, la relación entre la comprensión lectora y el desempeño en ciencias sociales
+también es un hallazgo relevante, ya que refuerza la importancia de fortalecer las habilidades de
+lectura como una estrategia para mejorar el aprendizaje en otras disciplinas (Rodríguez-García &
+Arias-Gago, 2021).
+        Desde una perspectiva de política educativa, estos hallazgos resaltan la necesidad de diseñar
+intervenciones específicas para reducir las brechas de aprendizaje. La evidencia peruana converge
+en señalar la urgencia de políticas activas de desegregación escolar para contrarrestar la lógica de
+mercado (Balarin & Escudero, 2019) y romper el continuum que vincula bajos aprendizajes con
+trayectorias laborales precarias (Jaramillo & Balarin, 2023). Estrategias como la asignación
+equitativa de recursos, la mejora en la formación docente y el desarrollo de programas de
+acompañamiento académico para estudiantes en situación de desventaja pueden contribuir a una
+mayor equidad educativa (Chen et al., 2018).
+
+
+Conclusiones
+
+         Este estudio analizó las desigualdades en el desempeño académico en matemáticas, lectura
+y ciencias sociales entre estudiantes peruanos, considerando factores como el género, el tipo de
+gestión escolar, la zona geográfica y el departamento. A través del uso de modelos multinivel, se
+cuantificaron las brechas de rendimiento y se estimó el impacto relativo de cada variable,
+permitiendo una comprensión detallada de las desigualdades educativas en Perú desde una
+perspectiva que confirma y profundiza los hallazgos de la investigación nacional sobre segregación
+escolar.
+       Los resultados evidenciaron que la zona geográfica es un factor determinante en el
+rendimiento académico. Los estudiantes en zonas urbanas obtuvieron puntajes significativamente
+superiores a los de zonas rurales en todas las materias evaluadas. Esta diferencia fue especialmente
+pronunciada en matemática y ciencias sociales, lo que sugiere desigualdades estructurales en el
+acceso a oportunidades educativas. Esta brecha refleja no solo diferencias en infraestructura, sino
+
+                                            Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                 Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                           15
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+la confluencia de desigualdades históricas en el gasto educativo (Cuenca & Urrutia, 2019) y
+dinámicas de segregación socioespacial que concentran la oferta educativa de calidad en territorios
+específicos (Carrillo & Murillo, 2021).
+        La comparación entre estudiantes de instituciones públicas y privadas mostró diferencias
+significativas en su desempeño académico, con mejores resultados en instituciones privadas. Estos
+hallazgos deben interpretarse como manifestación de un sistema segmentado por el desgobierno
+del mercado educativo (Balarin & Escudero, 2019), donde la composición socioeconómica de las
+escuelas emerge como variable explicativa fundamental (Murillo & Carrillo, 2021). En todas las
+áreas evaluadas, los estudiantes de instituciones privadas mostraron un desempeño
+consistentemente superior al de sus pares en instituciones públicas, lo que enfatiza la necesidad de
+investigar en mayor profundidad los factores estructurales, pedagógicos y contextuales que explican
+estas brechas.
+        El nivel de desempeño en matemática emergió como el principal predictor del puntaje
+global, mientras que las diferencias por género y área geográfica, aunque significativas, fueron de
+menor magnitud. Las interacciones analizadas destacaron que las brechas de género y zona
+geográfica son más evidentes en niveles avanzados de desempeño. Asimismo, se observó una fuerte
+relación entre las habilidades de lectura y rendimiento en ciencias sociales, lo que refuerza la
+importancia de implementar estrategias pedagógicas que integren el desarrollo de competencias
+lectoras para fortalecer el aprendizaje en otras disciplinas.
+         El análisis multinivel permitió desglosar la varianza en el desempeño académico en distintos
+niveles (individual, escolar y regional). Se encontró que la mayor parte de la variabilidad se explica
+a nivel individual, seguido por el nivel escolar y, en menor medida, el nivel regional. Aunque existen
+diferencias entre departamentos, el contexto escolar y las características individuales de los
+estudiantes desempeñan un rol más determinante en el rendimiento académico.
+        En perspectiva, los resultados revelan que el sistema educativo peruano enfrenta el riesgo
+de la paradoja desigual (Cuenca & Pérez, 2025), donde las mejoras en promedios nacionales pueden
+ocultar la profundización de brechas internas. Las investigaciones futuras deberían emplear
+enfoques de métodos mixtos para obtener una comprensión más profunda de los factores que
+contribuyen a estas desigualdades (Suleiman et al., 2024). Es fundamental diseñar estudios
+longitudinales para rastrear trayectorias educativas y evaluar el impacto de políticas de
+desegregación.
+        Los resultados de este estudio tienen implicaciones importantes para las políticas y prácticas
+educativas. Para abordar las desigualdades en el desempeño académico se requiere un enfoque
+integral que considere la compleja interacción de factores que influyen en los resultados de los
+estudiantes. Las políticas deben centrarse en la asignación equitativa de recursos, intervenciones
+específicas para apoyar a los estudiantes de entornos desfavorecidos, la formación docente y el
+fortalecimiento de la participación familiar en el proceso educativo.
+
+
+Referencias
+
+Abadia, L., Bernal, G., & Muñoz, S. (2018). Brechas en el desempeño de los estudiantes en PISA:
+¿Qué explica la diferencia de Colombia con Finlandia y Chile? Education Policy Analysis Archives,
+26(82), 1–36. https://doi.org/10.14507/epaa.26.3423
+
+
+
+
+                                           Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                          16
+
+                                                                               Myrian Luz Ricaldi Echevarria
+
+Abellán, J. (2023). Desigualdad e inequidad en la educación rural mexicana: La experiencia del
+CONAFE en el estado de Chihuahua. Revista Iberoamericana de Educación, 91(1), 115–133.
+https://doi.org/10.35362/rie9115568
+Alonso-Pastor, A., Olaya Acosta, G., & Calmet, E. (2024). Segregación educativa y desigualdad
+social en el Perú: Un análisis espacial en el nivel secundario. Revista Iberoamericana Sobre Calidad,
+Eficacia y Cambio en Educación, 23(1), 1–26. https://doi.org/10.15366/reice2025.23.1.001
+Balarin, M., & Escudero, A. (2019). El desgobierno del mercado educativo y la intensificación de la segregación
+escolar socioeconómica en el Perú (Documentos de Investigación, 101). GRADE.
+Bourdieu, P., & Passeron, J. C. (1977). La reproducción: Elementos para una teoría del sistema de enseñanza.
+Siglo XXI.
+Capdevila, A., & Bellmunt, H. (2016). Importancia de los hábitos de estudio en el rendimiento
+académico del adolescente: Diferencias por género. Educatio Siglo XXI, 34(1), 157–172.
+https://doi.org/10.6018/j/253261
+Cárcamo, C., Moreno, A., & Barrio, C. (2020). Diferencias de género en matemáticas y lengua:
+Rendimiento académico, autoconcepto y expectativas. Suma Psicológica, 27(1), 27–34.
+https://doi.org/10.14349/sumapsi.2020.v27.n1.4
+Carrillo, S., & Murillo, F. J. (2021). Desigualdad socioespacial y segregación escolar en la ciudad de
+Lima.         Revista     Peruana        de      Investigación    Educativa,      13(15),       55–88.
+https://doi.org/10.34236/rpie.v13i15.362
+Cervini, R., Dari, N., & Quiroz, S. (2016). Las determinaciones socioeconómicas sobre la
+distribución de los aprendizajes escolares. Los datos del TERCE. Revista Iberoamericana Sobre Calidad,
+Eficacia y Cambio en Educación, 14(4), 61–79. https://doi.org/10.15366/reice2016.14.4.003
+Cervini, R., Dari, N., & Quiroz, S. (2015). Género y rendimiento escolar en América Latina. Los
+datos del SERCE en matemática y lectura. Revista Iberoamericana de Educación, 68, 99–116.
+https://doi.org/10.35362/rie680206
+Chávez Vaca, V., Reyes Reinoso, J., Carrillo Guerrero, M., & Rodríguez Torres, Á. (2020).
+Diferencias de género en unidades educativas rurales de Ecuador. Revista de Ciencias Sociales, 26(1),
+203–218. https://doi.org/10.31876/rcs.v26i1.31320
+Chen, Q., Kong, Y., Gao, W., & Mo, L. (2018). Effects of socioeconomic status, parent–child
+relationship and learning motivation on reading ability. Frontiers in Psycholy, 9, 1–12.
+https://doi.org/10.3389/fpsyg.2018.01297
+Cuenca, R., & Pérez, A. (2025). Desigualdades de los aprendizajes en América Latina: Una
+exploración comparada a partir del ERCE. Revista Internacional de Investigación en Educación, 18, 1–27.
+https://doi.org/10.11144/Javeriana.m18.daal
+Cuenca, R., & Urrutia, C. E. (2019). Explorando las brechas de desigualdad educativa en el Perú.
+Revista       Mexicana        de      Investigación     Educativa,      24(81),       431–461.
+https://ojs.rmie.mx/index.php/rmie/article/view/391/714.
+De la Cruz, F. (2008). Modelos multinivel. Revista Peruana de Epidemiología, 12(3), 1–8.
+https://www.redalyc.org/articulo.oa?id=203120335002.
+Dubet, F. (2011). Repensar la justicia social: Contra el mito de la igualdad de oportunidades. Siglo XXI.
+
+
+                                              Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                   Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                                  17
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+Favila, A., & Huape, G. (2023). Medición de la desigualdad educativa en los municipios del estado
+de Michoacán a través del coeficiente de Gini para 2020. Revista de Investigación Educativa de la
+REDIECH, 14, 1–16. https://doi.org/10.33010/ie_rie_rediech.v14i0.1822
+Favila, A., & Hernández Bárriga, P. (2019). La desigualdad educativa en Michoacán medida a través
+del coeficiente de Gini. Revista de Investigación Educativa de la REDIECH, 10(19), 139–153.
+https://doi.org/10.33010/ie_rie_rediech.v10i19.646
+Gamboa, L., & Krüger, N. (2016). ¿Existen diferencias en América Latina en el aporte de la
+educación preescolar al logro educativo futuro?: Pisa 2009–2012. Revista de la CEPAL, 2016(118),
+85–100. https://doi.org/10.18356/740137dd-es
+García-Peña, V. (2023). El resultado de la inteligencia emocional en el rendimiento académico de
+estudiantes     de       secundaria.       Horizon       Nexus      Journal,    1(2),     60–69.
+https://doi.org/10.70881/hnj/v1/n2/17
+Giménez, G., Ciobanu, D., & Barrado, B. (2021). A proposal of spatial measurement of peer effect
+through socioeconomic indices and unsatisfied basic needs. Economies, 9(2), 1–20.
+https://doi.org/10.3390/economies9020072
+Giménez, G., & Barrado, B. (2020). Exposure to crime and academic achievement: A case study
+for Costa Rica using PISA data. Studies in Educational Evaluation, 65.
+https://doi.org/10.1016/j.stueduc.2020.100867
+Gómez-Talal, I., Bote-Curiel, L., & Rojo-Álvarez, J. L. (2024). Understanding the disparities in
+Mathematics performance: An interpretability-based examination. Engineering Applications of
+Artificial Intelligence, 133, 1–20. https://doi.org/10.1016/j.engappai.2024.108109
+Izaguirre, A., & Di Capua, L. (2020). Exploring peer effects in education in Latin America and the
+Caribbean. Research in Economics, 74(1), 73–86. https://doi.org/10.1016/j.rie.2020.02.001
+Ison, M., Greco, C., Korzeniowski, C., & Morelato, G. (2015). Atención selectiva un estudio
+comparativo sobre los estudiantes argentinos en diferentes contextos socioeconómicos. Electronic
+Journal      of     Research     in      Educational      Psychology,     13(26),    343–368.
+https://doi.org/10.14204/ejrep.36.14092
+Jaramillo, M., & Balarin, M. (2023). Breaking the continuum of socioeconomic inequalities in Peru. Norrag
+Special Issue.
+Krüger, N. (2020). Efectos compañero en contextos escolares altamente segregados. Revista
+Iberoamericana sobre Calidad, Eficacia y Cambio en Educación, 18(4), 171–196.
+https://doi.org/10.15366/reice2020.18.4.007
+Liu, J., Peng, P., Zhao, B., & Luo, L. (2022). Socioeconomic status and academic achievement in
+primary and secondary education: A meta-analytic review. Educational Psychology Review, 34, 2867–
+2896. https://doi.org/10.1007/s10648-022-09689-y
+Lorenzo-Rumbo, A., Giménez-Miralles, M., & Martín-Galán, M. (2024). Impacto de la adicción a
+redes sociales en asistencia y rendimiento académico: Diferencias según género en estudiantes de
+Educación Secundaria. European Public & Social Innovation Review, 10, 1–14.
+https://doi.org/10.31637/epsir-2025-959
+
+
+
+
+                                            Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                 Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                            18
+
+                                                                            Myrian Luz Ricaldi Echevarria
+
+Meisenberg, G. (2016). Gender differences in school achievement across cultures: An analysis of
+results     from     PISA     2000–2012.        Mankind     Quarterly,     57(2),    227–251.
+https://doi.org/10.46469/MQ.2016.57.2.5
+Michael, D., & Kyriakides, L. (2023). Efectos mediadores de la motivación y el estatus
+socioeconómico en el rendimiento en lectura: Un análisis secundario de PISA 2018. Large-scale
+Assessments in Education, 11(31), 1–25. https://doi.org/10.1186/s40536-023-00181-9
+Ministerio de Educación Nacional. (2022). Deserción escolar en Colombia: Análisis, determinantes y política
+de acogida, bienestar y permanencia: Nota técnica. https://www.mineducacion.gov.co/1780/articles-
+363488_recurso_34.pdf.
+Ministerio de Educación. (2020). Medición de la exclusión escolar en Chile. Documento de trabajo n° 20.
+Centro             de              Estudios.                   https://centroestudios.mineduc.cl/wp-
+content/uploads/sites/100/2020/04/DOCUMENTO-DE-TRABAJO-20_2020_f01.pdf.
+Molina-Muñoz, D., Molina-Portillo, E., Sánchez-Pelegrín, J. A., & Contreras-García, J. M. (2022).
+Estudio por género del impacto de factores contextuales en el rendimiento matemático del
+alumnado español en PISA 2018. Revista Complutense de Educación, 33(4), 645–656.
+https://doi.org/10.5209/rced.76428
+Muelle, L. (2016). Factores de riesgo en el bajo desempeño académico y desigualdad social en el
+Perú según PISA 2012. Apuntes. Revista de Ciencias Sociales, 43(79), 9–45.
+https://doi.org/10.21678/apuntes.79.865
+Muelle, L. (2019). Factores socioeconómicos y contextuales asociados al bajo rendimiento
+académico de alumnos peruanos en PISA 2015. Apuntes. Revista de Ciencias Sociales, 47(86).
+https://doi.org/10.21678/apuntes.86.943
+Muelle, L. (2023). Dimensión geoespacial de la segregación académica y social del rendimiento de
+alumnos en las escuelas de educación secundaria en Lima Metropolitana. Revista de Ciencias Sociales,
+50(93), 101–141. https://doi.org/https://doi.org/10.21678/apuntes.93.1521
+Murillo, F. J., & Carrillo, S. (2021). Incidencia de la segregación escolar por nivel socioeconómico
+en el rendimiento académico. Un estudio desde Perú. Archivos Analíticos de Políticas Educativas, 29(49),
+1–24. https://doi.org/10.14507/epaa.29.5129
+Murillo, F. J., & Carrillo, S. (2020). Segregación escolar por nivel socioeconómico en educación
+secundaria en Perú y sus regiones. Revista Peruana de Investigación Educativa, 12(12), 7–32.
+https://doi.org/10.34236/rpie.v12i12.130
+Navarro-Saldaña, G., Flores-Oyarzo, G., & González, M. (2022). Estudiantes con alta capacidad:
+Explorando su distribución según tipo de establecimiento educativo. LIBERABIT. Revista Peruana
+de Psicología, 28(1), 1–23. https://doi.org/10.24265/liberabit.2022.v28n1.02
+OECD (2021). Education at a Glance 2021:                    OECD       Indicators.   OECD Publishing.
+https://doi.org/10.1787/b35a14e5-en
+Quiroz, S., Dari, N., & Cervini, R. (2018). Nivel socioeconómico y brecha entre educación
+secundaria pública y privada en Argentina. Los datos de PISA 2015. Revista Iberoamericana sobre
+Calidad, Eficacia y Cambio en Educación, 16(4), 79–97. https://doi.org/10.15366/reice2018.16.4.005
+
+
+
+
+                                             Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                  Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                              19
+
+     Desigualdades en el desempeño académico en educación secundaria en el Perú: un análisis multinivel
+
+Rincón-Báez, W., & Arias-Velandia, N. (2019). Brecha de rendimiento académico por género en
+saber pro en programas de administración en los departamentos de Colombia. Panorama, 13(2),
+142–161. https://doi.org/10.15765/pnrm.v13i25.1410
+Rodríguez de Luque, J. (2024). Asociaciones entre el alto desempeño académico y el clima escolar
+en Bogotá: ¿Hay diferencias debido al nivel socioeconómico del estudiantado? Revista Internacional
+de Investigación en Educación, 17, 1–24. https://doi.org/10.11144/Javeriana.m17.aada
+Rodríguez, D. (2021). Determinantes del rendimiento educativo en PISA 2018: Análisis para el caso español.
+[Tesis de Pregrado, Universidad de Cantabria]. http://hdl.handle.net/10902/23046.
+Rodríguez-García, A., & Arias-Gago, A. R. (2021). Uso metodológico docente y rendimiento lector
+del alumnado: Análisis fundamentado en PISA lectura 2018. Revista Interuniversitaria de Formación
+del Profesorado, 24(3), 149–165. https://doi.org/10.6018/reifop.469921
+Rodríguez Rodríguez, D., & Guzmán Rosquete, R. (2019). Rendimiento académico y factores
+sociofamiliares de riesgo: Variables personales que moderan su influencia. Perfiles Educativos,
+41(164), 118–134. https://doi.org/10.22201/iisue.24486167e.2019.164.58925
+Rodríguez Rosero, D., Ordoñez Ortega, R., & Hidalgo-Villota, M. (2021). Determinantes del
+rendimiento académico de la educación media en el departamento de Nariño, Colombia. Lecturas
+de Economía, (94), 87–126. https://doi.org/10.17533/udea.le.n94a341834
+Rogiers, A., Van Keer, H., & Merchie, E. (2020). The profile of the skilled reader: An investigation
+into the role of reading enjoyment and student characteristics. International Journal of Educational
+Research, 99. https://doi.org/10.1016/j.ijer.2019.101512
+Santos Rego, M. Á., Lorenzo Moledo, M., Priegue Caamaño, D., & Torrado Quintela, J. (2020).
+Variaciones en los hábitos de estudio en función del género y origen étnico-cultural del alumnado
+y su relación con el rendimiento escolar. Revista Complutense de Educación, 31(2), 163–171.
+https://doi.org/10.5209/rced.62000
+Sarmiento Silva, C., Vargas Gallegos, M., y Díaz Gutiérrez, R. (2012). Diferencias en el rendimiento
+escolar por género asociadas al funcionamiento familiar de estudiantes de bachillerato. Quaderns de
+Psicología, 14(2), 17-23. https://doi.org/10.5565/rev/qpsicologia.1052
+Suleiman, I., Okunade, O., Dada, E., & Ezeanya, U. (2014). Factores clave que influyen en el
+rendimiento académico de los estudiantes. Journal of Electrical Systems and Information Technology,
+11(41), 1–18. https://doi.org/10.1186/s43067-024-00166-w
+Tiramonti, G. (2016). Notas sobre la configuración de la desigualdad educativa en América Latina.
+Revista   Internacional  de    Educación     para    la    Justicia   Social,   5(1),  163–176.
+https://doi.org/10.15366/riejs2016.5.1.009
+Tedesco, J. (2018). Educación y justicia social en América Latina. Fondo de Cultura Económica.
+Tene-Tenempaguay, T., Martínez-Abad, F., & Hernández-Ramos, J. P. (2024). Factores asociados
+al rendimiento académico de los estudiantes latinoamericanos: Una revisión sistemática. Profesorado,
+Revista    de     Currículum     y     Formación      del     Profesorado,    28(3),     215–236.
+https://doi.org/10.30827/profesorado.v28i3.29626
+Tsai, S., Smith, M., & Hauser, R. (2018). Gender gaps in student academic achievement and
+inequality. Research in the Sociology of Education, 20, 181–218. https://doi.org/10.1108/S1479-
+353920180000020008
+
+                                             Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                  Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                             20
+
+                                                                          Myrian Luz Ricaldi Echevarria
+
+UNESCO. (2022). Reimaginando nuestros futuros juntos: Un nuevo contrato social para la educación.
+https://unesdoc.unesco.org/ark:/48223/pf0000379707.
+Vieites, T., Iglesias, A., Díaz-Freire, F. M., Díaz-Pita, L., & Rodríguez-Llorente, C. (2024).
+Motivación, enfoques de trabajo en los deberes escolares y rendimiento académico en estudiantes
+de      Educación       Secundaria      Obligatoria.   Aula     Abierta,    53(3),    229–237.
+https://doi.org/10.17811/rifie.20555
+Verdugo, M., Cabrera, F., Cabrera, H., & Escudero, M. (2023). Factores que inciden en el
+rendimiento académico en los primeros años de los estudiantes de la Universidad de Cuenca,
+Ecuador. Revista Andina de Educación, 6(2), 1–11. https://doi.org/10.32719/26312816.2022.6.2.10
+Wang, X. S., Perry, L. B., Malpique, A., & Ide, T. (2023). Factors predicting mathematics
+achievement in PISA: A systematic review. Large-scale Assessments in Education, 11(1), 1–42.
+https://doi.org/10.1186/s40536-023-00174-8
+
+
+
+Recibido: 07/02/2025
+Versión corregida recibida: 16/11/2025
+Aceptado: 17/11/2025
+Publicado online: 26/11/2025
+
+
+
+
+                                            Práxis Educativa, Ponta Grossa, v. 21, e24571, p. 1-21, 2026
+                                 Disponível em: <https://revistas2.uepg.br/index.php/praxiseducativa>
+                                                                                                           21

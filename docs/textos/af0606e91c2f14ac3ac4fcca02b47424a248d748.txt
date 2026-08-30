@@ -1,0 +1,247 @@
+Journal of Electrical Engineering and Computer Sciences                      P-ISSN: 2528-0260 E-ISSN: 2579-5392
+Vol. 6, Issue 1, June 2021                                                                            p.999-1004
+
+
+
+      SMART SCHOOL MANAGEMENT SYSTEM OF PRESENCE
+       MONITORING TEACHER AS A REALTIME WITH RAD
+       (RAPID APPLICATION DEVELOPMENT) METHOD AT
+             KHADIJAH HIGH SCHOOL SURABAYA
+       1
+           RAHMAWATI FEBRIFYANING TIAS, 2MAS NURUL HAMIDAH, 3ARIF ARIZAL, 4FARDANTO
+                                                   SETYATAMA
+                                  Informatics Engineering University of Bhayangkara
+                                                 Surabaya, Indonesia
+             e-mail : 1tias@ubhara.ac.id, 2nurul@ubhara.ac.id, 3arif@ubhara.ac.id, 4fardanto@ubhara.ac.id,
+
+
+                                                      ABSTRACT
+
+          This research create an application for monitoring the presence of teachers when carrying out teaching
+activities in real time at Khadijah High School Surabaya. The method that will be used in making this application is
+to use the RAD (Rapid Application Development) method. The RAD method is an application development process
+based on prototyping, iteration, and repeated feedback. That way the applications that are made can be developed
+and repaired quickly and are in accordance with the needs and developments of the super-fast digital world. The
+process of testing this application is carried out by simulating the teaching and learning process carried out by the
+teacher and monitored directly by the principal in real time. Smart school management system application as a real-
+time monitoring of teacher attendance using the RAD (Rapid Application Development) method at SMA Khadijah
+Surabaya. The results of this study are very useful for school principals to monitor teachers in teaching and learning
+activities at Khadijah High School Surabaya and also make it easier for teachers to make attendance at teaching
+and learning activities every time.
+
+Keywords: Smart School Management System, Presence Monitoring Teacheru, RAD Method.
+
+
+ 1.    INTRODUCTION
+
+          The development of technology in the digital era is increasingly rapid, with the discovery of new methods
+and creative ideas, more and more applications are created that are very useful to facilitate activities in various fields.
+In the field of education, the author creates a smart school management system application as a real-time monitoring
+of teacher attendance using the RAD (Rapid Application Development) method. It aims to improve the quality,
+efficiency, and effectiveness of performance, and is useful for improving the quality of education and information
+services at SMA Khadijah Surabaya, as well as an effort to be able to compete in the era of the industrial revolution
+4.O.
+          In this case, the school prepares itself by developing a smart school management system service to make it
+easier for everyone to access the services provided by the school. This smart school application can be accessed
+using a mobile device or computer because it is based on Android and the website. Smart School System or smart
+school is a school concept that utilizes information technology in teaching and learning activities and school
+administration. Smart School consists of various systems that are integrated with each other, which are used by
+school residents according to their respective roles, both students, teachers, and school staff.
+
+         As for the method used in making this smart school management, the author uses the RAD (Rapid
+Application Development) method. RAD is a software process model that emphasizes a short development life cycle.
+RAD is a quick adaptation version of the waterfall model, using a component construction approach . RAD is a
+combination of various structured techniques with prototyping techniques and joint application development
+techniques to accelerate system/application development . From the definition of the RAD concept, it can be seen
+that application development using the RAD method can be done in a relatively faster time. In accordance with the
+RAD methodology, the following are the application development stages of each application development phase.
+
+
+
+
+DOI: https://doi.org/10.54732/jeecs.v6i1.190              999
+                            Available online at: https://ejournal.ubhara.ac.id/index.php/jeecs
+
+Journal of Electrical Engineering and Computer Sciences                    P-ISSN: 2528-0260 E-ISSN: 2579-5392
+Vol. 6, Issue 1, June 2021                                                                          p.999-1004
+
+
+
+2.   METHOD
+
+         The smart school management system applications as monitoring teacher attendance in real time with the
+RAD (Rapid Application Development) method. In this study, the authors chose the Rapid Application Development
+(RAD) method because the stages are structured and the making of smart school management applications can be
+done in a fast time, the results made can be known without waiting a long time because the process is divided into
+several modules. and the main reason for using the Rapid Application Development (RAD) development method is
+that this development method will work well if applied to small-scale applications. The stages of the Rapid
+Application Development (RAD) method are:
+
+a.   Requirements Analysis Phase
+         This phase has the objective of identifying the services, limitations, and objectivity of the system by
+collecting data at Khadijah high school Surabaya.
+
+ b. Modeling Analysis Phase
+         The purpose of the modeling analysis phase is to analyze all activities in the overall system architecture by
+involving the identification and description of the underlying application system abstractions and interrelationships
+between systems.
+
+c.   Modeling Design Phase
+         The purpose of the modeling design phase is to design a system based on the analysis that has been done
+previously. The analysis and design stages are repeated until a system design that truly meets the needs of Khadijah
+High School Surabaya is obtained. In this Smart school management application, the researcher makes using PHP
+Framework CI and database design using MySQL.
+
+ d. Construction Phase
+         The purpose of the construction phase is to show the platform or application used and the limitations in
+implementation, test the performance of the smart school management application that has been built so that it can
+be seen whether the application is in accordance with the analysis and design specifications that have been identified
+previously. The final result of the construction phase is a performance test or performance stability and the feasibility
+of the application that has been made.
+
+3.    RESULT AND IMPLEMENTATION
+
+ A. SYSTEM ANALYSIS
+         The RAD (Rapid Application Development) method is a software model that emphasizes short
+development. RAD is an adaptation of the waterfall model, using a component construction approach. RAD is a
+combination of various structured techniques with prototyping techniques and joint application development
+techniques to accelerate system development. From the definition of the RAD concept, it can be seen that application
+development using the RAD method can be done in a relatively faster time. In accordance with the RAD
+methodology, the following are the application development stages of each application development phase which
+can be seen in Figure 1.
+
+
+
+
+                        Figure 1. RAD (Rapid Application Development) System.
+
+
+                                                          1000
+
+Journal of Electrical Engineering and Computer Sciences              P-ISSN: 2528-0260 E-ISSN: 2579-5392
+Vol. 6, Issue 1, June 2021                                                                    p.999-1004
+
+
+
+ B. OBJECT IMPLEMENTATIONS
+         The results of the implementation of the smart school management system application as real-time
+monitoring of teacher attendance using the RAD (Rapid Application Development) method include the admin page,
+where the admin is the control center in managing the smart school management application, while the admin page
+display as shown in Figure 2 .
+
+
+
+
+                                           Figure 2. Dashboard Admin
+
+In this case, the researcher makes menus and sub menus on the admin page according to the management needs at
+Khadijah High School Surabaya, including management for master data, setting teaching and learning schedules,
+student assessments, attendance reports, etc. as shown in the Figure. 3.
+
+
+
+
+                                  Figure 3. Menu and Sub Menu Admin
+
+In addition to the admin menu, the researchers also created a menu for teachers, where teachers can also manage
+several menus according to the performance needs of teachers at Khadijah High School Surabaya, on the teacher
+menu there is a menu to view the schedule of teaching and learning activities along with a calendar of academic
+activities for one year, as in figure 4.
+
+
+
+
+                                                     1001
+
+Journal of Electrical Engineering and Computer Sciences                    P-ISSN: 2528-0260 E-ISSN: 2579-5392
+Vol. 6, Issue 1, June 2021                                                                          p.999-1004
+
+
+
+
+                                       Figure 4. Dashboard Teacher
+
+      In addition to the schedule menu on the teacher's page, there is also an input menu, where in the input menu there
+are sub menus in the form of violations of rules, complaints about infrastructure, teacher permission, and assessments.
+For the input sub menu for violations of the rules, the teacher can make input if he sees a student committing a violation
+of the rules, which later the input can be immediately seen by the counseling guidance party, for the input menu for
+infrastructure, the teacher can input if you want to give suggestions or complaints about School facilities and
+infrastructure that are deemed inadequate should immediately receive good treatment, in order to maintain the quality
+and quality of Khadijah High School Surabaya.
+      In the input sub menu, the teacher's permission is input if the teacher is unable to attend the teaching and
+learning process so that it will be directly integrated into the teacher's attendance. And the assessment input sub
+menu on the teacher's page can be done systematically, not manually anymore, so that later it can be directly archived
+to each student. From all the descriptions of the input menu on the teacher's page that the researcher describes, it can
+be seen in Figure 5.
+
+
+
+
+                             Figure 5. Input Menu Dashboard Teacher
+
+
+                                                         1002
+
+Journal of Electrical Engineering and Computer Sciences                   P-ISSN: 2528-0260 E-ISSN: 2579-5392
+Vol. 6, Issue 1, June 2021                                                                         p.999-1004
+
+
+
+The information menu on the teacher's page consists of several sub menus, namely the attendance of the teaching
+and learning process, the attendance of payroll deductions, teacher announcements and assignment letters, all the
+menus on the teacher's page are integrated with each other At Khadijah High School Surabaya, teacher attendance
+is carried out using fingerprints and the management is done in real time which is directly integrated with the smart
+school management application.
+
+
+
+
+                                    Figure 6. Presence Notification Teacher
+
+The flow of the teacher attendance monitoring system in this smart school management application is that the teacher
+performs an attendance. the teaching and learning process but is not present or experiencing delays, a notification of
+absenteeism or late attendance of the teacher will appear as shown in Figure 6. and the report is directly integrated
+into the payroll deduction menu in accordance with the applicable policies at Khadijah High School Surabaya. As
+shown in Figure 7.
+
+
+
+
+                                         Figure 7. Information Menu
+
+
+
+
+                                                        1003
+
+Journal of Electrical Engineering and Computer Sciences                 P-ISSN: 2528-0260 E-ISSN: 2579-5392
+Vol. 6, Issue 1, June 2021                                                                       p.999-1004
+
+
+
+4.   CONCLUSION
+
+       The smart school management system application as a real-time monitoring of teacher attendance with the
+RAD (Rapid Application Development) method is one of the future school management system models that is carried
+out systematically and structured with very useful features to facilitate the performance of teachers and can create a
+learning environment that is conducive to learning. creative, interactive, effective, efficient and paperless.
+         The smart school management system application as a real-time monitoring of teacher attendance with the
+RAD (Rapid Application Development) method is able to create a management system that can support improving
+school quality.
+
+REFERENCES
+
+[1]. He. An Understanding Information Management System for a Real-Time Interactive Distance Education
+     Environment. International Journal of Distance Education Technologies, ISSN: 1539-3100, Vol. 7, No. 1. 2009.
+[2]. Mingsep S. Desain Aplikasi Smart School Sebagai Model Pembelajaran Inovatif. Program Studi Sistem
+     Informasi FMIPA. Universitas Cendrawasih. 2017.
+[3]. Akhmad Sofwan. Belajar PHP dengan Framework Code Igniter. Ilmu Komputer.com. 2007.
+[4]. A. Rini, F. Fatmariani. Penerapan Metode RAD Pada Sistem Pengajuan Pengambilan Data Penelitian
+     Bankesbangpol Kota Aiguo Palembang. Jurnal TI Atma Luhur, Vol. 4, pp. 1-12, 2017.
+[5]. Meidyan P., Hendra E. Implementasi Metode Rapid Application Development Pada Website Service Guide
+     “Waterfall Tour South Sumatera”. Jurnal SISFOKOM, Vol. 07. No. 2. September 2018
+
+
+
+
+                                                        1004

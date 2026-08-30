@@ -1,0 +1,687 @@
+4
+
+      Two Decades of Muhammadiyah School Management Research:
+                        Bibliometric Analysis
+                       *Muhammad Hamdi1, Muhammad Ali Fikri2
+       1,2
+           Universitas Ahmad Dahlan, Jl. Kapas No.9, Semaki, Yogyakarta, Indonesia
+                           *muhammad.hamdi@mgm.uad.ac.id
+
+        ABSTRACT: This study offers a concise summary of the research on the
+        management of Muhammadiyah schools over the past two decades.
+        Specifically, this study aimed to identify necessary research and the most
+        recent themes regarding the management of Muhammadiyah schools. This
+        research used a bibliometric analysis of scientific articles from Scopus and
+        Google Scholar. This study used 930 publications to analyze productivity,
+        influence, research performance, and scientific journals managed by
+        universities using indicators such as impact factor, h-index, and number of
+        citations. VOSviewer was used to analyze the keyword networks, co-author
+        analysis, and co-reference citation analysis. Several classifications were
+        carried out, including examining the most influential journals, cited articles,
+        and productive and influential researchers. This study provides high-level
+        insights into the development of research on the management of
+        Muhammadiyah Schools, although some variations were found. First,
+        research trends related to Muhammadiyah school management in the last 20
+        years have increased, although the number of articles fluctuates yearly.
+        Second, research on Muhammadiyah school management is grouped into six
+        clusters. Third, few articles have been published in reputable international
+        journals. This article presents an initial extensive overview of prominent
+        trends and prominent researchers of Muhammadiyah School management,
+        providing a general introduction to the subject.
+
+        Kajian ini menawarkan rangkuman ringkas penelitian manajemen sekolah
+        Muhammadiyah selama dua dekade terakhir. Secara khusus penelitian ini
+        bertujuan untuk mengidentifikasi penelitian-penelitian yang diperlukan dan
+        tema-tema terkini mengenai manajemen sekolah muhammadiyah. Penelitian
+        ini menggunakan analisis bibliometrik artikel ilmiah dari Scopus dan Google
+        Scholar. Penelitian ini menggunakan 930 publikasi untuk menganalisis
+        produktivitas, pengaruh, kinerja penelitian, dan jurnal ilmiah yang dikelola
+        universitas dengan menggunakan indikator seperti impact factor, h-index,
+        dan jumlah sitasi. VOSviewer digunakan untuk menganalisis jaringan kata
+        kunci, analisis rekan penulis, dan analisis kutipan referensi bersama.
+        Beberapa klasifikasi dilakukan antara lain dengan meneliti jurnal paling
+        berpengaruh, artikel yang dikutip, dan peneliti produktif dan berpengaruh.
+        Kajian ini memberikan wawasan yang tinggi terhadap perkembangan
+        penelitian tentang manajemen Sekolah Muhammadiyah, meskipun
+
+1
+    orcid id: http://orcid.org/0000-0001-7100-4939
+2
+    orcid id: http://orcid.org/0000-0001-6793-0833
+
+
+                                                         DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+               Two Decades of Muhammadiyah School Management Research... – Muhammad Hamdi, et al. 434
+
+
+
+
+        ditemukan beberapa variasi. Pertama, tren penelitian terkait manajemen
+        sekolah Muhammadiyah dalam 20 tahun terakhir mengalami peningkatan,
+        meskipun jumlah artikelnya berfluktuasi setiap tahunnya. Kedua, penelitian
+        tentang manajemen sekolah Muhammadiyah dikelompokkan menjadi enam
+        cluster; Ketiga, masih sedikit artikel yang diterbitkan di jurnal internasional
+        bereputasi. Artikel ini menyajikan tinjauan awal yang ekstensif mengenai
+        tren-tren terkemuka dan para peneliti terkemuka dalam manajemen Sekolah
+        Muhammadiyah, serta memberikan pengenalan umum mengenai subjek
+        tersebut.
+
+        Keywords: School Management, Muhammadiyah School, Bibliometric
+        Analysis.
+
+             Received: June 7, 2023; Revised: December 28, 2023; Accepted: April 9, 2024
+
+
+I.   INTRODUCTION
+     The Muhammadiyah school is a Muhammadiyah business charity with the highest
+     number of students compared to other Muhammadiyah business charities. In 2022, there
+     were 3.334 Muhammadiyah schools, consisting of elementary schools (ES), junior high
+     schools (JHS), senior high schools (SHS), and vocational high schools (VHS) (Majelis
+     Dikdasmen, 2020). Muhammadiyah School is located throughout Indonesia. The data
+     shows that Muhammadiyah schools significantly improve Indonesian citizens' quality
+     of life (Wekke & Sahlan, 2014).
+     The Muhammadiyah school has a long history, starting with the establishment of the
+     first Muhammadiyah school and has lasted until now. Starting from the first
+     Muhammadiyah School, Madrasah Ibtidaiyah Diniyah Islamiyah (MIDI), established
+     by K.H. Ahmad Dahlan on December 1, 1911, the age of Muhammadiyah education
+     reached 112 years (Majelis Dikdasmen, 2020).
+     Although the history of Muhammadiyah schools is more than a century old, based on
+     preliminary searches, studies on Muhammadiyah Business Charities began in 2001.
+     However, an initial search of the databases owned by Scopus and Google Scholar
+     revealed 980 studies on Muhammadiyah schools. This research focused on school
+     administration, Islamic education reform, school leadership, history, and character
+     development (Aula et al., 2020; Huda et al., 2020).
+     The study of Muhammadiyah School Management was the topic of this research.
+     Investigating the Muhammadiyah school administration is crucial because school
+     performance is a challenge in today's educational environment. Good school
+     management will enhance academic quality, and one of them will affect the long-term
+     viability of school life. Based on the literature, there has yet to be a systematic literature
+     review of the concept of Muhammadiyah school management. Furthermore,
+     bibliometric studies have yet to be found on Muhammadiyah School Management,
+     although the number of studies on this topic is increasing.
+     This study used a bibliometric analysis. Bibliometric analysis has often been used in
+     research in recent years (Donthu et al., 2020; Donthu, Kumar, Mukherjee, et al., 2021;
+     Khan et al., 2021), which can be attributed to 1) the advancement, availability, and
+     accessibility of bibliometric software such as Gephi, Leximancer, VOSviewer, and
+     scientific databases such as Scopus and Web of Science and 2) cross-disciplinary
+
+
+                                                        DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+435   Al-Hayat: Journal of Islamic Education (AJIE)
+      e-ISSN: 2599-3046 (online) | Volume 8, Issue 2 | April - June 2024
+      p-ISSN: 2657-1781 (print)
+
+      bibliometric methodology from information science to business research. Bibliometric
+      analysis is a valuable reflection of 1) handling large amounts of scientific data and 2)
+      generating research impacts. Bibliometric analysis can be used as a complement to
+      studies on Muhammadiyah school management, can help researchers identify research
+      maps that have not yet been revealed, and can reduce the emergence of problems related
+      to the abandonment of good publication articles owing to the subjective judgments of
+      researchers (Veloutsou & Mafe, 2020).
+      Indeed, bibliometric research has been applied in various fields in business research,
+      including business strategy (Kumar, Lim, et al., 2021), electronic commerce (Kumar,
+      Sureka, et al., 2021), finance (Durisin & Puzone, 2009; Linnenluecke et al., 2017; Xu
+      et al., 2018), human resources (Andersen, 2021), management (Ellegaard & Wallin,
+      2015; Zupic & Čater, 2015), and marketing (Donthu et al., 2020; Donthu, Kumar, &
+      Pandey, 2021; Donthu, Kumar, Pandey, et al., 2021; Donthu, Kumar, Pattnaik, et al.,
+      2021; Hu et al., 2019), where the application of bibliometrics ranges from studying
+      publications to exploring the intellectual structure of research fields. Bibliometric
+      methodologies have been used to offer retrospectives of journals, such as the Journal of
+      Business Research, which typically occur over critical years (Donthu et al., 2020).
+      This research is expected to produce a bibliometric analysis of Muhammadiyah School
+      Management. This study aimed to examine the level of interest and research themes that
+      exist based on the literature, focusing on the theme of Muhammadiyah school
+      management. This study also aimed to identify bibliometric indicators in the early stages
+      of research on Muhammadiyah school management. This indicator provides essential
+      information to provide ideas for future research. The data used in this study was
+      obtained from Scopus and Google Scholar. Scopus provides comprehensive and
+      trustworthy coverage. Scopus is the largest database of abstracts and citations of peer-
+      reviewed publications (Zanjirchi et al., 2019). According to Gaviria-Marin et al., (2019),
+      scientists recognize Scopus as a digital bibliometric media that can offer the data needed
+      for analysis and the range of bibliometric data that is the centre of attention in
+      bibliometric analysis tends to be very large (for example hundreds, even thousands) and
+      objective in nature (for example, number of citations and publications and occurrence
+      of keywords and topics), although their interpretation often relies on objective (e.g.
+      performance analysis) and subjective (e.g. thematic analysis) evaluations established
+      through informed techniques and procedures (Donthu, Kumar, Mukherjee, et al., 2021).
+      As a result, this study provides a bibliometric analysis of Muhammadiyah School
+      Management Research. Its goal is to examine the level of interest and research themes
+      in the extant literature on this growing phenomenon, focusing on Muhammadiyah
+      School management. This project also seeks to provide bibliometric indicators for early-
+      stage Muhammadiyah school management research and valuable data for future
+      research in this stream. The data used in this study were obtained from Scopus, a well-
+      known scientific research database. The research questions were formulated as follows:
+      What are the topics related to Muhammadiyah School Management Research? Who is
+      the most productive researcher researching Muhammadiyah School Management?
+      Which Muhammadiyah College is the most productive in researching Muhammadiyah
+      School Management? How many studies on Muhammadiyah School Management have
+      been published annually? Which journal has the most discussions of the
+      Muhammadiyah School Management Research Theme? The findings of this study are
+      summarized as follows: First, we describe the study’s research context. The second
+      section explains the research methodology and data sources. The findings of this study
+
+
+                                                                 DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+             Two Decades of Muhammadiyah School Management Research... – Muhammad Hamdi, et al. 436
+
+
+
+
+   are presented and discussed. Finally, key findings, limitations, and research potential
+   for the future are discussed.
+
+
+II. METHOD
+   This research uses a quantitative approach, a type of bibliometric analysis referred to as
+   bibliometric methodology (Pritchard, 1969). Bibliometric methods have been used to
+   offer retrospectives of journals, such as the Journal of Business Research, which
+   typically occur over critical years (Donthu et al., 2020). In particular, bibliometric-based
+   publications have increased over time, with an average of 1021 publications over the
+   last ten years. This is related to the expansion of scientific research. However, due to
+   the complexity and impracticality of using traditional review procedures with large
+   bibliographic data sets, the emergence of scientific databases such as Scopus and Web
+   of Science has made it relatively more straightforward. To obtain large amounts of
+   bibliometric data, bibliometric software such as Gephi, Leximancer, and VOSviewer
+   allow for the analysis of such data very practically. This research data was obtained
+   from the Scopus and Google Scholar databases. Scopus provides comprehensive and
+   trustworthy coverage. Scopus is the largest database of abstracts and citations of peer-
+   reviewed publications (Zanjirchi et al., 2019). The data used are all related articles
+   published up to April 10, 2023, included in this study. Publications with themes that did
+   not meet the research requirements were excluded after carefully reviewing the title and
+   abstract (and, if necessary, the entire text). Finally, redundant information is removed.
+   The conference paper was retained because the subject was new and in its infancy. After
+   eliminating useless and incomplete entries, we were left with a sample of 930 records.
+   Data analysis with bibliometrics: according to Broadus (1987), bibliometrics is a
+   quantitative study of physically published units, bibliographic units, or a substitute for
+   both. The previously mentioned investigations help identify the various studies available
+   on a subject and several study topics researched by the academic community.
+   Bibliometric analysis considers the year of publication, author, country, type of
+   publication, journal, number of citations, field of study, topics covered, and research
+   methodology. Bibliometric map creation has been a focus of bibliometric research
+   (Waltman et al., 2010). Visualize the relationship between co-cites, co-occurrence
+   terms, and other factors. To enlighten and inspire further research, we summarize this
+   subject's current topics and research patterns based on the content of these 930
+   publications and the data provided by their authors' keywords.
+
+
+III. RESULT AND DISCUSSION
+   Concept of Muhammadiyah School
+   Characteristics of Muhammadiyah School Management
+   Muhammadiyah schools have characteristics that differ from those of other public and
+   private schools. According to Susilo, (2017), the attributes of Muhammadiyah School
+   management are that it is managed professionally, can develop curricula independently,
+   has comprehensive learning evaluation techniques, has high discipline, a culture of
+   progressive quality, and has strong support from stakeholders. These characteristics
+   have enabled the Muhammadiyah School to survive, become independent, and progress.
+   Professional school management can be observed through several consistently
+
+
+                                                      DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+437   Al-Hayat: Journal of Islamic Education (AJIE)
+      e-ISSN: 2599-3046 (online) | Volume 8, Issue 2 | April - June 2024
+      p-ISSN: 2657-1781 (print)
+
+      conducted activities. According to Susilo, the management periodization process is
+      taken seriously at Muhammadiyah School. Statutes and bylaws are references for the
+      regeneration of school management. Implementing education is then conducted based
+      on work procedures and compliance rules that bind all school members. School
+      administrators have a collective collegial responsibility and do not rely on a particular
+      figure. Develop a culture of communication in writing for each proposed idea.
+      Muhammadiyah School developed its curriculum on its own. Each school has the
+      autonomy to design a curriculum based on the national curriculum. Muhammadiyah
+      schools combine the national curriculum with the Islamic boarding school curriculum
+      (Anwar, Arifin, et al., 2023; Anwar, Khozin, et al., 2023). Consequently, students
+      acquire scientific, human, and religious knowledge. Students are formed into
+      individuals with noble characteristics and high expertise. School learning was evaluated
+      comprehensively. In Muhammadiyah schools, learning evaluation activities begin with
+      the development of learning process plans, monitor learning implementation, and end
+      with the evaluation of learning outcomes. School administrators also evaluate the school
+      learning process to identify deficiencies and make improvements (Setyawan & Widodo,
+      2019).
+      High discipline applies to all school members, including teachers, students, and
+      educational staff. According to Wuryandani et al., (2015), teachers at Muhammadiyah
+      schools regularly arrived at work earlier than students. The habit of reading and
+      memorizing short letters before learning begins and carrying out congregational prayers
+      for all students, both sunnah and obligatory prayers, is a routine carried out every day.
+      The school environment is also conditioned to carry out manners and courtesy towards
+      teachers and friends, such as appreciating and respecting others, telling the truth,
+      speaking politely, and avoiding harsh words. Support for Muhammadiyah schools
+      comes from external sources. According to (Susilo, 2017), school committees are
+      always involved; therefore, learning needs can be adequately discussed. In addition,
+      Muhammadiyah School always maintains good relations with the Regency/City
+      Education Office, so it always provides policy support, facilities, financing, and
+      accompanying staff.
+      Aspects of Muhammadiyah School Management
+      As with organizational management in other fields, Muhammadiyah School
+      Management includes school operations, human resource management (HRM),
+      financial management, and marketing management. School operational management is
+      often referred to as learning management. In Muhammadiyah schools, learning
+      management comprises three main activities: planning, implementation, and evaluation.
+      In the planning stage, the activities included preparing academic administration and
+      support, reviewing the syllabus, and reviewing the lesson plan. The implementation
+      phase included delivering the materials and assigning assignments. The activity
+      evaluation stage assesses learning outcomes and the learning process (Setyawan &
+      Widodo, 2019).
+      HR management activities are recruiting educators and education staff committed to the
+      aim of Muhammadiyah, developing them to improve competence, and assessing
+      performance based on an objective performance management system. According to
+      (Susilo, 2017), Muhammadiyah School is striving to encourage the teaching staff to
+      maintain and enhance their learning by allowing them to attend seminars and workshops
+      so that they may grow professionally. The Muhammadiyah School’s financial
+
+
+                                                                 DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+          Two Decades of Muhammadiyah School Management Research... – Muhammad Hamdi, et al. 438
+
+
+
+
+management includes receiving funds, planning management, spending, bookkeeping,
+supervision, and accountability. The principles used in implementing financial
+management are fairness, efficiency, transparency, and public accountability, according
+to Law No. 20 of 2003 concerning the Indonesian Education System, Article 48.
+Marketing management is carried out to attract prospective students to use the
+educational services offered by Muhammadiyah School. According to Iqbal (2019), the
+marketing management of the Muhammadiyah School refers to modern marketing.
+Segmenting the Market First. Muhammadiyah schools typically segregate students
+based on their demographic characteristics. When setting targets, Muhammadiyah
+schools chose segments based on their facilities. After setting targets, the next step is
+positioning, establishing a different position from other schools in the minds of
+prospective students or parents. However, a crucial research area in this context has
+been left in the dark because of the lack of a bibliometric study of all digital native
+research and a review study of the Muhammadiyah School in the management domain.
+Researchers still need sufficient evidence to support research directions in
+Muhammadiyah School Management Research.
+Bibliometric Analysis of Muhammadiyah School Management
+Annual publications from 2005 to the present are listed in Table 1. The table shows the
+publications from 2005 to 2022. The number of publications fluctuated during the study
+period. The number of journals published in 2005 and 2022 in the Scopus database
+needs to be correctly calculated and indexed. Therefore, predicting what will occur by
+2022 is difficult.
+                    Table 1. Annual publications from 2005 -2022
+                           Publication
+                                          Documents         % of 930
+                             Years
+                              2005              3             0,32%
+                              2006              7             0,75%
+                              2007              3             0,32%
+                              2008              2             0,22%
+                              2009             11             1,18%
+                              2010             10             1,08%
+                              2011             122           13,12%
+                              2012             94            10,11%
+                              2013             50             5,38%
+                              2014             25             2,69%
+                              2015             24             2,58%
+                              2016             36             3,87%
+                              2017             61             6,56%
+                              2018             64             6,88%
+                              2019             92             9,89%
+                              2020             111           11,94%
+                              2021             109           11,72%
+                              2022             106           11,40%
+
+As shown in Figure 1, there were at most 11 articles from 2005 to 2011. In 2005 and
+2007, only three articles were found (0.32%); in 2006, seven articles (0.75%); in 2008,
+two articles; and in 2009 and 2010, 11 (1.18%) and 10 articles (1.08%), respectively. A
+significant increase in the number of publications was observed in 2011 (122 articles
+(13,12%). Subsequently, the number of publications decreased between 2012 and 2015.
+In 2012, it gradually increased during 2016–2022. However, research on
+
+
+                                                     DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+439   Al-Hayat: Journal of Islamic Education (AJIE)
+      e-ISSN: 2599-3046 (online) | Volume 8, Issue 2 | April - June 2024
+      p-ISSN: 2657-1781 (print)
+
+      Muhammadiyah School Management has increased. Since 2020, more than 100 articles
+      have been published each year.
+        140
+
+        120                                                      122
+                                                                                                                                 111 109
+                                                                                                                                               106
+        100
+                                                                        94                                                92
+         80
+
+         60                                                                                                 61 64                                    Frequency
+                                                                               50
+         40                                                                                         36
+         20                                                                           25 24
+                             7                     11 10
+          0           3             3      2
+               2005
+                      2006
+                             2007
+                                    2008
+                                            2009
+                                                   2010
+                                                          2011
+                                                                 2012
+                                                                        2013
+                                                                               2014
+                                                                                      2015
+                                                                                             2016
+                                                                                                     2017
+                                                                                                            2018
+                                                                                                                   2019
+                                                                                                                          2020
+                                                                                                                                 2021
+                                                                                                                                        2022
+                                           Figure 1. Publications of the last two decades
+      Keyword Network Analysis
+      Figure 2, created using VOSviewer, shows the six clusters. Nodes of the same colour
+      create clusters, and the stronger their relationship with the cluster, the closer the distance
+      between the nodes in the cluster. The thicker the lines, the higher the chance of them
+      occurring together (Gu et al. 2017). The six clusters included 1) education, 2)
+      Muhammadiyah, 3) school, 4) management, 5) implementation, and 6) Muhammadiyah
+      High School.
+
+
+
+
+                                            Figure 2. Keyword co-occurrence network
+      The first cluster consisted of 23 keywords: communication, Covid-19, leadership,
+      muhammadiyah, management system, and performance. Cluster two consists of 19
+      keywords: financial management, Islamic boarding school, principal, student, and
+      development. Cluster three consists of 16 keywords: character education, elementary
+      school, school culture, school management, strategy, vision, and mission. Cluster four
+
+
+                                                                                                    DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+          Two Decades of Muhammadiyah School Management Research... – Muhammad Hamdi, et al. 440
+
+
+
+
+consists of 15 keywords: facilities, infrastructure, library, learning, and rector. The fifth
+cluster consisted of 14 keywords: classroom management, evaluation, implementation,
+learning process, total quality management, teaching, and planning. The sixth cluster
+consisted of ten keywords: curriculum, research, educational institutions, research, and
+focus. Figure 3 shows how these clusters can be observed in detail.
+
+
+
+
+                      Figure 3. Keyword density visualization map
+According to research on the correlation between keywords, frequency, and overall link
+strength, Table 2 lists the top ten keywords connected to school management.
+Muhammadiyah is the most dominant keyword in research on Muhammadiyah school
+management, with a frequency of 304 and a total link strength of 0.2. The second most
+dominant keyword was a study with a frequency of 174 and a total link strength of 0.11.
+Muhammadiyah schools were ranked third, 165, with a link strength of 0.17. The fourth-
+ranked students had a frequency of 133 and a total link strength of 0.26. The fifth rank
+is a teacher, with a frequency of 109 and a total link strength of 0.11.
+                               Table 2. Top ten keywords
+                                                                    Total Link
+                 Ranking          Keyword            Frequency
+                                                                     Strength
+                     1       Muhammadiyah                304            0,20
+                     2       Study                       174            0,11
+                     3       School Management           165            0,17
+                     4       Student                     133            0,26
+                     5       Teacher                     109            0,11
+                     6       Research                    109            0,25
+                     7       Education                   97             0,29
+                     8       Implementation              95             0,39
+                     9       Quality                     82             0,18
+                    10       Muhammadiyah                72             0,40
+                             Junior High School
+
+List of Productive Authors
+Table 3 lists the most prolific authors in the Scopus and Google Scholar databases. The
+ranking was created based on the author’s documents. Sutama, MP, ranked first in the
+list of 12 articles. The second is Candraningrum, D., with nine articles, and the third is
+
+
+
+                                                   DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+441   Al-Hayat: Journal of Islamic Education (AJIE)
+      e-ISSN: 2599-3046 (online) | Volume 8, Issue 2 | April - June 2024
+      p-ISSN: 2657-1781 (print)
+
+      Sutopo, A., with eight articles. The three authors are from the University of
+      Muhammadiyah Surakarta, Central Java, Indonesia.
+                                    Table 3. Top five productive authors
+                        Ranking                         Author                      Document
+                               1      Sutama, MP                                        12
+                               2      Candraningrum, D                                  9
+                               3      Sutopo, A                                         8
+                               4      Sardjono, Y; Haryanti, D; Hidayat N;              7
+                                      Srijono, D; Kom, M
+                               5      Elihami, E; Susilo, MJ; Sumardjoko, B;             6
+                                      Hikmat, MH; Fauziati, E; Prasetyarini, A
+      List of Universities that Have Contributed the Most to Research
+      Table 4 lists the five universities that contributed the most to conducting research in
+      Muhammadiyah school management. Rankings are based on the total frequency.
+      Muhammadiyah University of Surakarta was ranked first, with a frequency of 226. The
+      second highest ranked is the University of Muhammadiyah Malang, with a frequency
+      of 40 articles. The third highest was Muhammadiyah University of Sidoarjo, with 16
+      articles. The fourth position was Ahmad Dahlan University, with ten articles. The fifth
+      was Muhammadiyah University of Surabaya, with eight articles. All these universities
+      are located in Indonesia.
+                                   Table 4. Top five contributive university
+                      Ranking                       University                    Frequency
+                           1         Muhammadiyah University of Surakarta              226
+                           2         Muhammadiyah University of Malang                  40
+                           3         Muhammadiyah University of Sidoarjo                16
+                           4         Ahmad Dahlan University                            10
+                           5         Muhammadiyah University of Surabaya                 8
+      List of Journals That Have Contributed the Most to Research
+      Table 5 lists the three journals that contributed the most to conducting research in school
+      management. The rankings were based on the total number of frequencies. The Journal
+      of Islamic Educational Thoughts and Practices ranked first, with a frequency of 5. The
+      second rank consists of three journals: Journal of Humanities and Social Sciences
+      Reviews, International Journal of Educational Management and Innovation, and
+      International Journal on Integrated Education. Each of the four published articles is
+      related to Muhammadiyah school management. The Journal of Community Service and
+      Empowerment ranked third with three articles published.
+                                    Table 5. Top three research journals
+                        Ranking                        Journal                      Frequency
+                               1      Journal of Islamic Educational Thoughts             5
+                                      and Practices, Universitas
+                                      Muhammadiyah Surakarta
+                               2      Humanities & Social Sciences Reviews,               4
+                                      Maya Global Education Society, India
+                                      International Journal of Educational                4
+                                      Management and Innovation, Universitas
+                                      Ahmad Dahlan, Indonesia
+
+
+
+
+                                                                 DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+            Two Decades of Muhammadiyah School Management Research... – Muhammad Hamdi, et al. 442
+
+
+
+                                International Journal on Integrated             4
+                                Education, Research Parks Publishing,
+                                Indonesia
+                     3          Journal of Community Service and                3
+                                Empowerment, Universitas
+                                Muhammadiyah Malang, Indonesia.
+  List of Most Publication Years
+  Table 6 lists the highest number of articles published each year which discuss research
+  in the field of school management. Rankings are based on the total frequency. The years
+  2011–2012 were ranked first, with a frequency of 216. The 2013-2014 period had the
+  lowest number of articles because it only published 75 articles.
+                            Table 6. Year of most publications
+                         Ranking         Publication Year         Frequency
+                            1                2011-2012                  216
+                            2                2021-2022                  215
+                            3                2019-2020                  203
+                            4                2017-2018                  125
+                            5                2013-2014                  75
+
+
+IV. CONCLUSION
+  This study offers a general overview of the bibliometric aspects of research on the
+  management of Muhammadiyah schools. In doing so, it seeks to identify existing levels
+  of interest and research themes in the existing literature. While the findings of this study
+  largely align with the academic community's perspective, a closer examination of
+  numerical data from journals, articles, and authors involved in the analysis revealed
+  some intriguing discrepancies. First, research trends related to Muhammadiyah school
+  management in the last 20 years have increased, although the number of articles
+  fluctuates yearly. More than 100 articles have been published annually in recent years.
+  Second, research on Muhammadiyah school management was grouped into six clusters:
+  1) education, 2) Muhammadiyah, 3) school, 4) management, 5) implementation, and 6)
+  Muhammadiyah High School. Third, only a few articles were published in reputable
+  international journals. Based on the findings of this study, it is possible to discern some
+  of the most productive and influential research on the management of Muhammadiyah
+  schools in terms of journals and authors. However, it is essential to acknowledge a
+  significant limitation: these results provide only a general orientation. Additionally,
+  there are numerous debates surrounding the evaluation of publications, owing to the
+  disparate values of various journals.
+
+
+V. ACKNOWLEDGEMENTS
+  This study was funded by Majelis Pendidikan Tinggi Penelitian dan Pengembangan
+  Pimpinan Pusat Muhammadiyah using the Riset Muhammadiyah Batch VI research
+  grant program for 2022/2023 [Grant Number: 1687.073/PP/I.3/D/2022] from Pimpinan
+  Pusat Muhammadiyah, Indonesia. The authors declare that they have no conflicts of
+  interest.
+
+
+
+
+                                                       DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+443   Al-Hayat: Journal of Islamic Education (AJIE)
+      e-ISSN: 2599-3046 (online) | Volume 8, Issue 2 | April - June 2024
+      p-ISSN: 2657-1781 (print)
+
+VI. REFERENCES
+  [1] Andersen, N. (2021). Mapping the expatriate literature: a bibliometric review of the
+      field from 1998 to 2017 and identification of current research fronts. International
+      Journal         of       Human        Resource         Management,           32(22).
+      https://doi.org/10.1080/09585192.2019.1661267
+  [2] Anwar, S., Arifin, S., Humaidi, N., & Ikhwan, A. (2023). Muhammadiyah Boarding
+      School Curriculum in Indonesia: Insights into Building Nation Generation Building
+      Agenda.              Firdaus             Journal,          3(1),          10–18.
+      https://doi.org/10.37134/firdaus.vol3.1.2.2023%20
+  [3] Anwar, S., Khozin, & Ikhwan, A. (2023). Implementation of Muhammadiyah
+      Boarding School Curriculum in Organizational Caderization. The Abraka Journal of
+      Religion        and        Philosophy          (AJRP),      3(1),      289–308.
+      http://abrakajournal.com/index.php/ajrp/article/view/36
+  [4] Aula, N., Ikhwan, A., & Nuraini, N. (2020). The Leadership Role of the Principal as
+      Supervisor in Conflict Management at Muhammadiyah 2 Madiun High School, East
+      Java, Indonesia. Al-Hayat: Journal of Islamic Education, 4(1), 90–105.
+      https://doi.org/10.35723/ajie.v4i1.112
+  [5] Broadus, R. N. (1987). Toward a definition of “bibliometrics.” Scientometrics, 12(5–
+      6). https://doi.org/10.1007/BF02016680
+  [6] Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to
+      conduct a bibliometric analysis: An overview and guidelines. Journal of Business
+      Research, 133. https://doi.org/10.1016/j.jbusres.2021.04.070
+  [7] Donthu, N., Kumar, S., & Pandey, N. (2021). A retrospective evaluation of
+      Marketing Intelligence and Planning: 1983–2019. Marketing Intelligence and
+      Planning, 39(1). https://doi.org/10.1108/MIP-02-2020-0066
+  [8] Donthu, N., Kumar, S., Pandey, N., & Soni, G. (2021). A retrospective overview of
+      Asia Pacific Journal of Marketing and Logistics using a bibliometric analysis. Asia
+      Pacific Journal of Marketing and Logistics, 33(3). https://doi.org/10.1108/APJML-
+      04-2020-0216
+  [9] Donthu, N., Kumar, S., & Pattnaik, D. (2020). Forty-five years of Journal of Business
+      Research: A bibliometric analysis. Journal of Business Research, 109.
+      https://doi.org/10.1016/j.jbusres.2019.10.039
+  [10] Donthu, N., Kumar, S., Pattnaik, D., & Lim, W. M. (2021). A bibliometric
+       retrospection of marketing from the lens of psychology: Insights from Psychology &
+       Marketing. Psychology and Marketing, 38(5). https://doi.org/10.1002/mar.21472
+  [11] Durisin, B., & Puzone, F. (2009). Maturation of corporate governance research,
+       1993-2007: An assessment. Corporate Governance: An International Review, 17(3).
+       https://doi.org/10.1111/j.1467-8683.2009.00739.x
+
+
+
+                                                                 DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+            Two Decades of Muhammadiyah School Management Research... – Muhammad Hamdi, et al. 444
+
+
+
+
+[12] Ellegaard, O., & Wallin, J. A. (2015). The bibliometric analysis of scholarly
+     production:     How      great  is   the  impact?  Scientometrics,    105(3).
+     https://doi.org/10.1007/s11192-015-1645-z
+[13] Gaviria-Marin, M., Merigó, J. M., & Baier-Fuentes, H. (2019). Knowledge
+     management: A global examination based on bibliometric analysis. Technological
+     Forecasting and Social Change, 140. https://doi.org/10.1016/j.techfore.2018.07.006
+[14] Hu, C., Song, M., & Guo, F. (2019). Intellectual structure of market orientation: a
+     citation/co-citation analysis. In Marketing Intelligence and Planning (Vol. 37, Issue
+     6). https://doi.org/10.1108/MIP-08-2018-0325
+[15] Huda, M., Khoirurrijal, K., Dacholfany, M. I., Susminingsih, Hashim, A., Marni, N.,
+     Mohamed, A. K., Puad, M. A. A., Rozali, M. H., Maseleno, A., Muhamad, N. H. N.,
+     & Ikhwan, A. (2020). Empowering learning ethics culture in Islamic education.
+     Global Perspectives on Teaching and Learning Paths in Islamic Education, 244–
+     267. https://doi.org/10.4018/978-1-5225-8528-2.ch013
+[16] Khan, M. A., Pattnaik, D., Ashraf, R., Ali, I., Kumar, S., & Donthu, N. (2021). Value
+     of special issues in the journal of business research: A bibliometric analysis. Journal
+     of Business Research, 125. https://doi.org/10.1016/j.jbusres.2020.12.015
+[17] Kumar, S., Lim, W. M., Pandey, N., & Westland, J. C. (2021). 20 years of Electronic
+     Commerce         Research.    Electronic    Commerce         Research,       21(1).
+     https://doi.org/10.1007/s10660-021-09464-1
+[18] Kumar, S., Sureka, R., Lim, W. M., Mangla, S. K., & Goyal, N. (2021). What do we
+     know about business strategy and environmental research? Insights from Business
+     Strategy and the Environment. Business Strategy and the Environment, 30(8).
+     https://doi.org/10.1002/bse.2813
+[19] Linnenluecke, M. K., Chen, X., Ling, X., Smith, T., & Zhu, Y. (2017). Research in
+     finance: A review of influential publications and a research agenda. In Pacific Basin
+     Finance Journal (Vol. 43). https://doi.org/10.1016/j.pacfin.2017.04.005
+[20] Majelis Dikdasmen. (2020). Dapodikmu Jumlah Sekolah. Majelis Dikdasmen PP
+     Muhammadiyah.        https://dikdasmenppmuhammadiyah.org/dapodikmu-jumlah-
+     sekolah/
+[21] Pritchard, A. (1969). Statistical Bibliography or Bibliometrics? In Journal of
+     Documentation (Vol. 25, Issue 4, pp. 348–349).
+[22] Setyawan, A., & Widodo, H. (2019). Evaluasi Standar Proses Pendidikan Al Islam
+     dan Kemuhammadiyahan di Sekolah Menengah Kejuruan Muhammadiyah 1 Playen.
+     At-Tajdid:         Jurnal        Ilmu    Tarbiyah,        8(2),      316–343.
+     https://doi.org/10.52640/tajdid.v8i2.162
+[23] Susilo, M. J. (2017). Strategi membangun sekolah yang berkemandirian. Seminar
+     Nasional Pendidikan Berkemajuan Dan Menggembirakan (The Progressive & Fun
+     Education Seminar), 2. http://hdl.handle.net/11617/9571
+
+
+                                                     DOI: https://doi.org/10.35723/ajie.v8i2.399
+
+445   Al-Hayat: Journal of Islamic Education (AJIE)
+      e-ISSN: 2599-3046 (online) | Volume 8, Issue 2 | April - June 2024
+      p-ISSN: 2657-1781 (print)
+
+  [24] Veloutsou, C., & Mafe, C. R. (2020). Brands as relationship builders in the virtual
+       world: A bibliometric analysis. Electronic Commerce Research and Applications,
+       39, 100901. https://doi.org/10.1016/j.elerap.2019.100901
+  [25] Waltman, L., van Eck, N. J., & Noyons, E. C. M. (2010). A unified approach to
+       mapping and clustering of bibliometric networks. Journal of Informetrics, 4(4), 629–
+       635. https://doi.org/10.1016/j.joi.2010.07.002
+  [26] Wekke, I. S., & Sahlan, A. (2014). Strategy in Creating School Environment:
+       Lessons from High Schools in Indonesia. Procedia - Social and Behavioral Sciences,
+       143, 112–116. https://doi.org/10.1016/j.sbspro.2014.07.370
+  [27] Wuryandani, W., Maftuh, B., Sapriya, S., & Budimansyah, D. (2015). Internalisasi
+       Nilai Karakter Disiplin Melalui Penciptaan Iklim Kelas Yang Kondusif di SD
+       Muhammadiyah Sapen Yogyakarta. Jurnal Pendidikan Karakter, 5(2).
+       https://doi.org/10.21831/jpk.v0i2.2793
+  [28] Xu, X., Chen, X., Jia, F., Brown, S., Gong, Y., & Xu, Y. (2018). Supply chain
+       finance: A systematic literature review and bibliometric analysis. In International
+       Journal          of         Production       Economics          (Vol.         204).
+       https://doi.org/10.1016/j.ijpe.2018.08.003
+  [29] Zanjirchi, S. M., Jalilian, N., & Shahmohamadi Mehrjardi, M. (2019). Open
+       innovation: from technology exploitation to creation of superior performance. Asia
+       Pacific      Journal     of    Innovation     and     Entrepreneurship,     13(3).
+       https://doi.org/10.1108/apjie-02-2019-0005
+  [30] Zupic, I., & Čater, T. (2015). Bibliometric Methods in Management and
+       Organization.         Organizational     Research   Methods,    18(3).
+       https://doi.org/10.1177/1094428114562629
+
+
+
+
+                                                                 DOI: https://doi.org/10.35723/ajie.v8i2.399

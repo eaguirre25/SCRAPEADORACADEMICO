@@ -1,0 +1,1157 @@
+Technology, Knowledge and Learning (2023) 28:407–427
+https://doi.org/10.1007/s10758-022-09631-9
+
+    ORIGINAL RESEARCH
+
+
+
+Same, but Different? Digital Transformation in Swiss
+Vocational Schools from the Perspectives of School
+Management and Teachers
+
+Martina Rauseo1 · Andreas Harder2 · Deborah Glassey-Previdoli3 ·
+Alberto Cattaneo1 · Stephan Schumann2 · Serge Imboden3
+
+Accepted: 10 November 2022 / Published online: 5 December 2022
+© The Author(s) 2022
+
+
+Abstract
+The COVID-19 pandemic has further highlighted the importance of the digital transforma-
+tion of educational organizations. The effects of this transformation process are not limited
+to the classroom level but extend into various areas of the school, such as Equipment and
+Technology, Strategy and Leadership, Organization, Employees, and Culture. Against this
+background, we assessed the status quo of the digital transformation in Swiss vocational
+schools from the perspective of both school management members and teachers. For this
+endeavor, two surveys were conducted: the first one in the period from November 2019
+to January 2020 (school management members) and the second one between June and
+September 2020 (teachers). In total, 202 school management members and 1,739 teach-
+ers from 62 schools participated in the study. The results of the analyses indicate that the
+digitization-related dimensions of Strategy and Leadership, as well as Pedagogical IT
+Support, were perceived better by school management members, whereas teachers con-
+sidered the areas of Digital Competencies, Attitudes, and Culture to be more advanced.
+Furthermore, linear regression models show that the dimensions considered important
+when assessing the status quo of digital transformation differ between the groups. The re-
+sults emphasize the importance of communication between and the inclusion of all school
+stakeholders for the successful management of the digital transformation.
+
+Keywords Digital Transformation · Vocational Education · Switzerland · School
+Improvement · School Management · Teachers
+
+
+
+
+Martina Rauseo and Andreas Harder have contributed equally to this work and share first authorship.
+Martina Rauseo
+martinarauseo@hotmail.com
+1
+      Swiss Federal University for Vocational Education and Training, Lugano, Switzerland
+2
+      University of Konstanz, Konstanz, Germany
+3
+      University of Applied Sciences HES-SO Valais-Wallis, Sierre, Switzerland
+
+
+                                                                                             13
+
+408                                                                               M. Rauseo et al.
+
+
+1 Introduction
+
+Digital transformation is a global trend that permeates and influences private life as well
+as the world of work (e.g., World Economic Forum, 2016; Arnold et al., 2016; Cijan et al.,
+2019). The term “digital transformation” describes the profound structural change of the
+working world through digital technologies such as mobile, networked devices, cloud com-
+puting, digital networking, social media, internet of things, big data, artificial intelligence,
+and robotics (Bosch et al., 2018). It leads to new business models, work processes, and job
+profiles, and therefore to new requirements regarding the competence profiles of employees
+and apprentices (Genner, 2017). In line with the broad transformation processes in the world
+of work, the digital transformation also encompasses extensive changes in the school sec-
+tor. These changes are thematically diverse and complex and are not limited to technologi-
+cal aspects, such as the digital infrastructure or equipment of a school or a classroom, but
+also include, among other things, a digital school organization, curricular adaptations, other
+competence requirements for school management members and teachers, and generally an
+adaptation of the school culture. Only by taking this holistic view, the digital transformation
+can reach the teaching level in a sustainable way (Petko et al., 2018a). In this context, the
+Swiss Federal Council (2018) has developed a strategy for a digital Switzerland, with one
+of the pillars being the area of education.
+    Consequently, the Swiss State Secretariat for Education, Research and Innovation
+(SERI) (2017) compiled an action plan with the intention of enhancing competencies in
+education and research in Switzerland. The concept distinguishes between eight different
+dimensions, of which the first four areas are relevant for upper secondary education (includ-
+ing vocational schools): (1) improving digital literacy, (2) using information and communi-
+cation technology (ICT) in teaching and learning, (3) rapidly adapting the education system
+to market requirements, and (4) improving coordination and communication in education
+cooperation. The primary objective of education in this field, particularly in vocational
+schools, is to enable students to acquire the digital competencies necessary to carry out their
+professional activities. Genner (2017) argued that, in the context of digital transformation,
+the dual training system (i.e., vocational training alternating a company-based and a school-
+based track) plays an important role in providing the necessary competencies due to its close
+connection between the educational institution, on the one hand and the working reality on
+the other hand.
+    A key factor in achieving these digitalization-related educational goals is teachers
+that have appropriate digital competencies (e.g., Petko et al., 2018b). Thus, the European
+Commission has launched various initiatives to assess the status quo regarding the digital
+competencies of teachers. Based on their theoretical competence framework – the Digital
+Competence Framework for Educators (DigCompEdu) – they developed a self-assessment
+tool, which again decomposes the construct of “digital competence” into six dimensions
+(Carretero et al., 2017; Redecker & Punie, 2017), further illustrating the scope and complex-
+ity of this concept.
+    However, digital transformation is not limited to the classroom level. The successful
+achievement of digitalization-related educational goals requires appropriate framework
+conditions in schools, which are considered complex institutions (e.g., Eickelmann et al.,
+2019). Therefore, it is important to take the impact of digital transformation on schools at
+various levels into account (Ifenthaler & Egloffstein, 2020). Petko et al. (2018b) addressed
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                  409
+
+
+this topic by defining the concepts of teacher readiness and school readiness in the context
+of teachers’ use of ICT. Thus, in addition to the attitudes and competencies of the teachers
+(teacher readiness), certain school-level conditions are also necessary; for example, suf-
+ficient technological infrastructure and equipment, functioning IT support, or the prioritiza-
+tion of the digital transformation in general (school readiness). The International Computer
+and Information Literacy studies (ICILS), which focus on measuring the digital competen-
+cies of eighth graders, also highlight the need for appropriate school conditions and empha-
+size the special role of school management in this context (Fraillon et al., 2014, 2020).
+School management, in fact, is primarily responsible for initiating and implementing school
+development processes and can help ensure that the framework conditions are conducive
+through its leadership behavior (e.g., Bonsen 2016a).
+    In addition to an increasing trend toward digitalization, the COVID-19 pandemic has
+accelerated this development even further. Following the Federal Council’s (2020) deci-
+sion of school closures in the spring of 2020, the schools only had a few days to propose an
+appropriate solution for the following weeks and months, which has led to challenges for
+both school management and teachers. From a scientific point of view, the school closures
+represent a situation in which the digitalization of schools can be observed in a very special
+context. In some studies, this situation was the basis for examining how well schools were
+digitally positioned to deal with the pandemic-related challenges at that point in time. The
+pandemic can therefore be seen as a trigger that has once again brought digital transforma-
+tion into sharper focus.
+    In summary, both school management and teachers play important roles in achieving
+digitalization-related educational goals and supporting the digital transformation of the
+educational system. Whereas school management should ensure the necessary framework
+conditions and initiate and design corresponding school development processes, teachers
+are responsible in the classroom for ensuring that learners are prepared for the digitalized
+world of work in the best possible way. In this context, ICT’s potential for teachers in the
+classroom is multifaceted: on the one hand, ICT can foster pedagogical diversity of meth-
+ods for teaching subject-specific content, and on the other hand, the development of digital
+competencies is promoted through critical engagement with them. However, to the best of
+our knowledge, there are no studies investigating how these two points of view – the school
+management members’ and the teachers’ – position themselves in the process of digital
+transformation, especially regarding vocational education. Therefore, this study focuses
+on the perceptions of school management members as well as teachers regarding various
+aspects of digital transformation to identify the potential for optimization and to derive
+evidence-based, appropriate recommendations for practice.
+
+
+2 Theoretical Background
+
+The first part of this section presents the advantages and disadvantages of different static
+model approaches in the context of digital transformation. Static models allow us to assess
+the status quo of educational institutions at a specific point in time. However, since digital
+transformation is in doubt about long-term development processes, a dynamic view is also
+essential to classify the development status of the respective schools. This circumstance will
+be briefly addressed in the second part of the section.
+
+
+                                                                                  13
+
+410                                                                                M. Rauseo et al.
+
+
+    Development processes in schools are not limited to the classroom level. Rolff’s (2010)
+triad of school improvement is one of the most prominent models dealing with this topic, at
+least in German-speaking countries. In this context, organizational, personnel and instruc-
+tional development are defined as the three core dimensions of school improvement. In the
+light of digitalization, several models have been developed to approach the topic from a
+school improvement perspective and to define relevant content areas for this field (Waffner,
+2021). Rolff’s (2010) general approach was then further expanded by including the dimen-
+sions concerning technology and cooperation development (Schulz-Zander, 1999; Eickel-
+mann & Gerick, 2017).
+    Another well-known model focusing on the implementation of good practices within a
+school and its relevant stakeholders is the so-called Innovative Digital School (IDI) model
+(Ilomäki & Lakkala, 2018), in which the pedagogical and school-level knowledge practices
+as well as the digital resources form the foundation of the digital development of the school.
+Furthermore, the practices of the teaching community on the one hand, as well as the vision
+of the school in connection with adequate leadership on the other hand, are necessary for
+successfully shaping digital development processes. Although this approach focuses pre-
+dominantly on the practices of the different stakeholders, organizational, school cultural, or
+strategic elements of digital transformation are addressed only implicitly.
+    A model that explicitly addresses the relatively abstract approach of Rolff (2010) as well
+as the rather low differentiation of organizational and personal resources of the IDI model
+(Ilomäki & Lakkala, 2018) is the so-called Maturity Model for Educational Organizations
+(MMOE) (Ifenthaler & Egloffstein, 2020). The MMOE does not put the specific practices
+in the schools in the foreground but tries to define areas to determine the digital status quo
+of an organization. Although this model originally does not explicitly refer to schools but to
+educational organizations in general, it can be used as a holistic concretization of the abstract
+dimensions of the previously mentioned models, with a special focus on digital transforma-
+tion. The MMOE outlines six main dimensions: Equipment and Technology, Strategy and
+Leadership, Organization, Employees, Culture, and Digital learning and teaching. Based
+on these parameters, it is possible to determine how ‘mature’ the school organization is in
+terms of digital transformation. In the second step, these dimensions are then operational-
+ized with several indicators that illustrate the broad spectrum of some of the dimensions. A
+visualization of the model and its components is presented in Table 1.
+    Regardless of the question of which of these models depicts digital school improvement
+best, all approaches mentioned above can be classified as static, as they primarily aim to
+delineate relevant dimensions and do not focus process-related aspects in the first place.
+In addition to these static models, there are some approaches that attempt to map school
+improvement processes against the backdrop of digital transformation from a dynamic per-
+spective. For example, Gräsel et al. (2020) defined input, processual, and output factors
+based on existing school improvement models to successfully shape corresponding digital
+development processes. Classic change management approaches from the world of work
+can also help in this context, serving as a theoretical basis for the successful implementation
+of these models (e.g., Kotter 2012).
+    In both static and dynamic models, all school stakeholders – that is, school management
+members, teachers, and students – contribute to the successful implementation of these devel-
+opment processes (e.g., Ilomäki & Lakkala, 2018). At the individual school level, teachers
+are directly responsible for building digital literacy among students, whereas school man-
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                                 411
+
+Table 1 Dimensions of the            Dimension             Indicators/content
+Maturity Model for Educational
+                                     Equipment and         Equipment with digital devices, software
+Organizations (Ifenthaler &
+                                     Technology            Up-to-date infrastructure
+Egloffstein, 2020)
+                                                           Homogeneous technology landscape, standards
+                                     Strategy and          Existence and implementation of a digital
+                                     Leadership            strategy
+                                                           Managers promote digitalization with priority
+                                                           Analysis of new technologies
+                                                           Democratic leadership style, creative freedom
+                                                           granted
+                                     Organization          Sufficient financial resources
+                                                           Technical support (internal vs. external service
+                                                           providers)
+                                                           Efficient procurement and maintenance
+                                                           Pedagogical support
+                                     Employees             Knowledge/Skills in dealing with digital
+                                                           technologies
+                                                           Usage of devices and services
+                                                           Attitudes
+                                                           Readiness for further training
+                                     Culture               Openness to new technologies
+                                                           Openness for change
+                                                           Open communication, mutual support
+                                     Digital learning      Digital platforms, e-learning offerings
+                                     and teaching          Working with digital devices in classroom
+                                                           settings
+                                                           Digital education as an overall goal
+                                                           Data-driven teaching and learning
+
+
+agement takes on a special role by initiating and sustainably shaping the framework condi-
+tions and setting the right direction. This was corroborated by Petko et al. (2018b), who
+stated that technology integration depends on teacher readiness, which in turn is influenced
+by school readiness. From a more practical perspective, a specialized agency commissioned
+by the Swiss Confederation and the cantons, called Educa (2021), published a report that
+also addresses the important factors that enable the successful implementation of digital
+resources. Among other things, the report states that a strategy implemented by the school
+in the long term has a positive effect on school success. Furthermore, the report emphasizes
+the centrality of teachers’ beliefs and competence in the use of ICT in learning and teaching.
+This must also be fostered by a school environment that promotes digitalization (Educa,
+2021). These elements can again be found in the MMOE (Ifenthaler & Egloffstein, 2020).
+    Regarding the COVID-19 crisis, empirical results indicate that, in entering the crisis,
+schools had different starting positions in terms of digital prerequisites; in other words,
+the readiness of some schools was better developed than that of other schools (Feldhoff
+et al., 2021). The respective schools were able to deal better with the various challenges
+caused by the pandemic. If we compare the situation in the German-speaking countries of
+Switzerland, Germany, and Austria, studies show that Swiss schools were comparatively
+better prepared in terms of digital resources than schools in the other two countries (Huber
+et al., 2020), although the general level of teachers’ digital competence aligned with the
+international average (Cattaneo et al., 2022). These findings are also confirmed by the longi-
+tudinal S-Clever study, which surveyed school management members in all three countries,
+although the school management members addressed the challenges of the pandemic in
+
+
+                                                                                               13
+
+412                                                                             M. Rauseo et al.
+
+
+similar ways. However, the perception of specific challenges shows that the field of digital
+transformation is still topical and has not yet been settled by the pandemic, since there
+have been no significant improvements over time in dealing with teachers’ emotional or
+motivational burdens or the digital equipment in schools in all three countries (Feldhoff et
+al., 2022).
+    In summary, the different approaches and ideas demonstrate the complexity of school
+improvement, especially regarding digital transformation. Furthermore, the indispens-
+able necessity to further develop schools digitally becomes apparent. In this context, the
+COVID-19 crisis has served as an eye-opener for many schools.
+
+
+3 Research Question
+
+In the context of the SERI action plan (2017), the first focus of our study lies on the gen-
+eral state of development of digital transformation of vocational schools in Switzerland. In
+the next step, we refer to the portrayed MMOE, which shows from a theoretical perspec-
+tive how multilayered and differentiated the digital transformation in the school context
+is. However, whether and to what extent the various dimensions actually contribute to the
+perception of the digitization-related status quo remains open. In line with these theoretical
+considerations, three central research questions can be derived:
+
+1) What is the status quo of the general state of development of digital transformation in
+   Swiss vocational schools from the perspective of both school management members
+   and teachers?
+2) Are there differences in the perception of the various sub-areas of digital transformation
+   in schools between the two groups?
+3) Which of these sub-areas are predictive of the perceived digitalization-related state of
+   development?
+
+Many studies examine the digital transformation from the perspective of one particular
+school actor, i.e., either the school management, the teachers, or the learners. The content-
+related focus of these studies often differs: While school management members are more
+likely to be asked questions about organizational development, studies with teachers often
+deal with elements of instructional or classroom development. Since the successful design
+of school development processes in general – and the digital transformation in particular
+– requires the sustained participation of all school stakeholders, we will examine whether
+differences can be identified between school management members and teachers in terms
+of their perceptions regarding all three research questions. The principal aim of our study is
+to combine the two perspectives and thus to obtain a broader picture of the digitalization-
+related status quo from both groups. On this basis, implications that can support vocational
+schools in successfully shaping school development processes regarding digital transforma-
+tion will be developed.
+
+
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                 413
+
+
+4 Methods
+
+4.1 Design
+
+The presented study is the result of a cooperation between the Swiss Federal University for
+Vocational Education and Training (SFUVET), the University of Applied Sciences HES-SO
+Valais-Wallis and the University of Konstanz from Germany. It is based on a collaboration
+between two existing projects conducted independently by the University of Applied Sci-
+ences HES-SO Valais-Wallis and the University of Konstanz on the one hand, and SFUVET
+on the other.
+   Both projects are based on cross-sectional surveys which assess the various dimensions
+of digital transformation from the perspectives of the two groups (school management and
+teachers). The survey of the first project was conducted from November 2019 to January
+2020, and therefore immediately before the start of the COVID-19 pandemic in Europe.
+Among other things, the selection of these schools relied on the Smart School Competi-
+tion 2019 of the German digital association Bitkom e.V. (Harder et al., 2020). Given that
+the composition of the school management team can vary within schools, the teams were
+allowed to decide who would be considered a school management member in their schools
+and therefore participate in the survey.
+   The second project by SFUVET was launched in January 2020. The main goal was to
+assess the digital competencies of teachers in vocational education and training in Switzer-
+land. The survey took place from June to September 2020 and was primarily based on the
+European DigCompEdu Framework (Carretero et al., 2017; Redecker & Punie, 2017).
+   Since the cooperation between all three institutions started in April 2020, we were able
+to integrate several items of the instrument used for the school management members in
+the survey for the teachers. However, due to the different orientations of the projects and
+organizational reasons (i.e., the length of the instrument), the number of possible common
+items was limited.
+
+4.2 Sample
+
+According to the Federal Statistical Office (2021), there are 382 public schools for voca-
+tional education and training in Switzerland which employed 15,698 teachers (57.6% male)
+in the school year 2019/2020. There are no specific figures for the vocational education sec-
+tor in terms of the number of extended school management members.
+    A total of 202 school management members and 1,739 teachers from 62 vocational
+schools from the three main language regions in Switzerland voluntarily and anonymously
+participated in both cross-sectional surveys. Regarding the population, this corresponds to
+a rate of 16.2% of Swiss vocational schools and 11.1% of the teachers employed there. Fur-
+thermore, the majority of the participants lived in the German-speaking part of Switzerland
+(68%), followed by the French (20%) and Italian (12%) language regions. We also found
+a significantly larger proportion of male participants among school management members
+(80%), while gender was roughly balanced among teachers. A detailed sample description
+is presented in Table 2.
+
+
+
+
+                                                                                  13
+
+414                                                                                      M. Rauseo et al.
+
+Table 2 Sample description
+                                       School Management (SM)           Teachers (T)          Total
+                                               n = 202                    n = 1.739
+                                          Male        Female         Male           Female
+Language Region           German1      100 (50%)     31 (15%)      539 (33%)      556 (35%)     1.226
+                                                                                                (68%)
+                          French2       42 (21%)          9 (4%)   176 (11%)     142 (9%)        369
+                                                                                                (20%)
+                          Italian3       18 (9%)          1 (1%)    75 (5%)      121 (7%)        215
+                                                                                                (12%)
+Total                                   160 (80%)    41 (20%)      790 (49%)     819 (51%)      1.810
+                                                                                               (100%)
+Note. Deviations result from missing values (n = 1.942)
+1
+  Argovia, Basel-Country, Basel-City, Berne, Glarus, Grisons, Lucerne, Nidwald, Obwald, Schwyz,
+Soleure, St. Gall, Thurgovia, Uri, Zoug, Zurich
+2
+    Friburg, Geneva, Jura, Neuchatel, Vaud, Wallis
+3
+    Tessin
+
+4.3 Instrument
+
+In line with the research questions, our goal was to assess the status quo of digital transfor-
+mation from the perspectives of school management members and teachers. In view of the
+items that the two surveys had in common, the MMOE (Ifenthaler & Egloffstein, 2020) was
+chosen as the framework for the study, which became the common denominator on which
+the analyses were conducted.
+   The instrument used in the school management survey, which had already attempted to
+cover the broad spectrum of digital transformation as well as possible, served as the starting
+point for the design of the joint instrument. Following the teacher survey and the subsequent
+data processing, an attempt was made to summarize the items in a plausible way in terms of
+content using an exploratory factor analysis. This resulted in some dimensions being repre-
+sented by only one item, while others were operationalized with multiple scales. In the sec-
+ond step, the internal consistency of the potential scales was tested. Afterwards, individual
+items, as well as the newly formed scales, could be assigned to the superordinate dimensions
+of the MMOE (Ifenthaler & Egloffstein, 2020). During this process, it turned out that the
+dimension Digital teaching and learning could not be mapped empirically. This is particu-
+larly due to the target group of the first survey. Since it was directed at school management
+members, the focus was placed more on the dimensions of organizational and personnel
+development, while instructional development was only examined in a rudimentary way.
+   This resulted in a total of five MMOE dimensions being used to answer the second and
+third questions: The first dimension, Equipment and Technology, was covered by one item
+dealing with the satisfaction of the same. The Strategy and Leadership dimension was oper-
+ationalized with a three-item scale. In addition to the satisfaction with the school’s digital
+strategy, the items used related to the structural framework of the school, i.e., the extent
+to which teachers are offered incentives by school management to adapt their teaching to
+digital transformation or to what extent they are offered opportunities to acquire digital
+competencies. The Organization dimension was operationalized with two subscales of three
+items each. The Pedagogical IT Support scale comprises content aspects relating to the
+provision of relief hours for planning instructional innovations with digital teaching and
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                   415
+
+
+learning methods, the introduction of working groups on pedagogical, digital innovations
+and the overall satisfaction with pedagogical support in the school. The second subscale
+Technological IT Support includes aspects of satisfaction, availability of first-level support
+(technological support within ten minutes), and sufficient technical support for the school’s
+use of teachers’ own devices. The Employees dimension was mapped with two subscales
+and an additional single item. The first scale consists of four items and addresses teachers’
+Digital Competencies. The items relate to different competence facets, such as application
+competence, informatics competence, competencies in the area of data protection, and rules
+of conduct on the topic of IT security. The other two scales can be assigned to the area
+of attitudes. The negative Attitudes, i.e., the fear of doing something wrong when using
+digital technologies, of reaching one’s own limits or of worrying that digitization may over-
+whelm one, were operationalized with three corresponding items. The positive Attitudes
+were mapped with one single item on how the respondents feel about digitally supported
+teaching and learning methods. The last of the five dimensions, Culture, was also mapped
+with one single item, dealing with the perceived acceptance of digital teaching and learning
+methods among the teaching staff. Table 3 shows the scales with illustrative items as well
+as the single items used according to their assignment to the dimensions of the MMOE. All
+scales show acceptable to good Cronbach’s alphas.
+
+
+
+
+4.4 Analysis
+
+To answer the research questions, t-tests for independent samples as well as two linear
+regression models for both school management members and teachers were used. Since
+the participants in the study were from different schools (n = 62), independent and identi-
+cally distributed data could not be assumed with certainty. For this reason, a standard error
+correction was performed using the statistics software STATA 15. Robust standard errors
+account for this multilevel structure and filter out potential cluster-related effects (McNeish
+et al., 2017). Missing values were not imputed. Accordingly, the multivariate analyses were
+subject to the principle of listwise deletion.
+
+
+5 Results
+
+First, we explored the question of the extent to which perceptions differ between school
+management members and teaching staff regarding the various dimensions of digital trans-
+formation. Due to sample sizes of n > 30 in both subgroups (school management members
+and teachers), the parametric test procedures could be performed despite a violation of the
+normal distribution assumption (Field, 2009). A detailed overview of the results is presented
+in Table 4.
+   The analyses identified significant differences between the school management mem-
+bers and the teaching staff in various aspects of the digital transformation. Only the vari-
+ables Equipment and Technology and the subscale Technological IT Support, which can
+be assigned to the content dimension Organization, showed no significant effects. The
+findings also indicate that Pedagogical IT Support (d = 0.199) and Strategy and Leader-
+
+
+                                                                                   13
+
+416                                                                                                  M. Rauseo et al.
+
+Table 3 Operationalization and reliability analysis
+Variable / Scale                             M (SD)           Alpha Illustrative Items
+(Number of Items)
+Equipment and Technology
+Satisfaction with infrastructure and        4.53             ---       How satisfied are you with the digital
+equipment (1)1                              (1.15)                     infrastructure and equipment in your
+                                                                       school?
+Strategy and Leadership
+Scale: Strategy and Leadership (3)2              4.10        0.78      How satisfied are you with your school’s
+                                                 (1.04)                digital strategy?
+Organization
+Pedagogical IT Support (3)2                      3.64        0.68      Our school provides release hours for
+                                                 (1.10)                planning instructional innovations with
+                                                                       digital teaching-learning methods.
+Technological IT Support (3)3                    3.90        0.82      There is sufficient technical support
+                                                 (1.14)                for the school’s use of teachers’ own
+                                                                       devices.
+Employees
+Digital competencies of teaching staff           3.80        0.71      Application competence (e.g., use of
+(4)3                                             (0.85)                Microsoft Office, communication via
+                                                                       e-mail, etc.)
+Attitude (Fear) (3)4                             2.58        0.87      The idea of doing something wrong
+                                                 (1.12)                when using digital technologies scares
+                                                                       me.
+Attitude (Positive) (1)4                         4.48        ---       I am generally positive about digi-
+                                                 (1.09)                tally supported teaching and learning
+                                                                       methods.
+Culture
+Acceptance of digital teaching and learn- 4.24               ---
+                                                             How do you assess the acceptance of
+ing methods (1)5                          (0.96)             digital teaching and learning methods
+                                                             among the teaching staff at your school?
+Note. M: Mean, SD: Standard Deviation, α: Cronbach’s alpha, 6-point Likert scale
+1
+    1 ‘Not at all satisfied’ to 6 ‘Very satisfied’
+2
+    1 ‘Not at all satisfied’ to 6 ‘Very satisfied’; 1 ‘Does not apply at all’ to 6 ‘Fully applies’
+3
+    1 ‘Not at all satisfied’ to 6 ‘Very satisfied’; 1 ‘Do not agree at all’ to 6 ‘Totally agree’
+4
+    1 ‘Do not agree at all’ to 6 ‘Totally agree’
+5
+    1 ‘Very low acceptance’ to 6 ‘Very high acceptance’
+
+
+
+ship (d = 0.218) were rated better by school management members than by teachers. The
+reverse was true for the basic assessment of the Developmental State of Digital Transfor-
+mation (d = 0.228), Digital Competencies of the Teaching Staff (d = 0.278), Attitudes (Fear)
+(d = 0.133), and Culture (d = 0.201). According to Ellis (2010), these effects can be classified
+as small. By contrast, a large effect can be found for the variable Attitudes (Positive), which
+was operationalized using the item “[Teachers are] I am generally positive about digitally
+supported teaching and learning methods.” (d = 0.688). The positive Attitudes of teachers
+toward digitally supported teaching and learning methods was rated significantly higher by
+the teaching staff than by the members of the school management.
+   The second research question examined whether the model of Ifenthaler and Egloffstein
+(2020) could be validated empirically, that is, the extent to which the individual content
+dimensions are related to the general state of development of the digital transformation.
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                                   417
+
+Table 4 T-tests between school management members and teachers on various aspects of digital
+transformation
+Dependent Variable                      SM         TS             T              p           d
+                                      M (SD)    M (SD)
+Development State of the Digital    4.09      4.32         − 3.355          0.001       − 0.228
+Transformation                      (0.93)    (1.05)
+Equipment and Technology            4.42      4.54         − 1.492          n.s.        ---
+                                    (1.03)    (1.16)
+Strategy and Leadership             4.31      4.08         3.103            0.002       0.218
+                                    (0.94)    (1.04)
+Organization: Pedagogical IT        3.84      3.62         2.925            0.004       0.199
+Support                             (0.97)    (1.12)
+Organization: Technological IT      3.92      3.90         0.239            n.s.        ---
+Support                             (1.12)    (1.14)
+Employees: Digital Competencies     3.58      3.82         − 4.354          0.000       − 0.278
+                                    (0.69)    (0.86)
+Employees: Attitudes (fear)         2.45      2.60         − 2.018          0.045       − 0.133
+                                    (0.94)    (1.14)
+Employees: Attitudes (positive)     3.81      4.55         − 11.635         0.000       − 0.688
+                                    (0.78)    (1.09)
+Culture                             4.49      4.65         − 3.262          0.001       − 0.201
+                                    (0.62)    (0.82)
+Note. SM = School Management; TS = Teaching Staff; M = Mean; SD = Standard Deviation; measured
+with 6-point Likert scales
+
+
+Thus, we also assessed whether different effects could be identified between school man-
+agement members and teachers. A multivariate approach in the form of linear regression
+analysis was chosen for this purpose. Table 5 presents the regression model for school man-
+agement members. Table 6 presents the same regression model for the teaching staff.
+   With an explained variance of R² = 0.339, regression Model I shows a large effect
+(Ellis, 2010). A closer look at the predictors indicates that both Equipment and Technology
+(β = 0.281) and the subscale Digital Competencies (β = 0.180) of the Employees dimension
+
+
+Table 5 Regression Model I –                                        B      Robust    Beta       T      p
+School Management Members                                                   SE
+(DV: Development State of
+                                     Equipment and               0.247     0.068    0.281     3.60   0.001
+Digital Transformation)
+                                     Technology
+                                     Strategy and Leadership      0.123    0.082     0.128     1.50 0.140
+                                     Organization: Peda-         − 0.047   0.078    − 0.049   − 0.60 0.548
+                                     gogical IT Support
+                                     Organization: Techno-       0.064     0.081    0.081     0.79   0.431
+                                     logical IT Support
+                                     Employees: Digital          0.239     0.111    0.180     2.16   0.035
+                                     Competencies
+                                     Employees: Attitudes        − 0.039   0.072    − 0.041   − 0.55 0.586
+                                     (Fear)
+                                     Employees: Attitudes        − 0.036   0.102    − 0.032   − 0.35 0.727
+                                     (positive)
+R² = 0.339; n = 184; F (9;
+                                     Culture                     0.274     0.140    0.191     1.96   0.055
+60) = 9.88; p < .001; a 1 ‘male’ 2
+‘female’                             Gendera                     0.020     0.147    0.009     0.13   0.894
+
+
+
+                                                                                                13
+
+418                                                                                    M. Rauseo et al.
+
+
+were significant contributors to the variance explanation in the dependent variable. The
+Culture factor (β = 0.191) also made a significant contribution at an α = 10% level, indicating
+a statistical tendency here. The beta coefficients of the significant predictors indicate small
+to medium effects.
+   Compared to the first model, which was calculated only with the subsample of school
+management members, regression Model II (Table 6), in which only the teachers were con-
+sidered, showed an even higher variance explanation (R² = 0.509). This can also be classi-
+fied as a large effect or a high model quality. Considering the individual predictors, again
+Equipment and Technology (β = 0.319) and Digital Competencies (β = 0.071) were signifi-
+cant contributors to the variance explanation. Although the effect was slightly higher for
+Equipment and Technology compared to Model I, it decreased to a small effect for Digital
+Competencies. The variable Culture (β = 0.099), for which a statistical trend was found in
+Model I, was also significant in Model II, with a small effect.
+   In contrast to the school management members, however, two key differences emerged in
+regression Model II (teaching staff). First, the predictor Attitudes (Fear) (β = 0.066) showed
+a significant result, with a small effect. Second, there was a major change in the Strategy
+and Leadership variable (β = 0.483) between the models. Although it did not make a signifi-
+cant contribution to the variance explanation in the first model for the school management
+members, Strategy and Leadership showed up here as a significant predictor, with the larg-
+est effect size of all variables included in the model. The effect can be classified as large
+(Ellis, 2010). Compared to the school management members, it is thus clear that Strategy
+and Leadership had a significant influence on the perceived state of development of digital
+transformation among the teachers surveyed.
+
+
+
+
+Table 6 Regression Model                                    B       Robust    Beta       T       p
+II – Teaching Staff (DV:                                             SE
+Development State of Digital
+                                Equipment and             0.288     0.031    0.319     9.31    0.000
+Transformation)
+                                Technology
+                                Strategy and Leadership    0.485    0.033     0.483    14.58 0.000
+                                Organization: Peda-       − 0.046   0.030    − 0.050   − 1.53 0.132
+                                gogical IT Support
+                                Organization: Techno-     − 0.030   0.024    − 0.033   − 1.24 0.219
+                                logical IT Support
+                                Employees: Digital        0.086     0.026    0.071     3.37    0.001
+                                Competencies
+                                Employees: Attitudes      0.061     0.021    0.066     2.97    0.004
+                                (Fear)
+                                Employees: Attitudes      − 0.007   0.018    − 0.007   − 0.38 0.703
+                                (positive)
+R² = 0.509; n = 1.697; F (9;
+                                Culture                   0.126     0.034    0.099     3.72    0.000
+61) = 132.60; p < .001; a 1
+‘male’ 2 ‘female’               Gendera                   0.035     0.025    0.027     1.40    0.167
+
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                    419
+
+
+6 Discussion
+
+The overarching goal of our study was to assess the digitization-related development state
+of vocational schools in Switzerland. Through the cooperation of the three institutions
+involved, it was possible to look at both the perspective of school management members
+and that of teachers on various aspects of digital transformation.
+   The first research question of this study sought to define the status quo in the develop-
+ment of transformation in Swiss vocational schools. The assessment of the general devel-
+opment state of the digital transformation revealed that teachers assessed the status quo
+somewhat better than school management members; therefore, both groups perceived it as
+advanced. This is in line with the conclusions of the report of Educa (2021), which ascribe
+a comparatively positive picture to vocational schools regarding the digital transformation,
+although differences between individual schools undoubtedly exist. The differentiated per-
+ception can have various reasons. One possible reason for the digitalization-related status
+quo could be the different range of tasks performed by school management members com-
+pared to teachers. The role of school management members is significantly more complex
+and overarching, as they must look at the school from a holistic perspective. In addition to
+classroom activities, this includes, among other things, strategic or personnel aspects that
+can be assigned to the area of leadership. Furthermore, it is the duty of school management
+members to consider external influences, such as digitalization-related decisions of the edu-
+cation policy, and to account for and implement necessary measures in the best possible
+way. In the sense of Fend’s (2008) multi-level theory, school management must keep an
+eye on developments at the macro, meso, and micro levels. A higher number of task areas
+increases the likelihood that digitalization-related weaknesses will be noticed more and with
+a higher granularity. It can be assumed that teachers primarily focus on what happens in the
+classroom, where strategic or organizational aspects of the digital transformation are not
+addressed so strongly (primary focus on the micro level).
+   Another reason for the different perceptions could be that school management members
+serve as a point of contact for many teachers when digitalization-related aspects are not
+going as well as they should. The school management is regularly informed of ICT mal-
+functions by the teachers; however, school management is given very little feedback when
+ICT works. It is therefore possible that school management has an incorrect perception of
+the functioning of ICT. Further, it is also up to the school management if some teachers
+express complete reservation toward the digital transformation or reject it as such. Although
+this situation certainly has an impact on the school as a whole, it has no direct effect on
+individual teachers in their day-to-day work. Overall, it can be assumed that teachers are
+more likely to approach school management members with negative aspects and problems,
+and that school management is not necessarily as strongly confronted with positive aspects
+regarding digital transformation.
+   We must also question whether it might be socially desirable for school management
+members to be more reticent about the general level of digital development so that develop-
+ment processes can continue. However, a social desirability effect could be present in the
+teachers’ responses, as they might feel directly exposed. In this regard, the idea of a distrib-
+uted responsibility for the school management could have led to limit a possible overestima-
+tion of the state of the art. Additionally, school management could serve as a kind of “critical
+
+
+
+
+                                                                                    13
+
+420                                                                             M. Rauseo et al.
+
+
+friend” who identifies optimization potential in the dimensions of digital transformation and
+develops these aspects further.
+    Differences between the two groups can also be identified by considering the individual
+dimensions of digital transformation. Whereas the areas of Pedagogical IT Support and
+Strategy and Leadership were perceived better by the school management members, the
+opposite was true for the dimensions of Digital Competencies of the teaching staff, Attitudes,
+and Culture. One possible reason for the differentiated perceptions is the self-assessment or
+external assessment of these aspects. Individuals with high self-esteem tend to evaluate
+themselves more positively than others do (e.g., Atwater & Yammarino, 1992; Nilsen &
+Campbell, 1993; Lindeman et al., 1995). For example, it seems plausible that members of
+the school management assessed Pedagogical IT Support and Strategy and Leadership bet-
+ter, as these can be assigned to organizational development, for which the school manage-
+ment members are primarily responsible. Conversely, aspects such as Digital Competencies
+or the Attitudes of teachers are better assessed by the same. The different perceptions of
+the digitalization-related school culture may also be due to the situation described above,
+in which school management members tend to be informed significantly more often about
+difficulties or shortcomings regarding the digital transformation. Considering the approach
+by Petko et al. (2018b), it is noteworthy that aspects assigned to school readiness are rated
+better by school management, while those assigned to teacher readiness are rated better by
+teachers.
+    The second research question investigated the differences between the school manage-
+ment members and teachers regarding the various dimensions of the MMOE. In this respect,
+we found that certain dimensions of the MMOE are generally well suited for explaining
+the general digitalization-related state of development. Equipment and Technology, Digital
+Competencies, and Culture appeared to be of particular importance. In contrast to the regres-
+sion model for school management members, however, the greatest effect in the model for
+teachers was observed for the variable Strategy and Leadership. It therefore appears that
+the Strategy and Leadership dimension is a very important aspect from the perspective
+of the teachers regarding the general status quo of digital transformation. Conversely, this
+circumstance did not seem to be the case for the school management members themselves.
+In an attempt to elaborate characteristics of so-called “digital optimal schools”, Eickel-
+mann and Drossel (2020) identify satisfaction with digital infrastructure and equipment,
+advanced training for teachers, and IT support as the most important factors. While the first
+two aspects also appear to be important in our study, insofar as we see digitization-related
+advanced training in the context of increasing digital competencies, with our data we can-
+not confirm the importance of IT support for the perception of the digitization-related state
+of development. Regarding the aspects related to the Strategy and Leadership dimension,
+the authors do not make any explicit statements. For the successful design of digitalization-
+related school development processes, however, it is important that school management
+members are aware of their special role, in particular regarding their perceived importance
+in digital transformation processes from the teachers’ perspective. It is their task to drive
+and sustain digital transformation through appropriate transformational leadership. Without
+a corresponding commitment on the part of school management members and also consid-
+ering sufficient organisational resources, the transformation cannot succeed. This is in line
+with the argumentation of Seufert and Tarantini (2022), who also emphasize the importance
+of school management members or leadership and highlight their significant role in the
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                  421
+
+
+development of a culture conducive to innovation as well as the proactive design of change
+processes. At the same time, it must be considered that school management members also
+have organizational hurdles to overcome and are constrained by certain restrictions, for
+example in budgeting or a lack of culture for project-base work in some school environ-
+ments. This may result in the situation that certain measures can only be implemented to
+a limited extent, which can diminish the influence of the school management to a certain
+degree.
+    We deduced from the results that the inclusion of all school stakeholders – especially
+school management members and teachers – is indispensable to successfully shape the digi-
+tal transformation of schools. Scholkmann (2021) also identifies the “individual” (i.e., in
+our context, both school management members and teachers) as the problem source and
+at the same time solution regarding sustainable change. Following Graf-Schlattmann et al.
+(2019, p. 19), they state that a “collective willingness to change” is needed to drive digital
+transformation. Thus, only a collaborative approach that involves all relevant school stake-
+holders will result in a successful digital transformation. Stronger communication could be
+the key to developing a common understanding of digital transformation and, building on
+this, to further developing the various digital dimensions collaboratively. In this context,
+Tołwińska (2021) noted that the quality of work in schools can be improved if teachers con-
+tribute their knowledge and skills to these processes. The digital competencies of teachers
+play an important role in related change processes, since teachers who have a higher level
+of digital competencies perceive the ease of use of ICT (and consequently its usefulness)
+better (Baturay et al., 2017). It is the task of school management members to promote this
+exchange by getting teachers to be proactive and not afraid of making mistakes. Thus, col-
+laboration between school stakeholders is perhaps the most important aspect to consider in
+principle in change processes, and digital transformation as well.
+
+
+7 Limitations
+
+For an adequate interpretation of the results, it is necessary to address the limitations of
+the study. First, the different sample sizes within the two subgroups, which was to be
+expected given the significantly smaller population of school management members, need
+to be mentioned. Nevertheless, the relatively small number of school management mem-
+bers per school means that analyses at the individual school level are only possible to a
+limited extent. Furthermore, we cannot exclude the possibility of positive selection regard-
+ing the sample in both surveys. Participation in the study was voluntary for both school
+management members and teachers, which means that a corresponding bias seems possible.
+Moreover, both school management members and teachers from certain schools were more
+strongly represented in the sample than others. In the multivariate analyses, this clustering
+problem was accounted for using standard error correction. Another aspect connected to the
+sample itself, with special regard to vocational education and training, is that companies
+also represent an important stakeholder in digital transformation processes in vocational
+schools. Assessing their role and their perspective on digital transformation in vocational
+schools could be one focal point of future research.
+    The second key limitation of the study relates to the measurement of selected character-
+istics regarding self-assessment or social desirability. It can be assumed that when asked
+
+
+                                                                                  13
+
+422                                                                              M. Rauseo et al.
+
+
+about their leadership behavior, school management members can choose response behav-
+iors that are socially expected, which can lead to bias. Further, the survey contained aspects
+such as the digital competencies of the teachers, which can be better measured by using a
+corresponding competency test that could afford an increase in both reliability and validity.
+All measured variables are perceptions of the school management members or teachers; it is
+therefore not an objective assessment of the digitization-related state of development based
+on external standards (Educa, 2021).
+    Another aspect that needs to be mentioned in this context is the difficulty of operational-
+izing the underlying MMOE (Ifenthaler & Egloffstein, 2020); while the individual dimen-
+sions of the model are very complex in terms of content, these cannot be viewed separately
+from one another. For example, the dimension of Culture has many interfaces with other
+dimensions, such as those of Employees. In this context, our operationalization of the model
+is limited to a certain extent, as the respective theoretical dimensions are not fully mapped.
+Against the background of our findings, the question arises as to possible limitations regard-
+ing the chosen theoretical framework. The results suggest that the dimensions of the model
+may not have equal value, i.e., individual dimensions may appear more important than oth-
+ers. In addition, there is a possibility that important content aspects are not included in the
+model. One example could be the establishment of a feedback culture, which might play an
+important role in successfully shaping the digital transformation (cf. Delcker & Ifenthaler,
+2022).
+    Further, the individual project-related organizational conditions meant that the surveys
+could not take place during the same period. This circumstance was further compounded
+by the fact that the survey of school management members was conducted before, and the
+survey of teachers shortly after the onset of the COVID-19 pandemic. During this period,
+the issue of digitalization in schools developed a particular dynamic. The measures resulting
+from the pandemic may have led to a change in certain aspects related to digitalization. This
+should also be considered when interpreting the results.
+    Finally, adding the learners’ perspective in future studies could provide an even broader
+picture of the relevant school stakeholders. In this context, the SELFIE tool of the European
+Commission (2022) could – especially regarding the assessment of digital competencies –
+serve as a basis, since it was developed in accordance with the DigCompEdu Framework
+(Redecker & Punie, 2017) and already combines the perspectives of school management
+members, teachers and learners.
+
+
+8 Conclusions and Implications
+
+The first objective of this study was to assess the status quo of digital transformation from
+the perspective of school management members and teachers at vocational schools in Swit-
+zerland. The results showed that both status groups generally assessed the digitalization-
+related state of development as advanced. However, a small effect was observed in that
+the teachers rated the status quo slightly better than the school management members did.
+A detailed examination of various aspects of the digital transformation revealed that the
+individual dimensions of change were perceived differently by school management mem-
+bers and teachers. In the cases of Equipment and Technology, which were rated as good by
+both groups, and Technological IT Support, which was also in the satisfactory range, no
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                   423
+
+
+significant differences in perception could be identified. Although the school management
+members showed more positive assessments in the areas of Strategy and Leadership, Peda-
+gogical IT Support, and fear-related Attitudes toward digital transformation, the opposite
+effects were observed regarding the Digital Competencies, the positive Attitudes of teach-
+ers toward digital transformation, and the anchoring of digital transformation in the school
+culture. In the case of positive attitudes, the effect could be classified as medium to large.
+    The second objective of this study was to determine which dimensions of the digital
+transformation can be used as predictors for assessing the digitalization-related status quo of
+schools. In the model for the school management members, the digital competencies of the
+teaching staff were identified as a significant predictor, along with equipment and technol-
+ogy, which showed the greatest effect. Both variables remained significant in the teachers’
+model as well, with the effect of digital competencies being reduced due to multivariate cor-
+relations. Further, both the fear-related attitudes of the teachers, with a comparatively small
+effect, as well as the anchoring of the digital transformation in the school culture and the
+dimension of Strategy and Leadership, are predictive for the digitalization-related state of
+development at a significant level. In the case of Strategy and Leadership, the effect can be
+classified as medium to large. In other words, we can conclude that the teachers, in contrast
+to the school management members, perceived Strategy and Leadership as a significant fac-
+tor regarding the assessment of the digitalization-related development status. This suggests
+a different level of importance for this dimension in the context of digitalization between the
+two groups. However, the relevance of this dimension is enormous, as teachers perceive the
+willingness of school management to promote innovation or change as one of the strongest
+predictors of school quality (Bonsen et al., 2002; Imboden, 2017).
+    In summary, our study shows, on the one hand, that the different dimensions of digital
+transformation are perceived differently by the two observed status groups. On the other
+hand, some of these dimensions are considered more important than others regarding the
+perception of the general digitization-related status quo. In this context, differences between
+school management members and teachers could also be identified. In principle, we focused
+on obtaining a holistic view of digital transformation by both school management members
+and, in particular, by teachers, whereas in many other studies the content focus of studies
+with teachers is often reduced to instructional development, i.e., their digital competencies
+or the use of ICT in the classroom.
+    Thus, the question arises as to what implications for the successful design of the digi-
+talization-related school improvement process can be derived from these results. First, it
+is important that teachers are actively involved in digitalization-related development pro-
+cesses by school management. Based on a jointly developed vision or strategy, common
+values must be defined that determine both the content-related and the “moral” framework.
+It is of importance that all school stakeholders agree on what digital transformation means
+for their school and what part the individual status groups must contribute so that the trans-
+formation process can be shaped successfully. A constructive trial-and-error culture can help
+to quickly solve potential problems and optimize the transformation process (Tołwińska,
+2021).
+    To support these findings, further studies are needed on the digital transformation of
+vocational schools that look beyond the classroom level to the entire school development
+process. It is necessary to observe how schools evolve in the different theoretical dimen-
+sions of digital transformation, or whether some of these dimensions emerge as more impor-
+
+
+                                                                                   13
+
+424                                                                                            M. Rauseo et al.
+
+
+tant than others when assessing the digital status quo. In this regard, it would be helpful to
+consider the individual dimensions in more detail to better examine the interrelationships
+between them. Additionally, the school management’s leadership competence should also
+be included in these thoughts, as school management members with advanced leadership
+competence will find it easier to drive change (Hallinger & Heck, 2010; Bonsen, 2016b).
+Comparisons between vocational and general education schools, and between different
+countries can also help identify potential and formulate recommendations for action. It will
+be interesting to see how digital transformation in schools progresses over time, particularly
+in light of the complex dynamics of the topic, which was accelerated by the COVID-19
+pandemic.
+
+Acknowledgements The authors would like to thank Chiara Antonietti and Francesca Amenduni for their
+support in the preliminary phase of the analyses. This work was supported by the Swiss State Secretariat for
+Education, Research and Innovation (grant number 19-2550).
+
+Contributions Martina Rauseo: Conceptualization; Methodology; Investigation; Formal analysis; Writing –
+Original Draft; Writing – Review & Editing;
+Andreas Harder: Conceptualization; Methodology; Writing – Original Draft; Writing – Review & Editing;
+Formal analysis;
+Deborah Glassey-Previdoli: Conceptualization; Methodology; Writing – Original Draft; Writing – Review
+& Editing;
+Alberto Cattaneo: Conceptualization; Supervision; Writing – Review & Editing; Project administration;
+Funding acquisition.
+Stephan Schumann: Conceptualization; Supervision; Writing – Review & Editing;
+Serge Imboden: Conceptualization; Supervision; Project administration; Funding acquisition.
+
+Funding Open access funding provided by Swiss Federal University for Vocational Education and Training
+(SFUVET)
+
+Declarations
+
+Conflict of interest The authors declare that they have no competing interests that are relevant to the content
+of this article.
+
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which
+permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence,
+and indicate if changes were made. The images or other third party material in this article are included in the
+article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is
+not included in the article’s Creative Commons licence and your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright
+holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+
+
+
+
+References
+Arnold, D., Arntz, M., Gregory, T., Steffens, S., & Zierahn, U. (2016). Herausforderungen der Digitalisier-
+    ung für die Zukunft der Arbeitswelt. ZEW policy brief nr. 8. Zentrum für Europäische Wirtschaftsforsc-
+    hung (ZEW).
+Atwater, L. E., & Yammarino, F. J. (1992). Does Self-Other Agreement on Leadership perceptions moderate
+    the validity of Leadership and performance predictions? Personnel Psychology, 45(1), 141–164. https://
+    doi.org/10.1111/j.1744-6570.1992.tb00848.x.
+
+
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                                      425
+
+Baturay, M. H., Gökçearslan, Ş., & Ke, F. (2017). The relationship among pre-service teachers’ com-
+      puter competence, attitude towards computer-assisted education, and intention of technology accep-
+      tance. International Journal of Technology Enhanced Learning, 9(1), 1–13. https://doi.org/10.1504/
+      IJTEL.2017.084084.
+Bonsen, M. (2016a). Wirksame Schulleitung. In H. Buchen, & H. G. Rolff (Eds.), Professionswissen Schul-
+      leitung (pp. 193–226). Beltz.
+Bonsen, M. (2016b). Schulleitung und Führung in der Schule. In H. Altrichter, & K. Maag Merki
+      (Eds.), Handbuch Neue Steuerung im Schulsystem (pp. 301–323). Springer VS. https://doi.
+      org/10.1007/978-3-531-18942-0_11.
+Bonsen, M., von der Gathen, J., & Pfeiffer, H. (2002). Wie wirkt Schulleitung? Schulleitungshandeln als
+      Faktor für Schulqualität. In H. G. Rolff, H. G. Holtappels, K. Klemm, H. Pfeiffer, & R. Schulz-Zander
+      (Eds.), Jahrbuch der Schulentwicklung (pp. 287–322). Beltz Juventa.
+Bosch, U., Hentschel, S., & Kramer, S. (2018). Digital offroad: Erfolgsstrategien für die digitale Transfor-
+      mation. Haufe-Lexware.
+Carretero, S., Vuorikari, R., & Punie, Y. (2017). DigComp 2.1: the Digital competence Framework for Citi-
+      zens with eight proficiency levels and examples of use. Publications Office of the European Union.
+      https://doi.org/10.2760/38842.
+Cijan, A., Jenic, L., Lamovsek, A., & Stemberger, J. (2019). How digitalization changes the workplace.
+      Dynamic Relationships Management Journal, 8(1), 3–12. https://doi.org/10.17708/DRMJ.2019.
+      v08n01a01.
+Cattaneo, A. A. P., Antonietti, C., & Rauseo, M. (2022). How digitalised are vocational teachers? Assessing
+      digital competence in vocational education and looking at its underlying factors. Computers & Educa-
+      tion, 176. https://doi.org/10.1016/j.compedu.2021.104358
+Delcker, J., & Ifenthaler, D. (2022). Digital distance learning and the transformation of vocational
+      schools from a qualitative perspective. Frontiers in Education, 7, 908046. https://doi.org/10.3389/
+      feduc.2022.908046.
+Educa. (2021). Digitalisierung in der Bildung. Educa.
+Eickelmann, B., & Drossel, K. (2020). Digitales Potenzial. Erfolgreiche Förderung digitaler Kompetenzen
+      von Schülerinnen und Schülern an nicht-gymnasialen Schulen der Sekundarstufe I. Vodafone Stiftung.
+Eickelmann, B., & Gerick, J. (2017). Lehren und Lernen mit digitalen Medien - Zielsetzungen, Rahmen-
+      bedingungen und Implikationen für die Schulentwicklung. In K. Scheiter, & T. Riecke-Baulecke (Eds.),
+      Lehren und Lernen mit digitalen Medien. Strategien, internationale Trends und pädagogische Orien-
+      tierungen (pp. 54–81). Oldenbourg.
+Eickelmann, B., Gerick, J., & Vennemann, M. (2019). Unerwartet erfolgreiche Schulen im digitalen Zeitalter.
+      Eine Analyse von Schulmerkmalen resilienter Schultypen auf Grundlage der IEA-Studie ICILS 2013.
+      Journal for educational research online, 11(1), 118–144. https://doi.org/10.25656/01:16790.
+Ellis, P. D. (2010). Effect sizes and the interpretation of research results in international business. Journal of
+      International Business Studies, 41, 1581–1588. https://doi.org/10.1057/jibs.2010.39.
+European Commission (2022). SELFIE. Retrieved October 4, 2022, from https://education.ec.europa.eu/it/
+      selfie
+Federal Council (2018). Strategie “Digitale Schweiz”. Retrieved March 8, 2022, from https://www.dig-
+      italdialog.swiss/de/
+Federal Council (2020, March 17). Coronavirus: Bundesrat erklärt die «ausserordentliche Lage» und ver-
+      schärft die Massnahmen. Retrieved March 8, 2022, from https://www.admin.ch/gov/de/start/dokumen-
+      tation/medienmitteilungen.msg-id-78454.html
+Federal Statistical Office (2021). Obligatorische Schule, Sekundarstufe II, Tertiärstufe - höhere Fachschulen.
+      Retrieved March 8, 2022, from https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissen-
+      schaft/personal-bildungsinstitutionen/obligatorische-schule-sekundarstufe-II-tertiaerstufe-hoehere-
+      fachschulen.html
+Feldhoff, T., Jude, N., Radisch, F., Maag Merki, K., Brauckmann-Sajkiewicz, S., & Kriegbaum, K. (2021).
+      Challenges schools face during the COVID-19 crisis and how they change over time [PowerPoint
+      Slides]. EARLI Online 2021. https://www.researchgate.net/publication/354236426_Challenges_
+      schools_face_during_the_COVID-19_crisis_and_how_they_change_over_time
+Feldhoff, T., Radisch, F., Maag Merki, K., Jude, N., Brauckmann-Sajkiewicz, S., Maaz, K., Arndt, M.,
+      Habeck, L., Suter, F., Wüst, O., Rettinger, T., Reschke, K., & Selcik, F. (2022). Erfahrungen von
+      Schulleiter*innen in Deutschland, Österreich und in der Deutschschweiz während der COVID-
+      19-Pandemie. Zentrale Ergebnisse der Längsschnittstudie «S-CLEVER. Schulentwicklung vor neuen
+      Herausforderungen». Retrieved from www.s-clever.org.
+Fend, H. (2008). Neue Theorie der Schule. Einführung in das Verstehen von Bildungssystemen. VS Verlag für
+      Sozialwissenschaften. https://doi.org/10.1007/978-3-531-91788-7.
+Field, A. (2009). Discovering Statistics using SPSS. Sage.
+
+
+                                                                                                    13
+
+426                                                                                             M. Rauseo et al.
+
+Fraillon, J., Ainley, J., Schulz, W., Friedman, T., & Duckworth, D. (2020). Preparing for Life in a Digital
+      World. The IEA International Computer and Information Literacy Study 2018 International Report
+      Springer. https://doi.org/10.1007/978-3-030-38781-5
+Fraillon, J., Ainley, J., Schulz, W., Friedman, T., & Gebhardt, E. (2014). Preparing for life in a digital age.
+      The IEA International Computer and Information Literacy Study international report Springer. https://
+      doi.org/10.1007/978-3-319-14222-7
+Genner, S. (2017). Digitale Transformation: Auswirkungen auf Kinder und Jugendliche in der Schweiz –
+      Ausbildung, Bildung, Arbeit, Freizeit. ZHAW Zürcher Hochschule für Angewandte Wissenschaften.
+Gräsel, C., Schledjewski, J., & Hartmann, U. (2020). Implementation digitaler Medien als Schulentwicklung-
+      saufgabe. Zeitschrift für Pädagogik, 66(2), 208–224. https://doi.org/10.25656/01:23629.
+Graf-Schlattmann, M., Meister, D. M., Oevel, G., & Wilde, M. (2020). Kollektive Veränderungsbereitschaft
+      als zentraler Erfolgsfaktor von Digitalisierungsprozessen an Hochschulen. Zeitschrift für Hochschulent-
+      wicklung, 15(1), 19–39. https://doi.org/10.3217/zfhe-15-01/02.
+Hallinger, P., & Heck, R. H. (2010). Collaborative leadership and school improvement: understanding the
+      impact on school capacity and student learning. School Leadership & Management, 30(2), 95–110.
+      https://doi.org/10.1080/13632431003663214.
+Harder, A., Imboden, S., Glassey-Previdoli, D., & Schumann, S. (2020). Schulleitungshandeln in Zeiten der
+      digitalen Transformation – „Business as usual” oder „Alles ist neu”? In K. Heinrichs, K. Kögler, & C.
+      Siegfried (Eds.), Berufliches Lehren und Lernen: Grundlagen, Schwerpunkte und Impulse wirtschafts-
+      pädagogischer Forschung. Digitale Festschrift für Eveline Wuttke zum 60. Geburtstag (pp. 1 – 17).
+Huber, S. G., Günther, P. S., Schneider, N., Helm, C., Schwander, M., Schneider, J. A., & Pruitt, J. (2020).
+      COVID-19 – aktuelle Herausforderungen in Schule und Bildung. Erste Befunde des Schul-Barometers
+      in Deutschland, Österreich und der Schweiz. Waxmann.
+Ifenthaler, D., & Egloffstein, M. (2020). Development and implementation of a maturity model of digital
+      transformation. TechTrends, 64(2), 302–309. https://doi.org/10.1007/s11528-019-00457-4.
+Ilomäki, L., & Lakkala, M. (2018). Digital technology and practices for school improvement: innovative
+      digital school model. Research and practice in technology enhanced learning, 13(1), 1–32. https://doi.
+      org/10.1186/s41039-018-0094-8.
+Imboden, S. (2017). Leadership in der Berufsbildung: Eine Interventionsstudie zur Stärkung der Füh-
+      rungskompetenzen [Dissertation, University of Konstanz]. KOPS. http://nbn-resolving.de/urn:nbn:de:
+      bsz:352-0-409280
+Kotter, J. P. (2012). Leading change. Harvard Business School Press.
+Lindeman, M., Sundvik, L., & Rouhiainen, P. (1995). Under- or overestimation of self? Person variables and
+      self-assessment accuracy in work settings. Journal of Social Behavior and Personality, 10(1), 123–134.
+McNeish, D., Stapleton, L. M., & Silverman, R. D. (2017). On the unnecessary ubiquity of hierarchical linear
+      modeling. Psychological Methods, 22(1), 114–140. https://doi.org/10.1037/met0000078.
+Nilsen, D., & Campbell, D. P. (1993). Self–observer rating discrepancies: once an overrater, always an over-
+      rater? Human Resource Management, 32(2–3), 265–281.
+Petko, D., Döbeli Honegger, B., & Prasse, D. (2018a). Digitale Transformation in Bildung und Schule:
+      Facetten, Entwicklungslinien und Herausforderungen für die Lehrerinnen- und Lehrerbildung. Beiträge
+      zur Lehrerinnen- und Lehrerbildung, 36(2), 157–174. https://doi.org/10.25656/01:17094
+Petko, D., Prasse, D., & Cantieni, A. (2018b). The interplay of school readiness and teacher readiness for
+      educational technology integration: a structural equation model. Computers in the Schools, 35(1), 1–18.
+      https://doi.org/10.1080/07380569.2018.1428007.
+Redecker, C., & Punie, Y. (2017). European Framework for the Digital competence of educators: Dig-
+      CompEdu. Publications Office of the European Union. https://doi.org/10.2760/159770.
+Rolff, H. G. (2010). Schulentwicklung als Trias von Organisations-, Unterrichts- und Personalentwicklung.
+      In T. Bohl, W. Helsper, H. G. Holtappels, & C. Schelle (Eds.), Handbuch Schulentwicklung. Theorie
+      – Forschungsbefunde – Entwicklungsprozesse – Methodenrepertoire (pp. 29–36). Julius Klinkhardt.
+Scholkmann, A. B. (2021). Resistance to (Digital) Change. In D. Ifenthaler, S. Hofhues, M. Egloffstein, & C.
+      Helbig (Eds.), Digital Transformation of Learning Organizations (pp. 219–236). Springer. https://doi.
+      org/10.1007/978-3-030-55878-9_13
+Schulz-Zander, R. (1999). Neue Medien und Schulentwicklung. In E. Rösner (Ed.), Schulentwicklung und
+      Schulqualität. Kongressdokumentation 1. Und 2. Oktober 1998 (pp. 35–56). IFS.
+Seufert, S., & Tarantini, E. (2022). Gestaltung der digitalen Transformation in Schulen. Ein Reifegradmodell für
+      die Berufsbildung. MedienPädagogik, 49, 301–326. https://doi.org/10.21240/mpaed/49/2022.07.15.X.
+Swiss State Secretariat for Education, Research and Innovation (SERI) (2017). Aktionsplan im Bereich Bil-
+      dung, Forschung und Innovation in den Jahren 2019–2020 Retrieved October 28, 2021, from https://
+      www.sbfi.admin.ch/sbfi/de/home/bfi-politik/bfi-2021-2024/transversale-themen/digitalisierung-bfi/
+      digitalisierung.html
+
+
+
+13
+
+Same, but Different? Digital Transformation in Swiss Vocational Schools…                               427
+
+Tołwińska, B. (2021). The role of principals in learning schools to support Teachers’ Use of Digi-
+    tal Technologies. Technology Knowledge and Learning, 26(1), 917–930. https://doi.org/10.1007/
+    s10758-021-09496-4.
+Waffner, B. (2021). Schulentwicklung in der digital geprägten Welt: Strategien, Rahmenbedingungen und
+    Implikationen für Schulleitungshandeln. In A. Wilmers, M. Achenbach &, C. Keller (Eds.), Bildung im
+    digitalen Wandel. Organisationsentwicklung in Bildungseinrichtungen (pp. 67–103). Waxmann. https://
+    doi.org/10.25656/01:23605
+World Economic Forum (2016). World Economic Forum White Paper. Digital Transformation of Industries:
+    In collaboration with Accenture. Societal Implications. Retrieved March 8, 2022, from http://reports.
+    weforum.org/digital-transformation/wp-content/blogs.dir/94/mp/files/pages/files/dti-societal-implica-
+    tions-white-paper.pdf
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+
+
+
+
+                                                                                              13

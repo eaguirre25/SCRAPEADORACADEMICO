@@ -1,0 +1,780 @@
+https://rei.esprint.tech                                 ISSN: 2960-8317
+                                                         Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+                                                                                                                       Artículo de revisión
+
+                  Recursos educativos digitales para mejorar el aprendizaje en
+                                         matemáticas
+
+                          Digital educational resources to enhance learning in mathematics
+
+
+Beto Orlando Asqui Lema*                         Resumen: En la actualidad, el aprendizaje de las matemáticas resulta fundamental en
+Escuela de Educación Básica “21 de Abril”.       diversas áreas del conocimiento, pues fomenta el pensamiento lógico, la resolución de
+Riobamba-Ecuador.
+beto.asqui@educacion.gob.ec                      problemas y la toma de decisiones informadas. Las TICs desempeñan un papel crucial
+https://orcid.org/0009-0002-8596-9410
+                                                 en este proceso, al proporcionar herramientas interactivas, simulaciones y recursos
+*Correspondencia:
+                                                 multimedia que posibilitan que el aprendizaje sea de fácil acceso, dinámico y atractivo
+beto.asqui@educacion.gob.ec                      para los estudiantes. Esta investigación analiza los recursos educativos digitales más
+                                                 usados en el aprendizaje matemático, mediante una revisión bibliográfica, con el
+                                                 propósito de mejorar las prácticas educativas y promover habilidades matemáticas. Se
+Cómo citar este artículo:                        utilizó una metodología documental cualitativa, enfocada en recopilar y analizar
+Asqui, B. (2024). Recursos educativos
+digitales para mejorar el aprendizaje en         herramientas, plataformas y recursos digitales para el aprendizaje matemático. Los
+matemáticas. Esprint Investigación, 3(1), 59-
+72. https://doi.org/10.61347/ei.v3i1.67          resultados resaltan que la integración de estrategias didácticas innovadoras y
+                                                 herramientas digitales mejora significativamente el aprendizaje matemático, y
+                                                 promueve la comprensión profunda y el compromiso de los estudiantes. Estas
+Recibido: 29 de abril de 2024                    herramientas digitales diversifican el aprendizaje de las matemáticas al ofrecer funciones
+Aceptado: 05 de junio de 2024                    como modelado, resolución de problemas, gestión educativa y colaboración en línea.
+Publicado: 10 de junio de 2024
+                                                 GeoGebra y Symbolab son útiles para comprender conceptos complejos y resolver
+                                                 problemas, mientras que Khan Academy brinda cursos en línea con recursos
+                                                 interactivos. En tanto, Google Classroom y Jamboard optimizan la gestión y colaboración
+                                                 en el aula. Kahoot y MathGameTime introducen elementos lúdicos, mientras que
+                                                 Descartes, Logic.ly y Scratch ofrecen herramientas para simulaciones, lógica y
+                                                 programación visual, respectivamente.
+
+                                                 Palabras clave: Evaluación digital, herramientas digitales, prácticas interactivas,
+                                                 simulaciones, software educativo.
+
+                                                 Abstract: Nowadays, learning mathematics is fundamental in several areas of knowledge, as it
+                                                 fosters logical thinking, problem solving and informed decision making. ICTs play a crucial role
+                                                 in this process by providing interactive tools, simulations and multimedia resources that make
+                                                 learning easily accessible, dynamic and attractive to students. This research analyzes the digital
+                                                 educational resources most used in mathematical learning, through a literature review, with the
+                                                 purpose of improving educational practices and promoting mathematical skills. A qualitative
+                                                 documentary methodology was used, focused on collecting and analyzing tools, platforms and
+                                                 digital resources for mathematical learning. The results highlight that the integration of
+                                                 innovative didactic strategies and digital tools significantly improves mathematical learning, and
+Copyright: Derechos de autor 2024 Beto           promotes deep understanding and student engagement. These digital tools diversify mathematics
+Orlando Asqui Lema.
+                                                 learning by offering functions such as modeling, problem solving, educational management, and
+                                                 online collaboration. GeoGebra and Symbolab are useful for understanding complex concepts and
+Esta obra está bajo una licencia internacional
+                                                 solving problems, while Khan Academy provides online courses with interactive resources.
+Creative        Commons            Atribución-   Google Classroom and Jamboard optimize classroom management and collaboration. Kahoot and
+NoComercial 4.0.
+                                                 MathGameTime introduce playful elements, while Descartes, Logic.ly and Scratch offer tools for
+                                                 simulations, logic and visual programming, respectively.
+
+                                                 Keywords: Digital assessment, digital tools, educational software, interactive practices,
+                                                 simulations.
+
+
+
+
+                                                                                                                                               59
+
+                                            https://rei.esprint.tech                   ISSN: 2960-8317
+  Esprint Investigación
+                                     Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+1. Introducción
+
+El aprendizaje de las matemáticas, esencial para el desarrollo personal y profesional de los estudiantes,
+proporciona una base intelectual basada en la lógica, la abstracción y el razonamiento ordenado. Las
+habilidades pedagógicas en matemáticas se comprenden como la capacidad para resolver problemas
+abstractos, apoyar otras disciplinas y utilizar herramientas adecuadas para tomar decisiones en
+situaciones problemáticas de diversa complejidad (Torres et al., 2022). A pesar de su importancia, los
+informes internacionales indican que las matemáticas son una de las áreas con menor rendimiento
+académico (George, 2020). En Ecuador, los resultados del informe PISA muestran un rendimiento
+matemático por debajo de la media global. Las dificultades en este campo suelen ser mayores, con
+errores conceptuales y procedimentales frecuentes, debido a obstáculos epistemológicos, cognitivos y
+didácticos.
+   Tradicionalmente, los estudiantes enfrentan dificultades en el aprendizaje de las matemáticas
+debido a preconcepciones arraigadas sobre su complejidad. Estas dificultades pueden estar
+relacionadas con la naturaleza abstracta de los procesos matemáticos, lo que dificulta la comprensión
+de los conceptos. La construcción del conocimiento matemático en el sistema escolar está influenciada
+por el currículo y la gestión didáctica, a menudo centrada en el manejo memorístico de fórmulas o
+procedimiento (Marín et al., 2018).
+   Sánchez (2020) manifiesta que las matemáticas, por su esencia misma, no deben excluirse del
+proceso que abarca lo concreto, lo gráfico y lo abstracto. Lasso y Conde (2021) enfatizan en la necesidad
+de que las instituciones educativas mejoren la formación en matemáticas mediante diversas estrategias,
+como aulas virtuales, tutorías personalizadas y actividades participativas. También destacan la
+importancia de reformar los planes de estudio para integrar la relación entre matemáticas y
+computación desde etapas tempranas, mediante enfoques constructivistas y conectivistas.
+   Por su parte, Grisales-Aguirre (2018) plantea el desafío de adaptar el proceso de enseñanza-
+aprendizaje de las matemáticas a la formación profesional integral (FPI). Debido a la constante
+especialización del conocimiento matemático y al surgimiento continuo de nuevas aplicaciones y
+tecnologías. Además, subraya la complejidad del estudio de las matemáticas, lo que demanda la
+actualización de los métodos de enseñanza y la incorporación de estrategias y tecnologías para motivar
+a los estudiantes a explorar aplicaciones prácticas en su vida profesional y cotidiana.
+   El avance tecnológico ha transformado el panorama de la enseñanza de las matemáticas, y sin duda
+resulta un elemento crucial en la distinción entre la educación del futuro y la actual. Estas innovaciones
+tecnológicas también remodelan la naturaleza misma de las matemáticas; por ejemplo, se reduce la
+importancia de la mera aplicación de procedimientos, mientras emergen nuevas formas de validación
+y práctica en general dentro del ámbito matemático (Engelbrecht et al., 2020). La tecnología en la
+enseñanza de matemáticas puede contribuir al desarrollo de habilidades relevantes en los estudiantes,
+lo que les permitirá enfrentar los desafíos del mundo actual. Este enfoque tiene el potencial de motivar
+y mejorar dicho aprendizaje, al facilitar la implementación de prácticas pedagógicas innovadoras
+(Navarro et al., 2018).
+   De igual manera, Rodríguez et al. (2017) manifiestan que las Tecnologías de la Información y la
+Comunicación (TIC) en el ámbito de las matemáticas brindan acceso a una amplia gama de recursos
+educativos, herramientas de investigación y colaboración, así como oportunidades para la aplicación
+práctica de conceptos matemáticos en diferentes contextos. Además, facilitan el acceso a bases de datos,
+repositorios digitales y bibliotecas internacionales, lo que amplía las oportunidades de aprendizaje y
+promueve la innovación.
+
+Beto Orlando Asqui Lema                                                                              60
+
+                                           https://rei.esprint.tech                   ISSN: 2960-8317
+  Esprint Investigación
+                                     Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+   La constante evolución de los principios de diseño en los recursos digitales ha generado una notable
+transformación en el ámbito educativo, sobrepasando en múltiples aspectos a los materiales
+tradicionales impresos. Estos recursos abarcan desde planes de lecciones interactivas y simulaciones
+modeladas hasta presentaciones en video y software educativo, entre otros (Pepin et al., 2017). La
+integración de las TIC en la enseñanza no solo mejora la concentración y el compromiso de los
+estudiantes, sino que estimula su creatividad y promueve el desarrollo de habilidades digitales,
+preparándolos para enfrentar los desafíos de la era del conocimiento (Jiménez, 2019).
+   Las herramientas digitales deben facilitar este proceso para que el estudiante pueda comprender y
+asimilar la lógica detrás de los temas del área. Por lo que, para comprender el lenguaje matemático, no
+es suficiente con memorizar los algoritmos. Resulta ingente que el estudiante pueda aplicar la
+información en situaciones problemáticas reales. Esto requiere contextualización y aplicación efectiva
+del concepto, lo cual no se logra solo con la información teórica. El uso adecuado de las TIC permite
+formalizar y materializar los conceptos matemáticos abstractos.
+    En relación con el estado del arte, investigaciones como la de Mato-Vásquez et al. (2018) realizada
+en España, examinan una muestra de portales institucionales y plataformas que ofrecen recursos
+didácticos digitales en el ámbito de las matemáticas en la Comunidad Autónoma de Galicia. Sus
+hallazgos indican que, aunque existe una amplia variedad de materiales didácticos disponibles en
+línea, estos presentan deficiencias pedagógicas que no promueven metodologías activas ni una
+verdadera integración de otras alternativas que faciliten el desarrollo de proyectos educativos abiertos
+y flexibles. Destacan, además, que se limita la capacidad de atender la diversidad individual y colectiva
+de los estudiantes, así como la participación y la interactividad de la comunidad educativa. La mayoría
+de estos recursos simplemente replican el formato del libro de texto impreso, añadiendo algunos
+elementos en línea.
+   En Colombia, Bueno-Díaz (2022) llevó a cabo una investigación centrada en la integración de
+herramientas tecnológicas para fortalecer el pensamiento y los procesos matemáticos en estudiantes
+de primero y segundo grado de primaria. Recopiló 60 recursos educativos digitales disponibles en
+línea, organizados en tres categorías: páginas web, canales de YouTube y aplicaciones para
+dispositivos móviles, todos de acceso abierto y gratuito. Además, desarrolló una propuesta pedagógica
+de carácter didáctico. Los resultados principales revelan que estos recursos dinamizan y respaldan las
+estrategias de enseñanza utilizadas por los docentes.
+   De igual manera, otro estudio realizado en Colombia por Barrios y Delgado (2022) estimó los efectos
+de los recursos tecnológicos en el aprendizaje de las matemáticas en estudiantes de 7° grado,
+específicamente sobre polígonos en el plano cartesiano. Los autores demuestran que el uso de
+tecnologías mejoró las calificaciones de los estudiantes en relación con la asignatura de matemáticas,
+pues facilitaron la comprensión de conceptos geométricos y permitieron la corrección instantánea de
+errores, la práctica constante sin esfuerzo manual y la rápida comparación de resultados con sus
+compañeros. Se destaca, finalmente, que el uso de software posibilita procedimientos directos y
+eficaces.
+    Chancusig et al. (2017) en Ecuador investigan el impacto del uso de recursos didácticos interactivos
+en el aprendizaje significativo de los estudiantes. El estudio muestra que muchos docentes no utilizan
+estos recursos, lo que afecta negativamente el rendimiento académico y la calidad educativa.
+Destacaron que las clases de matemáticas suelen ser aburridas debido a la falta de estrategias
+innovadoras, y que los recursos didácticos interactivos son esenciales para motivar a los estudiantes,
+al fomentar el pensamiento libre y mejorar su capacidad intelectual. Además, señalan que el uso de
+metodologías tradicionales por parte de los docentes dificulta el proceso de aprendizaje de los
+
+Beto Orlando Asqui Lema                                                                             61
+
+                                            https://rei.esprint.tech                  ISSN: 2960-8317
+  Esprint Investigación
+                                     Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+estudiantes, lo que resulta en bajos rendimientos académicos. Se sugiere adoptar estrategias
+innovadoras y utilizar recursos didácticos interactivos para promover un aprendizaje más efectivo y
+significativo.
+   La literatura académica destaca los numerosos beneficios del uso de tecnologías en la enseñanza de
+las matemáticas, al señalar su importancia para adaptarse a las necesidades y habilidades actuales de
+los estudiantes. Es decisivo para los educadores conocer qué herramientas digitales están disponibles
+y cómo pueden utilizarse como estrategias efectivas para mejorar la educación matemática. En este
+contexto, el objetivo de esta investigación es identificar los recursos digitales más utilizados en la
+actualidad en el aprendizaje de las matemáticas. Para lograr este propósito, se llevó a cabo una revisión
+bibliográfica en buscadores académicos. Esta información resulta fundamental para orientar y
+enriquecer las prácticas educativas, así como para promover el desarrollo de habilidades matemáticas
+en los estudiantes.
+
+2. Metodología
+
+La metodología utilizada en el artículo es de carácter documental y se enmarca en un enfoque
+cualitativo. Este estudio se centra en la recopilación y análisis de herramientas, plataformas y recursos
+digitales que pueden contribuir al aprendizaje de las matemáticas. Para llevar a cabo esta revisión, se
+realizó una investigación en bases de datos científicas y motores de búsqueda académicos.
+   Cada recurso digital identificado es descrito, incluyendo sus principales usos y aplicaciones en el
+contexto educativo. Además de la explicación técnica de cada plataforma, el artículo también presenta
+ejemplos específicos de cómo estas herramientas han sido implementadas para mejorar el proceso de
+aprendizaje en matemáticas. En cada caso, se menciona el autor del estudio, el contexto de aplicación
+y el nivel educativo en el cual se utilizó la herramienta.
+   Esta metodología contribuye significativamente a la investigación y al área educativa al
+proporcionar una base de conocimiento sobre los recursos digitales disponibles y su efectividad. Al
+sintetizar y analizar las herramientas más relevantes, el artículo ofrece a los educadores y académicos
+una guía práctica y basada en evidencia para integrar la tecnología en sus estrategias de enseñanza.
+Esto facilita la identificación de las mejores prácticas y fomenta la innovación en métodos pedagógicos,
+ayudando a superar las dificultades tradicionales en el aprendizaje de las matemáticas.
+   Además, al destacar estudios de caso y aplicaciones en niveles educativos concretos, se proporciona
+una perspectiva práctica y contextualizada que puede ser adaptada a diferentes entornos educativos.
+Esto es especialmente útil para los docentes que buscan implementar nuevas tecnologías en sus aulas.
+En última instancia, esta investigación apoya el desarrollo profesional de los educadores y contribuye
+al avance de la educación matemática, promoviendo un aprendizaje más interactivo, dinámico y
+efectivo.
+
+3. Resultados
+
+En el ámbito de los recursos digitales utilizados en la educación, existen diversas categorías como
+aplicaciones y software educativos, plataformas de aprendizaje en línea, juegos educativos y
+gamificación, recursos multimedia (videos, tutoriales, simulaciones) y herramientas de colaboración
+en línea. Es importante que los docentes se capaciten y realicen investigaciones constantemente sobre
+el uso y la adecuada implementación de estas herramientas. Mantenerse al tanto de los avances
+tecnológicos y explorar formas innovadoras de integrarlos en las prácticas de enseñanza asegura que
+
+
+Beto Orlando Asqui Lema                                                                             62
+
+                                           https://rei.esprint.tech                   ISSN: 2960-8317
+  Esprint Investigación
+                                     Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+puedan adaptarse a las necesidades en constante evolución de los estudiantes y aprovechar la
+tecnología para mejorar los resultados del aprendizaje. Al estar informados y ser competentes en el
+uso de herramientas digitales, los educadores crean entornos de aprendizaje atractivos y dinámicos
+adaptados a diversos estilos de aprendizaje.
+Aplicaciones y software educativos
+Las aplicaciones y software educativos en matemáticas abarcan una amplia gama de herramientas
+diseñadas específicamente para mejorar la comprensión y el aprendizaje de conceptos matemáticos.
+Incluyen calculadoras especializadas, programas de resolución de problemas, herramientas de
+visualización matemática y software de creación de gráficos.
+Plataformas de aprendizaje en línea
+Las plataformas de aprendizaje en línea ofrecen un entorno virtual para el estudio de las matemáticas,
+pues proporcionan contenido educativo estructurado compuesto por lecciones interactivas, ejercicios
+prácticos, evaluaciones y retroalimentación personalizada. Además, algunas plataformas permiten la
+comunicación y colaboración entre estudiantes y profesores a través de foros de discusión, chats en
+línea y videoconferencias.
+Juegos educativos y gamificación
+Los juegos educativos y la gamificación son recursos digitales que integran elementos de juego en el
+proceso de aprendizaje de las matemáticas; pueden incluir juegos de mesa virtuales, aplicaciones
+móviles, juegos en línea y actividades interactivas diseñadas para hacer que el aprendizaje de las
+matemáticas sea más divertido y motivador.
+Recursos multimedia (videos, tutoriales, simulaciones)
+Los recursos multimedia en matemáticas contienen una variedad de materiales visuales y auditivos
+diseñados para mejorar la comprensión de los conceptos matemáticos, como videos educativos,
+tutoriales paso a paso, simulaciones interactivas y presentaciones multimedia.
+Herramientas de colaboración en línea
+Las herramientas de colaboración en línea permiten a los estudiantes y profesores trabajar juntos en
+proyectos matemáticos de forma remota; pueden incluir pizarras virtuales compartidas, herramientas
+de escritura colaborativa, plataformas de intercambio de archivos y espacios de trabajo en línea.
+   La Tabla 1 muestra un resumen de las principales plataformas y aplicaciones que ofrecen recursos
+interactivos y educativos para diversas prácticas en el proceso de aprendizaje. Se proporciona una
+visión general de las opciones disponibles para los educadores y estudiantes, y se destacan las
+características y funcionalidades de cada herramienta. Por otro lado, en la Tabla 2 se detallan ejemplos
+concretos de la aplicación práctica de estas herramientas, junto con los resultados obtenidos y el ámbito
+de aplicación específico. Esta información permite una comprensión más profunda de cómo estas
+herramientas pueden ser integradas efectivamente en el contexto y nivel educativo para mejorar la
+enseñanza y el aprendizaje de las matemáticas.
+
+
+
+
+Beto Orlando Asqui Lema                                                                             63
+
+                                                   https://rei.esprint.tech                     ISSN: 2960-8317
+  Esprint Investigación
+                                            Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+Tabla 1
+Principales recursos educativos digitales para el aprendizaje de la matemática
+
+      Recursos digitales                               Descripción                                Usos
+                                 GeoGebra es una herramienta gratuita y fácil de
+                                 usar que permite modelar cálculos algebraicos y         Simulaciones
+                                 geométricos. Este software presenta gráficamente
+                                                                                         Actividades prácticas
+ GeoGebra                        conceptos matemáticos, al facilitar la resolución de
+                                                                                         Demostraciones gráficas
+ www.geogebra.org                problemas mediante estrategias, exploración
+                                                                                         Evaluaciones
+                                 dinámica y nuevos métodos. Además, se puede
+                                 instalar en dispositivos móviles y ejecutarse en
+                                 navegadores de Internet (Jiménez & Jiménez, 2017).
+                                 Symbolab es una plataforma en línea que permite
+                                 introducir problemas de matemáticas, así como de
+                                 física y química, para resolverlos mostrando todos
+                                 los pasos realizados. Además, cuenta con una
+                                                                                         Herramienta de apoyo
+ Symbolab                        aplicación móvil que permite ingresar problemas
+                                                                                         Demostraciones gráficas
+ es.symbolab.com                 manualmente a través de una interfaz de
+                                 calculadora o escanearlos usando la cámara del
+                                 dispositivo. Ofrece explicaciones detalladas paso a
+                                 paso del proceso seguido hasta llegar a la solución
+                                 final (Martínez, 2022).
+                                 Esta plataforma proporciona cursos en una
+                                 variedad de campos y niveles educativos. En el
+ Khan Academy                    ámbito de las matemáticas, se incluyen materias
+                                                                                         Actividades prácticas
+ es.khanacademy.org              como aritmética, preálgebra, cálculo, probabilidad y
+                                 estadística, ecuaciones diferenciales, geometría y
+                                 álgebra lineal (Lasso & Conde, 2021).
+                                 Google Classroom facilita la creación de clases,
+                                 asignación de deberes, calificación, y gestión del
+                                 proceso educativo en un solo lugar. Mejora la
+                                 comunicación al permitir a los profesores crear
+                                 tareas, enviar notificaciones y fomentar debates. Los
+ Google Classroom                                                                        Herramienta de apoyo
+                                 alumnos pueden compartir recursos e interactuar a
+ edu.google.com
+                                 través del tablón de anuncios o por correo
+                                 electrónico. Los profesores pueden ver rápidamente
+                                 quién ha completado el trabajo, proporcionar
+                                 comentarios y calificar en tiempo real (Gómez,
+                                 2020).
+                                 Jamboard es una herramienta colaborativa en línea
+                                 desarrollada por Google que facilita la creación y
+                                 colaboración en pizarras digitales interactivas. Los
+                                 usuarios crean diagramas, representaciones              Herramienta de apoyo
+ Jamboard                        gráficas, resuelven problemas matemáticos, realizan     Demostraciones gráficas
+ jamboard.google.com             sesiones de lluvia de ideas y trabajan en proyectos
+                                 matemáticos de forma colaborativa y en tiempo real.
+                                 Además, ofrece herramientas para dibujar, escribir
+                                 fórmulas matemáticas, agregar imágenes y
+                                 manipular objetos geométricos.
+
+
+
+Beto Orlando Asqui Lema                                                                                          64
+
+                                            https://rei.esprint.tech                       ISSN: 2960-8317
+  Esprint Investigación
+                                    Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+                           Es una plataforma en línea que permite a los
+                           usuarios crear contenido interactivo y multimedia,
+                           así como diseñar presentaciones interactivas,
+                           infografías    animadas,     juegos    educativos,
+ Genially                  cuestionarios y otros recursos visuales atractivos       Demostraciones gráficas
+ genially.com/es           para explicar conceptos matemáticos de manera
+                           dinámica y comprensible. Esta plataforma ofrece
+                           una amplia gama de plantillas y herramientas de
+                           diseño que pueden adaptarse específicamente para
+                           el aprendizaje de las matemáticas.
+                           Kahoot es una herramienta web gratuita para crear
+                           juegos interactivos basados en preguntas. Los
+                           participantes pueden unirse desde dispositivos
+                           inteligentes con conexión a internet. Antes de la
+                           sesión, el docente prepara la encuesta o
+                           cuestionario, tras seleccionar el contenido y
+ Kahoot                                                                             Evaluaciones
+                           determinar el tiempo para cada pregunta, que
+ kahoot.it                                                                          Juegos
+                           puede incluir opciones de respuesta simples o
+                           múltiples. Este juego incluye puntuaciones y
+                           ranking de los jugadores. El docente puede acceder
+                           a datos estadísticos detallados del rendimiento de
+                           cada estudiante, lo que facilita un análisis posterior
+                           (Valles-Pereira & Mota-Villegas, 2020).
+                           Descartes es una herramienta gratuita y de libre uso
+                           diseñada para crear materiales educativos
+                           interactivos, especialmente para matemáticas,
+                           Destinada a profesores y estudiantes, permite crear
+                           objetos interactivos como gráficos de álgebra,
+ Descartes                                                                          Simulaciones
+                           estadística y funciones. Ofrece materiales didácticos
+ descartes.matem.unam.mx
+                           que facilitan metodologías activas, creativas,
+                           cooperativas e individualizadas, y permite a cada
+                           alumno aprender a su propio ritmo con atención
+                           personalizada (Morán-González & Gallegos-
+                           Macías, 2021).
+                           Matic es un software educativo diseñado para la
+                           enseñanza de matemáticas. Ofrece juegos
+                           educativos, vídeos, ejercicios interactivos y
+                           actividades de resolución de problemas. El software
+ Matic                     permite monitorear el progreso de los estudiantes y      Herramienta de apoyo
+ matic.aulaplaneta.com     proporcionar retroalimentación en tiempo real. Los
+                           profesores pueden asignar tareas y seguir el
+                           progreso individual, identificando áreas de
+                           fortaleza y debilidad para adaptar su enseñanza.
+                           (García et al., 2023).
+                           MathPapa es una calculadora de álgebra que
+                           resuelve ecuaciones paso a paso, ayudando a los
+ Mathpapa                                                                           Evaluaciones
+                           estudiantes a comprender el proceso completo.
+ www.mathpapa.com                                                                   Juegos
+                           Además, ofrece lecciones para aprender o repasar
+                           conceptos y actividades interactivas para practicar
+
+
+
+Beto Orlando Asqui Lema                                                                                  65
+
+                                          https://rei.esprint.tech                       ISSN: 2960-8317
+  Esprint Investigación
+                                   Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+                          no solo álgebra, sino también otros temas
+                          matemáticos. Entre sus beneficios se incluyen la
+                          posibilidad de ver desglosados todos los pasos de
+                          una solución, facilitando el aprendizaje y la
+                          comprensión profunda de los métodos algebraicos
+                          (Morán-González & Gallegos-Macías, 2021).
+                          Math Game Time es un completo repositorio de
+                          juegos de matemáticas que abarca una amplia
+                          variedad de actividades, desde operaciones básicas
+ MathTV                   hasta conceptos más avanzados (Jiménez, 2019).
+                                                                                  Actividades prácticas
+ www.mathtv.com           Estos juegos están organizados según niveles de
+                          dificultad y temas específicos, lo que permite a los
+                          estudiantes encontrar actividades que se ajusten a
+                          sus necesidades y niveles de habilidad.
+                          MathGameTime es un repositorio de juegos de
+                          matemáticas de diversos tipos, organizados por
+                          niveles y temas. Ofrece una amplia variedad de
+ Mathgametime
+                          juegos interactivos que hacen que el aprendizaje de     Actividades prácticas
+ www.mathgametime.com
+                          las matemáticas sea divertido y accesible para
+                          estudiantes de diferentes edades y habilidades
+                          (Morán-González & Gallegos-Macías, 2021).
+                          Matemáticas Online es una plataforma educativa
+                          que ofrece recursos variados para el aprendizaje.
+                          Proporciona materiales propios y seleccionados de
+                          internet, organizados por cursos de secundaria y        Herramienta de apoyo
+ Matematicasonline        bachillerato. Cada curso incluye teoría, apuntes,       Demostraciones gráficas
+ matematicasonline.es     ejercicios resueltos, actividades de evaluación,
+                          videos explicativos y ejercicios interactivos.
+                          Además, cuenta con secciones para matemáticas de
+                          primaria, juegos de lógica e inteligencia, y un
+                          almacén de ejercicios adicionales.
+                          Logic.ly permite conectar la teoría de la Lógica
+                          Proposicional con aplicaciones prácticas en
+                          electrónica, mediante simulaciones interactivas. Es     Simulaciones
+ Logic                    una herramienta educativa innovadora que facilita       Electrónicas
+ logic.ly                 la asimilación de conceptos clave como                  Evaluaciones
+                          proposiciones, deducción y funciones equivalentes
+                          (Salas & Salas, 2018). Se enfoca principalmente a las
+                          matemáticas en el campo de la electrónica.
+                          Scratch es una plataforma de programación visual
+                          que permite a los usuarios crear juegos, animaciones
+                          y proyectos interactivos. En el contexto del
+                          aprendizaje de las matemáticas, Scratch ofrece una
+                                                                                  Aplicaciones prácticas
+ Scratch                  forma práctica y creativa para que los estudiantes
+                                                                                  Simulaciones
+ scratch.mit.edu          desarrollen habilidades de pensamiento lógico y
+                          matemático al diseñar y construir sus propios
+                          juegos. Esto ayuda a comprender y aplicar
+                          conceptos de manera significativa (Acuña–Medina
+                          et al., 2018).
+
+
+Beto Orlando Asqui Lema                                                                                    66
+
+                                                    https://rei.esprint.tech                          ISSN: 2960-8317
+  Esprint Investigación
+                                             Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+                                  Math Cilenia es un software diseñado para mejorar
+                                  y hacer más dinámica la enseñanza de matemáticas
+                                  en el nivel preescolar, mediante videos, juegos
+                                                                                              Juegos
+ Math Cilenia                     interactivos y simuladores. Su objetivo es fortalecer
+                                                                                              Simulaciones
+ math.cilenia.com/es              las habilidades analíticas de los estudiantes y servir
+                                                                                              Actividades prácticas
+                                  como recurso complementario para los profesores
+                                  de matemáticas (Cedeño- Muñoz & Barcia-Briones,
+                                  2020).
+                                  Se trata de un software gratuito que ofrece una
+                                  variedad de herramientas matemáticas, incluyendo
+                                  un editor de texto con funciones matemáticas, una
+                                  calculadora activa en el texto, cálculo de integrales
+                                                                                              Aplicaciones prácticas
+                                  definidas, representación de funciones en el plano y
+ Calc3d                                                                                       Herramienta de apoyo
+                                  en el espacio, gráficos y cálculos estadísticos. Este
+ www.calc3d.com                                                                               Simulaciones
+                                  programa es especialmente útil para estudiantes de
+                                  bachillerato, ya que funciona como una calculadora
+                                  gráfica que incorpora todas las herramientas
+                                  necesarias según el currículo académico (Fernández
+                                  et al., 2017).
+
+
+Tabla 2
+Ejemplos de los recursos educativos digitales aplicados en el aprendizaje de la matemática
+
+ Recurso digital                           Estrategias aplicadas                          Autor       Nivel educativo
+                      Google Classroom mejora la enseñanza de matemáticas al
+                      facilitar la distribución de archivos y vídeos creados por el
+ Google               docente, así como para compartir enlaces de internet. Además,       Sánchez,
+                                                                                                      Educación básica
+ Classroom            esta plataforma permitió una interacción efectiva entre             2020
+                      alumnos y entre profesor y alumnos, lo cual se complementó
+                      con el uso de Hangouts y Gmail.
+                      Los autores destacan las ventajas de la plataforma Moodle para
+                      la enseñanza de matemáticas básicas, la plataforma organiza
+                      los temas en conferencias, clases prácticas, seminarios y
+                      talleres. Facilita la interacción entre profesor y estudiante a
+                      través de salas de chat y videoconferencias en vivo,
+                                                                                          Cortés et
+ Moodle               permitiendo discutir clases pasadas y resolver dudas. Además,                   Universidad
+                                                                                          al., 2020
+                      ofrece acceso las 24 horas del día para revisar el contenido en
+                      cualquier momento. Las herramientas de monitoreo permiten
+                      al profesor controlar la asistencia y el acceso al contenido,
+                      mientras que la plataforma notifica a los estudiantes sobre
+                      fechas límite y tareas pendientes.
+                      Esta herramienta ofrece una variedad de mini juegos
+                      diseñados para que los estudiantes de preescolar practiquen
+                                                                                          Cedeño-
+                      operaciones básicas como sumas, restas, multiplicaciones y
+                                                                                          Muñoz &
+                      divisiones, así como para trabajar con el reloj y el concepto del
+ Math Cilenia                                                                             Barcia-     Preescolar
+                      tiempo. Además, incluye pruebas para reforzar los
+                                                                                          Briones,
+                      conocimientos adquiridos y juegos de memoria con números,
+                                                                                          2020
+                      lo que añade un elemento divertido y desafiante para los
+                      alumnos.
+
+
+
+
+Beto Orlando Asqui Lema                                                                                               67
+
+                                                     https://rei.esprint.tech                           ISSN: 2960-8317
+  Esprint Investigación
+                                             Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+                      EXe-Learning es un software gratuito y portable diseñado
+                      específicamente para facilitar los procesos de enseñanza-
+                      aprendizaje. Este recurso digital ofrece opciones para la
+                      presentación      de     contenidos,        actividades      con     Yánez &
+ Exelearning          retroalimentación,   cuestionarios       interactivos     y    la    Nevárez,     Universidad
+                      incorporación de recursos externos. Se pueden diseñar                2018
+                      estrategias   como     preguntas       dirigidas,    actividades
+                      introductorias y de exploración, así como resúmenes,
+                      considerando el tema a tratar y el tipo de evaluación a utilizar.
+                      Después de impartir la lección sobre teoría de conjuntos y
+                      diagramas de Venn, se utilizó Kahoot para llevar a cabo un
+                      cuestionario de evaluación en forma de juego. Este
+                      cuestionario, compuesto por 20 preguntas, evaluó los                 Valles-
+                      conocimientos adquiridos de manera sumativa. Se observó              Pereira &
+                      que Kahoot resulta ser una herramienta altamente motivadora          Josefina
+ Kahoot               y atractiva para evaluar el aprendizaje, pues proporciona un         Mota-        Universidad
+                      ambiente menos estresante que los exámenes escritos                  Villegas,
+                      convencionales. A pesar de que las preguntas eran de selección       2020
+                      simple y se enfocaban en nociones básicas de teoría de
+                      conjuntos, se notó una mejora significativa en la retención de
+                      información por parte de los estudiantes en estas áreas (Valles-
+                      Pereira & Mota-Villegas, 2020).
+                      Se implementó una estrategia pedagógica centrada en el uso
+                      de Symbolab, para fortalecer las competencias matemáticas en
+                      estudiantes de séptimo grado, brindando a cada estudiante la
+                      oportunidad de identificar la dificultad específica relacionada
+                      con su error, como desconocer la jerarquía de las operaciones,       López,
+ Symbolab                                                                                               Educación Básica
+                      reconocer fracciones homogéneas y representar números                2017
+                      enteros en forma fraccionaria. Se destacó el incremento en la
+                      motivación y la concentración de los estudiantes, así como el
+                      desarrollo de habilidades para la lectura y la interpretación
+                      matemática (López, 2017).
+                      GeoGebra integra recursos visuales y promueve el aprendizaje
+                      colaborativo entre los estudiantes. Permite la elaboración de
+                      secuencias didácticas y estimula el análisis y reflexión sobre los
+                      temas trabajados en clase mediante estímulos visuales. Para los
+                      estudiantes, GeoGebra proporciona un recurso interactivo que         Alcívar et
+ Geogebra
+                      les permite practicar y estudiar desde casa los conceptos            al., 2019    Universidad
+                      matemáticos aprendidos en clase. Además, facilita al docente
+                      incorporar diferentes tipos de gráficos para visualizar y
+                      ejemplificar la resolución de diversos ejercicios, como el
+                      cálculo de áreas de polígonos regulares.
+                      Los investigadores utilizaron Mathgametime como un
+                      simulador para el aprendizaje de matemáticas en estudiantes
+                      de educación básica. Centrado en la adquisición y
+                      profundización de conocimientos sobre números enteros. En            Camacho
+                      sus resultados evidencian que Mathgametime proporciona               &
+ Mathgametime         una amplia variedad de juegos matemáticos organizados por            Medina-      Educación Básica
+                      niveles educativos, categorías y temas, adaptados a las              Chicaiza,
+                      necesidades de los estudiantes. Esta herramienta promueve y          2022
+                      refuerza los conocimientos adquiridos en el aula, al combinar
+                      tanto ejercicios abiertos como cerrados que permiten practicar
+                      con respuestas correctas e incorrectas.
+
+
+Beto Orlando Asqui Lema                                                                                               68
+
+                                           https://rei.esprint.tech                  ISSN: 2960-8317
+  Esprint Investigación
+                                    Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+
+4. Conclusiones
+
+Las matemáticas son esenciales para el desarrollo personal y profesional, pues proporcionan una base
+intelectual sólida basada en la lógica y el razonamiento ordenado. A pesar de su importancia, el
+rendimiento académico en matemáticas sigue siendo bajo a nivel mundial y en países específicos como
+Ecuador. Las dificultades en el aprendizaje de las matemáticas suelen estar relacionadas con la
+abstracción de los conceptos y una enseñanza que se centra en la memorización más que en la
+comprensión profunda.
+   Para mejorar el rendimiento y la comprensión matemática, es crucial integrar estrategias didácticas
+innovadoras y herramientas digitales en el proceso educativo. En la investigación de identificaron
+plataformas y software que pueden ser implementadas para mejorar diversas prácticas en el proceso
+de aprendizaje de la matemática, como GeoGebra que se utiliza para modelar cálculos, visualización
+gráfica, simulaciones y actividades interactivas, facilitando el aprendizaje de conceptos matemáticos
+complejos. Symbolab ayuda a resolver problemas y proporciona demostraciones gráficas en
+matemáticas, física y química. Khan Academy ofrece cursos en línea con lecciones interactivas y
+ejercicios prácticos que fomentan el aprendizaje autónomo. Google Classroom permite la asignación
+de tareas, retroalimentación en tiempo real y mejora la comunicación entre docentes y estudiantes.
+Jamboard posibilita la colaboración en línea a través de pizarras digitales y diagramas interactivos, y
+promueve el trabajo en equipo. Genially crea contenido interactivo y presentaciones atractivas que
+incluyen actividades multimedia para reforzar el aprendizaje. Kahoot utiliza juegos interactivos y
+cuestionarios para la evaluación del conocimiento y la participación activa de los estudiantes.
+   Por su parte, Descartes ofrece materiales educativos con simulaciones interactivas, al promover el
+aprendizaje cooperativo y la personalización del contenido. Matic proporciona ejercicios interactivos
+con retroalimentación y monitoreo del progreso estudiantil. MathPapa se enfoca en la resolución de
+ecuaciones y la comprensión de procesos algebraicos a través de una calculadora interactiva. MathTV
+suministra juegos de matemáticas y actividades prácticas para un aprendizaje accesible y adaptado a
+diferentes niveles y temas. MathGameTime ofrece juegos interactivos que hacen del aprendizaje de
+matemáticas una experiencia divertida y adecuada para diferentes edades. Matemáticas Online brinda
+recursos educativos con teoría, ejercicios resueltos y videos explicativos. Logic.ly se especializa en
+lógica proposicional con aplicaciones prácticas y simulaciones interactivas. Scratch permite a los
+estudiantes aprender programación visual a través de la creación de juegos y animaciones,
+desarrollando su pensamiento lógico. Math Cilenia está orientado a la enseñanza preescolar mediante
+videos y juegos interactivos que desarrollan habilidades analíticas; mientras que Calc3d provee
+herramientas matemáticas avanzadas para la edición de ecuaciones y conceptos avanzados, mediante
+un software gratuito accesible para todos.
+    Estos recursos digitales transforman la enseñanza de las matemáticas, al reducir la importancia de
+la aplicación mecánica de procedimientos y al destacar nuevas formas de validación y práctica, a través
+de la comprensión de conceptos abstractos, el fomento de la motivación y el compromiso de los
+estudiantes, y la preparación para enfrentar los desafíos de un mundo cada vez más digitalizado. La
+educación matemática del futuro dependerá de la capacidad para adaptarse y utilizar eficazmente
+estas tecnologías en el aula.
+
+
+
+
+Beto Orlando Asqui Lema                                                                           69
+
+                                            https://rei.esprint.tech                    ISSN: 2960-8317
+  Esprint Investigación
+                                      Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+Referencias
+
+Acuña-Medina, N., León-Arias, M., López–Palomino, L., Villar–Navarro, C., & Mulford–León, R.
+      (2018). Aprendizajes de las Matemáticas Mediados por Juegos Interactivos en Scratch en la
+      IEDGVCS. Cultura, Educación y Sociedad, 9(2). https://doi.org/10.17981/cultedusoc.9.2.2018.03
+Alcívar, E., Zambrano, K., Párraga, L., Mendoza, K., & Zambrano, Y. (2019). Software educativo
+       Geogebra. Propuesta de estrategia metodológica para mejorar el aprendizaje de las
+       matemáticas. Universidad Ciencia y Tecnología, 23(95), 59-65. https://n9.cl/80pcvh
+Barrios, L. M., & Delgado, M. (2022). Efectos de los recursos tecnológicos en el aprendizaje de las
+       matemáticas.     Revista   Digital:  Matemática,   Educación   e    Internet, 22(1),   1-14.
+       https://doi.org/10.18845/rdmei.v22i1.5731
+Bueno-Díaz, M. V. (2022). Las TIC como mediadoras didácticas en los procesos de aprendizaje del área
+      de     matemáticas.      Revista   Tecnológica-Educativa   Docentes    2.0,   15(2),    36-45.
+      https://doi.org/10.37843/rted.v15i2.318
+Camacho, A., & Medina-Chicaiza, P. (2022). Simuladores virtuales para la transferencia de
+     conocimientos sobre números enteros. Revista Científica Arbitrada Multidisciplinaria
+     Pentaciencias, 4(6), 236-246. https://n9.cl/b1tkm
+Cedeño-Muñoz, G. P., & Barcia-Briones, M. F. (2020). El Math Cilenia en el aprendizaje de la
+      matemática en los estudiantes preescolar. Polo del Conocimiento, 5(12), 602-615.
+      https://n9.cl/uigdz
+Chancusig, J. C., Flores, G. A., Venegas, G. S., Cadena, J. A., Guaypatin, O. A., & Izurieta, E. M. (2017).
+      Utilización de recursos didácticos interactivos a través de las TIC´ S en el proceso de enseñanza
+      aprendizaje en el área de matemática. Boletín Redipe, 6(4), 112-134. https://n9.cl/uxlfa
+Cortés, M. E., Cortés, M., Medina, J. F., Manzano, M., & León, J. L. (2020). Ventajas de la plataforma
+       Moodle para la enseñanza de las matemáticas en la Universidad de Cienfuegos. Revista
+       Universidad y Sociedad, 12(6), 240-245. https://n9.cl/o5m3eq
+Engelbrecht, J., Llinares, S., & Borba, M. C. (2020). Transformation of the mathematics classroom with
+       the internet. Zdm, 52(5), 825-841. https://doi.org/10.1007/s11858-020-01176-4
+Fernández, I., Riveros, V., & Montiel, G. (2017). Software educativo y las funciones matemáticas. Una
+      estrategia de apropiación. Omnia, 23(1), 9-19. https://n9.cl/b6k1x
+García, N., Chiliquinga, A., Román, G., Zurita, E., & Haro, A. (2023). Tecnologías de la información y
+       las comunicaciones (TIC) en el aprendizaje universitario en el área de matemáticas. LATAM
+       Revista Latinoamericana de Ciencias Sociales y Humanidades, 4(1), 4342-4353.
+       https://doi.org/10.56712/latam.v4i1.570
+George, C. E. (2020). Reducción de obstáculos de aprendizaje en matemáticas con el uso de las TIC. IE
+      Revista       de     Investigación    Educativa     de     la   REDIECH,         11,      1-16.
+      https://doi.org/10.33010/ie_rie_rediech.v11i0.697
+Gómez, J. M. (2020). Google Classroom: como herramienta para la gestión pedagógica. Mamakuna, (14),
+     44-54. https://n9.cl/4cx9y
+Grisales-Aguirre, A. M. (2018). Uso de recursos TIC en la enseñanza de las matemáticas: retos y
+       perspectivas. Entramado, 14(2), 198-214. https://doi.org/10.18041/1900-3803/entramado.2.4751
+
+
+Beto Orlando Asqui Lema                                                                               70
+
+                                            https://rei.esprint.tech                   ISSN: 2960-8317
+  Esprint Investigación
+                                     Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+Jiménez, J. G., & Jiménez, S. (2017). GeoGebra, una propuesta para innovar el proceso enseñanza-
+      aprendizaje en matemáticas. Revista Electrónica sobre Tecnología, Educación y Sociedad, 4(7), 1-17.
+      https://n9.cl/mhmw
+Jiménez, D. A. (2019). Herramientas digitales para la enseñanza de las matemáticas en la educación básica
+      [Tesis de especialización, Universidad Cooperativa de Colombia]. Repositorio institucional.
+      https://n9.cl/i1y96
+Lasso, L., & Conde, K. (2021). Khan Academy como herramienta en el aprendizaje de las matemáticas
+       y la programación. Revista Interamericana de Investigación Educación y Pedagogía RIIEP, 14(1), 225-
+       250. https://doi.org/10.15332/25005421.5777
+López, L. A. (2017). El uso de Symbolab en una secuencia didáctica para la detección de errores.
+       Actualidades Pedagógicas, 1(69), 227-245. http://dx.doi.org/10.19052/ap.4105
+Mato-Vázquez, D., Castro-Rodríguez, M. M., & Pereiro-González, M. C. (2018). Análisis de materiales
+      didácticos digitales para guiar y/o apoyar el proceso de enseñanza-aprendizaje de las
+      matemáticas.        @      tic.     Revista  d'innovació     Educativa,      (20),     80-88.
+      https://doi.org/10.7203/attic.20.12117
+Martínez, P. (2022). Aplicaciones matemáticas ¿Buenas aliadas? Análisis de las aplicaciones de Potomath y
+      Symbolab como herramientas de apoyo como herramientas de apoyo en los primeros cursos de Educación
+      Secundaria [Tesis de Maestría, Universidad de Alcalá]. Repositorio institucional.
+      http://hdl.handle.net/10017/53904
+Marín, F., Castillo, J., Torregroza, Y., & Peña, C. (2018). Competencia argumentativa matemática en
+       sexto grado. Una propuesta centrada en los recursos educativos digitales abiertas. Revista de
+       Pedagogía, 39(104), 61-85. https://n9.cl/r53zk
+Morán-González, M., & Gallegos-Macías, M. R. (2021). Plataformas tecnológicas y su aporte al
+      aprendizaje en línea para la asignatura de matemática. Revista Científica Multidisciplinaria
+      Arbitrada Yachasun, 5(9), 119-139. https://doi.org/10.46296/yc.v5i9edespsoct.0115
+Navarro, R. J., Vega, M. V., Chiroque, E., & Rivero, C. (2018). Percepción de los docentes sobre las
+      buenas prácticas con un aplicativo móvil para la enseñanza de matemáticas. Educación, 27(52),
+      81-97. https://doi.org/10.18800/educacion.201801.005
+Pepin, B., Choppin, J., Ruthven, K., & Sinclair, N. (2017). Digital curriculum resources in mathematics
+       education: foundations for change. ZDM, 49, 645-661. https://doi.org/10.1007/s11858-017-0879-
+       z
+Rodríguez, J. L., Romero, J. C., & Vergara, G. M. (2017). Importancia de las TIC en enseñanza de las
+      matemáticas. Revista de Matemática de la Universidad del Atlántico, 4(2), 41-49. https://n9.cl/2v4fy
+Salas, R., & Salas, J. (2018). Simulador Logic.ly ¿Herramienta tecnológica para facilitar el proceso
+        enseñanza-aprendizaje sobre las Matemáticas? Dilemas Contemporáneos: Educación, Política y
+        Valores, 5(3), 1-25. https://n9.cl/uzpue
+Sánchez, C. (2020). Herramientas tecnológicas en la enseñanza de las matemáticas durante la pandemia
+      COVID-19. Hamut´ay, 7(2), 46-57. https://doi.org/10.21503/hamu.v7i2.2132
+Torres, M., Valera, P., Vásquez, M., & Lescano, G. (2022). Desarrollo de las competencias matemáticas
+        en entornos virtuales. Una revisión sistemática. Alpha Centauri, 3(2), 46-59.
+        https://doi.org/10.47422/ac.v3i2.80
+
+
+Beto Orlando Asqui Lema                                                                              71
+
+                                           https://rei.esprint.tech                   ISSN: 2960-8317
+  Esprint Investigación
+                                     Vol. 3 N° 1, enero-junio 2024 (59-72)
+
+Valles-Pereira, R. E., & Mota-Villegas, D. J. (2020). Kahoot aplicada en la evaluación sumativa en un
+       curso       de      matemática         discreta.    Revista      Científica,    (37),    67-77.
+       https://doi.org/10.14483/23448350.15236
+Yánez, V., & Nevárez, M. (2018). Exelearning: recurso digital de una estrategia didáctica de enseñanza-
+       aprendizaje de matemática. 3ciencias, 7(4), 98-121. https://doi.org/10.17993/3ctic.2018.62.98-121
+
+Transparencia
+
+Conflicto de interés
+El autor declara que no existen conflictos de interés que influyan en la objetividad de este estudio.
+Fuente de financiamiento
+No se recibieron fondos financieros de ninguna organización que pudiera tener interés en los
+resultados presentados.
+Contribución de autoría
+Beto Orlando Asqui Lema: Conceptualización, metodología, software, validación, análisis formal,
+investigación, gestión de datos, visualización, redacción - preparación del borrador original, redacción
+- revisión y edición, financiamiento, administración del proyecto, recursos, supervisión.
+El autor contribuye activamente en el análisis de los resultados, revisión y aprobación del manuscrito
+final.
+
+
+
+
+Beto Orlando Asqui Lema                                                                             72

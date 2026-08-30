@@ -1,0 +1,911 @@
+The Australian Educational Researcher (2025) 52:1471–1487
+https://doi.org/10.1007/s13384-024-00771-8
+
+
+
+
+The roles of AI and educational leaders in AI‑assisted
+administrative decision‑making: a proposed framework
+for symbiotic collaboration
+
+Ruixun Dai1,2        · Matthew Krehl Edward Thomas1,3                   · Shaun Rawolle1,2
+
+Received: 7 December 2023 / Accepted: 5 September 2024 / Published online: 14 September 2024
+© The Author(s) 2024
+
+
+
+Abstract
+Education has always been in a state of flux because of technological disruption.
+As schools head towards a present in which digital technology is normalised as part
+of the fabric of everyday society, a post-digital paradigm, Artificial Intelligence
+(AI) is changing the educational administration and leadership. It is crucial to find
+ways to coexist with AI while striving for a human-centric future. While numerous
+studies advocate for a collaborative synergy between AI and human leaders in edu-
+cational governance, there is a gap in explicating the precise roles they undertake.
+This paper aims to address the void by providing a conceptual framework for the
+symbiotic roles of AI and educational leaders in the administrative decision-making
+process. This paper views administrative decision-making in schools as a political
+process involving negotiations among administrators, teachers, students, and par-
+ents. Within the framework, AI shoulders informational roles such as collecting and
+analysing data with its data analysis capability. Conversely, educational leaders are
+tasked with establishing the vision, disseminating information, managing conflicts,
+identifying new opportunities, negotiating and allocating decision-making author-
+ity to stakeholders. Moreover, educational leaders should encourage and supervise
+the implementation of AI in schools. The framework serves as a theoretical lens for
+prospective studies of AI impacts on education leadership and administration and
+bears practical implications for the preparation of future school leaders, contributing
+to the creation of a scenario where AI augments, rather than replaces educational
+leadership.
+
+Keywords Educational administration · Leadership · AI-human collaboration ·
+Technological change · AI-assisted decision-making
+
+
+
+
+Extended author information available on the last page of the article
+
+
+                                                                                    Vol.:(0123456789)
+
+1472                                                                         R. Dai et al.
+
+
+Introduction
+
+Artificial Intelligence (AI) is an overarching ‘umbrella’ term including techniques
+such as expert systems, machine learning, neural networks, deep learning, and more
+(Baker et al., 2019; Raso et al., 2018; Wang, 2021b; Zawacki-Richter et al., 2019).
+Among the techniques, machine learning is the most commonly used but is new to
+educational administration and leadership (Wang, 2021a). This technique enables
+machines to learn from data and replicate or enhance human intelligence through
+algorithms and models. In machine learning-powered algorithmic decision-mak-
+ing, a specific part of the reality is represented by the statistical model behind the
+algorithm, and the outcome is achieved with numeric values and previously defined
+steps in the system without human involvement (Krafft et al., 2022). For example,
+the algorithms can analyse the student performance data and predict the learning
+outcomes without human involvement. In this paper, the term ‘AI’ specifically refers
+to machine learning, and ‘AI-assisted decision-making’ refers to the general concept
+of engaging machine learning-powered systems in the decision-making process.
+   Decision-making is essential to leadership (Johnson Jr & Kruse, 2012). Depend-
+ing on the complexity, decisions can be classified into structured, semi-structured,
+and unstructured decisions (Simon, 1965). Structured decisions, characterised by
+routine and operational nature, can often be autonomously executed by machine
+learning with its capacity to process large volumes of data, identify patterns and
+generate data-driven decisions. Examples of such decisions include scheduling and
+attendance tracking. In contrast, semi-structured and unstructured decisions are typi-
+cally more intricate and involve the navigation of trade-offs of diverse stakehold-
+ers, such as the adoption of new technologies and parental complaints. Due to the
+involvement of uncontrollable factors and multiple stakeholders, semi-structured
+and unstructured decisions cannot be automated by AI. Instead, educational lead-
+ers must find ways to collaborate synergistically with AI in these decision-making
+processes.
+   To formulate the symbiotically collaborative framework of AI and educational
+leaders through decision-making, we amalgamate Herbert Simon’s trichotomy of
+administrative decision-making theory and Henry Mintzberg’s managerial role the-
+ory with a consideration of the uniqueness of educational administration and lead-
+ership. This collaboration framework serves as a theoretical lens for prospective
+investigations into the implications of AI-powered administrative decision-making
+on educational leaders. Furthermore, it offers guidance for future research about the
+synthesis of AI-human in educational administration and preparing future educa-
+tional leaders in an AI-driven era.
+
+
+The story of technology and educational leadership
+
+Education is a political sociocultural practice that has evolved with the progress
+of technological revolutions. Technologies, being the application of scientific
+knowledge for practical purposes, have the potential to redefine what constitutes
+
+The roles of AI and educational leaders in AI‑assisted…                             1473
+
+
+knowledge and how it should be delivered (Zhao, 2019). During the first industrial
+revolution (Industry 1.0), the emergence of steam engines facilitated a transition
+from farming and feudal societies to new manufacturing processes. Trains were used
+for transportation, and textile and steel industries flourished (Xu et al., 2018). Edu-
+cation activities were predominantly focused on agrarian and craft-based economics,
+benefiting the elite class. Education aimed to equip individuals with the necessary
+knowledge and skills to respond to economic expansion (Seldon et al., 2020; Xu
+et al., 2018; Zhao, 2019). During this era, the limited flow of information meant
+that the educational administration process was controlled by local authorities,
+such as local churches or community leaders, with an emphasis on hierarchy and
+standardisation.
+    The second industrial revolution (Industry 2.0) emerged with the invention of
+electricity, the internal combustion engine, and advancements in steel produc-
+tion, which led to the use of oil and electricity to drive mass production (Xu et al.,
+2018). These changes brought about the ideas of efficiency and self-achievement.
+The enhanced flow of information through telegraphs during this era led to a greater
+standardisation of educational leadership. Alongside the emergence of neoliberal-
+ism, which advocates free-market principles and limited intervention. This era wit-
+nessed mass and institutionalised education with standardised curricula and exams.
+The objective of education shifted towards the production of a skilled and special-
+ised workforce (Birkinshaw, 2020; Harvey, 2007; Hill & Kumar, 2009; Kumar &
+Hill, 2012; Lynch et al., 2012; Seldon et al., 2020). Consequently, education admin-
+istration and leadership underwent professionalisation to accommodate a larger edu-
+cation system.
+    The third industrial revolution (Industry 3.0) is characterised by digitalisation and
+automation. Computers, the internet, and other digital technologies revolutionised
+human activities. Robots were also increasingly integrated into human manufactur-
+ing processes, particularly assisting with repetitive tasks. Digital learning platforms
+like Moodle, along with other multimedia resources were introduced into schools.
+Digitalisation led to the proliferation of communication technologies and informa-
+tion exchange, enabling educational leaders to rely on data and make data-driven
+decisions. Meanwhile, the neoliberal principles developed predominantly glob-
+ally. Privatisation of education for profit became prominent, leading to disparities
+both within and across nations (Hill & Kumar, 2009; Kumar & Hill, 2012). Busi-
+ness management theories are incorporated into education administration and lead-
+ership to manage educational systems in a business-oriented way, emphasising the
+rational and efficient behaviours of individuals (Hanson, 1976; Lundberg, 1962).
+The changes necessitated a service-oriented and student-centred model in education
+(Schwab, 2017; Seldon et al., 2020; Xu et al., 2018). However, during Industry 3.0,
+digitalisation was seen as separate from human activities, with digital technologies
+viewed simply as tools to improve efficiency and expand the education industry.
+    We currently inhabit the fourth industrial revolution (Industry 4.0), charac-
+terised by the integration of AI and other cutting-edge technologies, including
+robotics, cloud computing, the Internet of Things (IoT), and big data. The fusion
+of these technologies blurred the line between the ‘physical, digital and biological
+spheres’ so that people move between the digital domains and offline reality with the
+
+1474                                                                         R. Dai et al.
+
+
+connected technology in daily life (Saucedo-Martínez et al., 2018; Schwab, 2017;
+Xu et al., 2018). This revolution witnesses AI collaborating with or independently
+performing intelligent tasks alongside humans, such as personal tutoring and auto-
+motive assessment in education. The unprecedented volume of data also demands
+that educational leaders develop data literacy and new skills to effectively manage
+large-scale and real-time data.
+    With an increasing integration of AI into human activities, the initiative of the
+fifth industrial revolution (Industry 5.0) was proposed. Industry 5.0 complements
+Industry 4.0 by integrating social and environmental concerns into technological
+innovation, seeking to harmonise human and machine strengths to create a more
+‘human-centric, sustainable, and resilient’ future (Xu et al., 2021, p. 532). Concur-
+rently, the concept of post-digitalism has gained attention, suggesting that digitali-
+sation is no longer about technological innovation or improvement but is taken for
+granted and requires more discussions around its broader social, cultural and philo-
+sophical impacts (Jandrić et al., 2018; Peters et al., 2023).
+    Under the post-digital condition, the boundary between AI and humans in deci-
+sion-making becomes blurred (Macgilchrist, 2021). For example, leaders often
+refer to online databases to gather information and insights before making deci-
+sions. Although the use of AI systems in educational administration is limited
+(Baker et al., 2019), AI-powered tools are integrated into leaders’ daily roles, often
+without conscious awareness. AI’s ability to self-learn and the reliance on big data
+transforms it from a neutral technology into a technology with social and political
+implications, thereby triggering issues regarding privacy, transparency, inequality,
+and the alterations of power dynamics in human activities (Williamson, 2023). This,
+in turn, makes AI an active agent that ushers a new era of education in which the
+intricate relationship between machine learning and educational leaders is redefined
+(Gulson et al., 2022). Therefore, the inclusion of AI in the decision-making process
+with educational leaders necessitates developing an AI-leader collaborative model
+to explore their evolving roles and responsibilities, which may result in the emer-
+gence of novel roles, to address this changing landscape (Baker et al., 2019; Gulson
+et al., 2022).
+
+
+AI in human leadership: augmentation in decision‑making
+
+The engagement of machine learning in decision-making at the administrative level
+is not unique to educational institutions; it is also employed to aid leaders in vari-
+ous other organisations. Studies by Jarrahi (2018), Wang (2021a), and Shrestha
+et al. (2019), have investigated the symbiotic modes of AI and humans in different
+decision-making contexts. Jarrahi (2018) discerned that AI systems exhibit height-
+ened efficacy in addressing intricate issues within analytical decision-making sce-
+narios, whereas humans should spearhead intuitive decision-making processes when
+dealing with uncertain and equivocal predicaments. Wang (2021a) asserts that AI
+systems excel in data-driven or evidence-based decisions, while human judgment
+is better suited for value-based decisions. Shrestha et al. (2019) proposes that AI
+
+The roles of AI and educational leaders in AI‑assisted…                           1475
+
+
+systems can function autonomously, devoid of human intervention, in situations
+necessitating precise, rapid, and repetitive outcomes.
+   These AI-human collaboration models explore how AI can augment human per-
+formance with its vast computing power in data recognition while ensuring humans
+maintain decision-making authority. Machine learning’s ability to handle large data-
+sets and identify intricate patterns allows AI systems to surpass humans in data pro-
+cessing (Wang, 2021a). This proficiency in cognitive analysis also reshapes the cog-
+nitive processes and behaviours in administrative activities (Gulson et al., 2022). To
+understand how leaders collaborate and coexist with AI systems in decision-mak-
+ing, we must examine the specific aspects and ways in which machine learning can
+enhance human leaders’ capabilities. Clarifying the specific roles and responsibili-
+ties of both AI and human leaders through the decision-making process can reveal
+how they can complement each other.
+   Despite the various studies exploring modes of AI-human collaboration in deci-
+sion-making, there remains a dearth of research elucidating the distinct roles that
+AI, and human leaders assume in the process, especially with a consideration of
+the school ecosystem and educational leadership. This paper aims to fill this gap by
+providing a synergetic collaborative framework between AI and educational lead-
+ers to demonstrate how they can coexist in the decision-making process of educa-
+tional administration within the school system by clarifying their respective roles
+and responsibilities.
+
+
+Theoretical background
+
+The school ecosystem is distinct from other non-educational organisations, and con-
+sequently, educational leadership and decision-making possess unique characteris-
+tics. In schools, the most fundamental tasks and goals revolve around teaching and
+learning activities, and student achievement (Millikan, 2018). Student achievement
+is influenced by complex factors that reciprocally intricate with each other, referred
+to as the ‘Ecological Model’ (Bronfenbrenner, 1994). In the innermost layer of the
+school system, which includes the immediate surroundings, the student is directly
+influenced by teachers, parents, and school administrators. Beyond this, extracur-
+ricular activities and religious involvement connect the school to the broader soci-
+ety, playing a significant role. Expanding further, the broader socioeconomic envi-
+ronment, including government policies and community services, also impacts the
+student’s development. Finally, societal and cultural norms shape the broader edu-
+cational context and exert their influence as well (Ryan, 2001). When educational
+leaders aim to improve teaching and learning practices and student achievement
+through decision-making, they must navigate the nuanced decisions influenced by
+diverse interest groups within these subsystems, such as students, teachers, commu-
+nity members, and so on.
+    Therefore, instead of having a rigid hierarchical structure in decision-making,
+schools exhibit a decentralised structure, in which leaders, teachers, students, par-
+ents, government, and community resources are interconnected with and influence
+each other through the decision-making process (Wallin, 2014). For example, when
+
+1476                                                                          R. Dai et al.
+
+
+developing a new curriculum, a committee involving leaders, teachers, students, par-
+ents, and community members is formed. Committee members gather information
+from their groups and discuss findings and proposals with other members, and the
+decision is made through consensus. In the process, the educational leader’s role
+extends beyond merely making the final choice but must integrate various require-
+ments and preferences from the other stakeholders and respond to competing ten-
+sions to make effective decisions (Evers & Lakomski, 2013).
+    Understanding the characterisations of the educational ecosystem and leadership,
+this paper will deconstruct the decision-making process based on Herbert Simon’s
+trichotomy and clarify the roles of leaders employing Henry Mintzberg’s managerial
+roles. The two theories will be integrated to shed light on the roles and responsi-
+bilities undertaken by leaders through the complicated decision-making trajectory,
+considering the unique features of educational institutions. Simon is renowned for
+deconstructing the administrative decision-making process, and it provides a general
+model that applies to most contexts, including schools. The concept of ’bounded
+rationality’ in his theory reflects the nature of human decision-making in reality.
+AI systems, to some extent, can extend the boundaries of human capabilities and
+thereby complement the decision-making process. On the other hand, understanding
+and articulating leaders’ roles is challenging due to their complex and multifaceted
+nature. Mintzberg’s role theory addresses the most basic question—‘What do lead-
+ers exactly do?’ by programming the unstructured roles of leaders. When Mintz-
+berg originally developed his model, he emphasised the thoughts of the decisional
+school, which has its origins in Simon’s work and is particularly relevant due to its
+intricate nature (Mintzberg, 1973). Although these two theories were not originally
+designed for educational studies, their integration, considering the uniqueness of
+the school ecosystem and educational leadership, can provide an applicable frame-
+work for the educational context. This theoretical synthesis aims to establish the
+essential groundwork for the AI-human collaborative role framework in educational
+leadership.
+
+
+Herbert Simon’s administrative decision‑making theory
+
+In economics, ‘decision-making’ encompasses making choices with associated
+consequences under uncertainty (Edwards, 1954; Schrenk, 1969). In Simon’s deci-
+sion-making theory, the economic perspective of decision-making assumes an ideal
+scenario by the ‘economic man, who possesses complete rationality, exhaustively
+pertinent information, and a consistent preference for maximising the outcome’
+(Edwards, 1954, p. 381). However, real-world organisations typically involve indi-
+viduals tasked with decision-making responsibilities, referred to as ’administra-
+tive men’ (Simon, 2013). These individuals operate under what Simon termed
+the ‘satisficing principle’. This principle involves prioritising alternatives that are
+deemed ’good enough’ rather than exhaustively optimal due to constraints imposed
+by limitations in information, cognitive capacity, time, and personal values (Melé,
+2010; Mintrom, 2015; Simon, 2013). This cognitive and informational limitation
+is regarded as ‘bounded rationality’ (Simon, 2013). Consequently, the practice of
+
+The roles of AI and educational leaders in AI‑assisted…                           1477
+
+
+decision-making by administrative individuals evolves as a social process, charac-
+terised by group dynamics and interpersonal considerations, extending beyond mere
+information about alternative consequences. This phenomenon is called ‘administra-
+tive decision-making’ (Vroom & Yetton, 1973).
+   Administrative decision-making represents an intricate interplay of two insepa-
+rable constituents—factual and value-based elements (Melé, 2010; Simon, 1965).
+The factual dimension pertains to the rational and technical facets of decisions,
+encompassing scientific and practical insights that inform the decision and its con-
+textual environment (Simon, 2013). However, the factual model of decision-making,
+influenced by the ‘administrative man’, tends to overlook the impact of social and
+cultural factors (Lundberg, 1962). This necessitates the inclusion of value-driven
+elements, such as ethical judgment, social values, intuitions and personal biases.
+Decision-making entails the preferences for future alternatives of groups or individ-
+uals. Therefore, the value-based elements are significant, and the presumptions of
+decision-makers (Simon, 1965). The dichotomous nature makes administrative deci-
+sion-making a political activity, responding to both internal and external environ-
+ments (Cray et al., 2007; Schrenk, 1969). Within the organisation, the decision-mak-
+ing process adheres to the hierarchical structure where values of the higher positions
+usually are delivered to the lower positions (Simon, 1943). Employees with diverse
+expertise collaborate through decision-making to pursue organisational objectives
+(Simon, 2013). Outside the organisation, decision-making entails negotiations and
+trade-offs among diverse interest groups (Cray et al., 2007; Harrison & Pelletier,
+2000; Shrestha et al., 2019). Hence, the factual and value-based elements are not
+mutually exclusive but rather intrinsic dimensions of administrative decision-mak-
+ing (Melé, 2010).
+   Drawing on Simon’s model of administrative decision-making, the trajectory can
+be divided into three stages—the intelligence stage, the design stage, and the selec-
+tion stage. During the intelligence stage, objectives and problems are identified. The
+design stage represents the informational juncture. Herein, feasible solutions are
+crafted based on the available information, often involving extensive information
+search and the generation of alternatives. In the subsequent selection stage, vari-
+ous alternatives are subjectively evaluated by stakeholders, leading to the ultimate
+choice. This choice is reached through a combination of evaluation and negotiation,
+reflecting the interactions and discussions among stakeholders (Mintzberg et al.,
+1976; Simon et al., 1987).
+   Simon’s trichotomy can be effectively applied to the educational decision-making
+process. The decision-making structure in schools is often decentralised. A decen-
+tralised model of decision-making enables the involvement of administrators, edu-
+cators, parents, students, and local community members (Mutchler & Duttweiler,
+1990). Collectively, these stakeholders engage in the analysis, generation, and evalu-
+ation of prospective solutions concerning various dimensions of the school system,
+such as staffing, budget allocation, curriculum design, instructional strategies, and
+beyond (Elacqua et al., 2021; Mutereko & Chitakunye, 2015). In addition, Lakomski
+and Evers (2022) call for attention to the role of emotions in educational decision-
+making, emphasising that emotions are deeply intertwined with rational decisions.
+The labels we assign to emotions are socially constructed, and thus can motivate us
+
+1478                                                                         R. Dai et al.
+
+
+to make value statements to different decisions and thus choose the optimal choice.
+Emotions significantly influence educational decisions as leaders and teachers invest
+emotionally in students’ development. Therefore, in educational decision-making,
+the leader is expected to integrate the viewpoints of stakeholders and harmonise
+the dichotomy between facts and values through the participation and negotiations
+among stakeholders, while adhering to Simon’s tripartite framework.
+
+
+Henry Mintzberg’s managerial role theory
+
+The responsibilities shouldered by leaders are inherently complex and multifaceted.
+To gain insight into the roles of leaders in decision-making, Mintzberg’s managerial
+role theory is employed. In the model, leaders’ unstructured roles are programmed,
+outlining a classification of 10 roles that managers undertake (Mintzberg, 1973).
+It is important to note ‘managers’ and ‘leaders’ are different– managers primarily
+navigate daily operational intricacies, while leaders catalyse and rally their teams
+towards the achievement of organisational objectives. This paper narrows its focus
+to the behaviours and roles displayed by leaders. The terms ‘leaders’ and ‘managers’
+are used interchangeably.
+    The roles are categorised into three domains: interpersonal, informational, and
+decisional roles. The interpersonal roles encompass the figurehead, the leader, and
+the liaison. Due to the interchangeability of the terms ‘leader’ and ‘manager’ in this
+paper, the figurehead and liaison roles will be discussed. As the figurehead, leaders
+embody a charismatic presence, contributing to the establishment of organisational
+culture and vision. They forge connections with both internal subordinates and exter-
+nal stakeholders. In the role of a liaison, leaders orchestrate an equilibrium between
+individual requisites and organisational objectives. The second type of role—infor-
+mational roles—enables the leaders to serve as the ‘nerve centre for information’ to
+receive and deliver information, facilitating the exchange between the internal and
+external environment. In the informational role, as a monitor, leaders sift through
+and accumulate information. Subsequently, they disseminate this information to
+internal teams as a disseminator while also articulating value statements. Further-
+more, leaders play the role of spokesmen, preaching factual and value-laden infor-
+mation to external interest groups. With the information collection and dissemina-
+tion, the leaders bear the third type of roles—the decisional roles—the entrepreneur,
+the disturbance handler, the resource allocator, and the negotiator. As entrepreneurs,
+leaders catalyse organisational changes and innovations. They are also disturbance
+handlers, addressing unforeseen incidents and reconciling stakeholder conflicts. In
+their roles as negotiators, leaders also strike harmony among stakeholders. Addi-
+tionally, leaders act as resource allocators, allocating decision-making authority to
+participants and employing organisational resources.
+    The uniqueness of school ecosystems determines the distinctiveness of educa-
+tional leaders, who wield a unique mediating impact on the ultimate organisational
+outcome: student achievement. This influence is often deemed ‘second only’ to the
+effects of teaching and learning itself (Leithwood & Riehl, 2007). Effective edu-
+cational leaders ought to adopt a forward-thinking view of education and play a
+
+The roles of AI and educational leaders in AI‑assisted…                            1479
+
+
+vital role in establishing goals, visions, and cultures in the schools (Gurr & Drys-
+dale, 2020). Simultaneously, educational leaders focus on providing tailored sup-
+port, motivating teaching staff and cultivating a conducive environment for profes-
+sional development (Day et al., 2016; Leithwood et al., 2008; Sterrett & Richardson,
+2019). Therefore, educational leaders’ impersonal roles in establishing the organisa-
+tional culture, maintaining relationships with subordinates and motivating their per-
+formance are particularly important (Day et al., 2020). The informational roles and
+decisional roles require them to delegate decision-making authority to subordinates
+and stakeholders while bolstering the communication channels.
+
+
+Integration of the two theories in education
+
+When educational leaders are making semi-structured and unstructured decisions,
+their roles go beyond merely making a final selection; they encompass a wide range
+of activities, including interpersonal interactions, information transfer, and negotia-
+tions (Mintzberg, 1973). The educational decisions are influenced by various factors
+and stakeholders, such as parents, teachers, co-curriculum activities, social and cul-
+tural norms, government policy and so on. The leaders need to establish the vision
+and overall goals for the school, manage relationships with the stakeholders, allocate
+decision-making power, and balance stakeholders’ values. They also need to allo-
+cate resources throughout the process and encourage other stakeholders to engage in
+decision-making (Elacqua et al., 2021). With the complex nature of semi-structured
+and unstructured decision-making in schools, the decision process and leaders’ roles
+do not conclude at the final phase. Instead, they often cycle back to the initial step,
+where new problems emerge, and the process needs to be repeated.
+   To gain a comprehensive understanding of an educational leader’s roles through-
+out the administrative decision-making process, Simon’s trichotomy theory and
+Mintzberg’s managerial theory are integrated, with a consideration of the unique-
+ness of the school ecosystem (See Fig. 1). This integration allows us to clarify the
+distinct roles that a leader assumes at each step of the decision-making process.
+   In the intelligence stage, the educational leader serves as a figurehead to set up
+the educational objectives. Additionally, the leader acts as the resource allocator to
+encourage the teaching staff and students to collaborate in identifying the problems
+that need to be addressed. Furthermore, the leader functions as a liaison and a dis-
+seminator, ensuring that other stakeholders are well-informed about the issues to be
+decided upon.
+   During the design stage, the educational leader plays a crucial role in collecting
+and disseminating information, as well as making value-laden statements to guide
+the decision-making process. In this phase, the educational leader encourages the
+active participation of other stakeholders, fostering collaborative brainstorming to
+generate innovative alternatives. Therefore, the leader encompasses all the informa-
+tional roles, such as a monitor, a disseminator, and a spokesman, in addition to tak-
+ing on certain decisional roles, such as the role of an entrepreneur and a resource
+allocator.
+
+1480                                                                                           R. Dai et al.
+
+
+
+
+        En
+        Entrepreneur                                                                     Fig
+                                                                                         Figurehead
+        Disturbance Handler
+        Di                                                                               Liaison
+                                                                                         Lia
+        Resource Allocator
+        Re                                                                               Disseminator
+                                                                                         Dis
+        Ne
+        Negotiator                                                                       Re
+                                                                                         Resource Allocator
+
+
+
+
+                                                 2. Design
+
+                                                      M
+                                                      Monitor
+                                                      Di
+                                                      Disseminator
+                                                      Sp
+                                                      Spokesman
+                                                      En
+                                                      Entrepreneur
+                                                      Resource
+                                                      Allocator
+
+
+Fig. 1  Roles of educational leaders in administrative decision-making (created by authors)
+
+
+   Finally, in the selection stage, the educational leader is responsible for evaluating
+the various alternatives. The leader engages in negotiations with other stakeholders
+and delegates decision-making authority to teachers, students, or parents. Thus, the
+leader fulfils all the decisional roles, acting as the entrepreneur, the disturbance han-
+dler, the resource allocator, and the negotiator.
+
+
+AI‑educational leaders collaborative role framework
+
+Digitalisation, once a method of innovation and disruption, is now embedded in
+educational administration unconsciously, requiring leaders to coevolve and coexist
+with AI (Jandrić et al., 2019; Peters et al., 2023). To boost the synergistic collabora-
+tion of AI and educational leaders, it is essential to investigate how machine learn-
+ing can specifically enhance the capabilities of human leaders, understanding AI’s
+strengths and what makes human leaders unique as humans. Clarifying the roles and
+responsibilities of both AI and human leaders during the decision-making process
+will demonstrate how they can complement and enhance each other. A framework
+of the distinct roles assumed by educational human leaders and AI throughout the
+administrative decision-making process with a consideration of the uniqueness of
+the school ecosystem is proposed (See Fig. 2). With a superpower in data collection
+and processing, AI undertakes the pivotal tasks of factual data compilation and rig-
+orous analysis during the design phase. In contrast, human leaders ought to prioritise
+
+The roles of AI and educational leaders in AI‑assisted…                                            1481
+
+
+
+
+         En
+         Entrepreneur                                                                 Fi
+                                                                                      Figurehead
+         Di
+         Disturbance Handler                                                          Li
+                                                                                      Liaison
+         Re
+         Resource Allocator                                                           Di
+                                                                                      Disseminator
+         Ne
+         Negotiator                                                                   R
+                                                                                      Resource Allocator
+                                                     Monitor
+
+                                                     Motivator
+
+
+
+
+                                                     2. Design
+                                                            g
+
+                                    Data analysiss               Monitor
+                                    Data                         Disseminator
+                                    collection                   Spokesman
+                                    Alternative                  Entrepreneur
+                                    Generation                   Resource
+                                                                 Allocator
+
+
+Fig. 2  AI-leaders collaborative role framework in administrative decision-making in education (created
+by authors)
+
+
+
+the subjective and experiential dimensions in their managerial engagements, tran-
+scending the mere application of established rules into contexts (Kolbjørnsrud et al.,
+2016). Human leaders also undertake roles to encourage the adaptation of AI in the
+organisation and to monitor its ethical use.
+   Machine learning-powered solutions excel in grasping factual elements in deci-
+sion-making because they are developed within the framework of ‘new cognitive
+science,’ enabling them to learn from large amounts of data without supervision,
+recognise strong patterns, and make informed decisions (Eriksson & Djoweini,
+2020; Evers, 2000; Simon, 1965). During the design phase of the decision-making
+trajectory, feasible solutions are developed based on information, requiring exten-
+sive information search and analysis and the generation of alternatives. AI’s prow-
+ess in recognising patterns and learning from data enables it to handle the ‘hard
+elements’ of leaders’ roles, involving the collection and processing of raw data and
+information (Yukl, 2012).
+   Decisions encompass human emotions and cultural nuances, which current
+AI systems struggle to comprehend (Titareva, 2021). While certain AI solutions,
+which can discern human emotions through vocal tone and facial expressions, are
+used in school management to track students’ behaviours (Johansson & Björk-
+man, 2018), they do not have the emotional intelligence—the capacity for ethi-
+cal judgment, consideration of attitudes and sentiments, and the assessment of
+morale (Agrawal et al., 2017; Johansson & Björkman, 2018; Parry et al., 2016;
+
+1482                                                                          R. Dai et al.
+
+
+Smith & Green, 2018). The ‘soft elements’ that uniquely define human behav-
+iours, such as networking, representation, and envisioning, remain beyond the
+AI’s capabilities (Chamorro-Premuzic et al., 2018; Eriksson & Djoweini, 2020;
+Yukl, 2012).
+    In the collaborative decision-making process, human leaders play indispensable
+roles in domains related to human nature, such as creativity, empathy, curiosity, and
+communication and mutual understanding and communication, which AI’s cur-
+rent capacities fall short (De Jong, 2020; Johansson & Björkman, 2018; Titareva,
+2021). The roles of figureheads, responsible for formulating the educational visions,
+liaisons, and disseminators, facilitating the communications and connections with
+teaching staff, students, and parents are paramount. Although AI can effectively
+collect and analyse the data, it is human leaders who undertake the roles of moni-
+tors, disseminators, and spokesmen, effectively communicating the information to
+stakeholders. Leaders must hold an entrepreneurial stance when addressing novel
+challenges as the education culture is mobilising, especially in an AI-driven era
+(Andrew, 2017). This magnifies the role of the entrepreneur during the design. After
+the alternatives are generated with the aid of AI, educational leaders are tasked with
+gathering stakeholders and harmonising their interests, fostering networks and col-
+laborations (Kolbjørnsrud et al., 2016; Sterrett & Richardson, 2019; Tyson & Sau-
+ers, 2021). This aligns with the roles of spokesmen, disseminators, disturbance han-
+dlers, and negotiators (Breuer & Szillat, 2019; Kolbjørnsrud et al., 2016; Tyson &
+Sauers, 2021). The role of educational leaders as resource allocators is significant
+since they must allocate decision-making authority to stakeholders and empower
+teachers, students and parents who understand the nuances of classroom dynam-
+ics to respond to changes in a broader school community (Brynjolfsson & McAfee,
+2014; Dewhurst & Willmott, 2014; Sharma et al., 2023). Therefore, the role of the
+resource allocator is in each step of the decision-making trajectory (Kolbjørnsrud
+et al., 2016).
+    The advent of AI systems introduces novel leadership roles as well, including
+those of motivators and monitors (Johansson & Björkman, 2018). Leaders must gain
+an in-depth understanding of AI system performance, recognise new opportunities
+it presents, assess when and how to use the technology, and wisely choose the right
+tools to align with the school framework (Agrawal et al., 2017; Davenport, 2018;
+Tyson & Sauers, 2021). They also need to motivate and inspire the teaching staff to
+adapt to and be comfortable with using AI systems and oversee their integration into
+daily routines. This includes designing, monitoring, and supporting the AI used in
+ways that fit organisational goals and contribute to improved decision-making pro-
+cesses (Richardson et al., 2021; Sterrett & Richardson, 2019).
+    When the boundary between AI and educational leaders is blurred, it is essential
+to find a way for the leaders to coexist with AI by integrating AI’s capabilities into
+the decision-making process. The framework provides a conceptual roadmap illus-
+trating the distinctive roles assumed by AI and human leaders within the context of
+semi-structured and unstructured administrative decision-making and clarifies how
+AI and human leaders can contribute to and collaborate within the educational deci-
+sion-making trajectory. This is the first and paramount step to establishing a coexist-
+ing future between AI and educational leaders.
+
+The roles of AI and educational leaders in AI‑assisted…                                             1483
+
+
+Conclusions
+
+The conceptual framework indicates the distinct roles assumed by educational
+leaders and AI systems within the trajectory of semi-structured and unstructured
+administrative decision-making. This is achieved by synthesising Simon’s trichot-
+omy of administrative decision-making theory and Mintzberg’s theory of mana-
+gerial roles while also considering the unique nuances of the school landscape
+and educational leadership. Educational administrative decision-making must
+integrate the requirements and preferences of diverse stakeholders, as it is a polit-
+ical process involving teachers, students, and parents. The remarkable capacity
+for data analysis and computation equips AI systems to undertake informational
+roles, such as the collection and analysis of factual data during the design phase.
+Conversely, human leaders are tasked with human-centric roles and articulate
+value-laden statements when necessary. These roles include interpersonal dimen-
+sions to establish the educational vision for the schools, informational dimensions
+including disseminating information to stakeholders, as well as decisional dimen-
+sions encompassing bringing in new opportunities for the schools, dealing with
+conflicts, negotiating, and allocating decision-making authority to stakeholders.
+Furthermore, novel responsibilities for human leaders include supervising the
+ethical conduct of AI systems and fostering the adoption of the technology among
+teachers and students. The framework clarifies the roles and responsibilities AI
+and educational leaders undertake through the decision-making process, aiming
+to enhance the synergetic collaborations between them. It also provides a basis
+for prospective inquiries into the impacts of machine learning on educational
+administration and leadership, offering practical implications for the preparation
+of future school leaders. The framework contributes to the scenario in which AI
+augments, rather than replaces, educational leaders and thus advocates for a more
+human-centric future.
+Acknowledgements We acknowledge the traditional custodians of the lands on which this writing was
+conducted in places across time. We pay our deep respect to the Ancestors and Elders of Wadawur-
+rung Country, Eastern Maar Country, and Wurundjeri Country, and pay respect to their Elders past, and
+present.
+
+Author contributions Ruixun Dai: conceptualisation, methodology, visualisation, writing—original
+draft. Matthew Krehl Edward Thomas: conceptualisation, methodology, supervision, writing—review &
+editing. Shaun Rawolle: conceptualisation, methodology, supervision, writing—review & editing.
+
+Funding Open Access funding enabled and organized by CAUL and its Member Institutions. The
+research received no external funding or financial support.
+
+Data availability We do not analyse or generate any datasets, because our work proceeds within a theo-
+retical approach. One can obtain the relevant materials from the references.
+
+Declarations
+Conflict of interest The authors declare no competing financial, professional, or personal interests that
+might have influenced the performance or presentation of the work described in this manuscript.
+
+Ethical approval Deakin University Human Research Ethics Committee (DUHREC), 2023-328.
+
+1484                                                                                               R. Dai et al.
+
+
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License,
+which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Com-
+mons licence, and indicate if changes were made. The images or other third party material in this article
+are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the
+material. If material is not included in the article’s Creative Commons licence and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+
+
+
+References
+Agrawal, A., Gans, J., & Goldfarb, A. (2017). What to expect from artificial intelligence. MIT Sloan Man-
+     agement Review, 58(3), 23–26.
+Andrew, M. (2017). The business of artificial intelligence: What it can—and cannot—do for your organiza-
+     tion. Harvard Business Review Digital Articles, 7, 3–11.
+Baker, T., Smith, L., & Anissa, N. (2019). Educ-AI-tion rebooted? Exploring the future of artificial intelli-
+     gence in schools and colleges. Retrieved May 12 2020.
+Birkinshaw, J. (2020). What is the value of firms in an AI world? In the future of management in an AI world
+     (pp. 23–35). Springer. https://​doi.​org/​10.​1007/​978-3-​030-​20680-2_2
+Breuer, S., & Szillat, P. (2019). Leadership and digitalization: Contemporary approaches towards leading in
+     the modern day workplace.
+Bronfenbrenner, U. (1994). Ecological models of human development. International Encyclopedia of Educa-
+     tion, 3(2), 37–43.
+Brynjolfsson, E., & McAfee, A. (2014). The second machine age: Work, progress, and prosperity in a time of
+     brilliant technologies. WW Norton & Company.
+Chamorro-Premuzic, T., Wade, M., & Jordan, J. (2018). As AI makes more decisions, the nature of leader-
+     ship will change. Harvard Business Review, 1, 2–7. https://​doi.​org/​10.​1002/​ltl.​20777
+Cray, D., Inglis, L., & Freeman, S. (2007). Managing the arts: Leadership and decision making under dual
+     rationalities. The Journal of Arts Management, Law, and Society, 36(4), 295–313. https://​doi.​org/​10.​
+     3200/​jaml.​36.4.​295-​314
+Davenport, T. H. (2018). The AI advantage: How to put the artificial intelligence revolution to work. MIT
+     Press. https://​doi.​org/​10.​7551/​mitpr​ess/​11781.​001.​0001
+Day, C., Gu, Q., & Sammons, P. (2016). The impact of leadership on student outcomes: How successful
+     school leaders use transformational and instructional strategies to make a difference. Educational
+     Administration Quarterly, 52(2), 221–258. https://​doi.​org/​10.​1177/​00131​61x15​616863
+Day, C., Sammons, P., & Gorgen, K. (2020). Successful school leadership. Education Development Trust.
+De Jong, J. C. (2020). AI (appreciative inquiry)+ AI (artificial intelligence)= SFL (sustainable future leader-
+     ship). AI Practitioner, 22(1), 45–48.
+Dewhurst, M., & Willmott, P. (2014). Manager and machine: The new leadership equation. McKinsey Quar-
+     terly, 4(3), 76–86.
+Edwards, W. (1954). The theory of decision making. Psychological Bulletin, 51(4), 380–417. https://​doi.​org/​
+     10.​1037/​h0053​870
+Elacqua, G., Munevar, I., Sanchez, F., & Santos, H. (2021). The impact of decentralized decision-making
+     on student outcomes and teacher quality: Evidence from Colombia. World Development, 141, 105378.
+     https://​doi.​org/​10.​1016/j.​world​dev.​2020.​105378
+Eriksson, M., & Djoweini, C. (2020). Artificial Intelligence’s impact on management: a literature review cov-
+     ering artificial intelligence’s influence on leadership skills and managerial decision-making processes
+     [Master’s thesis, KTH Royal Institute of Technology]. DiVA. Retrieved from https://​www.​diva-​portal.​
+     org/​smash/​get/​diva2:​14618​11/​FULLT​EXT01.​pdf
+Evers, C. W. (2000). Connectionist modelling and education. Australian Journal of Education, 44(3), 209–
+     225. https://​doi.​org/​10.​1177/​00049​44100​04400​302
+Evers, C. W., & Lakomski, G. (2013). Methodological individualism, educational administration, and lead-
+     ership. Journal of Educational Administration and History, 45(2), 159–173. https://​doi.​org/​10.​1080/​
+     00220​620.​2013.​768969
+
+The roles of AI and educational leaders in AI‑assisted…                                                   1485
+
+
+Gulson, K. N., Sellar, S., & Webb, P. T. (2022). Algorithms of Education: How datafication and artificial
+      intelligence shape policy. University of Minnesota Press. https://​doi.​org/​10.​5749/​97814​52968​797
+Gurr, D., & Drysdale, L. (2020). Leadership for challenging times. International Studies in Educational
+      Administration, 48(1), 24–30.
+Hanson, M. (1976). Beyond the bureaucratic model: a study of power and autonomy in educational decision-
+      making. Interchange, 7(2), 27–38. https://​doi.​org/​10.​1007/​bf021​42211
+Harrison, E. F., & Pelletier, M. A. (2000). The essence of management decision. Management Decision.
+      https://​doi.​org/​10.​1108/​00251​74001​03734​76
+Harvey, D. (2007). A brief history of neoliberalism. Oxford University Press.
+Hill, D., & Kumar, R. (2009). Neoliberalism and its impacts. Global Neoliberalism and Education and Its
+      Consequences, 1, 12–29. https://​doi.​org/​10.​4324/​97802​03891​858
+Jandrić, P., Knox, J., Besley, T., Ryberg, T., Suoranta, J., & Hayes, S. (2018). Postdigital science and edu-
+      cation. Educational Philosophy and Theory, 50(10), 893–899. https://​doi.​org/​10.​1080/​00131​857.​2018.​
+      14540​00
+Jandrić, P., Ryberg, T., Knox, J., Lacković, N., Hayes, S., Suoranta, J., Smith, M., Steketee, A., Peters, M., &
+      McLaren, P. (2019). Postdigital dialogue. Postdigital Science and Education, 1(1), 163–189. https://​doi.​
+      org/​10.​1007/​s42438-​018-​0011-x
+Jarrahi, M. H. (2018). Artificial intelligence and the future of work: Human-AI symbiosis in organizational
+      decision making. Business Horizons, 61(4), 577–586. https://​doi.​org/​10.​1016/j.​bushor.​2018.​03.​007
+Johansson, S., & Björkman, I. (2018). What impact will artificial intelligence have on the future leadership
+      role? A study of leaders’ expectations[Master’s thesis, Lund University]. Lund University Publications.
+      Retrieved from https://​lup.​lub.​lu.​se/​stude​nt-​papers/​search/​publi​cation/​89526​03
+Johnson, B. L., Jr., & Kruse, S. D. (2012). Decision making for educational leaders: Underexamined dimen-
+      sions and issues. SUNY Press.
+Kolbjørnsrud, V., Amico, R., & Thomas, R. J. (2016). How artificial intelligence will redefine management.
+      Harvard Business Review, 2(1), 3–10.
+Krafft, T. D., Zweig, K. A., & König, P. D. (2022). How to regulate algorithmic decision-making: A frame-
+      work of regulatory requirements for different applications. Regulation & Governance, 16(1), 119–136.
+      https://​doi.​org/​10.​1111/​rego.​12369
+Kumar, R., & Hill, D. (2012). Introduction: Neoliberal capitalism and education Global neoliberalism and
+      education and its consequences (pp. 21–31). Routledge. https://​doi.​org/​10.​4324/​97802​03891​858-6
+Lakomski, G., & Evers, C. W. (2022). The importance of context for leadership in education. Educational
+      Management Administration & Leadership, 50(2), 269–284. https://​doi.​org/​10.​1177/​17411​43221​10518​
+      50
+Leithwood, K., Harris, A., & Hopkins, D. (2008). Seven strong claims about successful school leadership.
+      School Leadership and Management, 28(1), 27–42. https://​doi.​org/​10.​1080/​13632​43070​18000​60
+Leithwood, K., & Riehl, C. (2007). What we know about successful leadership. Practising Administrator,
+      26(4), 41–66. https://​doi.​org/​10.​1007/​978-1-​4020-​6022-9_4
+Lundberg, C. C. (1962). Administrative decisions: A scheme for analysis. Academy of Management Journal,
+      5(2), 165–178. https://​doi.​org/​10.​2307/​254515
+Lynch, K., Grummell, B., & Devine, D. (2012). New managerialism in education: Commercialization, care-
+      lessness and gender. Springer. https://​doi.​org/​10.​1057/​97811​37007​230_9
+Macgilchrist, F. (2021). Theories of postdigital heterogeneity: Implications for research on education and
+      datafication. Postdigital Science and Education, 3(3), 660–667.
+Melé, D. (2010). Practical wisdom in managerial decision making. Journal of Management Development,
+      29(7/8), 637–645. https://​doi.​org/​10.​1108/​02621​71101​10590​68
+Millikan, R. H. (2018). Coming to terms with administrative structures. In creating an excellent school (pp.
+      62-98). Routledge.
+Mintrom, M. (2015). Herbert A. Simon, administrative behavior: A study of decision-making processes in
+      administrative organization. The Oxford Handbook of Classics in Public Policy and Administration, 1,
+      12–21.
+Mintzberg, H. (1973). The nature of managerial work. Harper & Row.
+Mintzberg, H., Raisinghani, D., & Theoret, A. (1976). The structure of" unstructured" decision processes.
+      Administrative Science Quarterly. https://​doi.​org/​10.​2307/​23920​45
+Mutchler, S. E., & Duttweiler, P. C. (1990). Implementing shared decision making in school-based manage-
+      ment: Barriers to changing traditional Behavior. ERIC.
+
+1486                                                                                                    R. Dai et al.
+
+
+Mutereko, S., & Chitakunye, P. (2015). Discretion and autonomy: Public administrators’ dilemmas in the
+      implementation of national curriculum statements. International Journal of Public Administration,
+      38(2), 143–155. https://​doi.​org/​10.​1080/​01900​692.​2014.​934835
+Parry, K., Cohen, M., & Bhattacharya, S. (2016). Rise of the machines: A critical consideration of automated
+      leadership decision making in organizations. Group & Organization Management, 41(5), 571–594.
+      https://​doi.​org/​10.​1177/​10596​01116​643442
+Peters, M. A., Jackson, L., Papastephanou, M., Jandrić, P., Lazaroiu, G., Evers, C. W., Cope, B., Kalantzis,
+      M., Araya, D., & Tesar, M. (2023). AI and the future of humanity: ChatGPT-4, philosophy and educa-
+      tion—critical responses. Educational Philosophy and Theory, 56(9), 828–862. https://​doi.​org/​10.​1080/​
+      00131​857.​2023.​22134​37
+Wallin, J. (2014). Education needs to get a grip on life. In M. Carlin & J. Wallin (Eds.), Deleuze & Guattari,
+      politics and education: For a people-yet-to-come (pp. 117–139). Bloomsbury Academic.
+Raso, F. A., Hilligoss, H., Krishnamurthy, V., Bavitz, C., & Kim, L. (2018). Artificial intelligence & human
+      rights: Opportunities & risks. Berkman Klein Center Research Publication.
+Richardson, J. W., Watts, J. L. D., & Sterrett, W. L. (2021). Challenges of being a digitally savvy principal.
+      Journal of Educational Administration, 59(3), 318–334. https://​doi.​org/​10.​1108/​jea-​10-​2020-​0215
+Ryan, D. P. J. (2001). Bronfenbrenner’s ecological systems theory. Retrieved January, 9, 2012.
+Saucedo-Martínez, J. A., Pérez-Lara, M., Marmolejo-Saucedo, J. A., Salais-Fierro, T. E., & Vasant, P. (2018).
+      Industry 4.0 framework for management and operations: A review. Journal of Ambient Intelligence and
+      Humanized Computing, 9(3), 789–801. https://​doi.​org/​10.​1007/​s12652-​017-​0533-1
+Schrenk, L. (1969). Aiding the decision maker—a decision process model. Ergonomics, 12(4), 543–557.
+      https://​doi.​org/​10.​1080/​00140​13690​89310​79
+Schwab, K. (2017). The fourth industrial revolution. Currency.
+Seldon, A., Abidoye, O., & Metcalf, T. (2020). The fourth education revolution reconsidered: Will artificial
+      intelligence enrich or diminish humanity? Legend Press Ltd.
+Sharma, U., Laletas, S., May, F., & Grove, C. (2023). “In any crisis there is an opportunity for us to learn
+      something new”: Australian teacher experiences during COVID-19. The Australian Educational
+      Researcher, 50(5), 1303–1321. https://​doi.​org/​10.​1007/​s13384-​022-​00556-x
+Shrestha, Y. R., Ben-Menahem, S. M., & Von Krogh, G. (2019). Organizational decision-making structures
+      in the age of artificial intelligence. California Management Review, 61(4), 66–83. https://​doi.​org/​10.​
+      1177/​00081​25619​862257
+Simon, H. A. (1943). A theory of administrative decision. The University of Chicago.
+Simon, H. A. (1965). Administrative decision making. Public Administration Review, 25(1), 31–37. https://​
+      doi.​org/​10.​2307/​974005
+Simon, H. A. (2013). Administrative behavior. Simon and Schuster.
+Simon, H. A., Dantzig, G. B., Hogarth, R., Plott, C. R., Raiffa, H., Schelling, T. C., Shepsle, K. A., Thaler,
+      R., Tversky, A., & Winter, S. (1987). Decision making and problem solving. Interfaces, 17(5), 11–31.
+      https://​doi.​org/​10.​1287/​inte.​17.5.​11
+Smith, A. M., & Green, M. (2018). Artificial intelligence and the role of leadership. Journal of Leadership
+      Studies, 12(3), 85–87. https://​doi.​org/​10.​1002/​jls.​21605
+Sterrett, W. L., & Richardson, J. W. (2019). The change-ready leadership of technology-savvy super-
+      intendents. Journal of Educational Administration, 57(3), 227–242. https://​doi.​org/​10.​1108/​
+      jea-​09-​2018-​0160
+Titareva, T. (2021). Leadership in an Artificial Intelligence Era. Presented at Leading Change Conference,
+      James Madison University.
+Tyson, M. M., & Sauers, N. J. (2021). School leaders’ adoption and implementation of artificial intelligence.
+      Journal of Educational Administration, 59(6), 745–761. https://​doi.​org/​10.​1108/​jea-​10-​2020-​0221
+Vroom, V. H., & Yetton, P. W. (1973). Leadership and decision-making. University of Pittsburgh Pre. https://​
+      doi.​org/​10.​2307/j.​ctt6w​rc8r
+Wang, Y. (2021a). Artificial intelligence in educational leadership: A symbiotic role of human-artificial intel-
+      ligence decision-making. Journal of Educational Administration, 59(6), 671–686. https://​doi.​org/​10.​
+      1108/​jea-​10-​2020-​0216
+Wang, Y. (2021b). When artificial intelligence meets educational leaders’ data-informed decision-making: A
+      cautionary tale. Studies in Educational Evaluation, 69, 100872. https://​doi.​org/​10.​1016/j.​stued​uc.​2020.​
+      100872
+Williamson, B. (2023). The social life of AI in education. International Journal of Artificial Intelligence in
+      Education, 34, 97–104. https://​doi.​org/​10.​1007/​s40593-​023-​00342-5
+
+The roles of AI and educational leaders in AI‑assisted…                                                  1487
+
+
+Xu, M., David, J. M., & Kim, S. H. (2018). The fourth industrial revolution: Opportunities and challenges.
+     International Journal of Financial Research, 9(2), 90–95. https://​doi.​org/​10.​5430/​ijfr.​v9n2p​90
+Xu, X., Lu, Y., Vogel-Heuser, B., & Wang, L. (2021). Industry 4.0 and industry 5.0—inception, conception
+     and perception. Journal of Manufacturing Systems, 61, 530–535. https://​doi.​org/​10.​1016/j.​jmsy.​2021.​
+     10.​006
+Yukl, G. (2012). Effective leadership behaviour: What we know and what questions need more attention.
+     Academy of Management Perspectives, 26(4), 66–85. https://​doi.​org/​10.​5465/​amp.​2012.​0088
+Zawacki-Richter, O., Marín, V. I., Bond, M., & Gouverneur, F. (2019). Systematic review of research on
+     artificial intelligence applications in higher education–where are the educators? International Journal of
+     Educational Technology in Higher Education, 16(1), 1–27. https://​doi.​org/​10.​1186/​s41239-​019-​0171-0
+Zhao, Y. (2019). The future of education: 2030 shaping future schools with digital technology (pp. 1–24).
+     Springer.
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps
+and institutional affiliations.
+
+
+
+
+Ruixun Dai is a PhD candidate in Education at Deakin University, located in Melbourne, Australia.
+Boasting a rich educational background in administration and substantial professional experience in
+schools both in China and the USA, Ruixun’s research focuses on the influence of Artificial Intelligence
+on educational administration and leadership.
+
+Matthew Krehl Edward Thomas PhD (SFHEA) is an Associate Professor in Education and the Director
+of Professional Experience at Deakin University, Australia. He critiques the systems in which educators
+are formed and works to enhance pedagogical practices at a system level. Matthew’s research explores the
+sociology of time and education, human rights, and surveillance capitalism.
+
+Shaun Rawolle is a Senior Lecturer in the School of Education at Deakin University, Australia. His
+research is focused on the way policy impacts on practice in education and education systems and pub-
+lished in the areas of communications, new contractualism, sociology of education and education policy
+and contributed to the development of theoretical, conceptual, and methodological innovations in the
+study of education policy, comparative education, and sociology of education drawing on the sociology
+of Pierre Bourdieu.
+
+
+
+
+Authors and Affiliations
+
+Ruixun Dai1,2        · Matthew Krehl Edward Thomas1,3                     · Shaun Rawolle1,2
+
+* Ruixun Dai
+  s220182158@deakin.edu.au
+    Matthew Krehl Edward Thomas
+    matthew.thomas@deakin.edu.au
+    Shaun Rawolle
+    shaun.rawolle@deakin.edu.au
+1
+    School of Education, Deakin University, Melbourne, Australia
+2
+    Deakin University, 75 Pigdons Rd, Geelong, Waurn Ponds, VIC 3216, Australia
+3
+    Deakin University, 221 Burwood Hwy, Melbourne, Burwood, VIC 3125, Australia

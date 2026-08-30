@@ -1,0 +1,1106 @@
+Artículos de investigación
+
+
+            LA VIGILANCIA CIENTÍFICA COMO APOYO
+             A LA GESTIÓN EDUCATIVA. UN ANÁLISIS
+             BIBLIOMÉTRICO DE LA FORMACIÓN EN
+            GESTIÓN DE LA PRODUCCIÓN INDUSTRIAL.
+
+                                           1
+                                            Christian Zetty Arenas
+                                     2
+                                       María Alejandra Jácome Vallejo
+                                           3María Eugenia Morales
+                                        4
+                                          Pablo Andrés Erazo Muñoz
+                                    5Carlos Alejandro Ramírez Gómez
+                                        6
+                                         Alejandra Galeano Colonia
+                                     7
+                                       Néstor Eduardo Sánchez Ospina
+
+Como citar este artículo:
+Zetty Arenas, C., Jácome Vallejo, M. A., Morales Quiceno, M. E., Erazo Muñoz, P. A., Ramírez
+Gómez, C. A., Galeano Colonia, A., & Sánchez Ospina, N. E. (2020). La vigilancia científica como
+apoyo a la gestión educativa. Un análisis de la formación en Automatización Industrial. Rutas
+de formación: prácticas y experiencias, 10, 60–75. https://doi.org/10.24236/24631388.n.2020.3396
+
+Fecha de recepción: 21 de septiembre de 2020 / Fecha de aprobación: 28 de octubre de 2020
+
+
+                                                      Resumen
+
+La enseñanza de la gestión de la producción industrial GPI, trae grandes retos tanto para los
+docentes como para los centros de formación donde se orienta, debido a los avances en esta
+línea de conocimiento, además del amplio número de publicaciones que se genera en este
+campo.
+
+
+
+
+1 Diseñador Industrial, Universidad Nacional de Colombia. Instructor Centro de Automatización Industrial SENA. Regional
+
+Caldas. E-mail: czettya@misena.edu.co.
+2Ingeniera industrial. Universidad Nacional de Colombia, Sede Manizales. Especialista en gerencia estratégica de proyectos.
+Instructora Centro de Automatización Industrial SENA. Regional Caldas. E-mail: mjacomev@sena.edu.co
+3 Ingeniera Industrial. Universidad Nacional de Colombia, Sede Manizales. Instructora Centro de Automatización Industrial
+SENA. Regional Caldas. E-mail: maría.e@misena.edu.co.
+4Doctorando en Administración, Universidad Nacional de Colombia; Magister en Administración; Universidad Nacional de
+
+Colombia Especialista en Gerencia Educativa; Universidad Católica de Manizales. Administrador de Empresas; Universidad
+Nacional de Colombia Grupo de Investigación Cultura de la Calidad en la Educación; Universidad Nacional de Colombia.
+Profesional ENI Centro de Automatización Industrial SENA Regional Caldas. paerazom@unal.edu.co; paerazom@sena.edu.co
+5 Magister en Automatización Industrial; Universidad Nacional de Colombia. Ingeniero Eléctrico; Universidad Nacional de
+Colombia. Catedrático Universidad Pedagógica y tecnológica de Colombia UPTC. Instructor SENNOVA Centro de Automati-
+zación Industrial; Sena regional Caldas. carlos.ramirez05@uptc.edu.co - alramirezgo@sena.edu.co
+6Magister en Administración de Negocios; Especialista en Desarrollo Gerencial; Universidad Autónoma de Manizales. Tra-
+bajadora Social; Universidad de Caldas. Profesional diseño curricular. Centro de Automatización Industrial SENA Regional
+Caldas. agaleanoc@sena.edu.co.
+7Magister en Ciencias-Física; Universidad Nacional de Colombia; Ingeniero Físico; Universidad Nacional de Colombia. Líder
+SENNOVA - Grupo de Investigación EAYER, Centro de Automatización Industrial Sena regional Caldas nesanchezo@unal.
+edu.co; nesanchezo@sena.edu.co
+
+
+                                                           60
+
+Por lo anterior por medio de una metodología innovadora basada en el análisis bibliométrico
+y utilizando software como (Bibliometrix de R), VOSviewer, Sci2 y Gephi, se presenta una re-
+visión a la literatura científica en este campo, dentro de los principales hallazgos se encuentra
+que se han publicado 16.709 documentos en Scopus y 4.741 en WOS, siendo el 2019, el año
+con mayor producción en este tema, los países más representativos son Estados Unidos y Ale-
+mania, las instituciones con mayor número de publicaciones son la Universidad Técnica de
+Aquisgrán y el Politécnico de Milano. Los autores más prolíficos son Danil Zakoldaev e Igor
+Olegovich Zharinov con 46 publicaciones respectivamente; en Colombia la Universidad Na-
+cional de Colombia y la Universidad de la Costa son las más representativas. Se encontraron
+cuatro tendencias en la producción científica en GPI que son Lean manufacturing, Industrias
+4.0, Transformación digital y Manufactura sostenible. La investigación aporta a los docentes
+un panorama del pasado, presente y futuro de la gestión de la producción Industrial, lo que les
+permitirá mejorar su práctica educativa, además de hacer aportes a los currículos, la formación
+docente y a la actualización de laboratorios donde se enseñan temas relacionados la GPI.
+
+Palabras clave: Análisis bibliométrico; vigilancia científica; gestión de la producción indus-
+trial GPI; Sci2; gestión educativa.
+
+
+
+
+                Scientific surveillance as support for
+              educational management. A bibliometric
+             analysis of the Training in Management of
+                       Industrial Production.
+
+
+                                           Abstract
+
+The teaching of Industrial Production Management GPI, for its initials in Spanish, brings great
+challenges both for teachers and for the training centers where it is oriented, due to the advan-
+ces in this line of knowledge, in addition to the large number of publications generated in this
+field. Therefore, through an innovative methodology based on bibliometric analysis and using
+software such as (Bibliometrix de R), VOSviewer, Sci2 and Gephi, a review of the scientific lite-
+rature in this field is presented. Within the main results we found that 16,709 documents have
+been published in Scopus and 4,741 in WOS. So far, 2019 has been the year with the highest
+production on this subject. The most representative countries are the United States and Ger-
+many. The institutions with the highest number of publications are the Technical University of
+Aachen and the Polytechnic of Milano. The most prolific authors are Danil Zakoldaev and Igor
+Olegovich Zharinov with 46 publications; in Colombia the Universidad Nacional de Colombia
+and the Universidad de la Costa are the most representative. Four trends in scientific produc-
+tion in GPI were found. They are: Lean manufacturing, Industries 4.0, Digital Transformation
+and Sustainable Manufacturing. This research provides teachers with an overview of the past,
+present and future of the Industrial production management. It will allow them to improve
+their educational practice, in addition to making contributions to curricula, teacher training
+and updating laboratories where GPI related topics are taught.
+
+Keywords: Bibliometric analysis; scientific surveillance; industrial production management
+GP; Sci2; Education Management.
+                                                61
+
+            A vigilância científica como suporte para a
+          gestão educacional. Uma análise bibliométrica
+               da Formação em Gestão da Produção
+                             Industrial.
+
+
+                                          Resumo
+
+O ensino da gestão da produção industrial, GPI, traz grandes desafios tanto para os professores
+quanto para os centros de formação onde está orientado, devido aos avanços nesta linha de
+conhecimento, além do grande número de publicações geradas nesta área . Portanto, através
+de uma metodologia inovadora baseada em análise bibliométrica e utilizando softwares como
+Bibliometrix de R, VOSviewer, Sci2 e Gephi, é apresentada uma revisão da literatura científica
+na área. Dentro dos principais achados consta que já foram publicados 16.709 documentos na
+Scopus e 4.741 na WOS, sendo 2019 o ano de maior produção sobre o assunto. Os países mais
+representativos são os Estados Unidos e a Alemanha, as instituições com maior número de
+publicações são a Universidade Técnica de Aachen e o Politécnico de Milão. Os autores mais
+prolíficos são Danil Zakoldaev e Igor Olegovich Zharinov com 46 publicações respectivamen-
+te; na Colômbia, a Universidade Nacional da Colômbia e a Universidade da Costa são as mais
+representativas. Quatro tendências na produção científica foram encontradas no GPI, que são
+Lean Manufacturing, Industries 4.0, Digital Transformation e Sustainable Manufacturing. A
+pesquisa proporciona aos professores um panorama sobre o passado, o presente e o futuro da
+gestão da produção industrial; o que lhes permitirá aprimorar sua prática pedagógica, além
+de contribuir com os currículos, a formação docente e a atualização dos laboratórios onde são
+ministrados tópicos relacionados ao GPI.
+
+Palavras-chave: Análise bibliométrica; vigilância científica; gestão da produção industrial
+GPI; Sci2; Gerenciamento de educação.
+
+
+
+
+                                              62
+
+Introducción                                                      Nacional de Aprendizaje (SENA), continúen a la van-
+                                                                  guardia del conocimiento y acorde con las necesidades
+En el mundo, en el que el conocimiento crece a gran               del entorno. Esto es muy importante, ya que este estu-
+velocidad, es necesario desarrollar herramientas que              dio abre las puertas hacia unos procesos de formación
+permitan realizar una vigilancia constante y que posi-            concertada entre las necesidades del mundo laboral y
+bilite estar al día en las tendencias a donde se dirige el        las ofertas educativas, a fin de cumplir con la misión
+conocimiento; y, para identificar la vanguardia de este           del SENA, de entregar el recurso más valioso a las or-
+en diferentes áreas, se han desarrollado herramientas             ganizaciones —que son las personas—, para que estas
+de vigilancia científico-tecnológica.                             sean idóneas, aptas y cualificadas para ejercer con
+                                                                  efectividad las actividades que se requieren en ellas.
+En el mundo académico, una de las herramientas más
+usadas para realizar vigilancias es el análisis bibliomé-         Metodología para la vigilancia científica-tecnológica
+trico, el cual permite buscar la información, además
+de medir su nivel de impacto (Mena et al., 2020). Esto      Con el fin de ampliar la aplicación de la metodología
+permite dar una orientación a la comunidad académi-         propuesta, se realizó un análisis a la Línea de Gestión
+ca con respecto a los diferentes enfoques y avances de      de la Producción Industrial buscando la información
+un área del conocimiento, además de diferentes ele-         científica en este tema, que permitiera entender los
+mentos como la colaboración entre autores, la activi-       ejes directrices hacia donde se dirige esta especiali-
+dad científica por país o región, el análisis de citación   dad y la cual permita posteriormente tomar decisio-
+y el factor de impacto de las publicaciones y revistas      nes de formación para el Centro de Automatización
+(Duque y Cervantes-Cervantes, 2019).                        Industrial; por este motivo se realiza la investigación
+                                                            a través de la metodología, la cual se describirá a con-
+El objetivo de este trabajo es presentar un análisis bi- tinuación.
+bliométrico del área de conocimiento de gestión de la
+producción industrial. El Análisis está dividido en dos Figura 1.
+fases. La fase uno comienza con un área de conoci- Metodología: vigilancia científica para el mejora-
+miento de forma general a partir de la cual se realizan miento de la gestión educativa
+cinco pasos, de lo cual se obtiene una ecuación de bús-
+queda acorde con las tendencias actuales del área de
+conocimiento. En la fase dos se realiza una búsqueda
+definitiva con ayuda de la ecuación de búsqueda y se
+construye una base de datos, con la cual se realizan los
+tres análisis que son: análisis de publicaciones con la
+herramienta Biblometrix, en donde se busca identifi-
+car los autores, las instituciones y los países que están
+marcando la pauta en el área de conocimiento; análisis
+del árbol de la ciencia, en el cual se clasifican las pu-
+blicaciones en tres tipos: raíz, tronco y follaje; análisis
+de tendencia, en donde se identifican los temas en los
+cuales se está desarrollando el área de conocimiento,
+que se realizan con la ayuda de Sci2 Tool.
+
+Por último, este trabajo presenta, a modo de conclu-
+sión, los referentes teóricos que se deben seguir en el
+área de gestión de la producción industrial e identi-
+ficar las tendencias de conocimiento en las cuales se Fuente: Elaboración propia
+desarrollará el área en los próximos años. Adicional-
+mente, plantea las acciones a desarrollar para que los
+programas de formación del área que se imparten en
+el Centro de Automatización Industrial, del Servicio
+
+                                                             63
+
+Desarrollo de la fase uno                                mente, desarrollado por Van Eck y Waltman (2010)
+                                                         para construir y visualizar mapas bibliométricos. A di-
+Paso uno: definición de la línea o tema                  ferencia de la mayoría de los software que se utilizan
+                                                         para el mapeo bibliométrico, VOSviewer presta espe-
+En el Centro de Automatización Industrial del SENA, cial atención a la representación gráfica de los mapas
+regional Caldas, se viene realizando un estudio de bibliométricos, y es especialmente útil para mostrar
+prospectiva que posibilite validar la pertinencia de los grandes mapas bibliométricos de una manera fácil de
+programas, además, garantizar la vigencia del conte- interpretar (Van Eck y Waltman, 2010).
+nido curricular de los mismos. Para esto, se aplicó un
+proceso de vigilancia científico-tecnológica en cada VOSviewer puede usarse, por ejemplo, para construir
+una de las áreas medulares del Centro y a los progra- mapas de autores o revistas basados en datos de ci-
+mas de formación ofrecidos a la comunidad. En el pre- tas o para construir mapas de palabras clave basados
+sente documento se presenta la vigilancia del área de en datos de coincidencia. Cuando se construyen los
+gestión de la producción industrial.                     mapas, se pueden visualizar de tres maneras: vista de
+                                                         etiqueta, en donde los elementos se indican mediante
+Paso dos: entrevista a comunidad académica para un elemento que permite marcarlos y, de forma prede-
+identificación de palabras                               terminada, mediante un círculo, hacer comparaciones
+                                                         por medio de tamaño, por tanto, entre más grande la
+Para identificar la evolución, autores e instituciones etiqueta y el círculo, más importante es el documento;
+origen de las publicaciones científicas, se partió de la vista de densidad, en la que el color de un punto en
+identificación de las palabras clave relacionadas con un mapa depende del número de elementos en la ve-
+la Línea Medular de Gestión de la Producción Indus- cindad del punto y de la importancia de los elementos
+trial, estas fueron sugeridas por los expertos del área vecinos. La vista de densidad es particularmente útil
+en el Centro y se concluyó que se podría partir de la para obtener una visión general de la estructura ge-
+ecuación de búsqueda “logistic” o “efficiency” y “supply neral de un mapa y llamar la atención sobre las áreas
+chain”.                                                  más importantes de él (Van Eck y Waltman, 2010); vis-
+                                                         ta de densidad de clúster, la cual es particularmente
+Paso tres: búsqueda preliminar en WOS y Scopus útil para obtener una visión general de la asignación
+                                                         de elementos a los clústeres y de la forma en que ellos
+Con estas palabras, se realizó una búsqueda en las pla- se relacionan entre sí (Van Eck y Waltman, 2010).
+taformas Web of Science (en adelante WoS) y Scopus
+del tema “logistic” o “efficiency” y “supply chain”. El En la metodología propuesta en el presente artículo,
+resumen de los resultados obtenidos de la búsqueda se se utilizan las mallas de VOSviewer para analizar las
+puede observar en la tabla 1.                            redes de palabras, autores y países, y se aprovecha su
+                                                         visualización para observar cuáles son, por ejemplo,
+Tabla 1.                                                 los países que vienen publicando actualmente y las
+Resumen de resultados de la búsqueda                     redes de cocitación. Además de lo anterior, se utiliza
+                                                         inicialmente para determinar los clústeres de palabras
+ Plataforma de indexación Resultados Periodo
+                                                         a fin de que los expertos y docentes / instructores los
+                                                         puedan validar.
+WOS                    300.403   Todos los años -hasta 28/05/2020
+
+SCOPUS                 22.465    Todos los años -hasta 28/05/2020        Con la ayuda del software bibliométrico Vosviewer se
+                                                                         lograron identificar seis Clúster o tendencias, los cua-
+                                                                         les están conformados por las palabras clave usadas
+Fuente: Elaboración propia                                               en los artículos encontrados en la búsqueda, y que se
+                                                                         presentan en la figura 2.
+Paso cuatro: análisis de red de palabras en Vosviewer
+
+Para la segunda parte de la fase 4 se utiliza VOSviewer,
+que es un programa informático disponible gratuita-
+
+                                                                    64
+
+Figura 2.                                                       Clúster 2. Programación de la producción / sche-
+Red de palabras clave                                           dule production: product, remanufacturing, simu-
+                                                                lation, industry 4.0, internet of things, justo a tiempo,
+                                                                teoría de restricciones, PER, CPM, formulación de
+                                                                problemas de programación lineal, reglas de prioridad,
+                                                                Palmer, Jhonson N2, teoría de colas (línea de espera),
+                                                                balance de línea, sistemas aditivos (lineal, lotes, pro-
+                                                                yectos), lean manufacturing, lead time, control estadís-
+                                                                tico de procesos.
+
+                                                                Clúster 3. Estudio del trabajo / work study: dia-
+                                                                grama bimanual, diagrama hombre-máquina, diseño
+                                                                de puestos de trabajo, estándar de producción, docu-
+                                                                mentación de procesos, flujograma, diagrama de pro-
+                                                                cedencia, diagrama sinóptico, ideograma, workstation
+                                                                design, work study, time study, method study.
+
+                                                                Desarrollo de la fase dos
+Fuente: elaboración propia en VOSviewer
+                                                           Paso uno: generación de la ecuación de búsqueda
+Paso cinco: revisión del clúster de palabras por
+profesores y expertos                                      La ecuación de búsqueda es construida con las pala-
+                                                           bras obtenidas en la fase uno, utilizando para ello ope-
+En este paso se busca realizar una validación sobre radores lógicos y algunos filtros a fin de que la búsque-
+los resultados obtenidos, para lo cual se toman las da sea lo más acertada posible en el paso dos.
+tendencias encontradas por la aplicación VosViewer.
+Cada tendencia está compuesta por una serie de pala- Paso dos: validación de la ecuación de búsqueda
+bras clave. Para la validación, se realiza una sesión de
+trabajo con uno o varios expertos del área de conoci- Con la ayuda de los expertos se realiza la validación
+miento y se hace la verificación de la coherencia de los de la ecuación de búsqueda, la cual debe establecerse
+resultados con el desarrollo y perspectiva del área; si de tal forma que permita abarcar claramente el área
+el resultado de la búsqueda es válido, se documenta, en de conocimiento en la cual se está realizando la vigi-
+caso contrario, los resultados de la búsqueda se toman lancia científico-tecnológica. Para este caso, se define
+como no válidos y es necesario regresar al paso dos.       la ecuación de búsqueda: “supply chain design” o “lean
+                                                           manufacturing” o “industry 4.0” o “process documenta-
+Al realizar la sesión de trabajo y analizar los resultados tion” o “workstation design”.
+de la búsqueda con los expertos del área de gestión de
+la producción industrial, María Alejandra Jácome Va- Paso tres: búsqueda en WOS y SCOPUS
+llejo, Christian Zetty Arenas y María Eugenia Morales
+Quiceno, lograron identificar tres tendencias relevan- Tabla 2.
+tes en el área, las cuales se presentan a continuación. Resultados obtenidos de la Búsqueda en WOS y Scopus
+
+Clúster 1. Logística / logistic: circular economy,
+cleaner production, E-commerce, facility localition, in-
+                                                                    Plataforma de indexación          Resultados                   Período
+ventory management, logistic network, loop supply
+                                                                 WOS                           4741                Todos los años - hasta 28/05/2020
+chain, CRM - ERP, network design, reverse logistics,
+                                                                 SCOPUS                        16.709              Todos los años - hasta 28/05/2020
+supply chain design, trazabilidad, Big Data, Big Data
+Analytics, logistics, transports, social responsability.
+
+                                                                Fuente: Elaboración propia
+
+                                                           65
+
+Desarrollo de la fase tres                                       El número de publicaciones por año en un área de co-
+                                                                 nocimiento es de gran importancia, ya que permite
+Paso uno: análisis de indicadores en WOS o Scopus                identificar la pertinencia y la relevancia de este; una
+                                                                 caída en las publicaciones o una nula investigación
+Para el desarrollo de este paso se utilizó SCOPUS,               sobre del área puede suponer que el tema ha perdido
+por su afinidad con las bases de datos relacionadas              del interés por parte de los investigadores y que fue
+con el área de gestión de la producción industrial. En           reemplazado por otros temas. En la figura 3 se puede
+este proceso, se realizó la búsqueda con la ecuación             evidenciar el crecimiento de las publicaciones hasta el
+seleccionada en la fase anterior, teniendo como resul-           2019 y que en el 2020 ya se tiene un número significa-
+tado 2908 documentos, los cuales posibilitan hacer un            tivo de ellas, lo que indica que el área de conocimiento
+análisis que permite conocer de manera general las               en gestión de la producción industrial es de relevancia
+principales estadísticas e indicadores del tema o Línea          académica.
+Medular de Gestión de la Producción Industrial, entre
+ellas: producción a través de los años, autores repre- Figura 4.
+sentativos, instituciones representativas, países, tipos Número de publicaciones por país en el área
+de documentos, subáreas, patrocinadores financieros
+de las investigaciones relacionadas y número de cita-                         Países
+ciones por documento.                                         France
+                                                                  Russian Federation
+
+Paso dos y tres: procesamiento y análisis de la in-
+                                                                              Brazil
+                                                                              Spain
+formación en Excel de Scopus                                                  China
+                                                                    United Kingdom
+                                                                               India
+El análisis bibliométrico tiene como objetivo identifi-                         Italy
+car los diferentes actores que influyen en la publicación                  Germany
+                                                                       United States
+de información del área de conocimiento en particular,
+                                                                                        0   500   1000   1500   2000   2500   3000   3500
+para esto, se referencian los siguientes aspectos de las
+publicaciones encontradas: autores, instituciones, paí-          Fuente: Scopus.
+ses, entre otros. Esta condición es muy importante, ya
+que tener identificadas las fuentes más influyentes en           Países de las publicaciones
+las áreas de conocimiento facilita su seguimiento, el
+cual se genera en una área determinada. Además, po-              Los países tienen procesos que favorecen el desarro-
+sibilita la evaluación de la cocitación y otros tipos de         llo de diferentes áreas de conocimiento, lo cual genera
+medidas, como el acoplamiento, la colaboración cien-             que algunos se conviertan en un referente frente a un
+tífica y los análisis de co-palabras, permitiendo hacer          área específica de conocimiento. De la figura 4 se pue-
+el análisis de otros índices, entre ellos, la cantidad de        de concluir que los tres países con mayor aporte al de-
+artículos, redes de cocitación y coautorías, productivi-         sarrollo del área de conocimiento son Estados Unidos,
+dad por países y autores e impacto de las revistas.              Alemania e Italia; todos ellos con más de 1000 publica-
+                                                                 ciones, lo que los convierte en un referente importante
+Figura 3.                                                        para el área de gestión de la producción industrial.
+Número de publicaciones por año, en el área de
+gestión de la producción industrial            Universidades o instituciones de pertenencia del
+                                               autor
+                      Producción por año
+          6000
+
+          5000
+                                                                 Los autores, generalmente, están afiliados a institucio-
+          4000
+                                                                 nes, que a su vez tienen áreas de conocimiento en las
+          3000                                                   cuales trabajan; al identificar cuáles de ellas están pu-
+          2000
+                                                                 blicando, es posible encontrar referentes que permitan
+                                                                 definir los vectores hacia los cuales se dirige el cono-
+          1000
+
+            0
+
+                                                                 cimiento. En la figura 5 se pueden observar las insti-
+               20
+               19
+               18
+               17
+               16
+               15
+               14
+               13
+               12
+               11
+               10
+               09
+               08
+               07
+               06
+               05
+               04
+               03
+               02
+               01
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+             20
+
+
+
+
+Fuente: Scopus.                                                  tuciones de las cuales provienen la mayor cantidad de
+
+                                                            66
+
+información del área, convirtiéndose en referentes a Tabla 3.
+nivel mundial.                                       Información de los principales autores del área
+
+Figura 5.                                                                                                                Autor               Danil A.Zakoldaev       Igor
+                                                                                                                                                                     Zharinov
+                                                                                                                                                                             Olegovich     Anatoly
+                                                                                                                                                                                           Vladimirovich
+                                                                                                                                                                                                                     Erwin Rauch
+
+
+
+Afiliación de los investigadores                                                                                                                                                           Shukalov
+
+                                                                                                                         Afiliación          Saint      Petersburg Saint    Petersburg     Saint      Petersburg     Free University of
+
+                                    Afiliación de los autores                                                                                National
+                                                                                                                                             University
+                                                                                                                                                            Research National Research
+                                                                                                                                                                  of University       of
+                                                                                                                                                                                           National
+                                                                                                                                                                                           University
+                                                                                                                                                                                                         Research
+                                                                                                                                                                                                                of
+                                                                                                                                                                                                                     Bozen-Bolzano,
+                                                                                                                                                                                                                     Bozen-Bolzano,
+                                                                                                                                             Information             Information           Information               Italy
+            Technical University of Munich
+                                                                                                                                             Technologies,           Technologies,         Technologies,
+   Universidade Federal de Santa Catarina                                                                                                    Mechanics          and Mechanics        and   Mechanics          and
+                 Tecnologico de Monterrey                                                                                                    Optics       University Optics University     Optics       University
+
+                         Universität Stuttgart                                                                                               ITMO                    ITMO                  ITMO
+
+                University of Johannesburg                                                                               Número          de 58                       71                    63                        81
+
+ Università degli Studi di Napoli Federico II                                                                            publicaciones
+
+                     Universidade do Minho                                                                               Índice H            5                       6                     5                         16
+    CNRS Centre National de la Recherche…
+                                                                                                                         Citas               102                     131                   110                       746
+                         Politecnico d i Milano
+        Rheinisch-Westfälische Technische…
+
+                                                   0   20   40    60    80   100 120 140 160 180
+                                                                                                        Fuente: Elaboración propia
+Fuente: Scopus.
+                                                                                                        Análisis bibliométrico en Colombia
+Autores
+                                                                                                        En Colombia también se ha venido desarrollando el
+Los resultados obtenidos en Scopus, permiten identifi-                                                  área de gestión de la producción industrial, lo cual se
+car los quince autores más representativos de acuerdo                                                   ve reflejado con el número de publicaciones que se en-
+con el número de publicaciones, quienes se relacionan                                                   cuentran en la base de datos de Scopus, y que se puede
+en la figura 6.                                                                                         ver en la figura 7.
+
+Figura 6.                                                                                               Figura 7.
+Principales autores de área                                                                             Número de publicaciones del área en Colombia
+                                        Principales Autores                                             Documents by year
+                                                                                                                    60
+      Romero D.
+        Ferrari P.                                                                                                  50
+
+        Wuest T.
+       Ivanov D.                                                                                                    40
+                                                                                                        Documents
+
+
+
+
+      Matt D.T.
+                                                                                                                    30
+       Vinodh S.
+        Rauch E.
+                                                                                                                    20
+   Shukalov A.V.
+ Zakoldaev D.A.
+                                                                                                                    10
+   Zharinov I.O.
+
+                     0        5      10       15       20    25        30    35   40    45   50                     0
+                                                                                                                          2002        2004           2006        2008        2010          2012          2014         2016         2018   2020
+                                                                                                                                                                                    Year
+
+                                                                                                        Fuente: Scopus.
+Fuente: Scopus.
+                                                                                                        Además, se puede observar la producción de docu-
+                                                                                                        mentos al año, al igual que a nivel mundial, el área
+                                                                                                        ha tenido un repunte en el número de publicaciones
+                                                                                                        en los últimos años, lo que la convierte en un área en
+                                                                                                        desarrollo no solo a nivel mundial, sino también local.
+                                                                                                        Adicionalmente, se evidencia que se han publicado 130
+                                                                                                        documentos sobre gestión de la producción industrial
+                                                                                                        en Scopus, lo cual da una idea de la calidad de las pu-
+                                                                                                        blicaciones que se están generando en el área.
+
+
+                                                                                                   67
+
+Instituciones en Colombia                              Tabla 4.
+                                                       Información de los principales autores del área en
+En Colombia son varias las instituciones que están de- Colombia
+sarrollando el área de gestión de la producción indus-
+                                                         Autor   Muñoz-      Varela Izquierdo, Rodríguez-      Rivera,
+trial, así lo revela el número de publicaciones que se
+                                                                 Villamizar, Noel              Molano,    José Leonardo
+encuentran registradas en las bases de datos de Scopus           Andrés                        Ignacio
+(figura 8).
+                                                                                                                                                                      Afiliación      Massachusetts       Universidad de la Universidad          Universidad del
+                                                                                                                                                                                      Institute        of Costa             Distrital            Valle     (Cali,
+Figura 8.                                                                                                                                                                             Technology          (Barranquilla,    Francisco     José Colombia)
+Número de publicaciones por institución en Colombia                                                                                                                                   (Cambridge,         Colombia)         de          Caldas
+                                                                                                                                                                                      United States)                        (Bogotá,
+                                                                                                                                                                                                                            Colombia)
+                                Harbin Institute of Technology
+
+                              Technische Universität Dresden
+                                                                                                                                                                      Número       de 26                  43                42                   23
+                                                Politecnico d i Milano
+
+                                                Universität Stuttgart
+                                                                                                                                                                      publicaciones
+                                Shanghai Jiao Tong University
+
+                         Technical University of Cluj-Napoca
+                                                                                                                                                                      Índice H        8                   8                 5                    5
+                                                 Zhejiang University
+
+                                Northeastern University China
+                                                                                                                                                                      Citas           197                 123               75                   170
+                                                 Tsinghua University
+
+                           Consiglio Nazionale delle Ricerche
+
+                            ABB Corporate Research Vasteras
+
+                                       Luleå tekniska Universitet
+                                                                                                                                                                  Fuente: Scopus.
+                                    Ministry of Education China
+
+                                                     Aalto University
+
+
+
+                                 Chinese Academy of Scienc es
+                                                                    IEEE
+                                                                                                                                                                  Desarrollo de la fase cuatro
+ Rheinisch-Westfälische Technische Hochschule Aachen
+
+                                Technical University of Munich
+
+                                                         Siemens AG
+                                                                                                                                                                  Creación de la red en Sci2
+                                   Technische Universitat Wien
+
+                                                                           0        50           100             150             200         250         300
+                                                                                                       Número de publicaciones
+                                                                                                                                                                  Después de realizar la búsqueda en las bases de datos
+Fuente: Scopus.                                                                                                                                                   WOS o Scopus, se deben descargar las citas, las cua-
+                                                                                                                                                                  les deben contener: autor, título, año, DOI, fuente y
+Autores representativos en Colombia                                                                                                                               referencias de cada uno de los artículos. Con la base
+                                                                                                                                                                  de datos y la herramienta Sci2 Tool se organiza la in-
+Figura 9.                                                                                                                                                         formación y se aplican filtros que permiten identificar
+Número de publicaciones por Autores en Colombia                                                                                                                   patrones comunes entre los diferentes artículos. Pos-
+                                                                                                                                                                  teriormente, la información se lleva a la herramienta
+                           Kastner, W.
+                                                                                                                                                                  Gephi, que se encarga de procesar y graficar las re-
+                                Biffl, S.
+
+                          Lastra, J.L.M.                                                                                                                          des de información, para lo que se deben seguir los
+                                                                                                                                                                  siguientes pasos.
+                             Sauter, T.
+
+                             Leitão, P.
+
+                                Fay, A.
+
+                              Vitturi, S.
+
+
+
+
+                                                                                                                                                                  Paso uno: se genera el mapa de trayectorias y, cuando
+                        Warnecke, H.J.
+
+                         Valenzano, A.
+             Autores
+
+
+
+
+                            Strasser, T
+
+                           Gidlund, M.
+
+                          Flammini, A.
+                                                                                                                                                                  está realizado, toda la información que está allí reunida
+                           Pereira, C.E.
+
+                             Ferrari, P.
+                                                                                                                                                                  se traslapa entre sí. En este paso ya están disponibles
+                            Marcos, M.
+
+                        Jasperneite, J.
+                                                                                                                                                                  las relaciones entre los artículos, pero es imposible de
+                        Colombo, A.W
+
+                                Zoitl, A                                                                                                                          analizar, un ejemplo de esto se puede ver en la tabla 5.
+                       Vogel-Heuser, B
+
+                            Vyatkin, V.
+
+
+
+                                                                                                                                                                  Paso dos: en este paso se procesa la información con
+                                            0                  20              40        60             80              100            120         140     160
+                                                                                              Número de publicaciones
+
+
+
+                                                                                                                                                                  el fin de evitar los cruces de las trayectorias y de los
+Fuente: Scopus.                                                                                                                                                   artículos. En él se puede ver claramente el mapa de
+                                                                                                                                                                  trayectoria de información (ver la tabla 5).
+En Colombia son varios autores que están desarrollan-
+do investigaciones en el área de gestión de la produc- Paso tres: al poder ver claramente el mapa de trayec-
+ción industrial, que se ven reflejados con los artículos toria, es posible encontrar los patrones existentes en
+hallados en bases de datos como Scopus (tabla 4).        los artículos y de esta forma agruparlos (ver tabla 5).
+
+                                                                                                                                                                 68
+
+Tabla 5.                                                                                               y árbol de la ciencia.
+Proceso del mapa de trayectoria
+                                                                                                       ● Tendencias: para determinar las tendencias el algo-
+         Paso uno                              Paso dos                               Paso tres        ritmo identifica cuál es la relación entre las palabras
+                                                                                                       clave y las fuentes usadas, esto conduce a patrones que
+                                                                                                       permitan reconocer áreas similares. En la tabla 6 se
+                                                                                                       puede observar que se identificaron cuatro tendencias.
+
+                                                                                                       Tabla 6.
+                                                                                                       Tendencias del área de gestión de la producción industrial
+Fuente: Elaboración propia
+                                                                                                       Cluster   1 –   Lean   Clúster 2 - Industrias   Clúster 3                Clúster 4- Manufactura
+
+Creación del árbol de la ciencia                                                                       manufacturing          4.0                      Transformación digital   sostenible
+
+
+
+
+El árbol de la ciencia permite identificar claramente
+la relevancia de los artículos, para lo cual se separan
+en tres categorías que son: la primera, denominada la
+raíz, en la que se presentan los artículos con grado de
+entrada alto y salida cero; la segunda el tronco, allí se
+                                                                                                       Fuente: Elaboración propia con Sci2 - Gephi
+asocian los artículos con un grado de intermediación
+alto; la tercera y última, el follaje el cual se localiza en
+                                                                                                       Clúster 1. Lean manufacturing
+los artículos con alto grado de salida y un grado de
+entrada cero, también denominados las perspectivas
+                                                     En el artículo de Silvério et al. (2020) se tiene un enfo-
+(Duque y Cervantes-Cervantes, 2019). En la figura 10
+                                                     que basado en la autoevaluación esbelta, bajo la filo-
+se puede ver como los artículos se identifican en cada
+                                                     sofía de la manufactura esbelta. Este artículo propone
+una de las categorías.
+                                                     una hoja de ruta para evaluar el compromiso con el
+Figura 10.                                           proceso de lean manufacturing, y la aplicación de con-
+Árbol de la ciencia de área de gestión de la produc- tramedidas bajo el coeficiente de concordancia (W) de
+ción industrial                                      Delphi y Kendall. Esta permite tomar decisiones fren-
+                                                     te a la asignación de recursos, ya que es una mezcla
+                                                     de análisis cualitativos y cuantitativos, en busca del
+                                                (Garay-
+                                                Rondero
+                                               et al 2019)
+
+
+
+                                                     planteamiento de objetivos más precisos en las empre-
+             (Basu and Dan                                                (Ghobakhico
+                 2020)                                                       2020)
+
+
+
+
+          (Zheng et al
+                                                     sas y así establecer planes de acción para aumentar el
+                                                                              (Chauhan and
+
+
+                                                     compromiso hacia la filosofía de lean para hacerla más
+             2019)                                                             Singh 2019)
+
+
+
+
+                                                Hojas
+                                                     eficiente.
+               (Ozlemed and                                                (Dai et
+               Gursev 2020)                                                al 2020)
+
+
+
+               (Pinzone et al
+                                                      Tronco
+                                                                            (Pejic-
+                                                                                                       Los artículos de Silvério et al. (2020) y Yadav et al.
+                                                                                                       (2020) presentan información relacionada con la so-
+                                                                          Bach et al
+                    2020)
+                                                                             2020)
+
+
+                  (Kerin
+                                                      Raı́z
+                                                                                                       lidez financiera de una compañía la cual puede estar
+                                                                          (Rauch et
+                 and Pham
+                                                                           al 2020)
+                   2019)
+
+
+
+
+             (Xu et
+            al 2018)            (Liao et
+                                                (Yang et
+                                                 al 2019
+                                                               (Hermann
+                                                                 et al
+                                                                                 (Lee et
+                                                                                 al 2015)
+                                                                                                       acompañada de la reducción de sus impactos am-
+                                                                                                       bientales, lo que ha permitido que más empresas se
+                                al 2017)         Lasi et
+                                                                 2016)
+                                                al 2014)
+
+
+
+
+                                           1                                                           interesen por los temas de producción eficiente, pero
+Fuente: Elaboración propia                                                                             también por cualquiera de las metodologías que pro-
+                                                                                                       penden con estos objetivos, tales como economía cir-
+Creación del clúster
+                                                                                                       cular, manufactura esbelta, Six Sigma, fabricación sos-
+                                                                                                       tenible, entre otros. Lo que se requiere es una adecuada
+En este paso, lo que se debe hacer, es independizar
+                                                                                                       implementación de las metodologías, y en algunas de
+cada uno de los grupos que se generan en el mapa de
+                                                                                                       las filosofías de trabajo con el fin de obtener beneficios
+trayectoria, como se puede ver en la tabla 5. El algorit-
+                                                                                                       desde lo económico, pero sin dejar de lado los impac-
+mo permite identificar dos tipos de grupos: tendencias
+                                                                                                       tos ambientales y de qué manera estos pueden servir
+
+                                                                                                  69
+
+como factores de cambio para las compañías.                      los enfoques novedosos de gestión no depende de los
+                                                                 aspectos socioeconómicos, el verdadero desafío de la
+El artículo de Gonçalves et al. (2019) destaca que cada          gestión reside en encontrar el equilibrio adecuado en-
+vez más empresas se han sumado a hacer parte de la fi-           tre los esfuerzos necesarios para adoptar LA dentro de
+losofía del lean manufacturing, lo que les ha permitido          la empresa y sus posibles beneficios e impactos en el
+tener mejores oportunidades frente a unos mercados               desempeño operativo y financiero.
+cada vez más competitivos y sin restricciones de fron-
+teras, por lo que las herramientas de LM contribuyen             En el artículo de Ghobakhloo y Ching (2019) se presen-
+a la mejora de los rendimientos y eficiencia en toda la          ta la adopción de tecnologías digitales de fabricación
+organización. Los análisis realizados en este artículo           inteligente en pequeña y mediana empresa (PYMES).
+resaltan la influencia que tienen las herramientas del           La integración de las tecnologías de la información y
+LM, y el rendimiento obtenido por las empresas, lo que           las tecnologías digitales (IDT) en todas las facetas de
+significa una alineación entre los objetivos de la com-          fabricación es una prioridad estratégica para los fabri-
+pañía y la forma de ejecutarlos.                                 cantes contemporáneos.
+
+En el artículo de Möldner et al. (2020), al igual que los        Las PYMES están significativamente limitadas con
+anteriores, se busca establecer una relación directa en-         respecto a los recursos financieros y humanos, tienen
+tre LM y productividad, lo explora desde la estadística,         acceso limitado a la información del mercado y rara
+haciendo una evaluación a diferentes empresas, levan-            vez utilizan técnicas estratégicas como el análisis fi-
+tando la información como resultado en la innovación             nanciero, el pronóstico y la gestión de proyectos. Ade-
+de procesos, como punto de partida para el mejora-               más, necesitan desarrollar estrategias de digitaliza-
+miento operativo de las empresas.                                ción inteligente y eventualmente prepararse para una
+                                                                 transformación de fabricación inteligente. Las PYMES
+Entre tanto, los artículos de Amer y Shaw (2014) y Hi-           deben migrar de la adopción de herramientas IDT
+nes et al. (2004) proporciona un panorama de cómo la             simples para avanzar SMIDT innovadoras. Los costos
+aplicación del pensamiento LM ha tenido un impacto               de implementación son una barrera importante para
+significativo tanto en los círculos académicos como in-          la adopción de IDT por parte de las PYMES. La com-
+dustriales en la última década. Esto teniendo en cuenta          patibilidad percibida es un determinante para adoptar
+que lo toman como la filosofía de trabajo que realizó            ERP, robots autónomos, etc. La hoja de ruta estratégica
+Toyota para mejorar la productividad de sus plantas              para la digitalización de la fabricación facilita la imple-
+de producción. Lo que estudia la evolución de ese tipo           mentación de SMIDT.
+de pensamiento en otras empresas, no siendo tan fá-
+cil de replicar porque al no ser una metodología sino El artículo de Ghobakhloo y Fathi (2019) se basa en
+una filosofía, toma tiempo, tiempo que pocas empresas demostrar cómo las pequeñas empresas manufacture-
+quieren dedicar a la formación de sus colaboradores.        ras pueden aprovechar sus recursos de tecnología de la
+                                                            información (TI) para desarrollar el sistema de fabrica-
+Clúster 2. Industrias 4.0                                   ción digitalizado que ofrece competitividad sostenida
+                                                            en la era de la industria 4.0. El desarrollo del sistema
+El artículo de Tortorella et al. (2019) revela las diferen- de fabricación digitalizado es una estrategia comercial
+cias en el nivel de implementación de industrias 4.0 viable para la supervivencia corporativa en el entor-
+y producción lean, cuya integración se denota como no de la industria 4.0. La relación directa entre TI y el
+automatización lean (LA), en economías emergentes desempeño a nivel de empresa puede ser débil, sin em-
+y desarrolladas. La incorporación de las tecnologías bargo, los recursos de TI apalancados de manera efec-
+de la información y las comunicaciones (TIC) en or- tiva pueden aumentar las capacidades organizativas
+ganizaciones y fabricantes ha sido considerada como críticas, lo que puede resultar en un mejor desempeño
+una característica importante de la cuarta era de la re- comercial. Se requiere que la alta gerencia sea solida-
+volución industrial. Las tecnologías digitales facilitan ria con respecto al uso de TI en sus negocios, ya que
+niveles más altos de procesos, productos y servicios tienen el poder de facilitar la digitalización de fabrica-
+personalizados en masa, lo que permite a las empresas ción. La experiencia de TI de los usuarios es un facili-
+alcanzar mejores niveles de rendimiento. El éxito de tador significativo de la digitalización de fabricación.
+
+                                                            70
+
+El artículo de Xu et al. (2018) presenta cómo los avances        en una industria 4.0 y una integración de manufactura
+en la industria y la informática han impulsado avan-             esbelta. Se concluye que la investigación sobre la rela-
+ces en la próxima generación de tecnología de fabri-             ción entre la industria 4.0 y manufactura esbelta aún
+cación. La industria 4.0 representa la tendencia actual          es muy inmadura.
+de las tecnologías de automatización en la industria
+manufacturera, incluyendo principalmente tecnolo-                Clúster 3. Transformación digital
+gías habilitadoras como los sistemas ciberfísicos (CPS),
+“internet de las cosas (IoT)” y la computación en la             El artículo de Yang et al. (2019) está orientado al análi-
+nube. Además, tiene el potencial de convertirse en el            sis de las nuevas tecnologías, que están migrando ha-
+lenguaje global de producción. La industria 4.0 propo-           cia los análisis del Big Data, el IoT, el almacenamiento
+ne la adopción de TIC avanzadas en la fabricación para           en la nube y, por ende, la ciberseguridad, para hacer
+mejorar la eficiencia y la competencia de fabricación.           frente a sistemas cada vez más complejos que permi-
+Esta exitosa industria se basa en tecnologías más sofis-         tan tener visualización de la información, pero a la vez
+ticadas que las que están disponibles ahora.                     hacerla lo más segura y exacta posible. Estos avances
+                                                                 han contribuido a una fabricación inteligente que inte-
+El artículo de Ghobakhloo (2018) es un texto que ana-            gra los protocolos de seguridad, eficiencia y velocidad
+liza el futuro de la industria manufacturera: una hoja           en los cambios que se realicen, desarrollando nuevas
+de ruta estratégica hacia la industria 4.0 concebido             metodologías en internet de manufactura IoMT, pero
+como un sistema integrador de creación de valor que              las innovaciones en la ingeniería deberán transformar-
+se compone de doce principios de diseño y catorce                se en impulsores de los sistemas de manufactura para
+tendencias tecnológicas. La industria 4.0 ya no es una           hacerla de forma inteligente. La evolución del internet,
+exageración y los fabricantes necesitan participar más           las redes y la velocidad de los sistemas de cómputo,
+pronto que tarde, además, es un sistema dinámico e               hacen que la fabricación sea cada vez más flexible, rá-
+integrado para ejercer control sobre toda la cadena de           pida y que precise toma de decisiones mucho más cla-
+valor del ciclo de vida de los productos. Cuando se tra-         ras y precisas basadas en la información que puedan
+ta de la cuarta revolución industrial, la gran pregunta          suministrar los sistemas MtM, el IoT, y los sistemas
+es: ¿cómo un fabricante hace su transición de donde              en la nube, lo que posibilita un buen proceso de SCM
+está ahora a donde quiere estar a través de los proce-           y el aseguramiento de las operaciones propias de la
+sos de digitalización? La respuesta sería a través de            empresa.
+una hoja de ruta estratégica integral que identifique y
+planifique cuidadosamente cada paso de la necesidad Entre tanto, el artículo de Wang et al. (2015) es una
+de tomar, como la última línea de tiempo y los costos representación del estado actual y el último avance de
+y beneficios asociados.                                   los sistemas CPS en la fabricación, puesto que com-
+                                                          prenderlo involucra su futuro en la fabricación, al apo-
+Buer et al. (2018) presenta en su artículo un estudio yarse en la fabricación desde la nube, su interrelación
+sobre la relación entre la industria 4.0 y manufactu- entre los CPS con la manufactura esbelta, con la eco-
+ra lean. Tanto la industria 4.0 como la manufactura nomía circular y los sistemas de procesos cerrados.
+esbelta utilizan un control descentralizado y apun-
+tan a aumentar la productividad y la flexibilidad. La Clúster 4. Manufactura sostenible
+manufactura esbelta es posiblemente el paradigma de
+manufactura más prominente de los últimos tiempos. Kerin y Pham (2019) analizan en su artículo las con-
+También, la manufactura esbelta apoya a las empresas diciones especiales para la remanufactura, teniendo
+en sus esfuerzos por mejorar en costos de producción, como punto de partida las tecnologías emergentes de
+calidad y capacidad de respuesta mejorada y mayor la industria 4.0, incluyendo para ello el IoT, la realidad
+flexibilidad. Los hallazgos de la literatura se clasifi- virtual (VR), la realidad aumentada (AR), entre otros,
+can en cuatro flujos de investigación: (1) industria 4.0, los cuales se han alineado con otras infraestructuras
+apoya la manufactura esbelta; (2) manufactura esbelta, de información a fin de rescatar los sistemas de rema-
+apoya la industria 4.0; (3) implicaciones de rendimien- nufactura (refurbished) para que la organización no
+to de una industria 4.0 y una integración de manufac- pierda tanto en la forma de organizar estas mudas, y
+tura esbelta; (4) el efecto de los factores ambientales no pierda sus procesos en la creación de valor hacia la
+
+                                                            71
+
+búsqueda de una economía circular. Este artículo des- tes temas interactúan entre ellos.
+taca veintinueve posibles temas de trabajo para lograr
+ese objetivo.                                          Desarrollo de la fase cinco
+
+A su vez, en el artículo de Fisher et al. (2018), se estu-        Aporte al currículo
+dia este nuevo concepto de “manufactura en la nube”,
+generando una ruta posible de procesos sincroniza-       La vigilancia científico-tecnológica representa un
+dos de tal forma que permita una integración entre la    aporte significativo a los programas de formación en
+información, los procesos internos y la logística para   el área, a la vez que permite identificar temas que hoy
+la entrega. La fabricación tratando de ser optimizada    son tendencia y que deben ser tenidos en cuenta por la
+desde el adecuado manejo de la información hacia una     Red Sectorial de Logística y Gestión de la Producción
+fabricación más integrada por cada uno de los proce-     en la tarea de actualizar el catálogo de programas. Es
+sos, definiendo para ello cuatro puntos básicos en esta  imperante la necesidad de que la Red cuente con una
+integración, estos son: el diseño colaborativo, una ma-  oferta pertinente que dé respuesta a las tendencias ac-
+yor automatización, mejora de la capacidad de recu-      tuales en el mundo de la industria, por lo cual cobra
+peración del proceso y las 3R aplicadas a los residuos   gran importancia la presente vigilancia, toda vez que a
+generados, ya que estos últimos son una consideración    través de la misma se logró identificar temas que hoy
+importante en la manufactura por sus fuertes implica-    marcan el rumbo de la gestión en la industria, tales
+ciones en la sostenibilidad.                             como lean manufacturing, industria 4.0, transforma-
+                                                         ción digital y manufactura sostenible, los cuales se
+Este artículo de Rajput y Singh (2019) busca establecer convierten en referente para el diseño y actualización
+las conexiones entre la economía circular y la indus- de los programas de formación.
+tria 4.0 observándola desde el SCM (supply chain ma-
+nagement). En el documento, se identifican veintiséis La revisión bibliográfica realizada en este estudio, per-
+factores habilitadores significativos y quince factores mitió identificar que la gran mayoría de los artículos
+desafiantes que se factorizan aún más mediante el aná- consultados mencionan herramientas metodológicas
+lisis de componentes principales (PCA). Lo que posi- que, desde el área de gestión de la producción indus-
+bilita este campo de estudio que ahora se ha tornado trial, se abordan en algunos apoyos; sin embargo, se
+más actual, y junto a las metodologías de mejoramien- reconoce que los nuevos postulados involucran no
+to como Six Sigma y TPM, y la filosofía del LM, podría solo dinámicas metodológicas, sino también filosófi-
+aplicarse buscando una interconexión entre todos los cas como el lean manufacturing, cuya implementación
+protagonistas del sistema de la cadena de abasteci- es dispendiosa y requiere de tiempo para que sea in-
+miento (SCM).                                            corporada en los procesos industriales. Si bien estas
+                                                         no son herramientas de rápida implementación en un
+Análisis de redes en VOSviewer                           futuro inmediato, son muy valiosas para la solución
+                                                         de problemas como el 5WH, el árbol de problemas, el
+Teniendo en cuenta que WOS es el indexador con SIPOC, la teoría de restricciones, el análisis estadístico
+mayor prestigio mundial, se decidió utilizar la semi- de procesos, por mencionar algunos, los cuales pro-
+lla de este, exportando las 500 referencias con mayor veen herramientas que aportan en la toma decisiones
+relevancia; con esta se revisó la red de cocitaciones de gerenciales de las empresas.
+palabras en VOSviewer (Van Eck y Waltman, 2010),
+que es una herramienta para construir y visualizar re- Si bien muchas empresas de la región caldense están en
+des bibliométricas que pueden estar relacionadas con el proceso de implementación de algunas herramien-
+citas, cocitas, acoplamiento bibliográfico, coautoría o tas / metodologías como las de TPM - Total Produc-
+co-ocurrencia de relaciones de palabras y que además tive Maintenance (mantenimiento productivo total),
+permitió generar clúster para identificar grupos o co- las cuales contribuyen al control en los procesos de
+munidades afines. En la figura 1 se presenta el mapa producción; se hace necesario, entonces, que desde el
+de las palabras clave, las cuales se puede ver que están SENA se adelanten acciones que apunten al fortaleci-
+separadas por colores, que representan las diferentes miento de las mismas, lo cual puede lograrse mediante
+tendencias y las líneas que muestran como los diferen- el diseño de procesos de formación que respondan a
+
+                                                             72
+
+las necesidades de la empresa en materia de gestión y para el docente / instructor al momento de orientar la
+procesos de producción.                                 formación en programas como Gestión Logística, Ges-
+                                                        tión de la Producción y Procesos de Manufactura, con
+En la siguiente tabla se presenta los temas que hoy son lo cual se contribuye a que los contenidos impartidos
+tendencia en el área de gestión de la producción in- sean pertinentes y de actualidad.
+dustrial y que se sugiere, sean tenidos en cuenta para
+la actualización o diseño de programas de formación. De la misma manera, se hace importante establecer
+                                                        acercamientos con las instituciones y autores que fue-
+Tabla 13.                                               ron identificados como referente en la vigilancia, con
+Líneas tendencia identificadas en la vigilancia el fin de gestionar alianzas y convenios que redunden
+tecnológica                                             en la cualificación del recurso humano de la institu-
+                                                        ción, y en el fortalecimiento de los procesos de ense-
+    Tema identificado               Fuente
+                                                        ñanza-aprendizaje, mediante el intercambio de cono-
+                                                        cimientos y experiencias exitosas.
+ Lean manufacturing       Silvério et al. (2020), Gonçalves et al. (2019), Möldner et
+                          al. (2020), Amer et al. (2014), Hines et al. (2004)                Aportes al trabajo interinstitucional y redes de
+                                                                                             conocimiento
+ Manufactura sostenible   Silvério et al. (2020), Yadav et al. (2020), Kerin y Pham
+                          (2019)
+                                                                                             La vigilancia científica realizada en el marco de ges-
+ Six Sigma                Silvério et al. (2020), Yadav et al. (2020)
+                                                                                             tión de la producción industrial, evidencia la impor-
+                                                                                             tancia de gestionar acercamientos con instituciones y
+ Industria 4.0            Tortorella et al. (2019); Ghobakhloo y Fathi (2019), Xu et         expertos técnicos a nivel nacional, con el fin de hacer
+                          al. (2018), Ghobakhloo (2018)                                      un intercambio de conocimientos y experiencias que
+                                                                                             nutran el quehacer del instructor y por consiguiente
+ Smart Manufacturing      Ghobakhloo y Ching (2019)                                          los procesos de formación. En este sentido, se iden-
+                                                                                             tificaron algunas universidades colombianas que vie-
+ Internet of things       Yang et al. (2019)
+                                                                                             nen trabajando en torno a la gestión de la producción
+                                                                                             industrial y las cuales podrían convertirse en aliados
+ Sistemas ciberfísicos    Wang et al. (2015)
+                                                                                             estratégicos al momento de realizar giras educativas,
+ Manufactura en la nube   Fisher et al. (2018)
+                                                                                             o, simplemente, establecer oportunidades para el in-
+                                                                                             tercambio de conocimientos y experiencias. Las uni-
+ Supply Chain             Rajput y Singh (2019)                                              versidades identificadas son: Universidad del Valle,
+                                                                                             Universidad de la Costa, Universidad de La Sabana,
+                                                                                             Universidad de Barranquilla, Universidad Distrital
+Aporte a la formación docente                                                                Francisco José de Caldas.
+
+Los resultados de la vigilancia científico-tecnológica                                       Aportes a la actualización de laboratorios
+constituyen una oportunidad para que los docentes /
+instructores del área identifiquen necesidades de cua-El área de gestión de la producción industrial podría
+lificación que les permitan aportar a la pertinencia de
+                                                      considerarse como transversal por el aporte que rea-
+los programas de formación. En ese sentido, se iden-  liza a otras áreas, como lo son automatización indus-
+tifica la necesidad de incluir dentro de los planes detrial, electrónica, sistemas y telecomunicaciones; esta
+formación y capacitación de docentes / instructores,  característica hace que sea necesario pensar en arti-
+temas de vanguardia relacionados con lean manufac-    cular los programas no solo desde el punto de vista de
+turing, Industria 4.0, transformación digital y manu- los contenidos, sino también desde el punto de vista de
+factura sostenible, los cuales son tendencia en los pro-
+                                                      los ambientes de formación, lo cual exige contar con
+cesos de gestión industrial.                          los equipos, software e infraestructura requerida para
+                                                      responder a las necesidades de los procesos actuales de
+Sumado a lo anterior, cabe anotar que los documen- manufactura en el campo de la industria. Sumado a lo
+tos consultados se convierten en un referente valioso anterior, se logra evidenciar la necesidad de que el área
+
+                                                                                        73
+
+cuente con un ambiente de formación que facilite la             aprovechado para el fortalecimiento de los procesos
+simulación de plantas de producción en donde se pue-            de formación en la actualización de los diseños curri-
+dan desarrollar conceptos como: lean manufacturing,             culares y la modernización de ambientes, pues, en la
+manufactura sostenible e industria 4.0, desde el punto          medida que se incorporen nuevas tecnologías, se po-
+de vista de la gestión de procesos. De igual forma, se          drá estar a la vanguardia de los adelantos tecnológicos
+recomienda articular la gestión de la producción a los          para con ello aportar a la pertinencia y calidad de la
+ambientes de formación que se han ido modernizando              formación.
+en el Centro de Automatización Industrial del SENA,
+como es el caso de ambiente de manufactura flexible             Referencias
+FMS, el cual se actualizó para implementar la industria
+4.0 con recursos entregados a través del banco de pro-          Amer, H. y Shaw, C. (2014). Lean Leadership Para-
+yectos SENNOVA.                                                 doxes: A Systematic Literature Review. En Procee-
+                                                                dings of the 2014 (5th) International Conference on En-
+Aportes a los grupos de investigación                           gineering, Project, and Production Management. http://
+                                                                www.ppml.url.tw/EPPM/conferences/2014/down-
+Con el fin de aportar a la consolidación del área de            load/Lean%20Leadership%20Paradoxes_A%20Syste-
+gestión de la producción industrial, como una línea             matic%20Literature%20Review.pdf
+medular del Centro de Automatización Industrial, se
+recomienda identificar posibles líneas de investigación         Buer, S.-V., Strandhagen, J. O. y Chan, F. T. S. (2018).
+en el área que puedan ser articuladas con SENNOVA,              The link between Industry 4.0 and lean manufactu-
+para generar proyectos que aborden los procesos de              ring: mapping current research and establishing a re-
+manufactura en la industria, a través de los cuales se          search agenda. In International Journal of Production
+incentive el interés de los aprendices en temas relacio-        Research, 56(8), 2924-2940. https://doi.org/10.1080/002
+nados con la gestión industrial.                                07543.2018.1442945
+
+Conclusiones                                                    Duque, P. y Cervantes-Cervantes, L. (2019). Respon-
+                                                                sabilidad social universitaria: una revisión sistemática
+El proceso de vigilancia tecnológica permite no solo            y análisis bibliométrico. Estudios Gerenciales, 35(153),
+identificar el panorama en el cual se mueve el área de          451-464.
+gestión de la producción industrial, sino también los
+referentes de desarrollo entre los que se destacan a            Fisher, O., Watson, N., Porcu, L., Bacon, D., Rigley, M.
+nivel mundial países como Estados Unidos, Alemania              y Gomes, R. (2018). Cloud manufacturing as a sustai-
+e Italia, asimismo instituciones como Rheinisch-Wes-            nable process manufacturing route. Journal of Manu-
+tfälische Technische Hochschule Aachen, Politecnico             facturing Systems, 47, 53-68. https://doi.org/10.1016/j.
+di Milano y CNRS Centre National de la Recherche e              jmsy.2018.03.005
+investigadores como Zakoldaev, Danil A., Zharinov,
+Igor Olegovich, Shukalov, Anatoly Vladimirovich y               Ghobakhloo, M. (2018). The future of manufacturing
+Rauch, Erwin.                                                   industry: a strategic roadmap toward Industry 4.0.
+                                                                Journal of Manufacturing Technology Management,
+Para el caso de Colombia, se cuenta con referentes              29(6), 910-936. https://doi.org/10.1108/jmtm-02-2018-
+como la Universidad Nacional de Colombia, Universi-             0057
+dad de la Costa, Universidad de La Sabana y la Univer-
+sidad Distrital Fráncico José de Caldas e investigadores        Ghobakhloo, M. y Ching, N. T. (2019). Adoption of di-
+como Andrés Muñoz-Villamizar; Noel Varela Izquier-              gital technologies of smart manufacturing in SMEs.
+do, José Ignacio Rodríguez- y Molano, , los cuales han          Journal of Industrial Information Integration, 16,
+realizado publicaciones en el área en los últimos años,         100107. https://doi.org/10.1016/j.jii.2019.100107
+por lo que se convierten en referente académico en el
+campo de la gestión de la producción industrial.                Ghobakhloo, M. y Fathi, M. (2019). Corporate survival
+Las tendencias identificadas presentadas en la tabla            in Industry 4.0 era: the enabling role of lean-digitized
+13 constituyen un hallazgo importante que puede ser             manufacturing. Journal of Manufacturing Technology
+
+                                                           74
+
+Management, 31(1), pp. 1-30. https://doi.org/10.1108/ jmsy.2015.04.008
+jmtm-11-2018-0417
+                                                         Xu, L. D., Da Xu, L., Xu, E. L. y Li, L. (2018). Indus-
+Gonçalves, T., Sousa, P. y Moreira, M. (2019). Does lean try 4.0: state of the art and future trends. International
+practices implementation impact on company perfor- Journal of Production Research, 56(8), 2941-2962. ht-
+mance? A meta-analytical research. Management and tps://doi.org/10.1080/00207543.2018.1444806
+Production Engineering Review, 10(4), 11-24.
+                                                         Yadav, G., Luthra, S., Huisingh, D., Mangla, S. K., Nar-
+Hines, P., Holweg, M. y Rich, N. (2004). Learning to khede, B. E. y Liu, Y. (2020). Development of a lean ma-
+evolve: A review of contemporary lean thinking. Inter- nufacturing framework to enhance its adoption within
+national Journal of Operations & Production Manage- manufacturing companies in developing economies.
+ment, 24(10), 994-1011.                                  Journal of Cleaner Production, 245, p. 118726. https://
+                                                         doi.org/10.1016/j.jclepro.2019.118726
+Mena, A. M., Erazo, P.A., Salazar, E. X. y Botero, J. C.
+(2020). Relaciones entre el liderazgo y el síndrome de Yang, H., Kumara, S., Bukkapatnam, S. T. S. y Tsung, F.
+burnout. Un análisis bibliométrico. Revista Espacios, (2019). The internet of things for smart manufacturing:
+41(38), 162-181. https://www.revistaespacios.com/ A review. IISE Transactions, 51(11), 1190-1216.
+a20v41n38/a20v41n38p16.pdf
+
+Möldner, A., Garza-Reyes, J. y Kumar, V. (2020). Ex-
+ploring lean manufacturing practices’ influence on
+process innovation performance. Journal of Business
+Research, 106, 233-249). https://doi.org/10.1016/j.jbus-
+res.2018.09.002
+
+Rajput, S. y Singh, S. (2019). Connecting circular
+economy and industry 4.0. International Journal of
+Information Management, 49, 98-113. https://doi.or-
+g/10.1016/j.ijinfomgt.2019.03.002
+
+Silvério, L., Trabasso, L. G. y Pessôa, M. V. P. (2020). A
+roadmap for a leanness company to emerge as a true
+lean organization. Concurrent Engineering, 28(1), 3-19.
+https://doi.org/10.1177/1063293x19888259
+
+Tortorella, G., Rossini, M., Costa, F., Staudacher, A. y
+Sawhney, R. (2019). A comparison on Industry 4.0 and
+Lean Production between manufacturers from emer-
+ging and developed economies. En Total Quality Ma-
+nagement & Business Excellence (pp. 1–22). https://doi.
+org/10.1080/14783363.2019.1696184
+
+Van Eck, N. y Waltman, L. (2010). Software Survey:
+Vosviewer, A Computer Program For Bibliometric Ma-
+pping. Scientometrics, 84(2), 523-538.
+
+Wang, L., Törngren, M. y Onori, M. (2015). Current
+status and advancement of cyber-physical systems
+in manufacturing. Journal of Manufacturing Sys-
+tems, 37(parte. 2), 517-527. https://doi.org/10.1016/j.
+
+                                                             75

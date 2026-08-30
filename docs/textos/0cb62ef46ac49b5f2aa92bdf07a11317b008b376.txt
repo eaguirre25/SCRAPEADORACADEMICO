@@ -1,0 +1,1519 @@
+Business Review
+
+                                                                                              Volume 18 Issue 1
+Article 3                                                                                    January-June 2023
+
+2023
+
+Pre and post assessment of school management committee: A
+case study of Sindh
+Lubna Naz
+Applied Economics Research Centre, University of Karachi
+
+Abdul Aleem Qureshi
+Applied Economics Research Centre, University of Karachi
+
+Fauzia Sohail
+Applied Economics Research Centre, University of Karachi
+
+
+
+
+Follow this and additional works at: https://ir.iba.edu.pk/businessreview
+
+   Part of the Educational Assessment, Evaluation, and Research Commons
+
+
+
+
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+
+
+Recommended Citation
+Naz, L., Qureshi, A. A., & Sohail, F. (2023). Pre and post assessment of school management committee: A
+case study of Sindh. Business Review, 18(1), 48-70. Retrieved from https://doi.org/10.54784/
+1990-6587.1497
+
+
+This article is brought to you by iRepository for open access under the Creative Commons Attribution 4.0 License
+and is available at https://ir.iba.edu.pk/businessreview/vol18/iss1/3. For more information, please contact
+irepository@iba.edu.pk.
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+                               Business Review: (2023) 18(1):48-70
+                               Original Paper
+
+
+
+
+                              Pre and post assessment of school management
+                              committee: A case study of Sindh
+
+                              Dr. Lubna Naz* · Abdul Aleem Qureshi ·
+                              Fauzia Sohail
+
+
+
+
+                              Abstract In Pakistan, the focus and concern of the educational planners and
+                              managers increasing interest in improving the school efficiency has shifted the at-
+                              tention from overall education system, particularly towards the functions of the
+                              schools. This study is an attempt to evaluate the causal impact of school-based
+                              management reform program namely school management committee (SMC)
+                              with a focus on Sindh province of Pakistan. Here, the study assesses the pre-
+                              post effect of SMC on various indicators of access and quality of education such
+                              as student-flow rates, school environment and teacher quality. Furthermore, for
+                              robustness analysis, the study assesses the regression model of DID method
+                              to estimate the impact of SMC on outcomes of interest. Finally, the study
+                              checks the balance of covariates used in the models at baseline. In order to con-
+                              duct a pre-post analysis of SMC on quality measures of educational attainment,
+                              the study uses a sophisticated quasi-experimental technique known as standard
+                              difference-in-differences (DID). The findings of the standard DID model reveals
+                              that in Sindh, SMC has significantly improved the quality of schools by provid-
+                              ing a better and developed environment of the school. However, the negative
+                              impact of SMC on other two outcome measures of quality of education implies
+                              inefficiencies in the utilization of SMC funds. These funds usually spend on re-
+                              pairs and maintenance of school instead of focusing on enhancing the quality of
+                              education such as improvement in student-survival rate and decline in dropout
+                              rate. Moreover, the findings of the robustness check based on regression analy-
+                              sis of DID method find similar estimates of SMC on all the outcome variables.
+                              Finally, the balance check of baseline covariates used in the analysis show that
+                              Dr. Lubna Naz
+                              Applied Economics Research Center
+                              E-mail: syeda.lubna@hotmail.com
+                              *Corresponding author
+                              Abdul Aleem Qureshi
+                              Applied Economics Research Center
+
+                              Fauzia Sohail
+                              Applied Economics Research Center
+                              c Naz,L., Qureshi, A. A. and Sohail,F 2023
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+                     covariates are balanced and their differences are different from zero for each
+                     outcome of interest. This study proposes the policy implications to make the
+                     procedure of SMC functional and effective, this includes improved student ac-
+                     cess to school, quality of teachers, monitoring, management, curriculum and
+                     financing of the program.
+
+
+                     Keywords School-Based Management, School Management Committee,
+                     Difference-in-Difference, Impact Evaluation, Quality of Education, Education
+                     Policy
+
+
+                     1 Introduction
+
+                     The national and international agencies have diverted funds towards education
+                     sector particularly with a focus in improving the quality of education. Given
+                     the objective of the program, there is a need to assess its impact on program ef-
+                     fectiveness and efficiency in delivering the quality education. Thus the research
+                     question of the study is to evaluate the causal impact of school-based man-
+                     agement reform program namely school management committee (SMC) with
+                     a focus on Sindh province of Pakistan. The objectives of the study are three-
+                     fold. In first step, the study assesses the pre-post effect of SMC on various
+                     indicators of access and quality of education such as studentflow rates, school
+                     environment and teacher quality. The study uses school-level census data called
+                     Sindh Education Management Information Survey (SEMIS), collected by Re-
+                     form Support Unit of government of Sindh. For this, the study employs 2004-5
+                     as pre-intervention and 2013-14 as postintervention periods. However, the sec-
+                     ond step is based on robustness analysis, the study assesses the regression model
+                     of DID method to estimate the impact of SMC on outcome of interest. Finally,
+                     the study checks the balance of covariates used in the models as baseline. The
+                     DID design is an ideal technique for assessing the causal effect of SMC on qual-
+                     ity of education. The findings of the standard DID model reveals that SMC
+                     has significantly improved the quality of school by developing the environment
+                     of the school. However, the significantly negative impact of SMC on other two
+                     outcome measures of quality of education implies inefficient utilization and de-
+                     lays in receiving the small amount of funds. The findings of the robustness check
+                     based on regression analysis of DID method find similar estimates of SMC on all
+                     the outcome variables. Finally, the balance check of baseline covariates used in
+                     the analysis show that covariates are balanced and their differences are different
+                     from zero for each outcome of interest. This study proposes the policy impli-
+                     cations to make the procedure of SMC functional and effective. This includes
+                     improved student access to school, quality of teachers, monitoring, management,
+                     curriculum and financing of the program.
+                         A vast literature though available on the topic, however the studies are
+                     mainly based on the international evidences however, In case of Pakistan only
+                     limited literature is available. Wing, et al. (2018) explained the technique of
+                     difference-in-differences (DID) technique, which is commonly used for the causal
+                     relationships in public health settings due to the infeasibility of randomized con-
+
+
+                     Business Review: (2023) 18(1):48-70                                             49
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                              trolled trials (RCTs) in such studies. The key focus of the study was to review
+                              the DID designs on public health policy research. Nasar and Kakar (2017) eval-
+                              uated the impact of community involvement on students enrolment and dropout
+                              in the schools. For the analysis, the study has conducted primary survey based
+                              on purposive sampling through interviews of 40 respondents. The findings of
+                              the study revealed that the role of Parent-Teacher School Management Com-
+                              mittees (PTSMCs) was significant through which the enrolment of the number
+                              of children who were out from the school increased and the study further found
+                              decline in students dropout rate. Conclusively, the study showed that the impact
+                              of community involvement has significant impact on overall quality of educa-
+                              tion.
+                                  The study conducted by King and Ozler (1998) found decentralization as
+                              a significant factor of institutional reform around the World. However, in ed-
+                              ucation sector, decentralization can be seen in school: administration, revenue
+                              generation, curriculum design, and hiring and management of teachers. The pol-
+                              icy which allows regional/municipal governments or school in decisions to these
+                              functions of schools is commonly known as school-based management (SBM),
+                              school based governance, school self-management and school management com-
+                              mittee (SMC) (De Grauwe 2005), and Gertler et al 2012. The SBM reforms were
+                              initiated in Australia in 1970 and a growing number of countries decentralized
+                              their schools by adopting such technique for instance, Hong Kong (China), In-
+                              donesia, El Salvador, Nicaragua, Kenya, Kyrgyz Republic, Nepal, Philippine and
+                              Paraguay and Mexico (World Bank, 2007). Various studies evaluated the im-
+                              pact of SBM and found ambiguous effects on quality of education. For instance,
+                              the studies conducted by (Guha 2022; Skoufias and Shapiro 2006; Gertler et al
+                              2012; Sawada and Ragatz 2005) revealed that SBM improved the educational
+                              outcomes, while the study of (Bardhan 2002) argued that the impact of SBM
+                              worsen the quality of education particularly (weakest) schools.
+                                  In Pakistan, to improve the quality of education, multiple reform programs
+                              have been initiated and each province has played its role by introducing re-
+                              form programs based on school interventions. In this context, the government
+                              of Sindh introduced a sector reform program for primary as well as secondary
+                              education known as the Sindh Education Sector Reform Program (SERP). Ad-
+                              ditionally, this program was financially supported by the World Bank during the
+                              Fiscal Year 2006/07 to 2011/12. The Second Sindh Education Sector Reform
+                              Program (SERP-II) was introduced to improve the quality of service delivery
+                              and to increase the students participation in schools. SMC is formed to provide
+                              a support to the head-teachers in order to deliver quality. education without any
+                              delay to the children, the monitoring of teachers attendance and performance
+                              in the classroom. Finally, SMC is also formed to improve the students perfor-
+                              mance by increasing the students enrolment and reducing the dropout from the
+                              school. Thus this study represents planning commissions PC-V, which is based
+                              on impact evaluation of an intervention (Government of Pakistan).
+                                  The study contributes to the existing empirical literature on the effectiveness
+                              of SMC in Sindh using school-level data for 2004-05 and 2013-14. For this, it
+                              evaluates the pre-post impact of SMC on various measures of access and quality
+                              of education using quasi-experimental difference-indifference (DID) technique
+
+
+                              50                                          Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+                     of impact evaluation. The findings of the study are consistent with literature
+                     which confirms the effectiveness of SMC in improving the quality of schooling in
+                     Sindh only. Nonetheless, SMC seems ineffective in improving the student-flow
+                     rates and quality of teachers. The remainder of the study is organized as fol-
+                     lows: the next section displays the econometric model specification and source
+                     of data used in the study; section 3 proposes a sophisticated quasiexperimental
+                     methodological approach i.e. difference-in-differences (DID) technique; followed
+                     by section 4 which discusses the empirical findings and final section highlights
+                     the implications for future and discusses the limitations of the study.
+
+
+
+
+                     1.1 An Overview of Sindh Education Sector
+
+                     Educational reforms in Sindh are based on the National Education Policy (NEP)
+                     - 2009 while NEP focuses to achieve the goals of EFA (Education for All). The
+                     goals are to expand early childhood care and education, provide free and com-
+                     pulsory primary education for all, to achieve gender parity and gender equality
+                     and improve the quality of education. To implement article 25-A of the 18th
+                     amendment (legal obligation) that mandates Provinces to provide Free and
+                     Compulsory Education to all children aged five to sixteen years (SESP 2014-
+                     18) and therefore, Government of Sindh (GoS) has prepared Sindh Education
+                     Sector Plan (SESP) 2014-18.
+                          Sindh Education Sector Plan (SESP) categorizes Education Reforms in Sindh
+                     into four policy areas - interventions. First one concerned with the improvement
+                     in government schools, specific initiates taken at this level includes recognition
+                     given to School Management Committee (SMC) and focus given to school spe-
+                     cific budget. The second one aimed to provide better learning outcomes and
+                     increased quality of education- specifically through merit based recruitment of
+                     teachers, introducing Standardized Achievement Test (SAT) system and adopt-
+                     ing public private partnership for the delivery of quality education, Sindh Ed-
+                     ucation Foundation (SEF). The third one is related to the availability, timeli-
+                     ness, richness and robustness of data initiatives taken Biometric verification of
+                     Teachers, establishment of Human Resource Management Information System
+                     (HRMIS) and Directorate General for Monitoring and Evaluation. While the
+                     fourth one related to the allocations and spending made on education Sindh
+                     committed to spend at least 20% of its total budget on education (SESP 2014-
+                     18).
+                          This sub-section of the chapter presents an overview of the education sector
+                     of Sindh province of Pakistan. For this, the following figures display the trend
+                     in students enrolment, Standardized Achievement Test (SAT) scores, students
+                     flow rates over the period of 2008-09 to 2016-17.
+
+                         Figure 1 depicts overall decline in enrollment through class 1 to XII in both
+                     the periods. However, the trend of enrollment shows a decline from class 1 to
+                     6 in 2016-17 over 2008-09 whereas, an increase in middle through higher sec-
+
+
+                     Business Review: (2023) 18(1):48-70                                            51
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+
+                                              900,000
+                                              800,000
+                                              700,000
+                                              600,000
+                                              500,000
+                                              400,000
+                                              300,000
+                                              200,000
+                                              100,000
+                                                    0
+                                                        Kachi   I        II   III      IV        V      VI     VII      VIII    IX     X   XI   XII
+
+
+
+
+                                                                                       2008-09                        2016-17
+
+
+
+
+                                                                Fig. 1: Trend of Enrolment by Class
+                                                                      Authors own illustration
+
+
+                              ondary over the period.
+
+
+
+
+                                              40
+                                              35
+                                              30
+                                              25
+                                              20
+                                              15
+                                              10
+                                              5
+                                              0
+                                                                    Pupil-Teacher                                    Pipil-Classroom
+
+                                                                                    2004-05          2013-14         2016-17
+
+
+                                                        Fig. 2: Pupil-Teacher & Pupil-classroom Ratios
+                                                              Authors illustration based on SERP
+
+
+
+                                  Figure 2 compares the average number of pupils per teacher in a class a
+                              measure of teacher workload and pupils per classroom a measure of class size in
+                              a school. A decrease in pupil-teacher ratio and pupil-classroom ratio is reflecting
+                              an improvement in quality of schooling and education in Sindh.
+
+                                  The quality of education can also be measured by students learning outcomes
+                              for instance Standardized Achievement Score (SAT). The figure 3 presents the
+                              students SAT scores for grades V and VIII over the period. It is evident from
+                              the figure that on average SAT scores improved over the period of 2013-14 to
+                              2016-17.
+
+                                 The decline in repetition rate indicates that the quality of education is im-
+                              proving. The repetition rate was high in all classes in 2008-09 but showed sharp
+                              decline in 2016-17.
+
+
+
+                              52                                                                             Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+
+
+                                                2016-17
+
+
+                                                2015-16
+
+
+                                                2014-15
+
+
+                                                2013-14
+
+                                                          0%      5%           10%        15%      20%           25%     30%          35%
+
+                                                                               Grade VIII              Grade V
+
+
+
+                                                Fig. 3: Standardized Achievement Test (SAT)
+                                                 Authors illustration based on SEP 2016-17.
+
+
+
+
+                                       30.000
+
+                                       25.000
+
+                                       20.000
+
+                                       15.000
+
+                                       10.000
+
+                                        5.000
+
+                                        0.000
+                                                  I        II   III       IV      V         VI   VII      VIII     IX     X      XI         XII
+
+                                                                          2008-09                      2016-17
+
+
+                                                           Fig. 4: Repetition Rate by Class:
+                                                          Authors illustration based on SERP.
+
+
+
+                                       40%
+
+                                       35%
+
+                                       30%
+
+                                       25%
+
+                                       20%
+
+                                       15%
+
+                                       10%
+
+                                        5%
+
+                                        0%
+                                                 1 to 2          2 to 3               3 to 4           4 to 5           5 to 6          Average
+
+                                                                                  2008-09              2016-17
+
+
+                                                    Fig. 5: Dropout Rate by Class
+                                      : Authors illustration based on Sindh Education Statistics.
+
+
+
+                        Figure 5 presents the trends in students dropout rate by class. The figure
+                     depicts small decline in dropout rate of students from class 1 to 2 and a sharp
+                     decline from class 5 to 6 in 2016-17.
+                        As compared to other provinces of Pakistan, the literacy rate of Sindh is
+                     much lower that is 55%. However, for education, the provincial governments
+                     budget was 13.4 % of total allocated budget in 2011 and grown to 18.5% in
+                     2017 (GoS, 2019). There are 12 million children in Sindh between the age of 5
+
+
+                     Business Review: (2023) 18(1):48-70                                                                                          53
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                              and 16, of which 6.7 million more than half of them are out of school and half
+                              of these are girls. Out of the total schools in Sindh almost 91% are primary,
+                              5% are middle while only 4% are high schools showing imbalance in supply
+                              of schools. Further to this 46% government primary schools are single teacher
+                              school. There are at least 6,164 non-functional and ghost schools in Sindh [Alif
+                              Ailaan The State of Sindh Education]. The situation demand essential Planning
+                              and urgent reforms. There are several initiatives taken by GoS to achieve the
+                              objectives of SESP. The key issues discussed by SESP and targets to meet the
+                              challenges related to equitable access, improving learning outcomes, governance
+                              and accountability and transparent financing.
+                                  However, it is interesting to note that the number of primary schools is
+                              around 91% of total schools in Sindh which completely outnumber middle and
+                              secondary schools (SESP 2014-18). However, the strategies to eliminate social
+                              exclusion and provision of greater opportunities for access need to be revisit. In-
+                              terventions are needed to address the issues of access and dropout, by targeting
+                              the districts that are farthest away from EFA goals. Finally, the SESP-2014-18
+                              has been implemented which provide comprehensive framework to move forward
+                              but the achievements are yet not completely realized. However, SESP certainly
+                              proved that GoS has recognized the challenges in the equitable access to quality
+                              education. Education in Sindh is facing challenges of access, quality, governance
+                              and financing and SESP attempts to targets all these challenges. With the com-
+                              mitment of the government to pursue the directions given in SESP, the policy
+                              interventions will definitely result in the better state of education in 2019-2024.
+
+
+
+
+                              2 Literature review
+
+                              The following review of the existing and relevant literature is based on commu-
+                              nity participation that is School Management Committees (SMCs) in schools
+                              and studies evaluated the impact of education and health programs. The impact
+                              of a program is evaluated using different techniques such as Propensity Score
+                              Matching (PSM), Difference-in-differences (DID) and Randomized Control Tri-
+                              als (RCT).
+                                  Guha (2022)evaluated the impact of school-based management on public
+                              schools in India. The study examined the impact of the SMCs on school in-
+                              frastructure and services such as classrooms physical condition, availability of
+                              electricity connection, library, tap water connection and availability of medical
+                              checkup facility in these schools. For estimating the impact of intervention, the
+                              study utilized panel data from Uttar Pradesh and used difference-in-difference
+                              approach. The study found that SMCs improved the availability of libraries and
+                              medical checkup facilities in the schools.
+                                  Ismail (2020) evaluated the community involvement in the school manage-
+                              ment system in Pakistan. The study’s finding revealed that after passing almost
+                              30 years, the core objective of the committee has not been achieved. The study
+                              critically evaluated the policy at the different stages of development and the
+                              loopholes in implementing the program. Based on the analysis, the study sug-
+
+                              54                                          Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+                     gested that the committees worked differently in all parts of Pakistan. This
+                     conclusion was made on the detailed and extensive field experience and the
+                     involvement of different communities by taking a deep analysis of training, or-
+                     ganizing and mobilizing hundreds of School Management committees (SMCs)
+                     of Pakistan.
+                         SATI (2019) highlighted the importance of community participation and em-
+                     powerment in educational governance. For analyzing the impact of community
+                     participation, the study selected 25 SMCs and 67 members from such com-
+                     mittees through questionnaires and focus groups. The study revealed that the
+                     parental involvement improved the outcomes of their children in educational
+                     activities. Additionally, the role of community participation in relation with an
+                     educational policy has improved the quality of education at elementary level in
+                     Uttarakhand state. Moreover, the School management committees (SMCs) have
+                     played a significant role in enhancing the students access to schools, number of
+                     enrolled children and their retention in the school. Additionally, the number of
+                     dropouts reduced and the schools’ monitoring was successfully maintained.
+                         Baral et al (2019)conducted a study to evaluate the attitude to parents and
+                     teachers towards the execution of the School Management Committees (SMCs).
+                     Further, the study observed the differences in the behaviour of parents for such
+                     committees, particularly for parents by region and teachers by gender. A descrip-
+                     tive survey method was employed for this purpose by selecting 20 elementary
+                     schools both from the rural and urban regions of Sambalpur district, Odisha.
+                     The study sample of 160 was randomly selected, consisting of both parents and
+                     students. The study performed a t-test to evaluate the findings. It was exposed
+                     in the study’s findings that the formation of the SMCs is appreciated by both
+                     parents and teachers. However, parents from rural areas welcomed the decision
+                     of SMCs at elementary level as compare to the parents of urban region. The
+                     study further revealed that the gender of the teachers showed same attitude
+                     towards the implementation of such committees in schools.
+                         Garcia-Moreno et al (2020) evaluated the first experimental assessment of
+                     the school-based management intervention called Programa Escuelas de Cal-
+                     idada (PEC) at national level in Mexico State of Colima. The program was
+                     initiated in 2001 and ended in 2014 and designed to evaluate the students learn-
+                     ing outcomes (test scores) in the school. The study used difference-in-difference
+                     technique to evaluate the impact of the program. The findings of the study show
+                     that the impact of the PEC has improved the students test scores after one year
+                     of the impact evaluation.
+                         Wing et al (2018) explained the technique of difference-in-differences (DID)
+                     technique, which is commonly used for the causal relationships in public health
+                     settings due to the infeasibility of randomized controlled trials (RCTs) in such
+                     studies. The key focus of the study was to review the DID designs on public
+                     health policy research. The study highlighted the importance of DID research
+                     design and recommended that modern researchers take an active approach with
+                     this research design by actively engaging in the major assumptions of the de-
+                     sign and discussing analytic tactics, supplementary analysis, and the methods
+                     of statistical implication, which are commonly crucial for the applied research.
+                     Although the DID design is not the perfect substitute for the randomized exper-
+
+
+                     Business Review: (2023) 18(1):48-70                                           55
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                              iments, it frequently gives the causal relationship about the quasi-experimental
+                              techniques, which is essential for the coming innovative idea about the DID ap-
+                              proach.
+                                  Sayeed (2016)evaluated the impact of female conditional cash transfer pro-
+                              gramme on schooling, age at marriage and age at first child birth in Bangladesh.
+                              For analyzing the impact of such intervention, the study used difference-in dif-
+                              ference (DID) and regression discontinuity design (RDD). The findings showed
+                              that the impact assessment of the programme has increased the females educa-
+                              tion (completed years of schooling) and also reduced the early marriages and
+                              early first child birth by delaying in marriages and first child birth.
+
+
+
+                              3 3. Model Specification and Sources of Data
+
+                              This section discusses the econometric model and variables definition used in
+                              the analysis. In addition, it provides the source of school-level census data used
+                              for impact evaluation of SMCs on different measures of quality of education.
+
+
+
+                              3.1 Model Specification
+
+                                        Yit = β0 + β1 Ti + β2 Pt + β3 (ti xPt )β2 Sit + β3 Git + β4 Rit + it   (1)
+                              Where Yit represents the outcome variables for school i in time t (i.e. school
+                              environment index, student-flow rates and teacher quality index)
+                              Ti represents the time variable, T = 1 indicates pre-intervention period and T
+                              = 0 indicates post-intervention period
+                              Pt represents the treatment variable, P = 1 if school receives the SMC inter-
+                              vention in time t or T = 0 if not Sit represents the status of school i in time t
+                              Git represents gender of school i in time t
+                              Rit represents the pupil-class ratio of school i in time t
+                                  Here, Yi indicating the five outcome variables namely school environment
+                              index, student-flow rates (promotion rate, repetition rate & dropout rate) and
+                              teacher quality index. These variables are constructed using composite index.
+                              For instance, teachers resource index, since teachers characteristics are com-
+                              prised of numerous indicators, thus, a single variable composite index is con-
+                              structed using principal component analysis (PCA)1 . Such characteristics are
+                              comprised of teachers designation (PST, JST, HST, SS, SLT, OT, PTI, WIT,
+                              HMs, DT, others), their academic qualification (doctorate, M.Phil., masters,
+                              bachelor, intermediate, matriculation and below matric), type of post and pro-
+                              fessional training (PTC, CT, B.Ed., M.Ed., other trained and untrained). These
+                              indicators were initially discrete in nature, first converted by taking proportion
+                              of each variable from the total number of teachers and PCA is applied.
+                                  The school environment index is constructed using a number of school-level
+                              indicators which are first converted into a dummy and scale variable. A scale
+                                1   See Annexure C
+
+
+                              56                                              Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+                     variable is defined as the variable which was initially discrete in nature, con-
+                     verted into a scale of ranges from 0 to 2. A scale of 2 is assigned to the highest
+                     level or degree, 1 is assigned to moderate degree and 0 to the lowest degree. For
+                     example, in case of school facility index, a scale ranges from 0 to 2 is assigned to
+                     a variable pupil-classroom ratio in such a way that a scale value of 2 is assigned
+                     if the ratio ranges from 1 to 25, scale value of 1 if the ratio is 26 to 50 and a scale
+                     value of 0 if the ratio value is above 50. The school facility index is constructed
+                     using 10 school-level indicators namely boundary wall, building condition, type
+                     of building, electricity connection, electric fan availability, drinking water facil-
+                     ity, library facility, and pupil-classroom ratio. Thus, PCA is applied to construct
+                     a composite- school facility index based on the variables discussed above.
+                          However, PCA is a commonly used statistical technique for transforming or-
+                     thogonally a large number of indicators into a composite index (indices) which
+                     can be further defined as the process of converting correlated variables to lin-
+                     early uncorrelated components. Each component of PCA is a linear (weighted)
+                     combination of original indicators that follows the common arrangement. The
+                     construction of first PCA i.e. school facility index is consisting of 9 indicators.
+                     Out of these 9 indicators, 6 indicators have 2 dimensions and 3 having 3 dimen-
+                     sions.
+                          However, the student-flow rates are calculated using student cohort method.
+                     The cohort student-flow rate method, adopted from UNESCO, is used for cal-
+                     culating the student- flow rates (promotion rate, repetition rate, and dropout
+                     rate) by taking class-wise enrolment and numbers of repeaters. To calculate the
+                     class-wise promotion rate, the number of students from a cohort enrolled in a
+                     given class at a given school year t + 1 is divided by the number of students
+                     from the same cohort enrolled in the previous class in preceding school year t.
+                     Like promotion rate, the students repetition rate is also derived by dividing the
+                     number of repeaters in a given class in a given year t+1 by the enrollment of
+                     same class but in the previous year t. Finally, the students class-wise dropout
+                     rate is calculated by subtracting the former students flow rates (promotion rate
+                     and repetition rate) from 100.
+
+
+
+
+                     3.2 Source of Data
+
+                     This study has used the annual school census data i.e. Sindh Education Manage-
+                     ment Information System (SEMIS), conducted by the School Education and Lit-
+                     eracy Department of Govt. of Sindh. The data provides comprehensive school-
+                     level information (public) consisting of school infrastructure and availability
+                     of school facilities, class-wise enrollment and number of repeaters and detailed
+                     teacher related information across gender, district and tehsil level. The data
+                     comprises of 45,484 and 46,724 public schools in 2004-5 and 2013-14 respec-
+                     tively.
+                         In order to evaluate the pre and post analysis, the study has used 2004-
+                     5 as pre- treatment (pre-intervention) and 2013-14 as post-treatment (post-
+                     intervention) period. Moreover, student flow rates, teacher quality and school
+
+                     Business Review: (2023) 18(1):48-70                                                 57
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                              environment index are measured and used as outcome of interest. However,
+                              SMC is a dichotomous in nature with (SMC=1) denoting the treatment group
+                              that is schools in which SMC is functional and (SMC= 0) indicating the control
+                              group that is schools without SMC intervention.
+
+
+
+
+                              4 Estimation Technique: Difference-in-Differences Technique (DID)
+
+                              In order to evaluate the impact of community involvement on educational at-
+                              tainment, the study seeks to identify the causal impact of School Management
+                              Committee (SMC) on quality of education (outcome of interest) using quasi-
+                              experimental technique such as difference-in-differences technique (DID). The
+                              DID design is an ideal technique for assessing the causal effect of SMC on qual-
+                              ity education.
+                                  The DID uses few notations such as i = 1, 2, 3, . I be the cross sectional unit
+                              (schools) and t = 1.T be the time period. Now let Pit = 1 if school i attains
+                              treatment (involves in community parent partnership through SMC) in time t
+                              and Pit = 0 if school i belongs to the control group in time t. The potential
+                              outcomes for the two hypothetical scenarios such as let Y(1)it be the outcome
+                              of interest for the treatment group that is quality of school for unit i at time
+                              t if the school involves in community partnership and Y(0)it be the potential
+                              outcome for the control group that is, if the school had not been involved in
+                              SMC are presented. Given this, the causal effect for school i at time t can be
+                              expressed as follows:
+
+                                                           ∆i,t = Y (1)it − Y (0)it                          (2)
+
+                                 The above causal effect indicates an individual effect (school i) that can
+                              be observed in experimental studies. However, in non-experimental studies, an
+                              individual effect is unobservable for same unit (individual) in two different sce-
+                              narios (treatment / control) but in practice, applied researchers observe each
+                              unit for only one scenario in one time period. Thus the fundamental problem of
+                              causal effect is controlled by Heckman (1997); Dehejia and Wahba (2002)), the
+                              average effect of treatment on schools can be defined as follows:
+
+                                                     Yit = Y (0)it + [Y (1)it − Y (0)it ]Pit                 (3)
+
+                                  In the above equation, the second term defines the counterfactual problem
+                              that generally occurs in causal effect. Like propensity score matching, a stan-
+                              dard DID design is also a quasi-experimental in nature which is independent
+                              of random assignment to deal the problem of bias that occurs as a results of
+                              unobservable confounders. However, standard DID designs assume that these
+                              unobservable group confounders are time-invariant across the groups and time-
+                              varying confounders are group-invariant commonly known as the common trend
+                              assumption.
+
+
+
+                              58                                            Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+                     Two Groups - Two Time Period The DID design with two groups (i.e. i =1, 2)
+                     and two time periods (i.e. t = 1, 2) is symbolized by a 2 x 2 box and called a
+                     simplest form of DID design. In time period 1 (pre period), both the groups are
+                     called control groups. However, in period 2, only group 2 is exposed to treatment.
+                     Let Ti = 1 (for i = 2) be a time invariant dummy variable which identifies
+                     observations in group 2. Pt = 1 (for t = 2) is also a dummy variable which
+                     identifies observations for period 2. Thus, in simple DID design, the treatment
+                     variable is obtained by multiplying these two dummy variables i.e. Dit = Ti xPt .
+                         Moreover, the effect of SMC on quality education for two time periods can
+                     be expressed as follows:
+
+
+                         SM C , ef f ect = (Quality Edupost, SM C − QualityEdupre, SM C)−
+                                                                                                   (4)
+                         (QualityEdu post, N on − SM C − QualityEdupre, N on − SM C)
+
+                        The model for the two potential outcomes under the simple DID design can
+                     be written as:
+                                           Y (0)it = β0 + β1 Ti + β2 Pt + it                 (5)
+                     The above equation shows that in the absence of treatment, 0 is the average
+                     outcome in group 1and period 1 and the sum of the coefficients (0 + 2 ) in pe-
+                     riod 2. However, the sum of the coefficients (β0 + β2) is the average untreated
+                     outcome in group 2 and period 1and (β0 + β2 +) in period 2. On the basis of
+                     common trend assumption, the coefficient of Ti (1) is the group effect which
+                     captures the time invariant difference in outcomes of the two groups. However,
+                     the coefficient of Pt (2) is the time trend, captures the combined effect that
+                     change over the two periods.
+
+                         The treated potential outcome:
+
+                                                     Y (1)it = Y (0)it + β3                        (6)
+                        In above equation the treated potential outcome is the sum of untreated
+                     potential outcome and treatment effect (constant). The general formula for both
+                     the treated and untreated potential outcome along with treatment effect can be
+                     written as:
+
+                                             Yit = Y (0)it + Dit [Y (1)it − Y (0)it ]              (7)
+                         The model specification:
+
+                                          Yit = β0 + β1 Ti + β2P t + β3 (Ti x Pt ) + it           (8)
+
+                     The Common Trends Assumption The DID designs depend on the common
+                     trends assumption that the (important unmeasured) variables are either time-
+                     invariant (group effect) or time-varying factors (time trend). In other words, the
+                     assumption implies that the outcomes of a group should change by a constant
+                     in each period and should depict a similar period-specific change. Moreover,
+                     the common trends assumption also holds for the restricted sample of groups
+
+
+                     Business Review: (2023) 18(1):48-70                                            59
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                              (matched sample) which can be obtained using propensity score matching then
+                              to estimate the treatment effects, DID design is used on the matched /restricted
+                              sample.
+
+
+
+                              5 Findings of the Study
+
+                              This section discusses the findings of pre-post impact of SMC on various mea-
+                              sures of quality education in Sindh. For this, the section comprises of standard
+                              DID analysis and a robustness analysis based on regression analysis. Finally,
+                              the section provides baseline balance check of covariates used in the analysis.
+
+
+
+                              5.1 Findings Based on DID
+
+                              The tables below provides the findings based on standard DID method of pre-
+                              post analysis.
+
+
+                                          Table 1: Pre & Post Effects of SMC on School Environment Index
+                                Outcome Variable                                                           School Index   t stat
+                                Pre-Treatment
+                                Control (Non-SMC)                                                          -1.099
+                                Treated (SMC)                                                              -0.534
+                                Difference (T - C)                                                         0.564          26.32*
+                                Post-Treatment
+                                Control(Non-SMC)                                                           0.441
+                                Treated (SMC)                                                              0.403
+                                Difference (T - C)                                                         0.844          38.54*
+                                Diff-in-Diff (DID)                                                         0.28           10.57*
+                              Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                              Note: * indicates level of significance at 1%
+
+
+
+                                  Table 1 presents the estimates of pre-post effect of SMC on school environ-
+                              ment. The first half of the table is showing the pre-treatment effect of SMC and
+                              non-SMC schools and consisting of mean outcome of both groups (treated & con-
+                              trol) along with their single difference (0.564). This estimate of pre-intervention
+                              provides positive and statistically significant impact. Whereas the second half
+                              of the table provides positive and statistically significant post-intervention im-
+                              pact of SMC on school environment which shows that the provision of SMC has
+                              improved the overall environment of the school. Moreover, the last row displays
+                              the DID estimator (before & after treatment effect of SMC). The positive and
+                              statistically significant impact implies that SMC has improved the environment
+                              of public schools in Sindh over the period of 2004-05 to 2013-14. Furthermore,
+                              this positive impact also reflects that schools that timely received funds and
+                              utilized these funds efficiently in developing their infrastructure and repairs and
+
+
+                              60                                            Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                       Pre and Post Assessment of School Management Committee: ...
+
+                     maintenance, resulted in an improved environment of the school.
+
+
+
+
+                                      Table 2: Pre & Post Effects of SMC on Student-Flow Rates
+                       Outcome Variable       Promotion     t - stat   Repetition     t stat   Dropout       t stat
+                                              Rate                     Rate                    Rate
+                       Pre-Treatment
+                       Control (Non-SMC)            40.56                      0.14                59.29
+                       Treated (SMC)                55.95                      0.87                43.36
+                       Difference (T - C)           15.39   43.55*             0.73   16.09*      -15.93     -44.85
+                       Post-Treatment
+                       Control (Non-SMC)            38.86                      0.04                61.06
+                       Treated (SMC)                50.39                     -0.02                49.57
+                       Difference (T - C)           11.53   31.92*            -0.06      1.4      -11.49     31.65*
+                       Diff-in-Diff (DID)           -3.86   8.84*             -0.79   14.17*        4.44     10.12*
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+
+
+
+                         Table 2 explains the impact of SMC on another quality measure that is
+                     student flow rates. The pre-intervention impact shows positive effects on pro-
+                     motion and repetition rates and negative effect on dropout rate. These findings
+                     are consistent with the studies of King and Ozler (1998); Di Gropello and Mar-
+                     shall (2005); Pellini (2005); Gertler et al (2012). However, the post-intervention
+                     impact is similar to the pre-intervention effect except the repetition rate which
+                     is negative and statistically insignificant. In addition, the post-intervention ef-
+                     fect is smaller than the pre-intervention effect. Thus, the study finds negative
+                     but statistically significant impact that is DID estimate of promotion, repetition
+                     and dropout rates. The alarming negative impact is mainly reflects inefficien-
+                     cies in the utilization of SMC funds. These funds usually spend on repairs and
+                     maintenance of the school instead of focusing on enhancing the quality of edu-
+                     cation such as improvement in student-survival rate and decline in dropout rate.
+
+
+
+
+                                   Table 3: Pre & Post Effects of SMC on Teacher Quality Index
+                       Outcome Variable                                                             Teacher Index     t stat
+                       Pre-Treatment
+                       Control (Non-SMC)                                                            11.103
+                       Treated (SMC)                                                                11.79
+                       Difference (T - C)                                                           0.688             15.65
+                       Post-Treatment
+                       Control (Non-SMC)                                                            11.54
+                       Treated (SMC)                                                                11.69
+                       Difference (T - C)                                                           0.157             3.60*
+                       Diff-in-Diff (DID)                                                           -0.531            8.58*
+                      Source: Authors calculations based on SEMIS 2004-5 & 2013-14 Note: * indicates level of
+                     significance at 1%
+
+
+                     Business Review: (2023) 18(1):48-70                                                       61
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                                  Next table 3 displays the DID impact of SMC on teacher quality. The treat-
+                              ment effect of DID given in last row provides negative but statistically significant
+                              impact of SMC on teacher quality in Sindh over the period of 2004-05 through
+                              2013-14. This negative impact is also reflecting the inefficiencies lies in SMC
+                              intervention which could be reduced particularly in order to improve the qual-
+                              ity of teachers by providing a number of teachers training programs and an
+                              improved accountability of teachers and head teachers. However, in this case,
+                              SMC is not functioning well in enhancing the quality of teachers. Thus having
+                              good infrastructure does not indicate good quality of education.
+
+
+
+                              5.2 Robustness Analysis Based on OLS Regression
+
+                              In addition to this, the study has conducted a robustness check analysis to con-
+                              firm the above DID treatment effect of SMC on outcomes of interest. For this,
+                              the study evaluated the average treatment effect of SMC using regression model
+                              of DID as discussed in equations 1 and 8. The tables B1 through B3 given in
+                              annexure, display the estimates of regression results of DID method. However,
+                              table B1 provides the similar treatment effect of SMC on quality of school as
+                              discussed in table 1. The positive and statistically significant interaction coeffi-
+                              cient (Period* SMC = 0.28) reflects that the average treatment effect of SMC
+                              has improved the quality of schools in Sindh. Additionally, tables β2 and β2
+                              depict the similar negative but statistically impact on student-flow rates and
+                              teacher quality index.
+                                  Finally, tables given in annexure B present the baseline balance check of the
+                              key covariates used in the analysis for each outcome variable. The balance check
+                              is consisting of t-test particularly used in DID method which shows that the
+                              baseline covariates are balanced and differences are significantly different from
+                              zero for each outcome of interest.
+
+
+
+                              6 Conclusions and Implications
+
+                              This study evaluates the impact of a community based management that is
+                              school management committee (SMC) in Sindh and found surprising effects on
+                              various outcome variables. A number of studies have discussed the functions of
+                              SMC but not evaluated the pre and post impact empirically. Here, the study
+                              revealed that over the nine years of SMC implementation in Sindh, SMC could
+                              only focus in developing the infrastructure of the school. However, it could not
+                              focus on development of student outcomes and the quality of teachers in the
+                              school. The main reason behind these findings is the inefficient utilization of
+                              SMC funds and lack of monitoring and governance in the sector.
+                                  Study also proposes the policy implications to make the procedure of SMC
+                              functional and effective. This includes, improved student access to school, qual-
+                              ity of teachers, monitoring, management, curriculum and financing of the pro-
+                              gram. For this, the government of Sindh should enhance the implementation of
+
+
+                              62                                           Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                      Pre and Post Assessment of School Management Committee: ...
+
+                     the program by revising a number of training and guidance programs for the
+                     schools and communities as well, so that the gap between them will be min-
+                     imized and the functions of SMC will become more efficient. To improve the
+                     student access to schools and reduction in dropouts can only be achieved by
+                     adopting improved curriculum and assessment strategies in the schools.
+                         In addition to this, teachers quality also plays their role in promoting good
+                     environment to the students in the school. There are certain factors which could
+                     help to improve the quality of teachers and teaching in the schools. For instance,
+                     the training of the teachers is one of the factors to make education system bet-
+                     ter and equitable. To make SMC more effective and accountable, the members
+                     should be qualified and trained enough so that these members in the committee
+                     can make it more functional. Further, the members of SMCs should also be
+                     bound to attend the meetings and organize meetings on regular basis. Commu-
+                     nity involvement is another factor for the effectiveness of schools management
+                     and governance. However, in Pakistan, SMCs are mostly non-functional and
+                     inefficient. To make education system more transparent and accountable, the
+                     policymakers should take new initiatives by increasing local community partic-
+                     ipation in schools management.
+                         Finally, the inefficient allocation of SMC funds is one of the factors which
+                     has not ensured the improve quality of education except the school facilities
+                     consisting of boundary wall, toilet and water facilities etc. The efficient alloca-
+                     tion of these funds is very important to improve the overall quality of education.
+                     The models used in the study control for a number of school-level key variables
+                     such as pupil-class ratio, status of school, and gender of school but model does
+                     not capture the parental socio-economic background which could also affect the
+                     quality of education. Thus, this factor of parental socio-economic characteristics
+                     will be evaluated in future research.
+
+
+
+
+                     References
+
+                     Baral R, Sahu N, Meher V (2019) The attitude of teachers and parents of students towards
+                         the implementation of school management committee (smcs) at elementary level. Interna-
+                         tional Journal of Theory and Application in Elementary and Secondary School Education
+                         1(2):58–74
+                     Bardhan P (2002) Decentralization of governance and development. Journal of Economic
+                         perspectives 16(4):185–205
+                     De Grauwe A (2005) School-based management (sbm): Does it improve quality. EFA Global
+                         Monitoring Report pp 1–14
+                     Dehejia RH, Wahba S (2002) Propensity score-matching methods for nonexperimental causal
+                         studies. Review of Economics and statistics 84(1):151–161
+                     Di Gropello E, Marshall J (2005) Teachers incentives in rural honduras. Incentives to Improve
+                         Teaching, Lessons from Latin America Washington, DC: The World Bank
+                     Garcia-Moreno VA, Gertler P, Patrinos HA (2020) School-based management and learning
+                         outcomes: Experimental evidence. In: Community Participation with Schools in Develop-
+                         ing Countries, Routledge, pp 211–229
+                     Gertler PJ, Patrinos HA, Rubio-Codina M (2012) Empowering parents to improve education:
+                         Evidence from rural mexico. Journal of Development Economics 99(1):68–79
+                     Guha P (2022) The effects of school-based management on indian government schools. Review
+                         of Development Economics 26(4):2090–2108
+
+
+                     Business Review: (2023) 18(1):48-70                                                       63
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                              Heckman J (1997) Instrumental variables: A study of implicit behavioral assumptions used in
+                                  making program evaluations. Journal of human resources pp 441–462
+                              Ismail S (2020) School management committees–a policy failure in pakistan
+                              King E, Ozler B (1998) Whats decentralization got to do with learning? the case of nicaraguas
+                                  school autonomy reform. Development Economics Research Group, Working Paper Series
+                                  on Impact Evaluation of Education Reforms 9:278,200–1099079877,269
+                              Nasar MR, Kakar B (2017) Community participation in schooling and its impact on increasing
+                                  enrollment and dropout retention
+                              Pellini A (2005) Decentralisation of education in cambodia: Searching for spaces of participa-
+                                  tion between traditions and modernity. Compare: A Journal of Comparative and Inter-
+                                  national Education 35(2):205–216
+                              SATI A (2019) Community participation and empowerment in educational governance: A
+                                  study of performance of school management committee in uttarakhand state
+                              Sawada Y, Ragatz A (2005) Decentralization of education, teacher behavior, and outcomes.
+                                  Incentives to improve teaching 255
+                              Sayeed Y (2016) Effect of girls’ secondary school stipend on completed schooling, age at
+                                  marriage, and age at first birth: Evidence from bangladesh. Tech. rep., WIDER Working
+                                  Paper
+                              Skoufias E, Shapiro J (2006) Evaluating the impact of mexico’s quality schools program: the
+                                  pitfalls of using nonexperimental data. World Bank Policy Research Working Paper (4036)
+                              Wing C, Simon K, Bello-Gomez RA (2018) Designing difference in difference studies: best
+                                  practices for public health policy research. Annual review of public health 39
+
+
+
+
+                              7 Appendix
+
+                              7.1 Annexure A
+
+
+                                                               Table A1: Summary Statistics
+                                      Variable         Observations     Mean      St. Dev      Min      Max
+                                Promotion Rate         92207            29.63      24.77         0      939.09
+                                Repetition Rate        92207             0.41       2.81         0        145
+                                Dropout Rate           92207            70.04      24.96      -839.09     100
+                                School Environment     92207          6.84E-07      1.79       -2.97     4.76
+                                Teacher quality        78346              12       1.933       0.252     13.55
+                                SMC                    92207             0.83       0.37         0         1
+                                Gender of School       92207             2.12       0.91         0         3
+                                Status of School       92207            1.18       0.47          0         3
+                                Pupil-Class Ratio      92207            0.83       0.82          0         2
+                               Source:Authors calculations based on SEMIS 2004-5 & 2013-14
+
+
+
+
+                              7.2 Annexure B: Regression Results For DID Analysis
+
+
+
+
+                              64                                                 Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                       Pre and Post Assessment of School Management Committee: ...
+
+                                               Table A2: Summary Statistics (D = 1)
+                            Variable         Observations   Mean     St. Dev      Min         Max
+                       Promotion Rate            46723      27.26     21.03         0        939.09
+                       Repetition Rate           46723      0.05      0.63          0        65.13
+                       Dropout Rate              46723      72.68     21.07      -839.09       100
+                       School Environment        46723      0.42      1.73        -2.97       4.76
+                       Teacher quality           40444        12      1.81         0.27       13.51
+                       SMC                       46723       0.83      0.37         0           1
+                       Gender of School          46723      2.31      0.86          1           3
+                       Status of School          46723       1.17     0.47          1           3
+                       Pupil-Class Ratio         46723      0.84      0.81          0           2
+                      Source:Authors calculations based on SEMIS 2004-5 & 2013-14
+
+                                               Table A3: Summary Statistics (D = 0)
+                            Variable         Observations   Mean     St. Dev      Min        Max
+                       Promotion Rate            45484      32.06     27.89         0        602.8
+                       Repetition Rate           45484       0.78     3.918         0         145
+                       Dropout Rate              45484       67.3     28.15      -502.8       100
+                       School Environment        45484      -0.427    1.747       -2.97       3.05
+                       Teacher quality           37920        12       2.05       0.252      13.55
+                       SMC                       45484      0.831      0.37         0           1
+                       Gender of School          45484      1.944     0.906         1           3
+                       Status of School          45484       1.19     0.906         1          3
+                       Pupil-Class Ratio         45484      0.815     0.831         0           2
+                      Source:Authors calculations based on SEMIS 2004-5 & 2013-14
+
+                                   Table B1: Regression Results of SMC on School Quality Index
+                            Variable         Coefficient                   St. Error       t-stat
+                       Period                0.658                            0.022        29.67*
+                       SMC                   0.564                             0.02         28.1*
+                       Period*SMC            0.28                             0.024       11.43*
+                       Gender of School      -0.435                           0.013        -33.9*
+                       Status of School      -0.06                            0.005       -11.41*
+                       Pupil-Class Ratio     1.031                            0.006       162.21*
+                       Constant              -1.099                           0.032        -34.1*
+                       No. of Observations                       83422
+                       R-squared                                 0.414
+                       F(6,83415)                              11627.13*
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+
+
+
+                     Business Review: (2023) 18(1):48-70                                              65
+
+
+
+
+Published by iRepository, June 2023
+
+                                                                                                                        Table B2: Regression Results of SMC on Student-Flow Rates
+
+
+
+
+                                      66
+
+
+
+
+Published by iRepository, June 2023
+                                                                                  Variable         Coefficient   St. Error   t-stat    Coefficient   St. Error   t-stat   Coefficient   St. Error   t-stat
+                                                                                                            Promotion Rate                     Repetition Rate                     Dropout Rate
+                                                                             Period                   -1.69        0.33      -5.13*       -0.1        0.02      -4.69*       1.77       0.33         5.33*
+                                                                             SMC                      15.39        0.41      37.54*       0.73        0.04      20.61*      -15.93      0.41        -38.73*
+                                                                                                                                                                                                                                                    DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+
+                                                                             Period*SMC              -3.86        0.37     -10.38*       -0.79       0.03      -25.25*       4.44       0.37        11.91*
+                                                                                                                                                                                                                                                    https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+
+
+
+
+                                                                             Gender of School         -0.01        0.09       -0.13       0.05        0.01       4.38*       -0.02      0.09         -0.23
+                                                                             Status of School        -16.03        0.23     -70.15*      -0.08        0.02      -4.03*      16.11       0.23         70.2*
+                                                                             Pupil-Class Ratio        -2.53         0.1     -24.43*       0.04        0.01      3.26**        2.5        0.1          24*
+                                                                             Constant                 40.56        0.63     63.99*        0.14        0.05      2.68**      59.29       0.64        93.24*
+                                                                             No. of Observations                83422                              83422                              83422
+                                                                             R-squared                           0.189                              0.193                             0.023
+                                                                             F(6,83415)                        7410.29*                           7510.01*                           300.02*
+                                                                            Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                                                                            Note: * indicates level of significance at 1%
+                                                                                                                                                                                                              L. Naz, A.A, Qureshi, and F. Sohail
+
+
+
+
+                                      Business Review: (2023) 18(1):48-70
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                        Pre and Post Assessment of School Management Committee: ...
+
+                                   Table B3: Regression Results of SMC on Teacher Quality Index
+                            Variable            Coefficient                   St. Error   t-stat
+                       Period                   0.434                          0.076       5.73*
+                       SMC                      0.688                          0.062      11.09*
+                       Period*SMC               -0.531                         0.077      -6.90*
+                       Gender of School         0.196                          0.008       25.06*
+                       Status of School         0.005                          0.061        0.09
+                       Pupil-Class Ratio        0.009                          0.009      -15.40*
+                       Constant                 11.103                         0.096       115.54
+                       No. of Observations                           72116
+                       R-squared                                     0.016
+                       F(6,72109)                                   167.93*
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+
+
+
+                                             Table B4: Balancing Test of School Quality Index
+                                                                 Mean
+                             Variable            Control                       Treated    Diff.     t-stat
+
+                       School Quality Index      -1.601                         -0.177    1.424     61.37*
+                       Status of School          1.881                           1.957    0.076      5.97*
+                       Gender of School          1.806                           1.061    -0.744    143.72*
+                       Pupil-Class Ratio         0.385                          0.909     0.524     46.15*
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+
+
+
+                     Business Review: (2023) 18(1):48-70                                                      67
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                                                     Table B5: Balancing Test of Student-Flow Rates
+                                                                         Mean
+                                      Variable        Control                        Treated       Diff.        t-stat
+
+                                Promotion Rate        10.614                         36.617       26.003      70.89*
+                                Status of School      1.806                           1.061        -0.744     143.72*
+                                Gender of School      1.881                           1.957         0.076       5.97*
+                                Pupil-Class Ratio     0.385                           0.909        0.524       46.15*
+                                Repetition Rate       0.106                           0.921        0.815      14.63*
+                                Status of School      1.806                           1.061        -0.744     143.72*
+                                Gender of School      1.881                           1.957         0.076       5.97*
+                                Pupil-Class Ratio     0.385                           0.909        0.524       46.15*
+                                Dropout Rate          89.31                          62.69        -26.62      72.08*
+                                Status of School      1.806                           1.061        -0.744     143.72*
+                                Gender of School      1.881                           1.957         0.076       5.97*
+                                Pupil-Class Ratio     0.385                           0.909        0.524       46.15*
+                              Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                              Note: * indicates level of significance at 1%
+
+                                                    Table B6: Balancing Test of Teacher Quality Index
+                                                                         Mean
+                                      Variable       Control                        Treated      Diff.      t-stat
+
+                                Teacher Index        11.36                           12.046     0.686       14.81*
+                                Status of School     1.924                           1.956      0.032        1.52
+                                Gender of School     1.163                            1.023     -0.14       30.81*
+                                Pupil-Class Ratio    0.868                           0.921      0.053       2.86*
+                              Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                              Note: * indicates level of significance at 1%
+
+                                             Table B7: DID Covariates & Coefficients of School Environment
+                                   Variables / Covariates       Coefficient                    St. Error       t-stat
+                                Gender of School                -0.06                           0.005        -11.422*
+                                Status of School                -0.435                          0.014        -31.839*
+                                Pupil-Class Ratio               1.031                           0.006        170.992*
+                                                                                     83422
+                                No. of Observations (DID)
+                                                                Before    After
+                                Control                          5929                      6361
+                                Treated                         35782                     35350
+                                R-square                                              0.41
+                              Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                              Note: * indicates level of significance at 1%
+
+                                            Table B8: DID Covariates & Coefficients of Teacher Quality Index
+                                   Variables / Covariates       Coefficient                    St. Error       t-stat
+                                Gender of School                0.196                           0.008         24.226*
+                                Status of School                0.005                            0.05          0.104
+                                Pupil-Class Ratio               -0.144                          0.009        -16.167*
+                                                                                     72116
+                                No. of Observations (DID)
+                                                                Before    After
+                                Control                          2081                      2058
+                                Treated                         33527                     34450
+                                R-square                                              0.02
+                              Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                              Note: * indicates level of significance at 1%
+
+
+
+                              68                                                  Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                                       Pre and Post Assessment of School Management Committee: ...
+
+                                      Table B9: DID Covariates & Coefficients of Promotion Rate
+                         Variables / Covariates     Coefficient                  St. Error    t-stat
+                       Gender of School             -0.011                         0.087      -0.129
+                       Status of School             -16.034                        0.225     -71.200*
+                       Pupil-Class Ratio            -2.527                         0.099     -25.411*
+                                                                         83422
+                       No. of Observations (DID)
+                                                    Before    After
+                       Control                       5929                      6361
+                       Treated                      35782                     35350
+                       R-square                                           0.19
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+                                    Table B10: DID Covariates & Coefficients of Repetition Rate
+                         Variables / Covariates     Coefficient                  St. Error   t-stat
+                       Gender of School             0.053                          0.011     4.739**
+                       Status of School             -0.083                         0.029     -2.892*
+                       Pupil-Class Ratio            0.045                          0.013     3.507*
+                                                                         83422
+                       No. of Observations (DID)
+                                                    Before    After
+                       Control                       5929                      6361
+                       Treated                      35782                     35350
+                       R-square                                           0.02
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+                                      Table B11: DID Covariates & Coefficients of Dropout Rate
+                         Variables / Covariates     Coefficient                  St. Error   t-stat
+                       Gender of School             -0.02                          0.088      -0.226
+                       Status of School             16.109                         0.226     71.177*
+                       Pupil-Class Ratio            2.497                           0.1      24.983*
+                                                                         83422
+                       No. of Observations (DID)
+                                                    Before    After
+                       Control                       5929                      6361
+                       Treated                      35782                     35350
+                       R-square                                           0.19
+                     Source: Authors calculations based on SEMIS 2004-5 & 2013-14
+                     Note: * indicates level of significance at 1%
+
+
+
+
+                     Business Review: (2023) 18(1):48-70                                                69
+
+
+
+
+Published by iRepository, June 2023
+
+https://ir.iba.edu.pk/businessreview/vol18/iss1/3
+DOI: https://doi.org/10.54784/1990-6587.1497
+
+
+
+                              L. Naz, A.A, Qureshi, and F. Sohail
+
+                                                            Table C1: Eigenvalues and Loadings
+                                Initial Eigenvalues                                    Extracted Sum of Squared Loadings
+                                Component      Eigenvalue     Variance   Cumulative    Eigenvalue Variance    Cumulative
+                                          1      3.29406        0.1267        0.1267      3.09574    0.1191       0.1191
+                                          2      2.30916        0.0888        0.2155      2.40993    0.0927       0.2118
+                                          3      2.15779         0.083        0.2985      2.25535    0.0867       0.2985
+                                          4      1.84509         0.071        0.3695
+                                          5      1.53937        0.0592        0.4287
+                                          6      1.46138        0.0562        0.4849
+                                          7        1.235        0.0475        0.5324
+                                          8      1.13463        0.0436         0.576
+                                          9      1.06319        0.0409        0.6169
+                                         10      1.01007        0.0388        0.6558
+                                         11     0.997533        0.0384        0.6941
+                                         12     0.990838        0.0381        0.7322
+                                         13     0.979873        0.0377        0.7699
+                                         14     0.956947        0.0368        0.8067
+                                         15     0.940448        0.0362        0.8429
+                                         16     0.785717        0.0302        0.8731
+                                         17     0.714239        0.0275        0.9006
+                                         18     0.673017        0.0259        0.9265
+                                         19     0.569999        0.0219        0.9484
+                                         20     0.565951        0.0218        0.9702
+                                         21     0.438892        0.0169         0.987
+                                         22      0.30011        0.0115        0.9986
+                                         23    0.0347823        0.0013        0.9999
+                                         24   0.00190995        0.0001             1
+                                         25            0             0             1
+                                         25            0             0             1
+                               Source:Authors calculations Based on SEMIS 2004-05 & 2013-14
+
+                                                            Table C2: Eigenvalues and Loadings
+                                Initial Eigenvalues                                    Extracted Sum of Squared Loadings
+                                Component      Eigenvalue    Variance    Cumulative    Eigenvalue Variance    Cumulative
+                                          1      3.01351        0.3348       0.3348      2.33618     0.2596       0.2596
+                                          2      1.49719        0.1664       0.5012      1.91619     0.2129       0.4725
+                                          3      1.08816        0.1209       0.6221      1.34648     0.1496       0.6221
+                                          4     0.698026        0.0776       0.6997
+                                          5     0.681063        0.0757       0.7753
+                                          6     0.653806        0.0726        0.848
+                                          7     0.622086        0.0691       0.9171
+                                          8     0.539397        0.0599        0.977
+                                          9     0.206773         0.023            1
+                               Source:Authors calculations Based on SEMIS 2004-05 & 2013-14
+
+
+
+
+                              70                                                Business Review: (2023) 18(1):48-70
+
+
+
+
+Published by iRepository, June 2023

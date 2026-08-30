@@ -1,0 +1,511 @@
+MAGAZINE DE LAS CIENCIAS                                      e-ISSN: 2528-8091
+                                               Vol. 8, N° 4/Octubre – Diciembre 2023
+
+
+        Integración de la Inteligencia Artificial en la
+           Educación para el Desarrollo Sostenible:
+                      Oportunidades y Desafíos
+Research skills and professional development in accounting students at the
+                              Ecuadorian university
+
+                    DOI: https://doi.org/10.33262/rmc.v8i4.2959
+
+
+
+                                                     Carlos Manuel Núñez-Michuy 1
+                                              Universidad Estatal de Quevedo, Ecuador
+                                               https://orcid.org/0000-0003-2298-7697
+                                                                 cnunezm@uteq.edu.ec
+
+                                                     Verónica Teresa Veloz-Segura 2
+                                               Universidad Estatal de Bolívar, Ecuador
+                                               https://orcid.org/0000-0002-1440-0115
+                                                                   vveloz@ueb.edu.ec
+
+                                                    Luis Marcial Agualongo-Chela 3
+                                              Universidad Estatal de Bolívar, Ecuador
+                                               https://orcid.org/0000-0003-4804-0522
+                                                               lagualongo@ueb.edu.ec
+
+                                                        Edgar Lenin Bayas-Romero 3
+                                              Universidad Estatal de Bolívar, Ecuador
+                                               https://orcid.org/0000-0003-0020-2334
+                                                                   ebayas@ueb.edu.ec
+
+DIRECCIÓN PARA CORRESPONDENCIA: cnunezm@uteq.edu.ec
+Fecha de recepción: 01/06/2023
+Fecha de aceptación: 10/09/2023
+
+
+RESUMEN
+El presente estudio investiga la integración de la Inteligencia Artificial (IA) en la
+Educación para el Desarrollo Sostenible (EDS), evaluando oportunidades y desafíos. La
+convergencia de la IA y la EDS ofrece oportunidades clave, como la personalización del
+
+
+                                                                        P á g i n a 96
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+aprendizaje, eficiencia en la gestión educativa y el desarrollo de contenido adaptativo. El
+propósito fundamental de este estudio consistió en examinar y evaluar las percepciones
+de los alumnos de una Institución de Educación Superior en relación con el uso, las
+potencialidades y las dificultades asociadas con la IA en su formación y proceso de
+enseñanza. Para esto, se implementó una metodología con un enfoque cuantitativo,
+utilizando un diseño no experimental descriptivo a través de una encuesta. Este diseño
+metodológico proporciona la capacidad de explorar de manera detallada las prácticas
+existentes, las percepciones de los actores principales y el análisis de los datos para
+determinar el impacto de la IA en la educación para el desarrollo sostenible. Los
+resultados identificaron desafíos, como la brecha de conocimiento entre estudiantes y la
+resistencia a la adopción de la IA en el ámbito de la educación para el desarrollo
+sostenible, además de la falta de conciencia sobre las capacidades reales de la IA, lo cual
+destaca la necesidad de programas educativos. En conclusión, se observó la necesidad de
+reducir la brecha de desconocimiento mediante la realización de capacitaciones centradas
+en la IA, con el objetivo de que los estudiantes adquieran un mayor conocimiento sobre
+las ventajas que esta tecnología puede aportar a su formación académica. Asimismo, se
+recomienda que los profesores utilicen, aunque sea de manera limitada, herramientas
+basadas en IA en su proceso de enseñanza. Este enfoque contribuirá no solo a ampliar el
+conocimiento de los estudiantes, sino también a enriquecer la calidad y la efectividad de
+la educación proporcionada.
+Palabras clave: Educación, inteligencia artificial, sostenibilidad.
+
+
+ABSTRACT
+The present study investigates the integration of Artificial Intelligence (AI) in Education
+for Sustainable Development (ESD), evaluating opportunities and challenges. The
+convergence of AI and ESD offers key opportunities, such as personalization of learning,
+efficiency in educational management and adaptive content development. The
+fundamental purpose of this study is to examine and evaluate the perceptions of students
+of a Higher Education Institution in relation to the use, potential and difficulties
+associated with Artificial Intelligence in their training and teaching process. For this, a
+methodology with a quantitative approach is implemented, using a descriptive non-
+experimental design through a survey. This methodological design provides the ability to
+thoroughly explore existing practices, key stakeholder perceptions, and data analysis to
+determine the impact of AI on education for sustainable development. The results
+
+                                                                             P á g i n a 97
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+identified challenges, such as the knowledge gap among students and resistance to the
+adoption of Artificial Intelligence in the field of education for sustainable development,
+in addition to the lack of awareness about the real capabilities of AI, which highlights the
+need for educational programs. In conclusion, there is a need to reduce the gap of
+ignorance by carrying out training focused on AI, with the aim of students acquiring
+greater knowledge about the advantages that this technology can bring to their academic
+training. Likewise, it is recommended that teachers use, even in a limited way, tools based
+on Artificial Intelligence in their teaching process. This approach will contribute not only
+to expanding students' knowledge, but also to enriching the quality and effectiveness of
+the education provided.
+Keywords: Artificial Intelligence, Education, Sustainability.
+
+
+INTRODUCCIÓN
+La creciente intersección entre la inteligencia artificial (IA) y la educación para el
+desarrollo sostenible (EDS) representa un amplio campo de investigación y aplicación
+con el potencial de transformar la forma en que se abordan los desafíos cruciales que
+enfrenta el planeta (Gual, 2023) En un mundo cada vez más complejo, donde la
+sostenibilidad y la equidad son imperativos, la educación emerge como una poderosa
+herramienta para inculcar valores, inspirar acciones y preparar a las generaciones futuras
+para abordar problemas globales (Acosta Silva, 2022). En este sentido, estrategias como
+el aula invertida (AI) y el aprendizaje colaborativo (AC) surgen para mejorar hábitos de
+aprendizaje, pensamiento crítico y la colaboración en el intercambio de conocimiento de
+los estudiantes (Amresh et al., 2013).
+La IA, con su capacidad para procesar grandes cantidades de datos, aprender patrones
+complejos y tomar decisiones autónomas, se presenta como un aliado prometedor en el
+ámbito educativo (Bitencourt et al., 2022). La convergencia de la IA y la EDS abre un
+abanico de oportunidades para optimizar la enseñanza y el aprendizaje, personalizar la
+experiencia educativa y cultivar una conciencia sostenible desde una edad temprana
+(Ávila-Tomás et al., 2020). Tanto las universidades como los desarrolladores de
+tecnología buscan satisfacer necesidades académicas relacionadas con el proceso de
+enseñanza y aprendizaje. La AI se ha enfocado en el aprendizaje mixto, donde el
+estudiante alcanza sus propias bases a través del autoaprendizaje y en clase resuelve dudas
+con apoyo del profesor (Grover et al., 2014).
+
+
+                                                                             P á g i n a 98
+
+      MAGAZINE DE LAS CIENCIAS                                        e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+En esta introducción, se exploran las oportunidades y desafíos intrínsecos a la integración
+de la IA en la educación para el desarrollo sostenible (Castillejos López, 2022). A medida
+que se avanza hacia una era digital, (Gil-Vera & Quintero-López, 2021) señalan que es
+imperativo comprender cómo la IA puede ser una herramienta estratégica para amplificar
+los objetivos de la educación sostenible y, al mismo tiempo, abordar con agudeza los
+obstáculos éticos, técnicos y sociales que puedan surgir en este camino. El estudiante
+universitario, un aprendiz digital que navega por la red en busca de información para
+convertirla en un nuevo conocimiento, se encuentra con importantes desafíos al tratar de
+ubicar contenidos a través del caudal de información por el cual se desplazan grandes
+cantidades de datos (Stambuk-Castellano et al., 2022).
+La comprensión profunda de estas dinámicas requiere una revisión minuciosa de la
+literatura existente, destacando los avances significativos en la aplicación de la IA en
+entornos educativos y subrayando las preocupaciones éticas y sociales asociadas (Parra-
+Sánchez, 2022). A través de esta investigación, no solo se busca identificar las posibles
+relaciones beneficiosas entre la IA y la educación para el desarrollo sostenible, sino
+también examinar críticamente los riesgos y desafíos potenciales que podrían surgir en
+esta unión tecnológica-educativa. La implementación de tecnologías y técnicas
+computacionales de IA mejora el intercambio de un espacio real a uno virtual de forma
+natural, logrando adaptarse a las necesidades específicas de cada estudiante (Sánchez-
+Azqueta et al., 2019).
+El propósito de esta investigación es contribuir a la comprensión detallada de cómo la IA
+puede ser implementada efectivamente para fortalecer la educación sostenible y, al mismo
+tiempo, abordar los dilemas éticos y sociales que surgen en este contexto (Aparicio
+Gómez, 2023). Para Arabit-García et al., (2021) a medida que se avanza hacia un futuro
+donde la tecnología desempeñará un papel central en la educación, es crucial abordar
+estas cuestiones con previsión y responsabilidad, garantizando que la integración de la IA
+en la educación contribuya de manera positiva al desarrollo sostenible global. Además,
+se busca identificar el papel de la IA como apoyo para el aprendizaje (Hidalgo Suárez et
+al., 2021).
+
+
+METODOLOGÍA
+Este estudio utilizó un enfoque de investigación cuantitativa, con el propósito de obtener
+una comprensión detallada de la relación entre la IA y la educación para el desarrollo
+sostenible. La elección de este diseño de investigación posibilita una exploración
+
+                                                                             P á g i n a 99
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+minuciosa de las prácticas existentes, las percepciones de los principales actores y el
+análisis de datos para evaluar de manera precisa el impacto de la IA en este ámbito. El
+objetivo del estudio consistió en analizar y valorar las percepciones de los estudiantes
+universitarios en relación con el uso, potencialidades y desafíos inherentes al empleo de
+la IA en su formación y en el proceso de enseñanza. Para alcanzar dicho propósito, se
+adoptó un enfoque cuantitativo mediante un diseño no experimental descriptivo a través
+de una encuesta.
+Participantes
+La población objeto de estudio en esta investigación consistió en la totalidad de
+estudiantes matriculados en una institución de educación superior específica. La razón
+para seleccionar esta población radica en identificar de manera general cuales son los
+desafíos que afronta la integración de herramientas de IA en el proceso de enseñanza-
+aprendizaje en esta institución. Se anticipaba que cada individuo seleccionado aportaría
+perspectivas diversas acerca de la influencia de la IA en la educación para el desarrollo
+sostenible. Dada la naturaleza y el tamaño de la población, se optó por un enfoque de
+muestreo aleatorio simple con el fin de obtener una muestra representativa. El cálculo de
+la muestra fue de 264 individuos repartidos de manera aleatoria entre las distintas carreras
+la institución educativa.
+Instrumentos
+Como medio para recopilar información y evaluar el nivel de utilidad de la IA en la
+educación superior, se diseñó un cuestionario compuesto por 25 ítems en una escala
+Likert, que va desde 1 (totalmente en desacuerdo) hasta 5 (totalmente de acuerdo). Este
+cuestionario fue tomado de un trabajo anterior (Ayuso-Del Puerto & Gutiérrez-Esteban,
+2022). La confiabilidad del instrumento se evaluó mediante el cálculo del coeficiente alfa
+de Cronbach para todos los ítems del cuestionario. La consistencia final obtenida resultó
+satisfactoria, alcanzando un valor de 0.930.
+Este valor supera el umbral mínimo aceptable según las pautas establecidas por Castro
+(2020), quien indican que un coeficiente alfa de Cronbach igual o superior a 0,70 refleja
+una consistencia adecuada, mientras que valores por debajo indicarían una consistencia
+baja. Es relevante destacar que, según Terrones Rodríguez (2022) el valor máximo
+esperado para el coeficiente alfa de Cronbach es 0,90, y valores por encima de este umbral
+sugieren redundancia o duplicación en los ítems del cuestionario. Para llevar a cabo el
+análisis cuantitativo de los datos recopilados, se realizaron cálculos de estadísticos
+descriptivos utilizando el programa SPSS.
+
+                                                                            P á g i n a 100
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+RESULTADOS
+A partir de los datos recopilados en relación con la pregunta sobre si los estudiantes están
+familiarizados con el potencial educativo de la IA para abordar el aprendizaje de
+contenidos didácticos y el desarrollo de las competencias clave, se observa que el 55% de
+los encuestados indica no tener conocimiento al respecto, mientras que el 45% restante
+afirma tener un entendimiento de las capacidades de la IA en el ámbito educativo. En
+cuanto a la pregunta sobre la participación en proyectos de IA solo un 11% asegura haber
+participado, mientras que el 89% restante señala no conocer ni haber participado en
+proyectos de este tipo.
+Se destaca que para el 57,20% de los estudiantes encuestados, el uso de la IA se percibe
+como sencillo y claro. Asimismo, el 45,45% considera que la creación de proyectos
+relacionados con esta temática es fácil. Por tanto, el 54,92% opina que utilizar la IA para
+el aprendizaje es una idea positiva, ya que hace que el proceso sea más interesante
+(57,20%) y divertido (57,95%). En línea con esto, al 54,92% de los estudiantes les
+gustaría que se empleara la IA como herramienta de estudio, ya que facilitaría la
+comprensión de ciertos conceptos (60,98%) y mejorarían su rendimiento en ciertas
+asignaturas (56,44%).
+En cuanto a los recursos necesarios para desarrollar proyectos de IA en su futura labor,
+solo el 37,88% se muestra optimista al respecto. Por otro lado, en relación con la
+posibilidad de desarrollar proyectos de IA con ayuda, el 59,09% afirma que esto sería
+posible, aunque solo el 35,23% considera que podrían hacerlo sin ayuda. Además, el
+46,97% señala que podrían llevar a cabo estos proyectos si cuentan con el tiempo
+suficiente, ya que disfrutarían haciéndolo (40,91%) y les proporcionaría una sensación de
+satisfacción y logro (54,55%). En consecuencia, a la mitad de los encuestados (48,86%)
+les gustaría profundizar en este tema.
+Contrariamente, el 37,88% se siente inseguro al utilizar herramientas para la creación de
+proyectos de IA ya que, de alguna manera, les resultan intimidantes (35,23%). Sin
+embargo, para el 55,30% de los estudiantes, completar con éxito lecciones de IA sería
+importante, y el 58,9% desearía que los docentes utilicen IA en su formación. En este
+contexto, el 51,52% tiene la intención de utilizar una herramienta de creación de
+proyectos de IA. Esto puede deberse a que el 53,03% considera que la modalidad virtual
+de los seminarios facilita el aprendizaje de los contenidos y la abundancia de información
+hace difícil recordar todos los puntos importantes (49,62%).
+
+
+                                                                            P á g i n a 101
+
+      MAGAZINE DE LAS CIENCIAS                                           e-ISSN: 2528-8091
+                                                     Vol. 8, N° 4/Octubre – Diciembre 2023
+En relación con la utilidad de la IA para el aprendizaje, el 63,26% de los estudiantes, es
+decir, la mayoría, considera que es beneficiosa. Además, el 58,71% recomienda su uso
+no solo en el aprendizaje, sino también en la enseñanza. Por lo tanto, el 57,95% afirma
+que los proyectos de IA permiten a los alumnos adquirir conocimientos de manera más
+rápida. Ver gráfico 1.
+Gráfico 1.
+Resultados de la encuesta
+
+
+
+
+Fuente: Elaboración propia con ayuda del programa SPSS
+
+
+DISCUSIÓN
+Los resultados de este estudio proporcionan una perspectiva detallada sobre los factores
+que implica la integración de la IA en el contexto de una institución de educación
+superior. La convergencia de estas áreas representa una oportunidad significativa para
+afrontar los desafíos contemporáneos de la institución y contribuir a la educación para el
+desarrollo sostenible. Cabe destacar que diversos estudios previos han explorado la
+integración de la IA en la educación, considerando especialmente su impacto desde una
+perspectiva sostenible.
+Por ejemplo, según las conclusiones de Amresh et al., (2013) uno de los principales
+beneficios observados es la capacidad de la IA para personalizar el proceso de
+aprendizaje. Esto se alinea con la literatura que destaca Sánchez-Azqueta et al., (2019), y
+
+
+                                                                            P á g i n a 102
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+sugiere que la individualización del aprendizaje puede mejorar significativamente la
+retención de conocimientos y la participación del estudiante. Gil-Vera & Quintero-López
+(2021) proponen que la automatización de procesos educativos como una estrategia
+efectiva para reducir los costes de profesorado, al tiempo que mantienen un nivel óptimo
+de atención educativa personalizada en cualquier momento y lugar. Este enfoque no solo
+optimiza recursos, sino que también se alinea con la demanda de flexibilidad y
+adaptabilidad en la educación contemporánea (Barrios-Tao et al., 2021).
+Los resultados de esta investigación se respaldan la noción de que la IA mejora la
+eficiencia y eficacia en la gestión educativa, como se ha señalado en Hidalgo et al.,
+(2021). Esto tiene implicaciones directas en la optimización de recursos y la mejora
+general de la calidad del sistema educativo. Asimismo, Stambuk-Castellano et al., (2022)
+complementan esta perspectiva al resaltar que la aplicación de la IA, especialmente a
+través de la asistencia automatizada con la colaboración de los propios estudiantes, puede
+facilitar su aprendizaje. Según Chacón et al., (2018) la disponibilidad inmediata de
+mecanismos de apoyo cuando se necesitan, crea un entorno propicio para el desarrollo
+académico.
+La aplicación de proyectos relacionados con la IA, aunque demanda recursos, no puede
+pasarse por alto, por lo que Bonilla et al. (2023) subrayan que estos proyectos no solo
+contribuyen al aprendizaje del alumnado, sino que también enriquecen los métodos de
+enseñanza de los docentes, quienes desempeñan un papel crucial en las actividades
+educativas y deben ser prioritarios en los procesos de desarrollo profesional,
+especialmente en el contexto de la educación para el desarrollo sostenible. En este sentido,
+Rieckmann (2022) destaca en su estudio la importancia de integrar la IA en la educación
+como un medio para acelerar la obtención de un sistema educativo igualitario y abierto.
+La flexibilidad inherente a la IA facilita la personalización del aprendizaje, teniendo en
+cuenta las características individuales de los estudiantes y el acceso a los recursos
+disponibles.
+El impacto de la IA en la educación se ha traducido en cambios significativos, abarcando
+desde el aprendizaje global hasta el desarrollo de contenido adaptativo, Bitencourt et al.,
+(2022) señalan cómo la IA ha mejorado eficiencia y eficacia en la gestión educativa,
+permitiendo una mayor personalización de la experiencia de aprendizaje. Silva-
+Hernández & Prats, (2022) afirman que la capacidad de la IA para desarrollar contenido
+adaptativo ha sido identificada como una oportunidad significativa. Esto se traduce en
+
+
+                                                                            P á g i n a 103
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+impacto en la adaptabilidad del contenido, lo cual es esencial para abordar las diversas
+necesidades de los estudiantes en un entorno educativo diverso (Gual, 2023).
+A pesar de las oportunidades identificadas, los resultados también subrayan una brecha
+de conocimiento significativa entre los estudiantes sobre las potencialidades reales de la
+IA en la educación (Arana, 2021). Esto coincide con estudios anteriores que señala Acosta
+(2022), donde destaca la necesidad urgente de iniciativas educativas para cerrar esta
+brecha. Castillejos López (2022) sugieren que la IA no solo debe cambiar la forma de
+enseñar, sino ser incorporada como una herramienta para los estudiantes. Esto no solo
+promovería la comprensión de las ventajas y potencialidades de la IA, sino también
+proporcionaría nociones de programación que respalden su ejercicio profesional futuro
+(Mendizábal & Escalante, 2021).
+Por otra parte, la integración de la IA en la educación puede presentar también desafíos
+éticos, como se ha señalado en Stambuk-Castellano et al., (2022). La preocupación por
+aspectos éticos identificados, como el plagio, por ejemplo, debe ser abordado de manera
+proactiva para garantizar un despliegue ético y equitativo de la IA en el ámbito educativo.
+No obstante, Ávila-Tomás et al., (2020) destacan la capacidad de la IA para ser un
+compañero y soporte tanto dentro como fuera del aula, eliminando barreras y fomentando
+la independencia de los estudiantes en el desarrollo de proyectos de IA.
+La resistencia a la adopción de tecnologías emergentes, incluida la IA, por parte de
+algunos docentes puede impactar la implementación exitosa. Estos hallazgos coinciden
+con investigaciones previas como la de Eaton et al., (2018), estudio en el cual enfatizan
+la necesidad de estrategias para fomentar la aceptación y la capacitación docente. Por lo
+tanto, la integración efectiva de la IA en la educación tiene profundas implicaciones en la
+educación para el desarrollo sostenible. Al aprovechar las oportunidades identificadas y
+abordar los desafíos observados, se puede contribuir significativamente a las metas
+específicas de desarrollo sostenible como la educación de calidad (Clifford & Zaman,
+2016).
+Limitaciones del estudio
+Es imperativo reconocer las limitaciones inherentes a este estudio, como la naturaleza
+auto informada de las respuestas de los estudiantes y la cuestión de la representatividad
+de la muestra. Además, dado que la investigación se centró exclusivamente en una
+institución específica, los hallazgos obtenidos no pueden generalizarse. Por ende, se
+sugiere que futuras investigaciones amplíen la muestra, incorporando diversas
+instituciones universitarias para obtener una perspectiva más completa. En conjunto, esta
+
+                                                                           P á g i n a 104
+
+     MAGAZINE DE LAS CIENCIAS                                         e-ISSN: 2528-8091
+                                                  Vol. 8, N° 4/Octubre – Diciembre 2023
+discusión arroja luz sobre la dinámica compleja entre la IA y la educación para el
+desarrollo sostenible, destacando tanto las oportunidades prometedoras como los desafíos
+cruciales que deben abordarse para lograr una implementación exitosa y equitativa en el
+ámbito educativo. A pesar de estas limitaciones, el presente estudio ofrece una visión
+integral de la relación entre la IA y la sostenibilidad en el contexto de una institución de
+educación superior.
+
+
+CONCLUSIONES
+Este estudio ha proporcionado una comprensión más profunda de las percepciones de los
+estudiantes de la carrera de administración en una institución de educación superior con
+respecto al uso, las ventajas y los desafíos de la IA en la educación para el desarrollo
+sostenible. Los resultados clave destacan que más del 50% de los estudiantes no están
+familiarizados con el potencial didáctico de la IA para abordar el aprendizaje. Para
+abordar esta brecha de conocimiento, resulta esencial implementar charlas,
+capacitaciones y otras iniciativas para dotar a los estudiantes del conocimiento necesario
+sobre las ventajas que implica el uso de la inteligencia artificial en su formación
+académica.
+Considerando esto, se observa que la mayoría de estos estudiantes no ha participado en
+proyectos de IA. Sin embargo, para este grupo, aprender sobre esta temática no es una
+tarea difícil, ya que la encuentran interesante y hasta divertida. Por lo tanto, consideran
+que, si los profesores incorporaran la IA como herramienta de enseñanza, esto facilitaría
+su comprensión en ciertas asignaturas. Es relevante mencionar que la mayoría de los
+estudiantes carece de los recursos necesarios para involucrarse en proyectos de IA y solo
+podrían lograrlo con asistencia.
+Todo lo anterior genera inseguridad en los estudiantes, llegando incluso a sentirse
+intimidados de alguna manera. No obstante, consideran importante completar lecciones
+sobre IA de manera exitosa, aunque les resulte complicado recordar toda la información
+debido a la cantidad. Estas experiencias alimentan el interés de los estudiantes por
+aprender más sobre esta temática, sin importar si requieren orientación o si carecen de los
+recursos necesarios. Por esto, aunque los estudiantes reconocieron las oportunidades de
+la integración de la IA, también identificaron desafíos, como la falta de conocimiento
+sobre las potencialidades de la IA en el contexto educativo.
+La percepción de los estudiantes sobre la IA en su formación es significativa, ya que, no
+solo afecta la forma en que aprenden, sino que también influye en la metodología de
+
+                                                                            P á g i n a 105
+
+      MAGAZINE DE LAS CIENCIAS                                          e-ISSN: 2528-8091
+                                                    Vol. 8, N° 4/Octubre – Diciembre 2023
+enseñanza proporcionada por los docentes. Además, creen que el uso de IA para mejorar
+su aprendizaje contribuye a la adquisición de conocimientos de manera más rápida y
+dinámica. Por lo tanto, es esencial que los docentes implementen herramientas de
+enseñanza basadas en IA, incluso si es de manera ocasional. Estas conclusiones
+proporcionan una visión integral de las percepciones de los estudiantes sobre la
+integración de la IA en la EDS. Las recomendaciones derivadas apuntan hacia la
+importancia de la educación continua y la adaptación de las prácticas educativas para
+maximizar los beneficios de la IA en el contexto educativo y promover la sostenibilidad.
+
+
+BIBLIOGRAFÍA:
+Acosta Silva, A. (2022). Gobernanza como nueva forma de gobernar: contextos y giros
+     conceptuales              en              la               (pp.                422–441).
+     https://www.researchgate.net/publication/361677194_Gobernanza_como_nueva_fo
+     rma_de_gobernar_contextos_y_giros_conceptuales_en_la
+Amresh, A., Carberry, A. R., & Femiani, J. (2013). Evaluating the effectiveness of flipped
+     classrooms for teaching CS1. 2013 IEEE Frontiers in Education Conference (FIE),
+     733–735. https://doi.org/10.1109/FIE.2013.6684923
+Aparicio Gómez, W. (2023). La Inteligencia Artificial y su Incidencia en la Educación:
+     Transformando el Aprendizaje para el Siglo XXI. Revista Internacional de
+     Pedagogía         e          Innovación          Educativa,         3,         217–229.
+     https://doi.org/10.51660/ripie.v3i2.133
+Arabit-García, J., García-Tudela, P. A., & Prendes-Espinosa, M. P. (2021). Uso de
+     tecnologías avanzadas para la educación científica. Revista Iberoamericana de
+     Educación, 87(1), 173–194. https://doi.org/10.35362/rie8714591
+Arana, C. (2021). Inteligencia Artificial Aplicada a la Educación: Logros, Tendencias y
+     Perspectivas. INNOVA UNTREF. Revista Argentina de Ciencia y Tecnología, 1(7).
+     https://revistas.untref.edu.ar/index.php/innova/article/view/1107
+Ávila-Tomás, J., Mayer, M. A., & Quesada Varela, V. J. (2020). La inteligencia artificial
+     y sus aplicaciones en medicina I: introducción antecedentes a la IA y robótica.
+     Atención Primaria, 52. https://doi.org/10.1016/j.aprim.2020.04.013
+Ayuso-Del Puerto, D., & Gutiérrez-Esteban, P. (2022). La Inteligencia Artificial como
+     recurso educativo durante la formación inicial del profesorado. RIED-Revista
+     Iberoamericana          de         Educación           a          Distancia,         25.
+     https://doi.org/10.5944/ried.25.2.32332
+
+                                                                              P á g i n a 106
+
+      MAGAZINE DE LAS CIENCIAS                                             e-ISSN: 2528-8091
+                                                       Vol. 8, N° 4/Octubre – Diciembre 2023
+Barrios-Tao, H., Díaz, V., & Guerra, Y. M. (2021). Propósitos de la educación frente a
+     desarrollos       de   inteligencia    artificial.   Cadernos     de     Pesquisa,   51.
+     https://doi.org/10.1590/198053147767
+Bitencourt, W. A., Silva, D. M., & Xavier, G. do C. (2022). Pode a inteligência artificial
+     apoiar ações contra evasão escolar universitária? Ensaio: Avaliação e Políticas
+     Públicas Em Educação, 30. https://doi.org/10.1590/S0104-403620220003002854
+Bonilla Jurado, D. M., Zambrano Pintado, R. N., & Moncayo Cueva, H. L. (2023).
+     Desarrollo profesional continuo de docentes para actividades en los Institutos
+     Tecnológicos: una revisión literaria. Revista Científica UISRAEL, 10(1), 27–39.
+     https://doi.org/10.35290/rcui.v10n1.2023.647
+Castillejos López, B. (2022). Inteligencia artificial y entornos personales de aprendizaje:
+     atentos al uso adecuado de los recursos tecnológicos de los estudiantes universitarios.
+     Educación, 31, 9–24. http://dx.doi.org/10.18800/educacion.202201.001
+Castro, N. (2020). Metodologías de investigación educativa (descriptivas, experimentales,
+     participativas,        y    de        investigación-ación-acción).       4,    163–173.
+     https://doi.org/10.26820/recimundo/4.(3).julio.2020.163-173
+Chacón, J., Marín Suelves, D., Saiz, J., & Blanco, D. (2018). Competencia digital en los
+     planes de estudios de universidades públicas españolas. REDU. Revista de Docencia
+     Universitaria, 16, 175. https://doi.org/10.4995/redu.2018.8935
+Clifford, K. L., & Zaman, M. H. (2016). Engineering, global health, and inclusive
+     innovation: focus on partnership, system strengthening, and local impact for SDGs.
+     Global Health Action, 9(1), 30175. https://doi.org/10.3402/gha.v9.30175
+Eaton, E., Koenig, S., Schulz, C., Maurelli, F., Lee, J., Eckroth, J., Crowley, M.,
+     Freedman, R. G., Cardona-Rivera, R. E., Machado, T., & Williams, T. (2018). Blue
+     Sky Ideas in Artificial Intelligence Education from the EAAI 2017 New and Future
+     AI       Educator          Program.          AI        Matters,        3(4),      23–31.
+     https://doi.org/10.1145/3175502.3175509
+Gil-Vera, V. D., & Quintero-López, C. (2021). Predicción del rendimiento académico
+     estudiantil con redes neuronales artificiales. Información Tecnológica, 32, 221–228.
+     http://dx.doi.org/10.4067/S0718-07642021000600221
+Grover, S., Pea, R., & Cooper, S. (2014). Promoting Active Learning & Leveraging
+     Dashboards for Curriculum Assessment in an OpenEdX Introductory CS Course for
+     Middle School. Proceedings of the First ACM Conference on Learning @ Scale
+     Conference, 205–206. https://doi.org/10.1145/2556325.2567883
+
+                                                                               P á g i n a 107
+
+      MAGAZINE DE LAS CIENCIAS                                           e-ISSN: 2528-8091
+                                                     Vol. 8, N° 4/Octubre – Diciembre 2023
+Gual, A. (2023). La inteligencia artificial y la educación médica (I): la revolución
+    profesional. FEM: Revista de La Fundación Educación Médica, 26, 43–47.
+    https://dx.doi.org/10.33588/fem.262.1271
+Hidalgo Suárez, C. G., Llanos Mosquera, J. M., & Bucheli Guerrero, V. A. (2021). Una
+    revisión sistemática sobre aula invertida y aprendizaje colaborativo apoyados en
+    inteligencia artificial para el aprendizaje de programación. Tecnura, 25(69), 196–
+    214. https://www.redalyc.org/articulo.oa?id=257070003009
+Mendizábal, G., & Escalante Ferrer, A. (2021). El reto de la educación 4.0: competencias
+    laborales para el trabajo emergente por la covid-19. RICSH Revista Iberoamericana
+    de      Las     Ciencias     Sociales        y      Humanísticas,    10,     261–283.
+    https://doi.org/10.23913/ricsh.v10i19.242
+Parra-Sánchez, J. S. (2022). Potencialidades de la Inteligencia Artificial en Educación
+    Superior: Un Enfoque desde la Personalización. Revista Docentes 2.0, 14(1), 19–27.
+    https://doi.org/10.37843/rted.v14i1.296
+Rieckmann, M. (2022). La formación de competencias clave para el desarrollo
+    sustentable             en              la              educación            superior.
+    https://www.researchgate.net/publication/360427024_La_formacion_de_competenc
+    ias_clave_para_el_desarrollo_sustentable_en_la_educacion_superior
+Sánchez-Azqueta, C., Celma, S., Aldea, C., Gimeno, C., & Cascarosa, E. (2019). ICT-
+    Based Didactic Strategies to Build Knowledge Models in Electronics in Higher
+    Education. 2019 IEEE International Symposium on Circuits and Systems (ISCAS),
+    1–5. https://doi.org/10.1109/ISCAS.2019.8702527
+Silva-Hernández, F., & Prats, G. (2022). Aportes de ingeniería en inteligencia artificial
+    aplicada en la educación. 3C TIC: Cuadernos de Desarrollo Aplicados a Las TIC,
+    11, 133–143. https://doi.org/10.17993/3ctic.2022.111.133-143
+Stambuk-Castellano, M., Contreras-McKay, I., Neyem, A., Inzunza, O., Ottone, N. E., &
+    del Sol, M. (2022). Plataforma de Software Educativa Gamificada: Experiencia con
+    Estudiantes de Anatomía de la Universidad de La Frontera. International Journal of
+    Morphology, 40, 297–303. http://dx.doi.org/10.4067/S0717-95022022000200297
+Terrones Rodríguez, A. L. (2022). Inteligencia artificial sostenible y evaluación ética
+    constructiva. Isegoría, 67, e10. https://doi.org/10.3989/isegoria.2022.67.10
+
+
+
+
+                                                                            P á g i n a 108

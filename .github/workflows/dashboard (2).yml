@@ -1,6 +1,19 @@
 name: Generar Dashboard
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'generate_research_library.py'
+      - 'generate_corpus_text_files.py'
+      - 'inject_library_link.py'
+      - 'inject_library_ocr.py'
+      - 'inject_library_pdf_viewer.py'
+      - 'inject_drive_manifest.py'
+      - 'inject_universal_reader.py'
+      - 'inject_apa7_metadata.py'
+      - 'data/drive_manifest.csv'
+      - '.github/workflows/dashboard (2).yml'
   workflow_run:
     workflows: ["Análisis STM – Dirección Escolar"]
     types: [completed]
@@ -13,7 +26,7 @@ permissions:
 
 jobs:
   dashboard:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -37,6 +50,14 @@ jobs:
         run: |
           python generate_dashboard.py
           python generate_article_table.py
+          python generate_research_library.py
+          python generate_corpus_text_files.py
+          python inject_drive_manifest.py
+          python inject_library_ocr.py
+          python inject_library_pdf_viewer.py
+          python inject_universal_reader.py
+          python inject_apa7_metadata.py
+          python inject_library_link.py
 
       - name: Check dashboard and STM files
         run: python dashboard_healthcheck.py
@@ -45,11 +66,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/articulos.html docs/fulltext_search_index.js data/dashboard_healthcheck.json
+          git add docs/index.html docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json
           if git diff --cached --quiet; then
             echo "Sin cambios."
           else
-            git commit -m "Actualiza dashboard – $(date +'%Y-%m-%d')"
+            git commit -m "Actualiza dashboard y biblioteca – $(date +'%Y-%m-%d')"
             git pull --rebase origin main
             git push
           fi
