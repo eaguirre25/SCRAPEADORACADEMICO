@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notebook Académico IA - 2.124 Obras Sin Límite</title>
+<title>Notebook Académico IA - 2.124 Obras Sin Límite (Google Gemini)</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root {
@@ -84,7 +84,7 @@
 <header>
   <div class="brand-title">
     📓 <span>NOTEBOOK ACADÉMICO IA (2.124 FUENTES)</span>
-    <span class="brand-badge">Sin límite de 300</span>
+    <span class="brand-badge">Motor Google Gemini 3.6</span>
   </div>
   <nav>
     <a href="index.html">📊 Dashboard</a>
@@ -96,21 +96,17 @@
 <div class="notebook-container">
   <div class="sidebar">
     <div class="sidebar-section">
-      <h3>🔑 Conectar IA Real (Gemini o Groq)</h3>
+      <h3>🔑 Conexión IA Real (Google Gemini)</h3>
       
       <div class="form-group">
-        <label>Pegar Clave de API (Gemini o Groq):</label>
-        <input type="password" id="apiKeyInput" placeholder="Pegá tu clave AIzaSy... o gsk_... aquí">
+        <label>Clave de API de Gemini:</label>
+        <input type="password" id="apiKeyInput" placeholder="Pegá tu clave de Gemini aquí">
         <button type="button" id="saveKeyBtn" style="padding:8px;background:#059669;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.82rem;margin-top:4px">💾 Conectar y Guardar Clave</button>
       </div>
 
       <div class="key-helper" id="keyHelperBox">
-        <b>¿Cómo obtener tu clave gratuita?</b>
-        <ol>
-          <li><b>Google Gemini (Oficial):</b> Entrá a <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a> y tocá <i>Create API key</i> (copiá la que empieza con <code>AIzaSy...</code>).</li>
-          <li><b>Groq Llama 3.3:</b> Entrá a <a href="https://console.groq.com/keys" target="_blank">Groq Keys</a> y tocá <i>Create API Key</i> (empieza con <code>gsk_...</code>).</li>
-        </ol>
-        <i>Son 100% gratuitas y no requieren tarjeta de crédito.</i>
+        <b>✓ Google Gemini 3.6 Flash Activo</b><br>
+        Tu clave se guarda en tu navegador y conecta en vivo con los servidores de Google Gemini para leer el texto completo de tus 2.124 obras sin límite de fuentes.
       </div>
     </div>
 
@@ -135,14 +131,14 @@
       <div class="msg assistant">
         <div class="notebook-response">
           <h3>📘 Notebook Académico sobre tus 2.124 Obras</h3>
-          <p>Este cuaderno supera el límite de 300 fuentes de NotebookLM permitiéndote consultar sobre tus <b>2.124 materiales simultáneamente</b>.</p>
-          <p>Al hacer una pregunta, el sistema busca los pasajes más relevantes en el texto completo de tus 2.124 obras, y la IA redacta una <b>respuesta académica fluida, profunda y literal</b> con <b>citas interactivas <span class="cite-badge">[1]</span>, <span class="cite-badge">[2]</span></b> enlazadas a los fragmentos exactos.</p>
+          <p>Este cuaderno supera el límite de 300 fuentes de NotebookLM permitiéndote consultar sobre tus <b>2.124 materiales simultáneamente</b> con la inteligencia artificial de <b>Google Gemini</b>.</p>
+          <p>Al hacer una pregunta, el sistema extrae los pasajes más relevantes de tus 2.124 obras y <b>Google Gemini redacta una respuesta académica viva, profunda, fluida y literal</b> con <b>citas interactivas <span class="cite-badge">[1]</span>, <span class="cite-badge">[2]</span></b> enlazadas a los fragmentos exactos.</p>
         </div>
       </div>
     </div>
 
     <div class="chat-input-bar">
-      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto o autor (ej: Qué se entiende por gubernamentalidad en la gestión escolar)..."></textarea>
+      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto o autor (ej: A qué se llama políticas públicas en educación)..."></textarea>
       <button id="sendBtn" type="button">Preguntar</button>
     </div>
   </div>
@@ -168,19 +164,9 @@ function updateStatusUI(key) {
     tag.style.color = '#94a3b8';
     return;
   }
-  if (key.startsWith('AIzaSy')) {
-    tag.textContent = '🟢 Google Gemini 1.5 Conectado (2.124 Obras)';
-    tag.style.background = '#065f46';
-    tag.style.color = '#6ee7b7';
-  } else if (key.startsWith('gsk_')) {
-    tag.textContent = '🟢 Groq Llama 3.3 Conectado (2.124 Obras)';
-    tag.style.background = '#1d4ed8';
-    tag.style.color = '#bfdbfe';
-  } else {
-    tag.textContent = '🟢 IA Conectada';
-    tag.style.background = '#065f46';
-    tag.style.color = '#6ee7b7';
-  }
+  tag.textContent = '🟢 Google Gemini 3.6 Conectado (2.124 Obras)';
+  tag.style.background = '#065f46';
+  tag.style.color = '#6ee7b7';
 }
 
 const savedKey = localStorage.getItem('user_ai_api_key_v1') || '';
@@ -194,7 +180,7 @@ document.getElementById('saveKeyBtn').onclick = () => {
   localStorage.setItem('user_ai_api_key_v1', k);
   updateStatusUI(k);
   if(k) {
-    alert('✓ Clave guardada exitosamente. Ahora la IA real redactará tus respuestas en vivo.');
+    alert('✓ Clave guardada exitosamente. Ahora Google Gemini 3.6 redactará tus respuestas en vivo sobre tus 2.124 obras.');
   } else {
     alert('Clave eliminada.');
   }
@@ -280,7 +266,7 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Consultando el corpus de 2.124 obras...</h3><p>Buscando pasajes literales y generando respuesta...</p></div>`;
+  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Google Gemini 3.6 procesando tus 2.124 obras...</h3><p>Recuperando pasajes literales y generando síntesis académica profunda...</p></div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
@@ -333,18 +319,21 @@ async function sendMessage() {
 
   let llmText = "";
 
-  const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje Extraído: "${m.bestP}"`).join('\n\n');
+  const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje Sustantivo Extraído: "${m.bestP}"`).join('\n\n');
 
-  const sysPrompt = `Sos un asistente académico avanzado estilo NotebookLM (Gemini). El usuario pregunta: "${text}".\n\nAnalizá atentamente estos textos extraídos de su biblioteca de 2.124 obras:\n\n${contextStr}\n\nINSTRUCCIONES OBLIGATORIAS:\n1. Redactá una respuesta extensa, profunda, fluida y literal en español (3-5 párrafos) respondiendo con rigor conceptual.\n2. Incluí citas en formato [1], [2], [3] vinculadas exactamente a las fuentes donde se basa cada afirmación.\n3. Explicá cómo aborda el tema cada autor en sus propias palabras.`;
+  const sysPrompt = `Sos un experto asistente académico estilo NotebookLM (Gemini). El usuario pregunta: "${text}".\n\nAnalizá atentamente estos textos extraídos de su biblioteca de 2.124 obras de investigación educativa:\n\n${contextStr}\n\nINSTRUCCIONES OBLIGATORIAS:\n1. Redactá una respuesta académica extensa, profunda, fluida y literal en español (3-5 párrafos) desarrollando con total rigor el concepto.\n2. Incluí citas en formato [1], [2], [3] vinculadas exactamente a las fuentes donde se sustenta cada afirmación o cita.\n3. Hacé dialogar los hallazgos y argumentos de los distintos autores del corpus.`;
 
-  // 1. Detección automática: Si empieza con AIzaSy... es Google Gemini
-  if (apiKey && apiKey.startsWith('AIzaSy')) {
+  // LLAMADA EN VIVO A GOOGLE GEMINI 3.6 FLASH CON X-GOOG-API-KEY
+  if (apiKey) {
     try {
-      container.innerHTML = '<h3>✨ Generando respuesta en vivo con Google Gemini 1.5 Flash...</h3><p>Leyendo y sintetizando pasajes de tus 2.124 obras...</p>';
-      const gUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+      container.innerHTML = '<h3>✨ Google Gemini 3.6 Flash generando síntesis en vivo...</h3><p>Leyendo pasajes sustantivos de tus 2.124 obras...</p>';
+      const gUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent';
       const res = await fetch(gUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'x-goog-api-key': apiKey
+        },
         body: JSON.stringify({
           contents: [{ parts: [{ text: sysPrompt }] }]
         })
@@ -352,34 +341,24 @@ async function sendMessage() {
       if (res.ok) {
         const d = await res.json();
         llmText = d.candidates?.[0]?.content?.parts?.[0]?.text;
+      } else {
+        console.warn('Gemini 3.6 response not ok:', res.status);
       }
-    } catch(e) { console.warn('Gemini error:', e); }
-  }
-  // 2. Detección automática: Si empieza con gsk_... es Groq Llama 3.3
-  else if (apiKey && apiKey.startsWith('gsk_')) {
-    try {
-      container.innerHTML = '<h3>⚡ Generando respuesta en vivo con Llama 3.3 70B (Groq)...</h3>';
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: 'llama-3.3-70b-versatile', messages: [{ role: 'user', content: sysPrompt }] })
-      });
-      if (res.ok) { const d = await res.json(); llmText = d.choices?.[0]?.message?.content; }
-    } catch(e) { console.warn('Groq error:', e); }
+    } catch(e) { console.warn('Gemini fetch error:', e); }
   }
 
-  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Académica Integrada</h3>`;
+  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Académica con Google Gemini</h3>`;
 
   if (llmText) {
     const cleanLlm = llmText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
     let formattedText = cleanLlm.replace(/\[(\d+)\]/g, '<a href="#src-$1" class="cite-badge">[$1]</a>');
     finalHTML += `<div style="line-height:1.85">${formattedText.replace(/\n\n/g, '</p><p>')}</div>`;
   } else {
-    // Si no tiene Key guardada, avisar con el botón
+    // Si no hay respuesta viva de la API, mostrar aviso
     finalHTML += `
       <div style="background:#1e1b4b;border:1px solid #4338ca;padding:14px 18px;border-radius:8px;margin-bottom:16px;font-size:0.9rem">
-        💡 <b>Para activar Google Gemini o Llama 3.3 en vivo sobre tus 2.124 obras:</b><br>
-        Pegá tu clave gratuita de <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:#38bdf8;text-decoration:underline">Google AI Studio (empieza con AIzaSy...)</a> o <a href="https://console.groq.com/keys" target="_blank" style="color:#38bdf8;text-decoration:underline">Groq (empieza con gsk_...)</a> en el panel izquierdo y hacé clic en <b>Guardar Clave</b>.
+        💡 <b>Para activar Google Gemini en vivo:</b><br>
+        Pegá tu clave de Google Gemini en el panel izquierdo y hacé clic en <b>💾 Conectar y Guardar Clave</b>.
       </div>
     `;
 
