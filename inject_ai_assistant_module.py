@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta el Asistente IA Bibliográfico repensado con modelos GRATUITOS de máxima potencia (DeepSeek-R1, Llama 3.3 70B, Qwen 2.5 y Gemini) en docs/biblioteca.html."""
+"""Inyecta el Asistente IA Bibliográfico repensado con modelos GRATUITOS de máxima potencia (DeepSeek-R1 Local Ollama, DeepSeek-R1 OpenRouter, Llama 3.3 70B, Qwen 2.5 y Gemini) en docs/biblioteca.html."""
 from pathlib import Path
 
 p = Path('docs/biblioteca.html')
@@ -97,8 +97,8 @@ js = r'''
     aiPane.innerHTML = `
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:10px">
         <div>
-          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Multimodelo Gratuitos: DeepSeek-R1 · Llama 3.3 70B · Qwen 2.5</h2>
-          <div style="font-size:0.82rem;color:#8b949e">Elegí la IA de mayor potencia para analizar los <b>2.124 materiales en texto completo</b>, extraer citas literales y generar referencias APA 7.</div>
+          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Multimodelo: DeepSeek-R1 (Local / Cloud) · Llama 3.3 70B · Qwen 2.5</h2>
+          <div style="font-size:0.82rem;color:#8b949e">Analiza las <b>2.124 obras en texto completo</b>, extrae citas literales y genera referencias APA 7 usando modelos de pensamiento de alta potencia.</div>
         </div>
         <button id="closeAiPaneBtn" type="button" style="padding:4px 12px;background:#21262d;border:1px solid #30363d;color:#fff;cursor:pointer">✕ Cerrar</button>
       </div>
@@ -119,17 +119,18 @@ js = r'''
 
       <div id="aiConfigBox" style="font-size:0.78rem;color:#c9d1d9;margin-bottom:14px;background:#0d1117;padding:10px 14px;border-radius:6px;border:1px solid #30363d;display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <label><b>Seleccionar Modelo IA Potente:</b></label>
+          <label><b>Seleccionar Modelo IA:</b></label>
           <select id="aiProviderSelect" style="padding:5px 10px;background:#161b22;color:#fff;font-weight:700;border:1px solid #8957e5">
-            <option value="deepseek">🧠 DeepSeek-R1 (Razonamiento Crítico Gratuito - OpenRouter / Groq / Local)</option>
-            <option value="llama3">⚡ Llama 3.3 70B (Meta AI - Ultra Rápido y Potente - Groq / OpenRouter)</option>
-            <option value="qwen">🌐 Qwen 2.5 72B (Alibaba - RAG Multidocumento Avanzado)</option>
+            <option value="deepseek_local">🧠 DeepSeek-R1 Local (Ollama instalado en tu PC - 100% Gratis sin Internet)</option>
+            <option value="deepseek">🧠 DeepSeek-R1 Cloud (Razonamiento Crítico - OpenRouter Gratis)</option>
+            <option value="llama3">⚡ Llama 3.3 70B (Meta AI - Ultra Rápido - OpenRouter / Groq)</option>
+            <option value="qwen">🌐 Qwen 2.5 72B (Alibaba - RAG Multidocumento)</option>
             <option value="gemini">✨ Google Gemini 1.5 Flash</option>
           </select>
         </div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <label><b>Clave de API (Groq, OpenRouter o Gemini):</b></label>
-          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter (gratis), Groq (gratis) o Gemini aquí" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
+          <label><b>Clave de API (OpenRouter / Groq / Gemini):</b></label>
+          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter, Groq o Gemini aquí (opcional para DeepSeek Local)" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
           <button type="button" id="saveApiKeyBtn" style="padding:4px 10px;font-size:0.78rem;background:#238636;border-color:#238636;color:#fff">Guardar Clave</button>
           <a href="https://openrouter.ai/keys" target="_blank" style="color:#79c0ff;font-size:0.75rem;text-decoration:underline">Obtener Key gratis en OpenRouter</a>
         </div>
@@ -150,7 +151,7 @@ js = r'''
 
     main.parentNode.insertBefore(aiPane, main.nextSibling);
 
-    const savedProvider = localStorage.getItem('ai_provider_v2') || 'deepseek';
+    const savedProvider = localStorage.getItem('ai_provider_v2') || 'deepseek_local';
     const savedKey = localStorage.getItem('qwen_api_key_v1') || '';
     document.getElementById('aiProviderSelect').value = savedProvider;
     document.getElementById('qwenApiKeyInput').value = savedKey;
@@ -201,7 +202,7 @@ js = r'''
     container.style.display = 'block';
 
     const provider = document.getElementById('aiProviderSelect').value;
-    const modelName = provider === 'deepseek' ? 'DeepSeek-R1' : (provider === 'llama3' ? 'Llama 3.3 70B' : (provider === 'qwen' ? 'Qwen 2.5 72B' : 'Gemini 1.5 Flash'));
+    const modelName = provider === 'deepseek_local' ? 'DeepSeek-R1 (Local)' : (provider === 'deepseek' ? 'DeepSeek-R1' : (provider === 'llama3' ? 'Llama 3.3 70B' : (provider === 'qwen' ? 'Qwen 2.5 72B' : 'Gemini 1.5 Flash')));
 
     bodyEl.textContent = `⚡ Consultando el texto completo de las 2.124 obras e invocando a ${modelName}...`;
     sourcesEl.innerHTML = '';
@@ -268,15 +269,32 @@ js = r'''
 
       const systemPrompt = `Sos un riguroso asistente bibliográfico universitario. El usuario consulta: "${rawPrompt}".\n\nTu tarea es responder ÚNICAMENTE basándote en el conocimiento acumulado de las siguientes fuentes de su corpus:\n\n${contextStr}\n\nREGLAS DE RESPUESTA:\n1. Respondé a la pregunta en español basándote ESTRICTAMENTE en la información de estas fuentes.\n2. Si el usuario pide una cita o frase literal, extraé la frase exacta entre comillas e indicá el autor y título.\n3. Sintetizá los conceptos explicando qué dice cada autor.\n4. No inventes nada fuera de estas fuentes.`;
 
-      // 1. DeepSeek-R1 (OpenRouter Free / Groq / Open API)
-      if (provider === 'deepseek') {
-        bodyEl.textContent = '🧠 Invocando al modelo de pensamiento profundo DeepSeek-R1...';
+      // 0. DeepSeek-R1 Local (Ollama en tu máquina)
+      if (provider === 'deepseek_local') {
+        bodyEl.textContent = '🧠 Invocando a DeepSeek-R1 corriendo localmente en Ollama...';
         try {
-          const ep = apiKey ? 'https://openrouter.ai/api/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions';
+          const res = await fetch('http://localhost:11434/v1/chat/completions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              model: 'deepseek-r1:1.5b',
+              messages: [{ role: 'user', content: systemPrompt }]
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            aiResponseText = data.choices?.[0]?.message?.content;
+          }
+        } catch (e) { console.warn('DeepSeek-R1 local error:', e); }
+      }
+      // 1. DeepSeek-R1 Cloud (OpenRouter)
+      else if (provider === 'deepseek') {
+        bodyEl.textContent = '🧠 Invocando al modelo de pensamiento profundo DeepSeek-R1 en la nube...';
+        try {
           const headers = { 'Content-Type': 'application/json' };
           if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
 
-          const res = await fetch(ep, {
+          const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
             headers: headers,
             body: JSON.stringify({
@@ -350,7 +368,6 @@ js = r'''
     }
 
     if (aiResponseText) {
-      // Limpiar etiquetas de pensamiento de DeepSeek-R1 (<think>...</think>) si existen
       let cleanReply = aiResponseText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
       bodyEl.textContent = cleanReply || aiResponseText;
     } else {
@@ -435,4 +452,4 @@ js = r'''
 if 'window.__aiAssistantModuleInstalled' not in html:
     html = html.replace('</body>', js + '\n</body>')
 p.write_text(html, encoding='utf-8')
-print('Modelos gratuitos de máxima potencia (DeepSeek-R1, Llama 3.3 70B, Qwen 2.5) inyectados con éxito.')
+print('Modelo DeepSeek-R1 local en Ollama y Cloud configurados con éxito.')
