@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Actualiza docs/asistente_ia.html para entregar síntesis conceptuales profundas, completas y concretas basadas en los párrafos de texto completo del corpus."""
+"""Actualiza docs/asistente_ia.html para dar soporte directo al Servidor RAG Local http://127.0.0.1:8000 y Groq API."""
 from pathlib import Path
 
 p = Path('docs/asistente_ia.html')
@@ -100,12 +100,12 @@ html_content = r'''<!DOCTYPE html>
     <h3>⚙️ Configuración de IA</h3>
     
     <div class="form-group">
-      <label>Modelo / Motor Conversacional:</label>
+      <label>Modelo / Conexión IA:</label>
       <select id="modelSelect">
-        <option value="rag_internal" selected>⚡ Motor RAG de Texto Completo (Garantizado sin fallos)</option>
+        <option value="rag_local_server" selected>⚡ Servidor RAG Local (http://127.0.0.1:8000 - Qwen 2.5 7B / DeepSeek-R1)</option>
         <option value="groq_cloud">⚡ Groq Cloud (Llama 3.3 70B / DeepSeek R1 - Gratis con Key)</option>
-        <option value="qwen7b_local">🌐 Qwen 2.5 7B Local (Ollama qwen2.5:7b)</option>
         <option value="openrouter_cloud">🌐 OpenRouter Cloud (DeepSeek-R1 / Qwen 2.5 72B)</option>
+        <option value="rag_internal">⚡ Motor RAG de Texto Completo en Cliente (Directo)</option>
       </select>
     </div>
 
@@ -136,7 +136,7 @@ html_content = r'''<!DOCTYPE html>
   <div class="chat-area">
     <div class="chat-header">
       <h2>💬 Chat Conversacional IA sobre tus 2.124 Fuentes</h2>
-      <span class="status-badge">● IA Conectada a 2.124 Obras</span>
+      <span class="status-badge" id="connBadge">● IA Conectada a 2.124 Obras</span>
     </div>
 
     <div class="messages-box" id="messagesBox">
@@ -236,7 +236,7 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="msg-bubble">🤖 Analizando el texto completo de las 2.124 obras y generando síntesis académica profunda estilo NotebookLM...</div>`;
+  aiDiv.innerHTML = `<div class="msg-bubble">🤖 Analizando el texto completo de las 2.124 obras y generando respuesta académica estructurada...</div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
@@ -289,8 +289,21 @@ async function sendMessage() {
 
   let llmOutput = "";
 
-  // 1. Si el usuario ingresó Groq API Key
-  if (model === 'groq_cloud' && apiKey) {
+  // 1. Intentar Servidor RAG Local (http://127.0.0.1:8000)
+  if (model === 'rag_local_server') {
+    try {
+      bubble.textContent = '⚡ Consultando Servidor RAG Local (Qwen 2.5 7B / DeepSeek-R1)...';
+      const res = await fetch('http://127.0.0.1:8000/v1/chat/completions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'qwen2.5:7b', messages: [{ role: 'user', content: text }] })
+      });
+      if (res.ok) { const d = await res.json(); llmOutput = d.choices?.[0]?.message?.content; }
+    } catch(e) { console.warn('Servidor RAG Local no activo:', e); }
+  }
+
+  // 2. Si el usuario ingresó Groq API Key
+  else if (model === 'groq_cloud' && apiKey) {
     try {
       bubble.textContent = '⚡ Consultando a Llama 3.3 70B en Groq Cloud ultra-rápido...';
       const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Título: ${m.doc.title} | Autores: ${m.doc.authors} | Párrafo: ${m.bestP}`).join('\n\n');
@@ -305,23 +318,6 @@ async function sendMessage() {
     } catch(e) { console.warn('Groq error:', e); }
   }
 
-  // 2. Si el usuario seleccionó Ollama Local
-  else if (model === 'qwen7b_local' || model === 'deepseek_r1_local') {
-    const localModel = model === 'qwen7b_local' ? 'qwen2.5:7b' : 'deepseek-r1:1.5b';
-    try {
-      bubble.textContent = `⚡ Consultando modelo local ${localModel} en Ollama...`;
-      const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Título: ${m.doc.title} | Autores: ${m.doc.authors} | Párrafo: ${m.bestP}`).join('\n\n');
-      const sysPrompt = `Explicá conversacionalmente en español la pregunta: "${text}" basándote en estas fuentes:\n${contextStr}`;
-      
-      const res = await fetch('http://localhost:11434/v1/chat/completions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: localModel, messages: [{ role: 'user', content: sysPrompt }] })
-      });
-      if (res.ok) { const d = await res.json(); llmOutput = d.choices?.[0]?.message?.content; }
-    } catch(e) { console.warn('Ollama local error:', e); }
-  }
-
   // Generación de Síntesis Académica Profunda y Específica
   const conceptTerm = queryTokens.length > 0 ? queryTokens.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : text;
 
@@ -333,7 +329,6 @@ async function sendMessage() {
     // Generar definición profunda fundada explícitamente en el contenido de los párrafos del corpus
     mainConceptualText = `<p>El concepto de <b>${esc(conceptTerm)}</b> se articula en tu corpus de investigación como un eje estructurante para examinar las transformaciones de las políticas públicas, la gestión institucional y la producción de subjetividades en el ámbito educativo.</p>`;
     
-    // Si la consulta es sobre gubernamentalidad
     if (cleanPrompt.includes('gubernamentalidad') || cleanPrompt.includes('foucault') || cleanPrompt.includes('gobierno')) {
       mainConceptualText += `<p>Desde el marco conceptual de la <b>gubernamentalidad neoliberal</b> (articulado en la obra de Foucault y desarrollado por las investigaciones de tu corpus), la noción remite a la trama compleja de instituciones, procedimientos, análisis, reflexiones, cálculos y tácticas que permiten ejercer una forma específica de poder sobre las poblaciones. En el contexto educativo latinoamericano, esta racionalidad política produce renovadas formas de privatización, mercantilización e imposición de lógicas empresariales en la administración de las escuelas públicas.</p>`;
       mainConceptualText += `<p>Asimismo, la gubernamentalidad opera mediante la reorganización de las relaciones de trabajo y la configuración de <b>tecnologías de auto-regulación y gobierno de sí</b>, en donde directivos, docentes y estudiantes son interpelados como sujetos autónomos, emprendedores y responsables del desempeño institucional.</p>`;
@@ -445,4 +440,4 @@ document.getElementById('promptInput').onkeydown = (e) => {
 '''
 
 p.write_text(html_content, encoding='utf-8')
-print('docs/asistente_ia.html actualizado con definiciones profundas e integración de párrafos extracted.')
+print('docs/asistente_ia.html actualizado con servidor RAG local y Groq API por defecto.')
