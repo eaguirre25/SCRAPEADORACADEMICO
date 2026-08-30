@@ -32,8 +32,10 @@
   .form-group select, .form-group input{background:#0b0f19;border:1px solid var(--border-light);color:#fff;padding:8px 12px;border-radius:8px;font-size:0.83rem}
   .form-group select:focus, .form-group input:focus{outline:none;border-color:var(--accent)}
 
-  .key-helper{background:#1e1b4b;border:1px solid #4338ca;border-radius:8px;padding:10px 12px;font-size:0.78rem;color:#c7d2fe;line-height:1.45}
+  .key-helper{background:#1e1b4b;border:1px solid #4338ca;border-radius:8px;padding:12px;font-size:0.8rem;color:#c7d2fe;line-height:1.5}
   .key-helper a{color:#38bdf8;font-weight:700;text-decoration:underline}
+  .key-helper ol{margin:6px 0 6px 18px}
+  .key-helper li{margin-bottom:4px}
 
   .source-stat-pill{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#cbd5e1;display:flex;flex-direction:column;gap:4px}
   .source-stat-pill b{color:#38bdf8}
@@ -42,7 +44,7 @@
   .chat-area{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
   .chat-header{padding:14px 20px;border-bottom:1px solid var(--border);background:#0f172a;display:flex;justify-content:space-between;align-items:center}
   .chat-header h2{font-size:1rem;color:#fff;font-weight:700;display:flex;align-items:center;gap:8px}
-  .status-tag{font-size:0.72rem;background:#065f46;color:#6ee7b7;padding:3px 10px;border-radius:20px;font-weight:700}
+  .status-tag{font-size:0.75rem;background:#1e293b;color:#94a3b8;padding:4px 12px;border-radius:20px;font-weight:700;border:1px solid #334155}
 
   .messages-box{flex:1;overflow-y:auto;padding:24px;display:flex;flex-direction:column;gap:24px}
   
@@ -94,32 +96,26 @@
 <div class="notebook-container">
   <div class="sidebar">
     <div class="sidebar-section">
-      <h3>⚙️ Proveedor de IA Real</h3>
+      <h3>🔑 Conectar IA Real (Gemini o Groq)</h3>
+      
       <div class="form-group">
-        <label>Motor de Inteligencia Artificial:</label>
-        <select id="modelSelect">
-          <option value="gemini_flash" selected>✨ Google Gemini 1.5 Flash (Gratuito - Super Contexto)</option>
-          <option value="groq_llama">⚡ Meta Llama 3.3 70B (Groq Cloud - Ultra Rápido)</option>
-          <option value="rag_internal">⚡ Motor Interno de Respaldo</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Clave de API (Gemini o Groq):</label>
-        <input type="password" id="apiKeyInput" placeholder="Pegá tu clave de Gemini o Groq aquí">
-        <button type="button" id="saveKeyBtn" style="padding:7px;background:#059669;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.8rem;margin-top:4px">💾 Guardar Clave de API</button>
+        <label>Pegar Clave de API (Gemini o Groq):</label>
+        <input type="password" id="apiKeyInput" placeholder="Pegá tu clave AIzaSy... o gsk_... aquí">
+        <button type="button" id="saveKeyBtn" style="padding:8px;background:#059669;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.82rem;margin-top:4px">💾 Conectar y Guardar Clave</button>
       </div>
 
       <div class="key-helper" id="keyHelperBox">
-        <b>¿Cómo obtener tu clave 100% gratis en 10 segundos?</b><br>
-        • Para <b>Gemini</b>: Entrá a <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a> y tocá <i>Create API Key</i>.<br>
-        • Para <b>Groq</b>: Entrá a <a href="https://console.groq.com/keys" target="_blank">Groq Console</a> y creá tu Key.<br>
-        <i>(No requiere tarjeta de crédito ni pagos).</i>
+        <b>¿Cómo obtener tu clave gratuita?</b>
+        <ol>
+          <li><b>Google Gemini (Oficial):</b> Entrá a <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a> y tocá <i>Create API key</i> (copiá la que empieza con <code>AIzaSy...</code>).</li>
+          <li><b>Groq Llama 3.3:</b> Entrá a <a href="https://console.groq.com/keys" target="_blank">Groq Keys</a> y tocá <i>Create API Key</i> (empieza con <code>gsk_...</code>).</li>
+        </ol>
+        <i>Son 100% gratuitas y no requieren tarjeta de crédito.</i>
       </div>
     </div>
 
     <div class="sidebar-section">
-      <h3>📊 Base de Conocimiento Total</h3>
+      <h3>📊 Base de Conocimiento Conectada</h3>
       <div class="source-stat-pill">
         <div>📚 <b>2.087</b> Artículos Scrapeados de Revistas</div>
         <div>📖 <b>37</b> Libros y Textos Teóricos (Drive)</div>
@@ -132,7 +128,7 @@
   <div class="chat-area">
     <div class="chat-header">
       <h2>💬 Cuaderno de Consulta Académica</h2>
-      <span class="status-tag" id="statusTag">● 2.124 Obras Conectadas</span>
+      <span class="status-tag" id="statusTag">● Esperando Clave de IA</span>
     </div>
 
     <div class="messages-box" id="messagesBox">
@@ -164,22 +160,41 @@ async function initKB() {
 }
 initKB();
 
+function updateStatusUI(key) {
+  const tag = document.getElementById('statusTag');
+  if (!key) {
+    tag.textContent = '● Modo Respaldo (Sin Key)';
+    tag.style.background = '#1e293b';
+    tag.style.color = '#94a3b8';
+    return;
+  }
+  if (key.startsWith('AIzaSy')) {
+    tag.textContent = '🟢 Google Gemini 1.5 Conectado (2.124 Obras)';
+    tag.style.background = '#065f46';
+    tag.style.color = '#6ee7b7';
+  } else if (key.startsWith('gsk_')) {
+    tag.textContent = '🟢 Groq Llama 3.3 Conectado (2.124 Obras)';
+    tag.style.background = '#1d4ed8';
+    tag.style.color = '#bfdbfe';
+  } else {
+    tag.textContent = '🟢 IA Conectada';
+    tag.style.background = '#065f46';
+    tag.style.color = '#6ee7b7';
+  }
+}
+
 const savedKey = localStorage.getItem('user_ai_api_key_v1') || '';
 if(savedKey) {
   document.getElementById('apiKeyInput').value = savedKey;
-  document.getElementById('statusTag').textContent = '● IA Real Conectada (Key Activa)';
-  document.getElementById('statusTag').style.background = '#1d4ed8';
-  document.getElementById('statusTag').style.color = '#bfdbfe';
+  updateStatusUI(savedKey);
 }
 
 document.getElementById('saveKeyBtn').onclick = () => {
   const k = document.getElementById('apiKeyInput').value.trim();
   localStorage.setItem('user_ai_api_key_v1', k);
+  updateStatusUI(k);
   if(k) {
-    document.getElementById('statusTag').textContent = '● IA Real Conectada (Key Activa)';
-    document.getElementById('statusTag').style.background = '#1d4ed8';
-    document.getElementById('statusTag').style.color = '#bfdbfe';
-    alert('✓ Clave de API guardada exitosamente. Ahora la IA real redactará tus respuestas.');
+    alert('✓ Clave guardada exitosamente. Ahora la IA real redactará tus respuestas en vivo.');
   } else {
     alert('Clave eliminada.');
   }
@@ -265,12 +280,11 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Consultando el corpus de 2.124 obras...</h3><p>Buscando pasajes literales y generando respuesta con IA real...</p></div>`;
+  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Consultando el corpus de 2.124 obras...</h3><p>Buscando pasajes literales y generando respuesta...</p></div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
   const container = aiDiv.querySelector('.notebook-response');
-  const model = document.getElementById('modelSelect').value;
   const apiKey = localStorage.getItem('user_ai_api_key_v1') || document.getElementById('apiKeyInput').value.trim();
 
   let items = KB;
@@ -323,10 +337,10 @@ async function sendMessage() {
 
   const sysPrompt = `Sos un asistente académico avanzado estilo NotebookLM (Gemini). El usuario pregunta: "${text}".\n\nAnalizá atentamente estos textos extraídos de su biblioteca de 2.124 obras:\n\n${contextStr}\n\nINSTRUCCIONES OBLIGATORIAS:\n1. Redactá una respuesta extensa, profunda, fluida y literal en español (3-5 párrafos) respondiendo con rigor conceptual.\n2. Incluí citas en formato [1], [2], [3] vinculadas exactamente a las fuentes donde se basa cada afirmación.\n3. Explicá cómo aborda el tema cada autor en sus propias palabras.`;
 
-  // 1. Google Gemini 1.5 Flash (Gratuito en AI Studio)
-  if (model === 'gemini_flash' && apiKey) {
+  // 1. Detección automática: Si empieza con AIzaSy... es Google Gemini
+  if (apiKey && apiKey.startsWith('AIzaSy')) {
     try {
-      container.innerHTML = '<h3>✨ Generando respuesta en vivo con Google Gemini 1.5 Flash...</h3><p>Leyendo pasajes de tus 2.124 obras...</p>';
+      container.innerHTML = '<h3>✨ Generando respuesta en vivo con Google Gemini 1.5 Flash...</h3><p>Leyendo y sintetizando pasajes de tus 2.124 obras...</p>';
       const gUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
       const res = await fetch(gUrl, {
         method: 'POST',
@@ -341,8 +355,8 @@ async function sendMessage() {
       }
     } catch(e) { console.warn('Gemini error:', e); }
   }
-  // 2. Groq Llama 3.3 70B
-  else if (model === 'groq_llama' && apiKey) {
+  // 2. Detección automática: Si empieza con gsk_... es Groq Llama 3.3
+  else if (apiKey && apiKey.startsWith('gsk_')) {
     try {
       container.innerHTML = '<h3>⚡ Generando respuesta en vivo con Llama 3.3 70B (Groq)...</h3>';
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -364,8 +378,8 @@ async function sendMessage() {
     // Si no tiene Key guardada, avisar con el botón
     finalHTML += `
       <div style="background:#1e1b4b;border:1px solid #4338ca;padding:14px 18px;border-radius:8px;margin-bottom:16px;font-size:0.9rem">
-        💡 <b>Para que Gemini 1.5 o Llama 3.3 redacten respuestas en vivo y sin límites:</b><br>
-        Pegá tu clave gratuita de <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:#38bdf8;text-decoration:underline">Google AI Studio</a> o <a href="https://console.groq.com/keys" target="_blank" style="color:#38bdf8;text-decoration:underline">Groq</a> en el panel izquierdo y hacé clic en <b>Guardar Clave</b>.
+        💡 <b>Para activar Google Gemini o Llama 3.3 en vivo sobre tus 2.124 obras:</b><br>
+        Pegá tu clave gratuita de <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:#38bdf8;text-decoration:underline">Google AI Studio (empieza con AIzaSy...)</a> o <a href="https://console.groq.com/keys" target="_blank" style="color:#38bdf8;text-decoration:underline">Groq (empieza con gsk_...)</a> en el panel izquierdo y hacé clic en <b>Guardar Clave</b>.
       </div>
     `;
 
