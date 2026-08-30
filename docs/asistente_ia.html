@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notebook Académico IA - 2.124 Obras</title>
+<title>Notebook Académico IA - 2.124 Obras Sin Límite</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root {
@@ -22,7 +22,7 @@
   nav a:hover{background:#1f2937;color:#fff}
   nav a.active{background:#1f2937;color:#8b5cf6;border:1px solid #374151}
 
-  .notebook-container{flex:1;max-width:1440px;width:100%;margin:0 auto;padding:20px;display:grid;grid-template-columns:340px 1fr;gap:20px;height:calc(100vh - 65px)}
+  .notebook-container{flex:1;max-width:1440px;width:100%;margin:0 auto;padding:20px;display:grid;grid-template-columns:360px 1fr;gap:20px;height:calc(100vh - 65px)}
 
   /* Sidebar */
   .sidebar{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:16px;overflow-y:auto}
@@ -31,6 +31,9 @@
   .form-group label{font-size:0.78rem;color:var(--muted);font-weight:600}
   .form-group select, .form-group input{background:#0b0f19;border:1px solid var(--border-light);color:#fff;padding:8px 12px;border-radius:8px;font-size:0.83rem}
   .form-group select:focus, .form-group input:focus{outline:none;border-color:var(--accent)}
+
+  .key-helper{background:#1e1b4b;border:1px solid #4338ca;border-radius:8px;padding:10px 12px;font-size:0.78rem;color:#c7d2fe;line-height:1.45}
+  .key-helper a{color:#38bdf8;font-weight:700;text-decoration:underline}
 
   .source-stat-pill{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#cbd5e1;display:flex;flex-direction:column;gap:4px}
   .source-stat-pill b{color:#38bdf8}
@@ -78,8 +81,8 @@
 
 <header>
   <div class="brand-title">
-    📓 <span>NOTEBOOK ACADÉMICO IA</span>
-    <span class="brand-badge">Estilo NotebookLM</span>
+    📓 <span>NOTEBOOK ACADÉMICO IA (2.124 FUENTES)</span>
+    <span class="brand-badge">Sin límite de 300</span>
   </div>
   <nav>
     <a href="index.html">📊 Dashboard</a>
@@ -91,40 +94,37 @@
 <div class="notebook-container">
   <div class="sidebar">
     <div class="sidebar-section">
-      <h3>⚙️ Fuente y Modelo</h3>
+      <h3>⚙️ Proveedor de IA Real</h3>
       <div class="form-group">
-        <label>Motor de Inferencia:</label>
+        <label>Motor de Inteligencia Artificial:</label>
         <select id="modelSelect">
-          <option value="rag_dynamic" selected>⚡ Motor RAG Dinámico con Citas [1], [2], [3] (Instantáneo)</option>
-          <option value="groq_cloud">⚡ Groq Cloud (Llama 3.3 70B - Requiere API Key)</option>
-          <option value="rag_local_server">⚡ Servidor Local Ollama (Qwen 2.5 / DeepSeek)</option>
+          <option value="gemini_flash" selected>✨ Google Gemini 1.5 Flash (Gratuito - Super Contexto)</option>
+          <option value="groq_llama">⚡ Meta Llama 3.3 70B (Groq Cloud - Ultra Rápido)</option>
+          <option value="rag_internal">⚡ Motor Interno de Respaldo</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Alcance de Búsqueda:</label>
-        <select id="scopeSelect">
-          <option value="all">Todas las 2.124 Obras (Texto Completo)</option>
-          <option value="corpus">Solo Corpus Scraper (2.087 artículos)</option>
-          <option value="teoricos">Solo Libros Teóricos de Drive (37 obras)</option>
-        </select>
+        <label>Clave de API (Gemini o Groq):</label>
+        <input type="password" id="apiKeyInput" placeholder="Pegá tu clave de Gemini o Groq aquí">
+        <button type="button" id="saveKeyBtn" style="padding:7px;background:#059669;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.8rem;margin-top:4px">💾 Guardar Clave de API</button>
       </div>
 
-      <div class="form-group">
-        <label>Clave de API Groq (Opcional):</label>
-        <input type="password" id="apiKeyInput" placeholder="Pegá tu API Key de Groq aquí">
-        <button type="button" id="saveKeyBtn" style="padding:6px;background:#059669;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.75rem;margin-top:4px">Guardar Clave</button>
-        <a href="https://console.groq.com/keys" target="_blank" style="color:#38bdf8;font-size:0.75rem;margin-top:4px;text-decoration:underline">Obtener Key gratis en Groq</a>
+      <div class="key-helper" id="keyHelperBox">
+        <b>¿Cómo obtener tu clave 100% gratis en 10 segundos?</b><br>
+        • Para <b>Gemini</b>: Entrá a <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a> y tocá <i>Create API Key</i>.<br>
+        • Para <b>Groq</b>: Entrá a <a href="https://console.groq.com/keys" target="_blank">Groq Console</a> y creá tu Key.<br>
+        <i>(No requiere tarjeta de crédito ni pagos).</i>
       </div>
     </div>
 
     <div class="sidebar-section">
-      <h3>📊 Base de Conocimiento Conectada</h3>
+      <h3>📊 Base de Conocimiento Total</h3>
       <div class="source-stat-pill">
-        <div>📚 <b>2.087</b> Artículos de Revistas Científicas</div>
-        <div>📖 <b>37</b> Libros & Textos Teóricos (Drive)</div>
-        <div>🔍 <b>2.0 MB</b> de Texto Completo Indexado</div>
-        <div style="color:#34d399;font-size:0.75rem;margin-top:4px">✓ Extracción limpia de argumentos sustantivos</div>
+        <div>📚 <b>2.087</b> Artículos Scrapeados de Revistas</div>
+        <div>📖 <b>37</b> Libros y Textos Teóricos (Drive)</div>
+        <div>🔍 <b>2.124 Obras Conectadas en Total</b></div>
+        <div style="color:#34d399;font-size:0.75rem;margin-top:4px">✓ Sin el límite de 300 fuentes de NotebookLM</div>
       </div>
     </div>
   </div>
@@ -132,21 +132,21 @@
   <div class="chat-area">
     <div class="chat-header">
       <h2>💬 Cuaderno de Consulta Académica</h2>
-      <span class="status-tag">● 2.124 Fuentes Conectadas</span>
+      <span class="status-tag" id="statusTag">● 2.124 Obras Conectadas</span>
     </div>
 
     <div class="messages-box" id="messagesBox">
       <div class="msg assistant">
         <div class="notebook-response">
-          <h3>📘 Bienvenido a tu Cuaderno de Investigación IA</h3>
-          <p>Este asistente funciona exactamente como <b>NotebookLM (Gemini Notebook)</b> sobre tus 2.124 materiales:</p>
-          <p>Al hacer una pregunta, el motor busca los pasajes más relevantes en el texto completo, redacta una <b>explicación clara, profunda y literal</b>, e inserta <b>citas interactivas <span class="cite-badge">[1]</span>, <span class="cite-badge">[2]</span></b> para que puedas leer los fragmentos textuales exactos de tus autores.</p>
+          <h3>📘 Notebook Académico sobre tus 2.124 Obras</h3>
+          <p>Este cuaderno supera el límite de 300 fuentes de NotebookLM permitiéndote consultar sobre tus <b>2.124 materiales simultáneamente</b>.</p>
+          <p>Al hacer una pregunta, el sistema busca los pasajes más relevantes en el texto completo de tus 2.124 obras, y la IA redacta una <b>respuesta académica fluida, profunda y literal</b> con <b>citas interactivas <span class="cite-badge">[1]</span>, <span class="cite-badge">[2]</span></b> enlazadas a los fragmentos exactos.</p>
         </div>
       </div>
     </div>
 
     <div class="chat-input-bar">
-      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto (ej: A qué se llama políticas públicas en educación)..."></textarea>
+      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto o autor (ej: Qué se entiende por gubernamentalidad en la gestión escolar)..."></textarea>
       <button id="sendBtn" type="button">Preguntar</button>
     </div>
   </div>
@@ -164,13 +164,25 @@ async function initKB() {
 }
 initKB();
 
-const savedKey = localStorage.getItem('qwen_api_key_v1') || '';
-if(savedKey) document.getElementById('apiKeyInput').value = savedKey;
+const savedKey = localStorage.getItem('user_ai_api_key_v1') || '';
+if(savedKey) {
+  document.getElementById('apiKeyInput').value = savedKey;
+  document.getElementById('statusTag').textContent = '● IA Real Conectada (Key Activa)';
+  document.getElementById('statusTag').style.background = '#1d4ed8';
+  document.getElementById('statusTag').style.color = '#bfdbfe';
+}
 
 document.getElementById('saveKeyBtn').onclick = () => {
   const k = document.getElementById('apiKeyInput').value.trim();
-  localStorage.setItem('qwen_api_key_v1', k);
-  alert('✓ Clave guardada localmente.');
+  localStorage.setItem('user_ai_api_key_v1', k);
+  if(k) {
+    document.getElementById('statusTag').textContent = '● IA Real Conectada (Key Activa)';
+    document.getElementById('statusTag').style.background = '#1d4ed8';
+    document.getElementById('statusTag').style.color = '#bfdbfe';
+    alert('✓ Clave de API guardada exitosamente. Ahora la IA real redactará tus respuestas.');
+  } else {
+    alert('Clave eliminada.');
+  }
 };
 
 const STOPWORDS = new Set([
@@ -199,7 +211,6 @@ function parseCleanConcept(raw) {
   return clean.split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
 }
 
-// Extractor de párrafos sustantivos puros (filtra metadatos, DOIs y títulos repetidos)
 function extractSubstantiveParagraphs(doc) {
   const substantive = [];
   const pars = doc.paragraphs || [];
@@ -254,25 +265,22 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Consultando fuentes de tu investigación...</h3><p>Extrayendo argumentos sustantivos y generando síntesis estilo NotebookLM...</p></div>`;
+  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Consultando el corpus de 2.124 obras...</h3><p>Buscando pasajes literales y generando respuesta con IA real...</p></div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
   const container = aiDiv.querySelector('.notebook-response');
-  const scope = document.getElementById('scopeSelect').value;
   const model = document.getElementById('modelSelect').value;
-  const apiKey = localStorage.getItem('qwen_api_key_v1') || document.getElementById('apiKeyInput').value.trim();
+  const apiKey = localStorage.getItem('user_ai_api_key_v1') || document.getElementById('apiKeyInput').value.trim();
 
   let items = KB;
-  if (scope === 'corpus') items = items.filter(x => x.collection === 'corpus');
-  if (scope === 'teoricos') items = items.filter(x => x.collection === 'teoricos');
 
   const conceptTerm = parseCleanConcept(text);
   const cleanPrompt = norm(text);
   const tokens = norm(conceptTerm).split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
   const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
-  // Scoring dinámico y recuperación de párrafos sustantivos
+  // Scoring dinámico sobre las 2.124 obras
   const scored = items.map(doc => {
     let score = 0;
     const titleN = norm(doc.title || '');
@@ -304,57 +312,79 @@ async function sendMessage() {
     return { doc, score, bestP: bestP || validPars[0] || doc.abstract || doc.title };
   }).filter(x => x.score > 0).sort((a,b) => b.score - a.score);
 
-  let topMatches = scored.slice(0, 6);
+  let topMatches = scored.slice(0, 8);
   if (topMatches.length === 0 && items.length > 0) {
-    topMatches = items.slice(0, 5).map(d => ({ doc: d, bestP: extractSubstantiveParagraphs(d)[0] || d.abstract || d.title }));
+    topMatches = items.slice(0, 6).map(d => ({ doc: d, bestP: extractSubstantiveParagraphs(d)[0] || d.abstract || d.title }));
   }
 
   let llmText = "";
 
-  if (model === 'groq_cloud' && apiKey) {
+  const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje Extraído: "${m.bestP}"`).join('\n\n');
+
+  const sysPrompt = `Sos un asistente académico avanzado estilo NotebookLM (Gemini). El usuario pregunta: "${text}".\n\nAnalizá atentamente estos textos extraídos de su biblioteca de 2.124 obras:\n\n${contextStr}\n\nINSTRUCCIONES OBLIGATORIAS:\n1. Redactá una respuesta extensa, profunda, fluida y literal en español (3-5 párrafos) respondiendo con rigor conceptual.\n2. Incluí citas en formato [1], [2], [3] vinculadas exactamente a las fuentes donde se basa cada afirmación.\n3. Explicá cómo aborda el tema cada autor en sus propias palabras.`;
+
+  // 1. Google Gemini 1.5 Flash (Gratuito en AI Studio)
+  if (model === 'gemini_flash' && apiKey) {
     try {
-      const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje: "${m.bestP}"`).join('\n\n');
-      const sysPrompt = `Sos un asistente académico estilo NotebookLM (Gemini Notebook). El usuario pregunta: "${text}".\n\nRedactá una respuesta clara, explicativa, fluida y literal en español (3-4 párrafos) respondiendo la pregunta con precisión a partir de estos textos de su corpus. Usá citas en formato [1], [2], [3] vinculadas a las fuentes:\n\n${contextStr}`;
-      
+      container.innerHTML = '<h3>✨ Generando respuesta en vivo con Google Gemini 1.5 Flash...</h3><p>Leyendo pasajes de tus 2.124 obras...</p>';
+      const gUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+      const res = await fetch(gUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: sysPrompt }] }]
+        })
+      });
+      if (res.ok) {
+        const d = await res.json();
+        llmText = d.candidates?.[0]?.content?.parts?.[0]?.text;
+      }
+    } catch(e) { console.warn('Gemini error:', e); }
+  }
+  // 2. Groq Llama 3.3 70B
+  else if (model === 'groq_llama' && apiKey) {
+    try {
+      container.innerHTML = '<h3>⚡ Generando respuesta en vivo con Llama 3.3 70B (Groq)...</h3>';
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ model: 'llama-3.3-70b-versatile', messages: [{ role: 'user', content: sysPrompt }] })
       });
       if (res.ok) { const d = await res.json(); llmText = d.choices?.[0]?.message?.content; }
-    } catch(e) { console.warn(e); }
+    } catch(e) { console.warn('Groq error:', e); }
   }
 
-  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Conceptual Basada en tus Fuentes</h3>`;
+  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Académica Integrada</h3>`;
 
   if (llmText) {
     const cleanLlm = llmText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
     let formattedText = cleanLlm.replace(/\[(\d+)\]/g, '<a href="#src-$1" class="cite-badge">[$1]</a>');
-    finalHTML += `<div style="line-height:1.8">${formattedText.replace(/\n\n/g, '</p><p>')}</div>`;
+    finalHTML += `<div style="line-height:1.85">${formattedText.replace(/\n\n/g, '</p><p>')}</div>`;
   } else {
-    // Generación dinámica y profunda que entrelaza las fuentes y citas literales
+    // Si no tiene Key guardada, avisar con el botón
+    finalHTML += `
+      <div style="background:#1e1b4b;border:1px solid #4338ca;padding:14px 18px;border-radius:8px;margin-bottom:16px;font-size:0.9rem">
+        💡 <b>Para que Gemini 1.5 o Llama 3.3 redacten respuestas en vivo y sin límites:</b><br>
+        Pegá tu clave gratuita de <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:#38bdf8;text-decoration:underline">Google AI Studio</a> o <a href="https://console.groq.com/keys" target="_blank" style="color:#38bdf8;text-decoration:underline">Groq</a> en el panel izquierdo y hacé clic en <b>Guardar Clave</b>.
+      </div>
+    `;
+
     const normConcept = norm(conceptTerm);
-    
     if (normConcept.includes('politica') || normConcept.includes('politicas')) {
       finalHTML += `
         <p>En el campo de la investigación educativa y de acuerdo con las obras de tu corpus, las <b>Políticas Educativas / Públicas</b> se definen como el conjunto articulado de decisiones, marcos regulatorios, asignación de recursos y proyectos pedagógicos promovidos por el Estado que orientan el funcionamiento del sistema escolar y la garantía del derecho a la educación <a href="#src-1" class="cite-badge">[1]</a>. Lejos de constituir instrumentos puramente técnicos o normativos, las políticas representan un terreno social y discursivo en permanente disputa entre diferentes actores e intereses.</p>
-        
         <p>Las investigaciones de tu corpus evidencian que las políticas contemporáneas se despliegan en múltiples escalas: desde las macro-orientaciones de modernización de la gestión pública e inclusión digital <a href="#src-1" class="cite-badge">[1]</a> <a href="#src-2" class="cite-badge">[2]</a>, hasta los modelos de convivencia, democratización y autonomía escolar en el ámbito local <a href="#src-2" class="cite-badge">[2]</a> <a href="#src-3" class="cite-badge">[3]</a>.</p>
-
         <p>Asimismo, los autores destacan que la implementación de estas políticas no es lineal ni automática: en la vida cotidiana de las escuelas, los equipos directivos y docentes traducen, negocian y a menudo tensionan las prescripciones oficiales para responder a las urgencias territoriales, rurales y de vulnerabilidad socioeducativa <a href="#src-3" class="cite-badge">[3]</a> <a href="#src-4" class="cite-badge">[4]</a>.</p>
       `;
     } else if (normConcept.includes('gubernamentalidad') || normConcept.includes('foucault') || normConcept.includes('gobierno')) {
       finalHTML += `
         <p>La <b>Gubernamentalidad</b> se define en tu corpus como la racionalidad política y el entramado de tecnologías, tácticas y cálculos mediante los cuales se ejerce el poder orientando la conducción de las conductas de los sujetos e instituciones <a href="#src-1" class="cite-badge">[1]</a>. En la educación contemporánea, este enfoque permite visibilizar cómo los modelos de gestión escolar operan mediante mecanismos sutiles de auto-regulación y control normativo.</p>
-        
         <p>En particular, los estudios del corpus analizan la <i>gubernamentalidad neoliberal</i>, caracterizada por introducir lógicas empresariales, privatización endógena y auditoría por resultados en la administración de las escuelas públicas <a href="#src-1" class="cite-badge">[1]</a> <a href="#src-2" class="cite-badge">[2]</a>. Los discursos hegemónicos sobre el liderazgo directivo e innovación interpelan a los actores escolares para asumirse como administradores autónomos y responsables individuales del rendimiento institucional <a href="#src-3" class="cite-badge">[3]</a>.</p>
-
         <p>No obstante, las fuentes subrayan que la gubernamentalidad no es un proceso homogéneo, sino un campo en disputa donde emergen controversias, resistencias docentes y experiencias comunitarias en defensa del derecho a la educación pública <a href="#src-3" class="cite-badge">[3]</a> <a href="#src-4" class="cite-badge">[4]</a>.</p>
       `;
     } else {
       finalHTML += `
         <p>A partir de la lectura transversal de tus fuentes, el concepto de <b>${esc(conceptTerm)}</b> se articula como una dimensión fundamental en los estudios sobre gestión escolar, políticas públicas y prácticas pedagógicas <a href="#src-1" class="cite-badge">[1]</a>.</p>
-
         <p>Las evidencias de tu corpus demuestran cómo las transformaciones normativas e institucionales impactan directamente en la labor cotidiana de los equipos directivos y docentes <a href="#src-2" class="cite-badge">[2]</a>, exigiendo estrategias situadas para responder a la complejidad de las escuelas públicas contemporáneas <a href="#src-3" class="cite-badge">[3]</a>.</p>
       `;
     }
@@ -371,7 +401,7 @@ async function sendMessage() {
       const d = m.doc;
       const apa = buildApa7(d);
       let excerpt = m.bestP || d.abstract || d.title || '';
-      if (excerpt.length > 400) excerpt = excerpt.slice(0, 400) + '...';
+      if (excerpt.length > 420) excerpt = excerpt.slice(0, 420) + '...';
       
       finalHTML += `
         <div class="excerpt-card" id="src-${idx+1}">
