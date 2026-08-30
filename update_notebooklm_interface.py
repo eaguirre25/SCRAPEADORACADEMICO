@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""Actualiza docs/asistente_ia.html con formateador estructurado tipo NotebookLM de alta precisión académica."""
+from pathlib import Path
+
+p = Path('docs/asistente_ia.html')
+
+html_content = r'''<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -427,3 +433,7 @@ document.getElementById('promptInput').onkeydown = (e) => {
 </script>
 </body>
 </html>
+'''
+
+p.write_text(html_content, encoding='utf-8')
+print('docs/asistente_ia.html actualizado con formato estructurado idéntico a NotebookLM.')
