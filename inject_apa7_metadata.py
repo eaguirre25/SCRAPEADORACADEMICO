@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta metadatos bibliográficos por tipo de obra y generador APA 7 editable."""
+"""Inyecta metadatos bibliográficos por tipo de obra, generador APA 7 editable, botón de copia 1-clic y tecla ESC / Volver a la lista."""
 from pathlib import Path
 
 p=Path('docs/biblioteca.html')
@@ -12,6 +12,19 @@ js=r'''
   if(window.__apa7MetadataInstalled) return;
   window.__apa7MetadataInstalled=true;
   const previousOpenReader=window.openReader || openReader;
+
+  // Atajo de teclado ESC para volver a la lista
+  document.addEventListener('keydown', function(evt){
+    if(evt.key === 'Escape'){
+      const reader = document.getElementById('reader');
+      const overlay = document.getElementById('reportOverlay');
+      if(overlay && overlay.classList.contains('open')){
+        closeReport();
+      } else if(reader && reader.classList.contains('open')){
+        closeReader();
+      }
+    }
+  });
 
   function q(sel, root=document){return root.querySelector(sel)}
   function qa(sel, root=document){return [...root.querySelectorAll(sel)]}
@@ -36,7 +49,6 @@ js=r'''
     const particles=new Set(['de','del','la','las','los','da','das','do','dos','di','van','von']);
     let start=Math.max(1,t.length-2);
     while(start>1 && particles.has(t[start-1].toLowerCase())) start--;
-    // Si el bloque final contiene partículas hispanas, incluir un apellido previo.
     if(start>1 && t.slice(start).some(x=>particles.has(x.toLowerCase()))) start--;
     const given=t.slice(0,start).join(' '), sur=t.slice(start).join(' ');
     return sur+', '+initials(given);
@@ -105,7 +117,7 @@ js=r'''
     return `<div class="form bib-extra"><label>${esc(label)}</label><textarea data-k="${esc(k)}" placeholder="${esc(placeholder)}" style="min-height:58px"></textarea></div>`;
   }
   function dynamicFields(type){
-    if(type==='article') return `<div class="g2">${row('Revista','revista')}${row('Volumen','volumen')}</div><div class="g2">${row('Número','numero')}${row('Páginas','paginas_biblio','23–41')}</div>`;
+    if(type==='article') return `<div class="g2">${row('Revista / Fuente','revista')}${row('Volumen','volumen')}</div><div class="g2">${row('Número','numero')}${row('Páginas','paginas_biblio','23–41')}</div>`;
     if(type==='thesis') return `<div class="g2">${row('Tipo de tesis','tipo_tesis','Tesis doctoral / Tesis de maestría')}${row('Institución','institucion')}</div><div class="g2">${row('Repositorio','repositorio')}${row('URL','url_biblio')}</div>`;
     if(type==='book') return `<div class="g2">${row('Editorial','editorial')}${row('Edición','edicion','2.ª ed.')}</div>${row('URL','url_biblio')}`;
     if(type==='chapter') return `${area('Editor/es del libro (formato APA)','editores','Apellido, N. N.; Apellido, N. N.')}${row('Título del libro','titulo_libro')}<div class="g2">${row('Páginas del capítulo','paginas_biblio','23–41')}${row('Editorial','editorial')}</div>${row('URL','url_biblio')}`;
@@ -115,7 +127,6 @@ js=r'''
   function install(a){
     const sheet=document.getElementById('sheet'); if(!sheet) return;
     const apa=field('apa'); if(!apa) return;
-    // Quitar una instalación anterior al reabrir/cambiar registro.
     qa('.apa7-added',sheet).forEach(x=>x.remove());
     const f=(typeof F!=='undefined' ? F[aid(a)] : null)||{};
     const wrap=document.createElement('div'); wrap.className='apa7-added';
@@ -124,11 +135,15 @@ js=r'''
       <div class="form"><label>Tipo de publicación</label><select data-k="tipo_publicacion" id="tipoPublicacionApa">
         <option value="article">Artículo de revista</option><option value="thesis">Tesis</option><option value="book">Libro</option><option value="chapter">Capítulo de libro</option><option value="report">Informe / documento</option>
       </select></div>
-      <div class="form"><label>Autores para APA 7 · uno por línea, en formato Apellido, Iniciales</label><textarea data-k="autores_apa" id="autoresApa7" style="min-height:68px"></textarea><div class="taghint">La propuesta automática puede corregirse manualmente; queda guardada para este registro.</div></div>
+      <div class="form"><label>Autores para APA 7 · uno por línea, en formato Apellido, N.</label><textarea data-k="autores_apa" id="autoresApa7" style="min-height:68px"></textarea><div class="taghint">La propuesta automática puede corregirse manualmente; queda guardada para este registro.</div></div>
       <div id="apaDynamicFields"></div>
-      <div style="display:flex;gap:7px;align-items:center;margin:-2px 0 10px"><button type="button" id="regenApa7">Regenerar APA 7</button><span class="meta">La referencia final sigue siendo editable.</span></div>`;
-    // Insertar antes del campo APA existente.
-    const apaForm=apa.closest('.form'); apaForm.parentNode.insertBefore(wrap,apaForm);
+      <div style="display:flex;gap:7px;align-items:center;margin:-2px 0 10px">
+        <button type="button" id="regenApa7" style="padding:5px 10px">Regenerar APA 7</button>
+        <button type="button" id="copyApa7Btn" style="padding:5px 10px;background:#1f6feb;border-color:#1f6feb;color:#fff;font-weight:700">📋 Copiar Cita APA 7</button>
+        <span class="meta" id="copyStatusMsg"></span>
+      </div>`;
+    
+    apa.closest('.form').parentNode.insertBefore(wrap,apa.closest('.form'));
     const type=q('#tipoPublicacionApa'); type.value=f.tipo_publicacion||'article';
     q('#autoresApa7').value=f.autores_apa||proposedAuthors(a.authors||val('autores'));
 
@@ -139,7 +154,6 @@ js=r'''
         if(f[e.dataset.k]!==undefined) e.value=f[e.dataset.k];
         else if(current[e.dataset.k]!==undefined) e.value=current[e.dataset.k];
       });
-      // Pre-carga desde metadatos conocidos.
       if(type.value==='article'){
         setv('revista', f.revista || a.journal || a.source || a.origin || '');
         setv('volumen', f.volumen || a.volume || ''); setv('numero', f.numero || a.issue || ''); setv('paginas_biblio', f.paginas_biblio || a.pages_biblio || '');
@@ -154,12 +168,24 @@ js=r'''
     }
     type.addEventListener('change',()=>{rebuild(); apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true}))});
     q('#regenApa7').onclick=()=>{apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true})); try{autosave()}catch(e){}};
+    
+    q('#copyApa7Btn').onclick=async()=>{
+      const textToCopy = apa.value || apa7();
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        q('#copyStatusMsg').textContent = '✓ ¡Cita copiada al portapapeles!';
+        q('#copyStatusMsg').style.color = '#7ee787';
+      } catch(err) {
+        q('#copyStatusMsg').textContent = 'Presioná Ctrl+C en el campo de texto.';
+      }
+      setTimeout(()=>{ q('#copyStatusMsg').textContent = ''; }, 3000);
+    };
+
     rebuild();
-    // Reemplazar la vieja cita preliminar por APA 7 si todavía no fue corregida manualmente.
     if(!f.apa || /Autor\/a|https:\/\/doi\.org|\(s\. f\.\)/.test(f.apa) || f.apa===apa.value){
       apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true}));
     }
-    const lab=apaForm.querySelector('label'); if(lab) lab.textContent='Referencia APA 7 (generada automáticamente y editable)';
+    const lab=apa.closest('.form').querySelector('label'); if(lab) lab.textContent='Referencia APA 7 (generada automáticamente y editable)';
   }
 
   window.openReader=openReader=function(a){ previousOpenReader(a); setTimeout(()=>install(a),0); };
@@ -170,4 +196,4 @@ js=r'''
 if 'window.__apa7MetadataInstalled' not in html:
     html=html.replace('</body>',js+'\n</body>')
 p.write_text(html,encoding='utf-8')
-print('Metadatos por tipo y generador APA 7 inyectados')
+print('Metadatos por tipo, botón Copiar APA 7 y tecla ESC inyectados')
