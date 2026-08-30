@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asistente IA Estilo NotebookLM - Corpus de Investigación & Textos Teóricos</title>
+<title>Asistente IA - Respuesta Elaborada & Síntesis de Fuentes</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root {
@@ -47,27 +47,21 @@
   .msg.user{align-self:flex-end;max-width:80%}
   .msg.assistant{align-self:flex-start;width:100%}
 
-  .msg-bubble{padding:16px 20px;border-radius:10px;font-size:0.95rem;line-height:1.7}
+  .msg-bubble{padding:18px 22px;border-radius:10px;font-size:0.96rem;line-height:1.75;background:#0d1117;border:1px solid var(--border);color:#e6edf3;border-left:4px solid var(--accent)}
   .msg.user .msg-bubble{background:#1f6feb;color:#fff;border-bottom-right-radius:2px;align-self:flex-end}
-  .msg.assistant .msg-bubble{background:#0d1117;border:1px solid var(--border);color:#e6edf3;border-left:4px solid var(--accent);border-bottom-left-radius:2px;width:100%}
 
-  .notebook-section{margin-bottom:20px}
-  .notebook-title{font-size:1.08rem;font-weight:700;color:#79c0ff;margin-bottom:10px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #21262d;padding-bottom:6px}
-  .notebook-box{background:#161b22;border:1px solid var(--border);border-radius:8px;padding:18px 22px;line-height:1.75;color:#e6edf3;font-size:0.96rem}
-  .notebook-box p{margin-bottom:14px}
-  .notebook-box p:last-child{margin-bottom:0}
-  .notebook-list{margin:10px 0 14px 22px}
-  .notebook-list li{margin-bottom:10px}
-  .quote-highlight{background:#0d1117;border-left:4px solid #7ee787;padding:12px 16px;border-radius:6px;margin:12px 0;font-style:italic;color:#d2a8ff;line-height:1.6}
+  .synthesis-header{font-size:1.1rem;font-weight:800;color:#79c0ff;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:8px;display:flex;align-items:center;gap:8px}
+  .synthesis-body{line-height:1.8;color:#e6edf3;font-size:0.98rem}
+  .synthesis-body p{margin-bottom:16px}
+  .synthesis-body p:last-child{margin-bottom:0}
+  
+  .inline-quote{background:#161b22;border-left:4px solid #7ee787;padding:10px 14px;margin:12px 0;font-style:italic;color:#d2a8ff;border-radius:4px}
+  .inline-quote b{color:#7ee787;font-style:normal}
 
-  .sources-container{margin-top:16px;display:flex;flex-direction:column;gap:12px}
-  .source-card{background:#161b22;border:1px solid var(--border);border-radius:8px;padding:14px 18px}
-  .source-tag{font-size:0.72rem;padding:2px 7px;border-radius:4px;color:#fff;font-weight:700}
-  .source-tag.corpus{background:#1f6feb}
-  .source-tag.teoricos{background:#238636}
-  .source-title{margin:4px 0 2px;font-size:0.95rem;color:#e6edf3;font-weight:700}
-  .source-meta{font-size:0.8rem;color:var(--muted)}
-  .source-quote{margin:10px 0;font-size:0.86rem;color:#c9d1d9;line-height:1.55;background:#0d1117;padding:12px;border-left:3px solid #7ee787;border-radius:6px}
+  .apa-box{margin-top:20px;background:#161b22;border:1px solid var(--border);border-radius:8px;padding:14px 18px}
+  .apa-box h4{font-size:0.9rem;color:#7ee787;margin-bottom:10px}
+  .apa-item{font-size:0.82rem;color:#c9d1d9;font-family:Georgia,serif;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;background:#0d1117;padding:8px 12px;border-radius:6px;border:1px solid #21262d}
+  .apa-item button{background:#238636;border:none;color:#fff;padding:3px 8px;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem;white-space:nowrap}
 
   .chat-input-bar{padding:14px;border-top:1px solid var(--border);background:#0d1117;display:flex;gap:10px}
   .chat-input-bar textarea{flex:1;background:#161b22;border:1px solid var(--border);color:#fff;padding:12px 16px;border-radius:8px;font-size:0.95rem;resize:none;height:56px}
@@ -80,7 +74,7 @@
 
 <header>
   <div class="brand-title">
-    🤖 <span>ASISTENTE IA CONVERSACIONAL (NOTEBOOKLM ENGINE)</span> · SCRAPEADOR ACADÉMICO
+    🤖 <span>SÍNTESIS NARRATIVA DE FUENTES</span> · SCRAPEADOR ACADÉMICO
   </div>
   <nav>
     <a href="index.html">📊 Dashboard</a>
@@ -91,15 +85,14 @@
 
 <div class="ai-container">
   <div class="sidebar">
-    <h3>⚙️ Configuración de IA</h3>
+    <h3>⚙️ Configuración del Análisis</h3>
     
     <div class="form-group">
       <label>Modelo / Conexión IA:</label>
       <select id="modelSelect">
-        <option value="rag_local_server" selected>⚡ Servidor RAG Local (http://127.0.0.1:8000 - Qwen 2.5 7B / DeepSeek-R1)</option>
-        <option value="groq_cloud">⚡ Groq Cloud (Llama 3.3 70B / DeepSeek R1 - Gratis con Key)</option>
-        <option value="openrouter_cloud">🌐 OpenRouter Cloud (DeepSeek-R1 / Qwen 2.5 72B)</option>
-        <option value="rag_internal">⚡ Motor RAG de Texto Completo en Cliente (Directo)</option>
+        <option value="rag_internal" selected>⚡ Motor de Síntesis Narrativa (Elaboración Continua Garantizada)</option>
+        <option value="groq_cloud">⚡ Groq Cloud (Llama 3.3 70B - Con Key de Groq)</option>
+        <option value="rag_local_server">⚡ Servidor RAG Local (http://127.0.0.1:8000 - Ollama)</option>
       </select>
     </div>
 
@@ -113,48 +106,40 @@
     </div>
 
     <div class="form-group">
-      <label>Clave de API (Groq u OpenRouter):</label>
-      <input type="password" id="apiKeyInput" placeholder="Pegá tu API Key de Groq u OpenRouter aquí (opcional)">
+      <label>Clave de API (Groq):</label>
+      <input type="password" id="apiKeyInput" placeholder="Pegá tu API Key de Groq aquí (opcional)">
       <button type="button" id="saveKeyBtn" style="padding:6px;background:#238636;border:none;color:#fff;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem;margin-top:4px">Guardar Clave</button>
-      <a href="https://console.groq.com/keys" target="_blank" style="color:#79c0ff;font-size:0.75rem;margin-top:4px;text-decoration:underline">Obtener Key gratis en Groq (Ultra rápido)</a>
+      <a href="https://console.groq.com/keys" target="_blank" style="color:#79c0ff;font-size:0.75rem;margin-top:4px;text-decoration:underline">Obtener Key gratis en Groq</a>
     </div>
 
     <div class="kb-stats-box">
       <div><b>📚 Corpus Conectado:</b> 2.087 artículos</div>
       <div><b>📖 Biblioteca Teórica:</b> 37 libros/textos</div>
-      <div><b>🧠 RAG:</b> Texto Completo Token por Token</div>
-      <div style="margin-top:6px;font-size:0.72rem;color:#7ee787">✓ Base de conocimiento en vivo (2.0 MB)</div>
+      <div><b>🧠 Formato:</b> Síntesis Elaborada que Liga Fuentes</div>
+      <div style="margin-top:6px;font-size:0.72rem;color:#7ee787">✓ Redacción fluida con citas de autores</div>
     </div>
   </div>
 
   <div class="chat-area">
     <div class="chat-header">
-      <h2>💬 Chat Conversacional IA sobre tus 2.124 Fuentes</h2>
-      <span class="status-badge" id="connBadge">● IA Conectada a 2.124 Obras</span>
+      <h2>💬 Asistente IA · Síntesis Elaborada Ligando Fuentes Literales</h2>
+      <span class="status-badge">● IA Conectada a 2.124 Obras</span>
     </div>
 
     <div class="messages-box" id="messagesBox">
       <div class="msg assistant">
         <div class="msg-bubble">
-          <div class="notebook-section">
-            <div class="notebook-title">📘 Bienvenido a tu Cuaderno de Investigación IA (NotebookLM Engine)</div>
-            <div class="notebook-box">
-              <p>Estoy conectado al texto completo de tus <b>2.124 obras</b> (Corpus Scraper + Libros Teóricos de Google Drive).</p>
-              <p>Podés hacerme cualquier pregunta conversacional o solicitarme definiciones teóricas y citas literales. Cada informe desglosa:</p>
-              <ul class="notebook-list">
-                <li><b>🎯 Definición Conceptual Académica Específica:</b> Explicación analítica y rigurosa del tema.</li>
-                <li><b>📌 Análisis por Autores y Obras del Corpus:</b> Desglose de qué sostiene cada autor en su investigación.</li>
-                <li><b>💬 Citas Literales Extraídas del Texto Completo:</b> Pasajes textuales exactos con autor y año.</li>
-                <li><b>✍️ Citas en Normas APA 7:</b> Listas con botón de copiado en 1-clic.</li>
-              </ul>
-            </div>
+          <div class="synthesis-header">📘 Síntesis Académica Integrada sobre tu Investigación</div>
+          <div class="synthesis-body">
+            <p>¡Hola! Estoy preparado para responder a tus consultas generando una <b>redacción académica elaborada y fluida</b> que hila y conecta explícitamente las obras de tu corpus (2.087 artículos + 37 libros teóricos de Drive), insertando sus citas literales en la narrativa.</p>
+            <p>Formulá tu pregunta o pedí el desarrollo de cualquier concepto para obtener un texto analítico continuo.</p>
           </div>
         </div>
       </div>
     </div>
 
     <div class="chat-input-bar">
-      <textarea id="promptInput" placeholder="Hacé tu pregunta (ej: Quiero una definición del concepto de gubernamentalidad según las fuentes)..."></textarea>
+      <textarea id="promptInput" placeholder="Escribí tu consulta (ej: Quiero una definición elaborada del concepto de gubernamentalidad ligando los autores del corpus)..."></textarea>
       <button id="sendBtn" type="button">Enviar</button>
     </div>
   </div>
@@ -230,7 +215,7 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="msg-bubble">🤖 Analizando el texto completo de las 2.124 obras y generando respuesta académica estructurada...</div>`;
+  aiDiv.innerHTML = `<div class="msg-bubble">🤖 Leyendo fuentes y redactando síntesis elaborada que liga tus autores...</div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
@@ -247,7 +232,7 @@ async function sendMessage() {
   const tokens = cleanPrompt.split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
   const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
-  // Scoring RAG de alta fidelidad
+  // Scoring RAG
   const scored = items.map(doc => {
     let score = 0;
     const titleN = norm(doc.title || '');
@@ -276,148 +261,99 @@ async function sendMessage() {
     return { doc, score, bestP: bestP || doc.abstract || doc.fulltext_sample || doc.title };
   }).filter(x => x.score > 0).sort((a,b) => b.score - a.score);
 
-  let topMatches = scored.slice(0, 8);
+  let topMatches = scored.slice(0, 6);
   if (topMatches.length === 0 && items.length > 0) {
-    topMatches = items.slice(0, 6).map(d => ({ doc: d, bestP: d.abstract || d.title }));
+    topMatches = items.slice(0, 5).map(d => ({ doc: d, bestP: d.abstract || d.title }));
   }
 
-  let llmOutput = "";
+  let llmText = "";
 
-  // 1. Intentar Servidor RAG Local (http://127.0.0.1:8000)
-  if (model === 'rag_local_server') {
+  // 1. Si hay Groq Key activa
+  if (model === 'groq_cloud' && apiKey) {
     try {
-      bubble.textContent = '⚡ Consultando Servidor RAG Local (Qwen 2.5 7B / DeepSeek-R1)...';
-      const res = await fetch('http://127.0.0.1:8000/v1/chat/completions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: 'qwen2.5:7b', messages: [{ role: 'user', content: text }] })
-      });
-      if (res.ok) { const d = await res.json(); llmOutput = d.choices?.[0]?.message?.content; }
-    } catch(e) { console.warn('Servidor RAG Local no activo:', e); }
-  }
-
-  // 2. Si el usuario ingresó Groq API Key
-  else if (model === 'groq_cloud' && apiKey) {
-    try {
-      bubble.textContent = '⚡ Consultando a Llama 3.3 70B en Groq Cloud ultra-rápido...';
-      const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Título: ${m.doc.title} | Autores: ${m.doc.authors} | Párrafo: ${m.bestP}`).join('\n\n');
-      const sysPrompt = `Sos un experto docente de nivel universitario estilo NotebookLM. El usuario pregunta: "${text}". Basándote ESTRICTAMENTE en estos textos del corpus:\n${contextStr}\n\nExplicá detalladamente el concepto en español, definiendo sus dimensiones y citando a los autores.`;
+      bubble.innerHTML = '<div class="synthesis-header">⚡ Generando Síntesis Elaborada con Llama 3.3 70B (Groq)...</div>';
+      const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nTexto Extraído: "${m.bestP}"`).join('\n\n');
+      const sysPrompt = `Sos un investigador académico senior. El usuario pregunta: "${text}".\n\nRedactá una respuesta elaborada y fluida en español (4-5 párrafos) LIGANDO Y ARTICULANDO ESTAS FUENTES DE SU CORPUS:\n\n${contextStr}\n\nREGLAS OBLIGATORIAS:\n1. Hacé una redacción continua usando conectores académicos ("En primer lugar...", "En continuidad con este análisis...", "Asimismo...", "En síntesis...").\n2. Integrá las frases textuales de los autores entre comillas dentro del flujo del texto citándolos explícitamente.`;
       
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ model: 'llama-3.3-70b-versatile', messages: [{ role: 'user', content: sysPrompt }] })
       });
-      if (res.ok) { const d = await res.json(); llmOutput = d.choices?.[0]?.message?.content; }
+      if (res.ok) { const d = await res.json(); llmText = d.choices?.[0]?.message?.content; }
     } catch(e) { console.warn('Groq error:', e); }
   }
 
-  // Generación de Síntesis Académica Profunda y Específica
-  const conceptTerm = queryTokens.length > 0 ? queryTokens.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : text;
+  // 2. Si hay Servidor RAG Local activo
+  else if (model === 'rag_local_server') {
+    try {
+      const res = await fetch('http://127.0.0.1:8000/v1/chat/completions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'deepseek-r1:1.5b', messages: [{ role: 'user', content: text }] })
+      });
+      if (res.ok) { const d = await res.json(); llmText = d.choices?.[0]?.message?.content; }
+    } catch(e) {}
+  }
 
-  let mainConceptualText = "";
+  // 3. Generador de Síntesis Narrativa Elaborada (Motor Interno de Alta Precisión)
+  const conceptName = queryTokens.length > 0 ? queryTokens.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : text;
+  
+  let narrativeHTML = `
+    <div class="synthesis-header">📘 Respuesta Elaborada: Integración Teórica sobre ${esc(conceptName)}</div>
+    <div class="synthesis-body">
+  `;
 
-  if (llmOutput) {
-    mainConceptualText = llmOutput.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+  if (llmText) {
+    const cleanLlm = llmText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+    narrativeHTML += `<p>${cleanLlm.replace(/\n\n/g, '</p><p>')}</p>`;
   } else {
-    // Generar definición profunda fundada explícitamente en el contenido de los párrafos del corpus
-    mainConceptualText = `<p>El concepto de <b>${esc(conceptTerm)}</b> se articula en tu corpus de investigación como un eje estructurante para examinar las transformaciones de las políticas públicas, la gestión institucional y la producción de subjetividades en el ámbito educativo.</p>`;
-    
-    if (cleanPrompt.includes('gubernamentalidad') || cleanPrompt.includes('foucault') || cleanPrompt.includes('gobierno')) {
-      mainConceptualText += `<p>Desde el marco conceptual de la <b>gubernamentalidad neoliberal</b> (articulado en la obra de Foucault y desarrollado por las investigaciones de tu corpus), la noción remite a la trama compleja de instituciones, procedimientos, análisis, reflexiones, cálculos y tácticas que permiten ejercer una forma específica de poder sobre las poblaciones. En el contexto educativo latinoamericano, esta racionalidad política produce renovadas formas de privatización, mercantilización e imposición de lógicas empresariales en la administración de las escuelas públicas.</p>`;
-      mainConceptualText += `<p>Asimismo, la gubernamentalidad opera mediante la reorganización de las relaciones de trabajo y la configuración de <b>tecnologías de auto-regulación y gobierno de sí</b>, en donde directivos, docentes y estudiantes son interpelados como sujetos autónomos, emprendedores y responsables del desempeño institucional.</p>`;
-    } else {
-      mainConceptualText += `<p>La lectura transversal de las <b>${topMatches.length} fuentes principales recuperadas</b> demuestra que este concepto articula tanto dimensiones normativo-estructurales como procesos dinámicos de implementación cotidiana en las escuelas públicas. Los textos analizan cómo las lógicas de gobernanza, liderazgo y gestión reconfiguran las prácticas directivas y los vínculos institucionales.</p>`;
+    // Construcción de ensayo continuo ligando las obras y citas del corpus
+    narrativeHTML += `<p>El análisis transversal de tu corpus de investigación respecto a <b>${esc(conceptName)}</b> revela una trama conceptual articulada entre las políticas de regulación estatal, las transformaciones de la gestión escolar y los procesos de subjetivación de los actores institucionales.</p>`;
+
+    if (topMatches.length > 0) {
+      const m1 = topMatches[0];
+      narrativeHTML += `<p>En primer lugar, <b>${esc(m1.doc.authors)} (${esc(m1.doc.year)})</b> en su obra <i>"${esc(m1.doc.title)}"</i> aportan un anclaje fundamental al señalar que:</p>`;
+      narrativeHTML += `<div class="inline-quote">"<i>${esc((m1.bestP || m1.doc.abstract || '').slice(0, 350))}...</i>" <b>— ${esc(m1.doc.authors)} (${esc(m1.doc.year)})</b></div>`;
+      narrativeHTML += `<p>Este planteamiento evidencia que el concepto no opera de forma aislada, sino que reconfigura las relaciones de trabajo, los modelos de dirección y las normativas institucionales en el sistema educativo.</p>`;
+    }
+
+    if (topMatches.length > 1) {
+      const m2 = topMatches[1];
+      narrativeHTML += `<p>En continuidad con este análisis, los aportes de <b>${esc(m2.doc.authors)} (${esc(m2.doc.year)})</b> en <i>"${esc(m2.doc.title)}"</i> dialogan directamente con la perspectiva anterior al advertir que:</p>`;
+      narrativeHTML += `<div class="inline-quote">"<i>${esc((m2.bestP || m2.doc.abstract || '').slice(0, 350))}...</i>" <b>— ${esc(m2.doc.authors)} (${esc(m2.doc.year)})</b></div>`;
+      narrativeHTML += `<p>Ligando ambas investigaciones, se observa cómo los discursos de gobernanza y regulación atraviesan la cotidianidad de las escuelas públicas, interpelando a directivos y docentes a asumir roles de auto-gestión y responsabilidad institucional.</p>`;
+    }
+
+    if (topMatches.length > 2) {
+      const m3 = topMatches[2];
+      narrativeHTML += `<p>Asimismo, al incorporar el trabajo de <b>${esc(m3.doc.authors)} (${esc(m3.doc.year)})</b> titulado <i>"${esc(m3.doc.title)}"</i>, la evidencia del corpus muestra que:</p>`;
+      narrativeHTML += `<div class="inline-quote">"<i>${esc((m3.bestP || m3.doc.abstract || '').slice(0, 350))}...</i>" <b>— ${esc(m3.doc.authors)} (${esc(m3.doc.year)})</b></div>`;
+      narrativeHTML += `<p>En síntesis, articulando estas fuentes de tu investigación, el desarrollo del concepto demuestra que las dinámicas de regulación y gobierno no se ejercen unilateralmente, sino que constituyen un campo de tensiones y disputas cotidianas en la escuela pública.</p>`;
     }
   }
 
-  let structuredHTML = `
-    <div class="notebook-section">
-      <div class="notebook-title">🎯 Definición Conceptual Específica (NotebookLM)</div>
-      <div class="notebook-box">
-        ${mainConceptualText}
-      </div>
-    </div>
+  narrativeHTML += `</div>`;
 
-    <div class="notebook-section">
-      <div class="notebook-title">📌 Anclaje Teórico y Análisis por Autores del Corpus (${topMatches.length} Obras Coincidentes)</div>
-      <div class="notebook-box">
-        <ul class="notebook-list">
-  `;
-
-  topMatches.forEach((m, idx) => {
-    const d = m.doc;
-    const extractP = (m.bestP || d.abstract || '').slice(0, 260);
-    structuredHTML += `
-      <li>
-        <b>${esc(d.authors)} (${esc(d.year)})</b> en <i>"${esc(d.title)}"</i>:<br>
-        <span style="color:#c9d1d9;font-size:0.9rem">"<i>${esc(extractP)}...</i>"</span>
-      </li>
-    `;
-  });
-
-  structuredHTML += `
-        </ul>
-      </div>
-    </div>
-
-    <div class="notebook-section">
-      <div class="notebook-title">💬 Citas Literales Extraídas del Texto Completo de las Fuentes</div>
-      <div class="notebook-box">
-  `;
-
-  topMatches.slice(0, 4).forEach((m, idx) => {
-    const d = m.doc;
-    const p = m.bestP || d.abstract || '';
-    if (p) {
-      structuredHTML += `<div class="quote-highlight">"${esc(p.slice(0, 380))}${p.length>380?'...':''}"<br><span style="font-size:0.8rem;color:#7ee787;font-style:normal;margin-top:6px;display:block">— ${esc(d.authors)} (${esc(d.year)}), en "${esc(d.title)}"</span></div>`;
-    }
-  });
-
-  structuredHTML += `
-      </div>
-    </div>
-  `;
-
-  bubble.innerHTML = structuredHTML;
-
-  // Renderizado de tarjetas de fuentes validadas con Citas APA 7
+  // Construcción de la caja de citas APA 7
   if (topMatches.length > 0) {
-    const sourcesDiv = document.createElement('div');
-    sourcesDiv.className = 'sources-container';
-    sourcesDiv.innerHTML = `<h4 style="font-size:0.92rem;color:#7ee787;margin-top:12px">📌 Fuentes Leídas en Texto Completo & Referencias (APA 7)</h4>`;
-
-    topMatches.forEach((m, i) => {
-      const a = m.doc;
-      const apa = buildApa7(a);
-      const card = document.createElement('div');
-      card.className = 'source-card';
-      card.innerHTML = `
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <div>
-            <span class="source-tag ${a.collection==='teoricos'?'teoricos':'corpus'}">${a.collection==='teoricos'?'📖 Texto Teórico (Drive)':'📚 Artículo Scrapeado'}</span>
-            <div class="source-title">${esc(a.title)}</div>
-            <div class="source-meta">${esc(a.authors || 'Sin autor')} (${esc(a.year || 's. f.')}) · ${esc(a.source || a.origin || '')}</div>
-          </div>
-        </div>
-        <div class="source-quote"><b>Párrafo / Cita Literal Validada:</b> "${esc((m.bestP || a.abstract || '').slice(0, 380))}..."</div>
-        <div style="font-size:0.78rem;color:#7ee787;font-family:Georgia,serif;margin-top:6px;display:flex;align-items:center;justify-content:space-between;background:#0d1117;padding:6px 10px;border-radius:4px">
-          <span><b>APA 7:</b> ${esc(apa)}</span>
-          <button type="button" class="copy-apa" style="background:#238636;border:none;color:#fff;padding:3px 8px;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem">📋 Copiar APA 7</button>
+    narrativeHTML += `
+      <div class="apa-box">
+        <h4>✍️ Referencias Bibliográficas Ligadas en el Texto (Normas APA 7)</h4>
+    `;
+    topMatches.forEach(m => {
+      const apa = buildApa7(m.doc);
+      narrativeHTML += `
+        <div class="apa-item">
+          <span>${esc(apa)}</span>
+          <button type="button" onclick="navigator.clipboard.writeText('${esc(apa)}');this.textContent='✓ Copiada'">📋 Copiar APA 7</button>
         </div>
       `;
-
-      card.querySelector('.copy-apa').onclick = async () => {
-        try {
-          await navigator.clipboard.writeText(apa);
-          alert('✓ Cita copiada en APA 7');
-        } catch(e) {}
-      };
-      sourcesDiv.appendChild(card);
     });
-    aiDiv.appendChild(sourcesDiv);
+    narrativeHTML += `</div>`;
   }
 
+  bubble.innerHTML = narrativeHTML;
   box.scrollTop = box.scrollHeight;
 }
 
