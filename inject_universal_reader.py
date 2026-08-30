@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta un lector único: visor PDF embebido (PDF.js / Drive Preview) sin descargas forzadas ni bloqueos de docs.google.com."""
+"""Inyecta un lector único: visor PDF embebido (Drive ViewerNG / Drive Preview) sin descargas forzadas ni bloqueos de CORS/Google Docs."""
 from pathlib import Path
 
 p=Path('docs/biblioteca.html')
@@ -33,58 +33,9 @@ js=r'''
   }
   function iframe(src){return '<iframe src="'+e(src)+'" style="width:100%;height:100%;border:0;background:#fff" allow="fullscreen; clipboard-read; clipboard-write"></iframe>'}
 
-  async function renderPdfJsViewer(pdfUrl) {
-    const body = document.getElementById('uvBody');
-    if (!body) return;
-    body.innerHTML = '<div style="height:100%;display:flex;flex-direction:column;background:#323639;color:#e8eaed">'
-      +'<div style="padding:6px 12px;background:#202124;border-bottom:1px solid #4a4d51;display:flex;align-items:center;justify-content:space-between;font-size:12px">'
-      +'<span id="pdfjsMsg">📄 Carga de PDF embebido (PDF.js)...</span>'
-      +'<button type="button" id="pdfjsOpenBtn" style="padding:3px 8px;font-size:11px;background:#3c4043;border:1px solid #5f6368;color:#fff;cursor:pointer">Abrir enlace directo</button>'
-      +'</div><div id="pdfjsScroller" style="flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;align-items:center;gap:16px;background:#525659">'
-      +'</div></div>';
-    
-    const ob = document.getElementById('pdfjsOpenBtn');
-    if (ob) ob.onclick = () => window.open(pdfUrl, '_blank');
-    
-    const scroller = document.getElementById('pdfjsScroller');
-    const msg = document.getElementById('pdfjsMsg');
-
-    try {
-      if (typeof pdfjsLib === 'undefined') {
-        throw new Error('pdfjsLib no cargado');
-      }
-      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-      
-      const loadingTask = pdfjsLib.getDocument({
-        url: pdfUrl,
-        cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
-        cMapPacked: true
-      });
-      
-      const pdf = await loadingTask.promise;
-      if (msg) msg.textContent = `📄 PDF embebido (${pdf.numPages} págs.) · Lectura en visor PDF.js`;
-
-      for (let num = 1; num <= pdf.numPages; num++) {
-        const page = await pdf.getPage(num);
-        const viewport = page.getViewport({ scale: 1.25 });
-        
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        canvas.style.boxShadow = '0 3px 10px rgba(0,0,0,0.4)';
-        canvas.style.background = '#ffffff';
-        canvas.style.maxWidth = '100%';
-        canvas.style.height = 'auto';
-
-        scroller.appendChild(canvas);
-        await page.render({ canvasContext: ctx, viewport: viewport }).promise;
-      }
-    } catch (err) {
-      console.warn('CORS / PDF.js render fallback to Mozilla viewer:', err);
-      const mozillaViewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(pdfUrl);
-      body.innerHTML = '<iframe src="' + e(mozillaViewer) + '" style="width:100%;height:100%;border:0;background:#fff" allow="fullscreen"></iframe>';
-    }
+  function nativePdf(src){
+    const embedUrl = 'https://drive.google.com/viewerng/viewer?embedded=true&url=' + encodeURIComponent(src);
+    return iframe(embedUrl);
   }
 
   function pdfBody(a){
@@ -96,7 +47,12 @@ js=r'''
         +'<div style="padding:6px 10px;background:#eef7ee;color:#173b17;border-bottom:1px solid #b8d8b8;font:11px Segoe UI,Arial,sans-serif"><b>'+e(fn)+'</b> · '+e(method)+'</div>'
         +'<div style="flex:1;min-height:0">'+iframe(drive)+'</div></div>';
     }
-    return '';
+    if(pdf){
+      return '<div style="height:100%;display:flex;flex-direction:column;background:#fff">'
+        +'<div style="padding:6px 10px;background:#fff7e6;color:#684b00;border-bottom:1px solid #e6c76b;font:11px Segoe UI,Arial,sans-serif"><b>PDF embebido (Drive ViewerNG)</b> · lectura sin descarga</div>'
+        +'<div style="flex:1;min-height:0">'+nativePdf(pdf)+'</div></div>';
+    }
+    return '<div class="fallback"><h3>No hay PDF disponible</h3><p>Este trabajo puede leerse desde el texto extraído, el resumen o el sitio del artículo.</p></div>';
   }
 
   async function renderUniversal(a,mode){
@@ -106,14 +62,10 @@ js=r'''
       +(hasPdf?'<button id="uvPdf" type="button" style="padding:5px 9px;background:#1f6feb;border-color:#1f6feb;color:#fff"><b>📄 Visor PDF</b></button>':'')
       +'<button id="uvRead" type="button" style="padding:5px 9px">'+(local||hasCorpus?'📝 Texto completo':'📝 Resumen / Texto')+'</button>'
       +(site?'<button id="uvSite" type="button" style="padding:5px 9px">🌐 Sitio de la revista</button>':'')
-      +'<span style="margin-left:auto;color:#8b949e;font-size:11px">'+(drive?'PDF en Drive':pdf?'Visor PDF.js (sin descarga)':local||hasCorpus?'texto interno':hasAbstract?'resumen':'fuente externa')+'</span></div>';
+      +'<span style="margin-left:auto;color:#8b949e;font-size:11px">'+(drive?'PDF en Drive':pdf?'Visor embebido (sin descarga)':local||hasCorpus?'texto interno':hasAbstract?'resumen':'fuente externa')+'</span></div>';
     viewer.innerHTML='<div style="height:100%;display:flex;flex-direction:column">'+bar+'<div id="uvBody" style="flex:1;min-height:0"></div></div>';
     const body=document.getElementById('uvBody');
-    if(mode==='pdf'){
-      if(drive) body.innerHTML=pdfBody(a);
-      else if(pdf) renderPdfJsViewer(pdf);
-      else body.innerHTML=abstractBody(a);
-    }
+    if(mode==='pdf') body.innerHTML=pdfBody(a);
     else if(mode==='site') body.innerHTML=site?iframe(site):abstractBody(a);
     else if(local) body.innerHTML=textBody(a,local,'Texto completo extraído/OCR');
     else if(hasCorpus){body.innerHTML='<div class="fallback"><p>Cargando texto completo…</p></div>';const txt=await corpusText(a);body.innerHTML=txt?textBody(a,txt,'Texto completo extraído por el scraper'):abstractBody(a)}
@@ -141,4 +93,4 @@ js=r'''
 '''
 if 'window.__universalReaderInstalled' not in html: html=html.replace('</body>',js+'\n</body>')
 p.write_text(html,encoding='utf-8')
-print('Lector único actualizado con PDF.js (sin bloqueos de Google ni descargas forzadas)')
+print('Lector único actualizado con Google Drive ViewerNG Embed')
