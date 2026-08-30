@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta el Asistente IA Bibliográfico impulsado por Qwen 2.5 y la Base de Conocimiento Completa (2.124 obras en texto completo) en docs/biblioteca.html."""
+"""Inyecta el Asistente IA Bibliográfico repensado con modelos GRATUITOS de máxima potencia (DeepSeek-R1, Llama 3.3 70B, Qwen 2.5 y Gemini) en docs/biblioteca.html."""
 from pathlib import Path
 
 p = Path('docs/biblioteca.html')
@@ -21,7 +21,6 @@ js = r'''
     try {
       KB = await fetch('fulltext_knowledge_base.json', { cache: 'no-store' }).then(res => res.json());
     } catch (e) {
-      console.warn('No se pudo cargar fulltext_knowledge_base.json, usando corpus cargado.', e);
       let c = (typeof A_corpus !== 'undefined' ? A_corpus : (window.A_corpus || []));
       let t = (typeof A_teoricos !== 'undefined' ? A_teoricos : (window.A_teoricos || []));
       KB = [].concat(c, t);
@@ -74,7 +73,6 @@ js = r'''
     const colBar = document.querySelector('.col-bar');
     if (!colBar) return;
 
-    // BOTÓN ÚNICO UNIFICADO
     const btnAi = document.createElement('button');
     btnAi.id = 'btnAiAssistant';
     btnAi.className = 'col-btn';
@@ -82,7 +80,7 @@ js = r'''
     btnAi.style.borderColor = '#8957e5';
     btnAi.style.color = '#fff';
     btnAi.style.fontWeight = '800';
-    btnAi.innerHTML = '🤖 Asistente IA & Buscador de Citas APA 7 (Qwen 2.5)';
+    btnAi.innerHTML = '🤖 Asistente IA (DeepSeek-R1 · Llama 3.3 70B · Qwen 2.5 · Citas APA 7)';
     colBar.appendChild(btnAi);
 
     const main = document.querySelector('main.library');
@@ -99,14 +97,14 @@ js = r'''
     aiPane.innerHTML = `
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:10px">
         <div>
-          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Bibliográfico & Validación de Fuentes APA 7 (Qwen 2.5)</h2>
-          <div style="font-size:0.82rem;color:#8b949e">Formulá cualquier pregunta o pedí frases literales. La IA responde <b>estrictamente basándose en el texto completo de tus 2.124 obras</b> (Corpus Scraper + Drive Teórico).</div>
+          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Multimodelo Gratuitos: DeepSeek-R1 · Llama 3.3 70B · Qwen 2.5</h2>
+          <div style="font-size:0.82rem;color:#8b949e">Elegí la IA de mayor potencia para analizar los <b>2.124 materiales en texto completo</b>, extraer citas literales y generar referencias APA 7.</div>
         </div>
         <button id="closeAiPaneBtn" type="button" style="padding:4px 12px;background:#21262d;border:1px solid #30363d;color:#fff;cursor:pointer">✕ Cerrar</button>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 220px 180px;gap:10px;margin-bottom:12px">
-        <textarea id="aiPrompt" placeholder="Hacé tu pregunta o pedí citas (ej: Decime una frase literal de Foucault sobre gobernanza, o ¿Qué dicen las fuentes sobre el liderazgo en escuelas públicas?)..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
+      <div style="display:grid;grid-template-columns:1fr 220px 190px;gap:10px;margin-bottom:12px">
+        <textarea id="aiPrompt" placeholder="Hacé cualquier pregunta o pedí citas literales (ej: Decime una frase literal de Foucault sobre gobernanza, o ¿Qué dicen las fuentes sobre la regulación afectiva?)..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
         
         <select id="conceptScope" style="background:#0d1117;color:#fff;font-size:0.85rem">
           <option value="all">Todas las 2.124 Obras (Texto Completo)</option>
@@ -115,30 +113,31 @@ js = r'''
         </select>
 
         <div style="display:flex;flex-direction:column;gap:6px">
-          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.92rem;cursor:pointer">⚡ Responder con Qwen 2.5</button>
+          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.92rem;cursor:pointer">✨ Analizar con IA</button>
         </div>
       </div>
 
       <div id="aiConfigBox" style="font-size:0.78rem;color:#c9d1d9;margin-bottom:14px;background:#0d1117;padding:10px 14px;border-radius:6px;border:1px solid #30363d;display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <label><b>Motor IA:</b></label>
-          <select id="aiProviderSelect" style="padding:4px 8px;background:#161b22;color:#fff">
-            <option value="openrouter">Qwen 2.5-72B (OpenRouter API - qwen/qwen-2.5-72b-instruct)</option>
-            <option value="ollama">Qwen Local (Ollama / LM Studio en http://localhost:11434/v1)</option>
-            <option value="together">Qwen 2.5 (Together AI)</option>
-            <option value="gemini">Google Gemini 1.5 Flash</option>
+          <label><b>Seleccionar Modelo IA Potente:</b></label>
+          <select id="aiProviderSelect" style="padding:5px 10px;background:#161b22;color:#fff;font-weight:700;border:1px solid #8957e5">
+            <option value="deepseek">🧠 DeepSeek-R1 (Razonamiento Crítico Gratuito - OpenRouter / Groq / Local)</option>
+            <option value="llama3">⚡ Llama 3.3 70B (Meta AI - Ultra Rápido y Potente - Groq / OpenRouter)</option>
+            <option value="qwen">🌐 Qwen 2.5 72B (Alibaba - RAG Multidocumento Avanzado)</option>
+            <option value="gemini">✨ Google Gemini 1.5 Flash</option>
           </select>
         </div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <label><b>Clave de API / Key:</b></label>
-          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter, Together o Gemini aquí (opcional para Ollama local)" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
-          <button type="button" id="saveApiKeyBtn" style="padding:4px 10px;font-size:0.78rem;background:#238636;border-color:#238636;color:#fff">Guardar</button>
+          <label><b>Clave de API (Groq, OpenRouter o Gemini):</b></label>
+          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter (gratis), Groq (gratis) o Gemini aquí" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
+          <button type="button" id="saveApiKeyBtn" style="padding:4px 10px;font-size:0.78rem;background:#238636;border-color:#238636;color:#fff">Guardar Clave</button>
+          <a href="https://openrouter.ai/keys" target="_blank" style="color:#79c0ff;font-size:0.75rem;text-decoration:underline">Obtener Key gratis en OpenRouter</a>
         </div>
       </div>
 
       <div id="aiResponseContainer" style="display:none;margin-top:14px;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px">
         <div id="aiSynthesisHeader" style="font-weight:700;color:#79c0ff;margin-bottom:10px;font-size:1.05rem;display:flex;align-items:center;gap:8px">
-          <span>🧠 Respuesta de Qwen 2.5 Basada en tus Fuentes</span>
+          <span>🧠 Respuesta de IA Basada Exclusivamente en tus Fuentes</span>
         </div>
         <div id="aiSynthesisBody" style="font-size:0.92rem;line-height:1.6;color:#e6edf3;white-space:pre-wrap;margin-bottom:16px;background:#161b22;padding:14px;border-radius:6px;border-left:4px solid #8957e5"></div>
 
@@ -151,7 +150,7 @@ js = r'''
 
     main.parentNode.insertBefore(aiPane, main.nextSibling);
 
-    const savedProvider = localStorage.getItem('qwen_provider_v1') || 'openrouter';
+    const savedProvider = localStorage.getItem('ai_provider_v2') || 'deepseek';
     const savedKey = localStorage.getItem('qwen_api_key_v1') || '';
     document.getElementById('aiProviderSelect').value = savedProvider;
     document.getElementById('qwenApiKeyInput').value = savedKey;
@@ -159,7 +158,7 @@ js = r'''
     document.getElementById('saveApiKeyBtn').onclick = () => {
       const p = document.getElementById('aiProviderSelect').value;
       const k = document.getElementById('qwenApiKeyInput').value.trim();
-      localStorage.setItem('qwen_provider_v1', p);
+      localStorage.setItem('ai_provider_v2', p);
       localStorage.setItem('qwen_api_key_v1', k);
       alert('✓ Configuración de IA guardada localmente.');
     };
@@ -201,7 +200,10 @@ js = r'''
     const sourcesEl = document.getElementById('aiValidatedSourcesList');
     container.style.display = 'block';
 
-    bodyEl.textContent = '⚡ Consultando el texto completo de las 2.124 obras e invocando a Qwen 2.5...';
+    const provider = document.getElementById('aiProviderSelect').value;
+    const modelName = provider === 'deepseek' ? 'DeepSeek-R1' : (provider === 'llama3' ? 'Llama 3.3 70B' : (provider === 'qwen' ? 'Qwen 2.5 72B' : 'Gemini 1.5 Flash'));
+
+    bodyEl.textContent = `⚡ Consultando el texto completo de las 2.124 obras e invocando a ${modelName}...`;
     sourcesEl.innerHTML = '';
 
     let items = KB.length > 0 ? KB : [].concat(window.A_corpus||[], window.A_teoricos||[]);
@@ -212,7 +214,7 @@ js = r'''
     const tokens = cleanPrompt.split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
     const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
-    // Scoring RAG sobre párrafos e historias completas
+    // RAG Scoring
     const scored = items.map(doc => {
       let score = 0;
       const titleN = norm(doc.title || '');
@@ -221,7 +223,6 @@ js = r'''
       const sampleN = norm(doc.fulltext_sample || '');
       const pars = doc.paragraphs || [];
 
-      // Match exacto de frase en título o texto completo
       if (titleN.includes(cleanPrompt)) score += 20;
       if (sampleN.includes(cleanPrompt)) score += 15;
 
@@ -236,7 +237,6 @@ js = r'''
         });
       });
 
-      // Extraer párrafos más relevantes como cita literal candidata
       let bestParagraph = '';
       let bestPScore = 0;
       pars.forEach(p => {
@@ -257,9 +257,7 @@ js = r'''
       topMatches = items.slice(0, 8).map(d => ({ doc: d, bestParagraph: d.abstract || d.title }));
     }
 
-    const provider = document.getElementById('aiProviderSelect').value;
     const apiKey = localStorage.getItem('qwen_api_key_v1') || document.getElementById('qwenApiKeyInput').value.trim();
-
     let aiResponseText = '';
 
     if (topMatches.length > 0) {
@@ -268,19 +266,42 @@ js = r'''
         return `[Fuente ${idx+1}] Título: "${d.title}" | Autor/es: ${d.authors} | Año: ${d.year}\nFragmento Texto Completo: "${(m.bestParagraph || d.fulltext_sample || d.abstract || '').slice(0, 450)}"`;
       }).join('\n\n');
 
-      const systemPrompt = `Sos un riguroso asistente bibliográfico universitario. El usuario hace la siguiente pregunta: "${rawPrompt}".\n\nTu tarea es responder ÚNICAMENTE basándote en el conocimiento acumulado de las siguientes fuentes de su corpus:\n\n${contextStr}\n\nREGLAS DE RESPUESTA:\n1. Respondé a la pregunta del usuario en español basándote ESTRICTAMENTE en la información de estas fuentes.\n2. Si el usuario pide una cita o frase literal, extraé la frase exacta entre comillas e indicá el autor y título.\n3. Sintetizá los conceptos explicando qué dice cada autor.\n4. No inventes nada fuera de estas fuentes.`;
+      const systemPrompt = `Sos un riguroso asistente bibliográfico universitario. El usuario consulta: "${rawPrompt}".\n\nTu tarea es responder ÚNICAMENTE basándote en el conocimiento acumulado de las siguientes fuentes de su corpus:\n\n${contextStr}\n\nREGLAS DE RESPUESTA:\n1. Respondé a la pregunta en español basándote ESTRICTAMENTE en la información de estas fuentes.\n2. Si el usuario pide una cita o frase literal, extraé la frase exacta entre comillas e indicá el autor y título.\n3. Sintetizá los conceptos explicando qué dice cada autor.\n4. No inventes nada fuera de estas fuentes.`;
 
-      if (provider === 'openrouter' && apiKey) {
-        bodyEl.textContent = '⚡ Invocando a Qwen 2.5-72B en OpenRouter para responder basándose en tu corpus...';
+      // 1. DeepSeek-R1 (OpenRouter Free / Groq / Open API)
+      if (provider === 'deepseek') {
+        bodyEl.textContent = '🧠 Invocando al modelo de pensamiento profundo DeepSeek-R1...';
         try {
+          const ep = apiKey ? 'https://openrouter.ai/api/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions';
+          const headers = { 'Content-Type': 'application/json' };
+          if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
+
+          const res = await fetch(ep, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify({
+              model: 'deepseek/deepseek-r1:free',
+              messages: [{ role: 'user', content: systemPrompt }]
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            aiResponseText = data.choices?.[0]?.message?.content;
+          }
+        } catch (e) { console.warn('DeepSeek-R1 error:', e); }
+      }
+      // 2. Llama 3.3 70B (Meta AI via Groq or OpenRouter)
+      else if (provider === 'llama3') {
+        bodyEl.textContent = '⚡ Invocando a Llama 3.3 70B (Meta AI)...';
+        try {
+          const headers = { 'Content-Type': 'application/json' };
+          if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
+
           const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${apiKey}`,
-              'Content-Type': 'application/json'
-            },
+            headers: headers,
             body: JSON.stringify({
-              model: 'qwen/qwen-2.5-72b-instruct',
+              model: 'meta-llama/llama-3.3-70b-instruct:free',
               messages: [{ role: 'user', content: systemPrompt }]
             })
           });
@@ -288,15 +309,20 @@ js = r'''
             const data = await res.json();
             aiResponseText = data.choices?.[0]?.message?.content;
           }
-        } catch (e) { console.warn('OpenRouter Qwen error:', e); }
-      } else if (provider === 'ollama') {
-        bodyEl.textContent = '⚡ Consultando modelo Qwen local en http://localhost:11434/v1...';
+        } catch (e) { console.warn('Llama 3.3 error:', e); }
+      }
+      // 3. Qwen 2.5 72B
+      else if (provider === 'qwen') {
+        bodyEl.textContent = '🌐 Invocando a Qwen 2.5 72B...';
         try {
-          const res = await fetch('http://localhost:11434/v1/chat/completions', {
+          const headers = { 'Content-Type': 'application/json' };
+          if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
+
+          const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: headers,
             body: JSON.stringify({
-              model: 'qwen2.5',
+              model: 'qwen/qwen-2.5-72b-instruct:free',
               messages: [{ role: 'user', content: systemPrompt }]
             })
           });
@@ -304,28 +330,11 @@ js = r'''
             const data = await res.json();
             aiResponseText = data.choices?.[0]?.message?.content;
           }
-        } catch (e) { console.warn('Local Ollama Qwen error:', e); }
-      } else if (provider === 'together' && apiKey) {
-        bodyEl.textContent = '⚡ Consultando Qwen 2.5 vía Together AI...';
-        try {
-          const res = await fetch('https://api.together.xyz/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${apiKey}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              model: 'Qwen/Qwen2.5-72B-Instruct-Turbo',
-              messages: [{ role: 'user', content: systemPrompt }]
-            })
-          });
-          if (res.ok) {
-            const data = await res.json();
-            aiResponseText = data.choices?.[0]?.message?.content;
-          }
-        } catch (e) { console.warn('Together Qwen error:', e); }
-      } else if (provider === 'gemini' && apiKey) {
-        bodyEl.textContent = '⚡ Consultando Google Gemini 1.5 Flash...';
+        } catch (e) { console.warn('Qwen error:', e); }
+      }
+      // 4. Gemini 1.5 Flash
+      else if (provider === 'gemini' && apiKey) {
+        bodyEl.textContent = '✨ Consultando Google Gemini 1.5 Flash...';
         try {
           const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
             method: 'POST',
@@ -341,9 +350,11 @@ js = r'''
     }
 
     if (aiResponseText) {
-      bodyEl.textContent = aiResponseText;
+      // Limpiar etiquetas de pensamiento de DeepSeek-R1 (<think>...</think>) si existen
+      let cleanReply = aiResponseText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+      bodyEl.textContent = cleanReply || aiResponseText;
     } else {
-      let synth = `⚡ SÍNTESIS EXCLUSIVA BASADA EN TU CORPUS (QWEN 2.5 RAG)\n\n`;
+      let synth = `⚡ SÍNTESIS EXCLUSIVA BASADA EN TU CORPUS (${modelName} RAG ENGINE)\n\n`;
       synth += `Consulta: "${rawPrompt}"\n`;
       synth += `Base de Conocimiento Consultada: ${items.length.toLocaleString()} obras (Texto Completo).\n`;
       synth += `Fuentes Validadas Directas: ${topMatches.length} documentos.\n\n`;
@@ -424,4 +435,4 @@ js = r'''
 if 'window.__aiAssistantModuleInstalled' not in html:
     html = html.replace('</body>', js + '\n</body>')
 p.write_text(html, encoding='utf-8')
-print('Asistente IA Bibliográfico con Base de Conocimiento de Texto Completo unificada con éxito.')
+print('Modelos gratuitos de máxima potencia (DeepSeek-R1, Llama 3.3 70B, Qwen 2.5) inyectados con éxito.')
