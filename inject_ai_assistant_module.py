@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta el Asistente IA Bibliográfico impulsado por Qwen 2.5 (OpenRouter, Ollama local, Together o Qwen API) en docs/biblioteca.html."""
+"""Inyecta el Módulo UNIFICADO: Asistente IA & Buscador de Conceptos/Citas APA 7 (Qwen 2.5) en docs/biblioteca.html."""
 from pathlib import Path
 
 p = Path('docs/biblioteca.html')
@@ -45,6 +45,7 @@ js = r'''
     const colBar = document.querySelector('.col-bar');
     if (!colBar) return;
 
+    // UN SOLO BOTÓN UNIFICADO
     const btnAi = document.createElement('button');
     btnAi.id = 'btnAiAssistant';
     btnAi.className = 'col-btn';
@@ -52,7 +53,7 @@ js = r'''
     btnAi.style.borderColor = '#8957e5';
     btnAi.style.color = '#fff';
     btnAi.style.fontWeight = '800';
-    btnAi.innerHTML = '🤖 Asistente IA (Qwen 2.5 · Validar Fuentes & Citas APA 7)';
+    btnAi.innerHTML = '🤖 Asistente IA & Buscador de Citas APA 7 (Qwen 2.5)';
     colBar.appendChild(btnAi);
 
     const main = document.querySelector('main.library');
@@ -61,7 +62,7 @@ js = r'''
     aiPane.style.display = 'none';
     aiPane.style.padding = '18px';
     aiPane.style.background = '#111820';
-    aiPane.style.border = '1px solid #1f6feb';
+    aiPane.style.border = '1px solid #8957e5';
     aiPane.style.borderRadius = '10px';
     aiPane.style.marginTop = '10px';
     aiPane.style.boxShadow = '0 8px 24px rgba(0,0,0,0.5)';
@@ -69,34 +70,40 @@ js = r'''
     aiPane.innerHTML = `
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:10px">
         <div>
-          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Bibliográfico con QWEN 2.5</h2>
-          <div style="font-size:0.82rem;color:#8b949e">Valida fuentes, conceptos y citas literales en APA 7 leyendo los <b>2.087 artículos del corpus</b> + <b>37 textos teóricos</b> usando el modelo <b>Qwen 2.5</b>.</div>
+          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Módulo Unificado: Asistente IA, Validación de Fuentes & Citas APA 7 (Qwen 2.5)</h2>
+          <div style="font-size:0.82rem;color:#8b949e">Consulta conceptos, valida frases o preguntale a la IA sobre los <b>2.087 artículos del corpus</b> + <b>37 textos teóricos de Drive</b>.</div>
         </div>
         <button id="closeAiPaneBtn" type="button" style="padding:4px 12px;background:#21262d;border:1px solid #30363d;color:#fff;cursor:pointer">✕ Cerrar</button>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 240px;gap:10px;margin-bottom:12px">
-        <textarea id="aiPrompt" placeholder="Preguntale a Qwen 2.5 (ej: ¿Cuáles son las citas literales sobre regulación afectiva en directores escolares? o Validar fuentes para la frase 'gobernanza del sistema educativo')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
+      <div style="display:grid;grid-template-columns:1fr 220px 180px;gap:10px;margin-bottom:12px">
+        <textarea id="aiPrompt" placeholder="Ingresá un concepto, frase a validar o pregunta (ej: @regulación, gobernanza, Foucault, 'liderazgo en escuelas públicas')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
+        
+        <select id="conceptScope" style="background:#0d1117;color:#fff;font-size:0.85rem">
+          <option value="all">Todos los materiales (2.124)</option>
+          <option value="corpus">Solo Corpus Scraper (2.087)</option>
+          <option value="teoricos">Solo Textos Teóricos (37)</option>
+        </select>
+
         <div style="display:flex;flex-direction:column;gap:6px">
-          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.95rem;cursor:pointer">⚡ Analizar con QWEN 2.5</button>
-          <div style="font-size:0.7rem;color:#8b949e;text-align:center">RAG Multidocumento + APA 7</div>
+          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.92rem;cursor:pointer">⚡ Consultar con Qwen 2.5</button>
         </div>
       </div>
 
       <div id="aiConfigBox" style="font-size:0.78rem;color:#c9d1d9;margin-bottom:14px;background:#0d1117;padding:10px 14px;border-radius:6px;border:1px solid #30363d;display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <label><b>Proveedor de IA:</b></label>
+          <label><b>Modelo IA:</b></label>
           <select id="aiProviderSelect" style="padding:4px 8px;background:#161b22;color:#fff">
-            <option value="openrouter">Qwen 2.5 vía OpenRouter (qwen/qwen-2.5-72b-instruct)</option>
+            <option value="openrouter">Qwen 2.5-72B (OpenRouter API - qwen/qwen-2.5-72b-instruct)</option>
             <option value="ollama">Qwen Local (Ollama / LM Studio en http://localhost:11434/v1)</option>
-            <option value="together">Qwen 2.5 vía Together AI</option>
+            <option value="together">Qwen 2.5 (Together AI)</option>
             <option value="gemini">Google Gemini 1.5 Flash</option>
           </select>
         </div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
           <label><b>Clave de API / Key:</b></label>
-          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter, Together o Gemini aquí (opcional para Ollama)" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
-          <button type="button" id="saveApiKeyBtn" style="padding:4px 10px;font-size:0.78rem;background:#238636;border-color:#238636;color:#fff">Guardar configuración</button>
+          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter, Together o Gemini aquí (opcional para Ollama local)" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
+          <button type="button" id="saveApiKeyBtn" style="padding:4px 10px;font-size:0.78rem;background:#238636;border-color:#238636;color:#fff">Guardar</button>
         </div>
       </div>
 
@@ -139,24 +146,34 @@ js = r'''
     };
 
     document.getElementById('runAiSearchBtn').onclick = runAiAnalysis;
+    document.getElementById('aiPrompt').onkeydown = (e) => {
+      if (e.key === 'Enter' && e.ctrlKey) {
+        e.preventDefault();
+        runAiAnalysis();
+      }
+    };
   }
 
   async function runAiAnalysis() {
     const promptText = document.getElementById('aiPrompt').value.trim();
     if (!promptText) {
-      alert('Ingresá una pregunta o frase para analizar.');
+      alert('Ingresá una pregunta, concepto o frase para analizar.');
       return;
     }
 
+    const scope = document.getElementById('conceptScope').value;
     const container = document.getElementById('aiResponseContainer');
     const bodyEl = document.getElementById('aiSynthesisBody');
     const sourcesEl = document.getElementById('aiValidatedSourcesList');
     container.style.display = 'block';
 
-    bodyEl.textContent = '⚡ RAG Multidocumento: Inspeccionando todos los artículos del corpus y textos teóricos...\nBuscando coincidencia conceptual y citas literales...';
+    bodyEl.textContent = '⚡ Inspeccionando materiales, extrayendo pasajes literales y consultando a Qwen 2.5...';
     sourcesEl.innerHTML = '';
 
-    const allItems = [].concat(window.A_corpus || [], window.A_teoricos || []);
+    let allItems = [];
+    if (scope === 'all' || scope === 'corpus') allItems = allItems.concat(window.A_corpus || []);
+    if (scope === 'all' || scope === 'teoricos') allItems = allItems.concat(window.A_teoricos || []);
+
     const qNorm = norm(promptText);
     const words = qNorm.split(/\s+/).filter(w => w.length >= 4);
 
@@ -186,7 +203,6 @@ js = r'''
     const provider = document.getElementById('aiProviderSelect').value;
     const apiKey = localStorage.getItem('qwen_api_key_v1') || document.getElementById('qwenApiKeyInput').value.trim();
 
-    // Intentar llamadas a API de Qwen / OpenRouter / Ollama
     let aiResponseText = '';
 
     if (topMatches.length > 0) {
@@ -272,7 +288,7 @@ js = r'''
       if (topMatches.length > 0) {
         let synth = `⚡ ANÁLISIS DE VALIDACIÓN DE FUENTES & CITAS (QWEN 2.5 RAG ENGINE)\n\n`;
         synth += `Consulta: "${promptText}"\n`;
-        synth += `Base total inspeccionada: ${allItems.length.toLocaleString()} materiales (${(window.A_corpus||[]).length} artículos corpus + ${(window.A_teoricos||[]).length} textos teóricos de Drive).\n`;
+        synth += `Base total inspeccionada: ${allItems.length.toLocaleString()} materiales.\n`;
         synth += `Coincidencias de fuentes validadas: ${topMatches.length} documentos.\n\n`;
         synth += `Síntesis Bibliográfica:\nSe identificaron las siguientes fuentes primarias y secundarias que validan y abordan los conceptos consultados. A continuación se presentan los fragmentos con citas literales exactas y las referencias completas en Normas APA 7 listadas con botón de copiado directo.`;
         bodyEl.textContent = synth;
@@ -354,4 +370,4 @@ js = r'''
 if 'window.__aiAssistantModuleInstalled' not in html:
     html = html.replace('</body>', js + '\n</body>')
 p.write_text(html, encoding='utf-8')
-print('Asistente IA Bibliográfico impulsado por Qwen 2.5 inyectado con éxito.')
+print('Módulo Unificado de Asistente IA (Qwen 2.5) inyectado con éxito.')
