@@ -99,7 +99,7 @@ tbody tr:hover td{background:var(--hover)}
     <div class="neon-title">Dashboard &middot; <span class="nt-accent">Direccion y Gestion Escolar</span></div>
     <div class="neon-sub">version beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elias Aguirre</a> &middot; <a href="articulos.html">Trabajar con tabla de articulos</a> &middot; <a href="biblioteca.html" style="display:inline-block;padding:7px 12px;border:1px solid #58a6ff;border-radius:8px;background:#1f6feb;color:#fff;font-weight:700;text-decoration:none;margin-left:4px">📚 Biblioteca y fichado</a></div>
   </div>
-  <span class="stamp">Actualizado: 29/08/2026 &middot; 2020&ndash;2026</span>
+  <span class="stamp">Actualizado: 30/08/2026 &middot; 2020&ndash;2026</span>
 </header>
 
 <div class="kpis">
@@ -290,29 +290,17 @@ function renderNetwork(isComparison){
       .on("drag", (e,d)=>{ d.fx=e.x; d.fy=e.y; })
       .on("end",  (e,d)=>{ if(!e.active) netSim.alphaTarget(0); d.fx=null; d.fy=null; }));
 
-  const caption = g.append("g").selectAll("text").data(nodes).enter().append("text")
-    .text(d=>{
-      if(isTopics) return "T"+d.id;
-      let author = (d.authors || "Anónimo").split(";")[0].split(",")[0].split(" et al.")[0].trim();
-      if (author.includes(" ")) {
-        const parts = author.split(" ");
-        author = parts[parts.length - 1];
-      }
-      return `${author} (${d.year || ""})`;
-    })
-    .attr("font-size", isTopics ? 10 : 8)
-    .attr("font-weight", isTopics ? 700 : 500)
-    .attr("fill", isTopics ? "#0D1117" : "#8B949E")
-    .attr("dx", isTopics ? 0 : 8)
-    .attr("dy", isTopics ? 3 : 3)
-    .attr("text-anchor", isTopics ? "middle" : "start")
-    .attr("pointer-events", "none");
+  const caption = isTopics
+    ? g.append("g").selectAll("text").data(nodes).enter().append("text")
+        .text(d=>"T"+d.id).attr("font-size",10).attr("font-weight",700)
+        .attr("fill","#0D1117").attr("text-anchor","middle").attr("pointer-events","none")
+    : null;
 
   netSim.on("tick",()=>{
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
     node.attr("cx",d=>d.x).attr("cy",d=>d.y);
-    caption.attr("x",d=>d.x).attr("y",d=>d.y);
+    if(caption) caption.attr("x",d=>d.x).attr("y",d=>d.y+3);
   });
 }
 
