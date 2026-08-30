@@ -633,6 +633,24 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
   if (window.__aiAssistantModuleInstalled) return;
   window.__aiAssistantModuleInstalled = true;
 
+  let KB = [];
+  let isKbLoading = false;
+
+  async function loadKnowledgeBase() {
+    if (KB.length > 0 || isKbLoading) return;
+    isKbLoading = true;
+    try {
+      KB = await fetch('fulltext_knowledge_base.json', { cache: 'no-store' }).then(res => res.json());
+    } catch (e) {
+      console.warn('No se pudo cargar fulltext_knowledge_base.json, usando corpus cargado.', e);
+      let c = (typeof A_corpus !== 'undefined' ? A_corpus : (window.A_corpus || []));
+      let t = (typeof A_teoricos !== 'undefined' ? A_teoricos : (window.A_teoricos || []));
+      KB = [].concat(c, t);
+    } finally {
+      isKbLoading = false;
+    }
+  }
+
   const STOPWORDS = new Set([
     'que', 'quien', 'quienes', 'cual', 'cuales', 'como', 'donde', 'cuando',
     'por', 'para', 'con', 'sin', 'sobre', 'desde', 'hasta', 'hacia', 'entre',
@@ -640,42 +658,12 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     'ese', 'esa', 'esos', 'esas', 'aquel', 'aquella', 'aquellos', 'aquellas',
     'mis', 'tus', 'sus', 'nuestro', 'nuestra', 'nuestros', 'nuestras',
     'dicen', 'dice', 'hablan', 'habla', 'mencionan', 'menciona', 'explican', 'explica',
-    'validar', 'fuentes', 'citas', 'frases', 'literales', 'autores', 'concepto', 'sobre',
-    'quiero', 'necesito', 'buscar', 'dame', 'encontrar', 'articulos', 'textos'
+    'validar', 'fuentes', 'citas', 'frases', 'literales', 'autores', 'concepto',
+    'quiero', 'necesito', 'buscar', 'dame', 'encontrar', 'articulos', 'textos', 'decime'
   ]);
 
   function esc(v){return (v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
   function norm(v){return(v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
-
-  function similarity(s1, s2) {
-    s1 = norm(s1); s2 = norm(s2);
-    if (s1 === s2) return 1.0;
-    if (s1.includes(s2) || s2.includes(s1)) return 0.85;
-    if (s1.length < 3 || s2.length < 3) return 0.0;
-    let longer = s1.length > s2.length ? s1 : s2;
-    let shorter = s1.length > s2.length ? s2 : s1;
-    let longerLength = longer.length;
-    if (longerLength === 0) return 1.0;
-    
-    let costs = new Array();
-    for (let i = 0; i <= s1.length; i++) {
-      let lastValue = i;
-      for (let j = 0; j <= s2.length; j++) {
-        if (i === 0) costs[j] = j;
-        else {
-          if (j > 0) {
-            let newValue = costs[j - 1];
-            if (s1.charAt(i - 1) !== s2.charAt(j - 1))
-              newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
-            costs[j - 1] = lastValue;
-            lastValue = newValue;
-          }
-        }
-      }
-      if (i > 0) costs[s2.length] = lastValue;
-    }
-    return (longerLength - costs[s2.length]) / parseFloat(longerLength);
-  }
 
   function buildApa7(a) {
     let rawAuthors = (a.authors || '').split(/\s*;\s*|\s*\|\s*/).map(x=>x.trim()).filter(Boolean);
@@ -697,26 +685,17 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     let year = a.year || 's. f.';
     let title = (a.title || '[Sin título]').trim();
     if (title.length > 1) title = title.charAt(0).toUpperCase() + title.slice(1);
-    let source = a.origin || a.source || (a.collection === 'teoricos' ? 'Biblioteca Teórica Drive' : 'Revista Científica');
+    let source = a.source || a.origin || (a.collection === 'teoricos' ? 'Biblioteca Teórica Drive' : 'Revista Científica');
     let doi = a.doi ? (a.doi.startsWith('http') ? a.doi : 'https://doi.org/' + a.doi) : (a.url || '');
 
     return `${authorsStr}. (${year}). ${title}. ${source}.${doi ? ' ' + doi : ''}`;
-  }
-
-  function getMaterials() {
-    let corpus = [];
-    let teoricos = [];
-    try { if (typeof A_corpus !== 'undefined') corpus = A_corpus; } catch(e){}
-    try { if (typeof A_teoricos !== 'undefined') teoricos = A_teoricos; } catch(e){}
-    if (!corpus.length && window.A_corpus) corpus = window.A_corpus;
-    if (!teoricos.length && window.A_teoricos) teoricos = window.A_teoricos;
-    return { corpus, teoricos };
   }
 
   function initAiAssistantUI() {
     const colBar = document.querySelector('.col-bar');
     if (!colBar) return;
 
+    // BOTÓN ÚNICO UNIFICADO
     const btnAi = document.createElement('button');
     btnAi.id = 'btnAiAssistant';
     btnAi.className = 'col-btn';
@@ -742,28 +721,28 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:10px">
         <div>
           <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Bibliográfico & Validación de Fuentes APA 7 (Qwen 2.5)</h2>
-          <div style="font-size:0.82rem;color:#8b949e">Consulta conceptos, valida frases o preguntale a la IA sobre todos los materiales de tu biblioteca.</div>
+          <div style="font-size:0.82rem;color:#8b949e">Formulá cualquier pregunta o pedí frases literales. La IA responde <b>estrictamente basándose en el texto completo de tus 2.124 obras</b> (Corpus Scraper + Drive Teórico).</div>
         </div>
         <button id="closeAiPaneBtn" type="button" style="padding:4px 12px;background:#21262d;border:1px solid #30363d;color:#fff;cursor:pointer">✕ Cerrar</button>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 220px 180px;gap:10px;margin-bottom:12px">
-        <textarea id="aiPrompt" placeholder="Ingresá un concepto, frase a validar o pregunta (ej: gubernamentalidad, @regulación, Foucault, 'liderazgo en escuelas públicas')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
+        <textarea id="aiPrompt" placeholder="Hacé tu pregunta o pedí citas (ej: Decime una frase literal de Foucault sobre gobernanza, o ¿Qué dicen las fuentes sobre el liderazgo en escuelas públicas?)..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
         
         <select id="conceptScope" style="background:#0d1117;color:#fff;font-size:0.85rem">
-          <option value="all">Todos los materiales (2.124)</option>
+          <option value="all">Todas las 2.124 Obras (Texto Completo)</option>
           <option value="corpus">Solo Corpus Scraper (2.087)</option>
           <option value="teoricos">Solo Textos Teóricos (37)</option>
         </select>
 
         <div style="display:flex;flex-direction:column;gap:6px">
-          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.92rem;cursor:pointer">⚡ Consultar con Qwen 2.5</button>
+          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.92rem;cursor:pointer">⚡ Responder con Qwen 2.5</button>
         </div>
       </div>
 
       <div id="aiConfigBox" style="font-size:0.78rem;color:#c9d1d9;margin-bottom:14px;background:#0d1117;padding:10px 14px;border-radius:6px;border:1px solid #30363d;display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <label><b>Modelo IA:</b></label>
+          <label><b>Motor IA:</b></label>
           <select id="aiProviderSelect" style="padding:4px 8px;background:#161b22;color:#fff">
             <option value="openrouter">Qwen 2.5-72B (OpenRouter API - qwen/qwen-2.5-72b-instruct)</option>
             <option value="ollama">Qwen Local (Ollama / LM Studio en http://localhost:11434/v1)</option>
@@ -780,7 +759,7 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
 
       <div id="aiResponseContainer" style="display:none;margin-top:14px;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px">
         <div id="aiSynthesisHeader" style="font-weight:700;color:#79c0ff;margin-bottom:10px;font-size:1.05rem;display:flex;align-items:center;gap:8px">
-          <span>🧠 Análisis Bibliográfico & Validación de Fuentes</span>
+          <span>🧠 Respuesta de Qwen 2.5 Basada en tus Fuentes</span>
         </div>
         <div id="aiSynthesisBody" style="font-size:0.92rem;line-height:1.6;color:#e6edf3;white-space:pre-wrap;margin-bottom:16px;background:#161b22;padding:14px;border-radius:6px;border-left:4px solid #8957e5"></div>
 
@@ -806,10 +785,13 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
       alert('✓ Configuración de IA guardada localmente.');
     };
 
-    btnAi.onclick = () => {
+    btnAi.onclick = async () => {
       const isVisible = aiPane.style.display !== 'none';
       aiPane.style.display = isVisible ? 'none' : 'block';
-      if (!isVisible) document.getElementById('aiPrompt').focus();
+      if (!isVisible) {
+        document.getElementById('aiPrompt').focus();
+        await loadKnowledgeBase();
+      }
     };
 
     document.getElementById('closeAiPaneBtn').onclick = () => {
@@ -828,9 +810,11 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
   async function runAiAnalysis() {
     const rawPrompt = document.getElementById('aiPrompt').value.trim();
     if (!rawPrompt) {
-      alert('Ingresá una pregunta, concepto o frase para analizar.');
+      alert('Ingresá una pregunta o consulta bibliográfica.');
       return;
     }
+
+    await loadKnowledgeBase();
 
     const scope = document.getElementById('conceptScope').value;
     const container = document.getElementById('aiResponseContainer');
@@ -838,59 +822,60 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     const sourcesEl = document.getElementById('aiValidatedSourcesList');
     container.style.display = 'block';
 
-    bodyEl.textContent = '⚡ RAG Multidocumento: Inspeccionando todos los artículos del corpus y textos teóricos...\nProcesando coincidencia conceptual y citas literales...';
+    bodyEl.textContent = '⚡ Consultando el texto completo de las 2.124 obras e invocando a Qwen 2.5...';
     sourcesEl.innerHTML = '';
 
-    const { corpus, teoricos } = getMaterials();
-    let allItems = [];
-    if (scope === 'all' || scope === 'corpus') allItems = allItems.concat(corpus);
-    if (scope === 'all' || scope === 'teoricos') allItems = allItems.concat(teoricos);
+    let items = KB.length > 0 ? KB : [].concat(window.A_corpus||[], window.A_teoricos||[]);
+    if (scope === 'corpus') items = items.filter(x => x.collection === 'corpus');
+    if (scope === 'teoricos') items = items.filter(x => x.collection === 'teoricos');
 
-    // Normalización y filtrado inteligente de stopwords
-    const cleanPrompt = norm(rawPrompt.replace(/\d+$/, '').replace(/^@/, ''));
-    const allTokens = cleanPrompt.split(/[\s,.;:!?_()-]+/).filter(Boolean);
-    const keyTokens = allTokens.filter(w => w.length >= 3 && !STOPWORDS.has(w));
-    const effectiveTokens = keyTokens.length > 0 ? keyTokens : allTokens;
+    const cleanPrompt = norm(rawPrompt);
+    const tokens = cleanPrompt.split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
+    const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
-    // Scoring RAG sobre la base completa
-    const scored = allItems.map(a => {
+    // Scoring RAG sobre párrafos e historias completas
+    const scored = items.map(doc => {
       let score = 0;
-      const titleN = norm(a.title || '');
-      const absN = norm(a.abstract || '');
-      const kwN = norm(a.keywords || '');
-      const authN = norm(a.authors || '');
-      const fnN = norm(a.drive_filename || '');
+      const titleN = norm(doc.title || '');
+      const authN = norm(doc.authors || '');
+      const absN = norm(doc.abstract || '');
+      const sampleN = norm(doc.fulltext_sample || '');
+      const pars = doc.paragraphs || [];
 
-      // Match exacto de frase
-      if (titleN.includes(cleanPrompt)) score += 15;
-      if (absN.includes(cleanPrompt)) score += 10;
-      if (fnN.includes(cleanPrompt)) score += 12;
+      // Match exacto de frase en título o texto completo
+      if (titleN.includes(cleanPrompt)) score += 20;
+      if (sampleN.includes(cleanPrompt)) score += 15;
 
-      // Match por tokens clave de la consulta
-      effectiveTokens.forEach(token => {
-        if (titleN.includes(token)) score += 5;
-        if (absN.includes(token)) score += 3;
-        if (kwN.includes(token)) score += 4;
-        if (authN.includes(token)) score += 4;
-        if (fnN.includes(token)) score += 5;
+      queryTokens.forEach(token => {
+        if (titleN.includes(token)) score += 8;
+        if (authN.includes(token)) score += 8;
+        if (absN.includes(token)) score += 4;
+        if (sampleN.includes(token)) score += 3;
 
-        // Similitud difusa (Levenshtein) para tolerar erratas
-        const wordsInDoc = (titleN + ' ' + kwN + ' ' + fnN).split(/\s+/);
-        wordsInDoc.forEach(w => {
-          if (w.length >= 4 && token.length >= 4) {
-            const sim = similarity(token, w);
-            if (sim >= 0.70) score += 4 * sim;
-          }
+        pars.forEach(p => {
+          if (norm(p).includes(token)) score += 2;
         });
       });
 
-      return { article: a, score };
+      // Extraer párrafos más relevantes como cita literal candidata
+      let bestParagraph = '';
+      let bestPScore = 0;
+      pars.forEach(p => {
+        let pScore = 0;
+        const pN = norm(p);
+        queryTokens.forEach(t => { if (pN.includes(t)) pScore += 1; });
+        if (pScore > bestPScore) {
+          bestPScore = pScore;
+          bestParagraph = p;
+        }
+      });
+
+      return { doc, score, bestParagraph: bestParagraph || doc.abstract || doc.fulltext_sample || doc.title };
     }).filter(x => x.score > 0).sort((a, b) => b.score - a.score);
 
-    // Si la búsqueda difusa estricta devuelve pocos, tomar los primeros elementos por tokens generales
-    let topMatches = scored.slice(0, 15).map(x => x.article);
-    if (topMatches.length === 0 && allItems.length > 0) {
-      topMatches = allItems.slice(0, 10);
+    let topMatches = scored.slice(0, 10);
+    if (topMatches.length === 0 && items.length > 0) {
+      topMatches = items.slice(0, 8).map(d => ({ doc: d, bestParagraph: d.abstract || d.title }));
     }
 
     const provider = document.getElementById('aiProviderSelect').value;
@@ -900,13 +885,14 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
 
     if (topMatches.length > 0) {
       const contextStr = topMatches.slice(0, 6).map((m, idx) => {
-        return `[Fuente ${idx+1}] Título: ${m.title} | Autores: ${m.authors} | Año: ${m.year} | Resumen/Fragmento: ${(m.abstract||m.title||'').slice(0, 320)}`;
+        const d = m.doc;
+        return `[Fuente ${idx+1}] Título: "${d.title}" | Autor/es: ${d.authors} | Año: ${d.year}\nFragmento Texto Completo: "${(m.bestParagraph || d.fulltext_sample || d.abstract || '').slice(0, 450)}"`;
       }).join('\n\n');
 
-      const systemPrompt = `Sos un experto asistente de investigación académica en educación. El usuario consulta: "${rawPrompt}".\n\nAnalizá las siguientes fuentes validadas del corpus:\n${contextStr}\n\nRespondé de forma sintética, clara y rigurosa en español. Explicá cómo se relacionan las fuentes con la consulta, valida las ideas clave y referencia a los autores.`;
+      const systemPrompt = `Sos un riguroso asistente bibliográfico universitario. El usuario hace la siguiente pregunta: "${rawPrompt}".\n\nTu tarea es responder ÚNICAMENTE basándote en el conocimiento acumulado de las siguientes fuentes de su corpus:\n\n${contextStr}\n\nREGLAS DE RESPUESTA:\n1. Respondé a la pregunta del usuario en español basándote ESTRICTAMENTE en la información de estas fuentes.\n2. Si el usuario pide una cita o frase literal, extraé la frase exacta entre comillas e indicá el autor y título.\n3. Sintetizá los conceptos explicando qué dice cada autor.\n4. No inventes nada fuera de estas fuentes.`;
 
       if (provider === 'openrouter' && apiKey) {
-        bodyEl.textContent = '⚡ Generando respuesta conversacional en vivo con Qwen 2.5 (OpenRouter)...';
+        bodyEl.textContent = '⚡ Invocando a Qwen 2.5-72B en OpenRouter para responder basándose en tu corpus...';
         try {
           const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
@@ -978,18 +964,18 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     if (aiResponseText) {
       bodyEl.textContent = aiResponseText;
     } else {
-      let synth = `⚡ ANÁLISIS DE VALIDACIÓN DE FUENTES & CITAS (QWEN 2.5 RAG ENGINE)\n\n`;
-      synth += `Consulta ingresada: "${rawPrompt}"\n`;
-      synth += `Términos clave analizados: [${effectiveTokens.join(', ')}]\n`;
-      synth += `Base total inspeccionada: ${allItems.length.toLocaleString()} materiales (${corpus.length} artículos corpus + ${teoricos.length} textos teóricos de Drive).\n`;
-      synth += `Fuentes validadas encontradas: ${topMatches.length} documentos.\n\n`;
-      synth += `Síntesis Bibliográfica:\nSe identificaron las fuentes primarias y secundarias que validan y responden a tu consulta. A continuación se presentan las fuentes con sus fragmentos literales validados y las referencias completas en Normas APA 7 listadas con botón de copiado directo de 1-clic.`;
+      let synth = `⚡ SÍNTESIS EXCLUSIVA BASADA EN TU CORPUS (QWEN 2.5 RAG)\n\n`;
+      synth += `Consulta: "${rawPrompt}"\n`;
+      synth += `Base de Conocimiento Consultada: ${items.length.toLocaleString()} obras (Texto Completo).\n`;
+      synth += `Fuentes Validadas Directas: ${topMatches.length} documentos.\n\n`;
+      synth += `Respuesta Basada en tus Fuentes:\nSe extrajeron las fuentes de tu corpus que responden directamente a la consulta. A continuación se presentan los fragmentos con citas literales exactas y las referencias completas en Normas APA 7 listadas para copiar con 1-clic.`;
       bodyEl.textContent = synth;
     }
 
     // Renderizado de Fuentes Validadas con Citas APA 7
     sourcesEl.innerHTML = '';
-    topMatches.forEach((a, i) => {
+    topMatches.forEach((m, i) => {
+      const a = m.doc;
       const apaCite = buildApa7(a);
       const card = document.createElement('div');
       card.style.background = '#161b22';
@@ -997,7 +983,7 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
       card.style.borderRadius = '8px';
       card.style.padding = '12px 14px';
 
-      const fragmentText = a.abstract || a.title || 'Fragmento disponible en la obra completa.';
+      const fragmentText = m.bestParagraph || a.abstract || a.title || 'Fragmento disponible en la obra completa.';
 
       card.innerHTML = `
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
@@ -1006,13 +992,13 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
               Fuente #${i+1} · ${a.collection==='teoricos'?'📖 Texto Teórico (Drive)':'📚 Artículo Scrapeado'}
             </span>
             <h4 style="margin:6px 0 4px;font-size:0.95rem;color:#e6edf3">${esc(a.title)}</h4>
-            <div style="font-size:0.78rem;color:#8b949e">${esc(a.authors || 'Sin autor')} · ${esc(a.year || 's. f.')} · ${esc(a.origin || a.source || '')}</div>
+            <div style="font-size:0.78rem;color:#8b949e">${esc(a.authors || 'Sin autor')} · ${esc(a.year || 's. f.')} · ${esc(a.source || a.origin || '')}</div>
           </div>
           <button type="button" class="read-btn" style="padding:5px 10px;font-size:0.8rem;background:#1f6feb;border-color:#1f6feb;color:#fff;cursor:pointer;white-space:nowrap">📖 Leer y Fichar</button>
         </div>
 
         <div style="margin:8px 0;font-size:0.82rem;color:#c9d1d9;line-height:1.45;background:#0d1117;padding:8px 10px;border-left:3px solid #8957e5;border-radius:4px">
-          <b>Cita Literal / Fragmento Validado:</b> "${esc(fragmentText.slice(0, 340))}${fragmentText.length>340?'...':''}"
+          <b>Cita Literal / Fragmento Validado:</b> "${esc(fragmentText.slice(0, 450))}${fragmentText.length>450?'...':''}"
         </div>
 
         <div style="margin-top:8px;padding:8px 10px;background:#0d1117;border:1px solid #21262d;border-radius:6px;display:flex;align-items:center;justify-content:space-between;gap:10px">
