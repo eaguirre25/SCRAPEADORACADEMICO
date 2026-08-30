@@ -10,7 +10,7 @@ Dashboard interactivo con:
 import csv, json, re, itertools, html as html_lib
 from pathlib import Path
 from datetime import date
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 DATA_DIR = Path("data")
 OUT_DIR  = Path("docs")
@@ -158,85 +158,339 @@ KW_STOPS = {
     "national","international","social","public","system","systems"
 }
 
-network_papers = []
-for i, cp in enumerate(corpus):
-    doi   = s(cp.get("doi", ""))
-    rec   = doi_to_record.get(doi, cp)
-    title = s(rec.get("title", "") or cp.get("titulo", ""))
-    if not title:
+# Cada vista del selector de modelado necesita su propia asignacion
+# documento -> topico y su propia tabla de topicos. Antes el grafo se construia
+# una sola vez con la STM historica y cambiar de modelo solo movia las
+# tarjetas; ahora se precalcula una red por vista.
+BERTOPIC_ROOT = "output/topic_models/bertopic/metadata_multilingual/preferred_solution"
+NETWORK_SOURCES = {
+    "bertopic-macros": {
+        "documents": f"{BERTOPIC_ROOT}/document_topics.csv",
+        "document_topic_field": "topic_id",
+        "topics": f"{BERTOPIC_ROOT}/topics.csv",
+        "topic_id_field": "topic_id",
+        "similarity": f"{BERTOPIC_ROOT}/topic_similarity.csv",
+        "label_model": "BERTopic-METADATA-MULTILINGUAL",
+    },
+    "bertopic-subtopics": {
+        "documents": f"{BERTOPIC_ROOT}/document_topic_hierarchy.csv",
+        "document_topic_field": "subtopic_id",
+        "topics": f"{BERTOPIC_ROOT}/subtopics.csv",
+        "topic_id_field": "subtopic_id",
+        "parent_field": "parent_topic_id",
+    },
+    "stm-es": {
+        "documents": "output/topic_models/stm/metadata_es_corrected/document_topics.csv",
+        "document_topic_field": "topic_id",
+        "topics": "output/topic_models/stm/metadata_es_corrected/topics.csv",
+        "topic_id_field": "topic_id",
+    },
+    "stm-en": {
+        "documents": "output/topic_models/stm/metadata_en_corrected/document_topics.csv",
+        "document_topic_field": "topic_id",
+        "topics": "output/topic_models/stm/metadata_en_corrected/topics.csv",
+        "topic_id_field": "topic_id",
+    },
+    "stm-pt": {
+        "documents": "output/topic_models/stm/metadata_pt_corrected/document_topics.csv",
+        "document_topic_field": "topic_id",
+        "topics": "output/topic_models/stm/metadata_pt_corrected/topics.csv",
+        "topic_id_field": "topic_id",
+    },
+    "legacy-stm": {
+        "documents": "output/topic_models/stm/document_topics.csv",
+        "document_topic_field": "topic_id",
+        "topics": "output/topic_models/stm/topics.csv",
+        "topic_id_field": "topic_id",
+    },
+}
+
+MAX_NODES = 400
+MAX_EDGES = 2500
+MAX_TOPIC_EDGES = 150
+MIN_SHARED_KEYWORDS = 2
+SPARSE_NETWORK_NODES = 150
+MIN_SEMANTIC_SIMILARITY = 0.35
+MIN_COASSIGNMENT = 0.15
+MIN_WORD_OVERLAP = 0.03
+
+
+def _row_doi(row):
+    """Las salidas de modelado traen `doi` o un `document_id` con prefijo."""
+    doi = s(row.get("doi"))
+    if doi:
+        return doi.lower()
+    document_id = s(row.get("document_id"))
+    if document_id.lower().startswith("doi:"):
+        return document_id[4:].strip().lower()
+    return ""
+
+
+def _topic_id(value):
+    """Los subtopicos se exportan como float ("0.0") y los topicos como int."""
+    value = s(value)
+    return value[:-2] if value.endswith(".0") else value
+
+
+def load_document_topics(config):
+    assignments = {}
+    for row in read_csv(config["documents"]):
+        doi = _row_doi(row)
+        topic_id = _topic_id(row.get(config["document_topic_field"]))
+        if doi and topic_id and topic_id != "-1":
+            assignments[doi] = topic_id
+    return assignments
+
+
+# Etiquetas humanas propuestas: los topics.csv traen el descriptor automatico
+# ("leadership · style"), ilegible en una leyenda de colores.
+PROPOSED_LABELS = defaultdict(dict)
+for row in read_csv("config/topic_labels.csv"):
+    label = s(row.get("human_label"))
+    if label:
+        PROPOSED_LABELS[s(row.get("model"))][_topic_id(row.get("topic_id"))] = label
+
+
+def topic_display_label(row, overrides=None):
+    return (
+        (overrides or {}).get(_topic_id(row.get("topic_id")), "")
+        or s(row.get("human_label"))
+        or s(row.get("automatic_label"))
+        or s(row.get("descriptor_automatic"))
+        or s(row.get("topic_label"))
+        or "Sin descriptor"
+    )
+
+
+def load_topic_table(config):
+    overrides = PROPOSED_LABELS.get(config.get("label_model", ""), {})
+    topics = []
+    for row in read_csv(config["topics"]):
+        topic_id = _topic_id(row.get(config["topic_id_field"]))
+        if not topic_id or topic_id == "-1":
+            continue
+        raw_words = s(row.get("top_words") or row.get("descriptor_automatic"))
+        topics.append({
+            "id": topic_id,
+            "label": topic_display_label(row, overrides),
+            "size": safe_int(row.get("document_count") or row.get("subtopic_size"), 0),
+            "prevalence": safe_float(row.get("prevalence"), 0.0),
+            "parent": _topic_id(row.get(config.get("parent_field") or "")),
+            "words": [w.strip().lower() for w in raw_words.replace("·", "|").split("|") if w.strip()],
+        })
+    return topics
+
+
+def topic_palette(topics):
+    ordered = sorted(topics, key=lambda topic: safe_float(topic["id"], 1e9))
+    return {topic["id"]: PALETA[i % len(PALETA)] for i, topic in enumerate(ordered)}
+
+
+# Pool de documentos: titulo, autoria y keywords con las que se tejen aristas.
+paper_pool = {}
+for row in records:
+    doi = s(row.get("doi", "")).lower()
+    title = s(row.get("title", ""))
+    if not doi or not title:
         continue
-    kws_raw = s(rec.get("keywords", "") or cp.get("keywords", ""))
-    kws = [k.strip().lower() for k in kws_raw.split(";")
-           if k.strip() and len(k.strip()) > 3 and k.strip().lower() not in KW_STOPS]
-    url = s(rec.get("url", "") or cp.get("url", ""))
-    if not url and doi:
-        url = f"https://doi.org/{doi}"
-    tid   = doi_to_topic.get(doi, "")
-    color = topic_colors.get(tid, "#484F58")
-    autores   = s(rec.get("authors", "") or cp.get("autores", ""))
-    auth_list = [a.strip() for a in autores.split(";") if a.strip()]
-    auth_short = "; ".join(auth_list[:2]) + (" et al." if len(auth_list) > 2 else "")
-    network_papers.append({
-        "idx":     i,
-        "title":   title[:70] + ("..." if len(title) > 70 else ""),
-        "authors": auth_short,
-        "year":    s(rec.get("publication_year", "") or cp.get("anio", "")),
-        "url":     url,
-        "topic":   tid,
-        "color":   color,
-        "kws":     kws[:12],
-        "degree":  0
-    })
+    kws_raw = s(row.get("keywords", ""))
+    authors = [a.strip() for a in s(row.get("authors", "")).split(";") if a.strip()]
+    paper_pool[doi] = {
+        "title": title[:70] + ("..." if len(title) > 70 else ""),
+        "authors": "; ".join(authors[:2]) + (" et al." if len(authors) > 2 else ""),
+        "year": s(row.get("publication_year", "")),
+        "url": s(row.get("url", "")) or f"https://doi.org/{doi}",
+        "kws": [
+            k.strip().lower() for k in kws_raw.split(";")
+            if k.strip() and len(k.strip()) > 3 and k.strip().lower() not in KW_STOPS
+        ][:12],
+    }
 
-# Construir índice keyword → papers
-kw_index = defaultdict(list)
-for i, p in enumerate(network_papers):
-    for kw in p["kws"]:
-        kw_index[kw].append(i)
+corpus_dois = {s(cp.get("doi", "")).lower() for cp in corpus if s(cp.get("doi", ""))}
+BASE_UNIVERSES = {
+    "master": ("todos los registros validados", set(paper_pool)),
+    "corpus": ("documentos con texto completo", corpus_dois & set(paper_pool)),
+}
 
-# Contar keywords compartidas
-edge_weights = defaultdict(int)
-for kw, paper_ids in kw_index.items():
-    if 2 <= len(paper_ids) <= 40:
-        for a, b in itertools.combinations(paper_ids, 2):
-            edge_weights[(min(a, b), max(a, b))] += 1
 
-# Filtrar aristas fuertes
-strong_edges = sorted(
-    [(a, b, w) for (a, b), w in edge_weights.items() if w >= 2],
-    key=lambda x: -x[2]
-)[:2500]
+def _weave(papers, min_shared):
+    """Teje la red exigiendo `min_shared` keywords en comun por arista."""
+    kw_index = defaultdict(list)
+    for i, paper in enumerate(papers):
+        for kw in paper["kws"]:
+            kw_index[kw].append(i)
 
-connected = set()
-for a, b, _ in strong_edges:
-    connected.add(a)
-    connected.add(b)
+    edge_weights = defaultdict(int)
+    for paper_ids in kw_index.values():
+        if 2 <= len(paper_ids) <= 40:
+            for a, b in itertools.combinations(paper_ids, 2):
+                edge_weights[(a, b)] += 1
 
-old_to_new = {old: new for new, old in enumerate(sorted(connected))}
-nodes = [network_papers[i] for i in sorted(connected)]
+    strong_edges = sorted(
+        ((a, b, w) for (a, b), w in edge_weights.items() if w >= min_shared),
+        key=lambda edge: -edge[2],
+    )[:MAX_EDGES]
 
-for a, b, _ in strong_edges:
-    if a in old_to_new and b in old_to_new:
+    connected = sorted({node for a, b, _ in strong_edges for node in (a, b)})
+    old_to_new = {old: new for new, old in enumerate(connected)}
+    nodes = [dict(papers[i], degree=0) for i in connected]
+    for a, b, _ in strong_edges:
         nodes[old_to_new[a]]["degree"] += 1
         nodes[old_to_new[b]]["degree"] += 1
 
-MAX_NODES = 400
-if len(nodes) > MAX_NODES:
-    top_idx = sorted(range(len(nodes)), key=lambda i: -nodes[i]["degree"])[:MAX_NODES]
-    keep    = set(top_idx)
-    remap   = {old: new for new, old in enumerate(sorted(keep))}
-    nodes   = [nodes[i] for i in sorted(keep)]
-    strong_edges = [
-        (remap[old_to_new[a]], remap[old_to_new[b]], w)
-        for a, b, w in strong_edges
-        if old_to_new.get(a) in keep and old_to_new.get(b) in keep
-    ]
-    edges = [{"source": a, "target": b, "weight": w} for a, b, w in strong_edges]
-else:
-    edges = [{"source": old_to_new[a], "target": old_to_new[b], "weight": w}
-             for a, b, w in strong_edges if a in old_to_new and b in old_to_new]
+    if len(nodes) > MAX_NODES:
+        keep = sorted(sorted(range(len(nodes)), key=lambda i: -nodes[i]["degree"])[:MAX_NODES])
+        remap = {old: new for new, old in enumerate(keep)}
+        kept = set(keep)
+        nodes = [nodes[i] for i in keep]
+        edges = [
+            {"source": remap[old_to_new[a]], "target": remap[old_to_new[b]], "weight": w}
+            for a, b, w in strong_edges
+            if old_to_new[a] in kept and old_to_new[b] in kept
+        ]
+    else:
+        edges = [
+            {"source": old_to_new[a], "target": old_to_new[b], "weight": w}
+            for a, b, w in strong_edges
+        ]
+    # Las keywords ya cumplieron su funcion y abultarian el HTML.
+    for node in nodes:
+        node.pop("kws", None)
+    return nodes, edges
 
-print(f"Red: {len(nodes)} nodos, {len(edges)} aristas")
+
+def build_keyword_network(base_dois, assignments, colors, labels):
+    """Red documental: nodos = articulos, aristas = keywords compartidas."""
+    papers = []
+    for doi in sorted(base_dois):
+        info = paper_pool[doi]
+        topic_id = assignments.get(doi)
+        if not topic_id or not info["kws"]:
+            continue
+        papers.append({
+            **info,
+            "topic": topic_id,
+            "topic_label": labels.get(topic_id, ""),
+            "color": colors.get(topic_id, "#484F58"),
+        })
+
+    nodes, edges = _weave(papers, MIN_SHARED_KEYWORDS)
+    # Los modelos con pocos documentos asignados no llegan a dos keywords
+    # compartidas y quedarian con un grafo casi vacio; ahi se afloja el umbral.
+    if len(nodes) < SPARSE_NETWORK_NODES and len(papers) > len(nodes):
+        relaxed_nodes, relaxed_edges = _weave(papers, 1)
+        if len(relaxed_nodes) > len(nodes):
+            nodes, edges = relaxed_nodes, relaxed_edges
+    return nodes, edges
+
+
+def build_topic_network(topics, colors, assignments, config):
+    """Red de topicos: nodos = topicos, aristas = similitud entre ellos."""
+    counts = Counter(assignments.values())
+    index = {topic["id"]: i for i, topic in enumerate(topics)}
+    nodes = [{
+        "id": topic["id"],
+        "label": topic["label"],
+        "size": topic["size"] or counts.get(topic["id"], 0),
+        "prevalence": topic["prevalence"],
+        "color": colors.get(topic["id"], "#484F58"),
+        "words": topic["words"][:8],
+    } for topic in topics]
+
+    raw_edges = []
+    threshold = MIN_WORD_OVERLAP
+    if config.get("similarity"):
+        # BERTopic exporta la similitud c-TF-IDF entre clusters.
+        threshold = MIN_SEMANTIC_SIMILARITY
+        for row in read_csv(config["similarity"]):
+            a, b = _topic_id(row.get("topic_a")), _topic_id(row.get("topic_b"))
+            weight = safe_float(row.get("ctfidf_similarity"))
+            if a in index and b in index and weight > 0:
+                raw_edges.append((index[a], index[b], weight))
+    elif config.get("parent_field"):
+        # Los subtopicos no tienen matriz de similitud: se conectan los que
+        # cuelgan del mismo macrotema.
+        by_parent = defaultdict(list)
+        for topic in topics:
+            by_parent[topic["parent"]].append(topic["id"])
+        for members in by_parent.values():
+            for a, b in itertools.combinations(members, 2):
+                raw_edges.append((index[a], index[b], 1.0))
+    else:
+        # Las STM no exportan matriz de similitud y sus top_words son casi
+        # disjuntas por construccion, asi que Jaccard deja el grafo vacio. Si
+        # se vinculan por el segundo topico de cada documento: dos topicos se
+        # tocan cuando comparten documentos fronterizos.
+        pair_counts = Counter()
+        for row in read_csv(config["documents"]):
+            first = _topic_id(row.get(config["document_topic_field"]))
+            second = _topic_id(row.get("second_topic_id"))
+            if first in index and second in index and first != second:
+                pair_counts[tuple(sorted((index[first], index[second])))] += 1
+        if pair_counts:
+            strongest = max(pair_counts.values())
+            raw_edges = [(a, b, count / strongest) for (a, b), count in pair_counts.items()]
+            threshold = MIN_COASSIGNMENT
+        else:
+            for a, b in itertools.combinations(topics, 2):
+                words_a, words_b = set(a["words"]), set(b["words"])
+                if not words_a or not words_b:
+                    continue
+                weight = len(words_a & words_b) / len(words_a | words_b)
+                if weight > 0:
+                    raw_edges.append((index[a["id"]], index[b["id"]], weight))
+
+    raw_edges.sort(key=lambda edge: -edge[2])
+    selected = [edge for edge in raw_edges if edge[2] >= threshold]
+    # Un umbral fijo deja sin aristas a los modelos de vocabulario disperso; se
+    # completa con los pares mas fuertes hasta tener un grafo legible.
+    if len(selected) < len(nodes):
+        selected = raw_edges[:len(nodes)]
+    selected = selected[:MAX_TOPIC_EDGES]
+    return nodes, [{"source": a, "target": b, "weight": round(w, 3)} for a, b, w in selected]
+
+
+networks = {}
+for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
+    config = NETWORK_SOURCES.get(model_key)
+    if not config:
+        continue
+    assignments = load_document_topics(config)
+    topics = load_topic_table(config)
+    if not assignments or not topics:
+        continue
+    colors = topic_palette(topics)
+    labels = {topic["id"]: topic["label"] for topic in topics}
+
+    # Base adaptativa: se elige el universo documental que mas asignaciones de
+    # este modelo llega a representar en la red.
+    base_key, base_label, base_dois, best_cover = "", "", set(), -1
+    for candidate_key, (candidate_label, candidate_dois) in BASE_UNIVERSES.items():
+        cover = sum(1 for doi in candidate_dois if doi in assignments and paper_pool[doi]["kws"])
+        if cover > best_cover:
+            base_key, base_label, base_dois, best_cover = (
+                candidate_key, candidate_label, candidate_dois, cover
+            )
+
+    doc_nodes, doc_edges = build_keyword_network(base_dois, assignments, colors, labels)
+    topic_nodes, topic_edges = build_topic_network(topics, colors, assignments, config)
+    networks[model_key] = {
+        "label": model_label,
+        "kind": model_kind,
+        "base": base_label,
+        "assigned": best_cover,
+        "documents": {"nodes": doc_nodes, "edges": doc_edges},
+        "topics": {"nodes": topic_nodes, "edges": topic_edges},
+    }
+    print(
+        f"Red {model_key}: {len(doc_nodes)} nodos / {len(doc_edges)} aristas "
+        f"(base {base_key}, {best_cover} asignados) - "
+        f"{len(topic_nodes)} topicos / {len(topic_edges)} enlaces"
+    )
+
+DEFAULT_NETWORK = "bertopic-macros" if "bertopic-macros" in networks else next(iter(networks), "")
+nodes = networks.get(DEFAULT_NETWORK, {}).get("documents", {}).get("nodes", [])
+edges = networks.get(DEFAULT_NETWORK, {}).get("documents", {}).get("edges", [])
 
 # ── Lista completa de artículos ───────────────────────────────────────────────
 
@@ -281,8 +535,7 @@ anio_max = max(anios) if anios else 2026
 
 # ── JSON ──────────────────────────────────────────────────────────────────────
 
-nodes_json   = json.dumps(nodes, ensure_ascii=False)
-edges_json   = json.dumps(edges, ensure_ascii=False)
+networks_json = json.dumps(networks, ensure_ascii=False, separators=(",", ":"))
 arts_json    = json.dumps(all_articles, ensure_ascii=False)
 topicos_json = json.dumps([{
     "id":          s(t.get("topico", "")),
@@ -488,8 +741,15 @@ header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;disp
 .panel-head{padding:8px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .panel-head h2{font-size:.78em;font-weight:600;color:#E6EDF3;text-transform:uppercase;letter-spacing:.06em}
 .badge{background:var(--accent);color:#0D1117;border-radius:20px;padding:2px 8px;font-size:.65em;font-weight:700}
-#net-svg{flex:1;width:100%;cursor:grab}
+#net-svg{flex:1;width:100%;cursor:grab;min-height:0}
 #net-svg:active{cursor:grabbing}
+.net-controls{display:flex;align-items:center;gap:8px}
+#net-view{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-size:.72em}
+#net-view:focus{outline:none;border-color:var(--accent)}
+.net-legend{flex-shrink:0;max-height:62px;overflow-y:auto;padding:6px 12px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:4px 10px;background:var(--surface)}
+.net-legend span{font-size:.66em;color:var(--muted);display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.net-legend i{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.net-empty{padding:14px;font-size:.75em;color:var(--muted)}
 .tooltip{position:fixed;background:#1a2030;border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:.76em;pointer-events:none;opacity:0;transition:opacity .15s;max-width:260px;z-index:300;line-height:1.5}
 .topics-panel{display:flex;flex-direction:column;overflow:hidden}
 .topics-scroll{flex:1;overflow-y:auto;padding:10px}
@@ -566,10 +826,17 @@ tbody tr:hover td{background:var(--hover)}
 <div class="main-grid">
   <div class="net-panel">
     <div class="panel-head">
-      <h2>Red documental comparativa · STM full text histórica</h2>
-      <span class="badge">Vista archivada · keywords compartidas · color = tópico STM</span>
+      <h2 id="net-title">Red temática</h2>
+      <div class="net-controls">
+        <select id="net-view" onchange="setNetworkView(this.value)">
+          <option value="documents">Red de documentos</option>
+          <option value="topics">Red de tópicos</option>
+        </select>
+        <span class="badge" id="net-badge">&nbsp;</span>
+      </div>
     </div>
     <svg id="net-svg"></svg>
+    <div class="net-legend" id="net-legend"></div>
   </div>
   <div class="topics-panel">
     <div class="panel-head">
@@ -624,60 +891,122 @@ tbody tr:hover td{background:var(--hover)}
 </div>
 
 <script>
-const NODES   = """ + nodes_json + """;
-const EDGES   = """ + edges_json + """;
+const NETWORKS = """ + networks_json + """;
 const TOPICOS = """ + topicos_json + """;
 const ARTS    = """ + arts_json + """;
 const PG = 50;
+
+// ── Redes por modelo ──────────────────────────────────────────────────────────
+// El selector de modelado y el de vista comparten un mismo estado: al cambiar
+// cualquiera de los dos se vuelve a dibujar el grafo con los datos del modelo
+// elegido, en lugar de mostrar siempre la STM histórica.
+let currentModel = """ + json.dumps(DEFAULT_NETWORK) + """;
+let currentView  = "documents";
+let netSim = null;
+
 function showTopicModel(name){
   document.querySelectorAll(".tm-pane").forEach(pane => pane.hidden = pane.id !== "tm-"+name);
+  if(NETWORKS[name]) currentModel = name;
+  renderNetwork(!NETWORKS[name]);
 }
 
-// ── Red D3 ────────────────────────────────────────────────────────────────────
-(function(){
-  const svgEl = document.getElementById("net-svg");
+function setNetworkView(view){ currentView = view; renderNetwork(false); }
+
+function renderNetwork(isComparison){
+  const svgEl  = document.getElementById("net-svg");
+  const legend = document.getElementById("net-legend");
+  const title  = document.getElementById("net-title");
+  const badge  = document.getElementById("net-badge");
+  const tip    = document.getElementById("tooltip");
+
+  if(netSim){ netSim.stop(); netSim = null; }
+  d3.select("#net-svg").selectAll("*").remove();
+  tip.style.opacity = "0";
+
+  const model = NETWORKS[currentModel];
+  if(!model){ legend.innerHTML = ""; badge.textContent = "Sin red disponible"; return; }
+
+  const isTopics = currentView === "topics";
+  const view = model[currentView] || {nodes:[], edges:[]};
+  title.textContent = (isTopics ? "Red de tópicos · " : "Red de documentos · ") + model.label;
+  badge.textContent = isComparison
+    ? "La comparación no tiene red propia · se mantiene " + model.label
+    : (isTopics
+        ? `${view.nodes.length} tópicos · ${view.edges.length} enlaces`
+        : `${view.nodes.length} nodos · ${view.edges.length} aristas · base: ${model.base}`);
+
+  // En la vista documental el color no se explica solo: la leyenda traduce
+  // cada color al tópico del modelo activo.
+  legend.innerHTML = isTopics ? "" : model.topics.nodes
+    .map(t=>`<span><i style="background:${t.color}"></i>T${t.id} ${t.label}</span>`).join("");
+
   const W = svgEl.clientWidth || 800;
   const H = svgEl.clientHeight || 400;
   const svg = d3.select("#net-svg").attr("width",W).attr("height",H);
-  const g   = svg.append("g");
-  const tip = document.getElementById("tooltip");
 
+  if(!view.nodes.length){
+    svg.append("text").attr("x",W/2).attr("y",H/2).attr("text-anchor","middle")
+       .attr("fill","#8B949E").attr("font-size",13)
+       .text("Este modelo no tiene documentos suficientes para tejer una red.");
+    return;
+  }
+
+  const g = svg.append("g");
   svg.call(d3.zoom().scaleExtent([0.15,10]).on("zoom", e => g.attr("transform", e.transform)));
 
-  const maxDeg = Math.max(1,...NODES.map(n=>n.degree||1));
+  // Se clona: la simulación escribe x/y sobre los objetos y volveríamos a
+  // dibujar posiciones viejas al regresar a un modelo ya visitado.
+  const nodes = view.nodes.map(n=>Object.assign({},n));
+  const links = view.edges.map(e=>Object.assign({},e));
+  const maxWeight = Math.max(1, ...nodes.map(n=>(isTopics ? n.size : n.degree)||1));
 
-  const sim = d3.forceSimulation(NODES)
-    .force("link", d3.forceLink(EDGES).id((_,i)=>i).distance(d=>55-d.weight*3).strength(0.5))
-    .force("charge", d3.forceManyBody().strength(-70))
+  netSim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id((_,i)=>i)
+      .distance(isTopics ? d=>130-70*d.weight : d=>55-d.weight*3)
+      .strength(isTopics ? 0.35 : 0.5))
+    .force("charge", d3.forceManyBody().strength(isTopics ? -430 : -70))
     .force("center", d3.forceCenter(W/2, H/2))
-    .force("collision", d3.forceCollide(9));
+    .force("collision", d3.forceCollide(isTopics ? 36 : 9));
 
-  const link = g.append("g").selectAll("line").data(EDGES).enter().append("line")
-    .attr("stroke","#1E2A38").attr("stroke-width",d=>Math.min(3,d.weight*0.4)).attr("stroke-opacity",0.5);
+  const link = g.append("g").selectAll("line").data(links).enter().append("line")
+    .attr("stroke","#1E2A38")
+    .attr("stroke-width", d=>isTopics ? Math.max(0.6, d.weight*3) : Math.min(3, d.weight*0.4))
+    .attr("stroke-opacity",0.5);
 
-  const node = g.append("g").selectAll("circle").data(NODES).enter().append("circle")
-    .attr("r", d=>4+(d.degree/maxDeg)*9)
+  const node = g.append("g").selectAll("circle").data(nodes).enter().append("circle")
+    .attr("r", d=>isTopics ? 9+Math.sqrt((d.size||1)/maxWeight)*24 : 4+((d.degree||0)/maxWeight)*9)
     .attr("fill", d=>d.color||"#484F58")
     .attr("stroke","#0D1117").attr("stroke-width",1).attr("opacity",0.87)
-    .style("cursor","pointer")
+    .style("cursor", isTopics ? "default" : "pointer")
     .on("mouseover",(ev,d)=>{
       tip.style.opacity="1";
-      tip.innerHTML=`<strong>${d.title}</strong><br><span style="color:#8B949E">${d.authors}</span><br><span style="color:#58A6FF">${d.year}</span>${d.topic?` &middot; T${d.topic}`:""}`;
+      tip.innerHTML = isTopics
+        ? `<strong>T${d.id} &middot; ${d.label}</strong><br><span style="color:#8B949E">${d.size} documentos${d.prevalence?` &middot; ${d.prevalence.toFixed(1)}%`:""}</span><br><span style="color:#58A6FF">${(d.words||[]).join(" &middot; ")}</span>`
+        : `<strong>${d.title}</strong><br><span style="color:#8B949E">${d.authors}</span><br><span style="color:#58A6FF">${d.year}</span>${d.topic?`<br>T${d.topic} ${d.topic_label||""}`:""}`;
     })
     .on("mousemove",ev=>{ tip.style.left=(ev.clientX+14)+"px"; tip.style.top=(ev.clientY-10)+"px"; })
     .on("mouseout",()=>{ tip.style.opacity="0"; })
-    .on("click",(_,d)=>{ if(d.url) window.open(d.url,"_blank"); })
+    .on("click",(_,d)=>{ if(!isTopics && d.url) window.open(d.url,"_blank"); })
     .call(d3.drag()
-      .on("start",(e,d)=>{ if(!e.active) sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on("start",(e,d)=>{ if(!e.active) netSim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
       .on("drag", (e,d)=>{ d.fx=e.x; d.fy=e.y; })
-      .on("end",  (e,d)=>{ if(!e.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+      .on("end",  (e,d)=>{ if(!e.active) netSim.alphaTarget(0); d.fx=null; d.fy=null; }));
 
-  sim.on("tick",()=>{
+  const caption = isTopics
+    ? g.append("g").selectAll("text").data(nodes).enter().append("text")
+        .text(d=>"T"+d.id).attr("font-size",10).attr("font-weight",700)
+        .attr("fill","#0D1117").attr("text-anchor","middle").attr("pointer-events","none")
+    : null;
+
+  netSim.on("tick",()=>{
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
     node.attr("cx",d=>d.x).attr("cy",d=>d.y);
+    if(caption) caption.attr("x",d=>d.x).attr("y",d=>d.y+3);
   });
-})();
+}
+
+renderNetwork(false);
 
 // ── Topicos ───────────────────────────────────────────────────────────────────
 (function(){

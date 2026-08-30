@@ -9,9 +9,16 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+import apa_citation
+
 DATA_DIR = Path("data")
 OUT_DIR = Path("docs")
 OUT_DIR.mkdir(exist_ok=True)
+# El modelado multilingue es la unica salida que informa el idioma por DOI y se
+# usa para decidir cuantos apellidos lleva la inversion del nombre en APA.
+LANGUAGE_SOURCE = Path(
+    "output/topic_models/bertopic/metadata_multilingual/preferred_solution/document_topics.csv"
+)
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -70,10 +77,20 @@ def build_fulltext_index(
     return compact_index, len(indexed_documents)
 
 
+def build_language_map() -> dict[str, str]:
+    """DOI -> idioma declarado por el modelado, para la inversion de nombres."""
+    return {
+        s(row.get("doi")).lower(): s(row.get("language"))
+        for row in read_csv(LANGUAGE_SOURCE)
+        if s(row.get("doi")) and s(row.get("language"))
+    }
+
+
 def main() -> None:
     records = read_csv(DATA_DIR / "master_records.csv")
     corpus = read_csv(DATA_DIR / "corpus.csv")
     doc_topics = read_csv(Path("output") / "document_topics.csv")
+    language_by_doi = build_language_map()
 
     corpus_by_doi = {s(row.get("doi")).lower(): row for row in corpus if s(row.get("doi"))}
     topic_by_doi = {s(row.get("doi")).lower(): row for row in doc_topics if s(row.get("doi"))}
@@ -85,6 +102,7 @@ def main() -> None:
         corpus_row = corpus_by_doi.get(doi_key, {})
         topic_row = topic_by_doi.get(doi_key, {})
         full_text = s(corpus_row.get("texto"))
+        citation = apa_citation.build_citation(row, language_by_doi.get(doi_key, ""))
         articles.append(
             {
                 "record_id": s(row.get("record_id")),
@@ -109,9 +127,13 @@ def main() -> None:
                 "second_review_reason": s(row.get("second_review_reason")),
                 "corpus_status": s(corpus_row.get("status")) or ("con texto" if full_text else "sin texto"),
                 "corpus_pages": s(corpus_row.get("paginas")),
-                "topic": s(topic_row.get("topico")),
+                "topic": s(topic_row.get("topico_dominante")),
                 "topic_weight": s(topic_row.get("proporcion")),
                 "text_excerpt": full_text[:1200],
+                "apa": apa_citation.plain_text(citation),
+                "apa_em": citation.italic,
+                "apa_kind": citation.kind,
+                "apa_missing": ", ".join(citation.missing),
             }
         )
 
@@ -153,10 +175,14 @@ header{{position:sticky;top:0;z-index:5;background:#0d1117;border-bottom:1px sol
 input,select,button{{background:#0d1117;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:8px 10px;font:inherit}} input:focus,select:focus{{outline:none;border-color:var(--blue)}} button{{cursor:pointer}} button.primary{{background:#1f6feb;border-color:#1f6feb}}
 .meta{{color:var(--muted);font-size:.86rem}} main{{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:12px;padding:12px 18px}}
 .table-wrap{{border:1px solid var(--line);background:var(--panel);height:calc(100vh - 142px);overflow:auto;border-radius:8px}}
-table{{border-collapse:collapse;width:100%;min-width:1180px}} th,td{{border-bottom:1px solid #242b35;padding:9px 10px;vertical-align:top;text-align:left}} th{{position:sticky;top:0;background:#111820;color:#c9d1d9;font-size:.78rem;text-transform:uppercase}} tr{{cursor:pointer}} tr:hover td,tr.active td{{background:#1c2530}}
+table{{border-collapse:collapse;width:100%;min-width:1360px}} th,td{{border-bottom:1px solid #242b35;padding:9px 10px;vertical-align:top;text-align:left}} th{{position:sticky;top:0;background:#111820;color:#c9d1d9;font-size:.78rem;text-transform:uppercase}} tr{{cursor:pointer}} tr:hover td,tr.active td{{background:#1c2530}}
 .title{{font-weight:650;color:#fff}} .small{{color:var(--muted);font-size:.82rem;margin-top:3px;line-height:1.35}} .pill{{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:2px;color:#c9d1d9;font-size:.78rem}} .ok{{color:var(--green)}} .warn{{color:var(--yellow)}}
 .text-hit{{display:inline-block;margin-top:5px;border:1px solid #1f6feb;border-radius:999px;padding:2px 7px;color:#79c0ff;font-size:.75rem}}
 mark{{background:#ffd33d;color:#111827;border-radius:3px;padding:0 2px;box-shadow:0 0 0 1px rgba(255,211,61,.2)}}
+.apa-cell{{min-width:190px}} .apa-btn{{width:100%;background:#1f6feb;border:1px solid #1f6feb;color:#fff;border-radius:6px;padding:5px 8px;font:inherit;font-size:.78rem;cursor:pointer;white-space:nowrap}} .apa-btn:hover{{background:#388bfd;border-color:#388bfd}} .apa-btn.done{{background:#238636;border-color:#238636}}
+.apa-preview{{color:var(--muted);font-size:.74rem;line-height:1.35;margin-top:5px;max-height:3.6em;overflow:hidden}}
+.apa-missing{{display:block;color:var(--yellow);font-size:.72rem;margin-top:4px}}
+aside .apa-box{{border:1px solid var(--line);background:#0d1117;border-radius:6px;padding:9px;font-size:.82rem;line-height:1.5;white-space:normal}} aside .apa-box em{{color:#c9d1d9}}
 aside{{border:1px solid var(--line);background:var(--panel);border-radius:8px;height:calc(100vh - 142px);overflow:auto;padding:14px}} aside h2{{font-size:1rem;margin:0 0 8px}} .field{{border-top:1px solid #242b35;padding:10px 0}} .label{{color:var(--muted);font-size:.74rem;text-transform:uppercase;margin-bottom:4px}} .value{{white-space:pre-wrap;line-height:1.42}} .actions{{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}} .pager{{display:flex;align-items:center;gap:8px;margin-top:10px}} .pager span{{color:var(--muted)}}
 @media(max-width:980px){{.tools{{grid-template-columns:1fr 1fr}} main{{grid-template-columns:1fr}} aside{{height:auto}} .table-wrap{{height:62vh}}}}
 </style>
@@ -182,7 +208,7 @@ aside{{border:1px solid var(--line);background:var(--panel);border-radius:8px;he
   <section>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Titulo</th><th>Autores</th><th>Año</th><th>Fuente</th><th>Pertinencia</th><th>Corpus</th><th>Tópico</th></tr></thead>
+        <thead><tr><th>Titulo</th><th>Autores</th><th>Año</th><th>Fuente</th><th>Pertinencia</th><th>Corpus</th><th>Tópico</th><th>Normas APA</th></tr></thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
@@ -212,12 +238,19 @@ fillSelect("source","source"); fillSelect("year","publication_year");
 function corpusLabel(a){{return a.text_excerpt ? "con texto" : "sin texto"}}
 function sortRows(rows){{const mode=$("sort").value; rows.sort((a,b)=>{{if(mode==="year_desc")return (b.publication_year||"").localeCompare(a.publication_year||""); if(mode==="score_desc")return (+b.relevance_score||0)-(+a.relevance_score||0); if(mode==="title")return a.title.localeCompare(b.title); return ((b.first_seen_date+b.publication_date+b.title).localeCompare(a.first_seen_date+a.publication_date+a.title));}})}}
 function applyFilters(){{const rawQuery=$("q").value, q=norm(rawQuery), src=$("source").value, yr=$("year").value, corp=$("corpus").value, textMatches=fullTextMatches(rawQuery); fullTextOnlyMatches=new Set(); filtered=ARTICLES.filter((a,index)=>{{if(src&&a.source!==src)return false; if(yr&&a.publication_year!==yr)return false; if(corp&&corpusLabel(a)!==corp)return false; if(!q)return true; const metadataMatch=metadataText(a).includes(q); const textMatch=textMatches.has(index); if(textMatch&&!metadataMatch)fullTextOnlyMatches.add(a.record_id); return metadataMatch||textMatch;}}); sortRows(filtered); page=0; render();}}
-function render(){{const tbody=$("rows"); tbody.innerHTML=""; const start=page*PAGE_SIZE; const rows=filtered.slice(start,start+PAGE_SIZE); for(const a of rows){{const tr=document.createElement("tr"); if(selected===a.record_id)tr.className="active"; const hit=fullTextOnlyMatches.has(a.record_id)?`<div class="text-hit">Coincidencia en texto completo: <mark>${escapeHtml($("q").value.trim())}</mark></div>`:""; tr.innerHTML=`<td><div class="title">${highlightHtml(a.title||"Sin titulo")}</div><div class="small">${highlightHtml((a.abstract||"").slice(0,180))}</div>${hit}</td><td>${highlightHtml(shortAuthors(a.authors))}</td><td>${highlightHtml(a.publication_year||"")}</td><td>${highlightHtml(a.source||"")}</td><td>${escapeHtml(a.relevance_score||"")}<div class="small">${highlightHtml(a.relevance_reason||"")}</div></td><td class="${a.text_excerpt?'ok':'warn'}">${corpusLabel(a)}</td><td>${highlightHtml(a.topic||"")}</td>`; tr.onclick=()=>showDetail(a); tbody.appendChild(tr);}} $("page").textContent=`${filtered.length.toLocaleString()} resultados · página ${page+1} de ${Math.max(1,Math.ceil(filtered.length/PAGE_SIZE))}`; $("prev").disabled=page===0; $("next").disabled=(page+1)*PAGE_SIZE>=filtered.length;}}
-function showDetail(a){{selected=a.record_id; $("detail").innerHTML=`<h2>${escapeHtml(a.title||"Sin titulo")}</h2><div class="actions">${a.url?`<a class="pill" target="_blank" rel="noopener" href="${escapeAttr(a.url)}">Abrir fuente</a>`:""}${a.pdf_url?`<a class="pill" target="_blank" rel="noopener" href="${escapeAttr(a.pdf_url)}">Abrir PDF</a>`:""}${a.doi?`<a class="pill" target="_blank" rel="noopener" href="https://doi.org/${escapeAttr(a.doi)}">DOI</a>`:""}</div>${field("Autores",a.authors)}${field("Año / fecha",`${a.publication_year||""} ${a.publication_date||""}`)}${field("Fuente / origen",`${a.source||""} · ${a.origin||""}`)}${field("Resumen",a.abstract)}${field("Palabras clave",a.keywords)}${field("Pertinencia",`${a.relevance_status||""} · score ${a.relevance_score||""}\\n${a.relevance_reason||""}\\n${a.relevance_evidence||""}`)}${field("Corpus",`${corpusLabel(a)} · paginas ${a.corpus_pages||""}\\n${a.text_excerpt||""}`)}${field("Tópico STM",`${a.topic||""} ${a.topic_weight||""}`)}${field("Identificadores",`record_id: ${a.record_id||""}\\nDOI: ${a.doi||""}`)}`; render();}}
+function render(){{const tbody=$("rows"); tbody.innerHTML=""; const start=page*PAGE_SIZE; const rows=filtered.slice(start,start+PAGE_SIZE); for(const a of rows){{const tr=document.createElement("tr"); if(selected===a.record_id)tr.className="active"; const hit=fullTextOnlyMatches.has(a.record_id)?`<div class="text-hit">Coincidencia en texto completo: <mark>${escapeHtml($("q").value.trim())}</mark></div>`:""; tr.innerHTML=`<td><div class="title">${highlightHtml(a.title||"Sin titulo")}</div><div class="small">${highlightHtml((a.abstract||"").slice(0,180))}</div>${hit}</td><td>${highlightHtml(shortAuthors(a.authors))}</td><td>${highlightHtml(a.publication_year||"")}</td><td>${highlightHtml(a.source||"")}</td><td>${escapeHtml(a.relevance_score||"")}<div class="small">${highlightHtml(a.relevance_reason||"")}</div></td><td class="${a.text_excerpt?'ok':'warn'}">${corpusLabel(a)}</td><td>${highlightHtml(a.topic||"")}</td><td class="apa-cell"><button class="apa-btn" type="button">Copiar APA 7</button><div class="apa-preview">${escapeHtml(a.apa||"")}</div>${a.apa_missing?`<span class="apa-missing">Completar a mano: ${escapeHtml(a.apa_missing)}</span>`:""}</td>`; tr.onclick=()=>showDetail(a); const apaButton=tr.querySelector(".apa-btn"); if(apaButton)apaButton.onclick=event=>{{event.stopPropagation(); copyCitation(a,apaButton);}}; tbody.appendChild(tr);}} $("page").textContent=`${filtered.length.toLocaleString()} resultados · página ${page+1} de ${Math.max(1,Math.ceil(filtered.length/PAGE_SIZE))}`; $("prev").disabled=page===0; $("next").disabled=(page+1)*PAGE_SIZE>=filtered.length;}}
+function showDetail(a){{selected=a.record_id; $("detail").innerHTML=`<h2>${escapeHtml(a.title||"Sin titulo")}</h2><div class="actions">${a.url?`<a class="pill" target="_blank" rel="noopener" href="${escapeAttr(a.url)}">Abrir fuente</a>`:""}${a.pdf_url?`<a class="pill" target="_blank" rel="noopener" href="${escapeAttr(a.pdf_url)}">Abrir PDF</a>`:""}${a.doi?`<a class="pill" target="_blank" rel="noopener" href="https://doi.org/${escapeAttr(a.doi)}">DOI</a>`:""}</div>${a.apa?`<div class="field"><div class="label">Cita en normas APA 7</div><div class="apa-box">${citationHtml(a)}</div>${a.apa_missing?`<span class="apa-missing">Completar a mano: ${escapeHtml(a.apa_missing)}</span>`:""}<div class="actions"><button class="apa-btn" type="button" id="apa-detail">Copiar APA 7</button></div></div>`:""}${field("Autores",a.authors)}${field("Año / fecha",`${a.publication_year||""} ${a.publication_date||""}`)}${field("Fuente / origen",`${a.source||""} · ${a.origin||""}`)}${field("Resumen",a.abstract)}${field("Palabras clave",a.keywords)}${field("Pertinencia",`${a.relevance_status||""} · score ${a.relevance_score||""}\\n${a.relevance_reason||""}\\n${a.relevance_evidence||""}`)}${field("Corpus",`${corpusLabel(a)} · paginas ${a.corpus_pages||""}\\n${a.text_excerpt||""}`)}${field("Tópico STM",`${a.topic||""} ${a.topic_weight||""}`)}${field("Identificadores",`record_id: ${a.record_id||""}\\nDOI: ${a.doi||""}`)}`; const detailButton=$("apa-detail"); if(detailButton)detailButton.onclick=()=>copyCitation(a,detailButton); render();}}
 function field(label,value){{return value?`<div class="field"><div class="label">${label}</div><div class="value">${highlightHtml(value)}</div></div>`:""}}
 function shortAuthors(v){{const parts=(v||"").split(";").map(x=>x.trim()).filter(Boolean); return parts.length>3?parts.slice(0,3).join("; ")+" et al.":parts.join("; ")}}
 function escapeHtml(v){{return (v||"").toString().replace(/[&<>"']/g,m=>({{"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#39;"}}[m]))}}
 function escapeAttr(v){{return escapeHtml(v).replace(/"/g,"&quot;")}}
+// La cita se copia en dos formatos: texto plano y HTML con el tramo en cursiva
+// que exige APA (revista, libro o titulo segun el tipo de documento).
+function citationHtml(a){{const text=escapeHtml(a.apa||""), target=escapeHtml(a.apa_em||""); return target&&text.includes(target)?text.replace(target,`<em>${target}</em>`):text;}}
+function flagCopied(button){{const previous=button.textContent; button.textContent="Copiado"; button.classList.add("done"); setTimeout(()=>{{button.textContent=previous; button.classList.remove("done");}},1500);}}
+function legacyCopy(text,done){{const area=document.createElement("textarea"); area.value=text; area.style.position="fixed"; area.style.opacity="0"; document.body.appendChild(area); area.select(); try{{document.execCommand("copy"); done();}}catch(error){{}} document.body.removeChild(area);}}
+function plainCopy(text,done){{if(navigator.clipboard&&navigator.clipboard.writeText){{navigator.clipboard.writeText(text).then(done).catch(()=>legacyCopy(text,done)); return;}} legacyCopy(text,done);}}
+function copyCitation(a,button){{const text=a.apa||""; if(!text)return; const done=()=>flagCopied(button); if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write){{const payload=new ClipboardItem({{"text/html":new Blob([citationHtml(a)],{{type:"text/html"}}),"text/plain":new Blob([text],{{type:"text/plain"}})}}); navigator.clipboard.write([payload]).then(done).catch(()=>plainCopy(text,done)); return;}} plainCopy(text,done);}}
 $("q").oninput=applyFilters; $("source").onchange=applyFilters; $("year").onchange=applyFilters; $("corpus").onchange=applyFilters; $("sort").onchange=applyFilters;
 $("prev").onclick=()=>{{if(page>0){{page--;render()}}}}; $("next").onclick=()=>{{if((page+1)*PAGE_SIZE<filtered.length){{page++;render()}}}};
 applyFilters();

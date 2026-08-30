@@ -12,7 +12,9 @@ El proyecto combina scraping desde fuentes abiertas, curado de relevancia, corpu
 
 - `main.py`: scraper principal y actualizacion de registros.
 - `relevance_filter.py`: clasificacion de registros relevantes, en revision y rechazados.
-- `generate_dashboard.py`: dashboard interactivo con red semantica, topicos STM y tabla paginada.
+- `generate_dashboard.py`: dashboard interactivo con redes tematicas por modelo, topicos STM y tabla paginada.
+- `generate_article_table.py`: tabla de trabajo con buscador de texto completo y cita APA 7 por articulo.
+- `apa_citation.py`: construccion de referencias en normas APA 7 desde los registros del scraper.
 - `generate_dashboard_three_columns.py`: dashboard liviano de tres columnas desde `data/master_records.csv`.
 - `dashboard_healthcheck.py`: chequeo rapido de archivos, cantidades y estado STM.
 - `data/`: registros, corpus, logs y reportes.
@@ -29,6 +31,23 @@ py -3 dashboard_healthcheck.py
 ```
 
 El widget local incluye un acceso directo para abrir la tabla navegable de articulos (`docs/index.html#articulos`) y dejar listo el buscador. Esa tabla permite filtrar rapidamente por titulo, autor, resumen, palabras clave, revista, fuente o anio.
+
+## Redes tematicas por modelo
+
+En `docs/index.html` el selector de modelado redibuja el grafo, no solo las tarjetas. Cada modelo (BERTopic macros y subtopicos, STM es/en/pt, STM historica) trae dos vistas conmutables:
+
+- **Red de documentos**: nodos = articulos, aristas = palabras clave compartidas, color = topico asignado por el modelo activo. La leyenda inferior traduce cada color a su topico.
+- **Red de topicos**: nodos = topicos dimensionados por cantidad de documentos. Las aristas usan la similitud c-TF-IDF que exporta BERTopic; para las STM, que no exportan matriz de similitud, se derivan del segundo topico de cada documento.
+
+La base documental de cada red se elige por cobertura: se toma el universo que mas asignaciones del modelo llega a representar.
+
+## Citas en normas APA 7
+
+`docs/articulos.html` incluye la columna **Normas APA** con un boton que copia la referencia al portapapeles en texto plano y en HTML con cursivas.
+
+Los registros no traen volumen, numero, paginas ni editorial, asi que la cita los emite como marcadores visibles (`[vol]`, `[num]`, `[pp.]`, `[Editorial]`) y la fila indica que campos completar a mano.
+
+La inversion del nombre depende del idioma del registro: en espanol y portugues se asumen dos apellidos cuando el nombre lo permite, en ingles uno solo. El idioma sale del modelado multilingue cuando existe y, si no, se infiere del titulo y el resumen.
 
 Para abrir el dashboard localmente:
 
