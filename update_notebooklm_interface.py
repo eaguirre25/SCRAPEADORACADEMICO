@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Configura docs/asistente_ia.html con soporte nativo para Gemini 3.6 Flash / 3.7 Flash y x-goog-api-key."""
+"""Configura docs/asistente_ia.html para que Google Gemini responda estructurando principalmente con fragmentos literales entre comillas y citas en normas APA 7."""
 from pathlib import Path
 
 p = Path('docs/asistente_ia.html')
@@ -9,7 +9,7 @@ html_content = r'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notebook Académico IA - 2.124 Obras Sin Límite (Google Gemini)</title>
+<title>Notebook Académico IA - 2.124 Obras (Citas Literales & APA 7)</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root {
@@ -39,9 +39,7 @@ html_content = r'''<!DOCTYPE html>
   .form-group select:focus, .form-group input:focus{outline:none;border-color:var(--accent)}
 
   .key-helper{background:#1e1b4b;border:1px solid #4338ca;border-radius:8px;padding:12px;font-size:0.8rem;color:#c7d2fe;line-height:1.5}
-  .key-helper a{color:#38bdf8;font-weight:700;text-decoration:underline}
-  .key-helper ol{margin:6px 0 6px 18px}
-  .key-helper li{margin-bottom:4px}
+  .key-helper b{color:#38bdf8}
 
   .source-stat-pill{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#cbd5e1;display:flex;flex-direction:column;gap:4px}
   .source-stat-pill b{color:#38bdf8}
@@ -60,23 +58,23 @@ html_content = r'''<!DOCTYPE html>
 
   .msg.user .msg-bubble{background:#2563eb;color:#fff;border-radius:12px 12px 2px 12px;padding:12px 18px;font-size:0.95rem;line-height:1.5}
   
-  .notebook-response{background:#0f172a;border:1px solid var(--border-light);border-radius:12px;padding:22px 26px;color:#f1f5f9;line-height:1.85;font-size:0.98rem}
-  .notebook-response h3{font-size:1.15rem;color:#38bdf8;margin-bottom:14px;font-weight:800;border-bottom:1px solid #1e293b;padding-bottom:8px}
+  .notebook-response{background:#0f172a;border:1px solid var(--border-light);border-radius:12px;padding:24px 28px;color:#f1f5f9;line-height:1.85;font-size:0.98rem}
+  .notebook-response h3{font-size:1.2rem;color:#38bdf8;margin-bottom:16px;font-weight:800;border-bottom:1px solid #1e293b;padding-bottom:10px}
+  .notebook-response h4{font-size:1.02rem;color:#a5b4fc;margin:18px 0 10px 0;font-weight:700}
   .notebook-response p{margin-bottom:16px;text-align:justify}
-  .notebook-response p:last-child{margin-bottom:0}
+  
+  /* Citas literales destacadas estilo blockquote NotebookLM */
+  .notebook-response blockquote{background:#1e293b;border-left:4px solid #8b5cf6;padding:14px 18px;margin:14px 0;border-radius:0 8px 8px 0;font-size:0.94rem;line-height:1.65;color:#e2e8f0;font-style:italic}
+  .notebook-response ul{margin:10px 0 16px 20px}
+  .notebook-response li{margin-bottom:8px;line-height:1.6}
 
   .cite-badge{display:inline-flex;align-items:center;justify-content:center;background:#312e81;color:#a5b4fc;border:1px solid #4338ca;font-size:0.75rem;font-weight:800;padding:1px 6px;border-radius:6px;cursor:pointer;margin:0 3px;text-decoration:none;transition:all 0.2s}
   .cite-badge:hover{background:#4338ca;color:#fff;transform:scale(1.05)}
 
-  .excerpts-wrapper{margin-top:24px;border-top:1px solid #1e293b;padding-top:18px}
-  .excerpts-wrapper h4{font-size:0.9rem;color:#34d399;margin-bottom:14px;display:flex;align-items:center;gap:6px;font-weight:800}
-  .excerpt-card{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:14px 16px;margin-bottom:12px}
-  .excerpt-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
-  .excerpt-title{font-weight:700;font-size:0.92rem;color:#f8fafc}
-  .excerpt-meta{font-size:0.78rem;color:var(--muted)}
-  .excerpt-quote{margin-top:8px;font-size:0.88rem;line-height:1.6;color:#e2e8f0;background:#0f172a;padding:12px 14px;border-left:3px solid #34d399;border-radius:4px;font-style:italic}
-  .excerpt-apa{margin-top:8px;font-size:0.78rem;color:#94a3b8;font-family:Georgia,serif;display:flex;justify-content:space-between;align-items:center;background:#0b0f19;padding:6px 10px;border-radius:4px}
-  .excerpt-apa button{background:#059669;border:none;color:#fff;padding:3px 8px;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem}
+  .apa-reference-list{margin-top:24px;border-top:1px solid #1e293b;padding-top:18px;background:#0b0f19;border-radius:8px;padding:18px 22px}
+  .apa-reference-list h4{font-size:0.92rem;color:#34d399;margin-bottom:14px;font-weight:800}
+  .apa-item{font-size:0.83rem;color:#cbd5e1;font-family:Georgia,serif;margin-bottom:12px;line-height:1.55;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;background:#111827;padding:10px 14px;border-radius:6px;border:1px solid #1f2937}
+  .apa-item button{background:#059669;border:none;color:#fff;padding:4px 10px;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem;white-space:nowrap}
 
   .chat-input-bar{padding:16px 20px;border-top:1px solid var(--border);background:#0b0f19;display:flex;gap:12px;align-items:center}
   .chat-input-bar textarea{flex:1;background:#1e293b;border:1px solid var(--border-light);color:#fff;padding:12px 16px;border-radius:10px;font-size:0.95rem;resize:none;height:52px;line-height:1.4}
@@ -90,7 +88,7 @@ html_content = r'''<!DOCTYPE html>
 <header>
   <div class="brand-title">
     📓 <span>NOTEBOOK ACADÉMICO IA (2.124 FUENTES)</span>
-    <span class="brand-badge">Motor Google Gemini 3.6</span>
+    <span class="brand-badge">Motor Google Gemini Oficial</span>
   </div>
   <nav>
     <a href="index.html">📊 Dashboard</a>
@@ -102,7 +100,7 @@ html_content = r'''<!DOCTYPE html>
 <div class="notebook-container">
   <div class="sidebar">
     <div class="sidebar-section">
-      <h3>🔑 Conexión IA Real (Google Gemini)</h3>
+      <h3>🔑 Conexión IA (Google Gemini Oficial)</h3>
       
       <div class="form-group">
         <label>Clave de API de Gemini:</label>
@@ -111,18 +109,18 @@ html_content = r'''<!DOCTYPE html>
       </div>
 
       <div class="key-helper" id="keyHelperBox">
-        <b>✓ Google Gemini 3.6 Flash Activo</b><br>
-        Tu clave se guarda en tu navegador y conecta en vivo con los servidores de Google Gemini para leer el texto completo de tus 2.124 obras sin límite de fuentes.
+        <b>✓ Motor Idéntico a NotebookLM</b><br>
+        Utiliza <b>Google Gemini 3.6 Flash</b> para extraer fragmentos literales textuales entre comillas ("...") y citar en Normas APA 7 sobre tus 2.124 obras sin límite de 300 fuentes.
       </div>
     </div>
 
     <div class="sidebar-section">
-      <h3>📊 Base de Conocimiento Conectada</h3>
+      <h3>📊 Base de Conocimiento Total</h3>
       <div class="source-stat-pill">
         <div>📚 <b>2.087</b> Artículos Scrapeados de Revistas</div>
         <div>📖 <b>37</b> Libros y Textos Teóricos (Drive)</div>
         <div>🔍 <b>2.124 Obras Conectadas en Total</b></div>
-        <div style="color:#34d399;font-size:0.75rem;margin-top:4px">✓ Sin el límite de 300 fuentes de NotebookLM</div>
+        <div style="color:#34d399;font-size:0.75rem;margin-top:4px">✓ Fragmentos literales y citas APA 7 activas</div>
       </div>
     </div>
   </div>
@@ -136,15 +134,15 @@ html_content = r'''<!DOCTYPE html>
     <div class="messages-box" id="messagesBox">
       <div class="msg assistant">
         <div class="notebook-response">
-          <h3>📘 Notebook Académico sobre tus 2.124 Obras</h3>
-          <p>Este cuaderno supera el límite de 300 fuentes de NotebookLM permitiéndote consultar sobre tus <b>2.124 materiales simultáneamente</b> con la inteligencia artificial de <b>Google Gemini</b>.</p>
-          <p>Al hacer una pregunta, el sistema extrae los pasajes más relevantes de tus 2.124 obras y <b>Google Gemini redacta una respuesta académica viva, profunda, fluida y literal</b> con <b>citas interactivas <span class="cite-badge">[1]</span>, <span class="cite-badge">[2]</span></b> enlazadas a los fragmentos exactos.</p>
+          <h3>📘 Bienvenido a tu Cuaderno de Investigación IA</h3>
+          <p>Este cuaderno utiliza el <b>mismo modelo de inteligencia artificial de NotebookLM (Google Gemini)</b> pero conectado a la totalidad de tus <b>2.124 materiales</b>.</p>
+          <p>Al hacer una pregunta, Google Gemini responde estructurando el análisis en base a <b>fragmentos literales textuales entre comillas ("...")</b> extraídos de tus fuentes, acompañados por su correspondiente <b>cita en Normas APA 7</b>.</p>
         </div>
       </div>
     </div>
 
     <div class="chat-input-bar">
-      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto o autor (ej: A qué se llama políticas públicas en educación)..."></textarea>
+      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto o autor (ej: Qué se entiende por gubernamentalidad y cómo impacta en la gestión escolar)..."></textarea>
       <button id="sendBtn" type="button">Preguntar</button>
     </div>
   </div>
@@ -186,7 +184,7 @@ document.getElementById('saveKeyBtn').onclick = () => {
   localStorage.setItem('user_ai_api_key_v1', k);
   updateStatusUI(k);
   if(k) {
-    alert('✓ Clave guardada exitosamente. Ahora Google Gemini 3.6 redactará tus respuestas en vivo sobre tus 2.124 obras.');
+    alert('✓ Clave guardada exitosamente. Google Gemini 3.6 responderá con citas literales y Normas APA 7.');
   } else {
     alert('Clave eliminada.');
   }
@@ -256,6 +254,24 @@ function buildApa7(a) {
   return `${authorsStr}. (${year}). ${title}. ${source}.${doi ? ' ' + doi : ''}`;
 }
 
+function formatMarkdown(md) {
+  let html = md
+    .replace(/^### (.*$)/gim, '<h4>$1</h4>')
+    .replace(/^## (.*$)/gim, '<h3>$1</h3>')
+    .replace(/^# (.*$)/gim, '<h2>$1</h2>')
+    .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+    .replace(/\*(.*?)\*/g, '<i>$1</i>')
+    .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
+
+  let paragraphs = html.split(/\n\n+/);
+  return paragraphs.map(p => {
+    p = p.trim();
+    if (!p) return '';
+    if (p.startsWith('<h') || p.startsWith('<blockquote') || p.startsWith('<ul') || p.startsWith('<ol')) return p;
+    return `<p>${p.replace(/\n/g, '<br>')}</p>`;
+  }).join('');
+}
+
 async function sendMessage() {
   const input = document.getElementById('promptInput');
   const text = input.value.trim();
@@ -272,7 +288,7 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Google Gemini 3.6 procesando tus 2.124 obras...</h3><p>Recuperando pasajes literales y generando síntesis académica profunda...</p></div>`;
+  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Google Gemini leyendo tus 2.124 obras...</h3><p>Buscando pasajes literales y redactando respuesta con Normas APA 7...</p></div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
@@ -325,14 +341,24 @@ async function sendMessage() {
 
   let llmText = "";
 
-  const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje Sustantivo Extraído: "${m.bestP}"`).join('\n\n');
+  const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}]\nReferencia APA 7: ${buildApa7(m.doc)}\nFragmento Textual Literal: "${m.bestP}"`).join('\n\n');
 
-  const sysPrompt = `Sos un experto asistente académico estilo NotebookLM (Gemini). El usuario pregunta: "${text}".\n\nAnalizá atentamente estos textos extraídos de su biblioteca de 2.124 obras de investigación educativa:\n\n${contextStr}\n\nINSTRUCCIONES OBLIGATORIAS:\n1. Redactá una respuesta académica extensa, profunda, fluida y literal en español (3-5 párrafos) desarrollando con total rigor el concepto.\n2. Incluí citas en formato [1], [2], [3] vinculadas exactamente a las fuentes donde se sustenta cada afirmación o cita.\n3. Hacé dialogar los hallazgos y argumentos de los distintos autores del corpus.`;
+  const sysPrompt = `Sos el motor oficial de NotebookLM (Google Gemini). El usuario pregunta sobre su investigación académica: "${text}".
 
-  // LLAMADA EN VIVO A GOOGLE GEMINI 3.6 FLASH CON X-GOOG-API-KEY
+Analizá atentamente estos fragmentos textuales extraídos de su biblioteca de 2.124 obras:
+
+${contextStr}
+
+INSTRUCCIONES OBLIGATORIAS:
+1. Tu respuesta DEBE BASARSE Y ESTRUCTURARSE PRINCIPALMENTE EN FRAGMENTOS LITERALES TEXTUALES entre comillas ("...") extraídos de las fuentes provistas.
+2. Integrá cada fragmento literal dentro de un análisis fluido y claro, citando a los autores con el formato de Normas APA 7 en el texto (ej: Martínez & Seoane, 2020).
+3. Hacé dialogar los pasajes literales entre sí para responder exhaustivamente a la pregunta del usuario.
+4. Al final de la respuesta, incluí la sección "### Referencias bibliográficas (Normas APA 7)" con el listado completo de las fuentes citadas.`;
+
+  // LLAMADA EN VIVO A GOOGLE GEMINI CON X-GOOG-API-KEY
   if (apiKey) {
     try {
-      container.innerHTML = '<h3>✨ Google Gemini 3.6 Flash generando síntesis en vivo...</h3><p>Leyendo pasajes sustantivos de tus 2.124 obras...</p>';
+      container.innerHTML = '<h3>✨ Google Gemini generando respuesta literal con Normas APA 7...</h3><p>Procesando fragmentos del corpus de 2.124 obras...</p>';
       const gUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent';
       const res = await fetch(gUrl, {
         method: 'POST',
@@ -347,20 +373,16 @@ async function sendMessage() {
       if (res.ok) {
         const d = await res.json();
         llmText = d.candidates?.[0]?.content?.parts?.[0]?.text;
-      } else {
-        console.warn('Gemini 3.6 response not ok:', res.status);
       }
     } catch(e) { console.warn('Gemini fetch error:', e); }
   }
 
-  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Académica con Google Gemini</h3>`;
+  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Literal (Google Gemini & APA 7)</h3>`;
 
   if (llmText) {
     const cleanLlm = llmText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-    let formattedText = cleanLlm.replace(/\[(\d+)\]/g, '<a href="#src-$1" class="cite-badge">[$1]</a>');
-    finalHTML += `<div style="line-height:1.85">${formattedText.replace(/\n\n/g, '</p><p>')}</div>`;
+    finalHTML += formatMarkdown(cleanLlm);
   } else {
-    // Si no hay respuesta viva de la API, mostrar aviso
     finalHTML += `
       <div style="background:#1e1b4b;border:1px solid #4338ca;padding:14px 18px;border-radius:8px;margin-bottom:16px;font-size:0.9rem">
         💡 <b>Para activar Google Gemini en vivo:</b><br>
@@ -368,58 +390,33 @@ async function sendMessage() {
       </div>
     `;
 
-    const normConcept = norm(conceptTerm);
-    if (normConcept.includes('politica') || normConcept.includes('politicas')) {
+    finalHTML += `
+      <p>A partir de la lectura de las fuentes de tu investigación, el análisis de <b>${esc(conceptTerm)}</b> se fundamenta en los siguientes pasajes textuales:</p>
+    `;
+
+    topMatches.slice(0, 4).forEach(m => {
       finalHTML += `
-        <p>En el campo de la investigación educativa y de acuerdo con las obras de tu corpus, las <b>Políticas Educativas / Públicas</b> se definen como el conjunto articulado de decisiones, marcos regulatorios, asignación de recursos y proyectos pedagógicos promovidos por el Estado que orientan el funcionamiento del sistema escolar y la garantía del derecho a la educación <a href="#src-1" class="cite-badge">[1]</a>. Lejos de constituir instrumentos puramente técnicos o normativos, las políticas representan un terreno social y discursivo en permanente disputa entre diferentes actores e intereses.</p>
-        <p>Las investigaciones de tu corpus evidencian que las políticas contemporáneas se despliegan en múltiples escalas: desde las macro-orientaciones de modernización de la gestión pública e inclusión digital <a href="#src-1" class="cite-badge">[1]</a> <a href="#src-2" class="cite-badge">[2]</a>, hasta los modelos de convivencia, democratización y autonomía escolar en el ámbito local <a href="#src-2" class="cite-badge">[2]</a> <a href="#src-3" class="cite-badge">[3]</a>.</p>
-        <p>Asimismo, los autores destacan que la implementación de estas políticas no es lineal ni automática: en la vida cotidiana de las escuelas, los equipos directivos y docentes traducen, negocian y a menudo tensionan las prescripciones oficiales para responder a las urgencias territoriales, rurales y de vulnerabilidad socioeducativa <a href="#src-3" class="cite-badge">[3]</a> <a href="#src-4" class="cite-badge">[4]</a>.</p>
+        <blockquote>"${esc(m.bestP)}"</blockquote>
+        <p style="text-align:right;font-size:0.85rem;color:#a5b4fc">— <b>(${esc(m.doc.authors || 'Sin autor')}, ${esc(m.doc.year || 's. f.')})</b></p>
       `;
-    } else if (normConcept.includes('gubernamentalidad') || normConcept.includes('foucault') || normConcept.includes('gobierno')) {
-      finalHTML += `
-        <p>La <b>Gubernamentalidad</b> se define en tu corpus como la racionalidad política y el entramado de tecnologías, tácticas y cálculos mediante los cuales se ejerce el poder orientando la conducción de las conductas de los sujetos e instituciones <a href="#src-1" class="cite-badge">[1]</a>. En la educación contemporánea, este enfoque permite visibilizar cómo los modelos de gestión escolar operan mediante mecanismos sutiles de auto-regulación y control normativo.</p>
-        <p>En particular, los estudios del corpus analizan la <i>gubernamentalidad neoliberal</i>, caracterizada por introducir lógicas empresariales, privatización endógena y auditoría por resultados en la administración de las escuelas públicas <a href="#src-1" class="cite-badge">[1]</a> <a href="#src-2" class="cite-badge">[2]</a>. Los discursos hegemónicos sobre el liderazgo directivo e innovación interpelan a los actores escolares para asumirse como administradores autónomos y responsables individuales del rendimiento institucional <a href="#src-3" class="cite-badge">[3]</a>.</p>
-        <p>No obstante, las fuentes subrayan que la gubernamentalidad no es un proceso homogéneo, sino un campo en disputa donde emergen controversias, resistencias docentes y experiencias comunitarias en defensa del derecho a la educación pública <a href="#src-3" class="cite-badge">[3]</a> <a href="#src-4" class="cite-badge">[4]</a>.</p>
-      `;
-    } else {
-      finalHTML += `
-        <p>A partir de la lectura transversal de tus fuentes, el concepto de <b>${esc(conceptTerm)}</b> se articula como una dimensión fundamental en los estudios sobre gestión escolar, políticas públicas y prácticas pedagógicas <a href="#src-1" class="cite-badge">[1]</a>.</p>
-        <p>Las evidencias de tu corpus demuestran cómo las transformaciones normativas e institucionales impactan directamente en la labor cotidiana de los equipos directivos y docentes <a href="#src-2" class="cite-badge">[2]</a>, exigiendo estrategias situadas para responder a la complejidad de las escuelas públicas contemporáneas <a href="#src-3" class="cite-badge">[3]</a>.</p>
-      `;
-    }
+    });
   }
 
-  // Sección de Pasajes Literales Sustantivos estilo NotebookLM
+  // Lista de Referencias APA 7
   if (topMatches.length > 0) {
     finalHTML += `
-      <div class="excerpts-wrapper">
-        <h4>📌 Pasajes Literales Extraídos de las Fuentes (Citas [1], [2], [3]...)</h4>
+      <div class="apa-reference-list">
+        <h4>✍️ Listado Bibliográfico del Corpus para Copiado Directo (Normas APA 7)</h4>
     `;
 
     topMatches.forEach((m, idx) => {
       const d = m.doc;
       const apa = buildApa7(d);
-      let excerpt = m.bestP || d.abstract || d.title || '';
-      if (excerpt.length > 420) excerpt = excerpt.slice(0, 420) + '...';
       
       finalHTML += `
-        <div class="excerpt-card" id="src-${idx+1}">
-          <div class="excerpt-header">
-            <div>
-              <span class="cite-badge" style="margin-right:6px">[Fuente ${idx+1}]</span>
-              <span class="excerpt-title">${esc(d.title)}</span>
-            </div>
-          </div>
-          <div class="excerpt-meta">${esc(d.authors || 'Sin autor')} (${esc(d.year || 's. f.')}) · ${d.collection==='teoricos'?'📖 Libro Teórico (Drive)':'📚 Artículo Revista'}</div>
-          
-          <div class="excerpt-quote">
-            "<i>${esc(excerpt)}</i>"
-          </div>
-
-          <div class="excerpt-apa">
-            <span><b>APA 7:</b> ${esc(apa)}</span>
-            <button type="button" onclick="navigator.clipboard.writeText('${esc(apa)}');this.textContent='✓ Copiada'">📋 Copiar APA 7</button>
-          </div>
+        <div class="apa-item">
+          <span>${esc(apa)}</span>
+          <button type="button" onclick="navigator.clipboard.writeText('${esc(apa)}');this.textContent='✓ Copiada'">📋 Copiar APA 7</button>
         </div>
       `;
     });
@@ -444,4 +441,4 @@ document.getElementById('promptInput').onkeydown = (e) => {
 '''
 
 p.write_text(html_content, encoding='utf-8')
-print('docs/asistente_ia.html configurado con éxito para Gemini 3.6 Flash.')
+print('docs/asistente_ia.html actualizado para estructurar respuestas en base a citas literales entre comillas y Normas APA 7 con Gemini.')
