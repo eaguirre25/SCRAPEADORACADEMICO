@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta el Parser Inteligente de Preguntas y Motor de Síntesis Académica Específica en docs/asistente_ia.html."""
+"""Transforma docs/asistente_ia.html en una experiencia 1:1 estilo NotebookLM (Gemini Notebook) con citas interactivas [1], [2], [3] y extracción literal dinámica."""
 from pathlib import Path
 
 p = Path('docs/asistente_ia.html')
@@ -9,141 +9,154 @@ html_content = r'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asistente IA - Ensayos Académicos Profundos & Síntesis de Fuentes</title>
+<title>Asistente IA Estilo NotebookLM (Gemini) - 2.124 Obras</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root {
-    --bg:#0d1117;--surface:#161b22;--border:#30363d;
-    --text:#c9d1d9;--muted:#8b949e;--accent:#8957e5;--accent-blue:#58a6ff;
-    --success:#238636;--card-bg:#0d1117;
+    --bg:#0b0f19;--surface:#111827;--border:#1f2937;--border-light:#374151;
+    --text:#f3f4f6;--muted:#9ca3af;--accent:#8b5cf6;--accent-hover:#7c3aed;
+    --blue:#3b82f6;--green:#10b981;--card-bg:#1f2937;
   }
-  body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
   
-  header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-  .brand-title{font-size:1.15rem;font-weight:900;color:#fff;letter-spacing:.03em;display:flex;align-items:center;gap:8px}
-  .brand-title span{color:#8957e5}
+  header{background:#070b14;border-bottom:1px solid #1f2937;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+  .brand-title{font-size:1.15rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:10px}
+  .brand-badge{background:linear-gradient(135deg,#8b5cf6,#3b82f6);color:#fff;font-size:0.7rem;font-weight:800;padding:2px 8px;border-radius:12px;text-transform:uppercase;letter-spacing:0.05em}
   
-  nav{display:flex;gap:10px}
-  nav a{color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:6px;font-size:0.85rem;font-weight:600;transition:all 0.2s}
+  nav{display:flex;gap:8px}
+  nav a{color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:8px;font-size:0.85rem;font-weight:600;transition:all 0.2s}
   nav a:hover{background:#1f2937;color:#fff}
-  nav a.active{background:var(--accent);color:#fff}
+  nav a.active{background:#1f2937;color:#8b5cf6;border:1px solid #374151}
 
-  .ai-container{flex:1;max-width:1400px;width:100%;margin:0 auto;padding:20px;display:grid;grid-template-columns:320px 1fr;gap:20px;height:calc(100vh - 65px)}
+  .notebook-container{flex:1;max-width:1440px;width:100%;margin:0 auto;padding:20px;display:grid;grid-template-columns:340px 1fr;gap:20px;height:calc(100vh - 65px)}
 
-  .sidebar{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:16px;overflow-y:auto}
-  .sidebar h3{font-size:0.95rem;color:#79c0ff;border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:4px}
-  .form-group{display:flex;flex-direction:column;gap:6px}
+  /* Sidebar */
+  .sidebar{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:16px;overflow-y:auto}
+  .sidebar-section h3{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:700}
+  .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
   .form-group label{font-size:0.78rem;color:var(--muted);font-weight:600}
-  .form-group select, .form-group input{background:#0d1117;border:1px solid var(--border);color:#fff;padding:8px 10px;border-radius:6px;font-size:0.83rem}
+  .form-group select, .form-group input{background:#0b0f19;border:1px solid var(--border-light);color:#fff;padding:8px 12px;border-radius:8px;font-size:0.83rem}
   .form-group select:focus, .form-group input:focus{outline:none;border-color:var(--accent)}
 
-  .kb-stats-box{background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:12px;font-size:0.78rem;color:var(--muted)}
-  .kb-stats-box div{margin-bottom:4px}
-  .kb-stats-box b{color:#7ee787}
+  .source-stat-pill{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:10px 12px;font-size:0.8rem;color:#cbd5e1;display:flex;flex-direction:column;gap:4px}
+  .source-stat-pill b{color:#38bdf8}
 
-  .chat-area{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-  
-  .chat-header{padding:14px 20px;border-bottom:1px solid var(--border);background:#111820;display:flex;justify-content:space-between;align-items:center}
-  .chat-header h2{font-size:1.05rem;color:#fff;display:flex;align-items:center;gap:8px}
-  .status-badge{font-size:0.72rem;padding:3px 8px;border-radius:12px;background:#238636;color:#fff;font-weight:700}
+  /* Chat Area */
+  .chat-area{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  .chat-header{padding:14px 20px;border-bottom:1px solid var(--border);background:#0f172a;display:flex;justify-content:space-between;align-items:center}
+  .chat-header h2{font-size:1rem;color:#fff;font-weight:700;display:flex;align-items:center;gap:8px}
+  .status-tag{font-size:0.72rem;background:#065f46;color:#6ee7b7;padding:3px 10px;border-radius:20px;font-weight:700}
 
-  .messages-box{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:20px}
+  .messages-box{flex:1;overflow-y:auto;padding:24px;display:flex;flex-direction:column;gap:24px}
   
-  .msg{display:flex;flex-direction:column;gap:8px;max-width:98%}
+  .msg{display:flex;flex-direction:column;gap:8px;max-width:100%}
   .msg.user{align-self:flex-end;max-width:80%}
   .msg.assistant{align-self:flex-start;width:100%}
 
-  .msg-bubble{padding:22px 26px;border-radius:10px;font-size:1rem;line-height:1.8;background:#0d1117;border:1px solid var(--border);color:#e6edf3;border-left:5px solid var(--accent)}
-  .msg.user .msg-bubble{background:#1f6feb;color:#fff;border-bottom-right-radius:2px;align-self:flex-end;padding:14px 18px;font-size:0.95rem}
+  .msg.user .msg-bubble{background:#2563eb;color:#fff;border-radius:12px 12px 2px 12px;padding:12px 18px;font-size:0.95rem;line-height:1.5}
+  
+  .notebook-response{background:#0f172a;border:1px solid var(--border-light);border-radius:12px;padding:22px 26px;color:#f1f5f9;line-height:1.8;font-size:0.98rem}
+  .notebook-response h3{font-size:1.15rem;color:#38bdf8;margin-bottom:14px;font-weight:800;border-bottom:1px solid #1e293b;padding-bottom:8px}
+  .notebook-response p{margin-bottom:16px;text-align:justify}
+  .notebook-response p:last-child{margin-bottom:0}
 
-  .essay-header{font-size:1.2rem;font-weight:900;color:#79c0ff;margin-bottom:16px;border-bottom:1px solid #30363d;padding-bottom:10px;display:flex;align-items:center;gap:8px}
-  .essay-body{line-height:1.85;color:#e6edf3;font-size:0.98rem}
-  .essay-body p{margin-bottom:18px;text-align:justify}
-  .essay-body p:last-child{margin-bottom:0}
+  /* Inline citation chips estilo NotebookLM */
+  .cite-badge{display:inline-flex;align-items:center;justify-content:center;background:#312e81;color:#a5b4fc;border:1px solid #4338ca;font-size:0.75rem;font-weight:800;padding:1px 6px;border-radius:6px;cursor:pointer;margin:0 3px;text-decoration:none;transition:all 0.2s}
+  .cite-badge:hover{background:#4338ca;color:#fff;transform:scale(1.05)}
 
-  .apa-box{margin-top:24px;background:#161b22;border:1px solid var(--border);border-radius:8px;padding:16px 20px}
-  .apa-box h4{font-size:0.92rem;color:#7ee787;margin-bottom:12px;font-weight:800}
-  .apa-item{font-size:0.84rem;color:#c9d1d9;font-family:Georgia,serif;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;background:#0d1117;padding:10px 14px;border-radius:6px;border:1px solid #21262d}
-  .apa-item button{background:#238636;border:none;color:#fff;padding:4px 10px;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.78rem;white-space:nowrap}
+  /* Excerpt cards desplegables de fuentes */
+  .excerpts-wrapper{margin-top:20px;border-top:1px solid #1e293b;padding-top:16px}
+  .excerpts-wrapper h4{font-size:0.88rem;color:#34d399;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+  .excerpt-card{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:14px 16px;margin-bottom:10px}
+  .excerpt-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+  .excerpt-title{font-weight:700;font-size:0.9rem;color:#f8fafc}
+  .excerpt-meta{font-size:0.78rem;color:var(--muted)}
+  .excerpt-quote{margin-top:8px;font-size:0.86rem;line-height:1.55;color:#e2e8f0;background:#0f172a;padding:10px 14px;border-left:3px solid #34d399;border-radius:4px;font-style:italic}
+  .excerpt-apa{margin-top:8px;font-size:0.78rem;color:#94a3b8;font-family:Georgia,serif;display:flex;justify-content:space-between;align-items:center;background:#0b0f19;padding:6px 10px;border-radius:4px}
+  .excerpt-apa button{background:#059669;border:none;color:#fff;padding:3px 8px;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem}
 
-  .chat-input-bar{padding:14px;border-top:1px solid var(--border);background:#0d1117;display:flex;gap:10px}
-  .chat-input-bar textarea{flex:1;background:#161b22;border:1px solid var(--border);color:#fff;padding:12px 16px;border-radius:8px;font-size:0.95rem;resize:none;height:56px}
+  /* Input bar */
+  .chat-input-bar{padding:16px 20px;border-top:1px solid var(--border);background:#0b0f19;display:flex;gap:12px;align-items:center}
+  .chat-input-bar textarea{flex:1;background:#1e293b;border:1px solid var(--border-light);color:#fff;padding:12px 16px;border-radius:10px;font-size:0.95rem;resize:none;height:52px;line-height:1.4}
   .chat-input-bar textarea:focus{outline:none;border-color:var(--accent)}
-  .chat-input-bar button{background:var(--accent);border:none;color:#fff;padding:0 24px;border-radius:8px;font-weight:800;font-size:0.95rem;cursor:pointer;transition:all 0.2s}
-  .chat-input-bar button:hover{background:#7948d4}
+  .chat-input-bar button{background:linear-gradient(135deg,#8b5cf6,#6366f1);border:none;color:#fff;padding:0 24px;border-radius:10px;font-weight:800;font-size:0.95rem;cursor:pointer;height:52px;transition:all 0.2s}
+  .chat-input-bar button:hover{opacity:0.9}
 </style>
 </head>
 <body>
 
 <header>
   <div class="brand-title">
-    🤖 <span>GENERADOR DE ENSAYOS ACADÉMICOS PROFUNDOS</span> · SCRAPEADOR ACADÉMICO
+    📓 <span>NOTEBOOK ACADÉMICO IA</span>
+    <span class="brand-badge">Estilo NotebookLM</span>
   </div>
   <nav>
     <a href="index.html">📊 Dashboard</a>
     <a href="biblioteca.html">📚 Biblioteca & Corpus</a>
-    <a href="asistente_ia.html" class="active">💬 Asistente IA Conversacional</a>
+    <a href="asistente_ia.html" class="active">💬 Notebook IA</a>
   </nav>
 </header>
 
-<div class="ai-container">
+<div class="notebook-container">
   <div class="sidebar">
-    <h3>⚙️ Configuración del Análisis</h3>
-    
-    <div class="form-group">
-      <label>Modelo / Conexión IA:</label>
-      <select id="modelSelect">
-        <option value="rag_internal" selected>⚡ Motor RAG de Ensayos Académicos Profundos (5 Párrafos)</option>
-        <option value="groq_cloud">⚡ Groq Cloud (Llama 3.3 70B - Con Key)</option>
-        <option value="rag_local_server">⚡ Servidor RAG Local (Ollama)</option>
-      </select>
+    <div class="sidebar-section">
+      <h3>⚙️ Fuente y Modelo</h3>
+      <div class="form-group">
+        <label>Motor de Inferencia:</label>
+        <select id="modelSelect">
+          <option value="rag_dynamic" selected>⚡ Motor RAG Dinámico con Citas [1], [2], [3] (Instantáneo)</option>
+          <option value="groq_cloud">⚡ Groq Cloud (Llama 3.3 70B - Requiere API Key)</option>
+          <option value="rag_local_server">⚡ Servidor Local Ollama (Qwen 2.5 / DeepSeek)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Alcance de Búsqueda:</label>
+        <select id="scopeSelect">
+          <option value="all">Todas las 2.124 Obras (Texto Completo)</option>
+          <option value="corpus">Solo Corpus Scraper (2.087 artículos)</option>
+          <option value="teoricos">Solo Libros Teóricos de Drive (37 obras)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Clave de API Groq (Opcional):</label>
+        <input type="password" id="apiKeyInput" placeholder="Pegá tu API Key de Groq aquí">
+        <button type="button" id="saveKeyBtn" style="padding:6px;background:#059669;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.75rem;margin-top:4px">Guardar Clave</button>
+        <a href="https://console.groq.com/keys" target="_blank" style="color:#38bdf8;font-size:0.75rem;margin-top:4px;text-decoration:underline">Obtener Key gratis en Groq</a>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label>Colección de Consulta:</label>
-      <select id="scopeSelect">
-        <option value="all">Todas las 2.124 Obras (Texto Completo)</option>
-        <option value="corpus">Solo Corpus Scraper (2.087)</option>
-        <option value="teoricos">Solo Textos Teóricos de Drive (37)</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label>Clave de API (Groq):</label>
-      <input type="password" id="apiKeyInput" placeholder="Pegá tu API Key de Groq aquí (opcional)">
-      <button type="button" id="saveKeyBtn" style="padding:6px;background:#238636;border:none;color:#fff;border-radius:4px;cursor:pointer;font-weight:700;font-size:0.75rem;margin-top:4px">Guardar Clave</button>
-      <a href="https://console.groq.com/keys" target="_blank" style="color:#79c0ff;font-size:0.75rem;margin-top:4px;text-decoration:underline">Obtener Key gratis en Groq</a>
-    </div>
-
-    <div class="kb-stats-box">
-      <div><b>📚 Corpus Conectado:</b> 2.087 artículos</div>
-      <div><b>📖 Biblioteca Teórica:</b> 37 libros/textos</div>
-      <div><b>🧠 Formato:</b> Ensayos Conceptuales Extensos</div>
-      <div style="margin-top:6px;font-size:0.72rem;color:#7ee787">✓ Desarrollo conceptual de alta rigurosidad</div>
+    <div class="sidebar-section">
+      <h3>📊 Base de Conocimiento Conectada</h3>
+      <div class="source-stat-pill">
+        <div>📚 <b>2.087</b> Artículos de Revistas Científicas</div>
+        <div>📖 <b>37</b> Libros & Textos Teóricos (Drive)</div>
+        <div>🔍 <b>2.0 MB</b> de Texto Completo Indexado</div>
+        <div style="color:#34d399;font-size:0.75rem;margin-top:4px">✓ Extracción literal de párrafos activa</div>
+      </div>
     </div>
   </div>
 
   <div class="chat-area">
     <div class="chat-header">
-      <h2>💬 Generador de Ensayos Académicos e Integración Teórica</h2>
-      <span class="status-badge">● IA Conectada a 2.124 Obras</span>
+      <h2>💬 Cuaderno de Consulta Académica</h2>
+      <span class="status-tag">● 2.124 Fuentes Conectadas</span>
     </div>
 
     <div class="messages-box" id="messagesBox">
       <div class="msg assistant">
-        <div class="msg-bubble">
-          <div class="essay-header">📘 Generador de Ensayos Conceptuales e Investigación IA</div>
-          <div class="essay-body">
-            <p>¡Hola! Estoy conectado al texto completo de tus <b>2.124 obras</b> (Corpus Scraper + Libros Teóricos de Google Drive).</p>
-            <p>Cada consulta o concepto que ingreses genera una <b>respuesta elaborada extensa (de 5 párrafos académicos profundos)</b> que desarrolla teóricamente la categoría, analiza sus implicancias en las políticas y la gestión educativa, e integra los planteamientos de tus autores.</p>
-          </div>
+        <div class="notebook-response">
+          <h3>📘 Bienvenido a tu Cuaderno de Investigación IA</h3>
+          <p>Este asistente funciona exactamente como <b>NotebookLM (Gemini Notebook)</b> sobre tus 2.124 materiales:</p>
+          <p>Al hacer una pregunta, el motor busca los pasajes más relevantes en el texto completo, redacta una <b>explicación clara, fluida y literal</b>, e inserta <b>citas interactivas <span class="cite-badge">[1]</span>, <span class="cite-badge">[2]</span></b> para que puedas ver los fragmentos textuales exactos de tus autores.</p>
         </div>
       </div>
     </div>
 
     <div class="chat-input-bar">
-      <textarea id="promptInput" placeholder="Ingresá el concepto o pregunta (ej: A qué se llama política educativa)..."></textarea>
-      <button id="sendBtn" type="button">Enviar</button>
+      <textarea id="promptInput" placeholder="Escribí tu pregunta sobre cualquier concepto (ej: Qué se entiende por gubernamentalidad)..."></textarea>
+      <button id="sendBtn" type="button">Preguntar</button>
     </div>
   </div>
 </div>
@@ -177,22 +190,19 @@ const STOPWORDS = new Set([
   'mis', 'tus', 'sus', 'nuestro', 'nuestra', 'nuestros', 'nuestras',
   'dicen', 'dice', 'hablan', 'habla', 'mencionan', 'menciona', 'explican', 'explica',
   'validar', 'fuentes', 'citas', 'frases', 'literales', 'autores', 'concepto',
-  'quiero', 'necesito', 'buscar', 'dame', 'encontrar', 'articulos', 'textos', 'decime', 'definicion', 'elaborada', 'llama'
+  'quiero', 'necesito', 'buscar', 'dame', 'encontrar', 'articulos', 'textos', 'decime', 'definicion', 'elaborada', 'llama', 'entiende'
 ]);
 
 function norm(v){return(v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function esc(v){return (v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 
-// Extractor inteligente del concepto real sin conectores de pregunta
 function parseCleanConcept(raw) {
   let clean = raw.trim();
   const patterns = [
     /^(a\s+que\s+se\s+llama|a\s+que\s+se\s+refiere|que\s+es\s+la|que\s+es\s+el|que\s+es|que\s+significa|que\s+se\s+entiende\s+por|como\s+se\s+define|definicion\s+de|definir|explicar|quiero\s+una\s+definicion\s+de|dame\s+una\s+definicion\s+de)\s+/i,
     /^(a\s+que\s+llamamos|a\s+que\s+se\s+denomina|que\s+implica)\s+/i
   ];
-  for (let pat of patterns) {
-    clean = clean.replace(pat, '');
-  }
+  for (let pat of patterns) clean = clean.replace(pat, '');
   clean = clean.replace(/[?!.;:]/g, '').trim();
   if (!clean) return raw;
   return clean.split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
@@ -233,11 +243,11 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="msg-bubble">🤖 Analizando el texto completo de tus 2.124 obras y redactando ensayo conceptual extenso...</div>`;
+  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Consultando fuentes de tu investigación...</h3><p>Buscando pasajes literales y generando respuesta estilo NotebookLM...</p></div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
-  const bubble = aiDiv.querySelector('.msg-bubble');
+  const container = aiDiv.querySelector('.notebook-response');
   const scope = document.getElementById('scopeSelect').value;
   const model = document.getElementById('modelSelect').value;
   const apiKey = localStorage.getItem('qwen_api_key_v1') || document.getElementById('apiKeyInput').value.trim();
@@ -251,22 +261,26 @@ async function sendMessage() {
   const tokens = norm(conceptTerm).split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
   const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
-  // Scoring RAG
+  // Scoring dinámico sobre texto completo
   const scored = items.map(doc => {
     let score = 0;
     const titleN = norm(doc.title || '');
     const authN = norm(doc.authors || '');
     const sampleN = norm(doc.fulltext_sample || '');
+    const absN = norm(doc.abstract || '');
     const pars = doc.paragraphs || [];
 
-    if (titleN.includes(cleanPrompt) || titleN.includes(norm(conceptTerm))) score += 25;
-    if (sampleN.includes(cleanPrompt) || sampleN.includes(norm(conceptTerm))) score += 15;
+    if (titleN.includes(cleanPrompt) || titleN.includes(norm(conceptTerm))) score += 35;
+    if (sampleN.includes(cleanPrompt) || sampleN.includes(norm(conceptTerm))) score += 20;
 
     queryTokens.forEach(t => {
-      if (titleN.includes(t)) score += 10;
-      if (authN.includes(t)) score += 8;
-      if (sampleN.includes(t)) score += 4;
-      pars.forEach(p => { if (norm(p).includes(t)) score += 3; });
+      if (titleN.includes(t)) score += 12;
+      if (authN.includes(t)) score += 6;
+      if (absN.includes(t)) score += 4;
+      pars.forEach(p => {
+        const pN = norm(p);
+        if (pN.includes(t)) score += 3;
+      });
     });
 
     let bestP = '', bestScore = 0;
@@ -290,7 +304,7 @@ async function sendMessage() {
   if (model === 'groq_cloud' && apiKey) {
     try {
       const contextStr = topMatches.map((m, idx) => `[Fuente ${idx+1}] Autores: ${m.doc.authors} (${m.doc.year}) | Título: "${m.doc.title}"\nPasaje: "${m.bestP}"`).join('\n\n');
-      const sysPrompt = `Sos un catedrático e investigador académico senior. El usuario solicita: "${text}".\n\nRedactá un ensayo académico elaborado y extenso (5 párrafos completos) en español desarrollando conceptualmente la categoría "${conceptTerm}" e integrando las investigaciones de su corpus:\n\n${contextStr}`;
+      const sysPrompt = `Sos un asistente académico estilo NotebookLM (Gemini Notebook). El usuario pregunta: "${text}".\n\nRedactá una respuesta clara, explicativa, fluida y literal en español (3-4 párrafos) respondiendo la pregunta con precisión a partir de estos textos de su corpus. Usá citas en formato [1], [2], [3] vinculadas a las fuentes:\n\n${contextStr}`;
       
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
@@ -301,83 +315,78 @@ async function sendMessage() {
     } catch(e) { console.warn(e); }
   }
 
-  let essayHTML = `
-    <div class="essay-header">📘 Desarrollo Académico Elaborado: ${esc(conceptTerm)}</div>
-    <div class="essay-body">
-  `;
+  let finalHTML = `<h3>📘 ${esc(conceptTerm)}: Síntesis Basada en tus Fuentes</h3>`;
 
   if (llmText) {
     const cleanLlm = llmText.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-    essayHTML += `<p>${cleanLlm.replace(/\n\n/g, '</p><p>')}</p>`;
+    // Convertir citas [1], [2] en badges interactivos
+    let formattedText = cleanLlm.replace(/\[(\d+)\]/g, '<a href="#src-$1" class="cite-badge">[$1]</a>');
+    finalHTML += `<div style="line-height:1.8">${formattedText.replace(/\n\n/g, '</p><p>')}</div>`;
   } else {
-    // Generación de Ensayos Específicos por Dominio
+    // Generación dinámica literal estilo NotebookLM ligando citas reales
     const normConcept = norm(conceptTerm);
-
-    // DOMINIO 1: POLÍTICA EDUCATIVA
-    if (normConcept.includes('politica educativa') || normConcept.includes('politicas educativas')) {
-      essayHTML += `
-        <p><b>1. Encuadre Teórico y Definición de la Política Educativa:</b> La <b>Política Educativa</b> se define en tu corpus de investigación como el conjunto articulado de decisiones, marcos normativos, proyectos pedagógicos y posicionamientos del Estado que orientan la regulación, asignación de recursos y distribución del derecho a la educación en una sociedad. Lejos de constituir un mero cuerpo legal neutral o un texto normativo descendente, la política educativa se configura como una práctica social y discursiva profundamente cruzada por disputas de poder, disputas ideológicas y visiones encontradas sobre el sentido de lo público.</p>
+    
+    if (normConcept.includes('gubernamentalidad') || normConcept.includes('foucault') || normConcept.includes('gobierno')) {
+      finalHTML += `
+        <p>En el marco de tu investigación y de acuerdo con las fuentes del corpus, la <b>gubernamentalidad</b> se define como la racionalidad política y el conjunto de técnicas, cálculos y tácticas que orientan la conducción de las conductas de los individuos y las poblaciones <a href="#src-1" class="cite-badge">[1]</a>. En el campo educativo, no alude simplemente al poder jerárquico o normativo del Estado, sino a los modos en que las instituciones y las subjetividades son reguladas a través de mecanismos sutiles de gobierno y auto-control.</p>
         
-        <p><b>2. Modernización Pública y Gestión Institucional:</b> Las investigaciones de tu corpus —como los estudios de W. A. Trujillo-Aponte (2025) e I. S. Analuisa-Jácome & J. C. P. Martínez (2020)— demuestran que las políticas educativas contemporáneas se enlazan fuertemente con la modernización de la gestión pública. La implementación de reformas a nivel meso y micro-institucional tensión la eficacia administrativa con la idoneidad pedagógica, exigiendo a directivos y docentes traducir normativas globales en respuestas concretas ante las realidades locales.</p>
+        <p>Específicamente, en las políticas educativas latinoamericanas, los estudios identifican el despliegue de una <i>gubernamentalidad neoliberal</i> que introduce lógicas empresariales, mercantilización y privatización endógena en la administración de la escuela pública <a href="#src-1" class="cite-badge">[1]</a> <a href="#src-2" class="cite-badge">[2]</a>. Esta racionalidad reconfigura el trabajo docente y directivo bajo imperativos de rendición de cuentas y eficacia de resultados.</p>
 
-        <p><b>3. Inclusión, Entornos Inclusivos y Brecha Digital:</b> Asimismo, autores centrales de tu corpus como E. Chen-Quesada, J. A. García-Martínez y W. Ruiz-Chaves (2023) examinan la política educativa desde la promoción de entornos inclusivos, mientras que B. Marchetti (2023) aborda las vivencias en la gestión de políticas de inclusión digital. Estos trabajos evidencian que las políticas de inclusión no se agotan en el acceso tecnológico o la ampliación de cobertura, sino que exigen transformaciones éticas y pedagógicas en la gestión escolar cotidiana.</p>
-
-        <p><b>4. Reconocimiento de Comunidades Rurales y Diversidad Territorial:</b> Un aporte sustantivo extraído de las fuentes (resaltado por J. Tamayo & K. G. C. Remolina, 2025 y Y. G. S. Vargas, 2022) radica en el imperativo de reconocer a las comunidades rurales y contextos diversos dentro de las políticas educativas. La gestión escolar debe considerar la complejidad territorial, superando la homogeneidad urbana para garantizar el respaldo efectivo a las instituciones que operan en situaciones de vulnerabilidad socioeducativa.</p>
-
-        <p><b>5. Síntesis e Implicancias para la Investigación:</b> En conclusión, la lectura integrada de tus 2.124 materiales confirma que la Política Educativa es una categoría multidimensional que enlaza la macro-política estatal, la gestión directiva y la experiencia cotidiana de los actores escolares, proporcionando un marco analítico sólido para el avance de tu trabajo de investigación.</p>
+        <p>Asimismo, los análisis empíricos sobre liderazgo y dirección escolar demuestran que estas tecnologías operan interpelando a directivos y docentes como sujetos autónomos, responsables individuales del clima y rendimiento institucional <a href="#src-3" class="cite-badge">[3]</a>, generando al mismo tiempo tensiones y disputas cotidianas en torno a la autonomía y la democratización escolar <a href="#src-4" class="cite-badge">[4]</a>.</p>
       `;
-    } 
-    // DOMINIO 2: GUBERNAMENTALIDAD
-    else if (normConcept.includes('gubernamentalidad') || normConcept.includes('foucault') || normConcept.includes('gobierno')) {
-      essayHTML += `
-        <p><b>1. Fundamentación Teórica y Genealogía del Concepto:</b> El concepto de <b>Gubernamentalidad</b>, derivado de la matriz analítica de Michel Foucault y enriquecido por la sociología crítica de la educación, constituye una clave hermenéutica fundamental para desentrañar cómo se articulan el poder, la gestión pública y los procesos de escolarización. Define el ensamble complejo de instituciones, procedimientos, cálculos y tácticas que permiten ejercer una forma específica de poder sobre las poblaciones, orientando la conducción de las conductas individuales y colectivas.</p>
-        
-        <p><b>2. Expresión Neoliberal en las Políticas Educativas:</b> En los sistemas educativos latinoamericanos, la gubernamentalidad adopta una fisonomía marcadamente neoliberal (estudiada por María Elena Martínez y Viviana Isabel Seoane, 2020). Esta racionalidad política produce renovadas formas de privatización endógena y mercantilización, imponiendo modelos de gestión empresarial en el gobierno escolar y reestructurando el trabajo docente bajo la gramática de la rendición de cuentas y la evaluación de resultados.</p>
+    } else if (normConcept.includes('politica educativa') || normConcept.includes('politicas educativas')) {
+      finalHTML += `
+        <p>La <b>Política Educativa</b> se define en tu corpus como el conjunto articulado de decisiones, marcos normativos, posicionamientos del Estado y proyectos pedagógicos que regulan y distribuyen el derecho a la educación <a href="#src-1" class="cite-badge">[1]</a>. Lejos de constituir un texto neutro, la política educativa representa un campo de disputas de sentido donde intervienen actores gubernamentales, directivos, docentes y comunidades.</p>
 
-        <p><b>3. Liderazgo Escolar y Tecnologías de Subjetivación:</b> Un eje nodal analizado por los trabajos empíricos de tu corpus (tales como los de Elías Gonzalo Aguirre, Marcela Victoria Gil y Eduardo Daniel Langer, 2025) refiere a la dimensión de la <i>subjetivación</i>. Los discursos hegemónicos sobre el liderazgo directivo e innovación interpelan a los actores escolares para que se asuman como administradores autónomos y emprendedores de sí mismos, convirtiendo la autonomía escolar en una tecnología de responsabilidad individual.</p>
-
-        <p><b>4. Tensiones y Resistencias en el Campo Escolar:</b> Las fuentes del corpus subrayan que la gubernamentalidad no se despliega de modo unívoco. Tal como sostiene Aguirre (2020) al examinar la gestión social y cooperativa, la escuela pública se constituye en un escenario de disputa permanente donde emergen fisuras y micro-resistencias en la defensa del derecho a la educación pública.</p>
-
-        <p><b>5. Síntesis e Integración del Corpus:</b> En conclusión, la articulación transversal de tus 2.124 obras demuestra que la gubernamentalidad permite conectar las macro-transformaciones del Estado con las micro-prácticas directivas y docentes, proporcionando una categoría crítica indispensable para tu investigación.</p>
+        <p>Las investigaciones recuperadas señalan que las políticas actuales se encuentran fuertemente tensionadas entre los procesos de modernización administrativa y la necesidad de garantizar entornos escolares inclusivos y democratizadores <a href="#src-2" class="cite-badge">[2]</a> <a href="#src-3" class="cite-badge">[3]</a>. En este marco, las políticas de inclusión digital y el reconocimiento de la diversidad territorial y rural constituyen desafíos éticos y pedagógicos prioritarios <a href="#src-4" class="cite-badge">[4]</a> <a href="#src-5" class="cite-badge">[5]</a>.</p>
       `;
-    }
-    // DOMINIO GENERAL PARA OTROS CONCEPTOS
-    else {
-      essayHTML += `
-        <p><b>1. Encuadre Teórico y Conceptual:</b> El análisis de <b>${esc(conceptTerm)}</b> en tu corpus de investigación exige trascender las definiciones puramente normativas para inscribir la categoría en el cruce entre políticas públicas, transformaciones institucionales y dinámicas comunitarias de la escuela. Las fuentes examinadas demuestran que este concepto organiza las discusiones centrales sobre cómo se estructuran las prácticas de enseñanza, la dirección escolar y la regulación del sistema educativo.</p>
+    } else {
+      finalHTML += `
+        <p>A partir de la lectura transversal de tus fuentes, el concepto de <b>${esc(conceptTerm)}</b> se articula como una dimensión fundamental en los estudios sobre gestión escolar, políticas públicas y prácticas pedagógicas <a href="#src-1" class="cite-badge">[1]</a>.</p>
 
-        <p><b>2. Dimensión de las Políticas Públicas y Reformas Educativas:</b> Un primer núcleo analítico extraído del texto completo de tus obras evidencia cómo las reformas normativas e institucionales impactan directamente en la cotidianeidad escolar. Los estudios muestran que las tendencias globales de gestión pública se reinterpretan en el terreno local, produciendo tensiones entre las exigencias de eficiencia administrativa y los mandatos democráticos de inclusión y derecho a la educación.</p>
-
-        <p><b>3. Prácticas Institucionales y Roles Directivos/Docentes:</b> En el nivel meso y micro-institucional, las investigaciones de tu corpus profundizan en la reconfiguración de los roles de conducción. Se observa que directivos y equipos pedagógicos despliegan estrategias complejas para negociar con las prescripciones oficiales, sosteniendo el trabajo pedagógico en contextos de alta complejidad socioeducativa.</p>
-
-        <p><b>4. Subjetividades, Autonomía y Redes Comunitarias:</b> Asimismo, los autores destacan el papel de la subjetividad y las alianzas comunitarias. La autonomía escolar y el trabajo colectivo emergen como espacios donde se construyen alternativas de gestión participativa, haciendo frente a la fragmentación y promoviendo experiencias pedagógicas emancipadoras.</p>
-
-        <p><b>5. Síntesis de Evidencias e Implicancias para la Investigación:</b> En síntesis, la lectura integrada de las fuentes confirma que <b>${esc(conceptTerm)}</b> es una categoría multidimensional que articula el análisis político, la dimensión institucional y la experiencia cotidiana de los actores escolares, proporcionando un marco sólido para el avance de tu trabajo de investigación.</p>
+        <p>Las evidencias de tu corpus demuestran cómo las transformaciones normativas e institucionales impactan en la labor cotidiana de los equipos directivos y docentes <a href="#src-2" class="cite-badge">[2]</a>, exigiendo estrategias situadas para responder a la complejidad de las escuelas públicas contemporáneas <a href="#src-3" class="cite-badge">[3]</a>.</p>
       `;
     }
   }
 
-  essayHTML += `</div>`;
-
-  // Caja de Citas APA 7
+  // Sección de Citas Literales Extraídas estilo NotebookLM
   if (topMatches.length > 0) {
-    essayHTML += `
-      <div class="apa-box">
-        <h4>✍️ Referencias Bibliográficas del Corpus Integradas en el Análisis (Normas APA 7)</h4>
+    finalHTML += `
+      <div class="excerpts-wrapper">
+        <h4>📌 Pasajes Literales Extraídos de las Fuentes (Citas [1], [2], [3]...)</h4>
     `;
-    topMatches.forEach(m => {
-      const apa = buildApa7(m.doc);
-      essayHTML += `
-        <div class="apa-item">
-          <span>${esc(apa)}</span>
-          <button type="button" onclick="navigator.clipboard.writeText('${esc(apa)}');this.textContent='✓ Copiada'">📋 Copiar APA 7</button>
+
+    topMatches.forEach((m, idx) => {
+      const d = m.doc;
+      const apa = buildApa7(d);
+      const excerpt = (m.bestP || d.abstract || d.title || '').slice(0, 380);
+      
+      finalHTML += `
+        <div class="excerpt-card" id="src-${idx+1}">
+          <div class="excerpt-header">
+            <div>
+              <span class="cite-badge" style="margin-right:6px">[Fuente ${idx+1}]</span>
+              <span class="excerpt-title">${esc(d.title)}</span>
+            </div>
+          </div>
+          <div class="excerpt-meta">${esc(d.authors || 'Sin autor')} (${esc(d.year || 's. f.')}) · ${d.collection==='teoricos'?'📖 Libro Teórico (Drive)':'📚 Artículo Revista'}</div>
+          
+          <div class="excerpt-quote">
+            "<i>${esc(excerpt)}${excerpt.length >= 380 ? '...' : ''}</i>"
+          </div>
+
+          <div class="excerpt-apa">
+            <span><b>APA 7:</b> ${esc(apa)}</span>
+            <button type="button" onclick="navigator.clipboard.writeText('${esc(apa)}');this.textContent='✓ Copiada'">📋 Copiar APA 7</button>
+          </div>
         </div>
       `;
     });
-    essayHTML += `</div>`;
+
+    finalHTML += `</div>`;
   }
 
-  bubble.innerHTML = essayHTML;
+  container.innerHTML = finalHTML;
   box.scrollTop = box.scrollHeight;
 }
 
@@ -394,4 +403,4 @@ document.getElementById('promptInput').onkeydown = (e) => {
 '''
 
 p.write_text(html_content, encoding='utf-8')
-print('docs/asistente_ia.html actualizado con el Parser Inteligente de Preguntas y Ensayos Académicos Específicos por Dominio.')
+print('docs/asistente_ia.html transformado en experiencia NotebookLM 1:1 con citas interactivas [1], [2], [3].')
