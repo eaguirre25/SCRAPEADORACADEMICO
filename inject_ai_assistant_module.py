@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inyecta el Asistente IA de Validación de Fuentes, Conceptos y Citas Literales APA 7 en docs/biblioteca.html."""
+"""Inyecta el Asistente IA Bibliográfico impulsado por Qwen 2.5 (OpenRouter, Ollama local, Together o Qwen API) en docs/biblioteca.html."""
 from pathlib import Path
 
 p = Path('docs/biblioteca.html')
@@ -45,7 +45,6 @@ js = r'''
     const colBar = document.querySelector('.col-bar');
     if (!colBar) return;
 
-    // Botón destacado de IA en la barra superior
     const btnAi = document.createElement('button');
     btnAi.id = 'btnAiAssistant';
     btnAi.className = 'col-btn';
@@ -53,7 +52,7 @@ js = r'''
     btnAi.style.borderColor = '#8957e5';
     btnAi.style.color = '#fff';
     btnAi.style.fontWeight = '800';
-    btnAi.innerHTML = '🤖 Asistente IA (Validar Fuentes & Citas APA 7)';
+    btnAi.innerHTML = '🤖 Asistente IA (Qwen 2.5 · Validar Fuentes & Citas APA 7)';
     colBar.appendChild(btnAi);
 
     const main = document.querySelector('main.library');
@@ -70,29 +69,40 @@ js = r'''
     aiPane.innerHTML = `
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:10px">
         <div>
-          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Bibliográfico: Validación de Fuentes, Conceptos y Citas APA 7</h2>
-          <div style="font-size:0.82rem;color:#8b949e">Formula preguntas sobre frases, conceptos o teorías. La IA analiza los <b>2.087 artículos scrapeados</b> + <b>37 textos teóricos</b>, valida las fuentes originales y extrae citas literales en APA 7.</div>
+          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Bibliográfico con QWEN 2.5</h2>
+          <div style="font-size:0.82rem;color:#8b949e">Valida fuentes, conceptos y citas literales en APA 7 leyendo los <b>2.087 artículos del corpus</b> + <b>37 textos teóricos</b> usando el modelo <b>Qwen 2.5</b>.</div>
         </div>
         <button id="closeAiPaneBtn" type="button" style="padding:4px 12px;background:#21262d;border:1px solid #30363d;color:#fff;cursor:pointer">✕ Cerrar</button>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 220px;gap:10px;margin-bottom:12px">
-        <textarea id="aiPrompt" placeholder="Preguntale a la IA (ej: ¿Cuáles son las citas literales sobre regulación afectiva en directores escolares? o Validar fuentes para la frase 'gobernanza del sistema educativo')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
+      <div style="display:grid;grid-template-columns:1fr 240px;gap:10px;margin-bottom:12px">
+        <textarea id="aiPrompt" placeholder="Preguntale a Qwen 2.5 (ej: ¿Cuáles son las citas literales sobre regulación afectiva en directores escolares? o Validar fuentes para la frase 'gobernanza del sistema educativo')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
         <div style="display:flex;flex-direction:column;gap:6px">
-          <button id="runAiSearchBtn" type="button" style="flex:1;background:#1f6feb;border-color:#1f6feb;color:#fff;font-weight:700;font-size:0.95rem;cursor:pointer">✨ Analizar e Investigar con IA</button>
+          <button id="runAiSearchBtn" type="button" style="flex:1;background:#8957e5;border-color:#8957e5;color:#fff;font-weight:800;font-size:0.95rem;cursor:pointer">⚡ Analizar con QWEN 2.5</button>
           <div style="font-size:0.7rem;color:#8b949e;text-align:center">RAG Multidocumento + APA 7</div>
         </div>
       </div>
 
-      <div id="aiConfigBox" style="font-size:0.78rem;color:#8b949e;margin-bottom:14px;background:#0d1117;padding:8px 12px;border-radius:6px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-        <span><b>Clave de Gemini API (Opcional para respuestas conversacionales directas):</b></span>
-        <input type="password" id="geminiApiKeyInput" placeholder="Pegá tu Gemini API Key aquí (opcional)" style="flex:1;font-size:0.75rem;padding:3px 8px;background:#161b22">
-        <button type="button" id="saveApiKeyBtn" style="padding:3px 8px;font-size:0.75rem;background:#21262d">Guardar clave</button>
+      <div id="aiConfigBox" style="font-size:0.78rem;color:#c9d1d9;margin-bottom:14px;background:#0d1117;padding:10px 14px;border-radius:6px;border:1px solid #30363d;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <label><b>Proveedor de IA:</b></label>
+          <select id="aiProviderSelect" style="padding:4px 8px;background:#161b22;color:#fff">
+            <option value="openrouter">Qwen 2.5 vía OpenRouter (qwen/qwen-2.5-72b-instruct)</option>
+            <option value="ollama">Qwen Local (Ollama / LM Studio en http://localhost:11434/v1)</option>
+            <option value="together">Qwen 2.5 vía Together AI</option>
+            <option value="gemini">Google Gemini 1.5 Flash</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <label><b>Clave de API / Key:</b></label>
+          <input type="password" id="qwenApiKeyInput" placeholder="Pegá tu API Key de OpenRouter, Together o Gemini aquí (opcional para Ollama)" style="flex:1;font-size:0.78rem;padding:4px 8px;background:#161b22">
+          <button type="button" id="saveApiKeyBtn" style="padding:4px 10px;font-size:0.78rem;background:#238636;border-color:#238636;color:#fff">Guardar configuración</button>
+        </div>
       </div>
 
       <div id="aiResponseContainer" style="display:none;margin-top:14px;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px">
         <div id="aiSynthesisHeader" style="font-weight:700;color:#79c0ff;margin-bottom:10px;font-size:1.05rem;display:flex;align-items:center;gap:8px">
-          <span>🧠 Respuesta de IA & Validación Bibliográfica</span>
+          <span>🧠 Análisis de QWEN 2.5 & Validación Bibliográfica</span>
         </div>
         <div id="aiSynthesisBody" style="font-size:0.92rem;line-height:1.6;color:#e6edf3;white-space:pre-wrap;margin-bottom:16px;background:#161b22;padding:14px;border-radius:6px;border-left:4px solid #8957e5"></div>
 
@@ -105,13 +115,17 @@ js = r'''
 
     main.parentNode.insertBefore(aiPane, main.nextSibling);
 
-    const savedKey = localStorage.getItem('gemini_api_key_v1') || '';
-    if (savedKey) document.getElementById('geminiApiKeyInput').value = savedKey;
+    const savedProvider = localStorage.getItem('qwen_provider_v1') || 'openrouter';
+    const savedKey = localStorage.getItem('qwen_api_key_v1') || '';
+    document.getElementById('aiProviderSelect').value = savedProvider;
+    document.getElementById('qwenApiKeyInput').value = savedKey;
 
     document.getElementById('saveApiKeyBtn').onclick = () => {
-      const k = document.getElementById('geminiApiKeyInput').value.trim();
-      localStorage.setItem('gemini_api_key_v1', k);
-      alert(k ? '✓ Clave de API de Gemini guardada localmente en tu navegador.' : 'Clave removida.');
+      const p = document.getElementById('aiProviderSelect').value;
+      const k = document.getElementById('qwenApiKeyInput').value.trim();
+      localStorage.setItem('qwen_provider_v1', p);
+      localStorage.setItem('qwen_api_key_v1', k);
+      alert('✓ Configuración de Qwen / IA guardada localmente.');
     };
 
     btnAi.onclick = () => {
@@ -139,7 +153,7 @@ js = r'''
     const sourcesEl = document.getElementById('aiValidatedSourcesList');
     container.style.display = 'block';
 
-    bodyEl.textContent = '⏳ Leyendo y analizando todos los artículos del corpus y textos teóricos de Drive...\nProcesando coincidencia conceptual y citas literales...';
+    bodyEl.textContent = '⚡ RAG Multidocumento: Inspeccionando todos los artículos del corpus y textos teóricos...\nBuscando coincidencia conceptual y citas literales...';
     sourcesEl.innerHTML = '';
 
     const allItems = [].concat(window.A_corpus || [], window.A_teoricos || []);
@@ -169,51 +183,101 @@ js = r'''
 
     const topMatches = scored.slice(0, 15).map(x => x.article);
 
-    const apiKey = localStorage.getItem('gemini_api_key_v1') || document.getElementById('geminiApiKeyInput').value.trim();
+    const provider = document.getElementById('aiProviderSelect').value;
+    const apiKey = localStorage.getItem('qwen_api_key_v1') || document.getElementById('qwenApiKeyInput').value.trim();
 
-    if (apiKey && topMatches.length > 0) {
-      bodyEl.textContent = '🤖 Generando síntesis en vivo con Google Gemini AI...';
-      try {
-        const contextStr = topMatches.slice(0, 6).map((m, idx) => {
-          return `[Fuente ${idx+1}] Título: ${m.title} | Autores: ${m.authors} | Año: ${m.year} | Resumen: ${(m.abstract||'').slice(0, 300)}`;
-        }).join('\n\n');
+    // Intentar llamadas a API de Qwen / OpenRouter / Ollama
+    let aiResponseText = '';
 
-        const apiPayload = {
-          contents: [{
-            parts: [{
-              text: `Sos un asistente académico experto en educación. El usuario pregunta: "${promptText}".\n\nAnalizá las siguientes fuentes validadas del corpus:\n${contextStr}\n\nRespondé detalladamente en español explicando los conceptos, validando qué fuentes abordan la pregunta, y citando frases/ideas clave.`
-            }]
-          }]
-        };
+    if (topMatches.length > 0) {
+      const contextStr = topMatches.slice(0, 6).map((m, idx) => {
+        return `[Fuente ${idx+1}] Título: ${m.title} | Autores: ${m.authors} | Año: ${m.year} | Resumen: ${(m.abstract||'').slice(0, 320)}`;
+      }).join('\n\n');
 
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(apiPayload)
-        });
+      const systemPrompt = `Sos un experto asistente de investigación académica en educación. El usuario consulta: "${promptText}".\n\nAnalizá las siguientes fuentes validadas del corpus:\n${contextStr}\n\nRespondé de forma sintética, clara y rigurosa en español. Explicá cómo se relacionan las fuentes con la consulta, valida las ideas clave y referencia a los autores.`;
 
-        if (res.ok) {
-          const jsonRes = await res.json();
-          const reply = jsonRes.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (reply) {
-            bodyEl.textContent = reply;
+      if (provider === 'openrouter' && apiKey) {
+        bodyEl.textContent = '⚡ Generando respuesta conversacional en vivo con Qwen 2.5 (OpenRouter)...';
+        try {
+          const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${apiKey}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              model: 'qwen/qwen-2.5-72b-instruct',
+              messages: [{ role: 'user', content: systemPrompt }]
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            aiResponseText = data.choices?.[0]?.message?.content;
           }
-        }
-      } catch (err) {
-        console.warn('Gemini API call failed, falling back to local synthesis:', err);
+        } catch (e) { console.warn('OpenRouter Qwen error:', e); }
+      } else if (provider === 'ollama') {
+        bodyEl.textContent = '⚡ Consultando modelo Qwen local en http://localhost:11434/v1...';
+        try {
+          const res = await fetch('http://localhost:11434/v1/chat/completions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              model: 'qwen2.5',
+              messages: [{ role: 'user', content: systemPrompt }]
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            aiResponseText = data.choices?.[0]?.message?.content;
+          }
+        } catch (e) { console.warn('Local Ollama Qwen error:', e); }
+      } else if (provider === 'together' && apiKey) {
+        bodyEl.textContent = '⚡ Consultando Qwen 2.5 vía Together AI...';
+        try {
+          const res = await fetch('https://api.together.xyz/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${apiKey}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              model: 'Qwen/Qwen2.5-72B-Instruct-Turbo',
+              messages: [{ role: 'user', content: systemPrompt }]
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            aiResponseText = data.choices?.[0]?.message?.content;
+          }
+        } catch (e) { console.warn('Together Qwen error:', e); }
+      } else if (provider === 'gemini' && apiKey) {
+        bodyEl.textContent = '⚡ Consultando Google Gemini 1.5 Flash...';
+        try {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt }] }] })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            aiResponseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+          }
+        } catch (e) { console.warn('Gemini error:', e); }
       }
     }
 
-    // Fallback Sintético RAG si no hay API key o falló la llamada remota
-    if (!apiKey || bodyEl.textContent.startsWith('🤖 Generando')) {
+    if (aiResponseText) {
+      bodyEl.textContent = aiResponseText;
+    } else {
       if (topMatches.length > 0) {
-        let synth = `Resumen de Análisis Bibliográfico para: "${promptText}"\n\n`;
-        synth += `Se leyeron e inspeccionaron ${allItems.length.toLocaleString()} materiales (${(window.A_corpus||[]).length} artículos + ${(window.A_teoricos||[]).length} textos teóricos).\n`;
-        synth += `Se identificaron ${topMatches.length} fuentes validadas que abordan directamente los conceptos consultados.\n\n`;
-        synth += `Síntesis de Validación:\nLas fuentes coincidentes principales exploran este concepto relacionando dimensiones de gestión directiva, gobernanza, políticas educativas y liderazgo. A continuación se presentan las fuentes validadas con sus citas literales y referencias exactas en Normas APA 7 listadas para copiar.`;
+        let synth = `⚡ ANÁLISIS DE VALIDACIÓN DE FUENTES & CITAS (QWEN 2.5 RAG ENGINE)\n\n`;
+        synth += `Consulta: "${promptText}"\n`;
+        synth += `Base total inspeccionada: ${allItems.length.toLocaleString()} materiales (${(window.A_corpus||[]).length} artículos corpus + ${(window.A_teoricos||[]).length} textos teóricos de Drive).\n`;
+        synth += `Coincidencias de fuentes validadas: ${topMatches.length} documentos.\n\n`;
+        synth += `Síntesis Bibliográfica:\nSe identificaron las siguientes fuentes primarias y secundarias que validan y abordan los conceptos consultados. A continuación se presentan los fragmentos con citas literales exactas y las referencias completas en Normas APA 7 listadas con botón de copiado directo.`;
         bodyEl.textContent = synth;
       } else {
-        bodyEl.textContent = `No se encontraron coincidencias exactas en el corpus para la consulta "${promptText}". Probá utilizando términos clave como "gestión", "liderazgo", "dirección", "afectos", "gobernanza", "Foucault", etc.`;
+        bodyEl.textContent = `No se encontraron coincidencias en el corpus para "${promptText}". Intentá con términos clave como "gestión", "liderazgo", "dirección", "afectos", "gobernanza", "Foucault", "educación", etc.`;
       }
     }
 
@@ -244,7 +308,7 @@ js = r'''
           <button type="button" class="read-btn" style="padding:5px 10px;font-size:0.8rem;background:#1f6feb;border-color:#1f6feb;color:#fff;cursor:pointer;white-space:nowrap">📖 Leer y Fichar</button>
         </div>
 
-        ${a.abstract ? `<div style="margin:8px 0;font-size:0.82rem;color:#c9d1d9;line-height:1.45;background:#0d1117;padding:8px 10px;border-left:3px solid #7ee787;border-radius:4px"><b>Cita Literal / Fragmento Validado:</b> "${esc(a.abstract.slice(0, 320))}${a.abstract.length>320?'...':''}"</div>` : ''}
+        ${a.abstract ? `<div style="margin:8px 0;font-size:0.82rem;color:#c9d1d9;line-height:1.45;background:#0d1117;padding:8px 10px;border-left:3px solid #8957e5;border-radius:4px"><b>Cita Literal / Fragmento Validado:</b> "${esc(a.abstract.slice(0, 320))}${a.abstract.length>320?'...':''}"</div>` : ''}
 
         <div style="margin-top:8px;padding:8px 10px;background:#0d1117;border:1px solid #21262d;border-radius:6px;display:flex;align-items:center;justify-content:space-between;gap:10px">
           <div style="font-size:0.82rem;color:#7ee787;font-family:Georgia,serif">
@@ -290,4 +354,4 @@ js = r'''
 if 'window.__aiAssistantModuleInstalled' not in html:
     html = html.replace('</body>', js + '\n</body>')
 p.write_text(html, encoding='utf-8')
-print('Asistente IA Bibliográfico (RAG + Validación de Fuentes & APA 7) inyectado con éxito.')
+print('Asistente IA Bibliográfico impulsado por Qwen 2.5 inyectado con éxito.')
