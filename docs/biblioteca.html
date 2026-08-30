@@ -636,6 +636,37 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
   function esc(v){return (v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
   function norm(v){return(v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 
+  // Distancia Levenshtein / Similitud difusa para tolerar errores como "buernamentalidad" por "gubernamentalidad"
+  function similarity(s1, s2) {
+    s1 = norm(s1); s2 = norm(s2);
+    if (s1 === s2) return 1.0;
+    if (s1.includes(s2) || s2.includes(s1)) return 0.85;
+    if (s1.length < 3 || s2.length < 3) return 0.0;
+    let longer = s1.length > s2.length ? s1 : s2;
+    let shorter = s1.length > s2.length ? s2 : s1;
+    let longerLength = longer.length;
+    if (longerLength === 0) return 1.0;
+    
+    let costs = new Array();
+    for (let i = 0; i <= s1.length; i++) {
+      let lastValue = i;
+      for (let j = 0; j <= s2.length; j++) {
+        if (i === 0) costs[j] = j;
+        else {
+          if (j > 0) {
+            let newValue = costs[j - 1];
+            if (s1.charAt(i - 1) !== s2.charAt(j - 1))
+              newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
+            costs[j - 1] = lastValue;
+            lastValue = newValue;
+          }
+        }
+      }
+      if (i > 0) costs[s2.length] = lastValue;
+    }
+    return (longerLength - costs[s2.length]) / parseFloat(longerLength);
+  }
+
   function buildApa7(a) {
     let rawAuthors = (a.authors || '').split(/\s*;\s*|\s*\|\s*/).map(x=>x.trim()).filter(Boolean);
     let formattedAuthors = rawAuthors.map(name => {
@@ -662,11 +693,21 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     return `${authorsStr}. (${year}). ${title}. ${source}.${doi ? ' ' + doi : ''}`;
   }
 
+  function getMaterials() {
+    let corpus = [];
+    let teoricos = [];
+    try { if (typeof A_corpus !== 'undefined') corpus = A_corpus; } catch(e){}
+    try { if (typeof A_teoricos !== 'undefined') teoricos = A_teoricos; } catch(e){}
+    if (!corpus.length && window.A_corpus) corpus = window.A_corpus;
+    if (!teoricos.length && window.A_teoricos) teoricos = window.A_teoricos;
+    return { corpus, teoricos };
+  }
+
   function initAiAssistantUI() {
     const colBar = document.querySelector('.col-bar');
     if (!colBar) return;
 
-    // UN SOLO BOTÓN UNIFICADO
+    // BOTÓN ÚNICO
     const btnAi = document.createElement('button');
     btnAi.id = 'btnAiAssistant';
     btnAi.className = 'col-btn';
@@ -691,14 +732,14 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     aiPane.innerHTML = `
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #30363d;padding-bottom:10px">
         <div>
-          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Módulo Unificado: Asistente IA, Validación de Fuentes & Citas APA 7 (Qwen 2.5)</h2>
-          <div style="font-size:0.82rem;color:#8b949e">Consulta conceptos, valida frases o preguntale a la IA sobre los <b>2.087 artículos del corpus</b> + <b>37 textos teóricos de Drive</b>.</div>
+          <h2 style="margin:0;font-size:1.2rem;color:#79c0ff">🤖 Asistente IA Bibliográfico & Validación de Fuentes APA 7 (Qwen 2.5)</h2>
+          <div style="font-size:0.82rem;color:#8b949e">Consulta conceptos, valida frases o preguntale a la IA sobre todos los materiales de tu biblioteca.</div>
         </div>
         <button id="closeAiPaneBtn" type="button" style="padding:4px 12px;background:#21262d;border:1px solid #30363d;color:#fff;cursor:pointer">✕ Cerrar</button>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 220px 180px;gap:10px;margin-bottom:12px">
-        <textarea id="aiPrompt" placeholder="Ingresá un concepto, frase a validar o pregunta (ej: @regulación, gobernanza, Foucault, 'liderazgo en escuelas públicas')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
+        <textarea id="aiPrompt" placeholder="Ingresá un concepto, frase a validar o pregunta (ej: gubernamentalidad, @regulación, Foucault, 'liderazgo en escuelas públicas')..." style="font-size:0.95rem;padding:10px 14px;min-height:65px;background:#0d1117;color:#fff;border:1px solid #30363d;border-radius:6px"></textarea>
         
         <select id="conceptScope" style="background:#0d1117;color:#fff;font-size:0.85rem">
           <option value="all">Todos los materiales (2.124)</option>
@@ -730,7 +771,7 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
 
       <div id="aiResponseContainer" style="display:none;margin-top:14px;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px">
         <div id="aiSynthesisHeader" style="font-weight:700;color:#79c0ff;margin-bottom:10px;font-size:1.05rem;display:flex;align-items:center;gap:8px">
-          <span>🧠 Análisis de QWEN 2.5 & Validación Bibliográfica</span>
+          <span>🧠 Análisis Bibliográfico & Validación de Fuentes</span>
         </div>
         <div id="aiSynthesisBody" style="font-size:0.92rem;line-height:1.6;color:#e6edf3;white-space:pre-wrap;margin-bottom:16px;background:#161b22;padding:14px;border-radius:6px;border-left:4px solid #8957e5"></div>
 
@@ -753,7 +794,7 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
       const k = document.getElementById('qwenApiKeyInput').value.trim();
       localStorage.setItem('qwen_provider_v1', p);
       localStorage.setItem('qwen_api_key_v1', k);
-      alert('✓ Configuración de Qwen / IA guardada localmente.');
+      alert('✓ Configuración de IA guardada localmente.');
     };
 
     btnAi.onclick = () => {
@@ -776,48 +817,64 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
   }
 
   async function runAiAnalysis() {
-    const promptText = document.getElementById('aiPrompt').value.trim();
-    if (!promptText) {
+    const rawPrompt = document.getElementById('aiPrompt').value.trim();
+    if (!rawPrompt) {
       alert('Ingresá una pregunta, concepto o frase para analizar.');
       return;
     }
 
+    // Limpieza de typos y caracteres especiales al final (ej: "buernamentalidad7" -> "buernamentalidad")
+    const cleanPrompt = rawPrompt.replace(/\d+$/, '').replace(/^@/, '').trim();
     const scope = document.getElementById('conceptScope').value;
     const container = document.getElementById('aiResponseContainer');
     const bodyEl = document.getElementById('aiSynthesisBody');
     const sourcesEl = document.getElementById('aiValidatedSourcesList');
     container.style.display = 'block';
 
-    bodyEl.textContent = '⚡ Inspeccionando materiales, extrayendo pasajes literales y consultando a Qwen 2.5...';
+    bodyEl.textContent = '⚡ RAG Multidocumento: Inspeccionando todos los artículos del corpus y textos teóricos...\nProcesando coincidencia conceptual y citas literales...';
     sourcesEl.innerHTML = '';
 
+    const { corpus, teoricos } = getMaterials();
     let allItems = [];
-    if (scope === 'all' || scope === 'corpus') allItems = allItems.concat(window.A_corpus || []);
-    if (scope === 'all' || scope === 'teoricos') allItems = allItems.concat(window.A_teoricos || []);
+    if (scope === 'all' || scope === 'corpus') allItems = allItems.concat(corpus);
+    if (scope === 'all' || scope === 'teoricos') allItems = allItems.concat(teoricos);
 
-    const qNorm = norm(promptText);
-    const words = qNorm.split(/\s+/).filter(w => w.length >= 4);
+    const qNorm = norm(cleanPrompt);
+    const queryTokens = qNorm.split(/\s+/).filter(w => w.length >= 3);
 
-    // Scoring RAG
+    // Scoring RAG con tolerancia a errores tipográficos (Fuzzy Matching)
     const scored = allItems.map(a => {
       let score = 0;
       const titleN = norm(a.title || '');
       const absN = norm(a.abstract || '');
       const kwN = norm(a.keywords || '');
       const authN = norm(a.authors || '');
+      const fnN = norm(a.drive_filename || '');
 
-      if (titleN.includes(qNorm)) score += 10;
+      // Coincidencia exacta de substring
+      if (titleN.includes(qNorm)) score += 12;
       if (absN.includes(qNorm)) score += 8;
+      if (fnN.includes(qNorm)) score += 10;
 
-      words.forEach(w => {
-        if (titleN.includes(w)) score += 3;
-        if (absN.includes(w)) score += 2;
-        if (kwN.includes(w)) score += 2;
-        if (authN.includes(w)) score += 2;
+      queryTokens.forEach(token => {
+        if (titleN.includes(token)) score += 4;
+        if (absN.includes(token)) score += 2;
+        if (kwN.includes(token)) score += 3;
+        if (authN.includes(token)) score += 3;
+        if (fnN.includes(token)) score += 4;
+
+        // Similitud difusa (Levenshtein) para cada palabra del título y palabras clave
+        const allWords = (titleN + ' ' + kwN + ' ' + fnN).split(/\s+/);
+        allWords.forEach(w => {
+          if (w.length >= 4 && token.length >= 4) {
+            const sim = similarity(token, w);
+            if (sim >= 0.72) score += 5 * sim;
+          }
+        });
       });
 
       return { article: a, score };
-    }).filter(x => x.score > 0).sort((a, b) => b.score - a.score);
+    }).filter(x => x.score > 0.5).sort((a, b) => b.score - a.score);
 
     const topMatches = scored.slice(0, 15).map(x => x.article);
 
@@ -828,10 +885,10 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
 
     if (topMatches.length > 0) {
       const contextStr = topMatches.slice(0, 6).map((m, idx) => {
-        return `[Fuente ${idx+1}] Título: ${m.title} | Autores: ${m.authors} | Año: ${m.year} | Resumen: ${(m.abstract||'').slice(0, 320)}`;
+        return `[Fuente ${idx+1}] Título: ${m.title} | Autores: ${m.authors} | Año: ${m.year} | Resumen/Fragmento: ${(m.abstract||m.title||'').slice(0, 320)}`;
       }).join('\n\n');
 
-      const systemPrompt = `Sos un experto asistente de investigación académica en educación. El usuario consulta: "${promptText}".\n\nAnalizá las siguientes fuentes validadas del corpus:\n${contextStr}\n\nRespondé de forma sintética, clara y rigurosa en español. Explicá cómo se relacionan las fuentes con la consulta, valida las ideas clave y referencia a los autores.`;
+      const systemPrompt = `Sos un experto asistente de investigación académica en educación. El usuario consulta: "${rawPrompt}" (concepto detectado: "${cleanPrompt}").\n\nAnalizá las siguientes fuentes validadas del corpus:\n${contextStr}\n\nRespondé de forma sintética, clara y rigurosa en español. Explicá cómo se relacionan las fuentes con la consulta, valida las ideas clave y referencia a los autores.`;
 
       if (provider === 'openrouter' && apiKey) {
         bodyEl.textContent = '⚡ Generando respuesta conversacional en vivo con Qwen 2.5 (OpenRouter)...';
@@ -908,20 +965,20 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
     } else {
       if (topMatches.length > 0) {
         let synth = `⚡ ANÁLISIS DE VALIDACIÓN DE FUENTES & CITAS (QWEN 2.5 RAG ENGINE)\n\n`;
-        synth += `Consulta: "${promptText}"\n`;
+        synth += `Consulta ingresada: "${rawPrompt}" (Término analizado: "${cleanPrompt}")\n`;
         synth += `Base total inspeccionada: ${allItems.length.toLocaleString()} materiales.\n`;
         synth += `Coincidencias de fuentes validadas: ${topMatches.length} documentos.\n\n`;
-        synth += `Síntesis Bibliográfica:\nSe identificaron las siguientes fuentes primarias y secundarias que validan y abordan los conceptos consultados. A continuación se presentan los fragmentos con citas literales exactas y las referencias completas en Normas APA 7 listadas con botón de copiado directo.`;
+        synth += `Síntesis Bibliográfica:\nSe identificaron las siguientes fuentes primarias y secundarias que validan y abordan el concepto. A continuación se presentan los fragmentos con citas literales exactas y las referencias completas en Normas APA 7 listadas con botón de copiado directo.`;
         bodyEl.textContent = synth;
       } else {
-        bodyEl.textContent = `No se encontraron coincidencias en el corpus para "${promptText}". Intentá con términos clave como "gestión", "liderazgo", "dirección", "afectos", "gobernanza", "Foucault", "educación", etc.`;
+        bodyEl.textContent = `No se encontraron coincidencias directas para "${rawPrompt}". Se inspeccionaron los ${allItems.length.toLocaleString()} materiales de la base.\n\nSugerencia: Intentá con términos como "gubernamentalidad", "gestión", "liderazgo", "dirección", "afectos", "gobernanza", "Foucault", "educación", etc.`;
       }
     }
 
     // Renderizado de Fuentes Validadas con Citas APA 7
     sourcesEl.innerHTML = '';
     if (topMatches.length === 0) {
-      sourcesEl.innerHTML = '<div style="color:#e3b341">Sin fuentes validadas.</div>';
+      sourcesEl.innerHTML = '<div style="color:#e3b341;padding:10px">Sin fuentes validadas para este término.</div>';
       return;
     }
 
@@ -932,6 +989,8 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
       card.style.border = '1px solid #30363d';
       card.style.borderRadius = '8px';
       card.style.padding = '12px 14px';
+
+      const fragmentText = a.abstract || a.title || 'Fragmento disponible en la obra completa.';
 
       card.innerHTML = `
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
@@ -945,7 +1004,9 @@ $('q').oninput=filter;$('year').onchange=filter;$('state').onchange=filter;init(
           <button type="button" class="read-btn" style="padding:5px 10px;font-size:0.8rem;background:#1f6feb;border-color:#1f6feb;color:#fff;cursor:pointer;white-space:nowrap">📖 Leer y Fichar</button>
         </div>
 
-        ${a.abstract ? `<div style="margin:8px 0;font-size:0.82rem;color:#c9d1d9;line-height:1.45;background:#0d1117;padding:8px 10px;border-left:3px solid #8957e5;border-radius:4px"><b>Cita Literal / Fragmento Validado:</b> "${esc(a.abstract.slice(0, 320))}${a.abstract.length>320?'...':''}"</div>` : ''}
+        <div style="margin:8px 0;font-size:0.82rem;color:#c9d1d9;line-height:1.45;background:#0d1117;padding:8px 10px;border-left:3px solid #8957e5;border-radius:4px">
+          <b>Cita Literal / Fragmento Validado:</b> "${esc(fragmentText.slice(0, 340))}${fragmentText.length>340?'...':''}"
+        </div>
 
         <div style="margin-top:8px;padding:8px 10px;background:#0d1117;border:1px solid #21262d;border-radius:6px;display:flex;align-items:center;justify-content:space-between;gap:10px">
           <div style="font-size:0.82rem;color:#7ee787;font-family:Georgia,serif">
