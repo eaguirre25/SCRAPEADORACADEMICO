@@ -38,132 +38,6 @@ function exportAll(){let blob=new Blob([JSON.stringify(F,null,2)],{type:'applica
 </script>
 <script>
 (function(){
-  if(window.__libraryPdfViewerInstalled)return;
-  window.__libraryPdfViewerInstalled=true;
-  const baseOpenReader=window.openReader||openReader;
-  function escV(v){return(v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-  function currentFicha(a){try{const fid=(typeof id==='function')?id(a):(a.record_id||a.doi||a.title);const store=(typeof F!=='undefined')?F:(window.F||{});return store[fid]||{}}catch(e){return{}}}
-  function showSavedText(a){
-    const f=currentFicha(a); if(!f.ocr_text)return false;
-    const viewer=document.getElementById('viewer'); if(!viewer)return false;
-    viewer.innerHTML='<div class="fallback" style="white-space:pre-wrap;font-family:Georgia,serif;line-height:1.58">'
-      +'<div style="position:sticky;top:0;background:#fff;padding:8px 0 12px;font-family:Segoe UI,Arial,sans-serif;font-size:12px;color:#555">'
-      +'<b>Texto guardado · '+escV(f.ocr_language_label||'texto extraído')+'</b> · seleccionable y copiable</div>'
-      +escV(f.ocr_text)+'</div>';
-    return true;
-  }
-  function renderDrive(a){
-    const viewer=document.getElementById('viewer'); if(!viewer)return;
-    const preview=a.drive_preview_url||(a.drive_file_id?('https://drive.google.com/file/d/'+encodeURIComponent(a.drive_file_id)+'/preview'):'');
-    const open=a.drive_open_url||(a.drive_file_id?('https://drive.google.com/file/d/'+encodeURIComponent(a.drive_file_id)+'/view'):'');
-    if(!preview){
-      viewer.innerHTML='<div class="fallback"><h3>PDF todavía no vinculado a Drive</h3><p>Este registro aún no tiene asociado el ID de su copia en Google Drive. El manifiesto de Drive se está incorporando para que el lector deje de depender del sitio de la revista.</p><p>Mientras tanto podés usar <b>Abrir original</b> o <b>Revisar / generar OCR</b>.</p></div>';
-      return;
-    }
-    viewer.innerHTML='<div style="height:100%;display:flex;flex-direction:column;background:#20242a">'
-      +'<div style="padding:7px 10px;background:#111820;border-bottom:1px solid #30363d;display:flex;gap:8px;align-items:center;font-size:12px">'
-      +'<span style="color:#7ee787">PDF desde tu Google Drive</span>'
-      +(open?'<button type="button" id="openDriveBtn" style="padding:4px 8px">Abrir en Drive</button>':'')
-      +'<button type="button" id="savedTextBtn" style="padding:4px 8px">Ver texto guardado</button>'
-      +'</div><iframe id="articlePdfFrame" src="'+escV(preview)+'" style="flex:1;width:100%;border:0;background:#fff" allow="fullscreen"></iframe></div>';
-    const ob=document.getElementById('openDriveBtn');if(ob)ob.onclick=()=>window.open(open,'_blank');
-    const sb=document.getElementById('savedTextBtn');if(sb)sb.onclick=()=>{if(!showSavedText(a)){const tc=document.getElementById('textCheck');if(tc)tc.innerHTML='<div class="textcheck no">Todavía no hay texto guardado para este artículo. Usá “Revisar / generar OCR”.</div>'}};
-  }
-  window.openReader=openReader=function(a){
-    window.selected=a; baseOpenReader(a);
-    if(!showSavedText(a))renderDrive(a);
-  };
-})();
-</script>
-
-
-<script>
-(function(){
-  if(window.__universalReaderInstalled)return; window.__universalReaderInstalled=true;
-  const previousOpenReader=window.openReader||openReader;
-  const textCache={};
-  function e(v){return(v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
-  function articleId(a){return(typeof id==='function')?id(a):(a.record_id||a.doi||a.title)}
-  function savedText(a){try{const store=(typeof F!=='undefined')?F:(window.F||{});return(store[articleId(a)]||{}).ocr_text||''}catch(err){return''}}
-  async function corpusText(a){
-    if(!a.text_file)return'';
-    if(textCache[a.text_file]!==undefined)return textCache[a.text_file];
-    try{const r=await fetch(a.text_file,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const t=await r.text();textCache[a.text_file]=t;return t}catch(err){console.warn('No se pudo cargar texto completo',err);textCache[a.text_file]='';return''}
-  }
-  function driveUrl(a){return a.drive_preview_url||(a.drive_file_id?'https://drive.google.com/file/d/'+encodeURIComponent(a.drive_file_id)+'/preview':'')}
-  function directPdf(a){return a.pdf_url||a.url||''}
-  function sourceUrl(a){return a.url||(a.doi?'https://doi.org/'+a.doi:'')}
-  function textBody(a,txt,label){
-    return '<div class="fallback" style="white-space:pre-wrap;font-family:Georgia,serif;line-height:1.65">'
-      +'<div style="position:sticky;top:-28px;background:#fff;padding:8px 0 12px;font-family:Segoe UI,Arial,sans-serif;font-size:12px;color:#555;border-bottom:1px solid #ddd"><b>'+e(label)+'</b> · seleccionable y copiable</div>'+e(txt)+'</div>'
-  }
-  function abstractBody(a){
-    if(a.abstract)return '<article class="fallback" style="font-family:Georgia,serif;line-height:1.72"><div style="font-family:Segoe UI,Arial,sans-serif;color:#555;font-size:12px;margin-bottom:18px"><b>Resumen disponible</b></div><h2 style="font-family:Segoe UI,Arial,sans-serif">'+e(a.title)+'</h2><p style="color:#555;font-family:Segoe UI,Arial,sans-serif">'+e(a.authors||'')+(a.year?' · '+e(a.year):'')+'</p><h3 style="font-family:Segoe UI,Arial,sans-serif">Resumen / abstract</h3><p>'+e(a.abstract)+'</p>'+(a.keywords?'<h3 style="font-family:Segoe UI,Arial,sans-serif">Palabras clave</h3><p>'+e(a.keywords)+'</p>':'')+'</article>';
-    return '<div class="fallback"><h2>'+e(a.title)+'</h2><p>'+e(a.authors||'')+(a.year?' · '+e(a.year):'')+'</p><p>No hay resumen ni texto interno para este registro. Probá <b>Sitio del artículo</b>.</p></div>'
-  }
-  function iframe(src){return '<iframe src="'+e(src)+'" style="width:100%;height:100%;border:0;background:#fff" allow="fullscreen; clipboard-read; clipboard-write"></iframe>'}
-
-  function nativePdf(src){
-    const embedUrl = 'https://drive.google.com/viewerng/viewer?embedded=true&url=' + encodeURIComponent(src);
-    return iframe(embedUrl);
-  }
-
-  function pdfBody(a){
-    const drive=driveUrl(a),pdf=directPdf(a);
-    if(drive){
-      const method=a.drive_match_method==='doi_exact'?'DOI exacto':(a.drive_match_method==='strict_title_author_year'?'título + autor + año':'vínculo verificado');
-      const fn=a.drive_filename||'archivo de Drive';
-      return '<div style="height:100%;display:flex;flex-direction:column;background:#fff">'
-        +'<div style="padding:6px 10px;background:#eef7ee;color:#173b17;border-bottom:1px solid #b8d8b8;font:11px Segoe UI,Arial,sans-serif"><b>'+e(fn)+'</b> · '+e(method)+'</div>'
-        +'<div style="flex:1;min-height:0">'+iframe(drive)+'</div></div>';
-    }
-    if(pdf){
-      return '<div style="height:100%;display:flex;flex-direction:column;background:#fff">'
-        +'<div style="padding:6px 10px;background:#fff7e6;color:#684b00;border-bottom:1px solid #e6c76b;font:11px Segoe UI,Arial,sans-serif"><b>PDF embebido (Drive ViewerNG)</b> · lectura sin descarga</div>'
-        +'<div style="flex:1;min-height:0">'+nativePdf(pdf)+'</div></div>';
-    }
-    return '<div class="fallback"><h3>No hay PDF disponible</h3><p>Este trabajo puede leerse desde el texto extraído, el resumen o el sitio del artículo.</p></div>';
-  }
-
-  async function renderUniversal(a,mode){
-    const viewer=document.getElementById('viewer');if(!viewer)return;
-    const drive=driveUrl(a),pdf=directPdf(a),site=sourceUrl(a),local=savedText(a),hasCorpus=!!a.text_file,hasAbstract=!!a.abstract,hasPdf=!!(drive||pdf);
-    const bar='<div style="height:44px;display:flex;align-items:center;gap:7px;padding:6px 9px;background:#111820;border-bottom:1px solid #30363d;flex-wrap:wrap">'
-      +(hasPdf?'<button id="uvPdf" type="button" style="padding:5px 9px;background:#1f6feb;border-color:#1f6feb;color:#fff"><b>📄 Visor PDF</b></button>':'')
-      +'<button id="uvRead" type="button" style="padding:5px 9px">'+(local||hasCorpus?'📝 Texto completo':'📝 Resumen / Texto')+'</button>'
-      +(site?'<button id="uvSite" type="button" style="padding:5px 9px">🌐 Sitio de la revista</button>':'')
-      +'<span style="margin-left:auto;color:#8b949e;font-size:11px">'+(drive?'PDF en Drive':pdf?'Visor embebido (sin descarga)':local||hasCorpus?'texto interno':hasAbstract?'resumen':'fuente externa')+'</span></div>';
-    viewer.innerHTML='<div style="height:100%;display:flex;flex-direction:column">'+bar+'<div id="uvBody" style="flex:1;min-height:0"></div></div>';
-    const body=document.getElementById('uvBody');
-    if(mode==='pdf') body.innerHTML=pdfBody(a);
-    else if(mode==='site') body.innerHTML=site?iframe(site):abstractBody(a);
-    else if(local) body.innerHTML=textBody(a,local,'Texto completo extraído/OCR');
-    else if(hasCorpus){body.innerHTML='<div class="fallback"><p>Cargando texto completo…</p></div>';const txt=await corpusText(a);body.innerHTML=txt?textBody(a,txt,'Texto completo extraído por el scraper'):abstractBody(a)}
-    else body.innerHTML=abstractBody(a);
-
-    const r=document.getElementById('uvRead');if(r)r.onclick=()=>renderUniversal(a,'read');
-    const p=document.getElementById('uvPdf');if(p)p.onclick=()=>renderUniversal(a,'pdf');
-    const s=document.getElementById('uvSite');if(s)s.onclick=()=>renderUniversal(a,'site');
-  }
-  window.renderUniversalReader=renderUniversal;
-  window.openReader=openReader=function(a){
-    window.selected=a;previousOpenReader(a);
-    const hasPdf=!!(driveUrl(a)||directPdf(a));
-    renderUniversal(a,hasPdf?'pdf':'read');
-    const tc=document.getElementById('textCheck');
-    if(tc){
-      if(hasPdf)tc.innerHTML='<div class="textcheck ok">✓ Visor PDF incrustado. Podés leer el trabajo sin salir de la ficha.</div>';
-      else if(savedText(a)||a.text_file)tc.innerHTML='<div class="textcheck ok">✓ Texto completo interno disponible: podés seleccionar y copiar citas.</div>';
-      else if(a.abstract)tc.innerHTML='<div class="textcheck no">No hay PDF disponible; se muestra el resumen y el acceso al sitio del artículo.</div>';
-      else tc.innerHTML='<div class="textcheck no">No hay PDF ni resumen interno; usá Sitio del artículo.</div>';
-    }
-  }
-})();
-</script>
-
-
-<script>
-(function(){
   if (window.__libraryOCRInstalled) return;
   window.__libraryOCRInstalled = true;
   if (window.pdfjsLib) {
@@ -306,6 +180,292 @@ function exportAll(){let blob=new Blob([JSON.stringify(F,null,2)],{type:'applica
       if(btn){btn.disabled=false;btn.textContent='Revisar / generar OCR';}
     }
   };
+})();
+</script>
+
+
+<script>
+(function(){
+  if(window.__libraryPdfViewerInstalled)return;
+  window.__libraryPdfViewerInstalled=true;
+  const baseOpenReader=window.openReader||openReader;
+  function escV(v){return(v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+  function currentFicha(a){try{const fid=(typeof id==='function')?id(a):(a.record_id||a.doi||a.title);const store=(typeof F!=='undefined')?F:(window.F||{});return store[fid]||{}}catch(e){return{}}}
+  function showSavedText(a){
+    const f=currentFicha(a); if(!f.ocr_text)return false;
+    const viewer=document.getElementById('viewer'); if(!viewer)return false;
+    viewer.innerHTML='<div class="fallback" style="white-space:pre-wrap;font-family:Georgia,serif;line-height:1.58">'
+      +'<div style="position:sticky;top:0;background:#fff;padding:8px 0 12px;font-family:Segoe UI,Arial,sans-serif;font-size:12px;color:#555">'
+      +'<b>Texto guardado · '+escV(f.ocr_language_label||'texto extraído')+'</b> · seleccionable y copiable</div>'
+      +escV(f.ocr_text)+'</div>';
+    return true;
+  }
+  function renderDrive(a){
+    const viewer=document.getElementById('viewer'); if(!viewer)return;
+    const preview=a.drive_preview_url||(a.drive_file_id?('https://drive.google.com/file/d/'+encodeURIComponent(a.drive_file_id)+'/preview'):'');
+    const open=a.drive_open_url||(a.drive_file_id?('https://drive.google.com/file/d/'+encodeURIComponent(a.drive_file_id)+'/view'):'');
+    if(!preview){
+      viewer.innerHTML='<div class="fallback"><h3>PDF todavía no vinculado a Drive</h3><p>Este registro aún no tiene asociado el ID de su copia en Google Drive. El manifiesto de Drive se está incorporando para que el lector deje de depender del sitio de la revista.</p><p>Mientras tanto podés usar <b>Abrir original</b> o <b>Revisar / generar OCR</b>.</p></div>';
+      return;
+    }
+    viewer.innerHTML='<div style="height:100%;display:flex;flex-direction:column;background:#20242a">'
+      +'<div style="padding:7px 10px;background:#111820;border-bottom:1px solid #30363d;display:flex;gap:8px;align-items:center;font-size:12px">'
+      +'<span style="color:#7ee787">PDF desde tu Google Drive</span>'
+      +(open?'<button type="button" id="openDriveBtn" style="padding:4px 8px">Abrir en Drive</button>':'')
+      +'<button type="button" id="savedTextBtn" style="padding:4px 8px">Ver texto guardado</button>'
+      +'</div><iframe id="articlePdfFrame" src="'+escV(preview)+'" style="flex:1;width:100%;border:0;background:#fff" allow="fullscreen"></iframe></div>';
+    const ob=document.getElementById('openDriveBtn');if(ob)ob.onclick=()=>window.open(open,'_blank');
+    const sb=document.getElementById('savedTextBtn');if(sb)sb.onclick=()=>{if(!showSavedText(a)){const tc=document.getElementById('textCheck');if(tc)tc.innerHTML='<div class="textcheck no">Todavía no hay texto guardado para este artículo. Usá “Revisar / generar OCR”.</div>'}};
+  }
+  window.openReader=openReader=function(a){
+    window.selected=a; baseOpenReader(a);
+    if(!showSavedText(a))renderDrive(a);
+  };
+})();
+</script>
+
+
+<script>
+(function(){
+  if(window.__universalReaderInstalled)return; window.__universalReaderInstalled=true;
+  const previousOpenReader=window.openReader||openReader;
+  const textCache={};
+  function e(v){return(v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+  function articleId(a){return(typeof id==='function')?id(a):(a.record_id||a.doi||a.title)}
+  function savedText(a){try{const store=(typeof F!=='undefined')?F:(window.F||{});return(store[articleId(a)]||{}).ocr_text||''}catch(err){return''}}
+  async function corpusText(a){
+    if(!a.text_file)return'';
+    if(textCache[a.text_file]!==undefined)return textCache[a.text_file];
+    try{const r=await fetch(a.text_file,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const t=await r.text();textCache[a.text_file]=t;return t}catch(err){console.warn('No se pudo cargar texto completo',err);textCache[a.text_file]='';return''}
+  }
+  function driveUrl(a){return a.drive_preview_url||(a.drive_file_id?'https://drive.google.com/file/d/'+encodeURIComponent(a.drive_file_id)+'/preview':'')}
+  function directPdf(a){return a.pdf_url||a.url||''}
+  function sourceUrl(a){return a.url||(a.doi?'https://doi.org/'+a.doi:'')}
+  function textBody(a,txt,label){
+    return '<div class="fallback" style="white-space:pre-wrap;font-family:Georgia,serif;line-height:1.65">'
+      +'<div style="position:sticky;top:-28px;background:#fff;padding:8px 0 12px;font-family:Segoe UI,Arial,sans-serif;font-size:12px;color:#555;border-bottom:1px solid #ddd"><b>'+e(label)+'</b> · seleccionable y copiable</div>'+e(txt)+'</div>'
+  }
+  function abstractBody(a){
+    if(a.abstract)return '<article class="fallback" style="font-family:Georgia,serif;line-height:1.72"><div style="font-family:Segoe UI,Arial,sans-serif;color:#555;font-size:12px;margin-bottom:18px"><b>Resumen disponible</b></div><h2 style="font-family:Segoe UI,Arial,sans-serif">'+e(a.title)+'</h2><p style="color:#555;font-family:Segoe UI,Arial,sans-serif">'+e(a.authors||'')+(a.year?' · '+e(a.year):'')+'</p><h3 style="font-family:Segoe UI,Arial,sans-serif">Resumen / abstract</h3><p>'+e(a.abstract)+'</p>'+(a.keywords?'<h3 style="font-family:Segoe UI,Arial,sans-serif">Palabras clave</h3><p>'+e(a.keywords)+'</p>':'')+'</article>';
+    return '<div class="fallback"><h2>'+e(a.title)+'</h2><p>'+e(a.authors||'')+(a.year?' · '+e(a.year):'')+'</p><p>No hay resumen ni texto interno para este registro. Probá <b>Sitio del artículo</b>.</p></div>'
+  }
+  function iframe(src){return '<iframe src="'+e(src)+'" style="width:100%;height:100%;border:0;background:#fff" allow="fullscreen; clipboard-read; clipboard-write"></iframe>'}
+
+  function nativePdf(src){
+    const embedUrl = 'https://drive.google.com/viewerng/viewer?embedded=true&url=' + encodeURIComponent(src);
+    return iframe(embedUrl);
+  }
+
+  function pdfBody(a){
+    const drive=driveUrl(a),pdf=directPdf(a);
+    if(drive){
+      const method=a.drive_match_method==='doi_exact'?'DOI exacto':(a.drive_match_method==='strict_title_author_year'?'título + autor + año':'vínculo verificado');
+      const fn=a.drive_filename||'archivo de Drive';
+      return '<div style="height:100%;display:flex;flex-direction:column;background:#fff">'
+        +'<div style="padding:6px 10px;background:#eef7ee;color:#173b17;border-bottom:1px solid #b8d8b8;font:11px Segoe UI,Arial,sans-serif"><b>'+e(fn)+'</b> · '+e(method)+'</div>'
+        +'<div style="flex:1;min-height:0">'+iframe(drive)+'</div></div>';
+    }
+    if(pdf){
+      return '<div style="height:100%;display:flex;flex-direction:column;background:#fff">'
+        +'<div style="padding:6px 10px;background:#fff7e6;color:#684b00;border-bottom:1px solid #e6c76b;font:11px Segoe UI,Arial,sans-serif"><b>PDF embebido (Drive ViewerNG)</b> · lectura sin descarga</div>'
+        +'<div style="flex:1;min-height:0">'+nativePdf(pdf)+'</div></div>';
+    }
+    return '<div class="fallback"><h3>No hay PDF disponible</h3><p>Este trabajo puede leerse desde el texto extraído, el resumen o el sitio del artículo.</p></div>';
+  }
+
+  async function renderUniversal(a,mode){
+    const viewer=document.getElementById('viewer');if(!viewer)return;
+    const drive=driveUrl(a),pdf=directPdf(a),site=sourceUrl(a),local=savedText(a),hasCorpus=!!a.text_file,hasAbstract=!!a.abstract,hasPdf=!!(drive||pdf);
+    const bar='<div style="height:44px;display:flex;align-items:center;gap:7px;padding:6px 9px;background:#111820;border-bottom:1px solid #30363d;flex-wrap:wrap">'
+      +(hasPdf?'<button id="uvPdf" type="button" style="padding:5px 9px;background:#1f6feb;border-color:#1f6feb;color:#fff"><b>📄 Visor PDF</b></button>':'')
+      +'<button id="uvRead" type="button" style="padding:5px 9px">'+(local||hasCorpus?'📝 Texto completo':'📝 Resumen / Texto')+'</button>'
+      +(site?'<button id="uvSite" type="button" style="padding:5px 9px">🌐 Sitio de la revista</button>':'')
+      +'<span style="margin-left:auto;color:#8b949e;font-size:11px">'+(drive?'PDF en Drive':pdf?'Visor embebido (sin descarga)':local||hasCorpus?'texto interno':hasAbstract?'resumen':'fuente externa')+'</span></div>';
+    viewer.innerHTML='<div style="height:100%;display:flex;flex-direction:column">'+bar+'<div id="uvBody" style="flex:1;min-height:0"></div></div>';
+    const body=document.getElementById('uvBody');
+    if(mode==='pdf') body.innerHTML=pdfBody(a);
+    else if(mode==='site') body.innerHTML=site?iframe(site):abstractBody(a);
+    else if(local) body.innerHTML=textBody(a,local,'Texto completo extraído/OCR');
+    else if(hasCorpus){body.innerHTML='<div class="fallback"><p>Cargando texto completo…</p></div>';const txt=await corpusText(a);body.innerHTML=txt?textBody(a,txt,'Texto completo extraído por el scraper'):abstractBody(a)}
+    else body.innerHTML=abstractBody(a);
+
+    const r=document.getElementById('uvRead');if(r)r.onclick=()=>renderUniversal(a,'read');
+    const p=document.getElementById('uvPdf');if(p)p.onclick=()=>renderUniversal(a,'pdf');
+    const s=document.getElementById('uvSite');if(s)s.onclick=()=>renderUniversal(a,'site');
+  }
+  window.renderUniversalReader=renderUniversal;
+  window.openReader=openReader=function(a){
+    window.selected=a;previousOpenReader(a);
+    const hasPdf=!!(driveUrl(a)||directPdf(a));
+    renderUniversal(a,hasPdf?'pdf':'read');
+    const tc=document.getElementById('textCheck');
+    if(tc){
+      if(hasPdf)tc.innerHTML='<div class="textcheck ok">✓ Visor PDF incrustado. Podés leer el trabajo sin salir de la ficha.</div>';
+      else if(savedText(a)||a.text_file)tc.innerHTML='<div class="textcheck ok">✓ Texto completo interno disponible: podés seleccionar y copiar citas.</div>';
+      else if(a.abstract)tc.innerHTML='<div class="textcheck no">No hay PDF disponible; se muestra el resumen y el acceso al sitio del artículo.</div>';
+      else tc.innerHTML='<div class="textcheck no">No hay PDF ni resumen interno; usá Sitio del artículo.</div>';
+    }
+  }
+})();
+</script>
+
+
+<script>
+(function(){
+  if(window.__apa7MetadataInstalled) return;
+  window.__apa7MetadataInstalled=true;
+  const previousOpenReader=window.openReader || openReader;
+
+  function q(sel, root=document){return root.querySelector(sel)}
+  function qa(sel, root=document){return [...root.querySelectorAll(sel)]}
+  function esc(v){return (v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+  function aid(a){try{return id(a)}catch(e){return a.record_id||a.doi||a.title}}
+  function field(k){return q('[data-k="'+k+'"]')}
+  function val(k){const el=field(k); return el?el.value.trim():''}
+  function setv(k,v){const el=field(k); if(el && !el.value) el.value=v||''}
+
+  function splitAuthors(raw){
+    return (raw||'').split(/\s*;\s*|\s*\|\s*/).map(x=>x.trim()).filter(Boolean);
+  }
+  function initials(given){
+    return (given||'').split(/[\s-]+/).filter(Boolean).map(x=>x.charAt(0).toUpperCase()+'.').join(' ');
+  }
+  function bestAuthor(name){
+    name=(name||'').trim(); if(!name) return '';
+    if(name.includes(',')){
+      let [sur,...rest]=name.split(','); return sur.trim()+', '+initials(rest.join(' ').trim());
+    }
+    const t=name.split(/\s+/).filter(Boolean); if(t.length===1) return t[0];
+    const particles=new Set(['de','del','la','las','los','da','das','do','dos','di','van','von']);
+    let start=Math.max(1,t.length-2);
+    while(start>1 && particles.has(t[start-1].toLowerCase())) start--;
+    // Si el bloque final contiene partículas hispanas, incluir un apellido previo.
+    if(start>1 && t.slice(start).some(x=>particles.has(x.toLowerCase()))) start--;
+    const given=t.slice(0,start).join(' '), sur=t.slice(start).join(' ');
+    return sur+', '+initials(given);
+  }
+  function proposedAuthors(raw){return splitAuthors(raw).map(bestAuthor).join('\n')}
+  function apaAuthors(raw){
+    let arr=(raw||'').split(/\n+/).map(x=>x.trim()).filter(Boolean);
+    if(!arr.length) return '';
+    if(arr.length===1) return arr[0];
+    if(arr.length===2) return arr[0]+', & '+arr[1];
+    return arr.slice(0,-1).join(', ')+', & '+arr[arr.length-1];
+  }
+  function sentenceTitle(s){
+    s=(s||'').trim(); if(!s) return '';
+    return s.charAt(0).toUpperCase()+s.slice(1);
+  }
+  function doiUrl(v){
+    v=(v||'').trim(); if(!v) return '';
+    v=v.replace(/^https?:\/\/(dx\.)?doi\.org\//i,'');
+    return 'https://doi.org/'+v;
+  }
+  function enddot(s){s=(s||'').trim(); return s && !/[.!?]$/.test(s)?s+'.':s}
+  function pagesNorm(v){return (v||'').trim().replace(/^pp?\.\s*/i,'')}
+
+  function apa7(){
+    const type=val('tipo_publicacion')||'article';
+    const authors=apaAuthors(val('autores_apa')) || val('autores');
+    const year=val('anio')||'s. f.';
+    const title=sentenceTitle(val('titulo'));
+    const doi=doiUrl(val('doi'));
+    const url=val('url_biblio');
+    let out='';
+    if(type==='article'){
+      const journal=val('revista'), vol=val('volumen'), num=val('numero'), pages=pagesNorm(val('paginas_biblio'));
+      out=`${enddot(authors)} (${year}). ${enddot(title)} ${journal}`;
+      if(vol) out+=`, ${vol}`;
+      if(num) out+=`(${num})`;
+      if(pages) out+=`, ${pages}`;
+      out+='.';
+      if(doi) out+=' '+doi; else if(url) out+=' '+url;
+    } else if(type==='thesis'){
+      const degree=val('tipo_tesis')||'Tesis'; const inst=val('institucion'); const repo=val('repositorio');
+      out=`${enddot(authors)} (${year}). ${title} [${degree}, ${inst||'Institución'}].`;
+      if(repo) out+=` ${repo}.`; if(url||doi) out+=' '+(doi||url);
+    } else if(type==='book'){
+      const edition=val('edicion'), publisher=val('editorial');
+      out=`${enddot(authors)} (${year}). ${title}`;
+      if(edition) out+=` (${edition})`;
+      out+='.'; if(publisher) out+=` ${publisher}.`; if(doi||url) out+=' '+(doi||url);
+    } else if(type==='chapter'){
+      const eds=val('editores'), book=val('titulo_libro'), pages=pagesNorm(val('paginas_biblio')), publisher=val('editorial');
+      out=`${enddot(authors)} (${year}). ${enddot(title)} En ${eds||'Editor/a'} (Ed.), ${book||'Título del libro'}`;
+      if(pages) out+=` (pp. ${pages})`; out+='.'; if(publisher) out+=` ${publisher}.`; if(doi||url) out+=' '+(doi||url);
+    } else if(type==='report'){
+      const org=val('institucion')||val('editorial'); const n=val('numero_informe');
+      out=`${enddot(authors||org)} (${year}). ${title}`;
+      if(n) out+=` (Informe n.º ${n})`; out+='.'; if(org && authors!==org) out+=` ${org}.`; if(doi||url) out+=' '+(doi||url);
+    }
+    return out.replace(/\s+/g,' ').replace(/\s+\./g,'.').trim();
+  }
+
+  function row(label,k,placeholder=''){
+    return `<div class="form bib-extra"><label>${esc(label)}</label><input data-k="${esc(k)}" placeholder="${esc(placeholder)}"></div>`;
+  }
+  function area(label,k,placeholder=''){
+    return `<div class="form bib-extra"><label>${esc(label)}</label><textarea data-k="${esc(k)}" placeholder="${esc(placeholder)}" style="min-height:58px"></textarea></div>`;
+  }
+  function dynamicFields(type){
+    if(type==='article') return `<div class="g2">${row('Revista','revista')}${row('Volumen','volumen')}</div><div class="g2">${row('Número','numero')}${row('Páginas','paginas_biblio','23–41')}</div>`;
+    if(type==='thesis') return `<div class="g2">${row('Tipo de tesis','tipo_tesis','Tesis doctoral / Tesis de maestría')}${row('Institución','institucion')}</div><div class="g2">${row('Repositorio','repositorio')}${row('URL','url_biblio')}</div>`;
+    if(type==='book') return `<div class="g2">${row('Editorial','editorial')}${row('Edición','edicion','2.ª ed.')}</div>${row('URL','url_biblio')}`;
+    if(type==='chapter') return `${area('Editor/es del libro (formato APA)','editores','Apellido, N. N.; Apellido, N. N.')}${row('Título del libro','titulo_libro')}<div class="g2">${row('Páginas del capítulo','paginas_biblio','23–41')}${row('Editorial','editorial')}</div>${row('URL','url_biblio')}`;
+    return `<div class="g2">${row('Institución / organismo','institucion')}${row('Número de informe','numero_informe')}</div>${row('URL','url_biblio')}`;
+  }
+
+  function install(a){
+    const sheet=document.getElementById('sheet'); if(!sheet) return;
+    const apa=field('apa'); if(!apa) return;
+    // Quitar una instalación anterior al reabrir/cambiar registro.
+    qa('.apa7-added',sheet).forEach(x=>x.remove());
+    const f=(typeof F!=='undefined' ? F[aid(a)] : null)||{};
+    const wrap=document.createElement('div'); wrap.className='apa7-added';
+    wrap.innerHTML=`
+      <h2 style="margin-top:4px">Metadatos bibliográficos</h2>
+      <div class="form"><label>Tipo de publicación</label><select data-k="tipo_publicacion" id="tipoPublicacionApa">
+        <option value="article">Artículo de revista</option><option value="thesis">Tesis</option><option value="book">Libro</option><option value="chapter">Capítulo de libro</option><option value="report">Informe / documento</option>
+      </select></div>
+      <div class="form"><label>Autores para APA 7 · uno por línea, en formato Apellido, Iniciales</label><textarea data-k="autores_apa" id="autoresApa7" style="min-height:68px"></textarea><div class="taghint">La propuesta automática puede corregirse manualmente; queda guardada para este registro.</div></div>
+      <div id="apaDynamicFields"></div>
+      <div style="display:flex;gap:7px;align-items:center;margin:-2px 0 10px"><button type="button" id="regenApa7">Regenerar APA 7</button><span class="meta">La referencia final sigue siendo editable.</span></div>`;
+    // Insertar antes del campo APA existente.
+    const apaForm=apa.closest('.form'); apaForm.parentNode.insertBefore(wrap,apaForm);
+    const type=q('#tipoPublicacionApa'); type.value=f.tipo_publicacion||'article';
+    q('#autoresApa7').value=f.autores_apa||proposedAuthors(a.authors||val('autores'));
+
+    function rebuild(){
+      const current={}; qa('[data-k]',wrap).forEach(e=>current[e.dataset.k]=e.value);
+      q('#apaDynamicFields').innerHTML=dynamicFields(type.value);
+      qa('[data-k]',q('#apaDynamicFields')).forEach(e=>{
+        if(f[e.dataset.k]!==undefined) e.value=f[e.dataset.k];
+        else if(current[e.dataset.k]!==undefined) e.value=current[e.dataset.k];
+      });
+      // Pre-carga desde metadatos conocidos.
+      if(type.value==='article'){
+        setv('revista', f.revista || a.journal || a.source || a.origin || '');
+        setv('volumen', f.volumen || a.volume || ''); setv('numero', f.numero || a.issue || ''); setv('paginas_biblio', f.paginas_biblio || a.pages_biblio || '');
+      }
+      if(!val('url_biblio')) setv('url_biblio',f.url_biblio||a.url||'');
+      qa('[data-k]',wrap).forEach(e=>{e.addEventListener('input',changed);e.addEventListener('change',changed)});
+      changed(false);
+    }
+    function changed(regen=true){
+      if(regen){ apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true})); }
+      try{ if(typeof autosave==='function') autosave(); }catch(e){}
+    }
+    type.addEventListener('change',()=>{rebuild(); apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true}))});
+    q('#regenApa7').onclick=()=>{apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true})); try{autosave()}catch(e){}};
+    rebuild();
+    // Reemplazar la vieja cita preliminar por APA 7 si todavía no fue corregida manualmente.
+    if(!f.apa || /Autor\/a|https:\/\/doi\.org|\(s\. f\.\)/.test(f.apa) || f.apa===apa.value){
+      apa.value=apa7(); apa.dispatchEvent(new Event('input',{bubbles:true}));
+    }
+    const lab=apaForm.querySelector('label'); if(lab) lab.textContent='Referencia APA 7 (generada automáticamente y editable)';
+  }
+
+  window.openReader=openReader=function(a){ previousOpenReader(a); setTimeout(()=>install(a),0); };
 })();
 </script>
 
