@@ -29,6 +29,10 @@ on:
         description: Búsqueda escalonada de parámetros BERTopic
         type: boolean
         default: true
+      upload_results:
+        description: Subir resultados como artifact temporal
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -80,7 +84,7 @@ jobs:
       - name: Run Python tests
         run: pytest -q
       - name: Upload tables, reports and dashboard
-        if: always()
+        if: always() && inputs.upload_results
         uses: actions/upload-artifact@v4
         with:
           name: topic-modeling-${{ github.run_id }}
@@ -90,4 +94,4 @@ jobs:
             output/document_topics.csv
             docs/index.html
           if-no-files-found: warn
-          retention-days: 30
+          retention-days: 1
