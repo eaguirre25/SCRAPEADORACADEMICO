@@ -1,24 +1,24 @@
 {
-  "generated": "2026-09-07",
-  "input_total": 4187,
-  "kept_high_relevance": 3284,
+  "generated": "2026-09-10",
+  "input_total": 4236,
+  "kept_high_relevance": 3328,
   "review_records": 96,
-  "rejected_records": 2101,
-  "latest_high_relevance": 121,
+  "rejected_records": 2131,
+  "latest_high_relevance": 44,
   "second_review": {
-    "input_review_candidates": 784,
+    "input_review_candidates": 783,
     "auto_promoted_to_high_relevance": 344,
-    "auto_rejected": 344,
+    "auto_rejected": 343,
     "remaining_manual_review": 96
   },
   "by_source_input": {
-    "OpenAlex": 3356,
+    "OpenAlex": 3405,
     "CONICET Digital | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 5,
     "CONICET Digital": 825
   },
   "by_source_kept": {
-    "OpenAlex": 2454,
+    "OpenAlex": 2498,
     "CONICET Digital | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 5,
     "CONICET Digital": 824
@@ -28,7 +28,7 @@
     "CONICET Digital": 1
   },
   "by_source_rejected": {
-    "OpenAlex": 1102,
+    "OpenAlex": 1132,
     "CONICET Digital": 999
   },
   "by_source_second_review_promoted": {
@@ -37,7 +37,7 @@
     "CONICET Digital": 329
   },
   "by_source_second_review_rejected": {
-    "OpenAlex": 344
+    "OpenAlex": 343
   },
   "policy": {
     "master_records_csv": "solo alta pertinencia",
