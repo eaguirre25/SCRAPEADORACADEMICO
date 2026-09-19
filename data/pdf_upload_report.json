@@ -1,14 +1,29 @@
 {
-  "generated_at": "2026-09-16T17:38:58",
+  "generated_at": "2026-09-19T16:22:55",
   "upload_after_date": "",
   "records_considered": 5,
-  "with_pdf_url": 1,
-  "without_pdf_url": 4,
-  "downloaded_now": 0,
+  "with_pdf_url": 5,
+  "without_pdf_url": 0,
+  "downloaded_now": 2,
   "already_local": 0,
-  "download_failed": 1,
-  "uploaded_to_drive": 0,
+  "download_failed": 3,
+  "uploaded_to_drive": 2,
   "already_in_drive": 0,
   "drive_upload_failed": 0,
-  "items": []
+  "items": [
+    {
+      "title": "Supervisión educativa y formación continua: Revisión de estrategias metodológicas y perspectivas internacionales",
+      "year": "2024",
+      "pdf_file": "Mendoza Rudecindo - 2024 - Supervision educativa y formacion continua Revision de estrategias metodologicas y perspec.pdf",
+      "pdf_url": "https://revista.sciencevolution.com/index.php/sciencievolution/article/download/150/116",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Las radios universitarias: la gestión de su institución educativa",
+      "year": "2025",
+      "pdf_file": "Milito - 2025 - Las radios universitarias la gestion de su institucion educativa.pdf",
+      "pdf_url": "http://sedici.unlp.edu.ar/bitstream/handle/10915/187532/Documento_completo.pdf?sequence=1",
+      "drive_status": "uploaded"
+    }
+  ]
 }
