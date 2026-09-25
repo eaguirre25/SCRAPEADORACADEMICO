@@ -1,14 +1,64 @@
 {
-  "generated_at": "2026-09-22T17:40:52",
+  "generated_at": "2026-09-25T17:59:44",
   "upload_after_date": "",
-  "records_considered": 2,
-  "with_pdf_url": 0,
-  "without_pdf_url": 2,
-  "downloaded_now": 0,
+  "records_considered": 14,
+  "with_pdf_url": 11,
+  "without_pdf_url": 3,
+  "downloaded_now": 7,
   "already_local": 0,
-  "download_failed": 0,
-  "uploaded_to_drive": 0,
+  "download_failed": 4,
+  "uploaded_to_drive": 7,
   "already_in_drive": 0,
   "drive_upload_failed": 0,
-  "items": []
+  "items": [
+    {
+      "title": "Liderazgo educativo, gestión escolar y currículo en contextos escolares interculturales en Perú, Chile y Brasil",
+      "year": "2026",
+      "pdf_file": "Lessa Goncalves et al - 2026 - Liderazgo educativo, gestion escolar y curriculo en contextos escolares interculturales en.pdf",
+      "pdf_url": "https://enfoqueseducacionales.uchile.cl/index.php/REE/article/download/80594/82566",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Prólogo a La dirección escolar",
+      "year": "2026",
+      "pdf_file": "Ines Villa et al - 2026 - Prologo a La direccion escolar.pdf",
+      "pdf_url": "http://sedici.unlp.edu.ar/bitstream/handle/10915/199050/Documento_completo.pdf?sequence=1",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Desafíos y Oportunidades de las TIC en la Gestión Administrativa de Instituciones Educativas del Siglo XXI: Impulso hacia la Sostenibilidad y la Calidad Educativa",
+      "year": "2025",
+      "pdf_file": "Benites Zambrano et al - 2025 - Desafios y Oportunidades de las TIC en la Gestion Administrativa de Instituciones Educativ.pdf",
+      "pdf_url": "https://sapientiatechnological.aitec.edu.ec/index.php/rst/article/download/121/255",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Factors Affecting Students’ Academic Achievement according to the Teachers’ Opinion",
+      "year": "2021",
+      "pdf_file": "Ozcan - 2021 - Factors Affecting Students’ Academic Achievement according to the Teachers’ Opinion.pdf",
+      "pdf_url": "https://dergipark.org.tr/en/download/article-file/1294701",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "MANAGING RESPONSIBILITIES: TEACHER-IN-CHARGE PERSONNEL’S LIVED EXPERIENCES IN SCHOOL MANAGEMENT",
+      "year": "2025",
+      "pdf_file": "R. Solomon-Solidarios - 2025 - MANAGING RESPONSIBILITIES TEACHER-IN-CHARGE PERSONNEL’S LIVED EXPERIENCES IN SCHOOL MANAGE.pdf",
+      "pdf_url": "https://doi.org/10.46360/globus.edu.220251004",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Responsive Islamic Boarding School Management to Environmental Sustainability Through Green Pesantren Program",
+      "year": "2023",
+      "pdf_file": "Kasanah et al - 2023 - Responsive Islamic Boarding School Management to Environmental Sustainability Through Gree.pdf",
+      "pdf_url": "https://jurnal.iainponorogo.ac.id/index.php/muslimheritage/article/download/5017/2890",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Islamic Educational Leadership in the Era of Digital Transformation: Developing Adaptive Leadership Competencies for School Principals",
+      "year": "2025",
+      "pdf_file": "Islam Ghuni et al - 2025 - Islamic Educational Leadership in the Era of Digital Transformation Developing Adaptive Le.pdf",
+      "pdf_url": "https://barkah-ilmi-fiddunya.my.id/ojs/index.php/ar/article/download/219/120",
+      "drive_status": "uploaded"
+    }
+  ]
 }
