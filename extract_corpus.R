@@ -80,7 +80,8 @@ drive_download_file <- function(file_id, destino) {
 # ── Rutas ─────────────────────────────────────────────────────────────────────
 
 MASTER_CSV <- "data/master_records.csv"
-CORPUS_CSV <- "data/corpus.csv"
+CORPUS_CSV <- "data/corpus.csv.gz"
+CORPUS_CSV_LEGACY <- "data/corpus.csv"  # formato previo, sin comprimir (se migra una vez)
 LOG_FILE   <- "data/extraction_log.csv"
 TEMP_DIR   <- tempdir()
 folder_id  <- Sys.getenv("DRIVE_FOLDER_ID")
@@ -93,8 +94,9 @@ cat(sprintf("Metadatos cargados: %d registros\n\n", nrow(metadata)))
 
 # ── Cargar corpus previo ──────────────────────────────────────────────────────
 
-if (file.exists(CORPUS_CSV)) {
-  corpus_prev   <- read_csv(CORPUS_CSV, show_col_types = FALSE) %>%
+corpus_fuente <- if (file.exists(CORPUS_CSV)) CORPUS_CSV else if (file.exists(CORPUS_CSV_LEGACY)) CORPUS_CSV_LEGACY else NA_character_
+if (!is.na(corpus_fuente)) {
+  corpus_prev   <- read_csv(corpus_fuente, show_col_types = FALSE) %>%
     mutate(across(everything(), as.character))
   ya_procesados <- corpus_prev$filename
   cat(sprintf("Corpus previo: %d archivos ya procesados.\n\n", length(ya_procesados)))

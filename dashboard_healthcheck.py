@@ -46,7 +46,7 @@ def main() -> None:
     dashboard = DOCS_DIR / "index.html"
     article_table = DOCS_DIR / "articulos.html"
     stm_files = {
-        "corpus": DATA_DIR / "corpus.csv",
+        "corpus": DATA_DIR / "corpus.csv.gz",
         "tabla_topicos": OUTPUT_DIR / "tabla_topicos.csv",
         "document_topics": OUTPUT_DIR / "document_topics.csv",
         "stm_model": OUTPUT_DIR / "stm_model.rds",
@@ -66,7 +66,7 @@ def main() -> None:
         "stm_status": "ok" if all(path.exists() and path.stat().st_size > 0 for path in stm_files.values()) else "missing_or_not_regenerated",
         "note": (
             "El workflow operativo genera docs/index.html desde data/master_records.csv. "
-            "El STM requiere data/corpus.csv y salida R en output/. Si esos archivos faltan, "
+            "El STM requiere data/corpus.csv.gz y salida R en output/. Si esos archivos faltan, "
             "el dashboard de tres columnas funciona, pero la capa STM no queda actualizada."
         ),
     }

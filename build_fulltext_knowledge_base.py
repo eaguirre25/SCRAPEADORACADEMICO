@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Construye docs/fulltext_knowledge_base.json unificando el texto completo de 1.387 artículos + 37 libros teóricos + metadatos."""
-import csv, json, re, glob
+import csv, gzip, json, re, glob
 from pathlib import Path
 
 DATA = Path('data')
 DOCS = Path('docs')
-CORPUS = DATA / 'corpus.csv'
+CORPUS = DATA / 'corpus.csv.gz'
 MASTER = DATA / 'master_records.csv'
 TEORICOS = DATA / 'teoricos_articles.json'
 OUT = DOCS / 'fulltext_knowledge_base.json'
@@ -29,7 +29,7 @@ if MASTER.exists():
 # 2. Cargar textos completos de corpus.csv
 corpus_texts = {}
 if CORPUS.exists():
-    with CORPUS.open(encoding='utf-8-sig', errors='replace') as f:
+    with gzip.open(CORPUS, 'rt', encoding='utf-8-sig', errors='replace') as f:
         for r in csv.DictReader(f):
             doi = (r.get('doi') or '').strip().lower()
             fn = (r.get('filename') or '').strip()
