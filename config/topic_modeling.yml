@@ -4,7 +4,7 @@ project:
   end_year: 2026
 
 paths:
-  corpus_pdf: data/corpus.csv
+  corpus_pdf: data/corpus.csv.gz
   bibliographic_records: data/master_records.csv
   output_root: output/topic_models
   cache_root: cache/topic_models

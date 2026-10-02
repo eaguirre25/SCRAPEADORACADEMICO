@@ -68,7 +68,7 @@ El healthcheck valida:
 
 - existencia de `docs/index.html`;
 - cantidad de registros en `data/master_records.csv`, `data/review_records.csv` y `data/rejected_records.csv`;
-- presencia de insumos y salidas STM en `data/corpus.csv` y `output/`;
+- presencia de insumos y salidas STM en `data/corpus.csv.gz` y `output/`;
 - generacion de `data/dashboard_healthcheck.json` para auditoria.
 
 ## Regenerar dashboard
@@ -133,7 +133,7 @@ py -3 -m pip install -r requirements.txt
 Los workflows de GitHub Actions corren en cascada:
 
 1. `Academic Scraper`: cada 3 dias recolecta registros, actualiza la base, filtra relevancia y sube a Google Drive los PDFs validados.
-2. `Extracción de corpus (PDFs → texto)`: se dispara cuando termina bien el scraper; lee los PDFs de Drive y actualiza `data/corpus.csv`.
+2. `Extracción de corpus (PDFs → texto)`: se dispara cuando termina bien el scraper; lee los PDFs de Drive y actualiza `data/corpus.csv.gz` (comprimido para respetar el límite de 100 MiB por archivo de GitHub).
 3. `Análisis STM – Dirección Escolar`: se dispara cuando termina bien la extracción de corpus; recalcula tópicos, tablas, modelo e informe STM en `output/`.
 4. `Generar Dashboard`: se dispara cuando termina bien STM; regenera `docs/index.html` y corre `dashboard_healthcheck.py`.
 

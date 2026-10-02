@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import gzip
 import hashlib
 import json
 import random
@@ -58,7 +59,11 @@ def read_csv(path: str | Path) -> list[dict[str, str]]:
     if not source.exists():
         return []
     csv.field_size_limit(50_000_000)
-    with source.open(encoding="utf-8-sig", newline="") as handle:
+    if source.suffix == ".gz":
+        handle_cm = gzip.open(source, "rt", encoding="utf-8-sig", newline="")
+    else:
+        handle_cm = source.open(encoding="utf-8-sig", newline="")
+    with handle_cm as handle:
         return list(csv.DictReader(handle))
 
 

@@ -7,7 +7,7 @@ Dashboard interactivo con:
 3. Lista completa paginada (50/página) con buscador por título/autor
 """
 
-import csv, json, re, itertools, html as html_lib
+import csv, gzip, json, re, itertools, html as html_lib
 from pathlib import Path
 from datetime import date
 from collections import Counter, defaultdict
@@ -30,7 +30,8 @@ def read_csv(path):
     if not p.exists():
         return []
     csv.field_size_limit(10_000_000)
-    with open(p, encoding="utf-8-sig") as f:
+    opener = (lambda: gzip.open(p, "rt", encoding="utf-8-sig", newline="")) if p.suffix == ".gz" else (lambda: open(p, encoding="utf-8-sig"))
+    with opener() as f:
         return list(csv.DictReader(f))
 
 def s(v):
@@ -74,7 +75,7 @@ def infer_origin(row):
 # ── Cargar datos ──────────────────────────────────────────────────────────────
 
 records    = read_csv("data/master_records.csv")
-corpus     = read_csv("data/corpus.csv")
+corpus     = read_csv("data/corpus.csv.gz")
 topicos    = read_csv("output/tabla_topicos.csv")
 doc_topics = read_csv("output/document_topics.csv")
 MODEL_VIEWS = [

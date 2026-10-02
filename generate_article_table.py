@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 import re
 import unicodedata
@@ -25,7 +26,11 @@ def read_csv(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         return []
     csv.field_size_limit(20_000_000)
-    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+    if path.suffix == ".gz":
+        handle_cm = gzip.open(path, "rt", encoding="utf-8-sig", newline="")
+    else:
+        handle_cm = path.open("r", encoding="utf-8-sig", newline="")
+    with handle_cm as handle:
         return list(csv.DictReader(handle))
 
 
@@ -88,7 +93,7 @@ def build_language_map() -> dict[str, str]:
 
 def main() -> None:
     records = read_csv(DATA_DIR / "master_records.csv")
-    corpus = read_csv(DATA_DIR / "corpus.csv")
+    corpus = read_csv(DATA_DIR / "corpus.csv.gz")
     doc_topics = read_csv(Path("output") / "document_topics.csv")
     language_by_doi = build_language_map()
 
