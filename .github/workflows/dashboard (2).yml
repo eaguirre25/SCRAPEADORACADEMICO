@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
     paths:
+      - 'generate_dashboard.py'
+      - 'apa_citation.py'
+      - 'docs/stellar-network.js'
+      - 'docs/stellar-network.css'
       - 'generate_research_library.py'
       - 'generate_corpus_text_files.py'
       - 'inject_library_link.py'

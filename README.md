@@ -39,6 +39,8 @@ En `docs/index.html` el selector de modelado redibuja el grafo, no solo las tarj
 - **Red de documentos**: nodos = articulos, aristas = palabras clave compartidas, color = topico asignado por el modelo activo. La leyenda inferior traduce cada color a su topico.
 - **Red de topicos**: nodos = topicos dimensionados por cantidad de documentos. Las aristas usan la similitud c-TF-IDF que exporta BERTopic; para las STM, que no exportan matriz de similitud, se derivan del segundo topico de cada documento.
 
+Las dos vistas comparten un fondo azul estelar y nodos esféricos con relieve. La simulación D3 conserva el arrastre del conjunto. Al seleccionar un nodo se iluminan sus enlaces directos y se abre una ficha lateral; clic en el fondo, Escape o el botón de cierre quitan la selección. Los documentos muestran etiquetas autor–año al acercar el zoom (o al seleccionar), con control de superposición; los tópicos muestran sus nombres. La ficha documental reutiliza las referencias de `apa_citation.py` y avisa qué datos faltan. Los controles permiten acercar, alejar y encuadrar la red. El renderizador y los estilos viven en `docs/stellar-network.js` y `docs/stellar-network.css`, incorporados por el generador y conservados en cada actualización.
+
 La base documental de cada red se elige por cobertura: se toma el universo que mas asignaciones del modelo llega a representar.
 
 ## Citas en normas APA 7

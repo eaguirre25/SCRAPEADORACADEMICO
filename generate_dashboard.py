@@ -11,6 +11,7 @@ import csv, gzip, json, re, itertools, html as html_lib
 from pathlib import Path
 from datetime import date
 from collections import Counter, defaultdict
+from apa_citation import build_citation, detect_language, format_author
 
 DATA_DIR = Path("data")
 OUT_DIR  = Path("docs")
@@ -296,8 +297,15 @@ for row in records:
         continue
     kws_raw = s(row.get("keywords", ""))
     authors = [a.strip() for a in s(row.get("authors", "")).split(";") if a.strip()]
+    language = detect_language(row)
+    surnames = [format_author(author, language).split(",", 1)[0] for author in authors]
+    short_author = (surnames[0] + " et al." if len(surnames) > 2 else " & ".join(surnames)) or "Sin autor"
+    citation = build_citation(row, language)
     paper_pool[doi] = {
-        "title": title[:70] + ("..." if len(title) > 70 else ""),
+        "title": title,
+        "short_citation": f"{short_author}, {s(row.get('publication_year')) or 's. f.'}",
+        "reference": citation.text,
+        "reference_missing": citation.missing,
         "authors": "; ".join(authors[:2]) + (" et al." if len(authors) > 2 else ""),
         "year": s(row.get("publication_year", "")),
         "url": s(row.get("url", "")) or f"https://doi.org/{doi}",
@@ -717,6 +725,7 @@ html = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Dashboard - Direccion Escolar</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="stellar-network.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -803,6 +812,7 @@ tbody tr:hover td{background:var(--hover)}
 .tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{max-width:420px;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:520px;overflow:auto}.tm-pane[hidden]{display:none}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps,.tm-alert{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-alert{color:#f6c177;background:#2b2214;border-left:2px solid #f6c177;padding:4px 6px}.tm-details{font-size:.69em;color:var(--muted);line-height:1.5;margin-top:8px;border-top:1px solid var(--border);padding-top:7px}.tm-details summary{cursor:pointer;color:var(--accent);font-weight:700}.tm-details div{margin-top:4px}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.topics-panel{display:none}}
 </style>
+<link rel="stylesheet" href="stellar-network.css">
 </head>
 <body>
 
@@ -836,7 +846,19 @@ tbody tr:hover td{background:var(--hover)}
         <span class="badge" id="net-badge">&nbsp;</span>
       </div>
     </div>
-    <svg id="net-svg"></svg>
+    <div class="stellar-stage">
+      <svg id="net-svg" aria-label="Red temática interactiva"></svg>
+      <div class="stellar-tools" aria-label="Controles de la red">
+        <button type="button" id="net-zoom-in" aria-label="Acercar">+</button>
+        <button type="button" id="net-zoom-out" aria-label="Alejar">−</button>
+        <button type="button" id="net-fit">Encuadrar</button>
+      </div>
+      <div class="stellar-hint">Arrastrá un nodo · Acercate para leer · Elegí para iluminar</div>
+      <aside id="net-detail" class="stellar-detail" aria-label="Ficha del nodo" hidden>
+        <button type="button" id="net-detail-close" aria-label="Cerrar ficha">×</button>
+        <div id="net-detail-body" aria-live="polite"></div>
+      </aside>
+    </div>
     <div class="net-legend" id="net-legend"></div>
   </div>
   <div class="topics-panel">
@@ -941,70 +963,7 @@ function renderNetwork(isComparison){
   legend.innerHTML = isTopics ? "" : model.topics.nodes
     .map(t=>`<span><i style="background:${t.color}"></i>T${t.id} ${t.label}</span>`).join("");
 
-  const W = svgEl.clientWidth || 800;
-  const H = svgEl.clientHeight || 400;
-  const svg = d3.select("#net-svg").attr("width",W).attr("height",H);
-
-  if(!view.nodes.length){
-    svg.append("text").attr("x",W/2).attr("y",H/2).attr("text-anchor","middle")
-       .attr("fill","#8B949E").attr("font-size",13)
-       .text("Este modelo no tiene documentos suficientes para tejer una red.");
-    return;
-  }
-
-  const g = svg.append("g");
-  svg.call(d3.zoom().scaleExtent([0.15,10]).on("zoom", e => g.attr("transform", e.transform)));
-
-  // Se clona: la simulación escribe x/y sobre los objetos y volveríamos a
-  // dibujar posiciones viejas al regresar a un modelo ya visitado.
-  const nodes = view.nodes.map(n=>Object.assign({},n));
-  const links = view.edges.map(e=>Object.assign({},e));
-  const maxWeight = Math.max(1, ...nodes.map(n=>(isTopics ? n.size : n.degree)||1));
-
-  netSim = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id((_,i)=>i)
-      .distance(isTopics ? d=>130-70*d.weight : d=>55-d.weight*3)
-      .strength(isTopics ? 0.35 : 0.5))
-    .force("charge", d3.forceManyBody().strength(isTopics ? -430 : -70))
-    .force("center", d3.forceCenter(W/2, H/2))
-    .force("collision", d3.forceCollide(isTopics ? 36 : 9));
-
-  const link = g.append("g").selectAll("line").data(links).enter().append("line")
-    .attr("stroke","#1E2A38")
-    .attr("stroke-width", d=>isTopics ? Math.max(0.6, d.weight*3) : Math.min(3, d.weight*0.4))
-    .attr("stroke-opacity",0.5);
-
-  const node = g.append("g").selectAll("circle").data(nodes).enter().append("circle")
-    .attr("r", d=>isTopics ? 9+Math.sqrt((d.size||1)/maxWeight)*24 : 4+((d.degree||0)/maxWeight)*9)
-    .attr("fill", d=>d.color||"#484F58")
-    .attr("stroke","#0D1117").attr("stroke-width",1).attr("opacity",0.87)
-    .style("cursor", isTopics ? "default" : "pointer")
-    .on("mouseover",(ev,d)=>{
-      tip.style.opacity="1";
-      tip.innerHTML = isTopics
-        ? `<strong>T${d.id} &middot; ${d.label}</strong><br><span style="color:#8B949E">${d.size} documentos${d.prevalence?` &middot; ${d.prevalence.toFixed(1)}%`:""}</span><br><span style="color:#58A6FF">${(d.words||[]).join(" &middot; ")}</span>`
-        : `<strong>${d.title}</strong><br><span style="color:#8B949E">${d.authors}</span><br><span style="color:#58A6FF">${d.year}</span>${d.topic?`<br>T${d.topic} ${d.topic_label||""}`:""}`;
-    })
-    .on("mousemove",ev=>{ tip.style.left=(ev.clientX+14)+"px"; tip.style.top=(ev.clientY-10)+"px"; })
-    .on("mouseout",()=>{ tip.style.opacity="0"; })
-    .on("click",(_,d)=>{ if(!isTopics && d.url) window.open(d.url,"_blank"); })
-    .call(d3.drag()
-      .on("start",(e,d)=>{ if(!e.active) netSim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
-      .on("drag", (e,d)=>{ d.fx=e.x; d.fy=e.y; })
-      .on("end",  (e,d)=>{ if(!e.active) netSim.alphaTarget(0); d.fx=null; d.fy=null; }));
-
-  const caption = isTopics
-    ? g.append("g").selectAll("text").data(nodes).enter().append("text")
-        .text(d=>"T"+d.id).attr("font-size",10).attr("font-weight",700)
-        .attr("fill","#0D1117").attr("text-anchor","middle").attr("pointer-events","none")
-    : null;
-
-  netSim.on("tick",()=>{
-    link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
-        .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
-    node.attr("cx",d=>d.x).attr("cy",d=>d.y);
-    if(caption) caption.attr("x",d=>d.x).attr("y",d=>d.y+3);
-  });
+  netSim = StellarNetwork.render({svgEl, model, view, isTopics, tip});
 }
 
 renderNetwork(false);
