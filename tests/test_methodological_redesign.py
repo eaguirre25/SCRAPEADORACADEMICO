@@ -111,3 +111,30 @@ def test_stm_temporal_dominant_counts_and_effective_mass_reconcile():
     assert temporal_accounting_issues(rows, "stm") == []
     rows[1]["dominant_topic_documents"] = "2"
     assert "dominant=4" in temporal_accounting_issues(rows, "stm")[0]
+
+
+def test_same_work_in_two_sources_keeps_the_record_with_pdf():
+    rows = [
+        {"record_id": "conicet", "doi": "", "title": "El trabajo de dirigir: apuntes conceptuales sobre la dirección escolar",
+         "publication_year": "2024", "authors": "Vicente, María Eugenia", "abstract": "Un resumen bastante más largo que el otro registro", "pdf_url": ""},
+        {"record_id": "openalex", "doi": "10.1/xyz", "title": "El trabajo de dirigir: apuntes conceptuales sobre la dirección escolar",
+         "publication_year": "2023", "authors": "María Eugenia Vicente", "abstract": "Resumen", "pdf_url": "https://example.org/a.pdf"},
+    ]
+    canonical, exact, _, resolution = audit_and_resolve_duplicates(rows)
+    assert len(canonical) == 1
+    assert canonical[0]["record_id"] == "openalex"
+    assert {row["rule"] for row in exact} == {"title_near_year_first_author"}
+    assert {row["decision"] for row in resolution} == {"kept_canonical", "merged_exact"}
+
+
+def test_similar_titles_with_different_dois_or_authors_are_not_merged():
+    shared = "Educational leadership and school improvement in rural contexts"
+    rows = [
+        {"record_id": "a", "doi": "10.1/aaa", "title": shared, "publication_year": "2022", "authors": "Ana Pérez"},
+        {"record_id": "b", "doi": "10.1/bbb", "title": shared, "publication_year": "2023", "authors": "Ana Pérez"},
+        {"record_id": "c", "doi": "", "title": shared, "publication_year": "2023", "authors": "Luis Gómez"},
+        {"record_id": "d", "doi": "", "title": "Educational Leadership", "publication_year": "2023", "authors": "Ana Pérez"},
+        {"record_id": "e", "doi": "", "title": "Educational Leadership", "publication_year": "2024", "authors": "Ana Pérez"},
+    ]
+    canonical, exact, _, _ = audit_and_resolve_duplicates(rows)
+    assert len(canonical) == 5 and exact == []

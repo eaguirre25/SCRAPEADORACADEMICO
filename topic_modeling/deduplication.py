@@ -13,13 +13,34 @@ def _group_id(kind: str, value: str) -> str:
 
 
 def _best_record(rows: list[dict[str, Any]]) -> dict[str, Any]:
-    def completeness(row: dict[str, Any]) -> tuple[int, int, int]:
+    """Elige el registro que representa a una publicación repetida en varias fuentes.
+
+    Primero se prefiere el que tiene PDF o acceso al texto completo; después el más completo.
+    """
+    def ranking(row: dict[str, Any]) -> tuple[int, int, int, int]:
+        has_fulltext_access = int(bool(clean_value(row.get("pdf_url"))))
         populated = sum(bool(clean_value(row.get(field))) for field in (
             "doi", "title", "abstract", "keywords", "authors", "publication_year", "url", "pdf_url"
         ))
-        return populated, len(clean_value(row.get("abstract"))), len(clean_value(row.get("keywords")))
+        return has_fulltext_access, populated, len(clean_value(row.get("abstract"))), len(clean_value(row.get("keywords")))
 
-    return max(rows, key=completeness)
+    return max(rows, key=ranking)
+
+
+NEAR_YEAR_MAX_GAP = 2
+NEAR_TITLE_MIN_WORDS = 4
+
+
+def _author_tokens(value: Any) -> set[str]:
+    return {token for token in first_author(value).split() if len(token) > 1}
+
+
+def _authors_compatible(left: Any, right: Any) -> bool:
+    """Mismo primer autor aunque cambie el orden o el formato del nombre ("Pérez, Ana" / "Ana Pérez")."""
+    a, b = _author_tokens(left), _author_tokens(right)
+    if len(a) < 2 or len(b) < 2:
+        return False
+    return a <= b or b <= a or len(a & b) >= 2
 
 
 def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
@@ -56,6 +77,31 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
             for other in indexes[1:]:
                 union(indexes[0], other)
 
+    # Misma obra registrada en varias fuentes con el año desplazado (versión previa, repositorio):
+    # título idéntico y largo, primer autor compatible, años a no más de dos de distancia y sin DOI distintos.
+    near_indexes: set[int] = set()
+    title_groups: dict[str, list[int]] = defaultdict(list)
+    for index, row in enumerate(records):
+        title = normalize_text(row.get("title"))
+        if len(title.split()) >= NEAR_TITLE_MIN_WORDS and clean_value(row.get("publication_year")).isdigit():
+            title_groups[title].append(index)
+    for indexes in title_groups.values():
+        for left_pos, left in enumerate(indexes):
+            for right in indexes[left_pos + 1:]:
+                if find(left) == find(right):
+                    continue
+                left_row, right_row = records[left], records[right]
+                left_doi, right_doi = normalize_doi(left_row.get("doi")), normalize_doi(right_row.get("doi"))
+                if left_doi and right_doi and left_doi != right_doi:
+                    continue
+                gap = abs(int(clean_value(left_row.get("publication_year"))) - int(clean_value(right_row.get("publication_year"))))
+                if gap > NEAR_YEAR_MAX_GAP:
+                    continue
+                if not _authors_compatible(left_row.get("authors"), right_row.get("authors")):
+                    continue
+                union(left, right)
+                near_indexes.update((left, right))
+
     components: dict[int, list[int]] = defaultdict(list)
     for index in range(len(records)):
         components[find(index)].append(index)
@@ -64,6 +110,7 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
     exact: list[dict[str, Any]] = []
     resolution: list[dict[str, Any]] = []
     source_to_publication: dict[int, str] = {}
+    index_of_row = {id(row): index for index, row in enumerate(records)}
     for indexes in components.values():
         rows = [records[index] for index in indexes]
         best = _best_record(rows)
@@ -82,7 +129,10 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
         for index, row in zip(indexes, rows, strict=True):
             source_to_publication[index] = publication_id
             if len(rows) > 1:
-                rule = "doi_normalized" if normalize_doi(row.get("doi")) else "title_year_first_author"
+                if index_of_row[id(row)] in near_indexes:
+                    rule = "title_near_year_first_author"
+                else:
+                    rule = "doi_normalized" if normalize_doi(row.get("doi")) else "title_year_first_author"
                 exact.append({
                     "duplicate_group_id": duplicate_group_id, "publication_document_id": publication_id,
                     "source_record_id": clean_value(row.get("record_id")), "rule": rule,
