@@ -1,0 +1,961 @@
+REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación, 2020, 18(2), 97-114.
+  https://doi.org/10.15366/reice2020.18.2.005
+
+
+
+
+              El Liderazgo Distribuido para la Mejora Educativa:
+              Análisis de Redes Sociales en Departamentos de
+              Escuelas Secundarias Chilenas
+
+              Distributed Leadership for Educational Improvement: A Social
+              Network Analysis in Chilean High Schools’ Departments
+
+                                                                                           Juan Pablo Queupil 1*
+                                                                                           Carmen Montecinos 2
+                                                                    1 Universidad Católica Silva Henríquez, Chile
+                                                            2 Pontificia Universidad Católica de Valparaíso, Chile
+
+
+
+                    La mejora educativa involucra interacciones entre individuos en contextos escolares,
+                    lo cual conlleva roles de liderazgo y su eminente distribución. En este estudio
+                    exploratorio-descriptivo usamos el Análisis de Redes Sociales (ARS) en una muestra
+                    de tres escuelas secundarias de Chile para examinar las relaciones entre los miembros
+                    de los departamentos de Lenguaje y Matemáticas, identificando quienes ejercen roles
+                    de liderazgo para los procesos de mejora educativa. Los resultados indican que los
+                    patrones son variados según el tipo de dimensión de colaboración, observando
+                    escuelas en las cuales las interacciones son escasas entre y dentro de los
+                    departamentos analizados, y en otras más intensas y frecuentes. Si bien el liderazgo
+                    de los jefes de departamento es importante, en algunos casos los docentes que no
+                    tienen ese cargo pueden incluso tener un papel más preponderante en influenciar
+                    procesos de mejora escolar. Todo lo anterior permite concluir que la técnica del (ARS)
+                    posibilita representar el capital social de una escuela para la mejora educativa,
+                    identificando aspectos a fortalecer para incidir en una mayor distribución del
+                    liderazgo y su impacto en la mejora escolar.
+                    Descriptores: Liderazgo; Mejora escolar; Redes sociales; Escuelas secundarias;
+                    Chile.
+
+                    Educational improvement involves interactions among individuals in school
+                    contexts, which entails leadership roles and their potential distribution. In this
+                    exploratory-descriptive study we use Social Network Analysis (SNA) with a sample
+                    of three secondary schools in Chile to examine the relationships between members
+                    of the Language and Mathematics departments, identifying those who play
+                    leadership roles for educational improvement processes. Findings show that patterns
+                    of interactions among teachers varied by type of collaborative action, where in some
+                    schools the interactions among teachers are scarce between and within the
+                    departments analyzed, and in others they are more intense and frequent. Whereas
+                    the role of department heads is important, in some cases teachers who do not have
+                    that position may even have a more prominent role in influencing school
+                    improvement processes. Findings lead us to conclude that SNA is a useful technique
+                    for depicting a school’s social capital, enabling the identification of aspects in need of
+                    attention to increase distributed leadership as leverage for school improvement.
+
+                    Keywords: Leadership; School improvement; Social network analysis; Secondary
+                    schools; Chile.
+
+
+
+               *Contacto: jqueupil@ucsh.cl                            Recibido:      2 de octubre 2019
+                                                                      1ª Evaluación: 14 de diciembre 2019
+               ISSN: 1696-4713                                        2ª Evaluación: 16 de enero 2020
+               www.rinace.net/reice/                                  Aceptado:      1 de febrero 2020
+               revistas.uam.es/reice
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+Introducción
+Alrededor del mundo, la mejora educativa es una de las problemáticas que ha recibido
+mayor atención en las últimas décadas, principalmente impulsada por una serie de
+reformas que han tenido resultados disímiles (Martínez-Valdivia, García-Martínez e
+Higueras-Rodríguez, 2018; Murillo y Krichesky, 2015). En ese sentido, Hallinger y Heck
+(2014), entre otros autores, resaltan que el liderazgo ciertamente contribuye a la capacidad
+de los establecimientos educativos para la mejora escolar. Asimismo, un estudio de
+Leithwood y sus colaboradores (2006) concluyó que el liderazgo total en las escuelas
+representaba el 27% de la variación entre escuelas respecto de los resultados de
+aprendizaje.
+Para incrementar la capacidad de mejora escolar se apuesta por un liderazgo distribuido
+que posibilite el logro de metas organizacionales a través de acciones colectivas (Harris,
+2004; Hopkins, Ainscow y West, 1994). Este liderazgo promueve la mejora de la
+enseñanza en el aula, ya que se basa en el apoyo, estimulación e influencia en él y del
+profesorado (Hallinger y Heck, 2014). En particular, se ha detectado la importancia de
+estructuras que posibilitan la colaboración entre docentes y de las redes sociales para
+promover el desarrollo profesional de los docentes (Daly et al., 2010; Murillo y Krichesky,
+2015).
+En escuelas secundarias, las experiencias de colaboración profesional para la gran mayoría
+de los docentes están circunscritas sustancialmente por los departamentos disciplinarios,
+ya que en estas estructuras organizativas se despliegan sus interacciones y desarrollo
+profesional (Harris, 2000, 2001; Siskin y Little 1995). En la literatura, los jefes de
+departamento se reconocen como líderes medios, ya que, si bien no son integrantes del
+equipo directivo, tienen responsabilidades formales en la gestión pedagógica de un grupo
+de profesores. Esta distribución del liderazgo pedagógico reconoce que quien mejor
+conoce las prácticas pedagógicas relevantes a un área disciplinaria son los especialistas y,
+por lo tanto, la intervención de los jefes de departamento puede tener más impacto en
+comparación al liderazgo del director o directora (Robinson, 2007). Así, los jefes de
+departamento pueden desempeñar un papel clave en la mejora educativa, sobre todo en el
+desarrollo y promoción de departamentos efectivos en términos del logro estudiantil
+(Wenner y Campbell, 2017).
+El presente estudio examina el liderazgo en la estructura departamental a través de un
+análisis cuantitativo de las interacciones que promueven la colaboración en procesos de
+mejora escolar, el intercambio de prácticas para mejorar la enseñanza y la innovación
+pedagógica. Utilizando un enfoque empírico de análisis de redes sociales (ARS), se calculan
+métricas y grafican patrones de interacciones relacionadas con prácticas que promueven
+la mejora en los departamentos de Lenguaje y Matemáticas de una muestra de tres
+escuelas secundarias chilenas. Este análisis permite identificar patrones a través de los
+cuales las ideas, información, recursos e influencia fluyen en los departamentos y entre
+departamentos (Daly, 2010).
+
+
+
+
+                                                                                         98
+
+                REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+1. Revisión de la literatura
+1.1. El liderazgo distribuido y su papel en la mejora educativa
+La evidencia sobre mejora escolar destaca la responsabilidad colectiva y la actividad
+colegiada de grupos amplios de docentes, incorporando la noción de liderazgo distribuido
+(Frost y Harris, 2003). Algunas definiciones subrayan este liderazgo como aquel que
+minimiza intencionalmente, o elimina, diferencias de poder e influencia entre quienes
+ocupan cargos de autoridad formal y los otros actores del escenario educativo (Barry,
+1991). De acuerdo con Spillane (2006), una visión distribuida del liderazgo implica
+centrarse en las redes de relaciones de los actores, así como en sus situaciones y prácticas.
+Desde esta perspectiva, la exploración del liderazgo debe evitar hacer suposiciones a priori
+con respecto a la distribución de las funciones entre quienes ocupan cargos formales. Más
+bien, el objeto de estudio son las interacciones entre los individuos, enfocado en el
+desarrollo de capacidad de influencia mutua (Garay et al., 2019; Gronn 2002; Harris,
+2001).
+Existe un creciente consenso que el liderazgo distribuido produce un impacto positivo en
+los resultados escolares y promueve una mejora educativa exitosa (Camburn, Rowan, y
+Taylor, 2003; Day y Harris 2002; Gronn, 2002; Harris, 2013; Spillane, 2006; Wallace,
+2002). Distribuir el liderazgo en los establecimientos educativos implica valorar la
+experticia que aportan distintos docentes para el logro de las metas institucionales. Así, la
+distribución del liderazgo pedagógico se define como la capacidad de docentes líderes para
+involucrar a sus colegas en el desarrollo profesional mutuo y colaborativo, con el fin de
+mejorar los procesos de enseñanza y aprendizaje (Aubrey-Hopkins y James, 2002;
+Bennett, 1995; Busher, Harris, y Wise , 2001).
+1.2. Liderazgo en los departamentos disciplinares y rol del jefe de departamento
+Una forma de abordar el estudio del liderazgo distribuido en las escuelas es centrarse en
+los puestos de liderazgo formalmente designados. En este estudio, nos focalizamos en los
+jefes de departamentos, en su calidad de líder pedagógico medio, que articula entre las
+orientaciones de mejoramiento a nivel escolar y las respuestas y necesidades docentes.
+Siguiendo a Wenner y Campbell (2017), el docente líder es quien cumple funciones de
+enseñanza y aprendizaje con estudiantes y, además, asume responsabilidades fuera del aula
+que han sido asignadas desde la estructura de la organización escolar.
+Los líderes pedagógicos medios proveen una instancia de alineamiento y control que antes
+era privativa del equipo directivo (Bush, 2003). Flückiger y sus colegas (2015) identifican
+las tareas de los jefes de departamento: (a) comprometer a los docentes hacia prácticas
+colaborativas, (b) potenciar conversaciones reflexivas enfocadas en formas de innovar y
+mejorar, (c) observar y retroalimentar prácticas, (d) modelar buenas prácticas, y (e)
+comprender los sistemas de rendición de cuentas. Para llevar a cabo estas tareas,
+configuran un trabajo colaborativo entre docentes del departamento que posibilite acceder
+y utilizar los recursos individuales y colectivos que están disponibles en la comunidad
+escolar (Daly et al., 2010).
+Hasta la fecha se han realizado escasas investigaciones sobre este tema específico para
+establecimientos educativos chilenos, por lo cual no es claro si los jefes de departamento
+ejercen liderazgo efectivo para la mejora educativa y en qué medida está presente una
+distribución de liderazgo en los departamentos (Cortez y Zoro, 2016). En un estudio de
+
+
+
+
+                                                                                          99
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+caso de un establecimiento secundario chileno, Araya (2015) observó que las funciones del
+jefe de departamento incluían acciones tales como: planificar, ejecutar, supervisar y
+evaluar las actividades docentes y de perfeccionamiento, comunicar a los integrantes de
+su departamento las informaciones necesarias para su buena marcha, y proponer y apoyar
+actividades de enriquecimiento curricular beneficio de los estudiantes.
+Araya (2015) no examinó los patrones de interacción entre los jefes de departamento y
+sus colegas en el despliegue de estas funciones. Así, no hay evidencia empírica respecto a
+cómo los jefes de departamento establecen vínculos profesionales dentro y entre
+departamentos, a fin de promover la mejora escolar. Analizar las interacciones de docentes
+que son reconocidos como influyentes merece atención por su potencial impacto en el
+desempeño profesional de los docentes y, en consecuencia, en cuánto aprenden los
+estudiantes (De Lima, 2008).
+1.3. El análisis de redes sociales para examinar el liderazgo distribuido en
+departamentos de establecimientos educativos
+Mediante la recopilación de información sobre las relaciones de cada miembro de los
+departamentos con los demás integrantes del equipo docente y directivo, se puede
+comprender el contexto social inmediato del liderazgo departamental.
+Metodológicamente, esta es una manera apropiada de identificar la distribución del
+liderazgo, no solo entre los líderes designados sino también entre los líderes que aparecen
+en la evidencia práctica, es decir, las personas que, independientemente de su posición,
+ejercen alguna influencia sobre sus colegas (Spillane, 2006). En otras palabras, la
+naturaleza multidireccional e interactiva del liderazgo docente distribuido en las escuelas
+requiere la utilización de un enfoque de investigación de redes sociales que devele el
+entramado y los patrones de relaciones que existen dentro y entre departamentos.
+En este sentido, el análisis de redes sociales (ARS) se basa en el supuesto que las relaciones
+entre personas representan un recurso –el capital social– de las organizaciones escolares
+para movilizar el cambio y la mejora (Downey, 2018). En particular, dos conceptos del
+análisis de redes sociales son particularmente importantes para comprender los patrones
+dentro y entre departamentos y grupos de docentes. Una es la densidad de red, que se
+refiere a la cantidad de vínculos presentes que existen en una red dada, en comparación
+con el total de vínculos potenciales que son teóricamente posibles en esa red (Wasserman
+y Faust, 1994). Un sistema de liderazgo distribuido implica una alta densidad, pues habrá
+varios docentes –en roles formales como informales–, y no solo uno, que serán recurridos
+y considerados por sus colegas, y también porque estos líderes serán activos y efectivos
+en interactuar y colaborar con otros pares para la mejora educativa de sus departamentos
+y sus establecimientos.
+El otro concepto relevante es la centralidad, una medida que describe la prominencia o el
+prestigio de un actor dentro de una red (Borgatti y Everett, 2006; Wasserman y Faust,
+1994). Así, los docentes líderes son aquellos actores relevantes en sus redes porque están
+involucrados en muchas interacciones, colaboraciones o lazos profesionales con otros
+colegas.
+El presente estudio tiene como objetivo examinar qué tan centralizados o distribuidos
+están los roles y liderazgos de los miembros de los departamentos de Lenguaje y
+Matemáticas –en particular, sus respectivas jefaturas– en los procesos y prácticas
+colaborativas para la mejora y transformación educativa. En otras palabras, el ARS permite
+
+
+
+
+                                                                                          100
+
+                      REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+establecer en qué medida se ejercen las funciones de liderazgo y cómo se distribuyen tanto
+a los jefes de departamentos como a otros colegas docentes a través de sus interacciones.
+
+
+2. Método
+Los datos que se reportan en este artículo se han producido en el contexto de una
+investigación más amplia que examina la contribución de los jefes de departamento a la
+mejora escolar, utilizando un diseño de estudio de casos múltiples (Merriam, 1988).
+Utilizando técnicas del análisis de redes sociales (ARS) este estudio tiene un enfoque
+cuantitativo para visualizar las interacciones profesionales de los docentes de los
+departamentos de Lenguaje y Matemáticas (Scott, 2000; Wasserman y Faust, 1994). A
+través de la construcción de sociogramas, ARS permite identificar los patrones de liderazgo
+que emergen de estas interacciones (Friedkin y Slater, 1994; Hadfield y Jopling, 2012;
+Hoppe y Reinelt, 2010).
+Muestra
+Dado el carácter exploratorio-descriptivo de la investigación, la muestra del estudio son
+tres escuelas secundarias en Chile (catalogados como Escuelas Agua, Cielo, y Tierra 1),
+ubicadas en una de las tres regiones más pobladas del país (V, VIII y Región
+Metropolitana). En cada escuela se invitó a participar en el estudio a los docentes de los
+departamentos de Lenguaje y Matemáticas, incluyendo sus jefaturas. Estas escuelas tienen
+una cantidad similar de docentes totales de Lenguaje y Matemática (10, 11 y 12,
+respectivamente).
+El principal criterio de selección de estos establecimientos fue su trayectoria de mejora en
+la enseñanza secundaria en la última década, utilizando el índice de desempeño educativo
+(IDE) (Valenzuela, Bellei y Allende, 2016). Este considera un amplio conjunto de
+indicadores de resultados de los establecimientos del país, y ha sido utilizado con éxito en
+otros estudios focalizados en la educación primaria chilena (Bellei, Valenzuela, Vanni y
+Contreras, 2014). La selección de escuelas efectivas da cuenta del objetivo general del
+estudio más amplio y recoge la evidencia empírica que muestra, entre otros aspectos, que
+estas se caracterizan por un liderazgo pedagógico fuerte, docentes con altos niveles de
+auto eficacia y comprometidos con la mejora escolar (Wang, Walters y Thum, 2013).
+Técnicas e instrumentos de producción de datos
+Se elaboró un cuestionario con tres “preguntas de red” en base a otras utilizadas en
+diversas investigaciones de redes sociales en contextos escolares (Moolenaar, 2012; Smith,
+Trygstad y Hayes, 2018), las cuales fueron previamente piloteadas para el contexto
+chileno. En particular, se preguntó la frecuencia con la cual recurren a otros colegas con
+relación a tres dimensiones de colaboración: a) trabajar en procesos de mejora escolar en
+su disciplina, b) pedir consejo sobre cómo mejorar su enseñanza, y c) obtener prácticas
+innovadoras. Para cada dimensión, se entregó una matriz con los nombres de todos los
+docentes de la escuela en las filas y la frecuencia de interacciones en las columnas (desde
+0 = Nunca hasta 4 = Casi a diario). Luego de firmar un consentimiento informado
+
+
+
+
+1 Estos son nombres ficticios a fin de proteger el compromiso de confidencialidad entre los investigadores y los participantes.
+
+
+
+
+                                                                                                                         101
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+accediendo a participar voluntariamente en el estudio, todos los docentes de estas escuelas
+completaron las tres matrices durante el año 2018.
+Análisis de datos
+Diversos conceptos y medidas de red destacados en la literatura previa para el liderazgo
+docente distribuido se pusieron en práctica en el estudio. Una red está compuesta de
+actores -que en el lenguaje de ARS se denominan nodos- e interacciones, las que
+técnicamente se llaman enlaces o links (Wasserman y Faust, 1994). Estas dos nociones se
+pueden visualizar en mapas de red o sociogramas, donde los nodos son círculos y las
+interacciones son flechas, lo cual conlleva una serie de métricas que son aplicadas a este
+estudio (Scott, 2000).
+De acuerdo con lo señalado por Moolenaar (2012), la principal métrica utilizada para
+examinar las características del liderazgo de una red a nivel de actores -en este caso,
+docentes- es el grado nodal (degree centrality), el cual es generalmente representado
+visualmente con flechas que van hacia el actor, convirtiéndose en in-degree centrality
+(número de nominaciones que recibe un actor) o flechas que salen del actor, lo que se
+denomina out-degree centrality, cuando las relaciones no son simétricas, como es el caso de
+este estudio (si el docente A nomina al docente B, no implica que el docente B nomina al
+docente A). Así, el grado nodal es una medida de la "popularidad" de un actor; en otras
+palabras, indica las conexiones directas de un actor a otros miembros de la red
+(Wasserman y Faust, 1994).
+En este caso, para cada tipo de relación, se determinó el grado de centralidad (in-degree y
+out-degree) para cada docente. Así, un alto puntaje de centralidad indica que el docente en
+cuestión estuvo involucrado con muchos colegas en relaciones profesionales dentro y/o
+entre departamentos. Para cada tipo de relación bajo análisis, todos los actores en cada
+departamento –Lenguaje y Matemáticas– fueron anonimizados y ordenados según
+centralidad in-degree para la dimensión procesos de mejora.
+La frecuencia de las interacciones que fue recolectada en los cuestionarios fue utilizada
+para construir el sociograma de cada departamento. Como se mencionó previamente, un
+sociograma es un mapa donde se puede visualizar los actores de la red y las relaciones
+presentes entre los actores (Smith et al., 2018). En este caso, una flecha más gruesa
+representa una relación más frecuente entre dos actores específicos.
+A nivel de la red como un todo, se utilizó la métrica de densidad de red, la cual indica la
+proporción de relaciones que están realmente presentes en una red, en relación con el total
+de relaciones que son teóricamente posibles. Las densidades de red varían de cero (0%)
+(no existe ninguna de las relaciones teóricamente posibles) a uno (100%) (se ejecutan todas
+las relaciones posibles). Así, la densidad puede verse como la plenitud de la red, es decir,
+el grado en que todas las relaciones potenciales están realmente presentes (Wasserman y
+Faust, 1994). Para este estudio, bajas densidades indican una falta de distribución del
+liderazgo dentro y/o entre departamentos (De Lima, 2008).
+En cuanto a los sociogramas, para este estudio, el tamaño de los nodos refleja el grado in-
+degree de cada docente, dimensionando el número de nominaciones o flechas que van hacia
+ellos. A su vez, los sociogramas pueden mostrar la red general, pero también varios sub-
+grupos o clústeres, es decir, regiones locales en una red con densidad relativamente alta y
+relativamente pocos enlaces a otro subconjunto de nodos (Wasserman y Faust, 1994).
+Para este estudio, la identificación de clústeres se hizo a partir del cálculo Wakita-Tsurumi
+
+
+
+                                                                                         102
+
+                REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+(Wakita y Tsurumi, 2007). Dicho cálculo identifica “vecindarios” de colaboración que se
+definen por los patrones y frecuencias de las interacciones que tienen como resultado una
+alta densidad dentro de un subconjunto de nodos. Se hipotetizó que cada departamento
+curricular aparecería como un clúster específico, lo cual, de ser así, el análisis lo
+especificará con colores diferentes. Todos los datos se analizaron con las métricas de
+centralidad, la densidad y diagramas de sociogramas y clústeres incluidas en el programa
+NodeXL (Smith et al., 2010).
+
+
+3. Resultados
+3.1. Densidad
+Los resultados de este estudio indican diferentes grados de densidad de las redes
+relacionadas con la distribución del liderazgo en los contextos analizados. En primer
+lugar, las densidades de las relaciones presentes para las tres dimensiones de colaboración
+varían siguiendo una tendencia decreciente. Las densidades más altas se encuentran en las
+relaciones referidas a “procesos de mejora en la disciplina”, seguido de “pedir consejo sobre
+cómo perfeccionar clases”, y finalmente por “obtención de prácticas innovadoras” (ver
+cuadro 1).
+Cuadro 1. Densidades de las redes según escuela secundaria, departamento y dimensión
+de colaboración
+                                                                     ESCUELA
+                                                          Agua        Cielo       Tierra
+ Región                                                    V          VIII         RM
+ Total docentes encuestados                                10          11           12
+ Total docentes Lenguaje                                   6            5           6
+ Total docentes Matemáticas                                4            6           6
+ Densidad “P. Mejora” (%)                                  49          41           57
+ Densidad “Consejo” (%)                                    31          30           31
+ Densidad “P. Innovadoras” (%)                             36          24           31
+Fuente: Elaboración propia.
+
+
+Las densidades en lo referente a interacciones entre docentes para los procesos de mejora
+siempre supera el 40% e incluso puede bordear el 60%. Aquellas interacciones que
+involucran algún tipo de transformación educativa a nivel más individual, tales como a
+quién recurrir para perfeccionar clases u obtener prácticas innovadoras, bordean el 30%
+en términos de densidad. Otro aspecto interesante de notar es que no es del todo claro si
+existe una relación inferencial entre el total de los docentes de las escuelas y las
+densidades, por lo que no es evidente que escuelas con menos docentes en Lenguaje y
+Matemática sean más cohesionados o viceversa.
+3.2. Centralidad
+Los cuadros 2, 3 y 4 presentan los grados de centralidad de los docentes de Lenguaje y
+Matemáticas –incluidas sus jefaturas– para las escuelas Agua, Cielo y Tierra,
+respectivamente. Estos están ordenados de acuerdo con el grado de centralidad in-degree
+de la dimensión “procesos de mejora en la disciplina”. Las figuras 1, 2, y 3 presentan los
+sociogramas asociados. Dado el carácter exploratorio del estudio, se presenta
+ilustrativamente un solo sociograma para cada dimensión y caso analizado: la figura 1
+
+
+
+                                                                                         103
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+presenta el sociograma del Escuela Agua para la red de la dimensión procesos de mejora;
+la figura 2 muestra el sociograma de la Escuela Cielo para la red de la dimensión consejo
+para mejorar la enseñanza; y la figura 3 exhibe el sociograma de la Escuela Tierra para la
+red de la dimensión prácticas innovadoras. Cabe recordar que los docentes (nodos) han
+sido anonimizados, y cada color de nodo representa un clúster o sub-grupo diferente, de
+acuerdo al análisis aplicado en cada sociograma.
+El cuadro 2 indica que la jefatura de Lenguaje (AG) en la Escuela Agua está entre las más
+recurridas en las dimensiones analizadas, complementado por el destacado rol de otros
+docentes del área, tales como el docente A, quien recibe 6 nominaciones de un máximo
+posible de 9 colegas. Incluso más, AG es quien suele hacer más menciones a otros colegas.
+Algo similar pasa con la jefatura de Matemáticas (G), pero su departamento en sí presenta
+menos interacciones, en particular por el rol de J, quien no hace menciones a otros colegas.
+A pesar de ello, la red presenta una alta densidad, sobre todo en lo que respecta a las
+interacciones relativas a “procesos de mejora en la disciplina”, lo cual se visualiza en la
+figura 1.
+Cuadro 2. Indicadores de centralidad en la Escuela Agua
+                                            DIMENSIONES DE COLABORACIÓN
+                                   P. Mejora           Consejo       P. Innovadoras
+NODO           CARGO
+                                 In-      Out-     In-       Out-    In-       Out-
+                                Degree   Degree   Degree    Degree  Degree    Degree
+ A       Docente Lenguaje         6        5        6          5      4         5
+ L       Docente Lenguaje         6        5        2          5      3         5
+ P       Docente Lenguaje         6        6        3          2      4         3
+ W       Docente Lenguaje         6        5        3          1      4         0
+ AG      Jefatura Lenguaje        5        6        3          5      4         5
+ V       Docente Lenguaje         5        6        3          1      4         5
+ G       Jefatura Matemáticas     3        4        2          4      2         3
+ J       Docente Matemáticas      3        0        2          0      3         0
+ M       Docente Matemáticas      2        2        2          2      2         3
+ U       Docente Matemáticas      2        5        2          3      2         3
+Fuente: Elaboración propia.
+
+
+En la figura 1 destaca que el análisis de clústeres sí arroja dos departamentos separados
+(Lenguaje en azul oscuro y Matemáticas en azul claro). Además, resalta el rol de ambas
+jefaturas de departamento (AG y G, para Lenguaje y Matemáticas, respectivamente). Se
+observa que las interacciones son frecuentes (reflejadas en el grosor de las flechas) y a su
+vez existe una interacción interesante entre los departamentos cuando se abordan
+procesos de mejora.
+En cuanto a la Escuela Cielo, el cuadro 3 indica un liderazgo relevante de la jefatura de
+Matemáticas para todas las dimensiones analizadas, y no así para la jefatura de Lenguaje,
+la cual va siendo menos relevante para las dimensiones “consejo” y “prácticas
+innovadoras”. Para la dimensión “pedir consejo sobre cómo perfeccionar clases”, hay tres
+docentes que no reciben nominaciones y dos de ellos están entre los que realizan más
+menciones (BJ y BK, docentes de Lenguaje y Matemáticas, respectivamente).
+
+
+
+
+                                                                                        104
+
+                REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+ Figura 1. Sociograma de relaciones en “procesos de mejora en el área” para la Escuela
+                                        Agua
+                                Fuente: Elaboración propia.
+
+
+Cuadro 3. Indicadores de centralidad en la Escuela Cielo
+                                            DIMENSIONES DE COLABORACIÓN
+                                    P. Mejora        Consejo      P. Innovadoras
+NODO             CARGO
+                                   In-     Out-    In-     Out-   In-       Out-
+                                  Degree Degree Degree Degree Degree       Degree
+ K       Jefatura Matemáticas       8       4       6       4      6         3
+ BC      Docente Matemáticas        7       5       6       3      3         0
+ L       Docente Matemáticas        7       3       5       3      4         3
+ J       Docente Matemáticas        6       3       4       2      4         0
+ AE      Docente Matemáticas        5       5       5       3      4         2
+ AI      Jefatura Lenguaje          5       2       3       2      3         2
+ AA      Docente Lenguaje           4       4       3       2      3         2
+ AH      Docente Lenguaje           1       6       1       2      0         4
+ BI      Docente Lenguaje           1       2       0       2      0         1
+ BJ      Docente Lenguaje           1       6       0       5      0         5
+ BK      Docente Matemáticas        0       5       0       5      0         5
+Fuente: Elaboración propia.
+
+
+Observando la figura 2, es posible notar nuevamente una separación de clústeres
+(Lenguaje en azul claro y Matemáticas en azul oscuro). Sin embargo, BJ, que es docente
+de Lenguaje, pasa a formar parte del clúster de Matemáticas, pues solo recurre a docentes
+de esa área. Incluso más, este docente no es recurrido por ningún colega, ni de Lenguaje
+ni de Matemáticas. Por otro lado, las frecuencias de interacción entre los departamentos
+son bajas y están prácticamente separados, de no ser por el vínculo entre K y AI,
+recordando que estos son jefaturas de departamento. Además, se observa una mayor
+cohesión en el departamento de Matemáticas, destacando el rol de prácticamente todos
+sus docentes, a pesar de que BK es uno de lo que realiza más nominaciones, pero no recibe
+ninguna.
+
+
+
+
+                                                                                       105
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+  Figura 2. Sociograma de relaciones en “pedir consejo sobre cómo perfeccionar clases”
+                                 para la Escuela Cielo
+                                Fuente: Elaboración propia.
+
+
+En cuanto la Escuela Tierra, el cuadro 4 revela un importante liderazgo de ambas
+jefaturas, ubicándose siempre entre los que reciben más nominaciones. Sin embargo, si
+bien otros docentes figuran de manera importante para el ámbito de “procesos de mejora
+en la disciplina”, su participación va decreciendo prácticamente en la misma magnitud para
+las dimensiones “consejo” y “prácticas innovadoras”. En esta última dimensión se
+encuentra el único caso de un docente que no realiza ninguna nominación y que a su vez
+solo recibe una (docente A, de Matemáticas). Interesantemente, AX, jefe del
+Departamento de Matemáticas, va realizando cada vez menos nominaciones, en particular
+solo una en el ámbito de “obtención de prácticas innovadoras”.
+Cuadro 4. Indicadores de centralidad la Escuela Tierra
+                                             DIMENSIONES DE COLABORACIÓN
+                                     P. Mejora        Consejo      P. Innovadoras
+NODO             CARGO
+                                    In-     Out-    In-    Out-    In-       Out-
+                                   Degree Degree Degree Degree Degree       Degree
+ AX      Jefatura Matemáticas        9       7       6       1      6         4
+ AA      Jefatura Lenguaje           8       9       5       4      5         1
+ D       Docente Lenguaje            8       5       4       2      4         3
+ V       Docente Matemáticas         8       11      4       5      5         5
+ A       Docente Matemáticas         7       4       2       1      1         0
+ AW      Docente Matemáticas         7       3       4       3      3         4
+ AK      Docente Lenguaje            6       5       2       5      3         4
+ L       Docente Lenguaje            6       2       5       1      4         2
+ G       Docente Matemáticas         6       7       3       4      3         4
+ AI      Docente Matemáticas         6       5       4       4      4         3
+ K       Docente Lenguaje            3       9       1       5      3         5
+ Z       Docente Lenguaje            3       10      2       7      2         8
+Fuente: Elaboración propia.
+
+
+De la figura 3, aparte de lo ya destacado para el docente A y la jefatura AX, cabe mencionar
+que el análisis nuevamente detecta dos clústeres claramente definidos, representando en
+
+
+
+                                                                                        106
+
+                REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+azul oscuro a Lenguaje y azul claro a Matemáticas, este último presentando mayor
+frecuencia en sus interacciones. Se observa que los departamentos interactúan entre sí,
+pero en menor medida que en las otras dimensiones e incluso que en las otras escuelas
+analizadas. Sin embargo, es el caso del docente A el que llama la atención, pues como se
+ha mencionado, es un docente de Matemáticas, pero que interactúa con un colega de
+Lenguaje (Z), siendo su única conexión en la red referida a la “obtención de prácticas
+innovadoras”.
+
+
+
+
+   Figura 3. Sociograma de relaciones en “obtención de prácticas innovadoras” para la
+                                    Escuela Tierra
+                                Fuente: Elaboración propia.
+
+
+4. Discusión
+El presente estudio examinó el liderazgo docente en departamentos de Lenguaje y
+Matemáticas en centros escolares secundarios chilenos a través de un análisis de las
+interacciones entre las jefaturas de departamentos –vistos como líderes formales– y sus
+colegas. Utilizando la técnica de análisis de redes sociales se establecieron patrones de
+interacciones intra-departamentos y entre departamentos en función a tres dimensiones
+de colaboración entre docentes: a) a quién recurre, y con cuánta frecuencia, para trabajar
+en procesos de mejora escolar en su disciplina; b) a quién recurre, y con cuánta frecuencia,
+para pedir consejo sobre cómo mejorar su enseñanza; y c) a quién recurre, y con cuánta
+frecuencia, para obtener prácticas innovadoras.
+Los resultados revelan tres hallazgos principales: a) se detectaron liderazgos múltiples en
+los departamentos; b) el liderazgo docente en las escuelas y departamentos analizados
+asume distintas configuraciones, según la dimensión de colaboración analizada; y c) la
+interacción entre docentes de distintos departamentos varía entre escuelas y se relaciona
+con la dimensión de colaboración analizada.
+Un primer resultado refiere a que, en mayor o menor medida, en los seis departamentos
+estudiados se observó la co-existencia del liderazgo asociado al cargo formal de jefe de
+departamento y la distribución del liderazgo entre docentes. Bush, Yoon y Ng (2019)
+resumen varias investigaciones que concurren en señalar que la distribución del liderazgo
+
+
+
+                                                                                        107
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+no es incompatible con formas más jerárquicas de organización, siempre y cuando los
+líderes en cargos formales posibiliten esta distribución. Investigaciones previas sugieren
+que algunos docentes son reacios a asumir completamente la responsabilidad de tomar
+decisiones que son consideradas negativas por quienes se ven afectados por ellas (Little,
+1995). Los docentes son más proclives a recurrir a aquellos que les expresen solo lo
+positivo o no cuestionen el status quo del departamento, en lugar de colegas que los desafían
+y presionen para que se transformen o mejoren. Por lo tanto, las normas implícitas o
+explícitas de igualitarismo, junto con las tensiones entre la autonomía docente y la no
+intervención que prevalecen en algunos departamentos, pueden ser obstáculos
+importantes para el ejercicio del liderazgo entre colegas para la mejora educativa y el
+cambio (Aubrey-Hopkins y James, 2002).
+Las diferencias observadas no se pueden explicar a partir de los datos reportados en este
+estudio. No obstante, es importante reconocer que, como líderes medios, los jefes de
+departamento requieren involucrarse en procesos micropolíticos, al negociar la
+conciliación de intereses de la dirección escolar y de sus pares docentes. Para estos efectos,
+buscan generar consensos entre sus pares, sin imponer una visión (Cortez y Zoro, 2018).
+Las distribuciones de los procesos de influencia que se observaron en estas tres escuelas
+pueden estar dando cuenta de una estrategia micropolítica de los jefes de departamento
+(Flessa, 2009). Esta posible explicación amerita investigaciones respecto a factores que
+den cuenta de los patrones de vínculos profesionales detectados a través de la descripción
+que ofrece el ARS.
+Un segundo resultado refiere a diferencias intra-escuela respecto de la densidad de las
+redes en función a la dimensión de colaboración sobre la cual se consulta a los docentes.
+Leithwood y Louis (1998) han postulado que las unidades departamentales pueden
+contribuir al aprendizaje a nivel individual, colectivo y organizacional. Un rol clave del
+jefe de departamento es articular estos tres niveles de aprendizaje. La evidencia recopilada
+en el presente estudio sugiere la presencia de ciertas regularidades respecto a cómo se
+abordan estos tres niveles en las dimensiones de colaboración e influencia mutua sobre las
+cuales los docentes fueron consultados. Los docentes reportan más interacciones respecto
+a procesos de mejora escolar, en comparación a interacciones para mejorar su enseñanza
+o innovar en sus prácticas pedagógicas. Considerando que las escuelas secundarias
+seleccionadas han presentado procesos de mejora sostenida en los últimos años, estos
+resultados corroboran la prioridad de este tipo de acciones colectivas. Sin embargo,
+aquellas interacciones que involucran algún tipo de transformación educativa, tales como
+perfeccionar clases u obtener prácticas innovadoras podrían ser menos frecuentes por
+tener un foco más individual. De ser así, potencialmente, la contribución de los
+departamentos al aprendizaje docente estaría limitada. Por otra parte, la escasez de
+interacciones en torno a la generación de prácticas innovadora puede presentar una
+limitante para el aprendizaje organizacional.
+Stoll y Fink (1998) han descrito los desafíos al mejoramiento continuo en escuelas que
+logran ser efectivas y que, al no potenciar la innovación frente a cambios en las demandas
+sociales, no siempre logran adaptarse. Por otra parte, un estudio realizado en Canadá en
+nueve escuelas secundarias mostró que la estructura departamental era un factor que
+inhibía la capacidad de cambio (Ross y Hannay, 2001). Esos autores plantean que los
+departamentos tienden a representar culturas homogéneas, con pocos espacios para el
+cuestionamiento de lo que se ha construido como sentido común respecto del
+funcionamiento de sus escuelas. Más aun, la estructura departamental puede limitar el
+
+
+
+                                                                                          108
+
+                REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+intercambio de ideas entre las distintas disciplinas del currículo escolar, impactando
+negativamente en el cambio organizacional.
+Lo ya señalado refiere también al tercer resultado de este estudio, respecto de la densidad
+en las interacciones entre los profesores de Lenguaje y Matemáticas. Este resultado
+muestra la utilidad del ARS para estudiar la cultura escolar en la cual se moviliza el trabajo
+colectivo para la mejora. En la Escuela Agua, y en relación con el tema de procesos de
+mejora escolar, es donde observamos más interacciones entre departamentos y esto puede
+ser un factor que propicie la mejora escolar. Esta red muestra que, a pesar de sus
+diferencias curriculares, es relevante tener en cuenta a otros colegas más allá del propio
+departamento para trabajar y lograr la mejora educativa.
+En la Escuela Cielo, y con relación a buscar consejos sobre cómo mejorar la enseñanza y
+obtener prácticas innovadoras, es donde se observan menos interacciones. En la Escuela
+Tierra, las interacciones se dan más entre docentes de la misma disciplina que entre los
+departamentos, ya que se observan dos clústeres distintivos, al igual que para la Escuela
+Cielo. Las redes de estas dos escuelas representan una limitación identificada por varios
+autores respecto de la estructura departamental. Siguiendo la tipología de culturas
+escolares propuesta por Hargreaves (2005), estas redes mostrarían una cultura escolar
+balcanizada, donde los departamentos disciplinarios parecieran haberse constituidos en
+subgrupos al interior de la organización escolar, con escasas oportunidades de interacción
+con otros departamentos.
+La existencia de estas sub-redes representa un desafío para la mejora escolar cuando hay
+aislamiento y los subgrupos están separados por fronteras poco permeables, generando
+comunidades de práctica que difieren en valores, creencias y prácticas (Hargreaves, 2005).
+Las culturas balcanizadas tienen importantes consecuencias para la posibilidad de
+compartir una visión del proyecto educativo de la escuela, cuya materialización requiere
+del esfuerzo colectivo de la comunidad escolar. Los datos de este estudio no permiten
+comprender características de liderazgo o características organizacionales que puedan
+explicar los tipos de redes descritos, pero por los efectos negativos de una cultura escolar
+balcanizada estos resultados ameritan nuevos estudios.
+
+
+5. Conclusiones
+Una de las principales conclusiones de este estudio es la utilidad de la técnica de ARS para
+describir el capital social de una escuela y cómo fluyen ideas, información, recursos e
+influencia en los departamentos y entre departamentos (Daly, 2010). Una segunda
+conclusión concurre con lo señalado por otros autores respecto que el liderazgo, como una
+cualidad organizacional, no se limita a asignarlo formalmente (Ogawa y Bossert, 1995),
+ya que este necesita integrarse en las prácticas e interacciones de los docentes. Además,
+dada la evidencia empírica de los patrones de interacciones, la determinación del grado de
+distribución de una red de liderazgo no puede considerarse solamente como una cuestión
+de estructura o diseño organizacional. Una forma de abordar esta problemática es a través
+del análisis de las redes de docentes y determinar si sus patrones de centralidad y densidad,
+junto con los sociogramas y sus clústeres, adoptan o no configuraciones de liderazgo
+distribuido, así como el tipo de cultura organizacional en el cual funcionan los
+departamentos.
+
+
+
+
+                                                                                          109
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+En este sentido, este estudio hipotetizó que aquellas redes departamentales caracterizadas
+por una alta densidad de red y una centralidad moderada, es decir donde el jefe del
+departamento es tan relevante como otros colegas, serían ejemplos de departamentos
+cohesionados y con patrones de liderazgo distribuido. Sin embargo, los resultados
+muestran que las densidades de red y los indicadores de centralidad de las jefaturas de
+departamento están asociadas a la dimensión de colaboración que se puede generar entre
+docentes. Los patrones detectados en la distribución del liderazgo, especialmente en
+interacciones de búsqueda de consejos y prácticas innovadoras para la mejora educativa,
+muestran menor densidad en comparación a interacciones para abordar la mejora escolar.
+Esto puede tener implicaciones importantes para los tres niveles de aprendizaje que se
+requieren para la mejora escolar: individual, colectivo y organizacional (Leithwood y
+Louis, 1998).
+El estudio, por su carácter descriptivo, no permite identificar factores que pueden moldear
+los patrones de red que se identificaron, como por ejemplo la carga de trabajo de los jefes
+de departamento, la antigüedad tanto como docentes como en el cargo, la historia de
+innovación de los departamentos, la perspectiva de género del cargo, entre otros factores.
+A su vez, estas conforman algunas de las limitaciones del estudio. Respecto a esto último,
+es posible ampliar la mirada a otras dimensiones de la mejora y cambio educativo, junto
+con tener en consideración mayor diversidad de tamaños tanto de los establecimientos
+educativos como de sus departamentos.
+Wenner y Campbell (2017) sintetizan tres condiciones que inciden en el liderazgo de los
+jefes de departamentos y sus efectos en la mejora escolar: (a) las competencias para ejercer
+este tipo de liderazgo, (b) las prácticas de directivos escolares que generan condiciones
+para este liderazgo, y (c) la cultura profesional orientada a la colaboración y el
+mejoramiento. Las diferencias observadas entre escuelas y entre departamentos de una
+misma escuela sugiere la necesidad de investigar estas condiciones para comprender su
+incidencia en las redes detectadas. La hipótesis es que el tipo de redes que se establecen
+podrían estar ligadas a condiciones institucionales como las ya señaladas. Por último, la
+acotada muestra utilizada no permite generalizaciones, pero sí entrega importante
+evidencia para un tema poco estudiado tanto en Chile como en otras latitudes
+hispanoparlantes.
+El liderazgo más o menos preponderante de un jefe de departamento se asocia a la
+definición clara, desde la dirección escolar, de las responsabilidades y tareas del cargo,
+junto al reconocimiento por su realización (Salleh, 2017). Esto, a su vez, implica que los
+directivos escolares comprenden a cabalidad cómo los líderes medios contribuyen a la
+mejora escolar y cómo ellos los pueden apoyar para ejercer procesos de influencia con sus
+pares. Las condiciones que genera el director o directora de una escuela secundaria para
+propiciar el liderazgo docente es otro aspecto que emerge como estudio futuro para
+comprender las variaciones observadas en las redes sociales descritas en la presente
+investigación.
+
+
+Agradecimientos
+Se agradece el financiamiento aportado por FONDECYT (Proyecto N° 1180687) y de
+CONICYT FB 003.
+
+
+
+
+                                                                                        110
+
+                   REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+Referencias
+Araya, F. (2015). Rediseño del rol y función del jefe de departamento de asignatura. Estudio de caso (Tesis
+       de maestría). Santiago de Chile: Pontificia Universidad Católica de Chile.
+Aubrey-Hopkins, J. y James, C. (2002). Improving practice in subject departments: The experience
+      of secondary school subject leaders in Wales. School Leadership and Management, 22(3), 305-
+      320. https://doi.org/10.1080/1363243022000020426
+Barry, D. (1991). Managing the bossless team: Lessons in distributed leadership. Organisational
+       Dynamics, 20(1), 31-47. https://doi.org/10.1016/0090-2616(91)90081-J
+Bellei, C., Valenzuela, J., Vanni, X. y Contreras, D. (2014). Lo aprendí en la escuela. ¿Cómo se logran
+        procesos de mejoramiento escolar?. Santiago de Chile: LOM.
+Bennett, N. (1995). Managing professional teachers: Middle management in primary and secondary
+      schools. Londres: Paul Chapman.
+Bolívar, A. (2014). Building school capacity: Shared leadership and professional learning
+       communities. A research proposal. International Journal of Educational Leadership and
+       Management, 2(2), 147-175. https://doi.org/10.4471/ijelm.2014.15
+Borgatti, S. P. y Everett, M. G. (2006). A graph-theoretic perspective on centrality. Social Networks,
+      28, 466-484. https://doi.org/10.1016/j.socnet.2005.11.005
+Bush, T. (2003). Theories of educational leadership and management. Londres: Sage.
+      https://doi.org/10.1177/0263211X0303102100
+Bush, T., Yoon, A. y Ng, M. (2019). Distributed leadership and the Malaysia education blueprint
+      enactment in a highly centralised context. Journal of Educational Administration, 57(3), 279-
+      295. https://doi.org/10.1108/JEA-11-2018-0206
+Busher, H., Harris, A. y Wise, C. (2001). Subject leadership and school improvement. Londres: Paul
+      Chapman.
+Camburn, E., Rowan, B. y Taylor, J. E. (2003). Distributed leadership in schools: The case of
+     elementary schools adopting comprehensive school reform models. Educational Evaluation
+     and Policy Analysis, 25(4), 347-373. https://doi.org/10.3102/01623737025004347
+Cortez, M. y Zoro, B. (2016). El rol estratégico de los liderazgos medios al interior de las escuelas para la
+      mejora escolar: una mirada desde la literatura internacional. Recuperado de
+      https://www.lidereseducativos.cl/wp-content/uploads/2017/01/NT-8.pdf
+Day, C. y Harris, A. (2002). Teacher leadership, reflective practice, and school improvement. En K.
+      Leithwood (Coord.), Second international handbook of educational leadership and administration
+      (pp. 957-955). Dordrecht: Springer. https://doi.org/10.1007/978-94-010-0375-9_32
+Daly, A. J. (2010). Social network theory and educational change. Cambridge, MA: Harvard University
+       Press.
+Daly, A. J., Moolenaar, N. M., Bolivar, J. M. y Burke, P. (2010). Relationships in reform: The role
+       of teachers' social networks. Journal of Educational Administration, 48(3), 359-391.
+       https://doi.org/10.1108/09578231011041062
+De Lima, J. A. (2008). Department networks and distributed leadership in schools. School
+     Leadership and Management, 28(2), 159-187. https://doi.org/10.1080/13632430801969864
+Downey, C. (2018). Utilizing social network analysis to identify the structural features of teachers’
+     knowledge and resource sharing networks within schools. Profesorado, Revista de Currículum
+     y Formación del Profesorado, 22(2), 133-159.
+     https://doi.org/10.30827/profesorado.v22i2.7718
+
+
+
+                                                                                                        111
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+Flessa, J. (2009). Educational micropolitics and distributed leadership. Peabody Journal of Education,
+       84, 331-349. https://doi.org/10.1080/01619560902973522
+Flückiger, B., Lovett, S., Dempster, N. y Brown, S. (2015). Middle leaders: Career pathways and
+      professional learning needs. Leading and Managing, 21(2), 60-74.
+Friedkin, N. E. y Slater, M. R. (1994). School leadership and performance: A social network
+      approach. Sociology of Education, 14(2), 139-157. https://doi.org/10.2307/2112701
+Frost, D. y Harris, A. (2003). Teacher leadership: Towards a research agenda. Cambridge Journal
+       of Education, 33(3), 479-498. https://doi.org/10.1080/0305764032000122078
+Garay, S., Queupil, J. P., Maureira, O., Guiñez, C. y Garay, C. (2019). El liderazgo desde la
+      perspectiva del análisis de redes: Una experiencia en escuelas vulnerables y efectivas de
+      Chile. Profesorado, Revista de Currículum y Formación del Profesorado, 23(2), 169-188.
+      https://doi.org/10.30827/profesorado.v23i2.9269
+Gronn, P. (2002). Distributed leadership. En K. Leithwood (Coord.), Second international handbook
+      of educational leadership and administration (pp. 653-696). Dordrecht: Springer.
+      https://doi.org/10.1007/978-94-010-0375-9_23
+Hadfield, M. y Jopling, M. (2012). How might better network theories support school leadership
+       research? School Leadership & Management, 32(2), 109-121.
+       https://doi.org/10.1080/13632434.2012.670115
+Hallinger, P. y Heck R. H. (2014). Liderazgo colaborativo y mejora escolar: Comprendiendo el
+       impacto sobre la capacidad de la escuela y el aprendizaje de los estudiantes. REICE. Revista
+       Iberoamericana sobre Calidad, Eficacia y Cambio en Educación, 12(4e), 71-88.
+Hargreaves, A. (2005). Colaboración y colegialidad artificial (copa reconfortante o cáliz
+      envenenado). En A. Hargreaves (Ed.), Profesorado, cultura y postmodernidad (pp. 210-234).
+      Londres: Ediciones Morata.
+Harris, A. (2000). Effective leadership and departmental improvement. Westminster Studies in
+       Education, 23, 81-90. https://doi.org/10.1080/0140672000230108
+Harris, A. (2001). Department improvement and school improvement: A missing link? British
+       Educational Research Journal, 27(4), 477-486. https://doi.org/10.1080/01411920120071470
+Harris, A. (2003). Teacher leadership as distributed leadership: Heresy, fantasy or possibility?
+       School Leadership and Management, 23(3), 313-324.
+       https://doi.org/10.1080/1363243032000112801
+Harris, A. (2004). Distributed leadership and school improvement: Leading or misleading?
+       Educational Management Administration & Leadership, 32(1), 11-24.
+       https://doi.org/10.1177/1741143204039297
+Harris, A. (2013). Distributed school leadership: developing tomorrow's leaders. Londres: Routledge.
+       https://doi.org/10.4324/9780203607909
+Hopkins, D., Ainscow, M. y West, M. (1994). School improvement in an era of change. Londres:
+      Cassell.
+Hoppe, B. y Reinelt, C. (2010). Social network analysis and the evaluation of leadership networks.
+      The Leadership Quarterly, 21(4), 600-619. https://doi.org/10.1016/j.leaqua.2010.06.004
+Leithwood, K. y Louis, K. S. (1998). Organizational learning in schools: An introduction. En K.
+      Leithwood y K. S. Louis (Eds.), Organizational learning in schools (pp. 1-14). Lisse: Swets &
+      Zeitlinger.
+
+
+
+
+                                                                                                   112
+
+                  REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación
+
+
+
+
+Leithwood, K., Day, C., Sammons, P., Harris, A. y Hopkins, D. (2006). Seven strong claims about
+      successful school leadership. Londres: NCSL.
+Little, J. W. (1995). Contested ground: The basis of teacher leadership in two restructuring high
+        schools. The Elementary School Journal, 96(1), 47-62. https://doi.org/10.1086/461814
+Martínez-Valdivia, E., García-Martínez, I. e Higueras-Rodríguez, M. L. (2018). El liderazgo para
+      la mejora escolar y la justicia social. Un estudio de caso sobre un centro de educación
+      secundaria obligatoria. REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en
+      Educación, 16(1), 35-51. https://doi.org/10.15366/reice2018.16.1.003
+Merriam, S. B. (1988). Case study research in education: A qualitative approach. San Francisco, CA:
+      Jossey-Bass.
+Moolenaar, N. M. (2012). A social network perspective on teacher collaboration in schools: Theory,
+     methodology, and applications. American Journal of Education, 119(1), 7-39.
+     https://doi.org/10.1086/667715
+Murillo, F. J. y Krichesky, G. J. (2015). Mejora de la escuela: Medio siglo de lecciones aprendidas.
+      REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación, 13(1), 69-102.
+Ogawa, R. T. y Bossert, S. T. (1995). Leadership as an organizational quality. Educational
+     Administration Quarterly, 31(2), 224-243. https://doi.org/10.1177/0013161X95031002004
+Robinson, V. M. (2007). School leadership and student outcomes: Identifying what works and why.
+      Australian Council for Educational Leaders, 41, art 5.
+Ross, J. y Hannay, L. (2001). Internalizing change capacity in secondary schools through
+      organizational change. Alberta Journal of Educational Research, 47(4), 325-340.
+Salleh, H. (2017). The attractions and challenges of building teacher leaders. Comunicación
+       presentanda en la Conferencia BELMAS 2017. Stratford-Upon-Avon, Reino Unido.
+Scott, J. (2000). Social network analysis: A handbook. Thousands Oaks, CA: Sage.
+Siskin, L. S. y Little, J. W. (1995). The subjects in question: Departmental organization and the high
+       school. Nueva York, NY: Teachers College Press.
+Smith, M., Ceni, A., Milic-Frayling, N., Shneiderman, B., Mendes Rodrigues, E., Leskovec, J. y
+       Dunne, C. (2010). NodeXL: A free and open network overview, discovery and exploration add-in
+       for Excel 2007/2010. Recuperado de http://nodexl.codeplex.com/
+Smith, P. S., Trygstad, P. J. y Hayes, M. L. (2018). Social network analysis: A simple but powerful
+       tool for identifying teacher leaders. International Journal of Leadership in Education, 21(1),
+       95-103. https://doi.org/10.1080/13603124.2016.1195016
+Spillane, J. P. (2006). Distributed leadership. San Francisco, CA: Jossey-Bass.
+Stoll, L. y Fink, D. (1998). The cruising school: The unidentified ineffective school. En L. Stoll y
+        K. Myers (Eds.), No quick fixes (pp. 189-206). Londres: Falmer Press.
+Valenzuela, J. P., Bellei, C. y Allende, C. (2016). Measuring systematic long-term trajectories of
+      school effectiveness improvement. School Effectiveness and School Improvement, 27(4), 473-
+      491. https://doi.org/10.1080/09243453.2016.1150861
+Wakita, K. y Tsurumi, T. (2007). Finding community structure in mega-scale social networks.
+      Recuperado de https://dl.acm.org/doi/10.1145/1242572.1242805
+Wallace, M. (2002). Modelling distributed leadership and management effectiveness: Primary
+      school senior management teams in England and Wales. School Effectiveness and School
+      Improvement, 13(2), 163-186. https://doi.org/10.1076/sesi.13.2.163.3433
+
+
+
+
+                                                                                                 113
+
+J. P. Queupil y C. Montecinos
+
+
+
+
+Wang, A. H., Walters, A. M. y Thum, Y. M. (2013). Identifying highly effective urban schools:
+     Comparing two measures of school success. International Journal of Educational Management,
+     27(5), 517-540. https://doi.org/10.1108/09513541311329878
+Wasserman, S. y Faust, K. (1994). Social network analysis: Methods and applications. Cambridge:
+     Cambridge University Press. https://doi.org/10.1017/CBO9780511815478
+Wenner, J. A. y Campbell, T. (2017). The theoretical and empirical basis of teacher leadership: A
+     review of the literature. Review of Educational Research, 87(1), 134-171.
+     https://doi.org/10.3102/0034654316653478
+
+
+Breve CV de los autores
+Juan Pablo Queupil
+Doctor en Liderazgo Educacional y Educación Internacional Comparada de The
+Pennsylvania State University, Estados Unidos. Actualmente es académico e investigador
+del “Centro de Investigación en Educación y Aprendizaje Basado en la Comunidad” de la
+Universidad Católica Silva Henríquez. Sus intereses de investigación incluyen: gestión y
+liderazgo educacional; colaboración e internacionalización de la investigación en
+educación; perspectiva de género; inclusión y justicia educacional; trayectorias y
+transiciones estudiantiles; educación superior; y política educacional. A su vez, es parte de
+la actual directiva de la “Red de Investigadores en Educación Chilena” (RIECH). ORCID
+ID: https://orcid.org/0000-0002-7324-9275. Email: jqueupil@ucsh.cl
+
+Carmen Montecinos
+Doctora en Psicología Educacional de la Southern Illinois University-Carbondale.
+Profesora Titular de la Escuela de Psicología de Valparaíso y Directora Ejecutiva del
+Centro de Liderazgo para la Mejora Escolar de la Pontificia Universidad Católica de
+Valparaíso e Investigadora Principal del CIAE, Universidad de Chile. Su investigación y
+publicaciones abordan temáticas de desarrollo y aprendizaje en los profesionales de la
+educación y mejora escolar. ORCID ID: https://orcid.org/0000-0001-8382-1848. Email:
+carmen.montecinos@pucv.cl
+
+
+
+
+                                                                                            114

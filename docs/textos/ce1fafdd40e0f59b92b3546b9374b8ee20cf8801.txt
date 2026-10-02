@@ -1,0 +1,2535 @@
+JOURNAL OF EDUCATION, SOCIETY & MULTICULTURALISM
+                   https://doi.org/10.2478/jesm-2026-00012
+
+       Artificial Intelligence in School Management. A
+                       Systematic Review
+                                                           Mariana, DOGARU 1
+Abstract
+This article addresses a significant gap in the literature by synthesizing peer-reviewed
+evidence on artificial intelligence (AI) applications in school management, focusing
+on administrative decision-making, resource allocation, operational support, and
+educational leadership. The review follows PRISMA guidelines and draws on
+approximately forty peer-reviewed studies published between 2018 and 2026,
+retrieved from SpringerLink, Sage Journals, ScienceDirect, ERIC, and Google
+Scholar. To contextualize AI-enabled administrative functions, the analysis also
+incorporates research from organizational studies, management information systems,
+business process management, and cybersecurity. Particular attention is given to
+explainable AI and stewardship, including formal modeling approaches for
+administrative processes and techniques that enhance the transparency and
+accountability of algorithmic decision-making. The review further examines financial
+management, student data protection, cybersecurity, interoperability, federated
+learning, and the integration of large language models into school information and
+ERP systems. Three key themes emerge. First, AI can improve administrative
+efficiency, reduce workload, strengthen data-informed decision-making, and optimize
+organizational processes. Second, successful implementation depends on robust
+governance frameworks, ethical guidelines, AI literacy among staff and leaders,
+effective data protection and cybersecurity measures, interoperability planning, and
+adequate digital infrastructure. Third, core dimensions of educational leadership—
+including professional judgment, relational trust, contextual understanding, creativity,
+and ethical accountability—remain indispensable and should be preserved as AI
+adoption expands. Based on these findings, the article proposes three research
+hypotheses concerning the relationship between AI-driven automation and
+administrative workload, the role of AI governance frameworks in shaping
+stakeholder outcomes, and the moderating effect of organizational support on the
+relationship between AI integration and institutional performance. The review also
+identifies methodological limitations in the existing evidence base, which remains
+dominated by conceptual and qualitative studies. Overall, AI offers substantial
+potential to transform school management, but its effectiveness depends on sustained
+
+
+1 National University of Science and Technology POLITEHNICA Bucharest,
+
+Romania, e-mail: mariana.dogaru@upb.ro
+© 2026 Authors. This is an open-access article distributed under the terms of the
+Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-
+NC 4.0).
+
+
+
+
+                                         237
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+investment in governance, technical safeguards, AI literacy, transparency, and equity-
+oriented implementation practices.
+Keywords:
+
+Artificial intelligence in education, school management, educational leadership,
+administrative automation, decision support systems, AI ethics.
+
+
+Introduction
+        School leaders in the twenty-first century operate in an
+increasingly complex environment. Principals, district administrators,
+and school management teams are simultaneously expected to drive
+instructional improvement, manage increasingly diverse student
+populations, navigate evolving legislative and regulatory requirements,
+satisfy stakeholder accountability demands, and maintain operational
+efficiency within constrained financial resources. Administrative tasks
+— scheduling, attendance monitoring, budget management, reporting,
+staff appraisal, resource allocation, parent and community
+communication — consume enormous proportions of school leaders'
+time and cognitive bandwidth, often at the direct expense of
+instructional leadership, professional development, and the relational
+work that animates healthy school cultures.
+         Into this context, artificial intelligence has arrived not as a
+speculative futuristic prospect, but as an increasingly present
+technological reality. Machine learning algorithms, natural language
+processing systems, predictive analytics platforms, computer vision
+tools, and decision-support architectures are already being piloted and
+deployed across educational settings worldwide. Vendors market AI-
+powered school management systems that claim to automate routine
+administrative tasks, generate real-time performance dashboards,
+optimize staff scheduling, predict student attendance and dropout risk,
+and provide evidence-based recommendations to school leaders.
+National and regional education authorities in several countries have
+begun developing AI policy frameworks for schools. At the same time,
+critical scholars have raised urgent questions about algorithmic bias,
+data privacy, the displacement of human professional judgment, and the
+risk that AI adoption in schools may deepen rather than mitigate
+
+
+
+                                        238
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+existing educational inequities. Across organizational contexts more
+broadly, AI adoption in management information systems (MIS) and
+management research has accelerated, yet reviews identify persistent
+gaps in understanding key adoption factors, topic evolution, and the
+socio-technical relationship between artificial and human intelligence
+(Islami & Mulolli, 2024, p.4; Liu et al., 2024, p.3; Stoykova & Shakev,
+2023, p.9). These developments raise questions about how to design,
+deploy, and govern AI so that it remains explainable, context-sensitive,
+and aligned with human educational and organizational goals.
+Explainability represents a central concern across these domains. In
+compulsory education, prediction systems that estimate pupils' future
+attendance rely on private data and can affect access to schooling and
+grades, thereby risking disadvantage for underperforming students if
+their operation remains opaque (Kammüller & Satija, 2023, p.8). In
+adjacent domains, deep AI networks trained on large benchmark
+datasets are being repurposed for tasks such as waste classification,
+where object contamination and deformation challenge generalizability
+and highlight the need for domain-informed augmentation and
+explanation of model behavior; kernel-weight analyses of architectures
+such as ResNet, ConvNeXt, and vision transformers show diminishing
+contributions from deeper layers, motivating leaner architectures that
+balance accuracy with explainability (Arashpour, 2023) — a tension
+that maps directly onto the trade-off between predictive power and
+interpretability that recurs throughout the school-management
+literature. In educational leadership specifically, analyses of Principal
+Ethical AI Leadership (PEAIL) portray a conceptually rich but
+empirically preliminary field, in which advocacy for values such as
+fairness and inclusion outpaces systematic evidence about how leaders
+handle day-to-day ethical dilemmas around AI (Ho, 2026). This
+scholarship further notes an under-representation of principals' own
+voices, uneven contextual diversity, and a narrow methodological
+repertoire, all of which constrain the development of robust, context-
+sensitive guidance for school leaders navigating AI-related decisions.
+Formal modeling and systematic review methodologies have been
+proposed to address different facets of these challenges. In the case of
+pupils' attendance prediction, the Isabelle Infrastructure Framework
+
+
+
+                                   239
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+(IIIf) has been instantiated to represent attendance infrastructures as
+Kripke structures, with actors, locations, labeled private data, and a
+black-box function that maps data tuples to attendance predictions,
+alongside explicit actions such as ‘put’ and ‘eval’ governed by local
+policies (Kammüller & Satija, 2023, p.8). This formalization supports
+model checking and attack-tree-based reasoning about how attendance
+decisions are produced and how counterfactual modifications to
+disadvantage status or location can change outcomes, thereby offering
+a principled route to explanation of opaque decision procedures. In
+MIS, systematic literature reviews using rigorously defined research
+questions and search strategies have similarly been advanced to identify
+AI capabilities, platforms, business value, and organizational
+challenges,      emphasizing      transparency,    replicability,   and
+comprehensive coverage of available studies (Stoykova & Shakev,
+2023, p.14). The scope of this article is deliberately bounded: it is
+concerned not with AI as a tool for teaching and learning, but with AI
+as an instrument of school organization, management, operational
+support, and leadership stewardship. The guiding question is: what does
+the current evidence base — spanning education-specific research,
+ethical-leadership scholarship, and adjacent organizational,
+management-information-systems, business-process-management, and
+cybersecurity literatures — tell us about how AI can be integrated into
+school management and support processes, and what are the conditions,
+benefits, risks, explainability requirements, and implications of such
+integration for educational leadership?
+   1. Background and Conceptual Foundations
+
+       1.1. Dimensions of AI in Educational Contexts
+
+        Within modern schooling systems, AI-driven tools represent a
+new phase in this evolution by offering data-driven personalization and
+automation within large-scale settings. Operationalizations of AI in K–
+12 contexts include predictive analytics that forecast academic
+performance or behavioral risk, adaptive learning environments,
+intelligent tutoring systems that personalize instruction and feedback,
+and generative models such as ChatGPT. Research on AI in education
+
+
+                                   240
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+conceptualizes these applications as a heterogeneous umbrella of
+machine-learning and data-driven systems embedded in everyday
+school practice, extending the longstanding project of managing
+diversity and individual needs within mass education. Systematic
+reviews of Principal Ethical AI Leadership use this operational
+definition to examine how school leaders confront equity, inclusion,
+and accountability issues arising from the deployment of such systems
+(Ho, 2026). Insights from the adjacent literature on AI applied to
+business process management indicate that machine learning and
+natural language processing can be employed to monitor and predict
+process trajectories while also surfacing practical problems such as
+label ambiguity and limited generalization — issues directly relevant
+when school systems deploy predictive analytics and adaptive tutoring
+tools (Fettke & Di Francescomarino, 2025, p.69). Label ambiguity,
+noisy event acquisition, and weak generalization often limit reliability
+and can make explanations brittle in practice, with similar data issues
+potentially eroding fairness and producing opaque recommendations
+when adaptive tutors or risk models are deployed across diverse student
+populations. Business process management research also explores
+techniques for improving event-log quality and semantically enriching
+process descriptions, measures that may suggest practical ways to
+strengthen prediction and explainability when analogous analytics are
+introduced in educational systems (Fettke & Di Francescomarino, 2025,
+p.73). A complementary strand centers on AI literacy and curriculum
+design. Contemporary analyses propose that integrating AI into
+education proceeds along two intertwined pathways: preparing students
+to participate in AI-shaped societies and economies, and deploying AI
+itself to support and personalize learning environments. The first
+pathway involves deliberately embedding topics such as coding,
+machine learning, data science, robotics, and neural networks across
+educational stages, beginning with foundational exposure in early
+schooling and advancing into higher education. The second entails
+engaging learners directly with AI tools and platforms, including large
+language models, AI-powered textbooks, and other modalities that
+personalize content and interaction. Historical experience with
+curriculum reform informs current calls for comprehensive competency
+
+
+
+                                   241
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+frameworks that move beyond technical skills to include critical
+thinking, problem solving, and reflection on ethical issues such as data
+privacy, algorithmic bias, and broader societal impacts. Efforts such as
+the Council of Europe's proposed “compass for AI in education,”
+intended to translate human rights and democratic standards into
+concrete guidance for responsible, human-centric AI use in education,
+exemplify this institutionalization of AI-related competencies within a
+long tradition of policy frameworks steering educational change
+(Reimers et al., 2025).
+
+
+1.2. Defining AI in School Management
+
+Artificial intelligence, for this review, refers to computational systems
+that perform tasks traditionally requiring human intelligence, including
+pattern recognition, prediction, natural language understanding, and
+decision support. The primary AI technologies identified in the
+literature as relevant to school management include machine learning
+(ML) algorithms for prediction and classification; predictive analytics
+platforms for attendance, performance, and resource forecasting;
+natural language processing (NLP) for communication, document
+processing, and reporting; computer vision systems for attendance
+automation and security monitoring; knowledge-based decision support
+systems; and AI-driven business intelligence and analytics dashboards.
+School management and organizational support processes encompasses
+the full range of administrative, operational, governance, and leadership
+activities that sustain the functioning of educational organizations. This
+includes, but is not limited to, student information management; staff
+scheduling and human resource administration; attendance monitoring
+and reporting; budget planning and resource allocation; communication
+and community engagement; decision support for principals and senior
+leaders; school self-evaluation and performance monitoring;
+compliance and regulatory reporting; and strategic planning.
+Conceptualizations of AI in school management emerge most clearly
+when examined through principals' concrete uses of data-driven
+systems, automation tools, and generative applications in day-to-day
+leadership. Studies on Principal Ethical AI Leadership (PEAIL)
+
+
+                                   242
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+describe AI as embedded in the same data infrastructures that underpin
+teaching, assessment, and organizational dashboards, positioning AI
+not as an isolated tool but as part of broader analytic platforms guiding
+school-level decisions. Within this perspective, AI in school
+management is defined operationally by the socio-technical
+arrangements through which principals process information, allocate
+resources, and exercise ethical agency in digitally mediated
+environments (Ho, 2026). Empirical and advocacy-oriented work
+portrays AI as supporting multiple managerial domains, AI-based
+predictive analytics and risk-management tools contribute to evidence-
+based decisions, particularly around forecasting and scenario analysis
+for school improvement; operationally, automated systems for
+scheduling, grading, and attendance exemplify AI applications that
+increase efficiency and free leaders to concentrate on higher-level
+strategic goals; in professional development, AI applications identify
+teachers' learning needs and deliver personalized coaching through
+virtual platforms, embedding staff development within continuous,
+data-informed cycles; and in communication and equity, multilingual
+messaging, stakeholder feedback collection, and student well-being
+support via chatbots situate AI within relational and inclusion-oriented
+dimensions of school management (Ho, 2026). PEAIL scholarship
+refines this definition by emphasizing AI as both an object and a context
+of ethical stewardship. PEAIL is described as a context-sensitive
+practice that links micro-level moral agency with macro-level socio-
+technical and policy frameworks, recognizing that opaque technologies,
+structural inequities, and external governance pressures shape
+principals' scope of action. Within this framing, AI in school
+management encompasses tools whose outcomes affect instructional
+and professional practices, organizational systems and governance, and
+equity and inclusion. Responsible use of AI to support personalization,
+differentiation, and student engagement is explicitly distinguished from
+any replacement of pedagogical judgment, defining AI as augmentative
+rather than substitutive in instructional decision processes.
+Organizational and governance uses constitute another definitional
+pillar. Ethical principals are described as implementing AI in
+administrative functions such as scheduling, reporting, and resource
+
+
+
+                                   243
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+allocation while ensuring that efficiency gains do not erode
+transparency or fairness. Acting as gatekeepers, they interpret AI-
+generated data through a critical lens, uphold privacy and legal
+compliance, and align AI deployment with school values and policy
+frameworks. Under this view, AI in school management refers not only
+to the technical systems themselves but also to the leadership practices
+that filter, contextualize, and constrain their influence (Ho, 2026). A
+complementary leadership framework elaborates AI-specific domains
+aligned with professional standards for educational leaders. Within this
+framework, AI is defined in terms of its role in data-informed decision-
+making, operational efficiency, and administrative transformation.
+Principals are expected to use AI tools to monitor key performance
+indicators, automate routine tasks such as scheduling, attendance
+reporting, and basic communications, and employ AI for compliance
+tracking, budgeting, and resource allocation, always with human
+judgment and ethical oversight (DeMatthews et al., 2026, p.3).
+Conceptualizing AI in this way embeds it within strategic planning and
+visioning, where principals cultivate a shared, people-centered vision
+of AI integration, maintain a human-in-the-loop approach, and align AI
+work with district and state policies. Other accounts describe AI as an
+“extended brain” that helps principals process information, track
+compliance and performance in real time, and make timely, data-
+informed decisions, provided that findings are corroborated with human
+stakeholders such as teachers and counselors. Generative AI systems
+are additionally defined by their capacity to automate emails, meeting
+summaries, budget tracking, and report writing, while requiring secure,
+institutionally governed platforms for any interaction with sensitive
+student data (DeMatthews et al., 2026, p.4). Across these strands, AI in
+school management is thus delineated as a multi-domain ensemble of
+analytic, automating, and generative tools whose meaning is co-
+constituted by ethical leadership practices, governance structures, and
+human-in-the-loop oversight.
+1.3. Taxonomic Landscape: AI Applications in Educational
+Leadership
+Sposato (2025), in a comprehensive taxonomy of AI applications in
+educational leadership, identifies multiple domains in which AI is
+
+
+                                   244
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+shaping school leadership practice. Drawing on an extensive review of
+literature, Sposato organizes AI applications along two axes: the level
+of decision-making they support (operational, tactical, or strategic), and
+the nature of the human–AI relationship (tool, assistant, collaborator, or
+autonomous agent). This taxonomy provides a useful organizing frame
+for the evidence synthesized in this review.
+At the operational level, AI tools automate routine administrative tasks:
+generating reports, monitoring attendance, processing scheduling
+conflicts, managing communications, and tracking resource usage.
+These tools function primarily as instruments that extend human
+capacity without substantially altering the nature of decision-making.
+At the tactical level, AI systems support more complex decisions:
+analyzing student performance data, identifying at-risk students,
+comparing resource allocation options, and evaluating staff
+performance patterns. Here, the human–AI relationship begins to
+involve genuine collaborative reasoning, with AI surfacing patterns and
+options that school leaders evaluate and act upon. At the strategic level
+— still largely aspirational in the current literature — AI systems might
+support long-term school improvement planning, policy formation, and
+organizational learning, potentially functioning as genuine decision
+partners to school leaders.
+1.4. The Human-AI Collaboration Imperative
+Arar (2024) develops the concept of “symbiotic co-leadership,” arguing
+that the most productive human–AI relationships in school contexts are
+those in which each party contributes what it does best: AI contributes
+computational power, pattern recognition, scalability, and consistency;
+humans contribute contextual wisdom, ethical judgment, relational
+intelligence, and creative adaptation. This framing is echoed across the
+literature and constitutes the first major conceptual pillar of the field.
+Dai & Rawolle (2025) argue that effective AI integration in school
+management requires clarity about where human judgment is
+irreplaceable, active co-design of AI tools with educators rather than
+imposition of external vendor systems, and institutional structures that
+ensure human oversight of AI-generated recommendations. This
+framework is significant because it resists both techno-utopian accounts
+of AI as a simple efficiency fix and dystopian accounts of AI as an
+
+
+                                   245
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+existential threat to professional autonomy, offering instead a nuanced
+middle ground grounded in respect for the complexity of educational
+leadership.
+
+
+   2. Theoretical Foundation of School Management through AI
+      perspective
+   2.1. Educational Management Theories
+Research on principal preparation for AI integration foregrounds the
+Technology Acceptance Model (TAM), the Unified Theory of
+Acceptance and Use of Technology (UTAUT), and Diffusion of
+Innovations (DOI) as core perspectives explaining how individual
+perceptions, social influence, and systemic conditions shape technology
+use in schools. These frameworks treat adoption as both technical and
+socio-organizational, emphasizing perceived usefulness and ease of
+use, organizational support, and the relative advantage and
+compatibility of innovations within existing practices. Within
+educational leadership scholarship, these adoption theories are
+mobilized to argue that successful AI integration depends
+simultaneously on personal attitudes, school culture, and structural
+arrangements, making them foundational reference points for
+management thinking in AI-rich environments.
+Leadership-focused theories complement these adoption models by
+specifying how principals can shape conditions for AI use. Instructional
+leadership, transformational leadership, distributed leadership, and
+social justice leadership are each invoked to conceptualize how school
+leaders guide technology-related change. Instructional leadership
+centers on improving teaching and learning, so AI tools are assessed in
+terms of alignment with instructional goals and teacher growth.
+Transformational leadership stresses vision and motivation; principals
+who articulate ethical AI use and model innovation can help their
+schools navigate adoption challenges. Distributed leadership
+emphasizes teamwork and shared responsibility, positioning AI
+initiatives as collective projects rather than individual decisions. Social
+justice leadership introduces an explicit equity lens, orienting AI use
+
+
+
+                                    246
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+toward benefits for underserved students and protection against
+exacerbated inequalities (DeMatthews et al., 2026, p.6).
+Ethical leadership theories are reinterpreted in light of AI through the
+conceptualization of Principal Ethical AI Leadership (PEAIL). PEAIL
+is framed as socio-technical stewardship in which principals operate
+within multi-level ecologies that link personal virtue, organizational
+cultures, and external governance environments (Ho, 2026). Existing
+work shows that ethical leadership in this context involves cultivating
+trust, modeling principled behavior, and sustaining open dialogue, with
+these relational qualities treated as preconditions for addressing AI-
+related dilemmas around surveillance, automation, and equity.
+Outcome-oriented syntheses group the effects of PEAIL into domains
+such as instructional and professional practices, organizational systems
+and governance, and equity and inclusion, illustrating how ethical
+leadership norms translate into concrete decisions about
+personalization, administrative automation, and the protection of
+vulnerable students (Ho, 2026).
+Methodologically oriented reviews of PEAIL expose important gaps in
+how these theories are operationalized. Across 62 studies on AI and
+ethical leadership, conceptual and qualitative designs dominate,
+including nine conceptual pieces, seven commentaries, and 15–16
+qualitative studies, with relatively few investigations directly
+examining how school leaders make ethical decisions about AI tools.
+Quantitative work largely addresses technology acceptance and
+attitudes rather than ethical judgment, while theoretical engagement
+spans 23 frameworks, of which Decision-Making Theory and
+Transformational Leadership Theory appear only a handful of times
+each. Critically oriented perspectives such as Critical Race Theory and
+Intersectional Feminist Theory occur rarely, signaling that systemic
+equity analyses remain marginal within current educational
+management theorizing around AI (Ho, 2026). Synthesis across this
+body of work yields a constrained but coherent picture of educational
+management theories under digital disruption: technology adoption
+models explain individual and organizational readiness for AI,
+traditional leadership theories provide lenses on instructional,
+transformational, distributed, and justice-oriented practices, and PEAIL
+
+
+
+                                   247
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+recasts ethical leadership as context-sensitive stewardship in AI-
+integrated schools (DeMatthews et al., 2026, p.5; Ho, 2026). At the
+same time, empirical fragility, over-reliance on advocacy-oriented
+writings, and limited use of rigorous systematic review standards
+indicate that these theoretical strands require further refinement and
+robust validation before they can fully guide educational management
+in AI-rich systems (Ho, 2026).
+        2.2. AI-Related Theoretical Frameworks
+AI-related theorizing in education currently develops unevenly across
+conceptual domains, with several strands explicitly identified as
+underdeveloped or fragmented. A systematic synthesis of artificial
+intelligence in education (AIEd) reviews reports that only 7.84% of
+included work engages directly with AIEd theories, despite their critical
+role in guiding the design, implementation, and evaluation of AI
+systems for teaching and learning. This relative scarcity is linked to
+difficulties in integrating abstract theoretical insights into real-world
+educational settings and to a wider gap between technological
+capabilities and educational theories that specify how, why, and under
+what conditions AI can support learning processes effectively. Existing
+AI-related frameworks in AIEd are often applied descriptively rather
+than subjected to empirical testing: Cognitive Load Theory and Self-
+Regulated Learning Theory are frequently invoked to justify the design
+of AI-based tutoring and assessment systems, yet few studies assess
+whether such interventions genuinely reduce cognitive load or foster
+self-regulation in practice. Parallel fragmentation appears where Social
+Agency Theory, TPACK, the Technology Acceptance Model, and
+Constructivism are typically used in isolation, with limited attempts to
+connect or integrate them into broader explanatory models of learning
+with AI. This siloed application constrains comprehensive accounts of
+how cognitive, emotional, and social factors jointly shape students'
+engagement with AI tools (Huang et al., 2026, p.3).
+Conceptual gaps also concern the temporal relationship between
+technological innovation and theory-building. While AI techniques and
+applications evolve rapidly, frameworks tailored specifically to AIEd
+lag behind. Most studies continue to rely on established learning
+theories rather than generating AI-informed conceptual models that
+
+
+                                   248
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+capture issues such as AI-enhanced feedback, human–AI co-agency, or
+the dynamics of overreliance and critical engagement in AI-infused
+environments. As a result, the field calls explicitly for theories extended
+using evidence from learning analytics and human–AI collaboration,
+with a view to explaining how AI can scaffold student thinking, support
+teachers' metacognitive reflection, and sustain creativity and critical
+thinking (Huang et al., 2026, p.12). Beyond individual learning
+theories, wider framework architectures have been proposed to
+structure AIEd research. One synthesis introduces a three-level
+thematic framework distinguishing user-related themes from
+developer-related themes at Level 1, then differentiating AI education
+and literacy, AI applications, AI challenges, and AI technology
+development at Level 2, and finally specifying more granular constructs
+such as AI education courses, AI literacy, AI ethics, AI functions, AI
+utilization processes, AI techniques, AI programming languages, and
+AI operating platforms at Level 3. This hierarchical arrangement
+clarifies how conceptual work on AI ethics, utilization processes, and
+technical underpinnings can be systematically related rather than
+treated as isolated topics, and it connects theoretical constructs
+explicitly to functional categories such as prediction, detection,
+classification, decision-making, and automated assessment (Huang et
+al., 2026, p 5).
+Methodological reflections on AI-related theoretical frameworks in
+educational leadership exhibit a comparable pattern of conceptual
+richness and empirical thinness. Reviews of PEAIL adopt established
+ethical leadership theories but then ground the resulting conceptual
+model in empirical patterns across 62 studies, rather than imposing
+predefined assumptions (Ho, 2026). This approach yields a multi-
+layered ecology in which individual dispositions, organizational
+cultures, policy environments, and societal norms jointly shape how
+principals address AI-mediated dilemmas, yet reviewers stress that
+PEAIL remains a framework “informed by theory and guided by
+evidence” rather than a theory rigorously validated through extensive
+field data (Ho, 2026). Across these strands, research shows that AI-
+related theoretical frameworks in education are characterized by
+underdeveloped dedicated AIEd theories, descriptive rather than
+
+
+
+                                    249
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+testing-oriented uses of classic learning theories, fragmented
+deployment of technology adoption and pedagogical frameworks, and
+emerging but empirically limited models of socio-technical stewardship
+in leadership. Calls for future work converge on tighter coupling
+between theory and practice, explicit integration of cognitive,
+emotional, and social perspectives, and the development of AI-specific
+conceptual models grounded in systematic empirical assessment (Ho,
+2026, p.12; Huang et al., 2026, p.7).
+
+
+    3. Research methodology
+The research goal is to identify how AI is being implemented in school
+management processes and to determine the extent to which it is
+changing school management theory.
+We used PRISMA framework. Searches were conducted in the
+following databases: SpringerLink, Sage Journals, ScienceDirect
+(Elsevier), ERIC (Education Resources Information Center), and
+Google Scholar. The search was conducted using Boolean keyword
+combinations including, but not limited to: “artificial intelligence”
+AND “school management”; “AI” AND “educational leadership”;
+“machine learning” AND “school administration”; “predictive
+analytics” AND “educational decision-making”; “natural language
+processing” AND “school organization”; “AI” AND “principal
+leadership”; “automation” AND “school processes”; “AI ethics” AND
+“education management”; “decision support systems” AND
+“educational organizations”; and “AI” AND “administrative
+efficiency” AND “schools.”
+3.1.Eligibility Criteria
+Inclusion criteria for the review were: (1) peer-reviewed articles or
+book chapters published in English between January 2018 and April
+2026; (2) empirical, theoretical, review, or framework articles
+addressing the use of AI in school management, administrative
+processes, educational leadership, or organizational support functions
+in pre-university education settings; (3) articles providing sufficient
+methodological detail and analytical substance to enable quality
+assessment. Exclusion criteria were: (1) articles focused exclusively on
+
+
+
+                                   250
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+AI applications in classroom instruction or direct student learning
+without addressing managerial or organizational dimensions; (2) grey
+literature, conference proceedings, and non-peer-reviewed sources; (3)
+duplicates; (4) articles in languages other than English.
+3.2.Screening and Quality Assessment
+Following the initial database search, approximately 400 records were
+identified after deduplication. Title and abstract screening reduced this
+to approximately 80 potentially eligible full-text articles. Full-text
+review against the eligibility criteria resulted in a final corpus of
+approximately 26 sources for qualitative synthesis. Studies were
+assessed on criteria including clarity of research design, relevance of
+evidence to the review question, transparency of methodology, and
+appropriateness of conclusions relative to data. No studies were
+excluded solely on quality grounds, but quality assessments informed
+the weight given to different sources in the narrative synthesis.
+Data Extraction and Synthesis
+Data were extracted from each included source using a structured
+extraction template covering: author(s), year, country/context, study
+type, AI application described, educational management level
+addressed, benefits reported, challenges identified, ethical dimensions
+discussed, and key conclusions. Extracted data were analyzed
+thematically, following the six-phase thematic analysis process
+described by Braun and Clarke (2006): familiarization, generating
+initial codes, searching for themes, reviewing themes, defining and
+naming themes, and producing the report. Three overarching themes —
+benefits, implementation challenges and equity implications, and the
+human dimension of leadership — and multiple sub-themes were
+identified, which structure the findings reported in Sections 5 through
+8 of this article. Where the supplementary explainability, governance,
+and organizational sources offered evidence that extended rather than
+duplicated the core corpus — for example on financial and resource
+management, student data management and cybersecurity,
+interoperability, and the analysis of correlations between AI adoption
+and school performance — these were integrated as additional sub-
+
+
+
+
+                                   251
+
+                   Artificial Intelligence in School Management. A Systematic Review
+                                              Mariana Dogaru
+
+themes within the same thematic structure, with all attributions traced
+to their original sources to ensure fidelity to the underlying evidence.
+
+
+
+
+                                      Identification of studies via databases and registers
+
+                        Records identified from*:                      Records removed before
+                           Databases (n =650)                          screening:
+  Identification
+
+
+
+
+                           Registers (n =648)                             Duplicate records removed (n
+                                                                          = 23)
+                                                                          Records marked as ineligible
+                                                                          by automation tools (n =200)
+                                                                          Records removed for other
+                                                                          reasons (n =50)
+
+
+
+
+                        Records screened                               Records excluded**
+                        (n =400)                                       (n =320 )
+
+
+
+
+                        Reports sought for retrieval                   Reports not retrieved
+                        (n =40)                                        (n =16 )
+  Screening
+
+
+
+
+                        Reports assessed for eligibility                Reports excluded:
+                        (n = 40)                                           Reason 1 (n =22)
+                                                                           Reason 2 (n =10)
+                                                                           Reason 3 (n =8)
+                                                                           etc.
+
+
+
+
+                       Studies included in review
+   Included
+
+
+
+
+                       (n =26)
+                       Reports of included studies
+                       (n =1)
+
+
+                                                       252
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+
+
+
+Figure 1. PRISMA flow
+
+3.3.Research Hypotheses for Future Empirical Investigation
+We formulated three research hypotheses to guide future empirical inquiry.
+These hypotheses are grounded in the patterns identified in the literature,
+respond to the most significant gaps in current knowledge, and are designed
+to be testable through rigorous empirical research designs. The convergent
+evidence base assembled for this expanded review — spanning roughly forty
+primary     and     secondary     sources     across    systematic   review,
+explainability/ethics, and bibliometric/organizational management literatures
+— reinforces rather than revises these hypotheses: the gains documented for
+AI in school management are real but conditional, the human elements of
+leadership remain foundational, and governance quality is decisive.
+
+H1. AI Integration and Administrative Workload Reduction
+The implementation of AI-driven automation and predictive analytics in
+school management will significantly reduce administrative workload for
+principals, thereby increasing the time and cognitive resources available for
+instructional leadership, and thereby improving overall school effectiveness
+as measured by teacher professional satisfaction, principal leadership quality
+ratings, and student outcome indicators.
+This hypothesis is grounded in the consistently documented finding that AI
+tools reduce administrative burden in school management settings (Kafa,
+2025, p.3; Machkour & Khdar, 2025, p.8; Reimers et al., 2025), combined
+with the extensive literature on the relationship between principals'
+instructional leadership time and school effectiveness. Future research should
+test this hypothesis through longitudinal quasi-experimental designs
+comparing schools that have implemented AI management tools with matched
+comparison schools, measuring outcomes across multiple dimensions
+including principal time allocation, leadership quality perceptions, and student
+performance indicators.
+
+H2. Governance Frameworks and Stakeholder Outcomes
+Schools that adopt structured AI leadership frameworks — explicitly
+addressing ethics, equity, community engagement, and operational
+governance — will demonstrate higher stakeholder satisfaction, better
+
+
+                                      253
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+decision-making quality, and more equitable student outcomes compared to
+schools that adopt AI in management processes in an ad-hoc, unstructured
+manner.
+This hypothesis is grounded in the consistent emphasis in the literature on
+governance, ethics, and structured implementation as determinants of AI
+integration quality (DeMatthews et al., 2026, p.7; Dai & Rawolle, 2024,
+p.1474; Arar, 2024, p.3). It implies that the quality of AI governance is as
+important as the sophistication of the AI technology in determining outcomes
+— a hypothesis that runs counter to the vendor-driven narrative that
+technology quality is the primary determinant of AI integration success.
+Future research should compare schools with structured AI governance
+frameworks against those without, using mixed-methods designs that capture
+both quantitative outcome indicators and qualitative stakeholder experience
+data.
+
+H3. Organizational Support Factors as Moderators
+Organizational support factors — including staff AI literacy, adequate digital
+infrastructure, clear ethical guidelines, and sustained professional
+development — positively moderate the relationship between AI integration
+in school management support processes and key performance indicators such
+as resource optimization efficiency, principal decision quality, and teacher
+collaboration, such that AI integration produces stronger positive outcomes in
+schools with stronger organizational support conditions.
+This hypothesis is grounded in multiple strands of evidence in the reviewed
+literature (Kafa, 2025, p.4; Reimers et al., 2025; Wang, 2021, p.11; Arar,
+2024, p.4) and reflects the theoretical insight that AI tools are not sufficient
+conditions for improved outcomes: they are necessary but not sufficient, with
+sufficiency contingent on organizational conditions that enable effective
+human-AI collaboration. Future research should test this moderation
+hypothesis through survey-based studies in large school samples, using
+structural equation modeling or multilevel regression to estimate the
+moderating effects of support conditions on the AI integration-outcomes
+relationship.
+
+
+4.Analysis and interpretation of the research data
+4.1.Correlation Between AI Adoption and School Performance
+Empirical work directly quantifying statistical correlations between AI
+adoption and school performance remains scarce in current research on
+
+
+                                      254
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+educational leadership and AI. Reviews of Principal Ethical AI
+Leadership (PEAIL) report that only a small subset of the 62 identified
+studies examines how school leaders actually use AI tools in practice,
+and fewer still trace these uses systematically to learning outcomes or
+organizational performance indicators. Within this corpus, most
+quantitative designs concentrate on technology acceptance or attitudes
+rather than measurable effects on achievement, equity, or school
+improvement metrics, which constrains any effort to compute or
+generalize correlations between AI uptake and performance.
+Available analyses instead describe AI-related outcomes qualitatively
+across several levels. At the micro level, ethical leadership around AI
+is reported to bolster teacher and student confidence in AI-mediated
+processes, in part by reducing fears of bias and data misuse.
+Organizationally, ethical deliberation is associated with stronger norms
+of technology use and a more coherent moral-professional culture. At
+policy and societal scales, ethical leadership linked to AI integration is
+said to enhance legitimacy and accountability, positioning schools as
+trustworthy actors within national digital education agendas. These
+outcome descriptions, however, are seldom operationalized through
+standardized performance indicators or statistical models that would
+enable calculation of effect sizes or correlation coefficients.
+Within substantive accounts of AI use in schools, PEAIL reviews
+describe principals employing adaptive learning platforms, AI tutors,
+generative tools, and predictive analytics for strategic planning, with
+reported benefits including support for evidence-based decisions, risk
+management, and automation of tasks such as scheduling, grading, and
+attendance that free time for strategic goals. Separate work on AI-
+enabled educational management highlights automated attendance,
+course scheduling, and intelligent assessment systems that can provide
+more comprehensive analyses of students' learning processes, habits,
+and problem-solving than point-in-time examinations, potentially
+informing long-term development (Feng & Li, 2024, p.50). Yet these
+accounts primarily document functional opportunities and perceived
+advantages; they do not provide paired quantitative measures of AI
+adoption intensity and corresponding changes in test scores,
+
+
+                                   255
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+progression rates, or other outcome measures needed to establish
+statistical correlations.
+Overall, current evidence portrays a field in which AI adoption in
+schools is expanding and is normatively linked to improved decision-
+making, efficiency, and potentially more nuanced assessment, while
+rigorous quantitative demonstrations of correlations with school
+performance are largely absent. Reviews consistently recommend
+longitudinal, comparative, and mixed-methods research incorporating
+systematic indicators, equity measures, stakeholder trust metrics, and
+learning outcomes, so that relationships between AI integration and
+school performance can be assessed empirically rather than inferred.
+
+4.2.Benefits of AI in school management
+4.2.1Administrative Efficiency and Workload Reduction
+
+
+The most consistently documented benefit of AI in school management
+across the literature is improved administrative efficiency. Studies from
+multiple national contexts report that AI-powered tools can
+significantly reduce the time school leaders and administrative staff
+spend on routine, repetitive, and low-complexity tasks, thereby freeing
+cognitive and temporal resources for higher-order leadership activities.
+Machkour & Khdar (2025) synthesize evidence from multiple empirical
+studies to conclude that AI-driven administrative tools reduce average
+time spent on routine tasks by substantial margins. The authors cite
+evidence of automated report generation, intelligent scheduling
+systems, and AI-powered communication platforms as examples of
+tools that streamline management workflows. Critically, the authors
+note that these efficiency gains are not automatic: they depend on
+adequate system design, staff training, and integration with existing
+administrative infrastructures.
+Reimers and colleagues (2025) present case evidence from diverse
+national contexts across Latin America, Africa, and Southeast Asia,
+documenting how schools in under-resourced settings have used AI
+tools to manage enrollment data, generate compliance reports, and
+automate communication with parents. Notably, the authors identify
+that administrative efficiency gains are particularly significant in
+
+
+                                   256
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+schools where administrative staffing is thin and principals are directly
+responsible for tasks that, in wealthier contexts, are handled by
+dedicated administrative teams. This finding complicates simplistic
+narratives of AI as primarily a luxury of well-resourced contexts and
+suggests that AI tools, if designed and deployed thoughtfully, could
+have substantial equity implications.
+Kafa (2025) surveyed school leaders about their perceptions and
+experiences of using an AI tool for management tasks. The findings
+reveal that a majority of participating principals perceived the AI tool
+as useful for reducing routine administrative burden, with particular
+appreciation expressed for features that automated scheduling,
+generated standardized reports, and supported attendance monitoring.
+Importantly, Kafa (2025) notes that perceptions of usefulness were
+significantly moderated by principals' AI literacy and their confidence
+in interpreting AI-generated outputs, underscoring the dependency of
+efficiency gains on human capacity to engage with AI productively.
+A complementary leadership framework specifies how this efficiency
+potential should be operationalized. Guidance for principals describes
+domain-level expectations that AI should streamline communications,
+scheduling, compliance tracking, budgeting, resource allocation, and
+attendance reporting so that staff can redirect time toward instruction
+and relationship building. Within this framing, automation is not
+positioned as an end in itself but as a means to protect staff work time
+and align operations with school improvement goals and district
+priorities, with explicit attention to data accuracy, fairness, and legal
+compliance (DeMatthews et al., 2026, p.8). One set of practices focuses
+on data-informed decision-making supported by automated dashboards
+and monitoring tools: principals are advised to use AI systems to track
+key performance indicators in strategic plans and to identify trends in
+areas such as attendance or discipline, while always applying human
+judgment to interpret patterns and confirm risk flags with teachers and
+counselors before intervening. AI is further characterized as an
+“extended brain” that assists school leaders in processing large volumes
+of information and making timely decisions, provided that findings are
+corroborated through stakeholder feedback and strong oversight
+(DeMatthews et al., 2026, p.8). These recommendations underscore a
+
+
+
+                                   257
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+human-in-the-loop paradigm in which automated analytics remain
+subordinate to professional judgment and community values.
+Another cluster of contributions elaborates concrete administrative
+tasks amenable to automation. Suggested uses include AI-generated
+basic emails, meeting summaries, budget tracking, and the rapid
+creation of master schedules that consider teacher availability, student
+needs, and compliance requirements. Generative systems are also
+presented as tools for preparing reports, analyzing student data, setting
+up professional development schedules, and tracking regulatory
+compliance (DeMatthews et al., 2026, p.10). At a broader operational
+level, school leaders are encouraged to automate routine scheduling,
+attendance reporting, and basic communications, and to embed AI into
+transactional functions linked to resource stewardship and operations
+management, explicitly tied to professional standards that call for
+actionable data systems, strategic staffing, and technology use to
+improve operations while maintaining privacy, security, and legal
+conformity (DeMatthews et al., 2026, p.11).
+Evidence from higher-level analyses of education systems provides a
+complementary view. It describes automated management as a major
+opportunity domain, alongside personalized learning, global resource
+sharing, and teacher professional development support. In this account,
+AI systems perform time-consuming tasks such as course scheduling,
+student attendance, and grade evaluation, using technologies including
+facial recognition for attendance and natural language processing for
+automatic grading; these tools are reported to reduce teachers'
+administrative workload and enable greater focus on instruction and
+individualized tutoring. Intelligent assessment systems are said to move
+beyond point-in-time examinations by continuously analyzing students'
+learning processes, habits, and problem-solving patterns to deliver more
+comprehensive and accurate evaluations that can inform long-term
+development (Feng & Li, 2024, p.49). To structure empirical work on
+automation impacts, general methodological guidance such as the PICO
+framework — specifying population, intervention, comparator, and
+outcome as core components of focused questions — can be adapted to
+support rigorous evaluation of AI-based administrative interventions
+relative to traditional processes (Parambil et al., 2024, p.5). Beyond
+
+
+
+                                   258
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+schooling, systematic reviews of AI in management information
+systems emphasize organizational-level automation supported by
+decision support, transaction processing, and enterprise resource
+planning systems, and call for detailed classifications of AI capabilities
+such as predictive analytics and intelligent process automation; these
+classifications highlight that automation often integrates machine
+learning, computer vision, and cognitive automation, suggesting that
+school-focused frameworks for administrative AI can be informed by
+broader MIS perspectives while remaining anchored in human-centered
+leadership and ethical oversight (Stoykova & Shakev, 2023, p.12;
+DeMatthews et al., 2026, p.8).
+4.2.2.Data-Driven Decision Support
+A second major domain of documented AI benefit in school
+management concerns decision support. AI systems — particularly
+those incorporating machine learning, predictive analytics, and
+business intelligence dashboards — can process and synthesize large
+volumes of educational data to provide school leaders with timely,
+evidence-grounded insights that would be difficult or impossible to
+generate manually.
+Wang (2021) examines the intersection of AI and data-informed
+decision-making in educational leadership. Drawing on a detailed case
+analysis, Wang identifies several ways in which AI systems can
+enhance the quality of decisions by school leaders: by surfacing non-
+obvious patterns in student performance data, by enabling rapid
+comparison of outcomes across demographic subgroups, and by
+generating probabilistic forecasts of future trends. Crucially, however,
+Wang's analysis is framed as a “cautionary tale”: the author documents
+how an overconfident reliance on AI-generated data can distort
+decision-making, particularly when leaders lack the statistical literacy
+to interrogate AI outputs critically or when the underlying data contain
+systematic biases. Wang's article makes a powerful case that AI
+enhances decision quality only when it is combined with human
+analytical skill, contextual knowledge, and healthy epistemic
+skepticism.
+DeMatthews et al (2026) present a six-domain framework for AI
+integration in school leadership that explicitly includes “data-informed
+
+
+                                   259
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+decision-making” as one of its core domains. The authors argue that AI
+can support more equitable decision-making by making patterns of
+differential treatment, resource distribution, and outcome disparities
+visible to leaders who might otherwise be unaware of them. They note,
+however, that this potential is contingent on data quality,
+representational equity in training datasets, and the interpretive capacity
+of school leaders.
+4.2.3.Process optimization in school
+Beyond efficiency and decision support, the literature identifies a third
+category of AI benefit, the optimization of specific operational
+processes within school management. These include student attendance
+monitoring, staff scheduling, resource allocation, performance
+monitoring, and community communication.
+Computer vision and machine learning-based attendance systems —
+using face recognition, deep learning algorithms, and AI cameras —
+have been documented in multiple studies as enabling more accurate,
+efficient, and less administratively burdensome monitoring of student
+attendance. Convolutional neural networks (CNNs) have been applied
+to automate classroom attendance marking, reducing both the
+administrative load on teachers and the error rates associated with
+manual attendance systems. Predictive models have been used to
+forecast attendance patterns, enabling proactive intervention for
+students at risk of chronic absenteeism.
+In the area of scheduling, AI systems have been used to generate
+optimal timetables that minimize conflicts, maximize resource
+utilization, and accommodate complex constraints across large schools.
+In resource allocation, machine learning-based forecasting models have
+supported more accurate budgeting and planning by predicting
+enrollment trends, maintenance needs, and staffing requirements. In
+communication, natural language processing tools have enabled
+automated generation of parent newsletters, personalized progress
+communications, and multilingual translation of school documents,
+reducing the administrative burden associated with community
+engagement while potentially improving the quality and accessibility of
+communication.
+
+
+
+                                    260
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+4.2.4.Financial and resource management
+Financial and resource management in AI-enabled school
+administration aligns closely with broader patterns of AI-supported
+decision-making and operational efficiency observed across sectors.
+Guidance for principals positions AI as a means to assist with
+budgeting, compliance tracking, and resource allocation, while
+retaining human oversight and clear alignment with school
+improvement goals and district priorities (DeMatthews et al., 2026,
+p.7). Within this framing, automating transactional tasks is intended to
+protect staff time for instruction and relationships, not to replace
+professional judgment in financial decisions.
+Evidence from manufacturing and logistics illustrates how AI augments
+financial stewardship by integrating large data streams for cost control
+and risk reduction. In Industry 4.0 environments, AI systems integrate
+data from information technology, smart sensors, and interconnected
+devices to support operational efficiency, supply chain coordination,
+and adaptation to changing environments. Automation of warehouse
+robotics, visual inspection, fault detection, and predictive maintenance
+reduces costs associated with unanticipated interruptions and
+operational errors, with financial benefits arising from improved
+reliability and lower disruption-related expenses. Within supply chain
+management, AI-based analysis of historical and real-time data
+supports forecasting, resource planning, and optimization of
+coordination, yielding more efficient allocations of inventory, transport,
+and production capacity, and generating cost savings and greater
+responsiveness to market fluctuations. Generative AI expands this
+financial and resource lens by enabling scenario analysis around
+political, social, or economic changes: such systems can model possible
+disruptions in demand or supplier availability, supporting risk
+assessment and the design of more efficient distribution strategies and
+logistics routes in light of external factors such as weather patterns and
+environmental constraints, as well as internal needs including cost
+reduction and management of peak demand. These applications show
+how AI-enabled scenario planning can inform budgetary contingencies
+and investment decisions linked to infrastructure, transportation, and
+
+
+
+
+                                   261
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+inventory buffers in complex organizational settings (Aguado-García et
+al., 2026, p.27-32).
+Comparative organizational analyses in management information
+systems further underline how AI capabilities relate to financial
+performance. Classifications of AI in management highlight decision
+support systems, analytical and statistical models, optimization
+techniques, and cost–benefit analysis as central elements of “production
+optimization and analytics” and “business economics and transition to
+economy 4.0,” where decision-making, value creation, cost
+engineering, and budget control are key cluster components. Within
+these clusters, analytical models, stochastic systems, and uncertainty
+analysis contribute to multi-criteria evaluations of profitability, risk,
+and investment strategies (Padovano & Cardamone, 2024, p.10). Such
+structures parallel school-level needs to evaluate AI investments, weigh
+operational savings against licensing and training costs, and monitor
+financial impacts over time.
+Human resource management cases focused on compensation,
+performance management, and benefits provide additional insight into
+AI-supported financial stewardship in people-intensive organizations.
+Scenario-based analyses of compensation management and benefits
+management stress that pay structures, incentives, and benefits
+enhancements must adhere to industry standards, best practices, and
+regulatory constraints while allocating resources efficiently and
+following transparent implementation timelines. Performance
+management and professional development applications similarly
+emphasize that system implementation requires careful resource
+allocation for training managers and employees, and must align with
+core organizational objectives such as precision, innovation, and
+strategic capacity (Aguinis et al., 2024, p. 5). These HR-oriented
+examples underscore that AI-informed financial and resource decisions
+need to integrate contextual factors, regulatory compliance, and long-
+term talent development goals rather than focusing solely on short-term
+cost reductions.
+Taken together, these strands suggest that AI-enabled financial and
+resource management combines automated analytics, predictive
+modeling, and scenario generation with context-sensitive leadership
+
+
+
+                                   262
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+practices. In educational settings, this entails using AI tools for
+budgeting, compliance, and resource allocation only within frameworks
+that safeguard transparency, fairness, and alignment with institutional
+missions (DeMatthews et al., 2026, p.12). Practical experience from
+higher education suggests that districts should budget explicitly for
+training, policy revision, and shared accountability structures so that
+administrators, teachers, and students receive support and the onus for
+misuse is distributed rather than placed solely on learners (Lim et al.,
+2023, p.7). While such investments may appear costly initially,
+evidence implies that clear governance, equitable access strategies, and
+sustained upskilling can reduce the downstream administrative burden
+created by patchwork bans or uneven deployments.
+4.2.5.Student Data Management as an application domain
+Student data management constitutes a fourth application domain in
+which AI offers school leaders genuine operational benefits, while
+simultaneously introducing the privacy, security, and ethical risks
+examined. AI systems support administrative integration of large,
+sensitive data streams: managing enrollment records, tracking
+compliance with attendance and reporting obligations, and feeding
+analytics dashboards that inform leadership decisions. Within e-
+learning and institutional platforms, technical interventions target the
+secure management of students' digital traces, including improving the
+accuracy and security of attendance systems by combining face
+recognition with location detection on mobile devices, developing
+anonymous authentication schemes that validate learners while
+minimizing latency, and integrating multi-modal biometric techniques
+into learning management systems to maintain identity assurance across
+sessions. Additional work develops privacy-preserving algorithms for
+learning analytics datasets in order to balance student privacy protection
+with the analytical usefulness of the resulting information (Parambil et
+al., 2024, p.3). Complementary efforts use blockchain to manage
+educational records and digital diplomas and to enhance transparency
+around how learning analytics data are treated, for example through
+visual icons that communicate data practices to stakeholders (Parambil
+et al., 2024, p.4).
+
+
+
+                                   263
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+From a management perspective, the operational value of these tools —
+more accurate attendance records, more secure and efficient handling
+of enrollment and assessment data, and richer analytics for leadership
+decision-making — is real, but it is inseparable from the governance,
+consent, and security obligations discussed later in this review. As such,
+student data management functions simultaneously as a benefit domain
+and as one of the most consequential sites of ethical risk in AI-enabled
+school management.
+4.2.6.School Leadership support and strategic capacity
+The literature also documents emerging evidence that AI can support
+the strategic and leadership dimensions of school management, not just
+the operational and administrative. AI-powered analytics dashboards
+can provide principals with real-time visibility into school performance
+indicators — attendance rates, grade distributions, disciplinary
+incidents, staff wellbeing signals — that support more responsive and
+evidence-informed leadership.
+DeMatthews et al (2026) articulate a vision in which AI serves as a
+“strategic partner” for school leaders, augmenting their capacity to
+identify improvement priorities, monitor implementation fidelity, and
+evaluate the impact of leadership decisions. The authors acknowledge
+that this vision is largely aspirational given the current state of AI
+development and deployment in schools, but they argue that it
+represents a legitimate and important direction for both research and
+practice. Similarly, Sposato (2025) envisions AI systems that can
+support “adaptive strategic planning” in schools — systems that learn
+from historical decision patterns, model the likely consequences of
+different strategic choices, and provide leaders with scenario-based
+decision support.
+
+
+
+
+                                   264
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+Table 1 Summary of Documented AI Benefits in School Management
+
+
+ Domain             AI Application(s)         Documented           Key Sources /
+                                              Benefit(s)           Evidence
+                                                                   Strength
+
+ Administrative     Automated reporting,      Reduced routine      Machkour &
+ Efficiency         scheduling,               workload; time       Khdar 2025, p.8;
+                    communication             savings for school   Kafa, 2025, p.3;
+                                              leaders              Reimers et al.,
+                                                                   2025, p.11
+
+ Decision Support   Predictive analytics,     Evidence-            Wang, 2021, p.8;
+                    BI dashboards, ML         grounded             DeMatthews et al.
+                    pattern recognition       decisions; early     2026, p.14;
+                                              identification of
+                                              at-risk students
+
+ Attendance         Face recognition,         Accuracy,            Machkour &
+ Monitoring /       CNNs, deep learning,      efficiency,          Khdar 2025, p.9,
+ Process            predictive models         proactive            p.9); Reimers et
+ Optimization                                 absenteeism          al. , 2025, p.6
+                                              intervention
+
+ Resource           Forecasting models,       Optimized            Machkour &
+ Allocation &       ML-based planning         budgeting,           Khdar, 2025, p.7;
+ Scheduling         tools                     enrollment           Reimers et al.,
+                                              planning,            2025, p.11
+                                              maintenance
+                                              scheduling,
+                                              optimal
+                                              timetabling
+
+ Financial &        Industry 4.0 analytics,   Cost control, risk   Aguado-García et
+ Resource           scenario modeling,        reduction,           al., 2026, p.8;
+ Management         HR/compensation           predictive           Padovano &
+ (Broader)          tools                     maintenance,         Cardamone, 2024,
+                                              equitable resource   p.11; Aguinis et
+                                              decisions            al. 2024, p.7
+
+
+
+
+                                        265
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+ Student Data      Biometric attendance,      Secure, accurate      Parambil et al.
+ Management        anonymous                  records; richer       2024, p.5;
+                   authentication,            leadership            Ahmad, et al,
+                   privacy-preserving         analytics             2022, p.8
+                   analytics, blockchain
+                   records
+
+ Community         NLP, automated             Improved parent       Reimers et al.,
+ Communication     messaging,                 engagement;           2025, p.7
+                   multilingual tools         reduced
+                                              administrative
+                                              burden
+
+ Strategic         Analytics platforms,       Improved              DeMatthews et
+ Leadership        scenario modeling,         strategic capacity;   al., 2026, p.9; Dai
+                   adaptive planning          evidence-based        & Rawalle, 2024,
+                                              improvement           p.1472
+                                              planning
+
+ Organizational    HR recruitment,            Productivity          Stoykova &
+ (Cross-Sector)    logistics forecasting,     gains, better         Shakev, 2023,
+                   ERP/MIS automation         hiring, service       p.11; Aguado-
+                                              delivery              García et al. 2026,
+                                                                    p.9
+
+
+4.2.7.Implementation Challenges, Ethical Concerns, and Equity
+Implications
+a. Data quality, privacy, and security
+Across the literature, concerns about data quality, privacy, and security
+emerge as among the most consistently identified challenges to AI
+integration in school management. AI systems are only as good as the
+data they are trained on and operate with; in many school contexts, data
+are incomplete, inconsistently recorded, siloed across incompatible
+systems, or reflective of historical biases. Data quality limitations can
+undermine the reliability of AI-generated predictions and
+recommendations, and in some cases may generate systematically
+misleading outputs.
+
+
+
+
+                                        266
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+Privacy concerns are particularly acute in school settings, where data
+subjects are often minors, where data contain sensitive information
+about student learning needs, behavioral histories, family
+circumstances, and health status, and where the consequences of data
+misuse can be severe. Regulatory frameworks such as FERPA in the
+United States, GDPR in the European Union, and analogous legislation
+in other jurisdictions impose significant requirements on how student
+data may be collected, processed, stored, and shared. AI systems that
+process student data must comply with these frameworks, and the
+compliance burden is non-trivial, particularly for smaller schools and
+districts with limited legal and technical expertise.
+Wang (2021) documents cases in which school leaders were presented
+with AI-generated analytics that obscured, rather than revealed, the
+limitations and uncertainties in underlying data, leading to
+overconfident decision-making. This finding underscores the
+importance of what Wang calls “data literacy” and “AI literacy” for
+school leaders: the capacity to understand not just what AI systems
+output, but how those outputs are generated, what assumptions they
+embed, and where they may be unreliable.
+Principal Ethical AI Leadership (PEAIL) scholarship positions school
+leaders as socio-technical stewards whose responsibilities include
+anticipating and mitigating risks related to data privacy, algorithmic
+bias, and informed consent, as well as setting clear policies and ensuring
+compliance with legal and social standards. Within this framing, data
+protection is integral to safeguarding vulnerable students and
+reinforcing justice in AI-enabled schooling, not a purely legal or
+technical add-on (Ho, 2026). Advocacy-oriented analyses of PEAIL
+specify data privacy and security as a core domain of ethical action:
+authors argue that principals must establish robust data protection
+protocols, including anonymization and consent management, in order
+to meet legal and ethical obligations for both students and staff.
+Commentators caution against surveillance-based AI systems and call
+for greater transparency regarding algorithmic design and data
+sourcing, while also insisting that all AI tools be subject to ongoing
+ethical scrutiny and compliance checks under principal oversight (Ho,
+2026). Further practice-oriented recommendations propose
+
+
+
+                                   267
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+institutionalizing governance routines such as data-protection
+protocols, data-minimization workflows, algorithmic impact
+assessments, audit logs, and regular “ethics rounds” that review high-
+stakes uses of AI, together with explicit codification of non-delegable
+decisions and documented professional judgments when AI outputs are
+overridden (Ho, 2026).
+Evidence indicates that principals, teachers, and students encounter
+persistent challenges in data ethics and security, particularly around the
+handling of sensitive student information collected by AI systems. Such
+data remains vulnerable to misuse, and schools frequently lack robust
+mechanisms to ensure informed consent when deploying AI tools.
+Advocacy-oriented work contends that inadequate oversight and
+opaque AI processes expose school leaders to significant ethical risk
+during technology adoption, especially where monitoring practices like
+facial recognition and intensive analytics become normalized and
+threaten the ethical integrity of school environments (Ho, 2026).
+Cybersecurity analyses focused on educational settings catalogue a
+broad spectrum of technical threats that directly affect student data
+management. Documented risks include data breaches, unauthorized
+access to biometric and location data, hacking, phishing, malware,
+denial-of-service and distributed denial-of-service attacks, information
+gathering, cross-site scripting, SQL injection, and malicious PDF
+distribution. Table-based summaries further identify privacy threats in
+cloud storage and data sharing, identity theft, fraud, and unauthorized
+access in online learning, as well as unauthorized screen recording of
+course videos and exam fraud via impersonation (Parambil et al., 2024,
+p.4).
+Studies call for robust security architectures that balance efficiency with
+privacy through encrypted storage, secure authentication, and scalable
+network designs, while also warning that explainable deep neural
+network approaches for threat detection can impose additional
+computational and infrastructural burdens. Ethical use of biometric data
+in student authentication receives particular attention, with authors
+stressing the need for explicit consent, data usage transparency, and
+long-term security evaluation of blockchain or biometric systems to
+avoid inadvertent exposure or misuse (Parambil et al., 2024, p.8).
+
+
+
+                                    268
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+Synthesis of cybersecurity recommendations for managers of
+educational systems and designers of AI-driven protection tools
+underscores several actionable priorities: comprehensive training
+programs for educators, students, and staff should ensure effective and
+informed use of AI-based cybersecurity tools; robust ethical guidelines
+must respect student privacy, comply with legal frameworks, and
+provide transparent communication about AI uses in security;
+interdisciplinary collaboration between AI experts, cybersecurity
+professionals, and educators is advised to develop tailored solutions for
+education, with machine learning algorithms such as random forests
+and deep neural networks employed to improve real-time threat
+detection accuracy and reduce false positives; and advanced data-
+privacy techniques — including data anonymization, differential
+privacy, and zero-knowledge proofs — are recommended to secure
+sensitive student information while still enabling personalized learning
+experiences, with enhancements in model interpretability through
+explainable AI identified as vital for building trust and accountability
+(Parambil et al., 2024, p.9).
+In distance education contexts, comprehensive risk management plans
+are proposed to address vulnerabilities in e-learning, smart education
+infrastructures, and cloud-based education portals. Security concept
+models for distance learning emphasize coordinated assurance
+processes, user-focused measures, and organizational procedures that
+can be implemented at multiple security levels. At the same time,
+analyses of AI-related ethical challenges in schools emphasize that
+principals often lack clear frameworks to govern data-intensive AI
+tools, and may depend heavily on vendors whose priorities do not
+necessarily align with educational or ethical values. This dependence,
+combined with opaque AI decision processes, complicates
+accountability when harmful or biased outcomes emerge from student
+data processing (Ho, 2026, p.14; Parambil et al., 2024, p.7). From a
+management perspective, student data handling is thus not only a
+technical cybersecurity problem but also a domain where ethical
+leadership, informed consent, transparency, and equitable governance
+must be integrated with advanced authentication, encryption, analytics,
+
+
+
+
+                                   269
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+and monitoring technologies in order to safeguard learners while
+enabling legitimate educational uses of AI.
+b.Algorithmic bias, discrimination, and accountability
+A second cluster of challenges concerns the potential for AI systems
+used in school management to embed, perpetuate, or amplify
+discriminatory patterns. Algorithmic bias — the systematic tendency of
+AI systems to produce outputs that disadvantage particular groups —
+can arise from biased training data, from design choices that embed
+historically unequal patterns as normative, from the selection of
+variables that serve as proxies for protected characteristics, or from the
+interaction of multiple individually defensible design choices that
+combine to produce discriminatory effects.
+In school management contexts, the risk of algorithmic bias is
+particularly salient in three areas: student classification and tracking
+systems that use AI to assign students to programs or interventions; staff
+evaluation and performance management systems that use AI-
+generated metrics to assess teacher effectiveness; and predictive
+systems that identify at-risk students for targeted support. In each of
+these areas, if the AI system is trained on historical data that reflects
+discriminatory patterns — for example, if students from particular
+racial, ethnic, or socioeconomic backgrounds were historically over-
+represented in disciplinary data — the system may reproduce and
+legitimize those patterns through ostensibly objective algorithmic
+outputs.
+DeMatthews et al (2026) devote substantial attention to what they call
+“ethical and equitable AI leadership,” arguing that school leaders have
+a professional and moral responsibility to critically interrogate the
+fairness implications of any AI tool they adopt or permit to be used in
+their schools. The authors advocate for regular algorithmic audits,
+diverse and representative data governance processes, transparency
+requirements for AI vendors, and clear lines of human accountability
+for decisions made with AI assistance. They propose a six-domain
+framework — encompassing ethics, equity, operations, curriculum,
+community, and leadership development — that positions ethical
+accountability not as a constraint on AI adoption but as its essential
+foundation.
+
+
+
+                                   270
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+Analyses of AI in online and higher education security contexts
+explicitly flag “Bias, Fairness, and Equity” as a central ethical category,
+reporting that AI algorithms carry significant potential for bias and
+discrimination, with consequent risks of unequal treatment of students.
+Authors discussed within this literature describe how AI systems can
+reflect or amplify existing societal biases, thereby generating unfair
+outcomes when deployed in educational settings; these findings frame
+bias not as an abstract possibility but as a concrete mechanism through
+which algorithmic decision-making can undermine equity. Concerns
+about fairness arise alongside related demands for transparency and
+accountability: institutional responsibility in the deployment of AI
+technologies requires clearly articulated policies that specify how
+systems will be used and what impacts they may have on student
+autonomy and academic integrity, alongside transparency in AI
+decision-making processes and human oversight to correct errors or
+biases, so that students, parents, and educators can understand AI-
+driven outcomes and have channels to question or challenge them
+(Parambil et al., 2024, p.9). In this view, fairness is inseparable from
+visibility into algorithmic operations and from accountable human
+governance structures.
+PEAIL scholarship translates these fairness issues into leadership
+practice. Within the equity and inclusion outcome domain, PEAIL is
+described as ensuring that AI tools are used to promote equity rather
+than reinforce exclusion. When guided ethically, AI can improve access
+for multilingual learners, support diverse learning needs, and foster
+inclusive communication, but leaders remain responsible for
+anticipating and mitigating risks related to data privacy, algorithmic
+bias, and informed consent. Ethical leadership involves setting clear
+policies, raising awareness, and ensuring compliance with legal and
+social norms, with explicit attention to protecting vulnerable students
+and reinforcing justice in AI-enabled schooling (Ho, 2026). Broader
+management analyses of AI reinforce the idea that biased training data
+can drive discriminatory outcomes: systems can perpetuate pre-existing
+biases in their training datasets, for instance in hiring contexts where
+gender or racial prejudices embedded in historical data lead to
+discriminatory recommendations. Automation bias is highlighted as a
+particular danger — decision-makers may over-trust AI outputs
+because of their perceived objectivity, relying too heavily on
+
+
+                                    271
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+algorithmic recommendations without adequate scrutiny. This
+overreliance can yield unethical outcomes, diffuse accountability, and
+erode human oversight. To address these challenges, authors call for
+frameworks that prioritize transparency, accountability, equity, and
+privacy in AI governance, explicitly linking fairness concerns to the
+need for interpretability and clear lines of responsibility (Islami &
+Mulolli, 2024, p.5).
+Research on ethical AI leadership in education underscores that such
+stewardship operates in multi-level ecologies. PEAIL is situated within
+an outer governance environment marked by opaque technologies and
+structural inequities that can outstrip the reach of individual ethics.
+Within this setting, ethical leadership is reconceptualized as socio-
+technical stewardship that connects micro-level moral agency with
+macro-level policy and infrastructural conditions. Outcome syntheses
+show that principals who act as gatekeepers interpret AI-generated data
+critically, align AI use with school values and policy frameworks, and
+resist blind reliance on algorithms in decisions about funding, staffing,
+and resource allocation. Under these conditions, AI-supported
+efficiencies are prevented from compromising transparency or fairness,
+and equity goals such as inclusion and justice are advanced rather than
+undermined (Ho, 2026). Evidence across these strands indicates that
+addressing bias and fairness in AI requires not only technical mitigation
+of discriminatory patterns but also robust ethical leadership,
+institutional accountability, and policy mechanisms that foreground
+equity in AI design and use.
+c.Resistance, trust, and professional culture
+The literature identifies a third set of implementation challenges related
+to the human and cultural dimensions of AI adoption in schools.
+Teacher and administrator resistance to AI tools is documented in
+multiple studies, arising from concerns about job displacement,
+surveillance, deskilling, loss of professional autonomy, and distrust of
+opaque algorithmic systems. This resistance is not irrational: it reflects
+legitimate professional concerns about the implications of AI adoption
+for the nature of educational work.
+Arar (2024) argues that resistance to AI in school management is often
+a symptom of deeper organizational dynamics — cultures of distrust,
+inadequate change management, insufficient consultation with staff,
+
+
+                                   272
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+and a perceived imposition of technological change from above. Arar's
+human-machine symbiosis framework emphasizes that successful AI
+integration requires not just technical implementation but cultural and
+relational work: building shared understandings of the purposes and
+limitations of AI, creating space for critical dialogue about AI adoption,
+and ensuring that staff feel that their expertise and professional
+judgment are valued rather than threatened.
+Kafa (2025) reports that among the school leaders surveyed in Cyprus,
+willingness to use AI tools was significantly associated with prior
+positive experience with technology, institutional support structures,
+and confidence in the tool's reliability. These findings align with the
+broader technology adoption literature in suggesting that perceived
+usefulness, perceived ease of use, and trust are key determinants of AI
+tool adoption, and that all three can be enhanced through appropriate
+training, support, and communication.
+Infrastructure, digital divide, and contextual Equity
+A fourth domain of implementation challenges concerns the
+infrastructural and contextual conditions required for effective AI
+deployment in school management. AI tools require reliable digital
+infrastructure — broadband connectivity, up-to-date hardware,
+interoperable software systems, and technical support — that is
+unevenly distributed across and within educational systems globally.
+Schools in under-resourced communities, rural settings, and lower-
+income countries often lack the basic technological prerequisites for AI
+adoption, raising serious concerns about whether AI may deepen rather
+than mitigate existing educational inequities.
+Reimers and colleagues (2025) document this challenge explicitly in
+their analysis of AI and school management in the Global South. While
+acknowledging the potential for AI to address specific management
+challenges in under-resourced settings, the authors note that realizing
+this potential requires substantial prior investment in digital
+infrastructure, technical capacity, and supportive policy frameworks.
+Without these investments, AI adoption risks benefiting primarily the
+most advantaged schools and systems, widening digital and resource
+divides.
+
+
+
+
+                                   273
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+The equity implications of AI adoption in school management extend
+beyond infrastructure to include questions of representational equity in
+AI development processes. AI systems designed primarily by engineers
+in high-income, English-speaking contexts may be poorly suited to the
+administrative realities, cultural norms, regulatory environments, and
+language needs of schools in other contexts. The absence of diverse
+voices in AI design and governance is a systemic problem that requires
+deliberate corrective action through inclusive design processes,
+community consultation, and diversification of the AI development
+pipeline.
+Policy gaps and governance deficits
+The literature consistently identifies the absence of adequate policy
+frameworks for AI in school management as a significant systemic
+challenge. Despite the rapid pace of AI adoption in education, many
+school systems lack explicit policies addressing data governance,
+algorithmic accountability, AI procurement standards, staff AI literacy
+requirements, and ethical frameworks for AI use. This policy vacuum
+creates risks: schools may adopt AI tools without adequate due
+diligence, vendor interests may shape AI adoption decisions in the
+absence of public regulatory frameworks, and accountability for AI-
+related harms may be diffuse and unenforceable.
+Multiple authors call for the development of robust policy frameworks
+at national and district levels that set clear standards for AI adoption in
+schools, require transparency from AI vendors, protect student and staff
+data, establish accountability mechanisms, and ensure equitable access.
+DeMatthews et al (2026) propose that these policy frameworks be co-
+developed with school leaders, teachers, students, families, and
+community members rather than designed exclusively by technologists
+and bureaucrats, emphasizing the importance of democratic
+participation in AI governance.
+d.Policy Alignment and Interoperability with Broader Educational
+Ecosystems
+Policy alignment around AI in schooling unfolds within multi-level
+ecologies where individual principals operate inside an outer
+governance environment composed of vendor infrastructures, market
+dominance, algorithmic opacity, and cross-jurisdictional regulations.
+This external layer establishes many of the moral and procedural
+
+
+                                    274
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+boundaries within which national and regional policies, school cultures,
+and resource conditions function, so that familiar levers such as AI
+readiness, policy clarity, and local resource availability are always
+conditioned by broader corporate and regulatory structures (Ho, 2026).
+Within this setting, policy instruments such as guidelines,
+accountability mechanisms, and role definitions shape how principals
+engage with AI, influencing both their authority and their responsibility
+for AI-related decisions. Clear policy direction can legitimize ethical
+expectations, formalize standards for responsible AI use, and embed
+ethics and AI literacy into leadership development programs, thereby
+equipping principals with conceptual tools to navigate technological
+change in ways that remain sensitive to transnational governance
+debates and platform power (Ho, 2026).
+Ethical AI leadership frameworks conceptualize principals as socio-
+technical stewards rather than heroic moral managers. In this view,
+alignment between AI and policy is not a simple matter of compliance
+but involves mediating between school-level values and constraints
+imposed by vendor infrastructures, opaque algorithms, and global
+normative commitments to fairness, inclusion, and human dignity.
+Ethical challenges linked to privacy, equity, professional autonomy,
+and transparency arise at the intersection of local standards and global
+infrastructures; policies that ignore this intersection risk placing
+unrealistic burdens on individual principals without addressing
+structural drivers of bias, surveillance, or governance gaps. Leadership
+strategies therefore emphasize strengthening oversight, protecting data,
+fostering inclusion, and sustaining human-centered culture as forms of
+mediation between normative commitments and structural limitations
+(Ho, 2026, p.14). Beyond school governance, policy debates on AI
+intersect with wider educational ecosystems concerned with lifelong
+learning and workforce adaptability. Analyses of government–industry
+partnership models describe policy-driven collaboration, platform-
+based partnerships, research-driven collaboration, industry–university
+partnerships, and regional governance frameworks as mechanisms for
+coordinating technology-enabled learning and reskilling initiatives,
+relying on clearly defined roles, strategic integration of technology, and
+broad stakeholder involvement. Recent bibliometric mapping of AI
+research in management-related domains indicates that ethics, decision
+making, and governance feature prominently among author keywords,
+
+
+                                   275
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+lending empirical weight to arguments for integrated governance
+approaches, while also revealing uneven coverage across indexing
+databases that may suggest variable visibility of policy-oriented work
+(Patra et al., 2024, p.14). Technology-enabled learning solutions, such
+as large-scale online platforms, demonstrate advantages in scalability,
+flexibility, customization, and real-time updating of content, provided
+that policies coordinate curriculum development, incentives, and
+learning infrastructure in ways that sustain continuous learning
+cultures, situating AI-related policies in schooling within larger
+ecosystems of digital learning governance where cross-sectoral
+collaboration and shared platforms are central (Reimers et al., 2025).
+Interoperability in AI-intensive ecosystems depends first on the
+technical capacity of diverse applications and infrastructures to
+exchange data and services across heterogeneous hardware, software,
+and networking environments. A large-scale scientometric analysis of
+Industry 4.0 and 5.0 scholarship identifies “interoperability and system
+integration” as a distinct thematic cluster, associated with software
+applications and middleware, explicit interoperability mechanisms,
+computer architecture and hardware/software paradigms, semantic
+modeling, ontology-driven engineering, OPC UA, web services,
+closed-loop control systems, open systems and open-source software,
+asset administration shells, data issues, and IT/OT convergence and
+synchronization. This cluster structure shows that interoperability is not
+a single interface problem but a composite of middleware, semantic,
+architectural, and data-integration concerns that must be coherently
+addressed when connecting AI components with surrounding systems
+(Padovano & Cardamone, 2024, p.11). Keyword-embedding studies in
+industrial engineering employ Sentence-BERT to derive dense
+semantic representations of tens of thousands of keywords and then
+apply hierarchical clustering and t-SNE visualization, with document
+keywords functioning as elementary constituents of a “knowledge
+landscape” in which cosine similarity guides cluster formation and
+spatial proximity denotes semantic relatedness. Such methods allow
+researchers to organize semantically similar topics into high-level
+subject areas and to examine how concepts such as interoperability,
+cloud computing, edge analytics, and AI capabilities co-occur across
+publications, offering an additional layer of interoperability at the level
+of conceptual vocabularies (Padovano & Cardamone, 2024, p.12).
+
+
+                                    276
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+Platform choices for AI integration further condition interoperability
+and data governance. A systematic review of AI in management
+information systems reports that most examined applications run on
+cloud-based or on-premises platforms, with only a small number
+targeting edge devices or hybrid architectures. Edge AI combined with
+federated learning is identified as a promising direction because local
+training on edge devices, followed by aggregation of model updates
+rather than raw data, can improve privacy, security, and resilience to
+cloud outages. The same review stresses that platform selection has
+direct implications for compliance with data protection regimes such as
+GDPR, since organizations must implement appropriate technical and
+organizational measures to secure personal data generated on edge
+devices and may employ AI to automate data protection tasks and detect
+breaches in real time (Stoykova & Shakev, 2023, p.16). Automation-
+focused analyses of AI deployment in enterprise resource planning and
+business management software extend these platform considerations to
+generative models and large language models: major ERP and CRM
+vendors are described as integrating LLMs and GPT-based services into
+their suites, with debates centering on cost-effectiveness versus
+competitive advantage, the trade-offs between relying on pre-trained
+external APIs and developing proprietary models, and heightened
+concerns about data privacy, bias, and information security in sensitive
+sectors. Despite these concerns, documented use cases range from
+qualitative data analytics and customer feedback insight extraction to
+knowledge-base structuring, accessibility support, language
+preservation initiatives, and educational customer support and
+personalized learning. Across these domains, LLMs and GPTs are
+characterized as augmenting rather than replacing human intelligence
+and critical thinking, implying interoperability requirements that
+preserve human interpretive control within larger socio-technical
+systems (Stoykova & Shakev, 2023, p.13).
+Cybersecurity research in online and higher education settings adds a
+further interoperability dimension for AI-based protection layers.
+Studies catalogue threats such as cheating in online examinations,
+privacy breaches, vulnerabilities in cloud-based infrastructures, and
+administrative compliance challenges, and examine AI and traditional
+solutions including keystroke dynamics, “Deep Speaker”
+authentication, multifactor biometrics, and predictive models for threat
+detection. Findings underscore the need for integrated security
+
+
+                                   277
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+architectures that combine AI-driven anomaly detection, encryption,
+authentication, and privacy-preserving analytics so that educational
+platforms, learning management systems, and administrative tools can
+interoperate securely without undermining data confidentiality or
+ethical norms. Recommendations emphasize comprehensive training,
+robust ethical guidelines, interdisciplinary collaboration, explainable
+AI techniques, continuous monitoring, and exploration of emerging
+technologies such as graph neural networks and blockchain as
+components of a resilient, interoperable cybersecurity infrastructure for
+education (Parambil et al., 2024, p.6). At the level of policy and system
+design, a systems-thinking perspective on AI in education describes
+education as a living, adaptive, multi-goal environment where
+curriculum, teacher training, assessment, governance, finance, and
+student support interact dynamically. Introducing AI-powered tools,
+including adaptive platforms, is argued to require alignment of these
+interacting subsystems so that data flows, institutional cultures, and
+resource structures adapt in concert rather than in isolation;
+interoperability is therefore framed not only as a technical integration
+of platforms and protocols, but as the capacity of AI initiatives to
+harmonize with existing institutional goals, feedback loops, and multi-
+directional influences, avoiding external impositions disconnected from
+prevailing educational realities (Reimers et al., 2025). Practical
+evidence from dental education suggests that uptake of AI for
+assessment remains uneven: many educators report limited use, low
+confidence, and insufficient institutional support, while ethical worries
+and potential misuse remain salient — findings that suggest
+interoperability must encompass governance, training, and support
+pathways as well as technical standards, so that educational systems can
+integrate AI tools without undermining pedagogical aims (Leung et al.,
+2026, p.4).
+Table 2 Challenges and Mitigation Strategies
+ Challenge       Nature of Risk            Proposed             Key Sources
+                                           Mitigation
+
+ Data quality,   Unreliable AI outputs;    Data audits;         Wang, 2021,
+ privacy &       breach of student/staff   GDPR/FERPA           p.9; Machkour
+ security        privacy; biometric and    compliance;          & Khdar,
+                 cybersecurity threats     encrypted storage,   2025, p.9;
+                 (breaches, phishing,      secure               Parambil et al.,
+
+
+
+                                     278
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+                   malware, DoS, SQL           authentication;         2024, p.14;
+                   injection)                  anonymization,          Ho, 2026, p.15
+                                               differential privacy,
+                                               zero-knowledge
+                                               proofs; transparent
+                                               data governance and
+                                               audit logs
+
+Algorithmic        Discriminatory              Algorithmic audits;     DeMatthews
+bias               classification;             equity-centered         et al., 2026,
+                   reproduction of inequity    design; diverse data    p.12; Arar,
+                   in tracking, staff          governance;             2024, p.6;
+                   evaluation, and at-risk     interpretability and    Islami &
+                   prediction; automation      clear lines of          Mulolli, 2024,
+                   bias / over-trust in        responsibility          p.6; Parambil
+                   outputs                                             et al., 2024,
+                                                                       p.12
+
+Resistance and     Non-adoption;               Change                  Kafa (2025),
+distrust           adversarial dynamics;       management;             p.4; Arar,
+                   cultural conflict;          participatory design;   2024, p.6
+                   concerns about              AI literacy
+                   deskilling and              programs;
+                   surveillance                transparent
+                                               communication
+
+Digital divide /   Inequitable access;         Infrastructure          Reimers et al.,
+infrastructure     deepening resource gaps;    investment;             2025, p.5
+                   representational inequity   inclusive policy;
+                   in AI design                Global South
+                                               engagement;
+                                               diversified AI
+                                               development
+                                               pipeline
+
+Policy gaps &      Unregulated vendor          National AI-in-         DeMatthews
+governance         power; accountability       education policy;       et al., 2026,
+deficits           vacuum; opaque multi-       democratic              p.11; Ho,
+                   level governance            governance              2026, p.10
+                   ecologies                   frameworks; ethics
+                                               rounds and non-
+
+
+
+
+                                       279
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+                                               delegable decision
+                                               protocols
+
+ Interoperability   Fragmented platforms;      Semantic modeling      Padovano &
+ gaps               semantic/middleware        and middleware         Cardamone,
+                    mismatches; weak           standards; edge AI     2024, p.12;
+                    compliance on              with federated         Stoykova &
+                    edge/cloud architectures   learning; platform-    Shakev, 2023,
+                                               conditioned GDPR       p.7
+                                               compliance
+
+ Over-reliance      Erosion of professional    Cultivate AI           Wang, 2021,
+ on AI              judgment; deskilling;      literacy; maintain     p.9; Dai&
+                    epistemological            human oversight;       Rawolleg,
+                    overconfidence             reflective practice;   202), p.1473;
+                                               documented             Ho, 2026, p.11
+                                               override procedures
+
+
+
+
+5.The Human Dimension: Leadership, Ethics, and Human-AI
+Symbiosis
+5.1. What AI Cannot Do in Educational Leadership
+One of the most intellectually significant contributions of the recent
+literature on AI in school management is its sustained attention to the
+boundaries of AI capability in educational leadership contexts. While
+acknowledging the efficiency and decision-support benefits
+documented in the preceding sections, multiple scholars emphasize
+with considerable force that there are dimensions of school leadership
+that AI cannot replicate, and that protecting and cultivating these
+dimensions must be a central priority of any responsible AI integration
+strategy. Arar (2024) argues that the “human” in educational leadership
+encompasses at least four irreducible capacities: moral imagination —
+the ability to envision what is good and just in complex situations
+without algorithmic guidance; relational intelligence — the capacity to
+build trust, navigate conflict, and sustain authentic professional
+relationships with students, teachers, families, and communities;
+contextual wisdom — deep familiarity with the particular history,
+culture, and community that gives meaning to events and decisions in a
+
+
+                                        280
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+specific school; and creative adaptation — the ability to respond
+inventively to unprecedented situations for which no historical pattern
+exists in training data. None of these capacities is reducible to pattern
+recognition, prediction, or optimization, and all are essential to effective
+school leadership.
+Wang (2021) makes a complementary argument through the lens of
+epistemological humility, contending that school leaders who become
+overly dependent on AI-generated analytics risk losing the capacity for
+the kind of situated, holistic, and relational knowing that constitutes
+genuine expertise in educational leadership. When a principal's
+decision-making becomes dominated by what the dashboard says, the
+rich texture of professional judgment — informed by direct
+observation, relational knowledge, historical memory, and ethical
+commitment — may be gradually eroded. Wang's cautionary tale is not
+an argument against AI in schools, but a powerful case for approaching
+AI integration with deliberate attention to the preservation of
+professional wisdom.
+5.2. Frameworks for Ethical AI Leadership in Schools
+In response to both the genuine potential and the genuine risks of AI in
+school management, several scholars have proposed frameworks for
+what they variously call “ethical AI leadership,” “responsible AI
+integration,” or “human-centered AI governance” in educational
+organizations. These frameworks converge on a set of core principles
+that can guide school leaders, district administrators, and policymakers
+in navigating AI adoption responsibly.
+DeMatthews et al (2026) propose the most comprehensive framework
+to date in the educational leadership literature. Their six-domain
+framework addresses: (1) Ethics — commitment to transparency,
+accountability, and the protection of human dignity in AI decision-
+making; (2) Equity — active interrogation of whether AI tools advance
+or undermine equitable outcomes for all students; (3) Operations —
+thoughtful integration of AI into administrative and management
+workflows; (4) Curriculum — attention to the implications of AI for
+what and how students learn; (5) Community — inclusive engagement
+with families and communities in AI governance processes; and (6)
+Leadership Development — building school leaders' capacity to
+
+
+                                    281
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+navigate AI-integrated environments with wisdom, courage, and ethical
+commitment. The framework is notable for its insistence that ethics and
+equity are not add-ons to AI governance but its foundational pillars.
+Dai & Rawolle (2024) contribute a complementary framework focused
+specifically on the human-AI relationship in administrative decision-
+making. They propose a four-quadrant model distinguishing between
+types of decisions on the basis of complexity and stakes, arguing that
+the appropriate role of AI varies systematically across these quadrants.
+For routine, low-stakes decisions, AI automation is appropriate and
+beneficial; for complex, high-stakes decisions — particularly those
+involving individual students, staff members, or community
+relationships — human judgment must remain primary, with AI serving
+at most an advisory role. The framework offers practical guidance for
+school leaders navigating the question of which decisions to delegate to
+AI and which to preserve as fundamentally human responsibilities.
+A further contribution to this body of frameworks comes from work on
+Principal Ethical AI Leadership (PEAIL), which repositions school
+principals from heroic individual moral managers toward stewards of
+socio-technical systems (Ho, 2026). On this view, ethical AI leadership
+is operationalized not only through individual values but through
+concrete governance routines: institutionalized algorithmic audits,
+recurring “ethics rounds” in which AI-supported decisions affecting
+students or staff are collectively reviewed, and explicit registers of
+“non-delegable decisions” — categories of decision that must always
+retain a documented human-in-the-loop checkpoint regardless of AI
+recommendation confidence. Complementary formal tools, such as the
+Isabelle Infrastructure Framework (Kammüller & Satija, 2023, p.9),
+offer methods for representing data flows, actors, locations, and
+otherwise opaque algorithmic functions as inspectable state structures
+amenable to counterfactual analysis, thereby giving ethical AI
+leadership frameworks a concrete technical complement: governance
+principles are only as effective as the inspectability of the systems they
+govern.
+5.3. AI Literacy as a Leadership Competency
+A theme that emerges with increasing insistence across the literature is
+the importance of AI literacy as a core competency for contemporary
+
+
+                                   282
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+school leaders. AI literacy in this context does not refer to technical
+programming ability, but to the conceptual, critical, and practical
+knowledge that enables leaders to understand what AI systems do, how
+they generate their outputs, what assumptions and limitations they
+embody, how to evaluate their outputs critically, and how to make
+ethically informed decisions about AI adoption and governance.
+Sposato (2025) argues that AI literacy should be treated as a
+professional development priority for educational leaders, analogous to
+the emphasis on data literacy that became central to educational
+leadership preparation in the early twenty-first century. Just as school
+leaders are expected to be able to read and critically interpret student
+performance data, they should be expected to be able to read and
+critically interpret AI-generated analytics. This requires investment in
+both pre-service and in-service professional learning programs that
+build leaders' AI literacy in educationally relevant and practically
+grounded ways.
+Kafa's (2025) empirical findings from Cyprus suggest that AI literacy
+is not merely a nice-to-have but a determinant of whether AI tools
+actually deliver their promised benefits. Principals who lacked
+confidence in understanding and interpreting AI outputs tended either
+to over-rely on AI recommendations without critical evaluation or to
+reject AI tools entirely. Both responses are suboptimal and both reflect
+the inadequacy of professional preparation for AI-integrated leadership,
+with clear implications for educational leadership preparation
+programs, professional development providers, and school systems
+designing AI integration strategies.
+5.4.Human-AI Collaboration, Explainability, and the Symbiosis
+Phase
+Human-AI collaboration in educational leadership can be framed not as
+a simple extension of earlier, purely human-centered phases of ethical
+leadership, but as a qualitative reconfiguration of ethical practice in
+which algorithmic systems actively participate in assessment,
+prediction, and decision-making. Ho (2026) describes this
+configuration as a “Human-AI Symbiosis and Ethical Governance
+Phase” that redistributes agency between human principals and non-
+human systems within hybrid socio-technical environments. AI in
+
+
+                                   283
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+school management in this phase comprises discriminative models such
+as predictive analytics for attendance, behavior, and achievement;
+adaptive learning platforms and intelligent tutoring systems that
+automate feedback; and generative models such as large-language
+systems producing text, images, or code. Each of these architectures
+exhibits distinct profiles of transparency, traceability, and
+accountability, so collaborative governance requires differentiated
+forms of oversight rather than a single uniform policy.
+Within this framing, PEAIL operates as a cross-cutting lens connecting
+personal virtue and professional judgment with systemic accountability,
+cultural pluralism, and technological mediation. Collaboration with AI
+is not merely tool use but an ongoing negotiation in which leaders
+interpret, negotiate, and at times resist pressures created by digital
+platforms, vendor infrastructures, and regulatory structures. The
+influencing factors span individual, organizational, policy, and socio-
+cultural levels, and are bounded by an overarching governance
+environment comprising market dominance, algorithmic opacity, cross-
+jurisdictional regulation, and global normative commitments to
+fairness, inclusion, and human dignity — boundary conditions that
+shape the possibilities and constraints of human-AI collaboration in
+everyday leadership.
+Within this ecology, principals encounter recurring ethical challenges
+precisely at the points where humans and AI systems intersect: data
+privacy and surveillance, algorithmic bias, unequal access, professional
+autonomy, and transparency all arise as dilemmas in which algorithmic
+outputs and school-level values must be jointly navigated. Strategic
+responses cast human-AI collaboration as mediated through explicit
+leadership practices — strengthening human oversight, protecting data,
+fostering inclusion, sustaining human-centered school cultures,
+ensuring transparent procedures, building AI literacy and ethical
+awareness, and working to bridge digital divides, all refracted through
+ongoing negotiations with vendors and compliance regimes. When such
+strategies are enacted, AI-supported decision processes become
+genuinely collaborative in the sense that human actors retain
+interpretive authority and relational commitments while leveraging
+algorithmic capabilities.
+
+
+
+                                   284
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+The outcomes associated with ethically managed human-AI
+collaboration point toward potential gains in personalization,
+professional collaboration, and inclusive school cultures: when human
+oversight and value mediation are maintained, AI can enhance
+personalized learning and foster new forms of professional cooperation
+without displacing empathy, trust, and moral judgment as core
+leadership qualities. Reviews of this emerging collaborative order are
+careful to note, however, that it remains conceptually vigorous but
+empirically preliminary. The broader framework of socio-technical
+stewardship — oversight practices, human-in-the-loop decision-
+making, value mediation, and formal inspectability tools such as the
+Isabelle Infrastructure Framework — is informed by theory and guided
+by evidence rather than fully validated, and further in-situ and
+longitudinal studies are required to clarify how socio-technical
+stewardship can reliably convert ethical intent into sustainable, equity-
+oriented practice in AI-mediated schooling.
+
+6.Discussion
+
+6.1. Implications for Policy, Practice, Research, and Governance
+6.1.1.Implications for Educational Policy
+The evidence synthesized in this review has substantial implications for
+educational policy at system, national, and international levels. Perhaps
+most urgently, the review underscores the need for coherent,
+comprehensive, and democratically legitimate policy frameworks for
+AI in school management. The current situation — characterized by
+rapid, largely uncoordinated AI adoption driven primarily by vendor
+marketing in the absence of robust regulatory oversight — creates
+unacceptable risks for students, staff, and communities.
+Policy frameworks for AI in school management should, at minimum,
+establish: clear requirements for transparency and explainability in AI
+systems used in educational settings; robust data protection and privacy
+standards that exceed minimum legal requirements and specifically
+address the vulnerabilities of students as data subjects; mandatory
+ethical impact assessments for AI procurement decisions; requirements
+for staff AI literacy training as a condition of AI adoption; community
+
+
+
+                                   285
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+engagement processes that give families and community members
+meaningful voice in AI governance; and regular independent auditing
+of AI systems for bias, accuracy, and equity effects.
+Beyond these minimum standards, this review suggests that policy
+frameworks should actively invest in equity-centered AI development
+and deployment, ensuring that the potential benefits of AI in school
+management are accessible to under-resourced schools and
+communities rather than concentrated in privileged settings. This
+requires targeted infrastructure investment, subsidized access to AI
+tools for under-resourced schools, capacity-building programs for
+educators and administrators in lower-income contexts, and active
+engagement with the Global South in the co-design of AI tools for
+school management.
+6.1.2.Implications for Practice
+For school leaders, the review's most important practical implication is
+the importance of approaching AI adoption with active rather than
+passive engagement. Passive AI adoption — accepting vendor offerings
+uncritically, allowing AI systems to automate decisions without
+adequate oversight, or treating AI outputs as authoritative — carries
+significant risks of the kinds documented throughout this review.
+Active AI adoption, by contrast, involves: critical evaluation of AI tools
+before procurement; co-design of implementation processes with staff,
+students, and families; deliberate cultivation of AI literacy within the
+school community; regular critical review of AI-generated outputs
+against independent evidence and professional judgment; clear
+institutional protocols for human oversight of AI-assisted decisions;
+and ongoing reflection on the ethical and equity implications of AI
+adoption decisions.
+School leaders should also resist the temptation to define AI integration
+success primarily in terms of efficiency gains. While efficiency is a
+legitimate and valuable benefit, the purpose of school management is
+ultimately not efficiency for its own sake but the creation of conditions
+in which all students can learn, grow, and flourish. AI tools that enhance
+efficiency while undermining equity, trust, or professional culture are
+not successful integrations, regardless of their efficiency metrics.
+Leaders should evaluate AI adoption in terms of its contribution to the
+
+
+                                   286
+
+      Artificial Intelligence in School Management. A Systematic Review
+                                 Mariana Dogaru
+
+school's core educational mission, assessed holistically and in dialogue
+with all stakeholders.
+6.1.3.Implications for Research
+The research agenda implied by this review is substantial. The field is
+still at an early stage of empirical development: many of the studies
+reviewed are theoretical or framework-oriented, empirical studies are
+often small-scale, context-specific, and cross-sectional, and the
+evidence base for specific claims about AI benefits in school
+management is frequently thinner than the enthusiasm of the broader
+discourse suggests. A more robust evidence base requires: longitudinal
+studies that track the effects of AI integration in school management
+over time; large-scale comparative studies across diverse national and
+contextual settings; randomized or quasi-experimental designs where
+feasible; mixed-methods approaches that combine quantitative outcome
+measures with rich qualitative understanding of implementation
+processes and stakeholder experiences; systematic attention to equity
+and distributional effects; and collaborative research designs that
+involve school leaders, teachers, students, families, and communities as
+active research partners rather than passive subjects.
+The three hypotheses formulated in Section 9 of this review provide a
+starting point for this research agenda, but they represent only a fraction
+of the empirical questions that remain unanswered. Particularly urgent
+are questions about the long-term effects of AI adoption on the
+professional identity and judgment of school leaders; the conditions
+under which AI tools enhance versus undermine equity in school
+management; the mechanisms through which AI literacy affects the
+quality of human-AI collaboration in school settings; and the
+governance structures that are most effective in ensuring that AI
+integration in schools serves democratic and educational values rather
+than commercial interests.
+6.1.4.Priority actions for Governance and Capacity Building
+Converging the technical, ethical, and policy strands of this review into
+actionable guidance, five priority actions emerge as a roadmap for
+shifting AI use in school management from ad-hoc efficiency gains
+toward accountable, educationally aligned practice.
+
+
+                                    287
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+   • Institutionalize governance routines — embed algorithmic audits,
+       recurring ethics rounds, and documented human-in-the-loop
+       decision points into procurement and day-to-day administrative
+       practice.
+   • Invest in workforce capacity — provide sustained professional
+       learning and budgeted technical support so that principals,
+       teachers, and IT staff can interpret, challenge, and override
+       system outputs when necessary.
+   • Condition vendor relationships on transparency — require data
+      portability, audit access, and algorithmic impact assessments
+      before deployment of AI tools in high-stakes domains.
+   • Adopt technical mitigations where appropriate — federated
+      training, differential privacy, and explainable-model toolchains,
+      balancing computational costs against usability and equity of
+      access.
+   • Expand theoretical and empirical work — integrate learning
+      science, human-AI collaboration theory, and equity-focused
+      frameworks (including critical and intersectional perspectives)
+      so that the design and evaluation of AI tools center both
+      cognitive mechanisms and socio-political impacts.
+Progress on these priorities depends on interdisciplinary collaboration
+among educators, technologists, ethicists, and policymakers, and on
+empirical programs that trace how leadership choices shape classroom
+practice and student outcomes over time. When governance, technical
+safeguards, and capacity investments are aligned, AI can support
+administrative relief and richer forms of learner support while
+respecting privacy, inclusion, and professional judgment.
+
+
+Conclusions
+This expanded systematic review has synthesized the current evidence
+on artificial intelligence applications in school management and
+organizational support processes, drawing together a systematic
+PRISMA-based review, explainability- and ethics-focused literature,
+and bibliometric and organizational-management scholarship. The
+
+
+
+                                   288
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+picture that emerges is one of genuine and significant potential,
+substantial and serious risk, and a field at an early but consequential
+stage of development.
+The potential is real. AI tools can reduce administrative burden on
+school leaders in ways that free time and cognitive resources for the
+relational and instructional dimensions of leadership that matter most
+for educational quality. AI analytics can surface patterns in complex
+educational data that support more evidence-informed, equitable, and
+responsive decision-making. AI-powered operational tools can
+optimize scheduling, resource allocation, financial and human-resource
+management, attendance monitoring, and community communication
+in ways that improve school functioning. Predictive and generative
+technologies promise administrative efficiencies and new modes of
+personalization. These benefits are not hypothetical; they are
+documented across multiple national contexts, organizational functions,
+and study types.
+The risks are equally real. Algorithmic bias can reproduce and
+legitimize discriminatory patterns. Data privacy and cybersecurity
+breaches can harm vulnerable students and families. Over-reliance on
+AI can erode the professional judgment, relational intelligence, and
+contextual wisdom that are the irreducible core of educational
+leadership. Digital divides and interoperability gaps can concentrate AI
+benefits in already-privileged settings. Policy vacuums can allow
+vendor lock-in and commercial interests to shape AI adoption in
+schools without adequate democratic accountability. Across all of these
+domains, three persistent tensions recur: the trade-off between
+predictive performance and transparency, the distribution of authority
+between automated systems and human decision-makers, and the
+ethical stewardship of sensitive student data.
+The resolution of this tension — between potential and risk — is not a
+technical but a human and political project. It requires educational
+leaders who approach AI with critical literacy, ethical commitment, and
+democratic accountability — leaders who, in the language of Principal
+Ethical AI Leadership, act as socio-technical stewards aligning
+operational uses of AI with professional norms, equity commitments,
+and legal obligations. It requires policymakers who design governance
+
+
+
+                                   289
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+frameworks that protect students and communities while enabling
+responsible innovation, and who condition vendor relationships on
+transparency, data portability, and audit access. It requires researchers
+who generate the rigorous, equity-centered evidence base that
+responsible AI integration in schools demands, moving beyond
+technology-acceptance studies toward designs that trace leadership
+decisions to classroom practices, student learning, and equity outcomes.
+And it requires the voices of students, teachers, families, and
+communities to be genuinely heard in decisions about how AI is
+adopted, governed, and evaluated in educational organizations.
+The central argument of this review is that AI in school management is
+neither a solution nor a threat, but a set of tools whose effects depend
+entirely on the wisdom, values, and intentions of the humans who
+deploy them. Its value lies in augmenting, not replacing, wise human
+leadership committed to educational justice. Educational leaders who
+engage with AI thoughtfully, critically, and with an unwavering
+commitment to educational justice have genuine reason for optimism.
+Those who adopt AI passively, uncritically, or primarily in service of
+efficiency have reason for serious concern. The difference lies not in
+the technology, but in the quality of human leadership that surrounds it.
+This review calls for continued, rigorous, and equity-centered research;
+for robust and democratically legitimate policy frameworks; for
+governance routines that embed algorithmic audits and ethics rounds
+into everyday practice; and for a profession-wide commitment to
+developing the AI literacy, ethical reasoning capacity, and reflective
+practice that responsible AI integration in school management
+demands. The future of AI in schools will be made, not given — and it
+will be made by the choices that educators, leaders, researchers, and
+communities make now.
+References
+
+Aguado-García, J.-M., Alonso-Muñoz, S., & De-Pablos-Heredero, C.
+      (2026). The implementation of artificial intelligence in
+      organizations by functional areas: A review and conceptual
+      model. Journal of Management & Organization.
+      https://doi.org/10.1017/jmo.2026.10091
+
+
+
+                                   290
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+Aguinis, H., Beltran, J. R., & Cope, A. (2024). How to use generative
+       AI as a human resource management assistant. Organizational
+       Dynamics, 53(1).
+       https://doi.org/10.1016/j.orgdyn.2024.101029
+Ahmad, S. F., Alam, M. M., Rahmat, Mohd. K., Mubarik, M. S., &
+       Hyder, S. I. (2022). Academic and administrative role of
+       artificial intelligence in education. Sustainability, 14(3).
+       https://doi.org/10.3390/su14031101
+Arar, K. (2024). Human-machine symbiosis in educational leadership.
+       Educational Management Administration & Leadership.
+       https://doi.org/10.1177/17411432241292295
+Arashpour, M. (2023). AI explainability framework for environmental
+       management research. Journal of Environmental Management,
+       342. https://doi.org/10.1016/j.jenvman.2023.118149
+Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology.
+        Qualitative Research in Psychology, 3(2), 77–101.
+        https://doi.org/10.1191/1478088706qp063oa
+Dai, R., Thomas, M.K.E. & Rawolle, S. The roles of AI and educational
+        leaders in AI-assisted administrative decision-making: a
+        proposed framework for symbiotic collaboration. Aust. Educ.
+        Res. 52, 1471–1487 (2025).
+        https://doi.org/10.1007/s13384-         024-00771-8
+DeMatthews, D., Reyes, P., Hart, T. D., & James, L. (2026). Leadership
+        for artificial intelligence use in schools: A six-domain
+        framework for ethical, equitable, and effective integration.
+        Educational Management Administration & Leadership.
+        https://doi.org/10.1177/17411432261418940
+Feng, T., & Li, Q. (2024). Artificial intelligence in education
+        management: Opportunities, challenges, and solutions.
+        Frontiers in Business, Economics and Management, 16(3).
+        https://doi.org/10.54097/raxsbp45
+Fettke, P., & Di Francescomarino, C. (2025). Business process
+        management and artificial intelligence. KI - Künstliche
+        Intelligenz, 39(2). https://doi.org/10.1007/s13218-025-00891-y
+Ho, C. S. M. (2026). Principals' ethical leadership in the AI era: A
+        narrative literature review of emerging challenges, strategies,
+
+
+                                   291
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+       and      outcomes.     Computers    &     Education,              243.
+       https://doi.org/10.1016/j.compedu.2025.105517
+Huang, R., Yin, Y., Zhou, N., & Lang, F. (2026). Artificial intelligence
+        in k-12 education: An umbrella review. Computers and
+        Education:            Artificial        Intelligence,         10.
+        https://doi.org/10.1016/j.caeai.2025.100519
+Islami, X., & Mulolli, E. (2024). Human-artificial intelligence in
+        management functions: A synergistic symbiosis relationship.
+        Applied Artificial Intelligence, 38(1).
+        https://doi.org/10.1080/08839514.2024.2439615
+Kafa, A. (2025). Exploring school leaders' perceptions of using an
+        artificial intelligence tool for management tasks: Empirical
+        evidence from Cyprus. Management in Education.
+        https://doi.org/10.1177/08920206251394137
+Kammüller, F., & Satija, D. (2023). Explanation of student attendance
+        AI prediction with the Isabelle Infrastructure Framework.
+        Information, 14(8). https://doi.org/10.3390/info14080453
+Leung, A., Fine, P., Tonni, I., & Louca, C. (2026). Artificial
+        intelligence: A modern tool for assessing dental students?
+        Journal of Dentistry, 165.
+        https://doi.org/10.1016/j.jdent.2025.106273
+Lim, W. M., Gunasekara, A., Pallant, J. L., Pallant, J. I., & Pechenkina,
+        E. (2023). Generative AI and the future of education: Ragnarök
+        or reformation? A paradoxical perspective from management
+        educators. The International Journal of Management Education,
+        21(2). https://doi.org/10.1016/j.ijme.2023.100790
+Liu, P., Lai, Y., & Liu, D. (2024). Artificial intelligence research in
+        organizations: A bibliometric approach. Cogent Business &
+        Management,                                                11(1).
+        https://doi.org/10.1080/23311975.2024.2408439
+Machkour, B., & Khdar, L. (2025). The rise of artificial intelligence in
+        educational management. Procedia Computer Science.
+        https://doi.org/10.1016/j.procs.2025.9020
+Moher, D., Liberati, A., Tetzlaff, J., Altman, D. G., & PRISMA Group.
+        (2009). Preferred reporting items for systematic reviews and
+
+
+
+                                   292
+
+     Artificial Intelligence in School Management. A Systematic Review
+                                Mariana Dogaru
+
+       meta-analyses: The PRISMA statement. PLOS Medicine, 6(7),
+       e1000097. https://doi.org/10.1371/journal.pmed.1000097
+Padovano, A., & Cardamone, M. (2024). Towards human-AI
+       collaboration in the competency-based curriculum development
+       process: The case of industrial engineering and management
+       education. Computers and Education: Artificial Intelligence, 7.
+       https://doi.org/10.1016/j.caeai.2024.100256
+Parambil, M. M. A., Rustamov, J., Ahmed, S. G., Rustamov, Z., Awad,
+       A. I., Zaki, N., & Alnajjar, F. (2024). Integrating AI-based and
+       conventional cybersecurity measures into online higher
+       education settings: Challenges, opportunities, and prospects.
+       Computers and Education: Artificial Intelligence, 7.
+       https://doi.org/10.1016/j.caeai.2024.100327
+Patra, A. K., Praharaj, A., Sudarshan, D., & Chhatoi, B. P. (2024). AI
+       and business management: Tracking future research agenda
+       through bibliometric network analysis. Heliyon, 10(1).
+       https://doi.org/10.1016/j.heliyon.2023.e23902
+Reimers, F., Azim, Z., Palomo, M.-R., & Thony, C. (2025). AI and
+       school organization and management. In F. Reimers (Ed.),
+       Artificial intelligence and education in the Global South (pp.
+       117–133). Springer.
+       https://doi.org/10.1007/978-3-032-11449- 5_7
+Sposato, M. (2025). Artificial intelligence in educational leadership: A
+       comprehensive taxonomy and future directions. International J
+       ournal of Educational Technology in Higher Education, 22(20).
+       https://doi.org/10.1186/s41239-025-00517-1
+Stoykova, S., & Shakev, N. (2023). Artificial intelligence for
+      management information systems: Opportunities, challenges,
+      and future directions. Algorithms, 16(8).
+      https://doi.org/10.3390/a16080357
+Wang, Y. (2021). When artificial intelligence meets educational
+      leaders' data-informed decision-making: A cautionary tale.
+      Studies     in    Educational     Evaluation,     69,    100872.
+      https://doi.org/10.1016/j.stueduc.2020.100872
+
+
+
+
+                                   293

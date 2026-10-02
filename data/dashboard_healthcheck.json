@@ -1,25 +1,25 @@
 {
-  "generated_at_utc": "2026-08-30T03:46:02.902261+00:00",
+  "generated_at_utc": "2026-10-02T21:06:27.151703+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 6747082
+    "size_bytes": 11229425
   },
   "article_table": {
     "path": "docs/articulos.html",
     "exists": true,
-    "size_bytes": 7180572
+    "size_bytes": 12469587
   },
   "records": {
-    "master_high_relevance": 2087,
-    "review": 95,
-    "rejected": 1968
+    "master_high_relevance": 3513,
+    "review": 69,
+    "rejected": 2152
   },
   "stm_inputs_outputs": {
     "corpus": {
-      "path": "data/corpus.csv",
+      "path": "data/corpus.csv.gz",
       "exists": true,
-      "size_bytes": 102969493
+      "size_bytes": 34653777
     },
     "tabla_topicos": {
       "path": "output/tabla_topicos.csv",
@@ -43,5 +43,5 @@
     }
   },
   "stm_status": "ok",
-  "note": "El workflow operativo genera docs/index.html desde data/master_records.csv. El STM requiere data/corpus.csv y salida R en output/. Si esos archivos faltan, el dashboard de tres columnas funciona, pero la capa STM no queda actualizada."
+  "note": "El workflow operativo genera docs/index.html desde data/master_records.csv. El STM requiere data/corpus.csv.gz y salida R en output/. Si esos archivos faltan, el dashboard de tres columnas funciona, pero la capa STM no queda actualizada."
 }

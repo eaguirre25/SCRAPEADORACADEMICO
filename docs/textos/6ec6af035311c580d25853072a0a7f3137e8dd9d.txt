@@ -1,0 +1,1092 @@
+archivos analíticos de
+políticas educativas
+Revista académica evaluada por pares,
+independiente, de acceso abierto y multilingüe
+
+
+
+
+                                                                                     Arizona State University
+
+             Volumen 30 Número 167         15 de noviembre 2022            ISSN 1068-2341
+
+
+   El Profesorado y los Enfoques Innovadores en Centros de
+               Educación Secundaria en España
+                                       Soledad García-Gómez
+                                                 &
+                                          Javier Gil Flores
+                                       Universidad de Sevilla
+                                                 España
+
+Citación: García-Gómez, S., & Gil Flores, J. (2022). El profesorado y los enfoques innovadores
+en centros de educación secundaria en España. Archivos Analíticos de Políticas Educativas, 30(167).
+https://doi.org/10.14507/epaa.30.7419
+
+Resumen: Los enfoques de enseñanza innovadores aún son minoritarios en las aulas españolas
+de educación secundaria. Exploramos qué características del profesorado y de los centros donde
+estos enseñan se asocian al uso de enfoques innovadores. Utilizamos datos procedentes de los
+cuestionarios respondidos por 4574 profesores españoles participantes en el último estudio
+TALIS (Teaching and Learning International Study) y por los directores de sus centros. Mediante
+modelos lineales jerárquicos, identificamos variables vinculadas al profesorado y a los centros
+que contribuyen significativamente a explicar el uso de enfoques innovadores. Los resultados
+indican mayor relevancia del profesorado que de los centros en los que trabajan. El uso de
+enfoques innovadores se asocia a la autoeficacia percibida por el profesor, la claridad en la
+planificación de su enseñanza, la colaboración con otros docentes, la responsabilidad social
+como motivación para ser profesor y la participación en actividades de desarrollo profesional.
+Decrece su presencia a medida que se incrementan los años de experiencia, siendo más habitual
+en los centros con una mayor autonomía curricular. De estos resultados derivamos implicaciones
+para las políticas educativas, señalando vías que podrían favorecer la presencia sostenida de
+enfoques innovadores de enseñanza en la etapa de educación secundaria obligatoria.
+
+Página web: http://epaa.asu.edu/ojs/                                          Artículo recibido: 27-1-2022
+Facebook: /EPAAA                                                             Revisiones recibidas: 1-6-2022
+Twitter: @epaa_aape                                                                   Aceptado: 15-6-2022
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                   2
+
+
+Palabras clave: educación secundaria; profesorado; centro educativo; innovación; metodología
+
+Teachers and innovative approaches in Spanish secondary education schools
+Abstract: Innovative teaching approaches are not usual in Spanish secondary schools. We
+explored which characteristics of teachers and the schools where they teach are associated with
+the use of innovative approaches. We used data from the questionnaires answered by 4574
+Spanish teachers in the latest edition of TALIS (Teaching and Learning International Study) and
+by the head teachers of their schools. Using hierarchical linear models, we identified variables at
+the teachers level and at the school one that contribute significantly to explain the use of
+innovative approaches. The results indicate that teachers are more relevant than the institutions
+where they teach. The use of innovative approaches is associated with teacher-perceived self-
+efficacy, clarity in teaching planning, collaboration with other teachers, social responsibility as a
+motivation to become a teacher, and involvement in professional development activities. Their
+presence decrease as the years of experience increase, and it is more common in schools with
+curricular autonomy. These results suggest implications for education policies, pointing out ways
+that may favor the sustained presence of teaching innovative approaches in compulsory
+secondary education.
+Key words: secondary education; teachers; schools; innovation; methodology
+
+Professores e abordagens inovadoras em escolas secundárias na Espanha
+Resumo: As abordagens pedagógicas inovadoras são ainda uma minoria nas salas de aula
+secundárias espanholas. Exploramos quais as características dos professores e das escolas onde
+ensinam que estão associadas à utilização de abordagens inovadoras. Utilizámos dados de
+questionários preenchidos por 4574 professores espanhóis que participaram no último TALIS
+(Teaching and Learning International Study) e pelos seus directores escolares. Utilizando modelos
+hierárquicos lineares, identificamos variáveis a nível de professores e a nível escolar que
+contribuem significativamente para explicar o uso de abordagens inovadoras. Os resultados
+indicam uma maior relevância dos professores do que das escolas em que trabalham. O uso de
+abordagens inovadoras está associado à percepção de auto-eficácia dos professores, clareza no
+planeamento do seu ensino, colaboração com outros professores, responsabilidade social como
+motivação para ser professor e participação em actividades de desenvolvimento.Sua presença
+diminui à medida que os anos de experiência aumentam, sendo mais comum em centros com
+maior autonomia curricular. Destes resultados extraímos implicações para as políticas educativas,
+apontando caminhos que possam favorecer a presença sustentada de abordagens pedagógicas
+inovadoras na fase do ensino secundário obrigatório.
+Palavras-chave: educação secundária; professor; escola; inovação; metodología
+
+
+       El Profesorado y los Enfoques Innovadores en Centros de Educación
+                              Secundaria en España
+        El logro de los fines académicos fijados por las políticas educativas de cada país depende en
+gran medida, aunque no de forma exclusiva, del trabajo que se desarrolla en los centros y, en
+particular, de las actuaciones del profesorado (Stronge et al., 2011). Por ello, los docentes se erigen
+como una pieza clave del sistema educativo. Las complejas coordenadas en las que desempeñan la
+profesión en la actualidad demandan que sean profesores resilientes (Day y Gu, 2015). En particular,
+en educación secundaria obligatoria, se espera que el profesorado promueva aprendizajes relevantes
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España        3
+
+
+y significativos en los adolescentes, al tiempo que maneje con éxito fenómenos tan complicados
+como las conductas disruptivas, el acoso escolar entre iguales, la desafección académica, el
+absentismo, el fracaso y el abandono escolar temprano, etc. (Fernández-Enguita et al., 2010; Van
+Praag et al., 2018). Esta labor no es fácil, máxime si se sigue enfocando la docencia desde premisas
+pedagógicas a todas luces desfasadas.
+         El enfoque transmisivo de enseñanza es aún predominante en muchas aulas, situadas en las
+antípodas de los enfoques activos e investigativos (García-Gómez, 2011). Según Rodríguez-García y
+Arias-Gago (2022) los centros de educación secundaria se caracterizan, aún hoy, por experimentar
+una gran presión sobre los contenidos, que prima la transmisión de conocimientos y,
+consecuentemente, la valoración del rendimiento académico como única medida de éxito entre el
+alumnado. Sin embargo, es destacable que en este contexto se vienen gestando y desarrollando
+innovaciones didácticas que, en algunos casos, no van más allá de quebrar ligeramente la rigidez del
+enfoque transmisivo más tradicional. Estas hacen guiños a otras formas de organizar los contenidos,
+al uso de recursos didácticos distintos al libro de texto, a una mayor variedad de actividades y/o a
+permitir otras formas de comunicación y relación entre el alumnado (Aramendi et al., 2018;
+Serdyukov, 2017).
+         Teniendo en cuenta la situación descrita, en este trabajo nos hemos planteado conocer y
+analizar las prácticas docentes innovadoras que se llevan a cabo en las aulas de educación secundaria
+en España. Para ello realizamos un análisis secundario sobre datos obtenidos en la edición de 2018
+del Teaching and Learning International Study (TALIS), ya que la literatura nos muestra que es una
+fuente de datos relevante para analizar la innovación escolar que se desarrolla en los centros
+educativos (Kasalak y Dagyar, 2020; Kaya, 2021; Ridge y Lavigne, 2020; Tang, 2021).
+         En particular, hemos formulado los siguientes objetivos: a) describir la frecuencia con que se
+utilizan por parte del profesorado determinadas actuaciones propias de enfoques de enseñanza
+innovadores, y b) identificar rasgos del profesorado y de los centros donde trabajan que se asocian al
+uso de metodologías innovadoras en las aulas. Con ello estaríamos visibilizando facilitadores de la
+innovación pedagógica, los cuales deberían ser considerados en las propuestas que aspiran a superar
+los enfoques tradicionales de enseñanza.
+
+                                                Marco Conceptual
+        Desde hace varias décadas existe un amplio consenso, al menos a nivel académico, sobre la
+necesidad de superar los denominados enfoques tradicionales de enseñanza. Como ya hemos
+avanzado, estos se han caracterizado por el protagonismo conferido al profesorado, que dirige el
+proceso de enseñanza, en contraposición con el papel pasivo atribuido a los estudiantes. Elementos
+adicionales propios de estos enfoques son, entre otros, el empleo de la lección magistral, la
+importancia de los contenidos plasmados en los libros de texto, el valor de la memorización, las
+tareas convergentes y repetitivas, o el predominio de la función sumativa de la evaluación (Lupión y
+Gallego, 2017).
+        Frente a estos planteamientos han surgido otros enfoques denominados alternativos o
+innovadores (Pozuelos y García, 2020; Trujillo et al., 2020), que van calando en el corpus legislativo
+promulgado por la administración educativa española (Coll y Martín, 2021; Luengo et al., 2021).
+Carbonell (2016), tras analizar las que denomina “pedagogías del siglo XXI”, sintetiza sus puntos
+comunes:
+        todas ellas se ocupan y preocupan por mejorar las relaciones educativas y lograr un
+        entorno escolar más amable; por fomentar una mayor cooperación, participación y
+        democratización de la gestión diaria de la escuela; por estimular el protagonismo del
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                 4
+
+
+         alumnado y su curiosidad por el conocimiento; por convertir el aula en un espacio de
+         investigación y conversación... (p. 15)
+
+Llevar estos planteamientos a los centros educativos y a las aulas demanda configurar los centros
+como instituciones que aprenden (Gil et al., 2018), y revisar la propia profesión docente (Montero y
+Gewerc, 2018). Como defiende Perrenoud (2019), es necesaria otra forma de ejercer la profesión
+docente que pasa por una nueva organización del trabajo, tanto en las aulas como en los centros. En
+la actualidad, aunque no constituyan un grupo mayoritario, hay docentes que desarrollan una
+enseñanza innovadora en sus aulas. Se han alejado de un perfil profesional circunscrito a la
+transmisión de conocimientos, y trabajan en pro de procesos de enseñanza-aprendizaje, en los que el
+alumnado desempeña un rol activo con un mayor protagonismo (Abellán y Herrada, 2016;
+Domènech-Casal et al., 2019). En muchos casos fundamentan su práctica en los enfoques
+constructivistas que favorecen la investigación escolar, al tiempo que potencian el trabajo autónomo
+del alumno y su responsabilidad sobre el aprendizaje, así como la cooperación entre iguales
+(Carretero, 2021). Y, en los últimos tiempos, con la presencia inexcusable de las tecnologías de la
+información y la comunicación (Prendes y Cerdán, 2021).
+         Además, hay que ser conscientes de que no sólo está cambiando el perfil de los docentes,
+también los jóvenes están asumiendo el rol de estudiante desde otras premisas. Los alumnos
+reclaman su lugar, exigen un papel activo, quieren intervenir en los procesos, participar. Son muy
+conscientes de la importancia del clima de aula para sus aprendizajes, que se ven favorecidos cuando
+el ambiente les genera bienestar (Kutsyuruba et al., 2015).
+         Las relaciones entre docentes y alumnado también precisan cambios; se hace necesaria una
+mayor comunicación, cercanía y confianza. Gorard y See (2011) identificaron demandas de
+alumnado de educación secundaria en relación a las clases. Entre ellas destacan unas buenas
+relaciones con compañeros y con profesores, además de diversidad de actividades, tareas prácticas,
+salidas del centro y debates. Reclamaban también respeto y autonomía en sus propios procesos de
+aprendizaje, anhelaban sentir gusto por aprender y satisfacción con las propias clases.
+         Ante este panorama, hay docentes plenamente conscientes de que son piezas clave en la
+formación del alumnado, que este precisa apoyo emocional, ayudas para el aprendizaje, que necesita
+orden y claridad en las clases, así como actividades adaptadas a sus necesidades, intereses y contextos
+(Praetorius et al., 2018). La conexión de los contenidos con los intereses del alumnado y con las
+situaciones de la vida real es otra apuesta fundamental (Gimeno, 2016). Para alcanzar el codiciado
+logro de los aprendizajes significativos y con sentido, se defiende el proporcionar retroalimentación
+a los estudiantes, enseñándoles estrategias de autorregulación (Hattie y Clarke, 2020). Para
+desarrollar estas actuaciones el profesorado precisa una oferta formativa y actuaciones que le
+permitan consolidar su propio proceso de desarrollo profesional (Hernández et al., 2020).
+         Los rasgos de un enfoque alternativo genérico de enseñanza, tan brevemente expuestos,
+tienen muchos puntos en común con los presupuestos del aprendizaje basado en proyectos
+(Kokotsaki et al., 2016). Según Real et al. (2020), este enfoque es el más frecuente en los centros
+educativos que se declaran innovadores. Sin embargo, se constata que, aunque en los últimos años se
+vaya avanzando en esta dirección, la implementación de las premisas de estos enfoques alternativos
+no está aún muy extendida. Algunas claves para poder consolidar las tentativas innovadoras en los
+centros educativos son: apoyarse en la normativa vigente, procurar una plantilla docente estable,
+formar y acompañar al profesorado, así como dar a conocer la propuesta innovadora al alumnado y
+a sus familias (García-Gómez y Salas, 2021).
+         El reto para los centros educativos es obvio, ya que cuando no dan una respuesta adecuada a
+las nuevas necesidades y demandas, un porcentaje demasiado elevado de jóvenes acaba fracasando a
+nivel académico y mostrando conductas disruptivas y/o absentistas (Vázquez, 2018). El propio
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España        5
+
+
+currículum que se ofrece es un elemento que favorece el desenganche del alumnado. González y
+Bernárdez (2019) critican que los contenidos tengan escasa relevancia, sean rígidos, excesivos y se
+presenten de forma fragmentada. También alertan de la gran desconexión que se da entre el
+currículo ofertado en el centro escolar y los intereses y capacidades de los estudiantes, quienes no
+consiguen establecer vínculos estrechos entre lo que hacen en el aula y sus realidades cotidianas.
+         Ante esta tesitura, los centros educativos han de comprometerse, deben ser generadores de
+oportunidades de desarrollo y aprendizajes relevantes, puesto que ejercen un rol crucial para asegurar
+el éxito escolar de los estudiantes (Tarabini et al., 2015). El papel de los equipos directivos es
+fundamental y pasa por procurar el ejercicio de un liderazgo más pedagógico que administrativo
+(Rittaco y Amores, 2018). También la administración educativa debe legislar medidas y mecanismos
+que apoyen las experiencias innovadoras como, por ejemplo: selección del profesorado,
+consolidación de plantillas, disminución de la interinidad, más recursos humanos, planes de
+evaluación y seguimiento, de acogida y apoyo, planes de formación, etc. (Consejo Escolar del
+Estado, 2015). Ya que, como plantean Prats et al. (2019), “el profesorado está prácticamente solo en
+esta ingente tarea y, en el mejor de los casos, trabajando junto con un equipo docente y ayudado por
+profesionales externos a la escuela con pocos o nulos incentivos. Con honrosas excepciones, las
+Administraciones educativas suelen estar ausentes de estos procesos de cambio” (p. 213).
+
+                                                         Método
+         Metodológicamente, el trabajo desarrollado constituye un análisis secundario a partir de los
+datos disponibles para la última edición de TALIS, desarrollado por la Organización para la
+Cooperación y el Desarrollo Económicos (OCDE) en 20181. Concretamente, hemos trabajado con
+el profesorado español participante de nivel ISCED-2 de la International Standard Classification of
+Education, que corresponde a la educación secundaria obligatoria en el sistema educativo español
+(alumnado de 12 a 16 años). Este profesorado asciende a 7407 docentes de 399 centros, elegidos
+mediante muestreo estratificado por titularidad del centro y regiones. A partir de este colectivo
+hemos seleccionado a docentes que imparten las materias de lengua castellana y literatura,
+matemáticas, ciencias naturales, ciencias sociales e idiomas, quienes han informado sobre la
+frecuencia con que desarrollan en sus aulas determinadas actuaciones docentes. Para ello, se ha
+depurado el archivo de datos seleccionando a quienes tienen asignadas las modalidades 1 a 5 en la
+variable TT3G37. De este modo, hemos conformado una muestra de 4574 individuos, de los cuales
+el 67.2% son mujeres y el 32.8% restante hombres. El 21.9% de ellos informó sobre sus actuaciones
+en las clases de lengua y literatura, el 19.6% en matemáticas, el 19.2% en ciencias naturales, el 16.5%
+en ciencias sociales y el 22.8% en otros idiomas.
+         En el estudio TALIS se administraron cuestionarios al profesorado y a los directores de los
+centros educativos para obtener información sobre el contexto escolar, las prácticas educativas que
+tienen lugar en él y sus actitudes en relación con los procesos de enseñanza y aprendizaje. En
+consecuencia, para el profesorado que integra la muestra, disponemos de la información
+proporcionada al responder al cuestionario y también de la aportada por la dirección del centro en el
+que ejerce profesionalmente. Los archivos con los datos para profesorado y para la dirección han
+sido fusionados usando como variable clave de emparejamiento la escuela (IDSCHOOL), presente
+en ambos. Entre la información obtenida a partir del profesorado se encuentra la frecuencia con que
+realizan seis tipos de actuaciones en el aula, que pueden ser consideradas indicadores de la adopción
+de enfoques innovadores de enseñanza (ver ítems en la Tabla 2 incluida en Resultados).
+
+1
+ La base de datos puede ser descargada de la página web de la OCDE
+https://www.oecd.org/education/talis/talis-2018-data.htm.
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                        6
+
+
+         A partir de estos seis ítems, se ha llevado a cabo un análisis de componentes principales para
+datos categóricos (comando CATPCA en SPSS) reteniendo la primera dimensión, que explica el
+43.48% de la varianza total. Los pesos de los seis ítems en esta dimensión se encuentran entre .448
+(“hago referencia a un problema de la vida cotidiana o del trabajo para demostrar por qué es útil
+adquirir nuevos conocimientos”) y .760 (“planteo tareas que requieren que los alumnos piensen de
+manera crítica”). Las puntuaciones en esta dimensión pueden ser tomadas como un índice de
+utilización de enfoques innovadores por parte del profesorado, que es la variable dependiente
+considerada en este estudio. Se trata de una variable estandarizada, con media 0 y desviación típica 1.
+         Como variables independientes, se han incluido características del profesorado y de los
+centros que, de acuerdo con la literatura previa, podrían estar asociadas al uso de enfoques
+alternativos de enseñanza. Se trata de variables disponibles en la base de datos de TALIS, parte de
+las cuales se obtienen directamente a partir de las respuestas de profesores y directores a los ítems
+contenidos en los cuestionarios que les fueron administrados. Otras son generadas a partir de esos
+ítems, mediante procedimientos diversos. En algunos casos se trata de una recodificación de
+respuestas seguida de operaciones aritméticas sencillas como, por ejemplo, la suma de valores. En
+otros casos se construyen escalas a partir de análisis factorial confirmatorio, generando índices 2 que
+constituyen variables continuas. Estas variables se expresan en una escala con desviación típica 2,
+donde el valor 10 se hace coincidir con el punto medio de la escala de respuesta a los ítems que
+sirven de base para su construcción. Los rasgos del profesorado tomados como variables
+independientes son el número de años de experiencia docente, junto con una serie de índices que
+mostramos a continuación, indicando entre paréntesis el nombre que tienen asignado en la base de
+datos de TALIS:
+         Participación en actividades de desarrollo profesional efectivo (T3EFFPD). Se
+         construye a partir de las respuestas del profesorado cuando se le preguntó si las
+         actividades formativas de los últimos doce meses que más impacto tuvieron sobre su
+         enseñanza tenían características como, por ejemplo, estar basadas en sus
+         conocimientos previos, orientadas a contenidos necesarios para enseñar sus materias
+         o adaptadas a sus necesidades de desarrollo.
+                 Autoeficacia percibida (T3SELF). Los ítems en los que se basa este índice
+         miden la percepción del profesor sobre su capacidad para enseñar, implicar al
+         alumnado en las actividades y gestionar la clase.
+                 Claridad en la enseñanza (T3CLAIN). Hace referencia a la frecuencia con
+         que el profesorado muestra desde el inicio cuáles son los objetivos y lo que espera
+         que aprendan los estudiantes, resume los contenidos aprendidos hasta el momento o
+         conecta los temas nuevos con los anteriores.
+                 Responsabilidad social del docente (T3SOCUT). Generado a partir de ítems
+         que preguntan por la importancia que tuvo, de cara a convertirse en profesor, el
+         hecho de que la enseñanza le permitiría influir en la formación de niños y jóvenes,
+         beneficiar a las personas más desfavorecidas socialmente y hacer una contribución a
+         la sociedad.
+                 Percepción sobre las relaciones profesorado-alumnado (T3STUD).
+         Elaborado a partir del grado de acuerdo del profesor con afirmaciones relativas a que
+         profesorado y alumnado se llevan bien, y a que el profesorado se preocupa por el
+         bienestar del alumnado, y le proporciona la ayuda que necesita.
+
+2 Información detallada sobre la construcción de estos índices puede consultarse en el informe técnico de la
+
+Organisation for Economic Co-operation and Development (2019, pp. 191-217).
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España           7
+
+
+                 Colaboración con otros docentes (T3COOP). Se basa en la frecuencia con
+         que se producen intercambios y coordinación con otros profesores, se trabaja
+         conjuntamente en las clases o se asiste con ellos a actividades de formación.
+                 Satisfacción laboral (T3JOBSA). Hace referencia a la medida en que el
+         profesor se encuentra satisfecho con su profesión, con su centro de trabajo y con la
+         autonomía de la que goza en el desarrollo de la docencia.
+
+En relación a los centros, los rasgos considerados como variables independientes han sido la
+titularidad (pública o privada), la ratio de estudiantes por profesor y otras variables generadas a partir
+de ítems contenidos en los cuestionarios respondidos por los directores de los centros:
+         Déficit de recursos materiales (T3PLACMA). Recoge la percepción de la dirección
+         sobre en qué medida la escasez de materiales docentes, materiales de biblioteca,
+         tecnología digital o una deficiente conexión a Internet constituyen un obstáculo para
+         lograr una enseñanza de calidad en su centro.
+                 Autonomía curricular (T3PAUTC). En qué medida el centro participa
+         directamente en la toma de decisiones sobre aspectos tales como el currículum que
+         se imparte o los materiales didácticos que se utilizan.
+                 Liderazgo de la dirección (T3PLEADS). Los ítems aluden a la frecuencia con
+         que el director se implica en acciones dirigidas a apoyar la cooperación entre
+         profesores, a que el profesorado se responsabilice del aprendizaje de sus alumnos y
+         de la mejora de su competencia docente.
+                 Apertura al cambio (T3PORGIN). Se basa en el grado de acuerdo expresado
+         por la dirección respecto a que el centro como organización identifica con rapidez
+         los cambios necesarios y responde a ellos, acepta nuevas ideas y apoya su desarrollo.
+
+A ellos se añade un índice de innovación educativa en equipo (T3TEAM), que en TALIS se obtiene
+para cada profesor a partir de su acuerdo con que la mayoría del profesorado del centro busca
+soluciones novedosas a los problemas, está predispuesto al cambio, se esfuerza por desarrollar
+nuevas ideas para la enseñanza y el aprendizaje, y se apoya mutuamente en la aplicación de las
+nuevas ideas. En este trabajo, hemos atribuido al centro un índice de innovación educativa calculado
+como promedio de los valores en T3TEAM que corresponden a su profesorado.
+        La Tabla 1 muestra el listado de las variables independientes consideradas, incluyendo
+estadísticos descriptivos. En el caso de las variables de profesorado, con la única excepción de los
+años de experiencia docente, todas son índices generados mediante escalamiento a partir de los ítems
+contenidos en los cuestionarios, siguiendo procedimientos a los que hemos hecho referencia
+anteriormente. En el caso de los centros, el liderazgo de la dirección, la apertura al cambio y la
+innovación educativa en equipo son índices también generados de ese modo. En cambio, las
+variables déficit de recursos materiales y autonomía curricular se han obtenido mediante la
+combinación de respuestas a diversos ítems, con una posterior recodificación en tres categorías de
+respuesta, como se refleja en la tabla. En particular, a la variable autonomía curricular se asignan los
+valores 1 cuando no existe autonomía (las decisiones son adoptadas por autoridades externas locales,
+regionales o estatales), 2 cuando se considera una autonomía mixta (las decisiones se adoptan tanto
+en el centro como por parte de autoridades externas) y 3 cuando se cuenta con autonomía (las
+decisiones se adoptan en el centro, por parte del profesorado o de los órganos de gobierno propios).
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                 8
+
+
+Tabla 1
+Estadísticos Descriptivos para las Variables Independientes
+ Variable                                       Descriptivos
+ Nivel de Profesorado
+  Años de experiencia docente                   M=17.2; DT=10.33
+  Desarrollo                                    M=15.1; DT=3.00
+  Autoeficacia percibida                        M=12.7; DT=1.95
+  Claridad en la enseñanza                      M=12.5; DT=1.84
+  Responsabilidad social                        M=12.2; DT=2.38
+  Relaciones profesorado-alumnado               M=13.3; DT=2.06
+  Colaboración con otros                        M=10.0; DT=1.75
+  Satisfacción laboral                          M=12.2; DT=2.01
+ Nivel de Centros
+  Titularidad                                     Pública (0): 69.0%
+                                                  Privada (1): 31.0%
+   Ratio estudiantes-profesor                     M=11.4; DT=4.22
+   Déficit de recursos materiales                 No es un problema (1): 67.0%
+                                                  Es un pequeño problema (2): 31.8%
+                                                  Es un problema (3): 1.2%
+   Autonomía curricular                           Sin autonomía (1): 44.6%
+                                                  Autonomía mixta (2): 18.0%
+                                                  Con autonomía (3): 37.4%
+  Liderazgo de la dirección                       M=10.9; DT=2.13
+  Apertura al cambio                              M=12.2; DT=1.90
+  Innovación                                      M=11.2; DT=0.81
+M = media. DT = desviación típica
+
+         El análisis de datos se ha iniciado con la descripción de las actuaciones desarrolladas por el
+profesorado en las aulas, calculando el porcentaje logrado en cada modalidad de respuesta. La
+exploración de rasgos asociados al uso de enfoques innovadores de enseñanza se ha basado en el
+análisis lineal jerárquico (Raudenbush y Bryk, 2002), considerando que el profesorado participante se
+encuentra agrupado en centros y, por tanto, disponemos de variables medidas en el profesorado
+(primer nivel) y en los centros (segundo nivel), es decir, con una estructura de datos anidados en dos
+niveles.
+         Hemos partido de la construcción de un modelo multinivel nulo o incondicional, incluyendo
+un solo factor de efectos aleatorios, con el que comprobamos la existencia de diferencias
+significativas inter-centros o intra-centros en la utilización de enfoques de enseñanza alternativos en
+las aulas. Posteriormente, se ha construido un modelo incluyendo las variables relativas a los centros
+para determinar cuáles resultan significativas en la explicación del uso de enfoques alternativos. Por
+último, un tercer modelo incluye las variables de nivel 2 (centros) que mostraron un efecto
+significativo, junto con las variables medidas en el nivel 1 (profesorado). Los modelos han sido
+ajustados usando el programa SPSS.26. y, en particular, el comando MIXED para modelos lineales
+de efectos mixtos.
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España                   9
+
+
+                                                      Resultados
+Actuaciones Innovadoras en las Aulas
+         En este apartado describimos con qué frecuencia el profesorado español de educación
+secundaria incluye en su desempeño docente -según sus respuestas- determinados elementos
+metodológicos característicos de los enfoques innovadores de enseñanza. Los resultados que se
+muestran en la Tabla 2 indican que mostrar la conexión de los nuevos conocimientos con problemas
+de la vida cotidiana o del trabajo es una actuación muy frecuente en las aulas, con un 82.0% del
+profesorado que afirma realizarla siempre o con frecuencia. También es frecuente plantear tareas que
+requieren un pensamiento crítico (64.6% del profesorado lo hace siempre o con frecuencia). Sin
+embargo, es mayoritario el profesorado que nunca o casi nunca, o solo de vez en cuando, presenta
+tareas sin una respuesta obvia (54.6%), invita a los alumnos a elegir procedimientos para resolver
+tareas complejas (61.9%), asigna al alumnado proyectos que requieren al menos una semana (74.3%),
+o hace que trabajen en grupo para resolver problemas (59.7%).
+
+Tabla 2
+Distribución de Frecuencias (Porcentajes) para las Actuaciones Desarrolladas en el Aula
+                                                                    Nunca o De vez en          Con
+                                                                                                         Siempre
+                                                                   casi nunca      cuando   frecuencia
+ Presento tareas para las que no hay una respuesta
+                                                                      15.9          38.7      36.1           9.3
+    obvia
+ Planteo tareas que requieren que los alumnos piensen
+                                                                       3.0          32.5      51.9           12.7
+    de manera crítica
+ Hago que los alumnos trabajen en pequeños grupos
+    para hallar una solución conjunta a un problema o                 11.3          48.4      33.6           6.7
+    tarea
+ Invito a los alumnos a que decidan ellos mismos qué
+    procedimiento emplear para resolver tareas                        17.9          44.0      31.7           6.4
+    complejas
+ Hago referencia a un problema de la vida cotidiana o
+    del trabajo para demostrar por qué es útil adquirir                1.0          16.9      52.6           29.4
+    nuevos conocimientos
+ Asigno a los alumnos proyectos cuya elaboración
+                                                                      27.2          47.1      20.1           5.6
+    completa requiere al menos una semana
+
+Modelo Explicativo del Uso de Metodologías Innovadoras de Enseñanza
+         A continuación describimos el proceso de modelado que hemos desarrollado con el fin de
+determinar cuáles son las variables de centro y de profesorado que resultan relevantes en la
+explicación del uso de enfoques innovadores de enseñanza. Antes de iniciar la construcción de un
+modelo multinivel, hemos ajustado el modelo de un solo factor con efectos aleatorios que, al no
+incluir variables explicativas, recibe la denominación de modelo nulo o incondicional (ver Tabla 3).
+Los valores significativos para el estadístico Z de Wald permiten rechazar las hipótesis nulas de
+igualdad y afirmar que la utilización de enfoques innovadores de enseñanza difiere dentro de los
+centros (eij=0.96; Z=45.74; p<.001) y que también hay diferencias entre centros (u0j=.46; Z=4.88;
+p<.001). De la variabilidad total observada (eij+ u0j =0.99), solo un 4.6% corresponde a las
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                            10
+
+
+diferencias entre centros (u0j) y el 95.4% restante se explica por las diferencias entre el profesorado
+dentro de los centros (eij).
+         Un primer resultado indica que la variación en el uso de enfoques alternativos de enseñanza
+se explica fundamentalmente por las diferencias entre el profesorado, y en menor medida por las
+diferencias entre centros. Esto revela que las prácticas innovadoras en las aulas están vinculadas a las
+opciones y decisiones de los profesionales a nivel individual, en mayor medida que a los
+condicionantes institucionales. No obstante, dado que las dos fuentes de variación son significativas,
+resulta pertinente ampliar el modelo multinivel con la inclusión de variables explicativas de ambos
+niveles.
+
+Tabla 3
+Modelo Lineal Jerárquico Nulo o Incondicional (Modelo 1)
+                             Estimaciones de los efectos aleatorios
+
+               Parámetro                      Estimación         Error estándar   Z de Wald       Sig.
+  eij (varianza dentro de los centros)             .9529                  .0208      45.738      .000
+  u0j (varianza entre centros)                     .0460                  .0094        4.877     .000
+
+         La inclusión de variables de centro en el modelo (ver Tabla 4) permite valorar en qué medida
+estas explican las diferencias observadas en el uso de enfoques de enseñanza alternativos.
+Manteniendo el resto de las variables constantes, la utilización de este tipo de enfoques se
+incrementa significativamente cuando se eleva el nivel de innovación del equipo de profesores
+(t=2.781; p<.01). En cambio, disminuye en los centros que no cuentan con autonomía curricular, al
+no participar el profesorado en la toma de decisiones sobre aspectos tales como el currículum que se
+imparte o los materiales didácticos que se usan (t=-2.200; p<.05). En lo que respecta a la variable
+titularidad, la presencia de estos enfoques se incrementa ligeramente (0.1088 puntos; t=2.060; p<.05)
+en los centros privados frente a los públicos. Las restantes variables de centro no se relacionan de
+manera significativa con el uso de enfoques alternativos en las aulas.
+         Al incluir variables medidas en el segundo nivel, se reduce la varianza no explicada entre
+centros (u0j), que pasa desde el valor 0.0460 registrado en el modelo nulo a 0.0388. Es decir, el
+porcentaje de varianza inter-centros se reduce en un 15.7% respecto al modelo nulo.
+
+Tabla 4
+Modelo Lineal Jerárquico para Predictores del Uso de Enfoques Alternativos Medidos en Relación a los Centros
+(Modelo 2)
+                               Estimaciones de los efectos fijos
+
+             Parámetro                       Estimación         Error estándar      T          Sig.
+ Intersección                                   -.936360                 .3568     -2.625      .009
+ Titularidad1 (privada)                            -.1088                .0528     -2.060      .040
+ Ratio de estudiantes por profesor                  .0020                .0050       .402      .688
+ Falta de recursos materiales2                      .0219                .1620       .135      .893
+ (no es un problema)
+ Falta de recursos materiales                       .0181               .1636        .111      .912
+ (es un pequeño problema)
+ Liderazgo de la dirección                          .0059               .0091        .647      .518
+ Autonomía curricular3                             -.0984               .0447      -2.200      .028
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España                             11
+
+
+                                   Estimaciones de los efectos fijos
+
+             Parámetro                          Estimación       Error estándar              T          Sig.
+ (sin autonomía)
+ Autonomía curricular                                -,0716                 ,0524           -1.368      .172
+ (autonomía mixta)
+ Innovación educativa                            .0690              .0248                    2.781      .006
+ Apertura al cambio                              .0159              .0099                    1.609      .109
+                                Estimaciones de los efectos aleatorios
+               Parámetro                        Estimación       Error estándar           Z de Wald Sig.
+  eij (varianza intra-centros)                       .9521                .0212             45.016 .000
+  u0j (varianza inter-centros)                       .0388                .0091              4.269 .000
+1Categoría de referencia: “pública”. 2Categoría de referencia: “es un problema”. 3Categoría de referencia: “con
+
+autonomía”.
+
+        En el modelo 3 (Tabla 5) se incluyen las características de centro que han resultado
+relevantes en el modelo 2, añadiendo las variables de profesorado. Presentamos dos versiones de
+este modelo, resultantes de incluir todas las variables medidas que atañen al profesorado (versión A)
+y de reajustar repetidamente el modelo suprimiendo las variables de profesorado que no han
+resultado significativas hasta lograr que todas las que permanecen lo sean (versión B). Esta segunda
+versión representa un modelo más simple, aunque con niveles similares de varianza explicada.
+
+Tabla 5
+Modelo Lineal Jerárquico para Predictores del Uso de Enfoques Alternativos Medidos en Relación a los Profesores y
+a los Centros (Modelo 3)
+                                               Modelo A                               Modelo B
+                                         Estimaciones de los efectos fijos
+                                                    Error                                          Error
+           Parámetro               Estimación                     T        Sig.   Estimación                   T        Sig.
+                                                   estándar                                       estándar
+  Intersección                        -4.3195        .3160 -13.671 .000                  -4.4801 .1656 -27.060 .000
+  Titularidad                          -.0804        .0453 -1.777 .076
+  Autonomía curricular1                -.1150        .0433 -2.656 .008                    -.1351 .0389         -3.475 .001
+     (sin autonomía)
+  Autonomía curricular                 -.1012        ,0500      -2.024 .044               -.1037 .0494         -2.099 .037
+     (autonomía mixta)
+  Innovación educativa                 -.0018        .0242       -.074 .941
+  Años de experiencia                  -.0059        .0015      -3.821 .000               -.0059 .0015         -3.911 .000
+     docente
+  Responsabilidad social                .0271        .0071       3.804 .000               .0293    .0070      4.194       .000
+  Desarrollo profesional                .0143        .0051       2.812 .005               .0142    .0050      2.825       .005
+  Claridad en la enseñanza              .1277        .0093      13.788 .000               .1245    .0092     13.585       .000
+  Autoeficacia percibida                .1327        .0089      14.851 .000               .1332    .0086     15.410       .000
+  Relac. profesorado-                  -.0175        .0081      -2.158 .031
+     alumnado
+  Colaboración docente                  .0882        .0092       9.627 .000               .0877 .0089          9.815 .000
+  Satisfacción laboral                  .0105        .0088       1.197 .231
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                 12
+
+
+                                    Estimaciones de los efectos aleatorios
+                                              Error    Z de                    Error Z de Sig
+          Parámetro              Estimación                   Sig. Estimación
+                                             estándar Wald                    estándar Wald .
+  eij (varianza intra-centros)         .7099    .0188 37.827 .000       .7080 .0186 38.043 .000
+  u0j (varianza inter-centros)         .0303    .0086 3.532 .000        .0313 .0086 3.663 .000
+1Categoría de referencia: “con autonomía”.
+
+
+
+         De acuerdo con el modelo A -tras incluir las variables de profesorado-, la titularidad del
+centro, la innovación educativa a nivel institucional y la satisfacción laboral del profesorado dejan de
+ser relevantes (p>.05) en la explicación del uso de enfoques alternativos. Al suprimirlas, las
+relaciones entre profesorado y alumnado dejan de ser significativas en un nuevo modelo, por lo que
+esta variable también ha sido excluida en el modelo final (B).
+         En el modelo B la varianza entre centros es u0j=0.0313, lo que representa una disminución
+del 32.0% respecto a la varianza entre centros obtenida en el modelo nulo (u 0j=0.0460). La inclusión
+de variables medidas a nivel del profesorado reduce la varianza intra-centros en un 25.7%, al pasar
+desde eij=0.9529 en el modelo nulo a eij=0.7080 en el modelo final. Para valorar la mejora lograda en
+el ajuste global del modelo nos basamos en la diferencia de desvianzas entre el modelo final (-
+2LL=8319.203) y el modelo nulo (-2LL=12938.365). Esta diferencia se distribuye según chi-
+cuadrado con un número de grados de libertad igual al número de parámetros de efectos fijos
+añadidos al modelo final, que en este caso son 8. En consecuencia, el ajuste de este modelo mejora
+significativamente (p<.001) respecto al modelo nulo.
+         La única variable de centro con efecto significativo que permanece en el modelo final es la
+autonomía curricular. Frente a centros que cuentan con autonomía para la toma de decisiones sobre
+diferentes aspectos curriculares, el uso de enfoques innovadores se reduce en 0.1037 puntos en
+aquellos centros caracterizados por una autonomía mixta, según la cual las decisiones también
+provienen de las administraciones local, autonómica o regional (t=-2.099; p=.037). Esta reducción
+llega a ser de 0.1351 puntos en los centros sin autonomía curricular (t=-3.475; p=.001).
+         Entre las variables de nivel 1 (profesorado), los principales efectos corresponden a la
+autoeficacia percibida (t=13.585; p<.001), la claridad en la enseñanza (t=15.410; p<.001) y la
+colaboración con otros docentes (t=9.815; p<.001). También es relevante el número de años de
+experiencia docente, cuyo efecto negativo en el uso de enfoques innovadores supone una
+disminución de 0.006 puntos por cada año (t=-3.911; p<.001). Por último, se incluyen como
+variables significativas la motivación profesional orientada a la responsabilidad social (t=4.194;
+p<.001) y la participación en actividades de desarrollo profesional (t=2.825; p<.01).
+
+                                        Discusión y Conclusiones
+         El primero de los objetivos que nos planteamos en este trabajo se ha concretado en
+determinar la presencia de enfoques innovadores en las aulas de educación secundaria, basándonos
+en la frecuencia con que se realizan en ellas determinadas prácticas docentes propias de estos
+enfoques. Podemos concluir que los enfoques innovadores son poco frecuentes en las aulas de
+educación secundaria, ya que hemos constatado que tales prácticas son escasas. Estos resultados son
+congruentes con los aportados por Gil (2017), referidos al profesorado de ciencias, cuyas
+actuaciones docentes más frecuentes estaban en la línea de un enfoque transmisivo: “presentación de
+contenidos por parte del profesor, reiteración de actividades similares propuestas a los estudiantes,
+comprobación de cuadernos y deberes” (p. 186). También el Consejo Escolar del Estado (2020) ha
+identificado limitaciones importantes en la metodología que suele emplear gran parte del
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España      13
+
+
+profesorado español de educación secundaria. Considera que está “muy condicionado por los libros
+de texto y orientado, frecuentemente en exceso, a aprendizajes conceptuales y a tareas comunes
+mecánicas que desarrollan aspectos muy restringidos de las competencias clave para el aprendizaje
+permanente” (p. 25).
+         La débil implantación de estrategias innovadoras en las aulas contrasta con el empeño de la
+administración educativa por promover enfoques alternativos a la enseñanza tradicional a través de
+la regulación normativa (Coll y Martín, 2021). En el currículum oficial -que prioriza el desarrollo de
+las competencias clave- se insta a que el profesorado fomente el pensamiento crítico, adopte la
+estrategia didáctica de la resolución de problemas, así como promueva la realización de proyectos en
+las diferentes áreas de conocimiento (Martínez-Izaguirre et al., 2017) .
+         El segundo objetivo se planteaba identificar rasgos del profesorado y del contexto
+institucional que se asocian al uso de metodologías innovadoras en las aulas. De acuerdo con los
+resultados obtenidos, puede afirmarse que la asunción de metodologías innovadoras se vincula en
+mayor medida al profesorado que a los centros educativos. En el modelo explicativo construido, en
+presencia de variables relativas al profesorado, la única variable de centro con efecto significativo
+sobre el uso de enfoques innovadores es la autonomía curricular. La innovación se asocia, por tanto,
+a contextos institucionales en los que la toma de decisiones sobre el currículum impartido o los
+materiales utilizados recae en buena medida sobre el profesorado. De hecho, una mayor autonomía
+se ha identificado como uno de los principales indicadores de cambio en los centros educativos
+(Fullan, 2019). Según Echevarría-Molina y Sánchez-Cabrero (2021), la autonomía aumenta los
+niveles de satisfacción del profesorado, por lo que se puede estimar que es un acicate para afrontar
+planteamientos innovadores.
+         En contra de lo que cabría esperar, no ha resultado relevante en nuestro modelo el papel del
+liderazgo pedagógico ejercido por la dirección, a pesar de que la literatura lo ha asociado a la
+promoción de enfoques alternativos de enseñanza (Buske, 2018; Rittaco y Amores, 2018). Estudios
+que derivan de datos aportados también por TALIS muestran conexiones de las variables liderazgo
+distribuido y colaboración docente, con la apertura de las organizaciones educativas a la innovación
+(Çoban y Atasoy, 2020). Con datos provenientes del profesorado de educación primaria, Kaya
+(2021) obtuvo relaciones significativas para esta misma variable con el liderazgo distribuido ejercido
+por la dirección, la satisfacción laboral, el tamaño de las escuelas, la disponibilidad de recursos y
+personal, o el clima escolar, entre otros factores.
+         Los recursos materiales con que cuentan los centros tampoco han resultado ser una variable
+relevante para explicar el uso de enfoques innovadores en las aulas. En una situación en la que la
+práctica totalidad de los centros cuenta con una adecuada dotación de materiales didácticos,
+bibliográficos y tecnológicos, este factor no permite diferenciar a aquellos centros en los que las
+prácticas innovadoras están presentes con mayor y menor frecuencia. Los resultados obtenidos para
+las variables titularidad del centro y ratio de alumnos por profesor, ambas no significativas en
+nuestro modelo, vienen a coincidir en gran medida con los aportados por Egido et al. (2018) y,
+parcialmente, con los hallazgos de Trujillo et al. (2020). Estos autores encontraron diferencias
+vinculadas a una ratio menor profesor-alumnos, no así entre centros privados y públicos en relación
+con la innovación.
+         Centrándonos en el profesorado, hemos de subrayar que la mayor parte de las variables
+consideradas han resultado significativas en la explicación de la variable dependiente. El uso de
+estrategias innovadoras se asocia fundamentalmente a la autoeficacia percibida, a la claridad de la
+enseñanza y a la colaboración con otros colegas. Quienes en mayor medida se perciben como
+profesores capaces de enseñar, implicar al alumnado y gestionar la clase, tienden a un uso más
+frecuente de estrategias innovadoras de enseñanza. Este resultado se alinea con los hallazgos de
+estudios anteriores, en los que se ha constatado que un elevado sentido de autoeficacia llevaría al
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                14
+
+
+profesor a ser más creativo en su trabajo, a mostrar una mayor apertura a nuevas ideas y a ensayar
+nuevos métodos (Protheroe, 2008). Según el estudio de Egido et al. (2018), el profesorado que
+percibe y muestra más autoeficacia es aquel proclive a la colaboración con los colegas, que fomenta
+la autoevaluación por parte de los estudiantes, siente satisfacción ante la disciplina percibida, ve
+necesario seguir formándose -tanto en relación con la materia que enseña como en las habilidades de
+enseñanza-, y defiende planteamientos constructivistas. Este último aspecto ya había sido
+identificado en la literatura al haberse encontrado relación entre la autoeficacia percibida por el
+docente y la concepción constructivista de la enseñanza, elemento fundamental en enfoques
+innovadores actuales (Gil, 2016).
+         Kasalak y Dagyar (2020) exploraron las relaciones entre la autoeficacia y la satisfacción
+laboral con los datos de las tres ediciones de TALIS realizadas hasta el momento y encontraron una
+relación alta y significativa entre ambos constructos. La alta relación entre autoeficacia percibida y
+satisfacción docente, justificaría la ausencia de esta última variable en el modelo explicativo que aquí
+hemos generado, dado que sus efectos estarían ya incluidos en los debidos a la autoeficacia. También
+Katsantonis (2020), con datos de TALIS 2018 para quince países, exploró las relaciones entre la
+autoeficacia y la satisfacción en el trabajo. Descubrió que el constructo multidimensional “clima de la
+escuela” tiene un impacto significativo en las variables mencionadas.
+         Un papel destacado corresponde también a la colaboración con otros docentes. Un hallazgo
+relevante del trabajo de Blömeke et al. (2021), tras el análisis de los datos de cuarenta y ocho países
+aportados por TALIS 2018, es que las escuelas innovadoras cuentan con un profesorado que
+colabora entre sí y que siente una alta satisfacción con su trabajo. Se podría aventurar que el
+profesorado innovador estaría asumiendo que la enseñanza es una tarea de gran envergadura que no
+se puede acometer en solitario, precisando del trabajo colectivo. La colaboración que se pretende
+entre el alumnado también ha de ser practicada por el profesorado. De hecho, Jolliffe (2015)
+sostiene que la mejor vía que tiene el profesorado para favorecer la colaboración entre el alumnado
+es el trabajo colaborativo con sus colegas. La colaboración entre docentes es un recurso
+imprescindible para desarrollar tareas de innovación vinculadas a la metodología investigativa.
+Apostar firmemente por enfoques alternativos pasa por haber asumido que los cambios de calado
+han de ser compartidos y que la innovación individualizada no consolida cambios duraderos (García-
+Gómez y Salas, 2021). Según Fernández-Enguita (2020) debemos caminar hacia la codocencia, ya
+que:
+         Potencia la motivación, mejora la moral, aumenta la eficiencia, favorece la
+         comunicación, mitiga o evita el aislamiento personal, eleva el sentimiento de
+         autoeficacia y la satisfacción, impulsa la competencia tecnológica, lleva a una
+         organización más centrada en el alumno, permite alinear el currículum oficial y el
+         oculto, suaviza la carga de trabajo, facilita la iniciación de los nuevos docentes. (p. 19)
+
+Por último, destacar que la claridad en la enseñanza es, según los resultados obtenidos, otra de las
+variables de mayor relevancia en la explicación del uso de enfoques innovadores. El profesorado que
+ha adoptado estos enfoques exhibe un orden y una claridad en las clases, que resulta fundamental
+para una enseñanza de calidad (Praetorius et al., 2018), explicitando desde el primer momento a los
+estudiantes qué se espera de ellos, cuáles son los objetivos y resultados de aprendizaje esperados, y
+mostrando los vínculos entre contenidos (nuevos y antiguos) que van siendo abordados en las clases.
+Según Reoyo et al. (2017), la buena gestión y desarrollo de las clases es una manifestación clara de la
+eficacia del profesorado de educación secundaria. Sin embargo, no son rasgos que vayan asociados
+directamente a los enfoques innovadores que, aún pretendiendo desarrollar prácticas eficaces, no se
+suelen identificar con algunos descriptores de los que conforman este constructo, como los relativos
+a la planificación y posterior implementación de las propuestas formativas, por defender
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España      15
+
+
+planteamientos más emergentes. Destacamos que no hemos identificado en la literatura vínculos
+estrechos entre la claridad de la enseñanza y la innovación pedagógica.
+         En consonancia con lo establecido por Ainley y Carstens (2018), al plantear el marco teórico
+de TALIS 2018, Wiens et al. (2021) sostienen que la claridad de la enseñanza está vinculada a un
+repertorio de estrategias cuyo interés primordial es asegurar el aprendizaje del alumnado. Se asume
+que el docente tiene que desempeñar un papel proactivo para favorecer que aprenda, ahora bien,
+esta asunción no lleva implícita que la metodología de enseñanza se fundamente en los principios
+constructivistas que se han venido explicitando en este trabajo. Sin embargo, a tenor de los datos
+expuestos, el profesorado español de educación secundaria más innovador sí se ocupa de las
+acciones que conforman este constructo.
+         La responsabilidad social del docente, sus años de experiencia y la participación en
+actividades de desarrollo profesional son variables asociadas a la innovación, aunque con menor
+peso en el modelo explicativo generado en el presente trabajo. El valor de la formación inicial como
+catalizador de la implicación del profesorado en enfoques innovadores de enseñanza podría ser
+insuficiente en el caso del profesorado de educación secundaria (López et al., 2021). Ello contribuiría
+a que este se involucre en actividades de formación permanente buscando sus propios aprendizajes
+para mejorar como docentes (Coldwell, 2017).
+         También es de interés la línea de investigación centrada en explorar las relaciones entre el
+profesorado veterano y el novel que comparten su desempeño profesional en el mismo centro
+educativo (Mouraz et al., 2020). Los docentes con más años de experiencia son una pieza clave en la
+fase de socialización de los principiantes. Además, el envejecimiento de los claustros, dada la escasa
+incorporación de profesorado joven al haber bajado la población en edad escolar en países como
+España (European Commission, 2020), es uno de los factores a tener en cuenta al indagar sobre la
+implementación de propuestas educativas innovadoras (apoyadas muchas de ellas en el uso de las
+tecnologías de la información y la comunicación, evidenciando la brecha digital existente entre
+docentes).
+          Como venimos exponiendo, los resultados de nuestro estudio indican que los enfoques
+alternativos de enseñanza (al menos algunas de sus manifestaciones) no se hallan muy extendidos en
+España en la etapa de educación secundaria, y que su uso se asocia en mayor medida a rasgos
+propios del profesorado que a características de los centros. Estos hallazgos nos invitan a proseguir
+indagando en qué factores (estructurales o no) contribuyen a explicar la situación descrita (Holloway
+et al., 2017; Rodríguez-Martínez, 2021).
+          Es bastante notorio que los docentes de educación secundaria que se deciden a innovar se
+encuentran potencialmente con varios problemas: no lo hacen los demás, no suele ser una demanda
+del alumnado ni de sus familias, y no siempre poseen una sólida formación para afrontar las
+dificultades que les surjan. También adolece el profesorado de apoyo institucional que le aliente y
+ayude. Como destacan Molina y Luengo (2020), es habitual que se sienta limitado pedagógicamente
+y, a veces, incluso deslegitimado por la Administración y ajeno a cualquier espacio de decisión sobre
+su tarea en el aula. Sin embargo, y a pesar de ello, en la actualidad se insta al profesorado desde
+diversos ámbitos a cambiar su forma de trabajar en las aulas, a motivar más a su alumnado, a
+implicarse más en actividades de formación permanente, y a colaborar con los colegas. La presión
+sobre el profesorado es alta, pareciera como si se le estuviera reclamando un cambio de modelo de
+enseñanza y, con la inmediatez característica de la sociedad actual, se le estuviera apremiando para
+contar con resultados visibles y rápidos. Ello causa estrés que, según Jerrim y Sims (2021) es
+contagioso. Utilizan esa expresión para alertar de la presión que ciertas prácticas de evaluación están
+generando en el profesorado y en las escuelas. Muestran que hay una modesta correlación positiva
+entre los sistemas de rendición de cuentas de las escuelas y el estrés en docentes y directivos en
+relación con su trabajo.
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                16
+
+
+         En esta coyuntura corresponde a las autoridades delinear políticas educativas que vayan en la
+línea de mejorar tanto la formación inicial como la formación permanente del profesorado, cuidando
+al mismo tiempo las condiciones en las que éste desarrolla su trabajo (Urbanos et al., 2021). Desde
+hace una década, la formación inicial del profesorado de educación secundaria en España consiste en
+cursar un máster de un año de duración, al que acceden graduados de distintos ámbitos disciplinares
+que aspiran a dedicarse a la docencia. Respecto a modelos anteriores, este máster ha supuesto un
+notable avance, aun cuando persisten aspectos a mejorar (López et al., 2021). Una limitación es que
+en el propio máster se sigue en general una metodología transmisiva, no aportando referentes que
+sirvan de motivación y orientación. Por ello, coincidimos con Imbernón (2019) cuando reclama para
+esta formación “una metodología menos transmisora y más colaborativa, y más basada en casos,
+incidentes críticos, proyectos de innovación, metodologías alternativas” (p. 157). Además, se debería
+tener en cuenta que en este período se está forjando (al menos parcialmente) la identidad
+profesional. Según Granjo et al. (2021), se debe prestar especial atención a la dimensión de la
+orientación ética del docente, pues su estudio ha evidenciado una relación positiva entre ésta y la
+motivación, la satisfacción, la competencia percibida, la autoestima y el compromiso con la
+institución educativa.
+         Aparte de paliar las deficiencias en la formación inicial del profesorado, habrían de adoptarse
+medidas para mejorar sus condiciones laborales y profesionales, especialmente, en los primeros años
+de ejercicio (Marcelo y Vaillant, 2017). La inestabilidad en el puesto de trabajo por continuos
+cambios de centro no contribuye a desarrollar otro tipo de propuestas alternativas (García-Gómez y
+Salas, 2021). Cada año, buena parte del profesorado cambia su centro de destino, lo cual no favorece
+el conocimiento del contexto ni del proyecto educativo, tampoco el establecimiento de relaciones
+colaborativas con colegas. En España hasta el momento se ha cuidado poco el acompañamiento al
+profesorado en la fase de socialización profesional (Mammadov y Çimen, 2019), a pesar de las
+bondades conocidas de la observación entre iguales y la retroalimentación para reflexionar y mejorar
+la práctica docente (Ridge y Lavigne, 2020).
+         Confiar plenamente en la formación permanente para alimentar prácticas innovadoras en las
+aulas puede resultar una opción ingenua, en tanto no se introduzca en ellas un cambio de
+orientación. Las propias actividades formativas tienen carencias. En este contexto, Imbernón (2019)
+propone que la formación se ocupe de orientar al profesorado para aprender a investigar sobre la
+práctica, buscando alternativas para eliminar los procesos de individualismo en el trabajo profesional
+y favorecer la participación y la toma de decisiones de todos los componentes del centro. Las
+palabras de este autor enfatizan aspectos que en este estudio han resultado relevantes para explicar el
+uso de enfoques innovadores en la enseñanza, como son las actividades que propicien un desarrollo
+profesional efectivo, el trabajo colaborativo y la imprescindible autonomía curricular.
+         Antes de finalizar, señalamos algunas de las fortalezas y limitaciones del presente trabajo. La
+realización de un análisis secundario sobre datos del estudio TALIS conlleva, como principal ventaja,
+la posibilidad de trabajar con una muestra muy extensa y representativa del profesorado español de
+educación secundaria, contando además con la información sobre los centros donde imparten
+docencia proporcionada por los directores. Sin embargo, hemos tenido que trabajar únicamente con
+las variables disponibles, por lo que los enfoques innovadores han sido caracterizados solo a partir
+de un número limitado de prácticas desarrolladas en las aulas. Del enfoque metodológico adoptado y
+de las técnicas analíticas aplicadas deriva otra limitación de este trabajo, ya que únicamente es
+constatable la existencia de relaciones entre variables, a partir de las cuales lograr modelos
+explicativos de la presencia de enfoques innovadores en las aulas. No es posible confirmar relaciones
+causales que permitan establecer efectos de las variables de profesorado y de centro aquí
+consideradas, sobre las prácticas docentes innovadoras. También somos conscientes de que el
+propio marco conceptual de TALIS, los cuestionarios empleados y las escalas estadísticas que se
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España                  17
+
+
+crean a partir de estos, responden a una identidad docente global, que no siempre se adapta a los
+contextos singulares de los países en que se aplican (Berkovich y Benoliel, 2020; Tahirsylaj et al.,
+2021). Con todo, el trabajo desarrollado ha permitido avanzar en la explicación del uso de enfoques
+innovadores de enseñanza, identificando factores que podrían ser objeto de profundización a través
+de futuros estudios complementarios desarrollados mediante metodologías cualitativas.
+
+                                                      Referencias
+Abellán, Y., y Herrada, R.I. (2016). Innovación educativa y metodologías activas en educación
+        secundaria: la perspectiva de los docentes de lengua castellana y literatura. Revista Fuentes,
+        18(1), 65-76. http://dx.doi.org/10.12795/revistafuentes.2016.18.1.04
+Ainley, J., & Carstens, R. (2018). Teaching and Learning International Survey (TALIS) 2018 conceptual
+        framework [Working paper,No. 187]. OECD. https://doi.org/10.1787/799337
+Aramendi, P., Arburua, R. M., y Buján, K. (2018). El aprendizaje basado en la indagación en la
+        enseñanza secundaria. Revista de Investigación Educativa, 36(1), 109-124.
+        http://dx.doi.org/10.6018/rie.36.1.278991
+Berkovich, I., & Benoliel, P. (2020). Marketing teacher quality: Critical discourse analysis of OECD
+        documents on effective teaching and TALIS. Critical Studies in Education, 61(4), 496-511.
+        https://doi.org/10.1080/17508487.2018.1521338
+Blömeke, S., Nilsen, T., & Scherer, R. (2021). School innovativeness is associated with enhanced
+        teacher collaboration, innovative classroom practices, and job satisfaction. Journal of
+        Educational Psychology, 113(8), 1645–1667. https://doi.org/10.1037/edu0000668
+Buske, R. (2018). The principal as a key actor in promoting teachers’ innovativeness – analyzing the
+        innovativeness of teaching staff with variance-based partial least square modeling. School
+        Effectiveness and School Improvement, 29(2), 262-284.
+        https://doi.org/10.1080/09243453.2018.1427606
+Carbonell, J. (2016). Pedagogías del siglo XXI. Alternativas para la innovación educativa. Octaedro.
+Carretero, M. (2021). Constructivismo y educación. Tilde Editora. (Obra original publicada en 1993).
+Çoban, Ö., & Atasoy, R. (2020). Relationship between distributed leadership, teacher collaboration
+        and organizational innovativeness. International Journal of Evaluation and Research in Education,
+        9(4), 903-911.https://doi.org/10.11591/ijere.v9i4.20679
+Coldwell, M. (2017). Exploring the influence of professional development on teacher careers: A path
+        model approach. Teaching and Teacher Education, 61, 189-198.
+        https://doi.org/10.1016/j.tate.2016.10.015
+Coll, C., y Martín, E. (2021). La LOMLOE, una oportunidad para la modernización curricular.
+        Avances en Supervisión Educativa, 35. https://doi.org/10.23824/ase.v0i35.731
+Consejo Escolar del Estado. (2015). El profesorado del siglo XXI. Ministerio de Educación, Cultura y
+        Deporte. Gobierno de España. https://www.educacionyfp.gob.es/dam/jcr:f88f1d40-af31-
+        4fae-8c6b-fb5536f8ab71/21encuentroconsejosescolares2012-pdf.pdf
+Consejo Escolar del Estado. (2020). El éxito en la educación primaria y secundaria. Ministerio de
+        Educación y Formación Profesional. Gobierno de España.
+        https://www.educacionyfp.gob.es/mc/cee/publicaciones/estudios/exito-educacion.html
+Day, C., y Gu, Q. (2015). Educadores resilientes, escuelas resilientes: Construir y sostener la calidad educativa en
+        tiempos difíciles. Narcea Ediciones.
+Domènech-Casal, J., Lope, S., y Mora, L. (2019). Qué proyectos STEM diseña y qué dificultades
+        expresa el profesorado de secundaria sobre aprendizaje basado en proyectos. Revista Eureka
+        sobre Enseñanza y Divulgación de las Ciencias, 16(2).
+        https://doi.org/10.25267/RevEurekaensendivulgcienc.2019.v16.i2.2203
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                         18
+
+
+Echevarría-Molina, I. y Sánchez-Cabrero, R. (2021). La satisfacción del docente de educación
+         secundaria en España a través de TALIS. Revista Fuentes, 23(3), 341-352.
+         https://doi.org/10.12795/revistafuentes.2021.15176
+Egido, I., López-Martín, E., Manso, J. y Valle, J. M. (2018). Determining factors of teachers’ self-
+         efficacy in countries of the European Union. Results from TALIS 2013. [Factores
+         determinantes de la autoeficacia docente en los países de la Unión Europea. Resultados a
+         partir de TALIS 2013]. Educación XX1, 21(2), 225-248.
+         https://doi.org/10.5944/educxx1.15875
+European Commission (2020). Monitor de la educación y la formación de 2019: España. Oficina de
+         Publicaciones. https://data.europa.eu/doi/10.2766/255732
+Fernández-Enguita, M. (2020). 2a/2p << a/p – Del aislamiento en la escuela a la codocencia en el
+         aula. Perspectiva Educativa, 10, 15-29. http://ntic.educacion.es/cee/revista/n10/pdfs/pe-n10-
+         art01_fernandez-enguita.pdf
+Fernández-Enguita, M., Mena, L., y Riviere, J. (2010). Fracaso y abandono escolar en España. Fundación
+         “la Caixa”.
+Fullan, M. (2019). Liderar los aprendizajes: Acciones concretas en pos de la mejora escolar (Leading
+         learning: Concrete actions in pursuit of school improvement). Revista Eletrônica de
+         Educação, 13(1), 58-65. https://doi.org/10.14244/198271993074
+García-Gómez, S. (2011). Viaje a las antípodas de la investigación escolar en la educación
+         secundaria. Investigación en la Escuela, 73, 41-52. http://hdl.handle.net/11441/51345
+García-Gómez, S., y Salas, M. (2021). Claves para la sostenibilidad de un proyecto innovador en un
+         instituto de educación secundaria. Profesorado. Revista de Currículum y Formación del Profesorado,
+         25(3), 239-258. https://doi.org/10.30827/profesorado.v25i3.9499
+Gil, A. J., Antelm, A. M., y Cacheiro, M. L. (2018). Análisis de la capacidad de innovación escolar
+         desde la perspectiva del profesorado de educación secundaria. La escuela como organización
+         que aprende. EDUCAR, 54(2), 449-468. https://doi.org/10.5565/rev/educar.864
+Gil, J. (2016). Variables asociadas a la autoeficacia percibida por el profesorado de ciencias en
+         educación secundaria. Revista de Educación, 373, 85-108. http://doi.org/10.4438/1988-592X-
+         RE-2016-373-322
+Gil, J. (2017). Rasgos del profesorado asociados al uso de diferentes estrategias metodológicas en las
+         clases de ciencias. Enseñanza de las Ciencias: Revista de Investigación y Experiencias Didácticas, 35(1),
+         175-192.https://doi.org/10.5565/rev/ensciencias.1970
+Gimeno, J. (2016). Los contenidos, una reflexión necesaria. Graó.
+González, M. T., y Bernárdez, A. (2019). Elementos y aspectos del centro escolar y su relación con la
+         desafección de los estudiantes. Revista de Investigación en Educación, 17(1), 5-19.
+         http://webs.uvigo.es/reined/
+Gorard, S., & See, B. H. (2011). How can we enhance enjoyment of secondary school? The student
+         view. British Educational Research Journal, 37(4), 671-690.
+         https://doi.org/10.1080/01411926.2010.488718
+Granjo, M., Castro, J., & Peixoto, F. (2021). Teacher identity: Can ethical orientation be related to
+         perceived competence, psychological needs satisfaction, commitment and global self-esteem?
+         European Journal of Teacher Education, 44(2), 158-179.
+         https://doi.org/10.1080/02619768.2020.1748004
+Hattie, J., y Clarke, S. (2020). Aprendizaje visible: FEEDBACK. Paraninfo.
+Hernández, F., Aberasturi, E., Sancho, J., y Correa, J. M. (2020). ¿Cómo aprenden los docentes?: Tránsitos
+         entre cartografías, experiencias, corporeidades y afectos. Octaedro.
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España             19
+
+
+Holloway, J., Sørensen, T. B., & Verger, A. (2017). Global perspectives on high-stakes teacher
+          accountability policies: An introduction. Education Policy Analysis Archives, 25(85).
+          https://dx.doi.org/10.14507/epaa.25.3325
+Imbernón, F. (2019). La formación del profesorado de secundaria: La eterna pesadilla. Profesorado.
+          Revista de Currículum y Formación del Profesorado, 23(3), 151-163.
+          https://doi.org/10.30827/profesorado.v23i3.9302
+Jerrim, J., & Sims, S. (2021). School accountability and teacher stress: International evidence from
+          the OECD TALIS study. Educational Assessment, Evaluation and Accountability, 34, 5-32.
+          https://doi.org/10.1007/s11092-021-09360-0
+Jolliffe, W. (2015). Bridging the gap: Teachers cooperating together to implement cooperative
+          learning. Education 3-13, 43(1), 70-82. https://doi.org/0.1080/03004279.2015.961719
+Kasalak, G., & Dagyar, M. (2020). The relationship between teacher self-efficacy and teacher job
+          satisfaction: A meta-analysis of the Teaching and Learning International Survey
+          (TALIS). Educational Sciences: Theory and Practice, 20(3), 16-33.
+          https://jestp.com/index.php/estp/article/view/885
+Katsantonis, I. G. (2020). Investigation of the impact of school climate and teachers’ self-efficacy on
+          job satisfaction: A cross-cultural approach. European Journal of Investigation in Health, Psychology
+          and Education, 10(1), 119-133. https://doi.org/10.3390/ejihpe10010011
+Kaya, M. (2021). Investigation of factors affecting organizational innovativeness in schools. Inquiry in
+          Education, 13(2), article 9. https://digitalcommons.nl.edu/ie/vol13/iss2/9
+Kokotsaki, D., Menzies, V., & Wiggins, A. (2016). Project-based learning: A review of the literature.
+          Improving School, 19(3), 267-277. https://doi.org/10.1177/1365480216659733
+Kutsyuruba, B., Klinger, D. A., & Hussain, A. (2015). Relationships among school climate, school
+          safety, and student achievement and well-being: A review of the literature. Review of Education,
+          3(2), 103-135. https://doi.org/10.1002/rev3.3043
+López, F., García, I., y Expósito, E. (2021). Formación inicial y formación permanente del
+          profesorado de educación secundaria en España. Un análisis territorial. Bordón, 77(4), 65-84.
+          https://doi.org/10.13042/Bordon.2021.91081
+Luengo, F., Hernández, J., Clavijo, M. J., y Gómez, J. A. (2021). Fortalezas y debilidades de la
+          propuesta curricular LOMLOE: proyecto Atlántida. Avances en Supervisión Educativa, 35.
+          https://doi.org/10.23824/ase.v0i35.723
+Lupión, T., y Gallego, M. (2017). Compartiendo la mirada: Una experiencia en práctica reflexiva para
+          formación permanente. Revista Electrónica Interuniversitaria de Formación del Profesorado, 20(1),
+          127–144. https://doi.org/10.6018/reifop/20.1.244931
+Mammadov, R., & Çimen, İ. (2019). Optimizing teacher quality based on student performance: A
+          data envelopment analysis on PISA and TALIS. International Journal of Instruction, 12(4), 767-
+          788. https://doi.org/10.29333/iji.2019.12449a
+Marcelo, C., y Vaillant, D. (2017). Políticas y programas de inducción en la docencia en
+          Latinoamérica. Cadernos de Pesquisa, 47(166), 1224-1249.
+          https://doi.org/10.1590/198053144322
+Martínez-Izaguirre, M., Álvarez de Eulate, C. Y., y Villardón-Gallego, L. (2017). Competencias
+          profesionales del profesorado de educación obligatoria. Revista Iberoamericana de
+          Educación, 74(1), 171-192. https://rieoei.org/historico/documentos/rie74a07.pdf
+Molina, J., y Luengo, J. (2020). Reconstrucciones “resilientes” de la identidad profesional del
+          profesorado: Endoprivatización y cultura performativa en Andalucía (España). REICE.
+          Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación, 18(2), 57-75.
+          https://doi.org/10.15366/reice2020.18.2.003
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                                        20
+
+
+Montero, L., y Gewerc, A. (2018). La profesión docente en la sociedad del conocimiento. Una
+         mirada a través de la revisión de investigaciones de los últimos 10 años. Revista de Educación a
+         Distancia (RED), 18(56). http://dx.doi.org/10.6018/red/56/3
+Mouraz, A., Lopes, A., Morgado, J. C., & Torres, A. C. (2020). Veteran teachers and the challenges
+         of curriculum innovation. En R. Dorczak & A. Portela (Eds.), Generational diversity and
+         intergenerational collaboration among teachers: Perspectives and experience (pp. 153-165). Uniwersytetu
+         Jagiellońskiego.
+Organisation for Economic Co-operation and Development. (2019). TALIS 2018 technical report.
+         https://www.oecd.org/education/talis/TALIS_2018_Technical_Report.pdf
+Perrenoud, P. (2019). La organización del trabajo, clave para cualquier educación diferenciada. Graó.
+Pozuelos, F. J., y García, F. J. (2020). Currículum integrado: Estrategias para la práctica. Investigación
+         en la Escuela, 100, 37-54. https://doi.org/10.12795/IE.2020.i100.04
+Praetorius, A. K., Klieme, E., Herbert, B., & Pinger, P. (2018). Generic dimensions of teaching
+         quality: The German framework of three basic dimensions. ZDM, 50(3), 407-426.
+         https://doi.org/10.1007/s11858-018-0918-4
+Prats, E., Marín-Blanco, A., y Álvarez-López, G. (2019). Elementos para el debate en la iniciación
+         profesional docente en España. En J.M. Valle y G. Álvarez-López (Coords.), La iniciación
+         profesional docente: marcos supranacionales y estudios comparados (pp. 204-220). Dykinson.
+Prendes, Mª P., y Cerdán, F. (2021). Tecnologías avanzadas para afrontar el reto de la innovación
+         educativa. RIED. Revista Iberoamericana de Educación a Distancia, 24(1), 33-46.
+         https://doi.org/10.5944/ried.24.1.28415
+Protheroe, N. (2008). Teacher efficacy: What is it and does it matter? Principal, 42-45.
+         http://www.naesp.org/sites/default/files/resources/1/Pdfs/Teacher_Efficacy_What_is_it_
+         and_Does_it_Matter.pdf
+Raudenbush, S. W., & Bryk, A. S. (2002). Hierarchical linear models: Applications and data analysis methods.
+         Sage Publishing.
+Real, S., Ramírez, S., Bermúdez, M., y Pino, A. M. (2020). Las metodologías empleadas en la
+         innovación educativa. Aula de Encuentro, 22(1), 57-80. https://doi.org/10.17561/ae.v22n1
+Reoyo, N., Carbonero, M. Á., y Martín, L. J. (2017). Características de eficacia docente desde las
+         perspectivas del profesorado y futuro profesorado de secundaria. Revista de Educación, 376,
+         62-112. https://doi.org/10.4438/1988-592X-RE-2017-376-344
+Ridge, B. L., & Lavigne, A. L. (2020). Improving instructional practice through peer observation and
+         feedback. Education Policy Analysis Archives, 28(61). https://doi.org/10.14507/epaa.28.5023
+Rittaco, M., y Amores, F. J. (2018). Dirección escolar y liderazgo pedagógico: Un análisis de
+         contenido del discurso de los directores de centros educativos en la Comunidad Autónoma
+         de Andalucía (España). Educação e Pesquisa, 44, e162034. https://doi.org/10.1590/S1678-
+         4634201709162034
+Rodríguez-García, A., & Arias-Gago, A. R. (2022). Características bibliométricas de la literatura
+         internacional sobre métodos docentes: Una taxonomía multidisciplinar. Revista Complutense de
+         Educación, 33(1), 93-106.https://doi.org/10.5209/rced.73722
+Rodríguez-Martínez, C. (2020). Contextos y desafíos de la profesión docente en España: La
+         formación y la carrera docente. Formação em Movimento, 2(1), 205-233.
+         https://doi.org/10.38117/2675-181X.formov2020.v2i1n3.205-233
+Serdyukov, P. (2017). Innovation in education: What works, what doesn’t, and what to do about
+         it? Journal of Research in Innovative Teaching & Learning, 10(1), 4-33.
+         https://doi.org/10.1108/JRIT-10-2016-0007
+
+El profesorado y los enfoques innovadores en centros de educación secundaria en España          21
+
+
+Stronge, J. H., Ward, T. J., & Grant, L. W. (2011). What makes good teachers good? A cross-case
+        analysis of the connection between teacher effectiveness and student achievement. Journal of
+        Teacher Education, 62(4), 339-355. https://doi.org/10.1177/0022487111404241
+Tahirsylaj, A., Smith, W. C., Khan, G., & Wermke, W. (2021). The conceptual and methodological
+        construction of a ‘global’ teacher identity through TALIS. c e p s Journal, 11(3), 75-95.
+        https://doi.org/10.26529/cepsj.1090
+Tang, Y. (2021). Does information and communication technology (ICT) empower teacher
+        innovativeness: A multilevel, multisite analysis. Educational Technology Research and Development,
+        69(6), 3009-3028. https://doi.org/10.1007/s11423-021-10052-1
+Tarabini, A., Curran, M., Montes, A., y Parcerisa, L. (2015). La vinculación escolar como antídoto
+        del abandono escolar prematuro: Explorando el papel de habitus institucional. Profesorado.
+        Revista de Currículum y Formación del Profesorado, 19(3), 196-212.
+        https://revistaseug.ugr.es/index.php/profesorado/article/view/18874
+Trujillo, F., Segura, A., y González, A. (2020). Claves de la innovación educativa en España desde la
+        perspectiva de los centros innovadores: Una investigación cualitativa. Participación Educativa,
+        7(10), 49-58. https://hdl.handle.net/11162/199508
+Urbanos, R., Ortún, V., y González, B. (2021). La larga marcha hacia ninguna parte: Los efectos de
+        las hambrunas y de los déficits educativos tardan en notarse, pero la educación en España
+        necesita atención urgente. Economía y Salud, 96.
+        https://accedacris.ulpgc.es/bitstream/10553/107016/2/larga_marcha_hacia.pdf
+Van Praag, L., Nouwen, W., Van Caudenberg, R., Clycq, N., & Timmerman, C. (2018). Comparative
+        perspectives on early school leaving in the European Union. Routledge.
+Vázquez, R. (2018). Hacia una literacidad del fracaso escolar y del abandono temprano desde las voces de
+        adolescentes y jóvenes. Servicio de Publicaciones de la Universidad de Cádiz.
+Wiens, P. D., Calkins, L., Yoder, P. J. & Hightower, A. (2021). Examining the relationship between
+        instructional practice and social studies teacher training: A TALIS study. The Journal of Social
+        Studies Research, 46, 123-133. https://doi.org/10.1016/j.jssr.2021.05.006 0885-985X
+
+
+                                                 Sobre los Autores
+Soledad García-Gómez
+Universidad de Sevilla
+solgar@us.es
+Doctora en Ciencias de la Educación por la Universidad de Málaga y Profesora Titular del
+Departamento de Didáctica y Organización Educativa de la Universidad de Sevilla. Actividad
+docente e investigadora centrada en la formación del profesorado, el trabajo por proyectos y los
+centros educativos innovadores.
+ORCID: https://orcid.org/0000-0002-1563-8678
+
+Javier Gil Flores
+Universidad de Sevilla
+jflores@us.es
+Doctor en Ciencias de la Educación por la Universidad de Sevilla y Catedrático de Universidad
+en el área de Métodos de Investigación y Diagnóstico en Educación. Su actividad investigadora
+más reciente se centra en los procesos de enseñanza y aprendizaje, el rendimiento académico y la
+educación superior.
+ORCID: https://orcid.org/0000-0003-0755-4367
+
+Archivos Analíticos de Políticas Educativas, Vol. 30, No. 167                               22
+
+
+
+
+           archivos analíticos de políticas educativas
+             Volumen 30 Número 167                 15 de noviembre 2022   ISSN 1068-2341
+
+
+                      Los/as lectores/as pueden copiar, mostrar, distribuir, y adaptar este articulo,
+                     siempre y cuando se de crédito y atribución al autor/es y a Archivos Analíticos
+                     de Políticas Educativas, los cambios se identifican y la misma licencia se aplica
+al trabajo derivada.Más detalles de la licencia de CreativeCommons se encuentran en
+https://creativecommons.org/licenses/by-sa/4.0/. Cualquier otro uso debe ser aprobado en
+conjunto por el autor/es, o AAPE/EPAA. La sección en español para Sud América de
+AAPE/EPAA es publicada por el Mary Lou Fulton Teachers College, Arizona StateUniversity y la
+Universidad de San Andrés de Argentina. Los artículos que aparecen en AAPE son indexados en CIRC
+(Clasificación Integrada de Revistas Científicas, España) DIALNET (España), Directory of Open
+Access Journals, EBSCO Education Research Complete, ERIC, Education Full Text (H.W. Wilson),
+PubMed, QUALIS A1 (Brazil), Redalyc, SCImagoJournal Rank, SCOPUS, SOCOLAR (China).
+
+Sobre el consejo editorial:https://epaa.asu.edu/ojs/index.php/epaa/about/editorialTeam
+
+Por errores y sugerencias contacte a Fischman@asu.edu
+
+Síganos en EPAA’s Facebook comunidad at https://www.facebook.com/EPAAAAPE y en
+Twitterfeed@epaa_aape.
