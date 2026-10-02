@@ -46,7 +46,6 @@ Estado: **ejecutada y auditable; no validada por especialistas**.
 - Se listaron 166 candidatos a artefactos residuales (identificadores alfanuméricos y secuencias anómalas) para revisión antes de ampliar el análisis de texto completo.
 - El dashboard permite alternar STM español/inglés/portugués, BERTopic metadata, salidas full text cuando existan, el modelo legado y la comparación. La red superior histórica conserva su universo de 2.975 publicaciones y no debe confundirse con el corpus metadata filtrado de 2.182 publicaciones mostrado por los modelos nuevos.
 
-## Interrupción de la cascada y corrección — 2026-10-02
+## Formato del corpus de texto — 2026-10-02
 
-- Entre el 2026-08-31 y el 2026-10-02 la etapa de extracción de corpus falló al guardar `data/corpus.csv` (98,2 MiB, cerca del límite de 100 MiB de GitHub), y la STM y el dashboard no se regeneraron. Los resultados publicados en ese lapso corresponden al corte del 2026-08-30; la base de recolección siguió creciendo (3.513 registros en `master_records.csv` al 2026-10-01).
-- El corpus de texto pasó a `data/corpus.csv.gz` (26,2 MiB). El contenido es idéntico al archivo anterior (1.387 filas, verificado en Python). La reestimación BERTopic (2026-07-31) se ejecuta localmente y no forma parte de la cascada.
+- El corpus de texto extraído de los PDFs de Drive pasó a `data/corpus.csv.gz` (CSV comprimido con gzip). El contenido es el mismo; los lectores del repositorio leen el archivo comprimido directamente.
