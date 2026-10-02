@@ -3,8 +3,8 @@
   "corpus": "metadata",
   "language": "en",
   "seed": 42,
-  "generated_at_utc": "2026-08-29 00:03:09",
-  "git_commit": "bcbd937d998f8523a21e9c2af805cf17ed6fada8",
+  "generated_at_utc": "2026-10-02 21:02:58",
+  "git_commit": "f07344afc8def12f4d57b41396bba2380b38a101",
   "R_version": "R version 4.3.3 (2024-02-29)",
   "packages": {
     "stm": "1.3.8"
@@ -16,7 +16,7 @@
       "end_year": 2026
     },
     "paths": {
-      "corpus_pdf": "data/corpus.csv",
+      "corpus_pdf": "data/corpus.csv.gz",
       "bibliographic_records": "data/master_records.csv",
       "output_root": "output/topic_models",
       "cache_root": "cache/topic_models",
@@ -218,14 +218,14 @@
       }
     }
   },
-  "documents": 998,
-  "input_candidates": 998,
+  "documents": 1089,
+  "input_candidates": 1089,
   "removed_by_textProcessor": 0,
   "removed_by_prepDocuments": 0,
-  "selected_K": 20,
+  "selected_K": 16,
   "selection_status": "stability_nonconverged",
   "human_review_status": "pending",
   "year_2026_incomplete": true,
   "execution_mode": "full",
-  "elapsed_seconds": 922.8303
+  "elapsed_seconds": 1075.7074
 }
