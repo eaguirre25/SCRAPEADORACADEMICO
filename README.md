@@ -139,6 +139,15 @@ Los workflows de GitHub Actions corren en cascada:
 
 Cada workflow conserva `workflow_dispatch`, por lo que tambien puede ejecutarse manualmente desde GitHub Actions.
 
+### Formato del corpus de texto y limite de tamano
+
+`data/corpus.csv.gz` es el corpus de texto extraido de los PDFs de Drive (CSV comprimido con gzip, UTF-8; las columnas incluyen `filename`, `doi`, `texto` y `status`). Pandas, readr y el modulo `csv` con `gzip` lo leen directamente. Se comprime porque la version sin comprimir (`data/corpus.csv`, 98,2 MiB al 28-ago-2026) se acercaba al limite de 100 MiB por archivo de GitHub; comprimido pesa unos 26 MiB. En la primera corrida posterior al cambio, el workflow de extraccion migra el CSV anterior y lo retira del repositorio.
+
+### Registro de incidencias de la cascada
+
+- **2026-08-31 a 2026-10-02.** El paso `Guardar corpus y manifiesto en GitHub` del workflow de extraccion fallo en todas las corridas (ultima exitosa: 2026-08-28); por eso el analisis STM y el dashboard quedaron en `skipped`. Causa probable: el push de `data/corpus.csv` superaba el limite de 100 MiB. La base de recoleccion (`data/master_records.csv`) siguio actualizandose cada 3 dias. Solucion: corpus comprimido (`data/corpus.csv.gz`, PR #3). Las etapas de extraccion, STM y dashboard publicadas antes de la correccion corresponden al corte del 2026-08-30.
+- **Nota operativa.** El paso `Instalar R y pdftools desde apt` puede tardar mas de una hora, por lo que una corrida completa de la cascada dura varias horas.
+
 ## Fuentes y licencia
 
 Los datos provienen de fuentes academicas abiertas, incluyendo OpenAlex y repositorios institucionales. Revisar las condiciones de cada fuente antes de redistribuir datos enriquecidos o archivos derivados.

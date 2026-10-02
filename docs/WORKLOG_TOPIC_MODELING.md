@@ -45,3 +45,8 @@ Estado: **ejecutada y auditable; no validada por especialistas**.
 - La auditoría del full text registra 1.246 candidatos, 672 textos elegibles y 15 eliminaciones en limpieza. Las pérdidas posteriores de `textProcessor` y `prepDocuments` quedan pendientes hasta ejecutar el STM full text rediseñado.
 - Se listaron 166 candidatos a artefactos residuales (identificadores alfanuméricos y secuencias anómalas) para revisión antes de ampliar el análisis de texto completo.
 - El dashboard permite alternar STM español/inglés/portugués, BERTopic metadata, salidas full text cuando existan, el modelo legado y la comparación. La red superior histórica conserva su universo de 2.975 publicaciones y no debe confundirse con el corpus metadata filtrado de 2.182 publicaciones mostrado por los modelos nuevos.
+
+## Interrupción de la cascada y corrección — 2026-10-02
+
+- Entre el 2026-08-31 y el 2026-10-02 la etapa de extracción de corpus falló al guardar `data/corpus.csv` (98,2 MiB, cerca del límite de 100 MiB de GitHub), y la STM y el dashboard no se regeneraron. Los resultados publicados en ese lapso corresponden al corte del 2026-08-30; la base de recolección siguió creciendo (3.513 registros en `master_records.csv` al 2026-10-01).
+- El corpus de texto pasó a `data/corpus.csv.gz` (26,2 MiB). El contenido es idéntico al archivo anterior (1.387 filas, verificado en Python). La reestimación BERTopic (2026-07-31) se ejecuta localmente y no forma parte de la cascada.
