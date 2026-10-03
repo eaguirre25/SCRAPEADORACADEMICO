@@ -1,5 +1,7 @@
 {
   "selection_hash": "e2b10d71402bc7178d746993f89c9673198e327ee5e43cc1886a52b952dfdd73",
+  "model_signature": "527466cfe09a734b4b797df6864d5d3334256c704c669c45fb939da6b77d6927",
+  "model_id": "8eaf976104bee8d3e016add51fb61d438902542d45a65e0761b4275c714e6aa4",
   "criterion": "study_location",
   "sensitivity": [
     {
@@ -105,7 +107,5 @@
     }
   ],
   "status": "exploratory_candidates",
-  "parameter_choice": "Primary UMAP/HDBSCAN settings match the existing preferred global solution: minimum cluster size 35. Sensitivity includes 10, 15 and 25. Vectorizer min_df=1/max_df=1 avoids empty vocabulary with few aggregate topic documents.",
-  "model_signature": "527466cfe09a734b4b797df6864d5d3334256c704c669c45fb939da6b77d6927",
-  "model_id": "8eaf976104bee8d3e016add51fb61d438902542d45a65e0761b4275c714e6aa4"
+  "parameter_choice": "Primary UMAP/HDBSCAN settings match the existing preferred global solution: minimum cluster size 35. Sensitivity includes 10, 15 and 25. Vectorizer min_df=1/max_df=1 prevents empty vocabulary when BERTopic aggregates a small number of topics. No optimum or substantive validation is claimed."
 }

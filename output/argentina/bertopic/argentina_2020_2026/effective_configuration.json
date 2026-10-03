@@ -247,15 +247,15 @@
     "evaluation": true
   },
   "seed": 42,
-  "python_version": "3.12.14",
+  "python_version": "3.11.16",
   "package_versions": {
     "bertopic": "0.17.4",
     "sentence-transformers": "5.7.0",
     "umap-learn": "0.5.12",
     "hdbscan": "0.8.44",
     "scikit-learn": "1.7.2",
-    "numpy": "2.3.5",
-    "pandas": "2.2.3"
+    "numpy": "2.4.6",
+    "pandas": "2.3.3"
   },
   "corpus_hash": "4ea78d2f2cd1bfc2032eda31bc02b30a3bb4be2c2b7226166e3e3239f4817b8a",
   "text_cleaning_version": "unicode-nfc-v2",
