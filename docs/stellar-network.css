@@ -1,0 +1,22 @@
+.net-panel{min-width:0;min-height:0}
+.stellar-stage{position:relative;flex:1;min-height:0;overflow:hidden;background:radial-gradient(ellipse at 28% 32%,#102a49 0%,#071426 43%,#030a16 100%)}
+.stellar-stage #net-svg{display:block;width:100%;height:100%;touch-action:none}
+.stellar-tools{position:absolute;left:14px;top:12px;display:flex;gap:5px}
+.stellar-tools button,.stellar-detail button{background:#0a1b30e8;border:1px solid #355575;color:#e1f0ff;border-radius:8px;padding:6px 10px;font:inherit;font-size:12px;cursor:pointer}
+.stellar-tools button:hover,.stellar-detail button:hover{background:#193957;border-color:#85c9ff}
+.stellar-tools button:focus-visible,.stellar-detail button:focus-visible,.stellar-detail a:focus-visible{outline:2px solid #a8d4ff;outline-offset:3px}
+.stellar-hint{position:absolute;bottom:10px;left:14px;font-size:10px;letter-spacing:.03em;color:#9db4ce;pointer-events:none}
+.stellar-detail{position:absolute;right:12px;top:12px;bottom:34px;width:min(310px,48%);overflow:auto;padding:20px 16px;background:#071426f5;border:1px solid #385e82;border-radius:14px;box-shadow:0 12px 42px #0009;color:#dceaff;line-height:1.55;scrollbar-width:thin}
+.stellar-detail[hidden]{display:none}
+#net-detail-close{position:absolute;right:9px;top:9px;padding:1px 9px;font-size:22px}
+.stellar-detail .detail-kicker{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#94bbdf;margin:0 30px 10px 0}
+.stellar-detail h3{font-size:15px;line-height:1.4;margin-bottom:12px;overflow-wrap:anywhere}
+.stellar-detail p{font-size:12px;margin:10px 0;overflow-wrap:anywhere}
+.stellar-detail .detail-reference{border-top:1px solid #29445e;padding-top:12px}
+.stellar-detail .detail-missing{color:#b5c4d6;font-size:10px}
+.stellar-detail a{display:inline-block;padding:7px 10px;background:#173959;border:1px solid #477599;border-radius:8px;color:#dcefff;font-size:12px;text-decoration:none}
+.stellar-node:focus{outline:none}
+.stellar-node:focus-visible .stellar-sphere{stroke:white;stroke-width:2.5px}
+.stellar-label{paint-order:stroke;stroke:#06101f;stroke-width:3px;stroke-linejoin:round;fill:#e0edff;pointer-events:none;font-family:"Segoe UI",system-ui,sans-serif}
+@media(max-width:600px){.stellar-detail{width:min(280px,76%)}.stellar-hint{font-size:9px}.net-controls{flex-wrap:wrap;justify-content:flex-end}.panel-head h2{font-size:.65em}.net-legend{max-height:46px}}
+@media(prefers-reduced-motion:reduce){.neon-title{animation:none}.tooltip{transition:none}}
