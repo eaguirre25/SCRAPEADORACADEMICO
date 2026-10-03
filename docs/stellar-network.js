@@ -36,7 +36,7 @@ window.StellarNetwork = (() => {
       return {stop() {}};
     }
     const g = svg.append('g').attr('class', 'stellar-world');
-    const nodes = view.nodes.map(n => ({...n}));
+    const nodes = view.nodes.map(n => ({...(window.StellarPapers?.[n.id] || {}), ...n}));
     const links = view.edges.map(e => ({...e}));
     const maxWeight = Math.max(1, ...nodes.map(n => (isTopics ? n.size : n.degree) || 1));
     const radius = d => isTopics ? 9 + Math.sqrt((d.size || 1) / maxWeight) * 24 : 4 + ((d.degree || 0) / maxWeight) * 9;
@@ -121,7 +121,7 @@ window.StellarNetwork = (() => {
       if (d) {
         paragraph(isTopics ? 'Tópico · ' + model.label : d.short_citation, 'detail-kicker');
         const h = document.createElement('h3'); h.textContent = isTopics ? d.label : d.title; body.appendChild(h);
-        paragraph(isTopics ? `${d.size} documentos · ${(d.words || []).join(' · ')}` : `T${d.topic} · ${d.topic_label || 'Tema sin etiqueta'}`);
+        paragraph(isTopics ? `${d.size} documentos · ${(d.words || []).join(' · ')}` : d.topic ? `T${d.topic} · ${d.topic_label || 'Tema sin etiqueta'}` : d.topic_label || 'Sin tema asignado');
         paragraph(`${adjacency.get(d.index).size - 1} conexiones directas en esta red`);
         if (!isTopics) {
           paragraph(d.reference || `${d.authors || 'Sin autor'} (${d.year || 's. f.'}). ${d.title}.`, 'detail-reference');
@@ -154,13 +154,13 @@ window.StellarNetwork = (() => {
       tip.style.left = Math.max(6, Math.min(ev.clientX + 14, window.innerWidth - 280)) + 'px';
       tip.style.top = Math.max(6, Math.min(ev.clientY + 12, window.innerHeight - tip.offsetHeight - 8)) + 'px';
     }
-    const zoom = d3.zoom().extent(() => [[0, 0], [W, H]]).scaleExtent([.15, 10])
+    const zoom = d3.zoom().extent(() => [[0, 0], [W, H]]).scaleExtent([.025, 10])
       .on('zoom', e => {transform = e.transform; g.attr('transform', transform); layoutLabels();});
     svg.call(zoom).call(zoom.transform, d3.zoomIdentity).on('click.stellar', () => select(null));
     function fit() {
       const x0 = d3.min(nodes, d => d.x - radius(d)) - 35, x1 = d3.max(nodes, d => d.x + radius(d)) + 35;
       const y0 = d3.min(nodes, d => d.y - radius(d)) - 35, y1 = d3.max(nodes, d => d.y + radius(d)) + 35;
-      const k = Math.max(.15, Math.min(2, (W - 35) / (x1 - x0), (H - 60) / (y1 - y0)));
+      const k = Math.max(.025, Math.min(2, (W - 35) / (x1 - x0), (H - 60) / (y1 - y0)));
       svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2 - k * (x0 + x1) / 2, H / 2 - k * (y0 + y1) / 2).scale(k));
     }
     document.getElementById('net-zoom-in').onclick = () => {firstFit = true; svg.call(zoom.scaleBy, 1.4);};
@@ -172,7 +172,7 @@ window.StellarNetwork = (() => {
     simulation.on('tick', () => {
       link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
       light.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-      node.attr('transform', d => `translate(${d.x},${d.y})`);
+      if (nodes.length < 1000 || frames % 2 === 0) node.attr('transform', d => `translate(${d.x},${d.y})`);
       captions.attr('x', d => d.x).attr('y', d => d.y + radius(d) + 15 / transform.k);
       if (++frames % 12 === 0) layoutLabels();
       if (!firstFit && simulation.alpha() < .09) {firstFit = true; fit();}

@@ -8,6 +8,8 @@ on:
       - 'apa_citation.py'
       - 'docs/stellar-network.js'
       - 'docs/stellar-network.css'
+      - 'docs/topic-review.js'
+      - 'docs/topic-review.css'
       - 'generate_research_library.py'
       - 'generate_corpus_text_files.py'
       - 'inject_library_link.py'
@@ -70,7 +72,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json
+          git add docs/index.html docs/topic-review-data.json docs/dashboard-articles.js docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json
           if git diff --cached --quiet; then
             echo "Sin cambios."
           else

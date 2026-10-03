@@ -12,6 +12,7 @@ from pathlib import Path
 from datetime import date
 from collections import Counter, defaultdict
 from apa_citation import build_citation, detect_language, format_author
+from topic_modeling.identifiers import normalize_doi, stable_document_id
 
 DATA_DIR = Path("data")
 OUT_DIR  = Path("docs")
@@ -207,11 +208,7 @@ NETWORK_SOURCES = {
     },
 }
 
-MAX_NODES = 400
-MAX_EDGES = 2500
-MAX_TOPIC_EDGES = 150
 MIN_SHARED_KEYWORDS = 2
-SPARSE_NETWORK_NODES = 150
 MIN_SEMANTIC_SIMILARITY = 0.35
 MIN_COASSIGNMENT = 0.15
 MIN_WORD_OVERLAP = 0.03
@@ -221,10 +218,10 @@ def _row_doi(row):
     """Las salidas de modelado traen `doi` o un `document_id` con prefijo."""
     doi = s(row.get("doi"))
     if doi:
-        return doi.lower()
+        return normalize_doi(doi)
     document_id = s(row.get("document_id"))
     if document_id.lower().startswith("doi:"):
-        return document_id[4:].strip().lower()
+        return normalize_doi(document_id)
     return ""
 
 
@@ -234,13 +231,28 @@ def _topic_id(value):
     return value[:-2] if value.endswith(".0") else value
 
 
+def match_paper(row):
+    doi = _row_doi(row)
+    if doi and doi in paper_keys_by_doi:
+        return paper_keys_by_doi[doi]
+    for field in ("publication_document_id", "document_id"):
+        key = s(row.get(field))
+        if key in paper_pool:
+            return key
+        if key in paper_keys_by_model_id:
+            return paper_keys_by_model_id[key]
+    document = model_document_metadata.get(s(row.get("document_id")), row)
+    matches = paper_keys_by_title.get(s(document.get("title")).casefold(), [])
+    return matches[0] if len(matches) == 1 else None
+
+
 def load_document_topics(config):
     assignments = {}
     for row in read_csv(config["documents"]):
-        doi = _row_doi(row)
+        key = match_paper(row)
         topic_id = _topic_id(row.get(config["document_topic_field"]))
-        if doi and topic_id and topic_id != "-1":
-            assignments[doi] = topic_id
+        if key and topic_id:
+            assignments[key] = topic_id
     return assignments
 
 
@@ -290,112 +302,82 @@ def topic_palette(topics):
 
 # Pool de documentos: titulo, autoria y keywords con las que se tejen aristas.
 paper_pool = {}
-for row in records:
-    doi = s(row.get("doi", "")).lower()
+paper_keys_by_doi = {}
+paper_keys_by_model_id = {}
+model_document_metadata = {s(row.get("document_id")): row for row in read_csv(f"{BERTOPIC_ROOT}/document_topics.csv")}
+paper_keys_by_title = defaultdict(list)
+for row_index, row in enumerate(records):
+    doi = normalize_doi(row.get("doi"))
     title = s(row.get("title", ""))
-    if not doi or not title:
-        continue
+    paper_key = s(row.get("record_id")) or f"record-{row_index}"
+    paper_keys_by_model_id.setdefault(stable_document_id(row), paper_key)
+    if doi:
+        paper_keys_by_doi.setdefault(doi, paper_key)
+    if title:
+        paper_keys_by_title[title.casefold()].append(paper_key)
     kws_raw = s(row.get("keywords", ""))
     authors = [a.strip() for a in s(row.get("authors", "")).split(";") if a.strip()]
     language = detect_language(row)
     surnames = [format_author(author, language).split(",", 1)[0] for author in authors]
     short_author = (surnames[0] + " et al." if len(surnames) > 2 else " & ".join(surnames)) or "Sin autor"
     citation = build_citation(row, language)
-    paper_pool[doi] = {
-        "title": title,
+    paper_pool[paper_key] = {
+        "id": paper_key,
+        "title": title or "Registro sin título",
         "short_citation": f"{short_author}, {s(row.get('publication_year')) or 's. f.'}",
         "reference": citation.text,
         "reference_missing": citation.missing,
         "authors": "; ".join(authors[:2]) + (" et al." if len(authors) > 2 else ""),
         "year": s(row.get("publication_year", "")),
-        "url": s(row.get("url", "")) or f"https://doi.org/{doi}",
+        "url": s(row.get("url", "")) or (f"https://doi.org/{doi}" if doi else ""),
         "kws": [
             k.strip().lower() for k in kws_raw.split(";")
             if k.strip() and len(k.strip()) > 3 and k.strip().lower() not in KW_STOPS
         ][:12],
     }
 
-corpus_dois = {s(cp.get("doi", "")).lower() for cp in corpus if s(cp.get("doi", ""))}
-BASE_UNIVERSES = {
-    "master": ("todos los registros validados", set(paper_pool)),
-    "corpus": ("documentos con texto completo", corpus_dois & set(paper_pool)),
-}
+BASE_UNIVERSES = {"master": ("corpus completo de registros", set(paper_pool))}
 
 
 def _weave(papers, min_shared):
-    """Teje la red exigiendo `min_shared` keywords en comun por arista."""
+    """Retiene todos los registros, incluidos los que no tienen enlaces."""
     kw_index = defaultdict(list)
     for i, paper in enumerate(papers):
-        for kw in paper["kws"]:
+        for kw in set(paper["kws"]):
             kw_index[kw].append(i)
-
     edge_weights = defaultdict(int)
     for paper_ids in kw_index.values():
+        # Se omiten términos demasiado frecuentes para evitar enlaces genéricos.
         if 2 <= len(paper_ids) <= 40:
             for a, b in itertools.combinations(paper_ids, 2):
                 edge_weights[(a, b)] += 1
-
-    strong_edges = sorted(
-        ((a, b, w) for (a, b), w in edge_weights.items() if w >= min_shared),
-        key=lambda edge: -edge[2],
-    )[:MAX_EDGES]
-
-    connected = sorted({node for a, b, _ in strong_edges for node in (a, b)})
-    old_to_new = {old: new for new, old in enumerate(connected)}
-    nodes = [dict(papers[i], degree=0) for i in connected]
-    for a, b, _ in strong_edges:
-        nodes[old_to_new[a]]["degree"] += 1
-        nodes[old_to_new[b]]["degree"] += 1
-
-    if len(nodes) > MAX_NODES:
-        keep = sorted(sorted(range(len(nodes)), key=lambda i: -nodes[i]["degree"])[:MAX_NODES])
-        remap = {old: new for new, old in enumerate(keep)}
-        kept = set(keep)
-        nodes = [nodes[i] for i in keep]
-        edges = [
-            {"source": remap[old_to_new[a]], "target": remap[old_to_new[b]], "weight": w}
-            for a, b, w in strong_edges
-            if old_to_new[a] in kept and old_to_new[b] in kept
-        ]
-    else:
-        edges = [
-            {"source": old_to_new[a], "target": old_to_new[b], "weight": w}
-            for a, b, w in strong_edges
-        ]
-    # Las keywords ya cumplieron su funcion y abultarian el HTML.
+    edges = [{"source": a, "target": b, "weight": w}
+             for (a, b), w in sorted(edge_weights.items()) if w >= min_shared]
+    nodes = [{k: v for k, v in paper.items() if k not in {"kws", "title", "authors", "year", "url", "short_citation", "reference", "reference_missing"}}
+             for paper in papers]
     for node in nodes:
-        node.pop("kws", None)
+        node["degree"] = 0
+    for edge in edges:
+        nodes[edge["source"]]["degree"] += 1
+        nodes[edge["target"]]["degree"] += 1
     return nodes, edges
 
 
 def build_keyword_network(base_dois, assignments, colors, labels):
-    """Red documental: nodos = articulos, aristas = keywords compartidas."""
     papers = []
-    for doi in sorted(base_dois):
-        info = paper_pool[doi]
-        topic_id = assignments.get(doi)
-        if not topic_id or not info["kws"]:
-            continue
-        papers.append({
-            **info,
-            "topic": topic_id,
-            "topic_label": labels.get(topic_id, ""),
-            "color": colors.get(topic_id, "#484F58"),
-        })
-
-    nodes, edges = _weave(papers, MIN_SHARED_KEYWORDS)
-    # Los modelos con pocos documentos asignados no llegan a dos keywords
-    # compartidas y quedarian con un grafo casi vacio; ahi se afloja el umbral.
-    if len(nodes) < SPARSE_NETWORK_NODES and len(papers) > len(nodes):
-        relaxed_nodes, relaxed_edges = _weave(papers, 1)
-        if len(relaxed_nodes) > len(nodes):
-            nodes, edges = relaxed_nodes, relaxed_edges
-    return nodes, edges
+    for key in sorted(base_dois):
+        info = paper_pool[key]
+        topic_id = assignments.get(key)
+        state = "outlier" if topic_id == "-1" else "assigned" if topic_id is not None else "not_modeled"
+        papers.append({**info, "topic": topic_id if state == "assigned" else "",
+            "topic_label": labels.get(topic_id, "Sin grupo asignado" if state == "outlier" else "Sin asignación vinculada a este modelo"),
+            "assignment_status": state, "color": colors.get(topic_id, "#72879e")})
+    return _weave(papers, MIN_SHARED_KEYWORDS)
 
 
 def build_topic_network(topics, colors, assignments, config):
     """Red de topicos: nodos = topicos, aristas = similitud entre ellos."""
-    counts = Counter(assignments.values())
+    counts = Counter(topic for topic in assignments.values() if topic != "-1")
     index = {topic["id"]: i for i, topic in enumerate(topics)}
     nodes = [{
         "id": topic["id"],
@@ -455,7 +437,6 @@ def build_topic_network(topics, colors, assignments, config):
     # completa con los pares mas fuertes hasta tener un grafo legible.
     if len(selected) < len(nodes):
         selected = raw_edges[:len(nodes)]
-    selected = selected[:MAX_TOPIC_EDGES]
     return nodes, [{"source": a, "target": b, "weight": round(w, 3)} for a, b, w in selected]
 
 
@@ -471,16 +452,10 @@ for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
     colors = topic_palette(topics)
     labels = {topic["id"]: topic["label"] for topic in topics}
 
-    # Base adaptativa: se elige el universo documental que mas asignaciones de
-    # este modelo llega a representar en la red.
-    base_key, base_label, base_dois, best_cover = "", "", set(), -1
-    for candidate_key, (candidate_label, candidate_dois) in BASE_UNIVERSES.items():
-        cover = sum(1 for doi in candidate_dois if doi in assignments and paper_pool[doi]["kws"])
-        if cover > best_cover:
-            base_key, base_label, base_dois, best_cover = (
-                candidate_key, candidate_label, candidate_dois, cover
-            )
-
+    base_key = "master"
+    base_label = "corpus completo de registros"
+    base_dois = set(paper_pool)
+    best_cover = sum(topic != "-1" for topic in assignments.values())
     doc_nodes, doc_edges = build_keyword_network(base_dois, assignments, colors, labels)
     topic_nodes, topic_edges = build_topic_network(topics, colors, assignments, config)
     networks[model_key] = {
@@ -488,6 +463,10 @@ for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
         "kind": model_kind,
         "base": base_label,
         "assigned": best_cover,
+        "modeled": len(read_csv(config["documents"])),
+        "unlinked": sum(match_paper(row) is None for row in read_csv(config["documents"])),
+        "outliers": sum(topic == "-1" for topic in assignments.values()),
+        "not_modeled": len(paper_pool) - len(assignments),
         "documents": {"nodes": doc_nodes, "edges": doc_edges},
         "topics": {"nodes": topic_nodes, "edges": topic_edges},
     }
@@ -496,6 +475,29 @@ for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
         f"(base {base_key}, {best_cover} asignados) - "
         f"{len(topic_nodes)} topicos / {len(topic_edges)} enlaces"
     )
+
+review_models = {}
+for model_key, config in NETWORK_SOURCES.items():
+    if model_key not in networks:
+        continue
+    member_groups = defaultdict(list)
+    for row in read_csv(config["documents"]):
+        topic_id = _topic_id(row.get(config["document_topic_field"]))
+        if not topic_id or topic_id == "-1":
+            continue
+        key = match_paper(row)
+        member = {"id": key or s(row.get("document_id")),
+            "ambiguous": s(row.get("is_ambiguous")).lower() == "true",
+            "silhouette": row.get("silhouette", ""),
+            "membership": row.get("hdbscan_membership_strength", ""),
+            "topic_probability": row.get("topic_probability", "")}
+        if key is None:
+            row = model_document_metadata.get(s(row.get("document_id")), row)
+            member["paper"] = {"title": s(row.get("title")) or "Sin título", "year": s(row.get("year")),
+                "authors": "Autoría no disponible", "url": f"https://doi.org/{_row_doi(row)}" if _row_doi(row) else ""}
+        member_groups[topic_id].append(member)
+    review_models[model_key] = {"topics": member_groups}
+(OUT_DIR / "topic-review-data.json").write_text(json.dumps({"models": review_models}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 DEFAULT_NETWORK = "bertopic-macros" if "bertopic-macros" in networks else next(iter(networks), "")
 nodes = networks.get(DEFAULT_NETWORK, {}).get("documents", {}).get("nodes", [])
@@ -545,7 +547,9 @@ anio_max = max(anios) if anios else 2026
 # ── JSON ──────────────────────────────────────────────────────────────────────
 
 networks_json = json.dumps(networks, ensure_ascii=False, separators=(",", ":"))
-arts_json    = json.dumps(all_articles, ensure_ascii=False)
+papers_json = json.dumps({key: {k: v for k, v in paper.items() if k != "kws"} for key, paper in paper_pool.items()}, ensure_ascii=False, separators=(",", ":"))
+arts_json    = json.dumps(all_articles, ensure_ascii=False, separators=(",", ":"))
+(OUT_DIR / "dashboard-articles.js").write_text("window.StellarArticles = " + arts_json + ";\n", encoding="utf-8")
 topicos_json = json.dumps([{
     "id":          s(t.get("topico", "")),
     "prevalencia": float(t.get("prevalencia", 0) or 0),
@@ -589,12 +593,12 @@ config_summary = (
     f"HDBSCAN {effective_config.get('hdbscan_parameters', {})} · semilla {effective_config.get('seed', 42)}"
 )
 
-def topic_cards(rows, model):
+def topic_cards(rows, model, model_key):
     if not rows:
         return '<p class="tm-empty">Todavia no hay resultados para este modelo.</p>'
     cards = []
     for row in rows:
-        topic_id = s(row.get("topic_id") or row.get("subtopic_id") or row.get("macro_topic_id"))
+        topic_id = _topic_id(row.get("topic_id") or row.get("subtopic_id") or row.get("macro_topic_id"))
         proposal = topic_label_proposal_by_id.get(topic_id, {}) if model == "BERTopic" else {}
         algorithmic_label = s(row.get("automatic_label") or row.get("descriptor_automatic")) or f"Tópico {topic_id}"
         proposed_label = s(proposal.get("proposed_human_label"))
@@ -671,14 +675,14 @@ def topic_cards(rows, model):
                 f'<div><strong>Contaminación:</strong> {html_lib.escape(contamination_text)}. Pendiente de revisión humana.</div></details>'
             )
         cards.append(
-            '<article class="tm-card">'
+            f'<article class="tm-card" role="button" tabindex="0" data-model="{html_lib.escape(model_key)}" data-topic="{html_lib.escape(topic_id)}" aria-label="Revisar tema {html_lib.escape(label)}">'
             f'<div class="tm-title">{html_lib.escape(label)}</div>'
             f'<div class="tm-meta"><strong>ID:</strong> T{html_lib.escape(topic_id)} · <strong>descriptor automático:</strong> {html_lib.escape(algorithmic_label)}</div>'
             f'<div class="tm-meta">{html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
-            f'{count} documentos · validación: {html_lib.escape(label_status)}</div>'
-            f'{alert_html}'
+            f'{count} documentos</div>'
+            '<div class="tm-open">Abrir ficha y revisar →</div>'
             f'<div class="tm-words">{html_lib.escape(s(row.get("top_words")))}</div>'
-            f'<div class="tm-reps">{html_lib.escape(s(row.get("representative_titles")))}</div>{interpretation_html}</article>'
+            f'<template class="tm-evidence">{alert_html}{interpretation_html}<p><strong>Estado del modelo:</strong> {html_lib.escape(selection_status)}. <strong>Etiqueta original:</strong> {html_lib.escape(label_status)}.</p></template></article>'
         )
     return "".join(cards)
 
@@ -703,17 +707,15 @@ model_options = "".join(
     ) + '</optgroup>' for group in ("principal", "comparative", "historical")
 ) + '<optgroup label="Comparación"><option value="comparison">Comparación STM–BERTopic</option></optgroup>'
 model_panes = "".join(
-    f'<div class="tm-pane" id="tm-{key}"{"" if key == first_model else " hidden"}>{topic_cards(rows, kind)}</div>'
+    f'<div class="tm-pane" id="tm-{key}"{"" if key == first_model else " hidden"}>{topic_cards(rows, kind, key)}</div>'
     for _, key, _, kind, rows in available_models if rows
 )
 hybrid_section = f'''<section class="tm-section" id="modelado-tematico">
-  <div class="tm-head"><div><h2>Modelado temático</h2><p><strong>BERTopic multilingüe · solución preferida provisional · 14 macrotemas · validación humana pendiente.</strong> Las STM son comparativas y los históricos aparecen separados.</p></div>
+  <div class="tm-head"><div><h2>Modelado temático</h2><p><strong>Elegí el modelo y abrí una tarjeta para revisar sus documentos.</strong> El selector cambia los temas y la red.</p></div>
   <select id="tm-select" onchange="showTopicModel(this.value)">{model_options}</select></div>
-  <div class="tm-method"><strong>Outliers conservados:</strong> {len(outlier_rows)} ({(100*len(outlier_rows)/2182 if outlier_rows else 0):.2f}%). Causas provisionales: {html_lib.escape(outlier_summary or "pendiente")}.</div>
-  <div class="tm-method"><strong>Configuración efectiva:</strong> {html_lib.escape(config_summary)}. Se muestran por separado el ID algorítmico, el descriptor automático y la etiqueta humana propuesta. Ninguna propuesta equivale a validación especializada.</div>
   {model_panes}
   <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th>Topico STM</th><th>Topico BERTopic</th><th>Relacion</th><th>Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>
-  <div class="tm-method">Estado exploratorio: la selección computacional y las etiquetas son provisionales hasta completar estabilidad, intrusión y revisión humana. Semilla: 42 · período 2020–2026 · 2026 es incompleto. La prevalencia STM es una mezcla documental; el tamaño BERTopic es una asignación de cluster. Cobertura full text inferior al 50% en: {html_lib.escape(", ".join(low_coverage_years) or "ningún año")}.</div>
+  <div class="tm-review-tools"><button type="button" id="topic-export">Exportar revisiones</button><label>Importar revisiones <input type="file" id="topic-import" accept="application/json,.json"></label><span id="topic-review-status" role="status">Las decisiones se guardan en este navegador.</span></div>
 </section>'''
 
 # ── HTML ──────────────────────────────────────────────────────────────────────
@@ -726,6 +728,8 @@ html = """<!DOCTYPE html>
 <title>Dashboard - Direccion Escolar</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="stellar-network.js"></script>
+<script src="dashboard-articles.js"></script>
+<script src="topic-review.js" defer></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -813,6 +817,7 @@ tbody tr:hover td{background:var(--hover)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.topics-panel{display:none}}
 </style>
 <link rel="stylesheet" href="stellar-network.css">
+<link rel="stylesheet" href="topic-review.css">
 </head>
 <body>
 
@@ -826,9 +831,9 @@ tbody tr:hover td{background:var(--hover)}
 
 <div class="kpis">
   <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Publicaciones</div></div>
-  <div class="kpi"><div class="kpi-n">{n_macros_preferred}</div><div class="kpi-l">Macrotemas BERTopic</div></div>
-  <div class="kpi"><div class="kpi-n">{n_nodes}</div><div class="kpi-l">Nodos en red</div></div>
-  <div class="kpi"><div class="kpi-n">{n_edges}</div><div class="kpi-l">Conexiones</div></div>
+  <div class="kpi"><div class="kpi-n" id="kpi-topics">{n_macros_preferred}</div><div class="kpi-l">Temas del modelo</div></div>
+  <div class="kpi"><div class="kpi-n" id="kpi-nodes">{n_nodes}</div><div class="kpi-l">Nodos en red</div></div>
+  <div class="kpi"><div class="kpi-n" id="kpi-edges">{n_edges}</div><div class="kpi-l">Conexiones</div></div>
   <div class="kpi"><div class="kpi-n">{anio_min}&ndash;{anio_max}</div><div class="kpi-l">Periodo</div></div>
 </div>
 
@@ -860,6 +865,7 @@ tbody tr:hover td{background:var(--hover)}
       </aside>
     </div>
     <div class="net-legend" id="net-legend"></div>
+    <details class="net-method"><summary>Cómo se construye esta red</summary><p id="net-method-text"></p><p>La ubicación resulta de una simulación de fuerzas. Las distancias en pantalla no son una escala de semejanza semántica. Las formas regulares aparecen cuando muchos nodos tienen enlaces y tamaños similares.</p></details>
   </div>
   <div class="topics-panel">
     <div class="panel-head">
@@ -915,8 +921,9 @@ tbody tr:hover td{background:var(--hover)}
 
 <script>
 const NETWORKS = """ + networks_json + """;
+window.StellarPapers = """ + papers_json + """;
 const TOPICOS = """ + topicos_json + """;
-const ARTS    = """ + arts_json + """;
+const ARTS    = window.StellarArticles || [];
 const PG = 50;
 
 // ── Redes por modelo ──────────────────────────────────────────────────────────
@@ -951,17 +958,23 @@ function renderNetwork(isComparison){
 
   const isTopics = currentView === "topics";
   const view = model[currentView] || {nodes:[], edges:[]};
+  document.getElementById("kpi-topics").textContent = model.topics.nodes.length.toLocaleString("es-AR");
+  document.getElementById("kpi-nodes").textContent = view.nodes.length.toLocaleString("es-AR");
+  document.getElementById("kpi-edges").textContent = view.edges.length.toLocaleString("es-AR");
+  document.getElementById("net-method-text").textContent = isTopics
+    ? (model.kind === "STM" ? "Nodos: temas. Tamaño: cantidad de documentos con ese tema predominante. Enlaces: coasignación como primer y segundo tema; se conservan los pares más fuertes según el criterio del modelo." : currentModel === "bertopic-subtopics" ? "Nodos: subtópicos. Tamaño: cantidad de documentos. Enlaces: pertenencia al mismo macrotema." : "Nodos: macrotemas. Tamaño: cantidad de documentos. Enlaces: similitud c-TF-IDF entre sus vocabularios; se aplica un umbral y se completan los pares más fuertes cuando la red queda escasa.")
+    : `Corpus completo: ${view.nodes.length} registros, incluidos los aislados. ${model.assigned} con tema asignado; ${model.outliers} sin grupo asignado; ${model.not_modeled} sin asignación vinculada a este modelo. Su exportación contiene ${model.modeled} filas; ${model.unlinked} no pudieron vincularse a un registro maestro. Enlaces: al menos dos palabras clave compartidas, omitiendo palabras presentes en más de 40 registros. Tamaño: número de conexiones en esta red. Gris: sin tema asignado. Sin recorte de 400 nodos.`;
   title.textContent = (isTopics ? "Red de tópicos · " : "Red de documentos · ") + model.label;
   badge.textContent = isComparison
     ? "La comparación no tiene red propia · se mantiene " + model.label
     : (isTopics
         ? `${view.nodes.length} tópicos · ${view.edges.length} enlaces`
-        : `${view.nodes.length} nodos · ${view.edges.length} aristas · base: ${model.base}`);
+        : `${view.nodes.length} registros · ${view.edges.length} enlaces · ${model.assigned} con tema`);
 
   // En la vista documental el color no se explica solo: la leyenda traduce
   // cada color al tópico del modelo activo.
   legend.innerHTML = isTopics ? "" : model.topics.nodes
-    .map(t=>`<span><i style="background:${t.color}"></i>T${t.id} ${t.label}</span>`).join("");
+    .map(t=>`<span><i style="background:${t.color}"></i>T${t.id} ${String(t.label).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</span>`).join("") + '<span><i style="background:#72879e"></i>Sin tema asignado / sin asignación vinculada</span>';
 
   netSim = StellarNetwork.render({svgEl, model, view, isTopics, tip});
 }
