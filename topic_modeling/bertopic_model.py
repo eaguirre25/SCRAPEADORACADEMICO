@@ -103,7 +103,7 @@ def run_bertopic(
     topic_rows: list[dict[str, Any]] = []
     representative_rows: list[dict[str, Any]] = []
     total = len(documents)
-    model_label = f"BERTopic-{corpus_unit.upper()}-MULTILINGUAL"
+    model_label = cfg.get("model_label") or f"BERTopic-{corpus_unit.upper()}-MULTILINGUAL"
     for _, item in info.iterrows():
         topic_id = int(item["Topic"])
         words = [word for word, _ in (model.get_topic(topic_id) or [])]

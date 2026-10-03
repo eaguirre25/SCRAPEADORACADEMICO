@@ -855,7 +855,7 @@ tbody tr:hover td{background:var(--hover)}
     <div class="neon-title">Dashboard &middot; <span class="nt-accent">Direccion y Gestion Escolar</span></div>
     <div class="neon-sub">version beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elias Aguirre</a> &middot; <a href="articulos.html">Trabajar con tabla de articulos</a></div>
   </div>
-  <span class="stamp">Actualizado: """ + date.today().strftime('%d/%m/%Y') + f""" &middot; {anio_min}&ndash;{anio_max}</span>
+  <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><a class="argentina-link" href="argentina.html" style="color:#d5edff;border:1px solid #4072a0;border-radius:22px;padding:10px 16px;text-decoration:none;background:#10233c">✦ Argentina · BERTopic 2020–2026 ↗</a><span class="stamp">Actualizado: """ + date.today().strftime('%d/%m/%Y') + f""" &middot; {anio_min}&ndash;{anio_max}</span></div>
 </header>
 
 <div class="kpis">

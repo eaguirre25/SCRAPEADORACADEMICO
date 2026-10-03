@@ -1,0 +1,4 @@
+model,corpus,topic_id,documents,embedding_compactness,silhouette_mean,silhouette_min,title_semantic_dispersion,abstract_semantic_dispersion,ctfidf_coherence_cv,ctfidf_coherence_npmi,topic_diversity,language_entropy,dominant_language_share,source_entropy,country_entropy,contamination_share,borderline_document_share,low_confidence_share,status,review_status
+BERTopic-ARGENTINA-2020-2026,metadata,0,244,0.72794,0.136848,-0.377268,0.328424,0.274629,,,0.333333,0.510532,0.856557,0.424905,-0.0,0.0,0.020492,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,1,47,0.748736,0.685228,0.493327,0.287267,0.248617,,,0.333333,0.660792,0.787234,0.102967,-0.0,0.0,0.042553,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,2,42,0.781357,0.552915,0.385647,0.261153,0.219024,,,0.333333,0.501047,0.857143,0.314492,-0.0,0.0,0.047619,0.0,contaminated_candidate,pending_human_review

@@ -1,0 +1,111 @@
+{
+  "selection_hash": "e2b10d71402bc7178d746993f89c9673198e327ee5e43cc1886a52b952dfdd73",
+  "criterion": "study_location",
+  "sensitivity": [
+    {
+      "seed": 42,
+      "min_topic_size": 10,
+      "topics": 3,
+      "outliers": 9,
+      "documents": 534,
+      "outlier_share": 0.016853932584269662,
+      "adjusted_rand_including_outliers": 0.023537913335402588,
+      "shared_assigned_documents": 333,
+      "adjusted_rand_shared_assigned": 0.0
+    },
+    {
+      "seed": 42,
+      "min_topic_size": 15,
+      "topics": 3,
+      "outliers": 9,
+      "documents": 534,
+      "outlier_share": 0.016853932584269662,
+      "adjusted_rand_including_outliers": 0.023537913335402588,
+      "shared_assigned_documents": 333,
+      "adjusted_rand_shared_assigned": 0.0
+    },
+    {
+      "seed": 42,
+      "min_topic_size": 25,
+      "topics": 2,
+      "outliers": 0,
+      "documents": 534,
+      "outlier_share": 0.0,
+      "adjusted_rand_including_outliers": 0.009112144289628267,
+      "shared_assigned_documents": 333,
+      "adjusted_rand_shared_assigned": 0.0
+    },
+    {
+      "seed": 42,
+      "min_topic_size": 35,
+      "topics": 3,
+      "outliers": 201,
+      "documents": 534,
+      "outlier_share": 0.37640449438202245,
+      "adjusted_rand_including_outliers": 1.0,
+      "shared_assigned_documents": 333,
+      "adjusted_rand_shared_assigned": 1.0
+    }
+  ],
+  "stability": [
+    {
+      "seed": 42,
+      "min_topic_size": 35,
+      "topics": 3,
+      "outliers": 201,
+      "documents": 534,
+      "outlier_share": 0.37640449438202245,
+      "adjusted_rand_including_outliers": 1.0,
+      "shared_assigned_documents": 333,
+      "adjusted_rand_shared_assigned": 1.0
+    },
+    {
+      "seed": 117,
+      "min_topic_size": 35,
+      "topics": 3,
+      "outliers": 341,
+      "documents": 534,
+      "outlier_share": 0.6385767790262172,
+      "adjusted_rand_including_outliers": 0.054384882307079774,
+      "shared_assigned_documents": 168,
+      "adjusted_rand_shared_assigned": 0.0
+    },
+    {
+      "seed": 233,
+      "min_topic_size": 35,
+      "topics": 3,
+      "outliers": 327,
+      "documents": 534,
+      "outlier_share": 0.6123595505617978,
+      "adjusted_rand_including_outliers": 0.11783909280250877,
+      "shared_assigned_documents": 186,
+      "adjusted_rand_shared_assigned": 0.0
+    },
+    {
+      "seed": 401,
+      "min_topic_size": 35,
+      "topics": 2,
+      "outliers": 230,
+      "documents": 534,
+      "outlier_share": 0.4307116104868914,
+      "adjusted_rand_including_outliers": 0.5205998719169818,
+      "shared_assigned_documents": 267,
+      "adjusted_rand_shared_assigned": 0.8507809500499302
+    },
+    {
+      "seed": 809,
+      "min_topic_size": 35,
+      "topics": 2,
+      "outliers": 158,
+      "documents": 534,
+      "outlier_share": 0.2958801498127341,
+      "adjusted_rand_including_outliers": 0.4048026005535442,
+      "shared_assigned_documents": 287,
+      "adjusted_rand_shared_assigned": 0.6384539003215727
+    }
+  ],
+  "status": "exploratory_candidates",
+  "parameter_choice": "Primary UMAP/HDBSCAN settings match the existing preferred global solution: minimum cluster size 35. Sensitivity includes 10, 15 and 25. Vectorizer min_df=1/max_df=1 avoids empty vocabulary with few aggregate topic documents.",
+  "model_signature": "527466cfe09a734b4b797df6864d5d3334256c704c669c45fb939da6b77d6927",
+  "model_id": "8eaf976104bee8d3e016add51fb61d438902542d45a65e0761b4275c714e6aa4"
+}

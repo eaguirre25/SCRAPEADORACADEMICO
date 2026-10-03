@@ -1,6 +1,6 @@
 /* D3 force layout: stellar shading changes appearance, never edge semantics. */
 window.StellarNetwork = (() => {
-  function render({svgEl, model, view, isTopics, tip}) {
+  function render({svgEl, model, view, isTopics, tip, onSelect}) {
     const svg = d3.select(svgEl);
     const detail = document.getElementById('net-detail');
     const body = document.getElementById('net-detail-body');
@@ -141,11 +141,13 @@ window.StellarNetwork = (() => {
         paragraph(isTopics ? `${d.size} documentos · ${(d.words || []).join(' · ')}` : d.topic ? `T${d.topic} · ${d.topic_label || 'Tema sin etiqueta'}` : d.topic_label || 'Sin tema asignado');
         paragraph(`${adjacency.get(d.index).size - 1} conexiones directas en esta red`);
         if (!isTopics) {
+          const semantic = links.some(e => e.relation === 'semantic');
+          if (semantic) paragraph('Conexiones por coseno de embeddings multilingües. No representan citas ni términos necesariamente idénticos.', 'detail-missing');
           paragraph('Etiquetas retenidas: ' + ((d.keywords || []).join(' · ') || 'Ninguna'), 'detail-missing');
           paragraph('Procedencia: ' + (d.keyword_provenance?.label || 'Sin trazabilidad'), 'detail-missing');
           const incidentLinks=links.filter(e=>e.source===d||e.target===d).sort((a,b)=>b.weight-a.weight);
-          if(incidentLinks.length){const evidence=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Ver conexiones y etiquetas compartidas ('+incidentLinks.length+')';evidence.appendChild(summary);
-            for(const edge of incidentLinks){const other=edge.source===d?edge.target:edge.source;const p=document.createElement('p');p.textContent=(other.short_citation||other.title)+' · semejanza '+edge.weight.toLocaleString('es-AR',{maximumFractionDigits:3})+' · '+(edge.shared_keywords||[]).join(' · ');evidence.appendChild(p);}body.appendChild(evidence);}
+          if(incidentLinks.length){const evidence=document.createElement('details');const summary=document.createElement('summary');summary.textContent=(semantic?'Ver semejanzas semánticas (':'Ver conexiones y etiquetas compartidas (')+incidentLinks.length+')';evidence.appendChild(summary);
+            for(const edge of incidentLinks){const other=edge.source===d?edge.target:edge.source;const p=document.createElement('p');p.textContent=(other.short_citation||other.title)+(semantic?' · coseno ':' · semejanza ')+edge.weight.toLocaleString('es-AR',{maximumFractionDigits:3})+(semantic?'':' · '+(edge.shared_keywords||[]).join(' · '));evidence.appendChild(p);}body.appendChild(evidence);}
           if(d.keyword_excluded?.length){const excluded=document.createElement('details');const title=document.createElement('summary');title.textContent='Ver etiquetas excluidas por el diccionario propuesto';excluded.appendChild(title);for(const rule of d.keyword_excluded){const p=document.createElement('p');p.textContent=rule.original+' · '+rule.reason;excluded.appendChild(p);}body.appendChild(excluded);}
           paragraph(d.reference || `${d.authors || 'Sin autor'} (${d.year || 's. f.'}). ${d.title}.`, 'detail-reference');
           if (d.reference_missing?.length) paragraph('Datos por completar: ' + d.reference_missing.join(', '), 'detail-missing');
@@ -158,6 +160,7 @@ window.StellarNetwork = (() => {
           } catch (_) { /* Missing URL: leave the reference readable. */ }
         }
       }
+      if (onSelect) onSelect(d, body);
       highlight();
     }
     close.onclick = () => {const previous = selected; select(null); node.filter(d => d === previous).node()?.focus();};

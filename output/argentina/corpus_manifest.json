@@ -1,0 +1,70 @@
+{
+  "criterion": "study_location",
+  "period": [
+    2020,
+    2026
+  ],
+  "master_records": 3513,
+  "canonical_publications": 3502,
+  "period_publications": 3360,
+  "modeled_candidates": 534,
+  "territorial_candidates": 534,
+  "human_included": 0,
+  "no_territorial_evidence": 2826,
+  "exact_duplicate_groups": 11,
+  "probable_duplicate_pairs": 2,
+  "corpus_hash": "e2b10d71402bc7178d746993f89c9673198e327ee5e43cc1886a52b952dfdd73",
+  "master_sha256": "7377742a86f8fb19c005516da0bef8bdf3d2b26560dbf5c7c007df7f27f78308",
+  "year_counts": {
+    "2020": 61,
+    "2021": 58,
+    "2022": 93,
+    "2023": 103,
+    "2024": 97,
+    "2025": 62,
+    "2026": 60
+  },
+  "partial_year": 2026,
+  "settings": {
+    "criterion": "study_location",
+    "start_year": 2020,
+    "end_year": 2026,
+    "include_unvalidated_candidates": true,
+    "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
+    "min_topic_size": 35,
+    "umap": {
+      "n_neighbors": 10,
+      "n_components": 10,
+      "min_dist": 0.1,
+      "metric": "cosine"
+    },
+    "min_samples": 5,
+    "semantic_network": {
+      "neighbors": 5,
+      "min_similarity": 0.7
+    },
+    "sensitivity_min_topic_sizes": [
+      10,
+      15,
+      25,
+      35
+    ],
+    "stability_seeds": [
+      42,
+      117,
+      233,
+      401,
+      809
+    ],
+    "review_file": "config/argentina_document_reviews.json"
+  },
+  "domain_eligibility": "Accepted master_records from the existing scraping/relevance workflow; no new topic-based domain exclusion.",
+  "limitations": [
+    "Territorial text matches are candidates, not verified study locations.",
+    "Missing territorial evidence does not demonstrate a study took place outside Argentina.",
+    "No affiliation country inference from repository or author name.",
+    "The year filter uses publication year, not fieldwork year.",
+    "Territorial terms remain in the modeling text; geographic clusters require substantive review.",
+    "Coverage depends on the existing thematic search, providers and available metadata."
+  ]
+}

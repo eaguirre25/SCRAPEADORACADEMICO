@@ -1,0 +1,68 @@
+name: Argentina · BERTopic 2020–2026
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/master_records.csv'
+      - 'config/argentina_analysis.json'
+      - 'config/argentina_document_reviews.json'
+      - 'config/topic_modeling.yml'
+      - 'scripts/run_argentina_analysis.py'
+      - '.github/workflows/argentina_bertopic.yml'
+  workflow_run:
+    workflows: ["Academic Scraper"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: argentina-bertopic
+  cancel-in-progress: false
+
+jobs:
+  argentina:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      HF_HOME: ${{ github.workspace }}/.cache/huggingface
+      TOKENIZERS_PARALLELISM: "false"
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-topic-modeling.txt
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .cache/huggingface
+            cache/topic_models
+          key: argentina-embeddings-${{ runner.os }}-${{ hashFiles('data/master_records.csv', 'config/argentina_analysis.json', 'requirements-topic-modeling.txt') }}
+          restore-keys: argentina-embeddings-${{ runner.os }}-
+      - name: Instalar dependencias CPU
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-topic-modeling.txt
+      - name: Construir corpus y ajustar BERTopic independiente
+        run: python scripts/run_argentina_analysis.py --mode all
+      - name: Verificar el corpus y las asignaciones
+        run: python -m pytest -q tests/test_argentina_analysis.py tests/test_keyword_network.py
+      - name: Publicar resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/argentina docs/argentina-data.json docs/argentina-corpus.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualiza análisis argentino BERTopic 2020–2026"
+            git pull --rebase origin main
+            git push
+          fi

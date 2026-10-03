@@ -15,3 +15,5 @@ output/topic_models/bertopic/embeddings*.parquet
 output/topic_models/**/*.joblib
 output/topic_models/**/*.pkl
 output/topic_models/reports/edge-profile-*/
+output/argentina/corpus/*.csv
+output/argentina/bertopic/**/model/
