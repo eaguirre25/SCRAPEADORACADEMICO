@@ -7,12 +7,13 @@ Dashboard interactivo con:
 3. Lista completa paginada (50/página) con buscador por título/autor
 """
 
-import csv, gzip, json, re, itertools, html as html_lib
+import csv, gzip, json, re, itertools, shutil, html as html_lib
 from pathlib import Path
 from datetime import date
 from collections import Counter, defaultdict
 from apa_citation import build_citation, detect_language, format_author
 from topic_modeling.identifiers import normalize_doi, stable_document_id
+from keyword_network import build_network, read_rules, topic_agreement, DEFAULT_PROFILE
 
 DATA_DIR = Path("data")
 OUT_DIR  = Path("docs")
@@ -208,7 +209,6 @@ NETWORK_SOURCES = {
     },
 }
 
-MIN_SHARED_KEYWORDS = 2
 MIN_SEMANTIC_SIMILARITY = 0.35
 MIN_COASSIGNMENT = 0.15
 MIN_WORD_OVERLAP = 0.03
@@ -300,7 +300,8 @@ def topic_palette(topics):
     return {topic["id"]: PALETA[i % len(PALETA)] for i, topic in enumerate(ordered)}
 
 
-# Pool de documentos: titulo, autoria y keywords con las que se tejen aristas.
+# Pool de documentos: la red léxica se calcula una sola vez para todos los modelos.
+keyword_ids, keyword_cleaned, keyword_variants, keyword_audit = build_network(records, read_rules())
 paper_pool = {}
 paper_keys_by_doi = {}
 paper_keys_by_model_id = {}
@@ -330,31 +331,19 @@ for row_index, row in enumerate(records):
         "authors": "; ".join(authors[:2]) + (" et al." if len(authors) > 2 else ""),
         "year": s(row.get("publication_year", "")),
         "url": s(row.get("url", "")) or (f"https://doi.org/{doi}" if doi else ""),
-        "kws": [
-            k.strip().lower() for k in kws_raw.split(";")
-            if k.strip() and len(k.strip()) > 3 and k.strip().lower() not in KW_STOPS
-        ][:12],
+        "kws": keyword_cleaned[paper_key]["keywords"],
+        "keywords": keyword_cleaned[paper_key]["keywords"],
+        "keyword_original": [k.strip() for k in kws_raw.split(";") if k.strip()],
+        "keyword_excluded": keyword_cleaned[paper_key]["excluded"],
+        "keyword_provenance": keyword_cleaned[paper_key]["provenance"],
     }
 
 BASE_UNIVERSES = {"master": ("corpus completo de registros", set(paper_pool))}
 
 
-def _weave(papers, min_shared):
-    """Retiene todos los registros, incluidos los que no tienen enlaces."""
-    kw_index = defaultdict(list)
-    for i, paper in enumerate(papers):
-        for kw in set(paper["kws"]):
-            kw_index[kw].append(i)
-    edge_weights = defaultdict(int)
-    for paper_ids in kw_index.values():
-        # Se omiten términos demasiado frecuentes para evitar enlaces genéricos.
-        if 2 <= len(paper_ids) <= 40:
-            for a, b in itertools.combinations(paper_ids, 2):
-                edge_weights[(a, b)] += 1
-    edges = [{"source": a, "target": b, "weight": w}
-             for (a, b), w in sorted(edge_weights.items()) if w >= min_shared]
-    nodes = [{k: v for k, v in paper.items() if k not in {"kws", "title", "authors", "year", "url", "short_citation", "reference", "reference_missing"}}
-             for paper in papers]
+def _weave(papers):
+    edges = keyword_variants[DEFAULT_PROFILE]
+    nodes = [{k: v for k, v in paper.items() if k not in {"kws", "keywords", "keyword_original", "keyword_excluded", "keyword_provenance", "title", "authors", "year", "url", "short_citation", "reference", "reference_missing"}} for paper in papers]
     for node in nodes:
         node["degree"] = 0
     for edge in edges:
@@ -372,7 +361,7 @@ def build_keyword_network(base_dois, assignments, colors, labels):
         papers.append({**info, "topic": topic_id if state == "assigned" else "",
             "topic_label": labels.get(topic_id, "Sin grupo asignado" if state == "outlier" else "Sin asignación vinculada a este modelo"),
             "assignment_status": state, "color": colors.get(topic_id, "#72879e")})
-    return _weave(papers, MIN_SHARED_KEYWORDS)
+    return _weave(papers)
 
 
 def build_topic_network(topics, colors, assignments, config):
@@ -458,6 +447,7 @@ for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
     best_cover = sum(topic != "-1" for topic in assignments.values())
     doc_nodes, doc_edges = build_keyword_network(base_dois, assignments, colors, labels)
     topic_nodes, topic_edges = build_topic_network(topics, colors, assignments, config)
+    keyword_audit.setdefault("topic_comparison", {})[model_key] = {profile: topic_agreement(keyword_ids, edges, assignments) for profile, edges in keyword_variants.items()}
     networks[model_key] = {
         "label": model_label,
         "kind": model_kind,
@@ -475,6 +465,42 @@ for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
         f"(base {base_key}, {best_cover} asignados) - "
         f"{len(topic_nodes)} topicos / {len(topic_edges)} enlaces"
     )
+
+legacy_index = defaultdict(list)
+for i, key in enumerate(keyword_ids):
+    original = [t.strip().lower() for t in paper_pool[key]["keyword_original"] if len(t.strip()) > 3 and t.strip().lower() not in KW_STOPS][:12]
+    for term in set(original):
+        legacy_index[term].append(i)
+legacy_counts = Counter()
+for members in legacy_index.values():
+    if 2 <= len(members) <= 40:
+        legacy_counts.update(itertools.combinations(members, 2))
+legacy_edges = [pair for pair, count in legacy_counts.items() if count >= 2]
+legacy_connected = set(i for pair in legacy_edges for i in pair)
+keyword_audit["legacy"] = {"label": "Criterio anterior de coincidencias exactas", "edges": len(legacy_edges), "connected_records": len(legacy_connected), "isolated_records": len(keyword_ids)-len(legacy_connected), "keyword_limit": 12, "max_document_frequency": 40, "min_shared": 2}
+keyword_audit["generated_on"] = date.today().isoformat()
+keyword_audit["selection_reason"] = "La configuración intermedia 0,20 es un punto de comparación exploratorio entre 0,10 y 0,30; no fue optimizada por apariencia ni validada como solución estadística. Las alternativas quedan disponibles."
+keyword_audit["sources"] = [
+ {"apa": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.", "url": "https://doi.org/10.1007/s11192-009-0146-3"},
+ {"apa": "van Eck, N. J., & Waltman, L. (2023). VOSviewer manual (version 1.6.20).", "url": "https://www.vosviewer.com/documentation/Manual_VOSviewer_1.6.20.pdf"},
+ {"apa": "OpenAlex. (s. f.). Keywords. OpenAlex Help Center. Consulta: 3 de octubre de 2026.", "url": "https://help.openalex.org/data/keywords/"}]
+shutil.copyfile("config/keyword_thesaurus.csv", OUT_DIR / "keyword-thesaurus.csv")
+(OUT_DIR / "keyword-network-audit.json").write_text(json.dumps(keyword_audit, ensure_ascii=False, indent=2), encoding="utf-8")
+# Store links once as compact arrays. All model views refer to the same lexical graph.
+vocabulary = sorted({term for edges in keyword_variants.values() for e in edges for term in e["shared_keywords"]})
+term_index = {term: i for i, term in enumerate(vocabulary)}
+pool = {}; variant_indexes = {}
+for profile, edges in keyword_variants.items():
+    indexes = []
+    for edge in edges:
+        pair = (edge["source"], edge["target"])
+        if pair not in pool:
+            pool[pair] = {"index": len(pool), "edge": edge}
+        indexes.append(pool[pair]["index"])
+    variant_indexes[profile] = indexes
+packed = [[e["edge"]["source"], e["edge"]["target"], e["edge"]["weight"], e["edge"]["jaccard"], [term_index[t] for t in e["edge"]["shared_keywords"]]] for e in pool.values()]
+keyword_payload = {"default_profile": DEFAULT_PROFILE, "profiles": keyword_audit["profiles"], "terms": vocabulary, "edges": packed, "variants": variant_indexes}
+(OUT_DIR / "keyword-network-data.js").write_text("window.KeywordNetworkData = " + json.dumps(keyword_payload, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
 
 review_models = {}
 for model_key, config in NETWORK_SOURCES.items():
@@ -546,7 +572,8 @@ anio_max = max(anios) if anios else 2026
 
 # ── JSON ──────────────────────────────────────────────────────────────────────
 
-networks_json = json.dumps(networks, ensure_ascii=False, separators=(",", ":"))
+network_export = {key: {**net, "documents": {"nodes": net["documents"]["nodes"], "edges": []}} for key, net in networks.items()}
+networks_json = json.dumps(network_export, ensure_ascii=False, separators=(",", ":"))
 papers_json = json.dumps({key: {k: v for k, v in paper.items() if k != "kws"} for key, paper in paper_pool.items()}, ensure_ascii=False, separators=(",", ":"))
 arts_json    = json.dumps(all_articles, ensure_ascii=False, separators=(",", ":"))
 (OUT_DIR / "dashboard-articles.js").write_text("window.StellarArticles = " + arts_json + ";\n", encoding="utf-8")
@@ -729,6 +756,8 @@ html = """<!DOCTYPE html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="stellar-network.js"></script>
 <script src="dashboard-articles.js"></script>
+<script src="keyword-network-data.js"></script>
+<script src="keyword-method.js" defer></script>
 <script src="topic-review.js" defer></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -830,7 +859,7 @@ tbody tr:hover td{background:var(--hover)}
 </header>
 
 <div class="kpis">
-  <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Publicaciones</div></div>
+  <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Registros reunidos</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-topics">{n_macros_preferred}</div><div class="kpi-l">Temas del modelo</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-nodes">{n_nodes}</div><div class="kpi-l">Nodos en red</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-edges">{n_edges}</div><div class="kpi-l">Conexiones</div></div>
@@ -848,6 +877,8 @@ tbody tr:hover td{background:var(--hover)}
           <option value="documents">Red de documentos</option>
           <option value="topics">Red de tópicos</option>
         </select>
+        <select id="net-profile" aria-label="Criterio de semejanza" onchange="setKeywordProfile(this.value)"></select>
+        <button type="button" id="keyword-audit-open">Método y comparación</button>
         <span class="badge" id="net-badge">&nbsp;</span>
       </div>
     </div>
@@ -925,6 +956,21 @@ window.StellarPapers = """ + papers_json + """;
 const TOPICOS = """ + topicos_json + """;
 const ARTS    = window.StellarArticles || [];
 const PG = 50;
+const KEYWORD_DATA = window.KeywordNetworkData;
+let currentProfile = KEYWORD_DATA.default_profile;
+const keywordCache = {};
+function keywordEdges(profile){
+  if(!keywordCache[profile]) keywordCache[profile] = KEYWORD_DATA.variants[profile].map(index=>{
+    const e=KEYWORD_DATA.edges[index];
+    return {source:e[0],target:e[1],weight:profile==='jaccard_control'?e[3]:e[2],shared_count:e[4].length,shared_keywords:e[4].map(i=>KEYWORD_DATA.terms[i])};
+  });
+  return keywordCache[profile];
+}
+for(const net of Object.values(NETWORKS)) net.documents.edges = keywordEdges(currentProfile);
+const profileSelect = document.getElementById('net-profile');
+for(const [id,p] of Object.entries(KEYWORD_DATA.profiles)){const o=new Option(p.label,id);profileSelect.appendChild(o);}
+profileSelect.value=currentProfile;
+function setKeywordProfile(profile){if(!KEYWORD_DATA.profiles[profile])return;currentProfile=profile;renderNetwork(false);}
 
 // ── Redes por modelo ──────────────────────────────────────────────────────────
 // El selector de modelado y el de vista comparten un mismo estado: al cambiar
@@ -957,13 +1003,18 @@ function renderNetwork(isComparison){
   if(!model){ legend.innerHTML = ""; badge.textContent = "Sin red disponible"; return; }
 
   const isTopics = currentView === "topics";
-  const view = model[currentView] || {nodes:[], edges:[]};
+  const baseView = model[currentView] || {nodes:[], edges:[]};
+  const edges = isTopics ? baseView.edges : keywordEdges(currentProfile);
+  const degrees = new Array(baseView.nodes.length).fill(0);
+  if(!isTopics) for(const e of edges){degrees[e.source]++;degrees[e.target]++;}
+  const view = isTopics ? baseView : {nodes:baseView.nodes.map((n,i)=>({...n,degree:degrees[i]})),edges};
+  profileSelect.disabled = isTopics;
   document.getElementById("kpi-topics").textContent = model.topics.nodes.length.toLocaleString("es-AR");
   document.getElementById("kpi-nodes").textContent = view.nodes.length.toLocaleString("es-AR");
   document.getElementById("kpi-edges").textContent = view.edges.length.toLocaleString("es-AR");
   document.getElementById("net-method-text").textContent = isTopics
     ? (model.kind === "STM" ? "Nodos: temas. Tamaño: cantidad de documentos con ese tema predominante. Enlaces: coasignación como primer y segundo tema; se conservan los pares más fuertes según el criterio del modelo." : currentModel === "bertopic-subtopics" ? "Nodos: subtópicos. Tamaño: cantidad de documentos. Enlaces: pertenencia al mismo macrotema." : "Nodos: macrotemas. Tamaño: cantidad de documentos. Enlaces: similitud c-TF-IDF entre sus vocabularios; se aplica un umbral y se completan los pares más fuertes cuando la red queda escasa.")
-    : `Corpus completo: ${view.nodes.length} registros, incluidos los aislados. ${model.assigned} con tema asignado; ${model.outliers} sin grupo asignado; ${model.not_modeled} sin asignación vinculada a este modelo. Su exportación contiene ${model.modeled} filas; ${model.unlinked} no pudieron vincularse a un registro maestro. Enlaces: al menos dos palabras clave compartidas, omitiendo palabras presentes en más de 40 registros. Tamaño: número de conexiones en esta red. Gris: sin tema asignado. Sin recorte de 400 nodos.`;
+    : `Corpus completo: ${view.nodes.length} registros, incluidos los aislados. ${model.assigned} con tema asignado; ${model.outliers} sin grupo asignado; ${model.not_modeled} sin asignación vinculada a este modelo. Su exportación contiene ${model.modeled} filas; ${model.unlinked} no pudieron vincularse a un registro maestro. Enlaces: al menos dos etiquetas normalizadas compartidas y semejanza ${KEYWORD_DATA.profiles[currentProfile].threshold.toFixed(2)} o mayor (${currentProfile === "jaccard_control" ? "Jaccard simple" : "Jaccard ponderado por IDF"}). Se consideran todas las etiquetas retenidas, sin límite de frecuencia. Diccionario de equivalencias y exclusiones propuesto, pendiente de revisión. Origen histórico de las etiquetas sin trazabilidad exacta. Consultá Método y comparación. Tamaño: número de conexiones en esta red. Gris: sin tema asignado. Sin recorte de 400 nodos.`;
   title.textContent = (isTopics ? "Red de tópicos · " : "Red de documentos · ") + model.label;
   badge.textContent = isComparison
     ? "La comparación no tiene red propia · se mantiene " + model.label

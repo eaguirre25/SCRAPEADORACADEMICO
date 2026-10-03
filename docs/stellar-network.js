@@ -40,21 +40,37 @@ window.StellarNetwork = (() => {
     const links = view.edges.map(e => ({...e}));
     const maxWeight = Math.max(1, ...nodes.map(n => (isTopics ? n.size : n.degree) || 1));
     const radius = d => isTopics ? 9 + Math.sqrt((d.size || 1) / maxWeight) * 24 : 4 + ((d.degree || 0) / maxWeight) * 9;
-    const width = d => isTopics ? Math.max(.6, d.weight * 3) : Math.min(3, d.weight * .4);
+    const width = d => isTopics ? Math.max(.6, d.weight * 3) : .5 + 2.5 * d.weight;
     const simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id((_, i) => i)
-        .distance(isTopics ? d => 130 - 70 * d.weight : d => 55 - d.weight * 3)
-        .strength(isTopics ? .35 : .5))
+        .distance(isTopics ? d => 130 - 70 * d.weight : d => 100 - 70 * d.weight)
+        .strength(isTopics ? .35 : d => .15 + .65 * d.weight))
       .force('charge', d3.forceManyBody().strength(isTopics ? -430 : -70))
       .force('center', d3.forceCenter(W / 2, H / 2))
-      .force('collision', d3.forceCollide(d => radius(d) + (isTopics ? 7 : 2)));
+      .force('collision', d3.forceCollide(d => radius(d) + (isTopics ? 7 : 2)))
+      .alphaDecay(isTopics ? .0228 : .045);
     // Only actual exported links are illuminated. The background is decorative.
     const adjacency = new Map(nodes.map(d => [d.index, new Set([d.index])]));
     links.forEach(d => {adjacency.get(d.source.index).add(d.target.index); adjacency.get(d.target.index).add(d.source.index);});
-    const link = g.append('g').attr('pointer-events', 'none').selectAll('line').data(links).join('line')
-      .attr('stroke', '#587b9e').attr('stroke-width', width).attr('stroke-opacity', .24);
-    const light = g.append('g').attr('pointer-events', 'none').selectAll('line').data(links).join('line')
-      .attr('stroke-width', d => width(d) + 4).attr('stroke-opacity', 0);
+    // Canvas retains every lexical link while avoiding tens of thousands of SVG lines.
+    const canvas = isTopics ? null : document.createElement('canvas');
+    let ctx = null, ratio = window.devicePixelRatio || 1;
+    if(canvas){canvas.className='stellar-links';canvas.setAttribute('aria-hidden','true');canvas.dataset.links=links.length;svgEl.parentElement.insertBefore(canvas,svgEl);ctx=canvas.getContext('2d');}
+    function resizeCanvas(){if(!canvas)return;canvas.width=Math.ceil(W*ratio);canvas.height=Math.ceil(H*ratio);}
+    resizeCanvas();
+    const link = isTopics ? g.append('g').attr('pointer-events', 'none').selectAll('line').data(links).join('line')
+      .attr('stroke', '#587b9e').attr('stroke-width', width).attr('stroke-opacity', .24) : g.selectAll('.no-svg-links');
+    const light = isTopics ? g.append('g').attr('pointer-events', 'none').selectAll('line').data(links).join('line')
+      .attr('stroke-width', d => width(d) + 4).attr('stroke-opacity', 0) : g.selectAll('.no-svg-lights');
+    function drawLinks(){
+      if(!ctx)return;ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,W,H);ctx.translate(transform.x,transform.y);ctx.scale(transform.k,transform.k);
+      const active=selected||hovered;let incidents=0;ctx.strokeStyle='#587b9e';ctx.globalAlpha=active?.035:.24;
+      for(let bucket=0;bucket<4;bucket++){ctx.beginPath();ctx.lineWidth=.5+(bucket+.5)*.625;
+        for(const e of links)if(Math.min(3,Math.floor(e.weight*4))===bucket){ctx.moveTo(e.source.x,e.source.y);ctx.lineTo(e.target.x,e.target.y);}ctx.stroke();}
+      if(active){ctx.beginPath();ctx.strokeStyle='#d3edff';ctx.lineWidth=2.4;ctx.globalAlpha=.92;
+        for(const e of links)if(e.source===active||e.target===active){ctx.moveTo(e.source.x,e.source.y);ctx.lineTo(e.target.x,e.target.y);incidents++;}ctx.stroke();}
+      canvas.dataset.highlighted=incidents;ctx.globalAlpha=1;
+    }
     const node = g.append('g').selectAll('g').data(nodes).join('g').attr('class', 'stellar-node')
       .attr('tabindex', 0).attr('role', 'button').attr('aria-pressed', 'false')
       .attr('aria-label', d => isTopics ? `T${d.id}: ${d.label}` : `${d.short_citation || d.authors || 'Sin autor'}: ${d.title}`)
@@ -104,6 +120,7 @@ window.StellarNetwork = (() => {
         .attr('stroke-opacity', d => active ? incident(d) ? .92 : .035 : .24)
         .attr('stroke-width', d => width(d) + (incident(d) ? .8 : 0));
       light.attr('stroke', active?.color || '#83c8ff').attr('stroke-opacity', d => incident(d) ? .18 : 0);
+      drawLinks();
       node.attr('opacity', d => nearby && !nearby.has(d.index) ? .19 : 1)
         .attr('aria-pressed', d => d === selected ? 'true' : 'false');
       node.select('.stellar-halo').attr('r', d => radius(d) * (d === active ? 3.6 : 2.4));
@@ -124,6 +141,12 @@ window.StellarNetwork = (() => {
         paragraph(isTopics ? `${d.size} documentos · ${(d.words || []).join(' · ')}` : d.topic ? `T${d.topic} · ${d.topic_label || 'Tema sin etiqueta'}` : d.topic_label || 'Sin tema asignado');
         paragraph(`${adjacency.get(d.index).size - 1} conexiones directas en esta red`);
         if (!isTopics) {
+          paragraph('Etiquetas retenidas: ' + ((d.keywords || []).join(' · ') || 'Ninguna'), 'detail-missing');
+          paragraph('Procedencia: ' + (d.keyword_provenance?.label || 'Sin trazabilidad'), 'detail-missing');
+          const incidentLinks=links.filter(e=>e.source===d||e.target===d).sort((a,b)=>b.weight-a.weight);
+          if(incidentLinks.length){const evidence=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Ver conexiones y etiquetas compartidas ('+incidentLinks.length+')';evidence.appendChild(summary);
+            for(const edge of incidentLinks){const other=edge.source===d?edge.target:edge.source;const p=document.createElement('p');p.textContent=(other.short_citation||other.title)+' · semejanza '+edge.weight.toLocaleString('es-AR',{maximumFractionDigits:3})+' · '+(edge.shared_keywords||[]).join(' · ');evidence.appendChild(p);}body.appendChild(evidence);}
+          if(d.keyword_excluded?.length){const excluded=document.createElement('details');const title=document.createElement('summary');title.textContent='Ver etiquetas excluidas por el diccionario propuesto';excluded.appendChild(title);for(const rule of d.keyword_excluded){const p=document.createElement('p');p.textContent=rule.original+' · '+rule.reason;excluded.appendChild(p);}body.appendChild(excluded);}
           paragraph(d.reference || `${d.authors || 'Sin autor'} (${d.year || 's. f.'}). ${d.title}.`, 'detail-reference');
           if (d.reference_missing?.length) paragraph('Datos por completar: ' + d.reference_missing.join(', '), 'detail-missing');
           try {
@@ -155,7 +178,7 @@ window.StellarNetwork = (() => {
       tip.style.top = Math.max(6, Math.min(ev.clientY + 12, window.innerHeight - tip.offsetHeight - 8)) + 'px';
     }
     const zoom = d3.zoom().extent(() => [[0, 0], [W, H]]).scaleExtent([.025, 10])
-      .on('zoom', e => {transform = e.transform; g.attr('transform', transform); layoutLabels();});
+      .on('zoom', e => {transform = e.transform; g.attr('transform', transform); drawLinks(); layoutLabels();});
     svg.call(zoom).call(zoom.transform, d3.zoomIdentity).on('click.stellar', () => select(null));
     function fit() {
       const x0 = d3.min(nodes, d => d.x - radius(d)) - 35, x1 = d3.max(nodes, d => d.x + radius(d)) + 35;
@@ -170,20 +193,22 @@ window.StellarNetwork = (() => {
     const escape = e => {if (e.key === 'Escape') {select(null); tip.style.opacity = '0';}};
     document.addEventListener('keydown', escape);
     simulation.on('tick', () => {
+      frames++;if(!isTopics && frames%3!==0 && simulation.alpha()>.02)return;
+      drawLinks();
       link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
       light.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
       if (nodes.length < 1000 || frames % 2 === 0) node.attr('transform', d => `translate(${d.x},${d.y})`);
-      captions.attr('x', d => d.x).attr('y', d => d.y + radius(d) + 15 / transform.k);
-      if (++frames % 12 === 0) layoutLabels();
+      captions.filter(function(){return this.getAttribute('display') !== 'none';}).attr('x', d => d.x).attr('y', d => d.y + radius(d) + 15 / transform.k);
+      if (frames % 12 === 0) layoutLabels();
       if (!firstFit && simulation.alpha() < .09) {firstFit = true; fit();}
     });
     const observer = new ResizeObserver(() => {
       if (disposed) return;
       W = svgEl.clientWidth || W; H = svgEl.clientHeight || H;
-      svg.attr('width', W).attr('height', H); placeStars(); layoutLabels();
+      svg.attr('width', W).attr('height', H); placeStars(); resizeCanvas(); drawLinks(); layoutLabels();
     });
     observer.observe(svgEl);
-    return {stop() {disposed = true; simulation.stop(); observer.disconnect(); document.removeEventListener('keydown', escape); svg.on('.stellar', null);}};
+    return {stop() {disposed = true; simulation.stop(); canvas?.remove(); observer.disconnect(); document.removeEventListener('keydown', escape); svg.on('.stellar', null);}};
   }
   return {render};
 })();
