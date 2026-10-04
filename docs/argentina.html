@@ -1,9 +1,21 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html data-page="argentina" lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Argentina 2020–2026 · Dirección y gestión escolar</title>
 <link rel="stylesheet" href="stellar-network.css"><link rel="stylesheet" href="argentina.css">
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
-<script src="stellar-network.js" defer></script><script src="argentina.js" defer></script></head>
+<script src="stellar-network.js" defer></script><script src="argentina.js" defer></script><!-- pwa:start -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D1117">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dirección Escolar">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="mobile.css">
+<script src="pwa.js" defer></script>
+<!-- pwa:end -->
+</head>
 <body><header><a href="index.html">← Dashboard general</a><span>Dirección y gestión escolar · Atlas temático</span></header>
 <main><section class="hero"><div class="eyebrow">UNA LECTURA TERRITORIAL DEL CORPUS</div><h1>Argentina<span>2020 — 2026</span></h1><p>Investigaciones con evidencia territorial argentina. Un análisis propio de BERTopic, construido sobre el barrido bibliográfico del proyecto.</p><div class="hero-actions"><button id="method">Criterios y método ↗</button><a href="argentina-corpus.csv" download>Descargar corpus</a><a href="index.html">Ver mapa general ↗</a></div></section>
 <p id="loading" role="status">Preparando el atlas…</p><section id="stats" class="stats" aria-label="Cobertura del análisis"></section>

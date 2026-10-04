@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Biblioteca | SCRAPEADORACADEMICO</title><style>
+<!doctype html><html data-page="biblioteca" lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Biblioteca | SCRAPEADORACADEMICO</title><style>
 :root{--bg:#0d1117;--p:#161b22;--p2:#111820;--line:#30363d;--tx:#e6edf3;--mut:#8b949e;--blue:#58a6ff;--green:#3fb950;--amber:#d29922;--red:#f85149}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px Segoe UI,Arial,sans-serif}a{color:var(--blue);text-decoration:none}button,input,select,textarea{font:inherit;color:var(--tx);background:#0d1117;border:1px solid var(--line);border-radius:7px;padding:8px 10px}button{cursor:pointer}.primary{background:#1f6feb;border-color:#1f6feb}.green{background:#238636;border-color:#238636}
 header{padding:12px 16px;border-bottom:1px solid var(--line);background:#0b1018;position:sticky;top:0;z-index:20}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:1.2rem;font-weight:800}.sub,.meta{color:var(--mut);font-size:.8rem}
 .col-bar{display:flex;gap:8px;margin-top:10px;margin-bottom:6px}.col-btn{padding:7px 14px;border-radius:20px;font-weight:600;background:#161b22;border:1px solid var(--line);color:var(--tx)}.col-btn.active{background:#1f6feb;border-color:#1f6feb;color:#fff}
@@ -10,6 +10,18 @@ header{padding:12px 16px;border-bottom:1px solid var(--line);background:#0b1018;
 </style>
 <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@7/dist/tesseract.min.js"></script>
+<!-- pwa:start -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D1117">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dirección Escolar">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="mobile.css">
+<script src="pwa.js" defer></script>
+<!-- pwa:end -->
 </head><body>
 <header>
   <div class="top">

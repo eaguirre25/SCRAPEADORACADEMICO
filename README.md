@@ -55,6 +55,17 @@ Referencias metodológicas: van Eck, N. J., & Waltman, L. (2010). Software surve
 
 Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y todas las asignaciones exportadas, búsqueda y paginación. Permite corregir el nombre, marcar un tema como validado o pendiente de correcciones, escribir notas y revisar documentos. Las revisiones se guardan en este navegador y se exportan/importan como JSON; no modifican automáticamente las asignaciones originales ni reentrenan los modelos. `docs/topic-review-data.json` se regenera junto con el dashboard. Las cantidades del corpus maestro y las filas del modelado se identifican por separado: un registro sin asignación vinculada no implica necesariamente que el modelo no lo haya procesado.
 
+## App para el celular
+
+El sitio de `docs/` funciona como aplicación instalable (PWA): se abre desde la dirección de GitHub Pages del repositorio y se agrega a la pantalla de inicio, sin pasar por tiendas de aplicaciones.
+
+- **Android (Chrome):** abrir el tablero y tocar **Instalar** en el aviso inferior, o menú ⋮ → *Instalar aplicación*.
+- **iPhone (Safari):** botón Compartir → *Agregar a inicio*.
+
+Una vez instalada, abre a pantalla completa con una barra inferior para Tablero, Artículos, Biblioteca, Argentina y Asistente. En pantallas chicas la tabla de artículos se muestra como tarjetas y al tocar una se baja a su ficha con la cita APA 7. Las páginas ya abiertas quedan guardadas en el teléfono y se pueden consultar sin conexión; lo que nunca se abrió requiere conexión. Las revisiones y el fichado siguen guardándose en el navegador del dispositivo, como en la versión de escritorio: conviene exportarlas.
+
+Archivos: `docs/manifest.webmanifest`, `docs/sw.js` (service worker: red primero y copia local sin conexión), `docs/pwa.js` (barra inferior y aviso de instalación), `docs/mobile.css` (ajustes para teléfonos) y `docs/icons/`. `inject_pwa.py` agrega estas referencias a cada página HTML; el workflow **Generar Dashboard** lo ejecuta después de regenerar, por lo que la app se mantiene en cada actualización automática. Si se cambia `sw.js`, subir `VERSION` para que los teléfonos descarten la copia anterior.
+
 ## Citas en normas APA 7
 
 `docs/articulos.html` incluye la columna **Normas APA** con un boton que copia la referencia al portapapeles en texto plano y en HTML con cursivas.
