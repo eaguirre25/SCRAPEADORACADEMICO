@@ -137,11 +137,17 @@ def screening(row, settings, reviews):
     try: period = settings['start_year'] <= int(row['publication_year']) <= settings['end_year']
     except (ValueError, KeyError): period = False
     text = ' '.join(row.get(k, '') for k in ('title', 'abstract', 'keywords'))
+    # Puntaje de pertinencia del filtro general: los aceptados solo por la
+    # segunda revisión con puntaje <= 0 resultaron ajenos a la gestión escolar
+    # (biología, agro, arqueología). Una inclusión manual los recupera.
+    try: low_relevance = int(row.get('relevance_score') or '') < settings.get('min_relevance_score', -10**9)
+    except ValueError: low_relevance = False
     eligible = period and len(text.strip()) >= 80 and (decision == 'include' or (
-        settings['include_unvalidated_candidates'] and bool(evidence) and decision == 'pending'))
+        settings['include_unvalidated_candidates'] and bool(evidence) and decision == 'pending' and not low_relevance))
     return {'evidence': evidence, 'decision': decision, 'in_period': period, 'modeled': eligible,
+            'low_relevance': low_relevance,
             'notes': reviews.get(str(row['record_id']), {}).get('notes', ''),
-            'reason': 'out_of_period' if not period else 'insufficient_metadata' if len(text.strip())<80 else 'human_exclusion' if decision=='exclude' else 'uncertain' if decision=='uncertain' else 'human_inclusion' if decision=='include' else 'territorial_candidate' if evidence else 'no_territorial_evidence'}
+            'reason': 'out_of_period' if not period else 'insufficient_metadata' if len(text.strip())<80 else 'human_exclusion' if decision=='exclude' else 'uncertain' if decision=='uncertain' else 'human_inclusion' if decision=='include' else 'low_relevance' if low_relevance and evidence else 'territorial_candidate' if evidence else 'no_territorial_evidence'}
 
 def prepare(settings):
     raw = read_csv('data/master_records.csv')
@@ -180,6 +186,7 @@ def prepare(settings):
         'modeled_candidates':len(corpus), 'territorial_candidates':sum(bool(d['evidence']) for d in documents),
         'human_included':sum(d['decision']=='include' for d in documents),
         'no_territorial_evidence':sum(not d['evidence'] for d in documents),
+        'low_relevance_excluded':sum(bool(d['evidence']) and d['low_relevance'] and d['decision']=='pending' for d in documents),
         'exact_duplicate_groups':len({r.get('duplicate_group_id') for r in exact}), 'probable_duplicate_pairs':len(probable),
         'corpus_hash':fingerprint, 'master_sha256':hashlib.sha256(Path('data/master_records.csv').read_bytes()).hexdigest(),
         'year_counts':dict(sorted(Counter(r['year'] for r in corpus).items())),
@@ -291,7 +298,7 @@ def render(documents, corpus, manifest, reviews):
     for d in documents:
         d['assignment']=assignments.get(d['document_id'],{})
         citation=build_citation(d);d['short_citation']=short_citation(d);d['reference']=plain_text(citation)
-    display_fields={'record_id','document_id','title','abstract','authors','publication_year','source','url',
+    display_fields={'low_relevance','relevance_score','record_id','document_id','title','abstract','authors','publication_year','source','url',
         'evidence','decision','modeled','notes','assignment','short_citation','reference'}
     data={'manifest':manifest,'model':model_manifest if current else {},'status':'fitted'if current else 'pending_fit',
         'documents':[{k:v for k,v in d.items()if k in display_fields}for d in documents],

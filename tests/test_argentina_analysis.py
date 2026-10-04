@@ -78,3 +78,11 @@ def test_min_topic_size_rule_prefers_stable_sizes():
     assert [r['min_topic_size'] for r in table]==[10,25,80]
     big=next(r for r in table if r['min_topic_size']==80)
     assert big['min_topics']<3 or big['mean_outlier_share']>0.35
+
+def test_low_relevance_candidates_are_excluded_but_recoverable():
+    r={**record(),'relevance_score':'0'}
+    check=argentina.screening(r,settings,{})
+    assert not check['modeled'] and check['low_relevance'] and check['reason']=='low_relevance'
+    assert argentina.screening(r,settings,{'test-1':{'decision':'include'}})['modeled']
+    assert argentina.screening({**record(),'relevance_score':'1'},settings,{})['modeled']
+    assert argentina.screening({**record(),'relevance_score':''},settings,{})['modeled']

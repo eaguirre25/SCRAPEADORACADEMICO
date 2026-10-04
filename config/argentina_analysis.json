@@ -3,6 +3,7 @@
   "start_year": 2020,
   "end_year": 2026,
   "include_unvalidated_candidates": true,
+  "min_relevance_score": 1,
   "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
   "min_topic_size": 15,
   "umap": {"n_neighbors": 10, "n_components": 10, "min_dist": 0.1, "metric": "cosine"},

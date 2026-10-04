@@ -61,7 +61,7 @@
     content.replaceChildren();add(content,'div','PROCEDIMIENTO Y TRAZABILIDAD','eyebrow');add(content,'h2','Cómo se construye este mapa');
     add(content,'h3','1 · Del barrido al corpus argentino');
     add(content,'p','Se parte del master bibliográfico aceptado por el workflow temático del proyecto. Se resuelven duplicados exactos con el procedimiento existente y se filtran años de publicación 2020–2026. Se buscan indicios en títulos y resúmenes; una mención territorial produce una candidatura revisable, no una identificación confirmada del lugar de estudio.');
-    table(content,['Etapa','Publicaciones'],[['Registros del master',fmt(data.manifest.master_records)],['Publicaciones luego de deduplicación',fmt(data.manifest.canonical_publications)],['Dentro de 2020–2026',fmt(data.manifest.period_publications)],['Candidatos con metadatos suficientes para el ajuste',fmt(data.manifest.modeled_candidates)],['Sin evidencia territorial automática',fmt(data.manifest.no_territorial_evidence)],['Inclusiones documentales incorporadas al workflow',fmt(data.manifest.human_included)]]);
+    table(content,['Etapa','Publicaciones'],[['Registros del master',fmt(data.manifest.master_records)],['Publicaciones luego de deduplicación',fmt(data.manifest.canonical_publications)],['Dentro de 2020–2026',fmt(data.manifest.period_publications)],['Candidatos con metadatos suficientes para el ajuste',fmt(data.manifest.modeled_candidates)],['Sin evidencia territorial automática',fmt(data.manifest.no_territorial_evidence)],['Excluidos por puntaje de pertinencia ≤ 0 (recuperables con inclusión manual)',fmt(data.manifest.low_relevance_excluded||0)],['Inclusiones documentales incorporadas al workflow',fmt(data.manifest.human_included)]]);
     add(content,'p','La revisión de corpus permite incluir, excluir o marcar casos dudosos. Los casos sin evidencia pueden incorporarse manualmente. Se conserva el fragmento de evidencia. Las afiliaciones y el repositorio no se usan como país del estudio. 2026 es un año en curso; sus cantidades no se comparan como un año cerrado.');
     add(content,'h3','2 · BERTopic independiente');
     add(content,'p','Se ajusta un nuevo modelo sobre este corpus, usando el mismo modelo de embeddings multilingües, limpieza, combinación de título (0,35), resumen (0,50) y palabras clave (0,15), UMAP, HDBSCAN y c-TF-IDF del workflow. Los pesos se normalizan por los campos disponibles. Se conservan los documentos sin tópico (−1). Los números y etiquetas de temas pertenecen a este ajuste.');
@@ -84,7 +84,7 @@
   function renderList(){
     const q=$('search').value.toLocaleLowerCase('es'),filter=$('filter').value;
     const matches=data.documents.filter(d=>{
-      const dec=decision(d);const mode=filter==='all'||filter==='candidates'&&d.modeled||filter==='pending'&&d.modeled&&dec==='pending'||filter==='without'&&!d.evidence.length||['include','exclude','uncertain'].includes(filter)&&dec===filter;
+      const dec=decision(d);const mode=filter==='all'||filter==='candidates'&&d.modeled||filter==='pending'&&d.modeled&&dec==='pending'||filter==='without'&&!d.evidence.length||filter==='low_relevance'&&d.low_relevance&&d.evidence.length&&!d.modeled||['include','exclude','uncertain'].includes(filter)&&dec===filter;
       return mode&&(d.title+' '+d.authors+' '+d.abstract).toLocaleLowerCase('es').includes(q);
     });
     page=Math.min(page,Math.max(0,Math.ceil(matches.length/20)-1));const list=$('document-list');list.replaceChildren();matches.slice(page*20,page*20+20).forEach(d=>documentRow(list,d));
