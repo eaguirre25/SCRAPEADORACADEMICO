@@ -4,11 +4,13 @@
   "end_year": 2026,
   "include_unvalidated_candidates": true,
   "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
-  "min_topic_size": 35,
+  "min_topic_size": 15,
   "umap": {"n_neighbors": 10, "n_components": 10, "min_dist": 0.1, "metric": "cosine"},
   "min_samples": 5,
   "semantic_network": {"neighbors": 5, "min_similarity": 0.70},
-  "sensitivity_min_topic_sizes": [10, 15, 25, 35],
+  "sensitivity_min_topic_sizes": [10, 15, 20, 25, 35],
+  "selection": {"max_outlier_share": 0.35, "min_topics": 3},
+  "exclude_territorial_terms_from_topic_words": true,
   "stability_seeds": [42, 117, 233, 401, 809],
   "review_file": "config/argentina_document_reviews.json"
 }
