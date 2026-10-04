@@ -5,6 +5,16 @@
   "min_similarity": 0.7,
   "edges": [
     {
+      "source": "10.11144/javeriana.10554.34540",
+      "target": "conicet:los discursos internacionales en la construcción de la agenda de las políticas educativas de evaluación en argentina 19902019::2025",
+      "weight": 0.825399
+    },
+    {
+      "source": "10.14409/ie.2023.19.e0054",
+      "target": "10.5212/olharprofr.v.29.25332.010",
+      "weight": 0.774018
+    },
+    {
       "source": "10.14507/epaa.28.4147",
       "target": "10.30972/riie.16228044",
       "weight": 0.889112
@@ -37,7 +47,7 @@
     {
       "source": "10.14507/epaa.28.4162",
       "target": "conicet:virajes en las políticas de inclusión social y educativa para garantizar la educación secundaria obligatoria un estudio en ciudadesbarrios de córdoba argentina::2021",
-      "weight": 0.855008
+      "weight": 0.855007
     },
     {
       "source": "10.14679/5036",
@@ -136,13 +146,13 @@
     },
     {
       "source": "10.19137/els-2026-262609",
-      "target": "conicet:el fracaso escolar en el nivel medio argentino es menos frecuente en las escuelas de gestión privada debido a su administración::2021",
-      "weight": 0.834546
+      "target": "https://openalex.org/W7155252508",
+      "weight": 0.850912
     },
     {
       "source": "10.21573/vol42n12026.139503",
       "target": "10.33255/26184141/1568e0018",
-      "weight": 0.895295
+      "weight": 0.895294
     },
     {
       "source": "10.21573/vol42n12026.139503",
@@ -171,13 +181,13 @@
     },
     {
       "source": "10.30972/riie.16228016",
-      "target": "conicet:educación en tiempos de pandemia::2022",
-      "weight": 0.833132
+      "target": "conicet:los desafíos de la gestión directiva en pandemia como claves para pensar la configuración desigual del sistema educativo del nivel secundario en caba::2025",
+      "weight": 0.818847
     },
     {
       "source": "10.30972/riie.16228016",
-      "target": "conicet:los desafíos de la gestión directiva en pandemia como claves para pensar la configuración desigual del sistema educativo del nivel secundario en caba::2025",
-      "weight": 0.818847
+      "target": "https://openalex.org/W3124575860",
+      "weight": 0.867479
     },
     {
       "source": "10.30972/riie.16228044",
@@ -275,9 +285,24 @@
       "weight": 0.8445
     },
     {
+      "source": "10.5212/olharprofr.v.29.25332.010",
+      "target": "conicet:directio narrans figuras retóricas en épocas de crisis de la narración un estudio sobre las prácticas de directorases escolares en el conurbano bonaerense::2026",
+      "weight": 0.905627
+    },
+    {
+      "source": "10.5212/olharprofr.v.29.25332.010",
+      "target": "https://openalex.org/W7169701904",
+      "weight": 0.971366
+    },
+    {
       "source": "10.52501/cc.310.11",
       "target": "conicet:estado del arte escolaridad primaria y jornada escolar en el contexto internacional estudio de casos en europa y américa latina::2023",
       "weight": 0.785292
+    },
+    {
+      "source": "10.59427/rcli/2023/v23cs.3717-3724",
+      "target": "https://openalex.org/W7155252508",
+      "weight": 0.874973
     },
     {
       "source": "conicet:acceso de los pueblos indígenas del chaco a la cultura escrita en el contexto de la educación bilingüe intercultural 19872015::2026",
@@ -327,12 +352,12 @@
     {
       "source": "conicet:acerca de las particularidades de las prácticas docentes de les maestres de apoyo a la inclusión en contextos de ruralidad en la provincia de chubut::2024",
       "target": "conicet:prácticas y saberes docentes en torno a procesos del enseñar y el aprender en las intersecciones entre educación especial y educación rural un estudio con maestrasos de apoyo a la inclusión y docentes de aula en una escuela rural::2026",
-      "weight": 0.782113
+      "weight": 0.782114
     },
     {
       "source": "conicet:acerca del autoconcepto en adolescentes de escuelas secundarias un análisis en contextos vulnerables::2021",
       "target": "conicet:intervención psicosocial sobre problemáticas actuales en adolescentes de una escuela media de la comuna 3 de la caba::2020",
-      "weight": 0.778334
+      "weight": 0.778333
     },
     {
       "source": "conicet:acerca del autoconcepto en adolescentes de escuelas secundarias un análisis en contextos vulnerables::2021",
@@ -352,7 +377,7 @@
     {
       "source": "conicet:actores y estrategias en la construcción del texto ley para la educación técnico profesional en argentina::2021",
       "target": "conicet:la integralidad en la formación de las trayectorias laborales de egresados de la escuela secundaria técnica la configuración de los procesos de inserción laboral en distintas jurisdicciones de argentina::2023",
-      "weight": 0.813931
+      "weight": 0.813932
     },
     {
       "source": "conicet:actores y estrategias en la construcción del texto ley para la educación técnico profesional en argentina::2021",
@@ -527,7 +552,7 @@
     {
       "source": "conicet:argentina 20152019 o cuando la política educativa es evaluar la evaluación estandarizada como instrumento de acción pública::2024",
       "target": "conicet:del discurso a la práctica la trayectoria de la política educativa para la educación técnico profesional en argentina y brasil 20042015::2020",
-      "weight": 0.840112
+      "weight": 0.840111
     },
     {
       "source": "conicet:argentina 20152019 o cuando la política educativa es evaluar la evaluación estandarizada como instrumento de acción pública::2024",
@@ -642,7 +667,7 @@
     {
       "source": "conicet:ave símbolo de la provincia de córdoba argentina desarrollo aprendizajes y proyecciones::2026",
       "target": "conicet:el largo camino del cuarteto a las aulas de la ciudad de córdoba argentina::2025",
-      "weight": 0.806143
+      "weight": 0.806144
     },
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
@@ -652,7 +677,7 @@
     {
       "source": "conicet:bachilleratos populares en argentina educación desde los movimientos sociales::2022",
       "target": "conicet:hacer escuela hacer colectivo movimientos sociales jóvenes y experiencias educativas desde una perspectiva antropológica rosario argentina::2022",
-      "weight": 0.836834
+      "weight": 0.836833
     },
     {
       "source": "conicet:caminando sobre gliptodontes y tigres diente de sable talleres educativos sobre paleontología y conservación del patriminio fósil::2023",
@@ -767,7 +792,7 @@
     {
       "source": "conicet:comprensión de textos en contextos desfavorecidos el efecto de un programa de intervención sobre la habilidad de detectar errores e incongruencias en textos escritos::2020",
       "target": "conicet:intervenciones docentes en la tarea de leer para responder cuestionarios::2022",
-      "weight": 0.713265
+      "weight": 0.713264
     },
     {
       "source": "conicet:comprensión oral y escrita efectos de la estructura textual::2023",
@@ -927,7 +952,7 @@
     {
       "source": "conicet:desigualdad en la educación primaria percepciones sobre circuitos educativos en el centro y la periferia de bahía blanca::2024",
       "target": "conicet:hacer escuela con palabras directores de escuela media frente a la desigualdad::2020",
-      "weight": 0.815104
+      "weight": 0.815103
     },
     {
       "source": "conicet:desigualdades vinculadas a las tecnologías de la información y la comunicación tic diferencias entre escuelas públicas y privadas en bahía blanca argentina::2024",
@@ -977,7 +1002,7 @@
     {
       "source": "conicet:discursos en torno a las violencias y la autoridad en escuelas medias públicas entre la desubjetivación y la integración normativa::2023",
       "target": "conicet:tensiones en torno a la violencia escolar notas sobre la performatividad y los modos de concebir a las y los jóvenes::2022",
-      "weight": 0.823186
+      "weight": 0.823185
     },
     {
       "source": "conicet:discursos en torno a las violencias y la autoridad en escuelas medias públicas entre la desubjetivación y la integración normativa::2023",
@@ -1011,6 +1036,11 @@
     },
     {
       "source": "conicet:educación en tiempos de pandemia::2022",
+      "target": "https://openalex.org/W3124575860",
+      "weight": 0.879027
+    },
+    {
+      "source": "conicet:educación en tiempos de pandemia::2022",
       "target": "https://openalex.org/W3208871464",
       "weight": 0.865073
     },
@@ -1022,7 +1052,7 @@
     {
       "source": "conicet:educación estética  educación artística perspectivas curriculares superpuestas de la enseñanza del arte en la escuela primaria de la provincia de buenos aires 19841999::2022",
       "target": "conicet:estado del arte escolaridad primaria y jornada escolar en el contexto internacional estudio de casos en europa y américa latina::2023",
-      "weight": 0.790451
+      "weight": 0.790452
     },
     {
       "source": "conicet:educación estética  educación artística perspectivas curriculares superpuestas de la enseñanza del arte en la escuela primaria de la provincia de buenos aires 19841999::2022",
@@ -1130,6 +1160,11 @@
       "weight": 0.881234
     },
     {
+      "source": "conicet:el fracaso escolar en el nivel medio argentino es menos frecuente en las escuelas de gestión privada debido a su administración::2021",
+      "target": "https://openalex.org/W7155252508",
+      "weight": 0.861945
+    },
+    {
       "source": "conicet:el gobierno como problema autonomía negativa libertad gerenciada o contraconductas tramas socio estatales en la configuración de las escuelas públicas de gestión social chaco argentina::2023",
       "target": "conicet:gobernar a través de las comunidades dispositivos socioestatales proactividad comunitaria y economización de la educación un estudio sobre las escuelas públicas de gestión social de la provincia de chaco::2026",
       "weight": 0.845839
@@ -1138,11 +1173,6 @@
       "source": "conicet:el gobierno como problema autonomía negativa libertad gerenciada o contraconductas tramas socio estatales en la configuración de las escuelas públicas de gestión social chaco argentina::2023",
       "target": "https://openalex.org/W3186450505",
       "weight": 0.872867
-    },
-    {
-      "source": "conicet:el habla en las tertulias dialógicas literarias un estudio con docentes y estudiantes de 6to grado de la provincia de santa fe::2021",
-      "target": "conicet:oralidad fortalecimiento lingüístico y escuela los materiales de voces tobas como un aporte para la educación intercultural bilingüe en chaco::2025",
-      "weight": 0.738027
     },
     {
       "source": "conicet:el habla en las tertulias dialógicas literarias un estudio con docentes y estudiantes de 6to grado de la provincia de santa fe::2021",
@@ -1237,7 +1267,7 @@
     {
       "source": "conicet:entre amores clandestinos y cesantías la maestra y el director argentina 19201928::2020",
       "target": "conicet:una educación contra los peligros de la miseria y el vicio la escuela profesional de mujeres de azul provincia de buenos aires 19281939::2026",
-      "weight": 0.789872
+      "weight": 0.789873
     },
     {
       "source": "conicet:entre la escuela las redes sociales y los espacios de ocio nocturno los conflictos entre jóvenes de educación secundaria::2020",
@@ -1317,7 +1347,7 @@
     {
       "source": "conicet:estado e imaginario tecnológico un análisis de las reconfiguraciones en las políticas educativas nacionales de incorporación de tic::2023",
       "target": "conicet:políticas de diseminación tecnológica escuelas y hogares sentidos de las tic en el campo y la ciudad salta argentina 2017::2021",
-      "weight": 0.832408
+      "weight": 0.832407
     },
     {
       "source": "conicet:estado e imaginario tecnológico un análisis de las reconfiguraciones en las políticas educativas nacionales de incorporación de tic::2023",
@@ -1422,7 +1452,7 @@
     {
       "source": "conicet:experiencia educativa focalizada en el personal docente para promover el compromiso escolar percepciones de estudiantes::2023",
       "target": "conicet:necesidades psicológicas básicas y compromiso académico en estudiantes secundarios de entre ríos::2023",
-      "weight": 0.773406
+      "weight": 0.773405
     },
     {
       "source": "conicet:experiencias escolares de jóvenes wichí en contexto de pandemia::2024",
@@ -1612,7 +1642,7 @@
     {
       "source": "conicet:institución escolar y programa conectar igualdad representaciones de docentes respecto de las normas de uso de las tecnologías digitales::2021",
       "target": "conicet:las tic en la intersección áulica desafíos y tensiones de la alfabetización digital en la escuela media::2022",
-      "weight": 0.775657
+      "weight": 0.775658
     },
     {
       "source": "conicet:institución escolar y programa conectar igualdad representaciones de docentes respecto de las normas de uso de las tecnologías digitales::2021",
@@ -1842,7 +1872,7 @@
     {
       "source": "conicet:la estructura represiva de la armada argentina desde una perspectiva regional apuntes y consideraciones sobre la fuerza de tareas 6 durante la última dictadura militar en argentina::2022",
       "target": "conicet:showing the crime scene statements of esma perpetrators and the memory of argentinas dictatorship::2023",
-      "weight": 0.706753
+      "weight": 0.706754
     },
     {
       "source": "conicet:la experiencia de estudiar sexualidades en contextos escolares un ejercicio de reflexividad epistemológica ética y afectiva para una etnografía feminista::2022",
@@ -1973,6 +2003,11 @@
       "source": "conicet:llovido sobre mojado pandemia y segmentación educativa en una ciudad intermedia de argentina::2024",
       "target": "https://openalex.org/W3208871464",
       "weight": 0.855412
+    },
+    {
+      "source": "conicet:los desafíos de la gestión directiva en pandemia como claves para pensar la configuración desigual del sistema educativo del nivel secundario en caba::2025",
+      "target": "https://openalex.org/W3124575860",
+      "weight": 0.838813
     },
     {
       "source": "conicet:los guardianes del agua una etnografía de los canaleros de la dirección provincial de hidráulica provincia de buenos aires argentina::2026",
@@ -2229,55 +2264,55 @@
     {
       "neighbors": 3,
       "min_similarity": 0.6,
-      "edges": 283,
-      "isolated": 204
+      "edges": 285,
+      "isolated": 207
     },
     {
       "neighbors": 3,
       "min_similarity": 0.7,
-      "edges": 269,
-      "isolated": 221
+      "edges": 271,
+      "isolated": 224
     },
     {
       "neighbors": 3,
       "min_similarity": 0.8,
-      "edges": 178,
-      "isolated": 320
+      "edges": 182,
+      "isolated": 322
     },
     {
       "neighbors": 5,
       "min_similarity": 0.6,
-      "edges": 473,
-      "isolated": 134
+      "edges": 479,
+      "isolated": 136
     },
     {
       "neighbors": 5,
       "min_similarity": 0.7,
-      "edges": 444,
+      "edges": 451,
       "isolated": 164
     },
     {
       "neighbors": 5,
       "min_similarity": 0.8,
-      "edges": 265,
-      "isolated": 293
+      "edges": 272,
+      "isolated": 294
     },
     {
       "neighbors": 10,
       "min_similarity": 0.6,
-      "edges": 947,
-      "isolated": 80
+      "edges": 958,
+      "isolated": 81
     },
     {
       "neighbors": 10,
       "min_similarity": 0.7,
-      "edges": 850,
+      "edges": 863,
       "isolated": 125
     },
     {
       "neighbors": 10,
       "min_similarity": 0.8,
-      "edges": 460,
+      "edges": 471,
       "isolated": 281
     }
   ]
