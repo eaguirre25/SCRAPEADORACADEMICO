@@ -32,7 +32,7 @@ on:
       - 'data/drive_manifest.csv'
       - '.github/workflows/dashboard (2).yml'
   workflow_run:
-    workflows: ["Análisis STM – Dirección Escolar"]
+    workflows: ["Análisis STM – Dirección Escolar", "Enriquecer metadatos CONICET"]
     types: [completed]
   workflow_dispatch:
 

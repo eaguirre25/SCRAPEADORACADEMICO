@@ -66,6 +66,18 @@ Una vez instalada, abre a pantalla completa con una barra inferior para Tablero,
 
 Archivos: `docs/manifest.webmanifest`, `docs/sw.js` (service worker: red primero y copia local sin conexión), `docs/pwa.js` (barra inferior y aviso de instalación), `docs/mobile.css` (ajustes para teléfonos) y `docs/icons/`. `inject_pwa.py` agrega estas referencias a cada página HTML; el workflow **Generar Dashboard** lo ejecuta después de regenerar, por lo que la app se mantiene en cada actualización automática. Si se cambia `sw.js`, subir `VERSION` para que los teléfonos descarten la copia anterior.
 
+## Recuperación de metadatos de CONICET Digital
+
+Los registros cosechados del buscador de CONICET traen título, autores, resumen y handle, pero no DOI, revista, volumen, número, páginas, palabras clave ni tipo documental. Además, su año es el de **carga en el repositorio**, no el de publicación, lo que afecta los filtros por período (por ejemplo, Argentina 2020–2026).
+
+`scripts/enrich_metadata.py` busca cada registro por título y autores en fuentes alternativas: CONICET OAI-PMH por handle (si responde), OpenAlex y Crossref; con el DOI completa volumen, número y páginas. Una coincidencia se acepta solo si el título es casi idéntico (similitud ≥ 0,90), comparte al menos un apellido y el año encontrado no es posterior al de carga. Los casos parecidos que no cumplen todo quedan como «revisar» y no se aplican. Nunca se modifican título, autores ni resumen.
+
+- Se ejecuta en GitHub Actions: workflow **Enriquecer metadatos CONICET** (manual) y como paso del **Academic Scraper** para los registros nuevos. Al terminar dispara Argentina · BERTopic y el dashboard.
+- `data/metadata_enrichment.csv` registra, por registro, la fuente, las puntuaciones, el año original y si se aplicó; sirve de caché. Si una fuente no responde, el registro queda en «error» y se reintenta en la próxima corrida.
+- `data/metadata_enrichment_report.json` resume la corrida e informa los registros cuya clasificación de pertinencia cambiaría con los nuevos datos.
+- Volumen, número y páginas se leen desde `data/metadata_enrichment.csv` al armar la cita APA 7 (`apa_citation.py`), porque el maestro no tiene esas columnas.
+- Para decidir a mano un caso «revisar» (o anular uno aceptado), agregar una fila en `config/metadata_enrichment_overrides.csv` con `record_id,decision,nota` y decisión `aceptar` o `rechazar`; se aplica en la siguiente corrida.
+
 ## Citas en normas APA 7
 
 `docs/articulos.html` incluye la columna **Normas APA** con un boton que copia la referencia al portapapeles en texto plano y en HTML con cursivas.
