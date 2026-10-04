@@ -1,0 +1,626 @@
+GESTÃO ESCOLAR E INTELIGÊNCIA
+ ARTIFICIAL: o uso do ChatGPT como
+          apoio à gestão
+
+
+
+
+    Rosemary dos Santos Mendes de Melo
+
+
+
+
+                    2024
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+ Oficina desenvolvida como produto do Mestrado Profissional em Educação Básica (MPEB)
+         da Universidade Federal de Pernambuco (UFPE) - Recife/PE – Brasil/2024
+
+
+
+
+Elaboração:
+Rosemary dos Santos Mendes de Melo
+
+
+
+
+Professora Orientadora:
+Ana Lúcia Félix dos Santos
+
+
+
+
+Capa:
+Elaboração própria e gerada por IA- Plataforma Canva em junho 2024
+
+
+
+
+Esta oficina encontra-se registrada nos termos e normas legais da Lei 9.610/1998 dos Direitos Autorais do Brasil.
+Conforme determinação legal, a obra aqui registrada não pode ser plagiada, utilizada, reproduzida ou divulgada
+sem a autorização de seu(s) autor(es).
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+                                     APRESENTAÇÃO
+
+
+       É com grande entusiasmo que apresentamos nossa Oficina de Capacitação em
+Inteligência Artificial ChatGPT, uma proposta inovadora desenvolvida para potencializar a
+gestão escolar por meio do uso estratégico da Inteligência Artificial.
+       A oficina se destaca como uma oportunidade única para gestores escolares se
+familiarizarem com a Inteligência Artificial, com foco especial no modelo ChatGPT. Com uma
+carga horária de oito horas, distribuídas em dois encontros, o programa oferece uma imersão
+aprofundada no universo da IA e explora as aplicações práticas desse conhecimento na gestão
+educacional.
+       Entendemos a convergência de agendas e as distintas necessidades dos gestores, por
+isso, a oficina está disponível nos formatos presencial e online. Essa flexibilidade permite que
+gestores escolares participem de acordo com suas preferências e disponibilidade, sem
+comprometer a qualidade da experiência de aprendizado. Com objetivos de capacitação técnica,
+serão oportunizados conhecimentos sólidos sobre o funcionamento da Inteligência Artificial,
+com ênfase no modelo ChatGPT, e sua aplicação prática na gestão escolar, enfatizando a
+utilização estratégica da IA como tecnologia no apoio à gestão de modo a promover eficiência
+e inovação nos processos educacionais.
+       O diálogo visa promover discussões sobre o papel da gestão escolar numa perspectiva
+democrática, explorando como a Inteligência Artificial pode ser aliada nesse contexto e gerar
+benefícios para os participantes.
+       Discutiremos a compreensão abrangente da Inteligência Artificial e do modelo
+ChatGPT, habilidades práticas para integrar a IA na gestão escolar de maneira eficaz,
+oportunidade de networking e troca de experiências entre gestores escolares. Ao final, será
+fornecido certificado de participação.
+       Estamos ansiosos para colaborar na capacitação dos gestores escolares, impulsionando
+a inovação e promovendo uma gestão educacional eficiente e centrada no aluno.
+
+     GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+                                                            SUMÁRIO
+
+
+1 INTRODUÇÃO ................................................................................................           4
+
+2 PRINCÍPIOS ....................................................................................................       6
+
+3 ROTEIRO DA OFICINA ................................................................................                   7
+
+3.1 INTRODUÇÃO À INTELIGÊNCIA ARTIFICIAL (IA) E CHATGPT E
+CONTEXTUALIZAÇÃO NA GESTÃO ESCOLAR ...........................................                                          7
+3.2 APLICAÇÕES PRÁTICAS NA GESTÃO ESCOLAR ..................................                                            7
+
+3.3 TREINAMENTO PRÁTICO/WORKSHOP INTERATIVO ..........................                                                  7
+
+3.4 DESAFIOS ÉTICOS, DEMOCRÁTICOS E LIMITAÇÕES DA IA NA
+EDUCAÇÃO ........................................................................................................       7
+3.5 INTEGRAÇÃO DA IA NO MODELO DE GESTÃO DEMOCRÁTICA                                                                    8
+
+3.6 AVALIAÇÃO DE RESULTADOS E FEEDBACKS ...................................                                             8
+
+4 PASSOS METODOLÓGICOS: REPERTÓRIO FORMATIVO DA
+OFICINA .............................................................................................................   9
+5 DETALHAMENTO ........................................................................................                 10
+
+6 SEQUÊNCIAS DIDÁTICAS .........................................................................                        11
+
+7 PLANO DE INTEGRAÇÃO DE IA (CHATGPT) NA GESTÃO ESCOLAR 13
+
+8 AVALIAÇÃO .................................................................................................           14
+
+8.1 AVALIAÇÃO DO ENCONTRO 1 ..............................................................                              14
+
+8.2 AVALIAÇÃO DO ENCONTRO 2 .............................................................                               14
+
+REFERÊNCIAS .................................................................................................           15
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+1 INTRODUÇÃO
+
+
+         A oficina Gestão escolar e Inteligência Artificial: o uso do ChatGPT como apoio à
+gestão tem como objetivo capacitar gestores escolares para a aplicação estratégica da IA,
+através especificamente do modelo ChatGPT como tecnologia de apoio à gestão. Ao mesmo
+tempo, visa discutir o papel da gestão escolar numa perspectiva democrática.
+         Utilizaremos como tecnologia de IA o ChatGPT de forma inovadora, favorecendo o
+trabalho da gestão, tendo em vista a otimização do tempo, a criação de conteúdos, o aumento
+de ideias, a colaboração na escrita e a ampliação do pensamento, delegando à Inteligência
+Artificial as atividades repetitivas e muitas vezes burocráticas.
+         Com o foco no público-alvo, ou seja, gestores, coordenadores pedagógicos e demais
+profissionais envolvidos na administração educacional, a oficina é baseada em experiências
+reais, discussões teóricas e análises dos dados, fruto de uma pesquisa qualitativa, na qual a
+pesquisadora empenhou-se para responder à problemática central de como os gestores
+percebem o uso da Inteligência Artificial via ChatGPT no apoio à gestão escolar.
+         Ao longo da oficina, apresentaremos conceitos, reflexões e possibilidades de uso da IA
+ChatGPT na gestão. Partiremos da compreensão de que, entre outras razões, um(a) bom(boa)
+gestor(a) deve desenvolver competências múltiplas, o que justifica a relevância da oficina com
+relação ao uso de IAs na educação e na gestão.
+         O impacto desse constructo ocorre na coesão entre a teoria e a prática no campo da
+educação, alinhando elementos da cultura e da realidade.
+         Quanto à aplicabilidade, será ajustável de acordo com as necessidades das redes de
+ensino e contará com materiais físicos e virtuais.
+         A oficina, a priori, terá uma carga horária de oito horas, distribuídas em dois encontros.
+Estará    balizada   pelos   seguintes    princípios:   1   –   Inspiração/Sensibilização,   2   –
+Conhecer/Aprofundar, 3 – Experienciar e 4 – Refletir/Socializar, vivenciados um a um em cada
+encontro.
+         O diferencial desta oficina está na exploração de possibilidades e aplicabilidades como
+tecnologia de gestão, bem como em ações pedagógicas, sendo criada, recriada e atualizada com
+a participação coletiva.
+
+
+
+
+                                                 4
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+        O acesso à oficina contará com duas modalidades. No formato virtual, será oferecida
+através de Ambientes Virtuais de Aprendizagem (AVA)1, viabilizados pelas equipes técnicas
+das Redes de Ensino. Quanto ao formato presencial, no caso da Rede de Ensino do Recife,
+ocorrerá nas Unidades de Tecnologias na Educação e Cidadania (UTEC) e contará com o apoio
+de professores(as) de tecnologia e professores(as) multiplicadores(as).
+        A oficina se destaca por sua inovação quanto à formação continuada para um público
+específico, não sendo desprezados outros(as) participantes.
+
+
+
+
+1
+         Ambientes Virtuais de Aprendizagem são plataformas online utilizadas para fins educacionais. Os AVA
+existem para simular uma sala de aula real no meio digital, sendo assim, trata-se de um sistema que permite que
+os professores compartilhem materiais e se comuniquem com seus alunos através da web (Moraes, 2021).
+                                                      5
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+2 PRINCÍPIOS
+
+
+       Um dos objetivos da oficina consiste em inspirar e sensibilizar os participantes a
+dialogarem com a Inteligência Artificial na educação, ajudando a compreender transformações
+sociais e tecnológicas, tendo em vista que a presença das IAs vem avançando em diversos
+setores e consequentemente impacta na educação, tornando urgente ampliar conhecimentos e
+debates sobre o tema.
+       A educação no Brasil é marcada por variadas disputas, conquistas e embates advindos
+de pressões sociais e ideologias políticas (Gasparin, 2009), Nesse contexto, o processo de gestão
+escolar exige atualizações frequentes, tendo em vista que o processo de gerir não se faz no vazio
+ou de forma neutra, chegando por vezes a ser determinado pelas forças concretas presentes na
+realidade (Santos; Silva; Silva, 2013). Nesse sentido, a presença das tecnologias e Inteligências
+Artificiais no campo educacional é parte inerente das transformações da atualidade, exigindo
+cada vez mais conhecimento e competências dos(as) gestores(as) escolares.
+       Como parte das competências desse(a) “novo(a)” gestor(a), ele(a) deve: “Optar por
+conhecimentos, técnicas, novas tecnologias (procedimentos e instrumentos), articulando-os
+para a resolução de problemas e aperfeiçoamento de tarefas na escola e para a escola, com vistas
+à qualidade educativa” (Unesco, 2019, p. 16).
+       Os princípios norteadores da oficina partem, em um primeiro momento, da
+sensibilização e inspiração de equipes gestoras quanto às potencialidades das tecnologias
+digitais e Inteligências Artificiais na transformação na gestão escolar democrática.
+       No segundo ponto, será apresentado e aprofundado o conhecimento sobre a IA e o
+ChatGPT. É importante destacar a necessidade de atualizações futuras. Outro aspecto que
+merece atenção é a parceria com o setor de tecnologia para a construção da oficina.
+       O terceiro momento da oficina consiste em experienciar a utilização da Inteligência
+Artificial via ChatGPT atrelada às competências da função de gestão. Pretende-se propor um
+repertório com variadas possibilidades e aplicabilidades de possibilidades de gestão.
+       O quarto aspecto da proposta formadora é proporcionar aos(às) participantes reflexão e
+socialização de IAs e do ChatGPT.
+               A oficina seguirá guiada pela lógica de uma sequência didática, que, nas palavras
+de Zabala (1998, p. 18), é “um conjunto de atividades ordenadas, estruturadas e articuladas para
+a realização de certos objetivos educacionais, que têm um princípio e um fim conhecido tanto
+pelos professores como pelos alunos”.
+
+
+                                                6
+
+      GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+3 ROTEIRO DA OFICINA
+
+
+3.1    INTRODUÇÃO        À    INTELIGÊNCIA         ARTIFICIAL       (IA)   E   CHATGPT         E
+CONTEXTUALIZAÇÃO NA GESTÃO ESCOLAR
+
+
+- Exploração dos conceitos de gestão democrática na educação;
+- Breve explicação sobre o conceito de IA e sua aplicação em diversos setores;
+- Apresentação e discussão do modelo ChatGPT, como uma ferramenta estratégica na gestão
+escolar, destacando suas capacidades e potenciais benefícios.
+
+
+3.2 APLICAÇÕES PRÁTICAS NA GESTÃO ESCOLAR
+
+
+- Demonstração de casos de uso do ChatGPT na resolução de problemas comuns em gestão
+educacional, como comunicação com pais, elaboração de relatórios, análise de dados e ideias
+para a construção de projetos, entre outros;
+- Discussão sobre como a IA pode otimizar processos administrativos, permitindo que os
+gestores foquem em questões estratégicas.
+
+
+3.3 TREINAMENTO PRÁTICO/WORKSHOP INTERATIVO
+
+
+- Orientação passo a passo sobre como utilizar o ChatGPT em tarefas específicas na gestão
+escolar;
+- Exercícios práticos em que os participantes poderão experimentar a aplicação da IA em
+situações reais;
+- Sessão prática com exercícios em grupos, onde os participantes aplicarão o ChatGPT para
+resolver cenários desafiadores, incorporando elementos da gestão democrática.
+
+
+3.4 DESAFIOS ÉTICOS, DEMOCRÁTICOS E LIMITAÇÕES DA IA NA EDUCAÇÃO
+
+
+- Análise crítica dos desafios éticos, de privacidade e de uso democrático associados ao uso da
+IA na gestão educacional;
+- Estratégias para garantir a transparência, equidade e participação de todos os envolvidos;
+- Estratégias para mitigar riscos e garantir uma implementação responsável.
+
+
+                                               7
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+3.5 INTEGRAÇÃO DA IA NO MODELO DE GESTÃO DEMOCRÁTICA
+
+
+- Discussão sobre como integrar a IA, considerando o uso do ChatGPT em um modelo de gestão
+escolar democrático;
+- Reflexão sobre como a tecnologia pode fortalecer a tomada de decisões coletivas e inclusivas.
+
+
+3.6 AVALIAÇÃO DE RESULTADOS E FEEDBACKS
+
+
+- Coleta de feedbacks dos participantes sobre a oficina;
+- Discussão sobre como monitorar e avaliar os resultados do uso da IA na gestão escolar.
+
+
+
+
+                                               8
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+4 PASSOS METODOLÓGICOS: REPERTÓRIO FORMATIVO DA OFICINA
+
+
+       A atualidade exige cada vez mais competências e reflexões em decorrência de enormes
+transformações em nosso modo de vida. Seja em casa, na escola ou no trabalho, novas formas
+de relacionamento, experiências e aprendizagens impactam as relações entre as pessoas, delas
+consigo mesmas, e dos humanos com a natureza e com o mundo, exigindo conhecimentos e
+habilidades essenciais para a atuação nesse contexto.
+       Nesse sentido, a oficina visa proporcionar o desenvolvimento de habilidades cognitivas
+e socioemocionais através dos seguintes princípios:
+
+
+1 – Inspiração/sensibilização;
+2 – Conhecimento/aprofundamento;
+3 – Experienciação;
+4 – Reflexão e socialização da aprendizagem por meios metacognitivos 2 organizando o
+pensamento.
+
+
+
+
+2
+        A metacognição é um campo de estudos relacionado à consciência e ao automonitoramento
+do ato cognitivo. Consiste na aprendizagem sobre o processo da aprendizagem ou a apropriação e
+comando dos recursos internos se relacionando com os objetos externos. A metacognição consiste na
+capacidade do indivíduo de monitorar e autorregular os próprios processos cognitivos. Pensar sobre a
+maneira pela qual pensamos em várias situações pode ajudar em avanços e progressos do
+pensamento crítico, científico e interdisciplinar, levando estudantes a aprender (Metacognição, 2022).
+                                                  9
+
+  GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+5 DETALHAMENTO
+
+
+
+                                                     VIVÊNCIA
+      ETAPA
+
+                       ●   Abertura com uma discussão sobre o papel da Inteligência
+                           Artificial na sociedade e na educação.
+  1 - INSPIRAÇÃO /     ●   Apresentação de casos inspiradores de instituições que adotaram
+ SENSIBILIZAÇÃO:           com sucesso a IA na gestão escolar.
+                       ●   Reflexão sobre o potencial transformador da tecnologia, inspirando
+                           os participantes a considerarem novas abordagens.
+                       ●   Introdução aos conceitos básicos de Inteligência Artificial,
+                           destacando o ChatGPT como uma tecnologia específica.
+2 - CONHECIMENTO /     ●   Exploração aprofundada dos princípios da gestão democrática na
+APROFUNDAMENTO:            educação, evidenciando pontos de sinergia com a aplicação da IA.
+                       ●   Apresentação de estudos de caso e pesquisas recentes sobre o
+                           impacto da IA na gestão escolar e seus benefícios.
+                       ●   Sessão prática com exercícios em grupos, onde os participantes
+                           terão a oportunidade de aplicar o ChatGPT em cenários reais de
+                           gestão escolar.
+3 - EXPERIENCIAÇÃO: ●      Demonstração ao vivo de como integrar a IA em processos de
+                           tomada de decisão de maneira colaborativa e democrática.
+                       ●   Discussão sobre desafios práticos que podem surgir e estratégias
+                           para superá-los.
+                       ●   Diálogo aberto sobre os desafios éticos e democráticos associados
+                           ao uso da IA na gestão escolar.
+  4 - REFLEXÃO E
+                       ●   Sessão de reflexão individual e em grupo sobre como a tecnologia
+  SOCIALIZAÇÃO:
+                           pode ser incorporada de maneira ética e inclusiva.
+                       ●   Compartilhamento das experiências práticas, lições aprendidas e
+                           insights dos participantes.
+
+
+
+
+                                             10
+
+  GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+6 SEQUÊNCIAS DIDÁTICAS
+
+
+
+                                     SEQUÊNCIA 1
+
+
+  Encontros      Encontro 1 – Duração Total: 4 horas
+
+                 1. Inspiração/sensibilização
+  Princípios
+                 2. Conhecimento/aprofundamento:
+                ●   Apresentação (20 minutos);
+                ●   Apresentação em slides para introduzir os conceitos de gestão escolar e
+                    Inteligência Artificial na educação (20 minutos);
+                ●   Vídeo        inspirador        sobre    Inteligência    Artificial     –
+                    https://www.youtube.com/watch?v=At7TSu20VFk (20 minutos);
+                ●   Discussão em grupo sobre as possibilidades e desafios da IA na gestão
+                    democrática (20 minutos);
+                ●    Leitura compartilhada sobre o tema (40 minutos);
+                ●    Intervalo (20 minutos);
+    Etapas      ●    Vídeos complementares:
+                     Inteligência: https://www.youtube.com/watch?v=vOQZRMwkhlA (10
+                     minutos),
+                     História da Inteligência Artificial:
+                     https://www.youtube.com/watch?v=Lhu8bdmkMCM (16 minutos);
+                ●    Discussão em grupos pequenos para analisar e debater o conteúdo do texto
+                     (20 minutos);
+                ●    Sessão de perguntas e respostas para esclarecer dúvidas e consolidar o
+                     aprendizado (10 minutos);
+                ●    Conhecendo o ChatGPT (20 minutos).
+                 Computadores, laptops e smartphones com acesso à internet;
+                 Projetor e tela para apresentações;
+   Recursos
+                 Texto científico impresso ou disponível digitalmente;
+                 Acesso à plataforma ChatGPT.
+
+                ●   Debate (10 minutos)
+   Avaliação
+                ●   Virtual: Google formulário (10 minutos).
+
+
+
+
+                                              11
+
+GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+                                    SEQUÊNCIA 2
+
+
+Encontros      Encontro 2 – Duração total: 4 horas
+
+               3. Experienciação;
+Princípios
+               4. Reflexão e socialização:
+
+
+
+              ●   Demonstração prática do uso do ChatGPT em situações de gestão escolar
+                  (10 minutos);
+              ●   Atividade prática em que os participantes utilizam o ChatGPT para resolver
+                  problemas ou simular demandas de gestão. Prompts x alucinação (50
+                  minutos)
+              ●   Discussão em grupo sobre os desafios éticos e democráticos associados ao
+                  uso da IA na gestão escolar - mapa mental (40 minutos);
+ Etapas
+              ●   Intervalo (20 minutos);
+              ●   Sessão prática em que os participantes irão trabalhar em grupos para
+                  desenvolver um plano de integração da IA na gestão escolar, considerando
+                  princípios de gestão democrática (40 minutos);
+              ●   Socialização sobre a experiência de utilizar a IA como tecnologia de apoio
+                  à gestão - oral (40 minutos);
+              ●   Encerramento com reflexões finais e agradecimentos (40 minutos).
+
+
+
+
+               Computadores, laptops e smartphones com acesso à internet;
+               Projetor e tela para apresentações;
+Recursos       Texto científico impresso ou disponível digitalmente;
+               Acesso à plataforma ChatGPT;
+               Material para elaboração dos planos de integração da IA na gestão escolar.
+
+
+
+
+               Entrega do plano de integração da IA na gestão escolar, considerando
+Avaliação      princípios de gestão democrática;
+               Virtual: Google formulário (10 minutos).
+
+
+
+
+                                             12
+
+   GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+7 PLANO DE INTEGRAÇÃO DE IA (CHATGPT) NA GESTÃO ESCOLAR
+
+        PLANO DE INTEGRAÇÃO DE IA (CHATGPT) NA GESTÃO ESCOLAR
+JUSTIFICATIVA: Por que usar Inteligência Artificial ChatGPT na gestão escolar?
+
+
+
+
+TREINAMENTO E CAPACITAÇÃO: Quais recursos e habilidades são necessários para o uso
+de Inteligência Artificial ChatGPT na gestão escolar?
+
+
+
+
+DESAFIOS: Quais são as preocupações e desafios encontrados para o uso de Inteligência
+Artificial ChatGPT na gestão escolar?
+
+
+
+
+REFLEXÕES: Quais impactos podem ocorrer no uso de Inteligência Artificial ChatGPT na
+gestão escolar?
+
+
+
+
+                                           13
+
+    GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+8 AVALIAÇÃO
+
+
+        Avaliação sobre a Oficina Gestão escolar e Inteligência Artificial: o uso do ChatGPT
+como à gestão.
+
+
+8.1 AVALIAÇÃO DO ENCONTRO 1
+
+
+Pergunta 1: Como você avalia a relevância da abertura com a discussão sobre o papel da
+Inteligência Artificial na sociedade e na educação? De que forma essa discussão contribuiu para
+o seu entendimento sobre o tema?
+Lembre-se: não há respostas certas ou erradas! O objetivo é ampliar a reflexão sobre o tema.
+
+
+Pergunta 2: Com relação ao primeiro encontro, onde abordamos 1. Inspiração/sensibilização
+e 2. Conhecimento/aprofundamento, qual o seu grau de satisfação?
+
+
+   NADA SATISFEITO                         SATISFEITO                   TOTALMENTE SATISFEITO
+
+                                                                                     ☺
+
+8.2 AVALIAÇÃO DO ENCONTRO 2
+
+
+Pergunta 1: Como a sessão prática com exercícios em grupos, onde os participantes aplicaram
+o ChatGPT em cenários reais de gestão escolar, contribuiu para a sua compreensão prática da
+aplicação da IA? Identifique um exemplo específico em que você acredita que o ChatGPT
+poderia ser uma tecnologia eficaz.
+Lembre-se: não há respostas certas ou erradas! O objetivo é ampliar a reflexão sobre o tema.
+
+
+Pergunta 2: Com relação ao segundo encontro, onde abordamos 3. Experienciação e 4.
+Reflexão e socialização, qual o seu grau de satisfação?
+   NADA SATISFEITO                         SATISFEITO                   TOTALMENTE SATISFEITO
+
+                                                                                     ☺
+
+
+                                                      14
+
+   GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+REFERÊNCIAS
+
+
+
+GASPARIN, João Luiz. Uma didática para a pedagogia histórico-crítica. Campinas:
+Autores Associados, 2009.
+
+METACOGNIÇÃO. Wikipédia, 19 de junho de 2022. Disponível:
+https://pt.wikipedia.org/wiki/Metacogni%C3%A7%C3%A3o#:~:text=A%20metacogni%C3%
+A7%C3%A3o%20%C3%A9%20um%20campo,relacionando%20com%20os%20objetos%20
+externos.. Acesso em: 7 maio 2023.
+
+MORAES, Lucas Buges. O que é o Ambiente Virtual de Aprendizagem (AVA)? ABMES
+Blog, 23 mar. 2021. Disponível: https://abmes.org.br/blog/detalhe/18219/o-que-e-o-ambiente-
+virtual-de-aprendizagem-ava-. Acesso em: 7 maio 2023.
+
+SANTOS, A. L. F.; SILVA, A. L.; SILVA, J. P. Gestão democrática da escola e dos sistemas
+educacionais. In: BOTLER, A. H. (org.). Política e Gestão Educacional de Redes Públicas.
+Recife: Editora Universitária da UFPE, 2013.
+
+UNESCO. Gestão da educação pública com uso de tecnologia digital: características e
+tendências. 2019. Disponível: https://unesdoc.unesco.org/ark:/48223/pf0000376914. Acesso
+em: 7 maio 2023.
+
+ZABALA, A. A Prática Educativa: como ensinar. Porto Alegre: Artmed, 1998.
+
+
+
+
+                                            15
+
+GESTÃO ESCOLAR E INTELIGÊNCIA ARTIFICIAL: o uso do ChatGPT como apoio à gestão
+
+
+
+
+               UNIVERSIDADE FEDERAL DE PERNAMBUCO
+
+
+
+
+                          CENTRO DE EDUCAÇÃO
+
+
+
+
+           MESTRADO PROFISSIONAL EM EDUCAÇÃO BÁSICA
+
+
+
+
+                                     16

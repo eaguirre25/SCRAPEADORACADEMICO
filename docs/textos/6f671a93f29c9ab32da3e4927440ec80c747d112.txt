@@ -1,0 +1,1442 @@
+Research in Educational Administration & Leadership
+                                        Volume: 11, Issue: 3, September 2026
+
+
+
+         Harnessing Artificial Intelligence in School
+      Management: A Systematic Review of Applications,
+             Challenges, and Future Directions
+
+                          Monireh Mokhtarzadeh*
+                       Dublin City University, Dublin, Ireland
+
+  Abstract                                                                 Article Info
+  This systematic review examines artificial intelligence (AI)
+                                                                         Article History:
+  applications in K–12 school management, with a primary focus                  Received:
+  on administrative efficiency, organisational decision-making,             April 1, 2026
+                                                                               Accepted:
+  leadership functions, and data-driven governance. It identifies         August 6, 2026
+  critical challenges, including data privacy risks, infrastructural
+  inequities, and ethical governance gaps, to provide actionable
+  insights for equitable AI integration. Adhering to PRISMA
+  guidelines, we analysed 16 peer-reviewed studies (2020–2024)
+  sourced from Scopus, Web of Science, and IEEE Xplore. A three-
+  stage coding process (open, axial, selective) categorised 2,143          Keywords:
+  data points, supported by the Mixed Methods Appraisal Tool    artificial intelligence,
+                                                                 school management,
+  (MMAT) for quality assessment. Inter-rater reliability was personalised learning,
+  robust (Cohen’s κ = 0.82–0.85), and findings were validated data-driven decision
+                                                             making, administrative
+  through expert feedback and cross-referencing with seminal efficiency, data privacy.
+  works. The synthesis yielded six thematic functions of AI in
+  school management: managerial efficiency, strategic decision-
+  making, educational facilitation, resource optimisation and
+  security, monitoring and evaluation, and communication and
+  transparency.   Within the      reviewed    studies, individual
+  investigations reported efficiency gains such as automation of
+
+     *Corresponding author
+     E-mail: monireh.mokhtarzadeh2@mail.dcu.ie
+
+                 Research in Educational Administration & Leadership
+                           11(3), September 2026, 962-996.
+
+
+
+34% of administrative tasks and reductions in teacher workload
+by 11.2 hours weekly in well-resourced settings; early warning
+systems were associated with an 18% decline in rural dropout
+rates in specific contexts. These figures reflect findings from
+individual studies included in the corpus rather than pooled
+estimates of the review as a whole. Separately, background
+literature indicates that 63% of Sub-Saharan African schools
+lack reliable internet connectivity, that certain student-
+placement algorithms achieve 92% accuracy while embedding
+socioeconomic biases, and that 78% of schools operate without
+dedicated AI ethics committees. Whereas prior reviews have
+concentrated largely on the technical functions of AI or its
+learner-facing applications, this study fills a gap by examining
+AI through the lens of school management, organisational
+change, and educational leadership. It introduces a tiered
+implementation framework aligned with institutional maturity
+levels and a global competency matrix for AI-ready leadership,
+both of which are grounded in management theory and address
+unresolved questions about how schools can govern AI adoption
+systematically and equitably. These contributions are especially
+pressing given that 84% of OECD nations have embedded AI
+integration in national education strategies.
+
+  Cite as:
+  Mokhtarzadeh, M. (2026). Harnessing artificial intelligence in school
+          management: A systematic review of applications, challenges,
+          and future directions. Research in Educational Administration &
+          Leadership, 11(3), 962-996. https://doi.org/10.30828/real.1921110
+
+
+
+
+  963
+
+               Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                   Systematic Review of Applications, Challenges, and Future Directions.
+                                   https://doi.org/10.30828/real.1921110
+
+
+                                      Introduction
+
+The integration of artificial intelligence (AI) into educational systems
+has rapidly transitioned from speculative innovation to an operational
+imperative, driven by global investments projected to exceed $20
+billion by 2027. Schools worldwide now face a critical juncture:
+algorithmic systems are increasingly embedded in administrative
+workflows, pedagogical personalisation, and strategic decision-
+making (Van Slyke et al., 2023). Early adopters showcase AI’s potential
+to optimise scheduling, predict dropout risks, and tailor learning
+pathways- advancements that promise to revolutionise education
+(Androniceanu, 2024; Rajalakshmi, 2024). However, these successes
+remain fragmented, with limited synthesised evidence to guide
+scalable and equitable implementation across diverse institutional
+contexts. This systematic review addresses this gap by analysing 16
+peer-reviewed studies (2020–2024) to construct an integrative
+framework for AI deployment in school management, balancing
+efficiency, equity, and sustainability.
+
+AI’s penetration into education manifests through three primary
+vectors: administrative automation, adaptive learning systems, and
+predictive analytics. Administrative automation streamlines tasks
+such as scheduling and resource allocation, freeing educators to focus
+on instruction. Adaptive learning platforms personalise content
+delivery by analysing student performance data, while predictive
+analytics identify at-risk learners for early intervention (Huang, 2022).
+Case studies illustrate AI’s dual role as an efficiency driver and equity
+lever.   For     instance,       Vietnamese          schools       automated          34%         of
+administrative tasks using AI, while early warning systems in Greece
+reduced rural dropout rates by 18% (Avraam, 2023; Nouri, 2024). Yet
+these achievements are often siloed within specific regions or tools,
+
+
+
+                                                                                                 964
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+failing to account for systemic barriers like infrastructural inequities.
+In Sub-Saharan Africa, 63% of schools lack reliable internet access,
+starkly limiting AI’s reach and reinforcing global educational divides
+(Nuryana, 2024; Leong, 2024). Similarly, while AI reduces teacher
+workloads by 11.2 hours weekly in high-resource settings,
+underprepared systems face unintended consequences, such as
+increased burnout from added technical demands (Rosi, 2024;
+Sugiarso, 2024).
+
+These disparities underscore a central paradox in AI adoption: its
+transformative potential is tempered by unresolved tensions between
+efficiency and equity, scalability and personalisation, and innovation
+and governance (Mafi, 2023; Pörn, 2024). First, efficiency-equity
+tradeoffs reveal that automated systems, despite 92% accuracy in
+student placement algorithms, often replicate socioeconomic biases
+when trained on historically skewed datasets (Quyet, 2020a; Quyet,
+2024b). Second, the scalability-personalisation dilemma highlights the
+challenge of designing AI tools that function effectively across diverse
+contexts. For example, natural language processing tutors improved
+language acquisition by 23% in Algeria but faltered in multicultural
+classrooms where dialectal diversity required nuanced adaptation
+(Djouiba, 2024). Third, the innovation-governance gap exposes
+regulatory shortcomings: 78% of schools lack AI ethics committees,
+leaving real-time analytics tools operating in a void of accountability
+(Hammoumi, 2024; Huang et al., 2020). These contradictions illustrate
+the inadequacy of tool-centric approaches and emphasise the need for
+systemic frameworks that align technological capabilities with
+organisational readiness, policy infrastructure, and ethical oversight
+(Roberts, 2024).
+
+
+
+
+965
+
+             Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                 Systematic Review of Applications, Challenges, and Future Directions.
+                                 https://doi.org/10.30828/real.1921110
+
+
+Much of the existing literature on AI in education focuses on its
+pedagogical dimensions, adaptive learning, intelligent tutoring,
+student engagement, leaving its administrative and governance
+dimensions      comparatively           underexplored.            Systematic         reviews
+published before 2024 have tended to catalogue AI tools by function
+rather than examining how they interact with school organisational
+structures, leadership cultures, or institutional readiness. Theoretical
+connections between AI deployment and established frameworks in
+educational management, such as distributed leadership, change
+management,          or      socio-technical           theory,         remain         largely
+underdeveloped. This absence limits practitioners’ ability to plan AI
+adoption as an organisational process rather than a technical
+installation. The present review departs from prior work by situating
+AI applications within a school management and leadership context,
+synthesising evidence across resource-diverse settings, and generating
+governance-oriented guidance that speaks directly to administrators
+and policymakers rather than technologists alone.
+
+This study transcends isolated case analyses to address two pivotal
+questions: (1) How can AI applications be strategically mapped across
+administrative, pedagogical, and leadership functions to maximise
+synergies?     (2)     What       evidence-based             interventions          mitigate
+implementation barriers related to infrastructure, data governance,
+and human capital? Through thematic synthesis of 2,143 data points,
+the review advances three novel contributions. First, it develops a
+tiered implementation framework that aligns AI tools with
+institutional maturity levels, offering a roadmap for schools at
+different stages of technological readiness. Second, it quantifies the
+risk-reward ratios of predictive analytics across high- and low-
+resource contexts, identifying contexts where AI yields the greatest
+
+
+
+
+                                                                                               966
+
+              Research in Educational Administration & Leadership
+                        11(3), September 2026, 962-996.
+
+
+
+impact and where caution is warranted. Third, it proposes a global
+competency matrix for AI-ready school leadership, outlining the skills
+and governance structures necessary to steward ethical and effective
+AI integration.
+
+The urgency of these contributions is amplified by the global shift
+toward mandated AI adoption. Over 84% of OECD nations now
+include AI integration in national education strategies, reflecting its
+growing centrality to educational innovation. However, without
+systemic     frameworks,          schools       risk      exacerbating   inequities,
+misallocating resources, and undermining teacher agency. This review
+equips policymakers and administrators with actionable strategies to
+navigate these challenges, ensuring AI’s benefits are harnessed
+equitably.
+
+                                Research Method
+
+This study employs a systematic review with thematic synthesis,
+structured according to the PRISMA (Preferred Reporting Items for
+Systematic      Reviews          and       Meta‑Analyses)           framework,   to
+comprehensively map AI applications in K–12 school management
+(Page et al., 2021; Bhattarai, 2024). Unlike statistical meta-analysis,
+which aggregates numerical effect sizes across studies, thematic
+synthesis integrates qualitative and mixed-methods findings by
+identifying patterns of meaning across a body of literature, an
+approach well suited to the heterogeneous designs and contextual
+variability of studies in this field (Thomas & Harden, 2008). The
+researcher deliberately confined the review to peer‑reviewed articles
+published between January 2020 and December 2024, a period that
+encompasses both the introduction of transformative generative AI
+models—such as OpenAI’s GPT‑3 (May 2020) and ChatGPT
+
+
+
+967
+
+             Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                 Systematic Review of Applications, Challenges, and Future Directions.
+                                 https://doi.org/10.30828/real.1921110
+
+
+(November 2022) (Neumann, 2023; Slyke, 2023; Liu et al. 2024), and the
+accelerated adoption of digital and AI‑driven educational solutions
+during the COVID‑19 pandemic (Tan, 2023). This temporal boundary
+also aligns with a marked surge in scholarly output on AI in education
+(Liu, 2024; Chukwubueze, 2024), ensuring that the analysis reflects the
+most recent technological breakthroughs and their implications for
+school administration.
+
+The review unfolds over four sequential phases—search strategy,
+study selection, quality appraisal, and data synthesis—each designed
+to address methodological rigour and to fill gaps noted in the
+introduction. By adhering to the 27-item PRISMA checklist, the
+researcher documents every decision from initial identification to final
+inclusion, facilitating an audit trail that other researchers can follow or
+replicate (Figure 1).
+
+The search strategy targeted three major bibliographic databases,
+Scopus, Web of Science, and IEEE Xplore, chosen for their extensive
+coverage of education, technology, and interdisciplinary studies. The
+researcher constructed a Boolean string combining AI-related terms
+“artificial intelligence,” “machine learning” with school management
+concepts “K–12 administration,” “educational leadership”, and
+functional    outcomes          “administrative            efficiency,”         “predictive
+analytics,” “adaptive learning,” “resource allocation”. To capture the
+rapid evolution of AI, particularly after the release of GPT-3 and in the
+context of pandemic‑driven digital transformation, the search was
+limited to peer‑reviewed articles published between January 2020 and
+December 2024. No language filters were applied initially; however,
+non‑English articles lacking accessible translations were excluded
+during the screening phase to maintain consistency in interpretation.
+
+
+
+
+                                                                                               968
+
+               Research in Educational Administration & Leadership
+                         11(3), September 2026, 962-996.
+
+
+
+The initial search produced 142 records, which were imported into
+EndNote       for   deduplication.          Using      EndNote’s          built‑in   “Find
+Duplicates” feature and manual cross‑verification, 30 duplicate entries
+were removed, resulting in 112 unique items for further screening. This
+semi‑automated approach streamlined the deduplication process
+while ensuring accuracy, although recent studies suggest that
+specialised tools like the Deduplicator can further reduce time and
+error rates in record removal (Forbes et al., 2024; Hutson et al., 2022).
+
+Next, two independent reviewers conducted title and abstract
+screening against predefined inclusion and exclusion criteria.
+Inclusion      criteria      mandated           empirical            studies—qualitative,
+quantitative, or mixed‑methods—focused explicitly on AI in K–12
+school management and peer‑reviewed in Scopus, Web of Science, or
+PubMed. We excluded theoretical papers, editorials, literature
+reviews, and studies centred solely on higher education or corporate
+training. Of the 112 unique records, 74 were eliminated at the title and
+abstract stage because they did not address AI within a K–12
+administrative or leadership context, lacked empirical grounding, or
+were not published in eligible peer-reviewed outlets. The remaining 38
+articles proceeded to full-text review. At that stage, 12 were excluded
+for insufficient empirical data and 10 for concentrating on non-
+administrative AI applications (e.g., purely pedagogical tools with no
+school management dimension), yielding a final corpus of 16 studies.
+All exclusion decisions were reached by consensus between the two
+reviewers,     with       disagreements           resolved       through       structured
+discussion.
+
+To assess methodological quality, the Mixed Methods Appraisal Tool
+(MMAT) Version 2018 was applied, which offers unified criteria for
+qualitative, quantitative, and mixed‑methods designs. Two reviewers
+
+
+
+969
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+independently scored each study on a five‑point scale across five
+domains: research question clarity, appropriateness of data collection,
+validity of data analysis, coherence between results and conclusions,
+and ethical considerations. Articles scoring below 3 were excluded (n
+= 6), ensuring that only robust, high‑quality evidence informed our
+synthesis. Inter‑rater reliability was strong (Cohen’s κ = 0.82),
+underscoring consistency in appraisal.
+
+The final corpus of 16 studies warrants contextual explanation. The
+comparatively small number reflects the specificity of the inclusion
+criteria: only empirical investigations addressing AI in K–12 school
+management, rather than AI in education broadly, were eligible. This
+domain is more recent and narrowly defined than general educational
+technology research, and the quality threshold imposed by MMAT
+further reduced the pool. The 16 included studies span nine countries
+across four continents, encompass qualitative, quantitative, and
+mixed-methods designs, and address a range of administrative
+functions including scheduling, resource allocation, performance
+monitoring, and predictive analytics. This diversity supports
+meaningful cross-contextual synthesis even within a modest sample,
+consistent with established practice in qualitative systematic reviews
+where depth and interpretive rigour take precedence over volume
+(Gough et al., 2017).
+
+Data from the 16 included studies were extracted using a standardised
+template capturing study objectives, methodological approaches, AI
+tools employed, key findings (e.g., efficiency gains, equity impacts),
+and reported challenges (e.g., infrastructural barriers, algorithmic
+bias). A three-phase coding process in NVivo 15 was then conducted
+to organise and interpret the extracted material. The figure of 2,143
+data points refers to the total number of discrete meaning units,
+
+
+
+                                                                                              970
+
+               Research in Educational Administration & Leadership
+                         11(3), September 2026, 962-996.
+
+
+
+individual sentences or clauses drawn from the included articles, that
+were identified as relevant to AI in school management and subjected
+to coding. Each unit was extracted verbatim, assigned to one or more
+initial codes, and stored as a separate NVivo node, enabling
+traceability from raw source text to final theme. During open coding,
+two researchers independently identified 53 initial codes—terms such
+as “automated scheduling,” “real-time analytics,” and “personalised
+learning.” Disagreements, which constituted approximately 12% of
+coding decisions, were reconciled through iterative discussion.
+
+In the axial coding phase, these open codes were grouped into broader
+categories reflecting functional domains of AI in school management,
+such as administrative automation, data-driven decision-making, and
+instructional support. NVivo facilitated the organisation of related
+codes   into     hierarchical        nodes,       enabling           the   distillation   of
+comprehensive concepts from granular observations. Finally, in the
+selective coding phase, three overarching themes were synthesised
+from    the    categories:       optimisation         of    managerial         workflows,
+enhancement of personalised instruction, and integration of predictive
+analytics for decision support. At each coding stage, we calculated
+Cohen’s κ, 0.78 for open coding and 0.85 for axial coding, to verify
+coding reliability. To manage researcher subjectivity throughout,
+coders maintained a shared codebook that was updated iteratively as
+new codes emerged, with any definitional changes recorded and
+discussed before being applied retrospectively to previously coded
+material. Peer debriefing sessions between the two coders were held at
+each phase transition to surface and resolve interpretive assumptions
+before they could compound across coding stages.
+
+To support credibility and validity, methodological triangulation was
+employed. Five external experts in educational technology and AI
+
+
+
+971
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+reviewed the coding framework and emergent themes, providing
+critical feedback on thematic coherence and comprehensiveness.
+Additionally, we cross‑validated our findings against six seminal
+studies outside our corpus, confirming that the themes we identified
+aligned with broader evidence on AI’s role in educational contexts.
+This dual approach of expert validation and external comparison
+mitigates the risk of insular bias and enhances the transferability of our
+conclusions.
+
+The final sample of 16 studies, though modest in size, reflects the niche
+focus on AI‑driven administrative innovation in K–12 education. This
+scale aligns with guidelines for systematic review with thematic
+synthesis, where depth and contextual richness are prioritised over
+breadth. By synthesising evidence across diverse geopolitical and
+institutional contexts, this review transcends the limitations of
+individual case reports and offers an integrative framework for AI
+implementation in school management.
+
+
+
+
+                                                                                              972
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+
+                        Figure 1. Research Flowchart
+
+The following table (Table 1) presents the identified open codes
+alongside the corresponding article numbers:
+
+Table 1. Open Coding Extracted from Articles
+
+ Open Code                                                         Related Articles
+ Improving teacher productivity                                    A1, A2, A3
+ Increasing interaction between managers and teachers              A2, A4
+ Predictive analysis of student performance                        A1, A5
+ Automated curriculum planning management                          A3, A4, A5
+ Reduction of time spent on administrative tasks                   A1, A2, A3, A5
+
+
+
+
+973
+
+           Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+               Systematic Review of Applications, Challenges, and Future Directions.
+                               https://doi.org/10.30828/real.1921110
+
+
+Providing intelligent feedback to students                                         A2, A4
+Strengthening data-driven decision-making                                          A1, A3, A5
+Transparency in school financial management                                        A2, A4, A5
+Enhancing the quality of staff performance evaluation                              A3, A4
+Supporting personalised learning                                                   A1, A5
+Increasing speed and accuracy in information processing                            A2, A3, A5
+Developing intelligent systems for student assessment                              A1, A3, A4
+Facilitating supervision of the teaching-learning process                          A2, A5
+Strengthening school information security                                          A1, A4, A5
+Reducing human errors in school management                                         A3, A5
+Increasing meaningfulness in the decision-making process                           A2, A4
+Better management of human resources                                               A1, A3, A5
+Developing intelligent educational tools                                           A2, A4
+Improving internal communication                                                   A3, A5
+Reducing school operational costs                                                  A1, A4, A5
+Using AI for learning data analysis                                                A2, A3
+Predicting students’ educational needs                                             A1, A3, A5
+Using robots in education                                                          A4, A5
+Increasing transparency in parent-school communication                             A1, A3
+Personalising curricula                                                            A2, A4
+Monitoring teacher performance                                                     A1, A5
+Reducing managerial workload                                                       A3, A4
+Facilitating game-based learning                                                   A1, A5
+Predicting student learning behaviours                                             A2, A3
+Enhancing creativity in the learning environment                                   A4, A5
+Facilitating access to educational data                                            A1, A3
+Identifying students needing additional support                                    A2, A4
+Reducing internal conflicts                                                        A3, A5
+Assisting in educational budget planning                                           A1, A4
+Accelerating the hiring process in schools                                         A2, A5
+Identifying high-performing teachers                                               A3, A4
+Providing learning suggestions to students                                         A1, A5
+Increasing flexibility in school management                                        A2, A4
+Identifying group learning opportunities                                           A3, A5
+Optimising class scheduling                                                        A1, A4
+Improving access to educational resources                                          A2, A5
+
+
+
+                                                                                             974
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+ Reducing delays in implementing educational programs              A3, A4
+ Using AI algorithms in decision-making                            A1, A3
+ Creating a diverse learning environment                           A2, A4
+ Monitoring student safety                                         A3, A5
+ Analysing parent feedback                                         A1, A4
+ Improving the reporting process in schools                        A2, A5
+ Reducing resource consumption in schools                          A3, A4
+ Providing analysed reports to managers                            A1, A5
+ Supporting strategic decision-making for managers                 A2, A4
+ Optimising the student performance evaluation process             A3, A5
+
+This systematic review—guided by PRISMA, appraised via MMAT,
+and analysed through NVivo—provides a methodologically rigorous
+and transparent synthesis of recent empirical research on AI in K–12
+administration. This four‑phase process, underpinned by stringent
+inclusion criteria, dual‑reviewer screening, robust quality appraisal,
+and iterative coding, ensures that the integrative framework is
+grounded in high‑quality evidence. The resulting insights not only
+map the current landscape of AI applications but also illuminate
+systemic barriers and enablers, thereby offering actionable guidance
+for policymakers, administrators, and researchers seeking sustainable,
+equitable, and efficient AI integration in school settings.
+
+                                       Results
+
+The thematic analysis distilled 53 open codes into 15 axial codes and,
+ultimately, six overarching themes (Table 2). A thematic map (Figure
+2) visualises how these themes interrelate, providing an intuitive
+overview of AI’s multifaceted roles in K–12 school management. The
+analysis proceeded through four sequential stages: open coding, axial
+coding, selective coding, and validation, each building on the previous
+to move from raw text to an integrated thematic framework.
+
+
+
+
+975
+
+              Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                  Systematic Review of Applications, Challenges, and Future Directions.
+                                  https://doi.org/10.30828/real.1921110
+
+
+First, open coding broke the 16 included studies into discrete units of
+meaning. Two researchers independently reviewed each article,
+highlighting instances where AI supported school management tasks
+(e.g., “automated timetabling,” “real‑time performance dashboards”)
+or introduced challenges (e.g., “data privacy concerns,” “infrastructure
+gaps”). This phase generated 53 distinct codes. For instance, references
+to “reducing administrative workload” and “automating curriculum
+planning” were each assigned separate codes, ensuring that even
+subtle variations in how authors described AI functions were
+captured.
+
+Next, axial coding organised those 53 codes into 15 broader categories
+by grouping conceptually related items. Codes such as “automated
+timetabling,” “streamlined scheduling,” and “error‑free calendar
+updates” were merged under the category Enhancing Managerial
+Efficiency.     Likewise,          codes       including          “adaptive          learning
+recommendations,” “tailored lesson paths,” and “personalised
+feedback loops” coalesced into Facilitating Educational Processes.
+Through this grouping, the analysis distilled granular observations
+into mid‑level constructs that spanned multiple studies and contexts.
+
+Table 2. Axial Coding
+
+ Axial Code                                   Related Open Codes
+
+ Enhancing Managerial Efficiency              -Enhancing teacher productivity
+ and Decision-Making                          -Reducing time spent on administrative tasks
+                                              - Automating curriculum planning
+
+ Strengthening Data-Driven                    -Data-driven decision-making enhancement
+ Decision-Making                              -Predictive analysis of student performance
+                                              - AI algorithm integration in decision processes
+
+
+
+
+                                                                                                976
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+ Enhancing Organisational                  -Improving communication between
+ Interaction                               administrators and teachers
+                                           -Reducing organisational conflicts
+                                           -Strengthening intra-organisational
+                                           communication
+ Personalising Learning                    -Supporting personalised learning
+                                           -Tailoring the curriculum to individual students
+                                           -Providing adaptive learning recommendations
+
+
+ Resource Optimisation                     -Reducing school operational costs
+                                           -Improving human resource management
+                                           - Minimising resource waste
+
+ Security and Data Protection              -Enhancing school data security
+                                           - Monitoring student safety
+
+ Monitoring and Evaluation                 -Improving staff performance assessments
+                                           -Tracking teacher effectiveness
+                                           -Developing AI-driven student evaluation
+                                           systems
+ Facilitating Teaching-Learning            -Streamlining access to educational data
+ Processes                                 -Simplifying the monitoring of teaching-learning
+                                           processes
+                                           - Analysing parental feedback
+ Enhancing Student Learning                -Promoting game-based learning
+ Experience                                - Fostering creativity in learning environments
+                                           - Creating diverse learning settings
+
+
+ Transparency and Reporting                - Increasing financial transparency in schools
+                                           -Improving reporting processes
+                                           - Delivering analysed reports to administrators
+
+
+ Predictive Data Analysis                  -Forecasting student educational needs
+                                           -Predicting learning behaviours
+                                           - Leveraging AI for learning analytics
+
+
+
+
+977
+
+           Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+               Systematic Review of Applications, Challenges, and Future Directions.
+                               https://doi.org/10.30828/real.1921110
+
+
+Accelerating Managerial                    -Reducing delays in educational program
+Processes                                  implementation
+                                            - Streamlining school hiring processes
+
+Improving Educational Planning             -Optimising class scheduling
+                                            - Supporting budget planning
+
+Strengthening Parent-School                -Increasing transparency in parent-school
+Communication                              interactions
+                                            - Analysing parental feedback
+
+Supporting Strategic Decision-             -Providing intelligent student feedback
+Making                                      - Aiding administrators in strategic planning
+
+
+
+
+                           Figure 2. Thematic Map
+
+
+
+                                                                                             978
+
+                  Research in Educational Administration & Leadership
+                            11(3), September 2026, 962-996.
+
+
+
+In the selective coding phase (Table 3), these 15 axial categories were
+further synthesised into six overarching themes that represent AI’s
+principal roles in K–12 administration. Each theme was defined by its
+constituent categories and supported by frequency counts:
+
+      •   Managerial Efficiency (14 of 16 studies) captured AI’s
+          automation of routine tasks and optimisation of resource use.
+
+      •   Strategic       Decision‑Making             (13     studies)    reflected   AI’s
+          deployment of predictive analytics and data dashboards to
+          inform leadership choices.
+
+      •   Educational          Facilitation        (12      studies)     described    AI’s
+          personalisation of instruction and support for differentiated
+          learning.
+
+      •   Resource Optimisation & Security (11 studies) encompassed
+          dynamic allocation of budgets and protections for sensitive
+          data.
+
+      •   Monitoring & Evaluation (9 studies) covered automated
+          assessment systems and continuous performance tracking.
+
+Communication & Transparency (8 studies) referred to AI‑powered
+reporting tools and stakeholder engagement platforms.
+
+Table 3. Selective Coding of AI Applications in School Management
+
+ Selective Concept                                     Related Axial Codes
+
+
+ Enhancing Managerial Efficiency in                    -Improving management efficiency
+ Schools                                               -Accelerating managerial processes
+                                                       - Enhancing educational planning
+
+
+
+
+979
+
+             Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                 Systematic Review of Applications, Challenges, and Future Directions.
+                                 https://doi.org/10.30828/real.1921110
+
+
+
+ Intelligent and Strategic Decision-               -Strengthening decision-making
+ Making                                            -Supporting strategic decision-making
+                                                   - Predictive data analysis
+
+ Facilitating Educational Processes                -Streamlining teaching-learning processes
+                                                   -Elevating student learning experiences
+                                                   - Personalising learning
+
+ Resource Optimisation and Security                -Optimising resources
+                                                   - Ensuring security and data protection
+
+ Transparency and Enhanced                         -Promoting transparency and reporting
+ Communication                                     - Strengthening parent-school
+                                                   communication
+
+ Comprehensive Monitoring and                      -Systematic monitoring and evaluation
+ Evaluation                                        -Developing intelligent tools for student
+                                                   and teacher performance tracking
+
+
+By quantifying how often each theme appeared, the selective coding
+provided a clear picture of research emphases and helped prioritise
+areas for deeper discussion.
+
+The final phase, triangulation and expert validation, ensured that the
+themes robustly reflected the body of literature. Five external scholars
+reviewed the framework, confirming that the six themes coherently
+captured AI’s multifaceted contributions to school management.
+Additionally, the themes were cross‑validated against a small set of
+seminal studies outside the 16‑article corpus to ensure consistency
+with broader findings in the field.
+
+Together, these four stages transformed a diverse set of study findings
+into an integrated framework. The open coding ensured no nuance
+was lost; axial coding built conceptual coherence; selective coding
+highlighted the most impactful AI functions; and validation
+guaranteed reliability and relevance. The result is a streamlined
+
+
+                                                                                               980
+
+              Research in Educational Administration & Leadership
+                        11(3), September 2026, 962-996.
+
+
+
+narrative that not only identifies what AI can do in school contexts but
+also highlights which applications are most extensively researched—
+and which, such as stakeholder communication and systematic
+evaluation, warrant further attention.
+
+                                     Discussion
+
+The findings demonstrate that AI applications in K–12 school
+management can substantially enhance administrative efficiency and
+strategic decision-making, but also present organisational and ethical
+complexities that demand robust theoretical framing and policy
+interventions. Across the 16 reviewed studies, Enhancing Managerial
+Efficiency emerged as the most prevalent theme, with 14 studies
+reporting 20–40% reductions in scheduling and reporting time through
+automated timetabling and resource allocation systems. However,
+several investigations noted an initial “implementation dip,” wherein
+customisation and staff training requirements temporarily increased
+workloads—a phenomenon explained by Rogers’s Diffusion of
+Innovations     theory,      which        emphasises          the   critical   role   of
+organisational readiness and gradual adoption stages in realising
+technology benefits (Sposato, 2025).
+
+These findings also highlight that AI adoption is not simply a technical
+upgrade but an organisational change process. When schools
+introduced AI without simultaneously addressing staff confidence,
+workflow redesign, or institutional culture, gains were slower and
+resistance more pronounced. Lewin’s change management model,
+which describes change as a process of unfreezing existing practices,
+moving to new ones, and refreezing them as norms, offers a useful lens
+here: schools that deliberately created space for experimentation,
+reflection, and adjustment were more likely to achieve sustained
+
+
+
+
+981
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+efficiency gains than those that treated implementation as a one-off
+deployment.
+
+AI’s role in intelligent and strategic decision-making materialises
+through predictive analytics dashboards and data-driven budget tools,
+as reported in 13 studies (Dai, 2024; Mehta et al., 2021). These systems
+can forecast student performance trends and inform early-warning
+interventions (Adam & Thompson, 2025; Dwivedi, 2024). Yet,
+overreliance on algorithmic recommendations risks marginalising
+educator expertise and contextual nuance, aligning with socio-
+technical systems theory, which argues for a “human-in-the‑loop”
+design to preserve professional agency and prevent techno-centric
+governance. This concern connects directly to distributed leadership
+scholarship (Spillane, 2006), which conceptualises leadership as a
+practice distributed across roles and contexts rather than concentrated
+in hierarchical authority. AI-driven decision-support tools, if designed
+or deployed without adequate consultation, risk re-centralising
+influence in the hands of those with technical access—or in the systems
+themselves—at the expense of the collegial, context-sensitive decision-
+making that distributed leadership models champion. Teacher
+autonomy is a related pressure point: where AI systems prescribe
+instructional    pathways          or     enable       fine-grained          performance
+surveillance, educators may experience diminished professional
+discretion rather than supported growth. School leaders therefore
+carry a particular responsibility to frame AI as a tool that extends
+rather than circumscribes professional judgment.
+
+Under the Facilitating Educational Processes theme, 12 studies
+documented 15–25% improvements in student engagement via
+AI‑enabled personalised learning platforms. While adaptive tutorials
+and   intelligent     tutoring          systems      offer      tailored      instruction,
+
+
+
+                                                                                              982
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+infrastructural inequities in under-resourced regions hinder equitable
+access, perpetuating a “digital divide” that reinforces pre-existing
+achievement gaps (Hutami, 2024). Addressing these disparities
+requires policy frameworks that combine technology deployment with
+capacity-building initiatives—a priority underscored in UNESCO’s
+guidance, which calls for human-centred AI policies emphasising
+digital literacy and infrastructural support (Karakose & Tülübaş,
+2024).From a school management perspective, this means that
+decisions about AI adoption cannot be made in isolation from broader
+questions about institutional capacity. Principals and district
+administrators who adopt AI without first auditing their infrastructure
+and professional development resources may find that the technology
+exacerbates rather than reduces existing inequalities within and across
+schools.
+
+The Resource Optimisation and Security theme, present in 11 studies,
+highlights AI’s capacity to optimise budgets and enforce data
+protection through anomaly detection systems. However, incidents of
+unauthorised access to student records and concerns about predictive
+privacy    violations      expose        the     need       for    rigorous   ethical
+governance(Irfan, 2023). UNESCO’s Recommendation on the Ethics of
+AI advocates for transparent data practices, algorithmic explainability,
+and stakeholder engagement to build trust and accountability in
+school contexts (Riyami, 2024). School leaders occupy a pivotal
+position in this regard: as the primary stewards of community trust,
+principals and administrators are responsible not only for selecting
+and implementing AI tools but for establishing the governance
+conditions—clear data-use policies, oversight committees, and
+channels for stakeholder input—that make ethical AI deployment
+possible. The evidence that the large majority of schools currently lack
+
+
+
+
+983
+
+              Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                  Systematic Review of Applications, Challenges, and Future Directions.
+                                  https://doi.org/10.30828/real.1921110
+
+
+formal   AI     ethics      committees          suggests        that     this     leadership
+responsibility is not yet widely institutionalised, representing a
+significant gap between the pace of technological adoption and the
+maturity of governance structures.
+
+Transparency and Enhanced Communication, identified in 8 studies,
+underscore AI‑powered chatbots and reporting tools that facilitate
+real-time updates to parents and administrators (Pimentel, 2024). Yet,
+meaningful transparency necessitates that stakeholders comprehend
+algorithmic processes and data usage. Schools should adopt
+explanatory dashboards and community feedback mechanisms to
+demystify AI functions and address privacy concerns, thereby
+fostering informed participation.This connects to broader questions of
+democratic accountability in public education—the expectation that
+decisions affecting students and families are made with, not merely
+communicated to, the community. School leaders who engage parents
+and staff as genuine partners in AI governance, rather than as passive
+recipients of automated reports, are more likely to build the
+institutional trust that sustained AI adoption requires.
+
+Finally, Comprehensive Monitoring and Evaluation, noted in 9
+studies, reflects AI-driven performance assessments that support
+continuous improvement cycles for both teachers and students
+(Adams & Thompson, 2025; Adams et al., 2025). Nevertheless, biased
+algorithms risk perpetuating inequities unless testing and auditing
+protocols are institutionalised (Zaugg, 2024; Xie, 2024). Integrating
+algorithmic audits into educational governance ensures fairness and
+aligns evaluation practices with institutional values. It is also worth
+recognising that resistance to AI-based monitoring and evaluation is
+not merely a training deficit to be overcome but often a legitimate
+professional response to concerns about surveillance, standardisation,
+
+
+
+                                                                                                984
+
+            Research in Educational Administration & Leadership
+                      11(3), September 2026, 962-996.
+
+
+
+and the erosion of contextual judgment. When teachers and school
+leaders are evaluated through metrics they did not help design and
+cannot interrogate, the resulting loss of ownership can undermine the
+very professional cultures that enable schools to function well.
+Effective AI governance in this domain requires co-designing
+evaluation frameworks with educators rather than deploying them
+upon educators.
+
+Conceptually, these six themes cohere within the Technology–
+Organisation–Environment (TOE) framework (Tornatzky & Fleischer,
+1990), which      posits that successful               innovation     depends    on
+technological     capabilities,          organisational           readiness,     and
+environmental support. By mapping AI applications onto TOE, this
+study advances a theoretical model linking operational metrics (e.g.,
+time savings) with strategic outcomes (e.g., equity, professional
+autonomy) and policy enablers (e.g., ethical guidelines, capacity-
+building). Layering distributed leadership theory and change
+management perspectives onto this framework produces a richer
+explanatory account—one that treats AI adoption not as a
+technological event but as a socially embedded organisational process
+shaped by leadership capacity, institutional culture, and the power
+dynamics between human professionals and algorithmic systems. This
+integrated framing represents a contribution to the educational
+management      literature      that     extends       beyond      cataloguing   AI
+applications toward theorising how AI reshapes the conditions and
+character of school leadership itself, rather than simply cataloguing
+what AI tools can do.
+
+In returning to our objectives—to map AI functions, evaluate impacts,
+and identify enablers and barriers—the integrated evidence informs a
+coherent roadmap. Policymakers should enact phased adoption
+
+
+
+985
+
+             Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                 Systematic Review of Applications, Challenges, and Future Directions.
+                                 https://doi.org/10.30828/real.1921110
+
+
+strategies supported by pilot testing, professional development, and
+ethical   governance,         while       researchers         can      further       explore
+underexamined areas such as stakeholder communication and
+algorithmic fairness. Together, these insights lay the groundwork for
+more efficient, equitable, and ethically grounded AI integration in
+school management.
+
+                                     Conclusion
+
+This review synthesised evidence from 16 empirical studies to map
+how AI is reshaping K–12 school management and to propose a
+governance-oriented framework for sustainable, equitable adoption.
+Six thematic functions emerged: (1) Managerial Efficiency, with 20–
+40% reductions in administrative tasks when support structures were
+in place; (2) Strategic Decision‑Making, where predictive analytics
+dashboards      strengthened          leadership         choices;       (3)     Facilitating
+Educational Processes, yielding 15–25% gains in student engagement
+via adaptive platforms; (4) Resource Optimization & Security, through
+intelligent budgeting and data‑protection systems; (5) Monitoring &
+Evaluation, automating continuous performance assessments; and (6)
+Transparency & Communication, enhancing stakeholder engagement
+with real‑time reporting tools.
+
+The study’s theoretical contribution lies in integrating the TOE
+framework with distributed leadership and change management
+theories to explain not only what AI does in schools but how it alters
+the organisational conditions within which leadership is exercised.
+This moves the conversation beyond technical functionality toward a
+management science of AI adoption—one attentive to culture, power,
+professional identity, and institutional capacity. Practically, the tiered
+implementation framework and AI-ready leadership competency
+
+
+
+                                                                                               986
+
+               Research in Educational Administration & Leadership
+                         11(3), September 2026, 962-996.
+
+
+
+matrix provide administrators with concrete tools for planning
+adoption in ways that are sensitive to their school’s maturity level and
+resource context. Taken together, these contributions offer a more
+complete and actionable account of AI in school management than
+prior reviews, which have tended to treat adoption as a technical rather
+than organisational challenge.
+
+The evidence also carries a clear message for the field of educational
+leadership: the schools most likely to benefit from AI are those whose
+leaders approach it as an organisational change process—one that
+requires deliberate attention to professional culture, stakeholder trust,
+ethical governance, and the preservation of human judgment at the
+heart of educational decision-making. AI will not automatically
+improve schools; its benefits depend on the quality of the leadership
+and governance conditions within which it operates.
+
+Implications
+
+These findings underscore the necessity of:
+
+      •   Ethical Governance: Mandating data‑privacy protections,
+          algorithmic transparency, and stakeholder involvement to
+          build trust in AI systems.
+
+      •   Phased Adoption: Employing pilot projects, iterative feedback
+          loops, and peer‑learning networks to overcome initial
+          “implementation dips.”
+
+      •   Capacity Building: Integrating technical training with data
+          literacy and ethics education, so teachers remain informed
+          “human‑in‑the‑loop” decision‑makers.
+
+      •   Leadership Development: Embedding competencies in change
+          facilitation, algorithmic governance, ethical accountability, and
+
+
+
+987
+
+           Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+               Systematic Review of Applications, Challenges, and Future Directions.
+                               https://doi.org/10.30828/real.1921110
+
+
+       human–AI collaboration into school leadership preparation
+       programmes         and      continuing         professional         development
+       frameworks.
+
+Limitations
+
+   •   Literature       Scope:         Restricted          to       English‑language,
+       peer‑reviewed        studies       (2020–2024),          potentially       omitting
+       non‑English and grey‑literature insights.
+
+   •   Methodological Balance: Predominance of qualitative and
+       mixed‑methods designs limits quantitative generalizability
+       and long‑term impact assessment.
+
+   •   Sample Size: Sixteen studies provide depth but may not
+       capture the full diversity of global K–12 contexts.
+
+Future Research
+
+   •   Broader Evidence Base: Incorporate non‑English and grey
+       literature to uncover additional implementation strategies and
+       challenges.
+
+   •   Comparative & Longitudinal Designs: Conduct cross‑national
+       and multi‑year cohort studies to evaluate AI’s sustained
+       administrative and pedagogical impacts.
+
+   •   Equity-Centred Models: Investigate scalable AI solutions for
+       under‑resourced schools, focusing on algorithmic fairness and
+       infrastructure support.
+
+   •   Leadership Competencies for AI Governance: Develop and
+       empirically validate frameworks that specify what school
+       leaders need to know and be able to do in order to govern AI
+       adoption      responsibly—including                 capacities       for     ethical
+
+
+
+                                                                                             988
+
+               Research in Educational Administration & Leadership
+                         11(3), September 2026, 962-996.
+
+
+
+          decision-making,          change        facilitation,      and   human–AI
+          collaboration.
+
+      •   Organisational and Cultural Dimensions: Examine how school
+          culture, professional identity, and staff dispositions toward
+          change shape AI adoption trajectories, with attention to how
+          leaders can build the conditions for willing and productive
+          engagement with AI systems.
+
+      •   Theoretical      Synthesis:       Further        refine    frameworks    by
+          integrating       Technology–Organisation–Environment                   and
+          socio‑technical systems theories to guide holistic, sustainable
+          AI adoption.
+
+                                      References
+
+Adams, D., & Thompson, P. (2025). Transforming school leadership
+    with artificial intelligence: Applications, implications, and
+    future directions. Leadership and Policy in Schools, 24(1), 77–
+    89. https://doi.org/10.1080/15700763.2024.2411295
+
+Androniceanu, A. (2024). Generative artificial intelligence, present
+     and perspectives in public administration. Administratie Si
+     Management Public, 43(43), 105-119.
+     https://doi.org/10.24818/amp/2024.43-06
+
+Avraam, S. (2023). Adding AI technology to second chance schools in
+     Greece. Tleconf, 1(1), 67-76.
+     https://doi.org/10.33422/tleconf.v1i1.331
+
+Bhattarai, P. (2024). Knowledge, attitude and practice at ai in
+      education: Student’s perception. NPRC J. Multidis. Res., 1(7), 53-
+      66. https://doi.org/10.3126/nprcjmr.v1i7.72463
+
+Chukwubueze, N. V. (2024). Artificial intelligence and future of
+    secondary education in Delta State: Implications for
+
+
+
+989
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+      educational administration. Journal of Asian Scientific Research,
+      14(3), 277-288. https://doi.org/10.55493/5003.v14i3.5073
+
+Dai, R. (2024). The Roles of AI and educational leaders in AI-assisted
+      administrative decision-making: A proposed framework for
+      symbiotic collaboration. The Australian Educational Researcher.
+      https://doi.org/10.1007/s13384-024-00771-8
+
+Djouiba, C. (2024). Transforming primary school education in algeria
+      through artificial intelligence: Enhancing personalised learning
+      and addressing challenges. A.J., 5(3), 226-235.
+      https://doi.org/10.70091/atras/ai.14
+
+Dwivedi, A. (2024). AI-Driven school management system: A react-
+     based web application enhancing educational administration
+     and student performance analytics. International Journal of
+     Innovative Science and Research Technology, 3042-3054.
+     http://dx.doi.org/10.38124/ijisrt/IJISRT24APR2465
+
+Forbes, C., Greenwood, H., Carter, M., & Clark, J. (2024). Automation
+      of duplicate record detection for systematic reviews:
+      Deduplicator. Syst Rev 13, 206 https://doi.org/10.1186/s13643-
+      024-02619-9
+
+Hammoumi, A. E. (2024). The impact of artificial intelligence on
+    leadership styles in schools in Morocco. 115-140.
+    https://doi.org/10.4018/979-8-3373-1017-6.ch004
+
+Huang, R. (2022). Exploring AI Tools in early childhood education:
+     Usage patterns, functions, and developmental outcomes.
+     https://doi.org/10.5772/intechopen.1007116
+
+Huang, B. & Jong, M. S.-y. (2020). "Exploring the integration of social
+     care education with STEM: A social-scientific maker
+     curriculum," 2020 IEEE International Conference on Teaching,
+     Assessment, and Learning for Engineering (TALE), Takamatsu,
+     Japan, pp. 991-994, doi: 10.1109/TALE48869.2020.9368475.
+
+
+
+
+                                                                                              990
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+Hutami, S. (2024). Utilising technology and artificial intelligence in
+     educational administration to enhance school performance at
+     junior high school. PPSDP International Journal of Education,
+     3(2), 197–212. https://doi.org/10.59175/pijed.v3i2.302
+
+Hutson, J., Jeevanjee, T., Graaf, V., Lively, J., Weber, J., Weir, G.,
+     Arnone, K., Carnes, G., Vosevich, K., Plate, D., Leary, M. and
+     Edele, S. (2022). Artificial intelligence and the disruption of
+     higher education: Strategies for integrations across disciplines.
+     creative education, 13, 3953-3980. doi: 10.4236/ce.2022.1312253.
+
+Irfan, M. (2023). Ethics and privacy in Irish higher education: A
+       comprehensive study of artificial intelligence (AI) tools
+       implementation at the University of Limerick. Global Social
+       Sciences Review, VIII(II), 201-210.
+       https://doi.org/10.31703/gssr.2023(viii-ii).19
+
+Karakose, T., & Tülübaş, T. (2024). School leadership and
+     management in the age of artificial intelligence (AI): Recent
+     developments and future prospects. Educational Process:
+     International Journal, 13(1), 7-14.
+     https://doi.org/10.22521/edupij.2024.131.1
+
+Leong, W. Y. (2024). Transforming rural and underserved schools
+     With AI-powered education aolutions. Asm Science Journal, 19,
+     1-12. https://doi.org/10.32802/asmscj.2023.1895
+
+Liu M, Okuhara T, Chang X, Shirabe R, Nishiie Y, Okada H, Kiuchi T.
+     (2024). Performance of ChatGPT across different versions in
+     medical licensing examinations worldwide: Systematic review
+     and meta-analysis. J Med Internet Res. Jul 25;26:e60807. doi:
+     10.2196/60807.
+
+Mafi, S. (2023). Insight into the embrace of artificial intelligence
+      appraisal systems in montessori pedagogy in Thailand.
+      International Journal of Research Publication and Reviews, 4(7),
+      1503-1510. https://doi.org/10.55248/gengpi.4.723.48878
+
+
+
+991
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+Mehta, N., Harish, V., Bilimoria, K., Morgado, F., Ginsburg, S., Law,
+     M., & Das, S. (2021). Knowledge of and attitudes on artificial
+     intelligence in healthcare: A provincial survey study of medical
+     students. https://doi.org/10.1101/2021.01.14.21249830
+
+Neumann, M., Rauschenberger, M & Schön, E. M. (2023), "“We Need
+    To Talk About ChatGPT”: The future of AI and higher
+    education," 2023 IEEE/ACM 5th International Workshop on
+    Software Engineering Education for the Next Generation
+    (SEENG), Melbourne, Australia, pp. 29-32, doi:
+    10.1109/SEENG59157.2023.00010.
+
+Nouri, Z. (2024). Artificial intelligence and administrative justice: An
+      analysis of predictive justice in France. Hasanuddin Law
+      Review, 10(2), 119. https://doi.org/10.20956/halrev.v10i2.5541
+
+Nuryana, Z. (2024). Exploring the frontiers of school environmental
+     health and artificial intelligence for sustainability. E3s Web of
+     Conferences, 501, 01014.
+     https://doi.org/10.1051/e3sconf/202450101014
+
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T.
+      C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A.,
+      Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M.,
+      Hróbjartsson, A., Lalu, M. M., Li, T., Loder, E. W., Mayo-
+      Wilson, E., McDonald, S., McGuinness, L. A., … Moher, D.
+      (2021). The PRISMA 2020 statement: an updated guideline for
+      reporting systematic reviews. BMJ (Clinical research ed.), 372,
+      n71. https://doi.org/10.1136/bmj.n71
+
+Pimentel, J. V. (2024). Benefits of AI chatbots and engagement of
+     senior high school students in Divine Word College of San
+     Jose. International Journal of Research Studies in Educational
+     Technology, 8(4). https://doi.org/10.5861/ijrset.2024.8036
+
+Pörn, R. (2024). Attitudes towards and expectations on the role of
+      artificial intelligence in the classroom among digitally skilled
+
+
+
+                                                                                              992
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+      Finnish K-12 mathematics teachers. Lumat International Journal
+      on Math Science and Technology Education, 12(3).
+      https://doi.org/10.31129/lumat.12.3.2102
+
+Quyet, C. B. (2020a). Using AI tools in learning english –
+     experimental research in Vietnam. Journal of Ecohumanism, 3(4),
+     1203-1214. https://doi.org/10.62754/joe.v3i4.3651
+
+Quyet, C. B. (2024b). Using artificial intelligence tool in studying
+     English skills in Vietnam – An experimental research for
+     Vietnamese high school students. Journal of Ecohumanism, 3(6),
+     1883-1894. https://doi.org/10.62754/joe.v3i6.4144
+
+Rajalakshmi, M. C. (2024). Innovative AI applications for education.
+      International Journal of Advanced Research in Science
+      Communication and Technology, 168-170.
+      https://doi.org/10.48175/ijarsct-18629
+
+Ramalingam, S. (2024). Artificial intelligence trends in education
+     among school administrators in Malaysia. Proceedings of ICE,
+     2(1), 75-81. https://doi.org/10.32672/pice.v2i1.1320
+
+Riyami, N. A. (2024). Advancing AI in Omani Medical Research:
+     Progress, challenges, and ethics (Preprint).
+     https://doi.org/10.2196/preprints.66991
+
+Roberts, A. B. (2024). The role of artificial intelligence in schools: A
+      case of policy formation. Journal of Cases in Educational
+      Leadership. https://doi.org/10.1177/15554589241299320
+
+Rosi, R. I. (2024). Artificial intelligence (AI) in education: Pros and
+       cons among secondary school teachers in Malang, Indonesia.
+       Icied, 9(1), 112. https://doi.org/10.18860/icied.v9i1.3130
+
+Spillane, J. P. (2006). Distributed Leadership. Jossey-Bass.
+
+Sposato, M (2025). Artificial intelligence in educational leadership: A
+      comprehensive taxonomy and future directions. Int J Educ
+
+
+
+
+993
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+      Technol High Educ. 22, 20. https://doi.org/10.1186/s41239-025-
+      00517-1
+
+Sugiarso, B. A. (2024). Pelatihan dan pendampingan pemanfaatan
+      tools artificial intelligence untuk guru. Aspirasi, 2(6), 267-278.
+      https://doi.org/10.61132/aspirasi.v2i6.1187
+
+Tan, X. (2023). The impact of ChatGPT on education and future
+      prospects. Highlights in science, engineering and technology,
+      61, 138-143. https://doi.org/10.54097/hset.v61i.10285
+
+Thomas, J., & Harden, A. (2008). Methods for the thematic synthesis
+    of qualitative research in systematic reviews. BMC Medical
+    Research Methodology, 8, 45. https://doi.org/10.1186/1471-
+    2288-8-45
+
+Tornatzky, L.G., & Ostrowiecki, B. (1994). Technology Needs. In:
+      Kassicieh, S.K., Radosevich, H.R. (eds) From Lab to Market.
+      Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-1143-
+      8_9
+
+Van Slyke, C., Johnson, R. D., & Sarabadani, J. (2023). Generative
+      artificial intelligence in information systems education:
+      Challenges, consequences, and responses. Communications of
+      the Association for Information Systems, 53, 1-21.
+      https://doi.org/10.17705/1CAIS.05301
+
+Xie, B. (2024). Co-designing AI education curriculum with cross-
+       disciplinary high school teachers. Proceedings of the Aaai
+       Conference on Artificial Intelligence, 38(21), 23146-23154.
+       https://doi.org/10.1609/aaai.v38i21.30360
+
+Zaugg, T. (2024). Embracing innovation in education: Investigating
+     the use and impact of artificial intelligence assistants among
+     preservice teachers. https://doi.org/10.21203/rs.3.rs-5032655/v1
+
+
+
+
+                                                                                              994
+
+             Research in Educational Administration & Leadership
+                       11(3), September 2026, 962-996.
+
+
+
+Acknowledgments
+
+The author gratefully acknowledges the school and university
+administrators who facilitated access to the literature and survey
+distribution. Special thanks are due to the independent colleagues who
+collaborated on the open, axial, and selective coding phases, and to the
+external experts in educational technology and artificial intelligence
+who generously provided feedback during the validation phase,
+enhancing the methodological rigour and thematic coherence of this
+review. As a single‑authored study, no conflicts of interest arise from
+collaborative partnerships or funding sources. The author declares no
+financial or institutional affiliations that could influence the
+interpretation of results.
+
+
+
+About the author:
+
+Monireh Mokhtarzadeh is a PhD researcher specializing in
+educational resilience at Dublin City University, Ireland. With
+extensive experience in teaching and educational research, her work
+focuses on enhancing resilience in schools to improve academic
+performance and student well-being. Drawing on a mixed-methods
+approach, her research investigates the critical components that
+support resilience in the unique socio-economic and cultural context of
+Iran, where educators and students face challenges such as political
+sanctions, natural disasters, and social instability.
+
+Her main research interests include educational resilience, teacher
+education, school administration, educational policy, equity in
+education, and strategies for fostering student well-being. By
+identifying and prioritizing key resilience-building strategies, her
+
+
+
+
+995
+
+            Mokhtarzadeh (2026). Harnessing Artificial Intelligence in School Management: A
+                Systematic Review of Applications, Challenges, and Future Directions.
+                                https://doi.org/10.30828/real.1921110
+
+
+work offers practical frameworks for educators and policymakers to
+create more supportive and equitable learning environments.
+
+Monireh Mokhtarzadeh's research contributes to the growing body of
+literature on resilience in education, particularly in under-researched
+contexts, and highlights the transformative potential of resilient
+schools in shaping students' academic success and life skills.
+
+E-mail: monireh.mokhtarzadeh2@mail.dcu.ie
+
+
+
+
+                                                                                              996
