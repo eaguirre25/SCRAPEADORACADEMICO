@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html data-page="articulos" lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,18 @@ aside .apa-box{border:1px solid var(--line);background:#0d1117;border-radius:6px
 aside{border:1px solid var(--line);background:var(--panel);border-radius:8px;height:calc(100vh - 142px);overflow:auto;padding:14px} aside h2{font-size:1rem;margin:0 0 8px} .field{border-top:1px solid #242b35;padding:10px 0} .label{color:var(--muted);font-size:.74rem;text-transform:uppercase;margin-bottom:4px} .value{white-space:pre-wrap;line-height:1.42} .actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px} .pager{display:flex;align-items:center;gap:8px;margin-top:10px} .pager span{color:var(--muted)}
 @media(max-width:980px){.tools{grid-template-columns:1fr 1fr} main{grid-template-columns:1fr} aside{height:auto} .table-wrap{height:62vh}}
 </style>
+<!-- pwa:start -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D1117">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dirección Escolar">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="mobile.css">
+<script src="pwa.js" defer></script>
+<!-- pwa:end -->
 </head>
 <body>
 <header>

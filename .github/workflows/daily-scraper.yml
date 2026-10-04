@@ -47,6 +47,11 @@ jobs:
         run: |
           python relevance_filter.py
 
+      - name: Recover missing CONICET metadata
+        continue-on-error: true
+        run: |
+          python scripts/enrich_metadata.py --apply
+
       - name: Send curated email update
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
@@ -75,6 +80,8 @@ jobs:
           git reset --mixed origin/main
           git add \
             data/master_records.csv \
+            data/metadata_enrichment.csv \
+            data/metadata_enrichment_report.json \
             data/review_records.csv \
             data/rejected_records.csv \
             data/auto_review_promoted.csv \

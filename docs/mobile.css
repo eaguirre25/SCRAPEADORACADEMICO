@@ -1,0 +1,119 @@
+/* Adaptación a teléfonos y barra de navegación de la app instalable (PWA).
+ * Se incorpora en todas las páginas mediante inject_pwa.py. Las reglas por
+ * página se apoyan en html[data-page] para no afectar a las demás. */
+
+/* ---------- Barra inferior de la app ---------- */
+#pwa-nav{display:none}
+@media (max-width:760px), (display-mode:standalone){
+  html.has-pwa-nav body{padding-bottom:calc(60px + env(safe-area-inset-bottom,0px))}
+  #pwa-nav{position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;gap:0;
+    height:calc(58px + env(safe-area-inset-bottom,0px));padding:0 0 env(safe-area-inset-bottom,0px);
+    background:rgba(7,11,20,.96);border-top:1px solid #21314d;
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    font-family:-apple-system,"Segoe UI",system-ui,sans-serif}
+  #pwa-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+    margin:0;padding:6px 2px;border:0;border-radius:0;background:transparent;
+    color:#8B949E;font-size:.68rem;font-weight:600;text-decoration:none;line-height:1.1;
+    -webkit-tap-highlight-color:transparent;transition:none}
+  #pwa-nav a:hover{background:transparent;color:#C9D1D9;text-decoration:none}
+  #pwa-nav a[aria-current="page"]{color:#58A6FF}
+  #pwa-nav a[aria-current="page"] .pwa-nav-icon{background:#132a4a}
+  #pwa-nav .pwa-nav-icon{font-size:1.15rem;line-height:1;padding:3px 14px;border-radius:999px}
+}
+
+/* ---------- Aviso para instalar ---------- */
+#pwa-install{position:fixed;left:12px;right:12px;bottom:calc(70px + env(safe-area-inset-bottom,0px));z-index:95;
+  display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;
+  background:#161B22;border:1px solid #2f4b74;box-shadow:0 8px 28px rgba(0,0,0,.5);
+  color:#E6EDF3;font:14px/1.35 -apple-system,"Segoe UI",system-ui,sans-serif}
+#pwa-install img{border-radius:8px;flex-shrink:0}
+#pwa-install .pwa-install-text{flex:1}
+#pwa-install button{border-radius:8px;font:inherit;cursor:pointer}
+#pwa-install .pwa-install-go{background:#1f6feb;border:1px solid #1f6feb;color:#fff;font-weight:700;padding:7px 12px}
+#pwa-install .pwa-install-x{background:transparent;border:0;color:#8B949E;font-size:1.4rem;line-height:1;padding:2px 6px}
+@media (min-width:761px){#pwa-install{left:auto;right:16px;bottom:16px;max-width:380px}}
+
+/* ---------- Ajustes generales en pantallas chicas ---------- */
+@media (max-width:760px){
+  html{-webkit-text-size-adjust:100%}
+  img,video,iframe{max-width:100%}
+  input,select,textarea{font-size:16px} /* evita el zoom automático de iOS */
+
+  /* Tablero principal */
+  html[data-page="index"] header{flex-wrap:wrap;gap:10px;padding:12px 16px;position:static}
+  html[data-page="index"] .header-left{min-width:0;max-width:100%}
+  html[data-page="index"] .neon-title{white-space:normal;font-size:1.05em;line-height:1.25}
+  html[data-page="index"] .neon-sub{font-size:.74em;line-height:1.6}
+  html[data-page="index"] .argentina-link{padding:8px 12px !important;font-size:.85em}
+  html[data-page="index"] .kpis{flex-wrap:wrap}
+  html[data-page="index"] .kpi{flex:1 1 33%;border-bottom:1px solid var(--border)}
+  html[data-page="index"] .kpi-n{font-size:1.25em}
+  html[data-page="index"] .tm-section{padding:14px 16px}
+  html[data-page="index"] .tm-head{flex-direction:column;align-items:stretch}
+  html[data-page="index"] #tm-select{width:100%;max-width:100%}
+  html[data-page="index"] .tm-pane{grid-template-columns:1fr;max-height:none}
+  html[data-page="index"] .tm-pane table{display:block;overflow-x:auto}
+  html[data-page="index"] .tm-review-tools{flex-wrap:wrap}
+  html[data-page="index"] .main-grid{height:auto;overflow:visible}
+  html[data-page="index"] .net-panel{height:70vh;border-right:0}
+  html[data-page="index"] .panel-head{flex-wrap:wrap;gap:6px}
+  html[data-page="index"] .net-controls{flex-wrap:wrap}
+  html[data-page="index"] .topics-panel{display:flex;max-height:60vh;border-top:1px solid var(--border)}
+  html[data-page="index"] .pager{flex-wrap:wrap;padding:8px 12px}
+
+  /* Tabla de artículos: cada fila se muestra como tarjeta */
+  html[data-page="articulos"] header{padding:12px 14px;position:static}
+  html[data-page="articulos"] .top{flex-wrap:wrap}
+  html[data-page="articulos"] .tools{grid-template-columns:1fr 1fr}
+  html[data-page="articulos"] .tools > :first-child{grid-column:1/-1}
+  html[data-page="articulos"] .tools > *{min-width:0;width:100%}
+  html[data-page="articulos"] main{padding:10px;gap:10px}
+  html[data-page="articulos"] .table-wrap{height:auto;max-height:none;overflow:visible;border:0;background:transparent}
+  html[data-page="articulos"] table{min-width:0;display:block}
+  html[data-page="articulos"] thead{display:none}
+  html[data-page="articulos"] tbody{display:flex;flex-direction:column;gap:10px}
+  html[data-page="articulos"] tbody tr{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:12px;
+    background:var(--panel);border:1px solid var(--line);border-radius:10px}
+  html[data-page="articulos"] tbody td{display:block;border:0;padding:0;background:transparent !important;min-width:0}
+  html[data-page="articulos"] tbody td:nth-child(1){grid-column:1/-1;order:1}
+  html[data-page="articulos"] tbody td:nth-child(2){grid-column:1/-1;order:2;color:#c9d1d9;font-size:.86rem;margin-top:4px}
+  html[data-page="articulos"] tbody td:nth-child(3){order:3;color:var(--muted);font-size:.82rem}
+  html[data-page="articulos"] tbody td:nth-child(4){grid-column:1/-1;order:4;color:var(--muted);font-size:.82rem}
+  html[data-page="articulos"] tbody td:nth-child(6){order:3;font-size:.82rem;text-align:right}
+  html[data-page="articulos"] tbody td:nth-child(5),
+  html[data-page="articulos"] tbody td:nth-child(7){display:none}
+  html[data-page="articulos"] tbody td.apa-cell{grid-column:1/-1;order:5;margin-top:8px;min-width:0}
+  html[data-page="articulos"] tbody tr.active{border-color:var(--blue)}
+  html[data-page="articulos"] .pager{flex-wrap:wrap}
+  html[data-page="articulos"] aside{height:auto}
+
+  /* Biblioteca */
+  html[data-page="biblioteca"] header{position:static}
+  html[data-page="biblioteca"] .top{flex-wrap:wrap}
+  html[data-page="biblioteca"] .col-bar{overflow-x:auto;flex-wrap:nowrap}
+  html[data-page="biblioteca"] .col-btn{flex-shrink:0}
+  html[data-page="biblioteca"] .tools{grid-template-columns:1fr 1fr}
+  html[data-page="biblioteca"] .tools > :first-child{grid-column:1/-1}
+  html[data-page="biblioteca"] .tools > *{min-width:0;width:100%}
+  html[data-page="biblioteca"] .library{grid-template-columns:1fr;height:auto;padding:8px}
+  html[data-page="biblioteca"] .quote-entry{grid-template-columns:1fr 70px 38px}
+  html[data-page="biblioteca"] .quote-entry > :nth-child(3){grid-column:1/-1;order:5}
+  html[data-page="biblioteca"] .quote-card{grid-template-columns:1fr 50px 30px}
+  html[data-page="biblioteca"] .quote-card > :nth-child(3){grid-column:1/-1;order:5}
+  html[data-page="biblioteca"] .g2{grid-template-columns:1fr}
+
+  /* Asistente IA */
+  html[data-page="asistente_ia"] header{flex-wrap:wrap;gap:8px;padding:10px 14px;position:static}
+  html[data-page="asistente_ia"] .brand-title{flex-wrap:wrap;font-size:1rem}
+  html[data-page="asistente_ia"] header nav{overflow-x:auto;max-width:100%}
+  html[data-page="asistente_ia"] header nav a{white-space:nowrap}
+  html[data-page="asistente_ia"] .notebook-container{grid-template-columns:1fr;height:auto;padding:10px;gap:12px}
+  html[data-page="asistente_ia"] .chat-area{min-height:75vh;min-width:0}
+  html[data-page="asistente_ia"] .chat-header{flex-wrap:wrap;gap:6px;padding:12px 14px}
+  html[data-page="asistente_ia"] .messages-box{padding:14px}
+  html[data-page="asistente_ia"] .msg.user{max-width:92%}
+  html[data-page="asistente_ia"] .notebook-response{padding:14px 16px;overflow-wrap:anywhere}
+  html[data-page="asistente_ia"] .notebook-response p{text-align:left}
+  html[data-page="asistente_ia"] .chat-input-bar{min-width:0}
+  html[data-page="asistente_ia"] .chat-input-bar textarea{min-width:0}
+}

@@ -12,7 +12,7 @@ on:
       - 'scripts/run_argentina_analysis.py'
       - '.github/workflows/argentina_bertopic.yml'
   workflow_run:
-    workflows: ["Academic Scraper"]
+    workflows: ["Academic Scraper", "Enriquecer metadatos CONICET"]
     types: [completed]
 
 permissions:
