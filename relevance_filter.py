@@ -441,7 +441,7 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
         return "alta", score, "menciona rol/equipo directivo en contexto educativo", evidence
     # «Gestión educativa» o «educational leadership» en el título nombran el
     # campo de estudio; con educación superior sin anclaje escolar ya se descartó.
-    if medium_title and not noise_hits:
+    if medium_title:
         return "alta", score, "el título nombra el campo (gestión/liderazgo educativo)", evidence
     if management_near:
         if strict:

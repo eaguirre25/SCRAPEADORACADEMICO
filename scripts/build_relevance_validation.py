@@ -46,6 +46,9 @@ OBVIOUS_TITLE = re.compile(r"""
 |\b(school|educational|instructional|pedagogical|distributed|principal)\s+(leader\w*|management|administration|governance)
 |\bprincipals?\b.{0,40}\b(school|teacher|leadership)|\bheadteacher\w*|\bprincipalship\b
 |\bschool\s+(heads?|principals?)\b|\bschool[- ]based\s+management\b
+|\bleadership\s+(in|for|of)\s+(the\s+)?schools?\b
+|\b(transformational|distributed|instructional|pedagogical|teacher|servant|ethical)\s+leadership\b
+|\bliderazgo\s+(transformacional|distribuido|pedagogico|instruccional|docente|educativo|escolar|directivo)\b
 """, re.X)
 HIGHER_ED_TITLE = re.compile(r"\b(universi\w*|higher\s+education|educacion\s+superior|posgrado|postgrado|"
                              r"academic\s+leadership|department\s+heads?|faculty|surgeons?|hospital|medic\w*)\b")

@@ -97,3 +97,8 @@ def test_pandemic_context_does_not_discard_school_management():
 def test_library_guides_are_not_academic_works():
     assert status("LibGuides: Educational Leadership: Books") == "rechazada"
     assert status("Research Guides: EDLEAD 6206 - Orientation to School Management: Home") == "rechazada"
+
+
+def test_field_title_survives_incidental_noise():
+    abstract = "Women's status, health and empowerment shape access to educational leadership positions."
+    assert status("Status and empowerment of women for educational leadership in India", abstract) == "alta"
