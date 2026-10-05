@@ -124,17 +124,21 @@ def search_bertopic_parameters(config: dict[str, Any], *, corpus_unit: str = "me
     cfg = config["bertopic"]; search = cfg["parameter_search"]; macro = cfg["macro_search"]
     seed = int(config["project"]["seed"]); rows: list[dict[str, Any]] = []
     umap_specs = list(itertools.product(search["umap_neighbors"], search["umap_components"], search["umap_min_dist"]))
-    cluster_specs = [(25, 5), (35, 5), (35, 10), (50, 5), (50, 10)]
+    # Grilla de HDBSCAN: los valores por defecto son los del modelo global; un
+    # subcorpus puede declarar otros tamaños en macro_search (screen_cluster,
+    # cluster_specs) sin cambiar el resto del procedimiento.
+    screen_size, screen_samples = (int(x) for x in macro.get("screen_cluster", [35, 5]))
+    cluster_specs = [tuple(int(x) for x in spec) for spec in macro.get("cluster_specs", [(25, 5), (35, 5), (35, 10), (50, 5), (50, 10)])]
     reduced_cache = {}
     for neighbors, components, min_dist in umap_specs:
         key = (int(neighbors), int(components), float(min_dist)); started = time.perf_counter()
         reduced = UMAP(n_neighbors=key[0], n_components=key[1], min_dist=key[2], metric="cosine", random_state=seed, low_memory=True).fit_transform(embeddings)
         reduced_cache[key] = reduced
         # One broad baseline per UMAP; deeper HDBSCAN search is applied to the best geometries below.
-        labels = HDBSCAN(min_cluster_size=35, min_samples=5, metric="euclidean", cluster_selection_method="eom", prediction_data=True).fit_predict(reduced)
-        metrics = _evaluate(labels, reduced, embeddings, languages, texts, config, 35)
+        labels = HDBSCAN(min_cluster_size=screen_size, min_samples=screen_samples, metric="euclidean", cluster_selection_method="eom", prediction_data=True).fit_predict(reduced)
+        metrics = _evaluate(labels, reduced, embeddings, languages, texts, config, screen_size)
         row = {"phase": "macro_umap_screen", "n_neighbors": key[0], "n_components": key[1], "min_dist": key[2],
-               "min_cluster_size": 35, "min_samples": 5, "cluster_selection_method": "eom", **metrics,
+               "min_cluster_size": screen_size, "min_samples": screen_samples, "cluster_selection_method": "eom", **metrics,
                "elapsed_seconds": round(time.perf_counter() - started, 3), "seed": seed}
         row["rejection_reasons"] = " | ".join(_rejection_reasons(row, macro)); rows.append(row)
     best_geometries = sorted(rows, key=lambda row: _ranking_score(row, int(macro["target_min_topics"]), int(macro["target_max_topics"])), reverse=True)[:3]

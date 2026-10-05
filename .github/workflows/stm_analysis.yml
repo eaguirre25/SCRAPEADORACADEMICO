@@ -75,9 +75,20 @@ jobs:
           path: .cache/huggingface
           key: hf-${{ runner.os }}-paraphrase-multilingual-mpnet-base-v2
 
-      # BERTopic general: se reajusta con el corpus vigente y los parámetros ya
-      # seleccionados, para que el tablero no muestre tópicos de un corpus
-      # anterior. Las etiquetas manuales de otra versión no se aplican.
+      # Los parámetros se vuelven a elegir sobre el corpus vigente con el
+      # procedimiento declarado (cribado multicriterio + estabilidad en cinco
+      # semillas), así el modelo reportado no hereda una selección hecha sobre
+      # otro corpus.
+      - name: Buscar parámetros BERTopic sobre el corpus vigente
+        env:
+          HF_HOME: ${{ github.workspace }}/.cache/huggingface
+          TOKENIZERS_PARALLELISM: "false"
+        run: |
+          python scripts/search_bertopic_parameters.py --config config/topic_modeling.yml --corpus-unit metadata
+          python scripts/run_bertopic_stability.py --config config/topic_modeling.yml --finalists-only
+
+      # BERTopic general: se reajusta con el corpus vigente y los parámetros
+      # recién seleccionados. Las etiquetas manuales de otra versión no se aplican.
       - name: Reajustar BERTopic con el corpus vigente
         env:
           HF_HOME: ${{ github.workspace }}/.cache/huggingface

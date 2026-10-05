@@ -157,3 +157,17 @@ def artifact_counts(text: str) -> dict[str, int]:
         "bibliographic_ids": len(BIBLIOGRAPHIC_ID_RE.findall(source)),
         "editorial_lines": len(EDITORIAL_LINE_RE.findall(source)), "broken_tokens": len(BROKEN_TOKEN_RE.findall(source)),
     }
+
+
+def strip_repository_header(abstract: str, title: str) -> str:
+    """Quita la cabecera que CONICET antepone al resumen («títulos\nautores\nresumen»).
+
+    Repite el título y suma nombres propios que distorsionan embeddings y
+    vocabulario. Se aplica igual en el modelo global y en el argentino.
+    """
+    abstract = abstract or ""
+    lines = abstract.split("\n")
+    title = (title or "").strip().lower()
+    if len(lines) >= 3 and title and lines[0].strip().lower()[:25] == title[:25]:
+        return "\n".join(lines[2:]).strip()
+    return abstract
