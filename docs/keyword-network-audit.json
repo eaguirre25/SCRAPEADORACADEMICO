@@ -733,151 +733,151 @@
   "topic_comparison": {
     "bertopic-macros": {
       "exploratory": {
-        "eligible_edges": 24757,
-        "same_topic_edges": 8644,
-        "same_topic_share": 0.34915377468998665,
-        "all_assigned_pair_same_topic_share": 0.11655171597913143,
+        "eligible_edges": 108081,
+        "same_topic_edges": 24650,
+        "same_topic_share": 0.22806968847438494,
+        "all_assigned_pair_same_topic_share": 0.046767291953682275,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 5700,
-        "same_topic_edges": 2770,
-        "same_topic_share": 0.48596491228070177,
-        "all_assigned_pair_same_topic_share": 0.11655171597913143,
+        "eligible_edges": 15262,
+        "same_topic_edges": 5209,
+        "same_topic_share": 0.34130520246363516,
+        "all_assigned_pair_same_topic_share": 0.046767291953682275,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 1794,
-        "same_topic_edges": 939,
-        "same_topic_share": 0.5234113712374582,
-        "all_assigned_pair_same_topic_share": 0.11655171597913143,
+        "eligible_edges": 3820,
+        "same_topic_edges": 1584,
+        "same_topic_share": 0.41465968586387436,
+        "all_assigned_pair_same_topic_share": 0.046767291953682275,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 15746,
-        "same_topic_edges": 6526,
-        "same_topic_share": 0.41445446462593677,
-        "all_assigned_pair_same_topic_share": 0.11655171597913143,
+        "eligible_edges": 87456,
+        "same_topic_edges": 16780,
+        "same_topic_share": 0.1918679107208196,
+        "all_assigned_pair_same_topic_share": 0.046767291953682275,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "bertopic-subtopics": {
       "exploratory": {
-        "eligible_edges": 11322,
-        "same_topic_edges": 3930,
-        "same_topic_share": 0.347111817700053,
-        "all_assigned_pair_same_topic_share": 0.08503338810087277,
+        "eligible_edges": 60668,
+        "same_topic_edges": 9655,
+        "same_topic_share": 0.15914485395925365,
+        "all_assigned_pair_same_topic_share": 0.02854271677898233,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 2786,
-        "same_topic_edges": 1412,
-        "same_topic_share": 0.5068198133524767,
-        "all_assigned_pair_same_topic_share": 0.08503338810087277,
+        "eligible_edges": 8620,
+        "same_topic_edges": 2359,
+        "same_topic_share": 0.27366589327146174,
+        "all_assigned_pair_same_topic_share": 0.02854271677898233,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 938,
-        "same_topic_edges": 514,
-        "same_topic_share": 0.5479744136460555,
-        "all_assigned_pair_same_topic_share": 0.08503338810087277,
+        "eligible_edges": 2222,
+        "same_topic_edges": 805,
+        "same_topic_share": 0.3622862286228623,
+        "all_assigned_pair_same_topic_share": 0.02854271677898233,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 7572,
-        "same_topic_edges": 3037,
-        "same_topic_share": 0.40108293713681986,
-        "all_assigned_pair_same_topic_share": 0.08503338810087277,
+        "eligible_edges": 46622,
+        "same_topic_edges": 6880,
+        "same_topic_share": 0.14756981682467504,
+        "all_assigned_pair_same_topic_share": 0.02854271677898233,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "stm-es": {
       "exploratory": {
-        "eligible_edges": 3306,
-        "same_topic_edges": 883,
-        "same_topic_share": 0.26709013914095586,
-        "all_assigned_pair_same_topic_share": 0.05916869678022732,
+        "eligible_edges": 33715,
+        "same_topic_edges": 14088,
+        "same_topic_share": 0.4178555539077562,
+        "all_assigned_pair_same_topic_share": 0.07936562001663643,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 710,
-        "same_topic_edges": 218,
-        "same_topic_share": 0.30704225352112674,
-        "all_assigned_pair_same_topic_share": 0.05916869678022732,
+        "eligible_edges": 3991,
+        "same_topic_edges": 2556,
+        "same_topic_share": 0.6404409922325232,
+        "all_assigned_pair_same_topic_share": 0.07936562001663643,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 343,
-        "same_topic_edges": 91,
-        "same_topic_share": 0.2653061224489796,
-        "all_assigned_pair_same_topic_share": 0.05916869678022732,
+        "eligible_edges": 1063,
+        "same_topic_edges": 695,
+        "same_topic_share": 0.6538099717779868,
+        "all_assigned_pair_same_topic_share": 0.07936562001663643,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 2287,
-        "same_topic_edges": 605,
-        "same_topic_share": 0.2645386969829471,
-        "all_assigned_pair_same_topic_share": 0.05916869678022732,
+        "eligible_edges": 20327,
+        "same_topic_edges": 9258,
+        "same_topic_share": 0.4554533379249274,
+        "all_assigned_pair_same_topic_share": 0.07936562001663643,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "stm-en": {
       "exploratory": {
-        "eligible_edges": 61074,
-        "same_topic_edges": 11199,
-        "same_topic_share": 0.18336771785047648,
-        "all_assigned_pair_same_topic_share": 0.07368862094249369,
+        "eligible_edges": 137440,
+        "same_topic_edges": 27235,
+        "same_topic_share": 0.1981591967403958,
+        "all_assigned_pair_same_topic_share": 0.061600015028796876,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 13258,
-        "same_topic_edges": 3177,
-        "same_topic_share": 0.2396289033036657,
-        "all_assigned_pair_same_topic_share": 0.07368862094249369,
+        "eligible_edges": 23296,
+        "same_topic_edges": 6024,
+        "same_topic_share": 0.25858516483516486,
+        "all_assigned_pair_same_topic_share": 0.061600015028796876,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 3860,
-        "same_topic_edges": 947,
-        "same_topic_share": 0.24533678756476685,
-        "all_assigned_pair_same_topic_share": 0.07368862094249369,
+        "eligible_edges": 6280,
+        "same_topic_edges": 1711,
+        "same_topic_share": 0.2724522292993631,
+        "all_assigned_pair_same_topic_share": 0.061600015028796876,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 40227,
-        "same_topic_edges": 8142,
-        "same_topic_share": 0.20240137221269297,
-        "all_assigned_pair_same_topic_share": 0.07368862094249369,
+        "eligible_edges": 121675,
+        "same_topic_edges": 23367,
+        "same_topic_share": 0.19204438052188205,
+        "all_assigned_pair_same_topic_share": 0.061600015028796876,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "stm-pt": {
       "exploratory": {
-        "eligible_edges": 37,
-        "same_topic_edges": 31,
-        "same_topic_share": 0.8378378378378378,
-        "all_assigned_pair_same_topic_share": 0.34371957156767285,
+        "eligible_edges": 24333,
+        "same_topic_edges": 11186,
+        "same_topic_share": 0.45970492746475977,
+        "all_assigned_pair_same_topic_share": 0.28542035421963335,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 26,
-        "same_topic_edges": 20,
-        "same_topic_share": 0.7692307692307693,
-        "all_assigned_pair_same_topic_share": 0.34371957156767285,
+        "eligible_edges": 3422,
+        "same_topic_edges": 1958,
+        "same_topic_share": 0.5721800116890707,
+        "all_assigned_pair_same_topic_share": 0.28542035421963335,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 23,
-        "same_topic_edges": 17,
-        "same_topic_share": 0.7391304347826086,
-        "all_assigned_pair_same_topic_share": 0.34371957156767285,
+        "eligible_edges": 899,
+        "same_topic_edges": 586,
+        "same_topic_share": 0.6518353726362626,
+        "all_assigned_pair_same_topic_share": 0.28542035421963335,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 33,
-        "same_topic_edges": 27,
-        "same_topic_share": 0.8181818181818182,
-        "all_assigned_pair_same_topic_share": 0.34371957156767285,
+        "eligible_edges": 16053,
+        "same_topic_edges": 7318,
+        "same_topic_share": 0.45586494736186384,
+        "all_assigned_pair_same_topic_share": 0.28542035421963335,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
