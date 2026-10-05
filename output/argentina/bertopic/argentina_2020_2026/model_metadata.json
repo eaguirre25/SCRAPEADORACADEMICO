@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-ARGENTINA-2020-2026",
   "seed": 42,
-  "generated_at_utc": "2026-10-05T08:29:36.022702+00:00",
-  "git_commit": "838b28d12995a037a3dfd4db7c9c51c6fd8fcec1",
+  "generated_at_utc": "2026-10-05T09:16:10.976994+00:00",
+  "git_commit": "f41fe7340538c4b62e307ce230d1ed3bbfd77ef2",
   "python_version": "3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
   "documents": 165,
   "discarded_documents": 0,
-  "elapsed_seconds": 48.552,
+  "elapsed_seconds": 7.006,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
@@ -173,7 +173,7 @@
         "sentence-transformers/distiluse-base-multilingual-cased-v2"
       ],
       "batch_size": 64,
-      "min_topic_size": 10,
+      "min_topic_size": 15,
       "min_samples": 5,
       "nr_topics": null,
       "calculate_probabilities": true,
@@ -368,15 +368,15 @@
       "keywords_text": 148
     }
   },
-  "outlier_count": 24,
-  "outlier_percentage": 14.5455,
+  "outlier_count": 16,
+  "outlier_percentage": 9.697,
   "model_save_mode": "safetensors_without_ctfidf",
   "warnings": [
     "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"
   ],
   "outliers_reassigned_in_alternative": 0,
   "effective_configuration_path": "effective_configuration.json",
-  "macro_topics": 3,
+  "macro_topics": 2,
   "subtopics": 2,
   "ambiguity_rule": "outlier OR low semantic margin OR low HDBSCAN membership OR low centroid similarity OR high outlier score"
 }
