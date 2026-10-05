@@ -7,22 +7,23 @@
   "master_records": 4359,
   "canonical_publications": 4348,
   "period_publications": 4206,
-  "modeled_candidates": 539,
+  "modeled_candidates": 525,
   "territorial_candidates": 539,
   "human_included": 0,
   "no_territorial_evidence": 3667,
+  "low_relevance_excluded": 14,
   "exact_duplicate_groups": 11,
   "probable_duplicate_pairs": 2,
-  "corpus_hash": "1f251712182c7b1081a01ad7ad907b6e98a13f264eb1207a5c2266f2731ab629",
+  "corpus_hash": "7211ccd1bfe9e1207c3fa85f1aa2079a1cd1620d3a645b1209589d2d0defd01a",
   "master_sha256": "27211556a40527a7b2edcc903ae778677e03bc1fcdc1eb92d199cbe040be88ed",
   "year_counts": {
     "2020": 63,
-    "2021": 58,
-    "2022": 94,
-    "2023": 103,
-    "2024": 97,
-    "2025": 63,
-    "2026": 61
+    "2021": 56,
+    "2022": 93,
+    "2023": 100,
+    "2024": 95,
+    "2025": 59,
+    "2026": 59
   },
   "partial_year": 2026,
   "settings": {
@@ -30,8 +31,9 @@
     "start_year": 2020,
     "end_year": 2026,
     "include_unvalidated_candidates": true,
+    "min_relevance_score": 1,
     "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
-    "min_topic_size": 35,
+    "min_topic_size": 15,
     "umap": {
       "n_neighbors": 10,
       "n_components": 10,
@@ -46,9 +48,15 @@
     "sensitivity_min_topic_sizes": [
       10,
       15,
+      20,
       25,
       35
     ],
+    "selection": {
+      "max_outlier_share": 0.35,
+      "min_topics": 3
+    },
+    "exclude_territorial_terms_from_topic_words": true,
     "stability_seeds": [
       42,
       117,
@@ -64,7 +72,8 @@
     "Missing territorial evidence does not demonstrate a study took place outside Argentina.",
     "No affiliation country inference from repository or author name.",
     "The year filter uses publication year, not fieldwork year.",
-    "Territorial terms remain in the modeling text; geographic clusters require substantive review.",
+    "Territorial terms remain in the embedding text but are excluded from topic words; geographic clusters still require substantive review.",
+    "CONICET repository headers (titles and authors prepended to the abstract) are removed for this analysis only.",
     "Coverage depends on the existing thematic search, providers and available metadata."
   ]
 }

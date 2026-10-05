@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notebook Académico IA - 2.124 Obras (Citas Literales & APA 7)</title>
+<title>Notebook Académico IA - 4.396 Obras (Citas Literales & APA 7)</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root {
@@ -93,7 +93,7 @@
 
 <header>
   <div class="brand-title">
-    📓 <span>NOTEBOOK ACADÉMICO IA (2.124 FUENTES)</span>
+    📓 <span>NOTEBOOK ACADÉMICO IA (4.396 FUENTES)</span>
     <span class="brand-badge">Motor Google Gemini Oficial</span>
   </div>
   <nav>
@@ -116,16 +116,16 @@
 
       <div class="key-helper" id="keyHelperBox">
         <b>✓ Motor Idéntico a NotebookLM</b><br>
-        Utiliza <b>Google Gemini 3.6 Flash</b> para extraer fragmentos literales textuales entre comillas ("...") y citar en Normas APA 7 sobre tus 2.124 obras sin límite de 300 fuentes.
+        Utiliza <b>Google Gemini 3.6 Flash</b> para extraer fragmentos literales textuales entre comillas ("...") y citar en Normas APA 7 sobre tus 4.396 obras sin límite de 4.396 fuentes.
       </div>
     </div>
 
     <div class="sidebar-section">
       <h3>📊 Base de Conocimiento Total</h3>
       <div class="source-stat-pill">
-        <div>📚 <b>2.087</b> Artículos Scrapeados de Revistas</div>
+        <div>📚 <b>4.359</b> Artículos Scrapeados de Revistas</div>
         <div>📖 <b>37</b> Libros y Textos Teóricos (Drive)</div>
-        <div>🔍 <b>2.124 Obras Conectadas en Total</b></div>
+        <div>🔍 <b>4.396 Obras Conectadas en Total</b></div>
         <div style="color:#34d399;font-size:0.75rem;margin-top:4px">✓ Fragmentos literales y citas APA 7 activas</div>
       </div>
     </div>
@@ -141,7 +141,7 @@
       <div class="msg assistant">
         <div class="notebook-response">
           <h3>📘 Bienvenido a tu Cuaderno de Investigación IA</h3>
-          <p>Este cuaderno utiliza el <b>mismo modelo de inteligencia artificial de NotebookLM (Google Gemini)</b> pero conectado a la totalidad de tus <b>2.124 materiales</b>.</p>
+          <p>Este cuaderno utiliza el <b>mismo modelo de inteligencia artificial de NotebookLM (Google Gemini)</b> pero conectado a la totalidad de tus <b>4.396 materiales</b>.</p>
           <p>Al hacer una pregunta, Google Gemini responde estructurando el análisis en base a <b>fragmentos literales textuales entre comillas ("...")</b> extraídos de tus fuentes, acompañados por su correspondiente <b>cita en Normas APA 7</b>.</p>
         </div>
       </div>
@@ -174,7 +174,7 @@ function updateStatusUI(key) {
     tag.style.color = '#94a3b8';
     return;
   }
-  tag.textContent = '🟢 Google Gemini 3.6 Conectado (2.124 Obras)';
+  tag.textContent = '🟢 Google Gemini 3.6 Conectado (4.396 Obras)';
   tag.style.background = '#065f46';
   tag.style.color = '#6ee7b7';
 }
@@ -294,7 +294,7 @@ async function sendMessage() {
 
   const aiDiv = document.createElement('div');
   aiDiv.className = 'msg assistant';
-  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Google Gemini leyendo tus 2.124 obras...</h3><p>Buscando pasajes literales y redactando respuesta con Normas APA 7...</p></div>`;
+  aiDiv.innerHTML = `<div class="notebook-response"><h3>🤖 Google Gemini leyendo tus 4.396 obras...</h3><p>Buscando pasajes literales y redactando respuesta con Normas APA 7...</p></div>`;
   box.appendChild(aiDiv);
   box.scrollTop = box.scrollHeight;
 
@@ -308,7 +308,7 @@ async function sendMessage() {
   const tokens = norm(conceptTerm).split(/[\s,.;:!?_()-]+/).filter(w => w.length >= 3 && !STOPWORDS.has(w));
   const queryTokens = tokens.length > 0 ? tokens : cleanPrompt.split(/\s+/).filter(Boolean);
 
-  // Scoring dinámico sobre las 2.124 obras
+  // Scoring dinámico sobre las 4.396 obras
   const scored = items.map(doc => {
     let score = 0;
     const titleN = norm(doc.title || '');
@@ -351,7 +351,7 @@ async function sendMessage() {
 
   const sysPrompt = `Sos el motor oficial de NotebookLM (Google Gemini). El usuario pregunta sobre su investigación académica: "${text}".
 
-Analizá atentamente estos fragmentos textuales extraídos de su biblioteca de 2.124 obras:
+Analizá atentamente estos fragmentos textuales extraídos de su biblioteca de 4.396 obras:
 
 ${contextStr}
 
@@ -364,7 +364,7 @@ INSTRUCCIONES OBLIGATORIAS:
   // LLAMADA EN VIVO A GOOGLE GEMINI CON X-GOOG-API-KEY
   if (apiKey) {
     try {
-      container.innerHTML = '<h3>✨ Google Gemini generando respuesta literal con Normas APA 7...</h3><p>Procesando fragmentos del corpus de 2.124 obras...</p>';
+      container.innerHTML = '<h3>✨ Google Gemini generando respuesta literal con Normas APA 7...</h3><p>Procesando fragmentos del corpus de 4.396 obras...</p>';
       const gUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent';
       const res = await fetch(gUrl, {
         method: 'POST',
