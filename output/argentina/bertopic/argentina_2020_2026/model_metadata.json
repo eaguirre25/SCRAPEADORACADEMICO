@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-ARGENTINA-2020-2026",
   "seed": 42,
-  "generated_at_utc": "2026-10-05T04:24:10.278118+00:00",
+  "generated_at_utc": "2026-10-05T04:27:56.212436+00:00",
   "git_commit": "b2550608aa59b220f9ba2397b41fe17e27f84cde",
   "python_version": "3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
   "documents": 525,
   "discarded_documents": 0,
-  "elapsed_seconds": 108.193,
+  "elapsed_seconds": 15.696,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
