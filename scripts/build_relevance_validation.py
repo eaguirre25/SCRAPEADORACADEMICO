@@ -10,9 +10,8 @@ Salida: data/validacion/muestra_pertinencia.xlsx. Completar la columna
 «pertinente» (si / no / dudoso) y correr scripts/evaluate_relevance_validation.py.
 
 Criterio sugerido: «si» cuando el objeto de estudio es la dirección, gestión,
-gobierno o liderazgo de instituciones educativas (escuelas de nivel inicial,
-primario o secundario e instituciones de educación superior), sus actores
-directivos o las políticas que los regulan.
+gobierno o liderazgo de escuelas (niveles inicial, primario o secundario), sus
+actores directivos o las políticas que los regulan.
 """
 from __future__ import annotations
 
@@ -49,12 +48,10 @@ OBVIOUS_TITLE = re.compile(r"""
 |\bschool\s+(heads?|principals?)\b|\bschool[- ]based\s+management\b
 |\bleadership\s+(in|for|of)\s+(the\s+)?schools?\b
 |\b(transformational|distributed|instructional|pedagogical|teacher|servant|ethical)\s+leadership\b
-|\bliderazgo\s+(transformacional|distribuido|pedagogico|instruccional|docente|educativo|escolar|directivo|universitario)\b
-|\b(gestion|gobierno)\s+universitari\w*|\b(university|academic|higher\s+education)\s+(leadership|management|governance)\b
-|\bdepartment\s+(heads?|chairs?)\b|\b(decan\w*|deans?|rector\w*)\b
+|\bliderazgo\s+(transformacional|distribuido|pedagogico|instruccional|docente|educativo|escolar|directivo)\b
 """, re.X)
-# La educación superior está en el alcance; se excluye la formación médica.
-HIGHER_ED_TITLE = re.compile(r"\b(surgeons?|hospital|medic\w*|clinic\w*)\b")
+HIGHER_ED_TITLE = re.compile(r"\b(universi\w*|higher\s+education|educacion\s+superior|posgrado|postgrado|"
+                             r"academic\s+leadership|department\s+heads?|faculty|surgeons?|hospital|medic\w*)\b")
 
 
 def obvious_by_title(title: str) -> bool:
@@ -166,8 +163,8 @@ def main(argv=None) -> None:
         "Los títulos que nombran explícitamente la dirección o gestión escolar ya vienen marcados «si»",
         "(columna «marcado_por»: automático). Se pueden corregir si alguno no corresponde.",
         "Para ver solo lo pendiente: filtro del encabezado «pertinente» → (Vacías).",
-        "Criterio: «si» cuando el objeto de estudio es la dirección, gestión, gobierno o liderazgo de instituciones",
-        "educativas (escuelas y educación superior), sus actores directivos o las políticas que los regulan.",
+        "Criterio: «si» cuando el objeto de estudio es la dirección, gestión, gobierno o liderazgo",
+        "de escuelas (inicial, primaria, secundaria), sus actores directivos o las políticas que los regulan.",
         "La planilla no muestra qué decidió el filtro, para no condicionar la lectura.",
         "Al terminar: python scripts/evaluate_relevance_validation.py",
     ]:

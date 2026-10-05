@@ -61,12 +61,12 @@
       "exhaustividad": 0.857
     },
     "OpenAlex": {
-      "vp": 56,
-      "fp": 15,
-      "fn": 5,
-      "vn": 24,
-      "precision": 0.789,
-      "exhaustividad": 0.918
+      "vp": 53,
+      "fp": 6,
+      "fn": 8,
+      "vn": 33,
+      "precision": 0.898,
+      "exhaustividad": 0.869
     }
   },
   "marcados": "200 de 200"
