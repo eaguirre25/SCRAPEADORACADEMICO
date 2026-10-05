@@ -56,10 +56,19 @@ def test_resource_management_in_schools_is_not_school_management():
     assert status("Aguas subterráneas en la llanura", abstract, "CONICET Digital") == "rechazada"
 
 
-def test_field_names_in_title_are_kept_unless_higher_education():
+def test_field_names_in_title_are_kept_including_higher_education():
     assert status("Methodological Individualism and Educational Leadership") == "alta"
     assert status("Women in Educational Administration") == "alta"
-    assert status("Gestión educativa y desempeño docente en una universidad privada de Lima") == "rechazada"
+    assert status("Gestión educativa y desempeño docente en una universidad privada de Lima") == "alta"
+
+
+def test_higher_education_leadership_is_in_scope_but_not_any_university_study():
+    assert status("Academic Leadership During a Pandemic: Department Heads Leading With a Focus on Equity") == "alta"
+    assert status("Gobierno universitario y autonomía", "Analizamos el rol de los decanos de la universidad.") == "alta"
+    assert status("Estrés académico y resiliencia en estudiantes de una universidad privada",
+                  "Se midió el estrés académico de estudiantes universitarios de primer año.") == "rechazada"
+    thesis = "El trabajo fue dirigido por el director de tesis de la universidad y analiza suelos agrícolas."
+    assert status("Propiedades de suelos pampeanos", thesis, "CONICET Digital") == "rechazada"
 
 
 def test_portuguese_and_title_roles():

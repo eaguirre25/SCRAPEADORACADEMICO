@@ -64,14 +64,15 @@ Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y tod
 - «principal» cuenta como cargo solo en contexto inglés escolar («school principal», «principals», junto a «school» o «teacher»); en castellano es casi siempre un adjetivo.
 - Un cargo directivo o una acción de gestión deben aparecer **a no más de 8 palabras** de un término escolar; antes bastaba con que ambos figuraran en cualquier lugar del resumen.
 - No cuentan como gestión escolar «escuela de gestión estatal/privada/social» (tipo de sostenimiento), la gestión del agua, de residuos, ambiental o del aula, ni «escuela de pensamiento», «business school» y similares.
-- Un título que nombra el campo («gestión educativa», «educational leadership», «educational administration») se incluye, salvo que el foco sea la educación superior.
+- Un título que nombra el campo («gestión educativa», «educational leadership», «educational administration») se incluye.
+- **Alcance:** desde el 5/10/2026 incluye también la dirección, gestión, gobierno y liderazgo en educación superior (gestión y gobierno universitario, academic leadership, rectores, decanos, jefes de departamento). La universidad cuenta como contexto institucional igual que la escuela; no entran los estudios universitarios sin foco en su gestión (por ejemplo, estrés académico de estudiantes). OpenAlex suma 7 búsquedas de educación superior y CONICET 3. «Director de tesis» o «director del proyecto» no cuentan como cargo.
 - Se reconocen términos en portugués y cargos en el título («El director como líder…»).
 - Los rechazados **se reevalúan en cada corrida**, así las correcciones recuperan trabajos descartados antes.
 - `config/relevance_overrides.csv` (`record_id,decision,nota`, con `incluir` o `excluir`) fija decisiones manuales que prevalecen sobre las reglas.
 
 - En repositorios institucionales (CONICET, SEDICI, RIAA) se exige una frase directa, el campo en el título o un cargo directivo a no más de 6 palabras de un término escolar: «gestión» cerca de «escuela» o un cargo junto a «educación» dejaban pasar sobre todo historia y sociología de la escolaridad.
 
-Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.312 registros: OpenAlex de 3.519 a 4.131 y CONICET de 840 a 176.
+Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.442 registros: OpenAlex de 3.519 a 4.248 y CONICET de 840 a 189 (sin contar lo que traigan las búsquedas nuevas).
 
 **Resultado de la validación manual (200 registros, 5/10/2026).** Con las marcas del investigador, comparando sobre la misma muestra: en OpenAlex la precisión pasa de 0,78 a 0,90 y la exhaustividad de 0,69 a 0,87; en CONICET la precisión pasa de 0,20 a 0,46 y la exhaustividad de 0,93 a 0,86. Las reglas de repositorios se ajustaron con esta misma muestra, por lo que conviene confirmar con una muestra nueva. Las guías de biblioteca (LibGuides) se excluyen por no ser trabajos académicos.
 

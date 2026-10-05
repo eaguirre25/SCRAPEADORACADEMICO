@@ -66,6 +66,13 @@ STRONG_PHRASES = [
     "gestao escolar", "gestão escolar", "gestao democratica", "gestão democrática",
     "direcao escolar", "direção escolar", "diretor escolar", "diretora escolar", "diretores escolares",
     "gestor escolar", "gestores escolares", "equipe gestora", "lideranca escolar", "liderança escolar",
+    # Educación superior (incluida en el alcance desde octubre de 2026)
+    "gestion universitaria", "gestión universitaria", "gobierno universitario", "liderazgo universitario",
+    "gestion de la educacion superior", "gestión de la educación superior",
+    "gestao universitaria", "gestão universitária", "university management", "university leadership",
+    "university governance", "academic leadership", "higher education leadership",
+    "higher education management", "leadership in higher education", "management of higher education",
+    "department chairs", "department heads", "department chair", "department head",
 ]
 
 # Frases pertinentes pero demasiado amplias si aparecen solas.
@@ -88,6 +95,7 @@ ROLE_TERMS = [
     "principals", "principalship", "headteacher", "head teacher",
     "gestor", "gestora", "gestores", "diretor", "diretora", "diretores", "diretoras",
     "rector", "rectora", "rectores", "supervisor", "supervisora", "supervisores",
+    "vicerrector", "vicerrectora", "decano", "decana", "decanos", "dean", "deans",
 ]
 
 ENGLISH_PRINCIPAL_RE = re.compile(
@@ -108,6 +116,10 @@ NON_SCHOOL_PHRASES = [
     "medical school", "medical schools", "graduate school", "summer school", "law school",
     "nursing school", "school of medicine", "school of nursing", "school of public health",
     "school of economics", "school of engineering", "school of business",
+    # Cargos que no son de gestión institucional.
+    "director de tesis", "directora de tesis", "directores de tesis", "thesis director", "thesis supervisor",
+    "supervisor de tesis", "director del proyecto", "directora del proyecto", "project director",
+    "director de la revista", "director de orquesta", "director de cine", "film director",
 ]
 
 # Distancia máxima (en palabras) para considerar que un cargo o una acción de
@@ -163,10 +175,14 @@ SCHOOL_AUTHORITY_TERMS = [
     "management committee", "management committees",
 ]
 
-HIGHER_ED_NOISE_TERMS = [
+# Instituciones de educación superior: desde octubre de 2026 cuentan como
+# contexto institucional, igual que la escuela (antes se descartaban como ruido).
+HIGHER_ED_TERMS = [
     "universidad", "universitario", "universitaria", "universitarias",
     "higher education", "educacion superior", "educación superior",
     "postgrado", "postgrados", "posgrado", "posgrados",
+    "universidades", "university", "universities", "instituto superior", "institutos superiores",
+    "educacao superior", "educação superior", "ensino superior", "college", "colleges",
 ]
 
 SECTOR_NOISE_TERMS = [
@@ -305,7 +321,8 @@ def row_text(row: Dict[str, Any]) -> Tuple[str, str, str]:
     return title, body, all_text
 
 
-SCHOOL_CONTEXT_TERMS = CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS + EDUCATION_CONTEXT_TERMS
+INSTITUTION_TERMS = CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS + HIGHER_ED_TERMS
+SCHOOL_CONTEXT_TERMS = INSTITUTION_TERMS + EDUCATION_CONTEXT_TERMS
 
 
 def role_in_school_context(text: str, title: str = "") -> bool:
@@ -336,7 +353,7 @@ OWNERSHIP_PHRASES = OWNERSHIP_MANAGEMENT_NOISE_TERMS + [
 
 def role_near_school(text: str, title: str = "") -> bool:
     """Cargo directivo a pocas palabras de un término escolar (no de «educación» en general)."""
-    school = CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS
+    school = INSTITUTION_TERMS
     if english_principal_hit(text) or near_hit(text, ROLE_TERMS, school, 6):
         return True
     return bool(title and term_hit(title, ROLE_TERMS) and term_hit(text, school))
@@ -346,7 +363,7 @@ def management_near_school(text: str) -> bool:
     padded = f" {text} "
     for phrase in OWNERSHIP_PHRASES:
         padded = padded.replace(f" {norm(phrase)} ", " | ")
-    return near_hit(padded.strip(), MANAGEMENT_TERMS, CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS)
+    return near_hit(padded.strip(), MANAGEMENT_TERMS, INSTITUTION_TERMS)
 
 
 def management_in_title(title: str) -> bool:
@@ -354,7 +371,7 @@ def management_in_title(title: str) -> bool:
     padded = f" {title} "
     for phrase in OWNERSHIP_PHRASES:
         padded = padded.replace(f" {norm(phrase)} ", " | ")
-    return bool(term_hit(padded, MANAGEMENT_TERMS) and term_hit(padded, CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS))
+    return bool(term_hit(padded, MANAGEMENT_TERMS) and term_hit(padded, INSTITUTION_TERMS))
 
 
 def source_name(row: Dict[str, Any]) -> str:
@@ -388,11 +405,10 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     core_school_hits = term_hit(text, CORE_SCHOOL_TERMS)
     school_system_hits = term_hit(text, SCHOOL_SYSTEM_TERMS)
     education_hits = term_hit(text, EDUCATION_CONTEXT_TERMS)
-    higher_ed_noise = term_hit(text, HIGHER_ED_NOISE_TERMS)
     sector_noise = term_hit(text, SECTOR_NOISE_TERMS)
     ownership_noise = term_hit(text, OWNERSHIP_MANAGEMENT_NOISE_TERMS)
     noise_hits = term_hit(text, NOISE_TERMS)
-    school_anchor = bool(core_school_hits or school_system_hits)
+    school_anchor = bool(core_school_hits or school_system_hits or term_hit(text, HIGHER_ED_TERMS))
 
     evidence: List[str] = []
     score = 0
@@ -430,12 +446,6 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
 
     strict = source_is_strict(source)
 
-    # Educación superior como foco: en el título o con varias menciones; una
-    # sola mención en el resumen (p. ej., la universidad de los autores) no alcanza.
-    higher_ed_focus = bool(term_hit(title, HIGHER_ED_NOISE_TERMS)) or len(higher_ed_noise) >= 2
-    if higher_ed_noise and not (direct_focus or school_anchor) and (higher_ed_focus or not medium_title):
-        evidence.append("ruido de nivel: " + ", ".join(higher_ed_noise[:3]))
-        return "rechazada", score, "fuera de foco: educación superior sin dirección o gestión escolar", evidence
     # Una mención a covid, salud o ESI no descarta un trabajo que relaciona
     # gestión y escuela: la pandemia es contexto frecuente de estudios de gestión.
     if sector_noise and not (direct_focus or medium_title or management_near):
@@ -497,11 +507,10 @@ def second_review(row: Dict[str, Any]) -> Tuple[str, str, List[str]]:
     management_near = management_near_school(text) or management_in_title(title)
     core_school_hits = term_hit(text, CORE_SCHOOL_TERMS)
     school_system_hits = term_hit(text, SCHOOL_SYSTEM_TERMS)
-    authority_near = near_hit(text, SCHOOL_AUTHORITY_TERMS, CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS)
-    higher_ed_noise = term_hit(text, HIGHER_ED_NOISE_TERMS)
+    authority_near = near_hit(text, SCHOOL_AUTHORITY_TERMS, INSTITUTION_TERMS)
     sector_noise = term_hit(text, SECTOR_NOISE_TERMS)
     noise_hits = term_hit(text, NOISE_TERMS)
-    school_anchor = bool(core_school_hits or school_system_hits)
+    school_anchor = bool(core_school_hits or school_system_hits or term_hit(text, HIGHER_ED_TERMS))
 
     if strong_hits:
         evidence.append("segunda revisión: frase directa: " + ", ".join(strong_hits[:3]))
@@ -517,7 +526,7 @@ def second_review(row: Dict[str, Any]) -> Tuple[str, str, List[str]]:
 
     # Gestión y escuela deben aparecer juntas: en resúmenes largos ambas
     # palabras suelen estar en frases distintas sin relación entre sí.
-    if management_near and not (higher_ed_noise or sector_noise or noise_hits):
+    if management_near and not (sector_noise or noise_hits):
         evidence.append("segunda revisión: gestión/liderazgo junto a escuela sin ruido sectorial")
         return "promover", "segunda revisión confirma gestión escolar", evidence
 
@@ -525,10 +534,6 @@ def second_review(row: Dict[str, Any]) -> Tuple[str, str, List[str]]:
     if broad_only:
         evidence.append("segunda revisión: coincidencia demasiado amplia: " + ", ".join(medium_hits[:3]))
         return "descartar", "gestión/liderazgo educativo sin foco escolar/directivo", evidence
-
-    if higher_ed_noise and not school_anchor:
-        evidence.append("segunda revisión: foco en educación superior/postgrado")
-        return "descartar", "fuera de dirección escolar: educación superior o postgrado", evidence
 
     if sector_noise and not (role_near or authority_near):
         evidence.append("segunda revisión: foco sectorial no directivo: " + ", ".join(sector_noise[:3]))

@@ -54,6 +54,14 @@ SEARCH_TERMS: List[str] = [
     "principalship",
     "gestão escolar",
     "diretor escolar",
+    # Educación superior (en el alcance desde octubre de 2026)
+    "gestión universitaria",
+    "gobierno universitario",
+    "liderazgo universitario",
+    "university leadership",
+    "academic leadership",
+    "higher education leadership",
+    "gestão universitária",
 ]
 OAI_SOURCES = [
     {
@@ -90,6 +98,7 @@ CONICET_SEARCH_TERMS: List[str] = [
     "liderazgo educativo", "liderazgo escolar",
     "conducción escolar", "conduccion escolar",
     "administración escolar", "administracion escolar",
+    "gestión universitaria", "gestion universitaria", "gobierno universitario",
 ]
 # Para CONICET se usa sin recorte temporal por defecto, así coincide con el buscador del RI.
 CONICET_START_YEAR: Optional[int] = None
