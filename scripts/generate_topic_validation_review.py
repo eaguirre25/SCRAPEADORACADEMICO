@@ -299,13 +299,15 @@ Se revisaron {len({r['document_id'] for r in reviews})} documentos únicos en es
 
     # Preserve any actually validated labels; proposals never silently replace them.
     labels_path = ROOT / "config/topic_labels.csv"
+    effective = PREFERRED / "effective_configuration.json"
+    model_hash = json.loads(effective.read_text(encoding="utf-8")).get("corpus_hash", "") if effective.exists() else ""
     existing = read_csv(labels_path) if labels_path.exists() else []
     validated = {(r.get("model"), r.get("topic_id")): r for r in existing if r.get("label_status") in {"validated", "human_validated", "approved"}}
     config_rows = []
     for p in proposals:
         key = ("BERTopic-METADATA-MULTILINGUAL", str(p["topic_id"]))
-        config_rows.append(validated.get(key, {"model": key[0], "topic_id": key[1], "human_label": p["proposed_human_label"], "label_status": "proposed_pending_documentary_validation", "label_notes": p["rationale"]}))
-    write_csv(labels_path, config_rows, ["model", "topic_id", "human_label", "label_status", "label_notes"])
+        config_rows.append(validated.get(key, {"model": key[0], "topic_id": key[1], "human_label": p["proposed_human_label"], "label_status": "proposed_pending_documentary_validation", "label_notes": p["rationale"], "model_corpus_hash": model_hash}))
+    write_csv(labels_path, config_rows, ["model", "topic_id", "human_label", "label_status", "label_notes", "model_corpus_hash"])
 
     digest = hashlib.sha256((PREFERRED / "document_topics.csv").read_bytes()).hexdigest()[:12]
     summary = f"""# Resumen de validación sustantiva provisional

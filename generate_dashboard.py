@@ -77,12 +77,13 @@ def infer_origin(row):
 
 # ── Cargar datos ──────────────────────────────────────────────────────────────
 
+N_MACROS = sum(row.get("topic_id") not in ("-1", "", None) for row in read_csv("output/topic_models/bertopic/metadata_multilingual/preferred_solution/topics.csv"))
 records    = read_csv("data/master_records.csv")
 corpus     = read_csv("data/corpus.csv.gz")
 topicos    = read_csv("output/tabla_topicos.csv")
 doc_topics = read_csv("output/document_topics.csv")
 MODEL_VIEWS = [
-    ("principal", "bertopic-macros", "BERTopic multilingüe · 14 macrotemas", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/preferred_solution/topics.csv"),
+    ("principal", "bertopic-macros", f"BERTopic multilingüe · {N_MACROS} macrotemas", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/preferred_solution/topics.csv"),
     ("principal", "bertopic-subtopics", "BERTopic multilingüe · subtópicos", "BERTopic", "output/topic_models/bertopic/metadata_multilingual/preferred_solution/subtopics.csv"),
     ("comparative", "stm-es", "STM metadatos · español", "STM", "output/topic_models/stm/metadata_es_corrected/topics.csv"),
     ("comparative", "stm-en", "STM metadatos · inglés", "STM", "output/topic_models/stm/metadata_en_corrected/topics.csv"),
@@ -258,11 +259,23 @@ def load_document_topics(config):
 
 # Etiquetas humanas propuestas: los topics.csv traen el descriptor automatico
 # ("leadership · style"), ilegible en una leyenda de colores.
+# Cada etiqueta queda atada al corpus del modelo para el que se escribió
+# (model_corpus_hash). Si el modelo se reajusta con otro corpus, sus tópicos
+# cambian y la etiqueta vieja no se aplica: se muestra el descriptor automático.
+PREFERRED_CONFIG = Path("output/topic_models/bertopic/metadata_multilingual/preferred_solution/effective_configuration.json")
+CURRENT_MODEL_HASH = json.loads(PREFERRED_CONFIG.read_text(encoding="utf-8")).get("corpus_hash", "") if PREFERRED_CONFIG.exists() else ""
 PROPOSED_LABELS = defaultdict(dict)
+STALE_LABELS = 0
 for row in read_csv("config/topic_labels.csv"):
     label = s(row.get("human_label"))
+    bound = s(row.get("model_corpus_hash"))
+    if label and bound and bound != CURRENT_MODEL_HASH:
+        STALE_LABELS += 1
+        continue
     if label:
         PROPOSED_LABELS[s(row.get("model"))][_topic_id(row.get("topic_id"))] = label
+if STALE_LABELS:
+    print(f"Etiquetas de otra versión del modelo no aplicadas: {STALE_LABELS} (revisar config/topic_labels.csv)")
 
 
 def topic_display_label(row, overrides=None):

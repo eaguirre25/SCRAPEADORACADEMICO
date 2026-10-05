@@ -106,4 +106,4 @@ if TEORICOS.exists():
 print(f'Total de registros en la Base de Conocimiento Completa: {len(knowledge_base)}')
 
 OUT.write_text(json.dumps(knowledge_base, ensure_ascii=False), encoding='utf-8')
-print(f'Guardado docs/fulltext_knowledge_base.json ({OUT.stat().st_size / 1_024_1024:.2f} MB)!')
+print(f'Guardado docs/fulltext_knowledge_base.json ({OUT.stat().st_size / (1024 * 1024):.2f} MB)!')

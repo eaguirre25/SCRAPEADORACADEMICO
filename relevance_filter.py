@@ -37,6 +37,7 @@ REPORT_JSON = DATA_DIR / "relevance_filter_report.json"
 # Decisiones humanas que prevalecen sobre las reglas: record_id,decision,nota
 # con decision «incluir» o «excluir».
 OVERRIDES_CSV = Path("config") / "relevance_overrides.csv"
+DUPLICATES_CSV = DATA_DIR / "duplicate_records.csv"
 EXCEL_FILE = DATA_DIR / "publicaciones.xlsx"
 
 CSV_FIELDS = [
@@ -378,6 +379,8 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     """Devuelve categoría, puntaje, motivo y evidencias."""
     title, body, text = row_text(row)
     source = source_name(row)
+    if not str(row.get("title") or "").strip():
+        return "rechazada", 0, "registro sin título", ["sin título"]
     if LIBRARY_GUIDE_RE.match(str(row.get("title") or "")) or "libguides." in str(row.get("url") or "").lower():
         return "rechazada", 0, "no es un trabajo académico: guía de biblioteca", ["guía de biblioteca"]
 
@@ -674,6 +677,98 @@ def write_excel(relevant: List[Dict[str, Any]], review: List[Dict[str, Any]], re
     wb.save(EXCEL_FILE)
 
 
+def _surnames(authors: Any) -> set:
+    out = set()
+    for part in re.split(r";|\|", str(authors or "")):
+        part = part.strip()
+        if not part:
+            continue
+        family = part.split(",")[0] if "," in part else part.split()[-1]
+        out.update(tok for tok in norm(family).split() if len(tok) >= 3)
+    return out
+
+
+def _close_years(a: Dict[str, Any], b: Dict[str, Any]) -> bool:
+    try:
+        return abs(int(str(a.get("publication_year"))[:4]) - int(str(b.get("publication_year"))[:4])) <= 1
+    except ValueError:
+        return False
+
+
+def _completeness(row: Dict[str, Any]) -> Tuple[int, int, int]:
+    """Preferencia del registro que se conserva: con DOI, de OpenAlex, más completo."""
+    filled = sum(bool(str(row.get(f) or "").strip()) for f in ("abstract", "keywords", "authors", "origin", "pdf_url"))
+    return (bool(str(row.get("doi") or "").strip()), "openalex" in source_name(row).lower(), filled)
+
+
+def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """Unifica el mismo trabajo cargado más de una vez.
+
+    Son duplicados los registros con el mismo DOI, o con el mismo título
+    normalizado y al menos un apellido de autor en común. Títulos iguales con
+    autores distintos se conservan (p. ej., «La dirección escolar en España»
+    de dos autorías). El año no se exige: OpenAlex repite obras con años
+    distintos y CONICET registra el año de carga. Si a uno le faltan los autores,
+    se exige un título largo y años vecinos. Se conserva el registro con
+    DOI y más datos, se completan sus campos vacíos con los del duplicado y se
+    suman las fuentes.
+    """
+    parent = list(range(len(rows)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(a: int, b: int) -> None:
+        parent[find(a)] = find(b)
+
+    by_doi: Dict[str, int] = {}
+    by_title: Dict[str, List[int]] = {}
+    for i, row in enumerate(rows):
+        doi = str(row.get("doi") or "").strip().lower()
+        if doi:
+            if doi in by_doi:
+                union(i, by_doi[doi])
+            else:
+                by_doi[doi] = i
+        title = norm(row.get("title"))
+        if len(title) >= 15:
+            by_title.setdefault(title, []).append(i)
+    for idxs in by_title.values():
+        for a in range(len(idxs)):
+            for b in range(a + 1, len(idxs)):
+                i, j = idxs[a], idxs[b]
+                ai, aj = _surnames(rows[i].get("authors")), _surnames(rows[j].get("authors"))
+                if ai & aj:
+                    union(i, j)
+                elif (not ai or not aj) and len(norm(rows[i].get("title"))) >= 35 and _close_years(rows[i], rows[j]):
+                    # Un registro sin autores con el mismo título largo y año
+                    # vecino es la misma obra cargada con metadatos incompletos.
+                    union(i, j)
+
+    groups: Dict[int, List[int]] = {}
+    for i in range(len(rows)):
+        groups.setdefault(find(i), []).append(i)
+    kept: List[Dict[str, Any]] = []
+    removed: List[Dict[str, Any]] = []
+    for idxs in groups.values():
+        members = sorted((rows[i] for i in idxs), key=_completeness, reverse=True)
+        keep = members[0]
+        for other in members[1:]:
+            for field in ("doi", "abstract", "keywords", "authors", "origin", "document_type", "pdf_url", "url", "openalex_id"):
+                if not str(keep.get(field) or "").strip() and str(other.get(field) or "").strip():
+                    keep[field] = other[field]
+            keep["source"] = " | ".join(dict.fromkeys(
+                p.strip() for p in f"{keep.get('source', '')}|{other.get('source', '')}".split("|") if p.strip()))
+            removed.append({**other, "duplicate_of": record_key(keep)})
+        kept.append(keep)
+    order = {id(row): i for i, row in enumerate(rows)}
+    kept.sort(key=lambda r: order.get(id(r), 0))
+    return kept, removed
+
+
 def load_overrides() -> Dict[str, Tuple[str, str]]:
     _, rows = read_csv_if_exists(OVERRIDES_CSV)
     out: Dict[str, Tuple[str, str]] = {}
@@ -741,6 +836,7 @@ def main() -> None:
             rejected.append(row_out)
 
 
+    relevant, duplicates = deduplicate(relevant)
     latest_relevant = [r for r in relevant if str(r.get("first_seen_date") or "") == today]
 
     # El master queda curado: solo alta pertinencia.
@@ -750,6 +846,7 @@ def main() -> None:
     write_csv(LATEST_RELEVANT_CSV, fieldnames, latest_relevant)
     write_csv(AUTO_REVIEW_PROMOTED_CSV, fieldnames, auto_promoted)
     write_csv(AUTO_REVIEW_REJECTED_CSV, fieldnames, auto_rejected)
+    write_csv(DUPLICATES_CSV, fieldnames + ["duplicate_of"], duplicates)
     write_excel(relevant, review, rejected, fieldnames)
 
     report = {
@@ -759,6 +856,7 @@ def main() -> None:
         "review_records": len(review),
         "rejected_records": len(rejected),
         "latest_high_relevance": len(latest_relevant),
+        "duplicates_merged": len(duplicates),
         "second_review": {
             "input_review_candidates": len(review) + len(auto_promoted) + len(auto_rejected),
             "auto_promoted_to_high_relevance": len(auto_promoted),

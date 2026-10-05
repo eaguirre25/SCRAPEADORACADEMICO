@@ -115,3 +115,26 @@ def test_field_title_survives_incidental_noise():
 def test_thesis_or_project_director_is_not_a_directive_role():
     thesis = "Trabajo dirigido por el director de tesis; se tomaron muestras de suelo cerca de una escuela rural."
     assert status("Propiedades de suelos pampeanos", thesis, "CONICET Digital") == "rechazada"
+
+
+def test_deduplicate_merges_same_work_but_keeps_homonyms():
+    base = {f: "" for f in rf.CSV_FIELDS}
+    a = {**base, "record_id": "10.1/x", "doi": "10.1/x", "title": "La dirección escolar en la normativa vigente de Córdoba",
+         "authors": "Carolina Yelicich", "publication_year": "2021", "source": "OpenAlex"}
+    b = {**base, "record_id": "conicet:x", "title": "La dirección escolar en la normativa vigente de Córdoba",
+         "authors": "Yelicich, Carolina", "publication_year": "2023", "source": "CONICET Digital", "keywords": "dirección"}
+    c = {**base, "record_id": "W1", "title": "La dirección escolar en España", "authors": "Antonia López Martínez",
+         "publication_year": "2021", "source": "OpenAlex"}
+    d = {**base, "record_id": "W2", "title": "La dirección escolar en España", "authors": "Manuel Álvarez Fernández",
+         "publication_year": "2020", "source": "OpenAlex"}
+    e = {**base, "record_id": "W3", "title": "Política y gestión educativa en el Perú contemporáneo", "authors": "Rosana Meleán",
+         "publication_year": "2022", "source": "OpenAlex", "doi": "10.2/y"}
+    f = {**base, "record_id": "W4", "title": "Política y gestión educativa en el Perú contemporáneo", "authors": "",
+         "publication_year": "2023", "source": "OpenAlex"}
+    kept, removed = rf.deduplicate([a, b, c, d, e, f])
+    ids = {r["record_id"] for r in kept}
+    assert ids == {"10.1/x", "W1", "W2", "W3"}
+    merged = next(r for r in kept if r["record_id"] == "10.1/x")
+    assert merged["keywords"] == "dirección" and "CONICET Digital" in merged["source"]
+    assert {r["duplicate_of"] for r in removed} == {"10.1/x", "W3"}
+    assert rf.classify_relevance({"title": "", "abstract": "gestión escolar"})[0] == "rechazada"

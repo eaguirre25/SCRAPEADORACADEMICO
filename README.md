@@ -68,6 +68,7 @@ Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y tod
 - Se reconocen términos en portugués y cargos en el título («El director como líder…»). «Director de tesis» o «director del proyecto» no cuentan como cargo.
 - Los rechazados **se reevalúan en cada corrida**, así las correcciones recuperan trabajos descartados antes.
 - `config/relevance_overrides.csv` (`record_id,decision,nota`, con `incluir` o `excluir`) fija decisiones manuales que prevalecen sobre las reglas.
+- **Duplicados:** al final del filtro se unifica el mismo trabajo cargado más de una vez: mismo DOI, o mismo título con al menos un apellido en común (o un registro sin autores con título largo y año vecino). No se exige el año, porque OpenAlex repite obras con años distintos y CONICET usa el año de carga. Se conserva el registro con DOI y más datos, se completan sus campos vacíos y se suman las fuentes; los unificados quedan en `data/duplicate_records.csv` con `duplicate_of`. Los títulos iguales de autorías distintas se conservan. Los registros sin título se descartan.
 
 - En repositorios institucionales (CONICET, SEDICI, RIAA) se exige una frase directa, el campo en el título o un cargo directivo a no más de 6 palabras de un término escolar: «gestión» cerca de «escuela» o un cargo junto a «educación» dejaban pasar sobre todo historia y sociología de la escolaridad.
 
@@ -76,6 +77,14 @@ Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4
 **Resultado de la validación manual (200 registros, 5/10/2026).** Con las marcas del investigador, comparando sobre la misma muestra: en OpenAlex la precisión pasa de 0,76 a 0,88 y la exhaustividad de 0,72 a 0,91; en CONICET la precisión pasa de 0,20 a 0,46 y la exhaustividad de 0,93 a 0,86. El alcance es la dirección **escolar**: la gestión en educación superior queda fuera (decisión del investigador, 5/10/2026). Las reglas de repositorios se ajustaron con esta misma muestra, por lo que conviene confirmar con una muestra nueva. Las guías de biblioteca (LibGuides) se excluyen por no ser trabajos académicos.
 
 **Validación.** `scripts/build_relevance_validation.py` sortea 200 registros estratificados por fuente y decisión del filtro en `data/validacion/muestra_pertinencia.xlsx`, sin mostrar la decisión. Los títulos que nombran explícitamente la dirección o gestión escolar vienen marcados «si» (editable); tras marcar el resto de la columna «pertinente» (si / no / dudoso), `scripts/evaluate_relevance_validation.py` estima precisión y exhaustividad ponderadas por estrato en `data/validacion/resultado_validacion.json`.
+
+## Actualización completa del sitio
+
+Cada corrida del scraper encadena: filtro y unificación de duplicados → recuperación de metadatos de CONICET → extracción de corpus → STM → **reajuste de BERTopic** con los parámetros ya seleccionados y comparación STM–BERTopic → regeneración del tablero. Para que no queden datos de corridas anteriores:
+
+- `docs/textos/` publica solo textos de trabajos del maestro vigente y borra los demás.
+- La base del asistente IA (`docs/fulltext_knowledge_base.json`) se reconstruye en cada regeneración y `update_assistant_counts.py` actualiza las cifras escritas en `docs/asistente_ia.html`.
+- Las etiquetas manuales de tópicos (`config/topic_labels.csv`) llevan `model_corpus_hash`: solo se aplican al modelo ajustado con ese corpus. Tras un reajuste, el tablero muestra el descriptor automático hasta que se validen etiquetas nuevas; las anteriores siguen en el archivo como referencia.
 
 ## App para el celular
 

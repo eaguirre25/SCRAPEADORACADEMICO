@@ -84,6 +84,7 @@ jobs:
             data/metadata_enrichment_report.json \
             data/review_records.csv \
             data/rejected_records.csv \
+            data/duplicate_records.csv \
             data/auto_review_promoted.csv \
             data/auto_review_rejected.csv \
             data/latest_relevant_records.csv \
