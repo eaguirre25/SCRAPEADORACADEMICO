@@ -60,18 +60,6 @@ jobs:
         run: |
           python notify_updates.py
 
-      - name: Upload validated PDFs to Google Drive
-        env:
-          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
-          PDF_UPLOAD_AFTER_DATE: ${{ github.event.inputs.upload_after_date || '' }}
-          UPLOAD_LATEST_RELEVANT_ONLY: "true"
-          DRIVE_UPLOAD_STRICT: "false"
-        run: |
-          python upload_validated_pdfs.py
-
       - name: Commit updated data files
         run: |
           git config user.name "github-actions[bot]"
@@ -98,4 +86,34 @@ jobs:
           else
             git commit -m "Update academic scraper database"
             git push
+          fi
+
+      # Los PDF se suben después de guardar los datos: con muchas novedades la
+      # subida puede tardar horas y, si alcanzaba el límite del job, se perdía
+      # la corrida entera. Lo que no se suba en 60 min queda para la próxima.
+      - name: Upload validated PDFs to Google Drive
+        timeout-minutes: 60
+        continue-on-error: true
+        env:
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          PDF_UPLOAD_AFTER_DATE: ${{ github.event.inputs.upload_after_date || '' }}
+          UPLOAD_LATEST_RELEVANT_ONLY: "true"
+          DRIVE_UPLOAD_STRICT: "false"
+        run: |
+          python upload_validated_pdfs.py
+
+      - name: Commit PDF upload report
+        if: always()
+        run: |
+          git fetch origin main
+          git reset --mixed origin/main
+          git add data/pdf_upload_report.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update PDF upload report"
+            git pull --rebase origin main && git push
           fi
