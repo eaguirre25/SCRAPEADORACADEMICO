@@ -1,0 +1,25 @@
+{
+  "name": "Dirección y Gestión Escolar · Observatorio académico",
+  "short_name": "Dirección Escolar",
+  "description": "Tablero, artículos, biblioteca y asistente sobre dirección, gestión y liderazgo escolar.",
+  "lang": "es",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0D1117",
+  "theme_color": "#0D1117",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Artículos", "short_name": "Artículos", "url": "./articulos.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Biblioteca y fichado", "short_name": "Biblioteca", "url": "./biblioteca.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Argentina · BERTopic", "short_name": "Argentina", "url": "./argentina.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

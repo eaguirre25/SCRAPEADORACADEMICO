@@ -2,8 +2,10 @@
 """Construye citas en normas APA 7 a partir de los registros del scraper.
 
 Los registros de `data/master_records.csv` no traen volumen, numero, paginas ni
-editorial, asi que la cita se emite con marcadores visibles (`[vol]`, `[num]`,
-`[pp.]`, `[Editorial]`) para que el dato faltante se note al pegarla.
+editorial. Cuando `scripts/enrich_metadata.py` los recupero (OpenAlex/Crossref),
+se leen de `data/metadata_enrichment.csv`; si no, la cita se emite con
+marcadores visibles (`[vol]`, `[num]`, `[pp.]`, `[Editorial]`) para que el dato
+faltante se note al pegarla.
 
 La inversion del nombre de autor depende del idioma del registro: en espanol y
 portugues se asumen dos apellidos cuando el nombre lo permite, en ingles uno
@@ -12,10 +14,15 @@ infiere con palabras funcionales del titulo y el resumen.
 """
 from __future__ import annotations
 
+import csv
 import html as html_lib
 import re
 import unicodedata
 from dataclasses import dataclass, field
+from functools import lru_cache
+from pathlib import Path
+
+ENRICHMENT_CSV = Path(__file__).resolve().parent / "data" / "metadata_enrichment.csv"
 
 # ── Nombres de pila frecuentes en el corpus ──────────────────────────────────
 # Solo se usan para resolver el caso ambiguo de tres palabras: "Ramona Isabel
@@ -276,6 +283,39 @@ def _locator(record: dict) -> str:
     return s(record.get("url"))
 
 
+@lru_cache(maxsize=1)
+def _enriched_details() -> dict:
+    """Volumen, numero y paginas aceptados por scripts/enrich_metadata.py."""
+    if not ENRICHMENT_CSV.exists():
+        return {}
+    with ENRICHMENT_CSV.open(encoding="utf-8-sig", newline="") as fh:
+        return {
+            row["record_id"]: {k: s(row.get(k)) for k in ("volume", "issue", "pages")}
+            for row in csv.DictReader(fh)
+            if row.get("applied") == "si"
+        }
+
+
+def _issue_details(record: dict) -> dict:
+    extra = _enriched_details().get(s(record.get("record_id")), {})
+    return {k: s(record.get(k)) or extra.get(k, "") for k in ("volume", "issue", "pages")}
+
+
+def _journal_locator(record: dict, missing: list[str]) -> str:
+    """Tramo `, 12(3), 45–67` de la referencia, con marcadores si faltan datos."""
+    details = _issue_details(record)
+    volume, issue = details["volume"], details["issue"]
+    pages = re.sub(r"\s*-+\s*", "\u2013", details["pages"])
+    if not volume:
+        missing.extend(["volumen", "numero"])
+        volume, issue = PLACEHOLDER_VOLUME, PLACEHOLDER_ISSUE
+    if not pages:
+        missing.append("paginas")
+        pages = PLACEHOLDER_PAGES
+    # Sin numero recuperado se omite el parentesis: hay revistas sin numeracion.
+    return f"{volume}({issue}), {pages}" if issue else f"{volume}, {pages}"
+
+
 def build_citation(record: dict, language: str = "") -> Citation:
     """Arma la referencia APA 7 del registro segun su tipo documental."""
     language = detect_language(record, language)
@@ -347,11 +387,8 @@ def build_citation(record: dict, language: str = "") -> Citation:
         journal = origin if origin and not _is_repository(origin) else PLACEHOLDER_JOURNAL
         if journal == PLACEHOLDER_JOURNAL:
             missing.append("revista")
-        missing.extend(["volumen", "numero", "paginas"])
         body = "" if title_in_head else f"{title}."
-        reference = (
-            f" *{journal}*, {PLACEHOLDER_VOLUME}({PLACEHOLDER_ISSUE}), {PLACEHOLDER_PAGES}."
-        )
+        reference = f" *{journal}*, {_journal_locator(record, missing)}."
         return close(f"{body}{reference}".strip(), journal, "articulo")
 
     # Documento de repositorio o tipo no declarado.

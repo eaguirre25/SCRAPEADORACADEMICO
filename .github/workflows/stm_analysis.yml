@@ -69,6 +69,30 @@ jobs:
       - name: Ejecutar STM corregida y estabilidad por idioma
         run: python scripts/run_topic_pipeline.py --config config/topic_modeling.yml --mode stm --corpus-unit metadata --run-stability
 
+      - name: Caché del modelo de embeddings
+        uses: actions/cache@v4
+        with:
+          path: .cache/huggingface
+          key: hf-${{ runner.os }}-paraphrase-multilingual-mpnet-base-v2
+
+      # BERTopic general: se reajusta con el corpus vigente y los parámetros ya
+      # seleccionados, para que el tablero no muestre tópicos de un corpus
+      # anterior. Las etiquetas manuales de otra versión no se aplican.
+      - name: Reajustar BERTopic con el corpus vigente
+        env:
+          HF_HOME: ${{ github.workspace }}/.cache/huggingface
+          TOKENIZERS_PARALLELISM: "false"
+        run: |
+          python scripts/run_bertopic.py --config config/topic_modeling.yml --corpus-unit metadata \
+            --use-selected-parameters --output-name metadata_multilingual/preferred_solution
+
+      - name: Comparar STM y BERTopic
+        run: python scripts/compare_topic_models.py --config config/topic_modeling.yml
+
+      - name: Recalcular métricas de evaluación
+        continue-on-error: true
+        run: python scripts/evaluate_topic_models.py --config config/topic_modeling.yml
+
       - name: Pruebas R
         run: sudo Rscript -e "testthat::test_file('tests/testthat/test-stm-helpers.R')"
 
@@ -80,7 +104,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sin cambios."
           else
-            git commit -m "Actualiza análisis STM – $(date +'%Y-%m-%d')"
+            git commit -m "Actualiza análisis STM y BERTopic – $(date +'%Y-%m-%d')"
             git pull --rebase origin main
             git push
           fi

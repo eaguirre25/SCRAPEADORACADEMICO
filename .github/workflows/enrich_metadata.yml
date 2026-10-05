@@ -1,0 +1,57 @@
+name: Enriquecer metadatos CONICET
+
+on:
+  workflow_dispatch:
+    inputs:
+      retry_missing:
+        description: 'Volver a buscar los registros que antes quedaron sin coincidencia'
+        type: boolean
+        default: false
+      limit:
+        description: 'Máximo de registros a consultar (0 = todos)'
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: master-records
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Buscar metadatos en CONICET OAI, OpenAlex y Crossref
+        run: |
+          python scripts/enrich_metadata.py --apply \
+            --limit "${{ inputs.limit || '0' }}" \
+            ${{ inputs.retry_missing && '--retry-missing' || '' }}
+
+      - name: Resumen
+        run: cat data/metadata_enrichment_report.json
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/master_records.csv data/metadata_enrichment.csv data/metadata_enrichment_report.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "Completa metadatos de registros CONICET – $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push
+          fi

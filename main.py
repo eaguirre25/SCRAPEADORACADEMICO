@@ -42,8 +42,18 @@ SEARCH_TERMS: List[str] = [
     "gestión escolar",
     "dirección escolar",
     "gestión educativa",
+    "liderazgo escolar",
+    "liderazgo directivo",
+    "equipo directivo",
+    "director escolar",
     "school management",
     "educational leadership",
+    "school leadership",
+    "school principal",
+    "instructional leadership",
+    "principalship",
+    "gestão escolar",
+    "diretor escolar",
 ]
 OAI_SOURCES = [
     {
@@ -616,6 +626,13 @@ def _collect_entry_texts(entry: ET.Element, local_names: Set[str]) -> List[str]:
                 values.append(text)
     return values
 
+def strip_conicet_header(abstract: str, title: str) -> str:
+    """El resumen del buscador de CONICET llega como «títulos\nautores\nresumen»."""
+    lines = (abstract or "").split("\n")
+    if len(lines) >= 3 and title and lines[0].strip().lower()[:25] == title.strip().lower()[:25]:
+        return "\n".join(lines[2:]).strip()
+    return abstract
+
 def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from_year: Optional[int]) -> Optional[Dict[str, Any]]:
     title = ""
     title_el = next((el for el in entry if _xml_local_name(el.tag) == "title" and (el.text or "").strip()), None)
@@ -691,7 +708,7 @@ def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from
         "document_type":    types_list[0] if types_list else "",
         "authors":          "; ".join(str(a) for a in authors_list),
         "title":            title,
-        "abstract":         abstract_list[0] if abstract_list else "",
+        "abstract":         strip_conicet_header(abstract_list[0] if abstract_list else "", title),
         "keywords":         "; ".join(str(s) for s in subjects_list),
         "publication_year": year,
         "publication_date": dates_raw[0] if dates_raw else "",
@@ -716,7 +733,9 @@ def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, 
             try:
                 resp = requests.get(
                     CONICET_OPENSEARCH_URL,
-                    params={"format": "atom", "query": term, "rpp": rpp, "start": start},
+                    # Entre comillas: sin ellas el buscador devuelve cualquier
+                    # trabajo con ambas palabras sueltas («school» y «principal»).
+                    params={"format": "atom", "query": f'"{term}"', "rpp": rpp, "start": start},
                     headers=headers,
                     timeout=30,
                 )
@@ -769,7 +788,7 @@ def query_conicet_rest(from_year: Optional[int] = None) -> List[Dict[str, Any]]:
                 resp = requests.get(
                     f"{CONICET_REST_URL}/items",
                     params={
-                        "query":  term,
+                        "query":  f'"{term}"',
                         "limit":  limit,
                         "offset": offset,
                         "expand": "metadata",

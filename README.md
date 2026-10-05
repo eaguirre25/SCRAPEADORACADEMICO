@@ -55,6 +55,60 @@ Referencias metodológicas: van Eck, N. J., & Waltman, L. (2010). Software surve
 
 Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y todas las asignaciones exportadas, búsqueda y paginación. Permite corregir el nombre, marcar un tema como validado o pendiente de correcciones, escribir notas y revisar documentos. Las revisiones se guardan en este navegador y se exportan/importan como JSON; no modifican automáticamente las asignaciones originales ni reentrenan los modelos. `docs/topic-review-data.json` se regenera junto con el dashboard. Las cantidades del corpus maestro y las filas del modelado se identifican por separado: un registro sin asignación vinculada no implica necesariamente que el modelo no lo haya procesado.
 
+## Búsqueda y filtro de pertinencia
+
+**Búsqueda (`main.py`).** OpenAlex se consulta con 15 frases exactas en español, inglés y portugués (gestión/dirección escolar, liderazgo escolar y directivo, school leadership, principalship, gestão escolar, entre otras). CONICET Digital se consulta con las frases **entre comillas**: sin ellas su buscador devolvía cualquier trabajo con las palabras sueltas («school» y «principal»). El resumen de CONICET se guarda sin la cabecera de títulos y autores que antepone su buscador.
+
+**Filtro (`relevance_filter.py`).** Una auditoría de octubre de 2026 mostró que alrededor del 90 % de los registros de CONICET en el maestro no trataban sobre dirección escolar (paleobotánica, peronismo, aves) y que unos 500 trabajos pertinentes de OpenAlex habían quedado rechazados. Las reglas corregidas:
+
+- «principal» cuenta como cargo solo en contexto inglés escolar («school principal», «principals», junto a «school» o «teacher»); en castellano es casi siempre un adjetivo.
+- Un cargo directivo o una acción de gestión deben aparecer **a no más de 8 palabras** de un término escolar; antes bastaba con que ambos figuraran en cualquier lugar del resumen.
+- No cuentan como gestión escolar «escuela de gestión estatal/privada/social» (tipo de sostenimiento), la gestión del agua, de residuos, ambiental o del aula, ni «escuela de pensamiento», «business school» y similares.
+- Un título que nombra el campo («gestión educativa», «educational leadership», «educational administration») se incluye, salvo que el foco sea la educación superior.
+- Se reconocen términos en portugués y cargos en el título («El director como líder…»). «Director de tesis» o «director del proyecto» no cuentan como cargo.
+- Los rechazados **se reevalúan en cada corrida**, así las correcciones recuperan trabajos descartados antes.
+- `config/relevance_overrides.csv` (`record_id,decision,nota`, con `incluir` o `excluir`) fija decisiones manuales que prevalecen sobre las reglas.
+- **Duplicados:** al final del filtro se unifica el mismo trabajo cargado más de una vez: mismo DOI, o mismo título con al menos un apellido en común (o un registro sin autores con título largo y año vecino). No se exige el año, porque OpenAlex repite obras con años distintos y CONICET usa el año de carga. Se conserva el registro con DOI y más datos, se completan sus campos vacíos y se suman las fuentes; los unificados quedan en `data/duplicate_records.csv` con `duplicate_of`. Los títulos iguales de autorías distintas se conservan. Los registros sin título se descartan.
+
+- En repositorios institucionales (CONICET, SEDICI, RIAA) se exige una frase directa, el campo en el título o un cargo directivo a no más de 6 palabras de un término escolar: «gestión» cerca de «escuela» o un cargo junto a «educación» dejaban pasar sobre todo historia y sociología de la escolaridad.
+
+Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.312 registros: OpenAlex de 3.519 a 4.131 y CONICET de 840 a 176.
+
+**Resultado de la validación manual (200 registros, 5/10/2026).** Con las marcas del investigador, comparando sobre la misma muestra: en OpenAlex la precisión pasa de 0,76 a 0,88 y la exhaustividad de 0,72 a 0,91; en CONICET la precisión pasa de 0,20 a 0,46 y la exhaustividad de 0,93 a 0,86. El alcance es la dirección **escolar**: la gestión en educación superior queda fuera (decisión del investigador, 5/10/2026). Las reglas de repositorios se ajustaron con esta misma muestra, por lo que conviene confirmar con una muestra nueva. Las guías de biblioteca (LibGuides) se excluyen por no ser trabajos académicos.
+
+**Validación.** `scripts/build_relevance_validation.py` sortea 200 registros estratificados por fuente y decisión del filtro en `data/validacion/muestra_pertinencia.xlsx`, sin mostrar la decisión. Los títulos que nombran explícitamente la dirección o gestión escolar vienen marcados «si» (editable); tras marcar el resto de la columna «pertinente» (si / no / dudoso), `scripts/evaluate_relevance_validation.py` estima precisión y exhaustividad ponderadas por estrato en `data/validacion/resultado_validacion.json`.
+
+## Actualización completa del sitio
+
+Cada corrida del scraper encadena: filtro y unificación de duplicados → recuperación de metadatos de CONICET → extracción de corpus → STM → **reajuste de BERTopic** con los parámetros ya seleccionados y comparación STM–BERTopic → regeneración del tablero. Para que no queden datos de corridas anteriores:
+
+- `docs/textos/` publica solo textos de trabajos del maestro vigente y borra los demás.
+- La base del asistente IA (`docs/fulltext_knowledge_base.json`) se reconstruye en cada regeneración y `update_assistant_counts.py` actualiza las cifras escritas en `docs/asistente_ia.html`.
+- Las etiquetas manuales de tópicos (`config/topic_labels.csv`) llevan `model_corpus_hash`: solo se aplican al modelo ajustado con ese corpus. Tras un reajuste, el tablero muestra el descriptor automático hasta que se validen etiquetas nuevas; las anteriores siguen en el archivo como referencia.
+
+## App para el celular
+
+El sitio de `docs/` funciona como aplicación instalable (PWA): se abre desde la dirección de GitHub Pages del repositorio y se agrega a la pantalla de inicio, sin pasar por tiendas de aplicaciones.
+
+- **Android (Chrome):** abrir el tablero y tocar **Instalar** en el aviso inferior, o menú ⋮ → *Instalar aplicación*.
+- **iPhone (Safari):** botón Compartir → *Agregar a inicio*.
+
+Una vez instalada, abre a pantalla completa con una barra inferior para Tablero, Artículos, Biblioteca, Argentina y Asistente. En pantallas chicas la tabla de artículos se muestra como tarjetas y al tocar una se baja a su ficha con la cita APA 7. Las páginas ya abiertas quedan guardadas en el teléfono y se pueden consultar sin conexión; lo que nunca se abrió requiere conexión. Las revisiones y el fichado siguen guardándose en el navegador del dispositivo, como en la versión de escritorio: conviene exportarlas.
+
+Archivos: `docs/manifest.webmanifest`, `docs/sw.js` (service worker: red primero y copia local sin conexión), `docs/pwa.js` (barra inferior y aviso de instalación), `docs/mobile.css` (ajustes para teléfonos) y `docs/icons/`. `inject_pwa.py` agrega estas referencias a cada página HTML; el workflow **Generar Dashboard** lo ejecuta después de regenerar, por lo que la app se mantiene en cada actualización automática. Si se cambia `sw.js`, subir `VERSION` para que los teléfonos descarten la copia anterior.
+
+## Recuperación de metadatos de CONICET Digital
+
+Los registros cosechados del buscador de CONICET traen título, autores, resumen y handle, pero no DOI, revista, volumen, número, páginas, palabras clave ni tipo documental. Además, su año es el de **carga en el repositorio**, no el de publicación, lo que afecta los filtros por período (por ejemplo, Argentina 2020–2026).
+
+`scripts/enrich_metadata.py` busca cada registro por título y autores en fuentes alternativas: CONICET OAI-PMH por handle (si responde), OpenAlex y Crossref; con el DOI completa volumen, número y páginas. Una coincidencia se acepta solo si el título es casi idéntico (similitud ≥ 0,90), comparte al menos un apellido y el año encontrado no es posterior al de carga. Los casos parecidos que no cumplen todo quedan como «revisar» y no se aplican. Nunca se modifican título, autores ni resumen.
+
+- Se ejecuta en GitHub Actions: workflow **Enriquecer metadatos CONICET** (manual) y como paso del **Academic Scraper** para los registros nuevos. Al terminar dispara Argentina · BERTopic y el dashboard.
+- `data/metadata_enrichment.csv` registra, por registro, la fuente, las puntuaciones, el año original y si se aplicó; sirve de caché. Si una fuente no responde, el registro queda en «error» y se reintenta en la próxima corrida.
+- `data/metadata_enrichment_report.json` resume la corrida e informa los registros cuya clasificación de pertinencia cambiaría con los nuevos datos.
+- Volumen, número y páginas se leen desde `data/metadata_enrichment.csv` al armar la cita APA 7 (`apa_citation.py`), porque el maestro no tiene esas columnas.
+- Para decidir a mano un caso «revisar» (o anular uno aceptado), agregar una fila en `config/metadata_enrichment_overrides.csv` con `record_id,decision,nota` y decisión `aceptar` o `rechazar`; se aplica en la siguiente corrida.
+
 ## Citas en normas APA 7
 
 `docs/articulos.html` incluye la columna **Normas APA** con un boton que copia la referencia al portapapeles en texto plano y en HTML con cursivas.
@@ -162,11 +216,11 @@ Cada workflow conserva `workflow_dispatch`, por lo que tambien puede ejecutarse 
 Los datos provienen de fuentes academicas abiertas, incluyendo OpenAlex y repositorios institucionales. Revisar las condiciones de cada fuente antes de redistribuir datos enriquecidos o archivos derivados.
 ### Argentina · BERTopic 2020–2026
 
-El botón **Argentina · BERTopic 2020–2026** del dashboard abre `docs/argentina.html`. Esta rama ajusta un modelo independiente sobre publicaciones del master reunido por el workflow, con deduplicación del pipeline existente y años de publicación 2020–2026. El criterio es **objeto de estudio en Argentina**, incluidos estudios comparativos; repositorio y afiliación no sustituyen país del estudio. Las menciones del título/resumen producen candidatos pendientes de revisión. Los registros sin evidencia permanecen accesibles en «Revisar corpus» para inclusión manual. No se afirma cobertura exhaustiva de la producción argentina; 2026 está en curso.
+El botón **Argentina · BERTopic 2020–2026** del dashboard abre `docs/argentina.html`. Esta rama ajusta un modelo independiente sobre publicaciones del master reunido por el workflow, con deduplicación del pipeline existente y años de publicación 2020–2026. El criterio es **objeto de estudio en Argentina**, incluidos estudios comparativos; repositorio y afiliación no sustituyen país del estudio. Las menciones del título/resumen producen candidatos pendientes de revisión. Los registros sin evidencia permanecen accesibles en «Revisar corpus» para inclusión manual. Se excluyen del ajuste los candidatos con puntaje de pertinencia ≤ 0 del filtro general (aceptados solo por la segunda revisión; en la revisión de octubre de 2026 eran los 14 trabajos ajenos a la gestión escolar: biología, agro, arqueología, turismo). Figuran en el filtro «Fuera de tema» y una inclusión manual los recupera; el umbral es `min_relevance_score` en `config/argentina_analysis.json`. No se afirma cobertura exhaustiva de la producción argentina; 2026 está en curso.
 
 La constelación permite alternar vecinos semánticos recíprocos (cinco vecinos, coseno ≥ 0,70 en embeddings originales) y palabras clave (Jaccard IDF ≥ 0,20, dos términos). La vecindad semántica es una reducción explícita de enlaces, no citación; se reportan nueve combinaciones de k/umbral. Todos los candidatos, aislados y documentos sin tópico permanecen representados. Los tópicos usan conexiones c-TF-IDF ≥ 0,35, sin enlaces agregados para forzar conectividad.
 
-El ajuste conserva UMAP/HDBSCAN de la solución global preferida: UMAP 10 vecinos, 10 dimensiones, min_dist 0,1; tamaño mínimo 35 y min_samples 5. Compara tamaños 10/15/25/35 y cinco semillas, informando outliers y ARI con/sin outliers comunes. La vectorización usa min_df=1/max_df=1, ya que BERTopic vectoriza textos agregados por tópico y filtros mayores pueden eliminar el vocabulario con pocos grupos. Se conservan embeddings multilingües y pesos por campo del pipeline. Los términos territoriales permanecen en el texto; revisar si un grupo refleja geografía o contenido. El ajuste inicial es exploratorio y sensible a los parámetros: no se presenta como solución estable o validada.
+El ajuste usa UMAP con 10 vecinos, 10 dimensiones y min_dist 0,1, y HDBSCAN con min_samples 5. El tamaño mínimo de tópico ya no se hereda del modelo global (35, demasiado grande para unos 500 documentos: dejaba 38 % sin tópico y la estabilidad entre semillas era casi nula). Se elige con una regla declarada: entre los tamaños 10, 15, 20, 25 y 35, los que en cinco semillas de UMAP dejan en promedio como máximo 35 % sin tópico y forman al menos tres tópicos; de ellos, el de mayor ARI medio entre pares de semillas (empate: el mayor). Si ninguno cumple, se usa 15. La tabla completa figura en «Criterios y método». La vectorización usa min_df=1/max_df=1, ya que BERTopic vectoriza textos agregados por tópico y filtros mayores pueden eliminar el vocabulario con pocos grupos. Se conservan embeddings multilingües y pesos por campo del pipeline. Dos limpiezas se aplican solo en este análisis, sin modificar el maestro: se quita la cabecera que CONICET antepone al resumen (títulos, traducciones y autores), que repetía el título y sumaba nombres propios a los embeddings; y se excluyen los topónimos (Argentina, provincias) del vocabulario de los tópicos, porque todo el corpus se seleccionó por mencionarlos y dominaban las etiquetas. Los topónimos siguen en el texto de los embeddings y en la evidencia territorial; revisar igualmente si un grupo refleja geografía o contenido. El ajuste es exploratorio: no se presenta como solución validada.
 
 Para reproducir: instalar `requirements-topic-modeling.txt` y ejecutar `python scripts/run_argentina_analysis.py --mode all`. Configuración: `config/argentina_analysis.json`; resultados y trazabilidad: `output/argentina/`; corpus seleccionado descargable: `docs/argentina-corpus.csv`. `--mode render` requiere solo bibliotecas estándar y recalcula la selección/red léxica, reutilizando resultados únicamente si coinciden selección y configuración; ante cambios publica estado «ajuste pendiente».
 
