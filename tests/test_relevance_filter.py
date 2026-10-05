@@ -110,3 +110,8 @@ def test_library_guides_are_not_academic_works():
 def test_field_title_survives_incidental_noise():
     abstract = "Women's status, health and empowerment shape access to educational leadership positions."
     assert status("Status and empowerment of women for educational leadership in India", abstract) == "alta"
+
+
+def test_thesis_or_project_director_is_not_a_directive_role():
+    thesis = "Trabajo dirigido por el director de tesis; se tomaron muestras de suelo cerca de una escuela rural."
+    assert status("Propiedades de suelos pampeanos", thesis, "CONICET Digital") == "rechazada"

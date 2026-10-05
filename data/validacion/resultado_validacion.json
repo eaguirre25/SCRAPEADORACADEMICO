@@ -9,12 +9,12 @@
       "proporcion_pertinente": 0.02
     },
     "OpenAlex / incluido": {
-      "si": 52,
-      "no": 8,
+      "si": 51,
+      "no": 9,
       "dudoso": 0,
       "sin_marcar": 0,
       "poblacion": 4122,
-      "proporcion_pertinente": 0.8666666666666667
+      "proporcion_pertinente": 0.85
     },
     "CONICET / incluido": {
       "si": 13,
@@ -25,25 +25,25 @@
       "proporcion_pertinente": 0.26
     },
     "OpenAlex / no incluido": {
-      "si": 9,
-      "no": 31,
+      "si": 6,
+      "no": 34,
       "dudoso": 0,
       "sin_marcar": 0,
       "poblacion": 642,
-      "proporcion_pertinente": 0.225
+      "proporcion_pertinente": 0.15
     }
   },
   "total": {
-    "precision": 0.821,
-    "exhaustividad": 0.955,
-    "pertinentes_estimados_incluidos": 3660,
-    "pertinentes_estimados_perdidos": 174
+    "precision": 0.805,
+    "exhaustividad": 0.966,
+    "pertinentes_estimados_incluidos": 3592,
+    "pertinentes_estimados_perdidos": 126
   },
   "OpenAlex": {
-    "precision": 0.867,
-    "exhaustividad": 0.961,
-    "pertinentes_estimados_incluidos": 3572,
-    "pertinentes_estimados_perdidos": 144
+    "precision": 0.85,
+    "exhaustividad": 0.973,
+    "pertinentes_estimados_incluidos": 3504,
+    "pertinentes_estimados_perdidos": 96
   },
   "CONICET": {
     "precision": 0.26,
@@ -61,12 +61,12 @@
       "exhaustividad": 0.857
     },
     "OpenAlex": {
-      "vp": 53,
-      "fp": 6,
-      "fn": 8,
-      "vn": 33,
-      "precision": 0.898,
-      "exhaustividad": 0.869
+      "vp": 52,
+      "fp": 7,
+      "fn": 5,
+      "vn": 36,
+      "precision": 0.881,
+      "exhaustividad": 0.912
     }
   },
   "marcados": "200 de 200"

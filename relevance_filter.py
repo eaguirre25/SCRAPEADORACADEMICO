@@ -108,6 +108,10 @@ NON_SCHOOL_PHRASES = [
     "medical school", "medical schools", "graduate school", "summer school", "law school",
     "nursing school", "school of medicine", "school of nursing", "school of public health",
     "school of economics", "school of engineering", "school of business",
+    # Cargos que no son de gestión institucional.
+    "director de tesis", "directora de tesis", "directores de tesis", "thesis director", "thesis supervisor",
+    "supervisor de tesis", "director del proyecto", "directora del proyecto", "project director",
+    "director de la revista", "director de orquesta", "director de cine", "film director",
 ]
 
 # Distancia máxima (en palabras) para considerar que un cargo o una acción de

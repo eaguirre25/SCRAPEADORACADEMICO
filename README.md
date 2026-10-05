@@ -65,7 +65,7 @@ Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y tod
 - Un cargo directivo o una acción de gestión deben aparecer **a no más de 8 palabras** de un término escolar; antes bastaba con que ambos figuraran en cualquier lugar del resumen.
 - No cuentan como gestión escolar «escuela de gestión estatal/privada/social» (tipo de sostenimiento), la gestión del agua, de residuos, ambiental o del aula, ni «escuela de pensamiento», «business school» y similares.
 - Un título que nombra el campo («gestión educativa», «educational leadership», «educational administration») se incluye, salvo que el foco sea la educación superior.
-- Se reconocen términos en portugués y cargos en el título («El director como líder…»).
+- Se reconocen términos en portugués y cargos en el título («El director como líder…»). «Director de tesis» o «director del proyecto» no cuentan como cargo.
 - Los rechazados **se reevalúan en cada corrida**, así las correcciones recuperan trabajos descartados antes.
 - `config/relevance_overrides.csv` (`record_id,decision,nota`, con `incluir` o `excluir`) fija decisiones manuales que prevalecen sobre las reglas.
 
@@ -73,7 +73,7 @@ Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y tod
 
 Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.312 registros: OpenAlex de 3.519 a 4.131 y CONICET de 840 a 176.
 
-**Resultado de la validación manual (200 registros, 5/10/2026).** Con las marcas del investigador, comparando sobre la misma muestra: en OpenAlex la precisión pasa de 0,78 a 0,90 y la exhaustividad de 0,69 a 0,87; en CONICET la precisión pasa de 0,20 a 0,46 y la exhaustividad de 0,93 a 0,86. Las reglas de repositorios se ajustaron con esta misma muestra, por lo que conviene confirmar con una muestra nueva. Las guías de biblioteca (LibGuides) se excluyen por no ser trabajos académicos.
+**Resultado de la validación manual (200 registros, 5/10/2026).** Con las marcas del investigador, comparando sobre la misma muestra: en OpenAlex la precisión pasa de 0,76 a 0,88 y la exhaustividad de 0,72 a 0,91; en CONICET la precisión pasa de 0,20 a 0,46 y la exhaustividad de 0,93 a 0,86. El alcance es la dirección **escolar**: la gestión en educación superior queda fuera (decisión del investigador, 5/10/2026). Las reglas de repositorios se ajustaron con esta misma muestra, por lo que conviene confirmar con una muestra nueva. Las guías de biblioteca (LibGuides) se excluyen por no ser trabajos académicos.
 
 **Validación.** `scripts/build_relevance_validation.py` sortea 200 registros estratificados por fuente y decisión del filtro en `data/validacion/muestra_pertinencia.xlsx`, sin mostrar la decisión. Los títulos que nombran explícitamente la dirección o gestión escolar vienen marcados «si» (editable); tras marcar el resto de la columna «pertinente» (si / no / dudoso), `scripts/evaluate_relevance_validation.py` estima precisión y exhaustividad ponderadas por estrato en `data/validacion/resultado_validacion.json`.
 
