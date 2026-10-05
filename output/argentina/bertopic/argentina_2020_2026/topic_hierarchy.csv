@@ -1,5 +1,7 @@
 parent_topic_id,subtopic_id,relationship,decision_status
 0,0.0,subcluster,provisional_computational
 0,0.1,subcluster,provisional_computational
-0,0.2,subcluster,provisional_computational
-0,0.3,subcluster,provisional_computational
+1,1.0,subcluster,provisional_computational
+1,1.1,subcluster,provisional_computational
+2,2.0,subcluster,provisional_computational
+2,2.1,subcluster,provisional_computational

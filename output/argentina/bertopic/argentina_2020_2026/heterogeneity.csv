@@ -1,3 +1,8 @@
 model,corpus,topic_id,documents,embedding_compactness,silhouette_mean,silhouette_min,title_semantic_dispersion,abstract_semantic_dispersion,ctfidf_coherence_cv,ctfidf_coherence_npmi,topic_diversity,language_entropy,dominant_language_share,source_entropy,country_entropy,contamination_share,borderline_document_share,low_confidence_share,status,review_status
-BERTopic-ARGENTINA-2020-2026,metadata,0,285,0.739893,0.045109,-0.281719,0.309866,0.265429,,,0.5,0.486291,0.863158,0.449687,-0.0,0.0,0.003509,0.0,contaminated_candidate,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,1,35,0.764505,0.552124,0.410144,0.28071,0.238924,,,0.5,0.828495,0.685714,0.219033,-0.0,0.0,0.0,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,0,112,0.756376,0.268109,-0.290012,0.304491,0.273964,,,0.142857,0.385519,0.901786,0.259424,-0.0,0.0,0.410714,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,1,71,0.806557,0.163412,-0.459451,0.270431,0.2026,,,0.142857,0.638149,0.788732,-0.0,-0.0,0.0,0.0,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,2,64,0.805986,0.298053,-0.428007,0.266774,0.209891,,,0.142857,0.423866,0.875,0.311129,-0.0,0.0,0.515625,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,3,54,0.857514,0.395593,-0.001898,0.224353,0.169662,,,0.142857,0.522172,0.851852,0.825684,-0.0,0.0,0.074074,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,4,46,0.839602,0.478929,0.13665,0.222157,0.174318,,,0.142857,0.527562,0.826087,0.295439,-0.0,0.0,0.0,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,5,30,0.768478,0.739342,0.488053,0.32316,0.23363,,,0.142857,0.638967,0.766667,0.146145,-0.0,0.0,0.1,0.0,contaminated_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,6,28,0.713405,0.74093,0.626169,0.375237,0.283913,,,0.142857,0.787288,0.714286,0.154076,-0.0,0.0,0.035714,0.0,contaminated_candidate,pending_human_review

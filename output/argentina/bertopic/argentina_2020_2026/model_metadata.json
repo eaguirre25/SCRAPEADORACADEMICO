@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-ARGENTINA-2020-2026",
   "seed": 42,
-  "generated_at_utc": "2026-10-04T18:14:46.803027+00:00",
-  "git_commit": "e1c5425d61298b067b46224b452f0c31619cc39f",
+  "generated_at_utc": "2026-10-05T04:24:10.278118+00:00",
+  "git_commit": "b2550608aa59b220f9ba2397b41fe17e27f84cde",
   "python_version": "3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
-  "documents": 539,
+  "documents": 525,
   "discarded_documents": 0,
-  "elapsed_seconds": 219.613,
+  "elapsed_seconds": 108.193,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
@@ -173,7 +173,7 @@
         "sentence-transformers/distiluse-base-multilingual-cased-v2"
       ],
       "batch_size": 64,
-      "min_topic_size": 35,
+      "min_topic_size": 20,
       "min_samples": 5,
       "nr_topics": null,
       "calculate_probabilities": true,
@@ -311,11 +311,11 @@
   "output_name": "argentina_2020_2026",
   "validation_status": "exploratory",
   "embedding_cache": {
-    "fingerprint": "5d7053b6dad34ab6fa06a58a815f5a94fab5928a7ee68debb1d04e2c4d4048d3",
+    "fingerprint": "bc3b8ddee66f90e2ce2bcd03059a71d6a248f5c2eb9657f0b128d1fec67649f0",
     "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
     "dimension": 768,
-    "documents": 539,
-    "created_at_utc": "2026-10-04T18:12:51.170815+00:00",
+    "documents": 525,
+    "created_at_utc": "2026-10-05T04:22:05.055322+00:00",
     "combination": "weighted_field_average",
     "variant": "weighted_fields",
     "weights": {
@@ -329,33 +329,33 @@
     "text_cleaning_version": "unicode-nfc-v2",
     "field_embedding_manifests": {
       "title_text": {
-        "fingerprint": "e344deff6868bd1586c90992581ff34c8f94b0e66cd845f5099f92a2d9c4e7df",
+        "fingerprint": "65fa2be0549f7e2b06fdb1a5da1bc3c4ef56a118ab43444f43cf5213a8bb47c1",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 539,
-        "created_at_utc": "2026-10-04T18:11:31.046805+00:00",
+        "documents": 525,
+        "created_at_utc": "2026-10-05T04:20:48.610684+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
         "text_cleaning_version": "unicode-nfc-v2"
       },
       "abstract_text": {
-        "fingerprint": "2df6ff06dd6f35d41870eb17851f9fe5c6b35388e421a195ce588c4ad7fe24de",
+        "fingerprint": "4874723c5ab09530278a0e3eb6883b42c6809e1c3fecd02286c0b22fd6baff53",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 539,
-        "created_at_utc": "2026-10-04T18:12:43.804538+00:00",
+        "documents": 525,
+        "created_at_utc": "2026-10-05T04:21:58.382870+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
         "text_cleaning_version": "unicode-nfc-v2"
       },
       "keywords_text": {
-        "fingerprint": "3be431c9712b17c676c71ebefe1894a399fc89446043c04fd6745dc340ddf580",
+        "fingerprint": "d8e9d8e8c66ee4a22e6af1a771f35e461c0823f8130e08cac58caabc41dbd5db",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 539,
-        "created_at_utc": "2026-10-04T18:12:51.165462+00:00",
+        "documents": 525,
+        "created_at_utc": "2026-10-05T04:22:05.049960+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
@@ -363,20 +363,20 @@
       }
     },
     "available_field_counts": {
-      "title_text": 539,
-      "abstract_text": 539,
+      "title_text": 525,
+      "abstract_text": 525,
       "keywords_text": 50
     }
   },
-  "outlier_count": 219,
-  "outlier_percentage": 40.6308,
+  "outlier_count": 120,
+  "outlier_percentage": 22.8571,
   "model_save_mode": "safetensors_without_ctfidf",
   "warnings": [
     "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"
   ],
   "outliers_reassigned_in_alternative": 0,
   "effective_configuration_path": "effective_configuration.json",
-  "macro_topics": 2,
-  "subtopics": 4,
+  "macro_topics": 7,
+  "subtopics": 6,
   "ambiguity_rule": "outlier OR low semantic margin OR low HDBSCAN membership OR low centroid similarity OR high outlier score"
 }

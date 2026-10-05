@@ -20,7 +20,7 @@
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 35,
+    "min_cluster_size": 20,
     "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",
@@ -257,7 +257,7 @@
     "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "08de0cb4bca3858fe8fa578f6fbe3f00b79137e726001b7b0ddc71d11b92ea2a",
+  "corpus_hash": "2a9155c44efad7cc466c341cc8cd98e2dfd739f720e2c148e7aaa0a87a764863",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "5d7053b6dad34ab6fa06a58a815f5a94fab5928a7ee68debb1d04e2c4d4048d3"
+  "embedding_cache_hash": "bc3b8ddee66f90e2ce2bcd03059a71d6a248f5c2eb9657f0b128d1fec67649f0"
 }
