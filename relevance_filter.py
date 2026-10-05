@@ -324,7 +324,7 @@ def role_in_school_context(text: str, title: str = "") -> bool:
 OWNERSHIP_PHRASES = OWNERSHIP_MANAGEMENT_NOISE_TERMS + [
     "gestion oficial", "gestion comunitaria", "gestion cooperativa", "gestion social indigena",
     "gestion privada y estatal", "gestion estatal y privada", "under private management",
-    "under public management", "management located",
+    "under public management", "management located", "community management",
     # Gestión de un recurso o de la clase, no de la escuela.
     "gestion del agua", "gestion de los recursos hidricos", "gestion integrada de los recursos hidricos",
     "water management", "management of water resources", "gestion de residuos", "waste management",
@@ -358,10 +358,16 @@ def source_is_strict(source: str) -> bool:
     return any(part in STRICT_SOURCES for part in parts)
 
 
+# Páginas de guías de biblioteca (LibGuides) que OpenAlex indexa como obras.
+LIBRARY_GUIDE_RE = re.compile(r"^\s*(libguides|research guides?|subject guides?|library guides?)\s*:", re.I)
+
+
 def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     """Devuelve categoría, puntaje, motivo y evidencias."""
     title, body, text = row_text(row)
     source = source_name(row)
+    if LIBRARY_GUIDE_RE.match(str(row.get("title") or "")) or "libguides." in str(row.get("url") or "").lower():
+        return "rechazada", 0, "no es un trabajo académico: guía de biblioteca", ["guía de biblioteca"]
 
     strong_title = phrase_hit(title, STRONG_PHRASES)
     strong_body = phrase_hit(body, STRONG_PHRASES)
@@ -422,7 +428,9 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     if higher_ed_noise and not (direct_focus or school_anchor) and (higher_ed_focus or not medium_title):
         evidence.append("ruido de nivel: " + ", ".join(higher_ed_noise[:3]))
         return "rechazada", score, "fuera de foco: educación superior sin dirección o gestión escolar", evidence
-    if sector_noise and not (direct_focus or medium_title):
+    # Una mención a covid, salud o ESI no descarta un trabajo que relaciona
+    # gestión y escuela: la pandemia es contexto frecuente de estudios de gestión.
+    if sector_noise and not (direct_focus or medium_title or management_near):
         evidence.append("ruido de sector: " + ", ".join(sector_noise[:3]))
         return "rechazada", score, "fuera de foco: nivel/sector sin dirección o gestión escolar como objeto", evidence
 

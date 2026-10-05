@@ -87,3 +87,13 @@ def test_rejected_records_are_reevaluated_and_overrides_win(tmp_path, monkeypatc
     assert kept["r-forced"]["relevance_reason"].startswith("decisión manual")
     with open("data/rejected_records.csv", encoding="utf-8") as fh:
         assert [r["record_id"] for r in csv.DictReader(fh)] == ["r-bad"]
+
+
+def test_pandemic_context_does_not_discard_school_management():
+    abstract = "During the COVID-19 pandemic, private schools' management adopted new strategies."
+    assert status("COVID-19 and private schools' management strategies during lockdown in Nigeria", abstract) == "alta"
+
+
+def test_library_guides_are_not_academic_works():
+    assert status("LibGuides: Educational Leadership: Books") == "rechazada"
+    assert status("Research Guides: EDLEAD 6206 - Orientation to School Management: Home") == "rechazada"

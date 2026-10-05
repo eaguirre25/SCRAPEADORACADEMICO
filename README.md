@@ -69,9 +69,9 @@ Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y tod
 - Los rechazados **se reevalúan en cada corrida**, así las correcciones recuperan trabajos descartados antes.
 - `config/relevance_overrides.csv` (`record_id,decision,nota`, con `incluir` o `excluir`) fija decisiones manuales que prevalecen sobre las reglas.
 
-Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.460 registros: OpenAlex de 3.519 a 4.122 y CONICET de 840 a 338.
+Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.460 registros: OpenAlex de 3.519 a 4.122 y CONICET de 840 a 338. Las guías de biblioteca (LibGuides) se excluyen por no ser trabajos académicos.
 
-**Validación.** `scripts/build_relevance_validation.py` sortea 200 registros estratificados por fuente y decisión del filtro en `data/validacion/muestra_pertinencia.xlsx`, sin mostrar la decisión. Tras marcar la columna «pertinente» (si / no / dudoso), `scripts/evaluate_relevance_validation.py` estima precisión y exhaustividad ponderadas por estrato en `data/validacion/resultado_validacion.json`.
+**Validación.** `scripts/build_relevance_validation.py` sortea 200 registros estratificados por fuente y decisión del filtro en `data/validacion/muestra_pertinencia.xlsx`, sin mostrar la decisión. Los títulos que nombran explícitamente la dirección o gestión escolar vienen marcados «si» (editable); tras marcar el resto de la columna «pertinente» (si / no / dudoso), `scripts/evaluate_relevance_validation.py` estima precisión y exhaustividad ponderadas por estrato en `data/validacion/resultado_validacion.json`.
 
 ## App para el celular
 
