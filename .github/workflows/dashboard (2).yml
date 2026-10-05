@@ -14,6 +14,8 @@ on:
       - 'docs/topic-review.js'
       - 'docs/topic-review.css'
       - 'generate_research_library.py'
+      - 'build_weekly_reports.py'
+      - 'data/weekly_reports/**'
       - 'generate_corpus_text_files.py'
       - 'inject_library_link.py'
       - 'inject_library_ocr.py'
@@ -70,6 +72,7 @@ jobs:
         run: |
           python generate_dashboard.py
           python generate_article_table.py
+          python build_weekly_reports.py
           python generate_research_library.py
           python generate_corpus_text_files.py
           python build_fulltext_knowledge_base.py

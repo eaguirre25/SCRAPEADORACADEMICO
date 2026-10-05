@@ -76,7 +76,7 @@ HTML = r'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name
 header{padding:12px 16px;border-bottom:1px solid var(--line);background:#0b1018;position:sticky;top:0;z-index:20}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:1.2rem;font-weight:800}.sub,.meta{color:var(--mut);font-size:.8rem}
 .col-bar{display:flex;gap:8px;margin-top:10px;margin-bottom:6px}.col-btn{padding:7px 14px;border-radius:20px;font-weight:600;background:#161b22;border:1px solid var(--line);color:var(--tx)}.col-btn.active{background:#1f6feb;border-color:#1f6feb;color:#fff}
 .tools{display:grid;grid-template-columns:1fr 150px 150px;gap:8px;margin-top:8px}
-.library{display:grid;grid-template-columns:minmax(520px,1fr) 340px;gap:10px;height:calc(100vh - 165px);padding:10px}.pane{background:var(--p);border:1px solid var(--line);border-radius:99px;border-radius:9px;overflow:hidden}.ph{padding:10px 12px;border-bottom:1px solid var(--line);background:var(--p2);display:flex;justify-content:space-between}.list{height:calc(100% - 42px);overflow:auto}.art,.report{padding:10px 12px;border-bottom:1px solid #242b35;cursor:pointer}.art:hover,.report:hover{background:#1c2530}.title{font-weight:650;line-height:1.35}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:4px 4px 0 0;font-size:.72rem}.pill.ok{border-color:#238636;color:#7ee787}.pill.no{border-color:#9e6a03;color:#e3b341}.report-date{font-size:1rem;font-weight:800;color:var(--blue)}
+.library{display:grid;grid-template-columns:minmax(520px,1fr) 340px;gap:10px;height:calc(100vh - 165px);padding:10px}.pane{background:var(--p);border:1px solid var(--line);border-radius:99px;border-radius:9px;overflow:hidden}.ph{padding:10px 12px;border-bottom:1px solid var(--line);background:var(--p2);display:flex;justify-content:space-between}.list{height:calc(100% - 42px);overflow:auto}.art,.report{padding:10px 12px;border-bottom:1px solid #242b35;cursor:pointer}.art:hover,.report:hover{background:#1c2530}.title{font-weight:650;line-height:1.35}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:4px 4px 0 0;font-size:.72rem}.pill.ok{border-color:#238636;color:#7ee787}.pill.no{border-color:#9e6a03;color:#e3b341}.report-date{font-size:1rem;font-weight:800;color:var(--blue)}.report-group{padding:8px 12px;background:#0b1018;color:var(--mut);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--line)}.report.weekly{border-left:3px solid #8957e5}.weekly-intro{color:var(--tx);line-height:1.6}.weekly-priority{background:#1e1b4b;border:1px solid #4338ca;border-radius:8px;padding:10px 12px;color:#c7d2fe;line-height:1.55}.ovbody .report-paper,.weekly-apa,.weekly-why,.weekly-intro,.weekly-priority{overflow-wrap:anywhere;min-width:0}.ovbody{min-width:0}.weekly-apa{font-family:Georgia,serif;font-size:.86rem;color:#cbd5e1;margin:6px 0;line-height:1.5}.weekly-why{color:var(--tx);line-height:1.6;margin:6px 0}
 .overlay{position:fixed;inset:0;background:var(--bg);z-index:100;display:none}.overlay.open{display:flex;flex-direction:column}.ovh{height:58px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--line);background:#0b1018}.ovbody{flex:1;overflow:auto;padding:20px;max-width:1200px;width:100%;margin:auto}.report-paper{padding:12px 0;border-bottom:1px solid var(--line)}
 .reader{position:fixed;inset:0;background:var(--bg);z-index:120;display:none;grid-template-columns:minmax(0,1.08fr) minmax(480px,.92fr)}.reader.open{display:grid}.reading{min-width:0;border-right:1px solid var(--line);display:flex;flex-direction:column}.rh{min-height:66px;padding:9px 12px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}.viewer{flex:1;min-height:0;background:#20242a}.viewer iframe{width:100%;height:100%;border:0;background:white}.fallback{height:100%;overflow:auto;padding:28px;line-height:1.7;background:#fff;color:#111}.sheet{min-width:0;overflow:auto;padding:14px 18px}.sheet h2{font-size:1.05rem;margin:18px 0 10px;border-bottom:1px solid var(--line);padding-bottom:7px}.sheet h2:first-child{margin-top:0}.form{margin-bottom:10px}.form label{display:block;color:var(--mut);font-size:.72rem;margin-bottom:4px}.form input,.form textarea,.form select{width:100%}.form textarea{min-height:82px;resize:vertical}.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.autosave{position:sticky;bottom:0;background:#122017;padding:9px;border:1px solid #238636;border-radius:8px;color:#7ee787;font-size:.78rem;margin-top:12px}.actions{display:flex;gap:6px;flex-wrap:wrap}.textcheck{padding:7px 9px;border-radius:7px;font-size:.76rem}.textcheck.ok{background:#122017;color:#7ee787;border:1px solid #238636}.textcheck.no{background:#2b2111;color:#e3b341;border:1px solid #9e6a03}.quote-entry{display:grid;grid-template-columns:145px 78px 1fr 42px;gap:7px;align-items:end;margin-bottom:8px}.quote-entry textarea{min-height:72px}.plus{font-weight:900;font-size:1.15rem;padding:10px 0}.quotes{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.quote-card{display:grid;grid-template-columns:120px 55px 1fr 34px;gap:8px;padding:9px;background:#111820;border:1px solid var(--line);border-radius:8px;align-items:start}.qtag{color:#79c0ff;font-weight:700}.qpage{color:#e3b341}.qtext{white-space:pre-wrap;line-height:1.5}.qdel{padding:2px 6px;border:0;background:transparent;color:#f85149}.taghint{font-size:.72rem;color:var(--mut);margin:-5px 0 8px}.tagchips{display:flex;gap:5px;flex-wrap:wrap;margin-top:-4px;margin-bottom:8px}.tagchip{font-size:.68rem;color:#79c0ff;border:1px solid #1f6feb;border-radius:999px;padding:2px 6px;background:#0d1b2a}@media(max-width:900px){.library{grid-template-columns:1fr;height:auto}.pane{height:60vh}.reader.open{grid-template-columns:1fr}.reading{height:52vh}.sheet{height:48vh}.quote-entry{grid-template-columns:100px 65px 1fr 38px}}
 @media print{body>*{display:none!important}.reader.open{display:block!important;position:static}.reading{display:none}.sheet{display:block!important;overflow:visible}.autosave,.actions,.rh,.plus,.qdel{display:none!important}}
@@ -115,7 +115,7 @@ header{padding:12px 16px;border-bottom:1px solid var(--line);background:#0b1018;
 <div class="overlay" id="reportOverlay"><div class="ovh"><div><b id="rt"></b><div class="meta" id="rm"></div></div><button onclick="closeReport()">Cerrar</button></div><div class="ovbody" id="rb"></div></div>
 <div class="reader" id="reader"><section class="reading"><div class="rh"><div><b id="readTitle"></b><div class="meta" id="readMeta"></div><div id="textCheck"></div></div><div class="actions"><button onclick="externalOpen()">Abrir original</button><button onclick="closeReader()">Volver</button></div></div><div class="viewer" id="viewer"></div></section><section class="sheet" id="sheet"></section></div>
 <script>
-let A_corpus=[], A_teoricos=[], R=[], F={}, selected=null, currentCollection='corpus';
+let A_corpus=[], A_teoricos=[], R=[], W=[], F={}, selected=null, currentCollection='corpus';
 const KEY='scrapeador_fichas_maestro_v3', $=x=>document.getElementById(x);
 function norm(v){return(v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 function esc(v){return(v||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
@@ -137,6 +137,7 @@ async function init(){
   A_corpus=await fetch('library_articles.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
   A_teoricos=await fetch('teoricos_articles.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
   R=await fetch('report_history.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
+  W=await fetch('weekly_reports.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
   await loadMaster();
   $('cntCorpus').textContent=A_corpus.length.toLocaleString();
   $('cntTeoricos').textContent=A_teoricos.length.toLocaleString();
@@ -182,14 +183,43 @@ function filter(){
   });
 }
 
+function fmtDate(d){return esc((d||'').split('-').reverse().join('/'))}
 function renderReports(){
   $('reports').innerHTML='';
+  if(W.length){
+    $('reports').insertAdjacentHTML('beforeend','<div class="report-group">Selecciones semanales de lecturas</div>');
+    W.slice().reverse().forEach(r=>{
+      let d=document.createElement('div');d.className='report weekly';
+      d.innerHTML=`<div class="report-date">${fmtDate(r.date)}</div><div class="title">Selección semanal · ${(r.items||[]).length} recomendaciones</div><div class="meta">${esc((r.intro||'').slice(0,160))}${(r.intro||'').length>160?'…':''}</div>`;
+      d.onclick=()=>openWeekly(r);
+      $('reports').appendChild(d);
+    });
+    $('reports').insertAdjacentHTML('beforeend','<div class="report-group">Informes de actualización del scraper</div>');
+  }
   R.slice().reverse().forEach(r=>{
     let d=document.createElement('div');d.className='report';
     d.innerHTML=`<div class="report-date">${esc(r.date.split('-').reverse().join('/'))}</div><div class="title">Informe de actualización bibliográfica</div><div class="meta">${r.new} incorporaciones · base acumulada ${r.base}</div><div class="meta">${esc(r.sources)}</div>`;
     d.onclick=()=>openReport(r);
     $('reports').appendChild(d);
   });
+}
+
+function normDoi(v){return (v||'').toString().toLowerCase().replace(/^https?:\/\/(dx\.)?doi\.org\//,'').trim()}
+function openWeekly(r){
+  const byDoi={};A_corpus.forEach(a=>{const k=normDoi(a.doi);if(k)byDoi[k]=a});
+  $('rt').textContent='Selección semanal · '+(r.date||'').split('-').reverse().join('/');
+  $('rm').textContent=`${(r.items||[]).length} recomendaciones`;
+  let html='';
+  if(r.intro)html+=`<p class="weekly-intro">${esc(r.intro)}</p>`;
+  if(r.priority)html+=`<p class="weekly-priority"><b>Prioridad de lectura:</b> ${esc(r.priority)}</p>`;
+  html+=(r.items||[]).map((it,i)=>{
+    const inLib=byDoi[normDoi(it.doi)];
+    const link=it.url?`<a href="${attr(it.url)}" target="_blank" rel="noopener">Abrir publicación</a>`:'';
+    const lib=inLib?`<button class="primary" onclick='readById(${JSON.stringify(id(inLib))})'>Leer y fichar (en la biblioteca)</button>`:'<span class="pill">Todavía no está en la biblioteca</span>';
+    return `<div class="report-paper"><div class="title">${i+1}. ${esc(it.title)}</div><div class="meta">${esc(it.authors)} · ${esc(it.year)}</div><div class="weekly-apa">${esc(it.apa)}</div>${it.why?`<p class="weekly-why">${esc(it.why)}</p>`:''}<div class="actions">${link} ${lib}</div></div>`;
+  }).join('');
+  $('rb').innerHTML=html;
+  $('reportOverlay').classList.add('open');
 }
 
 function openReport(r){
