@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 import re
 import unicodedata
 from collections import Counter
@@ -688,6 +689,18 @@ def _surnames(authors: Any) -> set:
     return out
 
 
+def _name_tokens(authors: Any) -> set:
+    """Todos los tokens de los nombres: cubre apellidos compuestos o invertidos
+    ("De la Vega" frente a "de la Vega Rodríguez")."""
+    return {tok for tok in norm(str(authors or "").replace(";", " ").replace("|", " ")).split()
+            if len(tok) >= 4 and tok not in {"dela", "della", "van", "von"}}
+
+
+def _distinct_dois(a: Dict[str, Any], b: Dict[str, Any]) -> bool:
+    da, db = (str(r.get("doi") or "").strip().lower() for r in (a, b))
+    return bool(da and db and da != db)
+
+
 def _close_years(a: Dict[str, Any], b: Dict[str, Any]) -> bool:
     try:
         return abs(int(str(a.get("publication_year"))[:4]) - int(str(b.get("publication_year"))[:4])) <= 1
@@ -742,6 +755,9 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
                 i, j = idxs[a], idxs[b]
                 ai, aj = _surnames(rows[i].get("authors")), _surnames(rows[j].get("authors"))
                 if ai & aj:
+                    union(i, j)
+                elif (len(norm(rows[i].get("title"))) >= 35 and not _distinct_dois(rows[i], rows[j])
+                      and _name_tokens(rows[i].get("authors")) & _name_tokens(rows[j].get("authors"))):
                     union(i, j)
                 elif (not ai or not aj) and len(norm(rows[i].get("title"))) >= 35 and _close_years(rows[i], rows[j]):
                     # Un registro sin autores con el mismo título largo y año
@@ -898,5 +914,38 @@ def main() -> None:
     print(f"Reporte: {REPORT_JSON}")
 
 
+def deduplicate_master() -> None:
+    """Segunda pasada sobre el master ya curado. El enriquecimiento agrega DOI
+    a registros de CONICET después del filtro y así aparecen duplicados con
+    las versiones de OpenAlex que la primera pasada no podía ver."""
+    fieldnames, rows = read_csv_if_exists(MASTER_CSV)
+    if not rows:
+        return
+    kept, duplicates = deduplicate(rows)
+    if not duplicates:
+        print("Sin duplicados nuevos tras el enriquecimiento.")
+        return
+    write_csv(MASTER_CSV, fieldnames, kept)
+    kept_ids = {r.get("record_id") for r in kept}
+    latest_fields, latest = read_csv_if_exists(LATEST_RELEVANT_CSV)
+    write_csv(LATEST_RELEVANT_CSV, latest_fields or fieldnames, [r for r in latest if r.get("record_id") in kept_ids])
+    dup_fields, previous = read_csv_if_exists(DUPLICATES_CSV)
+    write_csv(DUPLICATES_CSV, dup_fields or fieldnames + ["duplicate_of"], previous + duplicates)
+    _, review = read_csv_if_exists(REVIEW_CSV)
+    _, rejected = read_csv_if_exists(REJECTED_CSV)
+    write_excel(kept, review, rejected, fieldnames)
+    if REPORT_JSON.exists():
+        report = json.loads(REPORT_JSON.read_text(encoding="utf-8"))
+        report["kept_high_relevance"] = len(kept)
+        report["latest_high_relevance"] = sum(1 for r in latest if r.get("record_id") in kept_ids)
+        report["duplicates_merged"] = report.get("duplicates_merged", 0) + len(duplicates)
+        report["by_source_kept"] = dict(Counter(source_name(r) for r in kept))
+        REPORT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Duplicados fusionados tras el enriquecimiento: {len(duplicates)}")
+
+
 if __name__ == "__main__":
-    main()
+    if "--solo-duplicados" in sys.argv:
+        deduplicate_master()
+    else:
+        main()
