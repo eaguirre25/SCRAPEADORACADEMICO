@@ -1,6 +1,6 @@
 {
   "embedding_model_name": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
-  "embedding_model_revision": "4328cf26390c98c5e3c738b4460a05b95f4911f5",
+  "embedding_model_revision": null,
   "embedding_dimension": 768,
   "embedding_batch_size": 64,
   "embedding_normalization": true,
@@ -11,16 +11,16 @@
   },
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
-    "n_neighbors": 10,
+    "n_neighbors": 30,
     "n_components": 10,
-    "min_dist": 0.1,
+    "min_dist": 0.0,
     "metric": "cosine",
     "random_state": 42,
     "low_memory": true
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 35,
+    "min_cluster_size": 50,
     "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",
@@ -247,17 +247,17 @@
     "evaluation": true
   },
   "seed": 42,
-  "python_version": "3.12.13",
+  "python_version": "3.11.16",
   "package_versions": {
     "bertopic": "0.17.4",
-    "sentence-transformers": "5.6.1",
+    "sentence-transformers": "5.7.0",
     "umap-learn": "0.5.12",
     "hdbscan": "0.8.44",
     "scikit-learn": "1.7.2",
-    "numpy": "2.3.5",
+    "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "9450d4b8c7b5e675aef98dc38cc28621579673e6403bfe28b7fff1fd8f6a8b8e",
+  "corpus_hash": "d65e1bd6987522d143391de97a052db3251b5f5c1734dd9fd9b3f97365a0d846",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "37e402b2e4df428a1418b781aeabb49997ff31027e62a2e88e4580a3ad4a71c3"
+  "embedding_cache_hash": "fe59ea503cfbbb8ab6769b6416dd20efb00f91e8c9c316f3c4308b65ccc3b2ce"
 }
