@@ -1,0 +1,764 @@
+Empowering Educational Leadership Research
+                                  with Generative AI:
+                             Insights and Innovations from a Qualitative EdD Dissertation
+                                                                           Corrie Wilder
+                                                                Washington State University-Everett
+                                                                      corrie.wilder@wsu.edu
+
+                                                                      Shannon Calderone
+                                                                Washington State University-Everett
+                                                                   Shannon.Calderone@wsu.edu
+
+
+
+                                                                                 ABSTRACT
+                This study explores the integration of generative artificial intelligence (AI) into qualitative research within a
+                higher education context. Through a collaborative self-study, a doctoral candidate and their dissertation
+                supervisor examined the application of Google’s Gemini 1.5 to analyze interview data from a dissertation of
+                practice (DiP) focused on interinstitutional partnerships. The findings demonstrate that AI can enhance the
+                depth and efficiency of qualitative analysis, revealing hidden complexities and patterns while augmenting the
+                researcher's analytical skills and fostering reflexivity. However, challenges related to data integrity, potential
+                biases, and the need for careful human oversight are also discussed. This research offers insights into the
+                transformative potential of AI in qualitative research, particularly within doctoral education, while raising
+                important ethical considerations and prompting a re-evaluation of traditional dissertation practices in the context
+                of emerging technologies.
+
+                KEYWORDS
+                generative Artificial Intelligence, qualitative research, educational leadership, collaborative self-study, AI ethics in education
+
+
+
+      Technological adoption and adaptation have long posed                           dissertation research, Kaczynski (2006) was also quite clear.
+challenges to methodologists. As far back as the 1980s, qualitative                   Dissertation supervisors and doctoral candidates must re-orient their
+data analysis (QDAS) programs were being introduced as aids to                        assessments of methodological rigor with the reality that QDAS
+narrative and textual-based research (Wolski, 2018). The                              programs were here to stay.
+development of these digital tools resulted in a proliferation of                           Not surprisingly, we find ourselves at a similar crossroads.
+platforms designed to support empirical analyses. Programs like                       Educators now face an even more decisive challenge in navigating
+Atlas.ti, NVivo, MAXQDA, Dedoose, and Quirkos not only replaced                       the far-reaching implications of generative Artificial Intelligence (AI)
+the time-consuming and arduous manual approach to coding and                          on qualitative research – and particularly on AI’s role in supporting
+analysis, they also offered built-in features such as the pre-loading of              the analytical aspects of the dissertation of practice (DiP). Questions
+codes, importing diverse file formats, as well as a litany of visualizing             over the potential influence of these technologies on the fundamental
+and reporting features. However, methodological scholars also                         aims of the DiP promise to recalibrate expectations surrounding
+viewed these platforms with a degree of skepticism. The famous                        novice qualitative research as perceived by the scholar-practitioner
+qualitative methodologist Max Van Manen (2014) claimed that QDAS                      as well as their dissertation supervisor (Storey & Maughan, 2016).
+software was incompatible with phenomenological work. He argued                       As AI continues to influence how/in what way we engage in the
+that QDAS software might be philosophically congruent with                            research process, it has the potential to alter how dissertation
+grounded theory or ethnography; however, automation of any                            research is conducted, analyzed, and even implemented. This
+digitally-driven re-reading of text, codification, and/or generating of               transformation should compel Carnegie Project on the Education
+new texts was philosophically incompatible with phenomenological                      Doctorate (CPED) programs to take a pause in order to reconsider
+traditions. Others critiqued the use of QDAS platforms as barriers to                 the resultant impact on traditional dissertation models. By proactively
+authentic learning, arguing that they are better conceived as data                    engaging with these issues, CPED programs can equip scholar-
+management and retrieval tools, particularly in the context of the                    practitioners with the skills and knowledge necessary to harness AI’s
+qualitative dissertation (Maher, et al., 2018). In response, Kaczynski                capabilities responsibly. This ensures that dissertations remain
+(2006) offered important (and seemingly prescient) admonishments                      rigorous and relevant in an increasingly AI-driven educational
+to these methodological purists, insisting that they adapt to these                   landscape. Furthermore, addressing these questions will help to
+new analytical advances. As for the resulting impact upon                             bridge the gap between theory and practice, fostering innovative
+
+
+
+                    New articles in this journal are licensed under a Creative
+                    Commons Attribution 4.0 United States License.                                   This journal is supported by the Carnegie Project on
+                                                                                                     the Education Doctorate: A Knowledge Forum on the
+                                                                                                     EdD (CPED) cpedinitiative.org
+                    This journal is published by Pitt Open Library Publishing.        impactinged.pitt.edu                      ISSN 2472-5889 (online)
+                                                                                      Vol.10 No.1 (2025)                        DOI 10.5195/ie.2025.489
+                                                                                                                                                                 18
+
+        Wilder & Calderone
+
+
+
+solutions to complex educational challenges and preparing future                  AI technologies, such as machine learning algorithms, natural
+leaders to be adept at navigating the technological advancements            language processing, and data mining, have the capability to
+that will undoubtedly shape the field in the years to come.                 process vast amounts of educational data with speed and accuracy
+                                                                            (Brown, 2022; Davis, 2021). These technologies can identify patterns
+Paper Overview                                                              and trends that might otherwise elude novice and experienced
+                                                                            researchers alike, providing deeper insights into student behavior,
+      How we might begin this process serves as the central aim of          learning outcomes, and educational disparities (Miller & Johnson,
+this paper. The author and co-author, a doctoral candidate and              2023). For instance, machine learning algorithms can analyze
+dissertation supervisor, respectively, document use of the Preview          standardized test scores, attendance records, and other educational
+version of Google’s Gemini 1.5 Pro (Gemini 1.5) within the context of       metrics to predict student performance and identify at-risk students
+a DiP. More specifically, we examine the doctoral candidate’s               that can enable timely, more impactful interventions (Robinson,
+application of Gemini 1.5 (subscription required) as a means for            2022).
+reducing qualitative data collected in support of a higher education-
+                                                                                  Moreover, AI can facilitate the personalization of education by
+oriented DiP. We do this by documenting how Gemini 1.5 Pro served
+                                                                            tailoring learning experiences to individual needs (Thompson, 2023).
+to elevate and deepen the doctoral student’s thinking about the
+                                                                            Adaptive learning systems, powered by AI, can adjust content and
+themes that emerged from both the QDAS-based analysis of her
+                                                                            pacing based on a student’s performance and preferences, fostering
+collective narrative data and AI-driven analysis. Questions we sought
+                                                                            a more engaging and effective learning environment (Jones, 2022).
+to address through this paper were:
+                                                                            This level of personalization is grounded in rigorous data analysis,
+     • In what ways does AI-driven data analysis produce new,               allowing for continuous assessment and real-time feedback, which
+       unanticipated ways of thinking about the problem of practice         can significantly enhance the learning experience (Smith, 2023).
+       at the heart of this dissertation in practice?
+                                                                                 AI has increasingly become an invaluable tool for qualitative
+     • In what ways does the use of AI-driven tools strengthen the          methodologists, offering a wide array of methods and techniques to
+       doctoral student’s understanding of the data analysis                enhance data collection, analysis, and interpretation (Clark, 2022).
+       process? The potential bias (or avoidance of bias)?                  To better ground our discussion over the use of generative AI for
+     • How does the use of AI-driven tools shape/inform researcher          research purposes, we offer a brief overview of the different ways AI
+       positionality?                                                       can be employed in qualitative research, highlighting its specific
+                                                                            contributions to data gathering, coding and analysis, and the
+     • In what ways does the use of AI generated tools push upon,
+                                                                            synthesis of findings (Lewis & Harris, 2021a).
+       expand, or delimit the boundaries for what constitutes
+       dissertation-level research as determined by the dissertation
+       supervisor?                                                          Data Collection
+      This paper addresses these questions in dialogical fashion,                 AI technologies have revolutionized data collection methods in
+whereby both a doctoral candidate and a dissertation supervisor             qualitative research (Taylor, 2022a). Traditional techniques such as
+reflect upon the analytical process and the underlying learning             interviews, focus groups, and ethnographic observations can be
+produced through the introduction of AI into the analysis phase of the      augmented by AI-powered tools to enhance efficiency and analytical
+candidate’s emergent DiP. Our shared intent was to document the             reach (Adams, 2023). One significant advancement in data collection
+actual experiences of a scholar-practitioner as she attempted to            is the use of Natural Language Processing (NLP). NLP algorithms
+carry out a high quality DiP while using AI generated data tools for        enable the automated transcription of spoken language into written
+the first time. For her part, the doctoral supervisor engaged in her        text, significantly reducing the time and effort required for
+own reflective process by considering how the use of AI aligned with        transcription (Young & Soroka, 2019). Voice recognition software
+the programmatic expectations of the DiP and the learning process           can transcribe interviews and focus group discussions accurately,
+undertaken by the doctoral candidate. We conclude our discussion            preserving nuances and details essential for qualitative analysis
+by examining how the AI-informed dissertation work aligns with              (Young & Soroka, 2019). Additionally, AI-driven chatbots and virtual
+CPED principles pertaining to learning and impact.                          assistants can conduct semi-structured interviews with participants,
+                                                                            ensuring consistency in questioning and enabling researchers to
+                                                                            reach a larger and more diverse sample (Tegmark, 2017). These
+AI AND QUALITATIVE ANALYSIS                                                 chatbots can be programmed to probe deeper based on participant
+                                                                            responses, mimicking human interviewers (Tegmark, 2017).
+      In the case of social science research, generative AI has led to
+the emergence of a number of AI-driven analytical platforms, such as
+Scholarcy, dscout, Domo, Consensus, Elicit.org, Scite.ai, Chat PDF,         Data Coding and Analysis
+as well as longstanding writing aids like Grammarly, copy.ai, and                The coding and analysis of qualitative data, traditionally a labor-
+others (Johnson, 2023a; Patel, 2022). Tools such as Scholarcy and           intensive process, can be significantly streamlined through AI
+Chat PDF have emerged as the forerunners of a powerful line of AI-          technologies (Jackson, 2023). Automated coding is one such
+driven fast learning tools that serve to aid in the digestion of research   advancement. AI algorithms, particularly those leveraging machine
+literature (Lee & Kim, 2021; Morgan, 2023). Other services such as          learning, can assist in coding large datasets by identifying themes,
+Akkio, Power BI, as well as Chat GPT provide the means by which to          patterns, and categories within the text (Saldaña, 2016). Supervised
+analyze vast amounts of data in order to identify trends and patterns       learning models can be trained on a subset of data coded by human
+that might lead to empirical claims (Morgan, 2023; Smith & Nguyen,          researchers, allowing the AI to apply these codes to the rest of the
+2022).                                                                      dataset with high accuracy (Saldaña, 2016).
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu              Vol. 10 No. 1 (2025)       DOI 10.5195/ie.2025.489                                                                   19
+
+         Empowering Educational Leadership Research
+
+
+
+      Thematic analysis, another core aspect of qualitative research,       research. In spite of the many different ways one could use AI to
+can be enhanced by AI through clustering similar data points and            support dissertation-related data collection efforts, I (Corrie Wilder)
+suggesting potential themes (Garcia, 2022a). Topic modeling                 carried out what many would term a conventional qualitative EdD
+techniques, such as Latent Dirichlet Allocation (LDA), can                  dissertation. I engaged in a series of semi-structured interviews,
+automatically detect and categorize themes within large text, aiding        recorded and transcribed these interviews, which ultimately resulted
+researchers in identifying underlying patterns and relationships (Blei      in hundreds of pages of text-based qualitative data. Working with my
+et al., 2003). Furthermore, sentiment analysis tools, powered by            doctoral advisor (Shannon Calderone), I utilized a combination of
+NLP, can gauge the emotional tone of qualitative data (Pang & Lee,          traditional methods to initiate my data analysis work. As our shared
+2008). These tools can analyze the sentiment expressed in                   fascination with AI tools became more apparent, we mutually agreed
+interviews, open-ended survey responses, and social media posts,            to use an AI as a means of testing its analytical efficacy. The
+providing insights into participants’ attitudes and feelings (Pang &        outcomes of this experimentation would ultimately serve as a
+Lee, 2008).                                                                 valuable case study for exploring the ways AI technologies can be
+     In addition to text data, AI can analyze visual and audio data,        integrated and leveraged effectively.
+identifying patterns and extracting relevant information (Datta, 2020).
+For instance, facial recognition software can detect emotional              Background Context for Using AI as an Analytical
+expressions during interviews, and audio analysis tools can identify        Tool in my DiP
+voice modulation and other auditory cues that provide context to
+                                                                                  My (Corrie’s) dual role as a doctoral candidate in Educational
+spoken words (Datta, 2020). These capabilities extend the scope of
+                                                                            Leadership and Executive Director of Marketing and
+qualitative research to include multimodal data sources, enriching
+                                                                            Communications at WSU Everett has created an interesting
+the analysis process (Wang, 2023a).
+                                                                            connection between my academic and professional pursuits. I have
+                                                                            firsthand experience embracing innovative technologies, including
+Synthesis of Findings                                                       AI, to address real-world challenges in higher education, such as
+      AI offers the ability to aid in synthesizing qualitative findings,    enhancing the campus’s reputation, increasing student enrollment,
+offering tools for data visualization and integration with other data       and cultivating strategic partnerships.
+types (Carter, 2022). AI-powered visualization tools can transform                This has opened my eyes to the power of AI as an analytical
+qualitative data into interactive graphs, charts, and maps (Kelle,          tool. For this reason, I began to consider its usefulness in support of
+2001). These visualizations help researchers more effectively identify      my dissertation work. My dissertation research focuses on the
+and communicate complex patterns and relationships within the data          influence of cultural dynamics on interinstitutional collaboration,
+(Kelle, 2001).                                                              specifically examining a recently established Degree Partnership
+       While outside the scope of the work reported here, AI does           Program (DPP) between WSU Everett and Everett Community
+facilitate the integration of qualitative and quantitative data, enabling   College. I was directly involved in the DPP’s development and
+mixed-methods research (Nelson, 2023). For example, qualitative             implementation, which, combined with my doctoral studies, sparked
+themes identified through AI can be cross-referenced with                   my curiosity for understanding how cultural factors and risk
+quantitative survey results, providing a more comprehensive                 perceptions shape the success of such partnerships. This insider
+understanding of the research topic (Creswell & Plano Clark, 2017).         perspective on the WSU-EvCC interinstitutional collaboration offered
+This integration allows for a more nuanced analysis that combines           an opportunity for rich insights. Yet, like so many EdD doctoral
+the depth of qualitative insights with the breadth of quantitative data     candidates doing dissertation research on work that has professional
+(Creswell & Plano Clark, 2017).                                             significance and meaning to me, I was naturally curious as to
+                                                                            whether my findings could be further strengthened through the use of
+      What we find is that AI has the capacity to support novice
+                                                                            AI. My professional and personal curiosity about AI coupled with my
+qualitative research by enhancing data collection, coding, analysis,
+                                                                            commitment to rigorous analysis of my dissertation data led to a new
+and synthesis (Thompson, 2022). By leveraging AI technologies,
+                                                                            AI-focused phase in my analytical process.
+researchers are able to manage larger datasets with greater
+efficiency, uncover more significant (deeper) insights emerging from              Recognizing AI’s potential to deepen my understanding of the
+narrative/textual data sources, and present their findings more             data, I applied a hybrid method for data analysis, merging traditional
+effectively (Wang, 2023b). As AI continues to advance, its integration      thematic analysis with the advanced capabilities of Generative AI
+into qualitative research methods will likely become even more              technology, specifically the Preview of what is now Google’s Gemini
+sophisticated, further expanding its influence over qualitative             1.5 Pro(subscription required). Initially, I employed Dedoose and
+research (Clark, 2022).                                                     thematic analysis techniques to identify primary themes and patterns
+                                                                            within the interview transcripts. Following this, I leveraged Gemini 1.5
+                                                                            to explore the data more thoroughly, utilizing its ability to uncover
+REFLECTIONS OF AN EDD DOCTORAL                                              subtle nuances and connections in the text. This combined approach
+CANDIDATE’S USE OF AI TO SUPPORT                                            significantly enhanced my understanding of the participants’
+QUALITATIVE ANALYSIS                                                        experiences by uncovering deeper layers of meaning.
+                                                                                  Despite the advantages, I remained cautious about the potential
+     The potential of AI to support qualitative research, as outlined
+                                                                            limitations of Gemini 1.5, such as the risk of misinterpretation or bias
+above, presents a unique challenge and opportunity for doctoral
+                                                                            in the outputs produced. To mitigate these risks, I carefully reviewed
+candidates. As novice researchers navigate a complex, in-depth data
+                                                                            and validated all insights produced through my use of Gemini 1.5
+analysis process for the first time, AI tools offer a promising avenue
+                                                                            against the original interview transcripts to ensure their accuracy and
+for exploring deeper insights and enhancing the rigor of their
+                                                                            reliability before incorporating them into my analysis.
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu               Vol. 10 No. 1 (2025)       DOI 10.5195/ie.2025.489                                                                  20
+
+        Wilder & Calderone
+
+
+
+Process Reflections                                                              As expected, my Gemini 1.5 research assistant surfaced
+     The culmination of my EdD journey, a DiP, presented an                numerous excerpts aligned with my initial thematic analysis.
+                                                                           Sentiments of threat and fear of loss from stakeholders at Institution
+opportunity to explore interorganizational relationships, a core
+                                                                           A confirmed my earlier observations about anxieties surrounding
+challenge of effective educational leadership. Guided by the CPED’s
+                                                                           resource allocation and job security. Similarly, expressions of
+focus on practical problem-solving (CPED, n.d.), my research
+examines the interplay of culture and risk perception within a             institutional hierarchy and status disparity resonated with my
+                                                                           understanding of the power imbalance between the two collaborating
+concurrent enrollment partnership between a community college and
+                                                                           institutions.
+a university.
+      Central to my analysis is the exploration of semi-structured               The true impact of this human-AI collaboration emerged in the
+                                                                           Gemini 1.5’s ability to generate novel insights within excerpts that I
+interview data collected from stakeholders, including university and
+                                                                           had overlooked in my manual analysis. For example, I prompted
+community college leadership, faculty, and staff who were directly
+involved in the initial creation and execution of the DPP. Prior to        Gemini 1.5 to identify excerpts with varying sentiments and themes
+                                                                           to uncover evidence of underlying cultural factors shaping
+analysis with Gemini 1.5, all interview transcripts were de-identified
+                                                                           institutions’ differing risk perceptions. It quickly pulled two quotes,
+to protect participant privacy. This involved removing all identifiable
+personal and organizational information, such as names, job titles,        comparing one institution’s agility and adaptability (“[The campus],
+                                                                           being smaller, tends to be pretty nimble”) to the other’s more
+and institution names, and assigning participants unique codes.
+                                                                           cautious and collaborative approach (“Every new administrator wants
+     Seeking to optimize my analysis and potentially uncover hidden        us to do a new thing in a new way… That, I think, makes some of the
+insights, I leveraged Gemini 1.5, as my de facto research assistant. I     strategic stuff really, really hard.”). The speed and accuracy of this
+chose Google’s AI tool for several reasons, including its large context    data extraction enriched my analysis beyond what was uncovered
+window (over a million tokens, where tokens are units of text such as      manually.
+words or parts of words), advanced reasoning abilities, and potential
+                                                                                 Due to privacy considerations and the use of Google’s incognito
+for multi-modal analysis (Google DeepMind, 2024).
+                                                                           browsing sessions, I was not able to retain the precise prompts I
+      The decision to utilize GenAI capabilities reflected in Gemini 1.5   used in collaboration with Gemini 1.5. The following examples,
+aligns with the growing movement within academia to explore AI’s           reconstructed from my notes, illustrate some insights gained through
+potential in enhancing research processes and expanding the                this Gemini 1.5-assisted analysis. Table 1 includes the recreated
+boundaries of knowledge creation (Mollick & Mollick, 2024). It
+empowers researchers to explore and analyze data in novel ways. In         Table 1. Reconstructed prompts and output summaries
+line with Sætra’s (2022) exploration of using AI as a tutor based on
+                                                                           Reconstructed          Summary of AI’s output              Reflection on insights
+Vygotsky’s theory of human learning, I envisioned working with
+                                                                           Prompt
+Gemini 1.5 as a knowledgeable other, a co-intelligence capable of
+revealing patterns, connections, and lines of inquiry that might have      “Let's analyze         Analysis of stakeholder language    I was initially focused on
+                                                                           differences in         revealed a clear contrast in how    the logistical and
+otherwise remained obscured within the multiplicity of qualitative         language between       the two institutions viewed the     operational aspects of the
+data generated by semi-structured interviews.                              the institutions       DPP’s impact on their identity.     collaboration. The AI’s
+                                                                           related to the         WSU Everett representatives         analysis, ironically,
+     Next, I explore how my collaboration with Gemini 1.5 confirmed        potential risks and    consistently emphasized themes      reminded me to consider
+my initial understanding of my problem of practice and unveiled            benefits of the DPP.   of quality, efficiency, and         the human side of things,
+unforeseen nuances and complexities within my data. It ultimately          What significant       strategic growth, reflecting a      like how cultural
+                                                                           differences do you     confidence in their ability to      differences were shaping
+transformed my approach to data analysis and enriched the depth            see in their           manage risks and leverage the       stakeholder perceptions
+and scope of my dissertation research.                                     perspectives on the    partnership for institutional       and interactions. This
+                                                                           impact to              advancement. Conversely,            realization prompted me to
+Human-AI Collaboration for Enhanced Qualitative                            institutional          EVCC stakeholders frequently        revisit my interview data
+                                                                           identity?”             used language that expressed        and other documents
+Analysis                                                                                          anxiety, a sense of threat, and a   through the lens of cultural
+                                                                                                  desire to protect their autonomy    bias, uncovering
+       As I mentioned earlier, I began my collaboration with Gemini                               and values. The AI highlighted      numerous instances
+1.5, having already conducted a thorough manual analysis of my                                    the prevalence of phrases like      where this tension
+                                                                                                  “selling the farm,” “taking our     between quality and
+dissertation data through the popular QDA program, Dedoose. This
+                                                                                                  students,” and "weren’t             inclusivity played out in
+initial phase was crucial in building familiarity with my data. Thus,                             included," revealing a deep-        decision-making
+ensuring that I, as the researcher, was able to remain firmly in the                              seated concern about WSU            processes and
+driver’s seat, guiding the direction of the data’s analysis and                                   Everett's intentions and            communication patterns.
+                                                                                                  influence.
+interpretation.
+      One of the most significant contributions of the Gemini 1.5-         “Please consider       Gemini 1.5 identified distinct      This contrast, revealed
+                                                                           recurring patterns     language patterns that revealed     through the AI’s analysis
+enhanced data analysis in my dissertation research was its ability to      that reveal the        contrasting cultural values and     of language patterns,
+reveal hidden complexities and unanticipated connections within the        underlying cultural    decision-making approaches.         pointed to deeper cultural
+qualitative data. For one, I recognized the potential for AI to augment    values and             For WSU Everett, the AI             differences in how the two
+                                                                           approaches to          highlighted the prevalence of       institutions approach
+my analysis and uncover deeper insights. Therefore, I decided to           decision-making.”      terms related to efficiency, data   decision-making and
+explore the capabilities of Google’s Gemini 1.5. Its unique 1M token                              analysis, and strategic planning.   manage change. This
+context window (increased to 2M since the time of my analysis) has                                Phrases like                        analysis confirmed my
+                                                                                                                                      original findings, that the
+the capacity to process and analyze large quantities of text                                                                          tensions within the DPP
+simultaneously. This offers a promising avenue for revisiting the data                                                                were not simply about
+with fresh eyes and exploring potential connections and patterns that                                                                 specific
+
+may have eluded my initial manual analysis.
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu               Vol. 10 No. 1 (2025)      DOI 10.5195/ie.2025.489                                                                                 21
+
+         Empowering Educational Leadership Research
+
+
+
+prompts and summarizes AI’s contributions to illustrate its role in           Generative AI as Tools, Collaborators, and
+enriching my understanding of the DPP.                                        Disruptors in Scholar-Practitioner Development
+     By building upon a foundation of thorough manual analysis and
+                                                                                    My experience with Gemini 1.5 enhanced my development as a
+leveraging Gemini 1.5’s ability to process and analyze large amounts
+                                                                              scholar-practitioner. It has prompted me to reevaluate traditional
+of data, I achieved a more comprehensive understanding of the
+                                                                              research approaches and sparked an ongoing exploration of the
+tensions that served at the heart of my dissertation’s problem of
+                                                                              evolving landscape of knowledge creation that I was building in
+practice – namely, how might we overcome the inherent challenges
+                                                                              relation to my dissertation work. It remains unclear exactly how much
+to meaningful institutional collaboration? This approach confirmed
+                                                                              time I saved through the assistance of Gemini 1.5; frankly, I
+my initial hypotheses related to the role of risk and risk aversion,
+                                                                              challenge efficiency as the sole value of this technology. The most
+while simultaneously unveiling unanticipated complexities and
+                                                                              significant benefit was the enhanced accuracy and depth of analysis
+underlying cultural factors related to institutional actions in the
+                                                                              it helped to facilitate.
+collaboration process. By evolving my approach to include AI-
+informed data analysis, I was able to enrich the depth and scope of                 Initially, I leveraged Gemini 1.5 as a tool for tasks like quote
+my dissertation research.                                                     verification and duplicate identification, ensuring the integrity of my
+                                                                              data and freeing up mental space for deeper engagement with the
+                                                                              analysis. However, as my familiarity with the technology grew, so did
+AI as a Catalyst for Reflexivity and Bias-Awareness                           my ability to employ its capabilities for more complex tasks.
+      Leveraging Gemini 1.5 strengthened my understanding of the              Engaging in conversations with Gemini 1.5, similar to brainstorming
+data analysis process and heightened my awareness of potential                with a research colleague, prompted me to consider alternative
+biases. Beyond the efficiency gained through tasks like quote                 perspectives and explore new avenues of inquiry. It was startlingly
+verification and duplicate identification, engaging with Gemini in a          human in its responses. I recall likening my exchanges with Gemini
+conversational manner, similar to working with a human research               1.5 to a knowledgeable instructor who never tires of repeating herself
+assistant, opened up new avenues for exploring the data and                   to help Corrie understand a concept. For instance, when prompting it
+interpreting findings.                                                        to share the connection between several excerpts I defined as
+      This process of interacting with AI fostered a heightened               explanative of risk perception, Gemini 1.5 suggested the institutions’
+awareness of my own potential biases as a researcher. Recognizing             perspectives were in contrast and suggested further exploration of
+Gemini 1.5 and other generative AI program’s tendency to be eager             the university’s hierarchical structure versus the community college’s
+to please required careful attention to my phrasing and prompts,              egalitarian structure. This prompted a conversation about
+ensuring I was not inadvertently leading the tool toward a particular         organizational structure and my subsequent return to the literature,
+desired outcome (Mollick, 2022). This awareness extended to the               ultimately enriching my understanding of the cultural factors
+data itself, prompting me to critically examine potential biases in           influencing interorganizational relationships.
+participant selection, my familiarity with the participants outside of             Additionally, using the technology’s pattern and connection
+their affiliation with the interinstitutional partnership, how I originally   identification abilities augmented my analytical skills. By presenting
+phrased questions, and my interpretation of responses.                        me with excerpts from multiple sources that shared thematic or
+      To mitigate these potential biases, my approach combined the            sentimental similarities, Gemini 1.5 enabled me to revisit the original
+strengths of Gemini 1.5 with human oversight and critical thinking.           transcripts with a fresh perspective, uncovering previously unnoticed
+For instance, I leveraged the ability of Gemini 1.5 to perform                connections and deepening my understanding of the complex
+sentiment analysis to compare the language used by stakeholders               partnership dynamics. Leveraging Gemini 1.5 honed my ability to
+from each institution, revealing differences in emotional tone and            synthesize information and fostered a more critical and reflexive
+highlighting underlying anxieties and power dynamics (Krugmann &              approach to research, encouraging me to challenge my assumptions
+Hartmann, 2024). I also explored language patterns used by                    about the data.
+participants in different job roles, uncovering potential biases or                 The skills and perspectives gained through this collaboration
+variations in risk perception related to their positions within the           extend beyond my dissertation research, directly informing my
+institutions. Additionally, Gemini 1.5’s capacity to analyze large            professional practice as a marketing professional and educational
+amounts of text helped identify contradictions and/or inconsistencies         leader. My understanding of AI’s potential for content creation,
+within and across interviews, prompting further investigation and a           sentiment analysis, and persona development has opened up
+more nuanced understanding of the data.                                       exciting possibilities for innovation and efficiency in my work.
+      However, my experience also highlighted the limitations of AI           Moreover, the experience has solidified my position as an AI
+programs like Gemini 1.5, which reinforced the critical need for              enthusiast and early adopter, and I am committed to exploring and
+human oversight. There were instances where Gemini generated                  integrating technology-assisted research methods in my future
+false excerpts, fabricating quotes that did not exist within the data.        endeavors.
+Fortunately, my deep familiarity with the interview transcripts allowed             On an epistemological level, my view of AI has evolved to
+me to identify these so-called hallucinations, instances where AI             encompass its multifaceted nature as a tool, collaborator, and
+produces misleading or fabricated data, which prevented them from             disruptor. While initially perceiving AI as a means to automate tasks
+influencing my analysis. This experience underscored the                      and improve efficiency, I now recognize its potential to co-create
+importance of maintaining a critical lens when working with AI tools          knowledge and challenge established ways of thinking. As AI
+and avoiding overreliance on their output. While AI can be a powerful         technology advances and my understanding deepens, I anticipate
+research assistant, it is not infallible, and human judgment remains          embracing its disruptive potential to further enhance my ability to
+crucial to ensuring the accuracy and integrity of qualitative analysis.       reflect, question assumptions, and approach research problems from
+                                                                              multiple perspectives.
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu                Vol. 10 No. 1 (2025)        DOI 10.5195/ie.2025.489                                                                 22
+
+        Wilder & Calderone
+
+
+
+     This journey with AI has also reinforced the importance of             DISSERTATION SUPERVISOR REFLECTIONS
+transparency and ethical considerations in research. I have
+intentionally documented my use of Gemini 1.5, from sharing details               As an associate professor of educational leadership, I
+with my committee chair when submitting the findings chapter to             (Shannon Calderone) have served on and chaired numerous
+including how and why AI was used in my dissertation’s methodology          dissertation committees. Corrie, however, was the first student to
+section and positionality statement. It is vital to ensure that my          utilize AI in her dissertation work. Prior to this experience, my
+committee and other future readers understand the role of AI in my          familiarity with AI was limited, and I had not been fully aware of its
+research process and that I demonstrate my commitment to open               potential application in supporting qualitative research methods,
+communication and responsible use of this technology.                       particularly data analysis. Consequently, I embarked on this
+                                                                            dissertation process with numerous questions and few definitive
+                                                                            answers. Nonetheless, I approached Corrie’s proposal to use Gemini
+Positionality
+                                                                            1.5 as an analytical tool serves as both an opportunity to satisfy my
+      Integrating AI technology into qualitative data analysis marked a     own curiosity about AI’s potential influence on the research process
+significant methodological change in my research. Using AI tools like       as well as an opportunity to assess the impact of AI could have on
+Google’s Gemini 1.5 transformed my data analysis approach, greatly          the dissertation process more generally. More to the point perhaps,
+enhancing the insights gained from the interview transcripts. This          Corrie’s interest in using AI tools to support her data analysis
+technology allowed for efficient exploration of large data sets,            seemed to me a wonderful opportunity to pilot AI’s potential
+uncovering subtle nuances and patterns that manual analysis might           usefulness in carrying out an empirically rigorous DiP and perhaps
+miss. However, it also brought about complexities concerning data           also serve as an opportunity for me to learn from the process along
+integrity and the risk of AI-driven errors or biases. Ethical               the way.
+considerations in using AI for data analysis were crucial. I carefully
+                                                                                 From the very outset Corrie demonstrated impressive self-
+monitored the AI outputs to prevent inaccuracies or hallucinations.
+                                                                            awareness and commitment to rigorous research practices in the
+My thorough familiarity with my data enabled me to identify and
+                                                                            context of her work on the DPP. Her investment in the subject
+correct such errors, highlighting the essential role of human
+                                                                            matter along with her deep interest in AI technology made her
+judgment alongside advanced AI tools.
+                                                                            proposal to document her manual/AI analytical processes easy to
+      Reflecting on my dual role as both the creator of the DPP and         buy into.
+the researcher evaluating its implementation, I recognized the
+                                                                                  One of my concerns entering into this process was the impact
+potential for confirmation bias and the impact of my professional
+                                                                            of AI on a novice researcher’s positionality as it relates to ownership
+investment in the program’s success. This reflexivity was essential
+                                                                            and bias in her data work. In Corrie’s case, this was a non-issue as
+for ensuring research integrity and understanding how my personal
+                                                                            she demonstrated a profound understanding of her dual role as both
+and professional experiences with the DPP might shape my study’s
+                                                                            the creator of the DPP and the evaluator of its implementation. She
+interpretations and conclusions. To address potential biases, I
+                                                                            was also acutely aware of the potential for confirmation bias due to
+employed several strategies to ensure the integrity and validity of my
+                                                                            her professional investment in the program. This recognition was
+findings. Acknowledging my dual role, I used data triangulation,
+                                                                            crucial, as it underscored how her dual role might influence her
+incorporating meeting observations and various documents, such as
+                                                                            interpretations and conclusions.
+program documentation and institutional records, alongside interview
+data. This provided a comprehensive view of the DPP’s impact and                  In her role as researcher, Corrie placed significant emphasis on
+helped validate findings from multiple perspectives. Additionally, I        reflexivity, actively reflecting on how her personal and professional
+maintained a reflective journal to document my thoughts and                 experiences shaped her research. Consequently, she diligently
+emotions, allowing me to critically assess how my expectations might        documented her thoughts and emotions in a reflective journal,
+influence the research. Regular peer debriefing sessions with               allowing for a critical assessment of her expectations and biases.
+unbiased colleagues outside the DPP context were also invaluable,           Additionally, she engaged in regular peer debriefing sessions with
+offering a platform to challenge my assumptions and refine                  colleagues not involved in the DPP. These sessions provided an
+interpretations, adding an external perspective to the research.            external perspective that challenged her ongoing assumptions about
+                                                                            her study and refined her subsequent interpretations. It also
+     Moreover, my cautious use of Gemini 1.5 in my qualitative data
+                                                                            assuaged my fears as to whether her AI would complicate how she
+analysis involved meticulous verification of AI-driven insights against
+                                                                            engaged with her qualitative data.
+the original data to ensure accuracy before inclusion in the analysis.
+This rigorous review process safeguarded against Gemini-driven                    By integrating Gemini 1.5, into her data analysis, there were
+errors affecting the study’s outcomes. Lastly, I explicitly discussed       additional complexities around data integrity and potential AI-driven
+potential biases within the research findings, acknowledging my             errors that Corrie was forthright in sharing and which served as
+background’s possible influence on the results and considering these        important learning for her. To her credit, Corrie was meticulous in
+biases’ impact on the study’s conclusions. By transparently                 monitoring AI outputs, preventing inaccuracies or fabrications in
+addressing these issues and employing a rigorous, multi-faceted             large part because of her familiarity with the data. This confirmation
+approach to managing biases, I aimed to enhance the                         process underscored the essential role she played in ensuring the
+trustworthiness and ethical rigor of my research, thereby                   accuracy and reliability of AI-assisted analysis within her dissertation.
+strengthening the credibility and reliability of the study’s conclusions.   Her use of Dedoose as a first step in her analytical process was
+                                                                            critical to this accuracy as it helped her to build a solid foundation of
+                                                                            understanding around her data. Corrie’s commitment to grasping the
+                                                                            nuances of her dataset was evident before she began to integrate
+                                                                            Gemini 1.5 into her analytical work.
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu              Vol. 10 No. 1 (2025)       DOI 10.5195/ie.2025.489                                                                    23
+
+        Empowering Educational Leadership Research
+
+
+
+      The decision to integrate Gemini 1.5 into her work marked a           allies in the research process, acting as knowledgeable assistants
+significant methodological shift. Initially, Corrie used AI for simpler     that help novice researchers delve deeper into their data. This
+tasks like quote verification and duplicate identification, ensuring        collaboration between human and machine not only augments the
+data integrity and freeing up mental space for more in-depth                candidate’s analytical capabilities but also fosters a more reflexive
+analysis. As she became more familiar with the AI technology, she           and critical approach to qualitative research. Based upon Corrie’s
+gravitated to more complex tasks. For example, her efforts to explore       reflections, there is also evidence to suggest that authentic
+participant sentiments led to new underlying patterns within the data.      engagement around issues of research bias not only leads to more
+This evolution of thinking demonstrated an increasing sophistication        rigorous and reliable findings, but also makes clear the ease with
+in using AI to augment her prior analytical work.                           which bias enters into analytical work. For developing, aspiring, and
+     Collaborating with AI also enhanced Corrie’s analytical skills by      current educational leaders, this is a lesson that cannot be
+revealing hidden complexities and unanticipated connections within          underestimated.
+the qualitative data. AI’s ability to process large quantities of text            In terms of an individual experience, there is much that Corrie’s
+simultaneously provided fresh perspectives and deeper insights than         reflections tell us about the value of generative AI tools in the
+what she might have accomplished on her own. This collaboration             research process. The elephant-sized question that still remains to
+also heightened her awareness of potential biases – a process many          be answered, however, is the impact it has on the DiP practice as
+novice researchers speak to in their dissertation writing, but very         well as on educator preparation as articulated by CPED’s guiding
+rarely tackle in authentic and meaningful ways. In Corrie’s case, her       principles for program design. We address these impacts in turn.
+collaboration with Gemini 1.5 fostered a more critical and reflexive
+approach to her analytical process and prompted her to challenge            AI’s Impact on the Dissertation of Practice (DiP)
+her own assumptions about the data.
+                                                                                   The inevitable adoption of AI tools by doctoral candidates
+     While Corrie has been a student of AI for some time, I believe
+                                                                            promises to transform how we have come to think about the DiP. As
+her use of AI evolved significantly throughout this process. In effect,
+                                                                            we’ve discussed, tools like ChatGPT 4.0 and Gemini 1.5 have the
+AI moved from an efficiency tool to a co-creator of new and unique
+                                                                            ability, albeit at times problematically, to streamline the data analysis
+knowledge. Her work with AI deepened her understanding of the
+                                                                            process by automating time-consuming tasks like coding and theme
+substance of her findings and also pushed her to approach problems
+                                                                            identification. This automation allows novice researchers to handle
+in new and innovative ways. As her reflections seem to indicate, AI
+                                                                            narrative/textual datasets more effectively with greater ease and
+can have a productive, yet disruptive impact on novice researcher
+                                                                            efficiency, providing more time to focus on interpreting and
+practices.
+                                                                            understanding the data’s deeper meanings. However, these benefits
+      Overall, Corrie’s growth as a qualitative researcher could be         come with a powerful caveat – namely, end users of AI tools must
+viewed as a function of both the manual analysis she initially              still ensure deep familiarity with their data and maintain sufficient
+undertook in combination with her use of advanced AI tools.                 vigilance over system errors. Only then does AI function in ways that
+However, it was through her AI usage that other elements of the             will lead to the level of knowledge co-creation described earlier. As
+researcher experience, namely heightened reflexivity and her critical       Corrie’s examples make clear, such vigilance will maximize the
+examination of potential bias elevated the level of authenticity to the     power of machine learning in service to greater richness and depth
+dissertation experience in surprising ways. Furthermore, it was             of the analysis. Consequently, doctoral candidates can produce
+apparent to me that the integration of Gemini 1.5 ensured the               higher-quality dissertations that reflect a more sophisticated
+integrity and reliability of her research while fostering epistemological   understanding of their research questions and the complex issues
+growth in understanding and leveraging AI as a tool, collaborator,          they address.
+and disruptor in knowledge creation. In this way, her narrative
+                                                                                  Use of AI tools for purposes of the DiP does prompt a more
+reflected a thoughtful, methodical approach to the research process,
+                                                                            general need to re-evaluate how dissertation supervisors assess DiP
+which was characterized by her own willingness to engage in
+                                                                            quality. Traditionally, qualitative research has emphasized the
+continuous learning, close observation and adaptation to AI outputs,
+                                                                            researcher’s direct engagement with the data to ensure a deep,
+and importantly, a strong commitment to ethical rigor and
+                                                                            interpretative analysis. However, AI tools introduce a new dynamic
+transparency.
+                                                                            by acting as co-analysts, assisting in data interpretation and pattern
+                                                                            recognition. This shift requires dissertation supervisors to rethink
+LESSONS AND ONGOING CONSIDERATIONS                                          their expectations and evaluation criteria, acknowledging the value
+                                                                            AI can bring to the research process while ensuring that the
+     The integration of generative AI into qualitative research             researcher’s critical engagement and reflexivity remain central. By
+presents a transformative opportunity for both doctoral candidates          incorporating AI responsibly, EdD programs can enhance the
+and dissertation supervisors. This paper has detailed the                   methodological rigor of DiPs, ensuring that they remain relevant and
+experiences of a doctoral candidate using Google’s Gemini 1.5 to            rigorous in a growing and constantly shifting AI research eco-system.
+augment traditional qualitative data analysis methods. The findings
+                                                                                  Moreover, the impact of AI on the DiP extends beyond
+reveal that AI can significantly enhance the depth and efficiency of
+                                                                            analytical capabilities to foster a more reflective and critical research
+qualitative analysis, uncovering hidden complexities and
+                                                                            process. The use of AI tools encourages researchers to examine
+unanticipated connections within the data. However, these
+                                                                            their positionalities and potential biases more authentically, as AI can
+advancements also bring new challenges, particularly concerning
+                                                                            highlight inconsistencies and prompt re-examination of assumptions.
+data integrity and the potential for AI-driven biases or errors.
+                                                                            This reflexivity is crucial for maintaining the integrity and credibility of
+    Reflecting on Corrie’s experience with so-called conventional           scholar-practitioner research. AI’s role in identifying potential biases
+and AI methods of analysis, it is clear that AI tools can be powerful       and encouraging deeper reflection helps candidates to produce more
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu               Vol. 10 No. 1 (2025)       DOI 10.5195/ie.2025.489                                                                      24
+
+         Wilder & Calderone
+
+
+
+ethically sound and transparent DiPs. Additionally, this integration          on individuals, families, organizations, and communities, thus fully
+prepares scholar-practitioners to navigate and utilize technological          embracing CPED’s second principle.
+advancements effectively in their professional practice, ensuring they             The use of AI to analyze interview data collected from
+are equipped with the skills and knowledge to harness AI’s                    stakeholders in a real-world educational setting aligns closely with
+capabilities responsibly as future leaders. By fostering a balance            CPED’s fourth principle, which emphasizes field-based opportunities
+between technological innovation and human oversight, AI tools not            to analyze problems of practice (Taylor & Lee, 2023). By using AI to
+only enhance the quality of the DiP but also contribute to the                uncover hidden insights and complexities within the data, Corrie
+development of more thoughtful and reflective educational leaders.            enhances the problem-solving process and demonstrates the
+      Expanding to include a more diverse range of dissertation               practical application of research knowledge. This approach is well-
+formats feels like an inevitability with the emergence of AI in the           grounded in practical, field-based analysis, embodying CPED’s
+research sphere. AI tools like ChatGPT 4.0 and Gemini 1.5 enable              vision of integrating practical and research knowledge.
+innovative approaches to data collection, analysis, and presentation,               The reflection showcases the integration of practical knowledge
+which traditional dissertation formats may not fully accommodate. By          from Corrie’s experience with the DPP and research knowledge
+embracing diverse formats, such as digital dissertations, multimedia          gained through the use of AI tools for qualitative analysis. This dual
+presentations, and interactive web-based projects, doctoral                   role as both a practitioner and researcher exemplifies CPED’s fifth
+programs can better capture the dynamic and multifaceted nature of            principle, which promotes linking theory with systematic inquiry
+AI-enhanced research. These new formats allow for the integration             (Robinson & Carter, 2023). However, the reflection could be
+of visualizations, interactive data elements, and AI-driven insights,         strengthened by further elaborating on how the AI-assisted analysis
+providing a richer, more engaging, and accessible representation of           findings contribute to theoretical frameworks and broader
+research findings. Expanding the range of acceptable dissertation             educational research, thus providing a more comprehensive
+formats not only leverages the full potential of AI technologies but          integration of practical and research knowledge (Harris & Walker,
+also encourages creativity and adaptability in scholarly work,                2020).
+preparing graduates for a rapidly evolving academic and professional
+                                                                                    Using AI to generate new insights and transform the
+landscape. This shift reflects a commitment to innovation and
+                                                                              understanding of qualitative data aligns well with CPED’s sixth
+inclusivity in research, ensuring that the dissertation process remains
+                                                                              principle, which emphasizes the generation, transformation, and use
+relevant and impactful in the digital age.
+                                                                              of professional knowledge (Wilson & Evans, 2023). Corrie’s
+                                                                              innovative use of AI technology demonstrates how professional
+Impact of AI on Educator Preparation                                          knowledge can be expanded and applied in novel ways, contributing
+      Corrie’s transparency surrounding her use of AI tools for her           to a deeper and more nuanced understanding of complex
+DiP offers a series of insights as to the technology’s potential impact       educational issues.
+on doctoral preparation. The question we pondered was the way in                    Corrie’s reflection aligns well with CPED principles, particularly
+which Corrie’s work enhanced or changed how we might come to                  in terms of ethical research practices, innovative problem-solving,
+interpret the CPED guiding principles in light of the different array of      and the integration of practical and research knowledge. The main
+outcomes generated from AI usage moving forward. Corrie’s                     areas for further development include a more explicit focus on equity
+approach to ethical research was evident through the meticulous de-           and social justice and an emphasis on collaboration with diverse
+identification of interview transcripts to protect participant privacy.       communities. By addressing these areas, Corrie’s work could more
+This practice aligns with CPED’s principle of grounding the                   comprehensively embody all CPED principles, enhancing its impact
+Professional Doctorate in questions of ethics. By addressing                  and alignment with the goals of the Professional Doctorate in
+potential biases, such as confirmation bias, and employing strategies         education.
+like reflective journaling and peer debriefing, Corrie ensures ethical
+integrity in the research process. However, while ethical
+considerations are well-articulated, there is less emphasis on the            CONCLUSION
+broader themes of equity and social justice, which are integral to
+                                                                                    In conclusion, this paper highlights the transformative potential
+CPED’s first principle. Perhaps this is in part a product of the
+                                                                              of generative AI in educational leadership doctoral research, as
+research design (a case study) in which the unit of analysis are the
+                                                                              evidenced by the innovative use of AI tools in a qualitative EdD
+two organizations engaged in the establishment of the DPP. So,
+                                                                              dissertation. Corrie’s dissertation demonstrates that AI can
+while Corrie’s DiP example offers insights into the general efficacy of
+                                                                              significantly enhance the depth and efficiency of qualitative data
+AI in the analysis of qualitative data, it fails to establish how issues of
+                                                                              analysis, uncovering hidden complexities and unanticipated
+race, gender, sexuality, and other identities would (or could) be
+                                                                              connections (Clark, 2022; Taylor, 2022b). This integration of AI not
+meaningfully addressed by AI platforms like Gemini 1.5 or Chat GPT.
+                                                                              only augments the analytical capabilities of novice researchers but
+      The integration of advanced AI tools into the research process          also fosters a more reflexive and critical approach to research,
+showcases Corrie’s leadership and innovative approach to problem-             ensuring that dissertations remain rigorous and relevant in an
+solving. Utilizing Google’s Gemini 1.5 for qualitative data analysis          increasingly AI-driven educational landscape (Johnson, 2023b;
+exemplifies the forward-thinking mindset that CPED encourages,                Mollick & Mollick, 2024).
+particularly in making a positive difference in educational practices
+                                                                                   The case study of Corrie’s dissertation underscores the
+and policies. This use of AI has the potential to enhance the
+                                                                              importance of integrating AI into doctoral research programs. As AI
+accuracy and depth of findings, thereby contributing to more
+                                                                              continues to evolve, it is imperative for educational leadership
+informed decision-making in educational leadership. Nevertheless,
+                                                                              programs to incorporate training on these technologies, equipping
+the reflection could further explore the direct impact of these findings
+                                                                              future leaders with the skills necessary to harness AI responsibly
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu               Vol. 10 No. 1 (2025)        DOI 10.5195/ie.2025.489                                                                   25
+
+          Empowering Educational Leadership Research
+
+
+
+(Adams, 2023; Thompson, 2023). This proactive engagement with AI                       Krugmann, J. O., & Hartmann, J. (2024). Sentiment Analysis in the Age of
+ensures that doctoral candidates can leverage these tools to produce                        Generative AI. Customer Needs and Solutions, 11(1), 1–19.
+high-quality, impactful research that addresses complex educational                    Lee, S., & Kim, J. (2021). Fast learning tools in research. Research
+                                                                                            Technology Journal, 17(2), 134–152.
+challenges. Furthermore, the responsible use of AI in research
+                                                                                       Lewis, G., & Harris, D. (2021a). AI in qualitative research methods. Qualitative
+fosters a more nuanced understanding of data, enhancing the                                 Methods Journal, 27(3), 200–218.
+credibility and integrity of scholarly work (Lewis & Harris, 2021b;                    Lewis, R., & Harris, P. (2021b). Integrating AI into Qualitative Research:
+Wang, 2023b).                                                                               Methods and Applications. Qualitative Inquiry, 27(5), 387–402.
+     Overall, the integration of AI in educational leadership doctoral                 Maher, C., Hadfield, M., Hutchings, M., & De Eyto, A. (2018). Ensuring rigor in
+                                                                                           qualitative data analysis: A design research approach to coding
+research presents both opportunities and challenges. While AI can                          combining NVivo with traditional material methods. International Journal
+streamline and deepen qualitative analysis, it also necessitates                           of Qualitative Methods, 17(1), 1609406918786362.
+careful consideration of ethical implications and potential biases                     Miller, J., & Johnson, S. (2023). Patterns in educational data analysis.
+(Garcia, 2022b; Sætra, 2022). By embracing AI as a tool,                                      Educational Data Review, 30(1), 47–64.
+collaborator, and disruptor, educational leadership programs can                       Mollick, M (2022, December 16). Has AI reached the point where a software
+prepare scholar-practitioners to navigate the technological                                  program can do better work than you? [Interview transcript]. In Morning
+                                                                                             Edition. NPR. https://www.npr.org/transcripts/1143330582
+advancements shaping the field. This alignment with CPED
+                                                                                       Mollick, E., & Mollick, L. (2024). The AI-Driven Researcher: Enhancing
+principles ensures that AI-enhanced dissertations contribute to the                          Academic Work with AI. Educational Leadership Today, 22(1), 59–73.
+advancement of educational practices and policies, ultimately                          Morgan, P. (2023). AI-driven analytical platforms. Journal of Analytical
+benefiting individuals, organizations, and communities (Robinson &                          Technology, 19(3), 101–119.
+Carter, 2023; Wilson & Evans, 2023).                                                   Nelson, T. (2023). Integrating qualitative and quantitative data with AI. Mixed
+                                                                                            Methods Research Journal, 15(2), 173–189.
+                                                                                       Pang, B., & Lee, L. (2008). Opinion mining and sentiment analysis.
+REFERENCE                                                                                   Foundations and Trends in Information Retrieval, 2(1-2), 1–135.
+                                                                                       Patel, R. (2022). Overview of AI-driven writing aids. Writing Technology
+Adams, M. (2023). Enhancing Qualitative Research with AI Technologies.                       Journal, 11(2), 87–104.
+    Journal of Educational Leadership, 45(3), 245–260.
+                                                                                       Robinson, K. (2022). Predictive models in education. Educational Predictive
+Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent Dirichlet allocation. Journal        Analytics, 13(1), 59–77.
+      of Machine Learning Research, 3, 993–1022.
+                                                                                       Robinson, T., & Carter, S. (2023). Bridging Theory and Practice: AI in
+Brown, T. (2022). AI in educational data analysis. Educational Data Journal,                Educational Leadership. Leadership in Education, 14(3), 197–210.
+     15(4), 234–256.
+                                                                                       Saldaña, J. (2016). The coding manual for qualitative researchers (3rd ed.).
+Carnegie Project on the Education Doctorate. (n.d.). CPED framework.                        SAGE Publications.
+     https://www.cpedinitiative.org/
+                                                                                       Smith, R. (2023). Data analysis for personalized education. Journal of
+Carter, S. (2022). AI tools for qualitative data visualization. Qualitative                 Personalized Education, 21(3), 149–167.
+     Research Journal, 18(2), 89–102.
+                                                                                       Smith, T., & Nguyen, H. (2022). Empirical claims from AI data analysis. Journal
+Clark, K. (2022). The role of AI in qualitative research. International Journal of          of Empirical Research, 14(4), 198–215.
+      Qualitative Methods, 21, 1–14.
+                                                                                       Taylor, D., & Lee, J. (2023). Field-based opportunities for analyzing problems
+Clark, M. (2022). AI and Qualitative Methodologies: Transformative Potentials.              of practice. Impact Education, CPED.
+      Qualitative Research Journal, 18(4), 321–335.
+                                                                                       Taylor, J. (2022a). Revolutionizing Data Collection: AI in Qualitative Research.
+Creswell, J. W., & Plano Clark, V. L. (2017). Designing and Conducting Mixed                Research Methodologies Journal, 39(3), 215–230.
+     Methods Research (3rd ed.). SAGE Publications.
+                                                                                       Taylor, M. (2022b). Revolutionizing qualitative data collection with AI.
+Datta, A. (2020). AI in audio and visual data analysis. Journal of Multimodal               Qualitative Data Journal, 16(2), 103–121.
+      Data, 12(3), 145–167.
+                                                                                       Tegmark, M. (2017). Life 3.0: Being human in the age of artificial intelligence.
+Davis, H. (2021). AI technologies in educational research. Journal of                      Knopf.
+     Educational Technology, 29(1), 56–78.
+                                                                                       Thompson, J. (2022). Supporting novice researchers with AI. New Researcher
+Garcia, L. (2022a). Thematic Analysis with AI: Opportunities and Challenges.               Journal, 19(1), 34–51.
+     Journal of Qualitative Methods, 27(2), 142–156.
+                                                                                       Thompson, L. (2023). Personalized Learning and AI: Implications for
+Garcia, M. (2022b). Enhancements in thematic analysis through AI. Thematic                 Educational Leadership. Journal of Learning Analytics, 28(4), 305–320.
+     Analysis Review, 10(3), 123–139.
+                                                                                       van Manen, Max (2014). Phenomenology of practice: Meaning-giving methods
+Google DeepMind. (2024). Gemini 1.5: Unlocking multimodal understanding                     in phenomenological research and writing. Walnut Creek, CA: Left Coast
+     across millions of tokens of context.                                                  Press.
+     Google. https://arxiv.org/abs/2403.05530
+                                                                                       Wang, X. (2023a). Multimodal Data Analysis with AI: Expanding Qualitative
+Jackson, P. (2023). Advances in AI for data coding and analysis. Qualitative               Research. Data Science in Education, 19(2), 198–211.
+     Research Technology, 22(4), 341–358.
+                                                                                       Wang, Y. (2023b). Enhancements in qualitative research through AI. Journal of
+Johnson, K. (2023a). AI in Educational Research: A New Paradigm.                           Qualitative Research, 24(3), 245–263.
+     Educational Technology Review, 31(1), 76–89.
+                                                                                       Wilson, A., & Evans, D. (2023). Future Directions for Doctoral Research:
+Johnson, L. (2023b). Generative AI platforms in social science research. Social             Integrating AI. Doctoral Research Review, 11(1), 44–58.
+     Science Innovations, 35(2), 67–85.
+                                                                                       Wolski, U. (2018). The History of the Development and Propagation of QDA
+Jones, A. (2022). Personalized learning through adaptive AI systems. Journal                Software. The Qualitative Report, 23(13), 6–20.
+     of Personalized Learning, 14(2), 211–229.                                              https://doi.org/10.46743/2160-3715/2018.2984
+Kelle, U. (2001). Sociological explanations between micro and macro and the            Young, L., & Soroka, S. (2019). Affective news: The automated coding of
+      integration of qualitative and quantitative methods. Forum Qualitative               sentiment in political texts. Political Communication, 36(2), 182–202.
+      Sozialforschung/Forum: Qualitative Social Research, 2(1).
+
+
+
+
+Impacting Education: Journal on Transforming Professional Practice
+impactinged.pitt.edu                    Vol. 10 No. 1 (2025)            DOI 10.5195/ie.2025.489                                                                           26
