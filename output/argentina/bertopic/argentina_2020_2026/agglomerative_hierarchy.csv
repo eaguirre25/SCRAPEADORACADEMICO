@@ -1,7 +1,3 @@
 ﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
-12,school_escuelas_educación_escolar_we,"[0, 1, 2, 3, 4, 5, 6]",10,school_escuelas_educación_escolar_we,11,children_adolescentes_niños_consumo_ambiental,0.8540573088590951
-11,children_adolescentes_niños_consumo_ambiental,"[5, 6]",6,ambiental_environmental_agua_water_leña,5,children_niños_adolescentes_alcohol_consumo,0.8156015269386742
-10,school_escuelas_educación_escolar_we,"[0, 1, 2, 3, 4]",4,políticas_educación_social_nivel_education,9,school_escuelas_educación_we_escolar,0.7326219153363198
-9,school_escuelas_educación_we_escolar,"[0, 1, 2, 3]",3,escolar_dirección_liderazgo_educativa_school,8,school_escuelas_we_escuela_educación,0.7097612600918216
-8,school_escuelas_we_escuela_educación,"[0, 1, 2]",0,reading_educación_director_education_historia,7,school_escuelas_pandemia_we_docentes,0.6991962253598534
-7,school_escuelas_pandemia_we_docentes,"[1, 2]",1,jóvenes_school_we_escuela_young,2,pandemia_rural_digital_docentes_escuelas,0.6898001354211236
+4,school_educación_gestión_escolar_escuelas,"[0, 1, 2]",2,rural_rurales_les_docentes_moqoit,3,school_educación_gestión_escolar_escuelas,0.9029591518247398
+3,school_educación_gestión_escolar_escuelas,"[0, 1]",0,escolar_educación_gestión_school_liderazgo,1,pandemia_digital_covid-19_escuelas_school,0.8485662159903319
