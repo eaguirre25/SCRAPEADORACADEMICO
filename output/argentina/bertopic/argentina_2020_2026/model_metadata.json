@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-ARGENTINA-2020-2026",
   "seed": 42,
-  "generated_at_utc": "2026-10-05T09:26:55.787232+00:00",
-  "git_commit": "49fdd403dde02699f7d4a335ea63eff63beaa2ca",
+  "generated_at_utc": "2026-10-05T10:50:53.860108+00:00",
+  "git_commit": "82f1102fd746b6561df40f08bf489ae26e4aa421",
   "python_version": "3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
   "documents": 165,
   "discarded_documents": 0,
-  "elapsed_seconds": 9.333,
+  "elapsed_seconds": 7.884,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
@@ -173,15 +173,15 @@
         "sentence-transformers/distiluse-base-multilingual-cased-v2"
       ],
       "batch_size": 64,
-      "min_topic_size": 12,
+      "min_topic_size": 10,
       "min_samples": 5,
       "nr_topics": null,
       "calculate_probabilities": true,
       "low_memory": true,
       "ngram_min": 1,
       "ngram_max": 3,
-      "min_df": 1,
-      "max_df": 1.0,
+      "min_df": 2,
+      "max_df": 0.95,
       "max_features": 50000,
       "token_pattern": "(?u)\\b[^\\W\\d_](?:[\\wÀ-ÖØ-öø-ÿ-]*[^\\W_])?\\b",
       "reduce_frequent_words": true,
@@ -196,7 +196,7 @@
       "umap": {
         "n_neighbors": 10,
         "n_components": 10,
-        "min_dist": 0.1,
+        "min_dist": 0.0,
         "metric": "cosine"
       },
       "hdbscan": {
@@ -205,12 +205,12 @@
         "prediction_data": true
       },
       "macro_search": {
-        "target_min_topics": 10,
-        "target_max_topics": 25,
+        "target_min_topics": 4,
+        "target_max_topics": 10,
         "reject_outlier_share_above": 0.45,
-        "reject_topics_above": 35,
-        "reject_topics_below": 5,
-        "reject_median_cluster_below": 20,
+        "reject_topics_above": 15,
+        "reject_topics_below": 3,
+        "reject_median_cluster_below": 6,
         "reject_minimum_size_share_above": 0.3,
         "reject_maximum_cluster_share_above": 0.35,
         "finalists": 4,
@@ -222,7 +222,34 @@
           401,
           809
         ],
-        "subcluster_minimum_documents": 60
+        "subcluster_minimum_documents": 60,
+        "_rationale": "Mismo procedimiento que el modelo global (config/topic_modeling.yml, bertopic.macro_search). Solo se escalan los valores que dependen del tamaño del corpus: los tamaños mínimos de HDBSCAN se multiplican por 10/35 (25, 35, 50 -> 7, 10, 14) y la mediana mínima de tópico por el mismo factor (20 -> 6); min_samples (5 y 10), outliers máximos, tópico dominante máximo, proporción de tópicos en el tamaño mínimo, finalistas y semillas son idénticos. El rango de tópicos se adapta a un corpus de ~165 documentos.",
+        "screen_cluster": [
+          10,
+          5
+        ],
+        "cluster_specs": [
+          [
+            7,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            14,
+            5
+          ],
+          [
+            14,
+            10
+          ]
+        ]
       },
       "ambiguity": {
         "margin_below": 0.08,
@@ -368,8 +395,8 @@
       "keywords_text": 148
     }
   },
-  "outlier_count": 24,
-  "outlier_percentage": 14.5455,
+  "outlier_count": 25,
+  "outlier_percentage": 15.1515,
   "model_save_mode": "safetensors_without_ctfidf",
   "warnings": [
     "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"

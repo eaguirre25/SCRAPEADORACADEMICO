@@ -1,7 +1,7 @@
 topic_a,topic_b,ctfidf_similarity,merge_candidate,review_status
--1,0,0.158311,False,pending_human_review
--1,1,0.123192,False,pending_human_review
--1,2,0.104475,False,pending_human_review
-0,1,0.151434,False,pending_human_review
-0,2,0.118188,False,pending_human_review
-1,2,0.102535,False,pending_human_review
+-1,0,0.635468,False,pending_human_review
+-1,1,0.354224,False,pending_human_review
+-1,2,0.231172,False,pending_human_review
+0,1,0.606296,False,pending_human_review
+0,2,0.415177,False,pending_human_review
+1,2,0.232756,False,pending_human_review

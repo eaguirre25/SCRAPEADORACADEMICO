@@ -13,14 +13,14 @@
   "umap_parameters": {
     "n_neighbors": 10,
     "n_components": 10,
-    "min_dist": 0.1,
+    "min_dist": 0.0,
     "metric": "cosine",
     "random_state": 42,
     "low_memory": true
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 12,
+    "min_cluster_size": 10,
     "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",
@@ -35,9 +35,9 @@
     "encoding": "utf-8",
     "input": "content",
     "lowercase": true,
-    "max_df": 1.0,
+    "max_df": 0.95,
     "max_features": 50000,
-    "min_df": 1,
+    "min_df": 2,
     "ngram_range": [
       1,
       3
