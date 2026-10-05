@@ -55,6 +55,24 @@ Referencias metodológicas: van Eck, N. J., & Waltman, L. (2010). Software surve
 
 Las tarjetas temáticas abren una ficha de revisión con los diagnósticos y todas las asignaciones exportadas, búsqueda y paginación. Permite corregir el nombre, marcar un tema como validado o pendiente de correcciones, escribir notas y revisar documentos. Las revisiones se guardan en este navegador y se exportan/importan como JSON; no modifican automáticamente las asignaciones originales ni reentrenan los modelos. `docs/topic-review-data.json` se regenera junto con el dashboard. Las cantidades del corpus maestro y las filas del modelado se identifican por separado: un registro sin asignación vinculada no implica necesariamente que el modelo no lo haya procesado.
 
+## Búsqueda y filtro de pertinencia
+
+**Búsqueda (`main.py`).** OpenAlex se consulta con 15 frases exactas en español, inglés y portugués (gestión/dirección escolar, liderazgo escolar y directivo, school leadership, principalship, gestão escolar, entre otras). CONICET Digital se consulta con las frases **entre comillas**: sin ellas su buscador devolvía cualquier trabajo con las palabras sueltas («school» y «principal»). El resumen de CONICET se guarda sin la cabecera de títulos y autores que antepone su buscador.
+
+**Filtro (`relevance_filter.py`).** Una auditoría de octubre de 2026 mostró que alrededor del 90 % de los registros de CONICET en el maestro no trataban sobre dirección escolar (paleobotánica, peronismo, aves) y que unos 500 trabajos pertinentes de OpenAlex habían quedado rechazados. Las reglas corregidas:
+
+- «principal» cuenta como cargo solo en contexto inglés escolar («school principal», «principals», junto a «school» o «teacher»); en castellano es casi siempre un adjetivo.
+- Un cargo directivo o una acción de gestión deben aparecer **a no más de 8 palabras** de un término escolar; antes bastaba con que ambos figuraran en cualquier lugar del resumen.
+- No cuentan como gestión escolar «escuela de gestión estatal/privada/social» (tipo de sostenimiento), la gestión del agua, de residuos, ambiental o del aula, ni «escuela de pensamiento», «business school» y similares.
+- Un título que nombra el campo («gestión educativa», «educational leadership», «educational administration») se incluye, salvo que el foco sea la educación superior.
+- Se reconocen términos en portugués y cargos en el título («El director como líder…»).
+- Los rechazados **se reevalúan en cada corrida**, así las correcciones recuperan trabajos descartados antes.
+- `config/relevance_overrides.csv` (`record_id,decision,nota`, con `incluir` o `excluir`) fija decisiones manuales que prevalecen sobre las reglas.
+
+Sobre los datos de `main` del 4 de octubre de 2026, el maestro pasa de 4.359 a 4.460 registros: OpenAlex de 3.519 a 4.122 y CONICET de 840 a 338.
+
+**Validación.** `scripts/build_relevance_validation.py` sortea 200 registros estratificados por fuente y decisión del filtro en `data/validacion/muestra_pertinencia.xlsx`, sin mostrar la decisión. Tras marcar la columna «pertinente» (si / no / dudoso), `scripts/evaluate_relevance_validation.py` estima precisión y exhaustividad ponderadas por estrato en `data/validacion/resultado_validacion.json`.
+
 ## App para el celular
 
 El sitio de `docs/` funciona como aplicación instalable (PWA): se abre desde la dirección de GitHub Pages del repositorio y se agrega a la pantalla de inicio, sin pasar por tiendas de aplicaciones.
