@@ -52,6 +52,11 @@ jobs:
         run: |
           python scripts/enrich_metadata.py --apply
 
+      # El enriquecimiento agrega DOI que revelan duplicados entre CONICET y OpenAlex.
+      - name: Merge duplicates revealed by enrichment
+        run: |
+          python relevance_filter.py --solo-duplicados
+
       - name: Send curated email update
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}

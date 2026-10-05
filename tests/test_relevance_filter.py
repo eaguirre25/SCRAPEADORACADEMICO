@@ -138,3 +138,14 @@ def test_deduplicate_merges_same_work_but_keeps_homonyms():
     assert merged["keywords"] == "dirección" and "CONICET Digital" in merged["source"]
     assert {r["duplicate_of"] for r in removed} == {"10.1/x", "W3"}
     assert rf.classify_relevance({"title": "", "abstract": "gestión escolar"})[0] == "rechazada"
+
+
+def test_deduplicate_compound_surname():
+    from relevance_filter import deduplicate
+    title = "Problemas de práctica de directores de escuelas vulnerables: oportunidades para el desarrollo"
+    rows = [
+        {"title": title, "authors": "Luis De la Vega", "doi": "10.15517/rge.v10i1.56232", "source": "OpenAlex"},
+        {"title": title, "authors": "Luis Felipe de la Vega Rodríguez", "doi": "", "source": "OpenAlex"},
+    ]
+    kept, removed = deduplicate(rows)
+    assert len(kept) == 1 and len(removed) == 1
