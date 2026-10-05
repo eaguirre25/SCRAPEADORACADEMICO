@@ -63,6 +63,12 @@ jobs:
           git add output/argentina docs/argentina-data.json docs/argentina-corpus.csv
           if ! git diff --cached --quiet; then
             git commit -m "Actualiza análisis argentino BERTopic 2020–2026"
-            git pull --rebase origin main
-            git push
+            # Si otro workflow escribió en main mientras tanto, se conserva el
+            # resultado de este ajuste (-X theirs en un rebase = el commit propio).
+            for attempt in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && exit 0
+              git rebase --abort 2>/dev/null || true
+              sleep $((attempt * 10))
+            done
+            exit 1
           fi
