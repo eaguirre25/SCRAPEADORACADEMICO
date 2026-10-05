@@ -33,7 +33,7 @@
     "include_unvalidated_candidates": true,
     "min_relevance_score": 1,
     "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
-    "min_topic_size": 15,
+    "min_topic_size": 8,
     "umap": {
       "n_neighbors": 10,
       "n_components": 10,
@@ -46,11 +46,12 @@
       "min_similarity": 0.7
     },
     "sensitivity_min_topic_sizes": [
+      5,
+      6,
+      8,
       10,
-      15,
-      20,
-      25,
-      35
+      12,
+      15
     ],
     "selection": {
       "max_outlier_share": 0.35,

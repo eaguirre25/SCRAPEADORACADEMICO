@@ -1,160 +1,178 @@
 {
   "selection_hash": "7292dc479362fd25c91538a4a98fea4c59d1b0932c9aed12088a5a1189d13fef",
-  "model_signature": "854354f984613fdcca2154a3087abedf76a80d7d270518fca5fac6b0af210037",
-  "model_id": "1e91a054df4ea7c7b1206aa1960180a296087f98f079c7489d5c692feeb50656",
+  "model_signature": "285db9a879206c7496ce527dfed2bb4ec5a81d5a693c721d589d3460d28475a1",
+  "model_id": "5e309850c94f870ca4cf699b4ab28760a5381172b789473255ae34346d7f6522",
   "criterion": "study_location",
   "sensitivity": [
     {
       "seed": 42,
+      "min_topic_size": 5,
+      "topics": 6,
+      "outliers": 57,
+      "documents": 165,
+      "outlier_share": 0.34545454545454546,
+      "adjusted_rand_including_outliers": 0.272224648795522,
+      "shared_assigned_documents": 108,
+      "adjusted_rand_shared_assigned": 0.4596988521071086
+    },
+    {
+      "seed": 42,
+      "min_topic_size": 6,
+      "topics": 6,
+      "outliers": 57,
+      "documents": 165,
+      "outlier_share": 0.34545454545454546,
+      "adjusted_rand_including_outliers": 0.272224648795522,
+      "shared_assigned_documents": 108,
+      "adjusted_rand_shared_assigned": 0.4596988521071086
+    },
+    {
+      "seed": 42,
+      "min_topic_size": 8,
+      "topics": 6,
+      "outliers": 57,
+      "documents": 165,
+      "outlier_share": 0.34545454545454546,
+      "adjusted_rand_including_outliers": 0.272224648795522,
+      "shared_assigned_documents": 108,
+      "adjusted_rand_shared_assigned": 0.4596988521071086
+    },
+    {
+      "seed": 42,
       "min_topic_size": 10,
       "topics": 3,
-      "outliers": 27,
+      "outliers": 24,
       "documents": 165,
-      "outlier_share": 0.16363636363636364,
-      "adjusted_rand_including_outliers": 0.6112603919187869,
-      "shared_assigned_documents": 138,
-      "adjusted_rand_shared_assigned": 0.7138860924157419
+      "outlier_share": 0.14545454545454545,
+      "adjusted_rand_including_outliers": 1.0,
+      "shared_assigned_documents": 141,
+      "adjusted_rand_shared_assigned": 1.0
+    },
+    {
+      "seed": 42,
+      "min_topic_size": 12,
+      "topics": 3,
+      "outliers": 24,
+      "documents": 165,
+      "outlier_share": 0.14545454545454545,
+      "adjusted_rand_including_outliers": 1.0,
+      "shared_assigned_documents": 141,
+      "adjusted_rand_shared_assigned": 1.0
     },
     {
       "seed": 42,
       "min_topic_size": 15,
-      "topics": 2,
-      "outliers": 16,
+      "topics": 3,
+      "outliers": 24,
       "documents": 165,
-      "outlier_share": 0.09696969696969697,
+      "outlier_share": 0.14545454545454545,
       "adjusted_rand_including_outliers": 1.0,
-      "shared_assigned_documents": 149,
+      "shared_assigned_documents": 141,
       "adjusted_rand_shared_assigned": 1.0
-    },
-    {
-      "seed": 42,
-      "min_topic_size": 20,
-      "topics": 2,
-      "outliers": 16,
-      "documents": 165,
-      "outlier_share": 0.09696969696969697,
-      "adjusted_rand_including_outliers": 1.0,
-      "shared_assigned_documents": 149,
-      "adjusted_rand_shared_assigned": 1.0
-    },
-    {
-      "seed": 42,
-      "min_topic_size": 25,
-      "topics": 2,
-      "outliers": 16,
-      "documents": 165,
-      "outlier_share": 0.09696969696969697,
-      "adjusted_rand_including_outliers": 1.0,
-      "shared_assigned_documents": 149,
-      "adjusted_rand_shared_assigned": 1.0
-    },
-    {
-      "seed": 42,
-      "min_topic_size": 35,
-      "topics": 0,
-      "outliers": 165,
-      "documents": 165,
-      "outlier_share": 1.0,
-      "adjusted_rand_including_outliers": 0.0,
-      "shared_assigned_documents": 0,
-      "adjusted_rand_shared_assigned": null
     }
   ],
   "stability": [
     {
       "seed": 42,
-      "min_topic_size": 15,
-      "topics": 2,
-      "outliers": 16,
+      "min_topic_size": 12,
+      "topics": 3,
+      "outliers": 24,
       "documents": 165,
-      "outlier_share": 0.09696969696969697,
+      "outlier_share": 0.14545454545454545,
       "adjusted_rand_including_outliers": 1.0,
-      "shared_assigned_documents": 149,
+      "shared_assigned_documents": 141,
       "adjusted_rand_shared_assigned": 1.0
     },
     {
       "seed": 117,
-      "min_topic_size": 15,
-      "topics": 2,
-      "outliers": 14,
+      "min_topic_size": 12,
+      "topics": 5,
+      "outliers": 62,
       "documents": 165,
-      "outlier_share": 0.08484848484848485,
-      "adjusted_rand_including_outliers": 0.8003314042965478,
-      "shared_assigned_documents": 144,
-      "adjusted_rand_shared_assigned": 1.0
+      "outlier_share": 0.37575757575757573,
+      "adjusted_rand_including_outliers": 0.26105815398037224,
+      "shared_assigned_documents": 102,
+      "adjusted_rand_shared_assigned": 0.5029942716797794
     },
     {
       "seed": 233,
-      "min_topic_size": 15,
+      "min_topic_size": 12,
       "topics": 3,
-      "outliers": 19,
+      "outliers": 15,
       "documents": 165,
-      "outlier_share": 0.11515151515151516,
-      "adjusted_rand_including_outliers": 0.5896941592955292,
-      "shared_assigned_documents": 141,
-      "adjusted_rand_shared_assigned": 0.6712521842700978
+      "outlier_share": 0.09090909090909091,
+      "adjusted_rand_including_outliers": 0.805977862085093,
+      "shared_assigned_documents": 138,
+      "adjusted_rand_shared_assigned": 1.0
     },
     {
       "seed": 401,
-      "min_topic_size": 15,
-      "topics": 2,
-      "outliers": 12,
+      "min_topic_size": 12,
+      "topics": 3,
+      "outliers": 29,
       "documents": 165,
-      "outlier_share": 0.07272727272727272,
-      "adjusted_rand_including_outliers": 0.8134120761920438,
-      "shared_assigned_documents": 146,
-      "adjusted_rand_shared_assigned": 0.9687633718442448
+      "outlier_share": 0.17575757575757575,
+      "adjusted_rand_including_outliers": 0.7254023116929319,
+      "shared_assigned_documents": 130,
+      "adjusted_rand_shared_assigned": 0.9761495192186804
     },
     {
       "seed": 809,
-      "min_topic_size": 15,
+      "min_topic_size": 12,
       "topics": 3,
-      "outliers": 6,
+      "outliers": 9,
       "documents": 165,
-      "outlier_share": 0.03636363636363636,
-      "adjusted_rand_including_outliers": 0.5739942268081519,
-      "shared_assigned_documents": 148,
-      "adjusted_rand_shared_assigned": 0.6669418291558993
+      "outlier_share": 0.05454545454545454,
+      "adjusted_rand_including_outliers": 0.755571428606007,
+      "shared_assigned_documents": 141,
+      "adjusted_rand_shared_assigned": 0.9553217249377901
     }
   ],
   "status": "exploratory_candidates",
-  "selected_min_topic_size": 15,
+  "selected_min_topic_size": 12,
   "parameter_selection": [
     {
+      "min_topic_size": 5,
+      "mean_pairwise_ari": 0.6816,
+      "mean_outlier_share": 0.1976,
+      "min_topics": 3,
+      "max_topics": 6
+    },
+    {
+      "min_topic_size": 6,
+      "mean_pairwise_ari": 0.6816,
+      "mean_outlier_share": 0.1976,
+      "min_topics": 3,
+      "max_topics": 6
+    },
+    {
+      "min_topic_size": 8,
+      "mean_pairwise_ari": 0.692,
+      "mean_outlier_share": 0.2085,
+      "min_topics": 3,
+      "max_topics": 6
+    },
+    {
       "min_topic_size": 10,
-      "mean_pairwise_ari": 0.8488,
-      "mean_outlier_share": 0.1055,
-      "min_topics": 2,
-      "max_topics": 3
+      "mean_pairwise_ari": 0.7934,
+      "mean_outlier_share": 0.1685,
+      "min_topics": 3,
+      "max_topics": 5
+    },
+    {
+      "min_topic_size": 12,
+      "mean_pairwise_ari": 0.7934,
+      "mean_outlier_share": 0.1685,
+      "min_topics": 3,
+      "max_topics": 5
     },
     {
       "min_topic_size": 15,
-      "mean_pairwise_ari": 0.7945,
-      "mean_outlier_share": 0.0812,
+      "mean_pairwise_ari": 0.8247,
+      "mean_outlier_share": 0.1176,
       "min_topics": 2,
       "max_topics": 3
-    },
-    {
-      "min_topic_size": 20,
-      "mean_pairwise_ari": 0.9705,
-      "mean_outlier_share": 0.1006,
-      "min_topics": 2,
-      "max_topics": 2
-    },
-    {
-      "min_topic_size": 25,
-      "mean_pairwise_ari": 0.9705,
-      "mean_outlier_share": 0.1006,
-      "min_topics": 2,
-      "max_topics": 2
-    },
-    {
-      "min_topic_size": 35,
-      "mean_pairwise_ari": null,
-      "mean_outlier_share": 1.0,
-      "min_topics": 0,
-      "max_topics": 0
     }
   ],
-  "parameter_choice": "No candidate size met the stability rule; configured size 15 kept. Vectorizer min_df=1/max_df=1 prevents empty vocabulary when BERTopic aggregates a small number of topics. Territorial terms are excluded from topic words. No optimum or substantive validation is claimed."
+  "parameter_choice": "Minimum topic size 12 chosen by the declared stability rule (highest mean pairwise ARI across 5 UMAP seeds among sizes with mean outlier share <= 0.35 and at least 3 topics). Vectorizer min_df=1/max_df=1 prevents empty vocabulary when BERTopic aggregates a small number of topics. Territorial terms are excluded from topic words. No optimum or substantive validation is claimed."
 }
