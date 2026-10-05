@@ -1,43 +1,43 @@
 {
-  "generated": "2026-10-01",
-  "input_total": 5266,
-  "kept_high_relevance": 3513,
-  "review_records": 69,
-  "rejected_records": 2152,
-  "latest_high_relevance": 151,
+  "generated": "2026-10-04",
+  "input_total": 5929,
+  "kept_high_relevance": 4359,
+  "review_records": 60,
+  "rejected_records": 2380,
+  "latest_high_relevance": 846,
   "second_review": {
-    "input_review_candidates": 711,
-    "auto_promoted_to_high_relevance": 348,
-    "auto_rejected": 294,
-    "remaining_manual_review": 69
+    "input_review_candidates": 696,
+    "auto_promoted_to_high_relevance": 350,
+    "auto_rejected": 286,
+    "remaining_manual_review": 60
   },
   "by_source_input": {
-    "OpenAlex": 3440,
+    "OpenAlex": 4103,
     "CONICET Digital | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 5,
     "CONICET Digital": 1820
   },
   "by_source_kept": {
-    "OpenAlex": 2673,
+    "OpenAlex": 3519,
     "CONICET Digital | OpenAlex": 1,
     "OpenAlex | CONICET Digital": 5,
     "CONICET Digital": 834
   },
   "by_source_review": {
-    "OpenAlex": 68,
+    "OpenAlex": 59,
     "CONICET Digital": 1
   },
   "by_source_rejected": {
-    "OpenAlex": 1139,
+    "OpenAlex": 1367,
     "CONICET Digital": 1013
   },
   "by_source_second_review_promoted": {
     "OpenAlex | CONICET Digital": 1,
-    "OpenAlex": 14,
+    "OpenAlex": 16,
     "CONICET Digital": 333
   },
   "by_source_second_review_rejected": {
-    "OpenAlex": 289,
+    "OpenAlex": 281,
     "CONICET Digital": 5
   },
   "policy": {

@@ -1,0 +1,258 @@
+International Journal of Computer Applications (0975 – 8887)
+                                                                                              Volume 186 – No.5, January 2024
+
+
+         A Sustainable Approach to School Management:
+        Introducing the Bold School Management System
+
+     Kennedy Kumangkem                                    Daniel Asiedu
+           Kubuga                                 Tamale Technical University,                       Felix Kipo
+   Tamale Technical University,                 Department of Computer Science            Tamale Technical University,
+ Department of Computer Science                                                               Directorate of ICT
+
+
+
+ABSTRACT                                                           Despite the acknowledged benefits of digital solutions, barriers
+The dominant reliance on paper-based record-keeping systems        such as acquisition and maintenance costs, a shortage of skilled
+in schools in Ghana is in contrast with the global inclination     personnel [6], and a lack of understanding regarding the
+towards the use of electronic systems. The paper sheds light on    advantages of electronic systems [7] can impede the adoption
+the unintended environmental impact of the practice and            of such technologies in schools.
+proposes a sustainable alternative; the BoldSchool
+Management System. It utilises spreadsheets for academic data      In response to the identified challenges, these authors built,
+storage and MySQL database for other records, providing            tested, and introduced the Bold School Management System as
+schools with a flexibility. The study demonstrates that the        a viable solution. The system utilises spreadsheets for academic
+adoption of electronic system will address administrative          information storage and a MySQL database for staff and
+inefficiencies and contribute to environmental sustainability.     financial records. This dual-storage approach enhances
+Primary data is taken from 18 schools, with a total learner        portability and reduces the burden on the database,
+population of 6792 learners.                                       distinguishing the School Manager from other systems. Its
+                                                                   adaptability to both local hosts and remote servers via
+Keywords                                                           registered domain names further facilitates ease of use and
+School Management, Electronic Systems, Environmental               encourages schools that do not have the means to run online
+Sustainability, Paper-Based   Processes,   Education               management systems to reduce paperwork as well. The
+Administration                                                     HTML/PHP dominant technology used also makes it easier to
+                                                                   remotely provide updates in the case of localhost
+1. INTRODUCTION                                                    implementations through third-party remote desktop
+The education sector in Ghana traditionally relies on record-      applications.
+keeping systems, primarily utilising paper-based methods.
+There is no official or reliable data available on the number of   As of the end of 2023, 18 schools, comprising a total population
+schools using electronic school management systems, but the        of 6,792 learners, have successfully implemented the Bold
+unscientific study done by the team showed that less than 10%      system for a minimum of two academic terms. The system's
+of schools use such digital tools nationwide. The result is that   flexibility has motivated schools to embrace the solution,
+a vast and significant proportion of pre-secondary schools in      offering a promising possibility for moderating the
+Ghana still use paper and manual procedures for school             environmental impact of paper-based processes. The relatively
+administration, including academic and financial report            few schools that have already used the system have collectively
+generation. This article communicates a possible way out while     saved 28 boxes consisting of 140 reams of A4 paper. This
+showcasing the consequences of this practice, emphasising the      translates to the equivalent of 7 trees which have been saved,
+impact on environmental sustainability. Previous studies [1, 2]    contributing to the reduction of carbon emissions.
+have highlighted the inefficiencies and inaccuracies associated
+with paper-based management systems, but environmental             The Bold School Management System presents a compelling
+considerations have been understated.                              alternative to traditional paper-based school management
+                                                                   processes. Its successful implementation in 18 schools without
+2. THE CHALLENGE                                                   any conscious or explicit marketing put in place demonstrates
+                                                                   the potential for widespread adoption. This is perceived as
+2.1 Environmental Impact of Paper-Based                            birthing a more sustainable approach to education
+Systems                                                            administration. It not only addresses the inefficiencies
+Studies indicate an average of between 8,000 to 10,000 sheets      associated with paper-based systems, but also contributes to
+of paper per tree in the production process [3, 4]. In the ten     environmental conservation, aligning with global efforts
+schools studied as part of this communication, the study found     towards sustainable practices in education.
+that on average, basic schools use a minimum of ten (10) sheets
+of A4 paper per learner annually for reporting purposes alone.     3. THE SOLUTION
+With a reported population of 8,507,142 learners in Ghana's        3.1 Application Architecture
+basic school system as of the end of 2022 [5], the annual paper    The Bold School Management System was designed with
+consumption for reporting alone translates to some 85,071,420      flexibility and efficiency in mind. It thus takes advantage of
+sheets of paper, resulting in the destruction of around 10,000     both spreadsheet and relative database management
+trees each year. This statistic excludes the additional paper      technologies for data storage; spreadsheets for academic data
+required for testing and communication.                            and MySQL for staff and financial records. This dual-storage
+                                                                   approach enhanced portability and reduces strain on the
+
+
+
+                                                                                                                                38
+
+                                                                   International Journal of Computer Applications (0975 – 8887)
+                                                                                              Volume 186 – No.5, January 2024
+
+database. The markup and scripting languages used also make        for example has access to the privilege of ‘creating’ subjects
+it adaptable to both localhost and remote server implementation    which can in turn be managed by the Class Teacher under the
+allowing for all kinds of institutions including those in          Subject Combination module as shown in Figure 4. Another
+resource-constrained areas to participate.                         key but flexible module is the Student Management Portal in
+                                                                   Figure 2 which lists existing all students with key identifiers
+4. DEVELOPMENT & METHODOLOGY                                       such as School Number and parent contact details. The
+4.1 Application Development Overview:                              modules’ flexibility lies in the fact that different users have
+Starting as a hobby project and with self-generated funds, the     access to its different functions. Clerk for example is able to
+vanilla-PHP coded system was developed with a focus on             use this module to receive payments from students whereas
+robust and efficient functionality, employing a combination of     Manager may for example be able to use it to bill students or
+technologies to meet the desired requirements.                     perform any of several actions associated with student
+                                                                   management. The system has the ability to generate several
+4.2 Programming Languages and Technologies:                        types of reports ranging from administrative reports such as
+PHP: The core and supporting functions of the software were        class and staff lists to financial reports and history of individual
+primarily implemented in PHP. PHP provides a server-side           students or classes among several others to academic reports of
+scripting environment, enabling dynamic content generation         individual or cohort in different formats. Figure 3 which shows
+and seamless integration with web applications.                    some of the steps involved in retrieving academic reports is one
+                                                                   of several options and wizards available for generating reports
+JavaScript and HTML: To enhance the user interface and             in the system. There are video demonstration on the youtube
+provide a dynamic user experience, JavaScript and HTML are         playlist at https://tinyurl.com/BoldSchMngr
+employed. JavaScript, as a client-side scripting language,
+facilitates interactivity within the system, while HTML in         4.4 User experience evaluation
+combination with CSS and some limited use of XML structures        Although the system has been tested by dozens of alpha, beta
+the content, look and feel, to ensure responsiveness across        and real users since 2018, the feedback has been very anecdotal
+devices types where implemented.                                   and qualitative. For this communication, the study chose to
+                                                                   include and display independent quantitative feedback taken in
+Database and Spreadsheet Management: The system relies             5 month period. Thus, show the user experience (UX) feedback
+on the MySQL database engine for efficient data storage.           in two formats;
+MySQL is a widely used relational database management
+system known for its reliability, scalability, and performance.         i)         experience and perceptions of real users
+It seamlessly integrates with PHP, enabling the application to          ii)        UX experience from automated non-human
+store and retrieve data in a structured manner providing a                         user.
+secure and reliable foundation for the application. To minimize    The responses from 39 and 26 users of the online and offline
+load on the database and to enhance portability of data, the       versions of the system respectively are demonstrated in Table
+system stores static academic records in Excel sheets. To          1, with Error! Reference source not found. showing the
+achieve this, the PHP-Excel library is utilised. This library      average time taken for 55 Action runtime tests of selected
+streamlines the handling and manipulation of Excel files,          aspects of the system. As detailed in Table 1, there was 81.5%
+allowing for tasks such as reading, writing, and formatting data   positive response or feedback from users who access the system
+within spreadsheet documents without the need for low level        via the online version and 76.48% positive response from
+time consuming coding.                                             offline users. This overwhelming endorsement by over 4 out of
+                                                                   every 5 users, can provide for good word-of-mouth publicity of
+The chosen technologies offer scalability, allowing the            the system. For the authors, it is also an endorsement that the
+software to accommodate future growth and evolving                 system is worth communicating to the scientific community.
+requirements. As the project progresses, periodic evaluations of
+emerging technologies and updates to libraries will be             The Action runtime testing was done using 55 sets of attempts
+considered to ensure the application remains current and           with each set consisting the activities mentioned in Error!
+optimised.                                                         Reference source not found.. This study employed the Cogtool
+                                                                   testing application [8] and methodology to simulate the
+4.3 User Interface                                                 activities of 60 users on the selected tasks. The process
+A demo version of the system is available at                       involved illustrating the tasks of interests using a storyboard
+https://smis.boldtechgh.com/demo/ for testing and further          format with drawings and pictures using CogTool’s widgets. At
+understanding. For brevity, therefore, it is worth mentioning      the click of a button, CogTool created a model that estimated
+that user views and privileges are managed by an inbuilt access    how long it would take an average skilled user to finish those
+control feature. Only the Super Administrator, has access to the   tasks. By using CogTool, different users could be simulated
+complete set of features on their dashboard as shown in Figure     without having to deal with the logistics, time and
+1. Other customisable users include, Clerk, Finance Officer,       inefficiencies involved in using actual end users.
+Class Teacher, Headteacher, Parent. The Super Administrator
+
+
+
+
+                                                                                                                                    39
+
+                                                                       International Journal of Computer Applications (0975 – 8887)
+                                                                                                  Volume 186 – No.5, January 2024
+
+
+
+
+        Figure 1: Administrator Dashboard Interface                        Figure 2: Student Management Portal
+
+
+
+
+           Figure 3: Class Results Printout Wizard                         Figure 4: Subject Combination Module
+                                        Table 1: Users Experience and Perceptions of System
+                                                                            Online                                 Offline
+                                                                 Yes       No           % Positive      Yes     No      % Positive
+ It saves us administrative time                                 31         8             78.5          22       4         84.6
+ Overall it was a god decision to invest in the system           27        12             69.2          20       6         76.9
+ Money is saved on paper and stationery                          37         2               94.8        22       6           78.6
+ It is easy to navigate                                          25         14              64.1        17       9           65.4
+ It is environmentally friendly                                  39         0               100         20       6           76.9
+ Average                                                                                    81.5                            76.48
+
+
+        Table 2:System Test Results using Cogtool                      the development of a an automated backup script which sends
+                                                                       a .sql backup of data to a designated email at a set time every
+    Average time taken to (s):          Remote      Local host         24 hours. This is in addition to existing security features.
+Sign in                                  2.41         1.72
+                                                                       Teachers feedback has largely concentrated on the user
+Add New User                             12.83           9.87
+                                                                       experience with regards to recording and reporting student
+Upload Students in Bulk1                  7.31           4.87          academic and progress reports. A major response to this
+                                                                       feedback has been allowing individual teachers to upload
+Delete individual record                  2.84           2.37          scores on assigned subjects. In the initial phases of the
+Upload Scores from excel file1            9.65           6.89          application, only designated staff could upload results for entire
+                                                                       classes or school.
+View Class Results                        8.09           5.78
+                                                                       Parents feedback has centered on making student academic
+Generate    Individual     Financial                                   progress and financial reports easy to access and permanently
+History                                  14.88           9.92          available. The feedback led to the improvement of the system
+                                                                       to allow for the sending of bulk SMS with customized URLs
+                                                                       for parents to download PDFs of reports on their devices
+4.5 User Feedback and Adaptation                                       without need to login.
+The team has over the years received feedback from school
+proprietors, teachers and parents. Proprietors have been more
+concerned about data security and made input that has led to
+
+
+1 This requires a prefilled Excel file to be uploaded. Time
+
+recorded here does not include the time used for preparing
+same.
+
+
+
+                                                                                                                                      40
+
+                                                                   International Journal of Computer Applications (0975 – 8887)
+                                                                                              Volume 186 – No.5, January 2024
+
+
+5. POTENTIAL IMPACT OF                                             7. REFERENCES
+APPLICATION                                                        [1] Ampofo JA. Challenges of student management
+                                                                       information system (MIS) in Ghana: A case study of
+5.1 Environmental Sustainability:                                      University for Development Studies, Wa Campus.
+Reduction in Paper Consumption: The assessment of the use              International Journal of Management & Entrepreneurship
+of the system so far, through our interactions with school             Research. 2020 Oct 23;2(5):332-43.
+administrators in 18 institutions has indicated a reduction in
+paper usage. This directly translates to saving trees and          [2] Inusah F, Missah YM, Najim U, Twum F. Integrating
+contributing to lower carbon emissions as targeted in the UN           expert system in managing basic education: A survey in
+Sustainable Development Goal on conservation efforts and               Ghana. International Journal of Information Management
+minimising deforestation and reducing waste [9,10].                    Data Insights. 2023 Apr 1;3(1):100166.
+                                                                   [3] Muntons. How much paper does one tree make? -
+5.2 Educational Institution Efficiency and                             Muntons [Internet]. Muntons. 2021. Available from:
+                                                                       https://www.muntons.com/success_story/how-much-
+Effectiveness:                                                         paper-does-one-tree-make/
+User feedback has largely pointed to the time-saving benefits,
+streamlining of academic, financial and administrative             [4] Ribble Packaging Ltd. How much paper comes from one
+reporting and therefore enhancing overall efficiency.                  tree? [Internet]. Ribble. 2022. Available from:
+According to Luz et al. [11] one of the major strategic reasons        https://ribble-pack.co.uk/blog/much-paper-comes-one-
+for organisations investing in technology is Operational               tree
+Excellence. Thus, educational institutions that use the school     [5] Ministry of Education EMIS platform. 2023.
+management system or any other similar systems are ultimately
+protecting their own existence and enhancing their viability and   [6] Adarkwah MA. “I’m not against online teaching, but what
+competitiveness                                                        about us?”: ICT in Ghana post Covid-19. Education and
+                                                                       information technologies. 2021 Mar;26(2):1665-85.
+6. LIMITATIONS AND FUTURE WORK                                     [7] Asunka S. Overcoming barriers to instructor adoption of a
+Sub-optimal responsiveness: The system was built to work               learning management system: The case of Regent
+ideally on localhost networks and from remote web servers              University College in Ghana. InCases on educational
+both accessible through any modern browsers. Although                  technology implementation for facilitating learning 2013
+extensive effort has been put into making the user interface           (pp. 239-252). IGI Global.
+responsive, the authors cannot guarantee that all pages will
+                                                                   [8] Saleh AM, Enaizan O. COG Tool: An Automated
+work responsively on all browsers. To offset the net effect of
+                                                                       Cognitive Measurement of Workload for Mobile Event
+this, the research recommends future work should integrate or
+                                                                       Logging. International Journal of Interactive Mobile
+rewrite the code using any popular and well supported
+                                                                       Technologies. 2022 Oct 15;16(20).
+framework which would have already taken the nitty-gritty into
+consideration. The development of a mobile app user interface      [9] Liang X, Yang X, Zhang W. Comparison of paper and
+for parents is further recommended.                                    electronic devices and measures to reduce carbon
+                                                                       emission. Highlights in Science, Engineering and
+Cost Implications: While the system aims to reduce                     Technology. 2023 Jul 12;58:280-8.
+paperwork and streamline processes, initial hardware
+acquisition, configuration and maintenance costs might pose        [10] Yousufi MK. Exploring paperless working: A step
+entry barriers especially for small sized resource-constrained          towards low carbon footprint. European Journal of
+institutions.                                                           Sustainable Development Research. 2023;7(4).
+                                                                   [11] Luz Tortorella G, Cauchick-Miguel PA, Li W, Staines J,
+Tech savviness and perceptions: The study anticipates some
+                                                                        McFarlane D. What does operational excellence mean in
+possible resistance or hesitation arising from some users due to
+                                                                        the Fourth Industrial Revolution era? International Journal
+a lack of understanding or familiarity with electronic systems.
+                                                                        of Production Research. 2022 May 3;60(9):2901-17.
+Hence, needs-based training especially for school staff before
+implementation in any institution is highly recommended.
+
+
+
+
+IJCATM : www.ijcaonline.org                                                                                                     41
