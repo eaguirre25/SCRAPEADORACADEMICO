@@ -1,0 +1,73 @@
+{
+  "estratos": {
+    "CONICET / no incluido": {
+      "si": 1,
+      "no": 49,
+      "dudoso": 0,
+      "sin_marcar": 0,
+      "poblacion": 1494,
+      "proporcion_pertinente": 0.02
+    },
+    "OpenAlex / incluido": {
+      "si": 52,
+      "no": 8,
+      "dudoso": 0,
+      "sin_marcar": 0,
+      "poblacion": 4122,
+      "proporcion_pertinente": 0.8666666666666667
+    },
+    "CONICET / incluido": {
+      "si": 13,
+      "no": 37,
+      "dudoso": 0,
+      "sin_marcar": 0,
+      "poblacion": 338,
+      "proporcion_pertinente": 0.26
+    },
+    "OpenAlex / no incluido": {
+      "si": 9,
+      "no": 31,
+      "dudoso": 0,
+      "sin_marcar": 0,
+      "poblacion": 642,
+      "proporcion_pertinente": 0.225
+    }
+  },
+  "total": {
+    "precision": 0.821,
+    "exhaustividad": 0.955,
+    "pertinentes_estimados_incluidos": 3660,
+    "pertinentes_estimados_perdidos": 174
+  },
+  "OpenAlex": {
+    "precision": 0.867,
+    "exhaustividad": 0.961,
+    "pertinentes_estimados_incluidos": 3572,
+    "pertinentes_estimados_perdidos": 144
+  },
+  "CONICET": {
+    "precision": 0.26,
+    "exhaustividad": 0.746,
+    "pertinentes_estimados_incluidos": 88,
+    "pertinentes_estimados_perdidos": 30
+  },
+  "filtro_vigente_en_la_muestra": {
+    "CONICET": {
+      "vp": 12,
+      "fp": 14,
+      "fn": 2,
+      "vn": 72,
+      "precision": 0.462,
+      "exhaustividad": 0.857
+    },
+    "OpenAlex": {
+      "vp": 53,
+      "fp": 6,
+      "fn": 8,
+      "vn": 33,
+      "precision": 0.898,
+      "exhaustividad": 0.869
+    }
+  },
+  "marcados": "200 de 200"
+}

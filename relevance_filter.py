@@ -334,6 +334,14 @@ OWNERSHIP_PHRASES = OWNERSHIP_MANAGEMENT_NOISE_TERMS + [
 ]
 
 
+def role_near_school(text: str, title: str = "") -> bool:
+    """Cargo directivo a pocas palabras de un término escolar (no de «educación» en general)."""
+    school = CORE_SCHOOL_TERMS + SCHOOL_SYSTEM_TERMS
+    if english_principal_hit(text) or near_hit(text, ROLE_TERMS, school, 6):
+        return True
+    return bool(title and term_hit(title, ROLE_TERMS) and term_hit(text, school))
+
+
 def management_near_school(text: str) -> bool:
     padded = f" {text} "
     for phrase in OWNERSHIP_PHRASES:
@@ -433,6 +441,21 @@ def classify_relevance(row: Dict[str, Any]) -> Tuple[str, int, str, List[str]]:
     if sector_noise and not (direct_focus or medium_title or management_near):
         evidence.append("ruido de sector: " + ", ".join(sector_noise[:3]))
         return "rechazada", score, "fuera de foco: nivel/sector sin dirección o gestión escolar como objeto", evidence
+
+    # Repositorios institucionales (CONICET, SEDICI, RIAA): su buscador devuelve
+    # mucha investigación educativa general. La validación manual de octubre de
+    # 2026 mostró que «gestión cerca de escuela» o un cargo junto a «educación»
+    # dejaban pasar sobre todo historia y sociología de la escolaridad. Se exige
+    # una frase directa, el campo en el título o un cargo directivo junto a un
+    # término escolar.
+    if strict:
+        if strong_title or strong_body:
+            return "alta", score, "coincidencia directa con dirección/gestión/liderazgo escolar", evidence
+        if role_near_school(text, title):
+            return "alta", score, "menciona rol/equipo directivo junto a la escuela", evidence
+        if medium_title:
+            return "alta", score, "el título nombra el campo (gestión/liderazgo educativo)", evidence
+        return "rechazada", score, "repositorio: sin frase directa ni cargo directivo junto a la escuela", evidence
 
     # Alta pertinencia: lo que entra al master y al dashboard.
     if strong_title or strong_body:

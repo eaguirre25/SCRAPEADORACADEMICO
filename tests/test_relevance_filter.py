@@ -35,7 +35,15 @@ def test_management_must_be_near_school_not_anywhere():
            "Como actividad de extensión se visitó una escuela rural.")
     assert status("Calidad del agua en cuencas pampeanas", far, "CONICET Digital") == "rechazada"
     near = "Analizamos cómo la gestión de la escuela secundaria organiza el trabajo de los docentes."
-    assert status("Organización institucional en secundarias", near, "CONICET Digital") == "alta"
+    assert status("Organización institucional en secundarias", near) == "alta"
+
+
+def test_repositories_need_a_directive_role_next_to_the_school():
+    general = "Analizamos la gestión de la escuela secundaria y las trayectorias de los estudiantes."
+    assert status("Trayectorias en la secundaria", general, "CONICET Digital") == "rechazada"
+    role = "Entrevistamos a los directivos de escuelas secundarias sobre sus decisiones curriculares."
+    assert status("Decisiones curriculares", role, "CONICET Digital") == "alta"
+    assert status("La dirección escolar en Argentina: aproximación al estado del arte", "", "CONICET Digital") == "alta"
 
 
 def test_school_ownership_type_is_not_school_management():

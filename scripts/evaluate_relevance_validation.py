@@ -31,6 +31,36 @@ def rows(ws):
     return [dict(zip(header, v)) for v in values[1:]]
 
 
+def current_filter_agreement(wb) -> dict:
+    """Matriz de confusión del filtro vigente sobre la muestra (sin ponderar).
+
+    Reclasifica cada registro con el texto guardado en la planilla (resumen
+    recortado a 1500 caracteres), para medir un cambio de reglas sin resortear.
+    """
+    try:
+        import relevance_filter as rf
+    except Exception:
+        return {}
+    out: dict = {}
+    for r in rows(wb["Muestra"]):
+        label = str(r.get("pertinente") or "").strip().lower()
+        if label not in ("si", "no"):
+            continue
+        row = {"title": r.get("titulo") or "", "abstract": r.get("resumen") or "",
+               "keywords": r.get("palabras_clave") or "", "document_type": r.get("tipo") or "",
+               "source": r.get("fuente") or ""}
+        status = rf.classify_relevance(row)[0]
+        if status == "revisar":
+            status = {"promover": "alta", "descartar": "rechazada"}.get(rf.second_review(row)[0], "revisar")
+        source = "CONICET" if "conicet" in str(r.get("fuente")).lower() else "OpenAlex"
+        m = out.setdefault(source, {"vp": 0, "fp": 0, "fn": 0, "vn": 0})
+        m[("v" if label == "si" else "f") + "p" if status == "alta" else ("f" if label == "si" else "v") + "n"] += 1
+    for m in out.values():
+        m["precision"] = round(m["vp"] / (m["vp"] + m["fp"]), 3) if m["vp"] + m["fp"] else None
+        m["exhaustividad"] = round(m["vp"] / (m["vp"] + m["fn"]), 3) if m["vp"] + m["fn"] else None
+    return out
+
+
 def evaluate(path: Path = SHEET) -> dict:
     wb = openpyxl.load_workbook(path)
     labels = {str(r["record_id"]): str(r.get("pertinente") or "").strip().lower() for r in rows(wb["Muestra"])}
@@ -66,6 +96,7 @@ def evaluate(path: Path = SHEET) -> dict:
             "pertinentes_estimados_incluidos": round(inc_p),
             "pertinentes_estimados_perdidos": round(exc_p),
         }
+    result["filtro_vigente_en_la_muestra"] = current_filter_agreement(wb)
     marked = sum(1 for v in labels.values() if v in ("si", "no", "dudoso"))
     result["marcados"] = f"{marked} de {len(labels)}"
     return result
