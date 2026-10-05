@@ -86,6 +86,10 @@ Cada corrida del scraper encadena: filtro y unificación de duplicados → recup
 - La base del asistente IA (`docs/fulltext_knowledge_base.json`) se reconstruye en cada regeneración y `update_assistant_counts.py` actualiza las cifras escritas en `docs/asistente_ia.html`.
 - Las etiquetas manuales de tópicos (`config/topic_labels.csv`) llevan `model_corpus_hash`: solo se aplican al modelo ajustado con ese corpus. Tras un reajuste, el tablero muestra el descriptor automático hasta que se validen etiquetas nuevas; las anteriores siguen en el archivo como referencia.
 
+## Selecciones semanales de lecturas
+
+La biblioteca (`docs/biblioteca.html`, «Revisiones e informes») muestra las selecciones semanales de lecturas que prepara y envía por correo una tarea programada de ChatGPT, con cita APA, por qué importa, enlace al DOI y acceso a la ficha si el trabajo ya está en la biblioteca. Cada selección es un archivo nuevo en `data/weekly_reports/` (`AAAA-MM-DD.md` con el texto del correo, o `.json`); `build_weekly_reports.py` las junta en `docs/weekly_reports.json` en cada regeneración del tablero. Así la tarea no necesita leer ni reescribir el acumulado, que era lo que impedía cargarlas desde septiembre. Formato e instrucción para la tarea: `data/weekly_reports/README.md`.
+
 ## App para el celular
 
 El sitio de `docs/` funciona como aplicación instalable (PWA): se abre desde la dirección de GitHub Pages del repositorio y se agrega a la pantalla de inicio, sin pasar por tiendas de aplicaciones.
