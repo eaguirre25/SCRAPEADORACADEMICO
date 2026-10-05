@@ -23,6 +23,7 @@ from .text_cleaning import (
     clean_for_stm,
     clean_for_vectorizer,
     split_academic_sections,
+    strip_repository_header,
 )
 
 
@@ -110,7 +111,7 @@ def _year_allowed(value: Any, start: int, end: int) -> bool:
 def _publication_from_record(row: dict[str, Any]) -> dict[str, Any]:
     publication_id = clean_value(row.get("publication_document_id")) or stable_document_id(row)
     title = clean_for_display(clean_value(row.get("title")))
-    abstract = clean_for_display(clean_value(row.get("abstract")))
+    abstract = clean_for_display(strip_repository_header(clean_value(row.get("abstract")), clean_value(row.get("title"))))
     keywords = clean_for_display(clean_value(row.get("keywords")))
     language, confidence, _ = detect_language(" ".join((title, abstract, keywords)))
     return {

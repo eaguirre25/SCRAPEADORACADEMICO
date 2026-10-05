@@ -37,8 +37,8 @@ def test_exported_network_and_model_account_for_every_candidate():
     if data['status']=='fitted':
         assert sum(int(t['document_count'])for t in data['topics'])+data['outliers']==len(candidates)
         assert all(d['assignment'].get('model')=='BERTopic-ARGENTINA-2020-2026' for d in candidates)
-        assert len(data['model']['stability'])==5
-        assert len(data['model']['sensitivity'])==len(data['manifest']['settings']['sensitivity_min_topic_sizes'])
+        if data['model'].get('procedure')=='global_bertopic_search':
+            assert len(data['model']['stability'])==5
     for edge in data['network']['edges']:
         assert 0<=edge['source']<len(candidates) and 0<=edge['target']<len(candidates)
         assert edge['shared_count']>=2 and edge['weight']>=.199999
@@ -66,18 +66,20 @@ def test_territorial_terms_leave_topic_words_but_not_the_selection():
     # La evidencia territorial sigue usando el texto completo.
     assert argentina.screening(record('Escuelas de Chaco'),settings,{})['evidence']
 
-def test_min_topic_size_rule_prefers_stable_sizes():
-    import pytest
-    np=pytest.importorskip('numpy');pytest.importorskip('umap');pytest.importorskip('hdbscan')
-    rng=np.random.default_rng(0)
-    centers=np.eye(8)[:4]*6
-    x=np.vstack([c+rng.normal(0,.3,(60,8)) for c in centers])
-    local={**settings,'sensitivity_min_topic_sizes':[10,25,80],'stability_seeds':[1,2,3]}
-    chosen,table,selected=argentina.select_min_topic_size(x,local,{'n_neighbors':10,'n_components':5,'min_dist':0.0,'metric':'euclidean'})
-    assert selected and chosen in (10,25)
-    assert [r['min_topic_size'] for r in table]==[10,25,80]
-    big=next(r for r in table if r['min_topic_size']==80)
-    assert big['min_topics']<3 or big['mean_outlier_share']>0.35
+def test_parameter_search_only_scales_size_dependent_rules():
+    """Fidelidad metodológica: el modelo argentino solo puede cambiar los
+    valores que dependen del tamaño del corpus; el resto es el del global."""
+    import yaml
+    glob=yaml.safe_load((Path(__file__).resolve().parents[1]/'config/topic_modeling.yml').read_text())['bertopic']['macro_search']
+    local={k:v for k,v in settings['macro_search'].items() if not k.startswith('_')}
+    size_dependent={'screen_cluster','cluster_specs','target_min_topics','target_max_topics',
+        'reject_topics_below','reject_topics_above','reject_median_cluster_below'}
+    assert set(local)<=size_dependent
+    merged={**glob,**local}
+    for key in ('reject_outlier_share_above','reject_maximum_cluster_share_above','reject_minimum_size_share_above','finalists','seeds'):
+        assert merged[key]==glob[key]
+    # min_samples idénticos a la grilla global (5 y 10).
+    assert {s for _,s in local['cluster_specs']}=={5,10}
 
 def test_low_relevance_candidates_are_excluded_but_recoverable():
     r={**record(),'relevance_score':'0'}

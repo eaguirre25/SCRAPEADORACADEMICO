@@ -67,19 +67,9 @@ def write_json(path, data):
         separators=(',', ':') if compact else None), encoding='utf-8')
 
 def clean_repository_abstract(row):
-    """Quita la cabecera que CONICET antepone al resumen (títulos y autores).
-
-    El buscador de CONICET entrega «título; traducciones\nautores\nresumen».
-    Esa cabecera repite el título y suma nombres propios que distorsionan los
-    embeddings y el vocabulario de los tópicos. Solo se usa en este análisis:
-    el maestro no se modifica.
-    """
-    abstract = row.get('abstract', '') or ''
-    lines = abstract.split('\n')
-    title = (row.get('title', '') or '').strip().lower()
-    if len(lines) >= 3 and title and lines[0].strip().lower()[:25] == title[:25]:
-        return '\n'.join(lines[2:]).strip()
-    return abstract
+    """Misma limpieza de cabeceras de CONICET que usa el modelo global."""
+    from topic_modeling.text_cleaning import strip_repository_header
+    return strip_repository_header(row.get('abstract', '') or '', row.get('title', '') or '')
 
 def strip_territorial_terms(text, settings):
     """Saca los topónimos del vocabulario de los tópicos (no de los embeddings).
@@ -91,40 +81,25 @@ def strip_territorial_terms(text, settings):
         return text
     return re.sub(r'\s+', ' ', re.sub(settings['territorial_pattern'], ' ', text, flags=re.I)).strip()
 
-def select_min_topic_size(embeddings, settings, umap_settings):
-    """Elige el tamaño mínimo de tópico por estabilidad entre semillas.
+MODEL_OUTPUT = 'argentina_2020_2026'
 
-    Regla declarada: entre los tamaños candidatos con proporción media de
-    outliers <= max_outlier_share y al menos min_topics tópicos en todas las
-    semillas, se elige el de mayor ARI medio entre pares de semillas (sobre
-    los documentos asignados en ambas); ante empate, el tamaño mayor. Si
-    ninguno cumple, se conserva min_topic_size de la configuración.
+def search_parameters(config, settings):
+    """Elige UMAP y HDBSCAN con el mismo procedimiento que el modelo global.
+
+    Usa topic_modeling.bertopic_search sin cambios: cribado de geometrías UMAP,
+    grilla HDBSCAN sobre las tres mejores, reglas de rechazo, puntaje
+    multicriterio, cuatro finalistas y estabilidad en cinco semillas (ARI, NMI,
+    centroides y palabras). Solo se reemplazan, de forma declarada en
+    config/argentina_analysis.json, la grilla de tamaños y los umbrales que
+    dependen del tamaño del corpus.
     """
-    from itertools import combinations
-    from sklearn.metrics import adjusted_rand_score
-    from umap import UMAP
-    from hdbscan import HDBSCAN
-    rule = settings.get('selection', {})
-    reduced = {seed: UMAP(n_neighbors=umap_settings['n_neighbors'], n_components=umap_settings['n_components'],
-        min_dist=umap_settings['min_dist'], metric=umap_settings['metric'], random_state=seed).fit_transform(embeddings)
-        for seed in settings['stability_seeds']}
-    table = []
-    for size in settings['sensitivity_min_topic_sizes']:
-        labels = {seed: HDBSCAN(min_cluster_size=size, min_samples=settings['min_samples'], metric='euclidean',
-            cluster_selection_method='eom').fit_predict(r) for seed, r in reduced.items()}
-        aris = []
-        for a, b in combinations(labels.values(), 2):
-            both = [i for i in range(len(a)) if a[i] >= 0 and b[i] >= 0]
-            if len(both) > 1:
-                aris.append(adjusted_rand_score([int(a[i]) for i in both], [int(b[i]) for i in both]))
-        topics = [len(set(int(x) for x in l if x >= 0)) for l in labels.values()]
-        outliers = [float((l < 0).mean()) for l in labels.values()]
-        table.append({'min_topic_size': size, 'mean_pairwise_ari': round(sum(aris) / len(aris), 4) if aris else None,
-            'mean_outlier_share': round(sum(outliers) / len(outliers), 4), 'min_topics': min(topics), 'max_topics': max(topics)})
-    eligible = [r for r in table if r['mean_pairwise_ari'] is not None
-        and r['mean_outlier_share'] <= rule.get('max_outlier_share', 0.35) and r['min_topics'] >= rule.get('min_topics', 3)]
-    chosen = max(eligible, key=lambda r: (r['mean_pairwise_ari'], r['min_topic_size']))['min_topic_size'] if eligible else settings['min_topic_size']
-    return chosen, table, bool(eligible)
+    from topic_modeling.bertopic_search import search_bertopic_parameters, run_bertopic_stability
+    config['bertopic']['macro_search'].update(settings['macro_search'])
+    search_bertopic_parameters(config, output_name=MODEL_OUTPUT)
+    run_bertopic_stability(config, output_name=MODEL_OUTPUT, finalists_only=True)
+    out = ROOT/'bertopic'/MODEL_OUTPUT
+    selected = json.loads((out/'selected_parameters.json').read_text(encoding='utf-8'))['selected']
+    return selected, read_csv(out/'candidate_solutions.csv'), read_csv(out/'stability_runs.csv')
 
 def screening(row, settings, reviews):
     evidence = []
@@ -207,64 +182,53 @@ def fit(settings):
     from topic_modeling.bertopic_model import run_bertopic
     from topic_modeling.embeddings import load_or_create_metadata_embeddings
     from topic_modeling.language_detection import detect_language
-    from sklearn.metrics import adjusted_rand_score
-    from umap import UMAP
-    from hdbscan import HDBSCAN
     config=load_config('config/topic_modeling.yml')
     config['paths']['output_root']=str(ROOT)
     config['paths']['human_labels']='config/argentina_topic_labels.csv'
-    config['bertopic']['umap'].update(settings['umap'])
     corpus=read_csv(ROOT/'corpus/modeling_corpus_metadata.csv')
-    if len(corpus)<max(20,min(settings['sensitivity_min_topic_sizes'])+1):
+    if len(corpus)<20:
         raise ValueError('Insufficient documents for the configured independent model')
-    embeddings,_=load_or_create_metadata_embeddings(corpus,config)
-    chosen,selection_table,selected=select_min_topic_size(embeddings,settings,config['bertopic']['umap'])
-    settings={**settings,'min_topic_size':chosen}
-    config['bertopic']['min_topic_size']=settings['min_topic_size']
-    config['bertopic']['min_samples']=settings['min_samples']
-    config['bertopic']['reduce_outliers']=False
-    config['bertopic']['model_label']='BERTopic-ARGENTINA-2020-2026'
-    # BERTopic vectorizes concatenated topic documents, so document-frequency
-    # filtering on a tiny number of clusters can remove the whole vocabulary.
-    config['bertopic']['min_df']=1
-    config['bertopic']['max_df']=1.0
+    # El idioma entra en el cribado (NMI idioma-tópico), igual que en el global.
     for row in corpus: row['language']=detect_language(row['texto_modelado'])[0]
     write_csv(ROOT/'corpus/modeling_corpus_metadata.csv',corpus)
-    # Language detection is diagnostic; retain the selection fingerprint before its enrichment.
     selection_hash=json.loads((ROOT/'corpus_manifest.json').read_text())['corpus_hash']
-    run_bertopic(config, output_name='argentina_2020_2026')
-    out=ROOT/'bertopic/argentina_2020_2026'
+    embeddings,_=load_or_create_metadata_embeddings(corpus,config)
+    selected,candidates,stability_runs=search_parameters(config,settings)
+    config['bertopic']['umap'].update({'n_neighbors':int(selected['n_neighbors']),'n_components':int(selected['n_components']),
+        'min_dist':float(selected['min_dist'])})
+    config['bertopic']['min_topic_size']=int(selected['min_cluster_size'])
+    config['bertopic']['min_samples']=int(selected['min_samples'])
+    config['bertopic']['reduce_outliers']=False
+    config['bertopic']['model_label']='BERTopic-ARGENTINA-2020-2026'
+    # Vectorización idéntica a la global (min_df 2, max_df 0,95). Solo si con
+    # pocos tópicos no queda vocabulario se relaja, y queda registrado.
+    vectorizer_note='Vectorizer identical to the global model (min_df=2, max_df=0.95).'
+    try:
+        run_bertopic(config, output_name=MODEL_OUTPUT)
+    except ValueError as error:
+        if 'vocabulary' not in str(error).lower() and 'max_df' not in str(error).lower(): raise
+        config['bertopic']['min_df']=1; config['bertopic']['max_df']=1.0
+        vectorizer_note='Global vectorizer left no vocabulary for this number of topics; min_df=1/max_df=1.0 used instead.'
+        run_bertopic(config, output_name=MODEL_OUTPUT)
+    out=ROOT/'bertopic'/MODEL_OUTPUT
     write_json(out/'semantic_network.json',semantic_neighbors(embeddings,[r['record_id']for r in corpus],
         settings['semantic_network']['neighbors'],settings['semantic_network']['min_similarity']))
-    assignments=read_csv(out/'document_topics.csv')
-    base=[int(r['topic_id']) for r in assignments]
-    sensitivity=[];stability=[]
-    u=config['bertopic']['umap']
-    for seed in settings['stability_seeds']:
-        reduced=UMAP(n_neighbors=u['n_neighbors'], n_components=u['n_components'],min_dist=u['min_dist'],metric=u['metric'],random_state=seed).fit_transform(embeddings)
-        sizes=settings['sensitivity_min_topic_sizes'] if seed==config['project']['seed'] else [settings['min_topic_size']]
-        for size in sizes:
-            labels=HDBSCAN(min_cluster_size=size,min_samples=settings['min_samples'],metric='euclidean',cluster_selection_method='eom',prediction_data=True).fit_predict(reduced)
-            counts=Counter(int(x) for x in labels)
-            result={'seed':seed,'min_topic_size':size,'topics':len([x for x in counts if x>=0]),
-                'outliers':counts[-1],'documents':len(corpus), 'outlier_share':counts[-1]/len(corpus),
-                'adjusted_rand_including_outliers':adjusted_rand_score(base,labels)}
-            assigned=[i for i,x in enumerate(labels) if x>=0 and base[i]>=0]
-            result['shared_assigned_documents']=len(assigned)
-            result['adjusted_rand_shared_assigned']=adjusted_rand_score([base[i]for i in assigned],[int(labels[i])for i in assigned]) if len(assigned)>1 else None
-            if seed==config['project']['seed']:sensitivity.append(result)
-            if size==settings['min_topic_size']:stability.append(result)
+    solution=selected.get('solution_id','')
+    keep=('phase','n_neighbors','n_components','min_dist','min_cluster_size','min_samples','clusters','outlier_share',
+        'median_cluster_size','maximum_cluster_share','silhouette','dbcv','topic_diversity','multi_criteria_score',
+        'rejection_reasons','solution_status','solution_id','stability_ari_mean','stability_nmi_mean')
     signature=model_signature(json.loads(Path('config/argentina_analysis.json').read_text()))
     write_json(out/'screening_model_manifest.json',{'selection_hash':selection_hash,'model_signature':signature,
         'model_id':hashlib.sha256((selection_hash+signature).encode()).hexdigest(),'criterion':settings['criterion'],
-        'sensitivity':sensitivity,'stability':stability,'status':'exploratory_candidates',
-        'selected_min_topic_size':chosen,'parameter_selection':selection_table,
-        'parameter_choice':(f'Minimum topic size {chosen} chosen by the declared stability rule (highest mean pairwise ARI across '
-            f'{len(settings["stability_seeds"])} UMAP seeds among sizes with mean outlier share <= '
-            f'{settings.get("selection",{}).get("max_outlier_share",0.35)} and at least {settings.get("selection",{}).get("min_topics",3)} topics). '
-            if selected else f'No candidate size met the stability rule; configured size {chosen} kept. ')
-            +'Vectorizer min_df=1/max_df=1 prevents empty vocabulary when BERTopic aggregates a small number of topics. '
-            'Territorial terms are excluded from topic words. No optimum or substantive validation is claimed.'})
+        'status':'exploratory_candidates','procedure':'global_bertopic_search',
+        'selected_parameters':{k:selected.get(k) for k in keep},
+        'parameter_search':[{k:r.get(k,'') for k in keep} for r in candidates],
+        'stability':[r for r in stability_runs if r.get('solution_id')==solution],
+        'macro_search':config['bertopic']['macro_search'],
+        'parameter_choice':('Parameters chosen with the same procedure as the global model (multi-criteria macro screen over '
+            'UMAP geometries and HDBSCAN settings, rejection rules, four finalists, five-seed stability). Only the HDBSCAN size grid '
+            'and size-dependent thresholds are scaled to the corpus, as declared in config/argentina_analysis.json. '+vectorizer_note+
+            ' Territorial terms are excluded from topic words only. No optimum or substantive validation is claimed.')})
 
 def render(documents, corpus, manifest, reviews):
     out=ROOT/'bertopic/argentina_2020_2026'

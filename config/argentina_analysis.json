@@ -5,13 +5,44 @@
   "include_unvalidated_candidates": true,
   "min_relevance_score": 1,
   "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
-  "min_topic_size": 8,
-  "umap": {"n_neighbors": 10, "n_components": 10, "min_dist": 0.1, "metric": "cosine"},
-  "min_samples": 5,
-  "semantic_network": {"neighbors": 5, "min_similarity": 0.70},
-  "sensitivity_min_topic_sizes": [5, 6, 8, 10, 12, 15],
-  "selection": {"max_outlier_share": 0.35, "min_topics": 3},
+  "semantic_network": {
+    "neighbors": 5,
+    "min_similarity": 0.7
+  },
   "exclude_territorial_terms_from_topic_words": true,
-  "stability_seeds": [42, 117, 233, 401, 809],
-  "review_file": "config/argentina_document_reviews.json"
+  "review_file": "config/argentina_document_reviews.json",
+  "macro_search": {
+    "_rationale": "Mismo procedimiento que el modelo global (config/topic_modeling.yml, bertopic.macro_search). Solo se escalan los valores que dependen del tamaño del corpus: los tamaños mínimos de HDBSCAN se multiplican por 10/35 (25, 35, 50 -> 7, 10, 14) y la mediana mínima de tópico por el mismo factor (20 -> 6); min_samples (5 y 10), outliers máximos, tópico dominante máximo, proporción de tópicos en el tamaño mínimo, finalistas y semillas son idénticos. El rango de tópicos se adapta a un corpus de ~165 documentos.",
+    "screen_cluster": [
+      10,
+      5
+    ],
+    "cluster_specs": [
+      [
+        7,
+        5
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        14,
+        5
+      ],
+      [
+        14,
+        10
+      ]
+    ],
+    "target_min_topics": 4,
+    "target_max_topics": 10,
+    "reject_topics_below": 3,
+    "reject_topics_above": 15,
+    "reject_median_cluster_below": 6
+  }
 }
