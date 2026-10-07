@@ -1,33 +1,30 @@
 {
-  "generated_at": "2026-10-05T07:39:27Z",
+  "generated_at": "2026-10-07T19:23:49Z",
   "conicet_oai_available": true,
-  "targets": 181,
-  "queried_this_run": 181,
+  "targets": 186,
+  "queried_this_run": 23,
   "status_counts": {
-    "aceptado": 162,
-    "sin_coincidencia": 2,
-    "error": 17
+    "aceptado": 174,
+    "sin_coincidencia": 11,
+    "revisar": 1
   },
-  "applied_records": 162,
-  "with_doi": 80,
-  "with_journal": 86,
-  "with_volume_or_pages": 72,
-  "year_changed": 131,
+  "applied_records": 174,
+  "with_doi": 86,
+  "with_journal": 96,
+  "with_volume_or_pages": 78,
+  "year_changed": 133,
   "master_fields_changed": {
-    "document_type": 148,
-    "keywords": 140,
-    "publication_year": 131,
-    "publication_date": 41,
-    "openalex_id": 9,
-    "pdf_url": 8,
-    "origin": 74,
-    "doi": 67
+    "doi": 6,
+    "origin": 9,
+    "document_type": 10,
+    "keywords": 10,
+    "publication_date": 6,
+    "openalex_id": 4,
+    "pdf_url": 4,
+    "publication_year": 7
   },
   "relevance_shifts": [],
-  "http_failures": {
-    "api.openalex.org": 122,
-    "ri.conicet.gov.ar": 3
-  },
+  "http_failures": {},
   "rules": {
     "title_accept": 0.9,
     "title_review": 0.8,
