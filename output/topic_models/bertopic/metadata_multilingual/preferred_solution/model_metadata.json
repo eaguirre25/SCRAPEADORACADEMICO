@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-METADATA-MULTILINGUAL",
   "seed": 42,
-  "generated_at_utc": "2026-10-05T13:54:13.713463+00:00",
-  "git_commit": "82f1102fd746b6561df40f08bf489ae26e4aa421",
+  "generated_at_utc": "2026-10-07T23:44:56.228474+00:00",
+  "git_commit": "da29f73eec4f2057b39f1c061b9df81b0dc5c6d0",
   "python_version": "3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
-  "documents": 7370,
+  "documents": 7550,
   "discarded_documents": 0,
-  "elapsed_seconds": 1255.554,
+  "elapsed_seconds": 1259.997,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
@@ -173,8 +173,8 @@
         "sentence-transformers/distiluse-base-multilingual-cased-v2"
       ],
       "batch_size": 64,
-      "min_topic_size": "50",
-      "min_samples": "5",
+      "min_topic_size": "35",
+      "min_samples": "10",
       "nr_topics": null,
       "calculate_probabilities": true,
       "low_memory": true,
@@ -195,7 +195,7 @@
       "merge_candidate_similarity": 0.8,
       "umap": {
         "n_neighbors": "30",
-        "n_components": "10",
+        "n_components": "5",
         "min_dist": "0.0",
         "metric": "cosine"
       },
@@ -310,11 +310,11 @@
   "output_name": "metadata_multilingual/preferred_solution",
   "validation_status": "exploratory",
   "embedding_cache": {
-    "fingerprint": "fe59ea503cfbbb8ab6769b6416dd20efb00f91e8c9c316f3c4308b65ccc3b2ce",
+    "fingerprint": "61b72b0df7df0c0ee7c8af131d8d9fea8118ee91f9f5952458ad0f72b7b9a716",
     "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
     "dimension": 768,
-    "documents": 7370,
-    "created_at_utc": "2026-10-05T13:20:22.164704+00:00",
+    "documents": 7550,
+    "created_at_utc": "2026-10-07T23:10:47.576782+00:00",
     "combination": "weighted_field_average",
     "variant": "weighted_fields",
     "weights": {
@@ -328,33 +328,33 @@
     "text_cleaning_version": "unicode-nfc-v2",
     "field_embedding_manifests": {
       "title_text": {
-        "fingerprint": "a2933a9f2d9ed06ac765c959c0840dd83e6e2bcbce9fd4c4b8a77177c04d3c01",
+        "fingerprint": "8e334be3d0a32fb06793ca3c3aaf79474c29d61e63def92620bd1e0000caba00",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 7370,
-        "created_at_utc": "2026-10-05T13:01:04.216664+00:00",
+        "documents": 7550,
+        "created_at_utc": "2026-10-07T22:50:41.299178+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
         "text_cleaning_version": "unicode-nfc-v2"
       },
       "abstract_text": {
-        "fingerprint": "a272bf3ced6bc2e013a03fa83199cbbefb7fe4085018e9b89a4f904e66707a50",
+        "fingerprint": "96c206fc1592f8967e837a2c191ad86a17a52ea3347780f7e7fe3dfeb71783c0",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 7370,
-        "created_at_utc": "2026-10-05T13:15:08.082058+00:00",
+        "documents": 7550,
+        "created_at_utc": "2026-10-07T23:05:32.836903+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
         "text_cleaning_version": "unicode-nfc-v2"
       },
       "keywords_text": {
-        "fingerprint": "5b943d6ae4fac3cb8e75a910730fa7cbadfe4b06db81b065614c94b9873dd627",
+        "fingerprint": "b55cf40326a3dd69a6006d1e7f85a6fde5707eae750b631c6395153e71489dd1",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 7370,
-        "created_at_utc": "2026-10-05T13:20:22.079150+00:00",
+        "documents": 7550,
+        "created_at_utc": "2026-10-07T23:10:47.491780+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
@@ -362,20 +362,20 @@
       }
     },
     "available_field_counts": {
-      "title_text": 7370,
-      "abstract_text": 6601,
-      "keywords_text": 7368
+      "title_text": 7550,
+      "abstract_text": 6776,
+      "keywords_text": 7548
     }
   },
-  "outlier_count": 3149,
-  "outlier_percentage": 42.7273,
+  "outlier_count": 3219,
+  "outlier_percentage": 42.6358,
   "model_save_mode": "safetensors_without_ctfidf",
   "warnings": [
     "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"
   ],
   "outliers_reassigned_in_alternative": 0,
   "effective_configuration_path": "effective_configuration.json",
-  "macro_topics": 28,
-  "subtopics": 57,
+  "macro_topics": 34,
+  "subtopics": 61,
   "ambiguity_rule": "outlier OR low semantic margin OR low HDBSCAN membership OR low centroid similarity OR high outlier score"
 }

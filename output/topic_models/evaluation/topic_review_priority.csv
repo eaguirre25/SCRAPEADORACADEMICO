@@ -1,15 +1,15 @@
 topic_id,review_priority_score,borderline_share,low_confidence_share,negative_silhouette_share,coherence_cv,contamination_share,language_concentration,metadata_coverage,priority_reason,priority_rank
-12,26.702,0.48855,0.0,0.0,0.368745,0.007634,0.969466,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,1
-6,25.324,0.635193,0.0,0.017167,0.777382,0.0,0.935622,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,2
-9,23.4,0.32967,0.0,0.0,0.273306,0.010989,0.994505,0.5,alta proporción fronteriza | país sin cobertura suficiente | heterogeneous_candidate,3
-4,21.835,0.513514,0.019305,0.003861,0.763758,0.0,0.440154,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,4
-3,20.728,0.522388,0.044776,0.0,0.881841,0.011194,0.600746,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,5
-11,19.971,0.516556,0.0,0.006623,0.883862,0.006623,0.715232,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,6
-1,19.923,0.401434,0.035842,0.114695,0.868323,0.0,0.706093,0.5,alta proporción fronteriza | siluetas negativas | país sin cobertura suficiente | borderline_heavy_candidate,7
-10,19.765,0.364162,0.16185,0.011561,0.75846,0.0,0.797688,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,8
-13,18.511,0.153846,0.0,0.1,0.406948,0.0,0.769231,0.5,país sin cobertura suficiente | broad_but_interpretable,9
-7,17.664,0.29108,0.0,0.004695,0.585309,0.00939,0.938967,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,10
-8,16.689,0.279188,0.0,0.086294,0.756252,0.0,0.959391,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,11
-5,15.998,0.044355,0.0,0.020161,0.227824,0.008065,0.641129,0.5,país sin cobertura suficiente,12
-2,15.608,0.233333,0.0,0.014815,0.619981,0.003704,0.944444,0.5,país sin cobertura suficiente | language_concentrated_candidate,13
-0,14.03,0.242254,0.039437,0.0,0.764688,0.014085,0.619718,0.5,país sin cobertura suficiente | broad_but_interpretable,14
+5,31.588,0.770563,0.0,0.004329,0.609144,0.0,0.930736,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,1
+11,30.941,0.62585,0.0,0.020408,0.394186,0.006803,0.938776,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,2
+7,29.17,0.538117,0.0,0.013453,0.326603,0.008969,0.991031,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,3
+3,27.663,0.666667,0.0,0.059524,0.75498,0.0,0.948413,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,4
+2,26.1,0.603053,0.0,0.019084,0.669673,0.007634,0.946565,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,5
+9,21.694,0.371429,0.268571,0.017143,0.760424,0.0,0.794286,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,6
+6,19.228,0.440529,0.079295,0.008811,0.859817,0.0,0.797357,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,7
+12,17.327,0.368056,0.0,0.069444,0.86338,0.0,0.722222,0.5,alta proporción fronteriza | país sin cobertura suficiente | borderline_heavy_candidate,8
+0,14.21,0.243553,0.008596,0.002865,0.729335,0.014327,0.613181,0.5,país sin cobertura suficiente | broad_but_interpretable,9
+10,13.141,0.066667,0.0,0.090909,0.587594,0.018182,0.466667,0.5,país sin cobertura suficiente,10
+4,12.969,0.241935,0.0,0.0,0.785909,0.0,0.447581,0.5,país sin cobertura suficiente | broad_but_interpretable,11
+1,11.721,0.238095,0.010989,0.0,0.882233,0.014652,0.593407,0.5,país sin cobertura suficiente | broad_but_interpretable,12
+8,9.089,0.025773,0.0,0.0,0.61573,0.005155,0.953608,0.5,país sin cobertura suficiente | language_concentrated_candidate,13
+13,7.183,0.034483,0.008621,0.0,0.782598,0.025862,0.715517,0.5,candidatos de contaminación | país sin cobertura suficiente,14
