@@ -41,11 +41,6 @@
     },
     {
       "source": "10.15366/reice2021.19.1.005",
-      "target": "10.17163/alt.v18n2.2023.06",
-      "weight": 0.896926
-    },
-    {
-      "source": "10.15366/reice2021.19.1.005",
       "target": "10.21573/vol42n12026.139503",
       "weight": 0.912622
     },
@@ -65,14 +60,29 @@
       "weight": 0.902665
     },
     {
+      "source": "10.15366/reice2021.19.1.005",
+      "target": "https://openalex.org/W7220616795",
+      "weight": 0.940984
+    },
+    {
       "source": "10.15366/reps2021.6.1.002",
       "target": "10.61203/2347-0658.v10.n2.34114",
       "weight": 0.896891
     },
     {
+      "source": "10.15366/reps2021.6.1.002",
+      "target": "conicet:el rol de las fundaciones empresariales en la formación de estudiantes técnicos en la provincia de neuquén argentina::2026",
+      "weight": 0.754779
+    },
+    {
+      "source": "10.15366/reps2022.7.2.009",
+      "target": "https://openalex.org/W7216818951",
+      "weight": 0.84666
+    },
+    {
       "source": "10.15366/tp2021.37.002",
       "target": "10.30972/riie.16248914",
-      "weight": 0.832946
+      "weight": 0.832945
     },
     {
       "source": "10.15366/tp2021.37.002",
@@ -111,11 +121,6 @@
     },
     {
       "source": "10.17163/alt.v18n2.2023.06",
-      "target": "10.21573/vol42n12026.139503",
-      "weight": 0.879955
-    },
-    {
-      "source": "10.17163/alt.v18n2.2023.06",
       "target": "10.36006/09807-1",
       "weight": 0.912134
     },
@@ -151,11 +156,6 @@
     },
     {
       "source": "10.21573/vol42n12026.139503",
-      "target": "10.33255/26184141/1568e0018",
-      "weight": 0.895294
-    },
-    {
-      "source": "10.21573/vol42n12026.139503",
       "target": "10.36006/09807-1",
       "weight": 0.88846
     },
@@ -165,14 +165,14 @@
       "weight": 0.896559
     },
     {
+      "source": "10.21573/vol42n12026.139503",
+      "target": "https://openalex.org/W7220616795",
+      "weight": 0.903644
+    },
+    {
       "source": "10.22201/iisue.24486167e.2025.47.61920",
       "target": "https://openalex.org/W7169699720",
       "weight": 0.882438
-    },
-    {
-      "source": "10.22235/pe.v16i2.3068",
-      "target": "https://openalex.org/W7167654807",
-      "weight": 0.847005
     },
     {
       "source": "10.22529/dp.2021.19(38)11",
@@ -193,6 +193,11 @@
       "source": "10.24215/23468866e110",
       "target": "conicet:elaboración de escalas de valoración de obstáculos y medidas para abordar la violencia de género en las escuelas::2023",
       "weight": 0.783171
+    },
+    {
+      "source": "10.24310/ijne.13.2024.19660",
+      "target": "https://openalex.org/W7220646378",
+      "weight": 0.825938
     },
     {
       "source": "10.30827/profesorado.v27i2.21267",
@@ -230,11 +235,6 @@
       "weight": 0.871999
     },
     {
-      "source": "10.30972/riie.16228016",
-      "target": "https://openalex.org/W3124575860",
-      "weight": 0.867479
-    },
-    {
       "source": "10.30972/riie.16228044",
       "target": "10.32541/recie.2020.v4i1.pp20-33",
       "weight": 0.880098
@@ -257,7 +257,7 @@
     {
       "source": "10.30972/riie.16248914",
       "target": "conicet:el rol de las fundaciones empresariales en la formación de estudiantes técnicos en la provincia de neuquén argentina::2026",
-      "weight": 0.757133
+      "weight": 0.761138
     },
     {
       "source": "10.30972/riie.16248914",
@@ -283,11 +283,6 @@
       "source": "10.32541/recie.2022.v6i2.pp131-143",
       "target": "conicet:las tic en la intersección áulica desafíos y tensiones de la alfabetización digital en la escuela media::2022",
       "weight": 0.809016
-    },
-    {
-      "source": "10.33255/2591/1718",
-      "target": "10.33255/2591/2482",
-      "weight": 0.759419
     },
     {
       "source": "10.33255/2591/1718",
@@ -320,9 +315,14 @@
       "weight": 0.907993
     },
     {
+      "source": "10.33255/26184141/1568e0018",
+      "target": "https://openalex.org/W7220616795",
+      "weight": 0.909904
+    },
+    {
       "source": "10.33255/26184141/2437e0066",
       "target": "conicet:el rol de las fundaciones empresariales en la formación de estudiantes técnicos en la provincia de neuquén argentina::2026",
-      "weight": 0.796049
+      "weight": 0.805447
     },
     {
       "source": "10.33881/2027-1786.rip.13105",
@@ -390,14 +390,19 @@
       "weight": 0.882652
     },
     {
+      "source": "10.48162/rev.36.004",
+      "target": "https://openalex.org/W7220153265",
+      "weight": 0.76775
+    },
+    {
+      "source": "10.48162/rev.36.004",
+      "target": "https://openalex.org/W7220646378",
+      "weight": 0.859719
+    },
+    {
       "source": "10.5212/olharprofr.v.29.25332.010",
       "target": "https://openalex.org/W7169701904",
       "weight": 0.971366
-    },
-    {
-      "source": "10.5281/zenodo.17667157",
-      "target": "conicet:representaciones docentes sobre las trayectorias estudiantiles en el nivel secundario durante la pandemia desenganche vínculo pedagógico y modos de evaluación::2025",
-      "weight": 0.861262
     },
     {
       "source": "10.5281/zenodo.17667157",
@@ -407,12 +412,17 @@
     {
       "source": "10.5281/zenodo.17667157",
       "target": "https://openalex.org/W7167654807",
-      "weight": 0.898835
+      "weight": 0.898836
     },
     {
       "source": "10.5281/zenodo.17667157",
       "target": "https://openalex.org/W7215346056",
       "weight": 0.899195
+    },
+    {
+      "source": "10.5281/zenodo.17667157",
+      "target": "https://openalex.org/W7220759025",
+      "weight": 0.896132
     },
     {
       "source": "10.55778/ts310044750",
@@ -436,18 +446,18 @@
     },
     {
       "source": "10.59427/rcli/2023/v23cs.3717-3724",
-      "target": "https://openalex.org/W7155252508",
-      "weight": 0.874973
-    },
-    {
-      "source": "10.59427/rcli/2023/v23cs.3717-3724",
       "target": "https://openalex.org/W7155290423",
       "weight": 0.886503
     },
     {
+      "source": "10.59427/rcli/2023/v23cs.3717-3724",
+      "target": "https://openalex.org/W7220616795",
+      "weight": 0.891562
+    },
+    {
       "source": "10.61203/2347-0658.v10.n2.34114",
       "target": "conicet:los entornos formativos en la educación técnica argentina estudio exploratorio sobre el sector automotriz::2025",
-      "weight": 0.709651
+      "weight": 0.709652
     },
     {
       "source": "10.70747/cr.v5i3.1353",
@@ -492,7 +502,7 @@
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
       "target": "conicet:desigualdades vinculadas a las tecnologías de la información y la comunicación tic diferencias entre escuelas públicas y privadas en bahía blanca argentina::2024",
-      "weight": 0.887808
+      "weight": 0.887809
     },
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
@@ -506,11 +516,6 @@
     },
     {
       "source": "conicet:claroscuros de la continuidad pedagógica en tiempos de pandemia experiencias de directores de escuelas secundarias de dos provincias del noroeste argentino::2025",
-      "target": "conicet:llovido sobre mojado pandemia y segmentación educativa en una ciudad intermedia de argentina::2024",
-      "weight": 0.880425
-    },
-    {
-      "source": "conicet:claroscuros de la continuidad pedagógica en tiempos de pandemia experiencias de directores de escuelas secundarias de dos provincias del noroeste argentino::2025",
       "target": "https://openalex.org/W3208871464",
       "weight": 0.882639
     },
@@ -520,19 +525,24 @@
       "weight": 0.904038
     },
     {
+      "source": "conicet:claroscuros de la continuidad pedagógica en tiempos de pandemia experiencias de directores de escuelas secundarias de dos provincias del noroeste argentino::2025",
+      "target": "https://openalex.org/W7220759025",
+      "weight": 0.8864
+    },
+    {
       "source": "conicet:control social y acciones estatales durante el conflicto docente bahía blanca argentina::2024",
       "target": "https://openalex.org/W3186450505",
-      "weight": 0.837131
+      "weight": 0.837132
+    },
+    {
+      "source": "conicet:control social y acciones estatales durante el conflicto docente bahía blanca argentina::2024",
+      "target": "https://openalex.org/W7219969860",
+      "weight": 0.830163
     },
     {
       "source": "conicet:desigualdades vinculadas a las tecnologías de la información y la comunicación tic diferencias entre escuelas públicas y privadas en bahía blanca argentina::2024",
       "target": "conicet:la pandemia y el año que enseñamos por whatsapp el recursotecnológico más utilizado en las secundarias pobres de bahía blanca durante el 2020::2022",
       "weight": 0.815144
-    },
-    {
-      "source": "conicet:discursos en torno a las violencias y la autoridad en escuelas medias públicas entre la desubjetivación y la integración normativa::2023",
-      "target": "conicet:elaboración de escalas de valoración de obstáculos y medidas para abordar la violencia de género en las escuelas::2023",
-      "weight": 0.793314
     },
     {
       "source": "conicet:educación y finanzas el cobro de matrículas en escuelas públicas argentina fines del siglo xix::2022",
@@ -547,7 +557,7 @@
     {
       "source": "conicet:el rol de las fundaciones empresariales en la formación de estudiantes técnicos en la provincia de neuquén argentina::2026",
       "target": "conicet:los entornos formativos en la educación técnica argentina estudio exploratorio sobre el sector automotriz::2025",
-      "weight": 0.733749
+      "weight": 0.745247
     },
     {
       "source": "conicet:estar y no estar sentidos y prácticas en torno a las migraciones e identificaciones étniconacionales en el espacio escolar::2024",
@@ -566,13 +576,13 @@
     },
     {
       "source": "conicet:ethopolítica del hacer docente en la escuela secundaria problematizaciones en y desde las prácticas de directorases del conurbano bonaerense::2026",
-      "target": "https://openalex.org/W7160567328",
-      "weight": 0.869435
-    },
-    {
-      "source": "conicet:ethopolítica del hacer docente en la escuela secundaria problematizaciones en y desde las prácticas de directorases del conurbano bonaerense::2026",
       "target": "https://openalex.org/W7169695870",
       "weight": 0.951174
+    },
+    {
+      "source": "conicet:evaluación y dinámicas de privatización educativa en argentina entre la medición de aprendizajes y la intervención de organizaciones no gubernamentales::2026",
+      "target": "https://openalex.org/W7216818951",
+      "weight": 0.843234
     },
     {
       "source": "conicet:experiencias escolares de jóvenes wichí en contexto de pandemia::2024",
@@ -592,7 +602,7 @@
     {
       "source": "conicet:género y liderazgo en la educación superior argentina::2026",
       "target": "conicet:mujeres que estudian en escuelas normales profesionales comerciales y liceos buenos aires 18801940::2025",
-      "weight": 0.767971
+      "weight": 0.77269
     },
     {
       "source": "conicet:la comunidad escolar como medio para el desarrollo socioemocional un estudio de caso en argentina::2020",
@@ -650,6 +660,11 @@
       "weight": 0.834533
     },
     {
+      "source": "conicet:subjetividades fit en el hacer escuela secundaria en contextos de desigualdades relatos del devenir managers de docentes y directivos en el conurbano bonaerense::2025",
+      "target": "https://openalex.org/W7220616795",
+      "weight": 0.919233
+    },
+    {
       "source": "https://openalex.org/W3124575860",
       "target": "https://openalex.org/W7167654807",
       "weight": 0.881066
@@ -658,6 +673,16 @@
       "source": "https://openalex.org/W3124575860",
       "target": "https://openalex.org/W7215346056",
       "weight": 0.895589
+    },
+    {
+      "source": "https://openalex.org/W3124575860",
+      "target": "https://openalex.org/W7220759025",
+      "weight": 0.902255
+    },
+    {
+      "source": "https://openalex.org/W7126302504",
+      "target": "https://openalex.org/W7220646378",
+      "weight": 0.808306
     },
     {
       "source": "https://openalex.org/W7126684661",
@@ -693,62 +718,72 @@
       "source": "https://openalex.org/W7167389268",
       "target": "https://openalex.org/W7217688011",
       "weight": 0.82973
+    },
+    {
+      "source": "https://openalex.org/W7167654807",
+      "target": "https://openalex.org/W7220759025",
+      "weight": 0.878464
+    },
+    {
+      "source": "https://openalex.org/W7220153265",
+      "target": "https://openalex.org/W7220646378",
+      "weight": 0.883256
     }
   ],
   "sensitivity": [
     {
       "neighbors": 3,
       "min_similarity": 0.6,
-      "edges": 88,
-      "isolated": 64
-    },
-    {
-      "neighbors": 3,
-      "min_similarity": 0.7,
       "edges": 87,
-      "isolated": 66
+      "isolated": 71
+    },
+    {
+      "neighbors": 3,
+      "min_similarity": 0.7,
+      "edges": 86,
+      "isolated": 73
     },
     {
       "neighbors": 3,
       "min_similarity": 0.8,
-      "edges": 77,
-      "isolated": 77
+      "edges": 79,
+      "isolated": 80
     },
     {
       "neighbors": 5,
       "min_similarity": 0.6,
-      "edges": 139,
-      "isolated": 50
+      "edges": 146,
+      "isolated": 49
     },
     {
       "neighbors": 5,
       "min_similarity": 0.7,
-      "edges": 138,
-      "isolated": 52
+      "edges": 145,
+      "isolated": 51
     },
     {
       "neighbors": 5,
       "min_similarity": 0.8,
-      "edges": 120,
-      "isolated": 65
+      "edges": 128,
+      "isolated": 61
     },
     {
       "neighbors": 10,
       "min_similarity": 0.6,
-      "edges": 302,
-      "isolated": 27
+      "edges": 304,
+      "isolated": 28
     },
     {
       "neighbors": 10,
       "min_similarity": 0.7,
-      "edges": 298,
+      "edges": 300,
       "isolated": 33
     },
     {
       "neighbors": 10,
       "min_similarity": 0.8,
-      "edges": 247,
-      "isolated": 54
+      "edges": 248,
+      "isolated": 52
     }
   ]
 }
