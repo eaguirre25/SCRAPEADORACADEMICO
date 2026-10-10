@@ -1,903 +1,140 @@
 {
-  "generated_at": "2026-10-07T19:24:40",
+  "generated_at": "2026-10-10T18:00:20",
   "upload_after_date": "",
-  "records_considered": 233,
-  "with_pdf_url": 218,
-  "without_pdf_url": 15,
-  "downloaded_now": 127,
+  "records_considered": 54,
+  "with_pdf_url": 47,
+  "without_pdf_url": 7,
+  "downloaded_now": 18,
   "already_local": 0,
-  "download_failed": 91,
-  "uploaded_to_drive": 124,
-  "already_in_drive": 3,
+  "download_failed": 29,
+  "uploaded_to_drive": 18,
+  "already_in_drive": 0,
   "drive_upload_failed": 0,
   "items": [
     {
-      "title": "EL SABER PEDAGÓGICO DE LA DIDÁCTICA PARA LA PARTICIPACIÓN PROTAGÓNICA DE LOS CONSEJOS EDUCATIVOS",
+      "title": "La influència de la direcció escolar en la participació de les famílies. — Anàlisi de facilitadors i barreres —",
+      "year": "2026",
+      "pdf_file": "Galimany Miralles de l'Educacio - 2026 - La influencia de la direccio escolar en la participacio de les families. — Analisi de faci.pdf",
+      "pdf_url": "https://ddd.uab.cat/pub/tfg/2025/336915/la_influencia_de_la_direccio_escolar_en_la_participacio_de.pdf",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "El Papel del Gestor Educativo en la Capacitación Docente del Bachillerato General Unificado",
+      "year": "2026",
+      "pdf_file": "Garcia Molina et al - 2026 - El Papel del Gestor Educativo en la Capacitacion Docente del Bachillerato General Unificad.pdf",
+      "pdf_url": "https://identidadbolivariana.itb.edu.ec/index.php/identidadbolivariana/article/download/625/473",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Liderazgo transformacional y desempeño directivo en educación secundaria peruana: revisión sistemática (2020–2025)",
+      "year": "2026",
+      "pdf_file": "Flores Huaman Sisa Martinez - 2026 - Liderazgo transformacional y desempeno directivo en educacion secundaria peruana revision.pdf",
+      "pdf_url": "https://revistatribunal.org/index.php/tribunal/article/download/1599/2070",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Competencias digitales y gestión educativa de los docentes en una Institución Educativa Lima, Perú",
+      "year": "2026",
+      "pdf_file": "Ramos Gonzales - 2026 - Competencias digitales y gestion educativa de los docentes en una Institucion Educativa Li.pdf",
+      "pdf_url": "https://www.igobernanza.org/index.php/IGOB/article/download/491/1004",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Una crónica inclusiva y accesible",
+      "year": "2024",
+      "pdf_file": "Ojeda Abolafia - 2024 - Una cronica inclusiva y accesible.pdf",
+      "pdf_url": "https://www.resad.com/Acotaciones.new/index.php/ACT/article/download/901/1119",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "A GESTÃO ESCOLAR NO CONTEXTO DA FORMAÇÃO CONTÍNUA DOS PROFESSORES DE ENSINO PRIMÁRIO",
+      "year": "2022",
+      "pdf_file": "Andre Manuel Guerra Vento - 2022 - A GESTAO ESCOLAR NO CONTEXTO DA FORMACAO CONTINUA DOS PROFESSORES DE ENSINO PRIMARIO.pdf",
+      "pdf_url": "https://www.periodicos.ufam.edu.br/index.php/rech/article/download/10052/7352",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Exploring the Role of School Management in Supporting Extracurricular Activities and Academic Success in South Punjab",
+      "year": "2025",
+      "pdf_file": "Ghosia et al - 2025 - Exploring the Role of School Management in Supporting Extracurricular Activities and Acade.pdf",
+      "pdf_url": "https://dialoguesreview.com/index.php/2/article/download/959/937",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "ASSESSMENT OF LEARNING FOR STUDENTS WITH DISABILITIES: THE ROLE OF SCHOOL MANAGEMENT IN BUILDING INCLUSIVE ASSESSMENT PRACTICES",
+      "year": "2026",
+      "pdf_file": "Brandalise et al - 2026 - ASSESSMENT OF LEARNING FOR STUDENTS WITH DISABILITIES THE ROLE OF SCHOOL MANAGEMENT IN BUI.pdf",
+      "pdf_url": "https://periodicojs.com.br/gei/article/download/3216/3358",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Principals' Instructional Leadership in Implementing Deep Learning in Senior High Schools",
+      "year": "2026",
+      "pdf_file": "Farida et al - 2026 - Principals' Instructional Leadership in Implementing Deep Learning in Senior High Schools.pdf",
+      "pdf_url": "https://journal.gmpionline.com/index.php/jpig/article/download/908/559",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Madrasah Head's Instructional Leadership Approach to the Development of New Teachers' Professionalism",
+      "year": "2025",
+      "pdf_file": "Wijaya Efendi - 2025 - Madrasah Head's Instructional Leadership Approach to the Development of New Teachers' Prof.pdf",
+      "pdf_url": "https://journal.csas.or.id/index.php/JARSEM/article/download/25/38",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "The Interplay Of Knowledge Management Between Instructional Leadership And Teacher’s Critical Thinking",
+      "year": "2023",
+      "pdf_file": "Sobia Bhutto - 2023 - The Interplay Of Knowledge Management Between Instructional Leadership And Teacher’s Criti.pdf",
+      "pdf_url": "https://journalppw.com/index.php/jpsp/article/download/15305/9861",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "A qualitative inquiry into women principals’ leadership in Malaysia",
+      "year": "2026",
+      "pdf_file": "Binti Ahmad - 2026 - A qualitative inquiry into women principals’ leadership in Malaysia.pdf",
+      "pdf_url": "http://wrap.warwick.ac.uk/130010/1/WRAP_Theses_Ahmad_2017.pdf",
+      "drive_status": "uploaded"
+    },
+    {
+      "title": "Overcoming Vulnerability: Life Stories of Two Cases Women Primary School Principals in the District of Abidjan, Côte D’Ivoire (Ivory Coast)",
       "year": "2021",
-      "pdf_file": "Lopez - 2021 - EL SABER PEDAGOGICO DE LA DIDACTICA PARA LA PARTICIPACION PROTAGONICA DE LOS CONSEJOS EDUC.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/331/295",
+      "pdf_file": "Oyeniran et al - 2021 - Overcoming Vulnerability Life Stories of Two Cases Women Primary School Principals in the.pdf",
+      "pdf_url": "https://www.macrothink.org/journal/index.php/jse/article/download/18402/14634",
       "drive_status": "uploaded"
     },
     {
-      "title": "Clima institucional y su implicancia en el desempeño laboral en docentes de instituciones educativas públicas de Atalaya Ucayali 2025",
+      "title": "School Heads’ leadership style and performance of the teachers in Congressional District, Division of Quezon City: Basis for proposed development plan",
       "year": "2025",
-      "pdf_file": "la Cruz - 2025 - Clima institucional y su implicancia en el desempeno laboral en docentes de instituciones.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/175175/1/Custodio_CMJ-SD.pdf",
+      "pdf_file": "Torres Aguilar - 2025 - School Heads’ leadership style and performance of the teachers in Congressional District,.pdf",
+      "pdf_url": "https://pantaointernationaljournal.com/wp-content/uploads/2025/10/510-Aguilar-School-Heads-leadership-style-and-performance-of-the-teachers-in-Congressional-District-Division-of-Quezon-City_-Basis-for-proposed-development-plan.pdf",
       "drive_status": "uploaded"
     },
     {
-      "title": "El Método de las 6 M y la Calidad educativa en estudiantes de una Institución Educativa de Lima Este, 2025",
+      "title": "Gestão escolar e a democratização do ensino: Uma revisão de literatura",
       "year": "2025",
-      "pdf_file": "Duarte Pantoja - 2025 - El Metodo de las 6 M y la Calidad educativa en estudiantes de una Institucion Educativa de.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/171113/1/DUARTE_PC_SD.pdf",
+      "pdf_file": "Braga Fernandes - 2025 - Gestao escolar e a democratizacao do ensino Uma revisao de literatura.pdf",
+      "pdf_url": "https://rsdjournal.org/rsd/article/download/49643/38867",
       "drive_status": "uploaded"
     },
     {
-      "title": "Estrategias de integración familia escuela para la participación de padres de familia en una institución educativa de Llama – 2024",
+      "title": "Gestão escolar: as nuances e os desafios na administração das escolas",
       "year": "2024",
-      "pdf_file": "Terrones Olivera - 2024 - Estrategias de integracion familia escuela para la participacion de padres de familia en u.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/147352/1/Terrones_OA-SD.pdf",
+      "pdf_file": "de Abreu Stanojev Pereira - 2024 - Gestao escolar as nuances e os desafios na administracao das escolas.pdf",
+      "pdf_url": "https://doi.org/10.36229/978-65-5866-414-7.cap.01",
       "drive_status": "uploaded"
     },
     {
-      "title": "Entre capitanes y marineros: análisis de las prácticas de directoras de escuelas secundarias",
-      "year": "2024",
-      "pdf_file": "del Campo et al - 2024 - Entre capitanes y marineros analisis de las practicas de directoras de escuelas secundaria.pdf",
-      "pdf_url": "https://portalrevistas.unipe.edu.ar/index.php/analisispracticas/article/download/279/414",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "EL LIDERAZGO DE ACOMPAÑAMIENTO: Una nueva forma de dirigir",
+      "title": "PRÁTICAS PEDAGÓGICAS E GESTÃO ESCOLAR DEMOCRÁTICA NO CONTEXTO DA EDUCAÇÃO 4.0",
       "year": "2025",
-      "pdf_file": "Luna Calvera - 2025 - EL LIDERAZGO DE ACOMPANAMIENTO Una nueva forma de dirigir.pdf",
-      "pdf_url": "https://revistacronica.es/index.php/revistacronica/article/download/168/109",
+      "pdf_file": "de Araujo Adriano Silva - 2025 - PRATICAS PEDAGOGICAS E GESTAO ESCOLAR DEMOCRATICA NO CONTEXTO DA EDUCACAO 4.0.pdf",
+      "pdf_url": "https://periodicos.ufms.br/index.php/deaint/article/download/24258/16048",
       "drive_status": "uploaded"
     },
     {
-      "title": "Caracterización de la gestión directiva en las escuelas centro de la ciudad de Capiatá, año 2025",
+      "title": "GESTÃO ESCOLAR ESTRATÉGICA: CONEXÃO ENTRE PLANEJAMENTO, LIDERANÇA E RESULTADOS EDUCACIONAIS",
       "year": "2026",
-      "pdf_file": "Aguilar Gimenez et al - 2026 - Caracterizacion de la gestion directiva en las escuelas centro de la ciudad de Capiata, an.pdf",
-      "pdf_url": "https://espanha.columbia.edu.py/investigacion/ojs/index.php/OMNESUCPY/article/download/126/106",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "El liderazgo pedagógico como factor de mejora en el desempeño educativo. Una revisión sistemática entre los años 2015-2022",
-      "year": "2025",
-      "pdf_file": "Garcia Jaque - 2025 - El liderazgo pedagogico como factor de mejora en el desempeno educativo. Una revision sist.pdf",
-      "pdf_url": "https://revistacei.com/index.php/rcei/article/download/25/34",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "TEACHER LEADERSHIP AND EDUCATIONAL PROJECTS: DRIVING TRANSFORMATION AND INNOVATION IN LEARNING ENVIRONMENTS",
-      "year": "2025",
-      "pdf_file": "OJEDA M.C - 2025 - TEACHER LEADERSHIP AND EDUCATIONAL PROJECTS DRIVING TRANSFORMATION AND INNOVATION IN LEARN.pdf",
-      "pdf_url": "https://tpmap.org/submission/index.php/tpm/article/download/1942/1537",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Distributed leadership and continuous improvement in educational organizations",
-      "year": "2022",
-      "pdf_file": "Choque Raymundo et al - 2022 - Distributed leadership and continuous improvement in educational organizations.pdf",
-      "pdf_url": "https://sinergiaseducativas.mx/index.php/revista/article/download/264/819",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Liderazgo pedagógico y su impacto en el desarrollo del pensamiento crítico: Array",
-      "year": "2021",
-      "pdf_file": "Rojas-Zavaleta - 2021 - Liderazgo pedagogico y su impacto en el desarrollo del pensamiento critico Array.pdf",
-      "pdf_url": "https://maestroysociedad.uo.edu.cu/index.php/MyS/article/download/5416/5085",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Effective Leadership Practices for the Improvement of Learning in Public Schools in Chile",
-      "year": "2025",
-      "pdf_file": "Albornoz Agloni - 2025 - Effective Leadership Practices for the Improvement of Learning in Public Schools in Chile.pdf",
-      "pdf_url": "https://culturajournal.com/submissions/index.php/ijpca/article/download/1794/1892",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "PERFIL BIOGRÁFICO DE DIRECTORAS DE INSTITUCIONES ESCOLARES QUE IMPARTEN EDUCACIÓN MEDIA TÉCNICO PROFESIONAL",
-      "year": "2024",
-      "pdf_file": "Figueroa-Cespedes DUFRAIX - 2024 - PERFIL BIOGRAFICO DE DIRECTORAS DE INSTITUCIONES ESCOLARES QUE IMPARTEN EDUCACION MEDIA TE.pdf",
-      "pdf_url": "https://ojs.rmie.mx/index.php/rmie/article/download/4/4",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Liderazgo Instruccional en jefaturas técnico pedagógica de establecimientos educacionales de Chile",
-      "year": "2024",
-      "pdf_file": "Aparicio Molina et al - 2024 - Liderazgo Instruccional en jefaturas tecnico pedagogica de establecimientos educacionales.pdf",
-      "pdf_url": "http://www.scielo.cl/pdf/estped/v50n1/0718-0705-estped-50-01-119.pdf",
-      "drive_status": "already_exists"
-    },
-    {
-      "title": "Liderazgo ético en las comunidades de aprendizaje y la formación inicial docente",
-      "year": "2025",
-      "pdf_file": "Ramirez-Ramos et al - 2025 - Liderazgo etico en las comunidades de aprendizaje y la formacion inicial docente.pdf",
-      "pdf_url": "https://institutojubones.edu.ec/ojs/index.php/portal/article/download/673/1129",
-      "drive_status": "already_exists"
-    },
-    {
-      "title": "DISEÑO DE UN MODELO DE GESTIÓN EDUCATIVA PARA UN BACHILLERATO TÉCNICO (DESIGN OF AN EDUCATIONAL MANAGEMENT MODEL FOR A TECHNICAL BACCALAUREATE)",
-      "year": "2024",
-      "pdf_file": "Robledo Ramos Ramirez Angeles - 2024 - DISENO DE UN MODELO DE GESTION EDUCATIVA PARA UN BACHILLERATO TECNICO (DESIGN OF AN EDUCAT.pdf",
-      "pdf_url": "https://pistaseducativas.celaya.tecnm.mx/index.php/pistas/article/download/3576/2590",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "CHALLENGES OF PROFESSIONAL LEARNING COMMUNITIES: A SYSTEMATIC REVIEW",
-      "year": "2022",
-      "pdf_file": "Rojas Calixtro - 2022 - CHALLENGES OF PROFESSIONAL LEARNING COMMUNITIES A SYSTEMATIC REVIEW.pdf",
-      "pdf_url": "https://journalppw.com/index.php/jpsp/article/download/8304/5421",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Análisis del liderazgo pedagógico para las instituciones educativas en el Ecuador",
-      "year": "2024",
-      "pdf_file": "Manuel Roca-Piloso et al - 2024 - Analisis del liderazgo pedagogico para las instituciones educativas en el Ecuador.pdf",
-      "pdf_url": "https://reicomunicar.org/index.php/reicomunicar/article/download/266/443",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "LIDERAZGO EFECTIVO DEL DIRECTOR COMO PERSPECTIVA DE CAMBIO EN EL DOCENTE",
-      "year": "2022",
-      "pdf_file": "Alberto Chacon - 2022 - LIDERAZGO EFECTIVO DEL DIRECTOR COMO PERSPECTIVA DE CAMBIO EN EL DOCENTE.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/616/929",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gênero no desenvolvimento profissional docente: Percepções da direção escolar",
-      "year": "2026",
-      "pdf_file": "Carrasco Saez et al - 2026 - Genero no desenvolvimento profissional docente Percepcoes da direcao escolar.pdf",
-      "pdf_url": "https://publicacoes.fcc.org.br/cp/article/download/12543/5769",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Innovación en la enseñanza explorando el impacto de la administración educativa y la motivación docente",
-      "year": "2025",
-      "pdf_file": "Salcedo Rios - 2025 - Innovacion en la ensenanza explorando el impacto de la administracion educativa y la motiv.pdf",
-      "pdf_url": "https://revistas.up.ac.pa/index.php/cuadernos_nacionales/article/download/10922/7496",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Una Educación Realizada en Condiciones de Equidad",
-      "year": "2023",
-      "pdf_file": "Saavedra Munoz - 2023 - Una Educacion Realizada en Condiciones de Equidad.pdf",
-      "pdf_url": "https://ciencialatina.org/index.php/cienciala/article/download/7579/11486",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Liderança assertiva como alternativa de mudança na qualidade da educação",
-      "year": "2023",
-      "pdf_file": "VELAZQUEZ CORDOVA et al - 2023 - Lideranca assertiva como alternativa de mudanca na qualidade da educacao.pdf",
-      "pdf_url": "https://atenas.umcc.cu/index.php/atenas/article/download/775/1142",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "GESTIÓN EDUCATIVA REQUERIDA PARA EL DESARROLLO HUMANO",
-      "year": "2022",
-      "pdf_file": "Ovalles - 2022 - GESTION EDUCATIVA REQUERIDA PARA EL DESARROLLO HUMANO.pdf",
-      "pdf_url": "https://revistasuba.com/index.php/POSTDOCTUBA/article/download/11/4",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "ATENCIÓN PSICOLÓGICA: ESTRATEGIA PEDAGÓGICA PARA UNA GESTIÓN EDUCATIVA DE CALIDAD",
-      "year": "2020",
-      "pdf_file": "Bortolotti - 2020 - ATENCION PSICOLOGICA ESTRATEGIA PEDAGOGICA PARA UNA GESTION EDUCATIVA DE CALIDAD.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/78/659",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "RETOS Y DESAFÍOS DE LA MIGRACIÓN VENEZOLANA EN LA GESTIÓN EDUCATIVA",
-      "year": "2025",
-      "pdf_file": "Soto - 2025 - RETOS Y DESAFIOS DE LA MIGRACION VENEZOLANA EN LA GESTION EDUCATIVA.pdf",
-      "pdf_url": "https://revistasuba.com/index.php/VISIONEDUCATIVA/article/download/1269/905",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "GESTIÓN EDUCATIVA UN PROCESO COMPLEJO EN LA FORMACIÓN DEL SER HUMANO",
-      "year": "2022",
-      "pdf_file": "de Iparraguirre - 2022 - GESTION EDUCATIVA UN PROCESO COMPLEJO EN LA FORMACION DEL SER HUMANO.pdf",
-      "pdf_url": "https://revistasuba.com/index.php/POSTDOCTUBA/article/download/9/2",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "GESTIÓN EDUCATIVA EN LAS ORGANIZACIONES PEDAGÓGICAS DE HOY: CUATRO PERSPECTIVAS, CUATRO SIGNIFICADOS",
-      "year": "2025",
-      "pdf_file": "Elisa Peraza - 2025 - GESTION EDUCATIVA EN LAS ORGANIZACIONES PEDAGOGICAS DE HOY CUATRO PERSPECTIVAS, CUATRO SIG.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/420/1943",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Importancia del liderazgo transformacional en la gestión educativa: Importance of transformational leadership in educational management",
-      "year": "2022",
-      "pdf_file": "Soto-Alvarado - 2022 - Importancia del liderazgo transformacional en la gestion educativa Importance of transform.pdf",
-      "pdf_url": "https://maestroysociedad.uo.edu.cu/index.php/MyS/article/download/5674/5469",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La eficiencia de la gestión educativa en la Unidad Fiscal “Martha Bucaram” del cantón Sucre",
-      "year": "2024",
-      "pdf_file": "Macias Acurio Herrera Bartolome - 2024 - La eficiencia de la gestion educativa en la Unidad Fiscal “Martha Bucaram” del canton Sucr.pdf",
-      "pdf_url": "https://maestroysociedad.uo.edu.cu/index.php/MyS/article/download/6520/7425",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestión educativa y práctica docente en una institución educativa estatal del nivel primaria, Abancay, 2023",
-      "year": "2023",
-      "pdf_file": "Paredes Ramos - 2023 - Gestion educativa y practica docente en una institucion educativa estatal del nivel primar.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/152528/1/Paredes_RJ-SD.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestión educativa y su influencia en el clima organizacional de una institución educativa de Tacna",
-      "year": "2023",
-      "pdf_file": "Medina Atencio - 2023 - Gestion educativa y su influencia en el clima organizacional de una institucion educativa.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/167356/1/Medina_AMC-SD.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Planificación estratégica y gestión educativa de calidad en una institución educativa de Andahuaylas- Apurímac 2024",
-      "year": "2024",
-      "pdf_file": "Mamani Jihuallanca - 2024 - Planificacion estrategica y gestion educativa de calidad en una institucion educativa de A.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/158381/1/Mamani_JJW-SD.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Simplificación administrativa y procesos administrativos en la Unidad de Gestión Educativa Local de Bellavista, 2024",
-      "year": "2025",
-      "pdf_file": "Pezo Cumapa - 2025 - Simplificacion administrativa y procesos administrativos en la Unidad de Gestion Educativa.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/158164/1/Pezo_CG-SD.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La gestión educativa con tendencia humanista: perspectiva de los estudiantes en Ciencias de la Educación.",
-      "year": "2023",
-      "pdf_file": "Suarez Ovando Ramos Alcoser - 2023 - La gestion educativa con tendencia humanista perspectiva de los estudiantes en Ciencias de.pdf",
-      "pdf_url": "https://dilemascontemporaneoseducacionpoliticayvalores.com/index.php/dilemas/article/download/3872/3799",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La gestión educativa y formación continua en docentes de una institución educativa de Piura, 2025",
-      "year": "2025",
-      "pdf_file": "Covenas Macalupu - 2025 - La gestion educativa y formacion continua en docentes de una institucion educativa de Piur.pdf",
-      "pdf_url": "https://repositorio.ucv.edu.pe/bitstream/20.500.12692/173307/1/Cove%c3%b1as_MNP-SD.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestión directiva de institución en la actualización docente en el uso de las TICS",
-      "year": "2026",
-      "pdf_file": "Guzman Unzuungo et al - 2026 - Gestion directiva de institucion en la actualizacion docente en el uso de las TICS.pdf",
-      "pdf_url": "http://revistareg.com/index.php/1/article/download/1016/1758",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "LIDERAZGO EDUCATIVO Y DESARROLLO COMUNITARIO PARA PROYECTOS PÚBLICOS",
-      "year": "2025",
-      "pdf_file": "Katherine Pico-Meza - 2025 - LIDERAZGO EDUCATIVO Y DESARROLLO COMUNITARIO PARA PROYECTOS PUBLICOS.pdf",
-      "pdf_url": "https://editorialibkn.com/index.php/Yachasun/article/download/683/1150",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "PRÁTICAS DE LIDERANÇA DIRETIVA NO CONTEXTO DA PANDEMIA:: Um estudo de caso na região de Valparaíso, Chile.",
-      "year": "2025",
-      "pdf_file": "Concha et al - 2025 - PRATICAS DE LIDERANCA DIRETIVA NO CONTEXTO DA PANDEMIA Um estudo de caso na regiao de Valp.pdf",
-      "pdf_url": "https://seer.ufrgs.br/index.php/Poled/article/download/144844/94757",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Influencia del liderazgo pedagógico didáctica docente en Educación Básica",
-      "year": "2026",
-      "pdf_file": "Balseca Intriago et al - 2026 - Influencia del liderazgo pedagogico didactica docente en Educacion Basica.pdf",
-      "pdf_url": "https://cienciayeducacion.com/index.php/journal/article/download/zenodo.22289131/4868",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Fundaciones Empresarias, ONGs y educación pública: Programas de Formación de Directivos Escolares en Argentina en las últimas décadas1",
-      "year": "2021",
-      "pdf_file": "Roberta Rodriguez Alejandra Olivera - 2021 - Fundaciones Empresarias, ONGs y educacion publica Programas de Formacion de Directivos Esc.pdf",
-      "pdf_url": "https://plarci.org/index.php/polifonias/article/download/948/1061",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Optimización del uso de recursos tecnológicos: ¿cómo administrar la brecha digital desde la gestión directiva?",
-      "year": "2026",
-      "pdf_file": "Oviedo et al - 2026 - Optimizacion del uso de recursos tecnologicos ¿como administrar la brecha digital desde la.pdf",
-      "pdf_url": "http://revistasdigitales.utelvt.edu.ec/revista/index.php/repique/article/download/360/505",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Didactic booklet on participatory leadership competencies for improving academic performance in primary school students",
-      "year": "2025",
-      "pdf_file": "Saenz Molina Botache - 2025 - Didactic booklet on participatory leadership competencies for improving academic performan.pdf",
-      "pdf_url": "https://revistas.unsa.edu.pe/index.php/rae/article/download/352/424",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "ERIGIENDO EL LIDERAZGO DIRECTIVO EN LA ESCUELA BOLIVARIANA",
-      "year": "2024",
-      "pdf_file": "Falcon - 2024 - ERIGIENDO EL LIDERAZGO DIRECTIVO EN LA ESCUELA BOLIVARIANA.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/1354/1668",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "LIDERAZGO DIRECTIVO CARISMÁTICO EN ORGANIZACIONES RESILIENTES. VISIÓN TRANSCOMPLEJA Y HOLOGRAMÁTICA",
-      "year": "2023",
-      "pdf_file": "Avila - 2023 - LIDERAZGO DIRECTIVO CARISMATICO EN ORGANIZACIONES RESILIENTES. VISION TRANSCOMPLEJA Y HOLO.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/1282/1601",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "EL LIDERAZGO DIRECTIVO EN LAS INSTITUCIONES DE EDUCACIÓN SUPERIOR EN COLOMBIA",
-      "year": "2023",
-      "pdf_file": "Mendoza - 2023 - EL LIDERAZGO DIRECTIVO EN LAS INSTITUCIONES DE EDUCACION SUPERIOR EN COLOMBIA.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/725/1057",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La pareja directiva como modelo de liderazgo educativo: Aproximaciones desde la escuela UNAE",
-      "year": "2023",
-      "pdf_file": "Gonzalez Sanmartin et al - 2023 - La pareja directiva como modelo de liderazgo educativo Aproximaciones desde la escuela UNA.pdf",
-      "pdf_url": "https://revistas.investigacion-upelipb.com/index.php/educare/article/download/1905/1779",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gobernar las escuelas en territorio neuquino. Acompañamiento y formación a equipos directivos desde la Escuela Carlos Fuentealba de ATEN",
-      "year": "2026",
-      "pdf_file": "Elena Bardelli et al - 2026 - Gobernar las escuelas en territorio neuquino. Acompanamiento y formacion a equipos directi.pdf",
-      "pdf_url": "https://revistas.filo.uba.ar/index.php/publica/article/download/4908/4224",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Equipo directivo y trastorno del espectro autista. Facilitadores y obstaculizadores para la inclusión escolar de estudiantes en el nivel primario",
-      "year": "2024",
-      "pdf_file": "Bressan - 2024 - Equipo directivo y trastorno del espectro autista. Facilitadores y obstaculizadores para l.pdf",
-      "pdf_url": "https://publicaciones.unpaz.edu.ar/OJS/index.php/sade/article/download/1697/1602",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Liderazgos que innovan: mérito, confianza y vinculación directiva en la gestión pública colombiana",
-      "year": "2026",
-      "pdf_file": "Garces Pedrozo - 2026 - Liderazgos que innovan merito, confianza y vinculacion directiva en la gestion publica col.pdf",
-      "pdf_url": "https://revistadebates.xoc.uam.mx/index.php/debinnovacion/article/download/269/254",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La conducción de escuelas secundarias universitarias: extraterritorialidad y dispositivos de soporte para la inclusión",
-      "year": "2026",
-      "pdf_file": "Gild - 2026 - La conduccion de escuelas secundarias universitarias extraterritorialidad y dispositivos d.pdf",
-      "pdf_url": "https://revistas.filo.uba.ar/index.php/publica/article/download/4903/4219",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Preliminares Revista INNOCAE 2025",
-      "year": "2026",
-      "pdf_file": "Arango Trillos Claro Quinones - 2026 - Preliminares Revista INNOCAE 2025.pdf",
-      "pdf_url": "https://revistas.sena.edu.co/index.php/innocae/article/download/7430/6761",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Sostenibilidad empresarial del sector de la construcción del Ecuador",
-      "year": "2024",
-      "pdf_file": "Moscoso Serrano et al - 2024 - Sostenibilidad empresarial del sector de la construccion del Ecuador.pdf",
-      "pdf_url": "https://revistas.uazuay.edu.ec/index.php/obsemp/article/download/846/1283",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Pareja Pedagógica y Educación Inclusiva: Inter-acciones entre investigación y territorio",
-      "year": "2023",
-      "pdf_file": "Lorena Palacios et al - 2023 - Pareja Pedagogica y Educacion Inclusiva Inter-acciones entre investigacion y territorio.pdf",
-      "pdf_url": "https://tramas.ifdc.edu.ar/index.php/revista/article/download/3/29",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Pedagogías de la diversidad: La escuela como acontecimiento inclusivo en tiempo de crisis",
-      "year": "2025",
-      "pdf_file": "Ramon Ponciano - 2025 - Pedagogias de la diversidad La escuela como acontecimiento inclusivo en tiempo de crisis.pdf",
-      "pdf_url": "https://revistas.uncu.edu.ar/ojs3/index.php/ruedes/article/download/9360/7871",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Determinantes de la innovación abierta en empresas del sector carbonífero del departamento de Norte de Santander, Colombia",
-      "year": "2025",
-      "pdf_file": "Herrera Rubio et al - 2025 - Determinantes de la innovacion abierta en empresas del sector carbonifero del departamento.pdf",
-      "pdf_url": "https://editorialteinco.edu.co/revistas/index.php/memoriascongreso/article/download/190/200",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "TIPO DE LIDERAZGO EN LOS DIRECTIVOS PARA EL FORTALECIMIENTO DE LAS UNIDADES EDUCATIVAS",
-      "year": "2021",
-      "pdf_file": "Hidalgo - 2021 - TIPO DE LIDERAZGO EN LOS DIRECTIVOS PARA EL FORTALECIMIENTO DE LAS UNIDADES EDUCATIVAS.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/299/265",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Liderazgo distribuido para la justicia social. Un estudio en bachilleratos rurales mexicanos",
-      "year": "2025",
-      "pdf_file": "Rueda Alonso et al - 2025 - Liderazgo distribuido para la justicia social. Un estudio en bachilleratos rurales mexican.pdf",
-      "pdf_url": "https://rlee.ibero.mx/index.php/rlee/article/download/769/2112",
-      "drive_status": "already_exists"
-    },
-    {
-      "title": "LIDERAZGO RESILIENTE EN EL DIRECTIVO ESCOLAR PARA ASUMIR LA ENSEÑANZA REMOTA EN TIEMPO DE PANDEMIA",
-      "year": "2022",
-      "pdf_file": "Ceballo - 2022 - LIDERAZGO RESILIENTE EN EL DIRECTIVO ESCOLAR PARA ASUMIR LA ENSENANZA REMOTA EN TIEMPO DE.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/516/677",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La palabra como dispositivo de gestión institucional. La voz de directores de dos escuelas secundarias técnicas marplatenses",
-      "year": "2025",
-      "pdf_file": "Alberto Figueroa Adriana Branda - 2025 - La palabra como dispositivo de gestion institucional. La voz de directores de dos escuelas.pdf",
-      "pdf_url": "https://fh.mdp.edu.ar/revistas/index.php/r_educ/article/download/9199/9492",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Academic Leadership and Management in Tecnological Educationin Guerrero. Pedagogical Stratgy for its Development",
-      "year": "2026",
-      "pdf_file": "Guevara Moya et al - 2026 - Academic Leadership and Management in Tecnological Educationin Guerrero. Pedagogical Strat.pdf",
-      "pdf_url": "https://identidadbolivariana.itb.edu.ec/index.php/identidadbolivariana/article/download/582/404",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestión efectiva del talento humano en las personas docentes",
-      "year": "2024",
-      "pdf_file": "Chinchilla Garro Alvarado Barboza - 2024 - Gestion efectiva del talento humano en las personas docentes.pdf",
-      "pdf_url": "https://www.revistaumbral.com/index.php/umbral/article/download/37/19",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "INTERVENCIÓN DIRECTIVA EN COLEGIOS DEL DISTRITO DE PARAGUARÍ EN EL AÑO 2023",
-      "year": "2023",
-      "pdf_file": "ESPINOLA BAEZ - 2023 - INTERVENCION DIRECTIVA EN COLEGIOS DEL DISTRITO DE PARAGUARI EN EL ANO 2023.pdf",
-      "pdf_url": "https://revistascientificas.una.py/index.php/rcff/article/download/4029/3271",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "LIDERAZGO CREATIVO COMO ALTERNATIVA EN LA RESILIENCIA DE LOS DIRECTORES EN EDUCACIÓN PRIMARIA",
-      "year": "2024",
-      "pdf_file": "Moncada - 2024 - LIDERAZGO CREATIVO COMO ALTERNATIVA EN LA RESILIENCIA DE LOS DIRECTORES EN EDUCACION PRIMA.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/1419/1728",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestão para a aprendizagem na perspectiva de avaliações em larga escala",
-      "year": "2024",
-      "pdf_file": "Souza Zanelato et al - 2024 - Gestao para a aprendizagem na perspectiva de avaliacoes em larga escala.pdf",
-      "pdf_url": "https://revistacientifica.sesisp.org.br/index.php/nee_arandu/article/download/44/15",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "A gestão do executivo em instituições públicas de ensino. Um estudo de caso",
-      "year": "2023",
-      "pdf_file": "Garcia Bustillos et al - 2023 - A gestao do executivo em instituicoes publicas de ensino. Um estudo de caso.pdf",
-      "pdf_url": "https://revistas.uniatlantico.edu.co/index.php/CEDOTIC/article/download/3713/4429",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "LIDERAZGO DE DIRECTORAS(ES) NOVELES: Preparación y resistencia al cambio en contexto de pandemia",
-      "year": "2023",
-      "pdf_file": "Vega Rodriguez Ahumada Figueroa - 2023 - LIDERAZGO DE DIRECTORAS(ES) NOVELES Preparacion y resistencia al cambio en contexto de pan.pdf",
-      "pdf_url": "https://ojs.rmie.mx/index.php/rmie/article/download/61/120",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "O CONTRIBUTO DA GESTÃO DEMOCRATICA PARA A QUALIDADE DE ENSINO",
-      "year": "2023",
-      "pdf_file": "Machado Dimande - 2023 - O CONTRIBUTO DA GESTAO DEMOCRATICA PARA A QUALIDADE DE ENSINO.pdf",
-      "pdf_url": "https://www.periodicos.ufam.edu.br/index.php/amazonica/article/download/14249/9137",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Atlas para a formação de gestores socioeducacionais de ciência e inovação em Santiago de Cuba",
-      "year": "2026",
-      "pdf_file": "Paz Dominguez et al - 2026 - Atlas para a formacao de gestores socioeducacionais de ciencia e inovacao em Santiago de C.pdf",
-      "pdf_url": "https://maestroysociedad.uo.edu.cu/index.php/MyS/article/download/7912/12460",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "ESTRATEGIA PARA LA FORMACIÓN DE DIRECTIVOS UNIVERSITARIOS EN LEGISLACIÓN ACADÉ- MICA PARA EL PROCESO DE EVALUACIÓN Y ACREDITACIÓN DE CARRERAS",
-      "year": "2021",
-      "pdf_file": "Latorre Tapia et al - 2021 - ESTRATEGIA PARA LA FORMACION DE DIRECTIVOS UNIVERSITARIOS EN LEGISLACION ACADE- MICA PARA.pdf",
-      "pdf_url": "https://revista.uniandes.edu.ec/ojs/index.php/METANOIA/article/download/2242/1573",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "EFETIVIDADE DA GESTÃO ESCOLAR NA REDE ESTADUAL: ANÁLISE DA ATUAÇÃO DOS GESTORES E DO DESEMPENHO EDUCACIONAL",
-      "year": "2025",
-      "pdf_file": "Freitas Freitas et al - 2025 - EFETIVIDADE DA GESTAO ESCOLAR NA REDE ESTADUAL ANALISE DA ATUACAO DOS GESTORES E DO DESEMP.pdf",
-      "pdf_url": "https://revista.uemg.br/revistappp/article/download/10583/6343",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "FACTORES QUE INCIDEN EN EL APRENDIZAJE DE MATEMÁTICA EN ESTUDIANTES DEL NIVEL MEDIO, AÑO 2021",
-      "year": "2022",
-      "pdf_file": "Medina Ortiz - 2022 - FACTORES QUE INCIDEN EN EL APRENDIZAJE DE MATEMATICA EN ESTUDIANTES DEL NIVEL MEDIO, ANO 2.pdf",
-      "pdf_url": "https://revistascientificas.una.py/index.php/rcff/article/download/2722/2472",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "INCIDENCIA DE LA SUPERVISIÓN EDUCATIVA EN LA PEDAGOGIZACIÓN DE LOS PROYECTOS SOCIOPRODUCTIVOS EN ESCUELAS TÉCNICAS",
-      "year": "2025",
-      "pdf_file": "Lago - 2025 - INCIDENCIA DE LA SUPERVISION EDUCATIVA EN LA PEDAGOGIZACION DE LOS PROYECTOS SOCIOPRODUCTI.pdf",
-      "pdf_url": "https://investigacionuft.net.ve/revista/index.php/scientiarium/article/download/364/1869",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Retos de la gerencia directiva en los centros educativos de Educación Primaria",
-      "year": "2020",
-      "pdf_file": "Lemus Maestre - 2020 - Retos de la gerencia directiva en los centros educativos de Educacion Primaria.pdf",
-      "pdf_url": "https://sinergiaseducativas.mx/index.php/revista/article/download/151/432",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "La gestión educativa en el seguimiento de la conducta y resiliencia de los hijos de privados de libertad.",
-      "year": "2023",
-      "pdf_file": "Autor desconocido - 2023 - La gestion educativa en el seguimiento de la conducta y resiliencia de los hijos de privad.pdf",
-      "pdf_url": "https://revistaellabrador.net/index.php/RevistaElLabrador/article/download/91/66",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Community Engagement in Rural School Management in Thailand",
-      "year": "2024",
-      "pdf_file": "Worawuth Tejadhammo - 2024 - Community Engagement in Rural School Management in Thailand.pdf",
-      "pdf_url": "https://so19.tci-thaijo.org/index.php/JEIM/article/download/608/365",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "แนวทางการบรหารสถานศกษาในยควถใหม : School Management Guidelines in New Normal",
-      "year": "2023",
-      "pdf_file": "Silalaiy - 2023 - แนวทางการบรหารสถานศกษาในยควถใหม School Management Guidelines in New Normal.pdf",
-      "pdf_url": "https://so07.tci-thaijo.org/index.php/rtnb/article/download/2353/1730",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "THE ROLE OF SCHOOL MANAGEMENT IN ENHANCEMENT OF FOREIGN LANGUAGE EDUCATION",
-      "year": "2024",
-      "pdf_file": "Yoqubova et al - 2024 - THE ROLE OF SCHOOL MANAGEMENT IN ENHANCEMENT OF FOREIGN LANGUAGE EDUCATION.pdf",
-      "pdf_url": "https://inlibrary.uz/index.php/science-research/article/download/28056/28883",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "HEALTHY SCHOOL MANAGEMENT: PLANNING MODEL IN ELEMENTARY SCHOOL",
-      "year": "2022",
-      "pdf_file": "Tina Rahmawati - 2022 - HEALTHY SCHOOL MANAGEMENT PLANNING MODEL IN ELEMENTARY SCHOOL.pdf",
-      "pdf_url": "https://journalppw.com/index.php/jpsp/article/download/6913/4511",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Effectiveness of Using School Management Information Systems to Improve Principal Performance",
-      "year": "2025",
-      "pdf_file": "Wasiatun Nikmah et al - 2025 - Effectiveness of Using School Management Information Systems to Improve Principal Performa.pdf",
-      "pdf_url": "https://jes.ejournal.unri.ac.id/index.php/JES/article/download/1060/630",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "CampusIQ: A Secure Multi-Portal Web Platform for Intelligent School Management",
-      "year": "2026",
-      "pdf_file": "Kunal Kanchankar et al - 2026 - CampusIQ A Secure Multi-Portal Web Platform for Intelligent School Management.pdf",
-      "pdf_url": "https://doi.org/10.22214/ijraset.2026.85002",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Ontological disruption in school management: sentithinking as the axis of contemporary educational supervision",
-      "year": "2026",
-      "pdf_file": "Cermeno - 2026 - Ontological disruption in school management sentithinking as the axis of contemporary educ.pdf",
-      "pdf_url": "https://revistabiohum.com/index.php/home/article/download/93/88",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "MODEL OF INTEGRATING AI TECHNOLOGY INTO SCHOOL MANAGEMENT IN THE CHINESE EDUCATION SYSTEM",
-      "year": "2026",
-      "pdf_file": "钱新毅 et al - 2026 - MODEL OF INTEGRATING AI TECHNOLOGY INTO SCHOOL MANAGEMENT IN THE CHINESE EDUCATION SYSTEM.pdf",
-      "pdf_url": "https://ijees.my/index.php/nj/article/download/45/26",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Artificial Intelligence Adoption and Teacher Performance: The Role of Leadership and Motivation in School Management",
-      "year": "2025",
-      "pdf_file": "Haritani Murcahyanto - 2025 - Artificial Intelligence Adoption and Teacher Performance The Role of Leadership and Motiva.pdf",
-      "pdf_url": "https://ejournal.unuja.ac.id/index.php/jumpa/article/download/14787/pdf_1",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "SCHOOL MANAGEMENT STRATEGY IN ENSURING EARLY CHILDHOOD SAFETY IN RA SHAZIA PALEMBANG",
-      "year": "2025",
-      "pdf_file": "Febrianti Wahyuni - 2025 - SCHOOL MANAGEMENT STRATEGY IN ENSURING EARLY CHILDHOOD SAFETY IN RA SHAZIA PALEMBANG.pdf",
-      "pdf_url": "https://ejournal.apmapi.or.id/index.php/Limeemas/article/download/41/30",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Educational Decentralization and Local Governance: A Case Study of School Management Policies in Indonesia",
-      "year": "2026",
-      "pdf_file": "Mursalin et al - 2026 - Educational Decentralization and Local Governance A Case Study of School Management Polici.pdf",
-      "pdf_url": "https://ejeset.saintispub.com/ejeset/article/download/1523/580",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The Concept of Educational Leadership in the Thought of Ayatollah Khomeini",
-      "year": "2026",
-      "pdf_file": "Mubarak Sudarmin et al - 2026 - The Concept of Educational Leadership in the Thought of Ayatollah Khomeini.pdf",
-      "pdf_url": "https://ejurnalilmiah.com/index.php/Educate/article/download/13707/1035",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The Criteria and Ethics of Educational Leadership in the Perspective of the Qur'an",
-      "year": "2025",
-      "pdf_file": "Apip Hasan Hisyam Malik - 2025 - The Criteria and Ethics of Educational Leadership in the Perspective of the Qur'an.pdf",
-      "pdf_url": "https://jes.ejournal.unri.ac.id/index.php/JES/article/download/241/341",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The Role of School Leadership in improving Teacher Performance",
-      "year": "2025",
-      "pdf_file": "Vikas Bhateja Poonam Singh - 2025 - The Role of School Leadership in improving Teacher Performance.pdf",
-      "pdf_url": "https://shodhprakashan.net/index.php/spjert/article/download/25/25",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Shaping the Future of Learning, Teaching, and School Leadership Management",
-      "year": "2024",
-      "pdf_file": "Li - 2024 - Shaping the Future of Learning, Teaching, and School Leadership Management.pdf",
-      "pdf_url": "https://lnep.ewapub.com/article/view/15587.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Integration of Jawara Values as a Social Asset School Leadership",
-      "year": "2023",
-      "pdf_file": "Syadeli et al - 2023 - Integration of Jawara Values as a Social Asset School Leadership.pdf",
-      "pdf_url": "https://www.atlantis-press.com/article/125985007.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The Relationship between School Leadership and Teacher Motivation in Kuwait",
-      "year": "2022",
-      "pdf_file": "Abdullah Shaddad - 2022 - The Relationship between School Leadership and Teacher Motivation in Kuwait.pdf",
-      "pdf_url": "https://doi.org/10.52132/ajrsp.e.2022.36.1",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "PSYCHODRAMA AND THE NEW ROLE OF THE SCHOOL PRINCIPAL",
-      "year": "2024",
-      "pdf_file": "MAE CARTER - 2024 - PSYCHODRAMA AND THE NEW ROLE OF THE SCHOOL PRINCIPAL.pdf",
-      "pdf_url": "https://www.psychodramajournal.com/index.php/asgppjournal/article/download/647/645",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The Role Of The School Principal As A Monitor Of Teacher Performance",
-      "year": "2024",
-      "pdf_file": "FAIZOL ACHMAD MUHLIS - 2024 - The Role Of The School Principal As A Monitor Of Teacher Performance.pdf",
-      "pdf_url": "https://ejournal.internasional.org/index.php/ijesr/article/download/33/22",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The School Principals' Leadership Style on Teacher Performance",
-      "year": "2025",
-      "pdf_file": "Septi Ayana Normuslim - 2025 - The School Principals' Leadership Style on Teacher Performance.pdf",
-      "pdf_url": "https://ojs.staialfurqan.ac.id/IJoASER/article/download/803/516",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "School Principals' Perception of the Challenges and Opportunities of School Digitalization",
-      "year": "2026",
-      "pdf_file": "Astuti - 2026 - School Principals' Perception of the Challenges and Opportunities of School Digitalization.pdf",
-      "pdf_url": "https://journal.horizonedukasipublisher.com/jeat/article/download/224/101",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Investigation of school principals' perceptions on self- leadership and positive childhood experiences",
-      "year": "2022",
-      "pdf_file": "Dilber et al - 2022 - Investigation of school principals' perceptions on self- leadership and positive childhood.pdf",
-      "pdf_url": "https://dergipark.org.tr/en/download/article-file/2769120",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Instructional Leadership Management for Teachers in Indonesia",
-      "year": "2025",
-      "pdf_file": "Prima Bendriyanti et al - 2025 - Instructional Leadership Management for Teachers in Indonesia.pdf",
-      "pdf_url": "https://attractivejournal.com/index.php/bpr/article/download/2169/1632",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "INSTRUCTIONAL LEADERSHIP OF THE PRINCIPAL IN ELEMENTARY SCHOOLS",
-      "year": "2026",
-      "pdf_file": "Rizal Habib et al - 2026 - INSTRUCTIONAL LEADERSHIP OF THE PRINCIPAL IN ELEMENTARY SCHOOLS.pdf",
-      "pdf_url": "https://journal.cerdasnusantara.org/index.php/fundamental/article/download/185/120",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "INSTRUCTIONAL Leadership and Teacher Enthusiasm As Predictors of Student ENGAGEMENT",
-      "year": "2025",
-      "pdf_file": "Tahuyan Matutino - 2025 - INSTRUCTIONAL Leadership and Teacher Enthusiasm As Predictors of Student ENGAGEMENT.pdf",
-      "pdf_url": "https://ojs.uic.edu.ph/index.php/IJER/article/download/246/252",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "INSTRUCTIONAL LEADERSHIP AND ITS CONTRIBUTION TO CURRICULUM IMPLEMENTATION AT THE UNDERGRADUATE LEVEL",
-      "year": "2024",
-      "pdf_file": "Saira Zafar - 2024 - INSTRUCTIONAL LEADERSHIP AND ITS CONTRIBUTION TO CURRICULUM IMPLEMENTATION AT THE UNDERGRA.pdf",
-      "pdf_url": "https://pjssrjournal.com/index.php/Journal/article/download/112/104",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Improving Instructional Leadership for Goal Attainment of Secondary Schools Education",
-      "year": "2025",
-      "pdf_file": "Uhuka ANUNOBI Oluchi Ogbonna - 2025 - Improving Instructional Leadership for Goal Attainment of Secondary Schools Education.pdf",
-      "pdf_url": "https://ijedm.com/index.php/ijedm/article/download/74/68",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Rethinking Instructional Leadership in the Era of Digital Transformation A Conceptual Framework",
-      "year": "2023",
-      "pdf_file": "Michael Anderson - 2023 - Rethinking Instructional Leadership in the Era of Digital Transformation A Conceptual Fram.pdf",
-      "pdf_url": "https://journal.echaprogres.or.id/index.php/tricks/article/download/33/19",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "The Effects of the Intervention of New Science and Technology on Teacher Instructional Leadership Models",
-      "year": "2023",
-      "pdf_file": "Zhi et al - 2023 - The Effects of the Intervention of New Science and Technology on Teacher Instructional Lea.pdf",
-      "pdf_url": "https://so02.tci-thaijo.org/index.php/JRKSA/article/download/262815/177570",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Global Research Trends of Instructional Leadership: A Bibliometric Analysis From 2002 to 2023",
-      "year": "2025",
-      "pdf_file": "Mai Huong Thi Quy - 2025 - Global Research Trends of Instructional Leadership A Bibliometric Analysis From 2002 to 20.pdf",
-      "pdf_url": "https://pdf.eujem.com/EUJEM_8_2_91.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Instructional Leadership : Principal's Challenges and Solutions in Enhancing Students' Academic Performance",
-      "year": "2024",
-      "pdf_file": "Lani Mohd Pauzi - 2024 - Instructional Leadership Principal's Challenges and Solutions in Enhancing Students' Acade.pdf",
-      "pdf_url": "https://e-journal.undikma.ac.id/index.php/jurnalkependidikan/article/download/12862/6257",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "THE POWER OF INSTRUCTIONAL LEADERSHIP STYLES ON TEACHERS' PROFESSIONAL COMPETENCE AND CAREER FULFILLMENT",
-      "year": "2026",
-      "pdf_file": "GUEVARRA MICUA - 2026 - THE POWER OF INSTRUCTIONAL LEADERSHIP STYLES ON TEACHERS' PROFESSIONAL COMPETENCE AND CARE.pdf",
-      "pdf_url": "https://ijrp.sfo3.cdn.digitaloceanspaces.com/pubjournal/8908/1001951420268908.pdf",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "IMPLEMENTATION OF ACADEMIC SUPERVISION BY THE PRINCIPLE OF PUBLIC JUNIOR HIGH SCHOOLS IN PROBOLINGGO CITY",
-      "year": "2023",
-      "pdf_file": "Zainuddin et al - 2023 - IMPLEMENTATION OF ACADEMIC SUPERVISION BY THE PRINCIPLE OF PUBLIC JUNIOR HIGH SCHOOLS IN P.pdf",
-      "pdf_url": "https://ejournal.unzah.ac.id/index.php/alfikru/article/download/953/663",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Strategi Kepemimpinan Kepala Sekolah Dalam Implementasi Pendidikan Karakter Berbasis Nilai Lokal",
-      "year": "2024",
-      "pdf_file": "Rahmi et al - 2024 - Strategi Kepemimpinan Kepala Sekolah Dalam Implementasi Pendidikan Karakter Berbasis Nilai.pdf",
-      "pdf_url": "https://jurnal.unipasby.ac.id/whn/article/download/9409/5691",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Desafios da gestão escolar no Brasil",
-      "year": "2022",
-      "pdf_file": "Ferraz Souto et al - 2022 - Desafios da gestao escolar no Brasil.pdf",
-      "pdf_url": "https://rsdjournal.org/index.php/rsd/article/download/29628/25645",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "A tecnologia no contexto da Gestão Escolar",
-      "year": "2024",
-      "pdf_file": "Costa Pinto et al - 2024 - A tecnologia no contexto da Gestao Escolar.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/199/183",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "A GESTÃO ESCOLAR NUMA PERSPECTIVA DEMOCRÁTICA",
-      "year": "2023",
-      "pdf_file": "Neiss Skrsypcsak - 2023 - A GESTAO ESCOLAR NUMA PERSPECTIVA DEMOCRATICA.pdf",
-      "pdf_url": "https://revistas.uceff.edu.br/saberes-e-sabores/article/download/484/425",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Considerações sobre a gestão escolar na atualidade",
-      "year": "2024",
-      "pdf_file": "Turchello - 2024 - Consideracoes sobre a gestao escolar na atualidade.pdf",
-      "pdf_url": "https://periodicos.ifsc.edu.br/index.php/eadifsc/article/download/3730/4754",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "PRINCÍPIOS E INSUMOS PARA A TERRITORIALIZAÇÃO DA GESTÃO ESCOLAR",
-      "year": "2026",
-      "pdf_file": "Musumeci et al - 2026 - PRINCIPIOS E INSUMOS PARA A TERRITORIALIZACAO DA GESTAO ESCOLAR.pdf",
-      "pdf_url": "https://periodicos.ufal.br/revistaimpeto/article/download/19893/13885",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Desafios da gestão escolar na percepção dos diretores",
-      "year": "2023",
-      "pdf_file": "Sousa Barbosa - 2023 - Desafios da gestao escolar na percepcao dos diretores.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/101/91",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "A Gestão Escolar e suas contribuições à prática pedagógica",
-      "year": "2025",
-      "pdf_file": "de Souza - 2025 - A Gestao Escolar e suas contribuicoes a pratica pedagogica.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/356/297",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestão por competências: uma ferramenta para gestão escolar pública",
-      "year": "2023",
-      "pdf_file": "Pereira Fonseca Oliveira Borges - 2023 - Gestao por competencias uma ferramenta para gestao escolar publica.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/109/99",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Desafios da gestão escolar em contextos de vulnerabilidade social",
-      "year": "2025",
-      "pdf_file": "Costa Pinto et al - 2025 - Desafios da gestao escolar em contextos de vulnerabilidade social.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/377/312",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "As competências do diretor escolar e a importância do envolvimento das famílias no processo educacional.",
-      "year": "2026",
-      "pdf_file": "Peres Pirozzi - 2026 - As competencias do diretor escolar e a importancia do envolvimento das familias no process.pdf",
-      "pdf_url": "https://revistacientifica.sesisp.org.br/index.php/nee_arandu/article/download/121/69",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "LIDERANÇA EDUCACIONAL OU TECNICISMO DA GESTÃO?",
-      "year": "2025",
-      "pdf_file": "Andrade Rocha Maia Mocarzel - 2025 - LIDERANCA EDUCACIONAL OU TECNICISMO DA GESTAO.pdf",
-      "pdf_url": "https://journal.ensin-e.edu.br/rensine/article/download/50/49",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "‘Diretor(a) Escolar’ ou ‘CEO Educacional’? : Reflexões sobre influências da ideologia neoliberal em processos de gestão",
-      "year": "2025",
-      "pdf_file": "da Silva et al - 2025 - ‘Diretor(a) Escolar’ ou ‘CEO Educacional’ Reflexoes sobre influencias da ideologia neolibe.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/332/289",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestão democrática e escola em tempo integral: desafios e possibilidades a partir da experiência gestora em Codó–MA",
-      "year": "2026",
-      "pdf_file": "do Vale et al - 2026 - Gestao democratica e escola em tempo integral desafios e possibilidades a partir da experi.pdf",
-      "pdf_url": "https://periodicoseletronicos.ufma.br/index.php/terradepretos/article/download/28941/14687",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "GESTÃO FINANCEIRA E PROCESSOS PEDAGÓGICOS EM ESCOLAS PÚBLICAS DE ENSINO MÉDIO: O PDDE EM DEBATE",
-      "year": "2025",
-      "pdf_file": "de Queiroz Oliveira Pereira - 2025 - GESTAO FINANCEIRA E PROCESSOS PEDAGOGICOS EM ESCOLAS PUBLICAS DE ENSINO MEDIO O PDDE EM DE.pdf",
-      "pdf_url": "https://revistas.uneb.br/elite/article/download/26887/16786",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "As perspetivas dos diretores sobre o modelo de gestão das escolas portuguesas",
-      "year": "2022",
-      "pdf_file": "S. Carvalho et al - 2022 - As perspetivas dos diretores sobre o modelo de gestao das escolas portuguesas.pdf",
-      "pdf_url": "https://revistas.ucp.pt/index.php/investigacaoeducacional/article/download/11109/11149",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "O Impacto da contratação política de gestores escolares no aproveitamento escolar:: Uma abordagem quantitativa",
-      "year": "2022",
-      "pdf_file": "Marzola Koblinsky Motta - 2022 - O Impacto da contratacao politica de gestores escolares no aproveitamento escolar Uma abor.pdf",
-      "pdf_url": "https://periodicos.fgv.br/ric/article/download/86866/83138",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Desafios da Gestão Escolar na Percepção dos Diretores da Rede Estadual de Ensino em Timon - MA no ano de 2022",
-      "year": "2023",
-      "pdf_file": "Sousa Barbosa - 2023 - Desafios da Gestao Escolar na Percepcao dos Diretores da Rede Estadual de Ensino em Timon.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/84/78",
-      "drive_status": "uploaded"
-    },
-    {
-      "title": "Gestão Escolar: Desafios e Perspectivas para uma Educação de Qualidade",
-      "year": "2025",
-      "pdf_file": "de Moura - 2025 - Gestao Escolar Desafios e Perspectivas para uma Educacao de Qualidade.pdf",
-      "pdf_url": "https://rebena.emnuvens.com.br/revista/article/download/525/411",
+      "pdf_file": "de Magalhaes et al - 2026 - GESTAO ESCOLAR ESTRATEGICA CONEXAO ENTRE PLANEJAMENTO, LIDERANCA E RESULTADOS EDUCACIONAIS.pdf",
+      "pdf_url": "https://revistatopicos.com.br/generate/pdf_zenodo/pub_781814357.pdf",
       "drive_status": "uploaded"
     }
   ]
