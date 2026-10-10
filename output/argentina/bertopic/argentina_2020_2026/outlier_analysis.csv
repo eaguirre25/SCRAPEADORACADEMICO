@@ -1,44 +1,47 @@
 document_id,language,year,source,text_length,has_abstract,relevance_status,hdbscan_outlier_score,nearest_topic,nearest_topic_similarity,second_nearest_topic,similarity_margin,reason_category,original_topic,suggested_topic,reassignment_method,reassignment_confidence,accepted_reassignment
-doi:10.11144/javeriana.10554.34540,es,2020,OpenAlex,2092,True,alta,0.366578,1,0.878559,3,0.020536,contamination_candidate,-1,1,nearest_semantic_centroid,0.878559,False
-doi:10.14409/ie.2025.23.e0102,es,2025,OpenAlex | CONICET Digital,1184,True,alta,0.596095,2,0.682559,0,0.022853,contamination_candidate,-1,2,nearest_semantic_centroid,0.682559,False
-doi:10.15366/reps2021.6.1.002,es,2021,OpenAlex,1023,True,alta,0.34858,1,0.757576,0,0.003908,contamination_candidate,-1,1,nearest_semantic_centroid,0.757576,False
-doi:10.15366/reps2022.7.2.009,es,2022,OpenAlex | CONICET Digital,1326,True,alta,0.244205,1,0.857826,0,0.044319,contamination_candidate,-1,1,nearest_semantic_centroid,0.857826,False
-doi:10.15443/tde20242587,es,2024,OpenAlex,1347,True,alta,0.596095,0,0.736918,3,0.002509,contamination_candidate,-1,0,nearest_semantic_centroid,0.736918,False
-doi:10.17227/nyn.vol6.num48-13668,es,2021,OpenAlex,678,True,alta,0.281721,1,0.808383,0,0.036316,contamination_candidate,-1,1,nearest_semantic_centroid,0.808383,False
-doi:10.21315/apjee2023.38.2.6,en,2023,OpenAlex,1931,True,alta,0.282823,0,0.807667,1,0.008474,contamination_candidate,-1,0,nearest_semantic_centroid,0.807667,False
-doi:10.22529/dp.2025.23(46)10,en,2025,OpenAlex,1251,True,alta,0.352426,0,0.862767,1,0.018073,contamination_candidate,-1,0,nearest_semantic_centroid,0.862767,False
-doi:10.24215/23468866e110,es,2022,OpenAlex,1189,True,alta,0.596095,2,0.747495,0,0.025575,contamination_candidate,-1,2,nearest_semantic_centroid,0.747495,False
-doi:10.35362/rie8814743,es,2022,OpenAlex,1237,True,alta,0.34855,1,0.677414,2,0.045302,contamination_candidate,-1,1,nearest_semantic_centroid,0.677414,False
-doi:10.37177/unicen/eb33-377,es,2023,OpenAlex | CONICET Digital,1707,True,alta,0.596095,0,0.761837,1,0.03421,contamination_candidate,-1,0,nearest_semantic_centroid,0.761837,False
-doi:10.37811/cl_rcm.v7i2.6016,es,2023,OpenAlex,1063,True,alta,0.595176,3,0.848879,0,0.024694,contamination_candidate,-1,3,nearest_semantic_centroid,0.848879,False
-doi:10.37811/cl_rcm.v8i3.11771,es,2024,OpenAlex,1676,True,alta,0.273267,0,0.890274,1,0.046306,contamination_candidate,-1,0,nearest_semantic_centroid,0.890274,False
-doi:10.47069/estudios-ambientales.v9i2.1291,es,2021,OpenAlex,3151,True,alta,0.573988,2,0.761875,3,0.010242,contamination_candidate,-1,2,nearest_semantic_centroid,0.761875,False
-doi:10.5281/zenodo.20354549,es,2026,OpenAlex,2195,True,alta,0.271281,1,0.840302,0,0.019351,contamination_candidate,-1,1,nearest_semantic_centroid,0.840302,False
-doi:10.58313/masquedos.2023.v8.n10.237,es,2023,OpenAlex,2029,True,alta,0.616513,3,0.675233,1,0.008198,contamination_candidate,-1,3,nearest_semantic_centroid,0.675233,False
-doi:10.61203/2347-0658.v10.n2.34114,es,2021,OpenAlex,1572,True,alta,0.280805,1,0.682287,2,0.026291,contamination_candidate,-1,1,nearest_semantic_centroid,0.682287,False
-doi:10.61616/rvdc.v7i2.1622,es,2026,OpenAlex,1606,True,alta,0.591897,2,0.781431,0,0.015665,contamination_candidate,-1,2,nearest_semantic_centroid,0.781431,False
-record:20e228c85da8f29db422febc,es,2021,CONICET Digital,1845,True,alta,0.379819,1,0.759417,3,0.010241,contamination_candidate,-1,1,nearest_semantic_centroid,0.759417,False
-record:8f74921734f9325132486c26,pt,2025,CONICET Digital,3977,True,alta,0.30224,1,0.815193,3,0.05638,contamination_candidate,-1,1,nearest_semantic_centroid,0.815193,False
-record:ef49402cf6d7b248aaaa1792,es,2024,CONICET Digital,4018,True,alta,0.63343,3,0.755931,2,0.038852,contamination_candidate,-1,3,nearest_semantic_centroid,0.755931,False
-doi:10.28928/ri/962024/atc1/bechep,es,2024,CONICET Digital,1978,True,alta,0.257703,1,0.850963,0,0.008538,contamination_candidate,-1,1,nearest_semantic_centroid,0.850963,False
-record:80af7d73f0bf81d5a573a7bc,es,2021,CONICET Digital,3388,True,alta,0.27129,1,0.862817,0,0.102353,contamination_candidate,-1,1,nearest_semantic_centroid,0.862817,False
-doi:10.22235/cp.v18i1.3316,es,2024,CONICET Digital,4279,True,alta,0.627191,1,0.501796,0,0.004677,contamination_candidate,-1,1,nearest_semantic_centroid,0.501796,False
-doi:10.16888/interd.2022.39.1.14,en,2022,CONICET Digital,5207,True,alta,0.596095,2,0.731448,0,0.00604,contamination_candidate,-1,2,nearest_semantic_centroid,0.731448,False
-record:0416d5c4e72853f88e5b4852,es,2025,CONICET Digital,499,True,alta,0.353928,1,0.625813,3,0.007142,contamination_candidate,-1,1,nearest_semantic_centroid,0.625813,False
-record:eaf2af2a857bb6586783e09f,es,2023,CONICET Digital,2395,True,alta,0.28189,2,0.820902,1,0.005456,contamination_candidate,-1,2,nearest_semantic_centroid,0.820902,False
-doi:10.37177/unicen/eb33-361,es,2023,CONICET Digital,2131,True,alta,0.610961,2,0.901752,1,0.029421,contamination_candidate,-1,2,nearest_semantic_centroid,0.901752,False
-doi:10.4067/s0718-07052019000300031,es,2020,CONICET Digital,2105,True,alta,0.426706,0,0.761236,3,0.047988,contamination_candidate,-1,0,nearest_semantic_centroid,0.761236,False
-doi:10.34096/iice.n57.16472,es,2025,CONICET Digital,2922,True,alta,0.596095,0,0.789195,1,0.025553,contamination_candidate,-1,0,nearest_semantic_centroid,0.789195,False
-record:ef4e34a18d53619c557d06fc,es,2021,CONICET Digital,1542,True,alta,0.287819,2,0.759222,0,0.018886,contamination_candidate,-1,2,nearest_semantic_centroid,0.759222,False
-record:a766d38f935f179b85c4bc08,es,2020,CONICET Digital,1140,True,alta,0.60353,2,0.788552,0,0.003258,contamination_candidate,-1,2,nearest_semantic_centroid,0.788552,False
-doi:10.17141/iconos.82.2025.6197,es,2025,CONICET Digital,2892,True,alta,0.365236,1,0.81113,3,0.007031,contamination_candidate,-1,1,nearest_semantic_centroid,0.81113,False
-doi:10.29112/ruae.v6.n1.5,pt,2021,CONICET Digital,4613,True,alta,0.58445,1,0.664014,3,0.010427,contamination_candidate,-1,1,nearest_semantic_centroid,0.664014,False
-record:4f5c34f614ed4007237d7729,es,2023,CONICET Digital,2342,True,alta,0.577115,0,0.878173,1,0.00351,contamination_candidate,-1,0,nearest_semantic_centroid,0.878173,False
-record:85cdd6c28422c8f681b84e38,es,2023,CONICET Digital,4095,True,alta,0.33402,3,0.863218,0,0.021504,contamination_candidate,-1,3,nearest_semantic_centroid,0.863218,False
-doi:10.1016/j.worlddev.2022.106131,en,2023,CONICET Digital,1654,True,alta,0.301181,0,0.590547,1,0.03609,contamination_candidate,-1,0,nearest_semantic_centroid,0.590547,False
-record:3a7d056d2a66b8e58dd41a05,en,2020,OpenAlex,3510,True,alta,0.263469,0,0.897043,1,0.038182,contamination_candidate,-1,0,nearest_semantic_centroid,0.897043,False
-record:00fe10c6ee58ca2623530dd1,es,2021,OpenAlex,771,True,alta,0.36042,0,0.82988,2,0.017158,contamination_candidate,-1,0,nearest_semantic_centroid,0.82988,False
-record:13b9e52cf4347bca6b60f01b,es,2020,OpenAlex,1618,True,alta,0.596095,0,0.802001,1,0.06588,contamination_candidate,-1,0,nearest_semantic_centroid,0.802001,False
-record:ec1ac1f0af097da49397378d,es,2025,OpenAlex,1397,True,alta,0.40764,1,0.887541,0,0.002755,contamination_candidate,-1,1,nearest_semantic_centroid,0.887541,False
-record:03cf948d1ff4ee5b34c64ff3,es,2022,OpenAlex,1875,True,alta,0.355959,0,0.706918,2,0.001379,contamination_candidate,-1,0,nearest_semantic_centroid,0.706918,False
-record:7229594ab9b04f478b943960,es,2026,OpenAlex,1541,True,alta,0.255845,0,0.852136,1,0.018492,contamination_candidate,-1,0,nearest_semantic_centroid,0.852136,False
+doi:10.11144/javeriana.10554.34540,es,2020,OpenAlex,2092,True,alta,0.397219,0,0.869636,3,0.013629,contamination_candidate,-1,0,nearest_semantic_centroid,0.869636,False
+doi:10.15366/reps2021.6.1.002,es,2021,OpenAlex,1023,True,alta,0.385361,1,0.754679,0,0.018048,contamination_candidate,-1,1,nearest_semantic_centroid,0.754679,False
+doi:10.15366/reps2022.7.2.009,es,2022,OpenAlex | CONICET Digital,1326,True,alta,0.33112,0,0.844562,4,0.031931,contamination_candidate,-1,0,nearest_semantic_centroid,0.844562,False
+doi:10.17227/nyn.vol6.num48-13668,es,2021,OpenAlex,678,True,alta,0.314501,0,0.814307,4,0.024025,contamination_candidate,-1,0,nearest_semantic_centroid,0.814307,False
+doi:10.21315/apjee2023.38.2.6,en,2023,OpenAlex,1931,True,alta,0.338864,1,0.80974,0,0.010897,contamination_candidate,-1,1,nearest_semantic_centroid,0.80974,False
+doi:10.22529/dp.2025.23(46)10,en,2025,OpenAlex,1251,True,alta,0.394649,1,0.858698,0,0.023623,contamination_candidate,-1,1,nearest_semantic_centroid,0.858698,False
+doi:10.32541/recie.2020.v4i1.pp20-33,es,2020,OpenAlex,1179,True,alta,0.294002,4,0.843221,0,0.000868,contamination_candidate,-1,4,nearest_semantic_centroid,0.843221,False
+doi:10.33255/26184141/2437e0066,es,2026,OpenAlex | CONICET Digital,2059,True,alta,0.334668,0,0.709354,3,0.024349,contamination_candidate,-1,0,nearest_semantic_centroid,0.709354,False
+doi:10.35362/rie8814743,es,2022,OpenAlex,1237,True,alta,0.366307,0,0.668727,2,0.036614,contamination_candidate,-1,0,nearest_semantic_centroid,0.668727,False
+doi:10.37811/cl_rcm.v7i2.6016,es,2023,OpenAlex,1063,True,alta,0.635164,3,0.850748,1,0.024416,contamination_candidate,-1,3,nearest_semantic_centroid,0.850748,False
+doi:10.37811/cl_rcm.v8i3.11771,es,2024,OpenAlex,1676,True,alta,0.317412,1,0.890427,0,0.051394,contamination_candidate,-1,1,nearest_semantic_centroid,0.890427,False
+doi:10.47069/estudios-ambientales.v9i2.1291,es,2021,OpenAlex,3151,True,alta,0.611779,2,0.761875,3,0.014738,contamination_candidate,-1,2,nearest_semantic_centroid,0.761875,False
+doi:10.5212/olharprofr.v.29.25332.010,pt,2026,OpenAlex | CONICET Digital,1365,True,alta,0.276219,1,0.756595,0,0.002726,contamination_candidate,-1,1,nearest_semantic_centroid,0.756595,False
+doi:10.5281/zenodo.20354549,es,2026,OpenAlex,2195,True,alta,0.323723,0,0.836223,1,0.022065,contamination_candidate,-1,0,nearest_semantic_centroid,0.836223,False
+doi:10.58313/masquedos.2023.v8.n10.237,es,2023,OpenAlex,2029,True,alta,0.637764,3,0.674158,0,0.016451,contamination_candidate,-1,3,nearest_semantic_centroid,0.674158,False
+doi:10.59282/reincisol.v4(7)2535-2549,es,2025,OpenAlex,1833,True,alta,0.287497,1,0.852665,0,0.040756,contamination_candidate,-1,1,nearest_semantic_centroid,0.852665,False
+doi:10.61203/2347-0658.v10.n2.34114,es,2021,OpenAlex,1572,True,alta,0.334668,0,0.662772,2,0.006776,contamination_candidate,-1,0,nearest_semantic_centroid,0.662772,False
+doi:10.61616/rvdc.v7i2.1622,es,2026,OpenAlex,1606,True,alta,0.641559,2,0.781431,4,0.010584,contamination_candidate,-1,2,nearest_semantic_centroid,0.781431,False
+record:20e228c85da8f29db422febc,es,2021,CONICET Digital,1845,True,alta,0.590611,0,0.749117,4,0.000773,contamination_candidate,-1,0,nearest_semantic_centroid,0.749117,False
+record:e58e3e1beb684efd71c3247f,es,2024,CONICET Digital,1566,True,alta,0.381905,4,0.882116,3,0.017454,contamination_candidate,-1,4,nearest_semantic_centroid,0.882116,False
+record:8f74921734f9325132486c26,pt,2025,CONICET Digital,3977,True,alta,0.332271,0,0.807378,4,0.030134,contamination_candidate,-1,0,nearest_semantic_centroid,0.807378,False
+record:ef49402cf6d7b248aaaa1792,es,2024,CONICET Digital,4018,True,alta,0.652357,3,0.759027,2,0.041947,contamination_candidate,-1,3,nearest_semantic_centroid,0.759027,False
+doi:10.28928/ri/962024/atc1/bechep,es,2024,CONICET Digital,1978,True,alta,0.311267,4,0.861999,0,0.013858,contamination_candidate,-1,4,nearest_semantic_centroid,0.861999,False
+record:80af7d73f0bf81d5a573a7bc,es,2021,CONICET Digital,3388,True,alta,0.302391,0,0.863105,4,0.053821,contamination_candidate,-1,0,nearest_semantic_centroid,0.863105,False
+doi:10.22235/cp.v18i1.3316,es,2024,CONICET Digital,4279,True,alta,0.647528,4,0.529464,5,0.013967,contamination_candidate,-1,4,nearest_semantic_centroid,0.529464,False
+record:10d975f644818d6426732c59,es,2025,CONICET Digital,2890,True,alta,0.334668,3,0.729539,0,0.000595,contamination_candidate,-1,3,nearest_semantic_centroid,0.729539,False
+record:0416d5c4e72853f88e5b4852,es,2025,CONICET Digital,499,True,alta,0.403757,3,0.615369,0,0.002632,contamination_candidate,-1,3,nearest_semantic_centroid,0.615369,False
+record:eaf2af2a857bb6586783e09f,es,2023,CONICET Digital,2395,True,alta,0.313295,2,0.820902,0,0.007248,contamination_candidate,-1,2,nearest_semantic_centroid,0.820902,False
+doi:10.37177/unicen/eb33-361,es,2023,CONICET Digital,2131,True,alta,0.637764,2,0.901752,4,0.024731,contamination_candidate,-1,2,nearest_semantic_centroid,0.901752,False
+doi:10.4067/s0718-07052019000300031,es,2020,CONICET Digital,2105,True,alta,0.588504,4,0.754372,1,0.00181,contamination_candidate,-1,4,nearest_semantic_centroid,0.754372,False
+record:ef4e34a18d53619c557d06fc,es,2021,CONICET Digital,1542,True,alta,0.309044,4,0.765184,2,0.005962,contamination_candidate,-1,4,nearest_semantic_centroid,0.765184,False
+doi:10.30972/riie.16238347,es,2025,CONICET Digital,2834,True,alta,0.334668,1,0.691423,0,0.014965,contamination_candidate,-1,1,nearest_semantic_centroid,0.691423,False
+record:a766d38f935f179b85c4bc08,es,2020,CONICET Digital,1140,True,alta,0.624756,2,0.788552,5,0.008083,contamination_candidate,-1,2,nearest_semantic_centroid,0.788552,False
+doi:10.17141/iconos.82.2025.6197,es,2025,CONICET Digital,2892,True,alta,0.399252,0,0.815486,3,0.011498,contamination_candidate,-1,0,nearest_semantic_centroid,0.815486,False
+doi:10.29112/ruae.v6.n1.5,pt,2021,CONICET Digital,4613,True,alta,0.634156,0,0.66293,3,0.017718,contamination_candidate,-1,0,nearest_semantic_centroid,0.66293,False
+record:4f5c34f614ed4007237d7729,es,2023,CONICET Digital,2342,True,alta,0.62348,4,0.879996,0,0.007107,contamination_candidate,-1,4,nearest_semantic_centroid,0.879996,False
+doi:10.46553/rges.59.2023.p.25-53,es,2023,CONICET Digital,2499,True,alta,0.296561,0,0.628817,2,0.076458,contamination_candidate,-1,0,nearest_semantic_centroid,0.628817,False
+doi:10.1016/j.worlddev.2022.106131,en,2023,CONICET Digital,1654,True,alta,0.338925,1,0.583846,4,0.001665,contamination_candidate,-1,1,nearest_semantic_centroid,0.583846,False
+record:3a7d056d2a66b8e58dd41a05,en,2020,OpenAlex,3510,True,alta,0.333397,1,0.891677,0,0.036783,contamination_candidate,-1,1,nearest_semantic_centroid,0.891677,False
+record:00fe10c6ee58ca2623530dd1,es,2021,OpenAlex,771,True,alta,0.386634,1,0.828718,2,0.015996,contamination_candidate,-1,1,nearest_semantic_centroid,0.828718,False
+doi:10.35305/rece.v1i21.957,en,2026,OpenAlex | CONICET Digital,1539,True,alta,0.301617,1,0.846928,4,0.039384,contamination_candidate,-1,1,nearest_semantic_centroid,0.846928,False
+record:ec1ac1f0af097da49397378d,es,2025,OpenAlex,1397,True,alta,0.433241,1,0.878941,0,0.000225,contamination_candidate,-1,1,nearest_semantic_centroid,0.878941,False
+record:0e803845efbe9a2e2ba8ef83,es,2026,OpenAlex,978,True,alta,0.275556,1,0.767073,0,0.005936,contamination_candidate,-1,1,nearest_semantic_centroid,0.767073,False
+record:67a67c1e3169db922f430ed8,en,2021,OpenAlex,1611,True,alta,0.326025,0,0.821486,4,0.031735,contamination_candidate,-1,0,nearest_semantic_centroid,0.821486,False
+record:03cf948d1ff4ee5b34c64ff3,es,2022,OpenAlex,1875,True,alta,0.417996,2,0.705539,1,0.001128,contamination_candidate,-1,2,nearest_semantic_centroid,0.705539,False
+record:7229594ab9b04f478b943960,es,2026,OpenAlex,1541,True,alta,0.287283,4,0.863987,1,0.024529,contamination_candidate,-1,4,nearest_semantic_centroid,0.863987,False

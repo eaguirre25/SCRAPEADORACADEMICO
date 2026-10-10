@@ -1,4 +1,6 @@
 ﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
-6,liderazgo_pandemia_digital_covid-19_durante,"[0, 1, 2, 3]",3,rural_rurales_pueblos_escuelas rurales_territorio,5,pandemia_liderazgo_digital_covid-19_durante,0.8262194900062543
-5,pandemia_liderazgo_digital_covid-19_durante,"[0, 1, 2]",4,liderazgo_leadership_dirección escolar_teacher_tanto,2,pandemia_digital_covid-19_pandemic_tecnologías,0.5578523492571958
-4,liderazgo_leadership_dirección escolar_teacher_tanto,"[0, 1]",0,liderazgo_leadership_dirección escolar_teacher_liderazgo directivo,1,gender_género_technical_mujeres_nueva,0.5249492582109285
+10,educativa_pandemia_liderazgo_digital_covid-19,"[0, 1, 2, 3, 4, 5]",4,participación_padres_educación física_catamarca_escuelas secundarias,9,educativa_pandemia_liderazgo_digital_covid-19,0.8564125870385155
+9,educativa_pandemia_liderazgo_digital_covid-19,"[0, 1, 2, 3, 5]",8,educativa_pandemia_liderazgo_digital_covid-19,5,integral_measures_obstáculos_scales_medidas,0.8081607063352396
+8,educativa_pandemia_liderazgo_digital_covid-19,"[0, 1, 2, 3]",3,rural_les_rurales_apoyo_local,7,educativa_pandemia_digital_liderazgo_covid-19,0.7146005654603403
+7,educativa_pandemia_digital_liderazgo_covid-19,"[0, 1, 2]",6,pandemia_digital_covid-19_durante_educativa,1,liderazgo_docente_leadership_liderazgo directivo_dirección,0.5545200155120225
+6,pandemia_digital_covid-19_durante_educativa,"[0, 2]",0,política_director_educativa_gender_género,2,pandemia_digital_covid-19_pandemic_tecnologías,0.5155708891118769

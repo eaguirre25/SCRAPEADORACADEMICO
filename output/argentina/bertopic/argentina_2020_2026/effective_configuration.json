@@ -20,7 +20,7 @@
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 10,
+    "min_cluster_size": 7,
     "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",

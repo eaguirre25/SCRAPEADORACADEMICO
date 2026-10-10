@@ -1,11 +1,6 @@
 solution_id,base_seed,seed,adjusted_rand_index,normalized_mutual_information,topic_centroid_similarity,jaccard_top_words,topic_count,outlier_share,alignment_method,status
-S1,42,42,1.0,1.0,1.0,1.0,5,0.304094,Hungarian,computed
-S1,42,117,0.233091,0.49579,0.986721,0.313353,3,0.017544,Hungarian,computed
-S1,42,233,0.223792,0.482376,0.988285,0.313353,3,0.035088,Hungarian,computed
-S1,42,401,0.32172,0.597176,0.990873,0.457237,4,0.081871,Hungarian,computed
-S1,42,809,0.196561,0.393347,0.981257,0.072797,2,0.05848,Hungarian,computed
-S2,42,42,1.0,1.0,1.0,1.0,4,0.251462,Hungarian,computed
-S2,42,117,0.401738,0.661603,0.99193,0.416667,3,0.146199,Hungarian,computed
-S2,42,233,0.356613,0.559202,0.991049,0.32764,3,0.146199,Hungarian,computed
-S2,42,401,0.227705,0.455209,0.985821,0.09127,2,0.122807,Hungarian,computed
-S2,42,809,0.198905,0.43252,0.985324,0.055556,2,0.093567,Hungarian,computed
+S1,42,42,1.0,1.0,1.0,1.0,6,0.269006,Hungarian,computed
+S1,42,117,0.319759,0.628161,0.991148,0.457086,4,0.087719,Hungarian,computed
+S1,42,233,0.351962,0.611388,0.988582,0.411404,4,0.169591,Hungarian,computed
+S1,42,401,0.210429,0.507816,0.988859,0.271143,3,0.02924,Hungarian,computed
+S1,42,809,0.608286,0.705871,0.996885,0.506266,5,0.274854,Hungarian,computed

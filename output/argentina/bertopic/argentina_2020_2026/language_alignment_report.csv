@@ -1,5 +1,7 @@
 model,corpus,topic_id,topic_language_distribution,dominant_language,dominant_language_share,language_entropy,language_mutual_information,topic_vs_language_residual,cross_language_nearest_neighbors,cross_language_centroid_similarity,dominant_source_share,dominant_country_share,classification,review_status
-BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 40, 'en': 3, 'pt': 1}",es,0.909091,0.355757,0.014657,0.014354,0.143182,0.776935,0.772727,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 36, 'pt': 2, 'en': 1}",es,0.923077,0.320152,0.014657,0.02834,0.171795,0.843744,0.538462,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 29, 'pt': 2, 'en': 1}",es,0.90625,0.370802,0.014657,0.011513,0.121875,0.566245,0.5,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 12, 'pt': 1}",es,0.923077,0.271189,0.014657,0.02834,0.146154,0.858194,0.615385,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 31, 'pt': 2}",es,0.939394,0.228632,0.043454,0.044657,0.163636,0.928139,0.545455,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 30, 'en': 2}",es,0.9375,0.233792,0.043454,0.042763,0.125,0.863418,0.84375,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 29, 'pt': 2, 'en': 1}",es,0.90625,0.370802,0.043454,0.011513,0.121875,0.566245,0.5,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 12, 'pt': 1}",es,0.923077,0.271189,0.043454,0.02834,0.146154,0.857738,0.615385,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,4,{'es': 8},es,1.0,-0.0,0.043454,0.105263,0.0375,0.0,0.625,1.0,language_driven_candidate,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,5,"{'es': 6, 'en': 1}",es,0.857143,0.410116,0.043454,-0.037594,0.185714,0.766742,0.428571,1.0,language_concentrated_but_thematic,pending_human_review
