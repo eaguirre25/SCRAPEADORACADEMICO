@@ -12,7 +12,7 @@
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
     "n_neighbors": 30,
-    "n_components": 5,
+    "n_components": 10,
     "min_dist": 0.0,
     "metric": "cosine",
     "random_state": 42,
@@ -247,7 +247,7 @@
     "evaluation": true
   },
   "seed": 42,
-  "python_version": "3.11.16",
+  "python_version": "3.11.17",
   "package_versions": {
     "bertopic": "0.17.4",
     "sentence-transformers": "5.7.0",
@@ -257,7 +257,7 @@
     "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "c2200a15e09a844ead95c1ed956c3782764e3901542dd878dc8a19162fececd7",
+  "corpus_hash": "c5fc6ad7c972da578e6cd20159d128cb5958cee7af044244d10109f5ec910b3b",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "61b72b0df7df0c0ee7c8af131d8d9fea8118ee91f9f5952458ad0f72b7b9a716"
+  "embedding_cache_hash": "eaf8ba05a3447323f688e14e47a150f4f8846ca0f18018ccbcb78542c67e0c63"
 }

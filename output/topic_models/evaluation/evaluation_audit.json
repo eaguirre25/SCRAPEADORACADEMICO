@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T23:45:26.055865+00:00",
+  "generated_at": "2026-10-10T21:19:13.434338+00:00",
   "mode": "evaluation_only",
   "corrections_applied": true,
   "correction_details": [
@@ -224,7 +224,7 @@
         "contamination_share": 0,
         "relevance_metadata_coverage": 0,
         "contamination_status": 0,
-        "representative_contamination_candidates": 6,
+        "representative_contamination_candidates": 5,
         "borderline_relevance_documents": 14,
         "review_status": 0,
         "status": 0,
@@ -668,7 +668,7 @@
       ]
     },
     "document_metrics.csv": {
-      "rows": 15053,
+      "rows": 15145,
       "columns": [
         "model",
         "model_path",
@@ -705,15 +705,15 @@
         "topic_id": 0,
         "assignment_confidence": 0,
         "probability_margin": 0,
-        "silhouette": 10722,
-        "distance_to_centroid": 10722,
-        "local_consistency": 7503,
+        "silhouette": 10833,
+        "distance_to_centroid": 10833,
+        "local_consistency": 7549,
         "ambiguous": 0,
         "is_outlier": 0,
         "language": 0,
         "relevance_status": 0,
         "relevance_score": 0,
-        "contamination_candidate": 7503
+        "contamination_candidate": 7549
       },
       "constant_columns": [
         "corpus",
@@ -729,24 +729,24 @@
     "All topic states remain candidates pending human review."
   ],
   "frozen_hashes_before": {
-    "document_topics.csv": "f8759338ba10c297833ae2a6347222427ca8bb77f2e09df794bf578fdc781fb6",
-    "topics.csv": "58674576d4ae28ecd6c4fdd2b3ceef35bc34e15c14bf57b3e326fb3d50c52084",
-    "topic_words.csv": "f84f16b7bf2f6b8bbc0410edb5595ee25068d8f4a23b4d271be727deba579a87",
-    "document_topic_hierarchy.csv": "2c8fab13d17f9794575ebd11a2f14ae9cd45f9672228a1e6a284d358df4f9584",
-    "subtopics.csv": "351c4f3a33a58dcb80ad5753cd1b84d0005a1655c88410b3e15c1efe65bb70bc",
-    "outliers.csv": "807cc6f86f976e1458f1d605bc7eb451a437c014ed9dece69ef8feb28129f368"
+    "document_topics.csv": "0b6d8990ce35ce221c49677ac1c17949b1fcab31793b91d352b988179488303d",
+    "topics.csv": "c9ba5ab10dad657f273ebc497a0e476931fcb93fff643ae87d7264e1b980f6c7",
+    "topic_words.csv": "8f62a2e6a6f35b33b721f035cdcde56e7831170a7d6472cb96cf46ba76ae4464",
+    "document_topic_hierarchy.csv": "bb2f54134059c4b45f65e84e3ad81360fe8e6af800c695a264796279e6f0f51b",
+    "subtopics.csv": "d51ccd0ba5ebfd350d3e501b682cfdd2f99f5b2e0c041d12f2b6590abd2a6308",
+    "outliers.csv": "8f6aac4b7af5464e45bf448ef68ebe031a2c4ead15bb2038b768430e70e7c957"
   },
   "frozen_hashes_after": {
-    "document_topics.csv": "f8759338ba10c297833ae2a6347222427ca8bb77f2e09df794bf578fdc781fb6",
-    "topics.csv": "58674576d4ae28ecd6c4fdd2b3ceef35bc34e15c14bf57b3e326fb3d50c52084",
-    "topic_words.csv": "f84f16b7bf2f6b8bbc0410edb5595ee25068d8f4a23b4d271be727deba579a87",
-    "document_topic_hierarchy.csv": "2c8fab13d17f9794575ebd11a2f14ae9cd45f9672228a1e6a284d358df4f9584",
-    "subtopics.csv": "351c4f3a33a58dcb80ad5753cd1b84d0005a1655c88410b3e15c1efe65bb70bc",
-    "outliers.csv": "807cc6f86f976e1458f1d605bc7eb451a437c014ed9dece69ef8feb28129f368"
+    "document_topics.csv": "0b6d8990ce35ce221c49677ac1c17949b1fcab31793b91d352b988179488303d",
+    "topics.csv": "c9ba5ab10dad657f273ebc497a0e476931fcb93fff643ae87d7264e1b980f6c7",
+    "topic_words.csv": "8f62a2e6a6f35b33b721f035cdcde56e7831170a7d6472cb96cf46ba76ae4464",
+    "document_topic_hierarchy.csv": "bb2f54134059c4b45f65e84e3ad81360fe8e6af800c695a264796279e6f0f51b",
+    "subtopics.csv": "d51ccd0ba5ebfd350d3e501b682cfdd2f99f5b2e0c041d12f2b6590abd2a6308",
+    "outliers.csv": "8f6aac4b7af5464e45bf448ef68ebe031a2c4ead15bb2038b768430e70e7c957"
   },
   "coherence_global": {
     "status": "computed",
-    "documents": 7550,
+    "documents": 7596,
     "vocabulary": 50000,
     "ngram_strategy": "literal_vectorizer_tokens"
   },

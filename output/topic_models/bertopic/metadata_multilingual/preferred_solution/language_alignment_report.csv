@@ -1,35 +1,34 @@
 model,corpus,topic_id,topic_language_distribution,dominant_language,dominant_language_share,language_entropy,language_mutual_information,topic_vs_language_residual,cross_language_nearest_neighbors,cross_language_centroid_similarity,dominant_source_share,dominant_country_share,classification,review_status
-BERTopic-METADATA-MULTILINGUAL,metadata,0,"{'es': 96, 'en': 214, 'pt': 35, 'id': 1, 'und': 3}",en,0.613181,0.94324,0.191576,0.112651,0.396848,0.886414,0.997135,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,1,"{'es': 80, 'en': 162, 'id': 2, 'pt': 29}",en,0.593407,0.943572,0.191576,0.092877,0.375092,0.924031,0.974359,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,2,"{'es': 13, 'en': 248, 'und': 1}",en,0.946565,0.222258,0.191576,0.446035,0.182824,0.963327,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,3,"{'es': 239, 'en': 12, 'pt': 1}",es,0.948413,0.217153,0.191576,0.586558,0.075397,0.789304,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,4,"{'es': 111, 'pt': 51, 'en': 86}",es,0.447581,1.052321,0.191576,0.085726,0.440323,0.972007,0.995968,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,5,"{'es': 215, 'en': 16}",es,0.930736,0.251731,0.191576,0.568882,0.080519,0.974453,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,6,"{'pt': 181, 'es': 15, 'en': 31}",pt,0.797357,0.631988,0.191576,0.665966,0.203965,0.979402,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,7,"{'en': 221, 'es': 1, 'id': 1}",en,0.991031,0.057423,0.191576,0.490502,0.086996,0.813898,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,8,"{'es': 5, 'en': 185, 'id': 4}",en,0.953608,0.21962,0.191576,0.453078,0.198454,0.954847,0.994845,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,9,"{'es': 25, 'en': 139, 'pt': 11}",en,0.794286,0.63484,0.191576,0.293756,0.225714,0.944424,0.994286,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,10,"{'es': 62, 'pt': 77, 'en': 25, 'und': 1}",pt,0.466667,1.040326,0.191576,0.335276,0.395758,0.889204,0.987879,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,11,"{'en': 138, 'es': 7, 'id': 1, 'pt': 1}",en,0.938776,0.272185,0.191576,0.438246,0.127891,0.90796,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,12,"{'pt': 104, 'es': 15, 'en': 25}",pt,0.722222,0.77461,0.191576,0.590831,0.276389,0.966734,0.993056,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,13,"{'es': 30, 'en': 83, 'und': 1, 'pt': 2}",en,0.715517,0.700263,0.191576,0.214987,0.212069,0.918072,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,14,"{'es': 105, 'en': 7, 'pt': 3}",es,0.913043,0.348558,0.191576,0.551189,0.2,0.930577,0.973913,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,15,"{'es': 83, 'en': 29, 'pt': 1}",es,0.734513,0.617517,0.191576,0.372659,0.292035,0.84597,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,16,"{'es': 5, 'en': 88, 'und': 2, 'pt': 4}",en,0.888889,0.463965,0.191576,0.388359,0.327273,0.914021,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,17,"{'es': 60, 'en': 32, 'pt': 1}",es,0.645161,0.698576,0.191576,0.283307,0.291398,0.942768,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,18,"{'es': 62, 'pt': 20, 'en': 8}",es,0.688889,0.806115,0.191576,0.327035,0.395556,0.956041,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,19,"{'es': 56, 'en': 17, 'pt': 4}",es,0.727273,0.718747,0.191576,0.365418,0.32987,0.961828,0.987013,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,20,"{'es': 28, 'en': 45, 'und': 1}",en,0.608108,0.728369,0.191576,0.107578,0.236486,0.905813,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,21,"{'es': 27, 'en': 36, 'id': 2, 'pt': 8}",en,0.493151,1.057362,0.191576,-0.007379,0.513699,0.928573,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,22,"{'es': 38, 'pt': 9, 'en': 25}",es,0.527778,0.964511,0.191576,0.165923,0.3875,0.956663,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,23,"{'es': 41, 'en': 22, 'pt': 2}",es,0.630769,0.764454,0.191576,0.268915,0.421538,0.96195,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,24,"{'es': 42, 'en': 19, 'und': 1, 'pt': 3}",es,0.646154,0.84789,0.191576,0.2843,0.416923,0.903378,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,25,"{'es': 12, 'en': 20, 'pt': 21}",pt,0.396226,1.070886,0.191576,0.264836,0.456604,0.972776,0.981132,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,26,"{'en': 45, 'pt': 4}",en,0.918367,0.282739,0.191576,0.417838,0.095918,0.914112,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,27,"{'en': 23, 'es': 2, 'und': 1, 'pt': 20}",en,0.5,0.928265,0.191576,-0.00053,0.521739,0.880366,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,28,"{'en': 43, 'id': 1}",en,0.977273,0.108471,0.191576,0.476743,0.065909,0.831368,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,29,"{'es': 11, 'en': 29, 'pt': 3}",en,0.674419,0.800171,0.191576,0.173889,0.223256,0.900752,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,30,"{'es': 9, 'en': 19, 'pt': 14}",en,0.452381,1.055142,0.191576,-0.048149,0.516667,0.94653,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,31,"{'es': 28, 'en': 10, 'pt': 1}",es,0.717949,0.680803,0.191576,0.356094,0.271795,0.930102,1.0,1.0,multilingual_topic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,32,"{'en': 37, 'es': 1}",en,0.973684,0.121692,0.191576,0.473154,0.052632,0.771663,1.0,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-METADATA-MULTILINGUAL,metadata,33,"{'en': 21, 'pt': 14}",en,0.6,0.673012,0.191576,0.09947,0.522857,0.980828,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,0,"{'es': 98, 'en': 217, 'pt': 36, 'id': 1, 'und': 3}",en,0.611268,0.945168,0.189157,0.110346,0.395493,0.885845,0.997183,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,1,"{'es': 15, 'en': 285, 'pt': 1, 'und': 1, 'id': 1}",en,0.940594,0.262973,0.189157,0.439673,0.186469,0.879282,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,2,"{'es': 28, 'pt': 213, 'en': 55}",pt,0.719595,0.772588,0.189157,0.58821,0.249662,0.970148,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,3,"{'es': 80, 'en': 161, 'id': 2, 'pt': 28}",en,0.594096,0.940288,0.189157,0.093174,0.374908,0.923708,0.97417,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,4,"{'es': 110, 'pt': 49, 'en': 88}",es,0.445344,1.048831,0.189157,0.083838,0.444939,0.973672,0.995951,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,5,"{'es': 206, 'en': 11}",es,0.949309,0.200546,0.189157,0.587803,0.058065,0.964671,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,6,"{'en': 195, 'id': 1}",en,0.994898,0.032018,0.189157,0.493976,0.07449,0.830078,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,7,"{'es': 6, 'en': 179, 'id': 4}",en,0.94709,0.242605,0.189157,0.446168,0.215344,0.961944,0.994709,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,8,"{'es': 177, 'en': 4, 'pt': 1}",es,0.972527,0.139591,0.189157,0.611021,0.057143,0.77473,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,9,"{'pt': 116, 'es': 19, 'en': 37}",pt,0.674419,0.83956,0.189157,0.543034,0.309884,0.969718,0.988372,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,10,"{'es': 25, 'en': 112, 'pt': 10}",en,0.761905,0.69132,0.189157,0.260983,0.259864,0.94344,0.993197,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,11,"{'es': 87, 'pt': 26, 'en': 26}",es,0.625899,0.920409,0.189157,0.264393,0.434532,0.967934,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,12,"{'en': 127, 'es': 2, 'pt': 1}",en,0.976923,0.124472,0.189157,0.476002,0.1,0.921045,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,13,"{'es': 51, 'pt': 57, 'en': 22}",pt,0.438462,1.029227,0.189157,0.307077,0.406154,0.939217,0.984615,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,14,"{'es': 109, 'en': 8, 'pt': 3}",es,0.908333,0.360089,0.189157,0.546827,0.19,0.927107,0.975,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,15,"{'es': 30, 'en': 85, 'und': 1, 'pt': 2}",en,0.720339,0.69401,0.189157,0.219417,0.216949,0.918201,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,16,"{'es': 75, 'en': 19, 'pt': 1}",es,0.789474,0.556446,0.189157,0.427968,0.244211,0.95314,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,17,"{'es': 6, 'en': 80, 'und': 2, 'pt': 4}",en,0.869565,0.519135,0.189157,0.368644,0.329348,0.912656,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,18,"{'en': 74, 'pt': 4}",en,0.948718,0.202273,0.189157,0.447796,0.066667,0.887221,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,19,"{'es': 57, 'en': 16, 'pt': 4}",es,0.74026,0.70276,0.189157,0.378754,0.320779,0.960831,0.987013,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,20,"{'es': 46, 'en': 30}",es,0.605263,0.67082,0.189157,0.243757,0.294737,0.955758,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,21,"{'es': 28, 'en': 45, 'und': 1}",en,0.608108,0.728369,0.189157,0.107187,0.236486,0.905813,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,22,"{'es': 27, 'en': 36, 'id': 2, 'pt': 8}",en,0.493151,1.057362,0.189157,-0.007771,0.513699,0.928573,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,23,"{'es': 39, 'pt': 8, 'en': 25}",es,0.541667,0.943523,0.189157,0.180161,0.390278,0.958166,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,24,"{'en': 68, 'es': 1}",en,0.985507,0.075751,0.189157,0.484586,0.042029,0.775274,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,25,"{'es': 41, 'en': 19, 'und': 1, 'pt': 3}",es,0.640625,0.854248,0.189157,0.279119,0.425,0.905305,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,26,"{'es': 14, 'en': 20, 'pt': 29}",pt,0.460317,1.055626,0.189157,0.328933,0.439683,0.974411,0.984127,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,27,"{'es': 37, 'en': 21, 'pt': 2}",es,0.616667,0.778924,0.189157,0.255161,0.425,0.960541,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,28,"{'en': 46, 'id': 1}",en,0.978723,0.102967,0.189157,0.477802,0.068085,0.829057,1.0,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,29,"{'es': 11, 'en': 29, 'pt': 3}",en,0.674419,0.800171,0.189157,0.173497,0.223256,0.900752,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,30,"{'en': 20, 'es': 2, 'pt': 20}",en,0.47619,0.851584,0.189157,-0.024731,0.495238,0.955488,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,31,"{'es': 28, 'en': 10, 'pt': 1}",es,0.717949,0.680803,0.189157,0.356443,0.276923,0.931628,1.0,1.0,multilingual_topic,pending_human_review
+BERTopic-METADATA-MULTILINGUAL,metadata,32,"{'en': 21, 'es': 1, 'pt': 14}",en,0.583333,0.781247,0.189157,0.082412,0.541667,0.929002,1.0,1.0,multilingual_topic,pending_human_review
