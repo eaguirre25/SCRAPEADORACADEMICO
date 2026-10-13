@@ -43,7 +43,7 @@ def author_tokens(v):
 
 rows=[]; by_doi={}
 dedup_report=Path("data/drive_deduplication_report.json")
-removed_ids={r["id"] for r in json.loads(dedup_report.read_text()).get("moves",[])} if dedup_report.exists() else set()
+removed_ids={r["id"] for field in ("moves", "invalid_downloads") for r in json.loads(dedup_report.read_text()).get(field,[])} if dedup_report.exists() else set()
 if MAN.exists():
     with MAN.open(encoding='utf-8-sig',newline='',errors='replace') as f:
         for r in csv.DictReader(f):

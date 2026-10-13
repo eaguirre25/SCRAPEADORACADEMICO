@@ -25,6 +25,8 @@ def main():
             doi = re.sub(r"\.pdf$", "", move.get("name", ""), flags=re.I).replace("_", "/", 1)
         if kept is not None and re.match(r"^10\.\d{4,9}/", doi) and not re.match(r"^10\.\d{4,9}/", kept.get("doi", "")):
             kept["doi"] = doi.lower()
+    if report.exists():
+        removed.update(r["id"] for r in json.loads(report.read_text()).get("invalid_downloads", []))
     active = [r for r in rows if r.get("drive_file_id") not in removed]
     for row in active:
         if not re.match(r"^10\.\d{4,9}/", row.get("doi", "")):
