@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-10T17:59:56Z",
+  "generated_at": "2026-10-13T20:05:47Z",
   "conicet_oai_available": false,
   "targets": 181,
-  "queried_this_run": 0,
+  "queried_this_run": 1,
   "status_counts": {
     "aceptado": 169,
     "sin_coincidencia": 11,
@@ -10,12 +10,14 @@
   },
   "applied_records": 169,
   "with_doi": 81,
-  "with_journal": 91,
+  "with_journal": 90,
   "with_volume_or_pages": 73,
-  "year_changed": 129,
+  "year_changed": 128,
   "master_fields_changed": {},
   "relevance_shifts": [],
-  "http_failures": {},
+  "http_failures": {
+    "ri.conicet.gov.ar": 1
+  },
   "rules": {
     "title_accept": 0.9,
     "title_review": 0.8,
