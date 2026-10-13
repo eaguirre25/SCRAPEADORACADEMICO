@@ -1,5 +1,3 @@
 ﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
-8,educativa_políticas_liderazgo_pandemia_we,"[0, 1, 2, 3, 4]",3,digital_tecnologías_públicas privadas_privadas_tic,7,educativa_políticas_liderazgo_we_leadership,0.8339864033860177
-7,educativa_políticas_liderazgo_we_leadership,"[0, 1, 2, 4]",6,educativa_políticas_liderazgo_we_leadership,4,integral_measures_obstáculos_scales_medidas,0.7838184875604164
-6,educativa_políticas_liderazgo_we_leadership,"[0, 1, 2]",2,rural_rurales_les_historia_pueblos,5,educativa_políticas_liderazgo_leadership_trayectorias,0.6218451619256101
-5,educativa_políticas_liderazgo_leadership_trayectorias,"[0, 1]",0,liderazgo_educativa_políticas_leadership_teacher,1,pandemia_covid-19_pandemic_i_continuidad,0.3913682091924944
+4,políticas_formación_docente_leadership_teacher,"[0, 1, 2]",2,les_escuelas rurales_historia_habilidades blandas_blandas,3,políticas_docente_leadership_formación_teacher,0.6374167728896651
+3,políticas_docente_leadership_formación_teacher,"[0, 1]",0,políticas_leadership_teacher_formación_dirección,1,digital_tecnologías_durante_teaching_desigualdades,0.22996680512271261
