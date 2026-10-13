@@ -1,7 +1,6 @@
 model,corpus,topic_id,topic_language_distribution,dominant_language,dominant_language_share,language_entropy,language_mutual_information,topic_vs_language_residual,cross_language_nearest_neighbors,cross_language_centroid_similarity,dominant_source_share,dominant_country_share,classification,review_status
-BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 31, 'pt': 2}",es,0.939394,0.228632,0.043454,0.044657,0.163636,0.928139,0.545455,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 30, 'en': 2}",es,0.9375,0.233792,0.043454,0.042763,0.125,0.863418,0.84375,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 29, 'pt': 2, 'en': 1}",es,0.90625,0.370802,0.043454,0.011513,0.121875,0.566245,0.5,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 12, 'pt': 1}",es,0.923077,0.271189,0.043454,0.02834,0.146154,0.857738,0.615385,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,4,{'es': 8},es,1.0,-0.0,0.043454,0.105263,0.0375,0.0,0.625,1.0,language_driven_candidate,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,5,"{'es': 6, 'en': 1}",es,0.857143,0.410116,0.043454,-0.037594,0.185714,0.766742,0.428571,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 97, 'en': 8, 'pt': 5}",es,0.881818,0.442029,0.051478,-0.005756,0.189091,0.898228,0.545455,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 16, 'de': 1, 'pt': 1}",es,0.888889,0.425848,0.051478,0.001315,0.133333,0.797476,0.444444,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 14, 'pt': 1}",es,0.933333,0.24493,0.051478,0.045759,0.153333,0.851293,0.6,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,3,{'es': 8},es,1.0,-0.0,0.051478,0.112426,0.05,0.0,0.5,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,4,"{'es': 6, 'en': 1}",es,0.857143,0.410116,0.051478,-0.030431,0.2,0.766742,0.428571,1.0,language_concentrated_but_thematic,pending_human_review

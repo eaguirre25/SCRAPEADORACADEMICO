@@ -27,7 +27,7 @@
     {
       "source": "10.14507/epaa.28.4147",
       "target": "https://openalex.org/W7169695870",
-      "weight": 0.877853
+      "weight": 0.884981
     },
     {
       "source": "10.14679/5036",
@@ -82,7 +82,7 @@
     {
       "source": "10.15366/tp2021.37.002",
       "target": "10.30972/riie.16248914",
-      "weight": 0.832945
+      "weight": 0.832946
     },
     {
       "source": "10.15366/tp2021.37.002",
@@ -147,12 +147,7 @@
     {
       "source": "10.19137/praxiseducativa-2025-290221",
       "target": "10.33255/2591/2482",
-      "weight": 0.787158
-    },
-    {
-      "source": "10.19137/praxiseducativa-2025-290221",
-      "target": "https://openalex.org/W7126302504",
-      "weight": 0.787265
+      "weight": 0.784333
     },
     {
       "source": "10.21573/vol42n12026.139503",
@@ -250,11 +245,6 @@
       "weight": 0.889748
     },
     {
-      "source": "10.30972/riie.16228044",
-      "target": "https://openalex.org/W3168903385",
-      "weight": 0.867548
-    },
-    {
       "source": "10.30972/riie.16248914",
       "target": "conicet:el rol de las fundaciones empresariales en la formación de estudiantes técnicos en la provincia de neuquén argentina::2026",
       "weight": 0.761138
@@ -292,12 +282,12 @@
     {
       "source": "10.33255/2591/2482",
       "target": "10.48162/rev.36.004",
-      "weight": 0.881871
+      "weight": 0.881533
     },
     {
       "source": "10.33255/2591/2482",
-      "target": "https://openalex.org/W7126302504",
-      "weight": 0.989128
+      "target": "https://openalex.org/W7220646378",
+      "weight": 0.795992
     },
     {
       "source": "10.33255/26184141/1568e0018",
@@ -386,11 +376,6 @@
     },
     {
       "source": "10.48162/rev.36.004",
-      "target": "https://openalex.org/W7126302504",
-      "weight": 0.882652
-    },
-    {
-      "source": "10.48162/rev.36.004",
       "target": "https://openalex.org/W7220153265",
       "weight": 0.76775
     },
@@ -412,7 +397,7 @@
     {
       "source": "10.5281/zenodo.17667157",
       "target": "https://openalex.org/W7167654807",
-      "weight": 0.898836
+      "weight": 0.898835
     },
     {
       "source": "10.5281/zenodo.17667157",
@@ -452,12 +437,12 @@
     {
       "source": "10.59427/rcli/2023/v23cs.3717-3724",
       "target": "https://openalex.org/W7220616795",
-      "weight": 0.891562
+      "weight": 0.891561
     },
     {
       "source": "10.61203/2347-0658.v10.n2.34114",
       "target": "conicet:los entornos formativos en la educación técnica argentina estudio exploratorio sobre el sector automotriz::2025",
-      "weight": 0.709652
+      "weight": 0.709651
     },
     {
       "source": "10.70747/cr.v5i3.1353",
@@ -502,7 +487,7 @@
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
       "target": "conicet:desigualdades vinculadas a las tecnologías de la información y la comunicación tic diferencias entre escuelas públicas y privadas en bahía blanca argentina::2024",
-      "weight": 0.887809
+      "weight": 0.887808
     },
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
@@ -532,7 +517,7 @@
     {
       "source": "conicet:control social y acciones estatales durante el conflicto docente bahía blanca argentina::2024",
       "target": "https://openalex.org/W3186450505",
-      "weight": 0.837132
+      "weight": 0.837131
     },
     {
       "source": "conicet:control social y acciones estatales durante el conflicto docente bahía blanca argentina::2024",
@@ -568,16 +553,6 @@
       "source": "conicet:estar y no estar sentidos y prácticas en torno a las migraciones e identificaciones étniconacionales en el espacio escolar::2024",
       "target": "conicet:ruralidades escuela y comunidades configuración de deseos en jóvenes de la escuela las aves de colombia::2023",
       "weight": 0.81488
-    },
-    {
-      "source": "conicet:ethopolítica del hacer docente en la escuela secundaria problematizaciones en y desde las prácticas de directorases del conurbano bonaerense::2026",
-      "target": "conicet:subjetividades fit en el hacer escuela secundaria en contextos de desigualdades relatos del devenir managers de docentes y directivos en el conurbano bonaerense::2025",
-      "weight": 0.915159
-    },
-    {
-      "source": "conicet:ethopolítica del hacer docente en la escuela secundaria problematizaciones en y desde las prácticas de directorases del conurbano bonaerense::2026",
-      "target": "https://openalex.org/W7169695870",
-      "weight": 0.951174
     },
     {
       "source": "conicet:evaluación y dinámicas de privatización educativa en argentina entre la medición de aprendizajes y la intervención de organizaciones no gubernamentales::2026",
@@ -661,6 +636,11 @@
     },
     {
       "source": "conicet:subjetividades fit en el hacer escuela secundaria en contextos de desigualdades relatos del devenir managers de docentes y directivos en el conurbano bonaerense::2025",
+      "target": "https://openalex.org/W7169695870",
+      "weight": 0.880687
+    },
+    {
+      "source": "conicet:subjetividades fit en el hacer escuela secundaria en contextos de desigualdades relatos del devenir managers de docentes y directivos en el conurbano bonaerense::2025",
       "target": "https://openalex.org/W7220616795",
       "weight": 0.919233
     },
@@ -678,11 +658,6 @@
       "source": "https://openalex.org/W3124575860",
       "target": "https://openalex.org/W7220759025",
       "weight": 0.902255
-    },
-    {
-      "source": "https://openalex.org/W7126302504",
-      "target": "https://openalex.org/W7220646378",
-      "weight": 0.808306
     },
     {
       "source": "https://openalex.org/W7126684661",
@@ -734,55 +709,55 @@
     {
       "neighbors": 3,
       "min_similarity": 0.6,
-      "edges": 87,
-      "isolated": 71
+      "edges": 85,
+      "isolated": 70
     },
     {
       "neighbors": 3,
       "min_similarity": 0.7,
-      "edges": 86,
-      "isolated": 73
+      "edges": 84,
+      "isolated": 72
     },
     {
       "neighbors": 3,
       "min_similarity": 0.8,
-      "edges": 79,
+      "edges": 76,
       "isolated": 80
     },
     {
       "neighbors": 5,
       "min_similarity": 0.6,
-      "edges": 146,
+      "edges": 141,
       "isolated": 49
     },
     {
       "neighbors": 5,
       "min_similarity": 0.7,
-      "edges": 145,
+      "edges": 140,
       "isolated": 51
     },
     {
       "neighbors": 5,
       "min_similarity": 0.8,
-      "edges": 128,
+      "edges": 123,
       "isolated": 61
     },
     {
       "neighbors": 10,
       "min_similarity": 0.6,
-      "edges": 304,
+      "edges": 296,
       "isolated": 28
     },
     {
       "neighbors": 10,
       "min_similarity": 0.7,
-      "edges": 300,
+      "edges": 292,
       "isolated": 33
     },
     {
       "neighbors": 10,
       "min_similarity": 0.8,
-      "edges": 248,
+      "edges": 243,
       "isolated": 52
     }
   ]
