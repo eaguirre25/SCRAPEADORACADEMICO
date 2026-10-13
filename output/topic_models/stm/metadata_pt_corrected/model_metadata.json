@@ -3,8 +3,8 @@
   "corpus": "metadata",
   "language": "pt",
   "seed": 42,
-  "generated_at_utc": "2026-10-10 20:19:08",
-  "git_commit": "02a4338ef2cfa6c6169d62e5171b22f4d03b2877",
+  "generated_at_utc": "2026-10-13 12:27:27",
+  "git_commit": "f13cb3fbb05d13609093b6fd3eb66b917fa03b05",
   "R_version": "R version 4.3.3 (2024-02-29)",
   "packages": {
     "stm": "1.3.8"
@@ -218,8 +218,8 @@
       }
     }
   },
-  "documents": 998,
-  "input_candidates": 998,
+  "documents": 995,
+  "input_candidates": 995,
   "removed_by_textProcessor": 0,
   "removed_by_prepDocuments": 0,
   "selected_K": 5,
@@ -227,5 +227,5 @@
   "human_review_status": "pending",
   "year_2026_incomplete": true,
   "execution_mode": "full",
-  "elapsed_seconds": 425.5605
+  "elapsed_seconds": 383.9094
 }
