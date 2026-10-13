@@ -146,3 +146,9 @@ def test_download_rejects_empty_responses(tmp_path, monkeypatch):
     monkeypatch.setattr(main.requests, 'get', lambda *a, **k: Response())
     assert main.download_pdf({'title': 'Test', 'pdf_url': 'https://example.org/test.pdf'}) is None
     assert not list(tmp_path.iterdir())
+
+
+def test_source_keywords_survive_publication_merges():
+    rows = pair()
+    kept, _ = deduplicate(rows)
+    assert set(kept[0]["keywords"].split("; ")) == {"Work (physics)", "dirección escolar"}

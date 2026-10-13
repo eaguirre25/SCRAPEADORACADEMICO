@@ -808,6 +808,8 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
             for field in ("doi", "abstract", "keywords", "authors", "origin", "document_type", "pdf_url", "url", "openalex_id"):
                 if not str(keep.get(field) or "").strip() and str(other.get(field) or "").strip():
                     keep[field] = other[field]
+            keep["keywords"] = "; ".join(dict.fromkeys(
+                k.strip() for k in f"{keep.get('keywords', '')};{other.get('keywords', '')}".split(";") if k.strip()))
             for field in ("source", "origin", "search_term"):
                 keep[field] = " | ".join(dict.fromkeys(
                     p.strip() for p in f"{keep.get(field, '')}|{other.get(field, '')}".split("|") if p.strip()))
@@ -973,6 +975,18 @@ def deduplicate_master() -> None:
     if not rows:
         return
     corrections_applied = apply_verified_corrections(rows)
+    # Recover useful keywords from archived source variants, including earlier merges.
+    _, aliases = read_csv_if_exists(DUPLICATES_CSV)
+    by_id = {r.get("record_id"): r for r in rows}
+    for alias in aliases:
+        target = by_id.get(alias.get("duplicate_of"))
+        if target is None:
+            continue
+        keywords = "; ".join(dict.fromkeys(k.strip() for k in
+            f"{target.get('keywords', '')};{alias.get('keywords', '')}".split(";") if k.strip()))
+        if keywords != target.get("keywords", ""):
+            target["keywords"] = keywords
+            corrections_applied += 1
     kept, duplicates = deduplicate(rows)
     if not duplicates and not corrections_applied:
         print("Sin duplicados nuevos tras el enriquecimiento.")
