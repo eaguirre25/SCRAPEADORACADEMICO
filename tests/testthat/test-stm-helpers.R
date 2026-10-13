@@ -1,5 +1,14 @@
 source(file.path("..", "..", "topic_modeling", "stm_pipeline.R"), encoding = "UTF-8")
 
+testthat::test_that("converged candidates take priority over higher scoring nonconverged fits", {
+  diagnostics <- data.frame(K = c(20, 14, 12), stability = c(.9, .6, NA),
+    convergence_rate = c(0, 1, NA), multicriteria_score = c(.99, .5, 1))
+  ranked <- rank_stm_candidates(diagnostics)
+  testthat::expect_equal(ranked$K[1], 14)
+  testthat::expect_equal(ranked$eligible_for_selection, c(TRUE, FALSE, FALSE))
+  testthat::expect_false(any(rank_stm_candidates(diagnostics[1, , drop = FALSE])$eligible_for_selection))
+})
+
 testthat::test_that("metric normalization is bounded and deterministic", {
   testthat::expect_equal(normalize_metric(c(1, 2, 3)), c(0, 0.5, 1))
   testthat::expect_equal(normalize_metric(c(1, 2, 3), FALSE), c(1, 0.5, 0))

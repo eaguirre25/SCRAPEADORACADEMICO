@@ -84,6 +84,15 @@ filter_corpus_language <- function(corpus, selected_language) {
   corpus %>% filter(.data$language == .env$selected_language)
 }
 
+rank_stm_candidates <- function(diagnostics, require_stability = TRUE) {
+  diagnostics$eligible_for_selection <- if (require_stability) {
+    !is.na(diagnostics$stability) & !is.na(diagnostics$convergence_rate) & diagnostics$convergence_rate >= 0.8
+  } else rep(TRUE, nrow(diagnostics))
+  score <- diagnostics$multicriteria_score
+  score[!is.finite(score)] <- -Inf
+  diagnostics[order(-as.integer(diagnostics$eligible_for_selection), -score), , drop = FALSE]
+}
+
 run_stm_pipeline <- function(args = character()) {
   started <- Sys.time()
   config_path <- arg_value(args, "--config", "config/topic_modeling.yml")
@@ -205,19 +214,20 @@ run_stm_pipeline <- function(args = character()) {
             init.type = ifelse(is.null(cfg$stm$stability_init_type), "Random", cfg$stm$stability_init_type),
             verbose = FALSE)
         })
-        diagnostics$stability[diagnostics$K == candidate] <- topic_stability(models, prep$vocab)
-        diagnostics$convergence_rate[diagnostics$K == candidate] <- mean(vapply(models, function(m) isTRUE(m$convergence$converged), logical(1)))
+        converged <- vapply(models, function(m) isTRUE(m$convergence$converged), logical(1))
+        diagnostics$stability[diagnostics$K == candidate] <- topic_stability(models[converged], prep$vocab)
+        diagnostics$convergence_rate[diagnostics$K == candidate] <- mean(converged)
       }
       diagnostics <- score_diagnostics(diagnostics, cfg$stm$diagnostic_weights)
     }
-    diagnostics <- diagnostics %>% arrange(desc(multicriteria_score)) %>% mutate(
+    diagnostics <- rank_stm_candidates(diagnostics, run_stability) %>% mutate(
       K_preferred = row_number() == 1, K_competitive = row_number() %in% 2:3,
       K_rejected = !(K_preferred | K_competitive),
       selection_status = ifelse(!run_stability, "provisional",
-        ifelse(is.na(stability), "not_stability_finalist",
-          ifelse(is.na(convergence_rate) | convergence_rate < 0.8,
+        ifelse(is.na(convergence_rate), "not_stability_finalist",
+          ifelse(convergence_rate < 0.8,
             ifelse(small_language_corpus, "exploratory_small_corpus_stability_nonconverged", "stability_nonconverged"),
-            completed_status))),
+            ifelse(is.na(stability), "insufficient_converged_replicas", completed_status)))),
       human_review_status = "pending",
       warning = ifelse(!run_stability, "Stability not executed; missing weight removed and remaining weights renormalized",
         ifelse(is.na(convergence_rate) | convergence_rate < 0.8,
@@ -233,6 +243,10 @@ run_stm_pipeline <- function(args = character()) {
   }
 
   model_selection_status <- ifelse(!is.na(fixed_k), "provisional_fixed_k", diagnostics$selection_status[1])
+  final_model_converged <- isTRUE(model$convergence$converged)
+  if (!final_model_converged) model_selection_status <- paste0(model_selection_status, "_final_fit_nonconverged")
+  write_json(list(converged = final_model_converged, iterations = model$convergence$its,
+    bound = model$convergence$bound), file.path(out, "final_fit_convergence.json"), pretty = TRUE, auto_unbox = TRUE)
   labels <- labelTopics(model, n = 20); theta <- model$theta
   dominant <- max.col(theta, ties.method = "first")
   second <- apply(theta, 1, function(x) order(x, decreasing = TRUE)[2])
@@ -302,6 +316,7 @@ run_stm_pipeline <- function(args = character()) {
     documents = length(prep$documents), input_candidates = nrow(corpus), removed_by_textProcessor = nrow(removed_processor),
     removed_by_prepDocuments = nrow(removed_prep), selected_K = K,
     selection_status = model_selection_status, human_review_status = "pending",
+    final_model_converged = final_model_converged, final_model_iterations = model$convergence$its,
     year_2026_incomplete = TRUE, execution_mode = ifelse(resumed, "resume_exports", "full"),
     elapsed_seconds = as.numeric(difftime(Sys.time(), started, units = "secs"))
   )

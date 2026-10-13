@@ -30,7 +30,7 @@ from .text_cleaning import (
 PUBLICATION_FIELDS = [
     "document_id", "doi_normalized", "title", "abstract", "keywords", "year", "authors", "first_author",
     "journal", "source", "source_database", "country", "language_metadata", "language_detected",
-    "language_confidence", "publication_type", "educational_level", "has_pdf", "has_fulltext",
+    "language_confidence", "language_detection_status", "publication_type", "educational_level", "has_pdf", "has_fulltext",
     "pdf_path_or_id", "fulltext_status", "relevance_status", "relevance_score", "relevance_reason",
     "duplicate_group_id", "metadata_text_available", "fulltext_available",
 ]
@@ -113,7 +113,7 @@ def _publication_from_record(row: dict[str, Any]) -> dict[str, Any]:
     title = clean_for_display(clean_value(row.get("title")))
     abstract = clean_for_display(strip_repository_header(clean_value(row.get("abstract")), clean_value(row.get("title"))))
     keywords = clean_for_display(clean_value(row.get("keywords")))
-    language, confidence, _ = detect_language(" ".join((title, abstract, keywords)))
+    language, confidence, language_status = detect_language(abstract if len(abstract) >= 80 else " ".join((title, abstract, keywords)))
     return {
         "document_id": publication_id, "doi_normalized": normalize_doi(row.get("doi")), "title": title,
         "abstract": abstract, "keywords": keywords, "year": clean_value(row.get("publication_year")),
@@ -122,6 +122,7 @@ def _publication_from_record(row: dict[str, Any]) -> dict[str, Any]:
         "source_database": clean_value(row.get("source")), "country": clean_value(row.get("country")),
         "language_metadata": clean_value(row.get("language")), "language_detected": language,
         "language_confidence": "" if confidence is None else round(confidence, 6),
+        "language_detection_status": language_status,
         "publication_type": clean_value(row.get("document_type")), "educational_level": "",
         "has_pdf": bool(clean_value(row.get("pdf_url"))), "has_fulltext": False,
         "pdf_path_or_id": clean_value(row.get("pdf_url")), "fulltext_status": "not_linked",
@@ -264,6 +265,8 @@ def build_corpora(config: dict[str, Any]) -> BuildResult:
         if not _year_allowed(publication["year"], start, end): reasons.append("year_outside_configured_period")
         if len(text) < metadata_min: reasons.append("metadata_below_minimum_characters")
         if publication["relevance_status"] != "included": reasons.append(f"relevance_{publication['relevance_status'] or 'unclassified'}")
+        if publication["language_detected"] not in corpus_cfg.get("supported_languages", ["es", "en", "pt", "id"]):
+            reasons.append("language_unknown_or_not_supported")
         if reasons:
             exclusions.append({
                 "publication_document_id": publication_id, "representation_id": publication_id,
@@ -283,7 +286,7 @@ def build_corpora(config: dict[str, Any]) -> BuildResult:
             "authors": publication["authors"], "doi": publication["doi_normalized"], "record_id": publication["record_id"],
             "source": publication["source_database"], "url": publication["url"], "pdf_url": publication["pdf_url"],
             "language": publication["language_detected"], "language_probability": publication["language_confidence"],
-            "language_detection_status": "ok" if publication["language_detected"] != "und" else "undetected",
+            "language_detection_status": publication.get("language_detection_status", "undetected"),
             "text_characters": len(text), "text_tokens": len(text.split()),
             "title_text": publication["title"], "abstract_text": publication["abstract"], "keywords_text": publication["keywords"],
             "stm_weighting_strategy": config.get("metadata_corpus", {}).get("stm_strategy", "unweighted"),

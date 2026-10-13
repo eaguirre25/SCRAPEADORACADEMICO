@@ -35,3 +35,16 @@ Pruebas del repositorio y control de integridad del dashboard. Sin reentrenamien
 Grootendorst, M. (2022). *BERTopic: Neural topic modeling with a class-based TF-IDF procedure*. https://doi.org/10.48550/arXiv.2203.05794
 
 Roberts, M. E., Stewart, B. M., & Tingley, D. (2019). stm: An R package for structural topic models. *Journal of Statistical Software, 91*(2), 1–40. https://doi.org/10.18637/jss.v091.i02
+
+## Continuación de la revisión
+
+Se verificaron los32 documentos del STM español T17 con el detector corregido:19 turcos,12 ingleses y1 español. Es una revisión de ese grupo; no una tasa estimada para todo el corpus. Ejemplos DOI10.29228/asrjournal.71516,10.29228/asrjournal.66776 y10.7827/turkishstudies.52134.
+
+Correcciones para el nuevo ajuste:
+- Detector abierto a todos los idiomas disponibles, con rechazo de decisiones ambiguas; se usa primero el resumen cuando tiene suficiente texto. Idiomas no admitidos permanecen en la biblioteca y pasan al registro de exclusiones del corpus analítico.
+- STM prioriza candidatos con estabilidad disponible y al menos80% de réplicas convergentes. La estabilidad se calcula sobre réplicas convergentes; si ninguna solución cumple, queda exploratoria. El máximo de iteraciones de réplicas pasa de150 a500; esto no garantiza convergencia.
+- Se registra convergencia del ajuste final y la trayectoria de su objetivo.
+- Evaluación pasa a ser requisito para publicar resultados: no se ignoran sus errores. Se conserva una copia comprimida del corpus de metadatos usado por el ajuste.
+- Las pruebas R se ejecutan antes del entrenamiento. Pruebas locales de idiomas/corpus/comparación pasan; la sintaxis R se validó con un parser. La ejecución de pruebas R y del nuevo entrenamiento queda pendiente en GitHub Actions; R no está disponible localmente.
+
+La validación documental e interpretación de los temas actuales sigue pendiente. Una corrección del código no equivale a validar científicamente los modelos.

@@ -1,6 +1,15 @@
 name: Análisis STM – Dirección Escolar
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'topic_modeling/language_detection.py'
+      - 'topic_modeling/corpus_builder.py'
+      - 'topic_modeling/stm_pipeline.R'
+      - 'topic_modeling/evaluation_metrics.py'
+      - 'config/topic_modeling.yml'
+      - '.github/workflows/stm_analysis.yml'
   workflow_run:
     workflows: ["Extracción de corpus (PDFs → texto)"]
     types: [completed]
@@ -9,9 +18,13 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: stm-bertopic-main
+  cancel-in-progress: true
+
 jobs:
   stm:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 360
 
@@ -63,6 +76,9 @@ jobs:
       - name: Crear directorio output
         run: mkdir -p output/plots
 
+      - name: Pruebas R antes de estimar modelos
+        run: sudo Rscript -e "testthat::test_file('tests/testthat/test-stm-helpers.R', stop_on_failure=TRUE)"
+
       - name: Construir corpus canónicos auditables
         run: python scripts/build_modeling_corpus.py --config config/topic_modeling.yml
 
@@ -101,11 +117,10 @@ jobs:
         run: python scripts/compare_topic_models.py --config config/topic_modeling.yml
 
       - name: Recalcular métricas de evaluación
-        continue-on-error: true
         run: python scripts/evaluate_topic_models.py --config config/topic_modeling.yml
 
-      - name: Pruebas R
-        run: sudo Rscript -e "testthat::test_file('tests/testthat/test-stm-helpers.R')"
+      - name: Conservar entrada exacta de los modelos
+        run: gzip -n -c output/topic_models/corpus/modeling_corpus_metadata.csv > output/topic_models/corpus/modeling_corpus_metadata.csv.gz
 
       - name: Guardar resultados en GitHub
         run: |

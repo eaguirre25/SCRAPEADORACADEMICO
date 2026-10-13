@@ -81,7 +81,7 @@ stm:
   max_em_iterations: 500
   init_type: Spectral
   stability_init_type: LDA
-  stability_max_em_iterations: 150
+  stability_max_em_iterations: 500
   prevalence_formula: "~ s(anio)"
   number_of_runs: 5
   stability_runs: 5
