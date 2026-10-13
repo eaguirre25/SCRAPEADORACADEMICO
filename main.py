@@ -27,6 +27,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
+from publication_identity import canonical_url, same_publication_url, conflicting_dois, authors_compatible
 from typing import Any, Dict, List, Optional, Set, Tuple
 import requests
 import openpyxl
@@ -211,11 +212,14 @@ def migrate_master_csv_schema() -> None:
     except Exception as exc:
         print(f"No se pudo leer CSV maestro para migración: {exc}")
         return
+    # Preserve enrichment, review and future metadata columns during ingestion.
+    CSV_FIELDS.extend(field for field in old_fields if field not in CSV_FIELDS)
     if old_fields == CSV_FIELDS:
         return
     migrated_rows: List[Dict[str, Any]] = []
     for row in rows:
         migrated_rows.append({
+            **row,
             "record_id":        str(row.get("record_id", "") or "").strip(),
             "first_seen_date":  str(row.get("first_seen_date", "") or "").strip(),
             "search_term":      str(row.get("search_term", "") or "").strip(),
@@ -345,11 +349,12 @@ def find_fuzzy_duplicate_target(
         if not ex_title:
             continue
         sim = SequenceMatcher(None, title_norm, ex_title).ratio()
-        if sim >= FUZZY_TITLE_HIGH:
+        if conflicting_dois(record, candidate):
+            continue
+        if sim >= FUZZY_TITLE_HIGH and authors_compatible(record.get("authors"), candidate.get("authors")):
             return candidate
-        if sim >= FUZZY_TITLE_LOW and first_auth and ex_author:
-            if SequenceMatcher(None, first_auth, ex_author).ratio() >= FUZZY_AUTHOR_MIN:
-                return candidate
+        if sim >= FUZZY_TITLE_LOW and authors_compatible(record.get("authors"), candidate.get("authors")):
+            return candidate
     return None
 
 def count_master_records() -> int:
@@ -895,6 +900,7 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     dirty_existing = False
 
     existing_by_id: Dict[str, Dict[str, Any]] = {}
+    existing_by_url: Dict[str, List[Dict[str, Any]]] = {}
     existing_by_sig: Dict[str, Dict[str, Any]] = {}
     existing_fuzzy: Dict[str, List[Dict[str, Any]]] = {}
     for row in existing_rows:
@@ -906,8 +912,12 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
         if sig:
             existing_by_sig[sig] = row
         existing_fuzzy.setdefault(year, []).append(row)
+        url = canonical_url(row.get("url"))
+        if url:
+            existing_by_url.setdefault(url, []).append(row)
 
     session_by_id: Dict[str, Dict[str, Any]] = {}
+    session_by_url: Dict[str, List[Dict[str, Any]]] = {}
     session_by_sig: Dict[str, Dict[str, Any]] = {}
     session_fuzzy: Dict[str, List[Dict[str, Any]]] = {}
 
@@ -940,6 +950,9 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
         if sig:
             session_by_sig[sig] = record
         session_fuzzy.setdefault(year, []).append(record)
+        url = canonical_url(record.get("url"))
+        if url:
+            session_by_url.setdefault(url, []).append(record)
 
     def _find_duplicate_target(record: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         rid = str(record.get("record_id", "") or "").strip()
@@ -948,10 +961,13 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             return session_by_id[rid]
         if rid and rid in existing_by_id:
             return existing_by_id[rid]
-        if sig and sig in session_by_sig:
-            return session_by_sig[sig]
-        if sig and sig in existing_by_sig:
-            return existing_by_sig[sig]
+        url = canonical_url(record.get("url"))
+        for candidate in session_by_url.get(url, []) + existing_by_url.get(url, []):
+            if same_publication_url(record, candidate):
+                return candidate
+        for candidate in (session_by_sig.get(sig), existing_by_sig.get(sig)):
+            if candidate is not None and not conflicting_dois(record, candidate) and authors_compatible(record.get("authors"), candidate.get("authors")):
+                return candidate
         target = find_fuzzy_duplicate_target(record, session_fuzzy)
         if target is not None:
             return target
@@ -964,17 +980,9 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             return
         duplicate = _find_duplicate_target(record)
         if duplicate is not None:
-            before = (
-                str(duplicate.get("source", "")),
-                str(duplicate.get("origin", "")),
-                str(duplicate.get("search_term", "")),
-            )
+            before = dict(duplicate)
             _merge_provenance(duplicate, record)
-            after = (
-                str(duplicate.get("source", "")),
-                str(duplicate.get("origin", "")),
-                str(duplicate.get("search_term", "")),
-            )
+            after = dict(duplicate)
             if duplicate in existing_rows and before != after:
                 dirty_existing = True
             seen_ids.add(rid)
@@ -1143,12 +1151,16 @@ def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
         return None
     dest = PDFS_DIR / build_pdf_filename(record)
     if dest.exists():
-        return dest
+        with dest.open("rb") as existing:
+            if existing.read(1024).lstrip().startswith(b"%PDF-"):
+                return dest
+        dest.unlink()
+    temporary = dest.with_suffix(".pdf.part")
     try:
         resp = requests.get(pdf_url, headers=build_headers(), timeout=30, stream=True)
         resp.raise_for_status()
         rejected_content = False
-        with open(dest, "wb") as f:
+        with open(temporary, "wb") as f:
             first_chunk = True
             for chunk in resp.iter_content(8192):
                 if not chunk:
@@ -1156,20 +1168,25 @@ def download_pdf(record: Dict[str, Any]) -> Optional[Path]:
                 if first_chunk:
                     content_type = resp.headers.get("content-type", "")
                     looks_like_pdf = chunk.lstrip().startswith(b"%PDF")
-                    if "pdf" not in content_type.lower() and not pdf_url.lower().endswith(".pdf") and not looks_like_pdf:
+                    if not looks_like_pdf:
                         rejected_content = True
                         break
                     first_chunk = False
                 f.write(chunk)
         if rejected_content:
             try:
-                dest.unlink(missing_ok=True)
+                temporary.unlink(missing_ok=True)
             except OSError:
                 pass
             return None
+        if first_chunk:
+            temporary.unlink(missing_ok=True)
+            return None
+        temporary.replace(dest)
         print(f"  PDF descargado: {dest.name}")
         return dest
     except Exception as exc:
+        temporary.unlink(missing_ok=True)
         print(f"  No se pudo descargar ({pdf_url}): {exc}")
         return None
 def bulk_download_and_upload(uploader: Optional[Any]) -> None:

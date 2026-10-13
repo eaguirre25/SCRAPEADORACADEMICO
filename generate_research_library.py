@@ -2,6 +2,7 @@
 """Genera docs/biblioteca.html con soporte dual: Corpus Scraper + Textos Teóricos (Drive)."""
 import csv, json, re
 from pathlib import Path
+from keyword_network import clean_keywords, read_rules
 
 DATA = Path('data')
 DOCS = Path('docs')
@@ -38,6 +39,7 @@ def records():
     raw = read_master()
     cidx = corpus_index()
     out = []
+    keyword_rules = read_rules()
     for r in raw:
         doi = key(r.get('doi'))
         c = cidx.get(doi, {})
@@ -52,7 +54,7 @@ def records():
             'source': s(r.get('source')),
             'origin': s(r.get('origin')),
             'abstract': s(r.get('abstract')),
-            'keywords': s(r.get('keywords')),
+            'keywords': '; '.join(clean_keywords(r.get('keywords'), keyword_rules)[0]),
             'doi': doi,
             'url': url,
             'pdf_url': s(r.get('pdf_url')),

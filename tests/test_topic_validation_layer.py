@@ -35,9 +35,12 @@ def test_review_templates_have_no_prefilled_human_answers():
 
 def test_selected_solution_reconciles_and_dossiers_exist():
     docs = _rows("output/topic_models/bertopic/metadata_multilingual/preferred_solution/document_topics.csv")
-    assert len(docs) == 2182
-    assert sum(row["topic_id"] != "-1" for row in docs) == 1340
-    assert sum(row["topic_id"] == "-1" for row in docs) == 842
+    topics = _rows("output/topic_models/bertopic/metadata_multilingual/preferred_solution/topics.csv")
+    assert len(docs) == sum(int(row["document_count"]) for row in topics)
+    assert len({row["document_id"] for row in docs}) == len(docs)
+    counts = {row["topic_id"]: int(row["document_count"]) for row in topics}
+    from collections import Counter
+    assert dict(Counter(row["topic_id"] for row in docs)) == counts
     dossiers = ROOT / "output/topic_models/validation/topic_dossiers"
     assert {path.name for path in dossiers.glob("T*.md")} == {f"T{topic:02d}.md" for topic in range(14)}
 

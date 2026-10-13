@@ -42,32 +42,41 @@ def author_tokens(v):
     return toks[:8]
 
 rows=[]; by_doi={}
+dedup_report=Path("data/drive_deduplication_report.json")
+removed_ids={r["id"] for r in json.loads(dedup_report.read_text()).get("moves",[])} if dedup_report.exists() else set()
 if MAN.exists():
     with MAN.open(encoding='utf-8-sig',newline='',errors='replace') as f:
         for r in csv.DictReader(f):
+            if r.get("drive_file_id") in removed_ids:continue
             r['_hay']=norm(' '.join([r.get('filename',''),r.get('doi','')]))
             d=doi_norm(r.get('doi'))
             if d: by_doi[d]=r
             rows.append(r)
 
+article_features={}
+
 def strict_score(a,r):
     """Devuelve score solo si pasan simultáneamente título, año y autor."""
-    title=norm(a.get('title'))
+    identity=id(a)
+    if identity not in article_features:
+        title=norm(a.get('title'))
+        article_features[identity]=(title,norm(a.get('year')),author_tokens(a.get('authors')),meaningful_tokens(title,4))
+    title,year,at,tt=article_features[identity]
     hay=r.get('_hay','')
     if not title or not hay: return 0.0
 
     # 1. Año obligatorio cuando está disponible en el registro.
-    year=norm(a.get('year'))
     if year and year not in hay:
         return 0.0
 
     # 2. Autor obligatorio: al menos un token distintivo de autor debe figurar en filename/slug.
-    at=author_tokens(a.get('authors'))
     if at and not any(t in hay for t in at):
         return 0.0
 
+    if len(tt)<=4 and sum(t in hay for t in at)<2:
+        return 0.0
+
     # 3. Título: cobertura alta de tokens distintivos + similitud de secuencia.
-    tt=meaningful_tokens(title,4)
     if not tt: return 0.0
     overlap=sum(1 for t in tt if t in hay)/len(tt)
     seq=SequenceMatcher(None,title,hay).ratio()

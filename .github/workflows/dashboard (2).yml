@@ -5,6 +5,16 @@ on:
     branches: [main]
     paths:
       - 'generate_dashboard.py'
+      - 'generate_article_table.py'
+      - 'dashboard_healthcheck.py'
+      - 'dashboard_integrity.py'
+      - 'publication_identity.py'
+      - 'config/verified_metadata_corrections.csv'
+      - 'data/drive_deduplication_report.json'
+      - 'config/topic_labels.csv'
+      - 'output/topic_models/**'
+      - 'data/master_records.csv'
+      - 'data/duplicate_records.csv'
       - 'apa_citation.py'
       - 'keyword_network.py'
       - 'config/keyword_thesaurus.csv'
@@ -34,7 +44,7 @@ on:
       - 'data/drive_manifest.csv'
       - '.github/workflows/dashboard (2).yml'
   workflow_run:
-    workflows: ["Análisis STM – Dirección Escolar", "Enriquecer metadatos CONICET"]
+    workflows: ["Análisis STM – Dirección Escolar", "Enriquecer metadatos CONICET", "Academic Scraper"]
     types: [completed]
   workflow_dispatch:
 
@@ -60,10 +70,15 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependencias
-        run: pip install requests
+        run: pip install requests openpyxl
 
       - name: Crear carpeta docs
         run: mkdir -p docs
+
+      - name: Verificar y unificar publicaciones repetidas
+        run: |
+          python relevance_filter.py --solo-duplicados
+          python scripts/clean_drive_manifest.py
 
       # Los datos de Argentina los genera y guarda solo el workflow
       # «Argentina · BERTopic 2020–2026»: si el tablero los regenerara, pisaría
@@ -92,7 +107,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/argentina.html docs/asistente_ia.html docs/keyword-network-audit.json docs/keyword-network-data.js docs/keyword-thesaurus.csv docs/topic-review-data.json docs/dashboard-articles.js docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/teoricos_articles.json docs/fulltext_knowledge_base.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json
+          git add docs/index.html docs/argentina.html docs/asistente_ia.html docs/keyword-network-audit.json docs/keyword-network-data.js docs/keyword-thesaurus.csv docs/topic-review-data.json docs/dashboard-articles.js docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/teoricos_articles.json docs/fulltext_knowledge_base.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json data/master_records.csv data/duplicate_records.csv data/latest_relevant_records.csv data/relevance_filter_report.json data/publicaciones.xlsx data/drive_manifest.csv
           if git diff --cached --quiet; then
             echo "Sin cambios."
           else

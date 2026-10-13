@@ -13,7 +13,8 @@ from datetime import date
 from collections import Counter, defaultdict
 from apa_citation import build_citation, detect_language, format_author
 from topic_modeling.identifiers import normalize_doi, stable_document_id
-from keyword_network import build_network, read_rules, topic_agreement, DEFAULT_PROFILE
+from keyword_network import build_network, read_rules, topic_agreement, DEFAULT_PROFILE, clean_keywords
+from dashboard_integrity import model_fingerprint, proposal_matches
 
 DATA_DIR = Path("data")
 OUT_DIR  = Path("docs")
@@ -266,11 +267,14 @@ PREFERRED_CONFIG = Path("output/topic_models/bertopic/metadata_multilingual/pref
 CURRENT_MODEL_HASH = json.loads(PREFERRED_CONFIG.read_text(encoding="utf-8")).get("corpus_hash", "") if PREFERRED_CONFIG.exists() else ""
 PROPOSED_LABELS = defaultdict(dict)
 STALE_LABELS = 0
+current_topics = {_topic_id(r.get("topic_id")): r for r in read_csv(f"{BERTOPIC_ROOT}/topics.csv")}
 for row in read_csv("config/topic_labels.csv"):
     label = s(row.get("human_label"))
     bound = s(row.get("model_corpus_hash"))
     if label and bound and bound != CURRENT_MODEL_HASH:
         STALE_LABELS += 1
+        continue
+    if label and not proposal_matches(row, current_topics.get(_topic_id(row.get("topic_id")), {})):
         continue
     if label:
         PROPOSED_LABELS[s(row.get("model"))][_topic_id(row.get("topic_id"))] = label
@@ -314,7 +318,8 @@ def topic_palette(topics):
 
 
 # Pool de documentos: la red léxica se calcula una sola vez para todos los modelos.
-keyword_ids, keyword_cleaned, keyword_variants, keyword_audit = build_network(records, read_rules())
+keyword_rules = read_rules()
+keyword_ids, keyword_cleaned, keyword_variants, keyword_audit = build_network(records, keyword_rules)
 paper_pool = {}
 paper_keys_by_doi = {}
 paper_keys_by_model_id = {}
@@ -350,6 +355,15 @@ for row_index, row in enumerate(records):
         "keyword_excluded": keyword_cleaned[paper_key]["excluded"],
         "keyword_provenance": keyword_cleaned[paper_key]["provenance"],
     }
+
+duplicate_aliases = read_csv("data/duplicate_records.csv")
+for alias in duplicate_aliases:
+    target = s(alias.get("duplicate_of"))
+    if target not in paper_pool:
+        continue
+    paper_keys_by_model_id[stable_document_id(alias)] = target
+    paper_keys_by_model_id[s(alias.get("record_id"))] = target
+    paper_keys_by_title[s(alias.get("title")).casefold()].append(target)
 
 BASE_UNIVERSES = {"master": ("corpus completo de registros", set(paper_pool))}
 
@@ -463,6 +477,7 @@ for _, model_key, model_label, model_kind, _ in MODEL_VIEWS:
     keyword_audit.setdefault("topic_comparison", {})[model_key] = {profile: topic_agreement(keyword_ids, edges, assignments) for profile, edges in keyword_variants.items()}
     networks[model_key] = {
         "label": model_label,
+        "fingerprint": model_fingerprint(read_csv(config["topics"]), read_csv(config["documents"])),
         "kind": model_kind,
         "base": base_label,
         "assigned": best_cover,
@@ -534,7 +549,8 @@ for model_key, config in NETWORK_SOURCES.items():
             row = model_document_metadata.get(s(row.get("document_id")), row)
             member["paper"] = {"title": s(row.get("title")) or "Sin título", "year": s(row.get("year")),
                 "authors": "Autoría no disponible", "url": f"https://doi.org/{_row_doi(row)}" if _row_doi(row) else ""}
-        member_groups[topic_id].append(member)
+        if not any(existing["id"] == member["id"] for existing in member_groups[topic_id]):
+            member_groups[topic_id].append(member)
     review_models[model_key] = {"topics": member_groups}
 (OUT_DIR / "topic-review-data.json").write_text(json.dumps({"models": review_models}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
@@ -557,11 +573,13 @@ for r in records:
     auth_list = [a.strip() for a in autores.split(";") if a.strip()]
     auth_short = "; ".join(auth_list[:3]) + (" et al." if len(auth_list) > 3 else "")
     kws_raw = s(r.get("keywords", ""))
-    kws = [k.strip() for k in kws_raw.split(";") if k.strip()][:5]
+    kws = clean_keywords(kws_raw, keyword_rules)[0][:5]
     resumen = s(r.get("abstract", ""))
     fuente = infer_source(r)
     revista = infer_origin(r)
-    search_text = " ".join([title, autores, revista, fuente, s(r.get("publication_year", "")), kws_raw, resumen])
+    aliases = [a for a in duplicate_aliases if s(a.get("duplicate_of")) == s(r.get("record_id"))]
+    variant_text = " ".join(s(a.get("title")) + " " + s(a.get("authors")) for a in aliases)
+    search_text = " ".join([title, autores, revista, fuente, s(r.get("publication_year", "")), kws_raw, resumen, variant_text])
     all_articles.append({
         "titulo":  title,
         "autores": auth_short,
@@ -578,6 +596,8 @@ all_articles.sort(key=lambda x: safe_int(x["anio"], 0), reverse=True)
 
 # ── Estadísticas ──────────────────────────────────────────────────────────────
 
+drive_manifest = read_csv("data/drive_manifest.csv")
+drive_pdf_count = len({r.get("drive_file_id") for r in drive_manifest if r.get("drive_file_id")})
 total  = len(records)
 anios  = [safe_int(r.get("publication_year", 0)) for r in records if r.get("publication_year")]
 anio_min = min(anios) if anios else 2020
@@ -615,7 +635,8 @@ annual_coverage = read_csv("output/topic_models/corpus/annual_coverage.csv")
 low_coverage_years = [s(row.get("year")) for row in annual_coverage if float(row.get("fulltext_coverage_in_year") or 0) < 0.5]
 preferred_root = Path("output/topic_models/bertopic/metadata_multilingual/preferred_solution")
 topic_label_proposals = read_csv("output/topic_models/validation/topic_label_proposals.csv")
-topic_label_proposal_by_id = {s(row.get("topic_id")): row for row in topic_label_proposals}
+topic_label_proposal_by_id = {s(row.get("topic_id")): row for row in topic_label_proposals
+    if proposal_matches(row, current_topics.get(s(row.get("topic_id")), {}), networks.get("bertopic-macros", {}).get("fingerprint", ""))}
 outlier_rows = read_csv(preferred_root / "outlier_analysis.csv")
 outlier_causes = defaultdict(int)
 for row in outlier_rows:
@@ -639,7 +660,7 @@ def topic_cards(rows, model, model_key):
     cards = []
     for row in rows:
         topic_id = _topic_id(row.get("topic_id") or row.get("subtopic_id") or row.get("macro_topic_id"))
-        proposal = topic_label_proposal_by_id.get(topic_id, {}) if model == "BERTopic" else {}
+        proposal = topic_label_proposal_by_id.get(topic_id, {}) if model_key == "bertopic-macros" else {}
         algorithmic_label = s(row.get("automatic_label") or row.get("descriptor_automatic")) or f"Tópico {topic_id}"
         proposed_label = s(proposal.get("proposed_human_label"))
         validated_label = s(row.get("human_label")) if s(row.get("label_status")).lower() in {"validated", "human_validated", "approved"} else ""
@@ -652,6 +673,10 @@ def topic_cards(rows, model, model_key):
         evaluation = evaluation_by_topic.get(diagnostic_key, {})
         language_diagnostic = language_by_topic.get(diagnostic_key, {})
         heterogeneity = heterogeneity_by_topic.get(diagnostic_key, {})
+        if model_key == "bertopic-macros" and not proposal:
+            evaluation = {}
+            language_diagnostic = {}
+            heterogeneity = {}
         alerts = []
         if label_status.lower() not in {"validated", "human_validated", "approved"}:
             alerts.append("Etiqueta humana provisional. Validación documental pendiente.")
@@ -715,7 +740,7 @@ def topic_cards(rows, model, model_key):
                 f'<div><strong>Contaminación:</strong> {html_lib.escape(contamination_text)}. Pendiente de revisión humana.</div></details>'
             )
         cards.append(
-            f'<article class="tm-card" role="button" tabindex="0" data-model="{html_lib.escape(model_key)}" data-topic="{html_lib.escape(topic_id)}" aria-label="Revisar tema {html_lib.escape(label)}">'
+            f'<article class="tm-card" role="button" tabindex="0" data-model="{html_lib.escape(model_key)}" data-topic="{html_lib.escape(topic_id)}" data-original-label="{html_lib.escape(label)}" aria-label="Revisar tema {html_lib.escape(label)}">'
             f'<div class="tm-title">{html_lib.escape(label)}</div>'
             f'<div class="tm-meta"><strong>ID:</strong> T{html_lib.escape(topic_id)} · <strong>descriptor automático:</strong> {html_lib.escape(algorithmic_label)}</div>'
             f'<div class="tm-meta">{html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
@@ -872,10 +897,11 @@ tbody tr:hover td{background:var(--hover)}
 </header>
 
 <div class="kpis">
-  <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Registros reunidos</div></div>
+  <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Publicaciones en catálogo</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-topics">{n_macros_preferred}</div><div class="kpi-l">Temas del modelo</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-nodes">{n_nodes}</div><div class="kpi-l">Nodos en red</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-edges">{n_edges}</div><div class="kpi-l">Conexiones</div></div>
+  <div class="kpi"><div class="kpi-n">{drive_pdf_count:,}</div><div class="kpi-l">Archivos PDF en Drive</div></div>
   <div class="kpi"><div class="kpi-n">{anio_min}&ndash;{anio_max}</div><div class="kpi-l">Periodo</div></div>
 </div>
 

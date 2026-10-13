@@ -20,6 +20,8 @@ import unicodedata
 from collections import Counter
 from datetime import date
 from pathlib import Path
+from publication_identity import canonical_url, same_publication_url, conflicting_dois, publication_title
+from topic_modeling.identifiers import normalize_doi
 from typing import Any, Dict, Iterable, List, Tuple
 
 import openpyxl
@@ -628,11 +630,13 @@ def write_csv(path: Path, fieldnames: List[str], rows: List[Dict[str, Any]]) -> 
     for field in extra_fields:
         if rows and field in rows[0] and field not in final_fields:
             final_fields.append(field)
-    with path.open("w", encoding="utf-8", newline="") as fh:
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    with temporary.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=final_fields, extrasaction="ignore")
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
+    temporary.replace(path)
 
 
 def write_excel(relevant: List[Dict[str, Any]], review: List[Dict[str, Any]], rejected: List[Dict[str, Any]], fieldnames: List[str]) -> None:
@@ -711,7 +715,9 @@ def _close_years(a: Dict[str, Any], b: Dict[str, Any]) -> bool:
 def _completeness(row: Dict[str, Any]) -> Tuple[int, int, int]:
     """Preferencia del registro que se conserva: con DOI, de OpenAlex, más completo."""
     filled = sum(bool(str(row.get(f) or "").strip()) for f in ("abstract", "keywords", "authors", "origin", "pdf_url"))
-    return (bool(str(row.get("doi") or "").strip()), "openalex" in source_name(row).lower(), filled)
+    pdf = str(row.get("pdf_url") or "").strip()
+    actual_pdf = bool(pdf and "doi.org/" not in pdf)
+    return (actual_pdf, bool(str(row.get("doi") or "").strip()), filled)
 
 
 def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
@@ -722,11 +728,12 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
     autores distintos se conservan (p. ej., «La dirección escolar en España»
     de dos autorías). El año no se exige: OpenAlex repite obras con años
     distintos y CONICET registra el año de carga. Si a uno le faltan los autores,
-    se exige un título largo y años vecinos. Se conserva el registro con
+    se exige un título largo y años vecinos. Se conserva primero la versión con PDF, después la que tiene
     DOI y más datos, se completan sus campos vacíos con los del duplicado y se
     suman las fuentes.
     """
     parent = list(range(len(rows)))
+    component_dois = [{normalize_doi(row.get("doi"))} - {""} for row in rows]
 
     def find(i: int) -> int:
         while parent[i] != i:
@@ -735,24 +742,40 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
         return i
 
     def union(a: int, b: int) -> None:
-        parent[find(a)] = find(b)
+        ra, rb = find(a), find(b)
+        if ra != rb and len(component_dois[ra] | component_dois[rb]) <= 1:
+            parent[ra] = rb
+            component_dois[rb] |= component_dois[ra]
 
     by_doi: Dict[str, int] = {}
     by_title: Dict[str, List[int]] = {}
+    by_url: Dict[str, List[int]] = {}
+    by_abstract: Dict[str, List[int]] = {}
     for i, row in enumerate(rows):
-        doi = str(row.get("doi") or "").strip().lower()
+        doi = normalize_doi(row.get("doi"))
         if doi:
             if doi in by_doi:
                 union(i, by_doi[doi])
             else:
                 by_doi[doi] = i
-        title = norm(row.get("title"))
+        abstract = norm(row.get("abstract"))
+        if len(abstract) >= 350:
+            by_abstract.setdefault(abstract, []).append(i)
+        url = canonical_url(row.get("url"))
+        if url:
+            for previous in by_url.get(url, []):
+                if same_publication_url(row, rows[previous]):
+                    union(i, previous)
+            by_url.setdefault(url, []).append(i)
+        title = publication_title(row.get("title"))
         if len(title) >= 15:
             by_title.setdefault(title, []).append(i)
     for idxs in by_title.values():
         for a in range(len(idxs)):
             for b in range(a + 1, len(idxs)):
                 i, j = idxs[a], idxs[b]
+                if conflicting_dois(rows[i], rows[j]):
+                    continue
                 ai, aj = _surnames(rows[i].get("authors")), _surnames(rows[j].get("authors"))
                 if ai & aj:
                     union(i, j)
@@ -762,6 +785,15 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
                 elif (not ai or not aj) and len(norm(rows[i].get("title"))) >= 35 and _close_years(rows[i], rows[j]):
                     # Un registro sin autores con el mismo título largo y año
                     # vecino es la misma obra cargada con metadatos incompletos.
+                    union(i, j)
+
+    from publication_identity import authors_compatible
+    for idxs in by_abstract.values():
+        for pos, i in enumerate(idxs):
+            for j in idxs[pos + 1:]:
+                a, b = rows[i], rows[j]
+                if (not conflicting_dois(a, b) and authors_compatible(a.get("authors"), b.get("authors"))
+                        and _close_years(a, b) and a.get("document_type") == b.get("document_type")):
                     union(i, j)
 
     groups: Dict[int, List[int]] = {}
@@ -776,8 +808,9 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
             for field in ("doi", "abstract", "keywords", "authors", "origin", "document_type", "pdf_url", "url", "openalex_id"):
                 if not str(keep.get(field) or "").strip() and str(other.get(field) or "").strip():
                     keep[field] = other[field]
-            keep["source"] = " | ".join(dict.fromkeys(
-                p.strip() for p in f"{keep.get('source', '')}|{other.get('source', '')}".split("|") if p.strip()))
+            for field in ("source", "origin", "search_term"):
+                keep[field] = " | ".join(dict.fromkeys(
+                    p.strip() for p in f"{keep.get(field, '')}|{other.get(field, '')}".split("|") if p.strip()))
             removed.append({**other, "duplicate_of": record_key(keep)})
         kept.append(keep)
     order = {id(row): i for i, row in enumerate(rows)}
@@ -798,6 +831,7 @@ def load_overrides() -> Dict[str, Tuple[str, str]]:
 
 def main() -> None:
     fieldnames, rows = read_master()
+    apply_verified_corrections(rows)
     rejected_fields, previously_rejected = read_csv_if_exists(REJECTED_CSV)
     for field in rejected_fields:
         if field not in fieldnames:
@@ -862,7 +896,9 @@ def main() -> None:
     write_csv(LATEST_RELEVANT_CSV, fieldnames, latest_relevant)
     write_csv(AUTO_REVIEW_PROMOTED_CSV, fieldnames, auto_promoted)
     write_csv(AUTO_REVIEW_REJECTED_CSV, fieldnames, auto_rejected)
-    write_csv(DUPLICATES_CSV, fieldnames + ["duplicate_of"], duplicates)
+    previous_fields, previous_duplicates = read_csv_if_exists(DUPLICATES_CSV)
+    archived = {record_key(r): r for r in previous_duplicates + duplicates}
+    write_csv(DUPLICATES_CSV, list(dict.fromkeys(previous_fields + fieldnames + ["duplicate_of"])), list(archived.values()))
     write_excel(relevant, review, rejected, fieldnames)
 
     report = {
@@ -914,6 +950,21 @@ def main() -> None:
     print(f"Reporte: {REPORT_JSON}")
 
 
+def apply_verified_corrections(rows):
+    _, corrections = read_csv_if_exists(Path("config/verified_metadata_corrections.csv"))
+    by_id = {r.get("record_id"): r for r in rows}
+    changed = 0
+    for correction in corrections:
+        row = by_id.get(correction.get("record_id"))
+        field = correction.get("field")
+        if row is not None and field in {"doi", "title", "abstract", "pdf_url", "publication_year"} and correction.get("evidence_url"):
+            value = correction.get("value", "")
+            if row.get(field) != value:
+                row[field] = value
+                changed += 1
+    return changed
+
+
 def deduplicate_master() -> None:
     """Segunda pasada sobre el master ya curado. El enriquecimiento agrega DOI
     a registros de CONICET después del filtro y así aparecen duplicados con
@@ -921,8 +972,9 @@ def deduplicate_master() -> None:
     fieldnames, rows = read_csv_if_exists(MASTER_CSV)
     if not rows:
         return
+    corrections_applied = apply_verified_corrections(rows)
     kept, duplicates = deduplicate(rows)
-    if not duplicates:
+    if not duplicates and not corrections_applied:
         print("Sin duplicados nuevos tras el enriquecimiento.")
         return
     write_csv(MASTER_CSV, fieldnames, kept)

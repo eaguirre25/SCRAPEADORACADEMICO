@@ -9,6 +9,7 @@ import re
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
+from keyword_network import clean_keywords, read_rules
 
 import apa_citation
 
@@ -92,6 +93,7 @@ def build_language_map() -> dict[str, str]:
 
 
 def main() -> None:
+    keyword_rules = read_rules() if Path("config/keyword_thesaurus.csv").exists() else {}
     records = read_csv(DATA_DIR / "master_records.csv")
     corpus = read_csv(DATA_DIR / "corpus.csv.gz")
     doc_topics = read_csv(Path("output") / "document_topics.csv")
@@ -100,6 +102,10 @@ def main() -> None:
     corpus_by_doi = {s(row.get("doi")).lower(): row for row in corpus if s(row.get("doi"))}
     topic_by_doi = {s(row.get("doi")).lower(): row for row in doc_topics if s(row.get("doi"))}
 
+    aliases = read_csv(DATA_DIR / "duplicate_records.csv")
+    variants = {}
+    for alias in aliases:
+        variants.setdefault(s(alias.get("duplicate_of")), []).append(s(alias.get("title")))
     articles: list[dict[str, str]] = []
     for row in records:
         doi = s(row.get("doi"))
@@ -117,8 +123,9 @@ def main() -> None:
                 "document_type": s(row.get("document_type")),
                 "authors": s(row.get("authors")),
                 "title": s(row.get("title")),
+                "alternate_titles": " | ".join(variants.get(s(row.get("record_id")), [])),
                 "abstract": s(row.get("abstract")),
-                "keywords": s(row.get("keywords")),
+                "keywords": "; ".join(clean_keywords(row.get("keywords"), keyword_rules)[0]),
                 "publication_year": s(row.get("publication_year")),
                 "publication_date": s(row.get("publication_date")),
                 "doi": doi,
@@ -234,7 +241,7 @@ const $ = id => document.getElementById(id);
 function norm(v){{return (v||"").toString().toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"")}}
 function queryTokens(v){{return [...new Set(norm(v).match(/[a-z0-9]{{2,40}}/g)||[])].filter(token=>/[a-z]/.test(token))}}
 function fullTextMatches(q){{const tokens=queryTokens(q); if(!tokens.length)return new Set(); let matches=null; for(const token of tokens){{if(!Object.prototype.hasOwnProperty.call(FULLTEXT_INDEX,token))return new Set(); const posting=new Set(FULLTEXT_INDEX[token]); matches=matches===null?posting:new Set([...matches].filter(index=>posting.has(index))); if(!matches.size)return matches;}} return matches||new Set();}}
-function metadataText(a){{return norm([a.title,a.authors,a.abstract,a.keywords,a.doi,a.source,a.origin,a.publication_year,a.relevance_reason,a.relevance_evidence].join(" "))}}
+function metadataText(a){{return norm([a.title,a.alternate_titles,a.authors,a.abstract,a.keywords,a.doi,a.source,a.origin,a.publication_year,a.relevance_reason,a.relevance_evidence].join(" "))}}
 function accentPattern(token){{const accents={{a:"[aáàäâã]",e:"[eéèëê]",i:"[iíìïî]",o:"[oóòöôõ]",u:"[uúùüû]",n:"[nñ]",c:"[cç]"}}; return [...token].map(char=>accents[char]||char).join("")}}
 function highlightHtml(value){{const text=(value||"").toString(), tokens=queryTokens($("q").value).sort((a,b)=>b.length-a.length); if(!tokens.length)return escapeHtml(text); const expression=new RegExp(`(${{tokens.map(accentPattern).join("|")}})`,"giu"); return text.split(expression).map((part,index)=>index%2?`<mark>${{escapeHtml(part)}}</mark>`:escapeHtml(part)).join("")}}
 function unique(key){{return [...new Set(ARTICLES.map(a=>a[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b))}}

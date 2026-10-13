@@ -5,6 +5,7 @@ from collections import defaultdict
 from difflib import SequenceMatcher
 from typing import Any
 
+from publication_identity import canonical_url, same_publication_url, conflicting_dois, authors_compatible, publication_title
 from .identifiers import clean_value, first_author, normalize_doi, normalize_text, stable_document_id
 
 
@@ -18,7 +19,8 @@ def _best_record(rows: list[dict[str, Any]]) -> dict[str, Any]:
     Primero se prefiere el que tiene PDF o acceso al texto completo; después el más completo.
     """
     def ranking(row: dict[str, Any]) -> tuple[int, int, int, int]:
-        has_fulltext_access = int(bool(clean_value(row.get("pdf_url"))))
+        pdf = clean_value(row.get("pdf_url"))
+        has_fulltext_access = int(bool(pdf and "doi.org/" not in pdf))
         populated = sum(bool(clean_value(row.get(field))) for field in (
             "doi", "title", "abstract", "keywords", "authors", "publication_year", "url", "pdf_url"
         ))
@@ -37,15 +39,13 @@ def _author_tokens(value: Any) -> set[str]:
 
 def _authors_compatible(left: Any, right: Any) -> bool:
     """Mismo primer autor aunque cambie el orden o el formato del nombre ("Pérez, Ana" / "Ana Pérez")."""
-    a, b = _author_tokens(left), _author_tokens(right)
-    if len(a) < 2 or len(b) < 2:
-        return False
-    return a <= b or b <= a or len(a & b) >= 2
+    return authors_compatible(left, right)
 
 
 def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     """Resolve only high-confidence duplicates and preserve all uncertain pairs for review."""
     parent = list(range(len(records)))
+    component_dois = [{normalize_doi(row.get("doi"))} - {""} for row in records]
 
     def find(i: int) -> int:
         while parent[i] != i:
@@ -55,15 +55,21 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
 
     def union(a: int, b: int) -> None:
         ra, rb = find(a), find(b)
-        if ra != rb:
+        if ra != rb and len(component_dois[ra] | component_dois[rb]) <= 1:
             parent[rb] = ra
+            component_dois[ra] |= component_dois[rb]
 
     doi_groups: dict[str, list[int]] = defaultdict(list)
     strong_groups: dict[str, list[int]] = defaultdict(list)
     title_year_groups: dict[str, list[int]] = defaultdict(list)
+    url_groups: dict[str, list[int]] = defaultdict(list)
+    url_indexes: set[int] = set()
     for index, row in enumerate(records):
+        url = canonical_url(row.get("url"))
+        if url:
+            url_groups[url].append(index)
         doi = normalize_doi(row.get("doi"))
-        title = normalize_text(row.get("title"))
+        title = publication_title(row.get("title"))
         year = clean_value(row.get("publication_year"))
         author = first_author(row.get("authors"))
         if doi:
@@ -77,12 +83,19 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
             for other in indexes[1:]:
                 union(indexes[0], other)
 
+    for indexes in url_groups.values():
+        for pos, left in enumerate(indexes):
+            for right in indexes[pos + 1:]:
+                if same_publication_url(records[left], records[right]):
+                    union(left, right)
+                    url_indexes.update((left, right))
+
     # Misma obra registrada en varias fuentes con el año desplazado (versión previa, repositorio):
     # título idéntico y largo, primer autor compatible, años a no más de dos de distancia y sin DOI distintos.
     near_indexes: set[int] = set()
     title_groups: dict[str, list[int]] = defaultdict(list)
     for index, row in enumerate(records):
-        title = normalize_text(row.get("title"))
+        title = publication_title(row.get("title"))
         if len(title.split()) >= NEAR_TITLE_MIN_WORDS and clean_value(row.get("publication_year")).isdigit():
             title_groups[title].append(index)
     for indexes in title_groups.values():
@@ -129,7 +142,9 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
         for index, row in zip(indexes, rows, strict=True):
             source_to_publication[index] = publication_id
             if len(rows) > 1:
-                if index_of_row[id(row)] in near_indexes:
+                if index_of_row[id(row)] in url_indexes:
+                    rule = "canonical_publication_url"
+                elif index_of_row[id(row)] in near_indexes:
                     rule = "title_near_year_first_author"
                 else:
                     rule = "doi_normalized" if normalize_doi(row.get("doi")) else "title_year_first_author"
@@ -150,7 +165,7 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
     # Blocking by year and first title character keeps the audit tractable and reproducible.
     blocks: dict[tuple[str, str], list[int]] = defaultdict(list)
     for index, row in enumerate(records):
-        title = normalize_text(row.get("title"))
+        title = publication_title(row.get("title"))
         year = clean_value(row.get("publication_year"))
         if len(title) >= 20 and year:
             blocks[(year, title[:1])].append(index)

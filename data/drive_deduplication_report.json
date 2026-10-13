@@ -1,0 +1,1621 @@
+{
+  "verified_at_utc": "2026-10-13",
+  "source_folder_id": "1eKU8cV4D2_TeNxlGoexVIuzE1LKilKqh",
+  "archive_folder_id": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ",
+  "files_before": 2991,
+  "files_after": 2729,
+  "duplicates_removed_from_active_folder": 262,
+  "verification": "Identical byte size and extracted PDF text for each pair, including files with different names. Copies moved, not permanently deleted.",
+  "unresolved_equal_size_groups": [
+    [
+      {
+        "id": "1Rc-WrUxsJ45cJw0w_XelK2kleossaSYV",
+        "name": "Rivero Rodriguez - 2025 - Gerencia espiritual y praxis docentes una propuesta integradora para la gestion educativa.pdf",
+        "size": "411437"
+      },
+      {
+        "id": "1V8ILKA4OrxwL8BDTI95YT5irCkXtOaCH",
+        "name": "10.36941_ajis-2021-0053.pdf",
+        "size": "411437"
+      }
+    ],
+    [
+      {
+        "id": "19U7qpKqQCoQlnFQAnSUgv84TLkwOP3-u",
+        "name": "Montilla Figuera - 2026 - Vision Ontoepistemica de la Supervision Educativa Orientada a la Calidad de la Gestion Esc.pdf",
+        "size": "233024"
+      },
+      {
+        "id": "1KxqHuHFZtKKBxoamoXb8CfA_MWfjxseD",
+        "name": "10.35381_e.k.v7i13.3226.pdf",
+        "size": "233024"
+      }
+    ],
+    [
+      {
+        "id": "1IKxrS81_Zy7efn4B4ep5dn_n-QHT-7wG",
+        "name": "10.55942_jebl.v5i4.855.pdf",
+        "size": "268366"
+      },
+      {
+        "id": "1U5AFg9OfNHBir2P8psM9VYxoONeWHhkB",
+        "name": "10.56880_experior32.4.pdf",
+        "size": "268366"
+      }
+    ]
+  ],
+  "moves": [
+    {
+      "id": "1uwjIfgxv90jBjIUcq_OoUQHJ-w2CnSFk",
+      "name": "10.59298_rijre_2025_515359.pdf",
+      "kept_id": "15jIei40JlHT1HczIqTdX3tiklCJBcB2d",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1DgNadAiEE_nroEU0HZZlc5NmA-dzFiUN",
+      "name": "10.29121_granthaalayah.v9.i5.2021.3943.pdf",
+      "kept_id": "1oCRrjmFHmrnd6iefXL8gZv2ygRPAdWoY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "14yFvwaEbwbea2Y1Kw4jsyYaXzdJfYvUw",
+      "name": "10.58837_chula.educu.49.2.9.pdf",
+      "kept_id": "140rEATrcHwofna-TKG6iE6F4ZjMGVyeP",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ZxV9PgZUuKVxt8xJn9RiAwEo-_vnKLBj",
+      "name": "10.21831_cp.v43i3.74834.pdf",
+      "kept_id": "1Ixn_87_p0SldkCE0TwFtZ-r4xjx3UHya",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1r9m74nDcvDcwQoTt0JI6C1IjcwZEHJqu",
+      "name": "https___openalex.org_W7155312407.pdf",
+      "kept_id": "1HrApTT7k8D6IQTxnKuNcljsTI2dRyXsA",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1mBVzsFEjg5qop8Kxy-6NrSfpNKLf9g8Y",
+      "name": "https___openalex.org_W7155285673.pdf",
+      "kept_id": "1zsA2OjUDF9oWsZRvFqMfemw9s8rvirBG",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1iWnyJOitqkaJWqdAn0MS_0zwX1xxS_58",
+      "name": "https___openalex.org_W7155311713.pdf",
+      "kept_id": "1nTXdrhMbXS6Zsh_eYEckuaUDAbe_1UgO",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1MN6xeJEAIwzzNmfFeu3l-6RsjM5XX3dr",
+      "name": "https___openalex.org_W7155332293.pdf",
+      "kept_id": "1jhOoKz3GHoK4jFoZoGt7OnRTgiKNR22I",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1_mQoEpawCvs2zMvoWRMfiHvsc8v9Ee4U",
+      "name": "https___openalex.org_W7155294642.pdf",
+      "kept_id": "1T8orISTZskBOK-EXMT4EpmJUjm3UW5pY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "16r7z1OnBJKhyMqM9jxCIiM9EbkxTvbjf",
+      "name": "https___openalex.org_W7155264637.pdf",
+      "kept_id": "1arAon0rzjPbJO6-YivBycw92yBWaU1Z9",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1DKmZ5t3fz9jssseBS3oMA1wjKoLuQJC-",
+      "name": "https___openalex.org_W7155311124.pdf",
+      "kept_id": "1btcSIaaOTJ4wl5joPnl_Y9_c8BgTavs8",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Z2v2DDAXNDE517fKpVU1fQ3jxzQzMrkl",
+      "name": "https___openalex.org_W7155306719.pdf",
+      "kept_id": "16G0SHPuup7idk483UlRqWfV5BIOKD__D",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "13L-WQ-PAYQsZAtlTmhNYaLm24KLSSgjp",
+      "name": "https___openalex.org_W7155262913.pdf",
+      "kept_id": "1bWSTyg81GsPegAjeQkytOawZIjjRuuWb",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1pCuOsFwAoO8WEpF_b8IM4Xk7RPGTeCXr",
+      "name": "https___openalex.org_W7155273345.pdf",
+      "kept_id": "1nu3GBCIlzE4tvCLjw_mAcBXPYxRspvPs",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1rld5OSdatm2Sz70tJ84YbeIddJ7zqRb0",
+      "name": "https___openalex.org_W7155313139.pdf",
+      "kept_id": "1iLL0r8MRdd04WGlVt7XCn8TdVkCuHGER",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "14QGFziRBMAT4xXtwI3mZXRd_NOCjjmZa",
+      "name": "https___openalex.org_W7155257467.pdf",
+      "kept_id": "1Nk4Z5SnB-sPNo_-evmZNoUVjN99YaTN_",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "16AdE3zN5OkkvzM7_C6hakoENLqHq_0Y6",
+      "name": "https___openalex.org_W7155307562.pdf",
+      "kept_id": "1HXq6wMLRJLT13EscUDDorU29WU3T0w6m",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1OIDfAzgATEiO8ZwP5KjXPbw-o3C9NvA3",
+      "name": "https___openalex.org_W7155260079.pdf",
+      "kept_id": "1bY93O8lBi3Doo9KwNZxx-Iss0kax6z32",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1_iKr_5f0w7LEuhFrChH0BLd8OdhyiNst",
+      "name": "https___openalex.org_W7155257849.pdf",
+      "kept_id": "1qXVhEwxGr-MQDTVpNMIvFNm8t3dKCMZR",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1yIrzNXg1Tq_Ia8B3WSSpuMhY83aRG-E_",
+      "name": "https___openalex.org_W7155255111.pdf",
+      "kept_id": "1VV5QKH5rAx5qUhLH7oH8GbmnFwPM0cTP",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1b_QxhqB1rwggYCxDf1pLbTRTahupJ9YP",
+      "name": "https___openalex.org_W7155318168.pdf",
+      "kept_id": "16g1ZvO5E0i7vtyK1fNwouAWiL-zM07Fe",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1DN0XTkCxCf_r2ZKSnZh4Kh3G7Almmhwe",
+      "name": "https___openalex.org_W7155261545.pdf",
+      "kept_id": "1qeLgXJXR4NH3v_34CTnA4Tm2r7uI9XHz",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ATVRtcYW2_9gChyDmw3s-S5qF8jdGzWK",
+      "name": "https___openalex.org_W7155256221.pdf",
+      "kept_id": "1Hdair-eI-X6E6wd9Imo99phJpF8Pi-bQ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1qiWmPyhkD3Yd0MY0Ly_u77IxgFDBNavv",
+      "name": "https___openalex.org_W7155267595.pdf",
+      "kept_id": "1BRzEUGS3kZCbrgEJYeA-j4ESWxfNlQOJ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Q6Z1gnUnstTDyKiVpI51Gp8oONhsabty",
+      "name": "https___openalex.org_W7155312987.pdf",
+      "kept_id": "1WvvewDfRBzXhIAD_sQtpMViE42lUlqzw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1dqEefsLC7J8-mQMNrz4cun1i8jn4Mzm4",
+      "name": "https___openalex.org_W7155266851.pdf",
+      "kept_id": "1ECQMGnNq3DIKdBZo2VRf2ttOg0P0z2Fq",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "14ek5NxpEVjLAxqJNQykQK3GlA0Kudmye",
+      "name": "https___openalex.org_W7155260460.pdf",
+      "kept_id": "1A8qPgi29xy8bwSHcsdzOAWPijU3sa3rr",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1cDodiWK1q0weyScfknv_ac9Rw1KzDTZX",
+      "name": "https___openalex.org_W7155254751.pdf",
+      "kept_id": "1StjEkENIX3UBRik5ON9jY82jQwEWI5Sm",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1w-ZvLN4hFe2ldZUcEyC3804hxDX5u89J",
+      "name": "https___openalex.org_W7155253478.pdf",
+      "kept_id": "1bdk35FoFmIDpLvug1UQzxeRtX99UfYRf",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1VRWlSz0V3OeAluYrC2r0LCmsZB6NtRWQ",
+      "name": "https___openalex.org_W7155264331.pdf",
+      "kept_id": "1AM5EIWJbkczbAGyyWxdF4j_JQgIAYflI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17U8fb5oDudFmdq7sYFKqSA1cZ6oNm7aO",
+      "name": "https___openalex.org_W7155291482.pdf",
+      "kept_id": "1H9xG4aRPrAIPae43EkBP--k-fGmNB_XF",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1QR5X8r8TvJuCRk7GUUGKpFh45L3S0X8r",
+      "name": "https___openalex.org_W7155256444.pdf",
+      "kept_id": "1GIKLX4zzbwWqtAy1sc9ubKdh8tWGJjuj",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1pqWw9e63KcBSVMlnrrAwTzBCwL-Dcgmb",
+      "name": "https___openalex.org_W7155303858.pdf",
+      "kept_id": "1TaCTVNkZ-3zmqsmDnNJyEyUonV7jEgtE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Viz8qt_xhuflo791hksnCFbZuiSzbq1-",
+      "name": "10.35537_10915_193460.pdf",
+      "kept_id": "1_4fGOOSlEyJtFm2WxoAS4faPMfOfvxNM",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1eUg98Yav2pP0fh78r7xcqOyc7IEwiKx6",
+      "name": "https___openalex.org_W7155252735.pdf",
+      "kept_id": "1_BpabUYz-7U_sAROcYTDocFYJfc4qflx",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1mJKyHC9oL826DAhlINmD-jK5fmmrGVnv",
+      "name": "https___openalex.org_W7155302713.pdf",
+      "kept_id": "15WZh_tVKqODM0j01DR0RV9Z7ozabJTVC",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1aBifniQ0OXgdIgYl7ktClGlWbMEKAfNK",
+      "name": "https___openalex.org_W7155250463.pdf",
+      "kept_id": "1G7wZnfNZWotkc47ec0C4dOZJxESV51O6",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1itCjsYPuoW2qr95em1uP8qAFPdmhwIbl",
+      "name": "https___openalex.org_W7155316404.pdf",
+      "kept_id": "1nC8FONa580F_k3MdnFY4k8qDztxfoJfO",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1PLTT8Jex4jZkKDGJ5Y-WHjKra5QvOBiL",
+      "name": "https___openalex.org_W7155257923.pdf",
+      "kept_id": "1ayBphKadxo05nX6sIl1RXiG-nHgdWSzr",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1nEExUM8uMsm-zt1o2ZRrxxMrqDy3OJN7",
+      "name": "https___openalex.org_W7155255385.pdf",
+      "kept_id": "176jFp2mU5Tjb7ruTQeJ0FHvnCvSqwInX",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1xKreIPEbjSZBki73AqmQkypiBGtnSQjk",
+      "name": "https___openalex.org_W7155252619.pdf",
+      "kept_id": "1wqi9pnIdID3ORIzKcAt_k0h5Os7pZmlq",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1hmLUjNDSTHcxXkbUeawge0zCr8H3iMvp",
+      "name": "https___openalex.org_W7155261815.pdf",
+      "kept_id": "1q-srvsTT--4aQOiWLg6sQo-YzBy0Ut_F",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1wN5Q171v_BqOUP0xa7Od6X7LFDS8VIzf",
+      "name": "https___openalex.org_W7155280653.pdf",
+      "kept_id": "17fvx1SBPv_bLVs4JKljF3QgwTtcLDEuY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1HcBTRizYXE5eCkKmfF_NA-LFiMLMC8HV",
+      "name": "https___openalex.org_W7155278988.pdf",
+      "kept_id": "18G8DsJrN8GHWK4C1_vVOCulq7H5BZzeb",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "14hN6BxFoFVTEY_SKPSE8U9-_yt1dVw-s",
+      "name": "https___openalex.org_W7155261879.pdf",
+      "kept_id": "1bCrUxtDQ50qhqxQnCoS2d7z9dahFM1ON",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1WiQmCg6qmCxsBtukxLw83omPNnNlH1su",
+      "name": "https___openalex.org_W7155345198.pdf",
+      "kept_id": "1QZQL11V4WftMr5RSNogghGKAhSvNwqwI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1I09Ipjn5gllzyLW7AwuvVai04ntG7nOH",
+      "name": "https___openalex.org_W7155316799.pdf",
+      "kept_id": "17YeEPZPb6_A_nfc9LRi_Yqje5FkWJRJW",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Sxd8i_GwfhI4KZFXUnH-HXbZ-0KCoAsM",
+      "name": "https___openalex.org_W7155275412.pdf",
+      "kept_id": "1TFBU-u-R7EHtRdlGXPzJkdZ6VAnyZK_2",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GKDoRCVVe07CSCHqDttM5SHTTG8AeH9_",
+      "name": "https___openalex.org_W7155287450.pdf",
+      "kept_id": "1Ebzljj6No0jJ7v3FlUH0EWSVeAnMiIA7",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1yPN19bmSpOObof0YpppmM81a2grkFwFh",
+      "name": "https___openalex.org_W7155308918.pdf",
+      "kept_id": "1o9hfUUWHaq33vow__ODgZopUJ8XIs5Jg",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1RlqBK1qt9JAcMQdCyCvtji3fWs1UIct0",
+      "name": "https___openalex.org_W7155298969.pdf",
+      "kept_id": "17-_50EGpw83e3ilclkgAx-IH614Ad28U",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GaTFwK-RU_F6MrESHGxfQQYbD5N3ZCdx",
+      "name": "https___openalex.org_W7155252711.pdf",
+      "kept_id": "1tsdNeAtjLuctAA3fOQ1sK3wGYbNAHQ5-",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1w653ybae9jhHQCmnNlq1Xa0RUeE0CORR",
+      "name": "https___openalex.org_W7155301455.pdf",
+      "kept_id": "1vlsgEP4T1AzT679mAP4oDlOeh0dxN4Ot",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GmZlsVfjwitlBfD4NhrNRsSUun6UnZFh",
+      "name": "https___openalex.org_W7070706359.pdf",
+      "kept_id": "1Ww8EGwrVY7HYVzABGmMMIjB1R7mTA1CA",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1VvhgFJA9i3qvLTKKhGS9LnrRFpup82cA",
+      "name": "https___openalex.org_W7155299268.pdf",
+      "kept_id": "1bAd_QRmcWmY7Vu11R-yiSJ4CrbVWaTdd",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1s6EXmO4rvTm8boZDjCQd2ibWZHPMCMZY",
+      "name": "https___openalex.org_W7155302898.pdf",
+      "kept_id": "1IjY6T-479ZwRrSO1dMEuY-jmX59_pSub",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1a1ToE-L_sebhP2exR0jQ5OvlixvvERIl",
+      "name": "https___openalex.org_W7155295686.pdf",
+      "kept_id": "1x90jErYzo9qvMB4sOUUr2O6JscR8Frwn",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1O-Kiv0w6xJ1UzZ-CvZTCCzOumSAJnr6a",
+      "name": "https___openalex.org_W7155311400.pdf",
+      "kept_id": "1ltkbLq1ViySUpa6Trqfgx1WO9jPopwKo",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1MwKbclgoFVoVGhm_lS_YE1TyA8jq0zn7",
+      "name": "https___openalex.org_W7155257527.pdf",
+      "kept_id": "1uRAex37Vn2AbF6nX51MgK2rvFbKTaunH",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "155phEhP3M75Mi6J9aj69h-xgTl3RKrIo",
+      "name": "https___openalex.org_W7155264017.pdf",
+      "kept_id": "1mbV6CG4kgkxxzZJnJROk6D-8r9VsoPZI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1XGWXRYvTDqUc2PsNBNhkBgYO1gYQ6sqV",
+      "name": "https___openalex.org_W7155249715.pdf",
+      "kept_id": "1aupsJ4n34YLmnpJi_NwvMexn12Lcmyp1",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1duRJeFrT3Vy8So0lUiDc11jlNKo5F5_9",
+      "name": "https___openalex.org_W7155305706.pdf",
+      "kept_id": "1cDlgB-S_zzmKaw3jQqnLa34cLULMInVp",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1xWugf4W_rp5p9VjwyFEncgCQmuHSx5hf",
+      "name": "https___openalex.org_W7155259849.pdf",
+      "kept_id": "1LtBfv1Mvy-c6zX1nHiboFRjuTSWnajEV",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1DWm6AdlEyIKMHLyzmyG0gvjCY7D1faZN",
+      "name": "https___openalex.org_W7155248426.pdf",
+      "kept_id": "1qXrERsXnv6q86vF9KyPmX5nOiP4dsjLp",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1AkwhT1Y2NzjHaYpKysHKRFdybNg_oMA_",
+      "name": "https___openalex.org_W7155283425.pdf",
+      "kept_id": "1CaGAhMQYjkv_uybHCotDgA_cy3Yu5ThH",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1_-nrbvf5Ic8-kOtuAhAvhcX1rupe-Iki",
+      "name": "https___openalex.org_W7155259060.pdf",
+      "kept_id": "11DsQUauuIWCzj9E-VxKeKQb2Fj5Yx2su",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17gS5Iy-IyPHg9_IZsRrJuFcimo5hQowQ",
+      "name": "https___openalex.org_W7155286386.pdf",
+      "kept_id": "1285fmFXetd-jv2saGGNUTk4mmjfeJmT_",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1t64tp9b_xBc6Rl1-WLbADzmBnAzMKLS5",
+      "name": "https___openalex.org_W7155257687.pdf",
+      "kept_id": "1Ndd7crw7cpxFgIUAHNBToTyfeEoy5zkV",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1dFnDoOBIr85eiOlg_jEIJJZluo7iESOC",
+      "name": "https___openalex.org_W7155259253.pdf",
+      "kept_id": "1KQVnM25cUPVs1LY8CqPsNsA1il00elpJ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1O5GYx-9LZlTyrPT1WIl_WgXDX_x24pF3",
+      "name": "https___openalex.org_W7155295467.pdf",
+      "kept_id": "1hQ4b83qZVfAXFmMlSda7cSU-WenA9lwj",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ys6pBYCbJONjdwUeKWxu0_bQT2eywcBb",
+      "name": "https___openalex.org_W7155248657.pdf",
+      "kept_id": "1Y4HXZxuQj8XdCW_Ut4_knz2H4clPio6i",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1uh9b48CVeuan_kltCOxiTlDIDyjTY0bE",
+      "name": "https___openalex.org_W7155277924.pdf",
+      "kept_id": "1arJdJVKDLD0WU3p7IqK-10PM1cV0tByC",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1CTVk2kmDmCpcc2dl9ihYBDTQFKpgTWHn",
+      "name": "https___openalex.org_W7155280228.pdf",
+      "kept_id": "16TntvaZIEPeqkctgggbciAPqCCuVKRUA",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1G2_KyNyOP56Yt8hSEXypffCtmOdaWf-I",
+      "name": "https___openalex.org_W7155276938.pdf",
+      "kept_id": "16gDt3SXi66zd7P8mNbYHcFDfN37_TW4s",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1as14GG_WfjvLgthSs-MBc2Ghhl9R8fNp",
+      "name": "https___openalex.org_W7155319050.pdf",
+      "kept_id": "1I4jo-G2mDfe_UguLiyPJ_GL0tpKbLsae",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "13yJuDaAqLuWvtk1iOathkIHecQLWlEjr",
+      "name": "https___openalex.org_W7155282813.pdf",
+      "kept_id": "1MYAEq0Q_746hx9IF6I_Q2OEPUZuxqRtc",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1_n2iirtM8EZ5D8uWjY2LjGsHxchs9DDB",
+      "name": "https___openalex.org_W7155302592.pdf",
+      "kept_id": "15tGs9NbMJqS7iEYAn-kRAc0Y4fy3P1kR",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1T3sIk1mQA4GEZIJpb-FMokCJapfxp1WE",
+      "name": "10.47865_igob.vol7.n26.2024.344.pdf",
+      "kept_id": "1ljir0Rn01P_Z7cqadfcymgcAvR23TOPi",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1rNi32dnx9S-OvlIEkRN_pIOlEVwS20T4",
+      "name": "10.56124_jbs.v3i2.0007.pdf",
+      "kept_id": "1RsqHIzV-UcPYvvXiOKs5SzFU4nsDb1Uk",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1JxLo7kv_FgGjSDAssxfPLbBDBPLGS34o",
+      "name": "10.26885_rcei.11.1.9.pdf",
+      "kept_id": "13hwqwfWgVMhfLkELim0-Hlgogn6fAim0",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1PdT25RBwlziCVOIMHxq8Cc7IIhJbh-ah",
+      "name": "10.59427_rcli_2023_v23cs.3940-3948.pdf",
+      "kept_id": "1dhOuPO0Wsoi-l5yzD3g4b_bHFG6xiesF",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1wiWeJBFAo2UCtj-ddKgLB5UsrJzSYPZ_",
+      "name": "10.59427_rcli_2024_v24cs.1167-1172.pdf",
+      "kept_id": "1z9zT_ao8dZW-X84-B2zX2SPvHOGirwVp",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "11c-OD1gzPIQuKX-BS2Krz5j8mYtucgdG",
+      "name": "10.52080_rvgluz.29.e12.40.pdf",
+      "kept_id": "1tMt-T9JmhP4hiTF0yL7FQ6u9c30yidN7",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1vFssJ52FoBbiGIt22hXRk4ltcSOmwYxV",
+      "name": "10.35756_educaumch.202322.274.pdf",
+      "kept_id": "1UeNoznVrXr8C6HvskbV3HKuL8DLCD8QY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1cHdc6VpCR6PIBFbAA7nIyvzGOA1GXtmY",
+      "name": "10.31876_rcs.v28i.38152.pdf",
+      "kept_id": "1ZmpuCASFQccQAq4FWbGTyBL4ikrJ_T1Y",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17MC9RrPAmPOIQuFjLYlPqPXitdzcpekL",
+      "name": "10.55560_arete.2023.18.9.7.pdf",
+      "kept_id": "1x9p_ZJ6hhTsOudkpb8BPj8bym3s-Phez",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1CBljBPcjsXR03GXvsF49kKg4nQCVZsLz",
+      "name": "10.18050_eduser.v10n2a2.pdf",
+      "kept_id": "1Qti0RDGYNuCf3g5ZbBn_LMT2-YQVladE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1CgUxv4UG5ICwqgWZh6k0PwEiQHCKE0De",
+      "name": "10.46498_reduipb.v26i2.1643.pdf",
+      "kept_id": "14Utwle45yHtMcdJmckxhxvzYysJAW9c5",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1oPwmVlkJHv0pqlJZgosb9A6cs489nV--",
+      "name": "10.47606_acven_ph0224.pdf",
+      "kept_id": "1T7NB2_bSfcbuEUsnNafr8tcIFsL1a55w",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1s20o1x8UzNt7fJ8rZkowpCAlg_uc66Tm",
+      "name": "10.37843_rted.v16i2.389.pdf",
+      "kept_id": "10MUKwJX0ccAusATcQ0ryGsDwRVs_RGdI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1cuhw1GgvOjV3EVo0eLEcixD2ZxEQoq7G",
+      "name": "10.52080_rvgluz.27.97.5.pdf",
+      "kept_id": "1k-OLGLA5fJqDRr-ZvidHf7zZT-z9llKo",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1frxtl-7sOBSTg5xml-8BhF4Z1I52FlgZ",
+      "name": "10.26490_uncp.alboradaciencia.2021.1.975.pdf",
+      "kept_id": "1Rjh7wnnXqGmn2eHF5UOZlHJygBNQCL5k",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "121Mp3GhdXVO5kEbs1JjBMqW6balNd8Hr",
+      "name": "10.15517_revedu.v45i1.40537.pdf",
+      "kept_id": "1xihcqXOdrlbWJ7vpeNkGB18JPclsLe5B",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GZ-MkChd6iNFuPtMEKSpzccrDd-kIwZX",
+      "name": "10.46498_reduipb.v25i1.1462.pdf",
+      "kept_id": "1TcIVrfcENadbtLdkVqxg8mRDAJYYFGCE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1T0Vy5RLJnTaIwG3tOgcJlkR2Vb4DEdei",
+      "name": "10.56726_irjmets44523.pdf",
+      "kept_id": "1kNIwsKE3im55-1othrpCFDVGTmk3_6yF",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1JsqwvxTexzv0PXE4d20ypz6ul_FinIuD",
+      "name": "10.32672_pice.v2i1.1329.pdf",
+      "kept_id": "1OSjVMEKoTV2zK0BgG7_KoD5gUpECMVRy",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1IO7ee4h5VIxFuQPGulfh5dooyY56CJge",
+      "name": "Suarez Ovando Ramos Alcoser - 2023 - La gestion educativa con tendencia humanista perspectiva de los estudiantes en Ciencias de.pdf",
+      "kept_id": "1lV7BQ0mX8kYcmF8VHbtsaE73TPLTwmwV",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1K6_OQhyuft0s_dsrQRuNUCAEfACqdI5-",
+      "name": "Yaguna Guerra et al - 2022 - Participacion en la gestion educativa como vigencia de los derechos humanos.pdf",
+      "kept_id": "11EFZk_AEKY7NQoSOoM_edbUbFxqQoByp",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1KeJU_-oGz_Bx-VaFEhbHl-b34a766kF3",
+      "name": "Graciela Soria-Leon - 2025 - Gestion educativa en la Educacion Superior.pdf",
+      "kept_id": "1dBi7QvAIx9HFyA9tIsXss4Jmxw_xmF1m",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1BuqrEMwHXwDF67XWtzmMrStlKUUgEwR2",
+      "name": "Tinashe Tsapayi Samuel - 2023 - Educational Leadership for Equality, Diversity and Inclusion in Curricula Design.pdf",
+      "kept_id": "13P5u6G_ZpFnhRK1NWwloZaxFzzourL9T",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "10-wkI3Jn1feNG6XZSYlhb4MCkbSzkZHa",
+      "name": "Pramitha - 2020 - WOMEN IN EDUCATIONAL LEADERSHIP FROM ISLAMIC PERSPECTIVES.pdf",
+      "kept_id": "1TZ1CX6W3OcuWzmXtull9uVfoYRm9Zhif",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1URsIqLERR2Uyzoaml-tTGd_p1KLAoa_-",
+      "name": "Jalali et al - 2025 - Psychometric properties of the educational leadership scale for nursing students.pdf",
+      "kept_id": "1DWVclSVwc9qKjVH-_6cI61ifm9kBG1uQ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1dwKVWbyk74R-lnCUuGIoomC43YRGkIJj",
+      "name": "Symbaluk et al - 2024 - The Emergence of Formalized Educational Leadership in Higher Education.pdf",
+      "kept_id": "1KAvZfXwQtaOjStwcH3uzc6loHqGUxX9z",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "13wLX_6Qb5mu8B20z20EkoMlAH6gVlHud",
+      "name": "10.37745_bje.2013_vol13n23043.pdf",
+      "kept_id": "13AyXUiK-h0fOBFoXXDCd2TN8AoracQym",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ZKr_HiUmYYCDKgQazG3jBQc7UibqdLOO",
+      "name": "KARAMAN et al - 2023 - Development of the educational leadership scale for nursing students a methodological stud.pdf",
+      "kept_id": "1M-X6w4-Ao3ZMhuxX9kEYjsI1oAlK5Svs",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "15jIei40JlHT1HczIqTdX3tiklCJBcB2d",
+      "name": "10.59298_rijre_2025_515359.pdf",
+      "kept_id": "1eta7LigLexzWY9Y8rvS8_KPu2RGIqUSw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1r1aASwdWWYLpc7eYiMtTyWFagWuO1JfV",
+      "name": "Assa’idi et al - 2021 - The Principles of Educational Leadership in the Perspective of the Qur’an.pdf",
+      "kept_id": "1Mpw5BB8j9ucQhkkc0FhmMvTsgePZ_Wlw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "13ABvIkpGwkKRm8PBPaMwaLeIfKRFeuMo",
+      "name": "10.59298_rijre_2025_522430.pdf",
+      "kept_id": "1H_M4AE91v2XVB6-Onp-dszXUcUHV520x",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1tVgKA85Tevi7qRYaaRBHHaLlqlcfAZ44",
+      "name": "Singh - 2023 - Role of Educational Leadership for Sustainable Development.pdf",
+      "kept_id": "1O6IjvoGgEV0vFY4bYN8U6FUg2IZ0ilww",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GUwfYIoF65j1_0xmPMi1jegPlL54WzyQ",
+      "name": "E. Bogotch - 2024 - Educational Leadership and Social Justice 4.0.pdf",
+      "kept_id": "1f5c-hwt7kQz9dsaFfC5ivj8FNrx4pp48",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1C-LZTs2Qrc7XxTQXEz9xiqjgJ6C_QDMV",
+      "name": "Cassia Sudan Gomes Zuin - 2022 - Reflections on educational leadership for sustainability a Brazilian case study.pdf",
+      "kept_id": "1ON0lGDnj76Uo55a6tKsT-dFFZVpDajtm",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1tpWM9YFrt-2oQAndzJ-DCGFlm3KA52WC",
+      "name": "Chanra Merentek et al - 2023 - Mapalus In Educational Leadership.pdf",
+      "kept_id": "18O--YNYdn4fYOzOlp6im18NQ-wkT1vxe",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1VDJCNU1keNYmRW7wIwDMW9Qxd3Z4xql-",
+      "name": "Sposato - 2025 - Artificial intelligence in educational leadership a comprehensive taxonomy and future dire.pdf",
+      "kept_id": "1oZuMlSH8hIpMdxoxwioLdQXRMuhmic65",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1dVK06mjU1WLsJiQRuSlb1yYn9WzwP0Ui",
+      "name": "https___openalex.org_W7113414853.pdf",
+      "kept_id": "1bRTaeb1JKC8kfZ9joVlClwbRHlAJ1BU6",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "16G0SHPuup7idk483UlRqWfV5BIOKD__D",
+      "name": "https___openalex.org_W7155306719.pdf",
+      "kept_id": "1PCyHpO9HsaFCxtuEe8U8Ct6X4_5vJ6VU",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "116DSoDUmXfjYe1bX-lvqoUIBP4paWgwT",
+      "name": "Universidad Politecnica Salesiana Guanuche Alban - 2025 - Implementacion de practicas innovadoras en la gestion educativa del Instituto de Idiomas d.pdf",
+      "kept_id": "1ENqDfaOMSo1xouwu2gRtXIhe9VYX8SAD",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1nDfFZZ5BWcMrPNlrBrU7oaUgZqH2BquY",
+      "name": "Guerrero et al - 2023 - La gestion educativa como factor importante en la eficacia del clima organizacional en ins.pdf",
+      "kept_id": "1qgH3BvR43uNvTgNEXvAr8IGD5W74lzFV",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1soNut8ABCu-_7_zGsUuKlAKNluLAeteH",
+      "name": "Miguel Flores et al - 2021 - El comportamiento organizacional en la gestion educativa publica retos y perspectivas en e.pdf",
+      "kept_id": "1lozp54UQ5bLYuykhDx6zaxAuRfDxGqxT",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1EicEIfb0hGBa7lltYT9aYFqlIn38e1EV",
+      "name": "Santa Maria Perez-Tapullima - 2025 - Gestion autonoma efectos sobre la gobernanza en una Unidad de Gestion Educativa de Loreto.pdf",
+      "kept_id": "10-I8hMzsL90q09B4TIjEO5wkuGBUVnDr",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1UELrr3hlhgg-Jvjwq22XZ90P_FftqIKP",
+      "name": "Torres Manrique et al - 2022 - Nivel de los servicios educativos en una Unidad de Gestion Educativa Local, Peru 2022.pdf",
+      "kept_id": "1lASXv8iVHKMklU_xoA2NNSyRp6rT2NrT",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1YjzElGwzGMosCnIz95ySTwEZk6ityPe1",
+      "name": "Del Aguila Delgado Bardales - 2020 - Gestion educativa docente en la calidad de ensenanza universitaria del programa de contabi.pdf",
+      "kept_id": "1eA-v2__9ZzTl8KvZ-fFDEDO2_H9sqS_j",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "16puJ6OcrDiZYvyJTUMOBI3K7hlKIAOUT",
+      "name": "Aguilar Saldana et al - 2020 - Gestion educativa y calidad de formacion profesional en el Instituto Superior Pedagogico “.pdf",
+      "kept_id": "1kxD6c_kXOnW7ZX0ECuuuqd-j5gXwGFQm",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "15XAPfjlZgNgwcgfND2ZmVxUU1jEiDJ7U",
+      "name": "Mori Apuela et al - 2022 - Nivel de gestion por procesos en una unidad de gestion educativa local, Peru 2022.pdf",
+      "kept_id": "1chn4DI9_JSe_qdB-3ckXfW4I12_YJ-PM",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1-mJVfCtrnWJgrGOV28T2lQysqEA1AyMG",
+      "name": "Velasquez Salazar Moreno Muro - 2022 - GESTION EDUCATIVA PARA MEJORAR LA EFICIENCIA DEL DESEMPENO DOCENTE EN EDUCACION PRIMARIA E.pdf",
+      "kept_id": "1DjRUWU65iFSlp-L-FWwJf1GnPiG079Xd",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1pKjrO_jz45kyp4cGXdh1DC9bDlhoz2ih",
+      "name": "Chen-Quesada - 2024 - Indice de competencias de profesionalizacion para la gestion educativa (COPROGE) proceso d.pdf",
+      "kept_id": "1rs_BkMucORKTrGmRV_Fu84dSubkDApWp",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17DTUls-0jDhREWHDZspVb5Vrm773J_ZL",
+      "name": "Maza Socola - 2021 - Gestion educativa y el desempeno docente en las instituciones educativas de Castilla, 2015.pdf",
+      "kept_id": "1NPZGWlS37byo3dAGS5d3tI_UTr-SqLH1",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1XmzZc8RAjClNLK_G5Yh0CHCwEW6vYewY",
+      "name": "Saravia Ramos - 2022 - Gestion Educativa y Calidad en la Formacion Tecnologica de un Instituto Superior Publico.pdf",
+      "kept_id": "1q1ayoEkd1yRudCBze1p1n2mzG8CKEhQI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1h7MijCjuxfGacqHv8AnV5V3rNka4FXdk",
+      "name": "Valentino Palomino-Flores - 2022 - Gestion educativa inclusiva Analisis bibliometrico de investigaciones y perspectivas futur.pdf",
+      "kept_id": "1pVOeJ6mthRcYIPY2qI1xWHqQoTLPiyEE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1VebibN-dFSOG1DJUDPwifaRTtnGIWGEY",
+      "name": "Grados Valladolid - 2022 - Competencias digitales para el desempeno laboral en una unidad de gestion educativa.pdf",
+      "kept_id": "1IEsIvUn5ARFUPjbbAgzbTg3pRP_5hz27",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1y08OqSUGQI7F3p9vw_8c3_fa_uc4Xj1j",
+      "name": "Cardenas Valverde et al - 2023 - INFLUENCIA DEL MENTORING EN LA REDACCION DE CUESTIONARIOS EN GESTION EDUCATIVA.pdf",
+      "kept_id": "1oMoVdsDALrGFIdEc4TAkIzgpOPzTmo66",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1NHHbToL8Gv1fglOShXQ0CDhDJ5V-T46g",
+      "name": "Alvarado - 2023 - Incidencia de la sostenibilidad en la gestion educativa, la situacion latinoamericana.pdf",
+      "kept_id": "1iKZtvqQIpfpkbyN_r3YW2mdY93xB8Qbc",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1RZAxC3AZNhEX05eop21bCjExSSMlaxgB",
+      "name": "Elizabeth Gorozabel-Quinonez et al - 2020 - Los modelos de gestion educativa y su aporte en la educacion ecuatoriana.pdf",
+      "kept_id": "1O5S0ErbW6uyIznmspm8nPe2X5F01_ioL",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1vkyUickTMj_h9f2NYfMbFAIZBaXyZ3bI",
+      "name": "Miranda-Medina et al - 2022 - Gestion educativa en Latinoamerica desde la investigacion y su normativa aplicable.pdf",
+      "kept_id": "1hlixmi15znje2RkqZ7qBebNwIChneC0P",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1KgfXkRZTqNl8oX27ZjlOg8AQRLhT6sWk",
+      "name": "Alamilla Ramirez et al - 2026 - Manual del Laboratorio de Electroterapia como Estrategia de Gestion Educativa.pdf",
+      "kept_id": "1OO4XFKNeX-IGa0PS6ZNCmALxYsHvQecm",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1eTEZ-YrRunmnDJVxuNkO5CzIWOHd6eTz",
+      "name": "Frank Moncada-Horna et al - 2021 - Calidad de servicio en las Unidades de Gestion Educativa Local.pdf",
+      "kept_id": "1LRLWHin7uXLQI9zq0pafQ3RsJ8G2aIqK",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1nTLU9vSHkcstpzGLuv993l5gOyFUoojy",
+      "name": "Lachuma Mas Delgado Bardales - 2020 - Desempeno laboral en la gestion educativa basica especial, 2020.pdf",
+      "kept_id": "1bArm3myYMBFTxSEkI_84TRbFY4cXGCtk",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1HpYywPvS1hdph6enMF1A3w3tiesbBZ3R",
+      "name": "Gomez Villalpando - 2025 - Aprendizaje organizacional de la gestion educativa de la innovacion.pdf",
+      "kept_id": "1QwGEg5BcI5Q16YJ74RusvizYYHO9jPmw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1eXVbNRRiecFgLVdF1vIHtEAdCKT5v5cf",
+      "name": "10.37811_cl_rcm.v4i2.147.pdf",
+      "kept_id": "1GZiLsI24Y28KcvmlplOxCgdXFuFokxn5",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1W71Bx2WVWfcfYQxa_c8w2YPtw6manC9N",
+      "name": "Blanco Villalobos - 2021 - Educacion virtual no es solo gestion educativa.pdf",
+      "kept_id": "1AJ-3io23je1WmNyHndlyX__nYbI6vmnQ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1_NKzOkf-e4or2-jSbJFVqP8RJBkhXW3Q",
+      "name": "10.22518_jour.ccsh_2020.2a09.pdf",
+      "kept_id": "1p5TOBWjQU2_CUaP-j7kxiBgx3E7kPRSw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "18kEz17y2b9WmGu1mOLu1qDpvzs4FFxn7",
+      "name": "Salazar Sicacha et al - 2026 - Gestion Educativa.pdf",
+      "kept_id": "1CULzE2lmAGTTCciA6gszgY_dhrJKy8V8",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "11gIE_Ld0drc0BTvbf0Y3dfp4Hj-IXy2r",
+      "name": "Yela Romo - 2022 - Competencias socioemocionales y su relacion con la gestion educativa, liderazgo y desempen.pdf",
+      "kept_id": "1Njy8EDU3Zn38_9iKRxrSM4aSJmMC_LFU",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1tV7Ddmxh7mIBTA4-vIIsCYG8cdtj7bXI",
+      "name": "Garcia Carmona et al - 2022 - Retrospective and Prospective Analysis on Educational Leadership Indicators of Productivit.pdf",
+      "kept_id": "1dLAL0sNpGole3yLk5xbw6dt6-tuAGaaI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1stZmQCNF2VUHnOUB5C-LofLFbluHVK1k",
+      "name": "Kisno et al - 2022 - Agile Methodology in Educational Leadership Scrum.pdf",
+      "kept_id": "1CYlgN8mtVjPcsvx7_M4C26brQwqyry9Y",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1JRzwbxbd1MJ24xQAQIdcYq4_0Eg22VAg",
+      "name": "10.18662_rrem_12.3_311.pdf",
+      "kept_id": "1reP2Gm0li1UZCvdrWzw2vWxjM32ALco5",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1m01agPZJuZxWDXpXqrxo70mHiEC7jmho",
+      "name": "Harvie - 2021 - Understanding educational leadership critical perspectives and approaches.pdf",
+      "kept_id": "11JqDS4xhI5aLSj1fUbcZOArn5YAr9U0X",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1jhOoKz3GHoK4jFoZoGt7OnRTgiKNR22I",
+      "name": "https___openalex.org_W7155332293.pdf",
+      "kept_id": "1C7zLfZjBBgvKYHw3Z0n4LS3JNcnjedPM",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1qeLgXJXR4NH3v_34CTnA4Tm2r7uI9XHz",
+      "name": "https___openalex.org_W7155261545.pdf",
+      "kept_id": "1oyyxtF_Xo86xOms3iVWDJCf-g56wVlts",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1uzyJTaZY0EQOTbgIAcTaRvM8bEjPHFEr",
+      "name": "de-los-Milagros De-la-Puente-Acosta et al - 2024 - Gestion educativa y desempeno docente Mejora del aprendizaje de estudiantes en el area de.pdf",
+      "kept_id": "1U6yYjIyBjIEOS2Pmcm9SZjDtC-IMaFdi",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1HXq6wMLRJLT13EscUDDorU29WU3T0w6m",
+      "name": "https___openalex.org_W7155307562.pdf",
+      "kept_id": "1tUAWnUweV09GsAg5fwbzZjDjRFhnUrur",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1nTXdrhMbXS6Zsh_eYEckuaUDAbe_1UgO",
+      "name": "https___openalex.org_W7155311713.pdf",
+      "kept_id": "1ZwF9-SY_Te-WqLBIZ0pYaoCj989f-6Yq",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1fnhsrQxWe8dBvzcqiA6GqDJWuOvrEdjW",
+      "name": "Mendoza Marin et al - 2024 - La gestion educativa como elemento transformador e innovador una revision sistematica y an.pdf",
+      "kept_id": "1Jn_z_jkhIaNL9bJr0MIdH_uMeVe8eR4V",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1nu3GBCIlzE4tvCLjw_mAcBXPYxRspvPs",
+      "name": "https___openalex.org_W7155273345.pdf",
+      "kept_id": "1d3dpd1MlE5cye4OqlKvHIai2fykN6Jn3",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1bY93O8lBi3Doo9KwNZxx-Iss0kax6z32",
+      "name": "https___openalex.org_W7155260079.pdf",
+      "kept_id": "1osESI8S9APHLryqC1fRrqneka3cyLVwk",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1qXVhEwxGr-MQDTVpNMIvFNm8t3dKCMZR",
+      "name": "https___openalex.org_W7155257849.pdf",
+      "kept_id": "18HLde21PoURSoNCxHJ70hw8KgE6f69er",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1T8orISTZskBOK-EXMT4EpmJUjm3UW5pY",
+      "name": "https___openalex.org_W7155294642.pdf",
+      "kept_id": "1UOQpZKkevkLC89vC6S0_Mb48YdVZ2ogz",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1VV5QKH5rAx5qUhLH7oH8GbmnFwPM0cTP",
+      "name": "https___openalex.org_W7155255111.pdf",
+      "kept_id": "1acypcYj3bxx8tyiHXdaHK4rMN3TH4Zd0",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1WvvewDfRBzXhIAD_sQtpMViE42lUlqzw",
+      "name": "https___openalex.org_W7155312987.pdf",
+      "kept_id": "1U42fmGyjtiZyQ7KPNczr141IPHLy3l2j",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Hdair-eI-X6E6wd9Imo99phJpF8Pi-bQ",
+      "name": "https___openalex.org_W7155256221.pdf",
+      "kept_id": "1CKOvcmXw2LP1VcZQA9TLfzSwzL0JRJx0",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ECQMGnNq3DIKdBZo2VRf2ttOg0P0z2Fq",
+      "name": "https___openalex.org_W7155266851.pdf",
+      "kept_id": "1SRxjK26SPY6Yh60Wcl9KVwiOTNFsWMY-",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1A8qPgi29xy8bwSHcsdzOAWPijU3sa3rr",
+      "name": "https___openalex.org_W7155260460.pdf",
+      "kept_id": "1u5OYcrvtqGKAXUftwxF3aoCXm8oG0LBi",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "18GNf2OZBhihQiUtAx5Jz-je0SdIzc2hR",
+      "name": "Efrain Tipan-Criollo - 2025 - Gestion educativa y desarrollo profesional docente hallazgos de una revision sistematica.pdf",
+      "kept_id": "1dtPmKCNxEBOGaEpfP4VuA52WSYEMQqq9",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1BRzEUGS3kZCbrgEJYeA-j4ESWxfNlQOJ",
+      "name": "https___openalex.org_W7155267595.pdf",
+      "kept_id": "1M-ux8K7F72LRI-yhP_QpXDu7oStOZCSt",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1y46NzzQtJc01aeKhz2VRfeoW6RFTEpht",
+      "name": "Torres-Morales Carlson Morales - 2024 - Resena El trance de entre la administracion a la gestion educativa.pdf",
+      "kept_id": "1Gl0sLbYoj1alF2PNsgghhSPZmIsDNbsi",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17YeWByFEWi8wPk3bnDHwi2AiW2Dl4Erh",
+      "name": "Calle Pena et al - 2022 - Trabajo remoto y productividad en una instancia de gestion educativa.pdf",
+      "kept_id": "1qXgdhjTyuOp-HJOD4zq6YebdoHMCcl8O",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "16PFLTtoufZ6gTMBIh1jfywvBaCmLMXTO",
+      "name": "Vanessa Moreira-Segovia Zambrano Barros - 2025 - Cultura, conocimiento y accion hacia una gestion educativa eficiente.pdf",
+      "kept_id": "1gTMhhcxapwQiOMuOfMwlgZMkiDkWKmQO",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1o-nrYX_hbk1FKSQAUUHPef41XezXBpqx",
+      "name": "10.48169_ecuatesis_0103202015.pdf",
+      "kept_id": "19w7eoe10M9x443_ZHeazahVseDRS0cCy",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GG-flGJEdVhIG5nHwEiRdHG_kuhZS1Az",
+      "name": "Hernandez Belmonte - 2026 - La autonomia curricular en la Nueva Escuela Mexicana una oportunidad para ejercer el lider.pdf",
+      "kept_id": "1dFxpilniHC7cOxXH7W07v7GSRco5Etcq",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1EAjlxlNUyDywHOAqrHLyw_q03N1zWbVD",
+      "name": "Gonzalo Aguirre - 2026 - Directio narrans rhetorical figures in times of (alleged) narrative crisis A study on the.pdf",
+      "kept_id": "12hbKm8HYLBxe19KFnmtOnegcSTHekiKa",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1T9Nc5IXKcM7LDyHS2X9bFynvZviOb8gn",
+      "name": "Camac Fernandez et al - 2023 - Cultura organizacional y gestion de la calidad del servicio educativo. IE n°3711 Fe y Aleg.pdf",
+      "kept_id": "1uBonthGRriqIdRVcIpW3hYO1XMNfsj7r",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1JtxyHnDXMteR3OS64KqCkOz1xmDSKgF8",
+      "name": "https___openalex.org_W7132621132.pdf",
+      "kept_id": "1F0_Vu1-xjVq_yMDCmXeQRHHQODJZqWRu",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1v5Pn6rGhCw9iaFKyf6pQrb-p0fbxgz1Z",
+      "name": "C. Laki Q. Badon - 2024 - A Systematic Review on the Impact of Gender Equity on Educational Leadership.pdf",
+      "kept_id": "1XN0MKBrTOIqH77jrUzL95mgmijPs_Eg7",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GZMpczwA5jtbR-H5y0jirzTgpqCFOTuH",
+      "name": "Konidari Stathopoulos - 2025 - System-level educational leadership as a resilience building mechanism The case of Greece.pdf",
+      "kept_id": "1iRAEt4PZuuHO1CC4vMDD1U77Hagffp9u",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1wLKyY6jDBr5338hr6NCHcXyDBHKlDxjt",
+      "name": "Korva Laine - 2023 - Understanding Leadership in Educational Leadership Research in Finland.pdf",
+      "kept_id": "1xcp8-b3DXfQDMsinmrsKCuvsH5B6006-",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1c5Uua7SuicM5ch8Vl9I0qJK1Dbru6f5G",
+      "name": "T. Kilag et al - 2023 - Anger and Stress Management Techniques for Successful Educational Leadership.pdf",
+      "kept_id": "1l850SRkixbxSIE4JjkQVSAwUnnyj1vxl",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1BeR7C0Kx9-s6ks57IPHsPN2ii7Lvoocg",
+      "name": "Mat Shoib et al - 2025 - DECISION MAKING AND EDUCATIONAL LEADERSHIP A COMPREHENSIVE SYSTEMATIC REVIEW.pdf",
+      "kept_id": "1Ssyc0oBQ6go-ZschvjuaQY95yTf49kcD",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1q-UAYLTqxdAYiZ1k6s3UnSQ99BDqlYxX",
+      "name": "Berges Puyo - 2022 - Ethical Leadership in Education A Uniting View Through Ethics of Care, Justice, Critique,.pdf",
+      "kept_id": "10GOPxJROwORlWx7IHPvmMhFqw5Ue-hm3",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1tteezGeqqcZdGjg8cX04-E3l2iOZ9aNu",
+      "name": "Hakkı Ozturk - 2020 - Book Review. Educational leadership and management Developing insights and skills.pdf",
+      "kept_id": "1O-JVdo6P24s2oS86j7_vMcuqPaxAezrf",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1x8gLbk_X5--LOliXUpUg-lGGs6wHcrUa",
+      "name": "Salazar Montoya L. Kew - 2023 - Marianismo and the changing role of Latinas in educational leadership.pdf",
+      "kept_id": "1nlDMHFzvPajNrqYRy9zxP6lzcRAlRc6x",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1RqxS09ZF9YJRnf-KicVoCRMB5gLo5izM",
+      "name": "Dimopoulos - 2020 - Educational Leadership Effectiveness. Is it a Matter of a Leader’s Characteristics, Behavi.pdf",
+      "kept_id": "1TUFpjMn9f18sLeFdHHzAYh7Q1c9jPvpH",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1KHQbSnSJ432Qt7I677iflWxqoaxVAd_L",
+      "name": "Jaraba Vergara et al - 2025 - Gestion educativa en Colombia analisis desde las desigualdades regionales.pdf",
+      "kept_id": "1cWPMfahY7mN7bd-QsY2Z37F3Vauoy-fD",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1bdk35FoFmIDpLvug1UQzxeRtX99UfYRf",
+      "name": "https___openalex.org_W7155253478.pdf",
+      "kept_id": "1078jq_fJ2KiK0IvoM5jmQw60GkMaJIjP",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1_3Qg-tHxzZcRF-Yc5t-zd8wI-7fI4HyD",
+      "name": "Jesus Garcia-Alvarez Consuelo Cobo-Rendon - 2022 - Psicologia positiva aplicada a la educacion como herramienta para la construccion de una c.pdf",
+      "kept_id": "1zfysh92rVs6LvTcPyOLcCAlIy6-Gpuuz",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1a7gB6pqGdfN5jJ-l1_AlkJNv_vX2yMRS",
+      "name": "Perez Zamora - 2022 - Incidencia de la gestion de los procesos de comunicacion institucional, toma de decisiones.pdf",
+      "kept_id": "1HwDXec2zOB3rLA1o6fHr6kaST9cG47f5",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1UCCkSOUmSH4Dk_gZ8J-ESraA9NA0qeYQ",
+      "name": "de Rengifo Damian Nunez - 2023 - Componente propuesta pedagogica del proyecto educativo institucional y su relacion con el.pdf",
+      "kept_id": "1jnnViHKXtkLesx-yWQuMn6je4Mqx8fH_",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "19j6Uasj0KzzE2YV0cpvU7zxF0BCFseHD",
+      "name": "10.59427_rcli_2024_v24cs.100-107.pdf",
+      "kept_id": "1xlCXpGEBTt3UgBeAj3Slpd-VH92tFmlm",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17tKkOg9oCLHcEKx_2L4ZNiYTzSK3yewl",
+      "name": "10.59427_rcli_2023_v23cs.1-13.pdf",
+      "kept_id": "1hv45Xe3sYnQBJxiZ1idTxgh64mQsqckw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1QC-9tsCtDu-i404vxLlY_tvv9QlvJMdK",
+      "name": "Llanos Chuquipa - 2023 - La participacion ciudadana en la educacion publica.pdf",
+      "kept_id": "1qh-4mW_nqMjCOT_2Z5AqraO40t1jp37V",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "10OZbsYt6QJ7fmCmb5zSKCAONPMquWHnw",
+      "name": "Rios Rios et al - 2024 - La Perspectiva de control interno en la gestion de tesoreria.pdf",
+      "kept_id": "1xSuUmrjZ5THCa9ipes9c5unfTKcVJ0g0",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1laUAmGUfKqEOl4EAWSWd2Qc3-NFOzEBG",
+      "name": "Ferreyra Diaz - 2025 - 13 perspectivas del liderazgo Orientaciones para fortalecer la formacion en gestion educat.pdf",
+      "kept_id": "1ZeGcruai6Pn7rxN9uDs91VYjTdDeuVut",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1uqoVknG1OhCPn4ghrZg0VKcqyLH8GDDn",
+      "name": "Vargas Cayetano Torrico Rocha - 2021 - Estrategias para la transformacion de la gestion educativa tomando en cuenta la recuperaci.pdf",
+      "kept_id": "1qhXPr1vM1UWx1mVRdc7Rzt1wxVDkFiDc",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1QQzO56LmN-69qtbPa52L4IS07aLkSQ1F",
+      "name": "Navarrete Criollo et al - 2024 - La Gestion Educativa y su Incidencia en el Proceso de Ensenanza Aprendizaje en Bachillerat.pdf",
+      "kept_id": "1lFprFUtwgairVkKFef3_kStwwGTiKtI0",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1R7dMFn-J9BWhJyuR8Om3zVvCwHgnL4bz",
+      "name": "Marjorie Valladares-Durand et al - 2022 - planificacion estrategica como mejora del desempeno docente en Peru.pdf",
+      "kept_id": "1GEUTc59tqxHfehXM0YUQAqkOhTSbLLLH",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1A_YN5rRl0o_h_mN4Rz8Eygz8UgWQ8F30",
+      "name": "Chung Diaz et al - 2022 - Sistema de control interno y gestion institucional de la Unidad de Gestion Educativa Local.pdf",
+      "kept_id": "17etFOqDp5p2X7Y1g3_AEJIyQe3pEV9YU",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1pPprh4grAKvLJNsjQZfCe5GmT0efJ4j1",
+      "name": "Malpartida Santos et al - 2024 - El liderazgo comunicativo. Una forma de integracion en la gestion educativa.pdf",
+      "kept_id": "1pSQ3bW44yXx6T3VAar4x9XfCqCAEb0px",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ubm2zxEjaslmkQwNTuH_wdxoMTJ2lGP3",
+      "name": "Luis Estevez-Mendez Moraleda Ruano - 2022 - Analisis de la percepcion docente sobre la gestion educativa del confinamiento por covid-1.pdf",
+      "kept_id": "1Qu50wXhd1IrxXILBfm2k6SPM-a_fVL3j",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1IcquyGxXjEzCqgoja-qluZJr6zrQw75A",
+      "name": "Garcia-Beltran et al - 2021 - Marco teorico para la evaluacion de la gestion educativa para el desarrollo de la competen.pdf",
+      "kept_id": "1MBVj1L39FoEuJrRFBYAJfbXK7GCgoNcR",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1O4-jr7Q9nAO2YRNzQp8-fcdnU123JzLX",
+      "name": "Isabel Esteves-Fajardo et al - 2022 - El liderazgo transformacional para la gestion educativa.pdf",
+      "kept_id": "1M9vH7vj6MrJj38DuE00jWwfopZOXrZQ_",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1gEbgjxw3qGyl5oSbOpW_IyGW3QZu57Ug",
+      "name": "Munoz Miraba et al - 2023 - Modelo de Gestion Educativa basado en el liderazgo transformacional para mejorar el desemp.pdf",
+      "kept_id": "1GOJ_TTeISpLlwdkncLa5r8uCy6oyGUHC",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1UYGEFo2SWP1hziF4x_Vp1P_NGhI9nt7x",
+      "name": "Augusto Reyes-Barrios Ponce Yactayo - 2023 - Estres laboral y clima organizacional en una unidad de gestion educativa local.pdf",
+      "kept_id": "1IVeRRiwfrRv-YvJs_yATw7EjHugF0OdU",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1EJ0vIaSlEQgw7H-4cVEKXh8SZTdPNDd1",
+      "name": "de Barbudez Ortiz Jimenez - 2021 - Leadership An opportunity for Educational Management.pdf",
+      "kept_id": "1zNyebrzjHwxfybtM0rG-n__TfoYXgsCB",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17PxI_ckcyroWmJ797UX5Nunt_OciYi9Z",
+      "name": "Palacio Sprockel et al - 2022 - Innovacion en la gestion educativa actores y procesos.pdf",
+      "kept_id": "1vEV5Ss4UjteVhrP5o7Y6tVaX9QL2oUgE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1LHXt8O9PLQ8elErwPKE_i8t15hZz8JJU",
+      "name": "Ayala - 2024 - La influencia del liderazgo transformacional en la gestion educativa.pdf",
+      "kept_id": "1oc17b6xe6WXYuvw0lky5LJnqtTUa-MS_",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1KyDJy-4aCVNnjfvtDVm5_PMORquIkbrp",
+      "name": "https___openalex.org_W3181632419.pdf",
+      "kept_id": "14ab6HjYtgsXXtZut8DPn6Di9aFLkeieL",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1j00TJh777ryH5MFXbfnOUUDUcgaQbNvR",
+      "name": "R. Jackson - 2023 - Educational Leadership.pdf",
+      "kept_id": "1RjOs3YJyZ_0xAhvUt2foYPeoQ7j7aVbz",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1C6-Ux6Wq_kXfknTgvsXFckLF4e806mxw",
+      "name": "10.35622_inudi.c.02.46.pdf",
+      "kept_id": "1UbvfNR3wZitABXuDg1YumdEoaoOoXQh5",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1StjEkENIX3UBRik5ON9jY82jQwEWI5Sm",
+      "name": "https___openalex.org_W7155254751.pdf",
+      "kept_id": "1G_9lVFJWs7REXRNm4J9ghJUGW7JrP9AZ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1FGMPOnudQ5tmojBcUnG-udZwn7ip9cmu",
+      "name": "https___openalex.org_W7132529729.pdf",
+      "kept_id": "1XlmRWAv7hQGcq7-03zsAAPfaZ1C9mFGz",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1IpXKHhGQk4SUaMmasXRHHNkCJo4wVWtz",
+      "name": "Ruiz Cutipa - 2022 - Liderazgo directivo y gestion administrativa de las instituciones educativas publicas del.pdf",
+      "kept_id": "1aYzrC5dd08wXnWc5PSMecVKN8SZWcLJD",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1q-srvsTT--4aQOiWLg6sQo-YzBy0Ut_F",
+      "name": "https___openalex.org_W7155261815.pdf",
+      "kept_id": "1lKX3WeaR-gu2Nau3GjTYi3tNiIO9_o1Y",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1AM5EIWJbkczbAGyyWxdF4j_JQgIAYflI",
+      "name": "https___openalex.org_W7155264331.pdf",
+      "kept_id": "1OfCPpa60WvEHAP5QhSvMLt-BEgZKLY7_",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1rRI9UOVLG6LCSjan59jlzt_pgoM_E6kb",
+      "name": "https___openalex.org_W7133385035.pdf",
+      "kept_id": "15JC3QhVXG9Ad31hXhwg8fQe8dqBI06mF",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1H9xG4aRPrAIPae43EkBP--k-fGmNB_XF",
+      "name": "https___openalex.org_W7155291482.pdf",
+      "kept_id": "1UErVtwUySJ2cgVWBXGpNM5yzkkj6jY04",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1GIKLX4zzbwWqtAy1sc9ubKdh8tWGJjuj",
+      "name": "https___openalex.org_W7155256444.pdf",
+      "kept_id": "1iakVSsIn25m4E2W9oWVLtWf6pRgDRqAW",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1TaCTVNkZ-3zmqsmDnNJyEyUonV7jEgtE",
+      "name": "https___openalex.org_W7155303858.pdf",
+      "kept_id": "1zvAiH9xGYx3_dFUCX6g1cMjljd0rxUGQ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1hYzE6xgbrJfqICo8uUYtITej-vXrfYJM",
+      "name": "https___openalex.org_W7132711186.pdf",
+      "kept_id": "14FDBmtW_a4sVta3uEksFzNvoJg3JyNXc",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "19nMAqQEu9GO2uQQmqogG7Vdz_r4uXxlg",
+      "name": "https___openalex.org_W7133092721.pdf",
+      "kept_id": "1YgJygdmZHGX4AkuNhukGbajcvPk-8saU",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17fvx1SBPv_bLVs4JKljF3QgwTtcLDEuY",
+      "name": "https___openalex.org_W7155280653.pdf",
+      "kept_id": "1BQtmqetmoP4AHLSFr8kYmhSqXIHBq737",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1XzzxaEiOzY0FmMpPLggvX9nx49Uo25yv",
+      "name": "https___openalex.org_W7132891391.pdf",
+      "kept_id": "1AO45FF3Prk_lGgE-Xz8KFodWpSVtBXT0",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "18G8DsJrN8GHWK4C1_vVOCulq7H5BZzeb",
+      "name": "https___openalex.org_W7155278988.pdf",
+      "kept_id": "13nGJRPenGseN1ytzzB156I7-Umdc-emw",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1uFhcwV6YtUd4OkWNCfRG9bTwk5wjgfiJ",
+      "name": "https___openalex.org_W7133091365.pdf",
+      "kept_id": "1OxrWIPTfVBWCWI6oTxX7ov5MZTktPXIf",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1QZQL11V4WftMr5RSNogghGKAhSvNwqwI",
+      "name": "https___openalex.org_W7155345198.pdf",
+      "kept_id": "1AMBtBs0JDH7Qzr5AS_V4awz0zuKZI_Uc",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1x90jErYzo9qvMB4sOUUr2O6JscR8Frwn",
+      "name": "https___openalex.org_W7155295686.pdf",
+      "kept_id": "1XS-ZBvgYTxsYqOv5AI4m4ZGbe0GUQxpY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1aupsJ4n34YLmnpJi_NwvMexn12Lcmyp1",
+      "name": "https___openalex.org_W7155249715.pdf",
+      "kept_id": "1McoW1jsM2GDZ4z-ESVzIZhZxVluzJSQ-",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17-_50EGpw83e3ilclkgAx-IH614Ad28U",
+      "name": "https___openalex.org_W7155298969.pdf",
+      "kept_id": "18I87R-s13S-uWEsMW6JV0fH3teQvQfuK",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1tsdNeAtjLuctAA3fOQ1sK3wGYbNAHQ5-",
+      "name": "https___openalex.org_W7155252711.pdf",
+      "kept_id": "1SjZHKFIdmzJldpyRL-mXsFCRsFBHHYsF",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1LtBfv1Mvy-c6zX1nHiboFRjuTSWnajEV",
+      "name": "https___openalex.org_W7155259849.pdf",
+      "kept_id": "1pAooVjnmDGAvcpx81_55Xq8Ib_rp3RmS",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1vlsgEP4T1AzT679mAP4oDlOeh0dxN4Ot",
+      "name": "https___openalex.org_W7155301455.pdf",
+      "kept_id": "18e9ItYm09hE_0VAvLjH8TyAz4lEgF3gE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Ebzljj6No0jJ7v3FlUH0EWSVeAnMiIA7",
+      "name": "https___openalex.org_W7155287450.pdf",
+      "kept_id": "1UsdyLiMNjZCCnRfQYLfYkuApjgMjLRAP",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "17YeEPZPb6_A_nfc9LRi_Yqje5FkWJRJW",
+      "name": "https___openalex.org_W7155316799.pdf",
+      "kept_id": "1B1cJRmvG0r_mOCWOSwMyOXsPdk3D7P50",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Ww8EGwrVY7HYVzABGmMMIjB1R7mTA1CA",
+      "name": "https___openalex.org_W7070706359.pdf",
+      "kept_id": "19qYf5egiphBal5H2A7EAKcyvMLizekva",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1KQVnM25cUPVs1LY8CqPsNsA1il00elpJ",
+      "name": "https___openalex.org_W7155259253.pdf",
+      "kept_id": "1XkYhnhGaljD7aoXlkGwkeOfB9OA_F84I",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1CaGAhMQYjkv_uybHCotDgA_cy3Yu5ThH",
+      "name": "https___openalex.org_W7155283425.pdf",
+      "kept_id": "1iPS5Zogfno2_NkgTgRzPZvfbdGladeMj",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1hQ4b83qZVfAXFmMlSda7cSU-WenA9lwj",
+      "name": "https___openalex.org_W7155295467.pdf",
+      "kept_id": "196ArapGyltgrTJ2CYKx-OoAUr4n0IrIu",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1uRAex37Vn2AbF6nX51MgK2rvFbKTaunH",
+      "name": "https___openalex.org_W7155257527.pdf",
+      "kept_id": "1dsoTMJamtd6r4IIgJup3JxuIOUz3uawr",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1qXrERsXnv6q86vF9KyPmX5nOiP4dsjLp",
+      "name": "https___openalex.org_W7155248426.pdf",
+      "kept_id": "1p9d1VdgG5PZ2ahZHQFFlxdqAaFEtuTzU",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1TFBU-u-R7EHtRdlGXPzJkdZ6VAnyZK_2",
+      "name": "https___openalex.org_W7155275412.pdf",
+      "kept_id": "1UsXQyTDyj2_MJqrb2sZIGZdbbbrSUgC9",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1cDlgB-S_zzmKaw3jQqnLa34cLULMInVp",
+      "name": "https___openalex.org_W7155305706.pdf",
+      "kept_id": "1umJDsLQn0exKc76yasYxfr4bY1Wqpi3u",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "16TntvaZIEPeqkctgggbciAPqCCuVKRUA",
+      "name": "https___openalex.org_W7155280228.pdf",
+      "kept_id": "1UoZrf8PZMJa5mPl-MJoRel73GtpeNh2t",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "11DsQUauuIWCzj9E-VxKeKQb2Fj5Yx2su",
+      "name": "https___openalex.org_W7155259060.pdf",
+      "kept_id": "1B9aOHXFTSqocpb4k_ugm8hA_RSmYQCkf",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1pa6AXM1PhiRDIPEFVHGMZSA71ILtgTqh",
+      "name": "https___openalex.org_W7112102013.pdf",
+      "kept_id": "1F0mr_bNCy25mPtVxFg85Jq9GswTJK9Tv",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "10c7nlxwfWzl2O3tS5BrIE5dRmVN3Kl0K",
+      "name": "https___openalex.org_W7112160825.pdf",
+      "kept_id": "1AaNXGjy0kgKLPBtKBLZFJqU2ar4aXvVV",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Ndd7crw7cpxFgIUAHNBToTyfeEoy5zkV",
+      "name": "https___openalex.org_W7155257687.pdf",
+      "kept_id": "1z921pb8aGpSg_fLkfsYjcjbXT2x3oB4S",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1bAd_QRmcWmY7Vu11R-yiSJ4CrbVWaTdd",
+      "name": "https___openalex.org_W7155299268.pdf",
+      "kept_id": "1lxqQXoYICy0KZ2Mftgu-tCaCYaOaSrHV",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1IjY6T-479ZwRrSO1dMEuY-jmX59_pSub",
+      "name": "https___openalex.org_W7155302898.pdf",
+      "kept_id": "18F3jamHoVfTNoxJubWCP91Ddfw4HaDyy",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1mbV6CG4kgkxxzZJnJROk6D-8r9VsoPZI",
+      "name": "https___openalex.org_W7155264017.pdf",
+      "kept_id": "1GqxFx-SYXPM4aMV56TaXHHZTzn5VIA5G",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1arJdJVKDLD0WU3p7IqK-10PM1cV0tByC",
+      "name": "https___openalex.org_W7155277924.pdf",
+      "kept_id": "18wPDoXixCNgUZ6pObV-6_nEcr4_8KJRQ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Y4HXZxuQj8XdCW_Ut4_knz2H4clPio6i",
+      "name": "https___openalex.org_W7155248657.pdf",
+      "kept_id": "1MoJLqzcAPWtDWishddqW6OL9sDvhmPMs",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1I4jo-G2mDfe_UguLiyPJ_GL0tpKbLsae",
+      "name": "https___openalex.org_W7155319050.pdf",
+      "kept_id": "1kRgu2Sp7jcHdpAs-riIIlJwO44Xj57x-",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "15tGs9NbMJqS7iEYAn-kRAc0Y4fy3P1kR",
+      "name": "https___openalex.org_W7155302592.pdf",
+      "kept_id": "1N-0T3vejFu5hdyhEsKyIYxR-oWBASPaY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1MYAEq0Q_746hx9IF6I_Q2OEPUZuxqRtc",
+      "name": "https___openalex.org_W7155282813.pdf",
+      "kept_id": "1CIABLwiPB5EeswevyUuQkplmJgNb_8m5",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ltkbLq1ViySUpa6Trqfgx1WO9jPopwKo",
+      "name": "https___openalex.org_W7155311400.pdf",
+      "kept_id": "1D6pYG4fpr3vLo7D6Z_fJw-BS8suhF_fX",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1by0A5lglJRiXXb4lIa14kHLQR5DGvr1I",
+      "name": "https___openalex.org_W7113170877.pdf",
+      "kept_id": "17SKEb6n0AD42VbxtuBr9D2mMUlcZtp9z",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1285fmFXetd-jv2saGGNUTk4mmjfeJmT_",
+      "name": "https___openalex.org_W7155286386.pdf",
+      "kept_id": "1yfKPWDi6wIgAyAgETf0g2jTFhdrrlT0C",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1qRCWo6_DkLZQ3m6H-zeynhk045T6iss6",
+      "name": "https___openalex.org_W7118113896.pdf",
+      "kept_id": "1BQ90JlDSAYZPtNrMX904jrU25sJaD7Ha",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1ZNmN1riH6VUB8X-iYupG5USMuXU8BC7h",
+      "name": "https___openalex.org_W7120627389.pdf",
+      "kept_id": "15Wu6JS0tz7wifdZd8k-GjuAm5_Qcac1e",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1Mj5nBCKRIORuTGNttOAlZdA2M6RAyHTs",
+      "name": "Alvarez Ramirez et al - 2023 - La gestion administrativa en un centro educativo indigena Caso de Ujarras.pdf",
+      "kept_id": "18CzRqgawXYEtKaCQ67qllTa5tCp4f8GY",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1jR0dE6-lae_mB8A4DDkIoILl3iL2dZXA",
+      "name": "Gonzalo Aguirre et al - 2025 - Become the error in the matrix A critical study of leadership discourses for school manage.pdf",
+      "kept_id": "1nte6y1zKlzHQy2XrVyj2yq_0EB8Yp7ZJ",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "10IpcmWHos9H9lr3HHp2J9eAQ1rfwJX0X",
+      "name": "E. Sanchez Thornton - 2023 - Gender Issues in K-12 Educational Leadership.pdf",
+      "kept_id": "1UfA9utd0g7yqNf0f4t1z1iJSdpKU77cA",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1eZnDeR-LcFU4Mxkhr4KwhgnqOV_hQD5m",
+      "name": "Cruz Vazquez Moreno Muro - 2026 - Gestion educativa y desercion estudiantil en Educacion Basica Alternativa revision bibliom.pdf",
+      "kept_id": "1mYKfmZCz6HVn7F_HqAt-x4kW1RYdblYE",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1nfJbGTbm9q_iI8cd3hsayKy_Ug2bt-Hi",
+      "name": "Peralta Tapia et al - 2023 - Gestion administrativa en unidades de gestion educativa una revision literaria.pdf",
+      "kept_id": "1-gYJXro3Tfj9sE3qVHMR97PwU0o7YnOI",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    },
+    {
+      "id": "1chpq29bgfpS-G6yRGhgpgycgQGBIXV8K",
+      "name": "Wang et al - 2023 - Measuring educational leadership in Singapore re-examining the psychometric properties of.pdf",
+      "kept_id": "17lKwF-tCrC8YGDqXvisvmutmUiq0kUzs",
+      "archive_folder": "1Pr_3XiU3hjutfcKzAIgW5o6iAli9aIKJ"
+    }
+  ]
+}

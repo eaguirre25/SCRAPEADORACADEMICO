@@ -43,7 +43,8 @@ getv <- function(x, name) if (is.null(x[[name]])) "" else as.character(x[[name]]
 doi_from_name <- function(nombre) {
   doi <- sub("\\.pdf$", "", nombre, ignore.case=TRUE)
   doi <- sub("_", "/", doi, fixed=TRUE)
-  tolower(trimws(doi))
+  doi <- tolower(trimws(doi))
+  if (grepl("^10\\.[0-9]{4,9}/", doi)) doi else ""
 }
 
 manifest <- tibble(

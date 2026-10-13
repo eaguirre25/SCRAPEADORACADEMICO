@@ -1,7 +1,7 @@
 /* Explicit user review, stored locally and exportable. Algorithmic evidence is preserved. */
 (() => {
   const storageKey='scrapeador-topic-reviews-v1';
-  const recordsKey=(model,topic)=>`${model}:${topic}`;
+  const recordsKey=(model,topic)=>`${model}:${NETWORKS[model]?.fingerprint||"unversioned"}:${topic}`;
   let reviews={},storageOK=true,active=null,returnFocus=null,modelData=null,page=0,filtered=[];
   try{reviews=JSON.parse(localStorage.getItem(storageKey)||'{}');if(!reviews||typeof reviews!=='object'||Array.isArray(reviews))reviews={};}catch(_){storageOK=false;}
   const status=document.getElementById('topic-review-status');
@@ -28,12 +28,12 @@
     }
   }
   function saveForm(){
-    const key=recordsKey(active.model,active.topic);reviews[key]={...(reviews[key]||{}),model:active.model,topic:active.topic,label:el('review-label').value.trim(),state:el('review-state').value,notes:el('review-notes').value,updated_at:new Date().toISOString(),documents:reviews[key]?.documents||{}};
+    const key=recordsKey(active.model,active.topic);reviews[key]={...(reviews[key]||{}),model:active.model,model_fingerprint:NETWORKS[active.model]?.fingerprint,topic:active.topic,label:el('review-label').value.trim(),state:el('review-state').value,notes:el('review-notes').value,updated_at:new Date().toISOString(),documents:reviews[key]?.documents||{}};
     const saved=persist();el('review-save-status').textContent=saved?'Guardado en este navegador. Exportá para conservar una copia o trasladarla a otro equipo.':'No se pudo guardar en el navegador. Exportá antes de cerrar.';
     applyReviews();renderNetwork(false);
   }
   function markDocument(id,value){
-    const key=recordsKey(active.model,active.topic),r=reviews[key]||{model:active.model,topic:active.topic,state:'pending',label:el('review-label').value.trim(),notes:'',documents:{}};
+    const key=recordsKey(active.model,active.topic),r=reviews[key]||{model:active.model,model_fingerprint:NETWORKS[active.model]?.fingerprint,topic:active.topic,state:'pending',label:el('review-label').value.trim(),notes:'',documents:{}};
     r.documents||={};r.documents[id]=value;r.updated_at=new Date().toISOString();reviews[key]=r;persist();
     el('review-save-status').textContent=storageOK?'Decisión documental guardada en este navegador.':'Exportá para conservar la decisión documental.';
   }
@@ -94,7 +94,7 @@
       const data=JSON.parse(await event.target.files[0].text());if(data.schema!=='scrapeador-topic-reviews-v1'||!data.reviews||Array.isArray(data.reviews))throw Error();
       const staged={...reviews};
       for(const [key,r]of Object.entries(data.reviews)){
-        if(!r||typeof r!=='object'||!NETWORKS[r.model]||!topicNodes(r.model).some(t=>String(t.id)===String(r.topic))||key!==recordsKey(r.model,r.topic))throw Error();
+        if(!r||typeof r!=='object'||!NETWORKS[r.model]||!topicNodes(r.model).some(t=>String(t.id)===String(r.topic))||(key!==recordsKey(r.model,r.topic)&&key!==`${r.model}:${r.topic}`&&key!==`${r.model}:${r.model_fingerprint}:${r.topic}`))throw Error();
         if(!['pending','validated','needs_changes'].includes(r.state)||typeof r.label!=='string'||typeof r.notes!=='string'||r.label.length>250||r.notes.length>10000)throw Error();
         if(reviews[key]?.updated_at&&reviews[key].updated_at>r.updated_at)continue;
         if(r.documents&&Object.values(r.documents).some(v=>!['pending','fits','question','reassign','exclude'].includes(v)))throw Error();
@@ -104,5 +104,5 @@
     }catch(_){status.textContent='Archivo de revisión incompatible o inválido. Las decisiones existentes se conservan.';}
     event.target.value='';
   };
-  applyReviews();if(!storageOK)status.textContent='Guardado local no disponible. Exportá las revisiones para conservarlas.';
+  applyReviews();if(Object.keys(reviews).some(key=>!Object.keys(NETWORKS).some(model=>key.startsWith(`${model}:${NETWORKS[model].fingerprint}:`))))status.textContent="Hay revisiones de versiones anteriores conservadas para exportar. Revisá los temas actuales antes de aplicarlas.";if(!storageOK)status.textContent='Guardado local no disponible. Exportá las revisiones para conservarlas.';
 })();
