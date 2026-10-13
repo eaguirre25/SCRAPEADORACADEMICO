@@ -176,6 +176,32 @@ def search_bertopic_parameters(config: dict[str, Any], *, corpus_unit: str = "me
     return rows
 
 
+def summarize_stability_runs(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Compare each independent seed with the reference; never count self-similarity."""
+    import numpy as np
+
+    independent = [row for row in rows if str(row["seed"]) != str(row["base_seed"])]
+    metrics = {
+        "stability_ari_mean": "adjusted_rand_index",
+        "stability_nmi_mean": "normalized_mutual_information",
+        "centroid_stability_mean": "topic_centroid_similarity",
+        "top_word_jaccard_mean": "jaccard_top_words",
+    }
+    summary = {
+        key: round(float(np.mean([float(row[column]) for row in independent])), 6)
+        if independent else ""
+        for key, column in metrics.items()
+    }
+    summary.update({
+        "topic_count_variation": round(float(np.std([float(row["topic_count"]) for row in rows])), 6) if rows else "",
+        "outlier_variation": round(float(np.std([float(row["outlier_share"]) for row in rows])), 6) if rows else "",
+        "stability_independent_comparisons": len(independent),
+        "stability_reference_seed": rows[0]["base_seed"] if rows else "",
+        "stability_status": "computed_independent_runs" if independent else "insufficient_independent_runs",
+    })
+    return summary
+
+
 def run_bertopic_stability(config: dict[str, Any], *, corpus_unit: str = "metadata", output_name: str = "metadata_multilingual", finalists_only: bool = True) -> list[dict[str, Any]]:
     import numpy as np
     from hdbscan import HDBSCAN
@@ -212,7 +238,9 @@ def run_bertopic_stability(config: dict[str, Any], *, corpus_unit: str = "metada
             else: centroid=0.0; word=0.0
             centroid_scores.append(centroid); word_scores.append(word)
             detail.append({"solution_id":solution_id,"base_seed":base_seed,"seed":seed,"adjusted_rand_index":round(ari,6),"normalized_mutual_information":round(nmi,6),"topic_centroid_similarity":round(centroid,6),"jaccard_top_words":round(word,6),"topic_count":counts[-1],"outlier_share":round(outliers[-1],6),"alignment_method":"Hungarian","status":"computed"})
-        summaries[solution_id]={"stability_ari_mean":round(float(np.mean(aris)),6),"stability_nmi_mean":round(float(np.mean(nmis)),6),"centroid_stability_mean":round(float(np.mean(centroid_scores)),6),"top_word_jaccard_mean":round(float(np.mean(word_scores)),6),"topic_count_variation":round(float(np.std(counts)),6),"outlier_variation":round(float(np.std(outliers)),6),"stability_status":"computed_five_runs"}
+        summaries[solution_id] = summarize_stability_runs([
+            row for row in detail if row["solution_id"] == solution_id
+        ])
     write_csv(out / "stability_runs.csv", detail)
     for index,row in enumerate(candidates):
         solution_id=f"S{index+1}"; row.update({"solution_id":solution_id, **summaries[solution_id]})

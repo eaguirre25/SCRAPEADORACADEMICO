@@ -49,7 +49,8 @@ def test_preferred_solution_has_stability_and_preserves_outliers_when_outputs_ex
     if not selected.exists() or not preferred.exists(): pytest.skip("corrected execution not generated")
     payload = json.loads(selected.read_text(encoding="utf-8")); chosen = payload["selected"]
     assert chosen["solution_status"] == "preferred_provisional"
-    assert chosen["stability_status"] == "computed_five_runs"
+    assert chosen["stability_status"] == "computed_independent_runs"
+    assert int(chosen["stability_independent_comparisons"]) == 4
     assert chosen["stability_ari_mean"] != ""
     docs = list(__import__("csv").DictReader((preferred / "document_topics.csv").open(encoding="utf-8")))
     assert any(row["original_topic"] == "-1" and row["accepted_reassignment"].casefold() == "false" for row in docs)

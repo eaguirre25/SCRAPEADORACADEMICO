@@ -11,6 +11,11 @@ def _truth(value: str) -> bool:
     return str(value).casefold() in {"1", "true", "yes", "si", "sí"}
 
 
+def _bertopic_outlier(row: dict[str, str]) -> bool:
+    # -1 denotes absence of a cluster, even when an older export omits the flag.
+    return str(row.get("topic_id", "")) == "-1" or _truth(row.get("is_outlier", ""))
+
+
 def _terms(value: str) -> set[str]:
     return {item.strip().casefold() for item in value.split("|") if item.strip()}
 
@@ -21,7 +26,8 @@ def align_topics(
     *, language: str = "",
 ) -> list[dict[str, Any]]:
     stm_by_doc = {row.get("publication_document_id") or row["document_id"]: row for row in stm_docs}
-    bert_by_doc = {row.get("publication_document_id") or row["document_id"]: row for row in bert_docs}
+    bert_by_doc = {row.get("publication_document_id") or row["document_id"]: row for row in bert_docs
+                   if not _bertopic_outlier(row)}
     shared = stm_by_doc.keys() & bert_by_doc.keys()
     stm_sets: dict[str, set[str]] = defaultdict(set); bert_sets: dict[str, set[str]] = defaultdict(set)
     for doc_id in shared:
@@ -80,6 +86,7 @@ def compare_models(config: dict[str, Any]) -> dict[str, int]:
         raise FileNotFoundError("BERTopic metadata multilingual output is required")
     bert_docs = read_csv(bert_path / "document_topics.csv"); bert_topics = read_csv(bert_path / "topics.csv")
     all_alignment: list[dict[str, Any]] = []; document_alignment: list[dict[str, Any]] = []
+    outlier_exclusions: list[dict[str, Any]] = []
     for language in config.get("multilingual", {}).get("stm_languages", ["es", "en", "pt"]):
         corrected = root / "stm" / f"metadata_{language}_corrected"
         stm_path = corrected if (corrected / "document_topics.csv").exists() else root / "stm" / f"metadata_{language}"
@@ -95,21 +102,28 @@ def compare_models(config: dict[str, Any]) -> dict[str, int]:
         for document_id in sorted(stm_by.keys() & bert_by.keys()):
             stm, bert = stm_by[document_id], bert_by[document_id]
             aligned = relation.get((stm["topic_id"], bert["topic_id"]), {})
-            document_alignment.append({
+            is_outlier = _bertopic_outlier(bert)
+            document_row = {
                 "publication_document_id": document_id, "title": stm.get("title") or bert.get("title"),
                 "year": stm.get("year") or bert.get("year"), "language": language, "corpus": "metadata",
                 "stm_model": stm.get("model", ""), "stm_topic": stm["topic_id"],
                 "stm_probability": stm.get("topic_probability", ""), "bertopic_model": bert.get("model", ""),
                 "bertopic_topic": bert["topic_id"], "bertopic_probability": bert.get("topic_probability", ""),
-                "bertopic_outlier": bert.get("is_outlier", ""), "relationship": aligned.get("relationship", "no_match"),
-                "combined_alignment": aligned.get("combined_alignment", 0),
+                "bertopic_outlier": is_outlier,
+                "relationship": "bertopic_outlier_not_aligned" if is_outlier else aligned.get("relationship", "no_match"),
+                "combined_alignment": 0 if is_outlier else aligned.get("combined_alignment", 0),
                 "ambiguous": _truth(stm.get("is_ambiguous", "")) or _truth(bert.get("is_ambiguous", "")),
                 "human_review_status": "pending",
-            })
+            }
+            document_alignment.append(document_row)
+            if is_outlier:
+                outlier_exclusions.append({**document_row, "exclusion_reason": "BERTopic has no assigned cluster"})
     out = root / "comparison"
     write_csv(out / "stm_bertopic_alignment.csv", all_alignment)
     write_csv(out / "topic_relationships.csv", all_alignment)
     write_csv(out / "document_alignment.csv", document_alignment)
+    write_csv(out / "outlier_alignment_exclusions.csv", outlier_exclusions,
+              fields=list(document_alignment[0]) + ["exclusion_reason"] if document_alignment else ["publication_document_id", "exclusion_reason"])
     # Compatibility aliases for the existing dashboard while it migrates.
     write_csv(out / "topic_alignment.csv", all_alignment)
     write_csv(out / "document_model_comparison.csv", document_alignment)
@@ -117,7 +131,8 @@ def compare_models(config: dict[str, Any]) -> dict[str, int]:
         {"metric": "shared_documents", "value": len(document_alignment)},
         {"metric": "stm_language_models_compared", "value": len({row["stm_model"] for row in all_alignment})},
         {"metric": "bertopic_documents", "value": len(bert_docs)},
-        {"metric": "bertopic_outliers", "value": sum(_truth(row.get("is_outlier", "")) for row in bert_docs)},
+        {"metric": "bertopic_outliers", "value": sum(_bertopic_outlier(row) for row in bert_docs)},
+        {"metric": "shared_documents_excluded_from_topic_alignment", "value": len(outlier_exclusions)},
         {"metric": "one_to_one_alignments", "value": sum(row["relationship"] == "one_to_one" for row in all_alignment)},
         {"metric": "comparison_status", "value": "exploratory_pending_human_review"},
     ]

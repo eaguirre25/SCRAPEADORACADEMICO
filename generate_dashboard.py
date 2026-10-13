@@ -753,9 +753,9 @@ def topic_cards(rows, model, model_key):
 
 alignment_rows = sorted(topic_alignment, key=lambda row: float(row.get("combined_alignment") or row.get("combined_similarity") or 0), reverse=True)[:20]
 alignment_html = "".join(
-    f'<tr><td>STM {html_lib.escape(s(row.get("stm_topic")))}</td><td>BERTopic {html_lib.escape(s(row.get("bertopic_topic")))}</td>'
+    f'<tr><td>{html_lib.escape(s(row.get("stm_model")))} · {html_lib.escape(s(row.get("language")))} · T{html_lib.escape(s(row.get("stm_topic")))}</td><td>BERTopic T{html_lib.escape(s(row.get("bertopic_topic")))}</td>'
     f'<td>{html_lib.escape(s(row.get("relationship") or row.get("alignment_status")))}</td><td>{html_lib.escape(s(row.get("combined_alignment") or row.get("combined_similarity")))}</td></tr>'
-    for row in alignment_rows
+    for row in alignment_rows if s(row.get("bertopic_topic")) != "-1"
 ) or '<tr><td colspan="4">Ejecute ambos modelos y la comparacion para completar esta vista.</td></tr>'
 available_models = []
 for group, key, label, kind, path in MODEL_VIEWS:
@@ -764,6 +764,12 @@ for group, key, label, kind, path in MODEL_VIEWS:
         model_rows = [row for row in model_rows if s(row.get("topic_id")) != "-1"]
     available_models.append((group, key, label, kind, model_rows))
 first_model = "bertopic-macros"
+stm_stability_warning = (
+    "En STM, las réplicas de estabilidad actuales no convergieron: la selección de temas requiere revisión."
+    if any("nonconverged" in s(row.get("selection_status") or row.get("model_status"))
+           for _, _, _, kind, rows in available_models if kind == "STM" for row in rows)
+    else "La convergencia y la estabilidad deben revisarse antes de interpretar la selección de temas."
+)
 group_labels = {"principal": "Modelo principal", "comparative": "Modelos comparativos", "historical": "Históricos"}
 model_options = "".join(
     f'<optgroup label="{group_labels[group]}">' + "".join(
@@ -776,7 +782,7 @@ model_panes = "".join(
     for _, key, _, kind, rows in available_models if rows
 )
 hybrid_section = f'''<section class="tm-section" id="modelado-tematico">
-  <div class="tm-head"><div><h2>Modelado temático</h2><p><strong>Elegí el modelo y abrí una tarjeta para revisar sus documentos.</strong> El selector cambia los temas y la red.</p></div>
+  <div class="tm-head"><div><h2>Modelado temático</h2><p><strong>Elegí el modelo y abrí una tarjeta para revisar sus documentos.</strong> El selector cambia los temas y la red.</p><p>Resultados exploratorios: validación humana pendiente. Los modelos actuales principales y comparativos se estimaron sobre metadatos bibliográficos; no representan un análisis del texto completo de todos los PDF. {stm_stability_warning} BERTopic mantiene los documentos sin tema fuera de la comparación temática.</p></div>
   <select id="tm-select" onchange="showTopicModel(this.value)">{model_options}</select></div>
   {model_panes}
   <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th>Topico STM</th><th>Topico BERTopic</th><th>Relacion</th><th>Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>

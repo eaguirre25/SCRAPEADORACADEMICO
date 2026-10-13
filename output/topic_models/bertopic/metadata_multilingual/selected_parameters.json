@@ -1,6 +1,6 @@
 {
   "status": "human_review_required",
-  "selection_basis": "multi-criteria macro screen plus five-run stability",
+  "selection_basis": "multi-criteria macro screen plus four independent seed comparisons to reference (five fitted runs)",
   "embedding_manifest": {
     "fingerprint": "eaf8ba05a3447323f688e14e47a150f4f8846ca0f18018ccbcb78542c67e0c63",
     "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
@@ -90,13 +90,15 @@
     "rank": "2",
     "solution_status": "preferred_provisional",
     "human_review_status": "pending",
-    "stability_status": "computed_five_runs",
+    "stability_status": "computed_independent_runs",
     "solution_id": "S2",
-    "stability_ari_mean": 0.807178,
-    "stability_nmi_mean": 0.872364,
-    "centroid_stability_mean": 0.998559,
-    "top_word_jaccard_mean": 0.750031,
+    "stability_ari_mean": 0.758972,
+    "stability_nmi_mean": 0.840456,
+    "centroid_stability_mean": 0.998199,
+    "top_word_jaccard_mean": 0.687538,
     "topic_count_variation": 1.16619,
-    "outlier_variation": 0.007112
+    "outlier_variation": 0.007112,
+    "stability_independent_comparisons": 4,
+    "stability_reference_seed": "42"
   }
 }

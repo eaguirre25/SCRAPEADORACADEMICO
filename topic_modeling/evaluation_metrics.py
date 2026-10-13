@@ -387,7 +387,7 @@ def rebuild_model_runs(config: dict[str, Any]) -> list[dict[str, Any]]:
                 row["model_family"] == "STM" and row["is_latest_for_model"] and not row["is_archived"] and row["corpus_unit"] == "metadata"
             ))
             row["notes"] = (
-                "Modelo principal vigente; solución preferred_provisional de 14 macrotemas."
+                f"Modelo principal vigente; solución preferred_provisional de {sum(int(topic['topic_id']) >= 0 for topic in read_csv(root / row['model_path'] / 'topics.csv'))} macrotemas."
                 if row["is_preferred_model"] else
                 "Ejecución histórica excluida de las tablas principales." if row["is_archived"] else
                 "Modelo comparativo vigente."
@@ -451,7 +451,7 @@ def recompute_evaluation(config: dict[str, Any], recompute_model: bool = False) 
     metadata_rows=[]; coherence_rows=[]; heterogeneity=[]; language_rows=[]; priority_rows=[]; preferred_topic_metrics=[]
     contamination_by_topic: dict[int, set[str]] = {}
     topic_by_id = {int(row["topic_id"]): row for row in topics}
-    for topic_id in range(14):
+    for topic_id in sorted(topic_by_id):
         topic_docs = by_topic[topic_id]
         meta = metadata_metrics(topic_docs, fields, config)
         if meta.get("dominant_source") and global_source_values:
@@ -578,7 +578,7 @@ def recompute_evaluation(config: dict[str, Any], recompute_model: bool = False) 
     audit=build_evaluation_audit(config, corrections_applied=True, extra={"frozen_hashes_before":frozen_before,"frozen_hashes_after":frozen_after,"coherence_global":coherence_global,"metadata_fields":fields,"join_coverage":len(joined)/len(docs)})
     (evaluation/"evaluation_audit.json").write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding="utf-8")
     write_metric_definitions(evaluation/"metric_definitions.md")
-    return {"status":"evaluation_only_complete","preferred_topics":14,"documents":len(docs),"frozen":frozen_before==frozen_after,"priority_top5":[row["topic_id"] for row in priority_rows[:5]]}
+    return {"status":"evaluation_only_complete","preferred_topics":len(topics),"documents":len(docs),"frozen":frozen_before==frozen_after,"priority_top5":[row["topic_id"] for row in priority_rows[:5]]}
 
 
 def build_evaluation_audit(config: dict[str, Any], corrections_applied: bool = False, extra: dict[str, Any] | None = None) -> dict[str, Any]:
