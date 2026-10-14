@@ -3,8 +3,8 @@
   "corpus": "metadata",
   "language": "es",
   "seed": 42,
-  "generated_at_utc": "2026-10-13 11:24:43",
-  "git_commit": "f13cb3fbb05d13609093b6fd3eb66b917fa03b05",
+  "generated_at_utc": "2026-10-13 21:54:22",
+  "git_commit": "66c240c0b770205e325f8e640d775079a557e2b4",
   "R_version": "R version 4.3.3 (2024-02-29)",
   "packages": {
     "stm": "1.3.8"
@@ -99,7 +99,7 @@
       "max_em_iterations": 500,
       "init_type": "Spectral",
       "stability_init_type": "LDA",
-      "stability_max_em_iterations": 150,
+      "stability_max_em_iterations": 500,
       "prevalence_formula": "~ s(anio)",
       "number_of_runs": 5,
       "stability_runs": 5,
@@ -218,14 +218,16 @@
       }
     }
   },
-  "documents": 2743,
-  "input_candidates": 2743,
+  "documents": 2799,
+  "input_candidates": 2799,
   "removed_by_textProcessor": 0,
   "removed_by_prepDocuments": 0,
-  "selected_K": 20,
-  "selection_status": "stability_nonconverged",
+  "selected_K": 18,
+  "selection_status": "metrics_complete",
   "human_review_status": "pending",
+  "final_model_converged": true,
+  "final_model_iterations": 103,
   "year_2026_incomplete": true,
   "execution_mode": "full",
-  "elapsed_seconds": 2522.7028
+  "elapsed_seconds": 3629.5449
 }

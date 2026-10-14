@@ -11,7 +11,7 @@
   },
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
-    "n_neighbors": 10,
+    "n_neighbors": 30,
     "n_components": 10,
     "min_dist": 0.0,
     "metric": "cosine",
@@ -21,7 +21,7 @@
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
     "min_cluster_size": 50,
-    "min_samples": 10,
+    "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",
     "prediction_data": true
@@ -257,7 +257,7 @@
     "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "342b4996c9d39eafd8b8d2e2036295dc10f34bb39e5accc3235130d6a267d0ea",
+  "corpus_hash": "b47c6825a00ede5a8c410a6b64c0acc167ab93f9bc31546deff1734cbfe38753",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "a24839c36fcc7810df7fef5c047bbdd97263006359298311b3e3f2e1538005ea"
+  "embedding_cache_hash": "97417b73e43ffc0d7b25392c825661248b2af7f4cadc6e57292fda70e1d301f6"
 }

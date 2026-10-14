@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T13:10:19.242445+00:00",
+  "generated_at": "2026-10-14T00:25:01.123767+00:00",
   "mode": "evaluation_only",
   "corrections_applied": true,
   "correction_details": [
@@ -97,7 +97,7 @@
   ],
   "files": {
     "heterogeneity.csv": {
-      "rows": 29,
+      "rows": 31,
       "columns": [
         "model",
         "corpus",
@@ -191,23 +191,23 @@
         "maximum_lexical_similarity_to_other_topics": 0,
         "most_similar_topic": 0,
         "topic_term_entropy": 0,
-        "language_entropy": 0,
+        "language_entropy": 2,
         "dominant_language": 0,
         "dominant_language_share_known": 0,
         "documents_total": 0,
         "documents_with_country": 0,
         "country_coverage": 0,
         "country_metadata_coverage": 0,
-        "dominant_country": 29,
-        "dominant_country_share_known": 29,
-        "country_entropy": 29,
+        "dominant_country": 31,
+        "dominant_country_share_known": 31,
+        "country_entropy": 31,
         "country_status": 0,
         "documents_with_source": 0,
         "source_coverage": 0,
         "source_metadata_coverage": 0,
         "dominant_source": 0,
         "dominant_source_share_known": 0,
-        "source_entropy": 17,
+        "source_entropy": 23,
         "source_status": 0,
         "dominant_source_global_share": 0,
         "source_concentration_excess": 0,
@@ -215,8 +215,8 @@
         "borderline_relevance_share": 0,
         "excluded_candidate_share": 0,
         "manual_review_share": 0,
-        "domain_similarity_mean": 29,
-        "domain_similarity_min": 29,
+        "domain_similarity_mean": 31,
+        "domain_similarity_min": 31,
         "domain_similarity_status": 0,
         "relevance_score_mean": 0,
         "relevance_score_min": 0,
@@ -224,8 +224,8 @@
         "contamination_share": 0,
         "relevance_metadata_coverage": 0,
         "contamination_status": 0,
-        "representative_contamination_candidates": 11,
-        "borderline_relevance_documents": 29,
+        "representative_contamination_candidates": 13,
+        "borderline_relevance_documents": 31,
         "review_status": 0,
         "status": 0,
         "status_reasons": 0
@@ -258,7 +258,7 @@
       ]
     },
     "topic_review_priority.csv": {
-      "rows": 29,
+      "rows": 31,
       "columns": [
         "topic_id",
         "review_priority_score",
@@ -290,7 +290,7 @@
       ]
     },
     "language_dependence.csv": {
-      "rows": 29,
+      "rows": 31,
       "columns": [
         "model",
         "corpus",
@@ -330,23 +330,23 @@
         "dominant_language": 0,
         "dominant_language_share_known": 0,
         "language_coverage": 0,
-        "language_entropy": 0,
+        "language_entropy": 2,
         "language_mutual_information": 0,
         "cross_language_nearest_neighbors": 0,
         "cross_language_centroid_similarity": 0,
         "documents_with_country": 0,
         "country_coverage": 0,
         "country_metadata_coverage": 0,
-        "dominant_country": 29,
-        "dominant_country_share_known": 29,
-        "country_entropy": 29,
+        "dominant_country": 31,
+        "dominant_country_share_known": 31,
+        "country_entropy": 31,
         "country_status": 0,
         "documents_with_source": 0,
         "source_coverage": 0,
         "source_metadata_coverage": 0,
         "dominant_source": 0,
         "dominant_source_share_known": 0,
-        "source_entropy": 17,
+        "source_entropy": 23,
         "source_status": 0,
         "dominant_source_global_share": 0,
         "source_concentration_excess": 0,
@@ -415,7 +415,7 @@
       "constant_columns": []
     },
     "topic_metrics.csv": {
-      "rows": 72,
+      "rows": 74,
       "columns": [
         "model",
         "model_path",
@@ -511,7 +511,7 @@
       ]
     },
     "metadata_coverage.csv": {
-      "rows": 29,
+      "rows": 31,
       "columns": [
         "model",
         "topic_id",
@@ -546,25 +546,25 @@
         "documents_with_country": 0,
         "country_coverage": 0,
         "country_metadata_coverage": 0,
-        "dominant_country": 29,
-        "dominant_country_share_known": 29,
-        "country_entropy": 29,
+        "dominant_country": 31,
+        "dominant_country_share_known": 31,
+        "country_entropy": 31,
         "country_status": 0,
         "documents_with_source": 0,
         "source_coverage": 0,
         "source_metadata_coverage": 0,
         "dominant_source": 0,
         "dominant_source_share_known": 0,
-        "source_entropy": 17,
+        "source_entropy": 23,
         "source_status": 0,
         "dominant_source_global_share": 0,
         "source_concentration_excess": 0,
-        "country_field": 29,
+        "country_field": 31,
         "country_semantics": 0,
         "source_field": 0,
         "source_semantics": 0,
-        "journal_field": 29,
-        "affiliation_field": 29
+        "journal_field": 31,
+        "affiliation_field": 31
       },
       "constant_columns": [
         "model",
@@ -588,7 +588,7 @@
       ]
     },
     "stability.csv": {
-      "rows": 17,
+      "rows": 16,
       "columns": [
         "model",
         "model_path",
@@ -615,7 +615,7 @@
         "candidate": 0,
         "stability_ari": 4,
         "stability_nmi": 13,
-        "convergence_rate": 8,
+        "convergence_rate": 7,
         "selection_status": 0,
         "validation_status": 0
       },
@@ -625,7 +625,7 @@
       ]
     },
     "coherence_diagnostics.csv": {
-      "rows": 29,
+      "rows": 31,
       "columns": [
         "model",
         "topic_id",
@@ -645,12 +645,12 @@
         "model": 0,
         "topic_id": 0,
         "coherence_terms_used": 0,
-        "coherence_terms_missing": 29,
+        "coherence_terms_missing": 31,
         "coherence_terms_used_count": 0,
         "coherence_terms_missing_count": 0,
         "coherence_document_count": 0,
         "coherence_status": 0,
-        "coherence_error": 29,
+        "coherence_error": 31,
         "coherence_cv": 0,
         "coherence_npmi": 0,
         "coherence_umass": 0,
@@ -668,7 +668,7 @@
       ]
     },
     "document_metrics.csv": {
-      "rows": 15127,
+      "rows": 15571,
       "columns": [
         "model",
         "model_path",
@@ -705,15 +705,15 @@
         "topic_id": 0,
         "assignment_confidence": 0,
         "probability_margin": 0,
-        "silhouette": 10394,
-        "distance_to_centroid": 10394,
-        "local_consistency": 7540,
+        "silhouette": 11245,
+        "distance_to_centroid": 11245,
+        "local_consistency": 7778,
         "ambiguous": 0,
         "is_outlier": 0,
         "language": 0,
         "relevance_status": 0,
         "relevance_score": 0,
-        "contamination_candidate": 7540
+        "contamination_candidate": 7778
       },
       "constant_columns": [
         "corpus",
@@ -729,24 +729,24 @@
     "All topic states remain candidates pending human review."
   ],
   "frozen_hashes_before": {
-    "document_topics.csv": "7cf89e81608e4369e1e62e2d70e31b86ba1f75af0136cf12e86843784487dfc3",
-    "topics.csv": "15bae8ebed4ba69234da01ceda6cce8170c0e55f42eca083759b1ca2223fe0aa",
-    "topic_words.csv": "6120d92f3afdde5cea90008fe0c6b43234f3c7a9fd53903cf715e623e1a6ec95",
-    "document_topic_hierarchy.csv": "6c96dead3c19e8d0fe73cef095865abb9ca2ead3bdb7f6039b38d271dd1d5158",
-    "subtopics.csv": "6e9d64753c4db274526f0d28e6c338d33be450d43a11d9a19a94cff420762628",
-    "outliers.csv": "020bfb39ef96633ebb2d72428224b5d965dcc27e92d992d33de1e23688e11b11"
+    "document_topics.csv": "06691829997548218e9fe0b0057c20194f98718294cbf4f3844cbe5c31046c5f",
+    "topics.csv": "22c0894d4c184f98a433a15d271c98b22b303a320bcaaeb516365785487abe39",
+    "topic_words.csv": "553f0551b96f2fe2e6c54869cfeeb673dc8dc6067592a56980820f23a04d3f2b",
+    "document_topic_hierarchy.csv": "bc52386f07eff562085df936879a67480b4d5a35576cc8bbe82afdd7362fa199",
+    "subtopics.csv": "3c48b854fbeb57d047b26bcfc231ccb31f3ef29e85f2fdb1960c636b6e38aa8f",
+    "outliers.csv": "f8320e8e437fb62c675009f0cc73b56cdbf55b3590af7422b8ab85520e52d261"
   },
   "frozen_hashes_after": {
-    "document_topics.csv": "7cf89e81608e4369e1e62e2d70e31b86ba1f75af0136cf12e86843784487dfc3",
-    "topics.csv": "15bae8ebed4ba69234da01ceda6cce8170c0e55f42eca083759b1ca2223fe0aa",
-    "topic_words.csv": "6120d92f3afdde5cea90008fe0c6b43234f3c7a9fd53903cf715e623e1a6ec95",
-    "document_topic_hierarchy.csv": "6c96dead3c19e8d0fe73cef095865abb9ca2ead3bdb7f6039b38d271dd1d5158",
-    "subtopics.csv": "6e9d64753c4db274526f0d28e6c338d33be450d43a11d9a19a94cff420762628",
-    "outliers.csv": "020bfb39ef96633ebb2d72428224b5d965dcc27e92d992d33de1e23688e11b11"
+    "document_topics.csv": "06691829997548218e9fe0b0057c20194f98718294cbf4f3844cbe5c31046c5f",
+    "topics.csv": "22c0894d4c184f98a433a15d271c98b22b303a320bcaaeb516365785487abe39",
+    "topic_words.csv": "553f0551b96f2fe2e6c54869cfeeb673dc8dc6067592a56980820f23a04d3f2b",
+    "document_topic_hierarchy.csv": "bc52386f07eff562085df936879a67480b4d5a35576cc8bbe82afdd7362fa199",
+    "subtopics.csv": "3c48b854fbeb57d047b26bcfc231ccb31f3ef29e85f2fdb1960c636b6e38aa8f",
+    "outliers.csv": "f8320e8e437fb62c675009f0cc73b56cdbf55b3590af7422b8ab85520e52d261"
   },
   "coherence_global": {
     "status": "computed",
-    "documents": 7587,
+    "documents": 7793,
     "vocabulary": 50000,
     "ngram_strategy": "literal_vectorizer_tokens"
   },
