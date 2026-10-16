@@ -1,3 +1,4 @@
 ﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
-4,políticas_formación_docente_leadership_teacher,"[0, 1, 2]",2,les_escuelas rurales_historia_habilidades blandas_blandas,3,políticas_docente_leadership_formación_teacher,0.6374167728896651
-3,políticas_docente_leadership_formación_teacher,"[0, 1]",0,políticas_leadership_teacher_formación_dirección,1,digital_tecnologías_durante_teaching_desigualdades,0.22996680512271261
+6,liderazgo_pandemia_covid-19_leadership_pandemic,"[0, 1, 2, 3]",3,rural_historia_rurales_les_pueblos,5,pandemia_liderazgo_covid-19_leadership_pandemic,0.8188684897772861
+5,pandemia_liderazgo_covid-19_leadership_pandemic,"[0, 1, 2]",2,pandemia_covid-19_pandemic_digital_desigualdades,4,liderazgo_leadership_teacher_gobierno_dirección escolar,0.6448951584260372
+4,liderazgo_leadership_teacher_gobierno_dirección escolar,"[0, 1]",0,liderazgo_leadership_teacher_liderazgo directivo_liderazgo escolar,1,política_nueva_programa_cambiemos_act,0.6135773551672337

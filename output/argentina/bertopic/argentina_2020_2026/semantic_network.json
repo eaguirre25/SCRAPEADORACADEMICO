@@ -67,7 +67,7 @@
     {
       "source": "10.15366/reps2021.6.1.002",
       "target": "10.61203/2347-0658.v10.n2.34114",
-      "weight": 0.89689
+      "weight": 0.896891
     },
     {
       "source": "10.15366/reps2021.6.1.002",
@@ -106,18 +106,23 @@
     },
     {
       "source": "10.15443/tde20242587",
+      "target": "conicet:el acceso a educación sexual integral en escuelas secundarias de argentina según las pruebas aprender 2022::2026",
+      "weight": 0.788003
+    },
+    {
+      "source": "10.15443/tde20242587",
       "target": "https://openalex.org/W7132142319",
       "weight": 0.803668
     },
     {
       "source": "10.15448/1984-7289.2022.1.41864",
       "target": "conicet:factores asociados a los logros académicos en el último año de la escuela secundaria en argentina::2023",
-      "weight": 0.876134
+      "weight": 0.877625
     },
     {
       "source": "10.15448/1984-7289.2022.1.41864",
       "target": "conicet:un acercamiento a las trayectorias escolares en la provincia de buenos aires argentina::2026",
-      "weight": 0.866802
+      "weight": 0.857841
     },
     {
       "source": "10.17163/alt.v18n2.2023.06",
@@ -178,11 +183,6 @@
       "source": "10.22529/dp.2025.23(46)10",
       "target": "https://openalex.org/W7118105825",
       "weight": 0.821438
-    },
-    {
-      "source": "10.24215/23468866e110",
-      "target": "10.37177/unicen/eb33-377",
-      "weight": 0.733839
     },
     {
       "source": "10.24215/23468866e110",
@@ -326,6 +326,11 @@
     },
     {
       "source": "10.37177/unicen/eb33-377",
+      "target": "conicet:el acceso a educación sexual integral en escuelas secundarias de argentina según las pruebas aprender 2022::2026",
+      "weight": 0.86467
+    },
+    {
+      "source": "10.37177/unicen/eb33-377",
       "target": "https://openalex.org/W7132142319",
       "weight": 0.910299
     },
@@ -412,7 +417,7 @@
     {
       "source": "10.5281/zenodo.17667157",
       "target": "https://openalex.org/W7167654807",
-      "weight": 0.898836
+      "weight": 0.898835
     },
     {
       "source": "10.5281/zenodo.17667157",
@@ -457,12 +462,12 @@
     {
       "source": "10.59427/rcli/2023/v23cs.3717-3724",
       "target": "https://openalex.org/W7220616795",
-      "weight": 0.891562
+      "weight": 0.891561
     },
     {
       "source": "10.61203/2347-0658.v10.n2.34114",
       "target": "conicet:los entornos formativos en la educación técnica argentina estudio exploratorio sobre el sector automotriz::2025",
-      "weight": 0.709652
+      "weight": 0.709651
     },
     {
       "source": "10.70747/cr.v5i3.1353",
@@ -507,7 +512,7 @@
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
       "target": "conicet:desigualdades vinculadas a las tecnologías de la información y la comunicación tic diferencias entre escuelas públicas y privadas en bahía blanca argentina::2024",
-      "weight": 0.887809
+      "weight": 0.887808
     },
     {
       "source": "conicet:años luz de distancia educativa las desigualdades tecnológicas entre escuelas primarias públicas y privadas después de la pandemia::2024",
@@ -553,6 +558,11 @@
       "source": "conicet:educación y finanzas el cobro de matrículas en escuelas públicas argentina fines del siglo xix::2022",
       "target": "conicet:iniciativas oficiales para la edificación de escuelas primarias en la ciudad de buenos aires durante el siglo xix::2023",
       "weight": 0.806168
+    },
+    {
+      "source": "conicet:el acceso a educación sexual integral en escuelas secundarias de argentina según las pruebas aprender 2022::2026",
+      "target": "https://openalex.org/W7132142319",
+      "weight": 0.841941
     },
     {
       "source": "conicet:el maestro los trabajadores rurales y la deserción escolar en unzué  bolívar provincia de buenos aires 1914::2024",
@@ -645,6 +655,11 @@
       "weight": 0.889023
     },
     {
+      "source": "conicet:migraciones y escuela representaciones sociales sobre el estudiantado extranjero en buenos aires::2025",
+      "target": "conicet:ruralidades escuela y comunidades configuración de deseos en jóvenes de la escuela las aves de colombia::2023",
+      "weight": 0.782548
+    },
+    {
       "source": "conicet:sostener trayectorias escolares de nivel primario articulaciones locales entre familias apoyos escolares y escuelas en un barrio popular de la caba::2024",
       "target": "https://openalex.org/W7132612523",
       "weight": 0.835283
@@ -729,55 +744,55 @@
     {
       "neighbors": 3,
       "min_similarity": 0.6,
-      "edges": 87,
-      "isolated": 69
+      "edges": 88,
+      "isolated": 70
     },
     {
       "neighbors": 3,
       "min_similarity": 0.7,
-      "edges": 86,
-      "isolated": 71
+      "edges": 87,
+      "isolated": 72
     },
     {
       "neighbors": 3,
       "min_similarity": 0.8,
-      "edges": 78,
+      "edges": 80,
       "isolated": 79
     },
     {
       "neighbors": 5,
       "min_similarity": 0.6,
-      "edges": 145,
+      "edges": 148,
       "isolated": 48
     },
     {
       "neighbors": 5,
       "min_similarity": 0.7,
-      "edges": 144,
+      "edges": 147,
       "isolated": 50
     },
     {
       "neighbors": 5,
       "min_similarity": 0.8,
-      "edges": 127,
+      "edges": 129,
       "isolated": 60
     },
     {
       "neighbors": 10,
       "min_similarity": 0.6,
-      "edges": 298,
+      "edges": 302,
       "isolated": 27
     },
     {
       "neighbors": 10,
       "min_similarity": 0.7,
-      "edges": 294,
+      "edges": 298,
       "isolated": 32
     },
     {
       "neighbors": 10,
       "min_similarity": 0.8,
-      "edges": 247,
+      "edges": 249,
       "isolated": 51
     }
   ]

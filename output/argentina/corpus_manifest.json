@@ -4,18 +4,18 @@
     2020,
     2026
   ],
-  "master_records": 9457,
-  "canonical_publications": 9457,
-  "period_publications": 9391,
-  "modeled_candidates": 171,
-  "territorial_candidates": 171,
+  "master_records": 9465,
+  "canonical_publications": 9465,
+  "period_publications": 9399,
+  "modeled_candidates": 172,
+  "territorial_candidates": 172,
   "human_included": 0,
-  "no_territorial_evidence": 9220,
+  "no_territorial_evidence": 9227,
   "low_relevance_excluded": 0,
   "exact_duplicate_groups": 0,
   "probable_duplicate_pairs": 300,
-  "corpus_hash": "d449e96d7d54fa0046691687ceba84c5d68e65cff76e17707e58820bfe71dd35",
-  "master_sha256": "98ec4626e9bbb9f3a56d792510d2a27f685f4e93c6ffdd2ba250b48e0f15fe0d",
+  "corpus_hash": "d0760e947f9346c39864d17452cd273ca1b73524c242ba80033b5d3a59489057",
+  "master_sha256": "988f3b465ff9fb8137c34e25cf51f33e8887ccdc2ca4f945ae87322241f40db5",
   "year_counts": {
     "2020": 19,
     "2021": 21,
@@ -23,7 +23,7 @@
     "2023": 33,
     "2024": 29,
     "2025": 28,
-    "2026": 22
+    "2026": 23
   },
   "partial_year": 2026,
   "settings": {
