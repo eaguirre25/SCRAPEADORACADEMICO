@@ -3,8 +3,8 @@
   "corpus": "metadata",
   "language": "es",
   "seed": 42,
-  "generated_at_utc": "2026-10-13 21:54:22",
-  "git_commit": "66c240c0b770205e325f8e640d775079a557e2b4",
+  "generated_at_utc": "2026-10-16 18:43:18",
+  "git_commit": "4e13496f010a22be69be1ac97df099548d5bc4c3",
   "R_version": "R version 4.3.3 (2024-02-29)",
   "packages": {
     "stm": "1.3.8"
@@ -218,16 +218,16 @@
       }
     }
   },
-  "documents": 2799,
-  "input_candidates": 2799,
+  "documents": 2802,
+  "input_candidates": 2802,
   "removed_by_textProcessor": 0,
   "removed_by_prepDocuments": 0,
-  "selected_K": 18,
+  "selected_K": 20,
   "selection_status": "metrics_complete",
   "human_review_status": "pending",
   "final_model_converged": true,
-  "final_model_iterations": 103,
+  "final_model_iterations": 76,
   "year_2026_incomplete": true,
   "execution_mode": "full",
-  "elapsed_seconds": 3629.5449
+  "elapsed_seconds": 3474.5291
 }
