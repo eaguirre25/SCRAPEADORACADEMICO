@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-16",
-  "input_total": 12054,
-  "kept_high_relevance": 9465,
+  "generated": "2026-10-19",
+  "input_total": 12057,
+  "kept_high_relevance": 9468,
   "review_records": 0,
   "rejected_records": 2559,
-  "latest_high_relevance": 8,
+  "latest_high_relevance": 3,
   "duplicates_merged": 30,
   "second_review": {
     "input_review_candidates": 146,
@@ -13,13 +13,13 @@
     "remaining_manual_review": 0
   },
   "by_source_input": {
-    "OpenAlex": 10208,
+    "OpenAlex": 10211,
     "CONICET Digital | OpenAlex": 2,
     "OpenAlex | CONICET Digital": 25,
     "CONICET Digital": 1819
   },
   "by_source_kept": {
-    "OpenAlex": 9281,
+    "OpenAlex": 9284,
     "CONICET Digital | OpenAlex": 2,
     "OpenAlex | CONICET Digital": 24,
     "CONICET Digital": 158

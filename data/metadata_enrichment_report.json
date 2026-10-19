@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-16T17:18:58Z",
+  "generated_at": "2026-10-19T19:11:33Z",
   "conicet_oai_available": true,
   "targets": 187,
-  "queried_this_run": 3,
+  "queried_this_run": 2,
   "status_counts": {
     "aceptado": 173,
     "error": 2,
@@ -15,14 +15,12 @@
   "with_volume_or_pages": 77,
   "year_changed": 131,
   "master_fields_changed": {
-    "doi": 4,
-    "origin": 4,
-    "document_type": 4,
-    "keywords": 4,
+    "doi": 3,
+    "origin": 3,
+    "document_type": 3,
+    "keywords": 3,
     "publication_year": 3,
-    "publication_date": 3,
-    "openalex_id": 1,
-    "pdf_url": 1
+    "publication_date": 2
   },
   "relevance_shifts": [],
   "http_failures": {},
