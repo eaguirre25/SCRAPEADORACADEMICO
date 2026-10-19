@@ -12,7 +12,7 @@
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
     "n_neighbors": 30,
-    "n_components": 10,
+    "n_components": 5,
     "min_dist": 0.0,
     "metric": "cosine",
     "random_state": 42,
@@ -20,8 +20,8 @@
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 35,
-    "min_samples": 10,
+    "min_cluster_size": 50,
+    "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",
     "prediction_data": true
@@ -257,7 +257,7 @@
     "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "4b7f40a91205c78b821ec0392e3205e57663e0f8eb4146d1c95fcf96272850f8",
+  "corpus_hash": "e768a4c2c9f596ea3f06a4c36316c0751ae49e47e373ea745c0e2ee4542aa238",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "7d0e7c45b5c79f9176f01eb442bd569c48a01558a990736c7cb54ac4c3e0b503"
+  "embedding_cache_hash": "c4c06523c16c0f8053b351a5bdcae6151d09fafe2e17b4e807c0b47cfaf6acd6"
 }
