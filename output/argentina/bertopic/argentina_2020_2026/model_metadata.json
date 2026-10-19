@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-ARGENTINA-2020-2026",
   "seed": 42,
-  "generated_at_utc": "2026-10-16T17:25:19.183788+00:00",
-  "git_commit": "eb3d2cb018ae76f6ecb929e115c43f34d1bf841e",
+  "generated_at_utc": "2026-10-19T19:16:20.822533+00:00",
+  "git_commit": "7e438e3a2d9dda1df1f9ecce614a096d42648f92",
   "python_version": "3.11.17 (main, Oct  1 2026, 14:32:31) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
   "documents": 172,
   "discarded_documents": 0,
-  "elapsed_seconds": 44.937,
+  "elapsed_seconds": 10.495,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
@@ -173,7 +173,7 @@
         "sentence-transformers/distiluse-base-multilingual-cased-v2"
       ],
       "batch_size": 64,
-      "min_topic_size": 10,
+      "min_topic_size": 7,
       "min_samples": 5,
       "nr_topics": null,
       "calculate_probabilities": true,
@@ -194,8 +194,8 @@
       "heterogeneous_topic_detection": true,
       "merge_candidate_similarity": 0.8,
       "umap": {
-        "n_neighbors": 30,
-        "n_components": 10,
+        "n_neighbors": 15,
+        "n_components": 5,
         "min_dist": 0.1,
         "metric": "cosine"
       },
@@ -395,15 +395,15 @@
       "keywords_text": 159
     }
   },
-  "outlier_count": 72,
-  "outlier_percentage": 41.8605,
+  "outlier_count": 53,
+  "outlier_percentage": 30.814,
   "model_save_mode": "safetensors_without_ctfidf",
   "warnings": [
     "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"
   ],
   "outliers_reassigned_in_alternative": 0,
   "effective_configuration_path": "effective_configuration.json",
-  "macro_topics": 4,
+  "macro_topics": 5,
   "subtopics": 0,
   "ambiguity_rule": "outlier OR low semantic margin OR low HDBSCAN membership OR low centroid similarity OR high outlier score"
 }

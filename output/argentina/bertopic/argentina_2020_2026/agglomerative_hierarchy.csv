@@ -1,4 +1,5 @@
 ﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
-6,liderazgo_pandemia_covid-19_leadership_pandemic,"[0, 1, 2, 3]",3,rural_historia_rurales_les_pueblos,5,pandemia_liderazgo_covid-19_leadership_pandemic,0.8188684897772861
-5,pandemia_liderazgo_covid-19_leadership_pandemic,"[0, 1, 2]",2,pandemia_covid-19_pandemic_digital_desigualdades,4,liderazgo_leadership_teacher_gobierno_dirección escolar,0.6448951584260372
-4,liderazgo_leadership_teacher_gobierno_dirección escolar,"[0, 1]",0,liderazgo_leadership_teacher_liderazgo directivo_liderazgo escolar,1,política_nueva_programa_cambiemos_act,0.6135773551672337
+8,educativa_liderazgo_pandemia_covid-19_digital,"[0, 1, 2, 3, 4]",4,integral_measures_obstáculos_scales_medidas,7,educativa_liderazgo_pandemia_covid-19_digital,0.8412678188604643
+7,educativa_liderazgo_pandemia_covid-19_digital,"[0, 1, 2, 3]",6,educativa_liderazgo_pandemia_covid-19_digital,3,rural_les_rurales_historia_escuelas rurales,0.7561991288926249
+6,educativa_liderazgo_pandemia_covid-19_digital,"[0, 1, 2]",5,liderazgo_educativa_leadership_teacher_dirección,2,pandemia_digital_covid-19_pandemic_tecnologías,0.5943609735331461
+5,liderazgo_educativa_leadership_teacher_dirección,"[0, 1]",1,siglo_ley_política_educativa_textiles,0,liderazgo_teacher_leadership_liderazgo escolar_participación,0.5329293270290548
