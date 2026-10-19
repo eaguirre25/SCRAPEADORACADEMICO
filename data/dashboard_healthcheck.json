@@ -1,17 +1,17 @@
 {
-  "generated_at_utc": "2026-10-18T23:08:16.800661+00:00",
+  "generated_at_utc": "2026-10-19T19:15:21.213602+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 22085755
+    "size_bytes": 22092517
   },
   "article_table": {
     "path": "docs/articulos.html",
     "exists": true,
-    "size_bytes": 28799988
+    "size_bytes": 28809701
   },
   "records": {
-    "master_high_relevance": 9465,
+    "master_high_relevance": 9468,
     "review": 0,
     "rejected": 2559
   },
@@ -45,7 +45,7 @@
   "stm_status": "ok",
   "note": "El workflow operativo genera docs/index.html desde data/master_records.csv. El STM requiere data/corpus.csv.gz y salida R en output/. Si esos archivos faltan, el dashboard de tres columnas funciona, pero la capa STM no queda actualizada.",
   "integrity": {
-    "records": 9465,
+    "records": 9468,
     "duplicate_identifiers": {
       "doi": 0,
       "record_id": 0
@@ -55,51 +55,51 @@
     "missing_titles": 0,
     "missing_years": 0,
     "export_counts": {
-      "dashboard": 9465,
-      "article_table": 9465,
-      "library": 9465
+      "dashboard": 9468,
+      "article_table": 9468,
+      "library": 9468
     },
     "models": {
       "bertopic-macros": {
         "modeled": 7798,
         "assigned": 4527,
         "outliers": 3271,
-        "not_modeled": 1667,
+        "not_modeled": 1670,
         "unlinked": 0
       },
       "bertopic-subtopics": {
         "modeled": 7798,
         "assigned": 3484,
         "outliers": 0,
-        "not_modeled": 5981,
+        "not_modeled": 5984,
         "unlinked": 0
       },
       "stm-es": {
         "modeled": 2802,
         "assigned": 2802,
         "outliers": 0,
-        "not_modeled": 6663,
+        "not_modeled": 6666,
         "unlinked": 0
       },
       "stm-en": {
         "modeled": 3950,
         "assigned": 3950,
         "outliers": 0,
-        "not_modeled": 5515,
+        "not_modeled": 5518,
         "unlinked": 0
       },
       "stm-pt": {
         "modeled": 1031,
         "assigned": 1031,
         "outliers": 0,
-        "not_modeled": 8434,
+        "not_modeled": 8437,
         "unlinked": 0
       },
       "legacy-stm": {
         "modeled": 863,
         "assigned": 777,
         "outliers": 0,
-        "not_modeled": 8688,
+        "not_modeled": 8691,
         "unlinked": 82
       }
     },
