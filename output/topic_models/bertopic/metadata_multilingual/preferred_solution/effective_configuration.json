@@ -11,8 +11,8 @@
   },
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
-    "n_neighbors": 30,
-    "n_components": 5,
+    "n_neighbors": 15,
+    "n_components": 10,
     "min_dist": 0.0,
     "metric": "cosine",
     "random_state": 42,
@@ -257,7 +257,7 @@
     "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "e768a4c2c9f596ea3f06a4c36316c0751ae49e47e373ea745c0e2ee4542aa238",
+  "corpus_hash": "9e3f54a63b751d2d165219a0108d2af16a9daa070f43f4e8ffc03b1e719d7b20",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "c4c06523c16c0f8053b351a5bdcae6151d09fafe2e17b4e807c0b47cfaf6acd6"
+  "embedding_cache_hash": "ea2043e830606758a23c8a09a9fc4e4433f642fe1d265f38eb3c1ca8ecfc49d3"
 }

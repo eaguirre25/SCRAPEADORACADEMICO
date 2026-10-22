@@ -1,58 +1,62 @@
 macro_topic_id,subtopic_id,parent_topic_id,hierarchy_level,macro_topic_size,subtopic_size,descriptor_automatic,human_label,validation_status
-0,0.0,0,2,380,49,school · management · system · school management · closures,,pending_human_review
-0,0.1,0,2,380,209,digitales · tecnologias · tecnologías · competencias · gestión,,pending_human_review
-0,0.2,0,2,380,55,leadership · school leadership · educational leadership · digital · leaders,,pending_human_review
-1,1.0,1,2,284,38,school · management · stakeholder · community · educational outcomes,,pending_human_review
-1,1.1,1,2,284,94,brasil · provimento · municipal education · municipal · cargo,,pending_human_review
-1,1.2,1,2,284,86,escolar democrática · gestão escolar democrática · school · gestão · escolar,,pending_human_review
-2,2.0,2,2,276,108,instructional leadership · school · leadership · leadership crisis · covid-19,,pending_human_review
-2,2.1,2,2,276,67,covid-19 · school · desempeño · pendidikan · pandemic,,pending_human_review
-2,2.2,2,2,276,75,gestão · school · remoto · ncds · desafíos,,pending_human_review
-3,3.0,3,2,264,43,school · natural · management · escolar · natural school,,pending_human_review
-3,3.1,3,2,264,57,bullying · alcohol · school · cultura paz · behaviors,,pending_human_review
-3,3.2,3,2,264,117,swot · estadual · escolar · school · competências,,pending_human_review
-4,4.0,4,2,262,47,leadership · inclusive · school · education · liderazgo,,pending_human_review
-4,4.1,4,2,262,114,gestão · educação · gestão escolar · inclusão · gestión escolar,,pending_human_review
-5,5.0,5,2,250,48,instructional · coaching · instructional leadership · instructional leadership school · educational,,pending_human_review
-5,5.1,5,2,250,200,educational · analysis · educational leadership · liderazgo · higher education,,pending_human_review
-6,6.0,6,2,236,65,meta-synthesis · international case studies · international case · career · sweden,,pending_human_review
-6,6.1,6,2,236,29,time use · occupational · time management · principals work · proposals,,pending_human_review
-6,6.2,6,2,236,24,supervision · academic supervision · clinical supervision · clinical · follow-up,,pending_human_review
-6,6.3,6,2,236,23,leadership team · instructional · lower secondary education · school improvement secondary · secondary education,,pending_human_review
-6,6.4,6,2,236,30,sekolah · principals professional · improve quality · professional development school · kepala sekolah,,pending_human_review
-7,7.0,7,2,194,39,liderazgo · directivo · ayacucho · liderazgo directivo · gestión,,pending_human_review
-7,7.1,7,2,194,23,liderazgo · liderazgo directivo · directivo · lima metropolitana · metropolitana,,pending_human_review
-7,7.2,7,2,194,21,maría · villa · josé · cajamarca · triunfo,,pending_human_review
-8,8.0,8,2,179,100,diretores escolares · paulo · são paulo · diretores · diretor,,pending_human_review
-8,8.1,8,2,179,20,gestão · paraense · pará · education · privatización educativa,,pending_human_review
-8,8.2,8,2,179,33,school · escolar · gestão · management · gestão escolar,,pending_human_review
-9,9.0,9,2,179,21,teachers job satisfaction · teachers job · satisfaction · job · job satisfaction,,pending_human_review
-9,9.1,9,2,179,25,school heads · heads · administrative support · leadership administrative · leadership administrative support,,pending_human_review
-9,9.2,9,2,179,24,self-leadership · personality · leadership self-efficacy · personality traits · toxic,,pending_human_review
-9,9.3,9,2,179,93,coaching · guru · influence instructional leadership · teacher professional · teacher work,,pending_human_review
-10,10.0,10,2,173,27,leadership · women · black · african american · color,,pending_human_review
-10,10.1,10,2,173,146,leadership · escolar · women · sexual · equality,,pending_human_review
-11,11.0,11,2,142,23,educativa · calidad · escolar · gestión escolar · gestión educativa,,pending_human_review
-11,11.1,11,2,142,82,educativa · gestión educativa · trujillo · escolar · gestión escolar,,pending_human_review
-12,12.0,12,2,131,27,instructional · middle · school leadership · instructional leadership · principals,,pending_human_review
-12,12.1,12,2,131,72,transformational · school leadership · chapter · educational · transformational school,,pending_human_review
-13,13.0,13,2,125,50,gestión · escolar · educación · educativa · método,,pending_human_review
-13,13.1,13,2,125,53,escuelas rurales · gestión · escolar · indígena · rural,,pending_human_review
-14,14.0,14,2,119,55,ai · leadership · educational · ai educational leadership · intelligence,,pending_human_review
-14,14.1,14,2,119,54,ia · educación · educativa · datos · análisis,,pending_human_review
-15,15.0,15,2,115,37,gestión · educativa · experimentais · management · school,,pending_human_review
-15,15.1,15,2,115,60,school · teacher · escolar · desenvolvimento · education,,pending_human_review
-16,16.0,16,2,110,64,innovación · educativa · gestión · formación · school,,pending_human_review
-16,16.1,16,2,110,38,entrepreneurial · school · leadership · vocational · educational,,pending_human_review
-17,17.0,17,2,107,20,quality · education · tqm · educational · quality management,,pending_human_review
-17,17.1,17,2,107,64,escolar · gestão · gestão escolar · gestión · resultados,,pending_human_review
-18,18.0,18,2,98,22,gestión · educativa · management · gestión educativa · educational,,pending_human_review
-18,18.1,18,2,98,39,gestión · educativa · calidad · educational · gestión educativa,,pending_human_review
-20,20.0,20,2,90,40,latinx · leadership · latin · school · america,,pending_human_review
-20,20.1,20,2,90,37,chilean · liderazgo · leadership · school · educación pública,,pending_human_review
-22,22.0,22,2,75,42,gestión · liderazgo · educativa · competencias · docentes,,pending_human_review
-22,22.1,22,2,75,26,ei · leadership · school · emotional · emotional intelligence,,pending_human_review
-24,24.0,24,2,71,22,ambiental · school · cultura ambiental · agua · environmental,,pending_human_review
-24,24.1,24,2,71,30,esd · school · sustainable · development · school leadership,,pending_human_review
-26,26.0,26,2,67,20,children · migrant children · estudiantes migrantes · inmigrantes · estudiantes inmigrantes,,pending_human_review
-26,26.1,26,2,67,47,diversity · diversidad cultural · multicultural · educational leadership · cultural,,pending_human_review
+0,0.0,0,2,378,50,management information · school closures · features · management software · closures,,pending_human_review
+0,0.1,0,2,378,20,entornos virtuales · efl · efl teachers · me · virtuales,,pending_human_review
+0,0.2,0,2,378,54,digital leadership · instructional leadership · leadership digital · islamic · ai,,pending_human_review
+0,0.3,0,2,378,70,digitales docentes · estratégica · digitales · secondary school management · competencias digitales docentes,,pending_human_review
+0,0.4,0,2,378,93,informacional · ferramentas · informação · comunicação · tics,,pending_human_review
+1,1.0,1,2,352,278,special education · discapacidad · humanos · leadership inclusive · special educational,,pending_human_review
+1,1.1,1,2,352,21,migrant children · estudiantes migrantes · inmigrantes · migrant · estudiantes inmigrantes,,pending_human_review
+1,1.2,1,2,352,53,indigenous · educación intercultural · diversidad cultural · musical · multicultural,,pending_human_review
+2,2.0,2,2,307,42,school · management · community · school management · escolar,,pending_human_review
+2,2.1,2,2,307,237,municipal · school · gestão · democracia · escolar,,pending_human_review
+3,3.0,3,2,274,45,instructional leadership school · instructional leaders · redefining · redefining instructional · redefining instructional leadership,,pending_human_review
+3,3.1,3,2,274,74,doctoral · liderazgo · pedagógico · qualitative research · qualitative,,pending_human_review
+3,3.2,3,2,274,38,liderazgo · styles · situational · private · leadership styles,,pending_human_review
+3,3.3,3,2,274,65,educational · educational leadership · foucault · emancipatory · michel foucault,,pending_human_review
+4,4.0,4,2,250,30,self-leadership · quantum · self-efficacy · quantum leadership · personality traits,,pending_human_review
+4,4.1,4,2,250,27,leadership team · instructional leadership team · republic · instructional leader · principals instructional leadership,,pending_human_review
+4,4.2,4,2,250,52,supervision · clinical supervision · quality · supervision school · instructional supervision,,pending_human_review
+4,4.3,4,2,250,56,international case studies · international case · meta-synthesis · international · successful school principalship,,pending_human_review
+4,4.4,4,2,250,21,spend · tend · private · spend more · spend more time,,pending_human_review
+5,5.0,5,2,247,66,covid-19 · school · pandemic · management · education,,pending_human_review
+5,5.1,5,2,247,154,school · leadership · covid-19 · pandemic · instructional leadership,,pending_human_review
+6,6.0,6,2,239,139,gestión · estudiantes · administración · educativa · formación,,pending_human_review
+6,6.1,6,2,239,97,school · management · school management · quality · education,,pending_human_review
+7,7.0,7,2,223,147,equality · sexual · género · gender equality · educación,,pending_human_review
+7,7.1,7,2,223,49,racial equity · white · leadership · anti-racism · racismo,,pending_human_review
+7,7.2,7,2,223,27,black women · women color · leadership · american female · gendered racism,,pending_human_review
+8,8.0,8,2,201,73,são paulo · paulo · diretor · escolha · critérios,,pending_human_review
+8,8.1,8,2,201,44,school · authority · liderazgo · escolar · management,,pending_human_review
+8,8.2,8,2,201,21,direito · direito à · direito à educação · gestão · right,,pending_human_review
+9,9.0,9,2,195,62,josé · maría · villa · sector · liderazgo,,pending_human_review
+9,9.1,9,2,195,28,liderazgo · secundaria instituciones · lima metropolitana · secundaria instituciones educativas · trujillo,,pending_human_review
+9,9.2,9,2,195,20,ayacucho · directivo gestión educativa · inicial provincia · nivel inicial provincia · gestión educativa,,pending_human_review
+9,9.3,9,2,195,25,liderazgo · directivo · liderazgo directivo · directivo calidad educativa · leadership,,pending_human_review
+10,10.0,10,2,186,158,colombia · gestión · convivencia · escolar · educativa,,pending_human_review
+10,10.1,10,2,186,25,gestión · ecuador · educativa · docente · liderazgo,,pending_human_review
+11,11.0,11,2,175,24,bellavista · educativa · usuarios · gestión educativa · local,,pending_human_review
+11,11.1,11,2,175,148,docente · desempeño docente · calidad educativa · estudiantes · educativa,,pending_human_review
+12,12.0,12,2,149,24,school heads · leadership · administrative support · heads · instructional,,pending_human_review
+12,12.1,12,2,149,22,teachers job satisfaction · teachers job · satisfaction · job · leadership,,pending_human_review
+12,12.2,12,2,149,95,efficacy · leadership · motivation · work motivation · teacher,,pending_human_review
+13,13.0,13,2,144,31,qualities · academic performance · school leadership · instructional leadership · management,,pending_human_review
+13,13.1,13,2,144,82,school leadership · chapter · practices · educational · leadership educational,,pending_human_review
+14,14.0,14,2,133,56,escolar · school · gestão · management · rede,,pending_human_review
+14,14.1,14,2,133,42,escolar · gestão · school · gestão escolar · management,,pending_human_review
+15,15.0,15,2,123,53,ai · leadership · educational · ai educational leadership · educational leaders,,pending_human_review
+15,15.1,15,2,123,56,gestión · ia · educación · educativa · datos,,pending_human_review
+16,16.0,16,2,116,45,entrepreneurial · vocational · principals · liderança · entrepreneurship,,pending_human_review
+16,16.1,16,2,116,36,conocimiento · gestión · gestión conocimiento · innovadora · educativa,,pending_human_review
+16,16.2,16,2,116,25,alumnado · innovation educational management · didácticas · management pedagogical · school management pedagogical,,pending_human_review
+17,17.0,17,2,104,32,school · management · school management · escolar · gestão,,pending_human_review
+17,17.1,17,2,104,49,docentes · teachers · formación · resultados · aprendizaje,,pending_human_review
+18,18.0,18,2,82,58,pesantren · management · islamic · child-friendly · boarding,,pending_human_review
+18,18.1,18,2,82,20,character · education · character education · management · leadership,,pending_human_review
+19,19.0,19,2,82,24,school · parent participation · parents · parent participation school · management,,pending_human_review
+19,19.1,19,2,82,44,gestão · família · gestão escolar · escola · school,,pending_human_review
+20,20.0,20,2,81,34,performance · academic · smcs · smc · academic performance,,pending_human_review
+20,20.1,20,2,81,47,management educational · leadership · educational · school management educational · evidence,,pending_human_review
+21,21.0,21,2,77,26,gestión · educativa · competencias · docentes · investigación,,pending_human_review
+21,21.1,21,2,77,45,ei · work · leadership · school · emotional,,pending_human_review
+24,24.0,24,2,71,28,liderazgo · liderazgo directivo · leadership · gestión · habilidades,,pending_human_review
+24,24.1,24,2,71,21,transformacional gestión educativa · liderazgo · educativa · gestión · transformacional,,pending_human_review
