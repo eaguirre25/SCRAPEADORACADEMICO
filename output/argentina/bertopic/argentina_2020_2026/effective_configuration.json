@@ -11,8 +11,8 @@
   },
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
-    "n_neighbors": 15,
-    "n_components": 5,
+    "n_neighbors": 30,
+    "n_components": 10,
     "min_dist": 0.1,
     "metric": "cosine",
     "random_state": 42,
@@ -20,7 +20,7 @@
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 7,
+    "min_cluster_size": 10,
     "min_samples": 5,
     "metric": "euclidean",
     "cluster_selection_method": "eom",

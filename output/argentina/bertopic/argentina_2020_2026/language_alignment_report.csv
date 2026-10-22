@@ -1,6 +1,5 @@
 model,corpus,topic_id,topic_language_distribution,dominant_language,dominant_language_share,language_entropy,language_mutual_information,topic_vs_language_residual,cross_language_nearest_neighbors,cross_language_centroid_similarity,dominant_source_share,dominant_country_share,classification,review_status
-BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 35, 'en': 3}",es,0.921053,0.276191,0.080582,0.037332,0.139474,0.88751,0.763158,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,1,{'es': 30},es,1.0,-0.0,0.080582,0.116279,0.12,0.0,0.433333,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 26, 'de': 1, 'pt': 2, 'en': 1}",es,0.866667,0.531304,0.080582,-0.017054,0.163333,0.617521,0.5,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 12, 'pt': 1}",es,0.923077,0.271189,0.080582,0.039356,0.138462,0.846747,0.615385,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,4,"{'es': 6, 'en': 2}",es,0.75,0.562335,0.080582,-0.133721,0.3375,0.893464,0.375,1.0,multilingual_topic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 29, 'en': 3}",es,0.90625,0.311129,0.044992,0.022529,0.146875,0.897862,0.75,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 26, 'pt': 1, 'en': 1}",es,0.928571,0.306829,0.044992,0.04485,0.175,0.670534,0.464286,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 25, 'de': 1, 'pt': 1, 'en': 1}",es,0.892857,0.458208,0.044992,0.009136,0.139286,0.640219,0.5,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 11, 'pt': 1}",es,0.916667,0.286836,0.044992,0.032946,0.166667,0.857089,0.666667,1.0,language_concentrated_but_thematic,pending_human_review
