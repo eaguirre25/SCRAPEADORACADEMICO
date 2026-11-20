@@ -28,6 +28,8 @@ on:
       - 'data/weekly_reports/**'
       - 'generate_corpus_text_files.py'
       - 'inject_library_link.py'
+      - 'data/matriz_analisis_textos.xlsx'
+      - 'scripts/build_matriz_json.py'
       - 'inject_library_ocr.py'
       - 'inject_library_pdf_viewer.py'
       - 'inject_drive_manifest.py'
@@ -87,6 +89,7 @@ jobs:
       - name: Generar dashboard
         run: |
           python generate_dashboard.py
+          python scripts/build_matriz_json.py
           python generate_article_table.py
           python build_weekly_reports.py
           python generate_research_library.py
@@ -108,7 +111,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/data docs/argentina.html docs/asistente_ia.html docs/keyword-network-audit.json docs/keyword-network-data.js docs/keyword-thesaurus.csv docs/topic-review-data.json docs/dashboard-articles.js docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/teoricos_articles.json docs/fulltext_knowledge_base.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json data/master_records.csv data/duplicate_records.csv data/latest_relevant_records.csv data/relevance_filter_report.json data/publicaciones.xlsx data/drive_manifest.csv
+          git add docs/index.html docs/data docs/matriz-data.json docs/argentina.html docs/asistente_ia.html docs/keyword-network-audit.json docs/keyword-network-data.js docs/keyword-thesaurus.csv docs/topic-review-data.json docs/dashboard-articles.js docs/articulos.html docs/fulltext_search_index.js docs/biblioteca.html docs/library_articles.json docs/teoricos_articles.json docs/fulltext_knowledge_base.json docs/report_history.json docs/weekly_reports.json docs/textos data/dashboard_healthcheck.json data/master_records.csv data/duplicate_records.csv data/latest_relevant_records.csv data/relevance_filter_report.json data/publicaciones.xlsx data/drive_manifest.csv
           if git diff --cached --quiet; then
             echo "Sin cambios."
           else

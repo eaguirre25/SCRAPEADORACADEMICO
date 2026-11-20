@@ -903,6 +903,11 @@ header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;disp
 .t-hint{font-size:.62em;color:var(--dim);margin-top:3px}
 .arts-section{display:flex;flex-direction:column;height:52vh;min-height:420px;overflow:hidden;background:var(--bg)}
 .arts-section:fullscreen,.arts-section.is-fullscreen{position:fixed;inset:0;width:100vw;height:100vh;z-index:900;background:var(--bg)}
+.matriz-section{border-top:2px solid #263952;height:58vh;min-height:460px}
+.matriz-cell{min-width:210px;max-width:340px}
+.matriz-cell-inner{max-height:170px;overflow-y:auto;white-space:pre-line;line-height:1.45;font-size:.86em;color:var(--text)}
+.matriz-cell.col-apa .matriz-cell-inner{color:#dceaff;font-weight:500}
+.matriz-cell.col-seccion{min-width:130px;max-width:180px}
 .arts-head{padding:10px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0}
 .arts-head h2{font-size:.78em;font-weight:600;color:#E6EDF3;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .search{flex:1;min-width:220px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 12px;color:var(--text);font-size:.82em;outline:none}
@@ -995,7 +1000,7 @@ button,select{min-height:28px}
 <header>
   <div class="header-left">
     <h1 class="neon-title">Dirección y gestión escolar</h1>
-    <div class="neon-sub">Versión beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elías Aguirre</a> &middot; <a href="articulos.html">Trabajar con la tabla de artículos</a></div>
+    <div class="neon-sub">Versión beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elías Aguirre</a> &middot; <a href="articulos.html">Trabajar con la tabla de artículos</a> &middot; <a href="#matriz-analisis">Matriz de análisis de textos</a></div>
   </div>
   <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><a class="argentina-link" href="argentina.html" style="color:#d5edff;border:1px solid #4072a0;border-radius:22px;padding:10px 16px;text-decoration:none;background:#10233c">Argentina · BERTopic 2020–2026 ↗</a><span class="stamp">Actualizado: """ + date.today().strftime('%d/%m/%Y') + f""" &middot; {anio_min}&ndash;{anio_max}</span></div>
 </header>
@@ -1093,6 +1098,44 @@ button,select{min-height:28px}
     <button type="button" onclick="prevPage()" id="btn-prev" disabled>&#8592; Anterior</button>
     <span class="pinfo" id="pinfo" role="status"></span>
     <button type="button" onclick="nextPage()" id="btn-next">Siguiente &#8594;</button>
+  </div>
+</div>
+
+<div class="arts-section matriz-section" id="matriz-analisis">
+  <div class="arts-head">
+    <h2>Matriz de análisis de textos</h2>
+    <input type="text" class="search" id="matriz-search-input" placeholder="Buscar por cita APA, tema, conceptos clave, categorías, metodología, citas literales, contexto…" aria-label="Buscar en la matriz de análisis de textos" oninput="onMatrizSearch()">
+    <div class="arts-tools">
+      <button type="button" class="arts-btn" id="btn-matriz-cols" aria-expanded="false" aria-controls="matriz-col-picker" onclick="toggleMatrizColPicker()">⚙ Columnas (<span id="matriz-col-count">19/19</span>)</button>
+      <button type="button" class="arts-btn" id="btn-matriz-csv" onclick="exportMatrizCsv()" title="Descargar las filas filtradas y columnas visibles en CSV">⬇ CSV</button>
+      <button type="button" class="arts-btn" id="btn-matriz-fullscreen" onclick="toggleMatrizFullscreen()" title="Ver matriz en pantalla completa">⛶ Pantalla completa</button>
+      <div class="col-picker" id="matriz-col-picker" role="dialog" aria-label="Selector de columnas de la matriz" hidden>
+        <div class="col-picker-head">
+          <span>Columnas visibles (solo lectura)</span>
+          <div class="col-picker-actions">
+            <button type="button" onclick="setAllMatrizCols(true)">Todas</button>
+            <button type="button" onclick="setEssentialMatrizCols()">Esenciales</button>
+          </div>
+        </div>
+        <div class="col-picker-grid" id="matriz-col-picker-grid"></div>
+      </div>
+    </div>
+    <span class="badge" id="matriz-count-badge" role="status">Cargando matriz…</span>
+  </div>
+  <div class="table-wrap">
+    <table id="matriz-table">
+      <caption class="sr-only">Matriz cualitativa de análisis de textos en modo solo lectura</caption>
+      <thead>
+        <tr id="matriz-thead-row"></tr>
+      </thead>
+      <tbody id="matriz-tbody"></tbody>
+    </table>
+    <div class="no-res" id="matriz-no-res">Sin resultados en la matriz para esta búsqueda.</div>
+  </div>
+  <div class="pager">
+    <button type="button" onclick="prevMatrizPage()" id="btn-matriz-prev" disabled>&#8592; Anterior</button>
+    <span class="pinfo" id="matriz-pinfo" role="status"></span>
+    <button type="button" onclick="nextMatrizPage()" id="btn-matriz-next">Siguiente &#8594;</button>
   </div>
 </div>
 
@@ -1635,6 +1678,239 @@ const idleLoad=()=>setTimeout(()=>ensureArticles(),1200);
 if(document.readyState==="complete") idleLoad(); else window.addEventListener("load",idleLoad,{once:true});
 document.getElementById("search-input").addEventListener("focus",()=>ensureArticles(),{once:true});
 focusArticleSearch();
+
+// ── Matriz de Análisis de Textos (solo lectura, 19 columnas) ─────────────────
+let MATRIZ_COLS = [
+  {key:"seccion",label:"Sección / Capítulo",visible:true},
+  {key:"apa",label:"Cita en norma APA",visible:true},
+  {key:"tema",label:"Tema principal",visible:true},
+  {key:"conceptos",label:"Conceptos clave (y su uso)",visible:true},
+  {key:"categorias",label:"Categorías analíticas",visible:true},
+  {key:"metodologia",label:"Metodología",visible:true},
+  {key:"problema",label:"Construcción del problema",visible:true},
+  {key:"epistemologia",label:"Ubicación epistemológica",visible:true},
+  {key:"contexto",label:"Contexto de estudio",visible:true},
+  {key:"muestra",label:"Muestra y alcance empírico",visible:true},
+  {key:"aportes_dir",label:"Potenciales aportes a dirección escolar",visible:true},
+  {key:"implicaciones",label:"Implicaciones prácticas y políticas",visible:true},
+  {key:"hallazgos",label:"Principales hallazgos y conclusiones",visible:true},
+  {key:"citas",label:"Citas literales clave",visible:true},
+  {key:"discusion",label:"Discusión (diálogo/crítica)",visible:true},
+  {key:"limitaciones",label:"Limitaciones reconocidas",visible:true},
+  {key:"futura",label:"Propuestas de investigación futura",visible:true},
+  {key:"palabras_clave",label:"Palabras clave",visible:true},
+  {key:"aportes_estudio",label:"Aportes al estudio de la dirección escolar",visible:true}
+];
+const MATRIZ_ESSENTIAL = new Set(["apa","tema","conceptos","categorias","metodologia","hallazgos","citas"]);
+let matrizRows = [];
+let matrizFiltered = [];
+let matrizPage = 0;
+const MATRIZ_PG = 20;
+let matrizSort = {key:"",dir:1};
+let matrizLoaded = false;
+let matrizLoadPromise = null;
+
+function buildMatrizColPicker(){
+  const grid = document.getElementById("matriz-col-picker-grid");
+  if(!grid) return;
+  grid.innerHTML = MATRIZ_COLS.map((c,i)=>
+    `<label class="col-picker-item"><input type="checkbox" ${c.visible?"checked":""} onchange="toggleMatrizCol(${i},this.checked)"><span>${escHtml(c.label)}</span></label>`
+  ).join("");
+  const vis = MATRIZ_COLS.filter(c=>c.visible).length;
+  const cc = document.getElementById("matriz-col-count");
+  if(cc) cc.textContent = `${vis}/${MATRIZ_COLS.length}`;
+}
+
+function toggleMatrizCol(idx, checked){
+  if(!checked && MATRIZ_COLS.filter(c=>c.visible).length<=1){
+    buildMatrizColPicker();
+    return;
+  }
+  MATRIZ_COLS[idx].visible = checked;
+  buildMatrizColPicker();
+  renderMatrizHeader();
+  renderMatriz();
+}
+
+function setAllMatrizCols(val){
+  MATRIZ_COLS.forEach((c,i)=>{ c.visible = val ? true : i===1; });
+  buildMatrizColPicker();
+  renderMatrizHeader();
+  renderMatriz();
+}
+
+function setEssentialMatrizCols(){
+  MATRIZ_COLS.forEach(c=>{ c.visible = MATRIZ_ESSENTIAL.has(c.key); });
+  buildMatrizColPicker();
+  renderMatrizHeader();
+  renderMatriz();
+}
+
+function toggleMatrizColPicker(){
+  const p = document.getElementById("matriz-col-picker");
+  const btn = document.getElementById("btn-matriz-cols");
+  if(!p||!btn) return;
+  const open = p.hasAttribute("hidden");
+  if(open){ p.removeAttribute("hidden"); btn.setAttribute("aria-expanded","true"); }
+  else{ p.setAttribute("hidden",""); btn.setAttribute("aria-expanded","false"); }
+}
+
+document.addEventListener("click",e=>{
+  const p = document.getElementById("matriz-col-picker");
+  const btn = document.getElementById("btn-matriz-cols");
+  if(p && !p.hasAttribute("hidden") && !p.contains(e.target) && btn && !btn.contains(e.target)){
+    p.setAttribute("hidden","");
+    btn.setAttribute("aria-expanded","false");
+  }
+});
+
+function renderMatrizHeader(){
+  const tr = document.getElementById("matriz-thead-row");
+  if(!tr) return;
+  tr.innerHTML = MATRIZ_COLS.filter(c=>c.visible).map(c=>{
+    const ind = matrizSort.key===c.key ? (matrizSort.dir>0?"▲":"▼") : "";
+    return `<th onclick="sortMatrizBy('${c.key}')" title="Ordenar por ${escHtml(c.label)}">${escHtml(c.label)}<span class="sort-ind">${ind}</span></th>`;
+  }).join("");
+}
+
+function sortMatrizBy(key){
+  if(matrizSort.key===key) matrizSort.dir *= -1;
+  else matrizSort = {key, dir:1};
+  applyMatrizFilter();
+}
+
+function applyMatrizFilter(){
+  const q = (document.getElementById("matriz-search-input")?.value || "").toLowerCase().trim();
+  const terms = q ? q.split(/\\s+/) : [];
+  matrizFiltered = matrizRows.filter(r=>{
+    if(!terms.length) return true;
+    const hay = MATRIZ_COLS.map(c=>r[c.key]||"").join(" ").toLowerCase();
+    return terms.every(t=>hay.includes(t));
+  });
+  if(matrizSort.key){
+    const k = matrizSort.key, d = matrizSort.dir;
+    matrizFiltered.sort((a,b)=>String(a[k]||"").localeCompare(String(b[k]||""),"es",{sensitivity:"base"})*d);
+  }
+  matrizPage = 0;
+  renderMatrizHeader();
+  renderMatriz();
+}
+
+function onMatrizSearch(){
+  if(!matrizLoaded){ ensureMatriz().then(()=>applyMatrizFilter()); return; }
+  applyMatrizFilter();
+}
+
+function renderMatriz(){
+  const tbody = document.getElementById("matriz-tbody");
+  const noRes = document.getElementById("matriz-no-res");
+  const badge = document.getElementById("matriz-count-badge");
+  const pinfo = document.getElementById("matriz-pinfo");
+  if(!tbody) return;
+  const tot = matrizFiltered.length;
+  const pages = Math.ceil(tot/MATRIZ_PG)||1;
+  const st = matrizPage*MATRIZ_PG;
+  const page = matrizFiltered.slice(st, st+MATRIZ_PG);
+
+  if(badge) badge.textContent = matrizLoaded ? (tot.toLocaleString("es-AR")+" ficha"+(tot!==1?"s":"")) : "Cargando matriz…";
+  if(pinfo) pinfo.textContent = tot>0 ? `Página ${matrizPage+1} de ${pages} (${tot.toLocaleString("es-AR")} fichas)` : (matrizLoaded ? "0 fichas" : "Cargando…");
+  const bp = document.getElementById("btn-matriz-prev"), bn = document.getElementById("btn-matriz-next");
+  if(bp) bp.disabled = matrizPage===0;
+  if(bn) bn.disabled = matrizPage>=pages-1;
+
+  tbody.innerHTML = "";
+  if(noRes) noRes.style.display = (matrizLoaded && tot===0) ? "block" : "none";
+  const visCols = MATRIZ_COLS.filter(c=>c.visible);
+  page.forEach(r=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = visCols.map(c=>{
+      const v = r[c.key] || "—";
+      return `<td class="matriz-cell col-${c.key}"><div class="matriz-cell-inner">${escHtml(v)}</div></td>`;
+    }).join("");
+    tbody.appendChild(tr);
+  });
+}
+
+function exportMatrizCsv(){
+  if(!matrizFiltered.length) return;
+  const visCols = MATRIZ_COLS.filter(c=>c.visible);
+  const csvEsc = v => `"${String(v||"").replace(/"/g,'""')}"`;
+  const lines = [visCols.map(c=>csvEsc(c.label)).join(",")];
+  for(const r of matrizFiltered){
+    lines.push(visCols.map(c=>csvEsc(r[c.key])).join(","));
+  }
+  const blob = new Blob(["\\ufeff"+lines.join("\\n")],{type:"text/csv;charset=utf-8;"});
+  const url = URL.createObjectURL(blob), link = document.createElement("a");
+  link.href = url; link.download = "matriz_analisis_textos_"+new Date().toISOString().slice(0,10)+".csv";
+  link.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function toggleMatrizFullscreen(){
+  const sec = document.getElementById("matriz-analisis"), btn = document.getElementById("btn-matriz-fullscreen");
+  if(!sec) return;
+  const isFull = document.fullscreenElement===sec || sec.classList.contains("is-fullscreen");
+  if(!isFull){
+    if(sec.requestFullscreen) sec.requestFullscreen().catch(()=>sec.classList.add("is-fullscreen"));
+    else sec.classList.add("is-fullscreen");
+    if(btn){ btn.textContent="✕ Salir de pantalla completa"; btn.classList.add("active"); }
+  }else{
+    if(document.fullscreenElement===sec) document.exitFullscreen?.();
+    sec.classList.remove("is-fullscreen");
+    if(btn){ btn.textContent="⛶ Pantalla completa"; btn.classList.remove("active"); }
+  }
+}
+document.addEventListener("fullscreenchange",()=>{
+  const sec = document.getElementById("matriz-analisis"), btn = document.getElementById("btn-matriz-fullscreen");
+  if(!sec||!btn) return;
+  const active = document.fullscreenElement===sec || sec.classList.contains("is-fullscreen");
+  btn.textContent = active ? "✕ Salir de pantalla completa" : "⛶ Pantalla completa";
+  btn.classList.toggle("active", active);
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){
+    const sec = document.getElementById("matriz-analisis");
+    if(sec && sec.classList.contains("is-fullscreen")) toggleMatrizFullscreen();
+  }
+});
+
+function prevMatrizPage(){ if(matrizPage>0){ matrizPage--; renderMatriz(); } }
+function nextMatrizPage(){ if(matrizPage<Math.ceil(matrizFiltered.length/MATRIZ_PG)-1){ matrizPage++; renderMatriz(); } }
+
+async function ensureMatriz(){
+  if(matrizLoaded) return matrizRows;
+  if(matrizLoadPromise) return matrizLoadPromise;
+  matrizLoadPromise = fetch("matriz-data.json")
+    .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+    .then(data=>{
+      if(Array.isArray(data.columns) && data.columns.length){
+        MATRIZ_COLS = data.columns.map(c=>({key:c.key,label:c.label,visible:true}));
+      }
+      matrizRows = Array.isArray(data.rows) ? data.rows : [];
+      matrizFiltered = matrizRows.slice();
+      matrizLoaded = true;
+      buildMatrizColPicker();
+      renderMatrizHeader();
+      renderMatriz();
+      return matrizRows;
+    })
+    .catch(err=>{
+      const badge = document.getElementById("matriz-count-badge");
+      if(badge) badge.textContent = "Error al cargar matriz";
+      console.error("Matriz load error:", err);
+      return [];
+    });
+  return matrizLoadPromise;
+}
+
+buildMatrizColPicker();
+renderMatrizHeader();
+const idleLoadMatriz = () => setTimeout(()=>ensureMatriz(), 1500);
+if(document.readyState==="complete") idleLoadMatriz(); else window.addEventListener("load", idleLoadMatriz, {once:true});
+document.getElementById("matriz-search-input")?.addEventListener("focus",()=>ensureMatriz(),{once:true});
+if(window.location.hash==="#matriz-analisis"){
+  ensureMatriz();
+  setTimeout(()=>document.getElementById("matriz-analisis")?.scrollIntoView({block:"start"}), 250);
+}
 </script>
 </body>
 </html>"""
