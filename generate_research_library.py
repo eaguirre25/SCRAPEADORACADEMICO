@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Genera docs/biblioteca.html con soporte dual: Corpus Scraper + Textos Teóricos (Drive)."""
-import csv, json, re
+import csv, gzip, json, re
 from pathlib import Path
 from keyword_network import clean_keywords, read_rules
 
 DATA = Path('data')
 DOCS = Path('docs')
 CORPUS = DATA / 'fulltext_corpus.csv'
+CORPUS_GZ = DATA / 'corpus.csv.gz'
 TEORICOS = DATA / 'teoricos_articles.json'
 MASTER = DATA / 'master_records.csv'
 DOCS.mkdir(parents=True, exist_ok=True)
@@ -20,13 +21,23 @@ def s(v: object) -> str:
 
 def corpus_index() -> dict[str, dict]:
     idx = {}
-    if not CORPUS.exists(): return idx
     csv.field_size_limit(150_000_000)
-    with CORPUS.open(encoding='utf-8-sig', newline='', errors='replace') as f:
+    if CORPUS.exists():
+        opener = lambda: CORPUS.open(encoding='utf-8-sig', newline='', errors='replace')
+    elif CORPUS_GZ.exists():
+        opener = lambda: gzip.open(CORPUS_GZ, 'rt', encoding='utf-8-sig', newline='', errors='replace')
+    else:
+        return idx
+    with opener() as f:
         for r in csv.DictReader(f):
             k = key(r.get('doi'))
             if not k: continue
-            idx[k] = {'text_status': s(r.get('status')), 'pages': s(r.get('paginas')), 'filename': s(r.get('filename')), 'drive_file_id': s(r.get('drive_file_id'))}
+            idx[k] = {
+                'text_status': s(r.get('status')) or ('ok' if s(r.get('texto')) else ''),
+                'pages': s(r.get('paginas')),
+                'filename': s(r.get('filename')),
+                'drive_file_id': s(r.get('drive_file_id'))
+            }
     return idx
 
 def read_master():
@@ -34,6 +45,11 @@ def read_master():
     csv.field_size_limit(150_000_000)
     with MASTER.open(encoding='utf-8-sig', newline='', errors='replace') as f:
         return list(csv.DictReader(f))
+
+def clean_title(v: object) -> str:
+    txt = str(v or '').strip()
+    txt = re.sub(r'</?(?:b|i|em|strong|sub|sup|span|p)\b[^>]*>', '', txt, flags=re.I)
+    return re.sub(r'\s+', ' ', txt).strip()
 
 def records():
     raw = read_master()
@@ -43,7 +59,7 @@ def records():
     for r in raw:
         doi = key(r.get('doi'))
         c = cidx.get(doi, {})
-        title = s(r.get('title')) or '[Sin título]'
+        title = clean_title(r.get('title')) or '[Sin título]'
         url = s(r.get('url')) or (f'https://doi.org/{doi}' if doi else '')
         out.append({
             'record_id': s(r.get('record_id')) or doi or title,
@@ -136,13 +152,19 @@ async function saveMaster(){
 }
 
 async function init(){
-  A_corpus=await fetch('library_articles.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  A_teoricos=await fetch('teoricos_articles.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  R=await fetch('report_history.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  W=await fetch('weekly_reports.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  await loadMaster();
-  $('cntCorpus').textContent=A_corpus.length.toLocaleString();
-  $('cntTeoricos').textContent=A_teoricos.length.toLocaleString();
+  $('articles').innerHTML='<div style="padding:24px;color:var(--mut);text-align:center">⏳ Cargando catálogo bibliográfico…</div>';
+  const [teoricos, reports, weekly] = await Promise.all([
+    fetch('teoricos_articles.json').then(x=>x.json()).catch(()=>[]),
+    fetch('report_history.json').then(x=>x.json()).catch(()=>[]),
+    fetch('weekly_reports.json').then(x=>x.json()).catch(()=>[]),
+    loadMaster()
+  ]);
+  A_teoricos = teoricos; R = reports; W = weekly;
+  $('cntTeoricos').textContent = A_teoricos.length.toLocaleString('es-AR');
+  renderReports();
+  if(currentCollection==='teoricos'){populateYears();filter();}
+  A_corpus = await fetch('library_articles.json').then(x=>x.json()).catch(()=>[]);
+  $('cntCorpus').textContent = A_corpus.length.toLocaleString('es-AR');
   populateYears();
   renderReports();
   filter();

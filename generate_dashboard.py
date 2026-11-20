@@ -41,6 +41,14 @@ def read_csv(path):
 def s(v):
     return str(v or "").strip()
 
+def clean_title(v):
+    txt = s(v)
+    txt = re.sub(r"</?(?:b|i|em|strong|sub|sup|span|p)\b[^>]*>", "", txt, flags=re.I)
+    return re.sub(r"\s+", " ", txt).strip()
+
+def fmt_es(n):
+    return f"{int(n):,}".replace(",", ".")
+
 def safe_int(v, default=0):
     try:
         return int(v)
@@ -136,7 +144,7 @@ for cp in corpus:
     if not tid:
         continue
     rec    = doi_to_record.get(doi, cp)
-    titulo = s(rec.get("title", "") or cp.get("titulo", ""))
+    titulo = clean_title(rec.get("title", "") or cp.get("titulo", ""))
     if not titulo:
         continue
     autores   = s(rec.get("authors", "") or cp.get("autores", ""))
@@ -327,7 +335,7 @@ model_document_metadata = {s(row.get("document_id")): row for row in read_csv(f"
 paper_keys_by_title = defaultdict(list)
 for row_index, row in enumerate(records):
     doi = normalize_doi(row.get("doi"))
-    title = s(row.get("title", ""))
+    title = clean_title(row.get("title", ""))
     paper_key = s(row.get("record_id")) or f"record-{row_index}"
     paper_keys_by_model_id.setdefault(stable_document_id(row), paper_key)
     if doi:
@@ -562,7 +570,7 @@ edges = networks.get(DEFAULT_NETWORK, {}).get("documents", {}).get("edges", [])
 
 all_articles = []
 for r in records:
-    title = s(r.get("title", ""))
+    title = clean_title(r.get("title", ""))
     if not title:
         continue
     doi  = s(r.get("doi", ""))
@@ -810,20 +818,20 @@ html = """<!DOCTYPE html>
   --text:#C9D1D9;--muted:#8B949E;--accent:#58A6FF;--dim:#484F58;--hover:#1F2937
 }
 body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:100}
 @keyframes neon-pulse{0%{text-shadow:0 0 5px #58a6ff,0 0 10px #58a6ff,0 0 20px #58a6ff,0 0 40px #1d6fd8}100%{text-shadow:0 0 8px #7bbfff,0 0 16px #7bbfff,0 0 32px #58a6ff,0 0 64px #1d6fd8,0 0 90px #1d6fd8}}
-.neon-title{font-size:1.25em;font-weight:900;letter-spacing:.05em;color:#fff;text-shadow:0 0 5px #58a6ff,0 0 10px #58a6ff,0 0 20px #58a6ff,0 0 40px #1d6fd8;animation:neon-pulse 2.5s ease-in-out infinite alternate;white-space:nowrap}
+.neon-title{font-size:clamp(1.05em,1.8vw,1.25em);font-weight:900;letter-spacing:.05em;color:#fff;text-shadow:0 0 5px #58a6ff,0 0 10px #58a6ff,0 0 20px #58a6ff,0 0 40px #1d6fd8;animation:neon-pulse 2.5s ease-in-out infinite alternate}
 .neon-title .nt-accent{color:#a8d4ff;text-shadow:0 0 5px #a8d4ff,0 0 12px #58a6ff,0 0 26px #58a6ff,0 0 50px #1d6fd8}
 .neon-sub{font-size:.68em;color:#8B949E;margin-top:2px;letter-spacing:.01em}
 .neon-sub a{color:#58A6FF;text-decoration:none}
 .neon-sub a:hover{text-decoration:underline}
-.header-left{display:flex;flex-direction:column}
+.header-left{display:flex;flex-direction:column;min-width:0}
 .stamp{font-size:.7em;color:var(--dim)}.kpis{display:flex;background:var(--surface);border-bottom:1px solid var(--border)}
 .kpi{flex:1;text-align:center;padding:10px 8px;border-right:1px solid var(--border)}
 .kpi:last-child{border-right:none}
 .kpi-n{font-size:1.5em;font-weight:700;color:var(--accent)}
 .kpi-l{font-size:.68em;color:var(--muted);margin-top:2px}
-.main-grid{display:grid;grid-template-columns:1fr 360px;height:calc(55vh);overflow:hidden;border-bottom:1px solid var(--border)}
+.main-grid{display:grid;grid-template-columns:1fr 360px;height:calc(62vh);min-height:460px;overflow:hidden;border-bottom:1px solid var(--border)}
 .net-panel{display:flex;flex-direction:column;border-right:1px solid var(--border)}
 .panel-head{padding:8px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .panel-head h2{font-size:.78em;font-weight:600;color:#E6EDF3;text-transform:uppercase;letter-spacing:.06em}
@@ -903,11 +911,11 @@ tbody tr:hover td{background:var(--hover)}
 </header>
 
 <div class="kpis">
-  <div class="kpi"><div class="kpi-n">{total:,}</div><div class="kpi-l">Publicaciones en catálogo</div></div>
-  <div class="kpi"><div class="kpi-n" id="kpi-topics">{n_macros_preferred}</div><div class="kpi-l">Temas del modelo</div></div>
-  <div class="kpi"><div class="kpi-n" id="kpi-nodes">{n_nodes}</div><div class="kpi-l">Nodos en red</div></div>
-  <div class="kpi"><div class="kpi-n" id="kpi-edges">{n_edges}</div><div class="kpi-l">Conexiones</div></div>
-  <div class="kpi"><div class="kpi-n">{drive_pdf_count:,}</div><div class="kpi-l">Archivos PDF en Drive</div></div>
+  <div class="kpi"><div class="kpi-n">{fmt_es(total)}</div><div class="kpi-l">Publicaciones en catálogo</div></div>
+  <div class="kpi"><div class="kpi-n" id="kpi-topics">{fmt_es(n_macros_preferred)}</div><div class="kpi-l">Temas del modelo</div></div>
+  <div class="kpi"><div class="kpi-n" id="kpi-nodes">{fmt_es(n_nodes)}</div><div class="kpi-l">Nodos en red</div></div>
+  <div class="kpi"><div class="kpi-n" id="kpi-edges">{fmt_es(n_edges)}</div><div class="kpi-l">Conexiones</div></div>
+  <div class="kpi"><div class="kpi-n">{fmt_es(drive_pdf_count)}</div><div class="kpi-l">Archivos PDF en Drive</div></div>
   <div class="kpi"><div class="kpi-n">{anio_min}&ndash;{anio_max}</div><div class="kpi-l">Periodo</div></div>
 </div>
 
@@ -927,14 +935,16 @@ tbody tr:hover td{background:var(--hover)}
         <span class="badge" id="net-badge">&nbsp;</span>
       </div>
     </div>
-    <div class="stellar-stage">
+    <div class="stellar-stage" id="stellar-stage">
       <svg id="net-svg" aria-label="Red temática interactiva"></svg>
       <div class="stellar-tools" aria-label="Controles de la red">
         <button type="button" id="net-zoom-in" aria-label="Acercar">+</button>
         <button type="button" id="net-zoom-out" aria-label="Alejar">−</button>
         <button type="button" id="net-fit">Encuadrar</button>
+        <button type="button" id="net-fullscreen" onclick="toggleNetFullscreen()" title="Pantalla completa">⛶</button>
+        <input type="search" id="net-search" class="stellar-search" placeholder="Localizar nodo en la red…" aria-label="Localizar nodo en la red" oninput="onNetSearch(this.value)">
       </div>
-      <div class="stellar-hint">Arrastrá un nodo · Acercate para leer · Elegí para iluminar</div>
+      <div class="stellar-hint">Arrastrá un nodo · Clic en la leyenda para aislar constelación · Elegí para iluminar</div>
       <aside id="net-detail" class="stellar-detail" aria-label="Ficha del nodo" hidden>
         <button type="button" id="net-detail-close" aria-label="Cerrar ficha">×</button>
         <div id="net-detail-body" aria-live="polite"></div>
@@ -1068,11 +1078,30 @@ function renderNetwork(isComparison){
         : `${view.nodes.length} registros · ${view.edges.length} enlaces · ${model.assigned} con tema`);
 
   // En la vista documental el color no se explica solo: la leyenda traduce
-  // cada color al tópico del modelo activo.
+  // cada color al tópico del modelo activo y permite aislar su constelación.
   legend.innerHTML = isTopics ? "" : model.topics.nodes
-    .map(t=>`<span><i style="background:${t.color}"></i>T${t.id} ${String(t.label).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</span>`).join("") + '<span><i style="background:#72879e"></i>Sin tema asignado / sin asignación vinculada</span>';
+    .map(t=>`<span data-legend-topic="${t.id}" onclick="toggleLegendTopic('${t.id}', this)" title="Clic para enfocar esta constelación temática"><i style="background:${t.color};box-shadow:0 0 6px ${t.color}"></i>T${t.id} ${String(t.label).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</span>`).join("") + '<span><i style="background:#72879e"></i>Sin tema asignado / sin asignación vinculada</span>';
 
   netSim = StellarNetwork.render({svgEl, model, view, isTopics, tip});
+}
+
+function toggleLegendTopic(topicId, el){
+  if(!netSim || !netSim.focusTopic) return;
+  const activeTopic = netSim.focusTopic(topicId);
+  document.querySelectorAll("#net-legend span[data-legend-topic]").forEach(sp=>{
+    sp.classList.toggle("active", sp.dataset.legendTopic === activeTopic);
+  });
+}
+
+function onNetSearch(val){
+  if(netSim && netSim.searchNodes) netSim.searchNodes(val);
+}
+
+function toggleNetFullscreen(){
+  const st = document.getElementById("stellar-stage");
+  if(!st) return;
+  if(!document.fullscreenElement) st.requestFullscreen?.();
+  else document.exitFullscreen?.();
 }
 
 renderNetwork(false);
@@ -1142,24 +1171,25 @@ function render(){
   const tot   = filtered.length;
   const pages = Math.ceil(tot/PG)||1;
 
-  document.getElementById("count-badge").textContent = tot.toLocaleString()+" articulo"+(tot!==1?"s":"");
-  document.getElementById("pinfo").textContent = tot>0 ? `Pagina ${curPage+1} de ${pages} (${tot.toLocaleString()} resultados)` : "0 resultados";
+  document.getElementById("count-badge").textContent = tot.toLocaleString("es-AR")+" articulo"+(tot!==1?"s":"");
+  document.getElementById("pinfo").textContent = tot>0 ? `Pagina ${curPage+1} de ${pages} (${tot.toLocaleString("es-AR")} resultados)` : "0 resultados";
   document.getElementById("btn-prev").disabled = curPage===0;
   document.getElementById("btn-next").disabled = curPage>=pages-1;
 
   tbody.innerHTML="";
   noRes.style.display = tot===0?"block":"none";
 
+  function escHtml(v){return String(v||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
   page.forEach(a=>{
     const tr=document.createElement("tr");
-    const kws=(a.kws||[]).map(k=>`<span class="kt">${k}</span>`).join("");
-    const resumen=a.resumen ? `<div class="ameta">${a.resumen}</div>` : "";
+    const kws=(a.kws||[]).map(k=>`<span class="kt">${escHtml(k)}</span>`).join("");
+    const resumen=a.resumen ? `<div class="ameta">${escHtml(a.resumen)}</div>` : "";
     tr.innerHTML=`
-      <td><a class="alink" href="${a.url||"#"}" target="_blank" rel="noopener">${a.titulo}</a>${resumen}</td>
-      <td><span class="ameta">${a.autores||"—"}</span></td>
-      <td><span class="ameta">${a.revista||"—"}</span></td>
-      <td><span class="ameta">${a.fuente||"—"}</span></td>
-      <td><span class="ameta">${a.anio||"—"}</span></td>
+      <td><a class="alink" href="${escHtml(a.url||"#")}" target="_blank" rel="noopener">${escHtml(a.titulo)}</a>${resumen}</td>
+      <td><span class="ameta">${escHtml(a.autores||"—")}</span></td>
+      <td><span class="ameta">${escHtml(a.revista||"—")}</span></td>
+      <td><span class="ameta">${escHtml(a.fuente||"—")}</span></td>
+      <td><span class="ameta">${escHtml(a.anio||"—")}</span></td>
       <td><div class="kws">${kws}</div></td>`;
     tbody.appendChild(tr);
   });

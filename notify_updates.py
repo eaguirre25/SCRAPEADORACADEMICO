@@ -30,8 +30,13 @@ def main() -> None:
     gmail_password = (os.getenv("GMAIL_APP_PASSWORD", "") or os.getenv("GMAIL_PASSWORD", "")).strip()
     recipient = os.getenv("RECIPIENT_EMAIL", "").strip()
     if gmail_user and gmail_password and recipient:
-        send_email(subject, body, gmail_user, gmail_password, recipient)
-        print(f"Correo enviado con {len(records)} novedades validadas.")
+        try:
+            send_email(subject, body, gmail_user, gmail_password, recipient)
+            print(f"Correo enviado con {len(records)} novedades validadas.")
+        except Exception as exc:
+            print(f"Advertencia: no se pudo enviar el correo por SMTP ({exc}). Se continúa sin abortar el workflow.")
+            print("Informe en consola:")
+            print(body)
     else:
         print("Faltan credenciales de correo. Informe en consola:")
         print(body)

@@ -1315,19 +1315,32 @@ def generate_email_body(new_records: List[Dict[str, Any]], total_records: int) -
         lines.append(f"... y {len(sorted_records) - EMAIL_ITEM_LIMIT} más en el Excel adjunto.")
     return "\n".join(lines)
 def send_email(subject: str, body: str, gmail_user: str, gmail_password: str, recipient: str) -> None:
+    import io
+    import zipfile
     msg = MIMEMultipart()
     msg["Subject"] = subject
     msg["From"]    = gmail_user
     msg["To"]      = recipient
     msg.attach(MIMEText(body, _subtype="plain", _charset="utf-8"))
     if EXCEL_FILE.exists():
-        with open(EXCEL_FILE, "rb") as f:
+        raw_bytes = EXCEL_FILE.read_bytes()
+        # Si el Excel supera 7 MB, comprimirlo en .zip evita rechazos o timeouts de SMTP
+        if len(raw_bytes) > 7 * 1024 * 1024:
+            buf = io.BytesIO()
+            with zipfile.ZipFile(buf, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+                zf.writestr(EXCEL_FILE.name, raw_bytes)
+            payload = buf.getvalue()
+            attach_name = f"{EXCEL_FILE.stem}.zip"
+        else:
+            payload = raw_bytes
+            attach_name = EXCEL_FILE.name
+        if len(payload) <= 18 * 1024 * 1024:
             part = MIMEBase("application", "octet-stream")
-            part.set_payload(f.read())
-        encoders.encode_base64(part)
-        part.add_header("Content-Disposition", f"attachment; filename={EXCEL_FILE.name}")
-        msg.attach(part)
-    with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+            part.set_payload(payload)
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", f"attachment; filename={attach_name}")
+            msg.attach(part)
+    with smtplib.SMTP("smtp.gmail.com", 587, timeout=45) as server:
         server.ehlo(); server.starttls(); server.ehlo()
         server.login(gmail_user, gmail_password)
         server.sendmail(gmail_user, [recipient], msg.as_string())

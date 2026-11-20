@@ -39,6 +39,12 @@ def s(value: object) -> str:
     return str(value or "").strip()
 
 
+def clean_title(value: object) -> str:
+    txt = s(value)
+    txt = re.sub(r"</?(?:b|i|em|strong|sub|sup|span|p)\b[^>]*>", "", txt, flags=re.I)
+    return re.sub(r"\s+", " ", txt).strip()
+
+
 def normalize_search_text(value: object) -> str:
     """Normaliza texto igual que el buscador del navegador."""
     decomposed = unicodedata.normalize("NFKD", s(value).lower())
@@ -122,7 +128,7 @@ def main() -> None:
                 "origin": s(row.get("origin")),
                 "document_type": s(row.get("document_type")),
                 "authors": s(row.get("authors")),
-                "title": s(row.get("title")),
+                "title": clean_title(row.get("title")),
                 "alternate_titles": " | ".join(variants.get(s(row.get("record_id")), [])),
                 "abstract": s(row.get("abstract")),
                 "keywords": "; ".join(clean_keywords(row.get("keywords"), keyword_rules)[0]),
@@ -275,8 +281,8 @@ applyFilters();
     # CSS and JavaScript (for example, `function render(){{ ... }}`).
     html = html.replace("{{", "{").replace("}}", "}")
     html = (
-        html.replace("__TOTAL__", f"{total:,}")
-        .replace("__INDEXED__", f"{indexed_documents:,}")
+        html.replace("__TOTAL__", f"{total:,}".replace(",", "."))
+        .replace("__INDEXED__", f"{indexed_documents:,}".replace(",", "."))
         .replace("__DATA__", data_json)
     )
 

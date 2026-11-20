@@ -94,7 +94,7 @@
   }
   function renderTopics(){
     $('topic-cards').replaceChildren();$('legend').replaceChildren();
-    data.topics.forEach(t=>{const b=add($('topic-cards'),'button',undefined,'topic-card');add(b,'span','T'+t.topic_id+' · '+fmt(t.document_count)+' documentos','topic-number');add(b,'h3',label(t));add(b,'p',t.top_words.split(' | ').slice(0,5).join(' · '));b.onclick=()=>topicDialog(t);const l=add($('legend'),'button','T'+t.topic_id+' · '+label(t));l.onclick=()=>topicDialog(t);});
+    data.topics.forEach(t=>{const b=add($('topic-cards'),'button',undefined,'topic-card');add(b,'span','T'+t.topic_id+' · '+fmt(t.document_count)+' documentos','topic-number');add(b,'h3',label(t));add(b,'p',t.top_words.split(' | ').slice(0,5).join(' · '));b.onclick=()=>topicDialog(t);const l=add($('legend'),'button','T'+t.topic_id+' · '+label(t));l.onclick=()=>{if(simulation?.focusTopic){const active=simulation.focusTopic(t.topic_id);document.querySelectorAll('#legend button').forEach(btn=>btn.classList.toggle('active',btn===l&&active===String(t.topic_id)));}else{topicDialog(t);}};l.ondblclick=()=>topicDialog(t);});
     if(!data.topics.length)add($('topic-cards'),'p',data.status==='fitted'?'Este ajuste no encontró agrupamientos; se conservan los documentos sin tópico.':'El ajuste independiente está pendiente.');
   }
   function drawMap(){
@@ -116,6 +116,7 @@
       $('loading').textContent=data.status==='fitted'?`Ajuste exploratorio sobre ${fmt(assignments)} candidatos territoriales. La revisión documental define su pertenencia. 2026 está en curso.`:'Corpus preparado; el ajuste BERTopic necesita actualizarse antes de interpretar temas.';
       $('loading').className='caption';renderTopics();renderList();drawMap();
       $('method').onclick=methodDialog;$('view').onchange=drawMap;$('relation').onchange=drawMap;
+      if($('net-search-ar'))$('net-search-ar').oninput=e=>simulation?.searchNodes?.(e.target.value);
       document.querySelectorAll('[role=tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[role=tab]').forEach(x=>x.setAttribute('aria-selected',String(x===b)));document.querySelectorAll('.panel').forEach(x=>x.hidden=x.id!==b.dataset.panel);if(b.dataset.panel==='map')drawMap();});
       ['search','filter'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{page=0;renderList();}));
       $('previous').onclick=()=>{page--;renderList();};$('next').onclick=()=>{page++;renderList();};

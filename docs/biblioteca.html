@@ -76,13 +76,19 @@ async function saveMaster(){
 }
 
 async function init(){
-  A_corpus=await fetch('library_articles.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  A_teoricos=await fetch('teoricos_articles.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  R=await fetch('report_history.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  W=await fetch('weekly_reports.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>[]);
-  await loadMaster();
-  $('cntCorpus').textContent=A_corpus.length.toLocaleString();
-  $('cntTeoricos').textContent=A_teoricos.length.toLocaleString();
+  $('articles').innerHTML='<div style="padding:24px;color:var(--mut);text-align:center">⏳ Cargando catálogo bibliográfico…</div>';
+  const [teoricos, reports, weekly] = await Promise.all([
+    fetch('teoricos_articles.json').then(x=>x.json()).catch(()=>[]),
+    fetch('report_history.json').then(x=>x.json()).catch(()=>[]),
+    fetch('weekly_reports.json').then(x=>x.json()).catch(()=>[]),
+    loadMaster()
+  ]);
+  A_teoricos = teoricos; R = reports; W = weekly;
+  $('cntTeoricos').textContent = A_teoricos.length.toLocaleString('es-AR');
+  renderReports();
+  if(currentCollection==='teoricos'){populateYears();filter();}
+  A_corpus = await fetch('library_articles.json').then(x=>x.json()).catch(()=>[]);
+  $('cntCorpus').textContent = A_corpus.length.toLocaleString('es-AR');
   populateYears();
   renderReports();
   filter();

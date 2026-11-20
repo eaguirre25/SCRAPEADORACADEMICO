@@ -57,14 +57,6 @@ jobs:
         run: |
           python relevance_filter.py --solo-duplicados
 
-      - name: Send curated email update
-        env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
-        run: |
-          python notify_updates.py
-
       - name: Commit updated data files
         run: |
           git config user.name "github-actions[bot]"
@@ -90,8 +82,17 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update academic scraper database"
-            git push
+            git pull --rebase origin main && git push
           fi
+
+      - name: Send curated email update
+        continue-on-error: true
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: |
+          python notify_updates.py
 
       # Los PDF se suben después de guardar los datos: con muchas novedades la
       # subida puede tardar horas y, si alcanzaba el límite del job, se perdía
