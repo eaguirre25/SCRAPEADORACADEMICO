@@ -1,0 +1,175 @@
+/* Atlas · sistema visual compartido.
+ * Solo cambia la apariencia: no modifica la estructura ni los scripts.
+ * Se carga al final de <head> mediante inject_pwa.py, después de los estilos
+ * propios de cada página. La red (stellar-network.css/js) no se toca. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap");
+
+:root{
+  --at-bg:#0A0E16;--at-surface:#0D1320;--at-surface-2:#111725;--at-surface-3:#1B2438;
+  --at-line:rgba(255,255,255,.07);--at-line-2:rgba(255,255,255,.12);
+  --at-text:#E8EDF7;--at-muted:#9AA6BC;--at-dim:#7C889E;
+  --at-accent:#7AA2FF;--at-accent-text:#9DBBFF;--at-warm:#F2B66D;
+  --at-serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --at-sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --at-radius:16px;
+}
+
+/* ───────────── Tablero (index) ───────────── */
+html[data-page="index"]{
+  --bg:var(--at-bg);--surface:var(--at-surface);--border:var(--at-line);
+  --text:var(--at-text);--muted:var(--at-muted);--dim:var(--at-dim);
+  --accent:var(--at-accent-text);--hover:var(--at-surface-3);
+}
+html[data-page="index"] body{
+  font-family:var(--at-sans);background:var(--at-bg);color:var(--at-text);
+  background-image:radial-gradient(1200px 520px at 78% -8%,rgba(122,162,255,.12),transparent 60%);
+  background-repeat:no-repeat;-webkit-font-smoothing:antialiased;
+}
+
+/* Encabezado */
+html[data-page="index"] header{
+  background:rgba(10,14,22,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--at-line);padding:22px 40px;align-items:flex-end;gap:20px;position:relative;
+}
+html[data-page="index"] .neon-title{
+  animation:none;text-shadow:none;color:var(--at-text);
+  font-family:var(--at-serif);font-weight:400;letter-spacing:-.02em;
+  font-size:clamp(28px,3.4vw,44px);line-height:1.05;
+}
+html[data-page="index"] .neon-title .nt-accent{color:inherit;text-shadow:none}
+html[data-page="index"] .neon-sub{font-size:13px;color:var(--at-dim);margin-top:10px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+html[data-page="index"] .neon-sub a{color:var(--at-accent-text)}
+html[data-page="index"] .neon-sub a.lib-link,
+html[data-page="index"] .neon-sub a[href="biblioteca.html"]{
+  display:inline-flex !important;align-items:center;height:38px;padding:0 16px !important;margin-left:8px !important;
+  border-radius:10px !important;border:0 !important;background:var(--at-text) !important;color:var(--at-bg) !important;
+  font-weight:600 !important;font-size:13px;text-decoration:none !important;
+}
+html[data-page="index"] .neon-sub a[href="biblioteca.html"]:hover{background:#fff !important}
+html[data-page="index"] .argentina-link{
+  display:inline-flex;align-items:center;height:38px;padding:0 16px !important;
+  border-radius:10px !important;border:1px solid rgba(242,182,109,.35) !important;
+  background:transparent !important;color:var(--at-warm) !important;font-size:13px;
+}
+html[data-page="index"] .argentina-link:hover{background:rgba(242,182,109,.08) !important}
+html[data-page="index"] .stamp{font-size:12px;color:var(--at-dim)}
+
+/* Indicadores */
+html[data-page="index"] .kpis{
+  max-width:none;margin:28px 40px 0;border:1px solid var(--at-line);border-radius:18px;
+  background:rgba(17,23,37,.6);overflow:hidden;
+}
+html[data-page="index"] .kpi:has(#kpi-nodes){display:none} /* repetía el total del catálogo */
+html[data-page="index"] .kpi{text-align:left;padding:20px 24px;border-right:1px solid var(--at-line)}
+html[data-page="index"] .kpi-n{font-family:var(--at-serif);font-weight:400;font-size:34px;line-height:1;color:var(--at-text);letter-spacing:-.02em}
+html[data-page="index"] .kpi-l{font-size:13px;color:var(--at-muted);margin-top:8px}
+
+/* Red + tópicos */
+html[data-page="index"] .main-grid{
+  margin:20px 40px 0;gap:20px;border-bottom:0;height:72vh;min-height:560px;overflow:visible;
+  grid-template-columns:minmax(0,1fr) 360px;
+}
+html[data-page="index"] .net-panel,
+html[data-page="index"] .topics-panel{
+  border:1px solid var(--at-line);border-radius:20px;background:var(--at-surface);overflow:hidden;min-height:0;
+}
+html[data-page="index"] .panel-head{padding:14px 18px;border-bottom:1px solid var(--at-line);gap:12px;flex-wrap:wrap}
+html[data-page="index"] .panel-head h2{
+  font-family:var(--at-serif);font-weight:400;text-transform:none;letter-spacing:-.01em;
+  font-size:21px;color:var(--at-text);
+}
+html[data-page="index"] .net-controls{flex-wrap:wrap;gap:8px;justify-content:flex-start}
+html[data-page="index"] .net-controls select,
+html[data-page="index"] #net-view,
+html[data-page="index"] #net-profile,
+html[data-page="index"] #tm-select{
+  -webkit-appearance:none;appearance:none;height:38px;padding:0 34px 0 12px;border-radius:10px;
+  border:1px solid var(--at-line-2);color:var(--at-text);font:inherit;font-size:13px;
+  background:var(--at-surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239AA6BC' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;
+}
+html[data-page="index"] #keyword-audit-open{
+  height:38px;padding:0 14px;border-radius:10px;border:1px solid var(--at-line-2);
+  background:transparent;color:var(--at-accent-text);font:inherit;font-size:13px;cursor:pointer;
+}
+html[data-page="index"] #keyword-audit-open:hover{background:var(--at-surface-3)}
+html[data-page="index"] .badge{
+  background:rgba(122,162,255,.12);color:var(--at-accent-text);font-weight:500;font-size:12px;
+  padding:5px 10px;border-radius:999px;
+}
+html[data-page="index"] .stellar-hint{display:none} /* la ayuda queda en "Cómo se construye esta red" */
+html[data-page="index"] .stellar-tools button,
+html[data-page="index"] .stellar-tools input.stellar-search{
+  background:rgba(17,23,37,.85);border-color:var(--at-line-2);border-radius:10px;min-height:36px;font-family:var(--at-sans);
+}
+html[data-page="index"] .net-legend{
+  background:var(--at-surface);border-top:1px solid var(--at-line);padding:10px 14px;gap:6px;max-height:92px;
+}
+html[data-page="index"] .net-legend span{
+  font-size:12px;color:#C9D2E3;padding:5px 11px;border-radius:999px;border:1px solid var(--at-line);background:var(--at-surface-2);
+}
+html[data-page="index"] .net-legend span:hover{background:var(--at-surface-3);border-color:var(--at-line-2)}
+html[data-page="index"] .net-method{padding:12px 18px;border-top:1px solid var(--at-line);color:var(--at-muted)}
+html[data-page="index"] .net-method summary{color:var(--at-accent-text);cursor:pointer}
+
+html[data-page="index"] .topics-panel .badge{display:none}
+html[data-page="index"] .topics-scroll{padding:12px}
+html[data-page="index"] .topic-item{
+  border:1px solid var(--at-line);border-left-width:1px;border-radius:14px;padding:14px 16px;
+  background:var(--at-surface-2);margin-bottom:8px;
+}
+html[data-page="index"] .topic-item:hover{transform:none;border-color:rgba(122,162,255,.45);background:var(--at-surface-2)}
+html[data-page="index"] .t-name{font-size:14px;font-weight:600}
+html[data-page="index"] .t-meta{font-size:12px;color:var(--at-muted)}
+html[data-page="index"] .bar-track{height:3px;background:rgba(255,255,255,.06)}
+html[data-page="index"] .t-frex{font-size:13px;line-height:1.5;color:var(--at-muted);margin-top:8px}
+html[data-page="index"] .t-hint{font-size:13px;color:var(--at-accent-text);margin-top:8px}
+
+/* Modelado temático */
+html[data-page="index"] .tm-section{
+  background:transparent;border-bottom:0;padding:64px 40px 24px;
+}
+html[data-page="index"] .tm-head h2{font-family:var(--at-serif);font-weight:400;font-size:36px;letter-spacing:-.02em;color:var(--at-text)}
+html[data-page="index"] .tm-head p,
+html[data-page="index"] .tm-lead{color:var(--at-muted);font-size:15px;line-height:1.6}
+html[data-page="index"] .tm-pane{gap:16px}
+html[data-page="index"] .tm-card{
+  border:1px solid var(--at-line);border-radius:var(--at-radius);padding:20px;
+  background:linear-gradient(180deg,var(--at-surface-2),var(--at-surface));
+  transition:border-color .2s,transform .2s;
+}
+html[data-page="index"] .tm-card:hover{border-color:rgba(255,255,255,.2);transform:translateY(-2px)}
+html[data-page="index"] .tm-title{font-family:var(--at-serif);font-weight:400;font-size:18px;line-height:1.25;color:var(--at-text)}
+html[data-page="index"] .tm-meta,
+html[data-page="index"] .tm-words,
+html[data-page="index"] .tm-evidence{color:var(--at-muted);font-size:13px;line-height:1.5}
+html[data-page="index"] .tm-open{color:var(--at-accent-text);font-weight:500;font-size:13px}
+
+/* Tabla de artículos y modales */
+html[data-page="index"] .arts-section{margin:24px 40px 48px;border:1px solid var(--at-line);border-radius:20px;overflow:hidden}
+html[data-page="index"] .arts-head{background:var(--at-surface);border-bottom:1px solid var(--at-line);padding:14px 20px}
+html[data-page="index"] .arts-head h2{font-family:var(--at-serif);font-weight:400;text-transform:none;letter-spacing:-.01em;font-size:22px}
+html[data-page="index"] .search{background:var(--at-surface-2);border:1px solid var(--at-line-2);border-radius:10px;height:40px;padding:0 14px}
+html[data-page="index"] thead th{background:var(--at-surface);color:var(--at-dim)}
+html[data-page="index"] tbody td{border-bottom:1px solid var(--at-line)}
+html[data-page="index"] .alink{color:var(--at-text);font-family:var(--at-serif);font-size:16px;font-weight:400}
+html[data-page="index"] .alink:hover{color:var(--at-accent-text);text-decoration:none}
+html[data-page="index"] .kt{background:var(--at-surface-3);border-radius:999px;padding:2px 8px}
+html[data-page="index"] .pager{background:var(--at-surface);border-top:1px solid var(--at-line)}
+html[data-page="index"] .pager button{border-radius:8px;background:var(--at-surface-2);border-color:var(--at-line-2)}
+html[data-page="index"] .modal{background:var(--at-surface);border-color:var(--at-line-2);border-radius:18px}
+html[data-page="index"] .modal-h h3{font-family:var(--at-serif);font-weight:400;font-size:22px}
+
+@media (max-width:900px){
+  html[data-page="index"] header{padding:16px}
+  html[data-page="index"] .kpis,
+  html[data-page="index"] .main-grid,
+  html[data-page="index"] .arts-section{margin-left:12px;margin-right:12px}
+  html[data-page="index"] .main-grid{grid-template-columns:1fr;height:auto}
+  html[data-page="index"] .net-panel{height:70vh}
+  html[data-page="index"] .tm-section{padding:40px 16px 16px}
+  html[data-page="index"] .kpi{text-align:center;padding:14px 10px}
+  html[data-page="index"] .kpi-n{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  html[data-page="index"] .tm-card{transition:none}
+}

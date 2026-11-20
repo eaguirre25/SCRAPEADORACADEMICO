@@ -20,6 +20,7 @@ HEAD = """<!-- pwa:start -->
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="theme.css">
 <script src="pwa.js" defer></script>
 <!-- pwa:end -->
 """
