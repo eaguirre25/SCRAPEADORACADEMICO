@@ -534,8 +534,14 @@ for profile, edges in keyword_variants.items():
             pool[pair] = {"index": len(pool), "edge": edge}
         indexes.append(pool[pair]["index"])
     variant_indexes[profile] = indexes
-packed = [[e["edge"]["source"], e["edge"]["target"], e["edge"]["weight"], e["edge"]["jaccard"], [term_index[t] for t in e["edge"]["shared_keywords"]]] for e in pool.values()]
-keyword_payload = {"default_profile": DEFAULT_PROFILE, "profiles": keyword_audit["profiles"], "terms": vocabulary, "edges": packed, "variants": variant_indexes}
+# Cada perfil de semejanza se publica en su propio JSON y se descarga solo al elegirlo:
+# el perfil por defecto pesa unos MB; los exploratorios, decenas.
+KEYWORD_DATA_DIR = OUT_DIR / "data"
+KEYWORD_DATA_DIR.mkdir(exist_ok=True)
+for profile, edges in keyword_variants.items():
+    rows = [[e["source"], e["target"], e["jaccard"] if profile == "jaccard_control" else e["weight"], [term_index[t] for t in e["shared_keywords"]]] for e in edges]
+    (KEYWORD_DATA_DIR / f"keyword-edges-{profile}.json").write_text(json.dumps(rows, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+keyword_payload = {"default_profile": DEFAULT_PROFILE, "profiles": keyword_audit["profiles"], "terms": vocabulary}
 (OUT_DIR / "keyword-network-data.js").write_text("window.KeywordNetworkData = " + json.dumps(keyword_payload, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
 
 review_models = {}
@@ -587,7 +593,9 @@ for r in records:
     revista = infer_origin(r)
     aliases = [a for a in duplicate_aliases if s(a.get("duplicate_of")) == s(r.get("record_id"))]
     variant_text = " ".join(s(a.get("title")) + " " + s(a.get("authors")) for a in aliases)
-    search_text = " ".join([title, autores, revista, fuente, s(r.get("publication_year", "")), kws_raw, resumen, variant_text])
+    # El navegador arma el texto buscable completo con titulo, autores, revista, fuente, año y resumen;
+    # aquí solo se guarda lo que no aparece en esos campos (palabras clave originales y títulos duplicados).
+    search_text = " ".join([kws_raw, variant_text]).strip()
     all_articles.append({
         "titulo":  title,
         "autores": auth_short,
@@ -613,9 +621,22 @@ anio_max = max(anios) if anios else 2026
 
 # ── JSON ──────────────────────────────────────────────────────────────────────
 
-network_export = {key: {**net, "documents": {"nodes": net["documents"]["nodes"], "edges": []}} for key, net in networks.items()}
+# Los nodos documentales de cada modelo y la tabla de papers pesan varios MB:
+# se publican como JSON aparte y el navegador los pide solo cuando los necesita.
+DATA_SUBDIR = OUT_DIR / "data"
+DATA_SUBDIR.mkdir(exist_ok=True)
+network_export = {}
+for key, net in networks.items():
+    nodes_json = json.dumps(net["documents"]["nodes"], ensure_ascii=False, separators=(",", ":"))
+    (DATA_SUBDIR / f"network-{key}.json").write_text(nodes_json, encoding="utf-8")
+    network_export[key] = {**net, "documents": {"nodes": [], "edges": []}}
 networks_json = json.dumps(network_export, ensure_ascii=False, separators=(",", ":"))
-papers_json = json.dumps({key: {k: v for k, v in paper.items() if k != "kws"} for key, paper in paper_pool.items()}, ensure_ascii=False, separators=(",", ":"))
+PAPER_DETAIL_KEYS = ("reference", "reference_missing", "keyword_original", "keyword_excluded", "keyword_provenance")
+papers_light = {key: {k: v for k, v in paper.items() if k != "kws" and k not in PAPER_DETAIL_KEYS} for key, paper in paper_pool.items()}
+papers_detail = {key: {k: paper[k] for k in PAPER_DETAIL_KEYS if k in paper} for key, paper in paper_pool.items()}
+(DATA_SUBDIR / "papers.json").write_text(json.dumps(papers_light, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+(DATA_SUBDIR / "papers-detail.json").write_text(json.dumps(papers_detail, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+papers_json = "{}"
 arts_json    = json.dumps(all_articles, ensure_ascii=False, separators=(",", ":"))
 (OUT_DIR / "dashboard-articles.js").write_text("window.StellarArticles = " + arts_json + ";\n", encoding="utf-8")
 topicos_json = json.dumps([{
@@ -807,8 +828,6 @@ html = """<!DOCTYPE html>
 <title>Dashboard - Direccion Escolar</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="stellar-network.js"></script>
-<script src="dashboard-articles.js"></script>
-<script src="keyword-network-data.js"></script>
 <script src="keyword-method.js" defer></script>
 <script src="topic-review.js" defer></script>
 <style>
@@ -1007,25 +1026,63 @@ tbody tr:hover td{background:var(--hover)}
 
 <script>
 const NETWORKS = """ + networks_json + """;
-window.StellarPapers = """ + papers_json + """;
+window.StellarPapers = {};
 const TOPICOS = """ + topicos_json + """;
-const ARTS    = window.StellarArticles || [];
+let ARTS = [];
 const PG = 50;
-const KEYWORD_DATA = window.KeywordNetworkData;
-let currentProfile = KEYWORD_DATA.default_profile;
+let KEYWORD_DATA = null;
+let currentProfile = null;
 const keywordCache = {};
-function keywordEdges(profile){
-  if(!keywordCache[profile]) keywordCache[profile] = KEYWORD_DATA.variants[profile].map(index=>{
-    const e=KEYWORD_DATA.edges[index];
-    return {source:e[0],target:e[1],weight:profile==='jaccard_control'?e[3]:e[2],shared_count:e[4].length,shared_keywords:e[4].map(i=>KEYWORD_DATA.terms[i])};
-  });
-  return keywordCache[profile];
+
+// ── Carga diferida de datos pesados ──────────────────────────────────────────
+function loadJSON(url){return fetch(url).then(r=>{if(!r.ok)throw Error(url+" HTTP "+r.status);return r.json();});}
+function loadScript(src){return new Promise((ok,fail)=>{const el=document.createElement("script");el.src=src;el.onload=ok;el.onerror=()=>fail(Error(src));document.head.appendChild(el);});}
+let papersPromise=null, keywordPromise=null, articlesPromise=null;
+const networkPromises={};
+window.ensurePapers=()=>papersPromise||(papersPromise=loadJSON("data/papers.json").then(p=>{window.StellarPapers=p;return p;}).catch(e=>{papersPromise=null;throw e;}));
+function ensureKeywords(){
+  return keywordPromise||(keywordPromise=loadScript("keyword-network-data.js").then(()=>{
+    KEYWORD_DATA=window.KeywordNetworkData;
+    currentProfile=KEYWORD_DATA.default_profile;
+    for(const [id,p] of Object.entries(KEYWORD_DATA.profiles)){profileSelect.appendChild(new Option(p.label,id));}
+    profileSelect.value=currentProfile;
+  }).catch(e=>{keywordPromise=null;throw e;}));
 }
-for(const net of Object.values(NETWORKS)) net.documents.edges = keywordEdges(currentProfile);
+const keywordEdgePromises={};
+function ensureKeywordEdges(profile){
+  if(keywordCache[profile]) return Promise.resolve();
+  return keywordEdgePromises[profile]||(keywordEdgePromises[profile]=loadJSON("data/keyword-edges-"+profile+".json").then(rows=>{
+    keywordCache[profile]=rows.map(e=>({source:e[0],target:e[1],weight:e[2],shared_count:e[3].length,shared_keywords:e[3].map(i=>KEYWORD_DATA.terms[i])}));
+  }).catch(e=>{delete keywordEdgePromises[profile];throw e;}));
+}
+let detailPromise=null;
+window.ensurePaperDetails=()=>detailPromise||(detailPromise=loadJSON("data/papers-detail.json").then(d=>{window.StellarPaperDetails=d;return d;}).catch(e=>{detailPromise=null;throw e;}));
+function ensureNetwork(name){
+  const net=NETWORKS[name];
+  if(!net||net.documents.nodes.length) return Promise.resolve();
+  return networkPromises[name]||(networkPromises[name]=loadJSON("data/network-"+name+".json").then(nodes=>{
+    net.documents.nodes=nodes;
+    if(window.applyTopicReviews) window.applyTopicReviews();
+  }).catch(e=>{delete networkPromises[name];throw e;}));
+}
+function ensureArticles(){
+  return articlesPromise||(articlesPromise=loadScript("dashboard-articles.js").then(()=>{
+    ARTS=window.StellarArticles||[];
+    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.resumen,a.search].join(" ").toLowerCase();
+    const q=document.getElementById("search-input").value.toLowerCase().trim();
+    filtered=q?ARTS.filter(a=>(a.search||"").toLowerCase().includes(q)):ARTS;
+    curPage=0;render();
+  }).catch(e=>{articlesPromise=null;throw e;}));
+}
+function whenNear(el,fn,margin){
+  if(!el) return;
+  if(!("IntersectionObserver" in window)){fn();return;}
+  const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();fn();}},{rootMargin:margin||"800px"});
+  io.observe(el);
+}
 const profileSelect = document.getElementById('net-profile');
-for(const [id,p] of Object.entries(KEYWORD_DATA.profiles)){const o=new Option(p.label,id);profileSelect.appendChild(o);}
-profileSelect.value=currentProfile;
-function setKeywordProfile(profile){if(!KEYWORD_DATA.profiles[profile])return;currentProfile=profile;renderNetwork(false);}
+function keywordEdges(profile){ return keywordCache[profile] || []; }
+function setKeywordProfile(profile){if(!KEYWORD_DATA||!KEYWORD_DATA.profiles[profile])return;currentProfile=profile;renderNetwork(false);}
 
 // ── Redes por modelo ──────────────────────────────────────────────────────────
 // El selector de modelado y el de vista comparten un mismo estado: al cambiar
@@ -1043,7 +1100,25 @@ function showTopicModel(name){
 
 function setNetworkView(view){ currentView = view; renderNetwork(false); }
 
-function renderNetwork(isComparison){
+let netRenderToken=0;
+async function renderNetwork(isComparison){
+  const token=++netRenderToken;
+  const model=NETWORKS[currentModel];
+  if(!KEYWORD_DATA||!papersPromise||(model&&!model.documents.nodes.length)){
+    document.getElementById("net-badge").textContent="Cargando red…";
+  }
+  try{
+    await ensureKeywords();
+    await Promise.all([ensureKeywordEdges(currentProfile),ensurePapers(),ensureNetwork(currentModel)]);
+  }catch(err){
+    document.getElementById("net-badge").textContent="No se pudo cargar la red. Reintentá recargando la página.";
+    console.error(err);return;
+  }
+  if(token!==netRenderToken) return;
+  for(const net of Object.values(NETWORKS)) if(net.documents.nodes.length) net.documents.edges = keywordEdges(currentProfile);
+  renderNetworkNow(isComparison);
+}
+function renderNetworkNow(isComparison){
   const svgEl  = document.getElementById("net-svg");
   const legend = document.getElementById("net-legend");
   const title  = document.getElementById("net-title");
@@ -1104,7 +1179,7 @@ function toggleNetFullscreen(){
   else document.exitFullscreen?.();
 }
 
-renderNetwork(false);
+whenNear(document.getElementById("stellar-stage")||document.getElementById("net-svg"),()=>renderNetwork(false),"600px");
 
 // ── Topicos ───────────────────────────────────────────────────────────────────
 (function(){
@@ -1155,8 +1230,10 @@ document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeMod(); });
 
 // ── Articulos paginados ────────────────────────────────────────────────────────
 let curPage=0, filtered=ARTS;
+function articlesLoading(){document.getElementById("pinfo").textContent="Cargando artículos…";}
 
 function onSearch(){
+  if(!articlesPromise){ensureArticles();return;}
   const q=document.getElementById("search-input").value.toLowerCase().trim();
   filtered = q ? ARTS.filter(a=>(a.search||"").toLowerCase().includes(q)) : ARTS;
   curPage=0;
@@ -1207,6 +1284,10 @@ function prevPage(){ if(curPage>0){ curPage--; render(); } }
 function nextPage(){ if(curPage<Math.ceil(filtered.length/PG)-1){ curPage++; render(); } }
 
 render();
+articlesLoading();
+const idleLoad=()=>setTimeout(()=>ensureArticles(),1200);
+if(document.readyState==="complete") idleLoad(); else window.addEventListener("load",idleLoad,{once:true});
+document.getElementById("search-input").addEventListener("focus",()=>ensureArticles(),{once:true});
 focusArticleSearch();
 </script>
 </body>

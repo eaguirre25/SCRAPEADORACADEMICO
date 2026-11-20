@@ -27,6 +27,7 @@
       for(const d of net.documents.nodes)if(labels.has(String(d.topic)))d.topic_label=labels.get(String(d.topic));
     }
   }
+  window.applyTopicReviews=applyReviews;
   function saveForm(){
     const key=recordsKey(active.model,active.topic);reviews[key]={...(reviews[key]||{}),model:active.model,model_fingerprint:NETWORKS[active.model]?.fingerprint,topic:active.topic,label:el('review-label').value.trim(),state:el('review-state').value,notes:el('review-notes').value,updated_at:new Date().toISOString(),documents:reviews[key]?.documents||{}};
     const saved=persist();el('review-save-status').textContent=saved?'Guardado en este navegador. Exportá para conservar una copia o trasladarla a otro equipo.':'No se pudo guardar en el navegador. Exportá antes de cerrar.';
@@ -72,7 +73,7 @@
     el('review-search').value='';el('review-document-list').replaceChildren();el('review-data-status').textContent='Cargando documentos…';el('review-page').textContent='';
     dialog.showModal();
     try{
-      if(!modelData){const response=await fetch('topic-review-data.json');if(!response.ok)throw Error('HTTP '+response.status);modelData=await response.json();}
+      if(window.ensurePapers)await window.ensurePapers();if(!modelData){const response=await fetch('topic-review-data.json');if(!response.ok)throw Error('HTTP '+response.status);modelData=await response.json();}
       if(active!==current)return;
       active.members=modelData.models[active.model]?.topics[active.topic]||[];
       el('review-data-status').textContent='Listado completo de asignaciones exportadas por el modelo. Las propuestas de reasignación o exclusión quedan registradas para revisión.';filterDocs();

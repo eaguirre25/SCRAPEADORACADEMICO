@@ -497,6 +497,15 @@ window.StellarNetwork = (() => {
     }
 
     function select(d) {
+      // La ficha usa campos pesados (referencia, procedencia) que se piden solo al abrir un nodo.
+      if (!isTopics && d && window.ensurePaperDetails && !window.StellarPaperDetails) {
+        window.ensurePaperDetails().then(() => select(d)).catch(() => selectNow(d));
+        return;
+      }
+      if (!isTopics && d && window.StellarPaperDetails?.[d.id]) Object.assign(d, window.StellarPaperDetails[d.id]);
+      selectNow(d);
+    }
+    function selectNow(d) {
       selected = d; hovered = null; tip.style.opacity = '0';
       detail.hidden = !d; body.replaceChildren();
       if (d) {

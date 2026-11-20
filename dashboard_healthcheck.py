@@ -88,7 +88,10 @@ def inspect_site(records):
             if not asset.startswith(("http:", "https:")) and not (DOCS_DIR / asset).exists():
                 failures.append(f"Missing dashboard script: {asset}")
         for model, network in networks.items():
-            if len(network["documents"]["nodes"]) != len(records):
+            # Los nodos documentales viven en docs/data/network-<modelo>.json (carga diferida).
+            nodes_file = DOCS_DIR / "data" / f"network-{model}.json"
+            nodes = json.loads(nodes_file.read_text(encoding="utf-8")) if nodes_file.exists() else network["documents"]["nodes"]
+            if len(nodes) != len(records):
                 failures.append(f"{model}: network publication count differs from master")
         model_coverage = {m: {k: n.get(k) for k in ("modeled", "assigned", "outliers", "not_modeled", "unlinked")}
                           for m, n in networks.items()}
