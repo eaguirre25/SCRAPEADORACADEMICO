@@ -894,13 +894,19 @@ function buildMatrizColPicker(){
   if(cc) cc.textContent = `${vis}/${MATRIZ_COLS.length}`;
 }
 
+function updateMatrizColCount(){
+  const vis = MATRIZ_COLS.filter(c=>c.visible).length;
+  const cc = document.getElementById("matriz-col-count");
+  if(cc) cc.textContent = `${vis}/${MATRIZ_COLS.length}`;
+}
+
 function toggleMatrizCol(idx, checked){
   if(!checked && MATRIZ_COLS.filter(c=>c.visible).length<=1){
     buildMatrizColPicker();
     return;
   }
   MATRIZ_COLS[idx].visible = checked;
-  buildMatrizColPicker();
+  updateMatrizColCount();
   renderMatrizHeader();
   renderMatriz();
 }
@@ -1021,24 +1027,13 @@ function exportMatrizCsv(){
 function toggleMatrizFullscreen(){
   const sec = document.getElementById("matriz-analisis"), btn = document.getElementById("btn-matriz-fullscreen");
   if(!sec) return;
-  const isFull = document.fullscreenElement===sec || sec.classList.contains("is-fullscreen");
-  if(!isFull){
-    if(sec.requestFullscreen) sec.requestFullscreen().catch(()=>sec.classList.add("is-fullscreen"));
-    else sec.classList.add("is-fullscreen");
-    if(btn){ btn.textContent="✕ Salir de pantalla completa"; btn.classList.add("active"); }
-  }else{
-    if(document.fullscreenElement===sec) document.exitFullscreen?.();
-    sec.classList.remove("is-fullscreen");
-    if(btn){ btn.textContent="⛶ Pantalla completa"; btn.classList.remove("active"); }
+  const active = sec.classList.toggle("is-fullscreen");
+  document.body.style.overflow = active ? "hidden" : "";
+  if(btn){
+    btn.textContent = active ? "✕ Salir de pantalla completa" : "⛶ Pantalla completa";
+    btn.classList.toggle("active", active);
   }
 }
-document.addEventListener("fullscreenchange",()=>{
-  const sec = document.getElementById("matriz-analisis"), btn = document.getElementById("btn-matriz-fullscreen");
-  if(!sec||!btn) return;
-  const active = document.fullscreenElement===sec || sec.classList.contains("is-fullscreen");
-  btn.textContent = active ? "✕ Salir de pantalla completa" : "⛶ Pantalla completa";
-  btn.classList.toggle("active", active);
-});
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"){
     const sec = document.getElementById("matriz-analisis");
