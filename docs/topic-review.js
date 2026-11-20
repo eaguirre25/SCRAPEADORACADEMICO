@@ -19,7 +19,7 @@
       card.querySelector('.tm-title').textContent=r?.label||card.dataset.originalLabel;
       card.setAttribute('aria-label','Revisar tema '+card.querySelector('.tm-title').textContent);
       const prompt=card.querySelector('.tm-open');prompt.classList.toggle('local-reviewed',!!r&&r.state==='validated');
-      prompt.textContent=r?.state==='validated'?'Revisión guardada · Abrir ficha →':r?.state==='needs_changes'?'Correcciones guardadas · Abrir ficha →':'Abrir ficha y revisar →';
+      prompt.textContent=r?.state==='validated'?'Revisión guardada · Ver documentos →':r?.state==='needs_changes'?'Correcciones guardadas · Ver documentos →':'Revisar los documentos del tema →';
     });
     for(const [model,net]of Object.entries(NETWORKS)){
       for(const t of net.topics.nodes)t.label=reviews[recordsKey(model,t.id)]?.label||originals[recordsKey(model,t.id)];

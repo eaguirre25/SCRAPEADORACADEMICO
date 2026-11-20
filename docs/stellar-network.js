@@ -443,7 +443,7 @@ window.StellarNetwork = (() => {
     function layoutLabelsDense() {
       const active = selected || hovered;
       const nearby = active ? adjacency.get(active.index) : null;
-      const k = transform.k, fontSize = 11 / k;
+      const k = transform.k, fontSize = 12 / k;
       const cap = active ? 140 : Math.max(24, Math.min(LABEL_SLOTS, Math.round(30 + 70 * k)));
       const inView = d => {
         const sx = transform.applyX(d.x), sy = transform.applyY(d.y);
@@ -464,7 +464,7 @@ window.StellarNetwork = (() => {
       const occupied = new Set(), shown = [];
       for (const d of ordered) {
         const x = transform.applyX(d.x), y = transform.applyY(d.y + radius(d) + 15 / k);
-        const half = (captionWidths.get(d.index) || 96) * 11 / 16 / 2;
+        const half = (captionWidths.get(d.index) || 96) * 12 / 16 / 2;
         const cells = [];
         for (let ix = Math.floor((x - half - 4) / 20); ix <= Math.floor((x + half + 4) / 20); ix++)
           for (let iy = Math.floor((y - 12) / 16); iy <= Math.floor((y + 3) / 16); iy++) cells.push(`${ix},${iy}`);

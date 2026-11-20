@@ -774,7 +774,7 @@ def topic_cards(rows, model, model_key):
             f'<div class="tm-meta"><strong>ID:</strong> T{html_lib.escape(topic_id)} · <strong>descriptor automático:</strong> {html_lib.escape(algorithmic_label)}</div>'
             f'<div class="tm-meta">{html_lib.escape(measure)}: {html_lib.escape(s(row.get("prevalence")))}% · '
             f'{count} documentos</div>'
-            '<div class="tm-open">Abrir ficha y revisar →</div>'
+            '<div class="tm-open">Revisar los documentos del tema →</div>'
             f'<div class="tm-words">{html_lib.escape(s(row.get("top_words")))}</div>'
             f'<template class="tm-evidence">{alert_html}{interpretation_html}<p><strong>Estado del modelo:</strong> {html_lib.escape(selection_status)}. <strong>Etiqueta original:</strong> {html_lib.escape(label_status)}.</p></template></article>'
         )
@@ -811,10 +811,11 @@ model_panes = "".join(
     for _, key, _, kind, rows in available_models if rows
 )
 hybrid_section = f'''<section class="tm-section" id="modelado-tematico">
-  <div class="tm-head"><div><h2>Modelado temático</h2><p><strong>Elegí el modelo y abrí una tarjeta para revisar sus documentos.</strong> El selector cambia los temas y la red.</p><p>Resultados exploratorios: validación humana pendiente. Los modelos actuales principales y comparativos se estimaron sobre metadatos bibliográficos; no representan un análisis del texto completo de todos los PDF. {stm_stability_warning} BERTopic mantiene los documentos sin tema fuera de la comparación temática.</p></div>
-  <select id="tm-select" onchange="showTopicModel(this.value)">{model_options}</select></div>
+  <div class="tm-head"><div><h2>Modelado temático</h2><p class="tm-lead"><strong>Elegí un modelo y abrí un tema para revisar sus documentos.</strong> El selector cambia los temas y colorea la red.</p><p>Resultados exploratorios: la validación humana está pendiente.</p>
+  <details class="tm-notes"><summary>Cómo leer estos resultados</summary><p>Los modelos principales y comparativos se estimaron sobre metadatos bibliográficos; no representan un análisis del texto completo de todos los PDF. {stm_stability_warning} BERTopic mantiene los documentos sin tema fuera de la comparación temática.</p></details></div>
+  <select id="tm-select" aria-label="Modelo temático" onchange="showTopicModel(this.value)">{model_options}</select></div>
   {model_panes}
-  <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th>Topico STM</th><th>Topico BERTopic</th><th>Relacion</th><th>Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>
+  <div class="tm-pane" id="tm-comparison" hidden><table><thead><tr><th scope="col">Tópico STM</th><th scope="col">Tópico BERTopic</th><th scope="col">Relación</th><th scope="col">Similitud combinada</th></tr></thead><tbody>{alignment_html}</tbody></table></div>
   <div class="tm-review-tools"><button type="button" id="topic-export">Exportar revisiones</button><label>Importar revisiones <input type="file" id="topic-import" accept="application/json,.json"></label><span id="topic-review-status" role="status">Las decisiones se guardan en este navegador.</span></div>
 </section>'''
 
@@ -825,7 +826,7 @@ html = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dashboard - Direccion Escolar</title>
+<title>Dashboard · Dirección y Gestión Escolar</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="stellar-network.js"></script>
 <script src="keyword-method.js" defer></script>
@@ -834,7 +835,7 @@ html = """<!DOCTYPE html>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#0D1117;--surface:#161B22;--border:#21262D;
-  --text:#C9D1D9;--muted:#8B949E;--accent:#58A6FF;--dim:#484F58;--hover:#1F2937
+  --text:#C9D1D9;--muted:#8B949E;--accent:#58A6FF;--dim:#7F8A96;--hover:#1F2937
 }
 body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:100}
@@ -915,37 +916,61 @@ tbody tr:hover td{background:var(--hover)}
 .mcount{font-size:.72em;color:var(--dim);padding:7px 18px;border-top:1px solid var(--border);text-align:right}
 .tm-section{padding:20px;border-bottom:1px solid var(--border);background:#0b1018}.tm-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}.tm-head h2{font-size:1em;color:#E6EDF3}.tm-head p,.tm-method{font-size:.76em;color:var(--muted);margin-top:4px}.tm-head select{max-width:420px;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:7px 12px;border-radius:6px}.tm-pane{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:9px;max-height:520px;overflow:auto}.tm-pane[hidden]{display:none}.tm-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}.tm-title{font-size:.83em;font-weight:700;color:#E6EDF3}.tm-meta,.tm-words,.tm-reps,.tm-alert{font-size:.69em;color:var(--muted);line-height:1.45;margin-top:5px}.tm-reps{color:var(--dim)}.tm-alert{color:#f6c177;background:#2b2214;border-left:2px solid #f6c177;padding:4px 6px}.tm-details{font-size:.69em;color:var(--muted);line-height:1.5;margin-top:8px;border-top:1px solid var(--border);padding-top:7px}.tm-details summary{cursor:pointer;color:var(--accent);font-weight:700}.tm-details div{margin-top:4px}.tm-method{border-left:3px solid var(--accent);padding:8px 10px;margin-top:12px;background:var(--surface)}.tm-empty{font-size:.8em;color:var(--muted)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.topics-panel{display:none}}
+/* ── Accesibilidad y legibilidad ───────────────────────────────────────────── */
+.skip-link{position:absolute;left:12px;top:-64px;z-index:1000;background:#fff;color:#0d1117;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+.skip-link:focus{top:10px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #a8d4ff;outline-offset:2px}
+.search:focus,#net-view:focus{outline:2px solid #a8d4ff;outline-offset:1px}
+main:focus{outline:none}
+.neon-sub{font-size:.78em}.stamp{font-size:.78em}.kpi-l{font-size:.78em}.badge{font-size:.75em}
+#net-view,#net-profile{font-size:.8em}.net-legend span{font-size:.75em;padding:4px 8px}
+.t-name{display:inline-flex;align-items:center;gap:6px;color:#E6EDF3}.t-dot{width:10px;height:10px;border-radius:50%;display:inline-block;box-shadow:0 0 6px currentColor}
+.t-meta,.t-frex{font-size:.78em}.t-hint{font-size:.75em;color:var(--muted)}
+table{font-size:.82em}.ameta{font-size:.92em}.kt{font-size:.9em;padding:2px 6px}thead th{font-size:.92em}.alink{padding:4px 0}
+.search{font-size:.9em}.pager button{font-size:.85em;padding:6px 14px}.pager .pinfo{font-size:.82em}
+.tooltip{font-size:.82em}.mfrex,.mcount,.mpmeta{font-size:.78em}
+.tm-head p,.tm-method,.tm-meta,.tm-words,.tm-reps,.tm-alert,.tm-details{font-size:.78em}.tm-title{font-size:.9em}
+.tm-open{font-size:12px;font-weight:700;color:var(--accent);margin-top:6px}
+.tm-lead{font-size:.86em;color:var(--text);margin-top:4px}
+.tm-notes{margin-top:8px;font-size:1em;color:var(--muted)}.tm-notes summary{font-size:.8em;cursor:pointer;color:var(--accent);font-weight:700}.tm-notes p{margin-top:6px;line-height:1.5}
+.kpi-l abbr{text-decoration:underline dotted;cursor:help}
+button,select{min-height:28px}
+.net-method,.net-method p,.net-method summary,#keyword-audit-open{font-size:12px}
+.topic-item:focus-visible,.tm-card:focus-visible{outline-offset:-2px}
+@media(pointer:coarse){button,select,.pager button,.stellar-tools button,.net-legend span{min-height:44px}.stellar-tools button{min-width:44px}.net-legend span{padding:10px 10px}.topic-item,.tm-card{min-height:44px}.mcls{min-width:44px;min-height:44px}}
 </style>
 <link rel="stylesheet" href="stellar-network.css">
 <link rel="stylesheet" href="topic-review.css">
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 <header>
   <div class="header-left">
-    <div class="neon-title">Dashboard &middot; <span class="nt-accent">Direccion y Gestion Escolar</span></div>
-    <div class="neon-sub">version beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elias Aguirre</a> &middot; <a href="articulos.html">Trabajar con tabla de articulos</a></div>
+    <h1 class="neon-title">Dashboard &middot; <span class="nt-accent">Dirección y Gestión Escolar</span></h1>
+    <div class="neon-sub">Versión beta &middot; desarrollada por <a href="mailto:aguirre.elias.gonzalo@gmail.com">Elias Aguirre</a> &middot; <a href="articulos.html">Trabajar con la tabla de artículos</a></div>
   </div>
   <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><a class="argentina-link" href="argentina.html" style="color:#d5edff;border:1px solid #4072a0;border-radius:22px;padding:10px 16px;text-decoration:none;background:#10233c">✦ Argentina · BERTopic 2020–2026 ↗</a><span class="stamp">Actualizado: """ + date.today().strftime('%d/%m/%Y') + f""" &middot; {anio_min}&ndash;{anio_max}</span></div>
 </header>
 
-<div class="kpis">
+<main id="contenido" tabindex="-1">
+<div class="kpis" role="group" aria-label="Resumen del corpus">
   <div class="kpi"><div class="kpi-n">{fmt_es(total)}</div><div class="kpi-l">Publicaciones en catálogo</div></div>
   <div class="kpi"><div class="kpi-n" id="kpi-topics">{fmt_es(n_macros_preferred)}</div><div class="kpi-l">Temas del modelo</div></div>
-  <div class="kpi"><div class="kpi-n" id="kpi-nodes">{fmt_es(n_nodes)}</div><div class="kpi-l">Nodos en red</div></div>
-  <div class="kpi"><div class="kpi-n" id="kpi-edges">{fmt_es(n_edges)}</div><div class="kpi-l">Conexiones</div></div>
-  <div class="kpi"><div class="kpi-n">{fmt_es(drive_pdf_count)}</div><div class="kpi-l">Archivos PDF en Drive</div></div>
+  <div class="kpi" title="Cada documento es un nodo de la red."><div class="kpi-n" id="kpi-nodes">{fmt_es(n_nodes)}</div><div class="kpi-l">Documentos en la red</div></div>
+  <div class="kpi" title="Dos documentos se enlazan si comparten palabras clave."><div class="kpi-n" id="kpi-edges">{fmt_es(n_edges)}</div><div class="kpi-l">Enlaces por palabras clave</div></div>
+  <div class="kpi"><div class="kpi-n">{fmt_es(drive_pdf_count)}</div><div class="kpi-l">PDF en Drive</div></div>
   <div class="kpi"><div class="kpi-n">{anio_min}&ndash;{anio_max}</div><div class="kpi-l">Periodo</div></div>
 </div>
-
-""" + hybrid_section + """
 
 <div class="main-grid">
   <div class="net-panel">
     <div class="panel-head">
       <h2 id="net-title">Red temática</h2>
       <div class="net-controls">
-        <select id="net-view" onchange="setNetworkView(this.value)">
+        <select id="net-model" aria-label="Modelo temático que colorea la red" onchange="syncModelSelect(this.value)"></select>
+        <select id="net-view" aria-label="Vista de la red" onchange="setNetworkView(this.value)">
           <option value="documents">Red de documentos</option>
           <option value="topics">Red de tópicos</option>
         </select>
@@ -955,7 +980,8 @@ tbody tr:hover td{background:var(--hover)}
       </div>
     </div>
     <div class="stellar-stage" id="stellar-stage">
-      <svg id="net-svg" aria-label="Red temática interactiva"></svg>
+      <svg id="net-svg" aria-label="Red temática interactiva" aria-describedby="net-summary"></svg>
+      <p id="net-summary" class="sr-only" aria-live="polite"></p>
       <div class="stellar-tools" aria-label="Controles de la red">
         <button type="button" id="net-zoom-in" aria-label="Acercar">+</button>
         <button type="button" id="net-zoom-out" aria-label="Alejar">−</button>
@@ -975,48 +1001,53 @@ tbody tr:hover td{background:var(--hover)}
   <div class="topics-panel">
     <div class="panel-head">
       <h2>Tópicos STM históricos</h2>
-      <span class="badge">Clic para ver articulos</span>
+      <span class="badge">Elegí un tópico</span>
     </div>
     <div class="topics-scroll" id="topics-container"></div>
   </div>
 </div>
 
+""" + hybrid_section + """
+
 <div class="arts-section" id="articulos">
   <div class="arts-head">
-    <h2>Todos los articulos</h2>
-    <input type="text" class="search" id="search-input" placeholder="Buscar por titulo, autor, resumen, palabras clave, revista, fuente o anio..." oninput="onSearch()">
-    <span class="badge" id="count-badge">{n_arts:,} articulos</span>
+    <h2>Todos los artículos</h2>
+    <input type="text" class="search" id="search-input" placeholder="Buscar por título, autor, resumen, palabras clave, revista, fuente o año…" aria-label="Buscar en el catálogo de artículos" oninput="onSearch()">
+    <span class="badge" id="count-badge" role="status">Cargando…</span>
   </div>
   <div class="table-wrap">
     <table>
+      <caption class="sr-only">Catálogo de artículos: título, autores, revista, fuente, año y palabras clave</caption>
       <thead>
         <tr>
-          <th style="width:36%">Titulo</th>
-          <th style="width:18%">Autores</th>
-          <th style="width:16%">Revista / origen</th>
-          <th style="width:12%">Fuente</th>
-          <th style="width:4%">Ano</th>
-          <th style="width:14%">Palabras clave</th>
+          <th scope="col" style="width:36%">Título</th>
+          <th scope="col" style="width:18%">Autores</th>
+          <th scope="col" style="width:16%">Revista / origen</th>
+          <th scope="col" style="width:12%">Fuente</th>
+          <th scope="col" style="width:6%">Año</th>
+          <th scope="col" style="width:12%">Palabras clave</th>
         </tr>
       </thead>
       <tbody id="arts-tbody"></tbody>
     </table>
-    <div class="no-res" id="no-res">Sin resultados para esta busqueda.</div>
+    <div class="no-res" id="no-res">Sin resultados para esta búsqueda.</div>
   </div>
   <div class="pager">
-    <button onclick="prevPage()" id="btn-prev" disabled>&#8592; Anterior</button>
-    <span class="pinfo" id="pinfo"></span>
-    <button onclick="nextPage()" id="btn-next">Siguiente &#8594;</button>
+    <button type="button" onclick="prevPage()" id="btn-prev" disabled>&#8592; Anterior</button>
+    <span class="pinfo" id="pinfo" role="status"></span>
+    <button type="button" onclick="nextPage()" id="btn-next">Siguiente &#8594;</button>
   </div>
 </div>
 
-<div class="tooltip" id="tooltip"></div>
+</main>
+
+<div class="tooltip" id="tooltip" role="tooltip"></div>
 
 <div class="modal-ov" id="modal-ov" onclick="closeMod(event)">
-  <div class="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mod-title">
     <div class="modal-h">
       <h3 id="mod-title"></h3>
-      <button class="mcls" onclick="closeMod()">&#215;</button>
+      <button type="button" class="mcls" id="mod-close" aria-label="Cerrar" onclick="closeMod()">&#215;</button>
     </div>
     <div class="mfrex" id="mod-frex"></div>
     <div class="mbody" id="mod-body"></div>
@@ -1097,6 +1128,18 @@ let currentModel = """ + json.dumps(DEFAULT_NETWORK) + """;
 let currentView  = "documents";
 let netSim = null;
 
+function syncModelSelect(name){
+  const main = document.getElementById("tm-select");
+  if(main){ main.value = name; }
+  showTopicModel(name);
+}
+(function(){
+  const main = document.getElementById("tm-select"), mirror = document.getElementById("net-model");
+  if(!main || !mirror) return;
+  mirror.innerHTML = main.innerHTML;
+  mirror.value = main.value;
+  main.addEventListener("change", () => { mirror.value = main.value; });
+})();
 function showTopicModel(name){
   document.querySelectorAll(".tm-pane").forEach(pane => pane.hidden = pane.id !== "tm-"+name);
   if(NETWORKS[name]) currentModel = name;
@@ -1151,6 +1194,12 @@ function renderNetworkNow(isComparison){
     ? (model.kind === "STM" ? "Nodos: temas. Tamaño: cantidad de documentos con ese tema predominante. Enlaces: coasignación como primer y segundo tema; se conservan los pares más fuertes según el criterio del modelo." : currentModel === "bertopic-subtopics" ? "Nodos: subtópicos. Tamaño: cantidad de documentos. Enlaces: pertenencia al mismo macrotema." : "Nodos: macrotemas. Tamaño: cantidad de documentos. Enlaces: similitud c-TF-IDF entre sus vocabularios; se aplica un umbral y se completan los pares más fuertes cuando la red queda escasa.")
     : `Corpus completo: ${view.nodes.length} registros, incluidos los aislados. ${model.assigned} con tema asignado; ${model.outliers} sin grupo asignado; ${model.not_modeled} sin asignación vinculada a este modelo. Su exportación contiene ${model.modeled} filas; ${model.unlinked} no pudieron vincularse a un registro maestro. Enlaces: al menos dos etiquetas normalizadas compartidas y semejanza ${KEYWORD_DATA.profiles[currentProfile].threshold.toFixed(2)} o mayor (${currentProfile === "jaccard_control" ? "Jaccard simple" : "Jaccard ponderado por IDF"}). Se consideran todas las etiquetas retenidas, sin límite de frecuencia. Diccionario de equivalencias y exclusiones propuesto, pendiente de revisión. Origen histórico de las etiquetas sin trazabilidad exacta. Consultá Método y comparación. Tamaño: número de conexiones en esta red. Gris: sin tema asignado. Sin recorte de 400 nodos.`;
   title.textContent = (isTopics ? "Red de tópicos · " : "Red de documentos · ") + model.label;
+  const summary = document.getElementById("net-summary");
+  if(summary) summary.textContent = (isTopics
+      ? `Red de ${view.nodes.length} tópicos del modelo ${model.label}.`
+      : `Red de ${view.nodes.length.toLocaleString("es-AR")} documentos y ${view.edges.length.toLocaleString("es-AR")} enlaces por palabras clave, coloreada con el modelo ${model.label}.`)
+    + " Con el foco en la red, usá las flechas para pasar de un nodo al más cercano, Enter para abrir su ficha y más, menos o cero para el zoom."
+    + " La misma información está disponible como texto en las tarjetas de tema y en la tabla de artículos.";
   badge.textContent = isComparison
     ? "La comparación no tiene red propia · se mantiene " + model.label
     : (isTopics
@@ -1194,48 +1243,85 @@ whenNear(document.getElementById("stellar-stage")||document.getElementById("net-
     const d = document.createElement("div");
     d.className = "topic-item";
     d.style.borderLeftColor = t.color;
-    d.innerHTML = `
-      <div class="topic-row">
-        <span class="t-name" style="color:${t.color}">T${t.id}</span>
-        <span class="t-meta">${t.prevalencia.toFixed(1)}% &middot; ${t.papers.length} arts.</span>
-      </div>
-      <div class="bar-track"><div class="bar-fill" style="width:${(t.prevalencia/mx*100).toFixed(1)}%;background:${t.color}"></div></div>
-      <div class="t-frex">${t.frex.join(" &middot; ")}</div>
-      <div class="t-hint">&#9654; Clic para ver articulos</div>`;
-    d.addEventListener("click",()=>openMod(t));
+    d.tabIndex = 0;
+    d.setAttribute("role", "button");
+    d.setAttribute("aria-label", `Tópico ${t.id}: ${t.papers.length} artículos. Abrir lista`);
+    const row = document.createElement("div");
+    row.className = "topic-row";
+    const name = document.createElement("span");
+    name.className = "t-name";
+    const dot = document.createElement("i");
+    dot.className = "t-dot"; dot.style.background = t.color; dot.style.color = t.color; dot.setAttribute("aria-hidden", "true");
+    name.append(dot, document.createTextNode("T" + t.id));
+    const meta = document.createElement("span");
+    meta.className = "t-meta";
+    meta.textContent = `${t.prevalencia.toFixed(1)}% · ${t.papers.length} artículos`;
+    row.append(name, meta);
+    const track = document.createElement("div");
+    track.className = "bar-track";
+    const fill = document.createElement("div");
+    fill.className = "bar-fill"; fill.style.width = (t.prevalencia/mx*100).toFixed(1) + "%"; fill.style.background = t.color;
+    track.appendChild(fill);
+    const frex = document.createElement("div");
+    frex.className = "t-frex"; frex.textContent = t.frex.join(" · ");
+    const hint = document.createElement("div");
+    hint.className = "t-hint"; hint.textContent = `Ver los ${t.papers.length} artículos del tópico →`;
+    d.append(row, track, frex, hint);
+    d.addEventListener("click", () => openMod(t, d));
+    d.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openMod(t, d); } });
     con.appendChild(d);
   });
 })();
 
-function openMod(t){
-  document.getElementById("mod-title").textContent = `Topico ${t.id} &middot; ${t.prevalencia.toFixed(1)}% del corpus`;
+let modReturnFocus = null;
+function safeUrl(u){
+  try { const x = new URL(u, location.href); return ["https:", "http:"].includes(x.protocol) ? x.href : ""; } catch(_) { return ""; }
+}
+function openMod(t, opener){
+  modReturnFocus = opener || document.activeElement;
+  document.getElementById("mod-title").textContent = `Tópico ${t.id} · ${t.prevalencia.toFixed(1)}% del corpus`;
   document.getElementById("mod-frex").textContent  = "FREX: " + t.frex.join(" · ");
-  document.getElementById("mod-count").textContent = t.papers.length + " articulos en este topico";
+  document.getElementById("mod-count").textContent = t.papers.length + " artículos en este tópico";
   const b = document.getElementById("mod-body");
-  b.innerHTML = "";
+  b.replaceChildren();
   if(!t.papers.length){
-    b.innerHTML='<p style="color:var(--muted);padding:16px">Sin articulos asignados aun.</p>';
+    const empty = document.createElement("p");
+    empty.style.cssText = "color:var(--muted);padding:16px";
+    empty.textContent = "Todavía no hay artículos asignados a este tópico.";
+    b.appendChild(empty);
   } else {
     t.papers.forEach(p=>{
-      const dv=document.createElement("div");
-      dv.className="mpaper";
-      dv.innerHTML=`<a href="${p.url||"#"}" target="_blank" rel="noopener">${p.titulo}</a>
-        <div class="mpmeta">${p.autores||"—"} &middot; ${p.revista||"—"} &middot; ${p.anio||"—"}</div>`;
+      const dv = document.createElement("div");
+      dv.className = "mpaper";
+      const a = document.createElement("a");
+      const href = safeUrl(p.url);
+      if(href){ a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      a.textContent = p.titulo || "Sin título";
+      const meta = document.createElement("div");
+      meta.className = "mpmeta";
+      meta.textContent = `${p.autores||"—"} · ${p.revista||"—"} · ${p.anio||"—"}`;
+      dv.append(a, meta);
       b.appendChild(dv);
     });
   }
   document.getElementById("modal-ov").classList.add("open");
+  document.getElementById("mod-close").focus();
 }
 
 function closeMod(ev){
-  if(!ev||ev.target===document.getElementById("modal-ov"))
-    document.getElementById("modal-ov").classList.remove("open");
+  const ov = document.getElementById("modal-ov");
+  if(!ov.classList.contains("open")) return;
+  if(!ev||ev.target===ov){
+    ov.classList.remove("open");
+    if(modReturnFocus && modReturnFocus.focus) modReturnFocus.focus();
+    modReturnFocus = null;
+  }
 }
 document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeMod(); });
 
 // ── Articulos paginados ────────────────────────────────────────────────────────
 let curPage=0, filtered=ARTS;
-function articlesLoading(){document.getElementById("pinfo").textContent="Cargando artículos…";}
+function articlesLoading(){document.getElementById("pinfo").textContent="Cargando artículos…";document.getElementById("count-badge").textContent="Cargando…";}
 
 function onSearch(){
   if(!articlesPromise){ensureArticles();return;}
@@ -1253,8 +1339,8 @@ function render(){
   const tot   = filtered.length;
   const pages = Math.ceil(tot/PG)||1;
 
-  document.getElementById("count-badge").textContent = tot.toLocaleString("es-AR")+" articulo"+(tot!==1?"s":"");
-  document.getElementById("pinfo").textContent = tot>0 ? `Pagina ${curPage+1} de ${pages} (${tot.toLocaleString("es-AR")} resultados)` : "0 resultados";
+  document.getElementById("count-badge").textContent = tot.toLocaleString("es-AR")+" artículo"+(tot!==1?"s":"");
+  document.getElementById("pinfo").textContent = tot>0 ? `Página ${curPage+1} de ${pages} (${tot.toLocaleString("es-AR")} resultados)` : "0 resultados";
   document.getElementById("btn-prev").disabled = curPage===0;
   document.getElementById("btn-next").disabled = curPage>=pages-1;
 

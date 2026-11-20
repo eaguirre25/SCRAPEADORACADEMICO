@@ -10,9 +10,12 @@ if not INDEX.exists():
 html = INDEX.read_text(encoding="utf-8")
 
 if 'href="biblioteca.html"' not in html:
-    old = '<a href="articulos.html">Trabajar con tabla de articulos</a>'
+    # Admite el texto actual y el anterior (sin tildes) del enlace a la tabla.
+    old = next((c for c in ('<a href="articulos.html">Trabajar con la tabla de artículos</a>',
+                            '<a href="articulos.html">Trabajar con tabla de articulos</a>') if c in html),
+               '<a href="articulos.html">Trabajar con la tabla de artículos</a>')
     new = (
-        '<a href="articulos.html">Trabajar con tabla de articulos</a>'
+        old +
         ' &middot; '
         '<a href="biblioteca.html" style="display:inline-block;padding:7px 12px;'
         'border:1px solid #58a6ff;border-radius:8px;background:#1f6feb;color:#fff;'
