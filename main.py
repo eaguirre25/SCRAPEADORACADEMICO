@@ -55,17 +55,23 @@ SEARCH_TERMS: List[str] = [
     "principalship",
     "gestão escolar",
     "diretor escolar",
+    "dirección escolar Argentina",
+    "gestión escolar Argentina",
+    "liderazgo escolar Argentina",
+    "equipo directivo escuela Argentina",
 ]
 OAI_SOURCES = [
     {
-        "name":     "SEDICI-UNLP",
-        "url":      "https://sedici.unlp.edu.ar/oai/request",
-        "max_pages": 60,
+        "name":          "SEDICI-UNLP",
+        "url":           "https://sedici.unlp.edu.ar/oai/request",
+        "opensearch_url": "https://sedici.unlp.edu.ar/open-search/discover",
+        "max_pages":     60,
     },
     {
-        "name":     "RIAA-UNSAM",
-        "url":      "https://repositorio.unsam.edu.ar/oai/request",
-        "max_pages": 30,
+        "name":          "RIAA-UNSAM",
+        "url":           "https://repositorio.unsam.edu.ar/oai/request",
+        "opensearch_url": "https://repositorio.unsam.edu.ar/open-search/discover",
+        "max_pages":     30,
     },
 ]
 # Términos ampliados para OAI-PMH
@@ -638,7 +644,14 @@ def strip_conicet_header(abstract: str, title: str) -> str:
         return "\n".join(lines[2:]).strip()
     return abstract
 
-def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from_year: Optional[int]) -> Optional[Dict[str, Any]]:
+def _extract_dspace_record_from_entry(
+    entry: ET.Element,
+    search_term: str,
+    from_year: Optional[int],
+    source_name: str = "CONICET Digital",
+    host_marker: str = "ri.conicet",
+    id_prefix: str = "conicet",
+) -> Optional[Dict[str, Any]]:
     title = ""
     title_el = next((el for el in entry if _xml_local_name(el.tag) == "title" and (el.text or "").strip()), None)
     if title_el is not None:
@@ -683,12 +696,12 @@ def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from
         ident_lower = ident_str.lower()
         if not doi and ("doi.org" in ident_lower or re.match(r"^10\.\d{4,}/", ident_str)):
             doi = normalize_doi(ident_str)
-        if not url and ident_str.startswith("http") and "ri.conicet" in ident_lower:
+        if not url and ident_str.startswith("http") and (host_marker in ident_lower or "hdl.handle.net" in ident_lower):
             url = ident_str
     for link in entry.findall("{http://www.w3.org/2005/Atom}link"):
         href = (link.get("href") or "").strip()
         ltype = (link.get("type") or "").lower()
-        if href and not url and "ri.conicet" in href.lower():
+        if href and not url and (host_marker in href.lower() or "hdl.handle.net" in href.lower()):
             url = href
         if href and "pdf" in ltype and not pdf_url:
             pdf_url = href
@@ -701,15 +714,15 @@ def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from
     if not url:
         return None
 
-    handle_match = re.search(r"/handle/([^/?#]+/[^/?#]+)", url)
+    handle_match = re.search(r"/(?:handle|10915|20\.500\.\d+)/([^/?#]+(?:/[^/?#]+)?)", url)
     handle = handle_match.group(1) if handle_match else ""
-    record_id = doi or (f"conicet:{handle}" if handle else f"conicet:{normalize_text(title)}::{year}")
+    record_id = doi or (f"{id_prefix}:{handle}" if handle else f"{id_prefix}:{normalize_text(title)}::{year}")
     return {
         "record_id":        record_id,
         "first_seen_date":  date.today().isoformat(),
         "search_term":      search_term,
-        "source":           "CONICET Digital",
-        "origin":           source_list[0] if source_list else "CONICET Digital",
+        "source":           source_name,
+        "origin":           source_list[0] if source_list else source_name,
         "document_type":    types_list[0] if types_list else "",
         "authors":          "; ".join(str(a) for a in authors_list),
         "title":            title,
@@ -724,12 +737,22 @@ def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from
         "pdf_url":          pdf_url,
     }
 
-def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, Any]]:
+def _extract_conicet_record_from_entry(entry: ET.Element, search_term: str, from_year: Optional[int]) -> Optional[Dict[str, Any]]:
+    return _extract_dspace_record_from_entry(entry, search_term, from_year, "CONICET Digital", "ri.conicet", "conicet")
+
+def query_dspace_opensearch(
+    opensearch_url: str,
+    search_terms: List[str],
+    source_name: str,
+    host_marker: str,
+    id_prefix: str,
+    from_year: Optional[int] = None,
+) -> List[Dict[str, Any]]:
     all_records: List[Dict[str, Any]] = []
     seen_urls: Set[str] = set()
     headers = build_headers()
-    print("  Consultando CONICET Digital (OpenSearch/Atom)...")
-    for term in CONICET_SEARCH_TERMS:
+    print(f"  Consultando {source_name} (OpenSearch/Atom)...")
+    for term in search_terms:
         start = 0
         rpp = 100
         term_count = 0
@@ -737,9 +760,7 @@ def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, 
         while True:
             try:
                 resp = requests.get(
-                    CONICET_OPENSEARCH_URL,
-                    # Entre comillas: sin ellas el buscador devuelve cualquier
-                    # trabajo con ambas palabras sueltas («school» y «principal»).
+                    opensearch_url,
                     params={"format": "atom", "query": f'"{term}"', "rpp": rpp, "start": start},
                     headers=headers,
                     timeout=30,
@@ -747,7 +768,7 @@ def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, 
                 resp.raise_for_status()
                 root = ET.fromstring(resp.content)
             except Exception as e:
-                print(f"    Error CONICET OpenSearch para '{term}': {e}")
+                print(f"    Error {source_name} OpenSearch para '{term}': {e}")
                 break
             entries = root.findall("{http://www.w3.org/2005/Atom}entry")
             if total_results is None:
@@ -757,7 +778,7 @@ def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, 
             if not entries:
                 break
             for entry in entries:
-                rec = _extract_conicet_record_from_entry(entry, term, from_year)
+                rec = _extract_dspace_record_from_entry(entry, term, from_year, source_name, host_marker, id_prefix)
                 if not rec:
                     continue
                 key = rec.get("url", "") or rec.get("record_id", "")
@@ -772,9 +793,19 @@ def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, 
             if total_results is not None and start >= total_results:
                 break
             time.sleep(1)
-        print(f"    CONICET OpenSearch '{term}': {term_count} registros")
-    print(f"  CONICET Digital OpenSearch total: {len(all_records)} registros")
+        print(f"    {source_name} OpenSearch '{term}': {term_count} registros")
+    print(f"  {source_name} OpenSearch total: {len(all_records)} registros")
     return all_records
+
+def query_conicet_opensearch(from_year: Optional[int] = None) -> List[Dict[str, Any]]:
+    return query_dspace_opensearch(
+        CONICET_OPENSEARCH_URL,
+        CONICET_SEARCH_TERMS,
+        "CONICET Digital",
+        "ri.conicet",
+        "conicet",
+        from_year=from_year,
+    )
 
 def query_conicet_rest(from_year: Optional[int] = None) -> List[Dict[str, Any]]:
     """
@@ -1008,8 +1039,20 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
     for rec in conicet_records:
         _ingest(rec)
 
-    print("\n=== Repositorios institucionales (OAI-PMH) ===")
+    print("\n=== Repositorios institucionales (OpenSearch + OAI-PMH) ===")
     for src in OAI_SOURCES:
+        repo_records: List[Dict[str, Any]] = []
+        if src.get("opensearch_url"):
+            host_marker = "sedici.unlp" if "sedici" in src["name"].lower() else "unsam"
+            id_prefix = "sedici" if "sedici" in src["name"].lower() else "riaa"
+            repo_records = query_dspace_opensearch(
+                opensearch_url = src["opensearch_url"],
+                search_terms   = OAI_SEARCH_TERMS,
+                source_name    = src["name"],
+                host_marker    = host_marker,
+                id_prefix      = id_prefix,
+                from_year      = 2020,
+            )
         oai_records = query_oai_pmh(
             base_url     = src["url"],
             from_date    = START_DATE,
@@ -1017,7 +1060,7 @@ def collect_new_records() -> Tuple[List[Dict[str, Any]], int]:
             source_name  = src["name"],
             max_pages    = src["max_pages"],
         )
-        for rec in oai_records:
+        for rec in repo_records + oai_records:
             _ingest(rec)
 
     if dirty_existing:

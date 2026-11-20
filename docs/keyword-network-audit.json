@@ -24,15 +24,15 @@
     }
   },
   "coverage": {
-    "records": 9476,
-    "with_raw_keywords": 9456,
-    "with_clean_keywords": 8666
+    "records": 9355,
+    "with_raw_keywords": 9335,
+    "with_clean_keywords": 8554
   },
   "by_source": {
     "OpenAlex": {
-      "records": 9292,
-      "with_raw_keywords": 9292,
-      "with_clean_keywords": 8508
+      "records": 9171,
+      "with_raw_keywords": 9171,
+      "with_clean_keywords": 8396
     },
     "OpenAlex | CONICET Digital": {
       "records": 24,
@@ -51,7 +51,7 @@
     }
   },
   "provenance": {
-    "OpenAlex · etiquetas de indexación; campo original no conservado": 9292,
+    "OpenAlex · etiquetas de indexación; campo original no conservado": 9171,
     "Fuentes combinadas; origen del campo sin trazabilidad": 26,
     "Sin etiquetas en el registro": 20,
     "Metadatos del proveedor; autoría de las palabras no comprobada": 138
@@ -117,11 +117,11 @@
       "documents": 226
     },
     {
-      "term": "teachers",
-      "documents": 189
+      "term": "Engineering",
+      "documents": 186
     },
     {
-      "term": "Engineering",
+      "term": "teachers",
       "documents": 186
     },
     {
@@ -138,7 +138,7 @@
     },
     {
       "term": "leadership",
-      "documents": 87
+      "documents": 86
     },
     {
       "term": "Management",
@@ -301,32 +301,32 @@
     {
       "original": "school leadership",
       "canonical": "liderazgo escolar",
-      "documents": 2507
+      "documents": 2472
     },
     {
       "original": "school management",
       "canonical": "gestión escolar",
-      "documents": 1807
+      "documents": 1768
     },
     {
       "original": "educational leadership",
       "canonical": "liderazgo educativo",
-      "documents": 1283
+      "documents": 1266
     },
     {
       "original": "instructional leadership",
       "canonical": "liderazgo instruccional",
-      "documents": 828
+      "documents": 818
     },
     {
       "original": "educational management",
       "canonical": "gestión educativa",
-      "documents": 787
+      "documents": 765
     },
     {
       "original": "inclusive education",
       "canonical": "educación inclusiva",
-      "documents": 382
+      "documents": 376
     },
     {
       "original": "Educational leadership",
@@ -336,22 +336,22 @@
     {
       "original": "transformational leadership",
       "canonical": "liderazgo transformacional",
-      "documents": 278
+      "documents": 274
     },
     {
       "original": "leadership styles",
       "canonical": "estilo de liderazgo",
-      "documents": 200
+      "documents": 196
     },
     {
       "original": "pedagogical leadership",
       "canonical": "liderazgo pedagógico",
-      "documents": 186
+      "documents": 183
     },
     {
       "original": "distributed leadership",
       "canonical": "liderazgo distribuido",
-      "documents": 183
+      "documents": 181
     },
     {
       "original": "Qualitative research",
@@ -361,7 +361,7 @@
     {
       "original": "professional development",
       "canonical": "desarrollo profesional",
-      "documents": 133
+      "documents": 132
     },
     {
       "original": "Leadership style",
@@ -371,17 +371,17 @@
     {
       "original": "secondary education",
       "canonical": "educación secundaria",
-      "documents": 103
-    },
-    {
-      "original": "parental involvement",
-      "canonical": "participación familiar",
-      "documents": 87
+      "documents": 101
     },
     {
       "original": "Instructional leadership",
       "canonical": "liderazgo instruccional",
       "documents": 86
+    },
+    {
+      "original": "parental involvement",
+      "canonical": "participación familiar",
+      "documents": 84
     },
     {
       "original": "Coronavirus disease 2019 (COVID-19)",
@@ -396,7 +396,7 @@
     {
       "original": "inclusive leadership",
       "canonical": "liderazgo inclusivo",
-      "documents": 43
+      "documents": 40
     },
     {
       "original": "Focus group",
@@ -431,7 +431,7 @@
     {
       "original": "artificial intelligence",
       "canonical": "inteligencia artificial",
-      "documents": 20
+      "documents": 19
     },
     {
       "original": "Educational management",
@@ -497,413 +497,413 @@
   "top_clean_terms": [
     {
       "term": "liderazgo escolar",
-      "documents": 2507,
-      "idf": 2.240037
+      "documents": 2472,
+      "idf": 2.241084
     },
     {
       "term": "school principals",
-      "documents": 2188,
-      "idf": 2.376078
+      "documents": 2158,
+      "idf": 2.376871
     },
     {
       "term": "gestión escolar",
-      "documents": 1813,
-      "idf": 2.563988
+      "documents": 1774,
+      "idf": 2.572715
     },
     {
       "term": "liderazgo educativo",
-      "documents": 1608,
-      "idf": 2.68391
+      "documents": 1590,
+      "idf": 2.682153
     },
     {
       "term": "liderazgo instruccional",
-      "documents": 914,
-      "idf": 3.248354
+      "documents": 904,
+      "idf": 3.246336
     },
     {
       "term": "gestión educativa",
-      "documents": 800,
-      "idf": 3.381417
+      "documents": 778,
+      "idf": 3.39626
     },
     {
       "term": "teacher professional development",
-      "documents": 679,
-      "idf": 3.545185
+      "documents": 672,
+      "idf": 3.542526
     },
     {
       "term": "pedagogy",
       "documents": 654,
-      "idf": 3.582643
+      "idf": 3.569636
     },
     {
       "term": "public schools",
-      "documents": 464,
-      "idf": 3.925241
+      "documents": 457,
+      "idf": 3.927402
     },
     {
       "term": "educational quality",
-      "documents": 425,
-      "idf": 4.012839
-    },
-    {
-      "term": "educación inclusiva",
-      "documents": 382,
-      "idf": 4.119243
+      "documents": 415,
+      "idf": 4.023586
     },
     {
       "term": "teacher perceptions",
-      "documents": 382,
-      "idf": 4.119243
+      "documents": 379,
+      "idf": 4.1141
+    },
+    {
+      "term": "educación inclusiva",
+      "documents": 376,
+      "idf": 4.122026
     },
     {
       "term": "education policy",
-      "documents": 367,
-      "idf": 4.159195
+      "documents": 361,
+      "idf": 4.162627
     },
     {
       "term": "academic performance",
-      "documents": 349,
-      "idf": 4.209345
-    },
-    {
-      "term": "covid-19 pandemic",
-      "documents": 342,
-      "idf": 4.229548
+      "documents": 345,
+      "idf": 4.207832
     },
     {
       "term": "public relations",
       "documents": 341,
-      "idf": 4.232467
+      "idf": 4.21946
+    },
+    {
+      "term": "covid-19 pandemic",
+      "documents": 338,
+      "idf": 4.228271
     },
     {
       "term": "democratic school management",
-      "documents": 334,
-      "idf": 4.253147
+      "documents": 329,
+      "idf": 4.255179
     },
     {
       "term": "estilo de liderazgo",
-      "documents": 312,
-      "idf": 4.321075
+      "documents": 308,
+      "idf": 4.32093
     },
     {
       "term": "liderazgo transformacional",
-      "documents": 308,
-      "idf": 4.333937
+      "documents": 304,
+      "idf": 4.333959
     },
     {
       "term": "mathematics education",
       "documents": 301,
-      "idf": 4.356851
+      "idf": 4.343844
     },
     {
       "term": "school administrators",
-      "documents": 285,
-      "idf": 4.411286
+      "documents": 278,
+      "idf": 4.423059
     },
     {
       "term": "medical education",
       "documents": 270,
-      "idf": 4.465159
+      "idf": 4.452152
     },
     {
       "term": "teacher performance",
-      "documents": 262,
-      "idf": 4.495124
+      "documents": 260,
+      "idf": 4.489751
     },
     {
       "term": "school governance",
-      "documents": 253,
-      "idf": 4.529944
+      "documents": 251,
+      "idf": 4.524842
     },
     {
       "term": "educational equity",
-      "documents": 251,
-      "idf": 4.537849
+      "documents": 245,
+      "idf": 4.54894
     },
     {
       "term": "school improvement",
-      "documents": 227,
-      "idf": 4.637932
+      "documents": 224,
+      "idf": 4.638171
     },
     {
       "term": "school climate",
-      "documents": 206,
-      "idf": 4.734559
+      "documents": 201,
+      "idf": 4.746003
     },
     {
       "term": "desarrollo profesional",
-      "documents": 192,
-      "idf": 4.804588
+      "documents": 191,
+      "idf": 4.796776
     },
     {
       "term": "liderazgo distribuido",
-      "documents": 190,
-      "idf": 4.815005
+      "documents": 188,
+      "idf": 4.812524
     },
     {
       "term": "liderazgo pedagógico",
-      "documents": 186,
-      "idf": 4.836169
+      "documents": 183,
+      "idf": 4.839335
     },
     {
       "term": "educational institutions",
-      "documents": 179,
-      "idf": 4.874321
-    },
-    {
-      "term": "educational innovation",
-      "documents": 177,
-      "idf": 4.885494
+      "documents": 175,
+      "idf": 4.883787
     },
     {
       "term": "principal leadership",
-      "documents": 176,
-      "idf": 4.891128
+      "documents": 174,
+      "idf": 4.889485
     },
     {
       "term": "investigación cualitativa",
       "documents": 174,
-      "idf": 4.902492
+      "idf": 4.889485
     },
     {
-      "term": "educational technology",
-      "documents": 170,
-      "idf": 4.925614
+      "term": "educational innovation",
+      "documents": 173,
+      "idf": 4.895216
     },
     {
       "term": "principal training",
-      "documents": 169,
-      "idf": 4.93148
+      "documents": 168,
+      "idf": 4.924372
     },
     {
       "term": "social psychology",
       "documents": 167,
-      "idf": 4.943314
+      "idf": 4.930307
     },
     {
-      "term": "elementary school",
-      "documents": 163,
-      "idf": 4.967412
+      "term": "educational technology",
+      "documents": 166,
+      "idf": 4.936277
     },
     {
       "term": "quality (philosophy)",
       "documents": 158,
-      "idf": 4.998374
+      "idf": 4.985367
     },
     {
-      "term": "school culture",
-      "documents": 153,
-      "idf": 5.030325
+      "term": "elementary school",
+      "documents": 158,
+      "idf": 4.985367
+    },
+    {
+      "term": "primary education",
+      "documents": 152,
+      "idf": 5.023833
     }
   ],
   "sensitivity": {
     "exploratory": {
       "label": "Exploratoria · ≥ 0,10",
-      "edges": 396078,
-      "connected_records": 7916,
-      "isolated_records": 1560,
-      "components_with_links": 46,
-      "largest_component": 7762,
-      "density": 0.008822800219635551
+      "edges": 385177,
+      "connected_records": 7804,
+      "isolated_records": 1551,
+      "components_with_links": 40,
+      "largest_component": 7663,
+      "density": 0.00880337464561273
     },
     "balanced": {
       "label": "Intermedia · ≥ 0,20",
-      "edges": 47881,
-      "connected_records": 5285,
-      "isolated_records": 4191,
-      "components_with_links": 226,
-      "largest_component": 4667,
-      "density": 0.0010665689518639507
+      "edges": 46873,
+      "connected_records": 5141,
+      "isolated_records": 4214,
+      "components_with_links": 191,
+      "largest_component": 4600,
+      "density": 0.0010713011933833159
     },
     "strict": {
       "label": "Estricta · ≥ 0,30",
-      "edges": 11781,
-      "connected_records": 2932,
-      "isolated_records": 6544,
-      "components_with_links": 378,
-      "largest_component": 2025,
-      "density": 0.0002624266164430401
+      "edges": 11492,
+      "connected_records": 2759,
+      "isolated_records": 6596,
+      "components_with_links": 310,
+      "largest_component": 2000,
+      "density": 0.0002626542639549648
     },
     "jaccard_control": {
       "label": "Jaccard simple · ≥ 0,20",
-      "edges": 332372,
-      "connected_records": 7100,
-      "isolated_records": 2376,
-      "components_with_links": 83,
-      "largest_component": 6858,
-      "density": 0.007403722889432657
+      "edges": 322443,
+      "connected_records": 6977,
+      "isolated_records": 2378,
+      "components_with_links": 69,
+      "largest_component": 6764,
+      "density": 0.007369563942954291
     }
   },
   "topic_comparison": {
     "bertopic-macros": {
       "exploratory": {
-        "eligible_edges": 125201,
-        "same_topic_edges": 27720,
-        "same_topic_share": 0.22140398239630674,
-        "all_assigned_pair_same_topic_share": 0.04609780049206467,
+        "eligible_edges": 122402,
+        "same_topic_edges": 27118,
+        "same_topic_share": 0.22154866750543292,
+        "all_assigned_pair_same_topic_share": 0.046179110830829394,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 18386,
-        "same_topic_edges": 6081,
-        "same_topic_share": 0.33074078102904386,
-        "all_assigned_pair_same_topic_share": 0.04609780049206467,
+        "eligible_edges": 18100,
+        "same_topic_edges": 5957,
+        "same_topic_share": 0.3291160220994475,
+        "all_assigned_pair_same_topic_share": 0.046179110830829394,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 4831,
-        "same_topic_edges": 2003,
-        "same_topic_share": 0.41461395156282344,
-        "all_assigned_pair_same_topic_share": 0.04609780049206467,
+        "eligible_edges": 4729,
+        "same_topic_edges": 1948,
+        "same_topic_share": 0.41192641150348913,
+        "all_assigned_pair_same_topic_share": 0.046179110830829394,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 101914,
-        "same_topic_edges": 19419,
-        "same_topic_share": 0.19054300684891182,
-        "all_assigned_pair_same_topic_share": 0.04609780049206467,
+        "eligible_edges": 99380,
+        "same_topic_edges": 19026,
+        "same_topic_share": 0.19144697122157375,
+        "all_assigned_pair_same_topic_share": 0.046179110830829394,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "bertopic-subtopics": {
       "exploratory": {
-        "eligible_edges": 84700,
-        "same_topic_edges": 14816,
-        "same_topic_share": 0.1749232585596222,
-        "all_assigned_pair_same_topic_share": 0.027951426411432813,
+        "eligible_edges": 83269,
+        "same_topic_edges": 14528,
+        "same_topic_share": 0.17447069137374052,
+        "all_assigned_pair_same_topic_share": 0.0280148527716222,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 12964,
-        "same_topic_edges": 3652,
-        "same_topic_share": 0.28170317803147177,
-        "all_assigned_pair_same_topic_share": 0.027951426411432813,
+        "eligible_edges": 12811,
+        "same_topic_edges": 3581,
+        "same_topic_share": 0.27952540785262664,
+        "all_assigned_pair_same_topic_share": 0.0280148527716222,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 3460,
-        "same_topic_edges": 1280,
-        "same_topic_share": 0.3699421965317919,
-        "all_assigned_pair_same_topic_share": 0.027951426411432813,
+        "eligible_edges": 3395,
+        "same_topic_edges": 1244,
+        "same_topic_share": 0.36642120765832104,
+        "all_assigned_pair_same_topic_share": 0.0280148527716222,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 66969,
-        "same_topic_edges": 9728,
-        "same_topic_share": 0.14526124027535128,
-        "all_assigned_pair_same_topic_share": 0.027951426411432813,
+        "eligible_edges": 65780,
+        "same_topic_edges": 9548,
+        "same_topic_share": 0.1451505016722408,
+        "all_assigned_pair_same_topic_share": 0.0280148527716222,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "stm-es": {
       "exploratory": {
-        "eligible_edges": 39583,
-        "same_topic_edges": 15619,
-        "same_topic_share": 0.3945885860091453,
-        "all_assigned_pair_same_topic_share": 0.08403949426393317,
+        "eligible_edges": 38745,
+        "same_topic_edges": 15482,
+        "same_topic_share": 0.39958704348948254,
+        "all_assigned_pair_same_topic_share": 0.08465101551071252,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 4449,
-        "same_topic_edges": 2793,
-        "same_topic_share": 0.6277815239379636,
-        "all_assigned_pair_same_topic_share": 0.08403949426393317,
+        "eligible_edges": 4351,
+        "same_topic_edges": 2753,
+        "same_topic_share": 0.632728108480809,
+        "all_assigned_pair_same_topic_share": 0.08465101551071252,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 1149,
-        "same_topic_edges": 811,
-        "same_topic_share": 0.7058311575282855,
-        "all_assigned_pair_same_topic_share": 0.08403949426393317,
+        "eligible_edges": 1100,
+        "same_topic_edges": 777,
+        "same_topic_share": 0.7063636363636364,
+        "all_assigned_pair_same_topic_share": 0.08465101551071252,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 23465,
-        "same_topic_edges": 10260,
-        "same_topic_share": 0.43724696356275305,
-        "all_assigned_pair_same_topic_share": 0.08403949426393317,
+        "eligible_edges": 22929,
+        "same_topic_edges": 10178,
+        "same_topic_share": 0.4438920144794801,
+        "all_assigned_pair_same_topic_share": 0.08465101551071252,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "stm-en": {
       "exploratory": {
-        "eligible_edges": 150068,
-        "same_topic_edges": 25013,
-        "same_topic_share": 0.16667777274302317,
-        "all_assigned_pair_same_topic_share": 0.05422878744273554,
+        "eligible_edges": 147476,
+        "same_topic_edges": 24402,
+        "same_topic_share": 0.1654642111258781,
+        "all_assigned_pair_same_topic_share": 0.054362625355962375,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 25044,
-        "same_topic_edges": 5581,
-        "same_topic_share": 0.22284778789330778,
-        "all_assigned_pair_same_topic_share": 0.05422878744273554,
+        "eligible_edges": 24647,
+        "same_topic_edges": 5423,
+        "same_topic_share": 0.220026778106869,
+        "all_assigned_pair_same_topic_share": 0.054362625355962375,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 6852,
-        "same_topic_edges": 1744,
-        "same_topic_share": 0.2545242265032107,
-        "all_assigned_pair_same_topic_share": 0.05422878744273554,
+        "eligible_edges": 6700,
+        "same_topic_edges": 1663,
+        "same_topic_share": 0.2482089552238806,
+        "all_assigned_pair_same_topic_share": 0.054362625355962375,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 137065,
-        "same_topic_edges": 20196,
-        "same_topic_share": 0.14734614963703352,
-        "all_assigned_pair_same_topic_share": 0.05422878744273554,
+        "eligible_edges": 134178,
+        "same_topic_edges": 19608,
+        "same_topic_share": 0.14613423959218352,
+        "all_assigned_pair_same_topic_share": 0.054362625355962375,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "stm-pt": {
       "exploratory": {
-        "eligible_edges": 27614,
-        "same_topic_edges": 13730,
-        "same_topic_share": 0.4972115593539509,
-        "all_assigned_pair_same_topic_share": 0.3311758481730791,
+        "eligible_edges": 26700,
+        "same_topic_edges": 13320,
+        "same_topic_share": 0.49887640449438203,
+        "all_assigned_pair_same_topic_share": 0.3308463597222761,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 3635,
-        "same_topic_edges": 2242,
-        "same_topic_share": 0.6167812929848693,
-        "all_assigned_pair_same_topic_share": 0.3311758481730791,
+        "eligible_edges": 3529,
+        "same_topic_edges": 2183,
+        "same_topic_share": 0.6185888353641258,
+        "all_assigned_pair_same_topic_share": 0.3308463597222761,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 967,
-        "same_topic_edges": 637,
-        "same_topic_share": 0.6587383660806618,
-        "all_assigned_pair_same_topic_share": 0.3311758481730791,
+        "eligible_edges": 939,
+        "same_topic_edges": 620,
+        "same_topic_share": 0.6602768903088392,
+        "all_assigned_pair_same_topic_share": 0.3308463597222761,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "jaccard_control": {
-        "eligible_edges": 18093,
-        "same_topic_edges": 9009,
-        "same_topic_share": 0.49792737522798874,
-        "all_assigned_pair_same_topic_share": 0.3311758481730791,
+        "eligible_edges": 17382,
+        "same_topic_edges": 8712,
+        "same_topic_share": 0.5012081463583017,
+        "all_assigned_pair_same_topic_share": 0.3308463597222761,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       }
     },
     "legacy-stm": {
       "exploratory": {
-        "eligible_edges": 5008,
+        "eligible_edges": 5000,
         "same_topic_edges": 918,
-        "same_topic_share": 0.18330670926517573,
+        "same_topic_share": 0.1836,
         "all_assigned_pair_same_topic_share": 0.08510461860977325,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "balanced": {
-        "eligible_edges": 1160,
+        "eligible_edges": 1157,
         "same_topic_edges": 263,
-        "same_topic_share": 0.2267241379310345,
+        "same_topic_share": 0.22731201382886776,
         "all_assigned_pair_same_topic_share": 0.08510461860977325,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
       "strict": {
-        "eligible_edges": 367,
+        "eligible_edges": 366,
         "same_topic_edges": 106,
-        "same_topic_share": 0.2888283378746594,
+        "same_topic_share": 0.2896174863387978,
         "all_assigned_pair_same_topic_share": 0.08510461860977325,
         "note": "Comparación descriptiva; universos distintos y datos relacionados. No es prueba de validez ni causalidad."
       },
@@ -918,9 +918,9 @@
   },
   "legacy": {
     "label": "Criterio anterior de coincidencias exactas",
-    "edges": 4519,
-    "connected_records": 2998,
-    "isolated_records": 6478,
+    "edges": 4423,
+    "connected_records": 2892,
+    "isolated_records": 6463,
     "keyword_limit": 12,
     "max_document_frequency": 40,
     "min_shared": 2

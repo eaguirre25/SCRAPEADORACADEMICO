@@ -4,7 +4,7 @@
   "end_year": 2026,
   "include_unvalidated_candidates": true,
   "min_relevance_score": 1,
-  "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|entre ríos|tierra del fuego|santiago del estero|río negro|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe)\\b",
+  "territorial_pattern": "\\b(?:argentin[a-záéíóú]*|buenos aires|caba|conurbano(?:\\s+bonaerense)?|amba|ciudad de la plata|mar del plata|bahía blanca|(?:partido|municipio|escuelas?[^.]{0,40})\\s+de\\s+(?:general\\s+)?san martín|general san martín|la matanza|lomas de zamora|provincia de (?:córdoba|mendoza|salta|san juan|san luis|la rioja|catamarca|corrientes)|cordob[eé]s[a-z]*|santafesin[oa]s?|mendocin[oa]s?|entrerrian[oa]s?|correntin[oa]s?|fueguin[oa]s?|pampean[oa]s?|jujeñ[oa]s?|salteñ[oa]s?|tucuman[oa]s?|misioner[oa]s?|chaqueñ[oa]s?|neuquin[oa]s?|bonaerenses?|patagoni[a-z]*|entre ríos|tierra del fuego|ushuaia|santiago del estero|río negro|bariloche|neuquén|chubut|santa cruz|la pampa|jujuy|tucumán|misiones|formosa|chaco|santa fe|universidad nacional de (?:la plata|córdoba|rosario|cuyo|san martín|general sarmiento|quilmes|luján|mar del plata|comahue|tucumán|litoral|entre ríos|río cuarto|sur|centro)|conicet|unlp|unsam|uncuyo|uncoma|unicen|ungs|unqui|untref)\\b",
   "semantic_network": {
     "neighbors": 5,
     "min_similarity": 0.7

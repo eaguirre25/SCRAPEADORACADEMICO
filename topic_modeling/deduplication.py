@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 from collections import defaultdict
 from difflib import SequenceMatcher
 from typing import Any
@@ -44,8 +45,16 @@ def _authors_compatible(left: Any, right: Any) -> bool:
 
 def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     """Resolve only high-confidence duplicates and preserve all uncertain pairs for review."""
+    def _doi_group_key(row: dict[str, Any]) -> str:
+        d = normalize_doi(row.get("doi"))
+        if not d:
+            return ""
+        if d.startswith("10.5281/zenodo.") and len(publication_title(row.get("title"))) >= 20:
+            return f"zenodo:{publication_title(row.get('title'))}"
+        return re.sub(r"(?:[./]v\d+)$", "", d)
+
     parent = list(range(len(records)))
-    component_dois = [{normalize_doi(row.get("doi"))} - {""} for row in records]
+    component_dois = [{_doi_group_key(row)} - {""} for row in records]
 
     def find(i: int) -> int:
         while parent[i] != i:
@@ -104,8 +113,7 @@ def audit_and_resolve_duplicates(records: list[dict[str, Any]]) -> tuple[list[di
                 if find(left) == find(right):
                     continue
                 left_row, right_row = records[left], records[right]
-                left_doi, right_doi = normalize_doi(left_row.get("doi")), normalize_doi(right_row.get("doi"))
-                if left_doi and right_doi and left_doi != right_doi:
+                if conflicting_dois(left_row, right_row):
                     continue
                 gap = abs(int(clean_value(left_row.get("publication_year"))) - int(clean_value(right_row.get("publication_year"))))
                 if gap > NEAR_YEAR_MAX_GAP:

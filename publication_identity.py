@@ -31,9 +31,24 @@ def authors_compatible(left, right):
     return len(a) >= 2 and len(b) >= 2 and (a <= b or b <= a or len(a & b) >= 2)
 
 
+def canonical_doi_family(doi_value):
+    """Collapse repository version DOIs (e.g., 10.26180/30312055.v1 -> 10.26180/30312055)."""
+    d = normalize_doi(doi_value)
+    if not d:
+        return ""
+    return re.sub(r"(?:[./]v\d+)$", "", d)
+
+
 def conflicting_dois(left, right):
-    a, b = normalize_doi(left.get("doi")), normalize_doi(right.get("doi"))
-    return bool(a and b and a != b)
+    a, b = canonical_doi_family(left.get("doi")), canonical_doi_family(right.get("doi"))
+    if not a or not b or a == b:
+        return False
+    # Zenodo assigns consecutive DOIs to the concept record and v1 of the exact same deposit.
+    if a.startswith("10.5281/zenodo.") and b.startswith("10.5281/zenodo."):
+        ta, tb = publication_title(left.get("title")), publication_title(right.get("title"))
+        if len(ta) >= 20 and ta == tb and authors_compatible(left.get("authors"), right.get("authors")):
+            return False
+    return True
 
 
 def same_publication_url(left, right):

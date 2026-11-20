@@ -732,8 +732,16 @@ def deduplicate(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[
     DOI y más datos, se completan sus campos vacíos con los del duplicado y se
     suman las fuentes.
     """
+    def _doi_group_key(row: Dict[str, Any]) -> str:
+        d = normalize_doi(row.get("doi"))
+        if not d:
+            return ""
+        if d.startswith("10.5281/zenodo.") and len(publication_title(row.get("title"))) >= 20:
+            return f"zenodo:{publication_title(row.get('title'))}"
+        return re.sub(r"(?:[./]v\d+)$", "", d)
+
     parent = list(range(len(rows)))
-    component_dois = [{normalize_doi(row.get("doi"))} - {""} for row in rows]
+    component_dois = [{_doi_group_key(row)} - {""} for row in rows]
 
     def find(i: int) -> int:
         while parent[i] != i:
