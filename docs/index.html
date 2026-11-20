@@ -236,7 +236,7 @@ button,select{min-height:28px}
       <select class="arts-select" id="filter-source" aria-label="Filtrar por fuente" onchange="onSearch()"><option value="">Todas las fuentes</option></select>
       <select class="arts-select" id="filter-year" aria-label="Filtrar por año" onchange="onSearch()"><option value="">Todos los años</option></select>
       <select class="arts-select" id="filter-oa" aria-label="Filtrar por acceso abierto" onchange="onSearch()"><option value="">Acceso abierto: todos</option><option value="Sí">Solo acceso abierto</option><option value="No">Sin acceso abierto</option></select>
-      <button type="button" class="arts-btn" id="btn-cols" aria-expanded="false" aria-controls="col-picker" onclick="toggleColPicker()">⚙ Columnas (<span id="col-count">16/16</span>)</button>
+      <button type="button" class="arts-btn" id="btn-cols" aria-expanded="false" aria-controls="col-picker" onclick="toggleColPicker()">⚙ Columnas (<span id="col-count">20/20</span>)</button>
       <button type="button" class="arts-btn" id="btn-export-csv" onclick="exportVisibleCsv()" title="Descargar las filas filtradas y columnas visibles en CSV">⬇ CSV</button>
       <button type="button" class="arts-btn" id="btn-arts-fullscreen" onclick="toggleArtsFullscreen()" title="Ver tabla en pantalla completa">⛶ Pantalla completa</button>
       <div class="col-picker" id="col-picker" role="dialog" aria-label="Selector de columnas visibles" hidden>
@@ -329,7 +329,7 @@ function ensureNetwork(name){
 function ensureArticles(){
   return articlesPromise||(articlesPromise=loadScript("dashboard-articles.js").then(()=>{
     ARTS=window.StellarArticles||[];
-    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.doi,a.tipo,a.termino,a.resumen,a.search].join(" ").toLowerCase();
+    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.topico,a.motivo,a.doi,a.tipo,a.termino,a.resumen,a.search].join(" ").toLowerCase();
     populateTableFilters();
     applyTableFilters();
   }).catch(e=>{articlesPromise=null;throw e;}));
@@ -551,11 +551,17 @@ document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeMod(); });
 // ── Tabla interactiva en vivo (solo lectura, con selector de columnas y pantalla completa) ──
 const TABLE_COLS = [
   {key:"titulo", label:"Título", visible:true, compact:true},
+  {key:"kws", label:"Conceptos centrales / Palabras clave", visible:true, compact:true},
+  {key:"topico", label:"Tópico del modelo", visible:true, compact:true},
   {key:"anio", label:"Año", visible:true, compact:true},
-  {key:"fecha_pub", label:"Fecha pub.", visible:true, compact:false},
   {key:"autores", label:"Autores", visible:true, compact:true},
   {key:"revista", label:"Revista / origen", visible:true, compact:true},
-  {key:"fuente", label:"Fuente", visible:true, compact:true},
+  {key:"fuente", label:"Fuente", visible:true, compact:false},
+  {key:"corpus", label:"Texto completo", visible:true, compact:false},
+  {key:"apa", label:"Cita APA 7", visible:true, compact:false},
+  {key:"motivo", label:"Motivo de pertinencia", visible:true, compact:false},
+  {key:"score", label:"Pertinencia", visible:true, compact:false},
+  {key:"fecha_pub", label:"Fecha pub.", visible:true, compact:false},
   {key:"tipo", label:"Tipo", visible:true, compact:false},
   {key:"termino", label:"Término búsqueda", visible:true, compact:false},
   {key:"doi", label:"DOI", visible:true, compact:false},
@@ -563,9 +569,7 @@ const TABLE_COLS = [
   {key:"oa", label:"Acceso abierto", visible:true, compact:false},
   {key:"pdf", label:"PDF URL", visible:true, compact:false},
   {key:"resumen", label:"Abstract / resumen", visible:true, compact:false},
-  {key:"kws", label:"Palabras clave", visible:true, compact:true},
-  {key:"fecha_reg", label:"Fecha registro", visible:true, compact:false},
-  {key:"score", label:"Pertinencia", visible:true, compact:false}
+  {key:"fecha_reg", label:"Fecha registro", visible:true, compact:false}
 ];
 let curPage=0, filtered=ARTS, sortCol=null, sortDir=1;
 function articlesLoading(){document.getElementById("pinfo").textContent="Cargando artículos…";document.getElementById("count-badge").textContent="Cargando…";}

@@ -574,12 +574,23 @@ edges = networks.get(DEFAULT_NETWORK, {}).get("documents", {}).get("edges", [])
 
 # ── Lista completa de artículos ───────────────────────────────────────────────
 
+default_topic_by_id = {
+    n["id"]: (f"T{n['topic']} · {n.get('topic_label', '')}" if n.get("topic") else (n.get("topic_label") or "Sin tema"))
+    for n in nodes
+}
+corpus_status_by_doi = {
+    normalize_doi(cp.get("doi")): ("Con texto completo" if s(cp.get("texto")) else "Sin texto")
+    for cp in corpus if s(cp.get("doi"))
+}
+
 all_articles = []
 for r in records:
     title = clean_title(r.get("title", ""))
     if not title:
         continue
     doi  = s(r.get("doi", ""))
+    doi_norm = normalize_doi(doi)
+    paper_key = s(r.get("record_id"))
     url  = s(r.get("url", ""))
     if not url and doi:
         url = f"https://doi.org/{doi}"
@@ -587,22 +598,23 @@ for r in records:
     auth_list = [a.strip() for a in autores.split(";") if a.strip()]
     auth_short = "; ".join(auth_list[:3]) + (" et al." if len(auth_list) > 3 else "")
     kws_raw = s(r.get("keywords", ""))
-    kws = clean_keywords(kws_raw, keyword_rules)[0][:5]
+    kws = clean_keywords(kws_raw, keyword_rules)[0][:8]
     resumen = s(r.get("abstract", ""))
     fuente = infer_source(r)
     revista = infer_origin(r)
-    aliases = [a for a in duplicate_aliases if s(a.get("duplicate_of")) == s(r.get("record_id"))]
+    aliases = [a for a in duplicate_aliases if s(a.get("duplicate_of")) == paper_key]
     variant_text = " ".join(s(a.get("title")) + " " + s(a.get("authors")) for a in aliases)
     # El navegador arma el texto buscable completo con titulo, autores, revista, fuente, año y resumen;
     # aquí solo se guarda lo que no aparece en esos campos (palabras clave originales y títulos duplicados).
     search_text = " ".join([kws_raw, variant_text]).strip()
+    apa_text = paper_pool.get(paper_key, {}).get("reference", "")
     all_articles.append({
         "titulo":    title,
+        "anio":      s(r.get("publication_year", "")),
+        "fecha_pub": s(r.get("publication_date", "")),
         "autores":   auth_short,
         "revista":   revista,
         "fuente":    fuente,
-        "anio":      s(r.get("publication_year", "")),
-        "fecha_pub": s(r.get("publication_date", "")),
         "tipo":      s(r.get("document_type", "")),
         "termino":   s(r.get("search_term", "")),
         "doi":       doi,
@@ -610,6 +622,10 @@ for r in records:
         "oa":        "Sí" if str(r.get("is_oa", "")).strip().lower() in {"true", "1", "yes", "sí", "si"} else "No",
         "pdf":       s(r.get("pdf_url", "")),
         "kws":       kws,
+        "topico":    default_topic_by_id.get(paper_key, "Sin tema"),
+        "corpus":    corpus_status_by_doi.get(doi_norm, "Sin texto"),
+        "motivo":    s(r.get("relevance_reason", "")),
+        "apa":       apa_text,
         "resumen":   resumen[:450],
         "fecha_reg": s(r.get("first_seen_date", "")),
         "score":     s(r.get("relevance_score", "")),
@@ -1047,7 +1063,7 @@ button,select{min-height:28px}
       <select class="arts-select" id="filter-source" aria-label="Filtrar por fuente" onchange="onSearch()"><option value="">Todas las fuentes</option></select>
       <select class="arts-select" id="filter-year" aria-label="Filtrar por año" onchange="onSearch()"><option value="">Todos los años</option></select>
       <select class="arts-select" id="filter-oa" aria-label="Filtrar por acceso abierto" onchange="onSearch()"><option value="">Acceso abierto: todos</option><option value="Sí">Solo acceso abierto</option><option value="No">Sin acceso abierto</option></select>
-      <button type="button" class="arts-btn" id="btn-cols" aria-expanded="false" aria-controls="col-picker" onclick="toggleColPicker()">⚙ Columnas (<span id="col-count">16/16</span>)</button>
+      <button type="button" class="arts-btn" id="btn-cols" aria-expanded="false" aria-controls="col-picker" onclick="toggleColPicker()">⚙ Columnas (<span id="col-count">20/20</span>)</button>
       <button type="button" class="arts-btn" id="btn-export-csv" onclick="exportVisibleCsv()" title="Descargar las filas filtradas y columnas visibles en CSV">⬇ CSV</button>
       <button type="button" class="arts-btn" id="btn-arts-fullscreen" onclick="toggleArtsFullscreen()" title="Ver tabla en pantalla completa">⛶ Pantalla completa</button>
       <div class="col-picker" id="col-picker" role="dialog" aria-label="Selector de columnas visibles" hidden>
@@ -1140,7 +1156,7 @@ function ensureNetwork(name){
 function ensureArticles(){
   return articlesPromise||(articlesPromise=loadScript("dashboard-articles.js").then(()=>{
     ARTS=window.StellarArticles||[];
-    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.doi,a.tipo,a.termino,a.resumen,a.search].join(" ").toLowerCase();
+    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.topico,a.motivo,a.doi,a.tipo,a.termino,a.resumen,a.search].join(" ").toLowerCase();
     populateTableFilters();
     applyTableFilters();
   }).catch(e=>{articlesPromise=null;throw e;}));
@@ -1362,11 +1378,17 @@ document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeMod(); });
 // ── Tabla interactiva en vivo (solo lectura, con selector de columnas y pantalla completa) ──
 const TABLE_COLS = [
   {key:"titulo", label:"Título", visible:true, compact:true},
+  {key:"kws", label:"Conceptos centrales / Palabras clave", visible:true, compact:true},
+  {key:"topico", label:"Tópico del modelo", visible:true, compact:true},
   {key:"anio", label:"Año", visible:true, compact:true},
-  {key:"fecha_pub", label:"Fecha pub.", visible:true, compact:false},
   {key:"autores", label:"Autores", visible:true, compact:true},
   {key:"revista", label:"Revista / origen", visible:true, compact:true},
-  {key:"fuente", label:"Fuente", visible:true, compact:true},
+  {key:"fuente", label:"Fuente", visible:true, compact:false},
+  {key:"corpus", label:"Texto completo", visible:true, compact:false},
+  {key:"apa", label:"Cita APA 7", visible:true, compact:false},
+  {key:"motivo", label:"Motivo de pertinencia", visible:true, compact:false},
+  {key:"score", label:"Pertinencia", visible:true, compact:false},
+  {key:"fecha_pub", label:"Fecha pub.", visible:true, compact:false},
   {key:"tipo", label:"Tipo", visible:true, compact:false},
   {key:"termino", label:"Término búsqueda", visible:true, compact:false},
   {key:"doi", label:"DOI", visible:true, compact:false},
@@ -1374,9 +1396,7 @@ const TABLE_COLS = [
   {key:"oa", label:"Acceso abierto", visible:true, compact:false},
   {key:"pdf", label:"PDF URL", visible:true, compact:false},
   {key:"resumen", label:"Abstract / resumen", visible:true, compact:false},
-  {key:"kws", label:"Palabras clave", visible:true, compact:true},
-  {key:"fecha_reg", label:"Fecha registro", visible:true, compact:false},
-  {key:"score", label:"Pertinencia", visible:true, compact:false}
+  {key:"fecha_reg", label:"Fecha registro", visible:true, compact:false}
 ];
 let curPage=0, filtered=ARTS, sortCol=null, sortDir=1;
 function articlesLoading(){document.getElementById("pinfo").textContent="Cargando artículos…";document.getElementById("count-badge").textContent="Cargando…";}
