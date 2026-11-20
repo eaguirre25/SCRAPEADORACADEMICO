@@ -1,1 +1,13 @@
-
+duplicate_group_id,source_record_id,publication_document_id,decision,decision_basis,review_status
+duplicate:ed8090d6951acc85,10.5281/zenodo.6410248,doi:10.5281/zenodo.6410248,kept_canonical,title_near_year_first_author,algorithmic_high_confidence
+duplicate:ed8090d6951acc85,10.5281/zenodo.6410247,doi:10.5281/zenodo.6410248,merged_exact,title_near_year_first_author,algorithmic_high_confidence
+duplicate:0350711e928cf816,10.5281/zenodo.8009014,doi:10.5281/zenodo.8009014,kept_canonical,doi_normalized,algorithmic_high_confidence
+duplicate:0350711e928cf816,10.5281/zenodo.8009013,doi:10.5281/zenodo.8009014,merged_exact,doi_normalized,algorithmic_high_confidence
+duplicate:d4036af2954fc1b4,10.5281/zenodo.6982443,doi:10.5281/zenodo.6982443,kept_canonical,doi_normalized,algorithmic_high_confidence
+duplicate:d4036af2954fc1b4,10.5281/zenodo.6982442,doi:10.5281/zenodo.6982443,merged_exact,doi_normalized,algorithmic_high_confidence
+duplicate:0efe80350fc91d63,10.5281/zenodo.8017148,doi:10.5281/zenodo.8017148,kept_canonical,doi_normalized,algorithmic_high_confidence
+duplicate:0efe80350fc91d63,10.5281/zenodo.8017147,doi:10.5281/zenodo.8017148,merged_exact,doi_normalized,algorithmic_high_confidence
+duplicate:8f3e6aaeb18e817a,10.5281/zenodo.8296701,doi:10.5281/zenodo.8296701,kept_canonical,doi_normalized,algorithmic_high_confidence
+duplicate:8f3e6aaeb18e817a,10.5281/zenodo.8296700,doi:10.5281/zenodo.8296701,merged_exact,doi_normalized,algorithmic_high_confidence
+duplicate:5852e6ca125346d8,10.5281/zenodo.7986140,doi:10.5281/zenodo.7986140,kept_canonical,doi_normalized,algorithmic_high_confidence
+duplicate:5852e6ca125346d8,10.5281/zenodo.7986139,doi:10.5281/zenodo.7986140,merged_exact,doi_normalized,algorithmic_high_confidence

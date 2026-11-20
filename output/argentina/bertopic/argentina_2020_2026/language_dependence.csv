@@ -1,5 +1,7 @@
 model,corpus,topic_id,topic_language_distribution,dominant_language,dominant_language_share,language_entropy,language_mutual_information,topic_vs_language_residual,cross_language_nearest_neighbors,cross_language_centroid_similarity,dominant_source_share,dominant_country_share,classification,review_status
-BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 29, 'en': 3}",es,0.90625,0.311129,0.044992,0.022529,0.146875,0.897862,0.75,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 26, 'pt': 1, 'en': 1}",es,0.928571,0.306829,0.044992,0.04485,0.175,0.670534,0.464286,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 25, 'de': 1, 'pt': 1, 'en': 1}",es,0.892857,0.458208,0.044992,0.009136,0.139286,0.640219,0.5,1.0,language_concentrated_but_thematic,pending_human_review
-BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 11, 'pt': 1}",es,0.916667,0.286836,0.044992,0.032946,0.166667,0.857089,0.666667,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,0,"{'es': 40, 'en': 5}",es,0.888889,0.348832,0.053859,-0.005291,0.162222,0.937343,0.777778,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,1,"{'es': 36, 'en': 2}",es,0.947368,0.206192,0.053859,0.053189,0.131579,0.885376,0.447368,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,2,"{'es': 30, 'de': 1, 'pt': 1, 'en': 1}",es,0.909091,0.40451,0.053859,0.014911,0.121212,0.640805,0.545455,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,3,"{'es': 16, 'pt': 1}",es,0.941176,0.223718,0.053859,0.046997,0.147059,0.846403,0.529412,1.0,language_concentrated_but_thematic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,4,"{'es': 6, 'en': 2}",es,0.75,0.562335,0.053859,-0.14418,0.3375,0.893464,0.375,1.0,multilingual_topic,pending_human_review
+BERTopic-ARGENTINA-2020-2026,metadata,5,{'es': 8},es,1.0,-0.0,0.053859,0.10582,0.0875,0.0,0.5,1.0,language_concentrated_but_thematic,pending_human_review
