@@ -597,15 +597,23 @@ for r in records:
     # aquí solo se guarda lo que no aparece en esos campos (palabras clave originales y títulos duplicados).
     search_text = " ".join([kws_raw, variant_text]).strip()
     all_articles.append({
-        "titulo":  title,
-        "autores": auth_short,
-        "revista": revista,
-        "fuente": fuente,
-        "anio":    s(r.get("publication_year", "")),
-        "url":     url,
-        "kws":     kws,
-        "resumen": resumen[:450],
-        "search":  search_text,
+        "titulo":    title,
+        "autores":   auth_short,
+        "revista":   revista,
+        "fuente":    fuente,
+        "anio":      s(r.get("publication_year", "")),
+        "fecha_pub": s(r.get("publication_date", "")),
+        "tipo":      s(r.get("document_type", "")),
+        "termino":   s(r.get("search_term", "")),
+        "doi":       doi,
+        "url":       url,
+        "oa":        "Sí" if str(r.get("is_oa", "")).strip().lower() in {"true", "1", "yes", "sí", "si"} else "No",
+        "pdf":       s(r.get("pdf_url", "")),
+        "kws":       kws,
+        "resumen":   resumen[:450],
+        "fecha_reg": s(r.get("first_seen_date", "")),
+        "score":     s(r.get("relevance_score", "")),
+        "search":    search_text,
     })
 
 all_articles.sort(key=lambda x: safe_int(x["anio"], 0), reverse=True)
@@ -877,16 +885,38 @@ header{background:#070b14;border-bottom:1px solid #1a2a4a;padding:14px 24px;disp
 .bar-fill{height:100%;border-radius:3px}
 .t-frex{font-size:.68em;color:var(--muted);margin-top:4px;line-height:1.4}
 .t-hint{font-size:.62em;color:var(--dim);margin-top:3px}
-.arts-section{display:flex;flex-direction:column;height:45vh;overflow:hidden}
-.arts-head{padding:10px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0}
+.arts-section{display:flex;flex-direction:column;height:52vh;min-height:420px;overflow:hidden;background:var(--bg)}
+.arts-section:fullscreen,.arts-section.is-fullscreen{position:fixed;inset:0;width:100vw;height:100vh;z-index:900;background:var(--bg)}
+.arts-head{padding:10px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0}
 .arts-head h2{font-size:.78em;font-weight:600;color:#E6EDF3;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
-.search{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 12px;color:var(--text);font-size:.82em;outline:none}
+.search{flex:1;min-width:220px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 12px;color:var(--text);font-size:.82em;outline:none}
 .search:focus{border-color:var(--accent)}
 .search::placeholder{color:var(--dim)}
+.arts-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;position:relative}
+.arts-btn,.arts-select{background:#10243a;border:1px solid #355575;color:#dceaff;border-radius:6px;padding:5px 10px;font-size:.76em;cursor:pointer;white-space:nowrap}
+.arts-btn:hover,.arts-select:hover{background:#193957;border-color:var(--accent)}
+.arts-btn.active{background:#1f6feb;border-color:#58a6ff;color:#fff}
+.col-picker{position:absolute;right:0;top:calc(100% + 6px);width:min(360px,90vw);max-height:65vh;overflow:auto;background:#0d1726;border:1px solid #385e82;border-radius:10px;padding:12px;box-shadow:0 14px 40px rgba(0,0,0,.78);z-index:250}
+.col-picker[hidden]{display:none}
+.col-picker-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid var(--border);font-size:.78em;color:#e6edf3;font-weight:600}
+.col-picker-actions{display:flex;gap:6px}
+.col-picker-actions button{background:#162436;border:1px solid #304963;color:#a8d4ff;border-radius:5px;padding:3px 8px;font-size:.85em;cursor:pointer}
+.col-picker-actions button:hover{border-color:var(--accent);color:#fff}
+.col-picker-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px}
+.col-picker-item{display:flex;align-items:center;gap:7px;font-size:.76em;color:var(--text);cursor:pointer;padding:3px 4px;border-radius:5px}
+.col-picker-item:hover{background:#182433}
+.col-picker-item input{accent-color:var(--accent);cursor:pointer}
 .table-wrap{flex:1;overflow-y:auto;overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:.78em}
-thead th{background:var(--surface);color:var(--muted);padding:7px 12px;text-align:left;font-size:.7em;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
-tbody td{padding:7px 12px;border-bottom:1px solid #161B22;vertical-align:top}
+table{width:max-content;min-width:100%;border-collapse:collapse;font-size:.78em}
+thead th{background:var(--surface);color:var(--muted);padding:7px 12px;text-align:left;font-size:.7em;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;white-space:nowrap;cursor:pointer;user-select:none}
+thead th:hover{color:#e6edf3}
+thead th .sort-ind{margin-left:4px;color:var(--accent);font-size:.9em}
+tbody td{padding:7px 12px;border-bottom:1px solid #161B22;vertical-align:top;max-width:340px}
+tbody td.col-titulo{min-width:290px;max-width:420px}
+tbody td.col-resumen{min-width:260px;max-width:380px}
+tbody td.col-autores{min-width:170px}
+tbody td.col-revista,tbody td.col-termino{min-width:150px}
+tbody td.col-doi,tbody td.col-pdf,tbody td.col-url{max-width:210px;word-break:break-all}
 tbody tr:hover td{background:var(--hover)}
 .alink{color:var(--accent);text-decoration:none;font-weight:500;line-height:1.3;display:block}
 .alink:hover{text-decoration:underline}
@@ -1011,22 +1041,33 @@ button,select{min-height:28px}
 
 <div class="arts-section" id="articulos">
   <div class="arts-head">
-    <h2>Todos los artículos</h2>
-    <input type="text" class="search" id="search-input" placeholder="Buscar por título, autor, resumen, palabras clave, revista, fuente o año…" aria-label="Buscar en el catálogo de artículos" oninput="onSearch()">
+    <h2>Tabla en vivo del catálogo</h2>
+    <input type="text" class="search" id="search-input" placeholder="Buscar por título, autor, resumen, palabras clave, DOI, revista, fuente o año…" aria-label="Buscar en el catálogo de artículos" oninput="onSearch()">
+    <div class="arts-tools">
+      <select class="arts-select" id="filter-source" aria-label="Filtrar por fuente" onchange="onSearch()"><option value="">Todas las fuentes</option></select>
+      <select class="arts-select" id="filter-year" aria-label="Filtrar por año" onchange="onSearch()"><option value="">Todos los años</option></select>
+      <select class="arts-select" id="filter-oa" aria-label="Filtrar por acceso abierto" onchange="onSearch()"><option value="">Acceso abierto: todos</option><option value="Sí">Solo acceso abierto</option><option value="No">Sin acceso abierto</option></select>
+      <button type="button" class="arts-btn" id="btn-cols" aria-expanded="false" aria-controls="col-picker" onclick="toggleColPicker()">⚙ Columnas (<span id="col-count">16/16</span>)</button>
+      <button type="button" class="arts-btn" id="btn-export-csv" onclick="exportVisibleCsv()" title="Descargar las filas filtradas y columnas visibles en CSV">⬇ CSV</button>
+      <button type="button" class="arts-btn" id="btn-arts-fullscreen" onclick="toggleArtsFullscreen()" title="Ver tabla en pantalla completa">⛶ Pantalla completa</button>
+      <div class="col-picker" id="col-picker" role="dialog" aria-label="Selector de columnas visibles" hidden>
+        <div class="col-picker-head">
+          <span>Columnas visibles (solo lectura)</span>
+          <div class="col-picker-actions">
+            <button type="button" onclick="setAllCols(true)">Todas</button>
+            <button type="button" onclick="setCompactCols()">Compacta</button>
+          </div>
+        </div>
+        <div class="col-picker-grid" id="col-picker-grid"></div>
+      </div>
+    </div>
     <span class="badge" id="count-badge" role="status">Cargando…</span>
   </div>
   <div class="table-wrap">
-    <table>
-      <caption class="sr-only">Catálogo de artículos: título, autores, revista, fuente, año y palabras clave</caption>
+    <table id="arts-table">
+      <caption class="sr-only">Catálogo completo interactivo de artículos</caption>
       <thead>
-        <tr>
-          <th scope="col" style="width:36%">Título</th>
-          <th scope="col" style="width:18%">Autores</th>
-          <th scope="col" style="width:16%">Revista / origen</th>
-          <th scope="col" style="width:12%">Fuente</th>
-          <th scope="col" style="width:6%">Año</th>
-          <th scope="col" style="width:12%">Palabras clave</th>
-        </tr>
+        <tr id="arts-thead-row"></tr>
       </thead>
       <tbody id="arts-tbody"></tbody>
     </table>
@@ -1099,10 +1140,9 @@ function ensureNetwork(name){
 function ensureArticles(){
   return articlesPromise||(articlesPromise=loadScript("dashboard-articles.js").then(()=>{
     ARTS=window.StellarArticles||[];
-    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.resumen,a.search].join(" ").toLowerCase();
-    const q=document.getElementById("search-input").value.toLowerCase().trim();
-    filtered=q?ARTS.filter(a=>(a.search||"").toLowerCase().includes(q)):ARTS;
-    curPage=0;render();
+    for(const a of ARTS) a.search=[a.titulo,a.autores,a.revista,a.fuente,a.anio,a.doi,a.tipo,a.termino,a.resumen,a.search].join(" ").toLowerCase();
+    populateTableFilters();
+    applyTableFilters();
   }).catch(e=>{articlesPromise=null;throw e;}));
 }
 function whenNear(el,fn,margin){
@@ -1319,16 +1359,174 @@ function closeMod(ev){
 }
 document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeMod(); });
 
-// ── Articulos paginados ────────────────────────────────────────────────────────
-let curPage=0, filtered=ARTS;
+// ── Tabla interactiva en vivo (solo lectura, con selector de columnas y pantalla completa) ──
+const TABLE_COLS = [
+  {key:"titulo", label:"Título", visible:true, compact:true},
+  {key:"anio", label:"Año", visible:true, compact:true},
+  {key:"fecha_pub", label:"Fecha pub.", visible:true, compact:false},
+  {key:"autores", label:"Autores", visible:true, compact:true},
+  {key:"revista", label:"Revista / origen", visible:true, compact:true},
+  {key:"fuente", label:"Fuente", visible:true, compact:true},
+  {key:"tipo", label:"Tipo", visible:true, compact:false},
+  {key:"termino", label:"Término búsqueda", visible:true, compact:false},
+  {key:"doi", label:"DOI", visible:true, compact:false},
+  {key:"url", label:"URL", visible:true, compact:false},
+  {key:"oa", label:"Acceso abierto", visible:true, compact:false},
+  {key:"pdf", label:"PDF URL", visible:true, compact:false},
+  {key:"resumen", label:"Abstract / resumen", visible:true, compact:false},
+  {key:"kws", label:"Palabras clave", visible:true, compact:true},
+  {key:"fecha_reg", label:"Fecha registro", visible:true, compact:false},
+  {key:"score", label:"Pertinencia", visible:true, compact:false}
+];
+let curPage=0, filtered=ARTS, sortCol=null, sortDir=1;
 function articlesLoading(){document.getElementById("pinfo").textContent="Cargando artículos…";document.getElementById("count-badge").textContent="Cargando…";}
+function escHtml(v){return String(v||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
+
+function populateTableFilters(){
+  const srcSel=document.getElementById("filter-source"), yrSel=document.getElementById("filter-year");
+  if(srcSel && srcSel.options.length<=1){
+    const srcs=[...new Set(ARTS.map(a=>a.fuente).filter(Boolean))].sort();
+    for(const s of srcs) srcSel.add(new Option(s,s));
+  }
+  if(yrSel && yrSel.options.length<=1){
+    const yrs=[...new Set(ARTS.map(a=>a.anio).filter(Boolean))].sort((a,b)=>b.localeCompare(a));
+    for(const y of yrs) yrSel.add(new Option(y,y));
+  }
+}
+
+function buildColPicker(){
+  const grid=document.getElementById("col-picker-grid");
+  if(!grid) return;
+  grid.innerHTML="";
+  TABLE_COLS.forEach((col, idx)=>{
+    const lab=document.createElement("label");
+    lab.className="col-picker-item";
+    const cb=document.createElement("input");
+    cb.type="checkbox";
+    cb.checked=col.visible;
+    cb.onchange=()=>{
+      col.visible=cb.checked;
+      if(TABLE_COLS.every(c=>!c.visible)){ col.visible=true; cb.checked=true; }
+      updateColCount();
+      renderTableHeader();
+      render();
+    };
+    const span=document.createElement("span");
+    span.textContent=col.label;
+    lab.append(cb, span);
+    grid.appendChild(lab);
+  });
+  updateColCount();
+}
+
+function updateColCount(){
+  const n=TABLE_COLS.filter(c=>c.visible).length;
+  const el=document.getElementById("col-count");
+  if(el) el.textContent=n+"/"+TABLE_COLS.length;
+}
+
+function toggleColPicker(){
+  const p=document.getElementById("col-picker"), b=document.getElementById("btn-cols");
+  if(!p) return;
+  p.hidden=!p.hidden;
+  if(b){ b.setAttribute("aria-expanded", String(!p.hidden)); b.classList.toggle("active", !p.hidden); }
+}
+
+function setAllCols(val){
+  TABLE_COLS.forEach(c=>c.visible=val);
+  buildColPicker();
+  renderTableHeader();
+  render();
+}
+
+function setCompactCols(){
+  TABLE_COLS.forEach(c=>c.visible=!!c.compact);
+  buildColPicker();
+  renderTableHeader();
+  render();
+}
+
+document.addEventListener("click", ev=>{
+  const p=document.getElementById("col-picker"), b=document.getElementById("btn-cols");
+  if(p && !p.hidden && !p.contains(ev.target) && ev.target!==b && !b?.contains(ev.target)){
+    p.hidden=true;
+    if(b){ b.setAttribute("aria-expanded","false"); b.classList.remove("active"); }
+  }
+});
+
+function renderTableHeader(){
+  const tr=document.getElementById("arts-thead-row");
+  if(!tr) return;
+  tr.innerHTML="";
+  TABLE_COLS.filter(c=>c.visible).forEach(c=>{
+    const th=document.createElement("th");
+    th.scope="col";
+    th.title="Clic para ordenar por "+c.label;
+    const ind=sortCol===c.key ? (sortDir===1?" ▲":" ▼") : "";
+    th.innerHTML=escHtml(c.label)+(ind?`<span class="sort-ind">${ind}</span>`:"");
+    th.onclick=()=>{
+      if(sortCol===c.key) sortDir*=-1;
+      else { sortCol=c.key; sortDir=(c.key==="anio"||c.key==="score"||c.key==="fecha_pub"||c.key==="fecha_reg")?-1:1; }
+      applyTableFilters();
+    };
+    tr.appendChild(th);
+  });
+}
+
+function applyTableFilters(){
+  const q=(document.getElementById("search-input")?.value||"").toLowerCase().trim();
+  const src=document.getElementById("filter-source")?.value||"";
+  const yr=document.getElementById("filter-year")?.value||"";
+  const oa=document.getElementById("filter-oa")?.value||"";
+  filtered=ARTS.filter(a=>{
+    if(src && a.fuente!==src) return false;
+    if(yr && a.anio!==yr) return false;
+    if(oa && a.oa!==oa) return false;
+    if(q && !(a.search||"").includes(q)) return false;
+    return true;
+  });
+  if(sortCol){
+    filtered=[...filtered].sort((a,b)=>{
+      if(sortCol==="anio"||sortCol==="score"){
+        return ((Number(a[sortCol])||0)-(Number(b[sortCol])||0))*sortDir;
+      }
+      const va=Array.isArray(a[sortCol])?a[sortCol].join(" "):String(a[sortCol]||"");
+      const vb=Array.isArray(b[sortCol])?b[sortCol].join(" "):String(b[sortCol]||"");
+      return va.localeCompare(vb,"es")*sortDir;
+    });
+  }
+  curPage=0;
+  renderTableHeader();
+  render();
+}
 
 function onSearch(){
   if(!articlesPromise){ensureArticles();return;}
-  const q=document.getElementById("search-input").value.toLowerCase().trim();
-  filtered = q ? ARTS.filter(a=>(a.search||"").toLowerCase().includes(q)) : ARTS;
-  curPage=0;
-  render();
+  applyTableFilters();
+}
+
+function formatCell(a, key){
+  const v=a[key];
+  if(key==="titulo"){
+    const href=safeUrl(a.url);
+    return href ? `<a class="alink" href="${escHtml(href)}" target="_blank" rel="noopener">${escHtml(v)}</a>` : `<strong>${escHtml(v)}</strong>`;
+  }
+  if(key==="kws"){
+    return `<div class="kws">${(v||[]).map(k=>`<span class="kt">${escHtml(k)}</span>`).join("")}</div>`;
+  }
+  if(key==="doi" && v){
+    const doiHref=`https://doi.org/${encodeURIComponent(v)}`;
+    return `<a class="alink" href="${doiHref}" target="_blank" rel="noopener">${escHtml(v)}</a>`;
+  }
+  if((key==="url"||key==="pdf") && v){
+    const href=safeUrl(v);
+    if(href) return `<a class="alink" href="${escHtml(href)}" target="_blank" rel="noopener">${key==="pdf"?"Abrir PDF ↗":"Enlace ↗"}</a>`;
+  }
+  if(key==="oa"){
+    const ok=v==="Sí";
+    return `<span class="kt" style="color:${ok?"#7ee787":"#8b949e"};border:1px solid ${ok?"#238636":"#30363d"}">${escHtml(v||"No")}</span>`;
+  }
+  return `<span class="ameta">${escHtml(v||"—")}</span>`;
 }
 
 function render(){
@@ -1347,21 +1545,58 @@ function render(){
   tbody.innerHTML="";
   noRes.style.display = tot===0?"block":"none";
 
-  function escHtml(v){return String(v||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
+  const visCols=TABLE_COLS.filter(c=>c.visible);
   page.forEach(a=>{
     const tr=document.createElement("tr");
-    const kws=(a.kws||[]).map(k=>`<span class="kt">${escHtml(k)}</span>`).join("");
-    const resumen=a.resumen ? `<div class="ameta">${escHtml(a.resumen)}</div>` : "";
-    tr.innerHTML=`
-      <td><a class="alink" href="${escHtml(a.url||"#")}" target="_blank" rel="noopener">${escHtml(a.titulo)}</a>${resumen}</td>
-      <td><span class="ameta">${escHtml(a.autores||"—")}</span></td>
-      <td><span class="ameta">${escHtml(a.revista||"—")}</span></td>
-      <td><span class="ameta">${escHtml(a.fuente||"—")}</span></td>
-      <td><span class="ameta">${escHtml(a.anio||"—")}</span></td>
-      <td><div class="kws">${kws}</div></td>`;
+    tr.innerHTML=visCols.map(c=>`<td class="col-${c.key}">${formatCell(a,c.key)}</td>`).join("");
     tbody.appendChild(tr);
   });
 }
+
+function exportVisibleCsv(){
+  if(!filtered.length) return;
+  const visCols=TABLE_COLS.filter(c=>c.visible);
+  const csvEsc=v=>`"${String(v||"").replace(/"/g,'""')}"`;
+  const lines=[visCols.map(c=>csvEsc(c.label)).join(",")];
+  for(const a of filtered){
+    lines.push(visCols.map(c=>csvEsc(Array.isArray(a[c.key])?a[c.key].join("; "):a[c.key])).join(","));
+  }
+  const blob=new Blob(["\ufeff"+lines.join("\n")],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob), link=document.createElement("a");
+  link.href=url; link.download="catalogo_scrapeador_"+new Date().toISOString().slice(0,10)+".csv";
+  link.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function toggleArtsFullscreen(){
+  const sec=document.getElementById("articulos"), btn=document.getElementById("btn-arts-fullscreen");
+  if(!sec) return;
+  const isFull=document.fullscreenElement===sec || sec.classList.contains("is-fullscreen");
+  if(!isFull){
+    if(sec.requestFullscreen) sec.requestFullscreen().catch(()=>sec.classList.add("is-fullscreen"));
+    else sec.classList.add("is-fullscreen");
+    if(btn){ btn.textContent="✕ Salir de pantalla completa"; btn.classList.add("active"); }
+  }else{
+    if(document.fullscreenElement===sec) document.exitFullscreen?.();
+    sec.classList.remove("is-fullscreen");
+    if(btn){ btn.textContent="⛶ Pantalla completa"; btn.classList.remove("active"); }
+  }
+}
+document.addEventListener("fullscreenchange",()=>{
+  const sec=document.getElementById("articulos"), btn=document.getElementById("btn-arts-fullscreen");
+  if(!sec||!btn) return;
+  const active=document.fullscreenElement===sec || sec.classList.contains("is-fullscreen");
+  btn.textContent=active?"✕ Salir de pantalla completa":"⛶ Pantalla completa";
+  btn.classList.toggle("active",active);
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){
+    const sec=document.getElementById("articulos");
+    if(sec && sec.classList.contains("is-fullscreen")) toggleArtsFullscreen();
+  }
+});
+
+buildColPicker();
+renderTableHeader();
 
 function focusArticleSearch(){
   if(window.location.hash !== "#articulos") return;
