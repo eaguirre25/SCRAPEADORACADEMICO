@@ -1076,9 +1076,14 @@ function ensureArticles(){
 }
 function whenNear(el,fn,margin){
   if(!el) return;
-  if(!("IntersectionObserver" in window)){fn();return;}
-  const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();fn();}},{rootMargin:margin||"800px"});
+  let done=false;
+  const run=()=>{if(done)return;done=true;fn();};
+  if(!("IntersectionObserver" in window)){run();return;}
+  const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();run();}},{rootMargin:margin||"800px"});
   io.observe(el);
+  // Respaldo: pestañas en segundo plano o navegadores que no notifican la intersección.
+  const fallback=()=>setTimeout(()=>{io.disconnect();run();},2500);
+  if(document.readyState==="complete") fallback(); else window.addEventListener("load",fallback,{once:true});
 }
 const profileSelect = document.getElementById('net-profile');
 function keywordEdges(profile){ return keywordCache[profile] || []; }
