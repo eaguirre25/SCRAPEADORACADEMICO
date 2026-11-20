@@ -38,6 +38,7 @@ on:
       - 'build_fulltext_knowledge_base.py'
       - 'update_assistant_counts.py'
       - 'docs/mobile.css'
+      - 'docs/theme.css'
       - 'docs/pwa.js'
       - 'docs/sw.js'
       - 'docs/manifest.webmanifest'
