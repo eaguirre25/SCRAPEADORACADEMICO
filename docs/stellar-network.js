@@ -39,6 +39,36 @@ window.StellarNetwork = (() => {
         .attr('offset', offset).attr('stop-color', base.brighter(.85)).attr('stop-opacity', opacity));
     });
 
+    // Sprites precalculados por color: esfera sombreada y halo. Se dibujan con drawImage,
+    // lo que permite el mismo relieve que las esferas SVG sin un gradiente por nodo y por cuadro.
+    const sphereSprites = new Map(), haloSprites = new Map();
+    function sphereSprite(color) {
+      let s = sphereSprites.get(color);
+      if (s) return s;
+      const S = 96, c = document.createElement('canvas'); c.width = c.height = S;
+      const x = c.getContext('2d'), base = d3.color(color) || d3.color('#7089a3');
+      const gr = x.createRadialGradient(S * .30, S * .24, 0, S * .30, S * .24, S * .78);
+      [[0, '#ffffff'], [.15, base.brighter(1.45)], [.48, base], [.85, base.darker(1.8)], [1, base.darker(3.0)]]
+        .forEach(([o, col]) => gr.addColorStop(o, col.toString()));
+      x.beginPath(); x.arc(S / 2, S / 2, S / 2 - 2, 0, Math.PI * 2); x.fillStyle = gr; x.fill();
+      x.lineWidth = 1.6; x.strokeStyle = base.copy({opacity: .78}).toString(); x.stroke();
+      sphereSprites.set(color, c);
+      return c;
+    }
+    function haloSprite(color) {
+      let s = haloSprites.get(color);
+      if (s) return s;
+      const S = 128, c = document.createElement('canvas'); c.width = c.height = S;
+      const x = c.getContext('2d'), base = (d3.color(color) || d3.color('#7089a3')).brighter(.6).rgb();
+      const gr = x.createRadialGradient(S / 2, S / 2, S * .1, S / 2, S / 2, S / 2);
+      gr.addColorStop(0, `rgba(${base.r},${base.g},${base.b},.62)`);
+      gr.addColorStop(.45, `rgba(${base.r},${base.g},${base.b},.2)`);
+      gr.addColorStop(1, `rgba(${base.r},${base.g},${base.b},0)`);
+      x.fillStyle = gr; x.fillRect(0, 0, S, S);
+      haloSprites.set(color, c);
+      return c;
+    }
+
     // Multi-layered deep-space starfield with subtle parallax
     const stars = svg.append('g').attr('aria-hidden', 'true').attr('pointer-events', 'none');
     const starData = d3.range(135).map(i => ({
@@ -289,6 +319,8 @@ window.StellarNetwork = (() => {
 
       // 3. High-FPS 3D Glossy Spheres on Canvas for dense document mode
       if (isDenseDocs) {
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
         const vx0 = -transform.x / transform.k - 40;
         const vy0 = -transform.y / transform.k - 40;
         const vx1 = (W - transform.x) / transform.k + 40;
@@ -310,27 +342,19 @@ window.StellarNetwork = (() => {
           // Halo for hubs, active, or neighbors
           if (isAct || (nearby && isNear) || d.degree > 12) {
             const haloR = r * (isAct ? 3.8 : 2.3);
-            const hGrad = ctx.createRadialGradient(x, y, r * 0.4, x, y, haloR);
-            hGrad.addColorStop(0, `rgba(${rgb.r},${rgb.g},${rgb.b},${isAct ? 0.55 : 0.28})`);
-            hGrad.addColorStop(1, `rgba(${rgb.r},${rgb.g},${rgb.b},0)`);
-            ctx.fillStyle = hGrad;
-            ctx.beginPath();
-            ctx.arc(x, y, haloR, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.globalAlpha = alpha * (isAct ? 1 : 0.55);
+            ctx.drawImage(haloSprite(baseColor), x - haloR, y - haloR, haloR * 2, haloR * 2);
+            ctx.globalAlpha = alpha;
           }
 
-          // Sphere body
-          ctx.fillStyle = baseColor;
-          ctx.beginPath();
-          ctx.arc(x, y, r, 0, Math.PI * 2);
-          ctx.fill();
-
-          // Specular 3D star core highlight
-          if (transform.k > 0.45 || r > 5 || isAct) {
-            ctx.fillStyle = isAct ? '#ffffff' : 'rgba(255,255,255,0.65)';
-            ctx.beginPath();
-            ctx.arc(x - r * 0.28, y - r * 0.28, Math.max(0.9, r * 0.34), 0, Math.PI * 2);
-            ctx.fill();
+          // Cuerpo esférico: sprite sombreado de cerca, punto plano cuando el nodo mide menos de 2 px.
+          if (r * transform.k < 1.7) {
+            // Mínimo de ~1,2 px en pantalla para que la vista general conserve su densidad luminosa.
+            const rr = Math.max(r, 0.6 / transform.k);
+            ctx.fillStyle = baseColor;
+            ctx.fillRect(x - rr, y - rr, rr * 2, rr * 2);
+          } else {
+            ctx.drawImage(sphereSprite(baseColor), x - r, y - r, r * 2, r * 2);
           }
 
           // Active orbital ring
@@ -359,7 +383,9 @@ window.StellarNetwork = (() => {
     // Create accessible DOM node elements.
     // In dense mode (>900 docs), we keep lightweight hit/a11y nodes without 18,000 gradient circles,
     // while in topics / Argentina view (<900 nodes) we render full SVG spheres + halos + planetary rings.
-    const node = g.append('g').selectAll('g').data(nodes).join('g').attr('class', 'stellar-node')
+    // En modo denso los nodos no tienen elementos DOM propios: se dibujan en el canvas y el
+    // mouse, el teclado y los lectores de pantalla se atienden a nivel del SVG (ver más abajo).
+    const node = g.append('g').selectAll('g').data(isDenseDocs ? [] : nodes).join('g').attr('class', 'stellar-node')
       .attr('tabindex', 0).attr('role', 'button').attr('aria-pressed', 'false')
       .attr('aria-label', d => isTopics ? `T${d.id}: ${d.label}` : `${d.short_citation || d.authors || 'Sin autor'}: ${d.title}`)
       .style('cursor', 'pointer');
@@ -383,15 +409,26 @@ window.StellarNetwork = (() => {
         .attr('fill', 'transparent').attr('stroke', 'none');
     }
 
-    const captions = g.append('g').selectAll('text').data(nodes).join('text')
+    // Los registros sin autor se rotulan con el comienzo del título en lugar de "Sin autor, 2024".
+    const labelOf = d => {
+      if (isTopics) return `T${d.id} · ${(d.label || '').slice(0, 48)}${(d.label || '').length > 48 ? '…' : ''}`;
+      const cite = d.short_citation || `${d.authors || 'Sin autor'}, ${d.year || 's. f.'}`;
+      if (/^sin autor/i.test(cite) && d.title) return `${d.title.slice(0, 26).trim()}${d.title.length > 26 ? '…' : ''}${d.year ? ', ' + d.year : ''}`;
+      return cite;
+    };
+    // En modo denso las etiquetas son un grupo reducido de <text> que se reasigna al nodo que corresponda.
+    const LABEL_SLOTS = 240;
+    const captions = g.append('g').attr('aria-hidden', 'true').selectAll('text')
+      .data(isDenseDocs ? d3.range(LABEL_SLOTS).map(slot => ({slot, index: -1})) : nodes).join('text')
       .attr('class', 'stellar-label').attr('text-anchor', 'middle')
-      .text(d => isTopics ? `T${d.id} · ${(d.label || '').slice(0, 48)}${(d.label || '').length > 48 ? '…' : ''}` : d.short_citation || `${d.authors || 'Sin autor'}, ${d.year || 's. f.'}`);
+      .attr('display', isDenseDocs ? 'none' : null)
+      .text(d => isDenseDocs ? '' : labelOf(d));
 
     // Estimate label width arithmetically in dense mode to avoid 9,476 synchronous layout reflows
     const captionWidths = new Map();
     if (isDenseDocs) {
       nodes.forEach(d => {
-        const txt = d.short_citation || `${d.authors || 'Sin autor'}, ${d.year || 's. f.'}`;
+        const txt = labelOf(d);
         captionWidths.set(d.index, Math.max(48, txt.length * 6.4));
       });
     } else {
@@ -401,7 +438,56 @@ window.StellarNetwork = (() => {
     // Pre-sort nodes by degree/size once so label collision detection doesn't sort 9,476 items per frame
     const baseOrderedNodes = [...nodes].sort((a, b) => (b.degree || b.size || 0) - (a.degree || a.size || 0));
 
+    // Etiquetas del modo denso: se eligen entre los nodos visibles en pantalla (los de más grado primero),
+    // de modo que al acercarse a cualquier zona aparezcan sus autores, no solo los de los nodos centrales.
+    function layoutLabelsDense() {
+      const active = selected || hovered;
+      const nearby = active ? adjacency.get(active.index) : null;
+      const k = transform.k, fontSize = 11 / k;
+      const cap = active ? 140 : Math.max(24, Math.min(LABEL_SLOTS, Math.round(30 + 70 * k)));
+      const inView = d => {
+        const sx = transform.applyX(d.x), sy = transform.applyY(d.y);
+        return sx > -30 && sx < W + 30 && sy > -10 && sy < H + 30;
+      };
+      const ordered = [];
+      if (active) {
+        ordered.push(active);
+        for (const idx of nearby) if (idx !== active.index && inView(nodes[idx])) ordered.push(nodes[idx]);
+      } else {
+        for (const d of baseOrderedNodes) {
+          if (filterTopic && String(d.topic) !== filterTopic) continue;
+          if (!inView(d)) continue;
+          ordered.push(d);
+          if (ordered.length >= cap * 3) break;
+        }
+      }
+      const occupied = new Set(), shown = [];
+      for (const d of ordered) {
+        const x = transform.applyX(d.x), y = transform.applyY(d.y + radius(d) + 15 / k);
+        const half = (captionWidths.get(d.index) || 96) * 11 / 16 / 2;
+        const cells = [];
+        for (let ix = Math.floor((x - half - 4) / 20); ix <= Math.floor((x + half + 4) / 20); ix++)
+          for (let iy = Math.floor((y - 12) / 16); iy <= Math.floor((y + 3) / 16); iy++) cells.push(`${ix},${iy}`);
+        if (d !== active && cells.some(cell => occupied.has(cell))) continue;
+        cells.forEach(cell => occupied.add(cell));
+        shown.push(d);
+        if (shown.length >= Math.min(cap, LABEL_SLOTS)) break;
+      }
+      captions.each(function (_, i) {
+        const d = shown[i];
+        if (!d) { if (this.getAttribute('display') !== 'none') this.setAttribute('display', 'none'); return; }
+        this.removeAttribute('display');
+        if (this.__node !== d) { this.textContent = labelOf(d); this.__node = d; }
+        this.setAttribute('x', d.x);
+        this.setAttribute('y', d.y + radius(d) + 15 / k);
+        this.setAttribute('font-size', d === active ? fontSize * 1.12 : fontSize);
+        this.setAttribute('font-weight', d === active ? '700' : '500');
+        this.setAttribute('stroke-width', 3.2 / k);
+      });
+    }
+
     function layoutLabels() {
+      if (isDenseDocs) { layoutLabelsDense(); return; }
       const active = selected || hovered;
       const nearby = active ? adjacency.get(active.index) : null;
       const k = transform.k, fontSize = (isTopics ? 11.5 : 11) / k;
@@ -557,6 +643,7 @@ window.StellarNetwork = (() => {
       }
       if (onSelect) onSelect(d, body);
       highlight();
+      if (isDenseDocs && d && !suppressReveal) reveal(d);
     }
 
     close.onclick = () => { const previous = selected; select(null); node.filter(d => d === previous).node()?.focus(); };
@@ -601,24 +688,164 @@ window.StellarNetwork = (() => {
       node.attr('transform', d => `translate(${d.x},${d.y})`);
     }
 
+    // ── Modo denso: interacción a nivel del SVG ──────────────────────────────────
+    // Un índice espacial (quadtree) reemplaza a los ~9.500 elementos DOM invisibles: sirve para
+    // pasar el mouse, hacer clic, arrastrar un nodo y recorrerlos con el teclado.
+    let qt = null, qtDirty = true, suppressReveal = false, hoverRaf = 0, lastMove = null, userMoved = false;
+    const markDirty = () => { qtDirty = true; };
+    function rebuildQt() {
+      qt = d3.quadtree().x(d => d.x).y(d => d.y).addAll(nodes.filter(d => Number.isFinite(d.x) && Number.isFinite(d.y)));
+      qtDirty = false;
+    }
+    function nodeAtWorld(x, y) {
+      if (!isDenseDocs) return null;
+      if (qtDirty || !qt) rebuildQt();
+      const k = transform.k, c = qt.find(x, y, 16 / k + 14);
+      if (!c) return null;
+      return Math.hypot(c.x - x, c.y - y) <= Math.max(radius(c) + 2 / k, 9 / k) ? c : null;
+    }
+    function nodeAtEvent(ev) {
+      const [px, py] = d3.pointer(ev, svgEl);
+      return nodeAtWorld((px - transform.x) / transform.k, (py - transform.y) / transform.k);
+    }
+    // Deja a la vista un nodo: lo trae al centro del área libre si quedó fuera de pantalla o bajo la ficha.
+    function reveal(d) {
+      const usableW = detail.hidden ? W : Math.max(220, W - Math.min(325, W * .48) - 28);
+      const sx = transform.applyX(d.x), sy = transform.applyY(d.y);
+      if (sx > 56 && sx < usableW - 40 && sy > 56 && sy < H - 56) return;
+      svg.transition().duration(360).call(zoom.translateTo, d.x, d.y, [usableW / 2, H / 2]);
+    }
+    function pickStart() {
+      for (const d of baseOrderedNodes) {
+        if (filterTopic && String(d.topic) !== filterTopic) continue;
+        const sx = transform.applyX(d.x), sy = transform.applyY(d.y);
+        if (sx > 0 && sx < W && sy > 0 && sy < H) return d;
+      }
+      return baseOrderedNodes[0] || null;
+    }
+    // Recorrido con flechas: salta al nodo más cercano en esa dirección, con preferencia por los conectados.
+    function stepSelection(dx, dy) {
+      const from = selected;
+      if (!from) { const first = pickStart(); if (first) select(first); return; }
+      if (qtDirty || !qt) rebuildQt();
+      const reach = 260 / transform.k, linked = adjacency.get(from.index), cand = new Map();
+      for (const idx of linked) if (idx !== from.index) cand.set(idx, nodes[idx]);
+      qt.visit((q, x0, y0, x1, y1) => {
+        if (!q.length) {
+          let p = q;
+          do {
+            const d = p.data;
+            if (d !== from && Math.abs(d.x - from.x) < reach && Math.abs(d.y - from.y) < reach) cand.set(d.index, d);
+          } while ((p = p.next));
+        }
+        return x0 > from.x + reach || x1 < from.x - reach || y0 > from.y + reach || y1 < from.y - reach;
+      });
+      let best = null, bestScore = Infinity;
+      for (const d of cand.values()) {
+        const vx = d.x - from.x, vy = d.y - from.y, dist = Math.hypot(vx, vy) || 1e-6, cos = (vx * dx + vy * dy) / dist;
+        if (cos < .5) continue;
+        const score = dist * (1.7 - cos) * (linked.has(d.index) ? .55 : 1);
+        if (score < bestScore) { bestScore = score; best = d; }
+      }
+      if (best) select(best);
+    }
+    if (isDenseDocs) {
+      svg.call(d3.drag().container(g.node())
+        .subject(ev => nodeAtWorld(ev.x, ev.y))
+        .on('start', e => {
+          tip.style.opacity = '0'; hovered = null;
+          if (!e.active) simulation.alphaTarget(.3).restart();
+          e.subject.fx = e.subject.x; e.subject.fy = e.subject.y;
+        })
+        .on('drag', e => { e.subject.fx = e.x; e.subject.fy = e.y; markDirty(); })
+        .on('end', e => {
+          if (!e.active) simulation.alphaTarget(0);
+          e.subject.fx = null; e.subject.fy = null; markDirty();
+        }));
+      svg.on('pointermove.stellar', ev => {
+        if ((ev.pointerType && ev.pointerType !== 'mouse') || ev.buttons) return;
+        lastMove = ev;
+        if (hoverRaf) return;
+        hoverRaf = requestAnimationFrame(() => {
+          hoverRaf = 0;
+          if (disposed || !lastMove) return;
+          const d = nodeAtEvent(lastMove);
+          svgEl.style.cursor = d ? 'pointer' : '';
+          if (d !== hovered) {
+            hovered = d;
+            if (d) showTooltip(lastMove, d); else tip.style.opacity = '0';
+            if (!selected) highlight();
+          } else if (d) moveTip(lastMove);
+        });
+      }).on('pointerleave.stellar', () => {
+        svgEl.style.cursor = '';
+        if (hovered) { hovered = null; tip.style.opacity = '0'; if (!selected) highlight(); }
+      });
+      svgEl.setAttribute('tabindex', '0');
+      svgEl.setAttribute('role', 'application');
+      svgEl.setAttribute('aria-roledescription', 'red interactiva de documentos');
+      svg.on('keydown.stellar', ev => {
+        if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
+        const dirs = {ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1]};
+        if (dirs[ev.key]) { ev.preventDefault(); stepSelection(...dirs[ev.key]); return; }
+        if (ev.key === '+' || ev.key === '=') { ev.preventDefault(); document.getElementById('net-zoom-in')?.click(); }
+        else if (ev.key === '-' || ev.key === '_') { ev.preventDefault(); document.getElementById('net-zoom-out')?.click(); }
+        else if (ev.key === '0' || ev.key === 'Home') { ev.preventDefault(); document.getElementById('net-fit')?.click(); }
+        else if (ev.key === 'f' && selected) { ev.preventDefault(); fit([...adjacency.get(selected.index)].map(i => nodes[i]), 4); }
+        else if ((ev.key === 'Enter' || ev.key === ' ')) {
+          ev.preventDefault();
+          if (!selected) { const first = pickStart(); if (first) select(first); }
+          else (body.querySelector('a, summary') || close).focus();
+        }
+      });
+    }
+
     const zoom = d3.zoom().extent(() => [[0, 0], [W, H]]).scaleExtent([.025, 12])
       .on('zoom', e => {
+        if (e.sourceEvent) userMoved = true;
         transform = e.transform;
         g.attr('transform', transform);
         placeStars();
         drawCanvasScene();
         layoutLabels();
       });
-    svg.call(zoom).call(zoom.transform, d3.zoomIdentity).on('click.stellar', () => {
+    svg.call(zoom).call(zoom.transform, d3.zoomIdentity).on('click.stellar', ev => {
+      if (isDenseDocs) {
+        const hit = nodeAtEvent(ev);
+        if (hit) { select(hit); return; }
+      }
       filterTopic = null;
       select(null);
     });
+    if (isDenseDocs) {
+      // Doble clic: sobre un nodo enfoca su vecindario; sobre el fondo acerca la vista.
+      svg.on('dblclick.zoom', null).on('dblclick.stellar', ev => {
+        ev.preventDefault();
+        firstFit = true;
+        const hit = nodeAtEvent(ev);
+        if (hit) { select(hit); fit([...adjacency.get(hit.index)].map(i => nodes[i]), 4); }
+        else svg.transition().duration(300).call(zoom.scaleBy, 2, d3.pointer(ev, svgEl));
+      });
+    }
 
-    function fit(subsetNodes) {
+    // Límites para encuadrar. En redes densas se toma el cuerpo conectado de la red (sin el 1 % más
+    // alejado en cada borde): los registros aislados que la simulación empuja lejos no encogen la vista,
+    // siguen ahí y se alcanzan alejando el zoom.
+    function frameBounds(targetNodes, pad) {
+      if (!isDenseDocs || targetNodes.length < 400) {
+        return [d3.min(targetNodes, d => d.x - radius(d)) - pad, d3.max(targetNodes, d => d.x + radius(d)) + pad,
+          d3.min(targetNodes, d => d.y - radius(d)) - pad, d3.max(targetNodes, d => d.y + radius(d)) + pad];
+      }
+      const connected = targetNodes.filter(d => (d.degree || 0) > 0);
+      const base = connected.length >= 50 ? connected : targetNodes;
+      const xs = base.map(d => d.x).sort(d3.ascending), ys = base.map(d => d.y).sort(d3.ascending);
+      return [d3.quantile(xs, .03) - pad, d3.quantile(xs, .97) + pad, d3.quantile(ys, .03) - pad, d3.quantile(ys, .97) + pad];
+    }
+
+    function fit(subsetNodes, maxK = 2.6) {
       const targetNodes = (subsetNodes && subsetNodes.length) ? subsetNodes : nodes;
-      const x0 = d3.min(targetNodes, d => d.x - radius(d)) - 42, x1 = d3.max(targetNodes, d => d.x + radius(d)) + 42;
-      const y0 = d3.min(targetNodes, d => d.y - radius(d)) - 42, y1 = d3.max(targetNodes, d => d.y + radius(d)) + 42;
-      const k = Math.max(.025, Math.min(2.6, (W - 42) / Math.max(1, x1 - x0), (H - 64) / Math.max(1, y1 - y0)));
+      const [x0, x1, y0, y1] = frameBounds(targetNodes, 42);
+      const k = Math.max(.025, Math.min(maxK, (W - 42) / Math.max(1, x1 - x0), (H - 64) / Math.max(1, y1 - y0)));
       svg.transition().duration(480).call(
         zoom.transform,
         d3.zoomIdentity.translate(W / 2 - k * (x0 + x1) / 2, H / 2 - k * (y0 + y1) / 2).scale(k)
@@ -649,6 +876,8 @@ window.StellarNetwork = (() => {
       );
       if (match) {
         firstFit = true;
+        suppressReveal = true;
+        setTimeout(() => { suppressReveal = false; }, 900);
         select(match);
         const k = Math.max(transform.k, isTopics ? 1.35 : 2.2);
         svg.transition().duration(520).call(
@@ -666,12 +895,13 @@ window.StellarNetwork = (() => {
     if (btnOut) btnOut.onclick = () => { firstFit = true; svg.transition().duration(240).call(zoom.scaleBy, 1 / 1.45); };
     if (btnFit) btnFit.onclick = () => { firstFit = true; filterTopic = null; fit(); highlight(); };
 
-    svg.on('pointerdown.stellar', () => { firstFit = true; });
+    svg.on('pointerdown.stellar', () => { firstFit = true; userMoved = true; });
     const escape = e => { if (e.key === 'Escape') { filterTopic = null; select(null); tip.style.opacity = '0'; } };
     document.addEventListener('keydown', escape);
 
     simulation.on('tick', () => {
       frames++;
+      qtDirty = true;
       if (isDenseDocs && frames % 2 !== 0 && simulation.alpha() > .03) return;
       drawCanvasScene();
       if (isTopics) {
@@ -685,14 +915,15 @@ window.StellarNetwork = (() => {
       if (!firstFit && simulation.alpha() < .14) {
         firstFit = true;
         syncDomNodePositions();
-        const x0 = d3.min(nodes, d => d.x - radius(d)) - 35, x1 = d3.max(nodes, d => d.x + radius(d)) + 35;
-        const y0 = d3.min(nodes, d => d.y - radius(d)) - 35, y1 = d3.max(nodes, d => d.y + radius(d)) + 35;
+        const [x0, x1, y0, y1] = frameBounds(nodes, 35);
         const k = Math.max(.025, Math.min(2, (W - 35) / Math.max(1, x1 - x0), (H - 60) / Math.max(1, y1 - y0)));
         svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2 - k * (x0 + x1) / 2, H / 2 - k * (y0 + y1) / 2).scale(k));
       }
     });
 
     simulation.on('end', () => {
+      // Al asentarse la red, si nadie movió la vista, se reencuadra sobre el diseño final.
+      if (isDenseDocs && !userMoved) fit();
       syncDomNodePositions();
       drawCanvasScene();
       layoutLabels();
@@ -716,7 +947,10 @@ window.StellarNetwork = (() => {
         canvas?.remove();
         observer.disconnect();
         document.removeEventListener('keydown', escape);
-        svg.on('.stellar', null);
+        if (hoverRaf) cancelAnimationFrame(hoverRaf);
+        svgEl.style.cursor = '';
+        svgEl.removeAttribute('tabindex'); svgEl.removeAttribute('role'); svgEl.removeAttribute('aria-roledescription');
+        svg.on('.stellar', null).on('.drag', null).on('.zoom', null);
       }
     };
   }

@@ -20,6 +20,8 @@
 .stellar-detail .detail-missing{color:#b5c4d6;font-size:10.5px}
 .stellar-detail a{display:inline-block;padding:7px 11px;background:#173d62;border:1px solid #4d80aa;border-radius:8px;color:#e5f3ff;font-size:12px;text-decoration:none;transition:background .15s}
 .stellar-detail a:hover{background:#215280}
+.stellar-stage #net-svg:focus{outline:none}
+.stellar-stage #net-svg:focus-visible{outline:2px solid #a8d4ff;outline-offset:-3px;border-radius:2px}
 .stellar-node:focus{outline:none}
 .stellar-node:focus-visible .stellar-sphere{stroke:white;stroke-width:2.5px}
 @keyframes orbit-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
