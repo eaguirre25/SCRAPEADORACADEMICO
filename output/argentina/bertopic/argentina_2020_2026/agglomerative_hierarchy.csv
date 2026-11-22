@@ -1,6 +1,6 @@
 ﻿Parent_ID,Parent_Name,Topics,Child_Left_ID,Child_Left_Name,Child_Right_ID,Child_Right_Name,Distance
-10,educativa_liderazgo_pandemia_teaching_directivo,"[0, 1, 2, 3, 4, 5]",5,formativos_technical_training_sector_tecnológica,9,educativa_liderazgo_pandemia_teaching_directivo,0.8489111787066549
-9,educativa_liderazgo_pandemia_teaching_directivo,"[0, 1, 2, 3, 4]",8,educativa_liderazgo_pandemia_covid-19_teacher,4,integral_measures_obstáculos_scales_prácticas enseñanza,0.7935409611217225
-8,educativa_liderazgo_pandemia_covid-19_teacher,"[0, 1, 2, 3]",3,rural_rurales_les_historia_habilidades blandas,7,educativa_liderazgo_pandemia_covid-19_leadership,0.6790220525700875
-7,educativa_liderazgo_pandemia_covid-19_leadership,"[0, 1, 2]",2,pandemia_covid-19_pandemic_digital_tecnologías,6,liderazgo_educativa_teacher_dirección_leadership,0.5498799747342523
-6,liderazgo_educativa_teacher_dirección_leadership,"[0, 1]",0,liderazgo_teacher_leadership_participación_liderazgo escolar,1,educativa_política_director_his_general,0.4855684079868593
+10,escolar_educativa_pandemia_escolares_social,"[0, 1, 2, 3, 4, 5]",5,formativos_technical_técnica_training_sector,9,escolar_pandemia_educativa_escolares_social,0.9239332954220006
+9,escolar_pandemia_educativa_escolares_social,"[0, 1, 2, 3, 4]",8,escolar_pandemia_educativa_social_covid-19,4,integral_measures_obstáculos_escalas_scales,0.7970941486586062
+8,escolar_pandemia_educativa_social_covid-19,"[0, 1, 2, 3]",3,rural_rurales_les_local_habilidades,7,pandemia_escolar_educativa_covid-19_durante,0.6440107142572526
+7,pandemia_escolar_educativa_covid-19_durante,"[0, 1, 2]",6,pandemia_covid-19_escolar_pandemic_liderazgo,1,política_director_his_dirección_ley,0.5491722823950348
+6,pandemia_covid-19_escolar_pandemic_liderazgo,"[0, 2]",0,pandemia_covid-19_pandemic_tecnologías_digital,2,liderazgo_liderazgo directivo_escolar_directores_dirección,0.5136898016870268

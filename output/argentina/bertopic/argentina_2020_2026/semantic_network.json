@@ -67,7 +67,7 @@
     {
       "source": "10.15366/reps2021.6.1.002",
       "target": "10.61203/2347-0658.v10.n2.34114",
-      "weight": 0.89689
+      "weight": 0.896891
     },
     {
       "source": "10.15366/reps2021.6.1.002",
@@ -82,7 +82,7 @@
     {
       "source": "10.15366/tp2021.37.002",
       "target": "10.30972/riie.16248914",
-      "weight": 0.832946
+      "weight": 0.832945
     },
     {
       "source": "10.15366/tp2021.37.002",
@@ -143,6 +143,11 @@
       "source": "10.19137/els-2026-262609",
       "target": "10.22529/dp.2025.23(46)10",
       "weight": 0.850414
+    },
+    {
+      "source": "10.19137/praxiseducativa-2024-280316",
+      "target": "https://openalex.org/W7220759025",
+      "weight": 0.894106
     },
     {
       "source": "10.19137/praxiseducativa-2025-290221",
@@ -312,7 +317,7 @@
     {
       "source": "10.33255/26184141/1568e0018",
       "target": "https://openalex.org/W7220616795",
-      "weight": 0.909905
+      "weight": 0.909904
     },
     {
       "source": "10.33255/26184141/2437e0066",
@@ -428,6 +433,11 @@
       "source": "10.5212/olharprofr.v.29.25332.010",
       "target": "https://openalex.org/W7169701904",
       "weight": 0.971366
+    },
+    {
+      "source": "10.5281/zenodo.17667157",
+      "target": "10.71112/bykk0676",
+      "weight": 0.876503
     },
     {
       "source": "10.5281/zenodo.17667157",
@@ -557,7 +567,7 @@
     {
       "source": "conicet:control social y acciones estatales durante el conflicto docente bahía blanca argentina::2024",
       "target": "https://openalex.org/W3186450505",
-      "weight": 0.837131
+      "weight": 0.837132
     },
     {
       "source": "conicet:control social y acciones estatales durante el conflicto docente bahía blanca argentina::2024",
@@ -580,11 +590,6 @@
       "weight": 0.797506
     },
     {
-      "source": "conicet:el rol de las fundaciones empresariales en la formación de estudiantes técnicos en la provincia de neuquén argentina::2026",
-      "target": "conicet:los entornos formativos en la educación técnica argentina estudio exploratorio sobre el sector automotriz::2025",
-      "weight": 0.745247
-    },
-    {
       "source": "conicet:escuela secundaria en tiempos de pandemia la fragmentación del sistema educativo al descubierto::2021",
       "target": "https://openalex.org/W3124575860",
       "weight": 0.889045
@@ -593,11 +598,6 @@
       "source": "conicet:escuela secundaria en tiempos de pandemia la fragmentación del sistema educativo al descubierto::2021",
       "target": "https://openalex.org/W7215346056",
       "weight": 0.896732
-    },
-    {
-      "source": "conicet:escuela secundaria en tiempos de pandemia la fragmentación del sistema educativo al descubierto::2021",
-      "target": "https://openalex.org/W7220759025",
-      "weight": 0.877982
     },
     {
       "source": "conicet:estar y no estar sentidos y prácticas en torno a las migraciones e identificaciones étniconacionales en el espacio escolar::2024",
@@ -789,56 +789,56 @@
     {
       "neighbors": 3,
       "min_similarity": 0.6,
-      "edges": 96,
-      "isolated": 79
-    },
-    {
-      "neighbors": 3,
-      "min_similarity": 0.7,
-      "edges": 94,
+      "edges": 97,
       "isolated": 82
     },
     {
       "neighbors": 3,
+      "min_similarity": 0.7,
+      "edges": 95,
+      "isolated": 85
+    },
+    {
+      "neighbors": 3,
       "min_similarity": 0.8,
-      "edges": 87,
-      "isolated": 89
+      "edges": 88,
+      "isolated": 92
     },
     {
       "neighbors": 5,
       "min_similarity": 0.6,
       "edges": 158,
-      "isolated": 59
+      "isolated": 61
     },
     {
       "neighbors": 5,
       "min_similarity": 0.7,
       "edges": 156,
-      "isolated": 62
+      "isolated": 64
     },
     {
       "neighbors": 5,
       "min_similarity": 0.8,
-      "edges": 139,
-      "isolated": 72
+      "edges": 140,
+      "isolated": 74
     },
     {
       "neighbors": 10,
       "min_similarity": 0.6,
-      "edges": 323,
-      "isolated": 31
+      "edges": 333,
+      "isolated": 30
     },
     {
       "neighbors": 10,
       "min_similarity": 0.7,
-      "edges": 316,
-      "isolated": 38
+      "edges": 326,
+      "isolated": 37
     },
     {
       "neighbors": 10,
       "min_similarity": 0.8,
-      "edges": 269,
-      "isolated": 56
+      "edges": 279,
+      "isolated": 54
     }
   ]
 }
