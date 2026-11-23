@@ -240,11 +240,14 @@ def clean_text(txt: str) -> str:
     return txt
 
 
-def split_sentences(text: str, max_chars: int = 24000) -> list[str]:
-    """Split text into clean sentences within a bounded window."""
+def split_sentences(text: str, max_chars: int = 28000) -> list[str]:
+    """Split text into clean sentences, sampling both start and end for long PDFs."""
     if not text:
         return []
-    sample = clean_text(text[:max_chars])
+    if len(text) > max_chars * 2:
+        sample = clean_text(text[:max_chars]) + " " + clean_text(text[-max_chars:])
+    else:
+        sample = clean_text(text)
     sents = RE_SENTENCE_SPLIT.split(sample)
     return [s.strip() for s in sents if 35 <= len(s.strip()) <= 520]
 
@@ -298,9 +301,12 @@ def norm_doi(d: str) -> str:
     return s.rstrip(".")
 
 
-def load_fulltext_index() -> dict[str, str]:
-    """Load extracted full text keyed by normalized DOI and filename."""
+def load_fulltext_index() -> tuple[dict[str, str], dict[str, str], list[dict[str, str]]]:
+    """Load extracted full text keyed by normalized DOI, filename, and normalized title,
+    plus the list of all raw corpus rows so none are omitted."""
     corpus_texts: dict[str, str] = {}
+    corpus_by_title: dict[str, str] = {}
+    corpus_records: list[dict[str, str]] = []
     corpus_gz = ROOT / "data" / "corpus.csv.gz"
     if corpus_gz.exists():
         with gzip.open(corpus_gz, "rt", encoding="utf-8-sig", errors="replace") as f:
@@ -310,10 +316,14 @@ def load_fulltext_index() -> dict[str, str]:
                     continue
                 doi = norm_doi(r.get("doi") or "")
                 fn = (r.get("filename") or "").strip()
+                nt = norm_title(r.get("titulo") or "")
                 if doi:
                     corpus_texts[doi] = txt
                 if fn:
                     corpus_texts[fn] = txt
+                if nt and len(nt) > 20:
+                    corpus_by_title[nt] = txt
+                corpus_records.append(r)
 
     for tf in glob.glob(str(ROOT / "docs" / "textos" / "*.txt")):
         fname = Path(tf).name
@@ -324,7 +334,7 @@ def load_fulltext_index() -> dict[str, str]:
                     corpus_texts[fname] = content
             except Exception:
                 pass
-    return corpus_texts
+    return corpus_texts, corpus_by_title, corpus_records
 
 
 def build_scraped_row(rec: dict[str, str], full_txt: str) -> dict[str, str]:
@@ -419,10 +429,13 @@ def main() -> int:
         if nt_apa:
             seen_titles.add(nt_apa)
 
-    corpus_texts = load_fulltext_index()
+    corpus_texts, corpus_by_title, corpus_records = load_fulltext_index()
 
     scraped_rows: list[dict[str, str]] = []
     fulltext_hits = 0
+    matched_corpus_dois: set[str] = set()
+    matched_corpus_titles: set[str] = set()
+
     if master_path.exists():
         with master_path.open(encoding="utf-8-sig", errors="replace") as f:
             for rec in csv.DictReader(f):
@@ -437,12 +450,80 @@ def main() -> int:
                 fn = (rec.get("filename") or "").strip()
                 full_txt = corpus_texts.get(doi) or corpus_texts.get(fn) or ""
                 if not full_txt and doi:
-                    # Also check sanitized DOI filename (e.g. 10.1007_s10833.pdf or .txt)
                     doi_fn = doi.replace("/", "_")
                     full_txt = corpus_texts.get(doi_fn + ".pdf") or corpus_texts.get(doi_fn + ".txt") or ""
+                if not full_txt and nt and nt in corpus_by_title:
+                    full_txt = corpus_by_title[nt]
                 if full_txt:
                     fulltext_hits += 1
+                if doi:
+                    matched_corpus_dois.add(doi)
+                    seen_dois.add(doi)
+                if nt:
+                    matched_corpus_titles.add(nt)
+                    seen_titles.add(nt)
                 scraped_rows.append(build_scraped_row(rec, full_txt))
+
+    # Include all remaining full-text PDFs from corpus.csv.gz not present in master_records.csv
+    extra_corpus_count = 0
+    for cr in corpus_records:
+        doi = norm_doi(cr.get("doi") or "")
+        title = (cr.get("titulo") or "").strip()
+        nt = norm_title(title)
+        if doi and (doi in seen_dois or doi in matched_corpus_dois):
+            continue
+        if nt and (nt in matched_corpus_titles or any(nt in st for st in seen_titles if len(nt) > 25)):
+            continue
+        rec = {
+            "title": title or cr.get("filename") or "Documento PDF del corpus",
+            "authors": (cr.get("autores") or "").strip(),
+            "publication_year": (cr.get("anio") or "").strip(),
+            "origin": (cr.get("revista") or "Corpus PDF").strip(),
+            "source": "Corpus PDF",
+            "document_type": "article",
+            "doi": doi,
+            "url": f"https://doi.org/{doi}" if doi else "",
+            "abstract": "",
+            "keywords": "",
+            "search_term": "",
+            "relevance_evidence": f"Texto completo PDF ({cr.get('paginas') or '?'} págs.)",
+        }
+        full_txt = (cr.get("texto") or "").strip()
+        if doi:
+            seen_dois.add(doi)
+        if nt:
+            seen_titles.add(nt)
+        scraped_rows.append(build_scraped_row(rec, full_txt))
+        fulltext_hits += 1
+        extra_corpus_count += 1
+
+    # Include theoretical books from data/teoricos_articles.json
+    teoricos_path = ROOT / "data" / "teoricos_articles.json"
+    teoricos_count = 0
+    if teoricos_path.exists():
+        for t in json.loads(teoricos_path.read_text(encoding="utf-8")):
+            title = (t.get("title") or "").strip()
+            nt = norm_title(title)
+            if nt and any(nt in st for st in seen_titles if len(nt) > 20):
+                continue
+            rec = {
+                "title": title,
+                "authors": (t.get("authors") or "").strip(),
+                "publication_year": str(t.get("year") or "").strip(),
+                "origin": (t.get("origin") or t.get("source") or "Textos Teóricos (Drive)").strip(),
+                "source": "Textos Teóricos (Drive)",
+                "document_type": (t.get("document_type") or "book").strip(),
+                "doi": "",
+                "url": (t.get("drive_preview_url") or "").strip(),
+                "abstract": "",
+                "keywords": "Marco teórico; Textos teóricos (Drive)",
+                "search_term": "Textos Teóricos",
+                "relevance_evidence": f"Archivo Drive: {t.get('drive_filename') or title}",
+            }
+            row = build_scraped_row(rec, "")
+            row["seccion"] = "Textos Teóricos (Drive)"
+            scraped_rows.append(row)
+            teoricos_count += 1
 
     # Put full-text PDF rows first after curated rows, then metadata/abstract rows
     scraped_rows.sort(

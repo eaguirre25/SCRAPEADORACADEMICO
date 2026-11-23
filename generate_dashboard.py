@@ -1874,7 +1874,7 @@ function nextMatrizPage(){ if(matrizPage<Math.ceil(matrizFiltered.length/MATRIZ_
 async function ensureMatriz(){
   if(matrizLoaded) return matrizRows;
   if(matrizLoadPromise) return matrizLoadPromise;
-  matrizLoadPromise = fetch("matriz-data.json")
+  matrizLoadPromise = fetch("matriz-data.json?v=" + Date.now())
     .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
     .then(data=>{
       if(Array.isArray(data.columns) && data.columns.length){
