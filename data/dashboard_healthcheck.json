@@ -1,105 +1,105 @@
 {
-  "generated_at_utc": "2026-11-20T20:33:10.856627+00:00",
+  "generated_at_utc": "2026-11-23T18:02:13.132294+00:00",
   "dashboard": {
-    "path": "docs\\index.html",
+    "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 543229
+    "size_bytes": 553491
   },
   "article_table": {
-    "path": "docs\\articulos.html",
+    "path": "docs/articulos.html",
     "exists": true,
-    "size_bytes": 28494444
+    "size_bytes": 29056040
   },
   "records": {
-    "master_high_relevance": 9355,
+    "master_high_relevance": 9514,
     "review": 0,
-    "rejected": 2559
+    "rejected": 2563
   },
   "stm_inputs_outputs": {
     "corpus": {
-      "path": "data\\corpus.csv.gz",
+      "path": "data/corpus.csv.gz",
       "exists": true,
-      "size_bytes": 65802664
+      "size_bytes": 69105669
     },
     "tabla_topicos": {
-      "path": "output\\tabla_topicos.csv",
+      "path": "output/tabla_topicos.csv",
       "exists": true,
-      "size_bytes": 7169
+      "size_bytes": 7146
     },
     "document_topics": {
-      "path": "output\\document_topics.csv",
+      "path": "output/document_topics.csv",
       "exists": true,
-      "size_bytes": 142505
+      "size_bytes": 141641
     },
     "stm_model": {
-      "path": "output\\stm_model.rds",
+      "path": "output/stm_model.rds",
       "exists": true,
       "size_bytes": 3998697
     },
     "informe_stm": {
-      "path": "output\\informe_stm.html",
+      "path": "output/informe_stm.html",
       "exists": true,
-      "size_bytes": 12136
+      "size_bytes": 11952
     }
   },
   "stm_status": "ok",
   "note": "El workflow operativo genera docs/index.html desde data/master_records.csv. El STM requiere data/corpus.csv.gz y salida R en output/. Si esos archivos faltan, el dashboard de tres columnas funciona, pero la capa STM no queda actualizada.",
   "integrity": {
-    "records": 9355,
+    "records": 9514,
     "duplicate_identifiers": {
       "doi": 0,
       "record_id": 0
     },
     "duplicate_publication_urls": [],
-    "homonymous_title_groups": 179,
+    "homonymous_title_groups": 185,
     "missing_titles": 0,
     "missing_years": 0,
     "export_counts": {
-      "dashboard": 9355,
-      "article_table": 9355,
-      "library": 9355
+      "dashboard": 9514,
+      "article_table": 9514,
+      "library": 9514
     },
     "models": {
       "bertopic-macros": {
-        "modeled": 7809,
-        "assigned": 4511,
-        "outliers": 3192,
-        "not_modeled": 1652,
+        "modeled": 7832,
+        "assigned": 4372,
+        "outliers": 3460,
+        "not_modeled": 1682,
         "unlinked": 0
       },
       "bertopic-subtopics": {
-        "modeled": 7809,
-        "assigned": 3592,
+        "modeled": 7832,
+        "assigned": 3056,
         "outliers": 0,
-        "not_modeled": 5763,
+        "not_modeled": 6458,
         "unlinked": 0
       },
       "stm-es": {
-        "modeled": 2808,
-        "assigned": 2765,
+        "modeled": 2807,
+        "assigned": 2807,
         "outliers": 0,
-        "not_modeled": 6590,
+        "not_modeled": 6707,
         "unlinked": 0
       },
       "stm-en": {
-        "modeled": 3953,
-        "assigned": 3907,
+        "modeled": 3958,
+        "assigned": 3958,
         "outliers": 0,
-        "not_modeled": 5448,
+        "not_modeled": 5556,
         "unlinked": 0
       },
       "stm-pt": {
-        "modeled": 1033,
-        "assigned": 1016,
+        "modeled": 1052,
+        "assigned": 1052,
         "outliers": 0,
-        "not_modeled": 8339,
+        "not_modeled": 8462,
         "unlinked": 0
       },
       "legacy-stm": {
         "modeled": 863,
         "assigned": 777,
         "outliers": 0,
-        "not_modeled": 8578,
+        "not_modeled": 8737,
         "unlinked": 82
       }
     },
