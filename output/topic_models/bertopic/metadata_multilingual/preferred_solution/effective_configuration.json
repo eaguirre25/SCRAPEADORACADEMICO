@@ -11,7 +11,7 @@
   },
   "umap_class": "umap.umap_.UMAP",
   "umap_parameters": {
-    "n_neighbors": 15,
+    "n_neighbors": 30,
     "n_components": 10,
     "min_dist": 0.0,
     "metric": "cosine",
@@ -20,8 +20,8 @@
   },
   "hdbscan_class": "hdbscan.hdbscan_.HDBSCAN",
   "hdbscan_parameters": {
-    "min_cluster_size": 50,
-    "min_samples": 5,
+    "min_cluster_size": 35,
+    "min_samples": 10,
     "metric": "euclidean",
     "cluster_selection_method": "eom",
     "prediction_data": true
@@ -247,7 +247,7 @@
     "evaluation": true
   },
   "seed": 42,
-  "python_version": "3.11.17",
+  "python_version": "3.11.18",
   "package_versions": {
     "bertopic": "0.17.4",
     "sentence-transformers": "5.7.0",
@@ -257,7 +257,7 @@
     "numpy": "2.4.6",
     "pandas": "2.3.3"
   },
-  "corpus_hash": "9e3f54a63b751d2d165219a0108d2af16a9daa070f43f4e8ffc03b1e719d7b20",
+  "corpus_hash": "dd61d5635da13fa50e695ce1521a6eba8440ec64903a2ca7ba7943f90bcc0afc",
   "text_cleaning_version": "unicode-nfc-v2",
-  "embedding_cache_hash": "ea2043e830606758a23c8a09a9fc4e4433f642fe1d265f38eb3c1ca8ecfc49d3"
+  "embedding_cache_hash": "e68925df2872e75f8c8e1164165581c7dcb02536a4659bae38d3d484065e7b76"
 }

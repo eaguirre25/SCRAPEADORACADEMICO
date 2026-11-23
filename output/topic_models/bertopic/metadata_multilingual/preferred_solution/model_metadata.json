@@ -1,13 +1,13 @@
 {
   "model": "BERTopic-METADATA-MULTILINGUAL",
   "seed": 42,
-  "generated_at_utc": "2026-10-22T20:45:58.919568+00:00",
-  "git_commit": "42df9c0202c6f919d52b2c60369e10ac8035e989",
-  "python_version": "3.11.17 (main, Oct  1 2026, 14:32:31) [GCC 13.3.0]",
-  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
-  "documents": 7809,
+  "generated_at_utc": "2026-11-23T00:11:29.131145+00:00",
+  "git_commit": "10984546d2e4278625dbf5b006fc24bb1a82ccbf",
+  "python_version": "3.11.18 (main, Oct 26 2026, 02:48:29) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+  "documents": 7832,
   "discarded_documents": 0,
-  "elapsed_seconds": 1088.974,
+  "elapsed_seconds": 1392.841,
   "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "configuration": {
     "project": {
@@ -173,8 +173,8 @@
         "sentence-transformers/distiluse-base-multilingual-cased-v2"
       ],
       "batch_size": 64,
-      "min_topic_size": "50",
-      "min_samples": "5",
+      "min_topic_size": "35",
+      "min_samples": "10",
       "nr_topics": null,
       "calculate_probabilities": true,
       "low_memory": true,
@@ -194,7 +194,7 @@
       "heterogeneous_topic_detection": true,
       "merge_candidate_similarity": 0.8,
       "umap": {
-        "n_neighbors": "15",
+        "n_neighbors": "30",
         "n_components": "10",
         "min_dist": "0.0",
         "metric": "cosine"
@@ -310,11 +310,11 @@
   "output_name": "metadata_multilingual/preferred_solution",
   "validation_status": "exploratory",
   "embedding_cache": {
-    "fingerprint": "ea2043e830606758a23c8a09a9fc4e4433f642fe1d265f38eb3c1ca8ecfc49d3",
+    "fingerprint": "e68925df2872e75f8c8e1164165581c7dcb02536a4659bae38d3d484065e7b76",
     "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
     "dimension": 768,
-    "documents": 7809,
-    "created_at_utc": "2026-10-22T20:19:39.351346+00:00",
+    "documents": 7832,
+    "created_at_utc": "2026-11-22T23:35:18.236919+00:00",
     "combination": "weighted_field_average",
     "variant": "weighted_fields",
     "weights": {
@@ -328,33 +328,33 @@
     "text_cleaning_version": "unicode-nfc-v2",
     "field_embedding_manifests": {
       "title_text": {
-        "fingerprint": "fbb7d1c4b354b83545d0451d1175dbfc2bbba9de9864a20258d89d839793a345",
+        "fingerprint": "47a0736bb3c34fb9fef35014388503b7bbeb9e8905f025d7fa94512cd766baff",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 7809,
-        "created_at_utc": "2026-10-22T20:01:35.686155+00:00",
+        "documents": 7832,
+        "created_at_utc": "2026-11-22T23:13:13.246448+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
         "text_cleaning_version": "unicode-nfc-v2"
       },
       "abstract_text": {
-        "fingerprint": "300a071613ce3e3bc69607f66ca36ca80f8d5987108ddf0fc7e5817ce5098c6a",
+        "fingerprint": "927f4d38d0984170c15ea17e9eab52e0b4fb54ffa37c79f87014ba3072a7ec70",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 7809,
-        "created_at_utc": "2026-10-22T20:14:44.483488+00:00",
+        "documents": 7832,
+        "created_at_utc": "2026-11-22T23:29:27.743504+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
         "text_cleaning_version": "unicode-nfc-v2"
       },
       "keywords_text": {
-        "fingerprint": "c68c5796c5d0b18b2b0b8cbd9366e399f1159f2c1cc111744a75bdbe653e7b29",
+        "fingerprint": "066fb45172f1165b54f677193838f415d36a0fdfd5ac59393a8ad4f577203ab9",
         "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         "dimension": 768,
-        "documents": 7809,
-        "created_at_utc": "2026-10-22T20:19:39.289361+00:00",
+        "documents": 7832,
+        "created_at_utc": "2026-11-22T23:35:18.138050+00:00",
         "embedding_normalization": true,
         "batch_size": 64,
         "model_revision": null,
@@ -362,20 +362,20 @@
       }
     },
     "available_field_counts": {
-      "title_text": 7809,
-      "abstract_text": 6977,
-      "keywords_text": 7807
+      "title_text": 7831,
+      "abstract_text": 7034,
+      "keywords_text": 7830
     }
   },
-  "outlier_count": 3244,
-  "outlier_percentage": 41.5418,
+  "outlier_count": 3460,
+  "outlier_percentage": 44.1777,
   "model_save_mode": "safetensors_without_ctfidf",
   "warnings": [
     "c-TF-IDF state was not serialized: Object of type int64 is not JSON serializable"
   ],
   "outliers_reassigned_in_alternative": 0,
   "effective_configuration_path": "effective_configuration.json",
-  "macro_topics": 29,
-  "subtopics": 61,
+  "macro_topics": 35,
+  "subtopics": 63,
   "ambiguity_rule": "outlier OR low semantic margin OR low HDBSCAN membership OR low centroid similarity OR high outlier score"
 }
