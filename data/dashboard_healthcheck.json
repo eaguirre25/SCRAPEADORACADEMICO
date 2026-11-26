@@ -1,9 +1,9 @@
 {
-  "generated_at_utc": "2026-11-25T22:25:45.779660+00:00",
+  "generated_at_utc": "2026-11-26T01:34:00.639841+00:00",
   "dashboard": {
     "path": "docs/index.html",
     "exists": true,
-    "size_bytes": 553491
+    "size_bytes": 535674
   },
   "article_table": {
     "path": "docs/articulos.html",
@@ -19,7 +19,7 @@
     "corpus": {
       "path": "data/corpus.csv.gz",
       "exists": true,
-      "size_bytes": 69105669
+      "size_bytes": 69211318
     },
     "tabla_topicos": {
       "path": "output/tabla_topicos.csv",
@@ -61,38 +61,38 @@
     },
     "models": {
       "bertopic-macros": {
-        "modeled": 7832,
-        "assigned": 4372,
-        "outliers": 3460,
-        "not_modeled": 1703,
+        "modeled": 7849,
+        "assigned": 4549,
+        "outliers": 3300,
+        "not_modeled": 1686,
         "unlinked": 0
       },
       "bertopic-subtopics": {
-        "modeled": 7832,
-        "assigned": 3056,
+        "modeled": 7849,
+        "assigned": 3464,
         "outliers": 0,
-        "not_modeled": 6479,
+        "not_modeled": 6071,
         "unlinked": 0
       },
       "stm-es": {
-        "modeled": 2807,
-        "assigned": 2807,
+        "modeled": 2810,
+        "assigned": 2810,
         "outliers": 0,
-        "not_modeled": 6728,
+        "not_modeled": 6725,
         "unlinked": 0
       },
       "stm-en": {
-        "modeled": 3958,
-        "assigned": 3958,
+        "modeled": 3968,
+        "assigned": 3968,
         "outliers": 0,
-        "not_modeled": 5577,
+        "not_modeled": 5567,
         "unlinked": 0
       },
       "stm-pt": {
-        "modeled": 1052,
-        "assigned": 1052,
+        "modeled": 1056,
+        "assigned": 1056,
         "outliers": 0,
-        "not_modeled": 8483,
+        "not_modeled": 8479,
         "unlinked": 0
       },
       "legacy-stm": {
