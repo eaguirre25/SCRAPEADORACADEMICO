@@ -1,8 +1,8 @@
 metric,value
-shared_documents,7817
+shared_documents,7834
 stm_language_models_compared,3
-bertopic_documents,7832
-bertopic_outliers,3460
-shared_documents_excluded_from_topic_alignment,3455
-one_to_one_alignments,9
+bertopic_documents,7849
+bertopic_outliers,3300
+shared_documents_excluded_from_topic_alignment,3297
+one_to_one_alignments,10
 comparison_status,exploratory_pending_human_review

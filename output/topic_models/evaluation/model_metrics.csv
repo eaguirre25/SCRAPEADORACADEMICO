@@ -1,15 +1,15 @@
 model,model_path,corpus,run_id,is_latest_for_model,is_preferred_model,status,metric,value,applicability
-BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,19d62b050bf40250,True,True,preferred_provisional,documents,7832,all
-BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,19d62b050bf40250,True,True,preferred_provisional,topics_excluding_outliers,35,all
-BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,19d62b050bf40250,True,True,preferred_provisional,minimum_topic_size,35,dominant assignment or cluster
-BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,19d62b050bf40250,True,True,preferred_provisional,model_topic_diversity_top10,0.94,lexical representation
-BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,19d62b050bf40250,True,True,preferred_provisional,outlier_percentage,44.1777,BERTopic
-STM-METADATA-EN,stm/metadata_en_corrected,metadata,929620f5752392ee,True,False,metrics_complete,documents,3958,all
-STM-METADATA-EN,stm/metadata_en_corrected,metadata,929620f5752392ee,True,False,metrics_complete,topics_excluding_outliers,20,all
-STM-METADATA-EN,stm/metadata_en_corrected,metadata,929620f5752392ee,True,False,metrics_complete,minimum_topic_size,32,dominant assignment or cluster
-STM-METADATA-ES,stm/metadata_es_corrected,metadata,98bf16b398ab2027,True,False,metrics_complete,documents,2807,all
-STM-METADATA-ES,stm/metadata_es_corrected,metadata,98bf16b398ab2027,True,False,metrics_complete,topics_excluding_outliers,18,all
-STM-METADATA-ES,stm/metadata_es_corrected,metadata,98bf16b398ab2027,True,False,metrics_complete,minimum_topic_size,63,dominant assignment or cluster
-STM-METADATA-PT,stm/metadata_pt_corrected,metadata,2d851afc2ab52d0c,True,False,exploratory_small_corpus,documents,1052,all
-STM-METADATA-PT,stm/metadata_pt_corrected,metadata,2d851afc2ab52d0c,True,False,exploratory_small_corpus,topics_excluding_outliers,4,all
-STM-METADATA-PT,stm/metadata_pt_corrected,metadata,2d851afc2ab52d0c,True,False,exploratory_small_corpus,minimum_topic_size,13,dominant assignment or cluster
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,56d48e6082b09339,True,True,preferred_provisional,documents,7849,all
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,56d48e6082b09339,True,True,preferred_provisional,topics_excluding_outliers,30,all
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,56d48e6082b09339,True,True,preferred_provisional,minimum_topic_size,55,dominant assignment or cluster
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,56d48e6082b09339,True,True,preferred_provisional,model_topic_diversity_top10,0.903333,lexical representation
+BERTopic-METADATA-MULTILINGUAL,bertopic/metadata_multilingual/preferred_solution,metadata,56d48e6082b09339,True,True,preferred_provisional,outlier_percentage,42.0436,BERTopic
+STM-METADATA-EN,stm/metadata_en_corrected,metadata,6b1fc8b0222a8c42,True,False,metrics_complete,documents,3968,all
+STM-METADATA-EN,stm/metadata_en_corrected,metadata,6b1fc8b0222a8c42,True,False,metrics_complete,topics_excluding_outliers,18,all
+STM-METADATA-EN,stm/metadata_en_corrected,metadata,6b1fc8b0222a8c42,True,False,metrics_complete,minimum_topic_size,86,dominant assignment or cluster
+STM-METADATA-ES,stm/metadata_es_corrected,metadata,7f1d7aa74355ea0a,True,False,metrics_complete,documents,2810,all
+STM-METADATA-ES,stm/metadata_es_corrected,metadata,7f1d7aa74355ea0a,True,False,metrics_complete,topics_excluding_outliers,16,all
+STM-METADATA-ES,stm/metadata_es_corrected,metadata,7f1d7aa74355ea0a,True,False,metrics_complete,minimum_topic_size,66,dominant assignment or cluster
+STM-METADATA-PT,stm/metadata_pt_corrected,metadata,e3fa8d9e3348f6bf,True,False,exploratory_small_corpus,documents,1056,all
+STM-METADATA-PT,stm/metadata_pt_corrected,metadata,e3fa8d9e3348f6bf,True,False,exploratory_small_corpus,topics_excluding_outliers,5,all
+STM-METADATA-PT,stm/metadata_pt_corrected,metadata,e3fa8d9e3348f6bf,True,False,exploratory_small_corpus,minimum_topic_size,13,dominant assignment or cluster
